@@ -865,7 +865,11 @@ def _selftest():
         assert item["evidence_id"] is None
 
     # Second RIN: a finalized rule, chosen after collection (see NOTES.md for why).
-    finalized_rin = os.environ.get("REGINFO_SELFTEST_FINALIZED_RIN", "1210-AB88")
+    # 0938-AT38 = CMS "Administrative Simplification: Adoption of Standards for
+    # Health Care Attachments Transaction and Electronic Signatures": ran through
+    # every edition from Proposed Rule Stage (Spring 2018) to Completed Actions
+    # (2026 edition), with two OIRA reviews both decided "Consistent with Change".
+    finalized_rin = os.environ.get("REGINFO_SELFTEST_FINALIZED_RIN", "0938-AT38")
     print(f"\n== agenda_evidence_for_rin: finalized RIN {finalized_rin} ==")
     ev3 = agenda_evidence_for_rin(finalized_rin, "2026-09-25")
     print(f"  {len(ev3)} evidence items found")

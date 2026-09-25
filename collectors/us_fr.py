@@ -908,6 +908,8 @@ def process_anchor(thread_id: str, anchor: dict, sampling_frame: str, sampling_m
         evidence.append(stakeholder)
         seq += 1
 
+    disambiguate_titles(evidence, outcome)
+
     for ev in evidence:
         if ev["evidence_id"] in EXISTING_EVIDENCE_IDS:
             continue
