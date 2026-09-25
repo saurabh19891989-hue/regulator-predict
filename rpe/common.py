@@ -5,7 +5,7 @@ import os
 from datetime import date, datetime, timedelta
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
+DATA = os.environ.get("RPE_DATA", os.path.join(ROOT, "data"))
 SCHEMAS = os.path.join(ROOT, "schemas")
 CENSOR_DATE = "2026-09-25"          # outcome verification date for this Gate-0 run
 MODEL_KNOWLEDGE_CUTOFF = "2026-06-30"  # forecaster (Opus 5.5) stated knowledge cutoff: June 2026
