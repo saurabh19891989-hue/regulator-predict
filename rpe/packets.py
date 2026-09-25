@@ -10,6 +10,7 @@ import argparse
 import json
 import os
 import random
+import re
 from collections import defaultdict
 
 from .common import DATA, read_jsonl, sha256_text
@@ -140,6 +141,11 @@ def make_run(run, arms, designs, size, offsets=None, thread_ids=None, strata=Non
         bid = f"{run}_b{i:03d}"
         body = HEADER.format(n=len(b)) + "".join(
             render_snapshot(r, threads[r["thread_id"]], [ev[x] for x in r["evidence_ids"]]) for r in b)
+        for r in b:  # soft guard: ISO dates after the cutoff inside a snapshot's text → logged for audit
+            snap_txt = render_snapshot(r, threads[r["thread_id"]], [ev[x] for x in r["evidence_ids"]])
+            late = sorted({m for m in re.findall(r"\b20\d\d-\d\d-\d\d\b", snap_txt) if m > r["cutoff_date"]})
+            if late:
+                manifest.setdefault("future_iso_dates", []).append({"snapshot_id": r["snapshot_id"], "dates": late[:5]})
         for r in b:  # hard guard: internal ids encode frame/stratum and must never reach a forecaster
             bad = [x for x in [r["thread_id"]] + r["evidence_ids"] if x in body]
             if bad:
@@ -185,4 +191,5 @@ if __name__ == "__main__":
                  families=a.families.split(",") if a.families else None)
     tot = sum(len(b["snapshot_ids"]) for b in m["batches"])
     print(json.dumps({"run": a.run, "batches": len(m["batches"]), "snapshots": tot, "aliases": len(m["aliases"]),
+                      "snapshots_with_future_iso_dates": len(m.get("future_iso_dates", [])),
                       "approx_tokens_total": sum(b["approx_tokens"] for b in m["batches"])}, indent=1))

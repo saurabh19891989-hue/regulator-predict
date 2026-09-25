@@ -1,0 +1,47 @@
+[
+  {
+    "regulator": "OIRA/OMB (Regulatory Information Service Center, GSA)",
+    "endpoint": "https://www.reginfo.gov/public/do/eAgendaXmlReport",
+    "content": "Listing page enumerating every bulk Unified Agenda XML export currently served under https://www.reginfo.gov/public/do/XMLViewFileAction?f=<filename> (REGINFO_RIN_DATA_YYYYMM.xml pattern, plus one special-named file for Spring 2018)",
+    "tier": "B",
+    "access_method": "HTML listing page; each linked file fetched via GET https://www.reginfo.gov/public/do/XMLViewFileAction?f=<filename> with curl -sSL -A \"Mozilla/5.0\"; the endpoint ignores HTTP Range headers and always returns the full body",
+    "reliability_notes": "Authoritative bulk source for Unified Agenda content (title, agency, stage, priority, timetable, FR cites) per RIN per edition. Internal XML RUN_DATE attribute is NOT a reliable public-availability date (see agenda_editions.json note for pub_id 201804, where RUN_DATE is a later re-export). pub_id 202604 (which would be 'Spring 2026' under the usual naming convention) does not exist as of this collection: probed directly and reginfo.gov returns its generic HTML error page, not XML.",
+    "checked": "2026-09-25"
+  },
+  {
+    "regulator": "OIRA/OMB (Regulatory Information Service Center, GSA)",
+    "endpoint": "https://www.reginfo.gov/public/do/eAgendaHistory",
+    "content": "Historical-edition selector (<select id=\"currentPubId\">) listing every Unified Agenda pub_id and its official season/label as reginfo.gov itself names it",
+    "tier": "B",
+    "access_method": "HTML page fetched with curl -sSL -A \"Mozilla/5.0\"; option values/labels extracted with a regex over the raw HTML",
+    "reliability_notes": "Used to confirm pub_id 202510's official label is '2026 The Regulatory Plan and the Unified Agenda of Federal Regulatory and Deregulatory Actions' (not 'Fall 2025'), i.e. reginfo.gov itself has collapsed the Fall2025/Spring2026 biannual slots into one annual '2026' edition. This is the ground truth for edition labeling used in EDITIONS in collectors/reginfo.py.",
+    "checked": "2026-09-25"
+  },
+  {
+    "regulator": "OIRA/OMB",
+    "endpoint": "https://www.reginfo.gov/public/do/eAgendaViewRule?pubId=<pubId>&RIN=<RIN>",
+    "content": "Per-RIN, per-edition Unified Agenda detail page (used only for spot verification, not bulk collection); includes a 'RIN Data Printed in the FR: Yes/No' field per entry",
+    "tier": "B",
+    "access_method": "HTML page fetched with curl -sSL -A \"Mozilla/5.0\"",
+    "reliability_notes": "Spot-checked to confirm the pub_id=202410 (Fall 2024) FR-publication gap: e.g. RIN 0503-AA80 shows 'Publication ID: Fall 2024' and 'RIN Data Printed in the FR: No'.",
+    "checked": "2026-09-25"
+  },
+  {
+    "regulator": "OIRA/OMB",
+    "endpoint": "https://www.reginfo.gov/public/do/XMLReportList",
+    "content": "Listing page enumerating all EO 12866 regulatory-review bulk XML reports: EO_RULE_COMPLETED_<year>.xml (1981-2025), EO_RULE_COMPLETED_YTD.xml (current calendar year, 2026), EO_RULE_COMPLETED_30_DAYS.xml, EO_RULES_UNDER_REVIEW.xml (live pending-review snapshot), AGY_AGENCY_LIST.xml (agency code registry)",
+    "tier": "B",
+    "access_method": "HTML listing page; each linked file fetched via GET https://www.reginfo.gov/public/do/XMLViewFileAction?f=<filename> with curl -sSL -A \"Mozilla/5.0\"",
+    "reliability_notes": "Authoritative source for OIRA EO 12866 review receipt/completion dates and decisions. date_received is publicly listed on reginfo.gov on the day OIRA receives the rule; date_completed only once OIRA completes review. EO_RULES_UNDER_REVIEW.xml is a point-in-time live snapshot (retrieved 2026-09-25) of rules currently pending -- it will drift on every future retrieval and is NOT itself point-in-time-stable; downstream users needing a historical 'as of date X, what was pending' view should rely on (date_received < X) AND (date_completed is null or > X) computed from the completed-year files plus this snapshot, not re-fetch this endpoint later.",
+    "checked": "2026-09-25"
+  },
+  {
+    "regulator": "Federal Register (GPO/NARA), used only to date-verify reginfo.gov editions",
+    "endpoint": "https://www.federalregister.gov/api/v1/documents.json",
+    "content": "Full-text/metadata search used to find each Unified Agenda edition's Federal Register 'Introduction to the Unified Agenda of Federal Regulatory and Deregulatory Actions' notice (author agency: Regulatory Information Service Center) and its publication_date",
+    "tier": "B",
+    "access_method": "GET with conditions[agencies][]=regulatory-information-service-center and a publication_date range, fields limited to title/publication_date/html_url/type/document_number; no API key required",
+    "reliability_notes": "This is the single most authoritative public date for each edition: the day the Federal Register formally published the Unified Agenda. Confirmed there is NO such FR notice for the Fall 2024 (pub_id 202410) edition anywhere in 2024-09-01..2025-10-01 (checked both the exact title and a broader 'Semiannual Regulatory Agenda' term search) -- a genuine publication gap, not a search miss.",
+    "checked": "2026-09-25"
+  }
+]

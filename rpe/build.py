@@ -8,6 +8,7 @@ Usage: python3 -m rpe.build
 """
 import importlib.util
 import json
+import re
 import os
 import sys
 from collections import Counter
@@ -42,6 +43,33 @@ def load_reginfo():
     return mod
 
 
+COMPLETED_RE = re.compile(r"\s*Review completed (\d{4}-\d{2}-\d{2}), decision: ([^.]*)\.?")
+
+
+def split_oira(items):
+    """An OIRA 'received' item must not carry its completion (a later event). Split into two dated items."""
+    out = []
+    for it in items:
+        if it.get("document_type") != "oira_review_received":
+            out.append(it)
+            continue
+        txt = it.get("content_excerpt", "")
+        m = COMPLETED_RE.search(txt)
+        rec = dict(it)
+        rec["content_excerpt"] = COMPLETED_RE.sub("", txt).strip()
+        rec["extracted_claims"] = [c for c in it.get("extracted_claims", []) if "completed" not in c.lower()]
+        out.append(rec)
+        if m:
+            comp = dict(it)
+            comp["document_type"] = "oira_review_concluded"
+            comp["publication_date"] = m.group(1)
+            comp["title"] = it["title"].replace("review received", "review concluded")
+            comp["content_excerpt"] = rec["content_excerpt"].replace("review received", "review concluded on " + m.group(1) + " (received") + f"). Decision: {m.group(2)}."
+            comp["extracted_claims"] = [f"OIRA concluded EO 12866 review on {m.group(1)}; decision: {m.group(2)}."]
+            out.append(comp)
+    return out
+
+
 def merge_reginfo(threads, outcomes, evidence, reginfo):
     """Attach Unified Agenda + OIRA precursor items to US-FR threads, strictly before resolution."""
     added = 0
@@ -61,13 +89,14 @@ def merge_reginfo(threads, outcomes, evidence, reginfo):
             except Exception as e:
                 print(f"reginfo merge failed for {rin}: {e}", file=sys.stderr)
                 continue
+            items = split_oira(items)
             for i, it in enumerate(items):
                 key = (it.get("document_type"), it.get("publication_date"), it.get("title"))
                 if key in seen:
                     continue
                 seen.add(key)
                 it = dict(it)
-                tag = "AG" if it.get("document_type") == "regulatory_agenda_entry" else "OI"
+                tag = {"regulatory_agenda_entry": "AG", "oira_review_received": "OR", "oira_review_concluded": "OC"}.get(it.get("document_type"), "RG")
                 it["evidence_id"] = f"{t['thread_id']}-{tag}{len(seen):02d}"
                 it["thread_id"] = t["thread_id"]
                 it.setdefault("regulator", t["regulator"])

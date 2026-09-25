@@ -554,8 +554,19 @@ def determine_content_direction(anchor: dict, decisive_doc: dict) -> tuple[str, 
         r"final rule", (anchor.get("action") or ""), re.I
     ):
         direction, conf = "different_mechanism", "medium"
-    else:
+    elif not final_abstract and not final_action:
+        # Genuinely no text to go on at all — this is the one case that
+        # warrants dropping below the task's "medium unless clear" default.
         direction, conf = "mixed", "low"
+    else:
+        # No explicit soften/tighten/as-proposed keyword signal found. Per
+        # task instructions this still gets a provisional label at medium
+        # confidence (not a guess at "low"): the direction is genuinely
+        # unclear from automated text matching, but the decisive action
+        # itself (the fact and date of the final rule) is independently
+        # certain from the FR record, and outcome_class/decisive_date/
+        # decisive_document are unaffected by this uncertainty.
+        direction, conf = "mixed", "medium"
 
     if change_note:
         rationale = f"Automated heuristic over final-rule action/abstract text and a 'changes from the proposal' passage located in the govinfo.gov PDF: \"{change_note[:300]}\""
@@ -1155,6 +1166,8 @@ def process_anchor_with_resolution(thread_id, anchor, resolution, sampling_frame
     if stakeholder:
         evidence.append(stakeholder)
         seq += 1
+
+    disambiguate_titles(evidence, outcome)
 
     for ev in evidence:
         if ev["evidence_id"] in EXISTING_EVIDENCE_IDS:

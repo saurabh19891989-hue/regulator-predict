@@ -1,0 +1,22 @@
+[
+ {
+  "regulator": "Federal Register (govinfo/GPO, all US agencies)",
+  "endpoint": "https://www.federalregister.gov/api/v1/documents.json",
+  "content": "Proposed Rule / Rule / Notice documents; used for both anchor NPRM discovery (conditions[type][]=PRORULE&conditions[significant]=1) and outcome linkage (conditions[regulation_id_number]=<RIN>, conditions[docket_id]=<docket>, conditions[term]=<RIN> full-text fallback for bundled withdrawal notices).",
+  "tier": "B (anchor + precursor docs); Tier A material (final rules/withdrawals) is used only in outcomes.jsonl, never in evidence.jsonl",
+  "access_method": "Public JSON REST API, no auth, paginated (per_page=1000), GET with User-Agent header; responses cached under data/raw/us_fr/cache/.",
+  "date_field": "publication_date (official FR print-publication date)",
+  "reliability_notes": "Authoritative US government source of record for the Federal Register. regulations_dot_gov_info.comments_count reflects the count as of FR's last check of regulations.gov (checked_regulationsdotgov_at), which may predate today for older documents; used as-is per protocol.",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "Federal Register full text (via govinfo.gov PDF)",
+  "endpoint": "pdf_url field on each FR document (govinfo.gov/content/pkg/.../pdf/<doc>.pdf)",
+  "content": "Full text of the decisive final rule, used to search for a 'changes from the proposal' / 'summary of changes' passage to support content_direction labeling.",
+  "tier": "n/a (used only to inform outcome-store content_direction/content_summary, never copied into evidence.jsonl)",
+  "access_method": "HTTP GET of the govinfo.gov PDF, text extracted with PyMuPDF (fitz); federalregister.gov's own raw_text_url/body_html_url endpoints returned an access-gated 'Request Access' page from this container and were not usable.",
+  "date_field": "n/a",
+  "reliability_notes": "Best-effort; if the PDF fetch or heading search fails, content_direction falls back to a lower-confidence keyword heuristic over the action/abstract fields only (noted in the outcome record).",
+  "checked": "2026-09-25"
+ }
+]

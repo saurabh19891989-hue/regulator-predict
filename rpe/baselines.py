@@ -30,9 +30,9 @@ def features(thread, items, cutoff):
     latest = max((available_date(e) for e in official), default=thread["anchor_date"])
     since_anchor = max(0, days_between(thread["anchor_date"], c))
     followup_b = sum(1 for e in items if e["tier"] == "B" and d(available_date(e)) > d(thread["anchor_date"])
-                     and e["document_type"] not in ("regulatory_agenda_entry", "oira_review_received"))
-    oira_final = any(e["document_type"] == "oira_review_received" and re.search(r"final", e.get("content_excerpt", "") + e.get("title", ""), re.I)
-                     for e in items)
+                     and e["document_type"] not in ("regulatory_agenda_entry", "oira_review_received", "oira_review_concluded"))
+    oira_final = any(e["document_type"] in ("oira_review_received", "oira_review_concluded")
+                     and re.search(r"Stage:\s*(Interim\s+)?Final", e.get("content_excerpt", ""), re.I) for e in items)
     agenda = sorted([e for e in items if e["document_type"] == "regulatory_agenda_entry"], key=available_date)
     ag_within, ag_long, ag_any = 0, 0, 0
     if agenda:

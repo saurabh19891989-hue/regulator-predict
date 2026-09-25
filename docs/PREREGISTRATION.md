@@ -78,4 +78,7 @@ Snapshots flagged `contaminated_exclude` by audit; threads with outcome label_co
 separately); forecasts failing schema/coherence checks after one re-run.
 
 ## Amendments
-(none)
+- 2026-09-25 A1 (before any forecast): feature-extractor bug fix in `rpe/baselines.py` — `oira_final` now detects the
+  OIRA stage from the "Stage: Final Rule" field of OIRA items (previously a loose regex on the word "final") and
+  includes the new `oira_review_concluded` item type (created when OIRA receipt/completion were split into two
+  separately dated items to remove a leakage path). Heuristic rules and thresholds unchanged.
