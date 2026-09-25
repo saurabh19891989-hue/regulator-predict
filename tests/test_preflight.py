@@ -73,3 +73,17 @@ def test_preflight_rejects_invalidated_run(tmp_path, monkeypatch):
     report = preflight.preflight(run)
     assert not report["ok"]
     assert any("masking failed" in p for p in report["problems"])
+
+
+def test_preflight_rejects_changed_snapshot_index(tmp_path, monkeypatch):
+    run, _, _ = _run(tmp_path, monkeypatch)
+    path = tmp_path / "forecasts" / "runs" / (run + ".json")
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    manifest["snapshot_index_sha256"] = "0" * 64
+    path.write_text(json.dumps(manifest), encoding="utf-8")
+    index = tmp_path / "snapshots" / "index.jsonl"
+    index.parent.mkdir()
+    index.write_text("", encoding="utf-8")
+    report = preflight.preflight(run)
+    assert not report["ok"]
+    assert any("snapshot index SHA-256 mismatch" in p for p in report["problems"])

@@ -10,6 +10,7 @@ Usage:
   python3 -m rpe.ledger status <run>
 """
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -93,6 +94,12 @@ def ingest(run, model, agent_type="statusline-setup[Read,Edit] (isolated)"):
     man = json.load(open(os.path.join(DATA, "forecasts", "runs", f"{run}.json")))
     if man.get("invalidated"):
         raise ValueError(f"run {run} was invalidated: {man.get('invalid_reason', 'no reason recorded')}")
+    expected_index_hash = man.get("snapshot_index_sha256")
+    if expected_index_hash:
+        with open(os.path.join(DATA, "snapshots", "index.jsonl"), "rb") as f:
+            actual_index_hash = hashlib.sha256(f.read()).hexdigest()
+        if actual_index_hash != expected_index_hash:
+            raise ValueError(f"run {run} refers to a different frozen snapshot index")
     done = {(r["run"], r["snapshot_id"]) for r in read_jsonl(LEDGER)}
     prev = _last_hash()
     new, problems, pending = [], [], []

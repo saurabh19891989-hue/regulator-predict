@@ -26,6 +26,15 @@
   packet files have matching raw-byte SHA-256 hashes, no future ISO dates logged, and pending outboxes. Packet copies
   are preserved in `data/forecasts/packets/`. IRDAI revised-source and reconstructed US OIRA provenance remain RAPID
   limitations; no GOLD claim is made. The index SHA remains unchanged after those content-only patches.
+- GPT smoke completed (13:46 UTC): primary `ASTRA_SMOKE2` has 24 distinct forecasts plus 16 aliases; six distinct
+  forecasts self-report outcome recognition. Repaired `ASTRA_MASK_SMOKE3` has eight masked forecasts, two recognised;
+  its comparison is diagnostic only because some identifying wording and FDA information loss remain. Both runs pass
+  non-mutating structural preflight with zero coherence repairs, exact IDs and citations, matching packet/index hashes.
+  Independent review found no expressed post-cutoff fact or cross-snapshot transfer. Outputs are archived in Git;
+  ledger ingestion is held pending the first GOLD/source audit findings, and no headline evaluation has begun.
+- A US-FR GOLD audit has already found sampled decisive dates recorded at printed Federal Register dates despite
+  earlier public-inspection filing, plus several undated comment counts assigned synthetic historical dates. Scope
+  and repair are being checked before scaled forecasts; these findings may require a new frozen index version.
 
 The sections below preserve the original Claude pause state for historical context; their branch, path, and counts
 describe that checkpoint rather than the current Astra run.

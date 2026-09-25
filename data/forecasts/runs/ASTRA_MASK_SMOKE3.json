@@ -1,5 +1,9 @@
 {
  "run": "ASTRA_MASK_SMOKE3",
+ "analysis_role": "partial_masking_diagnostic_only",
+ "forecaster_model": "gpt-6-astra",
+ "reasoning_effort": "high",
+ "snapshot_index_sha256": "eca775c8e0de4eaaf0d8c4fb95de331f9a647d597d3568ec06b41299bdffc7eb",
  "arms": [
   "MASKED_B_PLUS_C"
  ],

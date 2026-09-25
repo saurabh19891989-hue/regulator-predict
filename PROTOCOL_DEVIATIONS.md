@@ -111,3 +111,18 @@ an official's name and exact policy/document titles in claims and excerpts. The 
 rules now redact those names and title phrases while keeping the policy mechanism where possible; a new run with
 fresh model contexts is required. Masking can still remove legitimate content (notably the FDA draft guidance
 topic), so any measured accuracy change must be interpreted with that limitation.
+
+## DEV-011 — Bind each forecast run to the frozen index (2026-09-25 13:46 UTC)
+Recorded after the GPT smoke forecasts but before ingestion or evaluation. Run manifests now include SHA-256 of
+their source snapshot index; preflight and ledger ingestion reject a changed index. The hash was retrofitted to
+`ASTRA_SMOKE2` and `ASTRA_MASK_SMOKE3` after confirming both used the unchanged index recorded in DEV-010.
+The invalidated first masked run remains preserved and cannot be ingested. This protects future scaled runs against
+the index drift described in FINDING-002; it does not alter forecasts or labels.
+
+## FINDING-005 — Repaired masked smoke remains a diagnostic (2026-09-25 13:46 UTC)
+Independent review of `ASTRA_MASK_SMOKE3` found no expressed future facts, invalid citations, or incoherent
+probabilities. Two of eight forecasts self-report outcome recognition. Two FDA guidance forecasts lose most
+substantive topic information when the title is withheld. An RBI excerpt retained an exact draft title despite
+agency-name redaction; a further generic title pattern was added for **future** masked packets, without modifying
+or relabelling the existing SMOKE3 packets. SMOKE3 is a partial-masking sensitivity only, not evidence of anonymity
+or freedom from memorisation. A representative GOLD masking test remains required.

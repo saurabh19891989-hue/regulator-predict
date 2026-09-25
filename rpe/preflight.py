@@ -38,6 +38,16 @@ def preflight(run):
     batch_reports = []
     if manifest.get("run") != run:
         problems.append(f"manifest run is {manifest.get('run')!r}, expected {run!r}")
+    expected_index_hash = manifest.get("snapshot_index_sha256")
+    if expected_index_hash:
+        index_path = os.path.join(DATA, "snapshots", "index.jsonl")
+        try:
+            with open(index_path, "rb") as f:
+                actual_index_hash = hashlib.sha256(f.read()).hexdigest()
+            if actual_index_hash != expected_index_hash:
+                problems.append("frozen snapshot index SHA-256 mismatch")
+        except OSError as exc:
+            problems.append(f"cannot read frozen snapshot index: {exc}")
     if manifest.get("invalidated"):
         problems.append(f"run was invalidated: {manifest.get('invalid_reason', 'no reason recorded')}")
     all_expected = [sid for b in manifest["batches"] for sid in b["snapshot_ids"]]

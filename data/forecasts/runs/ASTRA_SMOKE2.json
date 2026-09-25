@@ -1,5 +1,9 @@
 {
  "run": "ASTRA_SMOKE2",
+ "analysis_role": "smoke_excluded_from_headline",
+ "forecaster_model": "gpt-6-astra",
+ "reasoning_effort": "high",
+ "snapshot_index_sha256": "eca775c8e0de4eaaf0d8c4fb95de331f9a647d597d3568ec06b41299bdffc7eb",
  "arms": [
   "B_ONLY",
   "B_PLUS_C"

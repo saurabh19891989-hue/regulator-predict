@@ -86,8 +86,8 @@
     "RP0-04"
    ],
    "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
-   "status": "PAUSED",
-   "notes": "Only SMOKE1 (10 threads, 40 unique forecasts, Opus 5.5) done; freeze snapshot index before resuming (FINDING-002)"
+   "status": "PARTIAL",
+   "notes": "ASTRA_SMOKE2 completed and archived (24 distinct forecasts, 16 aliases); preflight and temporal audit pass, 6 recognition flags. Ingestion/evaluation await first GOLD source audit; no scaled forecasts yet."
   },
   {
    "id": "RP0-07",
@@ -239,8 +239,8 @@
    "notes": "DEV-008/009/010: Astra cutoff 2026-04-30, post-cutoff packet rule, masked separation; rebuilt index frozen before GPT forecasts"
   }
  ],
- "last_updated": "2026-09-25T13:25Z",
- "programme_state": "ACTIVE on astra/regulatory-predict; controls and index freeze complete, new GPT smoke test next",
+ "last_updated": "2026-09-25T13:46Z",
+ "programme_state": "ACTIVE on astra/regulatory-predict; GPT smoke complete and archived; assessing US-FR source-date issue before scaling",
  "status_vocabulary": [
   "COMPLETE",
   "PARTIAL",

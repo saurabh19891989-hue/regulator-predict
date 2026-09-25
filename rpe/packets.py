@@ -7,6 +7,7 @@ Usage:
   python3 -m rpe.packets make <run_name> --arms ALL --designs T,K --size 20 [--cutoffs T-365,T-180,...] [--threads-file f]
 """
 import argparse
+import hashlib
 import json
 import os
 import random
@@ -94,6 +95,7 @@ MASK_PATTERNS = [
     (r"\bStatement on Developmental and Regulatory Policies\b", "[policy statement]"),
     (r"\bBi-monthly Monetary Policy Statement\b", "[policy statement]"),
     (r"\b(?:Draft\s+)?Government Securities Lending Directions,\s*2023\b", "government securities lending draft"),
+    (r"\b[Dd]raft\s+the Regulator\s+\(([^)]{5,80})\)\s+Directions,\s*\d{4}\b", r"draft on \1"),
     (r"\bDigital Lending\s*[-–—]\s*Transparency in Aggregation of Loan Products from Multiple Lenders\b", "loan aggregation transparency draft"),
     (r"\bDivision of Gastroenterology and Inborn Error Products\b", "a specialist division"),
 ]
@@ -165,7 +167,10 @@ def _render(snap, thread, items):
 
 
 def make_run(run, arms, designs, size, offsets=None, thread_ids=None, strata=None, families=None, seed=0):
-    idx = read_jsonl(os.path.join(DATA, "snapshots", "index.jsonl"))
+    index_path = os.path.join(DATA, "snapshots", "index.jsonl")
+    idx = read_jsonl(index_path)
+    with open(index_path, "rb") as f:
+        index_sha256 = hashlib.sha256(f.read()).hexdigest()
     threads = {t["thread_id"]: t for t in read_jsonl(os.path.join(DATA, "threads", "threads.jsonl"))}
     ev = {e["evidence_id"]: e for e in read_jsonl(os.path.join(DATA, "evidence", "evidence.jsonl"))}
     sel = [r for r in idx if r["available"] and r["arm"] in arms and r["design"] in designs
@@ -195,7 +200,8 @@ def make_run(run, arms, designs, size, offsets=None, thread_ids=None, strata=Non
     outbox = os.path.join(FC_ROOT, run, "outbox")
     os.makedirs(inbox, exist_ok=True)
     os.makedirs(outbox, exist_ok=True)
-    manifest = {"run": run, "arms": arms, "designs": designs, "size": size, "offsets": offsets, "batches": [],
+    manifest = {"run": run, "snapshot_index_sha256": index_sha256,
+                "arms": arms, "designs": designs, "size": size, "offsets": offsets, "batches": [],
                 "aliases": alias}
     for i, b in enumerate(batches, 1):
         bid = f"{run}_b{i:03d}"

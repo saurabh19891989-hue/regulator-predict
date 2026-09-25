@@ -15,3 +15,9 @@ Actual invocation count, outputs, and observed usage will be appended after the 
 - Six fresh Astra high-effort CLI calls completed: 4 primary batches and 2 masked batches. CLI reported 52,431 total tokens across them (input, output and reasoning combined); actual account billing is unavailable.
 - The primary run produced 24 distinct forecasts. Six reported `recognised_outcome=true`; these stay flagged for sensitivity analysis.
 - The first masked run produced 8 forecasts but is invalid for masking comparison under FINDING-004. It is preserved without ledger ingestion. Two fresh masked calls are planned after repair, with about 5,800 packet input tokens plus overhead. No scaled forecasts have begun.
+
+## Repaired masked smoke, 2026-09-25 13:46 UTC
+
+- Two additional fresh Astra high-effort calls (`ASTRA_MASK_SMOKE3`) completed. CLI reported 6,647 and 10,242 tokens, respectively. Total across all eight smoke calls: **69,320 reported tokens**; actual account billing is unavailable.
+- Eight new masked forecasts passed structural preflight. Two self-report outcome recognition. This run is diagnostic only under FINDING-005.
+- The original six-call estimate was exceeded by two repair calls, before any scaled run. Future batch estimates should include a contingency for packet audit repairs.

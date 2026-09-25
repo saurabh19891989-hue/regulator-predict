@@ -194,6 +194,8 @@ def test_masked_arm_is_not_aliased_to_unmasked(dataset):
     redacted = mask_text("Shri Jayant Kumar Dash discussed the Digital Lending – Transparency in Aggregation "
                          "of Loan Products from Multiple Lenders draft", {"regulator": "RBI"})
     assert "Jayant" not in redacted and "Digital Lending – Transparency" not in redacted
+    assert "Directions, 2023" not in mask_text(
+        "Draft the Regulator (Government Securities Lending) Directions, 2023", {"regulator": "RBI"})
 
 
 def test_evaluator_end_to_end_on_synthetic_forecasts(dataset):
