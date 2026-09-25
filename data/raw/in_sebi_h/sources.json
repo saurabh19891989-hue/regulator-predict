@@ -1,0 +1,42 @@
+[
+ {
+  "regulator": "SEBI",
+  "endpoint": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=4&smid=35&ssid=38",
+  "content": "Reports & Statistics > Reports > 'Reports for Public Comments' listing (SEBI's consultation-paper index; sid=4 section 'Reports & Statistics', ssid=38 sub-section 'Reports', smid=35 sub-sub-section 'Reports for Public Comments'). This is the listing sampled for the IN-SEBI-H frame.",
+  "tier": "B",
+  "access_method": "The rendered page paginates via client-side JS. The underlying AJAX listing endpoint is POST https://www.sebi.gov.in/sebiweb/ajax/home/getnewslistinfo.jsp with form fields nextValue, next ('s' for first search / 'n' for page nav), search, fromDate=DD-MM-YYYY, toDate=DD-MM-YYYY, fromYear, toYear, deptId, sid=4, ssid=38, smid=35, ssidhidden, intmid=-1, sText, ssText, smText, doDirect(=page index, 0-based). Requires a browser User-Agent, Referer set to the listing page URL, and X-Requested-With: XMLHttpRequest, or SEBI's WAF returns an 'Unauthorized Request Blocked' page. Response is raw HTML rows (Date, Title+URL); each detail page is a static SEBI page under /reports-and-statistics/reports/<mon-yyyy>/<slug>_<id>.html carrying the PDF and a dateline.",
+  "date_field": "listing 'Date' column (also cross-checked against each consultation paper PDF's own dateline where the PDF was retrievable)",
+  "reliability_notes": "Confirmed the listing filtered to fromDate=01-01-2022 toDate=31-03-2024 returns exactly 100 records across 4 pages of 25, in descending date order (Mar 19, 2024 down to Jan 07, 2022). This 100-record set is the sampling frame for IN-SEBI-H. A minority of listing rows are 'Extension of timeline for submission of public comments on...' notices or an 'Addendum to Consultation Paper on...' -- these are not new policy proposals and were skipped per the executor guide's outcome-independent replacement rule.",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "SEBI",
+  "endpoint": "https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=6&ssid=23&smid=0",
+  "content": "SEBI Press Releases listing (used to find board-meeting outcome press releases and other Tier C statements)",
+  "tier": "C",
+  "access_method": "Same paginated listing pattern as the Reports listing; also reachable via WebSearch site:sebi.gov.in press-releases for targeted topic+date queries, which was the primary method used here (faster than paginating).",
+  "date_field": "listing 'Date' column / press-release PDF dateline",
+  "reliability_notes": "SEBI board-meeting outcome PRs are numbered (PR No. NN/YYYY) and dated; used as the primary decisive-action source for circular/regulation-adoption outcomes when a formal circular postdated the board PR.",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "SEBI",
+  "endpoint": "https://www.sebi.gov.in/legal/circulars.html (and topic-specific WebSearch site:sebi.gov.in circulars)",
+  "content": "SEBI Circulars listing (Tier A outcome source when a circular, not a board PR, is the first decisive document)",
+  "tier": "A_outcome_only",
+  "access_method": "WebSearch site:sebi.gov.in circular <topic>; circulars carry a SEBI/HO/... reference number and date at the top.",
+  "date_field": "circular reference-number date line",
+  "reliability_notes": "Used only to populate outcomes.jsonl, never evidence.jsonl.",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "SEBI",
+  "endpoint": "https://news.google.com/rss/search?q=Sebi+<topic>+after:YYYY-MM-DD+before:YYYY-MM-DD&hl=en-IN&gl=IN&ceid=IN:en",
+  "content": "Tier D reputable contemporaneous news via Google News RSS, date-scoped strictly before each thread's decisive date",
+  "tier": "D",
+  "access_method": "curl -sSL -A Mozilla/5.0 <rss url>; parsed <title>/<pubDate>/<source> only, article bodies not fetched (avoids revised-page leakage).",
+  "date_field": "RSS pubDate",
+  "reliability_notes": "Headlines reporting the eventual board/circular decision were discarded; only headlines dated strictly before the decisive date and describing the paper as a proposal/consultation were kept.",
+  "checked": "2026-09-25"
+ }
+]

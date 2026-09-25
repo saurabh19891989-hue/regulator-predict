@@ -4,3 +4,6 @@ __pycache__/
 data/raw/**/cache/
 *.pdf
 .venv/
+data/raw/us_reginfo/agenda_entries.jsonl
+data/raw/us_reginfo/*.xml
+data/raw/us_reginfo/*.zip
