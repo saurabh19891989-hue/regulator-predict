@@ -1,0 +1,124 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "outcome.schema.json",
+ "title": "thread_outcome (SEALED \u2014 never shown to forecasters)",
+ "version": "1.0.0",
+ "type": "object",
+ "required": [
+  "thread_id",
+  "outcome_class",
+  "decisive_action",
+  "decisive_date",
+  "withdrawal_date",
+  "censor_date",
+  "content_direction",
+  "content_summary",
+  "outcome_sources",
+  "label_confidence"
+ ],
+ "properties": {
+  "thread_id": {
+   "type": "string"
+  },
+  "outcome_class": {
+   "enum": [
+    "action_as_proposed",
+    "action_softened",
+    "action_tightened",
+    "action_mixed",
+    "withdrawn",
+    "stalled_no_action",
+    "unresolved"
+   ]
+  },
+  "decisive_action": {
+   "type": "boolean"
+  },
+  "decisive_date": {
+   "anyOf": [
+    {
+     "type": "string",
+     "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "decisive_document_title": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "decisive_document_url": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "decisive_document_type": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "withdrawal_date": {
+   "anyOf": [
+    {
+     "type": "string",
+     "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "censor_date": {
+   "type": "string",
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+  },
+  "content_direction": {
+   "enum": [
+    "as_proposed",
+    "softened",
+    "tightened",
+    "mixed",
+    "different_mechanism",
+    "na"
+   ]
+  },
+  "content_summary": {
+   "type": "string"
+  },
+  "key_parameters": {
+   "type": "array"
+  },
+  "outcome_sources": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "label_confidence": {
+   "enum": [
+    "high",
+    "medium",
+    "low"
+   ]
+  },
+  "labeled_by": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  }
+ },
+ "additionalProperties": true
+}

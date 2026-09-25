@@ -1,0 +1,110 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "thread.schema.json",
+ "title": "regulatory_thread",
+ "version": "1.0.0",
+ "type": "object",
+ "required": [
+  "thread_id",
+  "workstream",
+  "regulator",
+  "jurisdiction",
+  "neutral_title",
+  "issue_summary_neutral",
+  "process_type",
+  "anchor_evidence_id",
+  "anchor_date",
+  "sampling_frame",
+  "sampling_method",
+  "quality_tier_proposed"
+ ],
+ "properties": {
+  "thread_id": {
+   "type": "string",
+   "pattern": "^[A-Z]{2}-[A-Z0-9]+-[A-Z0-9-]+$"
+  },
+  "workstream": {
+   "type": "string"
+  },
+  "regulator": {
+   "type": "string"
+  },
+  "jurisdiction": {
+   "type": "string"
+  },
+  "neutral_title": {
+   "type": "string",
+   "minLength": 5,
+   "maxLength": 200
+  },
+  "issue_summary_neutral": {
+   "type": "string",
+   "minLength": 20,
+   "maxLength": 1500
+  },
+  "process_type": {
+   "enum": [
+    "nprm_to_final",
+    "consultation_to_regulation",
+    "draft_direction_to_final",
+    "exposure_draft_to_regulation",
+    "consultation_to_recommendation",
+    "draft_guidance_to_final",
+    "investigation_to_duty",
+    "other"
+   ]
+  },
+  "anchor_evidence_id": {
+   "type": "string"
+  },
+  "anchor_date": {
+   "type": "string",
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+  },
+  "sampling_frame": {
+   "type": "string"
+  },
+  "sampling_method": {
+   "enum": [
+    "census",
+    "systematic",
+    "random",
+    "purposive"
+   ]
+  },
+  "quality_tier_proposed": {
+   "enum": [
+    "RAPID",
+    "GOLD_CANDIDATE"
+   ]
+  },
+  "created_by": {
+   "type": "string"
+  },
+  "notes": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "agency": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "rin": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "docket": {
+   "type": [
+    "string",
+    "null"
+   ]
+  }
+ },
+ "additionalProperties": true
+}

@@ -1,0 +1,129 @@
+{
+  "project": "Regulatory Predictive Precursor Engine",
+  "gate": "GATE_0_BACKTEST",
+  "tickets": [
+    {
+      "id": "RP0-01",
+      "title": "Initialize schemas and ledger",
+      "owner": "manager",
+      "model": "opus-5.5",
+      "effort": "medium",
+      "depends_on": [],
+      "done_when": "Evidence, thread, forecast, outcome and audit schemas are versioned and tests pass."
+    },
+    {
+      "id": "RP0-02",
+      "title": "Build source registry",
+      "owner": "executors",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-01"
+      ],
+      "done_when": "Pilot regulator Tier B/C endpoints and access methods are recorded."
+    },
+    {
+      "id": "RP0-03",
+      "title": "Discover 150\u2013250 candidate threads",
+      "owner": "parallel_executors",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-01"
+      ],
+      "done_when": "Candidate set includes positive and stalled/no-action/altered threads."
+    },
+    {
+      "id": "RP0-04",
+      "title": "Reconstruct RAPID timelines",
+      "owner": "parallel_executors",
+      "model": "sonnet-5",
+      "effort": "high_on_ambiguity",
+      "depends_on": [
+        "RP0-03"
+      ],
+      "done_when": "100\u2013200 usable threads are reconstructed if evidence availability permits."
+    },
+    {
+      "id": "RP0-05",
+      "title": "Build 30\u201350 GOLD threads",
+      "owner": "research_managers",
+      "model": "opus-5.5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-03"
+      ],
+      "done_when": "Point-in-time versions and leakage risks are strongly verified."
+    },
+    {
+      "id": "RP0-06",
+      "title": "Blind cutoff forecasts",
+      "owner": "blind_forecasters",
+      "model": "opus-5.5",
+      "effort": "medium_high",
+      "depends_on": [
+        "RP0-04"
+      ],
+      "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure."
+    },
+    {
+      "id": "RP0-07",
+      "title": "Run evidence ablations",
+      "owner": "forecast_workers",
+      "model": "sonnet-5",
+      "effort": "high",
+      "depends_on": [
+        "RP0-04"
+      ],
+      "done_when": "B/C/stakeholder/news/latest-vs-trajectory comparisons are complete."
+    },
+    {
+      "id": "RP0-08",
+      "title": "Leakage red-team",
+      "owner": "auditors",
+      "model": "opus-5.5",
+      "effort": "high",
+      "depends_on": [
+        "RP0-05",
+        "RP0-06"
+      ],
+      "done_when": "GOLD and risk-weighted RAPID snapshots have contamination verdicts."
+    },
+    {
+      "id": "RP0-09",
+      "title": "Compute evaluation metrics",
+      "owner": "evaluator",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-06",
+        "RP0-07",
+        "RP0-08"
+      ],
+      "done_when": "Calibration, action, timing, content, lead-time and ablation metrics are reproducible."
+    },
+    {
+      "id": "RP0-10",
+      "title": "Independent hard-case adjudication",
+      "owner": "adjudicator",
+      "model": "fable-5.1",
+      "effort": "high",
+      "depends_on": [
+        "RP0-08"
+      ],
+      "optional": true,
+      "budget_rule": "Use only on 5\u201310 disputed/high-impact cases and only if budget remains."
+    },
+    {
+      "id": "RP0-11",
+      "title": "GO/NO-GO report",
+      "owner": "director",
+      "model": "opus-5.5",
+      "effort": "high",
+      "depends_on": [
+        "RP0-09"
+      ],
+      "done_when": "Six core predictive questions are answered and next architecture is justified by evidence."
+    }
+  ]
+}

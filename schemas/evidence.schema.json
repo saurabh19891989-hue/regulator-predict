@@ -1,0 +1,120 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "evidence.schema.json",
+ "title": "evidence_item",
+ "version": "1.0.0",
+ "type": "object",
+ "required": [
+  "evidence_id",
+  "thread_id",
+  "regulator",
+  "jurisdiction",
+  "title",
+  "source_url",
+  "publication_date",
+  "retrieval_date",
+  "document_type",
+  "tier",
+  "original_or_revised",
+  "version_confidence",
+  "date_verification",
+  "extracted_claims",
+  "content_excerpt"
+ ],
+ "properties": {
+  "evidence_id": {
+   "type": "string"
+  },
+  "thread_id": {
+   "type": "string"
+  },
+  "regulator": {
+   "type": "string"
+  },
+  "jurisdiction": {
+   "type": "string"
+  },
+  "title": {
+   "type": "string",
+   "minLength": 3
+  },
+  "source_url": {
+   "type": "string",
+   "pattern": "^https?://"
+  },
+  "publication_date": {
+   "type": "string",
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+  },
+  "first_known_date": {
+   "anyOf": [
+    {
+     "type": "string",
+     "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    {
+     "type": "null"
+    }
+   ]
+  },
+  "retrieval_date": {
+   "type": "string",
+   "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+  },
+  "document_type": {
+   "type": "string"
+  },
+  "tier": {
+   "enum": [
+    "B",
+    "C",
+    "S",
+    "D"
+   ]
+  },
+  "original_or_revised": {
+   "enum": [
+    "original",
+    "revised",
+    "unknown"
+   ]
+  },
+  "version_confidence": {
+   "enum": [
+    "high",
+    "medium",
+    "low"
+   ]
+  },
+  "date_verification": {
+   "type": "string",
+   "minLength": 5
+  },
+  "extracted_claims": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "content_excerpt": {
+   "type": "string",
+   "maxLength": 4000
+  },
+  "source_hash": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "stored_copy": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "leakage_flags": {
+   "type": "array"
+  }
+ },
+ "additionalProperties": true
+}

@@ -1,0 +1,157 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "forecast.schema.json",
+ "title": "frozen_forecast",
+ "version": "1.0.0",
+ "type": "object",
+ "required": [
+  "snapshot_id",
+  "action_probability_180d",
+  "timing",
+  "delay_or_no_action_probability",
+  "content_direction_probs",
+  "policy_scenarios",
+  "confidence_notes",
+  "missing_information",
+  "recognised_outcome"
+ ],
+ "properties": {
+  "snapshot_id": {
+   "type": "string"
+  },
+  "action_probability_180d": {
+   "type": "number",
+   "minimum": 0,
+   "maximum": 1
+  },
+  "timing": {
+   "type": "object",
+   "required": [
+    "7d",
+    "30d",
+    "60d",
+    "90d",
+    "180d"
+   ],
+   "properties": {
+    "7d": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "30d": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "60d": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "90d": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "180d": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    }
+   }
+  },
+  "next_step_probabilities": {
+   "type": "object"
+  },
+  "delay_or_no_action_probability": {
+   "type": "number",
+   "minimum": 0,
+   "maximum": 1
+  },
+  "content_direction_probs": {
+   "type": "object",
+   "required": [
+    "as_proposed",
+    "softened",
+    "tightened",
+    "mixed",
+    "different_mechanism"
+   ],
+   "properties": {
+    "as_proposed": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "softened": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "tightened": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "mixed": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    },
+    "different_mechanism": {
+     "type": "number",
+     "minimum": 0,
+     "maximum": 1
+    }
+   }
+  },
+  "policy_scenarios": {
+   "type": "array",
+   "maxItems": 4,
+   "items": {
+    "type": "object",
+    "required": [
+     "scenario",
+     "probability",
+     "mechanism"
+    ],
+    "properties": {
+     "scenario": {
+      "type": "string"
+     },
+     "probability": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+     },
+     "mechanism": {
+      "type": "string"
+     },
+     "parameter_ranges": {
+      "type": "object"
+     },
+     "supporting_evidence_ids": {
+      "type": "array"
+     },
+     "contrary_evidence_ids": {
+      "type": "array"
+     }
+    }
+   }
+  },
+  "confidence_notes": {
+   "type": "string"
+  },
+  "missing_information": {
+   "type": "array"
+  },
+  "recognised_outcome": {
+   "type": "boolean"
+  },
+  "insufficient_evidence": {
+   "type": "boolean"
+  }
+ },
+ "additionalProperties": true
+}
