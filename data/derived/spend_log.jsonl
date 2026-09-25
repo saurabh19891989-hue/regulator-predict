@@ -1,0 +1,2 @@
+{"ts": "2026-09-25T11:52Z", "who": "test-agent haiku (isolation check)", "tokens": 11546, "model": "haiku-4.5", "est_usd": 0.02}
+{"ts": "2026-09-25T12:30Z", "who": "director setup (estimate)", "tokens": null, "model": "opus-5.5", "est_usd": 3.0}
