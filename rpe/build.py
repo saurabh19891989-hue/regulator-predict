@@ -85,6 +85,56 @@ def merge_reginfo(threads, outcomes, evidence, reginfo):
     return added
 
 
+ALLOWED = {
+    "set_evidence": {"publication_date", "first_known_date", "extracted_claims", "content_excerpt", "tier", "title",
+                     "original_or_revised", "version_confidence"},
+    "set_outcome": {"decisive_date", "decisive_action", "outcome_class", "withdrawal_date", "content_direction",
+                    "content_label_confidence", "label_confidence"},
+    "set_thread": {"neutral_title", "issue_summary_neutral"},
+}
+
+
+def apply_patches(threads, evidence, outcomes, excluded):
+    """Apply auditor patches (data/audits/patches/*.jsonl) on top of executor data. Returns patched lists + log."""
+    pdir = os.path.join(DATA, "audits", "patches")
+    log = []
+    if not os.path.isdir(pdir):
+        return threads, evidence, outcomes, log
+    tm = {t["thread_id"]: t for t in threads}
+    om = {o["thread_id"]: o for o in outcomes}
+    em = {e["evidence_id"]: e for e in evidence}
+    dropped, excl = set(), set()
+    for fn in sorted(os.listdir(pdir)):
+        for p in read_jsonl(os.path.join(pdir, fn)):
+            op = p.get("op")
+            ok = False
+            if op == "set_evidence" and p.get("evidence_id") in em and p.get("field") in ALLOWED[op]:
+                em[p["evidence_id"]][p["field"]] = p["value"]; ok = True
+            elif op == "set_outcome" and p.get("thread_id") in om and p.get("field") in ALLOWED[op]:
+                om[p["thread_id"]][p["field"]] = p["value"]; ok = True
+            elif op == "set_thread" and p.get("thread_id") in tm and p.get("field") in ALLOWED[op]:
+                tm[p["thread_id"]][p["field"]] = p["value"]; ok = True
+            elif op == "drop_evidence" and p.get("evidence_id") in em:
+                dropped.add(p["evidence_id"]); ok = True
+            elif op == "exclude_thread" and p.get("thread_id") in tm:
+                excl.add(p["thread_id"]); ok = True
+            log.append({**p, "applied": ok, "file": fn})
+    for tid in excl:
+        excluded.append({"thread_id": tid, "reason": "audit_exclude_patch"})
+    threads = [t for t in threads if t["thread_id"] not in excl]
+    outcomes = [o for o in outcomes if o["thread_id"] not in excl]
+    anchors = {t["anchor_evidence_id"] for t in threads}
+    evidence = [e for e in evidence if e["thread_id"] not in excl and (e["evidence_id"] not in dropped or e["evidence_id"] in anchors)]
+    for t in threads:  # keep anchor_date consistent with a patched anchor item; recompute stratum
+        a = em.get(t["anchor_evidence_id"])
+        if a:
+            t["anchor_date"] = a["publication_date"]
+        o = om[t["thread_id"]]
+        rd = resolution_date(o)
+        t["stratum"] = "CLEAN" if (rd is None or d(rd) >= d(CLEAN_BOUNDARY)) else "HIST"
+    return threads, evidence, outcomes, log
+
+
 def build(verbose=True):
     raw = os.path.join(DATA, "raw")
     threads, evidence, outcomes, excluded = [], [], [], []
@@ -129,13 +179,46 @@ def build(verbose=True):
     reginfo = load_reginfo()
     added = merge_reginfo(threads, outcomes, evidence, reginfo) if reginfo else 0
 
-    # apply GOLD promotions from audits, if any
-    gold_path = os.path.join(DATA, "audits", "gold_promotions.json")
-    if os.path.exists(gold_path):
-        gold = set(json.load(open(gold_path)))
-        for t in threads:
-            if t["thread_id"] in gold:
-                t["quality"] = "GOLD"
+    threads, evidence, outcomes, patch_log = apply_patches(threads, evidence, outcomes, excluded)
+    # re-lint after patches: invalid outcomes exclude the thread; post-outcome evidence is dropped (logged)
+    from .lint import lint_evidence, lint_outcome
+    omap = {o["thread_id"]: o for o in outcomes}
+    bad = {t["thread_id"] for t in threads if any(l == "error" for l, _ in lint_outcome(omap[t["thread_id"]], t))}
+    for tid in bad:
+        excluded.append({"thread_id": tid, "reason": "outcome_invalid_after_patch"})
+    threads = [t for t in threads if t["thread_id"] not in bad]
+    outcomes = [o for o in outcomes if o["thread_id"] not in bad]
+    evidence = [e for e in evidence if e["thread_id"] not in bad]
+    kept_ev = []
+    for e in evidence:
+        errs = [m for lvl, m in lint_evidence(e, omap.get(e["thread_id"])) if lvl == "error"]
+        if errs:
+            patch_log.append({"op": "auto_drop_evidence", "evidence_id": e["evidence_id"], "reason": errs[0]})
+        else:
+            kept_ev.append(e)
+    evidence = kept_ev
+    # GOLD = audited clean/minor-fixed + gold_eligible; audit exclusions honoured
+    audits = []
+    adir = os.path.join(DATA, "audits")
+    for fn in sorted(os.listdir(adir)) if os.path.isdir(adir) else []:
+        if fn.startswith("audit_") and fn.endswith(".jsonl"):
+            audits += read_jsonl(os.path.join(adir, fn))
+    latest = {}
+    for a in audits:
+        latest[a["thread_id"]] = a
+    drop = {tid for tid, a in latest.items() if a["verdict"] == "contaminated_exclude"}
+    for t in threads:
+        a = latest.get(t["thread_id"])
+        t["audited"] = a is not None
+        t["audit_verdict"] = a["verdict"] if a else None
+        if a and a["verdict"] in ("clean", "minor_issue_fixed", "contaminated_rebuild") and a.get("gold_eligible"):
+            t["quality"] = "GOLD"
+    for tid in drop:
+        excluded.append({"thread_id": tid, "reason": "audit_contaminated_exclude"})
+    threads = [t for t in threads if t["thread_id"] not in drop]
+    outcomes = [o for o in outcomes if o["thread_id"] not in drop]
+    evidence = [e for e in evidence if e["thread_id"] not in drop]
+    write_jsonl(os.path.join(DATA, "derived", "patch_log.jsonl"), patch_log)
 
     write_jsonl(os.path.join(DATA, "threads", "threads.jsonl"), threads)
     write_jsonl(os.path.join(DATA, "evidence", "evidence.jsonl"), evidence)
@@ -150,6 +233,10 @@ def build(verbose=True):
         "negatives": sum(1 for o in outcomes if not o["decisive_action"]),
         "outcome_classes": dict(Counter(o["outcome_class"] for o in outcomes)),
         "tiers": dict(Counter(e["tier"] for e in evidence)),
+        "by_quality": dict(Counter(t["quality"] for t in threads)),
+        "audited": sum(1 for t in threads if t.get("audited")),
+        "patches_applied": sum(1 for x in patch_log if x.get("applied")),
+        "auto_dropped_evidence": sum(1 for x in patch_log if x.get("op") == "auto_drop_evidence"),
     }
     json.dump(summary, open(os.path.join(DATA, "derived", "build_summary.json"), "w"), indent=1)
     if verbose:

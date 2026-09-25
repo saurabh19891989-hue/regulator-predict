@@ -104,3 +104,19 @@ def test_metrics_sanity():
     rng = np.random.default_rng(0); p = rng.uniform(0.01, 0.99, 5000); y = (rng.uniform(size=5000) < p).astype(int)
     s, i = cal_slope(p, y)
     assert 0.85 < s < 1.15 and abs(i) < 0.15
+
+
+def test_audit_patch_moves_decisive_date_and_drops_leaked_evidence(dataset):
+    import json as _j
+    from rpe.build import build
+    pdir = os.path.join(dataset["root"], "audits", "patches")
+    os.makedirs(pdir, exist_ok=True)
+    # thread 0001: anchor 2022-02-10, E02 2022-03-20 (C), E03 2022-04-05 (D), decisive 2023-02-15 → move to 2022-04-01
+    with open(os.path.join(pdir, "test.jsonl"), "w") as f:
+        f.write(_j.dumps({"op": "set_outcome", "thread_id": "IN-TST-H-0001", "field": "decisive_date", "value": "2022-04-01", "reason": "earlier board approval"}) + "\n")
+    build(verbose=False)
+    ev = [e for e in read_jsonl(os.path.join(dataset["root"], "evidence", "evidence.jsonl")) if e["thread_id"] == "IN-TST-H-0001"]
+    assert all(d(e["publication_date"]) < d("2022-04-01") for e in ev)
+    assert any(e["evidence_id"].endswith("E02") for e in ev) and not any(e["evidence_id"].endswith("E03") for e in ev)
+    os.remove(os.path.join(pdir, "test.jsonl"))
+    build(verbose=False)
