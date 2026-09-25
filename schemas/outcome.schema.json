@@ -2,7 +2,7 @@
  "$schema": "https://json-schema.org/draft/2020-12/schema",
  "$id": "outcome.schema.json",
  "title": "thread_outcome (SEALED \u2014 never shown to forecasters)",
- "version": "1.0.0",
+ "version": "1.1.0",
  "type": "object",
  "required": [
   "thread_id",
@@ -117,6 +117,13 @@
    "type": [
     "string",
     "null"
+   ]
+  },
+  "content_label_confidence": {
+   "enum": [
+    "high",
+    "medium",
+    "low"
    ]
   }
  },

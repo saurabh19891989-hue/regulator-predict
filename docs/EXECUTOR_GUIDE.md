@@ -106,8 +106,11 @@ Point-in-time rules (NO HINDSIGHT LEAKAGE):
 - `content_direction` (relative to the anchor proposal) ∈ `as_proposed`, `softened`, `tightened`, `mixed`,
   `different_mechanism`, `na` (use `na` when there is no action).
 - `censor_date` = the date you verified the outcome (today: 2026-09-25).
-- If you cannot determine the outcome with at least medium confidence, keep the thread but set
-  `label_confidence: "low"` and explain in `notes` — do not guess.
+- `label_confidence` refers ONLY to the action label (whether/when the decisive action or withdrawal happened).
+  Put confidence in content_direction/key_parameters in a separate field `content_label_confidence`
+  (high|medium|low). Never lower `label_confidence` because content is uncertain.
+- If you cannot determine the action outcome with at least medium confidence, keep the thread but set
+  `label_confidence: "low"` and explain in `notes` — do not guess (low-confidence threads are excluded).
 
 ## 6. Source registry (`sources.json`)
 ```json

@@ -84,6 +84,11 @@ def render_snapshot(snap, thread, items):
     if not items:
         lines.append("Evidence: none provided for this snapshot.")
         return "\n".join(lines)
+    agenda = [e for e in items if e["document_type"] == "regulatory_agenda_entry"]
+    if len(agenda) > 4:  # cost control: keep the 4 most recent agenda editions
+        drop = {id(e) for e in agenda[:-4]}
+        items = [e for e in items if id(e) not in drop]
+        lines.append(f"(Note: {len(agenda) - 4} earlier regulatory-agenda editions omitted; the 4 most recent are shown.)")
     lines.append(f"Evidence available as of the cutoff ({len(items)} item(s), chronological):")
     for i, e in enumerate(items, 1):
         dom = e["source_url"].split("/")[2] if "://" in e["source_url"] else ""

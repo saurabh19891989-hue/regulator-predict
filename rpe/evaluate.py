@@ -257,7 +257,8 @@ def lead_time(rows):
 def content_block(rows, outcomes):
     """content_direction for positives: model vs leave-one-thread-out base-rate distribution."""
     om = {o["thread_id"]: o for o in outcomes}
-    pos = [r for r in rows if om[r["thread_id"]]["decisive_action"] and om[r["thread_id"]]["content_direction"] in CONTENT]
+    pos = [r for r in rows if om[r["thread_id"]]["decisive_action"] and om[r["thread_id"]]["content_direction"] in CONTENT
+           and om[r["thread_id"]].get("content_label_confidence", "medium") != "low"]
     if len(pos) < 5:
         return {"n": len(pos)}
     thr = sorted({r["thread_id"] for r in pos})
