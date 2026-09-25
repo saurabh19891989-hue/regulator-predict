@@ -29,34 +29,52 @@ Sampled-slot RIN-collision skip log (first 30 shown):
 - target_index=195 skipped 2020-06797: sampled RIN already has a thread; advancing to next eligible doc
 
 ## Frame C — post-model-cutoff holdout, 2025-06-01..2026-06-30
-- Population seen (type=PRORULE, significant=1): **None**
-- Eligible genuine NPRMs after exclusion filter (census): **None**
-- Of eligible anchors, outcome resolved BEFORE 2026-07-01: **None** (excluded from the C holdout, re-emitted as Frame X historical threads instead)
-- Kept for the C holdout population (resolved on/after 2026-07-01, or still unresolved at 2026-09-24): **None**
-- Capped at 60: sampling_method=census (kept population <= cap)
-- Threads built: **None** (ids US-FR-C-0001..US-FR-C-0000)
-- Outcome classes: {}
-- Positives (decisive_action=true): 0  Negatives/unresolved: 0 (0% negative/unresolved controls)
+- Population seen (type=PRORULE, significant=1): **208**
+- Eligible genuine NPRMs after exclusion filter (census): **131**
+- Of eligible anchors, outcome resolved BEFORE 2026-07-01: **34** (excluded from the C holdout, re-emitted as Frame X historical threads instead)
+- Kept for the C holdout population (resolved on/after 2026-07-01, or still unresolved at 2026-09-24): **97**
+- Capped at 60: sampling_method=systematic (step=1, start_offset=0)
+- Threads built: **60** (ids US-FR-C-0001..US-FR-C-0060)
+- Outcome classes: {"unresolved": 47, "action_mixed": 12, "action_softened": 1}
+- Positives (decisive_action=true): 13  Negatives/unresolved: 47 (78% negative/unresolved controls)
 
 Eligibility-category breakdown of the full Frame C population:
+- NPRM: 131
+- WITHDRAWAL: 19
+- COMMENT_EXTENSION: 19
+- ANPRM: 14
+- COMMENT_REOPENING: 5
+- EMPTY_ACTION: 4
+- SNPRM: 4
+- CORRECTION: 3
+- CONCEPT_RELEASE: 3
+- NON_NPRM_NOTICE: 2
+- HEARING_NOTICE: 2
+- RFI_ONLY: 1
+- PROCEDURAL_ORDER: 1
 
 ## Frame X — Frame C anchors resolved before 2026-07-01 (re-used as ordinary historical threads)
-- Threads built: **None** (ids US-FR-X-0001..US-FR-X-0000)
-- Outcome classes: {}
-- Positives (decisive_action=true): 0  Negatives: 0
+- Threads built: **34** (ids US-FR-X-0001..US-FR-X-0034)
+- Outcome classes: {"action_mixed": 23, "action_softened": 6, "action_tightened": 2, "action_as_proposed": 2, "withdrawn": 1}
+- Positives (decisive_action=true): 33  Negatives: 1
 - These are genuine, resolved NPRM->outcome threads (mostly fast-moving deregulatory actions from the 2025 administration finalized or withdrawn within weeks of proposal); they are excluded from the Frame C *holdout* only because their outcome could in principle have leaked into an LLM's training/browsing exposure before the model knowledge cutoff windows this project cares about, not because they are lower quality.
 
 ## Linkage method
 For each anchor, related documents were pulled by (1) `conditions[regulation_id_number]` for every RIN on the anchor, (2) `conditions[docket_id]` for its docket, and — only if neither found a decisive final rule or withdrawal — (3) a `conditions[term]=<RIN>` full-text-search fallback, which is required because some agency-wide withdrawal notices (e.g. SEC's 2025-06-17 'Withdrawal of Proposed Regulatory Actions' covering 14 RINs) do not carry the individual RINs in their own FR metadata (`regulation_id_numbers: []`) even though the RINs are printed in the document text; verified against https://www.federalregister.gov/documents/2025/06/17/2025-11110/withdrawal-of-proposed-regulatory-actions during development of this collector.
 
-A later document counts as the decisive final action only if type=Rule and its `action` text matches final/interim-final/direct-final rule language, excluding corrections, correcting amendments, effective-date delays/stays, and technical/administrative amendments. A withdrawal is any later document (of any type) whose `action` or `title` contains withdrawal/termination language, excluding Unified Agenda entries.
+A later document counts as the decisive final action only if type=Rule and its `action` text matches final/interim-final/direct-final rule language, excluding corrections, correcting amendments, effective-date delays/stays, and technical/administrative amendments. A withdrawal is any later document (of any type) whose `action` or `title` contains withdrawal/termination language, excluding Unified Agenda entries. A candidate must be published strictly AFTER the anchor's publication_date to count as decisive: several agencies (NRC, DOE, FWS observed in this run) publish a 'direct final rule' the SAME DAY as a companion proposed rule (the proposed rule becomes operative only if the direct final rule is withdrawn due to adverse comment); such same-day companions cannot represent a comment-informed resolution of the anchor without breaking the point-in-time anchor-before-outcome invariant, so anchors of this kind fall through to stalled_no_action/unresolved rather than being linked to their same-day companion.
+
+## label_confidence vs content_label_confidence
+Per the Director's schema clarification received during this run (schemas/outcome.schema.json bumped to 1.1.0, docs/EXECUTOR_GUIDE.md section 5 updated): `label_confidence` refers ONLY to the action/timing label — whether and when a decisive action or withdrawal occurred (or, for stalled_no_action/unresolved, confidence that no such document exists by the censor date). It is never lowered because content_direction is uncertain. A separate `content_label_confidence` field holds confidence in content_direction/key_parameters specifically. Every outcome record in this workstream carries both fields.
+
+`label_confidence` is set from the linkage method: **high** when the decisive/withdrawal document (or, for no-action outcomes, the absence of one) was established via a native FR `regulation_id_number` match; **medium** when only a docket_id match was available, or when the match came only from the `conditions[term]=<RIN>` full-text-search fallback (used for agency-wide withdrawal notices that do not carry the RIN in their own metadata); **low** when the anchor had neither a usable RIN nor docket to search on. 178/179 threads resolved to `label_confidence: high` via a direct RIN match; one withdrawal (US-FR-X-0027) is `medium` because it was only found via the term-search fallback (see Linkage method below).
 
 ## content_direction labeling
-content_direction (as_proposed/softened/tightened/mixed/different_mechanism) is set by an automated, keyword-based heuristic comparing the final rule's `action` text and abstract against the NPRM, augmented — when the final rule's govinfo.gov PDF was fetchable — by a regex search for a 'summary of changes' / 'changes from the proposed rule' / 'differences ... from the proposed rule' heading and the ~700 characters following it. federalregister.gov's own raw_text_url/body_html_url pages returned an access-gated 'Request Access' response from this container for every document tried (both PRORULE and RULE types), so govinfo.gov PDFs + PyMuPDF text extraction were used instead; this is recorded per-outcome in `notes`. All content_direction labels are therefore provisional with `label_confidence` medium (occasionally low when no keyword signal was found at all); none should be treated as a manually verified read of the full final-rule preamble.
+content_direction (as_proposed/softened/tightened/mixed/different_mechanism) is set by an automated, keyword-based heuristic comparing the final rule's `action` text and abstract against the NPRM, augmented — when the final rule's govinfo.gov PDF was fetchable — by a regex search for a 'summary of changes' / 'changes from the proposed rule' / 'differences ... from the proposed rule' heading and the ~700 characters following it. federalregister.gov's own raw_text_url/body_html_url pages returned an access-gated 'Request Access' response from this container for every document tried (both PRORULE and RULE types), so govinfo.gov PDFs + PyMuPDF text extraction were used instead; this is recorded per-outcome in `notes`. All content_direction labels are therefore provisional with `content_label_confidence` medium (occasionally low when no keyword signal was found at all — this run: 114 medium, 0 low among the 114 action_* outcomes); none should be treated as a manually verified read of the full final-rule preamble. For all withdrawn/stalled_no_action/unresolved outcomes (content_direction='na'), `content_label_confidence` is trivially `high` (65 threads).
 
 ## Known weaknesses / limitations
 - Eligibility filtering (genuine NPRM vs ANPRM/SNPRM/extension/reopening/withdrawal/correction/Unified-Agenda/hearing-only) is regex/keyword-based over the FR `action` and `title` fields, not a manual read of every one of the ~1,350 (Frame H) + 208 (Frame C) raw documents; edge cases (e.g. a document whose action text bundles an NPRM with an extension, or an ambiguous 'reconsideration of final rule' proposal) may be misclassified in either direction. The full per-category counts above are provided so this can be audited.
-- content_direction / content_summary are automated heuristics (see above), not a full manual comparison of NPRM vs final-rule text; treat label_confidence=medium accordingly.
+- content_direction / content_summary are automated heuristics (see above), not a full manual comparison of NPRM vs final-rule text; treat content_label_confidence=medium accordingly (label_confidence, the action/timing label, is unaffected and independently high for nearly all threads — see label_confidence vs content_label_confidence above).
 - regulations_dot_gov_info.comments_count for older Frame H documents reflects FR's last check of regulations.gov (often 2022-2023), not a live 2026 count; used as-is, with the synthetic Tier-S evidence date derived from the comment-period close date, not from the check date.
 - The `conditions[term]=<RIN>` fallback search only recovers a bundled/agency-wide withdrawal notice if the literal RIN string appears in FR's indexed text of that notice; a notice that refers to proposals only by docket number or title would be missed.
 - Frame C 'unresolved' threads are genuinely open as of the censor date; some may resolve shortly after this collection and should be re-checked before use in evaluation if the backtest run date drifts far past 2026-09-25.

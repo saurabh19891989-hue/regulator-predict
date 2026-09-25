@@ -1,0 +1,64 @@
+{
+ "workstreams": {
+  "in_rbi": {
+   "threads_in": 12,
+   "kept": 12,
+   "errors": 0
+  },
+  "in_sebi_h": {
+   "threads_in": 10,
+   "kept": 10,
+   "errors": 0
+  },
+  "us_fda": {
+   "threads_in": 55,
+   "kept": 55,
+   "errors": 0
+  },
+  "us_fr": {
+   "threads_in": 179,
+   "kept": 179,
+   "errors": 0
+  }
+ },
+ "threads": 256,
+ "evidence": 1914,
+ "reginfo_items_added": 1355,
+ "excluded": {},
+ "by_family": {
+  "IN-RBI": 12,
+  "IN-SEBI": 10,
+  "US-FDA": 55,
+  "US-FR": 179
+ },
+ "by_stratum": {
+  "HIST": 168,
+  "LATE": 88
+ },
+ "by_sampling_origin": {
+  "precursor_population": 256
+ },
+ "positives": 155,
+ "negatives": 101,
+ "outcome_classes": {
+  "stalled_no_action": 35,
+  "action_as_proposed": 37,
+  "action_mixed": 92,
+  "action_softened": 19,
+  "action_tightened": 7,
+  "unresolved": 62,
+  "withdrawn": 4
+ },
+ "tiers": {
+  "B": 1720,
+  "D": 12,
+  "C": 4,
+  "S": 178
+ },
+ "by_quality": {
+  "RAPID": 256
+ },
+ "audited": 0,
+ "patches_applied": 0,
+ "auto_dropped_evidence": 0
+}

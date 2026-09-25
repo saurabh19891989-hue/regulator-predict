@@ -1,0 +1,60 @@
+[
+ {
+  "regulator": "FDA",
+  "endpoint": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=food-and-drug-administration&conditions[type][]=NOTICE&conditions[term]=%22Draft%20Guidance%22%20%22Availability%22&conditions[publication_date][gte]=YYYY-MM-DD&conditions[publication_date][lte]=YYYY-MM-DD",
+  "content": "Federal Register full-text search for FDA NOTICE documents matching \"Draft Guidance\" \"Availability\" within a date window; used to build the precursor population for Frame H (2019-07-01..2023-06-30, N=313 after filtering) and Frame C (2025-06-01..2026-04-30, N=51 after filtering).",
+  "tier": "B",
+  "access_method": "HTTPS GET, JSON API, no auth required, per_page up to 1000 returns full result set in one call",
+  "date_field": "publication_date (FR official issue date, authoritative)",
+  "reliability_notes": "Authoritative federal source. Filtering applied client-side: title must contain 'draft guidance'; excluded titles containing 'correction', 'extension of comment period', 'reopening', plural 'Guidances' (batch product-specific-guidance bundles), 'withdrawal'; excluded abstracts stating availability of a FINAL guidance (a small number of false-positive term matches, e.g. finals whose abstract text says 'finalizes the draft guidance ...').",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "FDA",
+  "endpoint": "https://www.federalregister.gov/api/v1/documents.json?conditions[agencies][]=food-and-drug-administration&conditions[docket_id]=FDA-YYYY-D-NNNN",
+  "content": "Federal Register per-docket document listing, used to find the FINAL guidance availability notice (or comment-extension/reopening/prior-version notices) in the same docket as each anchor draft guidance notice, for outcome labeling and supplementary evidence.",
+  "tier": "B",
+  "access_method": "HTTPS GET, JSON API, no auth required",
+  "date_field": "publication_date",
+  "reliability_notes": "Primary outcome-verification method for this workstream. A candidate final was accepted only if its abstract explicitly announces availability of a FINAL guidance and (for Frame H) its title/topic matches the draft; one docket (FDA-2022-D-1494, VICH anthelmintics batch) contains multiple related-but-distinct final guidances published the same day, so the specific matching product (Caprines) was picked by exact title match. For a handful of Frame H drafts whose final used a different administrative docket than the draft's public-comment docket (e.g. thread US-FDA-H-0022, PFDD Guidance 3), a supplementary full-text FR title search was used to locate the final.",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "FDA",
+  "endpoint": "https://www.federalregister.gov/api/v1/documents/{document_number}.json?fields[]=comments_close_on&fields[]=regulations_dot_gov_info",
+  "content": "Federal Register single-document detail endpoint; its regulations_dot_gov_info.comments_count field gives the public-comment count recorded from regulations.gov for the draft notice's docket, used to build Tier S stakeholder evidence (publication_date = comments_close_on + 14 days, per protocol; items with comments_count 0 or missing were skipped as 'unknown/zero' rather than asserted as zero engagement).",
+  "tier": "S",
+  "access_method": "HTTPS GET, JSON API, no auth required",
+  "date_field": "comments_close_on (comment period close date) plus regulations_dot_gov_info.checked_regulationsdotgov_at (staleness indicator)",
+  "reliability_notes": "Used in preference to calling the regulations.gov API directly, because the regulations.gov DEMO_KEY was intermittently rate-limited/reset from this container during this session; the FR API mirrors the same comments_count figure without a separate key.",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "FDA",
+  "endpoint": "https://api.regulations.gov/v4/documents?filter[docketId]=FDA-YYYY-D-NNNN&api_key=DEMO_KEY",
+  "content": "regulations.gov v4 API, docket document listing. Used only to spot-check the FR API's regulations_dot_gov_info data; not used as a primary source in this run.",
+  "tier": "S",
+  "access_method": "HTTPS GET, JSON API, shared DEMO_KEY",
+  "date_field": "postedDate / commentStartDate / commentEndDate",
+  "reliability_notes": "DEMO_KEY returned OVER_RATE_LIMIT on first two attempts in this session and succeeded on a third attempt after a delay; unreliable for bulk use within a same-day RAPID run, so not used at scale.",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "FDA",
+  "endpoint": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents",
+  "content": "FDA's own guidance-document search database (intended per task instructions as a supplementary cross-check for finals not announced in the FR, and for withdrawals).",
+  "tier": "B",
+  "access_method": "Attempted HTTPS GET with browser User-Agent, Accept, X-Requested-With and Referer headers, per EXECUTOR_GUIDE note that fda.gov is reachable with a browser User-Agent. The results table on this page is populated client-side via a DataTables AJAX call to /datatables-json/search-for-guidance.json; that JSON endpoint returned an FDA WAF 'FDA Internet Site Error' HTML page to every automated request attempted from this container (with and without the extra headers), so the underlying dataset could not be retrieved. The static page shell itself IS reachable (200 OK) but does not embed the guidance list.",
+  "reliability_notes": "NOT successfully used as a source in this run; outcome labeling instead relies solely on the Federal Register (see above), which is the authoritative publication of record for FDA notices in any case. This is logged as a known limitation in NOTES.md (affects label_confidence on negative/unresolved outcomes, set to 'medium').",
+  "checked": "2026-09-25"
+ },
+ {
+  "regulator": "FDA (CDER)",
+  "endpoint": "https://www.fda.gov/drugs/guidances-drugs/cder-guidance-agenda",
+  "content": "CDER's annual 'Guidance Agenda: New & Revised Draft Guidances CDER Plans to Publish' (candidate Tier B 'guidance_agenda_entry' precursor evidence, called out explicitly in the task brief).",
+  "tier": "B",
+  "access_method": "HTTPS GET; page reachable, but only links to the CURRENT PDF (at time of check, a PDF dated 'CDER Guidance Agenda | July 2026', i.e. already revised well past the January 2025/2026 issuance the task asks for), with no visible archive of the original January 2025 or January 2026 versions.",
+  "reliability_notes": "SKIPPED per task instruction ('If a guidance agenda's original date cannot be verified (page revised), skip it and note that'): web.archive.org is blocked from this container (per EXECUTOR_GUIDE section 8) so the original Jan-2025/Jan-2026 dateline of this recurring, periodically-revised document could not be independently verified, and using the current (July-2026) copy as if it reflected January knowledge would itself be a leakage risk. No CDER Guidance Agenda or CDRH A-list/B-list entries were used as evidence in this run.",
+  "checked": "2026-09-25"
+ }
+]

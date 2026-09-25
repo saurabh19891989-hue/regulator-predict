@@ -18,7 +18,6 @@ from .ledger import CONTENT, LEDGER
 from .snapshots import select_items
 
 RNG = np.random.default_rng(20260925)
-K_H = {"K@2026-06-26": 90, "K@2026-07-26": 60, "K@2026-08-25": 30}
 
 
 # ---------------------------------------------------------------- metrics
@@ -129,12 +128,6 @@ def load(runs=None):
     return rows, idx
 
 
-def horizon_for(row, h):
-    if row["design"] == "K":
-        return K_H[row["offset"]] if h == "K" else h
-    return h
-
-
 def feature_rows(idx):
     """Feature rows for every available ALL-arm snapshot (baselines are arm-independent)."""
     threads = {t["thread_id"]: t for t in read_jsonl(os.path.join(DATA, "threads", "threads.jsonl"))}
@@ -168,7 +161,7 @@ def action_block(rows, look, h, label):
     """LLM vs baselines on the same snapshots for horizon h (K rows use their own horizon if h=='K')."""
     data = []
     for r in rows:
-        hh = horizon_for(r, h) if h == "K" else h
+        hh = h
         y = r["labels"].get(str(hh))
         if y is None:
             continue
@@ -286,12 +279,17 @@ def content_block(rows, outcomes):
             "top1_gain": boot(g, lambda ix: acc_m[ix].mean() - acc_b[ix].mean())}
 
 
-def run_eval(primary, ablation, title, probe_path=None, extra_filters=None):
+def run_eval(primary, ablation, title, probe_path=None, primary_arm="B_PLUS_C", masked=None):
+    """primary: runs holding the broad B_ONLY/B_PLUS_C forecasts (same model). Primary action metrics use
+    `primary_arm` on precursor-population threads only; backfilled/purposive threads reported separately."""
     rows_all, idx = load()
     look, frows = baseline_lookup(idx)
     outcomes = read_jsonl(os.path.join(DATA, "outcomes", "outcomes.jsonl"))
-    P = [r for r in rows_all if r["run"] in primary]
-    res = {"primary_runs": primary, "n_primary_forecasts": len(P)}
+    R = [r for r in rows_all if r["run"] in primary]
+    P = [r for r in R if r["arm"] == primary_arm and r["sampling_origin"] == "precursor_population"]
+    PB = [r for r in R if r["arm"] == primary_arm and r["sampling_origin"] != "precursor_population"]
+    res = {"primary_runs": primary, "primary_arm": primary_arm, "n_primary_forecasts": len(P),
+           "n_backfill_or_purposive_forecasts": len(PB)}
     recog = set()
     if probe_path and os.path.exists(probe_path):
         for x in read_jsonl(probe_path):
@@ -299,65 +297,76 @@ def run_eval(primary, ablation, title, probe_path=None, extra_filters=None):
                 recog.add(x["thread_id"])
     res["probe_recalled_threads"] = len(recog)
 
-    def sub(fn):
-        return [r for r in P if fn(r)]
-    blocks = {}
-    blocks["HIST_T_180"] = action_block(sub(lambda r: r["stratum"] == "HIST" and r["design"] == "T"), look, 180, "HIST design-T 180d")
-    blocks["ALL_T_180"] = action_block(sub(lambda r: r["design"] == "T"), look, 180, "All strata design-T 180d")
-    blocks["CLEAN_K"] = action_block(sub(lambda r: r["design"] == "K"), look, "K", "CLEAN design-K (horizon to censor)")
-    blocks["CLEAN_T_short"] = action_block(sub(lambda r: r["stratum"] == "CLEAN" and r["clean_snapshot"] and r["design"] == "T"), look, 30, "CLEAN post-cutoff design-T 30d")
+    def sub(fn, rows=P):
+        return [r for r in rows if fn(r)]
+    B = {}
+    B["T_180_all"] = action_block(sub(lambda r: r["design"] == "T"), look, 180, "Design T (outcome-anchored), 180d, all strata")
+    B["T_180_HIST"] = action_block(sub(lambda r: r["design"] == "T" and r["stratum"] == "HIST"), look, 180, "Design T, 180d, HIST")
+    for h in (30, 60, 90, 180):
+        B[f"C_{h}_all"] = action_block(sub(lambda r: r["design"] == "C"), look, h, f"Design C (calendar-forward), {h}d")
+    B["C_90_HIST"] = action_block(sub(lambda r: r["design"] == "C" and r["stratum"] == "HIST"), look, 90, "Design C, 90d, HIST")
+    B["C_30_postcutoff"] = action_block(sub(lambda r: r["design"] == "C" and r["post_cutoff_snapshot"]), look, 30, "Design C checkpoints after stated model cutoff, 30d")
+    B["C_60_postcutoff"] = action_block(sub(lambda r: r["design"] == "C" and r["post_cutoff_snapshot"]), look, 60, "Design C checkpoints after stated model cutoff, 60d")
     for fam in sorted({r["family"] for r in P}):
-        blocks[f"FAM_{fam}_T_180"] = action_block(sub(lambda r, fam=fam: r["family"] == fam and r["design"] == "T"), look, 180, f"{fam} design-T 180d")
-    blocks["US_T_180"] = action_block(sub(lambda r: r["family"].startswith("US") and r["design"] == "T"), look, 180, "US design-T 180d")
-    blocks["IN_T_180"] = action_block(sub(lambda r: r["family"].startswith("IN") and r["design"] == "T"), look, 180, "India design-T 180d")
-    blocks["HIST_T_180_not_selfrecognised"] = action_block(sub(lambda r: r["stratum"] == "HIST" and r["design"] == "T" and not r["fc"]["recognised_outcome"]), look, 180, "HIST T 180d excluding self-recognised")
+        B[f"FAM_{fam}_C_90"] = action_block(sub(lambda r, fam=fam: r["family"] == fam and r["design"] == "C"), look, 90, f"{fam} design C 90d")
+        B[f"FAM_{fam}_T_180"] = action_block(sub(lambda r, fam=fam: r["family"] == fam and r["design"] == "T"), look, 180, f"{fam} design T 180d")
+    B["US_C_90"] = action_block(sub(lambda r: r["family"].startswith("US") and r["design"] == "C"), look, 90, "US design C 90d")
+    B["IN_C_90"] = action_block(sub(lambda r: r["family"].startswith("IN") and r["design"] == "C"), look, 90, "India design C 90d")
+    B["C_90_not_selfrecognised"] = action_block(sub(lambda r: r["design"] == "C" and not r["fc"]["recognised_outcome"]), look, 90, "Design C 90d excluding self-recognised")
     if recog:
-        blocks["HIST_T_180_not_probe_recalled"] = action_block(sub(lambda r: r["stratum"] == "HIST" and r["design"] == "T" and r["thread_id"] not in recog), look, 180, "HIST T 180d excluding probe-recalled threads")
-    if extra_filters:
-        for name, fn in extra_filters.items():
-            blocks[name] = action_block(sub(fn), look, 180, name)
-    res["action"] = blocks
-    # timing calibration per horizon (design T, all strata; K rows at their horizon)
+        B["C_90_not_probe_recalled"] = action_block(sub(lambda r: r["design"] == "C" and r["thread_id"] not in recog), look, 90, "Design C 90d excluding probe-recalled threads")
+        B["T_180_not_probe_recalled"] = action_block(sub(lambda r: r["design"] == "T" and r["thread_id"] not in recog), look, 180, "Design T 180d excluding probe-recalled threads")
+    if PB:
+        B["C_90_backfill_only"] = action_block([r for r in PB if r["design"] == "C"], look, 90, "Design C 90d, backfilled/purposive threads only")
+    res["action"] = B
     tim = {}
-    for h in HORIZONS:
-        d_ = [(r["fc"]["timing"][f"{h}d"], r["labels"][str(h)], r["thread_id"]) for r in P if r["design"] == "T" and r["labels"].get(str(h)) is not None]
-        if d_:
-            p, y = np.array([x[0] for x in d_]), np.array([x[1] for x in d_])
-            tim[f"{h}d"] = {**summary(p, y), "reliability": reliability(p, y)}
+    for design in ("C", "T"):
+        for h in HORIZONS:
+            d_ = [(r["fc"]["timing"][f"{h}d"], r["labels"][str(h)]) for r in P if r["design"] == design and r["labels"].get(str(h)) is not None]
+            if d_:
+                p, y = np.array([x[0] for x in d_]), np.array([x[1] for x in d_])
+                tim[f"{design}_{h}d"] = {**summary(p, y), "reliability": reliability(p, y)}
     res["timing"] = tim
-    res["lead_time"] = lead_time([r for r in P if r["arm"] == "ALL"])
-    res["content"] = content_block([r for r in P if r["design"] == "T"], outcomes)
-    res["content_CLEAN"] = content_block([r for r in P if r["stratum"] == "CLEAN"], outcomes)
+    res["lead_time"] = lead_time([r for r in P if r["design"] == "T"])
+    res["content"] = content_block([r for r in P if r["design"] in ("T", "C")], outcomes)
+    res["content_LATE"] = content_block([r for r in P if r["stratum"] == "LATE"], outcomes)
     res["recognition"] = {"self_recognised_share": float(np.mean([r["fc"]["recognised_outcome"] for r in P])) if P else float("nan"),
                           "insufficient_share": float(np.mean([r["fc"]["insufficient_evidence"] for r in P])) if P else float("nan")}
-    # same-model TITLE_ONLY control
+    # B vs B+C lift (same model, same snapshots, only where tier C exists at the cutoff)
+    RR = [r for r in R if r["sampling_origin"] == "precursor_population"]
+    hasC = lambda r: r["classes_present"].get("C", 0) > 0
+    res["b_vs_bc"] = {
+        "T_180": paired_arms([r for r in RR if r["design"] == "T"], "B_PLUS_C", "B_ONLY", 180, restrict=hasC),
+        "T_30": paired_arms([r for r in RR if r["design"] == "T"], "B_PLUS_C", "B_ONLY", 30, restrict=hasC),
+        "C_90": paired_arms([r for r in RR if r["design"] == "C"], "B_PLUS_C", "B_ONLY", 90, restrict=hasC),
+        "C_180": paired_arms([r for r in RR if r["design"] == "C"], "B_PLUS_C", "B_ONLY", 180, restrict=hasC),
+        "C_alone_vs_B_alone_C_90": paired_arms([r for r in RR if r["design"] == "C"], "C_ONLY", "B_ONLY", 90),
+    }
     if title:
-        TT = [r for r in rows_all if r["run"] in title] + [r for r in P]
+        TT = [r for r in rows_all if r["run"] in title or r["run"] in primary]
+        TT = [r for r in TT if r["sampling_origin"] == "precursor_population"]
         res["title_only_control"] = {
-            "ALL_vs_TITLE_HIST": paired_arms([r for r in TT if r["stratum"] == "HIST" and r["design"] == "T"], "ALL", "TITLE_ONLY", 180),
-            "ALL_vs_TITLE_all_T": paired_arms([r for r in TT if r["design"] == "T"], "ALL", "TITLE_ONLY", 180),
-            "ALL_vs_TITLE_CLEAN_K": paired_arms([dict(r, labels={"180": r["labels"].get(str(K_H[r["offset"]]))}, fc=dict(r["fc"], timing={**r["fc"]["timing"], "180d": r["fc"]["timing"][f"{K_H[r['offset']]}d"]})) for r in TT if r["design"] == "K"], "ALL", "TITLE_ONLY", 180),
+            f"{primary_arm}_vs_TITLE_C_90": paired_arms([r for r in TT if r["design"] == "C"], primary_arm, "TITLE_ONLY", 90),
+            f"{primary_arm}_vs_TITLE_T_180": paired_arms([r for r in TT if r["design"] == "T"], primary_arm, "TITLE_ONLY", 180),
+            f"{primary_arm}_vs_TITLE_C_30_postcutoff": paired_arms([r for r in TT if r["design"] == "C" and r["post_cutoff_snapshot"]], primary_arm, "TITLE_ONLY", 30),
         }
-    # ablations (single model)
+    if masked:
+        MM = [r for r in rows_all if r["run"] in masked or r["run"] in primary]
+        res["masking_control"] = {
+            "C_90": paired_arms([r for r in MM if r["design"] == "C"], "MASKED_B_PLUS_C", "B_PLUS_C", 90),
+            "T_180": paired_arms([r for r in MM if r["design"] == "T"], "MASKED_B_PLUS_C", "B_PLUS_C", 180),
+        }
     if ablation:
         A = [r for r in rows_all if r["run"] in ablation]
         abl = {}
-        pairs = [("B_PLUS_C", "B_ONLY", "tierC_increment"), ("C_ONLY", "B_ONLY", "C_alone_vs_B_alone"),
-                 ("B_C_STAKEHOLDERS", "B_PLUS_C", "stakeholder_increment"),
+        pairs = [("B_C_STAKEHOLDERS", "B_PLUS_C", "stakeholder_increment"),
                  ("B_C_STAKEHOLDERS_PLUS_NEWS", "B_C_STAKEHOLDERS", "news_increment_over_BCS"),
-                 ("B_C_STAKEHOLDERS_PLUS_NEWS", "B_PLUS_C", "news_plus_stakeholder_increment_over_BC"),
+                 ("B_C_STAKEHOLDERS_PLUS_NEWS", "B_PLUS_C", "stakeholders_plus_news_over_BC"),
                  ("B_PLUS_C", "LATEST_DOCUMENT_ONLY", "full_trajectory_vs_latest_only"),
-                 ("ALL", "TITLE_ONLY", "evidence_vs_title_only"), ("B_ONLY", "TITLE_ONLY", "B_vs_title_only"),
-                 ("C_ONLY", "TITLE_ONLY", "C_vs_title_only")]
+                 ("C_ONLY", "B_ONLY", "C_alone_vs_B_alone"), ("B_PLUS_C", "B_ONLY", "tierC_increment")]
         for a, b, name in pairs:
-            abl[name] = paired_arms([r for r in A if r["design"] == "T"], a, b, 180)
-            abl[name + "_30d"] = paired_arms([r for r in A if r["design"] == "T"], a, b, 30)
-        arm_sum = {}
-        for arm in sorted({r["arm"] for r in A}):
-            d_ = [(r["fc"]["action_probability_180d"], r["labels"]["180"]) for r in A if r["arm"] == arm and r["design"] == "T" and r["labels"].get("180") is not None]
-            if d_:
-                arm_sum[arm] = summary(np.array([x[0] for x in d_]), np.array([x[1] for x in d_]))
-        abl["per_arm"] = arm_sum
+            for design, h in (("C", 90), ("T", 180)):
+                abl[f"{name}_{design}{h}"] = paired_arms([r for r in A + R if r["design"] == design], a, b, h)
         res["ablation"] = abl
     return res
 
@@ -382,7 +391,7 @@ def write_md(res, path):
         L.append(f"| {k} | {b['llm']['n']} | {b['threads']} | {fmt(b['llm']['base_rate'])} | {fmt(b['llm']['brier'])} | "
                  f"{fmt(b['llm_auroc_ci'])} | {b.get('best_baseline')} | {fmt(bb.get('brier', float('nan')))} | "
                  f"{fmt(bb.get('auroc', float('nan')))} | {fmt(bb.get('llm_brier_skill_vs_this', 'n/a'))} |")
-    L.append("\n## Timing calibration (design T)")
+    L.append("\n## Timing calibration (design C = calendar-forward; design T = outcome-anchored)")
     L.append("| horizon | n | base rate | mean p | Brier | ECE | slope | AUROC |")
     L.append("|---|---|---|---|---|---|---|---|")
     for h, t in res["timing"].items():
@@ -394,7 +403,14 @@ def write_md(res, path):
         L.append(f"| {t['threshold']} | {t['flagged']} | {fmt(t['precision'])} | {fmt(t['recall'])} | {fmt(t['detected_share'])} | {fmt(t['median_lead_days_first_cross'])} | {fmt(t['median_lead_days_persistent'])} |")
     L.append(f"\nAt precision ≥ 0.80: {json.dumps(res['lead_time']['at_precision_0.8'])}")
     L.append("\n## Content direction (positives)")
-    L.append("```\n" + json.dumps({"design_T": res["content"], "CLEAN": res["content_CLEAN"]}, indent=1) + "\n```")
+    L.append("```\n" + json.dumps({"all": res["content"], "LATE": res["content_LATE"]}, indent=1) + "\n```")
+    L.append("\n## B vs B+C lift (same model; snapshots where tier C exists; Δ = B+C − B, negative = C helps)")
+    for k, v in res.get("b_vs_bc", {}).items():
+        L.append(f"- {k}: n={v.get('n')} thr={v.get('threads')} Brier B+C={fmt(v.get('brier_a', float('nan')))} B={fmt(v.get('brier_b', float('nan')))} Δ={fmt(v.get('delta_brier_a_minus_b', 'n/a'))} AUROC B+C={fmt(v.get('auroc_a', float('nan')))} B={fmt(v.get('auroc_b', float('nan')))}")
+    if "masking_control" in res:
+        L.append("\n## Entity/title masking control (Δ = masked − unmasked; ≈0 means no reliance on identity)")
+        for k, v in res["masking_control"].items():
+            L.append(f"- {k}: n={v.get('n')} Δ={fmt(v.get('delta_brier_a_minus_b', 'n/a'))} AUROC masked={fmt(v.get('auroc_a', float('nan')))} unmasked={fmt(v.get('auroc_b', float('nan')))}")
     if "title_only_control" in res:
         L.append("\n## Same-model TITLE_ONLY memorisation/prior control (ΔBrier ALL − TITLE; negative = evidence helps)")
         for k, v in res["title_only_control"].items():
@@ -402,13 +418,7 @@ def write_md(res, path):
     if "ablation" in res:
         L.append("\n## Ablations (single model; ΔBrier a − b, negative = a better)")
         for k, v in res["ablation"].items():
-            if k == "per_arm":
-                continue
             L.append(f"- {k}: n={v.get('n')} thr={v.get('threads')} Brier a={fmt(v.get('brier_a', float('nan')))} b={fmt(v.get('brier_b', float('nan')))} Δ={fmt(v.get('delta_brier_a_minus_b', 'n/a'))} AUROC a={fmt(v.get('auroc_a', float('nan')))} b={fmt(v.get('auroc_b', float('nan')))}")
-        L.append("\n| arm | n | base | Brier | AUROC | ECE |")
-        L.append("|---|---|---|---|---|---|")
-        for arm, s in res["ablation"]["per_arm"].items():
-            L.append(f"| {arm} | {s['n']} | {fmt(s['base_rate'])} | {fmt(s['brier'])} | {fmt(s['auroc'])} | {fmt(s['ece'])} |")
     L.append("\n## Recognition\n" + json.dumps(res["recognition"]) + f"\nprobe-recalled threads: {res.get('probe_recalled_threads')}")
     open(path, "w").write("\n".join(L) + "\n")
 
@@ -418,10 +428,12 @@ if __name__ == "__main__":
     ap.add_argument("--primary-runs", default="")
     ap.add_argument("--ablation-runs", default="")
     ap.add_argument("--title-runs", default="")
+    ap.add_argument("--masked-runs", default="")
+    ap.add_argument("--primary-arm", default="B_PLUS_C")
     ap.add_argument("--probe", default=os.path.join(DATA, "audits", "memorisation_probe.jsonl"))
     a = ap.parse_args()
     sp = lambda s: [x for x in s.split(",") if x]
-    res = run_eval(sp(a.primary_runs), sp(a.ablation_runs), sp(a.title_runs), a.probe)
+    res = run_eval(sp(a.primary_runs), sp(a.ablation_runs), sp(a.title_runs), a.probe, a.primary_arm, sp(a.masked_runs))
     os.makedirs(os.path.join(ROOT, "reports"), exist_ok=True)
     json.dump(res, open(os.path.join(ROOT, "reports", "metrics.json"), "w"), indent=1, default=str)
     write_md(res, os.path.join(ROOT, "reports", "METRICS.md"))

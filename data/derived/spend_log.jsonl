@@ -1,2 +1,4 @@
 {"ts": "2026-09-25T11:52Z", "who": "test-agent haiku (isolation check)", "tokens": 11546, "model": "haiku-4.5", "est_usd": 0.02}
 {"ts": "2026-09-25T12:30Z", "who": "director setup (estimate)", "tokens": null, "model": "opus-5.5", "est_usd": 3.0}
+{"ts": "2026-09-25T12:20Z", "who": "executor us_reginfo (sonnet)", "tokens": 203630, "tool_uses": 68, "model": "sonnet-5", "est_usd": 0.6, "basis": "reported subagent_tokens x ~$3/M conservative blended (incl. cache reads not reported)"}
+{"ts": "2026-09-25T12:22Z", "who": "executor us_fda (sonnet)", "tokens": 248831, "tool_uses": 106, "model": "sonnet-5", "est_usd": 3.5, "basis": "~106 turns x ~125k avg cached context @ $0.2/M + writes + output"}

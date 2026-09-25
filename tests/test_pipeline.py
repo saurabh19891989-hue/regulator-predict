@@ -120,3 +120,23 @@ def test_audit_patch_moves_decisive_date_and_drops_leaked_evidence(dataset):
     assert any(e["evidence_id"].endswith("E02") for e in ev) and not any(e["evidence_id"].endswith("E03") for e in ev)
     os.remove(os.path.join(pdir, "test.jsonl"))
     build(verbose=False)
+
+
+def test_design_c_and_masked_packets(dataset):
+    from rpe.build import build
+    from rpe.packets import make_run
+    from rpe.snapshots import build_index
+    build(verbose=False)
+    rows, _ = build_index()
+    C = [r for r in rows if r["design"] == "C"]
+    assert C
+    om = {o["thread_id"]: o for o in read_jsonl(os.path.join(dataset["root"], "outcomes", "outcomes.jsonl"))}
+    for r in C:
+        dd = om[r["thread_id"]].get("decisive_date")
+        for h, y in r["labels"].items():
+            if y == 1:
+                assert d(r["cutoff_date"]) < d(dd) <= d(r["cutoff_date"]) + __import__("datetime").timedelta(days=int(h))
+    m = make_run("maskrun", ["MASKED_B_PLUS_C"], ["C"], size=5)
+    for b in m["batches"]:
+        txt = open(b["packet"]).read()
+        assert "TESTREG" not in txt and "Document number" not in txt and "example.gov" not in txt

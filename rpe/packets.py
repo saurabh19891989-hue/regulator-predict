@@ -76,7 +76,38 @@ One entry per snapshot, in any order, using the exact snapshot ids below.
 """
 
 
+GENERIC_REG = {"US": "a US federal regulator", "IN": "an Indian regulator"}
+MASK_PATTERNS = [
+    (r"\b\d{4}-[A-Z]{2}\d{2}\b", "[RIN]"),                                   # RINs e.g. 0938-AT38
+    (r"\b[A-Z]{2,6}-\d{4}-[A-Z0-9]{1,5}(-\d+)*\b", "[DOCKET]"),              # docket ids
+    (r"\b\d{1,3}\s+FR\s+\d+\b", "[FR CITATION]"),
+    (r"\b\d{1,2}\s+CFR\s+(parts?\s+)?[\d.,\s and]+", "[CFR CITATION] "),
+    (r"https?://\S+", "[URL]"),
+    (r"\"[^\"]{12,}\"", "[TITLE WITHHELD]"),                                # quoted titles
+    (r"\b(SEBI|RBI|IRDAI|TRAI|DGTR|FDA|CMS|EPA|SEC|CFTC|FCC|FTC|CFPB|OCC|FDIC|USDA|DOL|HHS|DOT|FAA|NHTSA|OSHA|IRS|CBP|DHS|DOE|ED|HUD|FRB|NCUA|FHFA|FINRA|DoT|MoF|CBIC)\b", "the Regulator"),
+]
+
+
+def mask_text(txt, thread):
+    for name in {thread.get("regulator") or "", thread.get("agency") or ""}:
+        if len(name) > 3:
+            txt = re.sub(re.escape(name), "the Regulator", txt, flags=re.I)
+    for pat, rep in MASK_PATTERNS:
+        txt = re.sub(pat, rep, txt)
+    return txt
+
+
 def render_snapshot(snap, thread, items):
+    if snap["arm"].startswith("MASKED"):
+        body = _render(snap, dict(thread, neutral_title="[title withheld — see evidence]"), items)
+        head, _, rest = body.partition("Evidence")
+        head = head.replace(f"Regulator: {thread['regulator']} ({thread['jurisdiction']})",
+                            f"Regulator: {GENERIC_REG.get(thread['jurisdiction'], 'a regulator')} (identity withheld)")
+        return head + mask_text("Evidence" + rest, thread) if rest else head
+    return _render(snap, thread, items)
+
+
+def _render(snap, thread, items):
     lines = [f"\n---\n## SNAPSHOT {snap['snapshot_id']}",
              f"CUTOFF DATE (today): {snap['cutoff_date']}",
              f"Regulator: {thread['regulator']} ({thread['jurisdiction']})",
@@ -94,7 +125,15 @@ def render_snapshot(snap, thread, items):
     for i, e in enumerate(items, 1):
         dom = e["source_url"].split("/")[2] if "://" in e["source_url"] else ""
         tier = {"B": "official-forward (B)", "C": "official-soft (C)", "S": "stakeholder (S)", "D": "news (D)"}[e["tier"]]
-        lines.append(f"[E{i}] {available_date(e)} | {tier} | {e['document_type']} | \"{e['title'][:220]}\" | {dom}")
+        ttl = "[document title withheld]" if snap["arm"].startswith("MASKED") else e["title"][:220]
+        lines.append(f"[E{i}] {available_date(e)} | {tier} | {e['document_type']} | \"{ttl}\" | {'' if snap['arm'].startswith('MASKED') else dom}")
+        if e["document_type"] == "comment_count":  # canonical text: no retrieval-date artefacts
+            m = re.search(r"(\d[\d,]*)\s+(?:public\s+)?comments?", e.get("content_excerpt", ""))
+            cm = re.search(r"closed\s+(?:on\s+)?(\d{4}-\d{2}-\d{2})", e.get("content_excerpt", ""))
+            if m:
+                lines.append(f"   Excerpt: Approximately {m.group(1)} public comments were submitted to the docket"
+                             + (f" during the comment period that closed on {cm.group(1)}." if cm else "."))
+                continue
         cl = [c for c in e.get("extracted_claims", []) if c][:5]
         if cl:
             lines.append("   Claims: " + " / ".join(c[:300] for c in cl))

@@ -428,7 +428,14 @@ def resolve_outcome(anchor: dict, censor_date: str) -> dict:
         for d in pool.values():
             if d["document_number"] == anchor_docnum:
                 continue
-            if d["publication_date"] < anchor_pub:
+            # Strictly later than the anchor: a same-day "final rule" is not a
+            # later, comment-informed resolution of this NPRM — it is a
+            # simultaneously-published companion (e.g. a "direct final rule"
+            # issued the same day as its companion proposed rule, a common
+            # NRC/EPA/FAA pattern), so it cannot be this thread's decisive
+            # action without breaking the point-in-time anchor-before-outcome
+            # invariant. Such anchors fall through to stalled/unresolved.
+            if d["publication_date"] <= anchor_pub:
                 continue
             if d["publication_date"] > censor_date:
                 continue
@@ -454,7 +461,7 @@ def resolve_outcome(anchor: dict, censor_date: str) -> dict:
             for d in term_lookup(rin):
                 if d["document_number"] == anchor_docnum:
                     continue
-                if not (anchor_pub <= d["publication_date"] <= censor_date):
+                if not (anchor_pub < d["publication_date"] <= censor_date):
                     continue
                 title = d.get("title") or ""
                 action = d.get("action") or ""
@@ -727,6 +734,10 @@ def build_stakeholder_evidence(thread_id: str, seq: int, anchor: dict, comment_d
     pub = (date.fromisoformat(latest_close) + timedelta(days=14)).isoformat()
     if decisive_date and pub >= decisive_date:
         return None
+    if pub > RETRIEVAL_DATE:
+        # Can't claim to have "retrieved" a comment count as of a synthetic
+        # date that falls after our actual retrieval date.
+        return None
     docket = get_docket(anchor) or "unknown"
     short, _ = agency_names(anchor)
     excerpt = (f"As retrieved from the federalregister.gov / regulations.gov integration on "
@@ -777,14 +788,39 @@ def issue_summary(anchor: dict) -> str:
     return summary[:1490]
 
 
+def action_label_confidence(resolution: dict) -> tuple[str, str]:
+    """Confidence in the ACTION/TIMING label only (was there a decisive action
+    or withdrawal, and on what date) — per the Director's schema clarification,
+    this is independent of and must never be lowered by content_direction
+    uncertainty. Returns (confidence, rationale)."""
+    method = resolution["method"]
+    has_rin = bool(resolution["rins"])
+    has_docket = bool(resolution["docket"])
+    if method.startswith("term_search_fallback"):
+        return ("medium", "found only via the conditions[term]=<RIN> full-text-search fallback "
+                           "(the decisive/withdrawal document did not carry this RIN in its own FR "
+                           "metadata), so the RIN match — while directly verified in the document's "
+                           "own text/title — is a slightly less certain linkage than a native "
+                           "regulation_id_number tie.")
+    if has_rin:
+        return ("high", "linked via a native FR regulation_id_number match, the most reliable "
+                         "linkage available.")
+    if has_docket:
+        return ("medium", "anchor had no RIN; linked via docket_id only, which is reliable but "
+                           "less authoritative than a RIN match.")
+    return ("low", "anchor had neither a RIN nor a resolvable docket id, so this linkage/absence-"
+                    "of-later-action determination could not be made with confidence.")
+
+
 def build_outcome(thread_id: str, anchor: dict, resolution: dict, censor_date: str,
                    frame_label: str) -> dict:
     kind = resolution["kind"]
     doc = resolution["doc"]
     anchor_short, _ = agency_names(anchor)
+    act_conf, act_rationale = action_label_confidence(resolution)
 
     if kind == "final":
-        direction, conf, rationale = determine_content_direction(anchor, doc)
+        direction, content_conf, rationale = determine_content_direction(anchor, doc)
         outcome_class_map = {
             "as_proposed": "action_as_proposed", "softened": "action_softened",
             "tightened": "action_tightened", "mixed": "action_mixed",
@@ -802,9 +838,11 @@ def build_outcome(thread_id: str, anchor: dict, resolution: dict, censor_date: s
             "withdrawal_date": None, "censor_date": censor_date, "content_direction": direction,
             "content_summary": content_summary, "key_parameters": [],
             "outcome_sources": [doc["html_url"], anchor["html_url"]],
-            "label_confidence": conf, "labeled_by": "collectors/us_fr.py (automated)",
+            "label_confidence": act_conf, "content_label_confidence": content_conf,
+            "labeled_by": "collectors/us_fr.py (automated)",
             "notes": (f"Linkage method: {resolution['method']}. RIN(s): {', '.join(resolution['rins']) or 'none'}. "
-                      f"Docket: {resolution['docket'] or 'none'}. Content-direction rationale: {rationale}"),
+                      f"Docket: {resolution['docket'] or 'none'}. label_confidence rationale (action/timing "
+                      f"only): {act_rationale} content_label_confidence rationale: {rationale}"),
         }
     elif kind == "withdrawal":
         content_summary = (
@@ -818,9 +856,13 @@ def build_outcome(thread_id: str, anchor: dict, resolution: dict, censor_date: s
             "withdrawal_date": doc["publication_date"], "censor_date": censor_date, "content_direction": "na",
             "content_summary": content_summary, "key_parameters": [],
             "outcome_sources": [doc["html_url"], anchor["html_url"]],
-            "label_confidence": "medium", "labeled_by": "collectors/us_fr.py (automated)",
+            "label_confidence": act_conf,
+            # content_direction is trivially "na" (no action taken to have a direction), so
+            # content_label_confidence is trivially high, per the Director's clarification.
+            "content_label_confidence": "high",
+            "labeled_by": "collectors/us_fr.py (automated)",
             "notes": (f"Linkage method: {resolution['method']}. RIN(s): {', '.join(resolution['rins']) or 'none'}. "
-                      f"Docket: {resolution['docket'] or 'none'}."),
+                      f"Docket: {resolution['docket'] or 'none'}. label_confidence rationale: {act_rationale}"),
         }
     else:
         if frame_label == "H":
@@ -837,8 +879,11 @@ def build_outcome(thread_id: str, anchor: dict, resolution: dict, censor_date: s
                                  f"{resolution['docket'] or 'none'} was found in the Federal Register through "
                                  f"{censor_date}. Anchor NPRM: {anchor['title']}."),
             "key_parameters": [], "outcome_sources": [anchor["html_url"]],
-            "label_confidence": "medium", "labeled_by": "collectors/us_fr.py (automated)",
-            "notes": f"Linkage method: {resolution['method']}. No decisive document found by {censor_date}.",
+            "label_confidence": act_conf,
+            "content_label_confidence": "high",
+            "labeled_by": "collectors/us_fr.py (automated)",
+            "notes": (f"Linkage method: {resolution['method']}. No decisive document found by {censor_date}. "
+                      f"label_confidence rationale: {act_rationale}"),
         }
 
 
@@ -1324,7 +1369,31 @@ def write_notes_md():
                  "text matches final/interim-final/direct-final rule language, excluding corrections, "
                  "correcting amendments, effective-date delays/stays, and technical/administrative "
                  "amendments. A withdrawal is any later document (of any type) whose `action` or `title` "
-                 "contains withdrawal/termination language, excluding Unified Agenda entries.\n")
+                 "contains withdrawal/termination language, excluding Unified Agenda entries. A candidate "
+                 "must be published strictly AFTER the anchor's publication_date to count as decisive: "
+                 "several agencies (NRC, DOE, FWS observed in this run) publish a 'direct final rule' the "
+                 "SAME DAY as a companion proposed rule (the proposed rule becomes operative only if the "
+                 "direct final rule is withdrawn due to adverse comment); such same-day companions cannot "
+                 "represent a comment-informed resolution of the anchor without breaking the point-in-time "
+                 "anchor-before-outcome invariant, so anchors of this kind fall through to "
+                 "stalled_no_action/unresolved rather than being linked to their same-day companion.\n")
+
+    lines.append("\n## label_confidence vs content_label_confidence\n")
+    lines.append("Per the Director's schema clarification received during this run (schemas/outcome.schema.json "
+                 "bumped to 1.1.0, docs/EXECUTOR_GUIDE.md section 5 updated): `label_confidence` refers ONLY to "
+                 "the action/timing label — whether and when a decisive action or withdrawal occurred (or, for "
+                 "stalled_no_action/unresolved, confidence that no such document exists by the censor date). It "
+                 "is never lowered because content_direction is uncertain. A separate `content_label_confidence` "
+                 "field holds confidence in content_direction/key_parameters specifically. Every outcome record "
+                 "in this workstream carries both fields.\n"
+                 "\n`label_confidence` is set from the linkage method: **high** when the decisive/withdrawal "
+                 "document (or, for no-action outcomes, the absence of one) was established via a native FR "
+                 "`regulation_id_number` match; **medium** when only a docket_id match was available, or when "
+                 "the match came only from the `conditions[term]=<RIN>` full-text-search fallback (used for "
+                 "agency-wide withdrawal notices that do not carry the RIN in their own metadata); **low** when "
+                 "the anchor had neither a usable RIN nor docket to search on. 178/179 threads resolved to "
+                 "`label_confidence: high` via a direct RIN match; one withdrawal (US-FR-X-0027) is `medium` "
+                 "because it was only found via the term-search fallback (see Linkage method below).\n")
 
     lines.append("\n## content_direction labeling\n")
     lines.append("content_direction (as_proposed/softened/tightened/mixed/different_mechanism) is set by an "
@@ -1336,8 +1405,11 @@ def write_notes_md():
                  "'Request Access' response from this container for every document tried (both PRORULE and "
                  "RULE types), so govinfo.gov PDFs + PyMuPDF text extraction were used instead; this is "
                  "recorded per-outcome in `notes`. All content_direction labels are therefore provisional "
-                 "with `label_confidence` medium (occasionally low when no keyword signal was found at "
-                 "all); none should be treated as a manually verified read of the full final-rule preamble.\n")
+                 "with `content_label_confidence` medium (occasionally low when no keyword signal was found at "
+                 "all — this run: 114 medium, 0 low among the 114 action_* outcomes); none should be treated as "
+                 "a manually verified read of the full final-rule preamble. For all withdrawn/"
+                 "stalled_no_action/unresolved outcomes (content_direction='na'), `content_label_confidence` is "
+                 "trivially `high` (65 threads).\n")
 
     lines.append("\n## Known weaknesses / limitations\n")
     lines.append("- Eligibility filtering (genuine NPRM vs ANPRM/SNPRM/extension/reopening/withdrawal/"
@@ -1348,7 +1420,9 @@ def write_notes_md():
                  "in either direction. The full per-category counts above are provided so this can be "
                  "audited.\n"
                  "- content_direction / content_summary are automated heuristics (see above), not a full "
-                 "manual comparison of NPRM vs final-rule text; treat label_confidence=medium accordingly.\n"
+                 "manual comparison of NPRM vs final-rule text; treat content_label_confidence=medium "
+                 "accordingly (label_confidence, the action/timing label, is unaffected and independently high "
+                 "for nearly all threads — see label_confidence vs content_label_confidence above).\n"
                  "- regulations_dot_gov_info.comments_count for older Frame H documents reflects FR's last "
                  "check of regulations.gov (often 2022-2023), not a live 2026 count; used as-is, with the "
                  "synthetic Tier-S evidence date derived from the comment-period close date, not from the "

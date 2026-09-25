@@ -35,7 +35,7 @@
    ],
    "done_when": "Pilot regulator Tier B/C endpoints and access methods are recorded.",
    "status": "in_progress",
-   "notes": "Each workstream writes data/raw/<ws>/sources.json; reachability table in docs/EXECUTOR_GUIDE.md."
+   "notes": "us_reginfo done; per-ws sources.json"
   },
   {
    "id": "RP0-03",
@@ -86,8 +86,8 @@
     "RP0-04"
    ],
    "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
-   "status": "pending",
-   "notes": "Opus via isolated statusline-setup agents; designs T and K; plus TITLE_ONLY + recall probe."
+   "status": "in_progress",
+   "notes": "SMOKE1 running; broad run = Opus B_ONLY/B_PLUS_C on design C all + design T {T-180,T-90,T-30} (DEV-005)"
   },
   {
    "id": "RP0-07",
@@ -100,7 +100,7 @@
    ],
    "done_when": "B/C/stakeholder/news/latest-vs-trajectory comparisons are complete.",
    "status": "pending",
-   "notes": "Sonnet, same isolated agent type, all arms on T-180/T-90/T-30."
+   "notes": "Rich ablations (S, D, latest-only, masked) only on GOLD/informative subsets (DEV-005); Sonnet or Opus same-model pairs"
   },
   {
    "id": "RP0-08",
@@ -183,6 +183,30 @@
    "status": "pending",
    "done_when": "Google-News-RSS dated headlines added before decisive dates",
    "notes": "needed for news ablation on US family"
+  },
+  {
+   "id": "RP0-14",
+   "title": "External US FR base-rate hazard table (2014\u20132019 NPRMs)",
+   "owner": "executors",
+   "model": "sonnet-5",
+   "effort": "medium",
+   "depends_on": [],
+   "status": "in_progress",
+   "done_when": "hazard_table.json + external_p() available to evaluator",
+   "notes": "DEV-007"
+  },
+  {
+   "id": "RP0-15",
+   "title": "Smoke test SMOKE1 (10 threads, B vs B+C, T-90/T-30) + manual leakage/coherence inspection",
+   "owner": "director",
+   "model": "opus-5.5",
+   "effort": "high",
+   "depends_on": [
+    "RP0-04"
+   ],
+   "status": "in_progress",
+   "done_when": "inspected; go/no-go to scale",
+   "notes": "DEV-006"
   }
  ],
  "last_updated": "2026-09-25"

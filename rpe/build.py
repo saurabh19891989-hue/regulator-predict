@@ -11,13 +11,25 @@ import json
 import re
 import os
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
 
 from .common import CENSOR_DATE, DATA, ROOT, add_days, d, read_jsonl, write_jsonl
 from .validate import validate_dir
 
-CLEAN_BOUNDARY = "2026-07-01"   # outcome resolved on/after this date → cannot be in forecaster training data
+LATE_BOUNDARY = "2026-07-01"   # outcome resolved on/after this date → after the forecaster's STATED knowledge cutoff (not guaranteed)
 SKIP_DIRS = {"us_reginfo"}
+
+
+LATE_ANCHOR_MIN = "2025-06-01"  # unresolved threads count as LATE only if initiated recently
+
+
+def stratum_of(t, o):
+    """LATE = resolution on/after the stated model cutoff, or a RECENT proposal still unresolved.
+    Old unresolved proposals are HIST: their non-action up to mid-2026 is knowable from training data."""
+    rd = resolution_date(o)
+    if rd:
+        return "LATE" if d(rd) >= d(LATE_BOUNDARY) else "HIST"
+    return "LATE" if d(t["anchor_date"]) >= d(LATE_ANCHOR_MIN) else "HIST"
 
 
 def family_of(thread_id):
@@ -74,6 +86,24 @@ def merge_reginfo(threads, outcomes, evidence, reginfo):
     """Attach Unified Agenda + OIRA precursor items to US-FR threads, strictly before resolution."""
     added = 0
     omap = {o["thread_id"]: o for o in outcomes}
+    rdir = os.path.join(DATA, "raw", "us_reginfo")
+    full = os.path.join(rdir, "agenda_entries.jsonl")
+    sub = os.path.join(rdir, "agenda_entries_sampled.jsonl")
+    want = set()
+    for t in threads:
+        if t["thread_id"].startswith("US-FR") and t.get("rin"):
+            want |= {r.strip() for r in str(t["rin"]).replace(";", ",").split(",") if r.strip()}
+    src = full if os.path.exists(full) else sub
+    ag_by = defaultdict(list)
+    for e in read_jsonl(src):
+        if e.get("rin") in want:
+            ag_by[e["rin"]].append(e)
+    if src == full:  # refresh the committed subset (full bulk file is gitignored)
+        write_jsonl(sub, [e for r in sorted(ag_by) for e in ag_by[r]])
+    editions = json.load(open(os.path.join(rdir, "agenda_editions.json")))
+    oi_by = defaultdict(list)
+    for r in read_jsonl(os.path.join(rdir, "oira_reviews.jsonl")):
+        oi_by[r.get("rin")].append(r)
     for t in threads:
         if not t["thread_id"].startswith("US-FR") or not t.get("rin"):
             continue
@@ -84,8 +114,8 @@ def merge_reginfo(threads, outcomes, evidence, reginfo):
         for rin in rins:
             items = []
             try:
-                items += list(reginfo.agenda_evidence_for_rin(rin, before) or [])
-                items += list(reginfo.oira_evidence_for_rin(rin, before) or [])
+                items += list(reginfo.agenda_evidence_for_rin(rin, before, ag_by.get(rin, []), editions) or [])
+                items += list(reginfo.oira_evidence_for_rin(rin, before, oi_by.get(rin, [])) or [])
             except Exception as e:
                 print(f"reginfo merge failed for {rin}: {e}", file=sys.stderr)
                 continue
@@ -158,9 +188,7 @@ def apply_patches(threads, evidence, outcomes, excluded):
         a = em.get(t["anchor_evidence_id"])
         if a:
             t["anchor_date"] = a["publication_date"]
-        o = om[t["thread_id"]]
-        rd = resolution_date(o)
-        t["stratum"] = "CLEAN" if (rd is None or d(rd) >= d(CLEAN_BOUNDARY)) else "HIST"
+        t["stratum"] = stratum_of(t, om[t["thread_id"]])
     return threads, evidence, outcomes, log
 
 
@@ -196,9 +224,12 @@ def build(verbose=True):
                 continue
             t = dict(t)
             t["family"] = family_of(tid)
-            rd = resolution_date(o)
-            t["stratum"] = "CLEAN" if (rd is None or d(rd) >= d(CLEAN_BOUNDARY)) else "HIST"
+            t["stratum"] = stratum_of(t, o)
             t["quality"] = "RAPID"          # promoted to GOLD only by audit (rpe.audit)
+            so = t.get("sampling_origin")
+            if so not in ("precursor_population", "outcome_backfill", "purposive"):
+                so = "precursor_population" if t.get("sampling_method") in ("census", "systematic", "random") else "purposive"
+            t["sampling_origin"] = so
             threads.append(t)
             outcomes.append(o)
         keep = {t["thread_id"] for t in threads}
@@ -258,6 +289,7 @@ def build(verbose=True):
         "excluded": dict(Counter(x["reason"] for x in excluded)),
         "by_family": dict(Counter(t["family"] for t in threads)),
         "by_stratum": dict(Counter(t["stratum"] for t in threads)),
+        "by_sampling_origin": dict(Counter(t["sampling_origin"] for t in threads)),
         "positives": sum(1 for o in outcomes if o["decisive_action"]),
         "negatives": sum(1 for o in outcomes if not o["decisive_action"]),
         "outcome_classes": dict(Counter(o["outcome_class"] for o in outcomes)),

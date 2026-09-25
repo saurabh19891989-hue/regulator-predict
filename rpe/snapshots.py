@@ -14,7 +14,9 @@ from collections import Counter, defaultdict
 from .common import CENSOR_DATE, DATA, add_days, d, days_between, read_jsonl, sha256_text, write_jsonl
 
 T_OFFSETS = [365, 270, 180, 120, 90, 60, 30, 14, 7]
-K_CUTOFFS = ["2026-06-26", "2026-07-26", "2026-08-25"]   # Design K (CLEAN, prospective)
+LATE_DATES = ["2026-06-26", "2026-07-26", "2026-08-25"]  # post-stated-knowledge-cutoff checkpoints
+C_CHECKPOINTS = [f"{y}-{m}-01" for y in range(2019, 2026) for m in ("01", "07")] + ["2026-01-01"] + LATE_DATES
+C_MAX_AGE_DAYS = 730   # Design C: monitor a visible thread at checkpoints up to 2 years after its anchor
 CENSOR_LAST = "2026-09-24"                               # last fully observed day
 ARMS = {
     "ALL": {"B", "C", "S", "D"},
@@ -25,6 +27,7 @@ ARMS = {
     "B_C_STAKEHOLDERS_PLUS_NEWS": {"B", "C", "S", "D"},
     "LATEST_DOCUMENT_ONLY": {"B", "C"},     # restricted to the single most recent official item
     "TITLE_ONLY": set(),
+    "MASKED_B_PLUS_C": {"B", "C"},          # entity/title-masked rendering (anti-memorisation test)
 }
 OFFICIAL = {"B", "C"}
 
@@ -90,7 +93,9 @@ def select_items(items, arm, cutoff):
     present = Counter(e["tier"] for e in vis)
     n_official = present["B"] + present["C"]
     avail, why = True, ""
-    if arm == "C_ONLY" and present["C"] == 0:
+    if arm == "MASKED_B_PLUS_C" and n_official == 0:
+        avail, why = False, "no official items"
+    elif arm == "C_ONLY" and present["C"] == 0:
         avail, why = False, "no tier C by cutoff"
     elif arm == "B_ONLY" and present["B"] == 0:
         avail, why = False, "no tier B by cutoff"
@@ -134,7 +139,8 @@ def build_index(arms=None):
                 "stratum": t["stratum"], "quality": t["quality"], "design": design, "offset": offset,
                 "cutoff_date": cutoff, "arm": arm, "available": avail, "unavailable_reason": why,
                 "evidence_ids": [e["evidence_id"] for e in sel], "classes_present": present,
-                "clean_snapshot": d(cutoff) >= d(K_CUTOFFS[0]),
+                "post_cutoff_snapshot": d(cutoff) >= d(LATE_DATES[0]),
+                "sampling_origin": t.get("sampling_origin", "precursor_population"),
                 "is_pseudo_anchor": anchors[t["thread_id"]]["pseudo"],
                 "anchor_T": anchors[t["thread_id"]]["anchor_T"],
                 "labels": {str(h): label(o, cutoff, h) for h in (7, 30, 60, 90, 180)},
@@ -144,23 +150,17 @@ def build_index(arms=None):
         T = anchors[t["thread_id"]]["anchor_T"]
         for k in T_OFFSETS:
             add(t, add_days(T, -k), "T", f"T-{k}")
-        if t["stratum"] == "CLEAN":
-            for c in K_CUTOFFS:
-                add(t, c, "K", f"K@{c}")
-    # dedupe identical design-T / design-K snapshots of the same thread/cutoff/arm (keep T)
-    seen, out = set(), []
-    for r in rows:
-        k = (r["thread_id"], r["cutoff_date"], r["arm"])
-        if k in seen:
-            continue
-        seen.add(k)
-        out.append(r)
+        for c in C_CHECKPOINTS:  # Design C: calendar-forward monitoring of currently visible threads
+            if d(t["anchor_date"]) <= d(c) <= d(add_days(t["anchor_date"], C_MAX_AGE_DAYS)) and d(c) <= d(CENSOR_LAST):
+                add(t, c, "C", f"C@{c}")
+    out = rows  # identical packets across designs/arms are aliased at run time (rpe.packets)
     write_jsonl(os.path.join(DATA, "snapshots", "index.jsonl"), out)
     summ = {
         "snapshots": len(out),
         "available_by_arm": dict(Counter(r["arm"] for r in out if r["available"])),
         "threads_with_valid_T_snapshot": len({r["thread_id"] for r in out if r["design"] == "T" and r["arm"] == "ALL" and r["available"]}),
-        "design_K_ALL": sum(1 for r in out if r["design"] == "K" and r["arm"] == "ALL" and r["available"]),
+        "design_C_B_PLUS_C": sum(1 for r in out if r["design"] == "C" and r["arm"] == "B_PLUS_C" and r["available"]),
+        "design_T_B_PLUS_C": sum(1 for r in out if r["design"] == "T" and r["arm"] == "B_PLUS_C" and r["available"]),
     }
     json.dump(summ, open(os.path.join(DATA, "derived", "snapshot_summary.json"), "w"), indent=1)
     return out, summ

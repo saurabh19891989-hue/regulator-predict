@@ -1,0 +1,17 @@
+{
+ "snapshots": 22833,
+ "available_by_arm": {
+  "ALL": 2537,
+  "B_ONLY": 2537,
+  "B_PLUS_C": 2537,
+  "B_C_STAKEHOLDERS_PLUS_NEWS": 132,
+  "TITLE_ONLY": 2537,
+  "MASKED_B_PLUS_C": 2537,
+  "C_ONLY": 48,
+  "LATEST_DOCUMENT_ONLY": 1798,
+  "B_C_STAKEHOLDERS": 1471
+ },
+ "threads_with_valid_T_snapshot": 256,
+ "design_C_B_PLUS_C": 675,
+ "design_T_B_PLUS_C": 1862
+}
