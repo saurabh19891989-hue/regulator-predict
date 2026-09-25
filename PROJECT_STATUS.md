@@ -5,7 +5,7 @@ GPT-6 Astra / OpenAI models. No LLM jobs running. Resume only on explicit instru
 **Last updated:** 2026-09-25 12:40 UTC
 **Gate:** GATE 0 — historical point-in-time backtest (not yet evaluated; no GO/NO-GO answer exists yet)
 **Repository:** https://github.com/saurabh19891989-hue/regulator-predict · branch `claude/optimistic-planck-3efc05`
-· local path `/home/user/regulator-predict` · latest commit: see `PAUSE_CHECKPOINT.md`
+· local path `/home/user/regulator-predict` · checkpoint commit `93090ee` (see `PAUSE_CHECKPOINT.md`)
 
 ## Exact current state
 - Infrastructure: complete and frozen (schemas, validator/lint, build, snapshots designs T+C, 9 arms, packets,

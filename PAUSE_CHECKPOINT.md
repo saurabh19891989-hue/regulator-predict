@@ -5,8 +5,8 @@
 - **Repository:** https://github.com/saurabh19891989-hue/regulator-predict · local `/home/user/regulator-predict`
 - **Branch:** `claude/optimistic-planck-3efc05` (tracks `origin/claude/optimistic-planck-3efc05`)
 - **Parent commit before checkpoint:** `bdbaf2a`
-- **Checkpoint commit:** the commit that adds this file ("PAUSE CHECKPOINT: …"); its hash is recorded in the follow-up
-  commit "PAUSE_CHECKPOINT: record checkpoint hash" below.
+- **Checkpoint commit:** `93090ee` ("PAUSE CHECKPOINT: preserve all Gate-0 state…"); this line was added by the follow-up
+  commit "PAUSE_CHECKPOINT: record checkpoint hash".
 - **Working tree at checkpoint:** clean after commit (all project state committed; ignored artifacts listed in DATA_MANIFEST.md).
 - **Outstanding background processes:** none. LLM agents: 0 running (verified with ListAgents after TaskStop of 8
   agents). Local shell jobs: the last pytest background job was stopped; the final test run (9 passed) ran in the foreground.
