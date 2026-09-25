@@ -188,6 +188,9 @@ def test_masked_arm_is_not_aliased_to_unmasked(dataset):
     assert sum(len(b["snapshot_ids"]) for b in run["batches"]) == 2
     assert not run["aliases"]
     assert "RBI" not in mask_text("RBI and FDA published a draft", {"regulator": "RBI"})
+    assert "Reserve Bank" not in mask_text("The Reserve Bank of India issued a paper", {"regulator": "RBI"})
+    assert "Food and Drug Administration" not in mask_text(
+        "The U.S. Food and Drug Administration proposed guidance", {"regulator": "FDA"})
 
 
 def test_evaluator_end_to_end_on_synthetic_forecasts(dataset):

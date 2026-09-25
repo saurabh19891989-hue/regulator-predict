@@ -1,0 +1,95 @@
+{
+ "run": "ASTRA_SMOKE2",
+ "arms": [
+  "B_ONLY",
+  "B_PLUS_C"
+ ],
+ "designs": [
+  "T"
+ ],
+ "size": 10,
+ "offsets": [
+  "T-90",
+  "T-30"
+ ],
+ "batches": [
+  {
+   "batch_id": "ASTRA_SMOKE2_b001",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE2\\inbox\\ASTRA_SMOKE2_b001.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE2\\outbox\\ASTRA_SMOKE2_b001.json",
+   "snapshot_ids": [
+    "S3a8fb94dda",
+    "S8f208c3643",
+    "S3af2bc2fa8",
+    "S468c08b188",
+    "Sc681c6813e",
+    "S9193a50595",
+    "Sf6bc50fa3c",
+    "S0f8d54c484",
+    "S8cd8b3217c",
+    "S2c427c07a0"
+   ],
+   "packet_sha256": "4d71caa517b367fa3549cabbd506a9323912176c06000bf5e72e92dd79a5c884",
+   "approx_tokens": 9840
+  },
+  {
+   "batch_id": "ASTRA_SMOKE2_b002",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE2\\inbox\\ASTRA_SMOKE2_b002.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE2\\outbox\\ASTRA_SMOKE2_b002.json",
+   "snapshot_ids": [
+    "S2868055f27",
+    "Sbca2878bf2",
+    "S1b90f93f70",
+    "S7f037bd31d",
+    "S4e19a401c3",
+    "S08025b6036",
+    "S32e9b5423f",
+    "S1f32eb4129",
+    "S826be67853",
+    "Sbaa90ee596"
+   ],
+   "packet_sha256": "1eaf45ed1bf1e5799505287084bdbb44fe45c4e8c3b2f070721311ec586c6384",
+   "approx_tokens": 8994
+  },
+  {
+   "batch_id": "ASTRA_SMOKE2_b003",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE2\\inbox\\ASTRA_SMOKE2_b003.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE2\\outbox\\ASTRA_SMOKE2_b003.json",
+   "snapshot_ids": [
+    "S00a1771642",
+    "S770e483b33"
+   ],
+   "packet_sha256": "7f5c0763b1cfab3f19b319d95152de31492bc520fcacaca0a3619a1e8dad31df",
+   "approx_tokens": 2165
+  },
+  {
+   "batch_id": "ASTRA_SMOKE2_b004",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE2\\inbox\\ASTRA_SMOKE2_b004.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE2\\outbox\\ASTRA_SMOKE2_b004.json",
+   "snapshot_ids": [
+    "S64682f8677",
+    "Sf5dac17667"
+   ],
+   "packet_sha256": "b4f477fb7a15956023297c7d6134eff2f4ed155bf0c42e1f2eeeaf0a0a9d8808",
+   "approx_tokens": 2059
+  }
+ ],
+ "aliases": {
+  "S1c189ba2c6": "S8f208c3643",
+  "S420f5bc89e": "S826be67853",
+  "Sa5b1d9b3b8": "S0f8d54c484",
+  "Se066274880": "S7f037bd31d",
+  "Sfb0fc8e350": "Sbaa90ee596",
+  "Sd9cee95ca7": "S2c427c07a0",
+  "S9a511c7b13": "S3a8fb94dda",
+  "S44ab86adde": "S32e9b5423f",
+  "Seb738d0860": "S1f32eb4129",
+  "Sc28ad60838": "S3af2bc2fa8",
+  "S876475fad2": "S4e19a401c3",
+  "Sc66183761f": "S8cd8b3217c",
+  "S9ea1b2e220": "S1b90f93f70",
+  "Sde3e7c571e": "Sf6bc50fa3c",
+  "Sb09bf2473d": "S9193a50595",
+  "S6d96e9e532": "S08025b6036"
+ }
+}

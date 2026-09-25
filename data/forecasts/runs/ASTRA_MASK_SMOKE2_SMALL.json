@@ -1,0 +1,43 @@
+{
+ "run": "ASTRA_MASK_SMOKE2_SMALL",
+ "arms": [
+  "MASKED_B_PLUS_C"
+ ],
+ "designs": [
+  "T"
+ ],
+ "size": 4,
+ "offsets": [
+  "T-90",
+  "T-30"
+ ],
+ "batches": [
+  {
+   "batch_id": "ASTRA_MASK_SMOKE2_SMALL_b001",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE2_SMALL\\inbox\\ASTRA_MASK_SMOKE2_SMALL_b001.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE2_SMALL\\outbox\\ASTRA_MASK_SMOKE2_SMALL_b001.json",
+   "snapshot_ids": [
+    "Sa2464fd8b8",
+    "S011409d9f7",
+    "S354bad04dd",
+    "S12580376fa"
+   ],
+   "packet_sha256": "a1513c87c2f4fb3969f7960a330ed5b4d6b79c162610aa1eced9377c25e3d649",
+   "approx_tokens": 2881
+  },
+  {
+   "batch_id": "ASTRA_MASK_SMOKE2_SMALL_b002",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE2_SMALL\\inbox\\ASTRA_MASK_SMOKE2_SMALL_b002.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE2_SMALL\\outbox\\ASTRA_MASK_SMOKE2_SMALL_b002.json",
+   "snapshot_ids": [
+    "S6df9df0851",
+    "Sb9b8b67309",
+    "Sb3df4e3bc0",
+    "Sc0f3dab048"
+   ],
+   "packet_sha256": "1d194829e4a0a2844dcb10863f9e9c6516b8cf619524fe0fd8cc7876b54d7159",
+   "approx_tokens": 2881
+  }
+ ],
+ "aliases": {}
+}

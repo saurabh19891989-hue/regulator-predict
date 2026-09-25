@@ -91,12 +91,21 @@ MASK_PATTERNS = [
     (r"\"[^\"]{12,}\"", "[TITLE WITHHELD]"),                                # quoted titles
     (r"\b(SEBI|RBI|IRDAI|TRAI|DGTR|FDA|CMS|EPA|SEC|CFTC|FCC|FTC|CFPB|OCC|FDIC|USDA|DOL|HHS|DOT|FAA|NHTSA|OSHA|IRS|CBP|DHS|DOE|ED|HUD|FRB|NCUA|FHFA|FINRA|DoT|MoF|CBIC)\b", "the Regulator"),
 ]
+REGULATOR_ALIASES = {
+    "RBI": ["Reserve Bank of India", "The Reserve Bank"],
+    "FDA": ["U.S. Food and Drug Administration", "US Food and Drug Administration", "Food and Drug Administration"],
+    "SEBI": ["Securities and Exchange Board of India"],
+    "IRDAI": ["Insurance Regulatory and Development Authority of India"],
+    "TRAI": ["Telecom Regulatory Authority of India"],
+}
 
 
 def mask_text(txt, thread):
-    for name in {thread.get("regulator") or "", thread.get("agency") or ""}:
+    names = {thread.get("regulator") or "", thread.get("agency") or ""}
+    names.update(REGULATOR_ALIASES.get(thread.get("regulator"), []))
+    for name in sorted(names, key=len, reverse=True):
         if len(name) >= 3:
-            txt = re.sub(re.escape(name), "the Regulator", txt, flags=re.I)
+            txt = re.sub(r"(?<!\w)" + re.escape(name) + r"(?!\w)", "the Regulator", txt, flags=re.I)
     for pat, rep in MASK_PATTERNS:
         txt = re.sub(pat, rep, txt)
     return txt
@@ -104,7 +113,7 @@ def mask_text(txt, thread):
 
 def render_snapshot(snap, thread, items):
     if snap["arm"].startswith("MASKED"):
-        body = _render(snap, dict(thread, neutral_title="[title withheld — see evidence]"), items)
+        body = _render(snap, dict(thread, neutral_title="[title withheld — see evidence]", process_type="other"), items)
         head, _, rest = body.partition("Evidence")
         head = head.replace(f"Regulator: {thread['regulator']} ({thread['jurisdiction']})",
                             f"Regulator: {GENERIC_REG.get(thread['jurisdiction'], 'a regulator')} (identity withheld)")
@@ -196,7 +205,7 @@ def make_run(run, arms, designs, size, offsets=None, thread_ids=None, strata=Non
                 raise RuntimeError(f"internal id leaked into packet {bid}: {bad[:3]}")
         pin = os.path.join(inbox, bid + ".md")
         pout = os.path.join(outbox, bid + ".json")
-        with open(pin, "w") as f:
+        with open(pin, "w", encoding="utf-8", newline="\n") as f:
             f.write(body)
         if not os.path.exists(pout):
             with open(pout, "w") as f:

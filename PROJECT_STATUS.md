@@ -20,6 +20,12 @@
   outputs for hindsight, alias/coherence and evidence-citation errors before ingesting the append-only ledger.
   Then audit and decide whether to scale. Tier C remains only 12 items (all RBI), so current B vs B+C evidence is
   too sparse for a broad scientific conclusion.
+- Pre-release packet audit (13:30 UTC): 10 threads, 5 action/5 controls, 40 requested B/B+C rows represented by
+  24 distinct forecasts plus 16 identical-arm aliases; four RBI/FDA threads add 8 masked forecasts. The audit found
+  and patched two retrospective Tier-C claim clauses and exposed full agency names in masked text. All six regenerated
+  packet files have matching raw-byte SHA-256 hashes, no future ISO dates logged, and pending outboxes. Packet copies
+  are preserved in `data/forecasts/packets/`. IRDAI revised-source and reconstructed US OIRA provenance remain RAPID
+  limitations; no GOLD claim is made. The index SHA remains unchanged after those content-only patches.
 
 The sections below preserve the original Claude pause state for historical context; their branch, path, and counts
 describe that checkpoint rather than the current Astra run.

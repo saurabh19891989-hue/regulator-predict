@@ -92,3 +92,13 @@ and 2,286 available Design-T `B_PLUS_C` snapshots. `data/snapshots/index.jsonl` 
 `eca775c8e0de4eaaf0d8c4fb95de331f9a647d597d3568ec06b41299bdffc7eb`. Commit this index before any
 new forecast. Future data or method changes require a new index version and explicit run-to-index provenance; do
 not rebuild the index under a live forecast run. This responds to FINDING-002.
+
+## FINDING-003 — Pre-release packet audit and source-claim repair (2026-09-25 13:29 UTC)
+Recorded before any GPT forecast or new result. The pre-release smoke packet audit found two Tier-C `extracted_claims`
+that appended retrospective comparisons to later thread anchor drafts (`IN-RBI-H-0010-E02` and
+`IN-RBI-H-0021-E02`). The source excerpts themselves were contemporaneous. The claims are patched through
+`data/audits/patches/astra_smoke_preflight.jsonl`, preserving the raw executor data. The audit also found full
+regulator names in masked FDA/RBI packets; the masking alias table and generic masked action description were
+expanded. Packet files were written with Windows CRLF while their manifest hashes covered LF text; the writer now
+uses UTF-8/LF bytes. All packets must be regenerated and byte hashes checked before forecasting. These repairs
+do not alter evidence IDs/dates, outcomes, or index membership; they do not constitute a full GOLD audit.
