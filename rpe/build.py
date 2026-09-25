@@ -13,10 +13,10 @@ import os
 import sys
 from collections import Counter, defaultdict
 
-from .common import CENSOR_DATE, DATA, ROOT, add_days, d, read_jsonl, write_jsonl
+from .common import CENSOR_DATE, DATA, ROOT, MODEL_KNOWLEDGE_CUTOFF, add_days, d, read_jsonl, write_jsonl
 from .validate import validate_dir
 
-LATE_BOUNDARY = "2026-07-01"   # outcome resolved on/after this date → after the forecaster's STATED knowledge cutoff (not guaranteed)
+LATE_BOUNDARY = add_days(MODEL_KNOWLEDGE_CUTOFF, 1)  # post-published-cutoff outcome; never described as guaranteed clean
 SKIP_DIRS = {"us_reginfo"}
 
 
@@ -272,7 +272,7 @@ def build(verbose=True):
         a = latest.get(t["thread_id"])
         t["audited"] = a is not None
         t["audit_verdict"] = a["verdict"] if a else None
-        if a and a["verdict"] in ("clean", "minor_issue_fixed", "contaminated_rebuild") and a.get("gold_eligible"):
+        if a and a["verdict"] in ("clean", "minor_issue_fixed") and a.get("gold_eligible"):
             t["quality"] = "GOLD"
     for tid in drop:
         excluded.append({"thread_id": tid, "reason": "audit_contaminated_exclude"})

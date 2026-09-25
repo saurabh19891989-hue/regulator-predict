@@ -11,7 +11,7 @@ import os
 import random
 from collections import Counter, defaultdict
 
-from .common import CENSOR_DATE, DATA, add_days, d, days_between, read_jsonl, sha256_text, write_jsonl
+from .common import CENSOR_DATE, DATA, MODEL_KNOWLEDGE_CUTOFF, add_days, d, days_between, read_jsonl, sha256_text, write_jsonl
 
 T_OFFSETS = [365, 270, 180, 120, 90, 60, 30, 14, 7]
 LATE_DATES = ["2026-06-26", "2026-07-26", "2026-08-25"]  # post-stated-knowledge-cutoff checkpoints
@@ -139,7 +139,7 @@ def build_index(arms=None):
                 "stratum": t["stratum"], "quality": t["quality"], "design": design, "offset": offset,
                 "cutoff_date": cutoff, "arm": arm, "available": avail, "unavailable_reason": why,
                 "evidence_ids": [e["evidence_id"] for e in sel], "classes_present": present,
-                "post_cutoff_snapshot": d(cutoff) >= d(LATE_DATES[0]),
+                "post_cutoff_snapshot": d(cutoff) > d(MODEL_KNOWLEDGE_CUTOFF),
                 "sampling_origin": t.get("sampling_origin", "precursor_population"),
                 "is_pseudo_anchor": anchors[t["thread_id"]]["pseudo"],
                 "anchor_T": anchors[t["thread_id"]]["anchor_T"],

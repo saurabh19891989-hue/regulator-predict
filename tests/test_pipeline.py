@@ -122,6 +122,36 @@ def test_audit_patch_moves_decisive_date_and_drops_leaked_evidence(dataset):
     build(verbose=False)
 
 
+def test_gold_promotion_requires_eligible_clean_or_minor_verdict(dataset):
+    from rpe.build import build
+
+    audit_path = os.path.join(dataset["root"], "audits", "audit_gold_promotion_test.jsonl")
+    cases = [
+        ("IN-TST-H-0001", "clean", True, "GOLD"),
+        ("IN-TST-H-0002", "minor_issue_fixed", True, "GOLD"),
+        ("IN-TST-H-0003", "contaminated_rebuild", True, "RAPID"),
+        ("IN-TST-H-0004", "unverifiable", True, "RAPID"),
+        ("IN-TST-H-0005", "clean", False, "RAPID"),
+    ]
+    try:
+        with open(audit_path, "w") as f:
+            for n, (tid, verdict, eligible, _) in enumerate(cases, 1):
+                f.write(json.dumps({
+                    "audit_id": f"AUD-test-{n}", "thread_id": tid, "scope": "thread",
+                    "verdict": verdict, "findings": [], "auditor": "test",
+                    "audit_date": "2026-09-25", "gold_eligible": eligible,
+                }) + "\n")
+        build(verbose=False)
+        threads = {t["thread_id"]: t for t in read_jsonl(os.path.join(dataset["root"], "threads", "threads.jsonl"))}
+        for tid, verdict, _, expected_quality in cases:
+            assert threads[tid]["audited"] is True
+            assert threads[tid]["audit_verdict"] == verdict
+            assert threads[tid]["quality"] == expected_quality
+    finally:
+        os.remove(audit_path)
+        build(verbose=False)
+
+
 def test_design_c_and_masked_packets(dataset):
     from rpe.build import build
     from rpe.packets import make_run
@@ -140,6 +170,24 @@ def test_design_c_and_masked_packets(dataset):
     for b in m["batches"]:
         txt = open(b["packet"]).read()
         assert "TESTREG" not in txt and "Document number" not in txt and "example.gov" not in txt
+
+
+def test_masked_arm_is_not_aliased_to_unmasked(dataset):
+    from rpe.build import build
+    from rpe.packets import make_run, mask_text
+    from rpe.snapshots import build_index
+
+    build(verbose=False)
+    rows, _ = build_index()
+    tid = "IN-TST-H-0001"
+    selected = [r for r in rows if r["thread_id"] == tid and r["design"] == "T"
+                and r["offset"] == "T-90" and r["arm"] in ("B_PLUS_C", "MASKED_B_PLUS_C")]
+    assert len(selected) == 2 and all(r["available"] for r in selected)
+    run = make_run("mask_alias_test", ["B_PLUS_C", "MASKED_B_PLUS_C"], ["T"], size=2,
+                   offsets=["T-90"], thread_ids={tid})
+    assert sum(len(b["snapshot_ids"]) for b in run["batches"]) == 2
+    assert not run["aliases"]
+    assert "RBI" not in mask_text("RBI and FDA published a draft", {"regulator": "RBI"})
 
 
 def test_evaluator_end_to_end_on_synthetic_forecasts(dataset):

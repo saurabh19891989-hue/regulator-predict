@@ -65,3 +65,30 @@ commit bdbaf2a). Required before any scaled run: freeze and commit the snapshot 
 
 ## PAUSE — 2026-09-25 ~12:35 UTC
 Programme paused on user instruction (Anthropic credit nearly exhausted; move to GPT-6 Astra). No further forecasts.
+
+## DEV-008 — GPT-6 Astra cutoff and post-cutoff world-knowledge guard (2026-09-25 13:21 UTC)
+Recorded after the 60 SMOKE1 ledger records and FINDING-001/002 were known, before any GPT forecast or new result.
+[Official OpenAI documentation](https://developers.openai.com/api/docs/models/gpt-6-astra) states GPT-6 Astra's
+knowledge cutoff is 2026-04-30. For this forecaster, LATE thread outcomes begin 2026-05-01, and the stricter
+`post_cutoff_snapshot` flag requires the **forecast cutoff** itself to be after 2026-04-30. LATE is a
+post-**stated**-cutoff stratum, not a guaranteed contamination-free holdout. Model identity and cutoff must be
+reconsidered if a different forecaster model is used. The packet now explicitly forbids post-cutoff world facts
+from model memory, including later election results and decisions; plans dated after the cutoff may be used only
+when they were already stated in cutoff-valid evidence and remain uncertain. Forecast rationales must be audited
+for assertions about later world state. This responds to FINDING-001. The frozen preregistration is unchanged.
+
+## DEV-009 — Masked packet identity and independent runs (2026-09-25 13:21 UTC)
+Recorded after SMOKE1, before any GPT forecast or new result. A masked packet has a different rendering from an
+unmasked packet even when its evidence IDs match, so runtime packet deduplication now keeps it distinct. Short
+regulator names such as RBI and FDA are masked as well. Masked and unmasked forecasts will use separate isolated
+contexts. This implements the entity/title comparison already specified in DEV-003; it does not change outcome
+labels or the original preregistration.
+
+## DEV-010 — Frozen GPT-6 Astra snapshot index (2026-09-25 13:25 UTC)
+Recorded after SMOKE1 and before any GPT forecast or new result. The canonical stores were rebuilt from the
+preserved raw workstreams after DEV-008. Counts stayed at 334 threads (205 actions, 129 controls), 2,065 evidence
+items, and 0 GOLD. The new stated-cutoff split is 206 HIST / 128 LATE. The index contains 801 available Design-C
+and 2,286 available Design-T `B_PLUS_C` snapshots. `data/snapshots/index.jsonl` SHA-256 is
+`eca775c8e0de4eaaf0d8c4fb95de331f9a647d597d3568ec06b41299bdffc7eb`. Commit this index before any
+new forecast. Future data or method changes require a new index version and explicit run-to-index provenance; do
+not rebuild the index under a live forecast run. This responds to FINDING-002.

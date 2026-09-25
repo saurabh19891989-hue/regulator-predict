@@ -1,11 +1,28 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
-**Status:** ⏸ PAUSED (user instruction, 2026-09-25 ~12:35 UTC) — Anthropic credit nearly exhausted; project moving to
-GPT-6 Astra / OpenAI models. No LLM jobs running. Resume only on explicit instruction. Handoff: `GPT_ASTRA_HANDOFF.md`.
-**Last updated:** 2026-09-25 12:40 UTC
+**Status:** ACTIVE on the Astra branch after the user's 2026-09-25 resume directive. No new GPT forecasts have run yet.
+**Last updated:** 2026-09-25 13:25 UTC
 **Gate:** GATE 0 — historical point-in-time backtest (not yet evaluated; no GO/NO-GO answer exists yet)
 **Repository:** https://github.com/saurabh19891989-hue/regulator-predict · branch `claude/optimistic-planck-3efc05`
 · local path `/home/user/regulator-predict` · checkpoint commit `93090ee` (see `PAUSE_CHECKPOINT.md`)
+
+## Astra transition, 2026-09-25 13:25 UTC
+- Workspace: `C:\Users\saura\Downloads\regulator-predict`, branch `astra/regulatory-predict` from remote handoff
+  `d93e255`; setup receipt `CODEX_WORKSPACE_STATUS.md` pushed at `5514f16`.
+- Preserved counts reproduced from raw data: 334 RAPID threads (205 action, 129 controls), 2,065 evidence items,
+  112 proposed GOLD candidates, 0 promoted GOLD, 60 legacy SMOKE1 ledger records; ledger hash chain verifies.
+- Tests: 9 original tests passed on Windows Python 3.12 with `PYTHONUTF8=1` (452 s). Focused regression tests for
+  GOLD promotion and masked packet separation pass. The full evaluator test has not been rerun after those fixes.
+- Official GPT-6 Astra stated knowledge cutoff is 2026-04-30. DEV-008/009/010 document the revised LATE boundary,
+  strict post-cutoff snapshot flag, post-cutoff world-knowledge packet rule, masking fix, and frozen rebuilt index.
+  LATE now has 128 threads; HIST 206. Index SHA-256 is recorded in DEV-010. No new forecasts preceded the freeze.
+- Immediate next actions: generate an isolated 10-thread GPT smoke run plus a small masked run; preflight packets and
+  outputs for hindsight, alias/coherence and evidence-citation errors before ingesting the append-only ledger.
+  Then audit and decide whether to scale. Tier C remains only 12 items (all RBI), so current B vs B+C evidence is
+  too sparse for a broad scientific conclusion.
+
+The sections below preserve the original Claude pause state for historical context; their branch, path, and counts
+describe that checkpoint rather than the current Astra run.
 
 ## Exact current state
 - Infrastructure: complete and frozen (schemas, validator/lint, build, snapshots designs T+C, 9 arms, packets,

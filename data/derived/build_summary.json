@@ -51,8 +51,8 @@
   "US-FR": 179
  },
  "by_stratum": {
-  "HIST": 228,
-  "LATE": 106
+  "HIST": 206,
+  "LATE": 128
  },
  "by_sampling_origin": {
   "precursor_population": 334

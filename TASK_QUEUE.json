@@ -233,14 +233,14 @@
    "id": "RP0-18",
    "title": "Re-derive LATE boundary for the new forecaster's knowledge cutoff; add post-cutoff-events rule (DEV-008); freeze snapshot index",
    "owner": "director",
-   "status": "NOT_STARTED",
+   "status": "COMPLETE",
    "depends_on": [],
    "done_when": "deviations logged; index committed before forecasts",
-   "notes": "FINDING-001/002"
+   "notes": "DEV-008/009/010: Astra cutoff 2026-04-30, post-cutoff packet rule, masked separation; rebuilt index frozen before GPT forecasts"
   }
  ],
- "last_updated": "2026-09-25T12:40Z",
- "programme_state": "PAUSED \u2014 handoff to GPT-6 Astra; see GPT_ASTRA_HANDOFF.md and PAUSE_CHECKPOINT.md",
+ "last_updated": "2026-09-25T13:25Z",
+ "programme_state": "ACTIVE on astra/regulatory-predict; controls and index freeze complete, new GPT smoke test next",
  "status_vocabulary": [
   "COMPLETE",
   "PARTIAL",

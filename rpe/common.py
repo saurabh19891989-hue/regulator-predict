@@ -8,7 +8,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.environ.get("RPE_DATA", os.path.join(ROOT, "data"))
 SCHEMAS = os.path.join(ROOT, "schemas")
 CENSOR_DATE = "2026-09-25"          # outcome verification date for this Gate-0 run
-MODEL_KNOWLEDGE_CUTOFF = "2026-06-30"  # forecaster (Opus 5.5) stated knowledge cutoff: June 2026
+MODEL_KNOWLEDGE_CUTOFF = "2026-04-30"  # GPT-6 Astra published cutoff; not a guarantee against memorisation
 CUTOFF_OFFSETS = [180, 120, 90, 60, 30, 14, 7]
 HORIZONS = [7, 30, 60, 90, 180]
 

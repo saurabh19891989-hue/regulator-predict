@@ -11,13 +11,13 @@ import json
 import os
 import random
 import re
+import tempfile
 from collections import defaultdict
 
 from .common import DATA, read_jsonl, sha256_text
 from .snapshots import available_date
 
-FC_ROOT = os.environ.get(
-    "RPE_FC_ROOT", "/tmp/claude-0/-home-user-regulator-predict/91e5b9f5-d683-5b72-a27c-87c3694866b1/scratchpad/fc")
+FC_ROOT = os.environ.get("RPE_FC_ROOT", os.path.join(tempfile.gettempdir(), "rpe_forecaster"))
 STUB = '{"status": "PENDING_FORECAST"}'
 
 DECISIVE = {
@@ -36,10 +36,15 @@ You are a professional regulatory forecaster. This file contains {n} independent
 DIFFERENT regulatory matters. Treat each snapshot on its own; do not carry information between snapshots.
 
 Rules:
-1. For each snapshot, "today" is its CUTOFF DATE. Nothing after the cutoff is known. Use only the evidence shown
-   plus general knowledge of how that regulator and process usually behave (base rates, typical durations).
+1. For each snapshot, "today" is its CUTOFF DATE. Use only the evidence shown plus general knowledge of how the
+   regulatory process usually behaves (base rates, typical durations). Do not use any world-state fact learned after
+   the cutoff: later election results, leadership changes, court rulings, agency decisions, dates or outcomes are
+   unknown, even if you remember them. A future event stated in cutoff-valid evidence may be considered only as an
+   uncertain plan or possibility, never as a later-known result. Every factual driver in "notes" or "scenarios" must
+   be supported by the shown evidence or be a general process base rate.
 2. Do NOT use any specific memory of what happened to this particular matter after the cutoff. If you recognise the
-   matter and believe you know its later outcome, still forecast as of the cutoff and set "recognised_outcome": true.
+   matter and believe you know its later outcome, set "recognised_outcome": true and forecast from cutoff-valid
+   evidence only. Never state or hint at the remembered result.
 3. The evidence shown may be only a subset of what was public; do not infer anything from the absence of a
    document type. Some snapshots show no documents at all — then forecast from title, regulator, process and date.
 4. "Decisive action" is defined per snapshot. Probabilities in "p" are CUMULATIVE: probability the decisive action
@@ -90,7 +95,7 @@ MASK_PATTERNS = [
 
 def mask_text(txt, thread):
     for name in {thread.get("regulator") or "", thread.get("agency") or ""}:
-        if len(name) > 3:
+        if len(name) >= 3:
             txt = re.sub(re.escape(name), "the Regulator", txt, flags=re.I)
     for pat, rep in MASK_PATTERNS:
         txt = re.sub(pat, rep, txt)
@@ -152,10 +157,10 @@ def make_run(run, arms, designs, size, offsets=None, thread_ids=None, strata=Non
            and (thread_ids is None or r["thread_id"] in thread_ids)
            and (strata is None or r["stratum"] in strata)
            and (families is None or r["family"] in families)]
-    # dedupe identical packets (same thread, cutoff, evidence set) across arms — score once, map to all arms
+    # Deduplicate identical renderings, but never alias a masked packet to an unmasked one.
     uniq, alias = {}, {}
     for r in sel:
-        k = (r["thread_id"], r["cutoff_date"], tuple(r["evidence_ids"]))
+        k = (r["thread_id"], r["cutoff_date"], tuple(r["evidence_ids"]), r["arm"].startswith("MASKED"))
         if k in uniq:
             alias[r["snapshot_id"]] = uniq[k]["snapshot_id"]
         else:
