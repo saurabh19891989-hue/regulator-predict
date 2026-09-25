@@ -10,8 +10,8 @@
    "effort": "medium",
    "depends_on": [],
    "done_when": "Evidence, thread, forecast, outcome and audit schemas are versioned and tests pass.",
-   "status": "done",
-   "notes": "Schemas v1.0.0, validator, lint, pipeline, 6 tests passing; prereg frozen."
+   "status": "COMPLETE",
+   "notes": "schemas v1.x, rpe/ pipeline, 9 tests passing"
   },
   {
    "id": "RP0-00",
@@ -20,9 +20,9 @@
    "model": "opus-5.5",
    "effort": "high",
    "depends_on": [],
-   "status": "done",
+   "status": "COMPLETE",
    "done_when": "docs/PREREGISTRATION.md committed before any forecast",
-   "notes": "commit 6841b87"
+   "notes": "docs/PREREGISTRATION.md, commit 6841b87"
   },
   {
    "id": "RP0-02",
@@ -34,8 +34,8 @@
     "RP0-01"
    ],
    "done_when": "Pilot regulator Tier B/C endpoints and access methods are recorded.",
-   "status": "in_progress",
-   "notes": "us_reginfo done; per-ws sources.json"
+   "status": "PARTIAL",
+   "notes": "sources.json present for us_fr, us_fda, us_reginfo, in_sebi_h; reachability table docs/EXECUTOR_GUIDE.md \u00a78; India workstreams stopped before writing sources.json/NOTES.md"
   },
   {
    "id": "RP0-03",
@@ -47,8 +47,8 @@
     "RP0-01"
    ],
    "done_when": "Candidate set includes positive and stalled/no-action/altered threads.",
-   "status": "in_progress",
-   "notes": "9 Sonnet executors launched 2026-09-25 ~12:00 UTC (us_fr, us_reginfo, us_fda, in_sebi_h, in_sebi_r, in_rbi, in_irdai, in_trai, in_dgtr)."
+   "status": "PARTIAL",
+   "notes": "335 candidates discovered; in_dgtr produced 0 threads"
   },
   {
    "id": "RP0-04",
@@ -60,8 +60,8 @@
     "RP0-03"
    ],
    "done_when": "100\u2013200 usable threads are reconstructed if evidence availability permits.",
-   "status": "in_progress",
-   "notes": "Executors reconstruct timelines in the same pass."
+   "status": "PARTIAL",
+   "notes": "334 RAPID usable (US-FR 179, US-FDA 55, SEBI 44, RBI 27, IRDAI 19, TRAI 10); incomplete: DGTR, TRAI, IRDAI-R frame, SEBI-H (14/25), RBI-R"
   },
   {
    "id": "RP0-05",
@@ -73,8 +73,8 @@
     "RP0-03"
    ],
    "done_when": "Point-in-time versions and leakage risks are strongly verified.",
-   "status": "pending",
-   "notes": "GOLD = GOLD_CANDIDATE + Opus audit; CLEAN holdout threads prioritised."
+   "status": "NOT_STARTED",
+   "notes": "112 GOLD_CANDIDATE threads; GOLD requires audit (RP0-08)"
   },
   {
    "id": "RP0-06",
@@ -86,8 +86,8 @@
     "RP0-04"
    ],
    "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
-   "status": "in_progress",
-   "notes": "SMOKE1 running; broad run = Opus B_ONLY/B_PLUS_C on design C all + design T {T-180,T-90,T-30} (DEV-005)"
+   "status": "PAUSED",
+   "notes": "Only SMOKE1 (10 threads, 40 unique forecasts, Opus 5.5) done; freeze snapshot index before resuming (FINDING-002)"
   },
   {
    "id": "RP0-07",
@@ -99,8 +99,8 @@
     "RP0-04"
    ],
    "done_when": "B/C/stakeholder/news/latest-vs-trajectory comparisons are complete.",
-   "status": "pending",
-   "notes": "Rich ablations (S, D, latest-only, masked) only on GOLD/informative subsets (DEV-005); Sonnet or Opus same-model pairs"
+   "status": "NOT_STARTED",
+   "notes": "DEV-005: broad B_ONLY vs B_PLUS_C; rich ablations only on GOLD/informative subsets"
   },
   {
    "id": "RP0-08",
@@ -113,8 +113,8 @@
     "RP0-06"
    ],
    "done_when": "GOLD and risk-weighted RAPID snapshots have contamination verdicts.",
-   "status": "pending",
-   "notes": ""
+   "status": "NOT_STARTED",
+   "notes": "protocol ready in docs/AUDIT_GUIDE.md; add forecast-rationale audit (FINDING-001)"
   },
   {
    "id": "RP0-09",
@@ -128,8 +128,8 @@
     "RP0-08"
    ],
    "done_when": "Calibration, action, timing, content, lead-time and ablation metrics are reproducible.",
-   "status": "pending",
-   "notes": "rpe/evaluate.py ready"
+   "status": "NOT_STARTED",
+   "notes": "rpe/evaluate.py ready and tested on synthetic forecasts"
   },
   {
    "id": "RP0-10",
@@ -142,8 +142,8 @@
    ],
    "optional": true,
    "budget_rule": "Use only on 5\u201310 disputed/high-impact cases and only if budget remains.",
-   "status": "pending",
-   "notes": "optional"
+   "status": "NOT_STARTED",
+   "notes": "optional adjudication"
   },
   {
    "id": "RP0-11",
@@ -155,7 +155,7 @@
     "RP0-09"
    ],
    "done_when": "Six core predictive questions are answered and next architecture is justified by evidence.",
-   "status": "pending",
+   "status": "NOT_STARTED",
    "notes": ""
   },
   {
@@ -167,9 +167,9 @@
    "depends_on": [
     "RP0-04"
    ],
-   "status": "pending",
+   "status": "NOT_STARTED",
    "done_when": "every positive has content_direction with >= medium confidence",
-   "notes": "outcome-side only; never shown to forecasters"
+   "notes": "US-FR content_direction heuristic (100/205 positives action_mixed)"
   },
   {
    "id": "RP0-13",
@@ -180,9 +180,9 @@
    "depends_on": [
     "RP0-04"
    ],
-   "status": "pending",
+   "status": "NOT_STARTED",
    "done_when": "Google-News-RSS dated headlines added before decisive dates",
-   "notes": "needed for news ablation on US family"
+   "notes": "US threads have no Tier D"
   },
   {
    "id": "RP0-14",
@@ -191,9 +191,9 @@
    "model": "sonnet-5",
    "effort": "medium",
    "depends_on": [],
-   "status": "in_progress",
+   "status": "PAUSED",
    "done_when": "hazard_table.json + external_p() available to evaluator",
-   "notes": "DEV-007"
+   "notes": "agent stopped at pause; no output; spec in agent prompt summarised in GPT_ASTRA_HANDOFF.md / PROJECT_STATUS.md"
   },
   {
    "id": "RP0-15",
@@ -204,10 +204,48 @@
    "depends_on": [
     "RP0-04"
    ],
-   "status": "in_progress",
+   "status": "COMPLETE",
    "done_when": "inspected; go/no-go to scale",
-   "notes": "DEV-006"
+   "notes": "SMOKE1 valid pipeline-wise; FINDING-001 macro hindsight, FINDING-002 index instability"
+  },
+  {
+   "id": "RP0-16",
+   "title": "Finish India collectors (DGTR all; TRAI; IRDAI-R; SEBI-H; RBI-R) + NOTES.md/sources.json",
+   "owner": "executors",
+   "model": "cheap model",
+   "status": "PAUSED",
+   "depends_on": [],
+   "done_when": "frames complete per docs/EXECUTOR_GUIDE.md",
+   "notes": "partial outputs preserved in data/raw/in_*"
+  },
+  {
+   "id": "RP0-17",
+   "title": "Targeted Tier-C collection (speeches, board statements, RBI SDRP, agency press releases)",
+   "owner": "executors",
+   "status": "NOT_STARTED",
+   "depends_on": [
+    "RP0-04"
+   ],
+   "done_when": "enough tier-C items to power B vs B+C",
+   "notes": "only 12 tier-C items exist (RBI)"
+  },
+  {
+   "id": "RP0-18",
+   "title": "Re-derive LATE boundary for the new forecaster's knowledge cutoff; add post-cutoff-events rule (DEV-008); freeze snapshot index",
+   "owner": "director",
+   "status": "NOT_STARTED",
+   "depends_on": [],
+   "done_when": "deviations logged; index committed before forecasts",
+   "notes": "FINDING-001/002"
   }
  ],
- "last_updated": "2026-09-25"
+ "last_updated": "2026-09-25T12:40Z",
+ "programme_state": "PAUSED \u2014 handoff to GPT-6 Astra; see GPT_ASTRA_HANDOFF.md and PAUSE_CHECKPOINT.md",
+ "status_vocabulary": [
+  "COMPLETE",
+  "PARTIAL",
+  "NOT_STARTED",
+  "BLOCKED",
+  "PAUSED"
+ ]
 }

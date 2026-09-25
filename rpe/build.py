@@ -237,7 +237,8 @@ def build(verbose=True):
         per_ws[ws] = {"threads_in": len(th), "kept": sum(1 for t in th if t["thread_id"] in keep), "errors": len(errs)}
 
     reginfo = load_reginfo()
-    added = merge_reginfo(threads, outcomes, evidence, reginfo) if reginfo else 0
+    has_ri = os.path.exists(os.path.join(DATA, "raw", "us_reginfo", "agenda_editions.json"))
+    added = merge_reginfo(threads, outcomes, evidence, reginfo) if (reginfo and has_ri) else 0
 
     threads, evidence, outcomes, patch_log = apply_patches(threads, evidence, outcomes, excluded)
     # re-lint after patches: invalid outcomes exclude the thread; post-outcome evidence is dropped (logged)

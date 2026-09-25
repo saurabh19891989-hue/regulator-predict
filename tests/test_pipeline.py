@@ -140,3 +140,33 @@ def test_design_c_and_masked_packets(dataset):
     for b in m["batches"]:
         txt = open(b["packet"]).read()
         assert "TESTREG" not in txt and "Document number" not in txt and "example.gov" not in txt
+
+
+def test_evaluator_end_to_end_on_synthetic_forecasts(dataset):
+    import numpy as np
+    from rpe import ledger
+    from rpe.build import build
+    from rpe.evaluate import run_eval, write_md
+    from rpe.packets import make_run
+    from rpe.snapshots import build_index
+    build(verbose=False)
+    build_index()
+    m = make_run("evalrun", ["B_ONLY", "B_PLUS_C", "TITLE_ONLY"], ["T", "C"], size=6)
+    idx = {r["snapshot_id"]: r for r in read_jsonl(os.path.join(dataset["root"], "snapshots", "index.jsonl"))}
+    rng = np.random.default_rng(1)
+    for b in m["batches"]:
+        fcs = []
+        for s in b["snapshot_ids"]:
+            y = idx[s]["labels"].get("180") or 0
+            p = float(np.clip(0.3 + 0.4 * y + rng.normal(0, 0.1), 0.01, 0.99))
+            fcs.append({"id": s, "p": {"7d": p * .1, "30d": p * .3, "60d": p * .5, "90d": p * .7, "180d": p},
+                        "next": {"final_action": p, "revised_or_further_consultation": 0, "formal_withdrawal": 0, "no_further_official_step": 1 - p},
+                        "content": {"as_proposed": .6, "softened": .2, "tightened": .1, "mixed": .1, "different_mechanism": 0},
+                        "scenarios": [], "notes": "", "missing": [], "recognised_outcome": False, "insufficient_evidence": False})
+        open(b["output"], "w").write(json.dumps({"forecasts": fcs}))
+    r = ledger.ingest("evalrun", "synthetic")
+    assert r["ingested"] > 0 and not r["problems"], r
+    res = run_eval(["evalrun"], [], ["evalrun"], None)
+    assert res["n_primary_forecasts"] > 0
+    assert res["action"]["T_180_all"]["llm"]["auroc"] > 0.7
+    write_md(res, os.path.join(dataset["root"], "METRICS_test.md"))

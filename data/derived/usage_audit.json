@@ -1,0 +1,352 @@
+{
+ "rows": [
+  {
+   "agent": "a11a70786e89a2e4d",
+   "task": "executor us_baserates",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 8,
+     "input": 16,
+     "output": 535,
+     "cache_read": 675291,
+     "cache_write_5m": 100401,
+     "cache_write_1h": 0,
+     "usd": 0.3914
+    }
+   },
+   "effort": {
+    "xhigh": 20
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "a1b5332e0a174c297",
+   "task": "executor in_dgtr",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 141,
+     "input": 282,
+     "output": 6192,
+     "cache_read": 25304281,
+     "cache_write_5m": 254056,
+     "cache_write_1h": 0,
+     "usd": 5.7585
+    }
+   },
+   "effort": {
+    "xhigh": 272
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "a1c56e86be0401d5b",
+   "task": "executor in_irdai",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 121,
+     "input": 242,
+     "output": 5805,
+     "cache_read": 23673738,
+     "cache_write_5m": 310079,
+     "cache_write_1h": 0,
+     "usd": 5.5685
+    }
+   },
+   "effort": {
+    "xhigh": 237
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "a45538d150ee4e5ea",
+   "task": "executor in_sebi_h",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 223,
+     "input": 446,
+     "output": 11327,
+     "cache_read": 54697720,
+     "cache_write_5m": 344013,
+     "cache_write_1h": 0,
+     "usd": 11.9137
+    }
+   },
+   "effort": {
+    "xhigh": 412
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "a5501cd2bd7dae687",
+   "task": "forecaster SMOKE1_b003",
+   "models": {
+    "claude-opus-5-5": {
+     "requests": 4,
+     "input": 8,
+     "output": 20165,
+     "cache_read": 80502,
+     "cache_write_5m": 36637,
+     "cache_write_1h": 0,
+     "usd": 0.6026
+    }
+   },
+   "effort": {
+    "xhigh": 7
+   },
+   "intended_model": "claude-opus-5-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "a7dff2243867b2c72",
+   "task": "executor in_rbi",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 121,
+     "input": 242,
+     "output": 26514,
+     "cache_read": 21258211,
+     "cache_write_5m": 299952,
+     "cache_write_1h": 0,
+     "usd": 5.2671
+    }
+   },
+   "effort": {
+    "xhigh": 239
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "a81466956d26a1bee",
+   "task": "isolation test (statusline-setup)",
+   "models": {
+    "claude-haiku-4-5-20251001": {
+     "requests": 5,
+     "input": 42,
+     "output": 9,
+     "cache_read": 37615,
+     "cache_write_5m": 11446,
+     "cache_write_1h": 0,
+     "usd": 0.0182
+    }
+   },
+   "effort": {},
+   "intended_model": "claude-haiku-4-5",
+   "routing_ok": false
+  },
+  {
+   "agent": "a981b9e972df21229",
+   "task": "executor us_fda",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 99,
+     "input": 198,
+     "output": 12889,
+     "cache_read": 15456786,
+     "cache_write_5m": 212581,
+     "cache_write_1h": 0,
+     "usd": 3.7521
+    }
+   },
+   "effort": {
+    "xhigh": 190
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "aa30d335f9dafbe48",
+   "task": "executor us_reginfo",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 59,
+     "input": 118,
+     "output": 7143,
+     "cache_read": 7833934,
+     "cache_write_5m": 168044,
+     "cache_write_1h": 0,
+     "usd": 2.0586
+    }
+   },
+   "effort": {
+    "xhigh": 123
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "abb27a8e1301fc4d0",
+   "task": "executor in_sebi_r",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 131,
+     "input": 262,
+     "output": 3869,
+     "cache_read": 25857610,
+     "cache_write_5m": 344401,
+     "cache_write_1h": 0,
+     "usd": 6.0717
+    }
+   },
+   "effort": {
+    "xhigh": 260
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "adf8a56925ee92911",
+   "task": "forecaster SMOKE1_b002",
+   "models": {
+    "claude-opus-5-5": {
+     "requests": 5,
+     "input": 10,
+     "output": 18206,
+     "cache_read": 95132,
+     "cache_write_5m": 32309,
+     "cache_write_1h": 0,
+     "usd": 0.5447
+    }
+   },
+   "effort": {
+    "xhigh": 8
+   },
+   "intended_model": "claude-opus-5-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "ae6163d8fc8d6791f",
+   "task": "forecaster SMOKE1_b004",
+   "models": {
+    "claude-opus-5-5": {
+     "requests": 4,
+     "input": 8,
+     "output": 16875,
+     "cache_read": 83838,
+     "cache_write_5m": 36475,
+     "cache_write_1h": 0,
+     "usd": 0.5367
+    }
+   },
+   "effort": {
+    "xhigh": 7
+   },
+   "intended_model": "claude-opus-5-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "aecfbb2638bc4f8cb",
+   "task": "executor us_fr",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 270,
+     "input": 540,
+     "output": 11715,
+     "cache_read": 63916490,
+     "cache_write_5m": 357735,
+     "cache_write_1h": 0,
+     "usd": 13.7959
+    }
+   },
+   "effort": {
+    "xhigh": 490
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "af45f231e75e57880",
+   "task": "executor in_trai",
+   "models": {
+    "claude-sonnet-5": {
+     "requests": 125,
+     "input": 250,
+     "output": 4423,
+     "cache_read": 22037913,
+     "cache_write_5m": 285705,
+     "cache_write_1h": 0,
+     "usd": 5.1666
+    }
+   },
+   "effort": {
+    "xhigh": 245
+   },
+   "intended_model": "claude-sonnet-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "afb186100ee9f0096",
+   "task": "forecaster SMOKE1_b001",
+   "models": {
+    "claude-opus-5-5": {
+     "requests": 4,
+     "input": 8,
+     "output": 17528,
+     "cache_read": 67343,
+     "cache_write_5m": 38215,
+     "cache_write_1h": 0,
+     "usd": 0.5551
+    }
+   },
+   "effort": {
+    "xhigh": 7
+   },
+   "intended_model": "claude-opus-5-5",
+   "routing_ok": true
+  },
+  {
+   "agent": "main",
+   "task": "director (this session)",
+   "models": {
+    "claude-opus-5-5": {
+     "requests": 109,
+     "input": 222,
+     "output": 248844,
+     "cache_read": 29760100,
+     "cache_write_5m": 0,
+     "cache_write_1h": 393106,
+     "usd": 14.0746
+    }
+   },
+   "effort": {
+    "xhigh": 312
+   },
+   "intended_model": "claude-opus-5-5",
+   "routing_ok": true
+  }
+ ],
+ "by_model": {
+  "claude-sonnet-5": {
+   "requests": 1298,
+   "input": 2596,
+   "output": 90412,
+   "cache_read": 260711974,
+   "cache_write_5m": 2676967,
+   "cache_write_1h": 0,
+   "usd": 59.7441
+  },
+  "claude-opus-5-5": {
+   "requests": 126,
+   "input": 256,
+   "output": 321618,
+   "cache_read": 30086915,
+   "cache_write_5m": 143636,
+   "cache_write_1h": 393106,
+   "usd": 16.3137
+  },
+  "claude-haiku-4-5-20251001": {
+   "requests": 5,
+   "input": 42,
+   "output": 9,
+   "cache_read": 37615,
+   "cache_write_5m": 11446,
+   "cache_write_1h": 0,
+   "usd": 0.0182
+  }
+ },
+ "total_usd_list_price": 76.08
+}

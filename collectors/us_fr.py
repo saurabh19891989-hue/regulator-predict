@@ -987,11 +987,26 @@ def process_anchor(thread_id: str, anchor: dict, sampling_frame: str, sampling_m
 # Systematic sampling
 # --------------------------------------------------------------------------
 
-def systematic_sample_indices(n: int, k: int) -> tuple[list[int], int, int]:
-    """Return (indices, step, start_offset) for a systematic sample of size k from n items."""
-    step = max(1, n // k)
-    start = step // 2
-    idx = [start + i * step for i in range(k) if start + i * step < n]
+def systematic_sample_indices(n: int, k: int) -> tuple[list[int], float, float]:
+    """Return (indices, step, start_offset) for a systematic sample of size k from n
+    sorted items, evenly spread across the full range [0, n). Uses a floating-point
+    step (n/k) rather than integer division: when n is not many times larger than k
+    (e.g. capping 97 kept Frame-C threads down to 60), integer step truncates to 1 and
+    degenerates into "take the first k in order", which is a temporal selection bias,
+    not a systematic sample. A float step keeps every ratio >= 1 evenly spread."""
+    if k <= 0 or n <= 0:
+        return [], 0.0, 0.0
+    if k >= n:
+        return list(range(n)), 1.0, 0.0
+    step = n / k
+    start = step / 2
+    idx, seen = [], set()
+    for i in range(k):
+        j = min(int(start + i * step), n - 1)
+        while j in seen and j < n - 1:
+            j += 1
+        idx.append(j)
+        seen.add(j)
     return idx, step, start
 
 
@@ -1023,9 +1038,9 @@ def run_frame_h():
     print(f"Frame H eligible NPRMs: {len(eligible)}  (categories: {cat_counts})")
 
     idx, step, start = systematic_sample_indices(len(eligible), FRAME_H_TARGET_N)
-    STATS["frameH_step"] = step
-    STATS["frameH_start_offset"] = start
-    print(f"Frame H systematic sample: step={step} start_offset={start} -> {len(idx)} target slots")
+    STATS["frameH_step"] = round(step, 3)
+    STATS["frameH_start_offset"] = round(start, 3)
+    print(f"Frame H systematic sample: step={step:.3f} start_offset={start:.3f} -> {len(idx)} target slots")
 
     used_rin_keys = set()
     used_docnums = set()
@@ -1150,8 +1165,8 @@ def run_frame_c():
     # --- Frame C: cap at 60, systematic if more ---
     if len(kept) > FRAME_C_CAP:
         idx, step, start = systematic_sample_indices(len(kept), FRAME_C_CAP)
-        STATS["frameC_cap_step"] = step
-        STATS["frameC_cap_start_offset"] = start
+        STATS["frameC_cap_step"] = round(step, 3)
+        STATS["frameC_cap_start_offset"] = round(start, 3)
         selected = [kept[i] for i in idx]
     else:
         STATS["frameC_cap_step"] = None
@@ -1378,6 +1393,15 @@ def write_notes_md():
                  "anchor-before-outcome invariant, so anchors of this kind fall through to "
                  "stalled_no_action/unresolved rather than being linked to their same-day companion.\n")
 
+    lc_counts = {}
+    clc_counts = {}
+    for o in outcomes:
+        lc_counts[o.get("label_confidence")] = lc_counts.get(o.get("label_confidence"), 0) + 1
+        clc_counts[o.get("content_label_confidence")] = clc_counts.get(o.get("content_label_confidence"), 0) + 1
+    non_high_lc = [(o["thread_id"], o.get("label_confidence")) for o in outcomes
+                   if o.get("label_confidence") != "high"]
+    non_high_lc_str = "; ".join(f"{tid} ({conf})" for tid, conf in non_high_lc) or "none"
+
     lines.append("\n## label_confidence vs content_label_confidence\n")
     lines.append("Per the Director's schema clarification received during this run (schemas/outcome.schema.json "
                  "bumped to 1.1.0, docs/EXECUTOR_GUIDE.md section 5 updated): `label_confidence` refers ONLY to "
@@ -1385,15 +1409,21 @@ def write_notes_md():
                  "stalled_no_action/unresolved, confidence that no such document exists by the censor date). It "
                  "is never lowered because content_direction is uncertain. A separate `content_label_confidence` "
                  "field holds confidence in content_direction/key_parameters specifically. Every outcome record "
-                 "in this workstream carries both fields.\n"
+                 "in this workstream carries both fields "
+                 f"(label_confidence: {json.dumps(lc_counts)}; content_label_confidence: {json.dumps(clc_counts)}).\n"
                  "\n`label_confidence` is set from the linkage method: **high** when the decisive/withdrawal "
                  "document (or, for no-action outcomes, the absence of one) was established via a native FR "
                  "`regulation_id_number` match; **medium** when only a docket_id match was available, or when "
                  "the match came only from the `conditions[term]=<RIN>` full-text-search fallback (used for "
                  "agency-wide withdrawal notices that do not carry the RIN in their own metadata); **low** when "
-                 "the anchor had neither a usable RIN nor docket to search on. 178/179 threads resolved to "
-                 "`label_confidence: high` via a direct RIN match; one withdrawal (US-FR-X-0027) is `medium` "
-                 "because it was only found via the term-search fallback (see Linkage method below).\n")
+                 f"the anchor had neither a usable RIN nor docket to search on. Threads with label_confidence "
+                 f"below high, and why: {non_high_lc_str} (each is a `notes` field with the full rationale).\n")
+
+    action_outcomes = [o for o in outcomes if o["decisive_action"]]
+    action_clc = {}
+    for o in action_outcomes:
+        action_clc[o.get("content_label_confidence")] = action_clc.get(o.get("content_label_confidence"), 0) + 1
+    na_outcomes_n = len(outcomes) - len(action_outcomes)
 
     lines.append("\n## content_direction labeling\n")
     lines.append("content_direction (as_proposed/softened/tightened/mixed/different_mechanism) is set by an "
@@ -1406,10 +1436,10 @@ def write_notes_md():
                  "RULE types), so govinfo.gov PDFs + PyMuPDF text extraction were used instead; this is "
                  "recorded per-outcome in `notes`. All content_direction labels are therefore provisional "
                  "with `content_label_confidence` medium (occasionally low when no keyword signal was found at "
-                 "all — this run: 114 medium, 0 low among the 114 action_* outcomes); none should be treated as "
-                 "a manually verified read of the full final-rule preamble. For all withdrawn/"
-                 "stalled_no_action/unresolved outcomes (content_direction='na'), `content_label_confidence` is "
-                 "trivially `high` (65 threads).\n")
+                 f"all — this run, among the {len(action_outcomes)} action_* outcomes: {json.dumps(action_clc)}); "
+                 "none should be treated as a manually verified read of the full final-rule preamble. For all "
+                 "withdrawn/stalled_no_action/unresolved outcomes (content_direction='na'), "
+                 f"`content_label_confidence` is trivially `high` ({na_outcomes_n} threads).\n")
 
     lines.append("\n## Known weaknesses / limitations\n")
     lines.append("- Eligibility filtering (genuine NPRM vs ANPRM/SNPRM/extension/reopening/withdrawal/"

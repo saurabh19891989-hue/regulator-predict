@@ -51,3 +51,17 @@ The evaluator's comparators are regulator/process-stage historical base rates co
 (workstream × elapsed-time bucket; workstream × visible process stage) plus the heuristic and logistic feature model.
 The LLM must beat the best of these. Where available, an external US Federal Register population base-rate table
 (significant NPRMs outside the test window) is added as a further comparator.
+
+## FINDING-001 — Macro-political hindsight in forecaster rationales (smoke test SMOKE1, 2026-09-25 12:29 UTC)
+Recorded after SMOKE1 results were seen. At cutoffs before the 5 Nov 2024 US election (2024-10-07, 2024-10-17) the
+forecaster (Opus 5.5) reasoned that a "Jan 2025 administration change likely halts or reverses" rules. Packets were
+clean; the leakage came from the model's world knowledge. Not yet remediated. Proposed DEV-008 (not implemented):
+explicit packet rule forbidding post-cutoff world events + rationale audit + sensitivity excluding flagged snapshots.
+
+## FINDING-002 — Snapshot/pseudo-anchor instability across rebuilds (2026-09-25 12:34 UTC)
+Collectors rebuilt data after SMOKE1 and the positive-gap pool changed, so 36 of 60 SMOKE1 ledger records no longer
+match the rebuilt index. SMOKE1-era rows preserved in `data/forecasts/runs/SMOKE1_index_rows.jsonl` (recovered from
+commit bdbaf2a). Required before any scaled run: freeze and commit the snapshot index (DEV-009, not implemented).
+
+## PAUSE — 2026-09-25 ~12:35 UTC
+Programme paused on user instruction (Anthropic credit nearly exhausted; move to GPT-6 Astra). No further forecasts.

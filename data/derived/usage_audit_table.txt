@@ -1,0 +1,24 @@
+task                                   model(s) actually used       intended           ok  req   input  cacheW   cacheR     out     USD  effort
+executor us_baserates                  claude-sonnet-5              claude-sonnet-5    Y    8      16  100401   675291     535    0.39  {'xhigh': 20}
+executor in_dgtr                       claude-sonnet-5              claude-sonnet-5    Y  141     282  254056 25304281    6192    5.76  {'xhigh': 272}
+executor in_irdai                      claude-sonnet-5              claude-sonnet-5    Y  121     242  310079 23673738    5805    5.57  {'xhigh': 237}
+executor in_sebi_h                     claude-sonnet-5              claude-sonnet-5    Y  223     446  344013 54697720   11327   11.91  {'xhigh': 412}
+forecaster SMOKE1_b003                 claude-opus-5-5              claude-opus-5-5    Y    4       8   36637    80502   20165    0.60  {'xhigh': 7}
+executor in_rbi                        claude-sonnet-5              claude-sonnet-5    Y  121     242  299952 21258211   26514    5.27  {'xhigh': 239}
+isolation test (statusline-setup)      claude-haiku-4-5-20251001    claude-haiku-4-5   N    5      42   11446    37615       9    0.02  {}
+executor us_fda                        claude-sonnet-5              claude-sonnet-5    Y   99     198  212581 15456786   12889    3.75  {'xhigh': 190}
+executor us_reginfo                    claude-sonnet-5              claude-sonnet-5    Y   59     118  168044  7833934    7143    2.06  {'xhigh': 123}
+executor in_sebi_r                     claude-sonnet-5              claude-sonnet-5    Y  131     262  344401 25857610    3869    6.07  {'xhigh': 260}
+forecaster SMOKE1_b002                 claude-opus-5-5              claude-opus-5-5    Y    5      10   32309    95132   18206    0.54  {'xhigh': 8}
+forecaster SMOKE1_b004                 claude-opus-5-5              claude-opus-5-5    Y    4       8   36475    83838   16875    0.54  {'xhigh': 7}
+executor us_fr                         claude-sonnet-5              claude-sonnet-5    Y  270     540  357735 63916490   11715   13.80  {'xhigh': 490}
+executor in_trai                       claude-sonnet-5              claude-sonnet-5    Y  125     250  285705 22037913    4423    5.17  {'xhigh': 245}
+forecaster SMOKE1_b001                 claude-opus-5-5              claude-opus-5-5    Y    4       8   38215    67343   17528    0.56  {'xhigh': 7}
+director (this session)                claude-opus-5-5              claude-opus-5-5    Y  109     222  393106 29760100  248844   14.07  {'xhigh': 312}
+
+BY MODEL:
+  claude-sonnet-5          requests= 1298 input=    2596 cache_write=  2676967 cache_read= 260711974 output=   90412 USD=59.74
+  claude-opus-5-5          requests=  126 input=     256 cache_write=   536742 cache_read=  30086915 output=  321618 USD=16.31
+  claude-haiku-4-5-20251001 requests=    5 input=      42 cache_write=    11446 cache_read=     37615 output=       9 USD=0.02
+
+TOTAL (list price, all transcripts in this session): $76.08
