@@ -191,6 +191,9 @@ def test_masked_arm_is_not_aliased_to_unmasked(dataset):
     assert "Reserve Bank" not in mask_text("The Reserve Bank of India issued a paper", {"regulator": "RBI"})
     assert "Food and Drug Administration" not in mask_text(
         "The U.S. Food and Drug Administration proposed guidance", {"regulator": "FDA"})
+    redacted = mask_text("Shri Jayant Kumar Dash discussed the Digital Lending – Transparency in Aggregation "
+                         "of Loan Products from Multiple Lenders draft", {"regulator": "RBI"})
+    assert "Jayant" not in redacted and "Digital Lending – Transparency" not in redacted
 
 
 def test_evaluator_end_to_end_on_synthetic_forecasts(dataset):

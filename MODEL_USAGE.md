@@ -9,3 +9,9 @@
 - Stop for packet or output contamination, malformed forecasts, coherence repairs, or any usage limit. Scale automatically only after the planned smoke audit passes and a separate call-count estimate is recorded.
 
 Actual invocation count, outputs, and observed usage will be appended after the run.
+
+## First smoke invocations, 2026-09-25 13:41 UTC
+
+- Six fresh Astra high-effort CLI calls completed: 4 primary batches and 2 masked batches. CLI reported 52,431 total tokens across them (input, output and reasoning combined); actual account billing is unavailable.
+- The primary run produced 24 distinct forecasts. Six reported `recognised_outcome=true`; these stay flagged for sensitivity analysis.
+- The first masked run produced 8 forecasts but is invalid for masking comparison under FINDING-004. It is preserved without ledger ingestion. Two fresh masked calls are planned after repair, with about 5,800 packet input tokens plus overhead. No scaled forecasts have begun.

@@ -91,6 +91,8 @@ def _last_hash():
 
 def ingest(run, model, agent_type="statusline-setup[Read,Edit] (isolated)"):
     man = json.load(open(os.path.join(DATA, "forecasts", "runs", f"{run}.json")))
+    if man.get("invalidated"):
+        raise ValueError(f"run {run} was invalidated: {man.get('invalid_reason', 'no reason recorded')}")
     done = {(r["run"], r["snapshot_id"]) for r in read_jsonl(LEDGER)}
     prev = _last_hash()
     new, problems, pending = [], [], []

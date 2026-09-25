@@ -90,6 +90,12 @@ MASK_PATTERNS = [
     (r"https?://\S+", "[URL]"),
     (r"\"[^\"]{12,}\"", "[TITLE WITHHELD]"),                                # quoted titles
     (r"\b(SEBI|RBI|IRDAI|TRAI|DGTR|FDA|CMS|EPA|SEC|CFTC|FCC|FTC|CFPB|OCC|FDIC|USDA|DOL|HHS|DOT|FAA|NHTSA|OSHA|IRS|CBP|DHS|DOE|ED|HUD|FRB|NCUA|FHFA|FINRA|DoT|MoF|CBIC)\b", "the Regulator"),
+    (r"\b(?:Shri|Smt|Mr|Ms|Dr)\.?\s+(?:[A-Z][a-z]+\s+){1,3}[A-Z][a-z]+\b", "[person withheld]"),
+    (r"\bStatement on Developmental and Regulatory Policies\b", "[policy statement]"),
+    (r"\bBi-monthly Monetary Policy Statement\b", "[policy statement]"),
+    (r"\b(?:Draft\s+)?Government Securities Lending Directions,\s*2023\b", "government securities lending draft"),
+    (r"\bDigital Lending\s*[-–—]\s*Transparency in Aggregation of Loan Products from Multiple Lenders\b", "loan aggregation transparency draft"),
+    (r"\bDivision of Gastroenterology and Inborn Error Products\b", "a specialist division"),
 ]
 REGULATOR_ALIASES = {
     "RBI": ["Reserve Bank of India", "The Reserve Bank"],
@@ -108,6 +114,7 @@ def mask_text(txt, thread):
             txt = re.sub(r"(?<!\w)" + re.escape(name) + r"(?!\w)", "the Regulator", txt, flags=re.I)
     for pat, rep in MASK_PATTERNS:
         txt = re.sub(pat, rep, txt)
+    txt = re.sub(r"\bthe\s+the Regulator\b", "the Regulator", txt, flags=re.I)
     return txt
 
 

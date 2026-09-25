@@ -102,3 +102,12 @@ regulator names in masked FDA/RBI packets; the masking alias table and generic m
 expanded. Packet files were written with Windows CRLF while their manifest hashes covered LF text; the writer now
 uses UTF-8/LF bytes. All packets must be regenerated and byte hashes checked before forecasting. These repairs
 do not alter evidence IDs/dates, outcomes, or index membership; they do not constitute a full GOLD audit.
+
+## FINDING-004 — Masked smoke run requires repair (2026-09-25 13:41 UTC)
+Recorded after the first GPT smoke forecasts, before headline evaluation. Independent review found that the eight
+forecasts in `ASTRA_MASK_SMOKE2_SMALL` used packets which, despite masking agency names and header titles, retained
+an official's name and exact policy/document titles in claims and excerpts. The run is preserved for audit but is
+**invalid for the masked-versus-unmasked comparison** and will not be ingested into the headline ledger. The masking
+rules now redact those names and title phrases while keeping the policy mechanism where possible; a new run with
+fresh model contexts is required. Masking can still remove legitimate content (notably the FDA draft guidance
+topic), so any measured accuracy change must be interpreted with that limitation.

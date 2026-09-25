@@ -39,5 +39,7 @@
    "approx_tokens": 2881
   }
  ],
- "aliases": {}
+ "aliases": {},
+ "invalidated": true,
+ "invalid_reason": "Partial entity and document-title masking; see FINDING-004 in PROTOCOL_DEVIATIONS.md. Preserve raw outputs for audit, exclude from comparison and ledger."
 }
