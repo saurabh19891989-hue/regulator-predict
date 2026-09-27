@@ -730,13 +730,12 @@ def build_stakeholder_evidence(thread_id: str, seq: int, anchor: dict, comment_d
     if not deadlines:
         return None
     latest_close = max(deadlines)
-    from datetime import date, timedelta
-    pub = (date.fromisoformat(latest_close) + timedelta(days=14)).isoformat()
+    # A live docket count is known only when observed. A closed comment period
+    # does not prove that today's count was available two weeks after closure.
+    pub = RETRIEVAL_DATE
     if decisive_date and pub >= decisive_date:
         return None
-    if pub > RETRIEVAL_DATE:
-        # Can't claim to have "retrieved" a comment count as of a synthetic
-        # date that falls after our actual retrieval date.
+    if pub > OUTCOME_CENSOR_DATE:
         return None
     docket = get_docket(anchor) or "unknown"
     short, _ = agency_names(anchor)
@@ -751,16 +750,14 @@ def build_stakeholder_evidence(thread_id: str, seq: int, anchor: dict, comment_d
         "title": f"Public comment volume on docket {docket}",
         "source_url": rdgi.get("comments_url") or anchor["html_url"],
         "publication_date": pub,
-        "first_known_date": None,
+        "first_known_date": pub,
         "retrieval_date": RETRIEVAL_DATE,
         "document_type": "comment_count",
         "tier": "S",
         "original_or_revised": "original",
         "version_confidence": "medium",
-        "date_verification": ("publication_date is synthetic: latest known comments_close_on for this "
-                               "thread (%s) + 14 days, used as a plausible date by which the comment "
-                               "volume was knowable; comment count itself is FR/regulations.gov "
-                               "integration data." % latest_close),
+        "date_verification": ("Count observed via FR/regulations.gov integration on " + RETRIEVAL_DATE
+                              + "; no earlier availability is asserted."),
         "extracted_claims": [f"Docket {docket} received {count} public comments (count as of "
                               f"regulations.gov check reflected in the FR API on {RETRIEVAL_DATE})."],
         "content_excerpt": excerpt,

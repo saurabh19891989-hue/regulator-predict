@@ -1,0 +1,27 @@
+{
+  "US-FDA-H-0005": {
+    "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bdocket_id%5D=FDA-2019-D-4433",
+    "status": 429,
+    "error": "Too many requests; temporarily deactivated.\n\nSupport Code 03"
+  },
+  "US-FDA-H-0007": {
+    "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bdocket_id%5D=FDA-2018-D-1398",
+    "status": 429,
+    "error": "Too many requests; temporarily deactivated.\n\nSupport Code 03"
+  },
+  "US-FDA-H-0008": {
+    "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bdocket_id%5D=FDA-2019-D-5573",
+    "status": 429,
+    "error": "Too many requests; temporarily deactivated.\n\nSupport Code 03"
+  },
+  "US-FDA-H-0021": {
+    "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bdocket_id%5D=FDA-2022-D-0168",
+    "status": 429,
+    "error": "Too many requests; temporarily deactivated.\n\nSupport Code 03"
+  },
+  "US-FDA-C-0001": {
+    "url": "https://www.federalregister.gov/api/v1/documents.json?conditions%5Bdocket_id%5D=FDA-2023-D-0093",
+    "status": 429,
+    "error": "Too many requests; temporarily deactivated.\n\nSupport Code 03"
+  }
+}

@@ -36,48 +36,48 @@
    "errors": 0
   }
  },
- "threads": 334,
- "evidence": 2065,
+ "threads": 328,
+ "evidence": 1869,
  "reginfo_items_added": 1333,
  "excluded": {
-  "low_label_confidence": 1
+  "low_label_confidence": 1,
+  "audit_exclude_patch": 6
  },
  "by_family": {
-  "IN-IRDAI": 19,
-  "IN-RBI": 27,
+  "IN-IRDAI": 18,
+  "IN-RBI": 23,
   "IN-SEBI": 44,
-  "IN-TRAI": 10,
+  "IN-TRAI": 9,
   "US-FDA": 55,
   "US-FR": 179
  },
  "by_stratum": {
-  "HIST": 206,
-  "LATE": 128
+  "HIST": 202,
+  "LATE": 126
  },
  "by_sampling_origin": {
-  "precursor_population": 334
+  "precursor_population": 328
  },
- "positives": 205,
- "negatives": 129,
+ "positives": 207,
+ "negatives": 121,
  "outcome_classes": {
-  "stalled_no_action": 42,
+  "stalled_no_action": 34,
   "action_mixed": 100,
-  "action_as_proposed": 74,
-  "action_softened": 23,
+  "action_as_proposed": 75,
+  "action_softened": 24,
   "unresolved": 83,
   "action_tightened": 8,
   "withdrawn": 4
  },
  "tiers": {
-  "B": 1776,
-  "D": 98,
-  "C": 12,
-  "S": 179
+  "B": 1766,
+  "D": 91,
+  "C": 12
  },
  "by_quality": {
-  "RAPID": 334
+  "RAPID": 328
  },
- "audited": 0,
- "patches_applied": 2,
- "auto_dropped_evidence": 0
+ "audited": 27,
+ "patches_applied": 961,
+ "auto_dropped_evidence": 3
 }

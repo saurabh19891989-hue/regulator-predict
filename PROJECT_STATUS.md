@@ -1,10 +1,30 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
-**Status:** ACTIVE on the Astra branch after the user's 2026-09-25 resume directive. No new GPT forecasts have run yet.
-**Last updated:** 2026-09-25 13:25 UTC
+**Status:** ACTIVE. Source audit invalidated the GPT smoke gate; data correction and independent audits are in progress.
+**Last updated:** 2026-09-27
 **Gate:** GATE 0 — historical point-in-time backtest (not yet evaluated; no GO/NO-GO answer exists yet)
-**Repository:** https://github.com/saurabh19891989-hue/regulator-predict · branch `claude/optimistic-planck-3efc05`
-· local path `/home/user/regulator-predict` · checkpoint commit `93090ee` (see `PAUSE_CHECKPOINT.md`)
+**Repository:** https://github.com/saurabh19891989-hue/regulator-predict · branch `astra/regulatory-predict`
+· local path `C:\Users\saura\Downloads\regulator-predict` · latest pushed checkpoint `b53ca1b`
+
+## Current repair phase, 2026-09-27
+
+- Original observation window stays fixed through 2026-09-24. The current date does not extend no-action labels.
+- Primary `ASTRA_SMOKE2` and masked `ASTRA_MASK_SMOKE3` are invalidated for empirical use because RBI H0021 was
+  falsely labeled no-action and its pseudo-anchor/cutoffs are wrong. Predictions and source index rows are archived;
+  they have not entered the append-only ledger. Ledger still has 60 legacy diagnostic records.
+- The actual primary smoke has two US-FR threads (H0002 and H0010), not six. Tier-S synthetic counts were **not**
+  rendered in its B/B+C packets. The count flaw affects the canonical dataset and richer ablations.
+- 158 US-FR synthetic count items have drop patches. FDA audit found the same defect in 21 FDA count items.
+- US-FR public-inspection/agency dates and multiple India false controls require correction. In particular EPA
+  publicly announced the H0002 final action on 2020-10-01, before the stored 2020-11-19 Federal Register date.
+- Independent agents are checking US-FR public availability, India outcomes/evidence, and ten FDA threads. No GOLD
+  promotion or scaled forecast is justified yet. Next smoke may use verified FDA controls and India actions.
+- Run manifests now bind canonical evidence, threads, outcomes and index by SHA-256; preflight, ingestion and
+  evaluation reject changed inputs or invalidated runs. Fifteen focused tests passed before the latest collector fix.
+- Rebuilt: 328 threads (207 actions/121 controls), 1,869 evidence, zero GOLD; 961 patches applied. New index has 777
+  Design-C and 2,240 Design-T B_PLUS_C snapshots; hash manifest data/snapshots/freeze_20260927.json.
+- Next: finish packet audit, commit the freeze, run fresh isolated ASTRA_SMOKE4/masked forecasts, then assess the
+  technical smoke gate. Remaining source uncertainty must be handled before broad scientific claims.
 
 ## Astra transition, 2026-09-25 13:25 UTC
 - Workspace: `C:\Users\saura\Downloads\regulator-predict`, branch `astra/regulatory-predict` from remote handoff

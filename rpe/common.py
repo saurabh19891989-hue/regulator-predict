@@ -59,6 +59,17 @@ def sha256_text(s):
     return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
 
+def frozen_data_hashes(data_root=None):
+    """Bind forecast/evaluation inputs to the exact canonical files used by a run."""
+    base = data_root or DATA
+    paths = ("snapshots/index.jsonl", "threads/threads.jsonl", "evidence/evidence.jsonl", "outcomes/outcomes.jsonl")
+    result = {}
+    for path in paths:
+        with open(os.path.join(base, path), "rb") as f:
+            result[path] = hashlib.sha256(f.read()).hexdigest()
+    return result
+
+
 def stable_hash(obj):
     return sha256_text(json.dumps(obj, sort_keys=True, ensure_ascii=False))
 

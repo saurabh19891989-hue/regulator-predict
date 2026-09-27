@@ -1,0 +1,106 @@
+{
+ "run": "ASTRA_SMOKE4",
+ "snapshot_index_sha256": "77413c7de115c76fccb308c94a3003d6c0d55a3b183b358f4f8db6dbd1198f90",
+ "dataset_sha256": {
+  "snapshots/index.jsonl": "77413c7de115c76fccb308c94a3003d6c0d55a3b183b358f4f8db6dbd1198f90",
+  "threads/threads.jsonl": "a3da9739e170a58c4e9561f9c163944336f24f5339d1933285caa8e097234576",
+  "evidence/evidence.jsonl": "b58375832c021b9fec570a17435622fd093e37d6d634fa71599773a75420d529",
+  "outcomes/outcomes.jsonl": "faa271272537712fa6fc0407a6483a9ea40db1820d81cea26927ae095a2db0db"
+ },
+ "arms": [
+  "B_ONLY",
+  "B_PLUS_C"
+ ],
+ "designs": [
+  "T"
+ ],
+ "size": 10,
+ "offsets": [
+  "T-90",
+  "T-30"
+ ],
+ "batches": [
+  {
+   "batch_id": "ASTRA_SMOKE4_b001",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE4\\inbox\\ASTRA_SMOKE4_b001.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE4\\outbox\\ASTRA_SMOKE4_b001.json",
+   "snapshot_ids": [
+    "S69575d9630",
+    "Sa667f1c317",
+    "S23817cfd0d",
+    "Sdd1cb4b496",
+    "Sa9ebc210e2",
+    "S3fe101262a",
+    "Scf6aafa349",
+    "S6d5b7b36e1",
+    "Sbebd0d5901",
+    "Sb046c8ee42"
+   ],
+   "packet_sha256": "e559d59af1506bb6a5466a3e4c054beaf3f293b4c956bdef4b64e301ee94e0e1",
+   "approx_tokens": 6428
+  },
+  {
+   "batch_id": "ASTRA_SMOKE4_b002",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE4\\inbox\\ASTRA_SMOKE4_b002.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE4\\outbox\\ASTRA_SMOKE4_b002.json",
+   "snapshot_ids": [
+    "Sbd9498fe08",
+    "S36692a77bf",
+    "Sc5fd7bb501",
+    "S5c6eaece3e",
+    "S76e998842a",
+    "Sa81f4594b9",
+    "Sdcd5aa1129",
+    "Sc4bed2c92d",
+    "S4a4c8d2b21",
+    "Sb65cb93305"
+   ],
+   "packet_sha256": "0fbcf099a49ea5ab364eff5a6d9068d410874f61f9b9c3d15007a8c86771f3b4",
+   "approx_tokens": 6075
+  },
+  {
+   "batch_id": "ASTRA_SMOKE4_b003",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE4\\inbox\\ASTRA_SMOKE4_b003.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE4\\outbox\\ASTRA_SMOKE4_b003.json",
+   "snapshot_ids": [
+    "S3e70531d48",
+    "Sa91345c512"
+   ],
+   "packet_sha256": "8d45823c928887471dcdf51674222a170223b2c7e3486194c86ac77359e716e2",
+   "approx_tokens": 2432
+  },
+  {
+   "batch_id": "ASTRA_SMOKE4_b004",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE4\\inbox\\ASTRA_SMOKE4_b004.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_SMOKE4\\outbox\\ASTRA_SMOKE4_b004.json",
+   "snapshot_ids": [
+    "S1ace4a094c",
+    "S7c39e788a6"
+   ],
+   "packet_sha256": "c58b83223c759f65ebd762c3df120eed16d1a9301857cdc62832598b4c0bb1ab",
+   "approx_tokens": 2080
+  }
+ ],
+ "aliases": {
+  "S825737546e": "S6d5b7b36e1",
+  "S6585078920": "S76e998842a",
+  "S8e22b8bb78": "S36692a77bf",
+  "S00f4e0aefb": "Sa9ebc210e2",
+  "Sca01fb93d0": "Sb65cb93305",
+  "S1c114d02dd": "Sb046c8ee42",
+  "Sa612202e45": "S69575d9630",
+  "S9a513d7881": "Sc4bed2c92d",
+  "S85c642ddda": "S4a4c8d2b21",
+  "Se09a91089c": "S23817cfd0d",
+  "Sd7693baa3c": "Sa81f4594b9",
+  "S3f8e36a3bd": "Sbebd0d5901",
+  "S66345dfc7f": "S5c6eaece3e",
+  "Scdefb0be2a": "Scf6aafa349",
+  "Sfe4e9bb73e": "S3fe101262a",
+  "Sb0b75b987a": "Sdcd5aa1129"
+ },
+ "analysis_role": "smoke_excluded_from_headline",
+ "forecaster_model": "gpt-6-astra",
+ "reasoning_effort": "high",
+ "sample_limitations": "Five India actions and five medium-confidence FDA controls; regulator/action confounding makes this a technical smoke only. FDA full absence search was rate-limited. No GOLD claim."
+}

@@ -1,5 +1,6 @@
 import hashlib
 import json
+import pytest
 
 from rpe import preflight
 
@@ -87,3 +88,29 @@ def test_preflight_rejects_changed_snapshot_index(tmp_path, monkeypatch):
     report = preflight.preflight(run)
     assert not report["ok"]
     assert any("snapshot index SHA-256 mismatch" in p for p in report["problems"])
+
+
+def test_evaluation_rejects_invalidated_or_changed_source_data(tmp_path, monkeypatch):
+    from rpe import evaluate
+    from rpe.common import frozen_data_hashes
+
+    monkeypatch.setattr(evaluate, "DATA", str(tmp_path))
+    monkeypatch.setattr(evaluate, "LEDGER", str(tmp_path / "ledger.jsonl"))
+    for rel in ("snapshots/index.jsonl", "threads/threads.jsonl", "evidence/evidence.jsonl", "outcomes/outcomes.jsonl"):
+        path = tmp_path / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("", encoding="utf-8")
+    hashes = frozen_data_hashes(str(tmp_path))
+    manifest = {"run": "test", "snapshot_index_sha256": hashes["snapshots/index.jsonl"],
+                "dataset_sha256": hashes}
+    path = tmp_path / "forecasts/runs/test.json"
+    path.parent.mkdir(parents=True)
+    path.write_text(json.dumps(manifest), encoding="utf-8")
+    assert evaluate.load(["test"])[0] == []
+    (tmp_path / "evidence/evidence.jsonl").write_text("\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="different frozen canonical dataset"):
+        evaluate.load(["test"])
+    manifest.update(invalidated=True, invalid_reason="source label corrected")
+    path.write_text(json.dumps(manifest), encoding="utf-8")
+    with pytest.raises(ValueError, match="source label corrected"):
+        evaluate.load(["test"])

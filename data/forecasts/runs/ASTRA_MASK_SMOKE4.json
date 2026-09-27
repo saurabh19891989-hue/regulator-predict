@@ -1,0 +1,54 @@
+{
+ "run": "ASTRA_MASK_SMOKE4",
+ "snapshot_index_sha256": "77413c7de115c76fccb308c94a3003d6c0d55a3b183b358f4f8db6dbd1198f90",
+ "dataset_sha256": {
+  "snapshots/index.jsonl": "77413c7de115c76fccb308c94a3003d6c0d55a3b183b358f4f8db6dbd1198f90",
+  "threads/threads.jsonl": "a3da9739e170a58c4e9561f9c163944336f24f5339d1933285caa8e097234576",
+  "evidence/evidence.jsonl": "b58375832c021b9fec570a17435622fd093e37d6d634fa71599773a75420d529",
+  "outcomes/outcomes.jsonl": "faa271272537712fa6fc0407a6483a9ea40db1820d81cea26927ae095a2db0db"
+ },
+ "arms": [
+  "MASKED_B_PLUS_C"
+ ],
+ "designs": [
+  "T"
+ ],
+ "size": 10,
+ "offsets": [
+  "T-90",
+  "T-30"
+ ],
+ "batches": [
+  {
+   "batch_id": "ASTRA_MASK_SMOKE4_b001",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\inbox\\ASTRA_MASK_SMOKE4_b001.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\outbox\\ASTRA_MASK_SMOKE4_b001.json",
+   "snapshot_ids": [
+    "S6d81816d50",
+    "S0efb3316dd",
+    "S09e17ab563",
+    "S90f1844b45"
+   ],
+   "packet_sha256": "664f16d7839a2b0b296bee1e9685a3b67dedf040570c8b5df80f319513e1f649",
+   "approx_tokens": 2827
+  },
+  {
+   "batch_id": "ASTRA_MASK_SMOKE4_b002",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\inbox\\ASTRA_MASK_SMOKE4_b002.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\outbox\\ASTRA_MASK_SMOKE4_b002.json",
+   "snapshot_ids": [
+    "Sdb2d5eab3c",
+    "Se37118f221",
+    "S86580cd2ed",
+    "S7b0f0e6aba"
+   ],
+   "packet_sha256": "8063e93a682ce0df694b7d42620a83e7d99fddc68fb3a5463b2cdae6197c5a68",
+   "approx_tokens": 2827
+  }
+ ],
+ "aliases": {},
+ "analysis_role": "smoke_excluded_from_headline",
+ "forecaster_model": "gpt-6-astra",
+ "reasoning_effort": "high",
+ "sample_limitations": "Five India actions and five medium-confidence FDA controls; regulator/action confounding makes this a technical smoke only. FDA full absence search was rate-limited. No GOLD claim."
+}

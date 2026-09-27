@@ -1,6 +1,6 @@
 {
  "run": "ASTRA_SMOKE2",
- "analysis_role": "smoke_excluded_from_headline",
+ "analysis_role": "invalidated_diagnostic_only",
  "forecaster_model": "gpt-6-astra",
  "reasoning_effort": "high",
  "snapshot_index_sha256": "eca775c8e0de4eaaf0d8c4fb95de331f9a647d597d3568ec06b41299bdffc7eb",
@@ -95,5 +95,15 @@
   "Sde3e7c571e": "Sf6bc50fa3c",
   "Sb09bf2473d": "S9193a50595",
   "S6d96e9e532": "S08025b6036"
- }
+ },
+ "invalidated": true,
+ "invalid_reason": "Source audit found IN-RBI-H-0021 falsely labeled no-action; its actual adoption on 2025-05-08 invalidates the pseudo-anchor used for these forecasts. US-FR and FDA publication chronology is also under repair. Preserved as diagnostics; excluded from smoke gate and empirical evaluation. Synthetic Tier-S counts were not shown in B/B+C packets.",
+ "invalidated_at": "2026-09-27T01:41:38Z",
+ "dataset_sha256": {
+  "snapshots/index.jsonl": "eca775c8e0de4eaaf0d8c4fb95de331f9a647d597d3568ec06b41299bdffc7eb",
+  "threads/threads.jsonl": "c5409a4ac3ac73359f95bbc41245ed00febcb661dd094c9d5081526d48922d90",
+  "evidence/evidence.jsonl": "59cd006d7082e957919fe346e67981e31900fcfaeda1c9652bf908ddd868b943",
+  "outcomes/outcomes.jsonl": "6538c4e36e130a8f14a0a3fab7907e533cc1ca0593c63ec8164c35c2baffc0bf"
+ },
+ "source_checkpoint": "b53ca1b"
 }

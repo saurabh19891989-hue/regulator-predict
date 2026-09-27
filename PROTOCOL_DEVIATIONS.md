@@ -126,3 +126,42 @@ substantive topic information when the title is withheld. An RBI excerpt retaine
 agency-name redaction; a further generic title pattern was added for **future** masked packets, without modifying
 or relabelling the existing SMOKE3 packets. SMOKE3 is a partial-masking sensitivity only, not evidence of anonymity
 or freedom from memorisation. A representative GOLD masking test remains required.
+
+## FINDING-006 — Source audit invalidates the GPT smoke gate (2026-09-27)
+Recorded after smoke forecasts, before headline evaluation. RBI H0021 was labeled stalled but official Directions
+adopted the matter on 2025-05-08. The pseudo-anchor used in both ASTRA_SMOKE2 and ASTRA_MASK_SMOKE3 was therefore
+invalid. Further reviews found earlier US/FDA first-public action dates and additional India false controls.
+Both runs are now invalidated; source index rows and forecasts remain archived, and neither run was ingested.
+The actual primary smoke includes US-FR H0002 and H0010 only. An earlier agent message incorrectly described six
+US-FR smoke threads. Canonical synthetic comment counts were Tier S and did not enter B_ONLY/B_PLUS_C packets.
+The 158 US-FR counts are being dropped; FDA has 21 similar items. These flaws invalidate affected experiments,
+not the research question. Fresh smoke forecasts are required after repair and a new committed dataset freeze.
+
+## DEV-012 — Full source binding and audited provenance corrections (2026-09-27)
+Recorded after diagnostic forecasts, before any headline evaluation. New run manifests bind SHA-256 of canonical
+threads, evidence, outcomes, and index. Preflight, ledger ingestion, and evaluation reject a changed canonical
+source set; the evaluator validates only the requested runs and rejects invalidated runs. Earlier GPT diagnostics
+have been bound to their unchanged source files at checkpoint b53ca1b for archival provenance.
+Auditor patch fields now include decisive-document/source metadata and evidence source/date-verification fields,
+so a false-control correction replaces its evidence trail as well as its boolean/date. Original raw files stay intact.
+The US-FR collector no longer backdates current comment counts to comment-close +14 days; a count is available
+only on its actual observation date, and observations after the fixed censor window cannot enter this backtest.
+The target remains first verified official public adoption. PI availability and print publication are distinct;
+PI alone is not proof that no earlier agency posting existed. Such uncertainty must remain explicit for RAPID,
+and cannot be called GOLD. The observation boundary stays 2026-09-24.
+
+## DEV-013 — Source-repair freeze and preserved masking semantics (2026-09-27)
+Before any new forecast after FINDING-006, the canonical data was rebuilt with 961 applied patches. It now holds
+328 threads (207 actions, 121 controls), 1,869 evidence items and zero GOLD. Six false controls are quarantined;
+179 unsupported comment counts are removed. Three OIRA conclusion items on/after corrected action dates were
+automatically dropped. All retained anchors exist and canonical schemas validate. The 60-record legacy ledger
+chain remains intact. Full suite 17 passed; later guard/masking edits passed 16 focused tests.
+The new index has 777 Design-C and 2,240 Design-T B_PLUS_C snapshots. Exact canonical file hashes are recorded in
+data/snapshots/freeze_20260927.json. Index SHA-256: `77413c7de115c76fccb308c94a3003d6c0d55a3b183b358f4f8db6dbd1198f90`.
+Every run must be frozen/committed before inference; corrections after this freeze require a new version.
+A repaired technical smoke uses five verified India actions and five medium-confidence FDA controls. This
+regulator/action confounding and incomplete FDA absence verification forbid predictive conclusions from the smoke.
+Four masked anchor-topic paraphrases preserve FDA substantive information while removing exact titles. These are
+source-derived, audited before inference, and contain no outcome facts. A GOLD masking experiment is still pending.
+The GOLD guard now enforces the existing >=3 retained evidence/high action-label confidence requirements and
+ignores evidence-item verdicts when selecting a whole-thread audit. No threshold in the preregistration changed.

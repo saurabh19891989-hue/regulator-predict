@@ -146,10 +146,12 @@ def merge_reginfo(threads, outcomes, evidence, reginfo):
 
 ALLOWED = {
     "set_evidence": {"publication_date", "first_known_date", "extracted_claims", "content_excerpt", "tier", "title",
-                     "original_or_revised", "version_confidence"},
+                     "original_or_revised", "version_confidence", "source_url", "date_verification", "document_type"},
     "set_outcome": {"decisive_date", "decisive_action", "outcome_class", "withdrawal_date", "content_direction",
-                    "content_label_confidence", "label_confidence"},
-    "set_thread": {"neutral_title", "issue_summary_neutral"},
+                    "content_label_confidence", "label_confidence", "decisive_document_title", "decisive_document_url",
+                    "decisive_document_type", "content_summary", "outcome_sources", "notes", "key_parameters",
+                    "censor_date", "labeled_by"},
+    "set_thread": {"neutral_title", "issue_summary_neutral", "masked_topic"},
 }
 
 
@@ -266,13 +268,19 @@ def build(verbose=True):
             audits += read_jsonl(os.path.join(adir, fn))
     latest = {}
     for a in audits:
-        latest[a["thread_id"]] = a
+        if a.get("scope") != "thread":
+            continue  # an evidence-item finding cannot supersede a whole-thread verdict
+        previous = latest.get(a["thread_id"])
+        if previous is None or a["audit_date"] >= previous["audit_date"]:
+            latest[a["thread_id"]] = a
     drop = {tid for tid, a in latest.items() if a["verdict"] == "contaminated_exclude"}
     for t in threads:
         a = latest.get(t["thread_id"])
         t["audited"] = a is not None
         t["audit_verdict"] = a["verdict"] if a else None
-        if a and a["verdict"] in ("clean", "minor_issue_fixed") and a.get("gold_eligible"):
+        retained = [e for e in evidence if e["thread_id"] == t["thread_id"]]
+        if (a and a["verdict"] in ("clean", "minor_issue_fixed") and a.get("gold_eligible")
+                and len(retained) >= 3 and omap[t["thread_id"]].get("label_confidence") == "high"):
             t["quality"] = "GOLD"
     for tid in drop:
         excluded.append({"thread_id": tid, "reason": "audit_contaminated_exclude"})

@@ -17,7 +17,7 @@ import shutil
 
 import jsonschema
 
-from .common import DATA, append_jsonl, load_schema, now_iso, read_jsonl, stable_hash
+from .common import DATA, append_jsonl, frozen_data_hashes, load_schema, now_iso, read_jsonl, stable_hash
 
 LEDGER = os.path.join(DATA, "forecasts", "ledger.jsonl")
 H = ["7d", "30d", "60d", "90d", "180d"]
@@ -94,6 +94,8 @@ def ingest(run, model, agent_type="statusline-setup[Read,Edit] (isolated)"):
     man = json.load(open(os.path.join(DATA, "forecasts", "runs", f"{run}.json")))
     if man.get("invalidated"):
         raise ValueError(f"run {run} was invalidated: {man.get('invalid_reason', 'no reason recorded')}")
+    if man.get("dataset_sha256") and frozen_data_hashes(DATA) != man["dataset_sha256"]:
+        raise ValueError(f"run {run} refers to a different frozen canonical dataset")
     expected_index_hash = man.get("snapshot_index_sha256")
     if expected_index_hash:
         with open(os.path.join(DATA, "snapshots", "index.jsonl"), "rb") as f:

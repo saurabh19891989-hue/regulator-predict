@@ -1,1 +1,7 @@
 {"reason": "low_label_confidence", "thread_id": "IN-IRDAI-H-0005"}
+{"reason": "audit_exclude_patch", "thread_id": "IN-IRDAI-H-0008"}
+{"reason": "audit_exclude_patch", "thread_id": "IN-RBI-H-0004"}
+{"reason": "audit_exclude_patch", "thread_id": "IN-RBI-H-0016"}
+{"reason": "audit_exclude_patch", "thread_id": "IN-RBI-H-0005"}
+{"reason": "audit_exclude_patch", "thread_id": "IN-TRAI-H-0010"}
+{"reason": "audit_exclude_patch", "thread_id": "IN-RBI-H-0001"}

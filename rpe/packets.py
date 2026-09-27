@@ -15,7 +15,7 @@ import re
 import tempfile
 from collections import defaultdict
 
-from .common import DATA, read_jsonl, sha256_text
+from .common import DATA, frozen_data_hashes, read_jsonl, sha256_text
 from .snapshots import available_date
 
 FC_ROOT = os.environ.get("RPE_FC_ROOT", os.path.join(tempfile.gettempdir(), "rpe_forecaster"))
@@ -84,6 +84,9 @@ One entry per snapshot, in any order, using the exact snapshot ids below.
 
 GENERIC_REG = {"US": "a US federal regulator", "IN": "an Indian regulator"}
 MASK_PATTERNS = [
+    (r"(?i:\bPress\s+Release\s*:\s*\d{4}\s*[-–—]\s*\d{2,4}/\d+\b)", "[release identifier withheld]"),
+    (r"(?i:\bDraft Circular on Fair Lending Practice\s*[-–—]\s*Penal Charges in Loan Accounts\b)", "draft on charges for breaches of loan terms"),
+    (r"(?i:\bRegulatory Framework for Web-Aggregation of loan products\b)", "framework for comparing loan offers from multiple lenders"),
     (r"\b\d{4}-[A-Z]{2}\d{2}\b", "[RIN]"),                                   # RINs e.g. 0938-AT38
     (r"\b[A-Z]{2,6}-\d{4}-[A-Z0-9]{1,5}(-\d+)*\b", "[DOCKET]"),              # docket ids
     (r"\b\d{1,3}\s+FR\s+\d+\b", "[FR CITATION]"),
@@ -122,10 +125,15 @@ def mask_text(txt, thread):
 
 def render_snapshot(snap, thread, items):
     if snap["arm"].startswith("MASKED"):
-        body = _render(snap, dict(thread, neutral_title="[title withheld — see evidence]", process_type="other"), items)
+        topic = thread.get("masked_topic") or "[title withheld — see evidence]"
+        body = _render(snap, dict(thread, neutral_title=topic, process_type="other"), items)
         head, _, rest = body.partition("Evidence")
         head = head.replace(f"Regulator: {thread['regulator']} ({thread['jurisdiction']})",
                             f"Regulator: {GENERIC_REG.get(thread['jurisdiction'], 'a regulator')} (identity withheld)")
+        for item in items:
+            title = item.get("title", "")
+            if len(title) > 12:
+                rest = re.sub(re.escape(title), "[document title withheld]", rest, flags=re.I)
         return head + mask_text("Evidence" + rest, thread) if rest else head
     return _render(snap, thread, items)
 
@@ -200,7 +208,7 @@ def make_run(run, arms, designs, size, offsets=None, thread_ids=None, strata=Non
     outbox = os.path.join(FC_ROOT, run, "outbox")
     os.makedirs(inbox, exist_ok=True)
     os.makedirs(outbox, exist_ok=True)
-    manifest = {"run": run, "snapshot_index_sha256": index_sha256,
+    manifest = {"run": run, "snapshot_index_sha256": index_sha256, "dataset_sha256": frozen_data_hashes(DATA),
                 "arms": arms, "designs": designs, "size": size, "offsets": offsets, "batches": [],
                 "aliases": alias}
     for i, b in enumerate(batches, 1):

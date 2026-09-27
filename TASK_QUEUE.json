@@ -60,8 +60,8 @@
     "RP0-03"
    ],
    "done_when": "100\u2013200 usable threads are reconstructed if evidence availability permits.",
-   "status": "PARTIAL",
-   "notes": "334 RAPID usable (US-FR 179, US-FDA 55, SEBI 44, RBI 27, IRDAI 19, TRAI 10); incomplete: DGTR, TRAI, IRDAI-R frame, SEBI-H (14/25), RBI-R"
+   "status": "IN_PROGRESS",
+   "notes": "Source repair: US/FDA first-public dates, synthetic comment counts, and multiple India false-control labels; preserve fixed censor 2026-09-24."
   },
   {
    "id": "RP0-05",
@@ -73,8 +73,8 @@
     "RP0-03"
    ],
    "done_when": "Point-in-time versions and leakage risks are strongly verified.",
-   "status": "NOT_STARTED",
-   "notes": "112 GOLD_CANDIDATE threads; GOLD requires audit (RP0-08)"
+   "status": "IN_PROGRESS",
+   "notes": "Independent primary-source audits underway; zero GOLD promoted. Do not promote pending or contaminated-rebuild verdicts."
   },
   {
    "id": "RP0-06",
@@ -86,8 +86,8 @@
     "RP0-04"
    ],
    "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
-   "status": "PARTIAL",
-   "notes": "ASTRA_SMOKE2 completed and archived (24 distinct forecasts, 16 aliases); preflight and temporal audit pass, 6 recognition flags. Ingestion/evaluation await first GOLD source audit; no scaled forecasts yet."
+   "status": "IN_PROGRESS",
+   "notes": "GPT smoke outputs archived but invalidated under FINDING-006. Rebuild/freeze corrected data and rerun fresh smoke before scaling."
   },
   {
    "id": "RP0-07",
@@ -113,8 +113,8 @@
     "RP0-06"
    ],
    "done_when": "GOLD and risk-weighted RAPID snapshots have contamination verdicts.",
-   "status": "NOT_STARTED",
-   "notes": "protocol ready in docs/AUDIT_GUIDE.md; add forecast-rationale audit (FINDING-001)"
+   "status": "IN_PROGRESS",
+   "notes": "US-FR six-thread audit preserved; expanded India/FDA audits and global public-inspection provenance repair underway."
   },
   {
    "id": "RP0-09",

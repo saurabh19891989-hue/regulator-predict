@@ -11,7 +11,7 @@ import json
 import os
 import re
 
-from .common import DATA
+from .common import DATA, frozen_data_hashes
 from .ledger import canonicalise
 
 
@@ -50,6 +50,12 @@ def preflight(run):
             problems.append(f"cannot read frozen snapshot index: {exc}")
     if manifest.get("invalidated"):
         problems.append(f"run was invalidated: {manifest.get('invalid_reason', 'no reason recorded')}")
+    if manifest.get("dataset_sha256"):
+        try:
+            if frozen_data_hashes(DATA) != manifest["dataset_sha256"]:
+                problems.append("frozen canonical dataset SHA-256 mismatch")
+        except OSError as exc:
+            problems.append(f"cannot read frozen canonical dataset: {exc}")
     all_expected = [sid for b in manifest["batches"] for sid in b["snapshot_ids"]]
     duplicate_expected = sorted(sid for sid, count in Counter(all_expected).items() if count > 1)
     if duplicate_expected:

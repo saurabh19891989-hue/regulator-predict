@@ -141,6 +141,11 @@ def test_gold_promotion_requires_eligible_clean_or_minor_verdict(dataset):
                     "verdict": verdict, "findings": [], "auditor": "test",
                     "audit_date": "2026-09-25", "gold_eligible": eligible,
                 }) + "\n")
+            f.write(json.dumps({
+                "audit_id": "AUD-item", "thread_id": "IN-TST-H-0003", "scope": "evidence_item",
+                "verdict": "clean", "findings": [], "auditor": "test", "audit_date": "2026-09-27",
+                "gold_eligible": True,
+            }) + "\n")
         build(verbose=False)
         threads = {t["thread_id"]: t for t in read_jsonl(os.path.join(dataset["root"], "threads", "threads.jsonl"))}
         for tid, verdict, _, expected_quality in cases:

@@ -4,6 +4,7 @@ Usage: python3 -m rpe.evaluate [--primary-runs R1,R2] [--ablation-runs R3,...] [
 Writes reports/metrics.json and reports/METRICS.md
 """
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -13,7 +14,7 @@ import numpy as np
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 from .baselines import HORIZONS, all_baselines, features
-from .common import DATA, ROOT, read_jsonl
+from .common import DATA, ROOT, frozen_data_hashes, read_jsonl
 from .ledger import CONTENT, LEDGER
 from .snapshots import select_items
 
@@ -116,6 +117,19 @@ def boot(groups, stat, reps=2000):
 
 # ---------------------------------------------------------------- data
 def load(runs=None):
+    # Fail before joining immutable forecasts to labels that may have changed during a rebuild.
+    if runs:
+        with open(os.path.join(DATA, "snapshots", "index.jsonl"), "rb") as f:
+            index_hash = hashlib.sha256(f.read()).hexdigest()
+        for run in sorted(set(runs)):
+            with open(os.path.join(DATA, "forecasts", "runs", run + ".json"), encoding="utf-8") as f:
+                manifest = json.load(f)
+            if manifest.get("invalidated"):
+                raise ValueError(f"run {run} was invalidated: {manifest.get('invalid_reason', '')}")
+            if manifest.get("snapshot_index_sha256") != index_hash:
+                raise ValueError(f"run {run} has no matching frozen snapshot index")
+            if manifest.get("dataset_sha256") and frozen_data_hashes(DATA) != manifest["dataset_sha256"]:
+                raise ValueError(f"run {run} refers to a different frozen canonical dataset")
     idx = {r["snapshot_id"]: r for r in read_jsonl(os.path.join(DATA, "snapshots", "index.jsonl"))}
     rows = []
     for r in read_jsonl(LEDGER):
@@ -282,7 +296,7 @@ def content_block(rows, outcomes):
 def run_eval(primary, ablation, title, probe_path=None, primary_arm="B_PLUS_C", masked=None):
     """primary: runs holding the broad B_ONLY/B_PLUS_C forecasts (same model). Primary action metrics use
     `primary_arm` on precursor-population threads only; backfilled/purposive threads reported separately."""
-    rows_all, idx = load()
+    rows_all, idx = load(set(primary) | set(ablation) | set(title) | set(masked or []))
     look, frows = baseline_lookup(idx)
     outcomes = read_jsonl(os.path.join(DATA, "outcomes", "outcomes.jsonl"))
     R = [r for r in rows_all if r["run"] in primary]

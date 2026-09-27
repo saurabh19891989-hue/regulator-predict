@@ -34,8 +34,12 @@ larger patch — write it) · `contaminated_exclude` (cannot be repaired; thread
 {"op": "exclude_thread", "thread_id": "…", "reason": "…"}
 ```
 Allowed fields: evidence {publication_date, first_known_date, extracted_claims, content_excerpt, tier, title,
-original_or_revised, version_confidence}; outcome {decisive_date, decisive_action, outcome_class, withdrawal_date,
-content_direction, content_label_confidence, label_confidence}; thread {neutral_title, issue_summary_neutral}.
+original_or_revised, version_confidence, source_url, date_verification, document_type}; outcome {decisive_date,
+decisive_action, outcome_class, withdrawal_date, content_direction, content_label_confidence, label_confidence,
+decisive_document_title, decisive_document_url, decisive_document_type, content_summary, outcome_sources, notes,
+key_parameters, censor_date, labeled_by}; thread {neutral_title, issue_summary_neutral, masked_topic}.
+The expanded source and outcome fields allow a correction to replace the supporting provenance as well as the
+label. Every patch still needs a reason with the primary source; raw records remain preserved.
 
 ## Audit record
 ```json

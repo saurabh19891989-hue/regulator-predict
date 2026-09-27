@@ -1,0 +1,14 @@
+{
+  "version": "2026-09-27-source-repair",
+  "data_sha256": {
+    "snapshots/index.jsonl": "77413c7de115c76fccb308c94a3003d6c0d55a3b183b358f4f8db6dbd1198f90",
+    "threads/threads.jsonl": "a3da9739e170a58c4e9561f9c163944336f24f5339d1933285caa8e097234576",
+    "evidence/evidence.jsonl": "b58375832c021b9fec570a17435622fd093e37d6d634fa71599773a75420d529",
+    "outcomes/outcomes.jsonl": "faa271272537712fa6fc0407a6483a9ea40db1820d81cea26927ae095a2db0db"
+  },
+  "prior_index_commit": "b53ca1b",
+  "prior_index_sha256": "eca775c8e0de4eaaf0d8c4fb95de331f9a647d597d3568ec06b41299bdffc7eb",
+  "censor_last": "2026-09-24",
+  "status": "frozen_before_ASTRA_SMOKE4",
+  "limitations": "All RAPID; US-FR PI-bound dates may be preceded by agency announcements; FDA no-action absence checks incomplete; excluded false controls preserved in raw."
+}
