@@ -87,7 +87,7 @@
    ],
    "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
    "status": "IN_PROGRESS",
-   "notes": "GPT smoke outputs archived but invalidated under FINDING-006. Rebuild/freeze corrected data and rerun fresh smoke before scaling."
+   "notes": "SMOKE4 core technical pass;40 records ingested,14 unique recognition flags. MASK4 invalidated for endpoint mismatch;MASK5 prepared. No scaling/headline inference yet."
   },
   {
    "id": "RP0-07",
@@ -114,7 +114,7 @@
    ],
    "done_when": "GOLD and risk-weighted RAPID snapshots have contamination verdicts.",
    "status": "IN_PROGRESS",
-   "notes": "US-FR six-thread audit preserved; expanded India/FDA audits and global public-inspection provenance repair underway."
+   "notes": "Core smoke output audit passes expressed-leakage/citation checks; masked endpoint repaired. Late-action provenance audit leads pending verification; GOLD zero."
   },
   {
    "id": "RP0-09",

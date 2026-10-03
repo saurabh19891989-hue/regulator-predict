@@ -126,10 +126,11 @@ def mask_text(txt, thread):
 def render_snapshot(snap, thread, items):
     if snap["arm"].startswith("MASKED"):
         topic = thread.get("masked_topic") or "[title withheld — see evidence]"
-        body = _render(snap, dict(thread, neutral_title=topic, process_type="other"), items)
+        body = _render(snap, dict(thread, neutral_title=topic), items)
         head, _, rest = body.partition("Evidence")
         head = head.replace(f"Regulator: {thread['regulator']} ({thread['jurisdiction']})",
                             f"Regulator: {GENERIC_REG.get(thread['jurisdiction'], 'a regulator')} (identity withheld)")
+        head = head.replace("the central bank", "the regulator")
         for item in items:
             title = item.get("title", "")
             if len(title) > 12:

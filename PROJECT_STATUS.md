@@ -1,10 +1,27 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
 **Status:** ACTIVE. Source audit invalidated the GPT smoke gate; data correction and independent audits are in progress.
-**Last updated:** 2026-09-27
+**Last updated:** 2026-10-04
 **Gate:** GATE 0 — historical point-in-time backtest (not yet evaluated; no GO/NO-GO answer exists yet)
 **Repository:** https://github.com/saurabh19891989-hue/regulator-predict · branch `astra/regulatory-predict`
-· local path `C:\Users\saura\Downloads\regulator-predict` · latest pushed checkpoint `b53ca1b`
+· local path `C:\Users\saura\Downloads\regulator-predict` · source-repair freeze checkpoint `7c1f0e6`
+
+## Resume checkpoint, 2026-10-04
+
+- SMOKE4 core technical audit passed:24 distinct forecasts plus16 aliases,14 self-recognition flags, no expressed
+  future facts or invalid citations. Forty records were appended to the ledger;100 total records verify.
+- MASK_SMOKE4 is invalidated: masking broadened the forecast event definition. Eight raw outputs remain archived.
+  The renderer now preserves the process-specific endpoint; regression test passed. MASK_SMOKE5 has two fresh
+  packet batches (eight forecasts) prepared on the unchanged source freeze; inference is next.
+- Six distinct CLI session IDs and event-log hashes were recovered into the SMOKE4 receipts. All six runs used
+  packet-only prompts with tools disabled. Actual usage is in receipts; no billing amount is asserted.
+- Source-repaired counts remain328 threads/1,869 evidence/zero GOLD. No scaled or headline result exists.
+- Follow-up late-action audits were interrupted before writing results. Pending leads: RBI H0007 may have adopted
+  its October2022 draft in November2023 rather than July2026; US-FR C0056 links a withdrawal of a direct final rule
+  and requires the earlier direct-final chronology. These are pending verification, not applied corrections.
+- User requested DeepSeek as an additional subagent. No DeepSeek route is exposed by native tools or local Codex
+  config; awaiting the user's existing connection/profile location while continuing authorized GPT work.
+- Fixed observation boundary remains2026-09-24. Do not rebuild canonical sources under MASK_SMOKE5.
 
 ## Current repair phase, 2026-09-27
 

@@ -1,0 +1,33 @@
+{
+  "run": "ASTRA_MASK_SMOKE4",
+  "ok": true,
+  "batches": [
+    {
+      "batch_id": "ASTRA_MASK_SMOKE4_b001",
+      "state": "ready",
+      "packets_checked": [
+        "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\inbox\\ASTRA_MASK_SMOKE4_b001.md",
+        "C:\\Users\\saura\\Downloads\\regulator-predict\\data\\forecasts\\packets\\ASTRA_MASK_SMOKE4\\inbox\\ASTRA_MASK_SMOKE4_b001.md"
+      ],
+      "forecasts": 4
+    },
+    {
+      "batch_id": "ASTRA_MASK_SMOKE4_b002",
+      "state": "ready",
+      "packets_checked": [
+        "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\inbox\\ASTRA_MASK_SMOKE4_b002.md",
+        "C:\\Users\\saura\\Downloads\\regulator-predict\\data\\forecasts\\packets\\ASTRA_MASK_SMOKE4\\inbox\\ASTRA_MASK_SMOKE4_b002.md"
+      ],
+      "forecasts": 4
+    }
+  ],
+  "pending_batches": [],
+  "recognised_outcome_ids": [
+    "S09e17ab563",
+    "S0efb3316dd",
+    "S86580cd2ed",
+    "Se37118f221"
+  ],
+  "recognised_outcome_count": 4,
+  "problems": []
+}

@@ -1,5 +1,5 @@
 {
- "run": "ASTRA_MASK_SMOKE4",
+ "run": "ASTRA_MASK_SMOKE5",
  "snapshot_index_sha256": "77413c7de115c76fccb308c94a3003d6c0d55a3b183b358f4f8db6dbd1198f90",
  "dataset_sha256": {
   "snapshots/index.jsonl": "77413c7de115c76fccb308c94a3003d6c0d55a3b183b358f4f8db6dbd1198f90",
@@ -20,38 +20,36 @@
  ],
  "batches": [
   {
-   "batch_id": "ASTRA_MASK_SMOKE4_b001",
-   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\inbox\\ASTRA_MASK_SMOKE4_b001.md",
-   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\outbox\\ASTRA_MASK_SMOKE4_b001.json",
+   "batch_id": "ASTRA_MASK_SMOKE5_b001",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE5\\inbox\\ASTRA_MASK_SMOKE5_b001.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE5\\outbox\\ASTRA_MASK_SMOKE5_b001.json",
    "snapshot_ids": [
     "S6d81816d50",
     "S0efb3316dd",
     "S09e17ab563",
     "S90f1844b45"
    ],
-   "packet_sha256": "664f16d7839a2b0b296bee1e9685a3b67dedf040570c8b5df80f319513e1f649",
-   "approx_tokens": 2827
+   "packet_sha256": "a908cc709a09907d062ffefadfbdfd75b3dba433743561296b24b6846a4f7e18",
+   "approx_tokens": 2808
   },
   {
-   "batch_id": "ASTRA_MASK_SMOKE4_b002",
-   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\inbox\\ASTRA_MASK_SMOKE4_b002.md",
-   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE4\\outbox\\ASTRA_MASK_SMOKE4_b002.json",
+   "batch_id": "ASTRA_MASK_SMOKE5_b002",
+   "packet": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE5\\inbox\\ASTRA_MASK_SMOKE5_b002.md",
+   "output": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_forecaster\\ASTRA_MASK_SMOKE5\\outbox\\ASTRA_MASK_SMOKE5_b002.json",
    "snapshot_ids": [
     "Sdb2d5eab3c",
     "Se37118f221",
     "S86580cd2ed",
     "S7b0f0e6aba"
    ],
-   "packet_sha256": "8063e93a682ce0df694b7d42620a83e7d99fddc68fb3a5463b2cdae6197c5a68",
-   "approx_tokens": 2827
+   "packet_sha256": "1be82fa67a8e8ed519ec1b40197c7710e0d4ab893bfc47fe9b711180cc621bc2",
+   "approx_tokens": 2808
   }
  ],
  "aliases": {},
- "analysis_role": "invalidated_masking_diagnostic_only",
+ "analysis_role": "smoke_excluded_from_headline",
  "forecaster_model": "gpt-6-astra",
  "reasoning_effort": "high",
  "sample_limitations": "Five India actions and five medium-confidence FDA controls; regulator/action confounding makes this a technical smoke only. FDA full absence search was rate-limited. No GOLD claim.",
- "invalidated": true,
- "invalidated_at": "2026-09-27T16:32:48Z",
- "invalid_reason": "Masked renderer broadened the process-specific decisive-action target. Identity-only comparison invalid; original outputs preserved."
+ "replaces_invalid_run": "ASTRA_MASK_SMOKE4"
 }

@@ -165,3 +165,13 @@ Four masked anchor-topic paraphrases preserve FDA substantive information while 
 source-derived, audited before inference, and contain no outcome facts. A GOLD masking experiment is still pending.
 The GOLD guard now enforces the existing >=3 retained evidence/high action-label confidence requirements and
 ignores evidence-item verdicts when selecting a whole-thread audit. No threshold in the preregistration changed.
+
+## FINDING-007 — Masked action endpoint mismatch (2026-09-27)
+After the completed SMOKE4 calls, independent output audit found masked rendering replaced the process-specific
+final-guidance/final-directions event with a generic adoption event. ASTRA_MASK_SMOKE4 is invalidated for the
+identity-only comparison; original outputs/receipts remain preserved and will not be ingested. The renderer now
+preserves the original process-specific endpoint, with only the central-bank name generalized to regulator.
+A regression test verifies this invariant. Fresh ASTRA_MASK_SMOKE5 packets are generated on the unchanged
+source freeze; two further Astra high calls are planned. This corrects the target definition, not the outcomes.
+Core SMOKE4 structural checks pass:24 unique forecasts,14 recognition flags; MASK4 had8 outputs,4 recognised.
+Recognition is not proof of expressed leakage, but excludes these rows from an uncontaminated sensitivity.

@@ -33,3 +33,12 @@ Actual invocation count, outputs, and observed usage will be appended after the 
 - Audit workers briefly hit a usage limit; after user continuation, native usage tool reported ordinary usage allowed,
   0% of the five-hour window used and 16% of the weekly window used. No reset credit was redeemed by this task.
 - Actual billing remains unavailable. Detailed per-batch usage receipts will be preserved after inference.
+
+## Completed source-repaired smoke and masking correction, 2026-09-27
+
+Six planned calls completed, with per-batch input/output/reasoning usage in archived receipts. All had zero
+unexpected tool-item types. SMOKE4 has24 unique forecasts and14 recognition flags. MASK_SMOKE4 has8 forecasts
+and4 recognition flags but is invalid for the identity-only comparison because the target endpoint changed.
+Two further fresh Astra high calls are planned for MASK_SMOKE5 after restoring the process-specific endpoint;
+about5,700 packet tokens plus two CLI/system overheads (roughly10k input tokens each in observed calls).
+No scaled forecast run has begun. No reset credit was redeemed by this task.

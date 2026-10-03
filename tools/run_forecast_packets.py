@@ -79,6 +79,8 @@ def main():
                    "started_at": started, "completed_at": dt.datetime.now(dt.timezone.utc).isoformat(),
                    "exit_code": result.returncode, "unexpected_item_types": unexpected, "usage": usage,
                    "packet_sha256": batch["packet_sha256"], "events_path": str(scratch / "events.jsonl"),
+                   "session_ids": [e["thread_id"] for e in events if e.get("type") == "thread.started"],
+                   "events_sha256": hashlib.sha256((scratch / "events.jsonl").read_bytes()).hexdigest(),
                    "tool_controls": "shell, web, plugins, apps, multi-agent, memories disabled; no project docs"}
         archive = ROOT / "data/forecasts/packets" / args.run
         (archive / "receipts").mkdir(parents=True, exist_ok=True)
