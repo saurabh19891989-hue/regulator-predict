@@ -175,3 +175,16 @@ A regression test verifies this invariant. Fresh ASTRA_MASK_SMOKE5 packets are g
 source freeze; two further Astra high calls are planned. This corrects the target definition, not the outcomes.
 Core SMOKE4 structural checks pass:24 unique forecasts,14 recognition flags; MASK4 had8 outputs,4 recognised.
 Recognition is not proof of expressed leakage, but excludes these rows from an uncontaminated sensitivity.
+
+## DEV-014 — Evaluation cohort and comparison guards (2026-10-04)
+
+Before scaled inference, baseline feature/training rows are restricted to threads in the selected primary runs.
+Previously an audited subset could be scored against a comparator fitted on unrelated, unaudited canonical labels.
+Thread-grouped cross-validation and the fixed baseline rules are unchanged. Exact baseline cohort IDs are reported.
+Paired ablations now require matching model, design, matter and cutoff, and reject competing replicate runs rather
+than silently overwriting one. The masking-report caption no longer equates a small difference with proof against
+memorisation. Calibration slopes are undefined for complete/quasi separation or failed convergence; a divergent
+Newton iteration must not produce a spurious finite slope. Original gate thresholds remain unchanged.
+
+The next cohort plan is docs/SCALING_PLAN_20261004.md. Complete precursor frames take priority over an
+outcome-conditioned collection of late actions; selected partial audit sets remain explicitly exploratory.

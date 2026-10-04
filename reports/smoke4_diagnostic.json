@@ -1,0 +1,1138 @@
+{
+  "primary_runs": [
+    "ASTRA_SMOKE4"
+  ],
+  "primary_arm": "B_PLUS_C",
+  "n_primary_forecasts": 20,
+  "n_backfill_or_purposive_forecasts": 0,
+  "baseline_training_threads": [
+    "IN-RBI-H-0011",
+    "IN-RBI-H-0012",
+    "IN-RBI-H-0021",
+    "IN-SEBI-H-0004",
+    "IN-SEBI-H-0012",
+    "US-FDA-C-0001",
+    "US-FDA-H-0005",
+    "US-FDA-H-0007",
+    "US-FDA-H-0008",
+    "US-FDA-H-0021"
+  ],
+  "baseline_training_scope": "Selected primary-run threads; thread-grouped cross-validation",
+  "probe_recalled_threads": 0,
+  "action": {
+    "T_180_all": {
+      "label": "Design T (outcome-anchored), 180d, all strata",
+      "horizon": 180,
+      "llm": {
+        "n": 18,
+        "base_rate": 0.5555555555555556,
+        "brier": 0.055872222222222226,
+        "logloss": 0.26345563575295233,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "ece": 0.22944444444444442,
+        "cal_slope": NaN,
+        "cal_intercept": NaN,
+        "mean_p": 0.5027777777777778,
+        "prec_rec": [
+          {
+            "threshold": 0.5,
+            "flagged": 10,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          {
+            "threshold": 0.7,
+            "flagged": 7,
+            "precision": 1.0,
+            "recall": 0.7
+          },
+          {
+            "threshold": 0.8,
+            "flagged": 3,
+            "precision": 1.0,
+            "recall": 0.3
+          }
+        ]
+      },
+      "threads": 9,
+      "baselines": {
+        "base_rate_elapsed": {
+          "n": 18,
+          "base_rate": 0.5555555555555556,
+          "brier": 0.13509987273742774,
+          "logloss": 0.3885113046912105,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "ece": 0.24857238213378563,
+          "cal_slope": NaN,
+          "cal_intercept": NaN,
+          "mean_p": 0.34643300591546206,
+          "prec_rec": [
+            {
+              "threshold": 0.5,
+              "flagged": 6,
+              "precision": 1.0,
+              "recall": 0.6
+            },
+            {
+              "threshold": 0.7,
+              "flagged": 5,
+              "precision": 1.0,
+              "recall": 0.5
+            },
+            {
+              "threshold": 0.8,
+              "flagged": 5,
+              "precision": 1.0,
+              "recall": 0.5
+            }
+          ],
+          "llm_brier_skill_vs_this": [
+            0.5864376398724502,
+            -0.1434137818331431,
+            0.7330018590723973
+          ],
+          "llm_auroc_minus_this": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "stage_transition": {
+          "n": 18,
+          "base_rate": 0.5555555555555556,
+          "brier": 0.058766769969725775,
+          "logloss": 0.19662144078375776,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "ece": 0.1483942052099947,
+          "cal_slope": NaN,
+          "cal_intercept": NaN,
+          "mean_p": 0.41584644692539435,
+          "prec_rec": [
+            {
+              "threshold": 0.5,
+              "flagged": 8,
+              "precision": 1.0,
+              "recall": 0.8
+            },
+            {
+              "threshold": 0.7,
+              "flagged": 6,
+              "precision": 1.0,
+              "recall": 0.6
+            },
+            {
+              "threshold": 0.8,
+              "flagged": 6,
+              "precision": 1.0,
+              "recall": 0.6
+            }
+          ],
+          "llm_brier_skill_vs_this": [
+            0.04925483821885568,
+            -7.56605208293062,
+            0.620174569388363
+          ],
+          "llm_auroc_minus_this": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "heuristic": {
+          "n": 18,
+          "base_rate": 0.5555555555555556,
+          "brier": 0.1711111111111111,
+          "logloss": 0.5147358900317974,
+          "auroc": 0.94375,
+          "auprc": 0.9307692307692308,
+          "ece": 0.26111111111111107,
+          "cal_slope": NaN,
+          "cal_intercept": NaN,
+          "mean_p": 0.37777777777777777,
+          "prec_rec": [
+            {
+              "threshold": 0.5,
+              "flagged": 7,
+              "precision": 1.0,
+              "recall": 0.7
+            },
+            {
+              "threshold": 0.7,
+              "flagged": 0,
+              "precision": NaN,
+              "recall": 0.0
+            },
+            {
+              "threshold": 0.8,
+              "flagged": 0,
+              "precision": NaN,
+              "recall": 0.0
+            }
+          ],
+          "llm_brier_skill_vs_this": [
+            0.673474025974026,
+            0.5482245247717409,
+            0.7283127510051053
+          ],
+          "llm_auroc_minus_this": [
+            0.05625000000000002,
+            0.0,
+            0.1607142857142857
+          ]
+        },
+        "logit_features": {
+          "n": 18,
+          "base_rate": 0.5555555555555556,
+          "brier": 0.04441048620289789,
+          "logloss": 0.18919542111928403,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "ece": 0.15933227683032863,
+          "cal_slope": NaN,
+          "cal_intercept": NaN,
+          "mean_p": 0.433556016026016,
+          "prec_rec": [
+            {
+              "threshold": 0.5,
+              "flagged": 10,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "threshold": 0.7,
+              "flagged": 7,
+              "precision": 1.0,
+              "recall": 0.7
+            },
+            {
+              "threshold": 0.8,
+              "flagged": 6,
+              "precision": 1.0,
+              "recall": 0.6
+            }
+          ],
+          "llm_brier_skill_vs_this": [
+            -0.2580862539301907,
+            -3.372459939273958,
+            0.2815583760052087
+          ],
+          "llm_auroc_minus_this": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "best_baseline": "logit_features",
+      "llm_auroc_ci": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "T_180_HIST": {
+      "label": "Design T, 180d, HIST",
+      "horizon": 180,
+      "llm": {
+        "n": 18,
+        "base_rate": 0.5555555555555556,
+        "brier": 0.055872222222222226,
+        "logloss": 0.26345563575295233,
+        "auroc": 1.0,
+        "auprc": 1.0,
+        "ece": 0.22944444444444442,
+        "cal_slope": NaN,
+        "cal_intercept": NaN,
+        "mean_p": 0.5027777777777778,
+        "prec_rec": [
+          {
+            "threshold": 0.5,
+            "flagged": 10,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          {
+            "threshold": 0.7,
+            "flagged": 7,
+            "precision": 1.0,
+            "recall": 0.7
+          },
+          {
+            "threshold": 0.8,
+            "flagged": 3,
+            "precision": 1.0,
+            "recall": 0.3
+          }
+        ]
+      },
+      "threads": 9,
+      "baselines": {
+        "base_rate_elapsed": {
+          "n": 18,
+          "base_rate": 0.5555555555555556,
+          "brier": 0.13509987273742774,
+          "logloss": 0.3885113046912105,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "ece": 0.24857238213378563,
+          "cal_slope": NaN,
+          "cal_intercept": NaN,
+          "mean_p": 0.34643300591546206,
+          "prec_rec": [
+            {
+              "threshold": 0.5,
+              "flagged": 6,
+              "precision": 1.0,
+              "recall": 0.6
+            },
+            {
+              "threshold": 0.7,
+              "flagged": 5,
+              "precision": 1.0,
+              "recall": 0.5
+            },
+            {
+              "threshold": 0.8,
+              "flagged": 5,
+              "precision": 1.0,
+              "recall": 0.5
+            }
+          ],
+          "llm_brier_skill_vs_this": [
+            0.5864376398724502,
+            -0.1735552892481356,
+            0.7339201225385826
+          ],
+          "llm_auroc_minus_this": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "stage_transition": {
+          "n": 18,
+          "base_rate": 0.5555555555555556,
+          "brier": 0.058766769969725775,
+          "logloss": 0.19662144078375776,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "ece": 0.1483942052099947,
+          "cal_slope": NaN,
+          "cal_intercept": NaN,
+          "mean_p": 0.41584644692539435,
+          "prec_rec": [
+            {
+              "threshold": 0.5,
+              "flagged": 8,
+              "precision": 1.0,
+              "recall": 0.8
+            },
+            {
+              "threshold": 0.7,
+              "flagged": 6,
+              "precision": 1.0,
+              "recall": 0.6
+            },
+            {
+              "threshold": 0.8,
+              "flagged": 6,
+              "precision": 1.0,
+              "recall": 0.6
+            }
+          ],
+          "llm_brier_skill_vs_this": [
+            0.04925483821885568,
+            -7.9093267071827045,
+            0.599370187298063
+          ],
+          "llm_auroc_minus_this": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "heuristic": {
+          "n": 18,
+          "base_rate": 0.5555555555555556,
+          "brier": 0.1711111111111111,
+          "logloss": 0.5147358900317974,
+          "auroc": 0.94375,
+          "auprc": 0.9307692307692308,
+          "ece": 0.26111111111111107,
+          "cal_slope": NaN,
+          "cal_intercept": NaN,
+          "mean_p": 0.37777777777777777,
+          "prec_rec": [
+            {
+              "threshold": 0.5,
+              "flagged": 7,
+              "precision": 1.0,
+              "recall": 0.7
+            },
+            {
+              "threshold": 0.7,
+              "flagged": 0,
+              "precision": NaN,
+              "recall": 0.0
+            },
+            {
+              "threshold": 0.8,
+              "flagged": 0,
+              "precision": NaN,
+              "recall": 0.0
+            }
+          ],
+          "llm_brier_skill_vs_this": [
+            0.673474025974026,
+            0.5606891445371168,
+            0.728486296646318
+          ],
+          "llm_auroc_minus_this": [
+            0.05625000000000002,
+            0.0,
+            0.1607142857142857
+          ]
+        },
+        "logit_features": {
+          "n": 18,
+          "base_rate": 0.5555555555555556,
+          "brier": 0.04441048620289789,
+          "logloss": 0.18919542111928403,
+          "auroc": 1.0,
+          "auprc": 1.0,
+          "ece": 0.15933227683032863,
+          "cal_slope": NaN,
+          "cal_intercept": NaN,
+          "mean_p": 0.433556016026016,
+          "prec_rec": [
+            {
+              "threshold": 0.5,
+              "flagged": 10,
+              "precision": 1.0,
+              "recall": 1.0
+            },
+            {
+              "threshold": 0.7,
+              "flagged": 7,
+              "precision": 1.0,
+              "recall": 0.7
+            },
+            {
+              "threshold": 0.8,
+              "flagged": 6,
+              "precision": 1.0,
+              "recall": 0.6
+            }
+          ],
+          "llm_brier_skill_vs_this": [
+            -0.2580862539301907,
+            -2.995166550240885,
+            0.27347725619017654
+          ],
+          "llm_auroc_minus_this": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "best_baseline": "logit_features",
+      "llm_auroc_ci": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "C_30_all": {
+      "label": "Design C (calendar-forward), 30d",
+      "n": 0
+    },
+    "C_60_all": {
+      "label": "Design C (calendar-forward), 60d",
+      "n": 0
+    },
+    "C_90_all": {
+      "label": "Design C (calendar-forward), 90d",
+      "n": 0
+    },
+    "C_180_all": {
+      "label": "Design C (calendar-forward), 180d",
+      "n": 0
+    },
+    "C_90_HIST": {
+      "label": "Design C, 90d, HIST",
+      "n": 0
+    },
+    "C_30_postcutoff": {
+      "label": "Design C checkpoints after stated model cutoff, 30d",
+      "n": 0
+    },
+    "C_60_postcutoff": {
+      "label": "Design C checkpoints after stated model cutoff, 60d",
+      "n": 0
+    },
+    "FAM_IN-RBI_C_90": {
+      "label": "IN-RBI design C 90d",
+      "n": 0
+    },
+    "FAM_IN-RBI_T_180": {
+      "label": "IN-RBI design T 180d",
+      "horizon": 180,
+      "llm": {
+        "n": 6,
+        "base_rate": 1.0,
+        "brier": 0.08193333333333332,
+        "logloss": 0.3317838651094443,
+        "auroc": NaN,
+        "auprc": NaN,
+        "ece": 0.27999999999999997,
+        "cal_slope": NaN,
+        "cal_intercept": NaN,
+        "mean_p": 0.7200000000000001,
+        "prec_rec": [
+          {
+            "threshold": 0.5,
+            "flagged": 6,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          {
+            "threshold": 0.7,
+            "flagged": 3,
+            "precision": 1.0,
+            "recall": 0.5
+          },
+          {
+            "threshold": 0.8,
+            "flagged": 1,
+            "precision": 1.0,
+            "recall": 0.16666666666666666
+          }
+        ]
+      },
+      "threads": 3,
+      "baselines": {},
+      "best_baseline": null,
+      "llm_auroc_ci": [
+        NaN,
+        NaN,
+        NaN
+      ]
+    },
+    "FAM_IN-SEBI_C_90": {
+      "label": "IN-SEBI design C 90d",
+      "n": 0
+    },
+    "FAM_IN-SEBI_T_180": {
+      "label": "IN-SEBI design T 180d",
+      "horizon": 180,
+      "llm": {
+        "n": 4,
+        "base_rate": 1.0,
+        "brier": 0.047950000000000007,
+        "logloss": 0.24348202686419806,
+        "auroc": NaN,
+        "auprc": NaN,
+        "ece": 0.21500000000000002,
+        "cal_slope": NaN,
+        "cal_intercept": NaN,
+        "mean_p": 0.785,
+        "prec_rec": [
+          {
+            "threshold": 0.5,
+            "flagged": 4,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          {
+            "threshold": 0.7,
+            "flagged": 4,
+            "precision": 1.0,
+            "recall": 1.0
+          },
+          {
+            "threshold": 0.8,
+            "flagged": 2,
+            "precision": 1.0,
+            "recall": 0.5
+          }
+        ]
+      },
+      "threads": 2,
+      "baselines": {},
+      "best_baseline": null,
+      "llm_auroc_ci": [
+        NaN,
+        NaN,
+        NaN
+      ]
+    },
+    "FAM_US-FDA_C_90": {
+      "label": "US-FDA design C 90d",
+      "n": 0
+    },
+    "FAM_US-FDA_T_180": {
+      "label": "US-FDA design T 180d",
+      "horizon": 180,
+      "llm": {
+        "n": 8,
+        "base_rate": 0.0,
+        "brier": 0.040287500000000004,
+        "logloss": 0.22219626817996063,
+        "auroc": NaN,
+        "auprc": NaN,
+        "ece": 0.19874999999999998,
+        "cal_slope": NaN,
+        "cal_intercept": NaN,
+        "mean_p": 0.19874999999999998,
+        "prec_rec": [
+          {
+            "threshold": 0.5,
+            "flagged": 0,
+            "precision": NaN,
+            "recall": NaN
+          },
+          {
+            "threshold": 0.7,
+            "flagged": 0,
+            "precision": NaN,
+            "recall": NaN
+          },
+          {
+            "threshold": 0.8,
+            "flagged": 0,
+            "precision": NaN,
+            "recall": NaN
+          }
+        ]
+      },
+      "threads": 4,
+      "baselines": {},
+      "best_baseline": null,
+      "llm_auroc_ci": [
+        NaN,
+        NaN,
+        NaN
+      ]
+    },
+    "US_C_90": {
+      "label": "US design C 90d",
+      "n": 0
+    },
+    "IN_C_90": {
+      "label": "India design C 90d",
+      "n": 0
+    },
+    "C_90_not_selfrecognised": {
+      "label": "Design C 90d excluding self-recognised",
+      "n": 0
+    }
+  },
+  "timing": {
+    "T_7d": {
+      "n": 20,
+      "base_rate": 0.0,
+      "brier": 0.00056875,
+      "logloss": 0.018841668124082698,
+      "auroc": NaN,
+      "auprc": NaN,
+      "ece": 0.01855,
+      "cal_slope": NaN,
+      "cal_intercept": NaN,
+      "mean_p": 0.01855,
+      "prec_rec": [
+        {
+          "threshold": 0.5,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": NaN
+        },
+        {
+          "threshold": 0.7,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": NaN
+        },
+        {
+          "threshold": 0.8,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": NaN
+        }
+      ],
+      "reliability": [
+        {
+          "bin": "0.0-0.2",
+          "n": 20,
+          "mean_p": 0.01855,
+          "obs_rate": 0.0
+        }
+      ]
+    },
+    "T_30d": {
+      "n": 20,
+      "base_rate": 0.25,
+      "brier": 0.16277750000000002,
+      "logloss": 0.44648040380764353,
+      "auroc": 1.0,
+      "auprc": 1.0,
+      "ece": 0.20450000000000002,
+      "cal_slope": NaN,
+      "cal_intercept": NaN,
+      "mean_p": 0.0925,
+      "prec_rec": [
+        {
+          "threshold": 0.5,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": 0.0
+        }
+      ],
+      "reliability": [
+        {
+          "bin": "0.0-0.2",
+          "n": 17,
+          "mean_p": 0.06941176470588237,
+          "obs_rate": 0.11764705882352941
+        },
+        {
+          "bin": "0.2-0.4",
+          "n": 3,
+          "mean_p": 0.22333333333333336,
+          "obs_rate": 1.0
+        }
+      ]
+    },
+    "T_60d": {
+      "n": 19,
+      "base_rate": 0.2631578947368421,
+      "brier": 0.11844210526315792,
+      "logloss": 0.36244884495084834,
+      "auroc": 1.0,
+      "auprc": 1.0,
+      "ece": 0.26052631578947366,
+      "cal_slope": NaN,
+      "cal_intercept": NaN,
+      "mean_p": 0.20473684210526313,
+      "prec_rec": [
+        {
+          "threshold": 0.5,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": 0.0
+        },
+        {
+          "threshold": 0.7,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": 0.0
+        }
+      ],
+      "reliability": [
+        {
+          "bin": "0.0-0.2",
+          "n": 9,
+          "mean_p": 0.06666666666666668,
+          "obs_rate": 0.0
+        },
+        {
+          "bin": "0.2-0.4",
+          "n": 7,
+          "mean_p": 0.2785714285714286,
+          "obs_rate": 0.2857142857142857
+        },
+        {
+          "bin": "0.4-0.6",
+          "n": 3,
+          "mean_p": 0.4466666666666667,
+          "obs_rate": 1.0
+        }
+      ]
+    },
+    "T_90d": {
+      "n": 19,
+      "base_rate": 0.5263157894736842,
+      "brier": 0.14391184210526317,
+      "logloss": 0.4315363998708096,
+      "auroc": 1.0,
+      "auprc": 0.9999999999999999,
+      "ece": 0.316578947368421,
+      "cal_slope": NaN,
+      "cal_intercept": NaN,
+      "mean_p": 0.3113157894736842,
+      "prec_rec": [
+        {
+          "threshold": 0.5,
+          "flagged": 3,
+          "precision": 1.0,
+          "recall": 0.3
+        },
+        {
+          "threshold": 0.7,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": 0.0
+        },
+        {
+          "threshold": 0.8,
+          "flagged": 0,
+          "precision": NaN,
+          "recall": 0.0
+        }
+      ],
+      "reliability": [
+        {
+          "bin": "0.0-0.2",
+          "n": 9,
+          "mean_p": 0.10722222222222222,
+          "obs_rate": 0.0
+        },
+        {
+          "bin": "0.2-0.4",
+          "n": 1,
+          "mean_p": 0.39,
+          "obs_rate": 1.0
+        },
+        {
+          "bin": "0.4-0.6",
+          "n": 6,
+          "mean_p": 0.4483333333333333,
+          "obs_rate": 1.0
+        },
+        {
+          "bin": "0.6-0.8",
+          "n": 3,
+          "mean_p": 0.6233333333333334,
+          "obs_rate": 1.0
+        }
+      ]
+    },
+    "T_180d": {
+      "n": 18,
+      "base_rate": 0.5555555555555556,
+      "brier": 0.055872222222222226,
+      "logloss": 0.26345563575295233,
+      "auroc": 1.0,
+      "auprc": 1.0,
+      "ece": 0.22944444444444442,
+      "cal_slope": NaN,
+      "cal_intercept": NaN,
+      "mean_p": 0.5027777777777778,
+      "prec_rec": [
+        {
+          "threshold": 0.5,
+          "flagged": 10,
+          "precision": 1.0,
+          "recall": 1.0
+        },
+        {
+          "threshold": 0.7,
+          "flagged": 7,
+          "precision": 1.0,
+          "recall": 0.7
+        },
+        {
+          "threshold": 0.8,
+          "flagged": 3,
+          "precision": 1.0,
+          "recall": 0.3
+        }
+      ],
+      "reliability": [
+        {
+          "bin": "0.0-0.2",
+          "n": 4,
+          "mean_p": 0.1725,
+          "obs_rate": 0.0
+        },
+        {
+          "bin": "0.2-0.4",
+          "n": 4,
+          "mean_p": 0.225,
+          "obs_rate": 0.0
+        },
+        {
+          "bin": "0.6-0.8",
+          "n": 7,
+          "mean_p": 0.7114285714285715,
+          "obs_rate": 1.0
+        },
+        {
+          "bin": "0.8-1.0",
+          "n": 3,
+          "mean_p": 0.8266666666666667,
+          "obs_rate": 1.0
+        }
+      ]
+    }
+  },
+  "lead_time": {
+    "thresholds": [
+      {
+        "threshold": 0.3,
+        "flagged": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "positives": 5,
+        "detected_share": 1.0,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.35,
+        "flagged": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "positives": 5,
+        "detected_share": 1.0,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.4,
+        "flagged": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "positives": 5,
+        "detected_share": 1.0,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.45,
+        "flagged": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "positives": 5,
+        "detected_share": 1.0,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.5,
+        "flagged": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "positives": 5,
+        "detected_share": 1.0,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.55,
+        "flagged": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "positives": 5,
+        "detected_share": 1.0,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.6,
+        "flagged": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "positives": 5,
+        "detected_share": 1.0,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.65,
+        "flagged": 10,
+        "precision": 1.0,
+        "recall": 1.0,
+        "positives": 5,
+        "detected_share": 1.0,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.7,
+        "flagged": 7,
+        "precision": 1.0,
+        "recall": 0.7,
+        "positives": 5,
+        "detected_share": 0.8,
+        "median_lead_days_first_cross": 90.0,
+        "median_lead_days_persistent": 90.0
+      },
+      {
+        "threshold": 0.75,
+        "flagged": 5,
+        "precision": 1.0,
+        "recall": 0.5,
+        "positives": 5,
+        "detected_share": 0.6,
+        "median_lead_days_first_cross": 30.0,
+        "median_lead_days_persistent": 30.0
+      },
+      {
+        "threshold": 0.8,
+        "flagged": 3,
+        "precision": 1.0,
+        "recall": 0.3,
+        "positives": 5,
+        "detected_share": 0.6,
+        "median_lead_days_first_cross": 30.0,
+        "median_lead_days_persistent": 30.0
+      },
+      {
+        "threshold": 0.85,
+        "flagged": 0,
+        "precision": NaN,
+        "recall": 0.0,
+        "positives": 5,
+        "detected_share": 0.0,
+        "median_lead_days_first_cross": 0.0,
+        "median_lead_days_persistent": 0.0
+      },
+      {
+        "threshold": 0.9,
+        "flagged": 0,
+        "precision": NaN,
+        "recall": 0.0,
+        "positives": 5,
+        "detected_share": 0.0,
+        "median_lead_days_first_cross": 0.0,
+        "median_lead_days_persistent": 0.0
+      },
+      {
+        "threshold": 0.95,
+        "flagged": 0,
+        "precision": NaN,
+        "recall": 0.0,
+        "positives": 5,
+        "detected_share": 0.0,
+        "median_lead_days_first_cross": 0.0,
+        "median_lead_days_persistent": 0.0
+      }
+    ],
+    "at_precision_0.8": {
+      "threshold": 0.3,
+      "flagged": 10,
+      "precision": 1.0,
+      "recall": 1.0,
+      "positives": 5,
+      "detected_share": 1.0,
+      "median_lead_days_first_cross": 90.0,
+      "median_lead_days_persistent": 90.0
+    }
+  },
+  "content": {
+    "n_snapshots": 10,
+    "threads": 5,
+    "label_dist": {
+      "as_proposed": 3,
+      "softened": 2,
+      "tightened": 0,
+      "mixed": 0,
+      "different_mechanism": 0
+    },
+    "model_multiclass_brier": 0.38386,
+    "baserate_multiclass_brier": 0.6863905325443788,
+    "brier_skill": [
+      0.44075568965517253,
+      0.3470790625000001,
+      0.5385408369565214
+    ],
+    "model_top1": 0.9,
+    "baserate_top1": 0.6,
+    "top1_gain": [
+      0.30000000000000004,
+      0.0,
+      0.6000000000000001
+    ]
+  },
+  "content_LATE": {
+    "n": 0
+  },
+  "recognition": {
+    "self_recognised_share": 0.5,
+    "insufficient_share": 0.1
+  },
+  "b_vs_bc": {
+    "T_180": {
+      "a": "B_PLUS_C",
+      "b": "B_ONLY",
+      "n": 4
+    },
+    "T_30": {
+      "a": "B_PLUS_C",
+      "b": "B_ONLY",
+      "n": 4
+    },
+    "C_90": {
+      "a": "B_PLUS_C",
+      "b": "B_ONLY",
+      "n": 0
+    },
+    "C_180": {
+      "a": "B_PLUS_C",
+      "b": "B_ONLY",
+      "n": 0
+    },
+    "C_alone_vs_B_alone_C_90": {
+      "a": "C_ONLY",
+      "b": "B_ONLY",
+      "n": 0
+    }
+  },
+  "masking_control": {
+    "C_90": {
+      "a": "MASKED_B_PLUS_C",
+      "b": "B_PLUS_C",
+      "n": 0
+    },
+    "T_180": {
+      "a": "MASKED_B_PLUS_C",
+      "b": "B_PLUS_C",
+      "n": 8,
+      "threads": 4,
+      "brier_a": 0.0695625,
+      "brier_b": 0.059512499999999996,
+      "delta_brier_a_minus_b": [
+        0.010050000000000003,
+        -0.003949999999999995,
+        0.023800000000000016
+      ],
+      "auroc_a": 1.0,
+      "auroc_b": 1.0,
+      "delta_logloss": [
+        0.02248200012574325,
+        -0.026562419927251113,
+        0.055696147301262044
+      ]
+    }
+  },
+  "analysis_role": "technical_smoke_excluded_from_headline",
+  "limitations": [
+    "10 matters; India action and FDA control status confounded with regulator",
+    "Medium-confidence FDA absence searches incomplete",
+    "Recognition and repeated cutoffs preclude independent uncontaminated observations",
+    "Only T-90 and T-30; no Design C",
+    "No GOLD"
+  ]
+}

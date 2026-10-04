@@ -8,8 +8,11 @@
 | ASTRA_SMOKE2 | Invalidated for empirical smoke gate | RBI H0021 false no-action label/pseudo-anchor; US/FDA first-public dates under repair |
 | ASTRA_MASK_SMOKE2_SMALL | Invalidated | Exact identities/titles remained in masked packet |
 | ASTRA_MASK_SMOKE3 | Invalidated for empirical smoke gate | Same RBI false-control issue; residual recognition and loss of topic information |
+| ASTRA_SMOKE4 | Technical pass; headline excluded | Repaired source freeze;14/24 recognised; regulator/action confounding |
+| ASTRA_MASK_SMOKE4 | Invalidated masking comparison | Masked action endpoint changed; preserved without ingestion |
+| ASTRA_MASK_SMOKE5 | Technical pass; headline excluded | Endpoint repaired;4/8 recognised; masking information loss remains |
 
-All raw forecasts remain preserved. The GPT runs were invalidated before ledger ingestion and headline evaluation.
+All raw forecasts remain preserved. SMOKE2/MASK2/MASK3 were invalidated before ledger ingestion and headline evaluation.
 The first GPT primary run had 24 distinct outputs plus 16 aliases; six distinct outputs self-reported recognition.
 The repaired masked diagnostic had eight outputs, two recognised. Independent rationale review found no expressed
 post-cutoff political facts or invalid citations, but that does not cure source/label failures.

@@ -42,3 +42,15 @@ and4 recognition flags but is invalid for the identity-only comparison because t
 Two further fresh Astra high calls are planned for MASK_SMOKE5 after restoring the process-specific endpoint;
 about5,700 packet tokens plus two CLI/system overheads (roughly10k input tokens each in observed calls).
 No scaled forecast run has begun. No reset credit was redeemed by this task.
+
+## MASK_SMOKE5 completed; GPT audit routing, 2026-10-04
+
+Two fresh Astra high calls completed with 24,992 input tokens and 3,437 output tokens reported by the CLI.
+The receipts separately report 740 reasoning-output tokens; those are not added again to output usage here.
+Both calls had zero unexpected tool items. Independent technical audit passed eight forecasts, now ingested;
+four self-report recognition. Actual billing is unavailable.
+
+The user withdrew the DeepSeek request and requested GPT subagents. No DeepSeek call was made. Active research
+managers use Sol high; the completed independent masked-output auditor used Astra high. Source audits cover
+late US actions, the complete SEBI-R frame and selected RBI records. Detailed model-call receipts are available
+for blind forecasting; native research-agent billing is not visible to the Director.

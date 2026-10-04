@@ -87,7 +87,7 @@
    ],
    "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
    "status": "IN_PROGRESS",
-   "notes": "SMOKE4 core technical pass;40 records ingested,14 unique recognition flags. MASK4 invalidated for endpoint mismatch;MASK5 prepared. No scaling/headline inference yet."
+   "notes": "SMOKE4/MASK5 technical audits passed;108 ledger records verify. Preparing complete SEBI-R30/FDA-H30 source-audited cohort for scaled frozen forecasts."
   },
   {
    "id": "RP0-07",
@@ -114,7 +114,7 @@
    ],
    "done_when": "GOLD and risk-weighted RAPID snapshots have contamination verdicts.",
    "status": "IN_PROGRESS",
-   "notes": "Core smoke output audit passes expressed-leakage/citation checks; masked endpoint repaired. Late-action provenance audit leads pending verification; GOLD zero."
+   "notes": "Completed masked-output audit plus55 new India/US source audits; false controls and mismatched outcomes repaired by unapplied patch sets. No GOLD promotion."
   },
   {
    "id": "RP0-09",
@@ -128,8 +128,8 @@
     "RP0-08"
    ],
    "done_when": "Calibration, action, timing, content, lead-time and ablation metrics are reproducible.",
-   "status": "NOT_STARTED",
-   "notes": "rpe/evaluate.py ready and tested on synthetic forecasts"
+   "status": "IN_PROGRESS",
+   "notes": "Technical smoke scored: Brier0.05587 vs best grouped baseline0.04441; headline excluded. Independent review identified prereg gate/report gaps; fixes in progress."
   },
   {
    "id": "RP0-10",

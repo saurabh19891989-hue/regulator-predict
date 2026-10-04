@@ -1,0 +1,25 @@
+{
+  "run": "ASTRA_MASK_SMOKE5",
+  "batch_id": "ASTRA_MASK_SMOKE5_b002",
+  "model": "gpt-6-astra",
+  "started_at": "2026-10-03T23:58:36.849607+00:00",
+  "completed_at": "2026-10-03T23:59:46.944416+00:00",
+  "exit_code": 0,
+  "unexpected_item_types": [],
+  "usage": [
+    {
+      "input_tokens": 12497,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1660,
+      "reasoning_output_tokens": 317
+    }
+  ],
+  "packet_sha256": "1be82fa67a8e8ed519ec1b40197c7710e0d4ab893bfc47fe9b711180cc621bc2",
+  "events_path": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_blind_sessions\\ASTRA_MASK_SMOKE5\\ASTRA_MASK_SMOKE5_b002\\events.jsonl",
+  "session_ids": [
+    "01a10434-93c6-7d93-a77e-afb5aafde869"
+  ],
+  "events_sha256": "b6c6a473cfcba902957cef1f4c7d4211965e7a528f7cc3056856ff234ea88616",
+  "tool_controls": "shell, web, plugins, apps, multi-agent, memories disabled; no project docs"
+}

@@ -1,27 +1,38 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
-**Status:** ACTIVE. Source audit invalidated the GPT smoke gate; data correction and independent audits are in progress.
+**Status:** ACTIVE. Repaired core smoke passed its technical audit; masked comparison and broader source audits are in progress.
 **Last updated:** 2026-10-04
-**Gate:** GATE 0 — historical point-in-time backtest (not yet evaluated; no GO/NO-GO answer exists yet)
+**Gate:** GATE 0 — technical smoke scored; broader empirical GO/NO-GO remains unresolved
 **Repository:** https://github.com/saurabh19891989-hue/regulator-predict · branch `astra/regulatory-predict`
 · local path `C:\Users\saura\Downloads\regulator-predict` · source-repair freeze checkpoint `7c1f0e6`
 
 ## Resume checkpoint, 2026-10-04
 
 - SMOKE4 core technical audit passed:24 distinct forecasts plus16 aliases,14 self-recognition flags, no expressed
-  future facts or invalid citations. Forty records were appended to the ledger;100 total records verify.
+  future facts or invalid citations. MASK5 adds eight audited forecasts;108 total ledger records verify.
 - MASK_SMOKE4 is invalidated: masking broadened the forecast event definition. Eight raw outputs remain archived.
   The renderer now preserves the process-specific endpoint; regression test passed. MASK_SMOKE5 has two fresh
-  packet batches (eight forecasts) prepared on the unchanged source freeze; inference is next.
+  packet batches (eight forecasts) completed on the unchanged source freeze. Structural preflight passes with
+  zero repairs; four India forecasts still self-report recognition. Independent output review passed and all eight
+  were ingested. Both smoke runs remain excluded from headline results.
 - Six distinct CLI session IDs and event-log hashes were recovered into the SMOKE4 receipts. All six runs used
   packet-only prompts with tools disabled. Actual usage is in receipts; no billing amount is asserted.
 - Source-repaired counts remain328 threads/1,869 evidence/zero GOLD. No scaled or headline result exists.
+  Technical scoring on18 evaluable180-day smoke rows gives model Brier0.05587 vs best baseline0.04441;
+  lower is better. Regulator/outcome confounding, recognition and small sample preclude predictive conclusions.
 - Follow-up late-action audits were interrupted before writing results. Pending leads: RBI H0007 may have adopted
   its October2022 draft in November2023 rather than July2026; US-FR C0056 links a withdrawal of a direct final rule
   and requires the earlier direct-final chronology. These are pending verification, not applied corrections.
-- User requested DeepSeek as an additional subagent. No DeepSeek route is exposed by native tools or local Codex
-  config; awaiting the user's existing connection/profile location while continuing authorized GPT work.
-- Fixed observation boundary remains2026-09-24. Do not rebuild canonical sources under MASK_SMOKE5.
+- User withdrew the DeepSeek request and explicitly requested GPT subagents. Sol high agents are completing
+  the full30 SEBI-R precursor frame, selected RBI records and18 US late-action records. No DeepSeek was used.
+  A usage interruption left partial artifacts; after the latest continuation ordinary usage was available and the
+  same workers resumed from saved files. Next output is an evidence-based model/baseline comparison on a complete
+  audited frame, followed by the preregistered gate assessment; see docs/SCALING_PLAN_20261004.md.
+- Fixed observation boundary remains2026-09-24. Smoke inference/ingestion is complete; a new source freeze can
+  be built only after active source managers finish and all effective patches validate.
+- The user's daily Google Drive collection refers to the separate NNML market-data collector. Direct server/Drive
+  check on2026-10-04 verified its October2 session,213 stocks/6indices andPASS upload receipt. No daily regulatory
+  collector/Drive pipeline was found in this workspace. See docs/COLLECTION_STATUS_20261004.md.
 
 ## Current repair phase, 2026-09-27
 
