@@ -54,3 +54,13 @@ The user withdrew the DeepSeek request and requested GPT subagents. No DeepSeek 
 managers use Sol high; the completed independent masked-output auditor used Astra high. Source audits cover
 late US actions, the complete SEBI-R frame and selected RBI records. Detailed model-call receipts are available
 for blind forecasting; native research-agent billing is not visible to the Director.
+
+## Scaled60-case forecast estimate, 2026-10-04 — before inference
+
+- ASTRA_CORE60:20 Astra high calls,380 distinct forecasts plus380 identical-evidence aliases;122,968 packet tokens.
+- ASTRA_CAL60:18 Astra high calls,298 distinct forecasts plus298 aliases;98,395 packet tokens.
+- Total38 calls,678 distinct outputs,221,363 packet tokens. Observed CLI/system overhead suggests approximately
+  600k input tokens in total, with roughly250k output tokens if output density follows the smoke. This is a planning
+  estimate, not billed usage. Actual receipts will be archived. No reset credit or paid top-up is authorized/used.
+- Primary sample is60 audited RAPID cases; zero GOLD and no added TierC in these packets. Same-model TITLE_ONLY
+  is included. Any quota, source mismatch, tool activity or forecast validation failure stops the affected campaign.

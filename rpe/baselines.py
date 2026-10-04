@@ -18,6 +18,26 @@ HORIZONS = [7, 30, 60, 90, 180]
 ELAPSED_BUCKETS = [0, 90, 180, 365, 730, 10 ** 6]
 AGENDA_RE = re.compile(r"final\s+(?:rule|action)[^0-9]{0,40}?(\d{1,2})/(\d{1,2})/(\d{4})", re.I)
 COUNT_RE = re.compile(r"(\d[\d,]*)\s+(?:public\s+)?comments?", re.I)
+COMMENT_ISO_RE = re.compile(
+    r"\b(?:comment(?:s)?|feedback|submissions?)\b[^.\n]{0,100}?"
+    r"\b(?:deadline|due|by|until|close(?:s|d)?(?:\s+on)?)\b[^.\n]{0,40}?"
+    r"\b(\d{4}-\d{2}-\d{2})\b", re.I)
+ISO_DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
+
+
+def _comment_deadline(e):
+    """Only an explicit deadline carried by a visible official source is usable."""
+    value = e.get("comment_deadline")
+    if value is None:
+        m = COMMENT_ISO_RE.search(e.get("content_excerpt", ""))
+        value = m.group(1) if m else None
+    if not isinstance(value, str) or not ISO_DATE_RE.fullmatch(value):
+        return None
+    try:
+        deadline = d(value)
+    except ValueError:
+        return None
+    return value if deadline >= d(available_date(e)) else None
 
 
 def features(thread, items, cutoff):
@@ -26,7 +46,10 @@ def features(thread, items, cutoff):
     n = defaultdict(int)
     for e in items:
         n[e["tier"]] += 1
-    official = [e for e in items if e["tier"] in ("B", "C")]
+    official = [e for e in items if e["tier"] in ("B", "C") and d(available_date(e)) <= d(c)]
+    dated_deadlines = [(available_date(e), _comment_deadline(e)) for e in official]
+    dated_deadlines = [(source_date, deadline) for source_date, deadline in dated_deadlines if deadline]
+    latest_deadline = max(dated_deadlines, default=("", ""))[1]
     latest = max((available_date(e) for e in official), default=thread["anchor_date"])
     since_anchor = max(0, days_between(thread["anchor_date"], c))
     followup_b = sum(1 for e in items if e["tier"] == "B" and d(available_date(e)) > d(thread["anchor_date"])
@@ -59,6 +82,7 @@ def features(thread, items, cutoff):
         "since_latest": max(0, days_between(latest, c)), "nB": n["B"], "nC": n["C"], "nS": n["S"], "nD": n["D"],
         "followup_b": followup_b, "oira_final": int(oira_final), "agenda_any": ag_any, "agenda_within": ag_within,
         "agenda_long": ag_long, "log_comments": math.log1p(cc), "recent_soft": recent_soft,
+        "comment_deadline_passed": int(bool(latest_deadline) and d(latest_deadline) < d(c)),
     }
 
 
@@ -122,7 +146,7 @@ def grouped_rate(rows, keyfn, h, folds=5, alpha=1.0):
 
 
 NUM = ["log_since_anchor", "since_latest", "nB", "nC", "nS", "nD", "followup_b", "oira_final", "agenda_any",
-       "agenda_within", "agenda_long", "log_comments", "recent_soft"]
+       "agenda_within", "agenda_long", "log_comments", "recent_soft", "comment_deadline_passed"]
 
 
 def _X(rows, fams):

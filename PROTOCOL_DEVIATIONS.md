@@ -188,3 +188,30 @@ Newton iteration must not produce a spurious finite slope. Original gate thresho
 
 The next cohort plan is docs/SCALING_PLAN_20261004.md. Complete precursor frames take priority over an
 outcome-conditioned collection of late actions; selected partial audit sets remain explicitly exploratory.
+
+## DEV-015 — Complete source-audited frames and preregistered scoring corrections (2026-10-04)
+
+Before scaled inference, source repairs produced327 RAPID threads (208 actions/119 controls),1,785 evidence,
+99 audited threads andzero GOLD. The source freeze is data/snapshots/freeze_20261004.json. The selected cohort
+is the complete original SEBI-R30 and FDA-H30 precursor samples, not an accuracy-selected subset. All selected
+retained evidence is Tier B. FDA action dates are first verified public finalization notices; exact first PDF
+posting days remain uncertain, so timing claims are conditional. SEBI negative labels use bounded official
+absence checks at medium confidence. No missing evidence class is treated as measured zero lift.
+
+Core T forecasts useT-180/T-90/T-30/T-7 where available; C uses the existing frozen calendar schedule. The
+previous scaling-plan list omittedT-7; it is restored before inference to measure short warnings without changing
+the original design. Twenty different matters may share a packet, one snapshot per matter, in fresh contexts.
+ALL/B_ONLY/B_PLUS_C are aliased only when packets contain identical evidence; aliases are not independent draws.
+
+Independent review found lead precision includedT-270/T-365 and searched unregistered probability thresholds.
+The scorer now uses onlyk<=180 andtheta0.5/0.7/0.8, matching the original preregistration. Primary comparators
+train only on selected primary-arm precursor-population threads. The declared logistic deadline-passed feature
+is implemented from cutoff-valid official records with explicit deadlines; the frozen heuristic remains unchanged
+and is described as recency-based. Added reports expose HIST title comparisons, LATE action slices, quality/stratum
+splits, pooled timing, recognition exclusions and missing gate inputs. Original numeric bands are unchanged.
+
+Rank-sum AUROC replaces the equivalent ROC integral inside confidence intervals to reduce measured evaluator
+runtime;50 tied/repeated-data cases match the reference implementation. Bootstrap remains2,000 thread-clustered
+replicates. Ten focused tests pass; the preceding synthetic end-to-end evaluation passed (830.86seconds).
+Scoped Git attributes preserve byte-bound canonical/packet files across Windows checkouts. No frozen forecast
+probability, source record or original preregistration is rewritten by these scorer changes.

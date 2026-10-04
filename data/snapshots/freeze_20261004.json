@@ -1,0 +1,16 @@
+{
+  "version": "2026-10-04-source-audit",
+  "data_sha256": {
+    "snapshots/index.jsonl": "fa378d0c9c8981ce6d4a59ded4a22951ed5efd737b5a2561110ba1858be6e2a7",
+    "threads/threads.jsonl": "1ad2595e73b3c7a4948c82a0e8988c2a8cfa7186df79d468e59842c613c32490",
+    "evidence/evidence.jsonl": "9ccf6f832ceeef0fe127512c3e056c1ba656cc9b5b87b2d24c0049d314b45d4f",
+    "outcomes/outcomes.jsonl": "cec53d66390307636b4ffe34283b0428fe26dda05c388b76a397716ef7bdca9b"
+  },
+  "source_audit_checkpoint": "3e27ed3",
+  "censor_last": "2026-09-24",
+  "threads": 327,
+  "evidence": 1785,
+  "audited": 99,
+  "gold": 0,
+  "status": "frozen_before_ASTRA_CORE60"
+}

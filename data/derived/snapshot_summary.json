@@ -1,16 +1,16 @@
 {
- "snapshots": 27153,
+ "snapshots": 26982,
  "available_by_arm": {
-  "ALL": 3017,
-  "B_ONLY": 3017,
-  "B_PLUS_C": 3017,
-  "TITLE_ONLY": 3017,
-  "MASKED_B_PLUS_C": 3017,
-  "B_C_STAKEHOLDERS_PLUS_NEWS": 337,
-  "LATEST_DOCUMENT_ONLY": 1953,
-  "C_ONLY": 130
+  "ALL": 2998,
+  "B_ONLY": 2998,
+  "B_PLUS_C": 2998,
+  "TITLE_ONLY": 2998,
+  "MASKED_B_PLUS_C": 2998,
+  "B_C_STAKEHOLDERS_PLUS_NEWS": 115,
+  "LATEST_DOCUMENT_ONLY": 1942,
+  "C_ONLY": 122
  },
- "threads_with_valid_T_snapshot": 328,
- "design_C_B_PLUS_C": 777,
- "design_T_B_PLUS_C": 2240
+ "threads_with_valid_T_snapshot": 327,
+ "design_C_B_PLUS_C": 768,
+ "design_T_B_PLUS_C": 2230
 }

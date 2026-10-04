@@ -11,6 +11,8 @@ import os
 from collections import defaultdict
 
 import numpy as np
+from scipy.special import expit
+from scipy.stats import rankdata
 from sklearn.metrics import average_precision_score, roc_auc_score
 
 from .baselines import HORIZONS, all_baselines, features
@@ -34,7 +36,16 @@ def logloss(p, y, eps=1e-3):
 
 
 def auroc(p, y):
-    return float(roc_auc_score(y, p)) if len(set(y)) == 2 else float("nan")
+    if len(set(y)) != 2:
+        return float("nan")
+    p, y = np.asarray(p, float), np.asarray(y, int)
+    if len(p) != len(y) or not np.isfinite(p).all():
+        raise ValueError("AUROC requires matching labels and finite probabilities")
+    # Rank-sum AUROC is identical to the ROC integral, including half credit for ties.
+    # Avoid repeated sklearn validation/sorting overhead in 2,000-replicate clustered CIs.
+    positive = y == 1
+    npos, nneg = int(positive.sum()), int((~positive).sum())
+    return float((rankdata(p, method="average")[positive].sum() - npos * (npos + 1) / 2) / (npos * nneg))
 
 
 def auprc(p, y):
@@ -55,18 +66,25 @@ def cal_slope(p, y):
     if len(set(y)) < 2:
         return float("nan"), float("nan")
     x = np.log(p / (1 - p))
+    # A finite unpenalized calibration MLE does not exist under complete/quasi separation.
+    if (np.ptp(x) == 0 or np.max(x[y == 0]) <= np.min(x[y == 1])
+            or np.max(x[y == 1]) <= np.min(x[y == 0])):
+        return float("nan"), float("nan")
     w = np.array([0.0, 1.0])
-    for _ in range(50):  # Newton-Raphson logistic regression y ~ a + b*x
+    for _ in range(100):  # Newton-Raphson logistic regression y ~ a + b*x
         z = w[0] + w[1] * x
-        mu = 1 / (1 + np.exp(-z))
+        mu = expit(z)
         g = np.array([np.sum(y - mu), np.sum((y - mu) * x)])
         Wd = mu * (1 - mu)
         Hm = -np.array([[Wd.sum(), (Wd * x).sum()], [(Wd * x).sum(), (Wd * x * x).sum()]])
         try:
-            w = w - np.linalg.solve(Hm, g)
+            step = np.linalg.solve(Hm, g)
+            w = w - step
         except np.linalg.LinAlgError:
-            break
-    return float(w[1]), float(w[0])
+            return float("nan"), float("nan")
+        if np.max(np.abs(step)) < 1e-8 and np.isfinite(w).all():
+            return float(w[1]), float(w[0])
+    return float("nan"), float("nan")
 
 
 def reliability(p, y, bins=5):
@@ -142,7 +160,7 @@ def load(runs=None):
     return rows, idx
 
 
-def feature_rows(idx):
+def feature_rows(idx, thread_ids=None):
     """Feature rows for every available ALL-arm snapshot (baselines are arm-independent)."""
     threads = {t["thread_id"]: t for t in read_jsonl(os.path.join(DATA, "threads", "threads.jsonl"))}
     ev = defaultdict(list)
@@ -150,6 +168,8 @@ def feature_rows(idx):
         ev[e["thread_id"]].append(e)
     rows = []
     for s in idx.values():
+        if thread_ids is not None and s["thread_id"] not in thread_ids:
+            continue
         if s["arm"] != "ALL" or not s["available"]:
             continue
         items, _, _, _ = select_items(ev[s["thread_id"]], "ALL", s["cutoff_date"])
@@ -158,8 +178,8 @@ def feature_rows(idx):
     return rows
 
 
-def baseline_lookup(idx):
-    frows = feature_rows(idx)
+def baseline_lookup(idx, thread_ids=None):
+    frows = feature_rows(idx, thread_ids)
     bl = all_baselines(frows)
     look = defaultdict(dict)   # (thread, cutoff) -> {name: {h: p}}
     for name, per_h in bl.items():
@@ -210,8 +230,17 @@ def action_block(rows, look, h, label):
 
 def paired_arms(rows, arm_a, arm_b, h=180, restrict=None):
     """ΔBrier (a − b) on snapshots available in both arms (same model/run family)."""
-    A = {(r["thread_id"], r["cutoff_date"]): r for r in rows if r["arm"] == arm_a}
-    B = {(r["thread_id"], r["cutoff_date"]): r for r in rows if r["arm"] == arm_b}
+    def keyed(arm):
+        out = {}
+        for r in rows:
+            if r["arm"] != arm:
+                continue
+            k = (r["thread_id"], r["cutoff_date"], r["design"], r["model"])
+            if k in out and (out[k]["run"], out[k]["snapshot_id"]) != (r["run"], r["snapshot_id"]):
+                raise ValueError(f"Multiple forecasts for {arm} at {k}; select one run per comparison")
+            out[k] = r
+        return out
+    A, B = keyed(arm_a), keyed(arm_b)
     keys = [k for k in A if k in B and A[k]["labels"].get(str(h)) is not None]
     if restrict:
         keys = [k for k in keys if restrict(A[k])]
@@ -229,7 +258,8 @@ def paired_arms(rows, arm_a, arm_b, h=180, restrict=None):
 
 def lead_time(rows):
     """Design-T, horizon 180. Earliest k<=180 with p>=θ; precision over all T snapshots with 180d label."""
-    T = [r for r in rows if r["design"] == "T" and r["labels"].get("180") is not None]
+    T = [r for r in rows if r["design"] == "T" and r["labels"].get("180") is not None
+         and int(r["offset"].split("-")[1]) <= 180]
     p = np.array([r["fc"]["action_probability_180d"] for r in T])
     y = np.array([r["labels"]["180"] for r in T])
     by_thread = defaultdict(list)
@@ -237,7 +267,7 @@ def lead_time(rows):
         if not r["is_pseudo_anchor"]:
             by_thread[r["thread_id"]].append((int(r["offset"].split("-")[1]), r["fc"]["action_probability_180d"]))
     res = {"thresholds": []}
-    for th in [round(x, 2) for x in np.arange(0.3, 0.96, 0.05)]:
+    for th in (0.5, 0.7, 0.8):
         pr = prec_rec(p, y, th)
         leads, persist = [], []
         for tid, lst in by_thread.items():
@@ -273,6 +303,7 @@ def content_block(rows, outcomes):
     tot = defaultdict(int)
     for t in thr:
         tot[lab[t]] += 1
+    majority = max(CONTENT, key=lambda c: tot[c])
     rows_out, mb, bb, acc_m, acc_b, g = [], [], [], [], [], []
     for r in pos:
         t = r["thread_id"]
@@ -287,23 +318,126 @@ def content_block(rows, outcomes):
         g.append(t)
     mb, bb, acc_m, acc_b = map(np.array, (mb, bb, acc_m, acc_b))
     return {"n_snapshots": len(pos), "threads": len(thr), "label_dist": dict(tot),
+            "majority_class": majority, "majority_rate_threads": tot[majority] / len(thr),
+            "majority_top1_snapshot": float(np.mean([lab[r["thread_id"]] == majority for r in pos])),
             "model_multiclass_brier": float(mb.mean()), "baserate_multiclass_brier": float(bb.mean()),
             "brier_skill": boot(g, lambda ix: 1 - mb[ix].mean() / bb[ix].mean()),
             "model_top1": float(acc_m.mean()), "baserate_top1": float(acc_b.mean()),
             "top1_gain": boot(g, lambda ix: acc_m[ix].mean() - acc_b[ix].mean())}
 
 
+def gate_assessment(res):
+    """Decision inputs only: absent audit and mechanism results can never become a GO."""
+    action = res["action"]
+    title = res.get("title_only_control", {})
+    arm = res["primary_arm"]
+    hist = action.get("C_90_HIST", {})
+    late = action.get("C_90_LATE", {})
+    best_h = hist.get("baselines", {}).get(hist.get("best_baseline"), {})
+    best_l = late.get("baselines", {}).get(late.get("best_baseline"), {})
+    bss_h = best_h.get("llm_brier_skill_vs_this")
+    bss_l = best_l.get("llm_brier_skill_vs_this")
+    title_h = title.get(f"{arm}_vs_TITLE_C_90_HIST", {}).get("delta_brier_a_minus_b")
+    late_auc = late.get("llm", {}).get("auroc")
+
+    def finite(x):
+        return isinstance(x, (int, float)) and math.isfinite(x)
+
+    def band(x, boundary, higher=True):
+        return {f"{boundary + shift:.2f}": (x >= boundary + shift if higher else x <= boundary + shift)
+                for shift in (-0.05, 0, 0.05)} if finite(x) else None
+
+    g1_ready = (bss_h and title_h and bss_l and finite(late_auc)
+                and all(finite(x) for x in (bss_h[0], bss_h[1], title_h[2], bss_l[0])))
+    g1_pass = (bss_h[0] >= 0.05 and bss_h[1] > 0 and title_h[2] < 0
+               and late_auc >= 0.70 and bss_l[0] >= 0) if g1_ready else None
+    g2_values = {h: res["timing"].get(f"POOLED_{h}d", {}) for h in (30, 90, 180)}
+    g2_ready = all(finite(v.get("ece")) and finite(v.get("cal_slope")) for v in g2_values.values())
+    g2_pass = all(v["ece"] <= 0.10 and 0.6 <= v["cal_slope"] <= 1.4 for v in g2_values.values()) if g2_ready else None
+    lead = res["lead_time"].get("at_precision_0.8")
+    g4_ready = bool(lead and finite(lead.get("median_lead_days_first_cross")))
+    g4_pass = lead["median_lead_days_first_cross"] >= 30 if g4_ready else None
+    direction = res["content"]
+    dir_accuracy = direction.get("model_top1")
+    dir_majority = direction.get("majority_top1_snapshot")
+    dir_bss = direction.get("brier_skill")
+    dir_pass = ((finite(dir_accuracy) and finite(dir_majority) and dir_accuracy >= dir_majority + 0.10)
+                or (dir_bss and finite(dir_bss[0]) and dir_bss[0] >= 0.05))
+    hist_auc = hist.get("llm", {}).get("auroc")
+    us_auc = action.get("US_C_90", {}).get("llm", {}).get("auroc")
+    india_auc = action.get("IN_C_90", {}).get("llm", {}).get("auroc")
+    self_hist = action.get("C_90_HIST_not_selfrecognised", {})
+    self_late = action.get("C_90_LATE_not_selfrecognised", {})
+    self_h_best = self_hist.get("baselines", {}).get(self_hist.get("best_baseline"), {})
+    self_l_best = self_late.get("baselines", {}).get(self_late.get("best_baseline"), {})
+    return {
+        "basis": "Design C 90d for G1; pooled C/T timing for G2; frozen Design-T thresholds for G4",
+        "G1": {"passes_numeric_checks": g1_pass, "HIST_brier_skill": bss_h,
+               "HIST_title_delta_brier": title_h, "LATE_auroc": late_auc,
+               "LATE_brier_skill": bss_l,
+               "sensitivity_pm_0.05": {"HIST_skill_band": band(bss_h[0], 0.05) if bss_h else None,
+                                        "LATE_auroc_band": band(late_auc, 0.70),
+                                        "LATE_skill_band": band(bss_l[0], 0) if bss_l else None}},
+        "G2": {"passes_numeric_checks": g2_pass,
+               "pooled": {str(h): {"n": v.get("n"), "ece": v.get("ece"), "slope": v.get("cal_slope"),
+                                   "ece_sensitivity_pm_0.05": band(v.get("ece"), 0.10, False),
+                                   "slope_interval_sensitivity_pm_0.05": {
+                                       "wider_0.55_1.45": 0.55 <= v["cal_slope"] <= 1.45,
+                                       "frozen_0.60_1.40": 0.60 <= v["cal_slope"] <= 1.40,
+                                       "narrower_0.65_1.35": 0.65 <= v["cal_slope"] <= 1.35,
+                                   } if finite(v.get("cal_slope")) else None}
+                          for h, v in g2_values.items()}},
+        "G3": {"status": "unassessed: blinded GOLD/LATE mechanism judgment absent",
+               "direction_numeric_pass": bool(dir_pass), "direction_accuracy": dir_accuracy,
+               "direction_majority_snapshot": dir_majority, "direction_brier_skill": dir_bss,
+               "direction_gain_band_sensitivity_pm_0.05":
+                   band(dir_accuracy - dir_majority, 0.10) if finite(dir_accuracy) and finite(dir_majority) else None,
+               "direction_brier_skill_band_sensitivity_pm_0.05":
+                   band(dir_bss[0], 0.05) if dir_bss else None},
+        "G4": {"passes_numeric_checks": g4_pass, "selected_threshold": lead,
+               "lead_days_sensitivity_pm_0.05": band(
+                   lead.get("median_lead_days_first_cross") if lead else None, 30),
+               "precision_band_sensitivity_pm_0.05": {
+                   f"{bound:.2f}": next((t["median_lead_days_first_cross"] >= 30 for t in res["lead_time"]["thresholds"]
+                                          if t["flagged"] >= 5 and finite(t["precision"]) and t["precision"] >= bound
+                                          and finite(t["median_lead_days_first_cross"])), None)
+                   for bound in (0.75, 0.80, 0.85)}},
+        "G5": {"status": "unassessed: audited-snapshot contamination denominator and full exclusion robustness absent",
+               "HIST_minus_LATE_auroc": hist_auc - late_auc if finite(hist_auc) and finite(late_auc) else None,
+               "US_auroc": us_auc, "India_auroc": india_auc,
+               "HIST_LATE_gap_sensitivity_pm_0.05":
+                   band(hist_auc - late_auc, 0.10, False) if finite(hist_auc) and finite(late_auc) else None,
+               "US_auroc_band_sensitivity_pm_0.05": band(us_auc, 0.65),
+               "India_auroc_band_sensitivity_pm_0.05": band(india_auc, 0.65),
+               "self_recognition_exclusion": {
+                   "HIST_brier_skill": self_h_best.get("llm_brier_skill_vs_this"),
+                   "LATE_brier_skill": self_l_best.get("llm_brier_skill_vs_this"),
+                   "HIST_title_delta_brier": title.get(
+                       f"{arm}_vs_TITLE_C_90_HIST_not_selfrecognised", {}).get("delta_brier_a_minus_b")}},
+        "decision": "UNASSESSED: G3 mechanism and G5 audit inputs are missing; numeric passes alone cannot establish GO",
+    }
+
+
+def primary_cohort_threads(rows, primary, primary_arm):
+    return {r["thread_id"] for r in rows if r["run"] in primary and r["arm"] == primary_arm
+            and r["sampling_origin"] == "precursor_population"}
+
+
 def run_eval(primary, ablation, title, probe_path=None, primary_arm="B_PLUS_C", masked=None):
     """primary: runs holding the broad B_ONLY/B_PLUS_C forecasts (same model). Primary action metrics use
     `primary_arm` on precursor-population threads only; backfilled/purposive threads reported separately."""
     rows_all, idx = load(set(primary) | set(ablation) | set(title) | set(masked or []))
-    look, frows = baseline_lookup(idx)
+    # Audited-cohort results must not train comparators on unrelated, unaudited labels.
+    cohort_threads = primary_cohort_threads(rows_all, primary, primary_arm)
+    look, frows = baseline_lookup(idx, cohort_threads)
     outcomes = read_jsonl(os.path.join(DATA, "outcomes", "outcomes.jsonl"))
     R = [r for r in rows_all if r["run"] in primary]
     P = [r for r in R if r["arm"] == primary_arm and r["sampling_origin"] == "precursor_population"]
     PB = [r for r in R if r["arm"] == primary_arm and r["sampling_origin"] != "precursor_population"]
     res = {"primary_runs": primary, "primary_arm": primary_arm, "n_primary_forecasts": len(P),
-           "n_backfill_or_purposive_forecasts": len(PB)}
+           "n_backfill_or_purposive_forecasts": len(PB),
+           "baseline_training_threads": sorted(cohort_threads),
+           "baseline_training_scope": "Selected primary-arm precursor-population threads; thread-grouped cross-validation"}
     recog = set()
     if probe_path and os.path.exists(probe_path):
         for x in read_jsonl(probe_path):
@@ -319,6 +453,18 @@ def run_eval(primary, ablation, title, probe_path=None, primary_arm="B_PLUS_C", 
     for h in (30, 60, 90, 180):
         B[f"C_{h}_all"] = action_block(sub(lambda r: r["design"] == "C"), look, h, f"Design C (calendar-forward), {h}d")
     B["C_90_HIST"] = action_block(sub(lambda r: r["design"] == "C" and r["stratum"] == "HIST"), look, 90, "Design C, 90d, HIST")
+    B["C_90_LATE"] = action_block(sub(lambda r: r["design"] == "C" and r["stratum"] == "LATE"), look, 90, "Design C, 90d, LATE")
+    B["T_180_LATE"] = action_block(sub(lambda r: r["design"] == "T" and r["stratum"] == "LATE"), look, 180, "Design T, 180d, LATE")
+    for quality in ("RAPID", "GOLD"):
+        for design, h in (("C", 90), ("T", 180)):
+            B[f"{design}_{h}_{quality}"] = action_block(
+                sub(lambda r, q=quality, ds=design: r["design"] == ds and r["quality"] == q),
+                look, h, f"Design {design}, {h}d, {quality}")
+            for stratum in ("HIST", "LATE"):
+                B[f"{design}_{h}_{quality}_{stratum}"] = action_block(
+                    sub(lambda r, q=quality, ds=design, st=stratum:
+                        r["design"] == ds and r["quality"] == q and r["stratum"] == st),
+                    look, h, f"Design {design}, {h}d, {quality}, {stratum}")
     B["C_30_postcutoff"] = action_block(sub(lambda r: r["design"] == "C" and r["post_cutoff_snapshot"]), look, 30, "Design C checkpoints after stated model cutoff, 30d")
     B["C_60_postcutoff"] = action_block(sub(lambda r: r["design"] == "C" and r["post_cutoff_snapshot"]), look, 60, "Design C checkpoints after stated model cutoff, 60d")
     for fam in sorted({r["family"] for r in P}):
@@ -327,6 +473,12 @@ def run_eval(primary, ablation, title, probe_path=None, primary_arm="B_PLUS_C", 
     B["US_C_90"] = action_block(sub(lambda r: r["family"].startswith("US") and r["design"] == "C"), look, 90, "US design C 90d")
     B["IN_C_90"] = action_block(sub(lambda r: r["family"].startswith("IN") and r["design"] == "C"), look, 90, "India design C 90d")
     B["C_90_not_selfrecognised"] = action_block(sub(lambda r: r["design"] == "C" and not r["fc"]["recognised_outcome"]), look, 90, "Design C 90d excluding self-recognised")
+    for design, h in (("C", 90), ("T", 180)):
+        for stratum in ("HIST", "LATE"):
+            B[f"{design}_{h}_{stratum}_not_selfrecognised"] = action_block(
+                sub(lambda r, ds=design, st=stratum: r["design"] == ds and r["stratum"] == st
+                    and not r["fc"]["recognised_outcome"]), look, h,
+                f"Design {design} {h}d {stratum} excluding self-recognised")
     if recog:
         B["C_90_not_probe_recalled"] = action_block(sub(lambda r: r["design"] == "C" and r["thread_id"] not in recog), look, 90, "Design C 90d excluding probe-recalled threads")
         B["T_180_not_probe_recalled"] = action_block(sub(lambda r: r["design"] == "T" and r["thread_id"] not in recog), look, 180, "Design T 180d excluding probe-recalled threads")
@@ -340,6 +492,12 @@ def run_eval(primary, ablation, title, probe_path=None, primary_arm="B_PLUS_C", 
             if d_:
                 p, y = np.array([x[0] for x in d_]), np.array([x[1] for x in d_])
                 tim[f"{design}_{h}d"] = {**summary(p, y), "reliability": reliability(p, y)}
+    for h in (30, 90, 180):
+        pooled = [(r["fc"]["timing"][f"{h}d"], r["labels"][str(h)]) for r in P
+                  if r["labels"].get(str(h)) is not None]
+        if pooled:
+            p, y = np.array([x[0] for x in pooled]), np.array([x[1] for x in pooled])
+            tim[f"POOLED_{h}d"] = {**summary(p, y), "reliability": reliability(p, y)}
     res["timing"] = tim
     res["lead_time"] = lead_time([r for r in P if r["design"] == "T"])
     res["content"] = content_block([r for r in P if r["design"] in ("T", "C")], outcomes)
@@ -363,6 +521,11 @@ def run_eval(primary, ablation, title, probe_path=None, primary_arm="B_PLUS_C", 
             f"{primary_arm}_vs_TITLE_C_90": paired_arms([r for r in TT if r["design"] == "C"], primary_arm, "TITLE_ONLY", 90),
             f"{primary_arm}_vs_TITLE_T_180": paired_arms([r for r in TT if r["design"] == "T"], primary_arm, "TITLE_ONLY", 180),
             f"{primary_arm}_vs_TITLE_C_30_postcutoff": paired_arms([r for r in TT if r["design"] == "C" and r["post_cutoff_snapshot"]], primary_arm, "TITLE_ONLY", 30),
+            f"{primary_arm}_vs_TITLE_C_90_HIST": paired_arms([r for r in TT if r["design"] == "C" and r["stratum"] == "HIST"], primary_arm, "TITLE_ONLY", 90),
+            f"{primary_arm}_vs_TITLE_T_180_HIST": paired_arms([r for r in TT if r["design"] == "T" and r["stratum"] == "HIST"], primary_arm, "TITLE_ONLY", 180),
+            f"{primary_arm}_vs_TITLE_C_90_HIST_not_selfrecognised": paired_arms(
+                [r for r in TT if r["design"] == "C" and r["stratum"] == "HIST"],
+                primary_arm, "TITLE_ONLY", 90, restrict=lambda r: not r["fc"]["recognised_outcome"]),
         }
     if masked:
         MM = [r for r in rows_all if r["run"] in masked or r["run"] in primary]
@@ -382,6 +545,7 @@ def run_eval(primary, ablation, title, probe_path=None, primary_arm="B_PLUS_C", 
             for design, h in (("C", 90), ("T", 180)):
                 abl[f"{name}_{design}{h}"] = paired_arms([r for r in A + R if r["design"] == design], a, b, h)
         res["ablation"] = abl
+    res["gate_assessment"] = gate_assessment(res)
     return res
 
 
@@ -395,7 +559,7 @@ def fmt(x):
 
 def write_md(res, path):
     L = ["# METRICS (auto-generated by rpe.evaluate — do not edit by hand)", ""]
-    L.append("## Action prediction (LLM ALL-arm vs no-LLM baselines)")
+    L.append(f"## Action prediction (LLM {res.get('primary_arm', 'B_PLUS_C')} vs no-LLM baselines)")
     L.append("| block | n | thr | base rate | LLM Brier | LLM AUROC [90% CI] | best baseline | its Brier | its AUROC | BSS vs best [90% CI] |")
     L.append("|---|---|---|---|---|---|---|---|---|---|")
     for k, b in res["action"].items():
@@ -422,7 +586,7 @@ def write_md(res, path):
     for k, v in res.get("b_vs_bc", {}).items():
         L.append(f"- {k}: n={v.get('n')} thr={v.get('threads')} Brier B+C={fmt(v.get('brier_a', float('nan')))} B={fmt(v.get('brier_b', float('nan')))} Δ={fmt(v.get('delta_brier_a_minus_b', 'n/a'))} AUROC B+C={fmt(v.get('auroc_a', float('nan')))} B={fmt(v.get('auroc_b', float('nan')))}")
     if "masking_control" in res:
-        L.append("\n## Entity/title masking control (Δ = masked − unmasked; ≈0 means no reliance on identity)")
+        L.append("\n## Entity/title masking control (Δ = masked − unmasked; a near-zero difference does not establish absence of memorisation)")
         for k, v in res["masking_control"].items():
             L.append(f"- {k}: n={v.get('n')} Δ={fmt(v.get('delta_brier_a_minus_b', 'n/a'))} AUROC masked={fmt(v.get('auroc_a', float('nan')))} unmasked={fmt(v.get('auroc_b', float('nan')))}")
     if "title_only_control" in res:
@@ -433,6 +597,8 @@ def write_md(res, path):
         L.append("\n## Ablations (single model; ΔBrier a − b, negative = a better)")
         for k, v in res["ablation"].items():
             L.append(f"- {k}: n={v.get('n')} thr={v.get('threads')} Brier a={fmt(v.get('brier_a', float('nan')))} b={fmt(v.get('brier_b', float('nan')))} Δ={fmt(v.get('delta_brier_a_minus_b', 'n/a'))} AUROC a={fmt(v.get('auroc_a', float('nan')))} b={fmt(v.get('auroc_b', float('nan')))}")
+    L.append("\n## Frozen-gate assessment inputs")
+    L.append("```json\n" + json.dumps(res["gate_assessment"], indent=2, default=str) + "\n```")
     L.append("\n## Recognition\n" + json.dumps(res["recognition"]) + f"\nprobe-recalled threads: {res.get('probe_recalled_threads')}")
     open(path, "w").write("\n".join(L) + "\n")
 

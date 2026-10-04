@@ -1,0 +1,6 @@
+# Preserve bytes used by frozen-data and packet SHA-256 manifests on Windows checkouts.
+/data/snapshots/index.jsonl -text
+/data/threads/threads.jsonl -text
+/data/evidence/evidence.jsonl -text
+/data/outcomes/outcomes.jsonl -text
+/data/forecasts/packets/** -text
