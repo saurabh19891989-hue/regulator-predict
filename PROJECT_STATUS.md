@@ -1,12 +1,37 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
-**Status:** ACTIVE. Repaired core smoke passed its technical audit; masked comparison and broader source audits are in progress.
+**Status:** ACTIVE. Full SEBI-R30/FDA-H30 source audit and Core60 packet release completed; isolated inference is being launched.
 **Last updated:** 2026-10-04
-**Gate:** GATE 0 — technical smoke scored; broader empirical GO/NO-GO remains unresolved
+**Gate:** GATE 0 — frozen packet release passed; forecast output and empirical GO/NO-GO remain unresolved
 **Repository:** https://github.com/saurabh19891989-hue/regulator-predict · branch `astra/regulatory-predict`
-· local path `C:\Users\saura\Downloads\regulator-predict` · source-repair freeze checkpoint `7c1f0e6`
+· local path `C:\Users\saura\Downloads\regulator-predict` · current freeze `data/snapshots/freeze_20261004.json`
 
 ## Resume checkpoint, 2026-10-04
+
+- Canonical freeze: 327 threads (208 actions, 119 controls), 1,785 evidence records, 99 source-audited RAPID
+  matters and zero promoted GOLD. The fixed observation boundary is 2026-09-24. The earlier 328/1,869
+  figures below describe a superseded source-repair checkpoint.
+- Full primary-source audits for all 30 SEBI-R and all 30 FDA-H cohort matters are complete. The packet-release
+  audit passed 38 frozen packets: ASTRA_CORE60 has 20 T-design batches covering 60 matters; ASTRA_CAL60 has
+  18 C-design batches covering 45 eligible matters. Total requested work is 678 distinct forecasts plus 678
+  same-input aliases (1,356 logical arm rows). There are 61 retained distinct evidence records, all Tier B.
+  B_ONLY, B_PLUS_C and ALL therefore have identical inputs; this cohort cannot measure Tier C, stakeholder
+  or news lift. Evidence versus TITLE_ONLY is the available input comparison.
+- Both runs are released for isolated packet-only inference and launch is under way. Release PASS is a packet
+  decision, not a forecast success receipt, leakage verdict, scored result or GOLD certification. Next gate:
+  collect per-batch execution/output receipts; audit recognition, cutoff-valid content, citations and coherence;
+  preflight and ingest valid outputs into the append-only ledger; then score T and C designs separately against
+  meaningful baselines with within-matter dependence respected. Do not report headline metrics before that gate.
+- Remaining limits: FDA action timing uses first verified public finalization notices and is conditional/medium
+  confidence, not proven first PDF uploads. SEBI and FDA absence controls remain medium-confidence bounded
+  checks, and unresolved does not mean permanent no action. Visible matter identity can induce recognition;
+  recognition flags are not proof against memorisation. There is no GOLD promotion. The smoke diagnostic remains
+  model Brier 0.05587 versus best grouped baseline 0.04441 on 18 evaluable 180-day rows, without scientific
+  predictive claim.
+- Separate NNML daily market-data collector and Google Drive archive were read-only verified through October 2.
+  No daily regulatory collector or Drive upload pipeline was found; see docs/COLLECTION_STATUS_20261004.md.
+
+## Prior repair and smoke checkpoint, 2026-10-04 (historical)
 
 - SMOKE4 core technical audit passed:24 distinct forecasts plus16 aliases,14 self-recognition flags, no expressed
   future facts or invalid citations. MASK5 adds eight audited forecasts;108 total ledger records verify.

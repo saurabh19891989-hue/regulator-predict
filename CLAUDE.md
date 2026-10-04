@@ -1,5 +1,8 @@
 # CLAUDE.md — Regulatory Predictive Precursor Engine
 
+## Current checkpoint — 2026-10-04
+The frozen canonical dataset has 327 threads (208 actions, 119 controls), 1,785 evidence records, 99 source-audited RAPID matters and zero promoted GOLD matters. The complete SEBI-R30/FDA-H30 cohort has a PASS packet-release audit: ASTRA_CORE60 has 20 T-design batches and ASTRA_CAL60 has 18 C-design batches covering 45 eligible matters. Together the 38 packets request 678 distinct forecasts plus 678 same-input arm aliases. Inference is being launched; treat forecasts as pending until output receipts, output audit and ledger ingestion are verified. The retained cohort evidence is 61 distinct Tier B records, with no Tier C, so this run cannot measure Tier C lift. The prior repaired smoke remains diagnostic only (180-day model Brier 0.05587 versus grouped baseline 0.04441). See PROJECT_STATUS.md, RESULTS_LIVE.md and data/audits/core60_packet_release_20261004.md. The fixed observation boundary is 2026-09-24; no empirical GO/NO-GO has been reached.
+
 ## North Star
 Determine whether future regulatory actions can be predicted from information available *before* the decisive regulatory document, and quantify how early and how accurately.
 

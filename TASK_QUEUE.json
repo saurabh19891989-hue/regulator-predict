@@ -61,7 +61,7 @@
    ],
    "done_when": "100\u2013200 usable threads are reconstructed if evidence availability permits.",
    "status": "IN_PROGRESS",
-   "notes": "Source repair: US/FDA first-public dates, synthetic comment counts, and multiple India false-control labels; preserve fixed censor 2026-09-24."
+   "notes": "Current freeze: 327 threads (208 actions, 119 controls), 1,785 evidence records; fixed censor 2026-09-24. Full SEBI-R30/FDA-H30 source audit completed; other source and label limitations remain."
   },
   {
    "id": "RP0-05",
@@ -74,7 +74,7 @@
    ],
    "done_when": "Point-in-time versions and leakage risks are strongly verified.",
    "status": "IN_PROGRESS",
-   "notes": "Independent primary-source audits underway; zero GOLD promoted. Do not promote pending or contaminated-rebuild verdicts."
+   "notes": "99 RAPID matters source-audited, including complete SEBI-R30/FDA-H30 cohort; zero GOLD promoted. Packet release is not GOLD certification."
   },
   {
    "id": "RP0-06",
@@ -87,7 +87,7 @@
    ],
    "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
    "status": "IN_PROGRESS",
-   "notes": "SMOKE4/MASK5 technical audits passed;108 ledger records verify. Preparing complete SEBI-R30/FDA-H30 source-audited cohort for scaled frozen forecasts."
+   "notes": "SMOKE4/MASK5 remain diagnostics (108 verified ledger records). Core60 packet release PASS: ASTRA_CORE60 20 T-design batches/60 matters, ASTRA_CAL60 18 C-design batches/45 eligible matters; 38 packets request 678 distinct forecasts plus 678 aliases. Inference launch under way; require batch receipts, output audit, preflight and ingestion before claiming completion."
   },
   {
    "id": "RP0-07",
@@ -100,7 +100,7 @@
    ],
    "done_when": "B/C/stakeholder/news/latest-vs-trajectory comparisons are complete.",
    "status": "NOT_STARTED",
-   "notes": "DEV-005: broad B_ONLY vs B_PLUS_C; rich ablations only on GOLD/informative subsets"
+   "notes": "Core60 retained evidence is 61 distinct records, all Tier B. B_ONLY, B_PLUS_C and ALL are identical inputs, so this run cannot measure Tier C, stakeholder or news lift. Evidence versus TITLE_ONLY is available after output validation; rich ablations require informative cohorts."
   },
   {
    "id": "RP0-08",
@@ -114,7 +114,7 @@
    ],
    "done_when": "GOLD and risk-weighted RAPID snapshots have contamination verdicts.",
    "status": "IN_PROGRESS",
-   "notes": "Completed masked-output audit plus55 new India/US source audits; false controls and mismatched outcomes repaired by unapplied patch sets. No GOLD promotion."
+   "notes": "Complete source audits for 30 SEBI-R and 30 FDA-H cohort matters; 99 RAPID matters source-audited overall, zero GOLD. Packet-release audit PASS. Next: audit inference outputs for cutoff leakage, recognition, citations and coherence before ledger ingestion. FDA action timing and bounded absence controls remain medium confidence."
   },
   {
    "id": "RP0-09",
@@ -129,7 +129,7 @@
    ],
    "done_when": "Calibration, action, timing, content, lead-time and ablation metrics are reproducible.",
    "status": "IN_PROGRESS",
-   "notes": "Technical smoke scored: Brier0.05587 vs best grouped baseline0.04441; headline excluded. Independent review identified prereg gate/report gaps; fixes in progress."
+   "notes": "Technical smoke diagnostic only: 18 evaluable 180-day rows, model Brier 0.05587 vs best grouped baseline 0.04441; no scientific claim. Await valid Core60 outputs and receipts, then score T and C separately with within-matter dependence and meaningful baselines."
   },
   {
    "id": "RP0-10",
@@ -239,8 +239,24 @@
    "notes": "DEV-008/009/010: Astra cutoff 2026-04-30, post-cutoff packet rule, masked separation; rebuilt index frozen before GPT forecasts"
   }
  ],
- "last_updated": "2026-09-25T13:46Z",
- "programme_state": "ACTIVE on astra/regulatory-predict; GPT smoke complete and archived; assessing US-FR source-date issue before scaling",
+ "last_updated": "2026-10-04",
+ "programme_state": "ACTIVE on astra/regulatory-predict; frozen Core60 packet release PASS after complete SEBI-R30/FDA-H30 source audit; isolated inference launch underway; no completed output or headline result yet",
+ "current_checkpoint": {
+  "freeze": "data/snapshots/freeze_20261004.json",
+  "threads": 327,
+  "actions": 208,
+  "controls": 119,
+  "evidence": 1785,
+  "source_audited_rapid": 99,
+  "gold": 0,
+  "packet_release": "PASS",
+  "packets": 38,
+  "distinct_forecasts_requested": 678,
+  "aliases_requested": 678,
+  "retained_cohort_evidence": 61,
+  "retained_cohort_evidence_tier": "B",
+  "next_gate": "Batch receipts, output audit, preflight, valid ledger ingestion, separate T/C evaluation"
+ },
  "status_vocabulary": [
   "COMPLETE",
   "PARTIAL",

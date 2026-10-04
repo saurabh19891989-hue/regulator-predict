@@ -23,5 +23,5 @@ Remote archive path:
 The existing health-check task is nnml-capture-health-check (Monday/Thursday17:00IST).
 
 For the regulatory project, no daily collection/upload automation was found in its repository or local Codex
-automation directory. Its328threads and1,869evidence records remain in the local/Git workspace. This check
-does not claim that regulatory cases are being collected every day or uploaded to Drive.
+automation directory. Its current frozen 327 threads and 1,785 evidence records remain in the local/Git
+workspace. This check does not claim that regulatory cases are being collected every day or uploaded to Drive.
