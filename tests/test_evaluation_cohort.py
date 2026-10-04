@@ -81,3 +81,31 @@ def test_bootstrap_auc_matches_reference_with_ties_and_repeated_rows():
         p = rng.choice([.1, .3, .5, .7, .9], n)
         assert evaluate.auroc(p, y) == pytest.approx(roc_auc_score(y, p))
     assert math.isnan(evaluate.auroc([.1, .9], [1, 1]))
+
+
+def test_logistic_preprocessing_is_fitted_only_on_training_threads(monkeypatch):
+    import numpy as np
+    from rpe import baselines
+    fitted = []
+
+    class CheckedLogit:
+        def __init__(self, **kwargs):
+            pass
+
+        def fit(self, x, y):
+            # Global preprocessing leaks held-out feature values into these moments.
+            assert np.allclose(x.mean(0), 0, atol=1e-8)
+            assert np.allclose(x.std(0), 1, atol=1e-8)
+            fitted.append(len(y))
+            return self
+
+        def predict_proba(self, x):
+            return np.tile([.5, .5], (len(x), 1))
+
+    monkeypatch.setattr(baselines, "LogisticRegression", CheckedLogit)
+    monkeypatch.setattr(baselines, "_X", lambda rows, fams: np.array([[r['f']['value']] for r in rows], float))
+    rows = [{'thread_id': f't{n}', 'f': {'family': 'one', 'value': value}, 'y': {'90': n % 2}}
+            for n, value in enumerate([0, 1, 3, 9, 30, 1000])]
+    result = baselines.grouped_logit(rows, 90, folds=3)
+    assert fitted == [4, 4, 4]
+    assert result == {n: .5 for n in range(6)}

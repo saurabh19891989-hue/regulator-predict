@@ -215,3 +215,14 @@ runtime;50 tied/repeated-data cases match the reference implementation. Bootstra
 replicates. Ten focused tests pass; the preceding synthetic end-to-end evaluation passed (830.86seconds).
 Scoped Git attributes preserve byte-bound canonical/packet files across Windows checkouts. No frozen forecast
 probability, source record or original preregistration is rewritten by these scorer changes.
+
+## DEV-016 — Fold-local logistic preprocessing (2026-10-04, before scaled scoring)
+
+While the scaled forecasts were running and before any scaled action metric was computed, inspection found
+that grouped_logit standardized features using the full cohort before splitting training/test threads. No test
+labels were used, but held-out covariates contributed to preprocessing, contrary to the stated grouped training
+separation. Scaling is now fitted within each training fold and applied to its held-out fold. Fixed feature
+definitions, regularization, folds, heuristic, outcome labels and gate thresholds remain unchanged. This is a
+validation repair, not a tuned model or change to frozen forecasts/source data. A regression test uses an extreme
+held-out-feature fixture and checks training matrices are centered/scaled within every fold. The original
+preregistration is preserved; current scoring will identify the corrected implementation vintage.

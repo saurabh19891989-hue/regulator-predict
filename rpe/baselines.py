@@ -169,14 +169,15 @@ def grouped_logit(rows, h, folds=5):
     fams = sorted({r["f"]["family"] for r in rows})
     X = _X([rows[i] for i in idx], fams)
     y = np.array([rows[i]["y"][str(h)] for i in idx])
-    mu, sd = X.mean(0), X.std(0) + 1e-9
-    X = (X - mu) / sd
     for tr, te in GroupKFold(n_splits=folds).split(X, y, groups):
+        # Fit preprocessing only on training threads, just like the classifier.
+        mu, sd = X[tr].mean(0), X[tr].std(0) + 1e-9
+        X_train, X_test = (X[tr] - mu) / sd, (X[te] - mu) / sd
         if len(set(y[tr])) < 2:
             p = np.full(len(te), y[tr].mean() if len(tr) else 0.5)
         else:
-            m = LogisticRegression(C=0.5, max_iter=2000).fit(X[tr], y[tr])
-            p = m.predict_proba(X[te])[:, 1]
+            m = LogisticRegression(C=0.5, max_iter=2000).fit(X_train, y[tr])
+            p = m.predict_proba(X_test)[:, 1]
         for j, pj in zip(te, p):
             out[idx[j]] = float(pj)
     return out
