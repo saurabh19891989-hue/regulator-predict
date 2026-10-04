@@ -1,6 +1,6 @@
 # Preserve bytes used by frozen-data and packet SHA-256 manifests on Windows checkouts.
-/data/snapshots/index.jsonl -text
-/data/threads/threads.jsonl -text
-/data/evidence/evidence.jsonl -text
-/data/outcomes/outcomes.jsonl -text
+/data/snapshots/index.jsonl -text whitespace=cr-at-eol
+/data/threads/threads.jsonl -text whitespace=cr-at-eol
+/data/evidence/evidence.jsonl -text whitespace=cr-at-eol
+/data/outcomes/outcomes.jsonl -text whitespace=cr-at-eol
 /data/forecasts/packets/** -text
