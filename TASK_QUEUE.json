@@ -240,7 +240,7 @@
   }
  ],
  "last_updated": "2026-10-04",
- "programme_state": "ACTIVE on astra/regulatory-predict; frozen Core60 packet release PASS after complete SEBI-R30/FDA-H30 source audit; isolated inference launch underway; no completed output or headline result yet",
+ "programme_state": "ACTIVE: 6 successful Core60/CAL60 batches and 120 distinct forecasts saved; first40 independently audited PASS; remaining32 resumed after ordinary usage window reopened; no scaled ingestion/scoring yet",
  "current_checkpoint": {
   "freeze": "data/snapshots/freeze_20261004.json",
   "threads": 327,
@@ -255,7 +255,11 @@
   "aliases_requested": 678,
   "retained_cohort_evidence": 61,
   "retained_cohort_evidence_tier": "B",
-  "next_gate": "Batch receipts, output audit, preflight, valid ledger ingestion, separate T/C evaluation"
+  "next_gate": "Batch receipts, output audit, preflight, valid ledger ingestion, separate T/C evaluation",
+  "completed_batches": 6,
+  "completed_distinct_forecasts": 120,
+  "independently_audited_distinct_forecasts": 40,
+  "campaign_status": "RUNNING_RESUMED"
  },
  "status_vocabulary": [
   "COMPLETE",

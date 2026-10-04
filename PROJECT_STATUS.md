@@ -1,12 +1,19 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
-**Status:** ACTIVE. Full SEBI-R30/FDA-H30 source audit and Core60 packet release completed; isolated inference is being launched.
+**Status:** ACTIVE. Full SEBI-R30/FDA-H30 source audit and Core60 packet release completed; isolated inference is running, with six completed batches (120 distinct forecasts).
 **Last updated:** 2026-10-04
 **Gate:** GATE 0 — frozen packet release passed; forecast output and empirical GO/NO-GO remain unresolved
 **Repository:** https://github.com/saurabh19891989-hue/regulator-predict · branch `astra/regulatory-predict`
 · local path `C:\Users\saura\Downloads\regulator-predict` · current freeze `data/snapshots/freeze_20261004.json`
 
 ## Resume checkpoint, 2026-10-04
+
+- Live inference checkpoint: six batches / 120 distinct forecasts are saved; all pass structural preflight.
+  Independent review passed the first two batches / 40 forecasts; the next four / 80 are under review.
+  The first campaign stopped on a real usage-limit error after five successful batches. The failed attempt
+  is archived. After the user continued and the ordinary account window reopened, a bounded retry passed;
+  the remaining 32 batches resumed with two workers. No reset credit or paid top-up was used.
+  No scaled forecast has been ingested or scored yet. Preserve this source freeze throughout the campaign.
 
 - Canonical freeze: 327 threads (208 actions, 119 controls), 1,785 evidence records, 99 source-audited RAPID
   matters and zero promoted GOLD. The fixed observation boundary is 2026-09-24. The earlier 328/1,869

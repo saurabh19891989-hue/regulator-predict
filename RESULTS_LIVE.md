@@ -6,7 +6,9 @@ threads (208 actions, 119 controls), 1,785 evidence records, 99 source-audited R
 Full source audits of the SEBI-R30/FDA-H30 cohort are complete. Packet release passed for ASTRA_CORE60
 (20 T-design batches, 60 matters) and ASTRA_CAL60 (18 C-design batches, 45 eligible matters): 38 packets,
 678 distinct forecasts and 678 same-input aliases. This is authorization for inference, not an empirical
-result. Inference is being launched; no completed output, ingestion or score is asserted without receipts.
+result. Six batches / 120 distinct forecasts have completed with receipts and pass structural preflight. Independent
+review passed the first 40; the next 80 are under review. The remaining 32 batches resumed after an ordinary
+usage-window interruption. No scaled output has been ingested or scored yet.
 The retained cohort has 61 distinct evidence records, all Tier B. B_ONLY, B_PLUS_C and ALL are the same input,
 so no Tier C, stakeholder or news lift is measurable in this release. Evidence versus TITLE_ONLY remains an
 available comparison, subject to output audit and within-matter analysis.

@@ -64,3 +64,16 @@ for blind forecasting; native research-agent billing is not visible to the Direc
   estimate, not billed usage. Actual receipts will be archived. No reset credit or paid top-up is authorized/used.
 - Primary sample is60 audited RAPID cases; zero GOLD and no added TierC in these packets. Same-model TITLE_ONLY
   is included. Any quota, source mismatch, tool activity or forecast validation failure stops the affected campaign.
+
+## Scaled campaign first window and resume, 2026-10-04
+
+- Four calls had completed when CAL60 b003 failed with the explicit account usage-limit error; the other active
+  CORE60 b003 call finished successfully before the queue stopped. The stop left 100 distinct forecasts, with no edits/ingestion.
+- Original failed CAL60 b003 receipt, events, stderr and campaign log are preserved under failed_attempts.
+  The first orchestration summary hit an eager-default KeyError on skipped jobs; its status was reconstructed
+  from receipts without inference and preserved as campaign_60_20261004_first_window.json.
+- Following user continuation, the native account reported ordinary usage available with 0% of the new five-hour
+  window used and 32% weekly used. The bounded retry of CAL60 b003 passed; no reset credit was redeemed.
+- Six successful calls now report 93,296 input and 35,606 output tokens, with 2,851 reasoning-output tokens
+  separately reported (not added again). There are 120 distinct forecasts. Actual billing is unavailable.
+- The remaining 32 calls resumed, with two workers and a stop on any failure. Completed outputs are skipped.
