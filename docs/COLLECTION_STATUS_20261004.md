@@ -46,3 +46,10 @@ Live journal confirms today's capture CLOSED successfully at15:31IST, with24,167
 across four slots. The service is inactive after normal completion. Next capture isOctober6 09:05IST;
 today's post-close Drive copy remains scheduled15:50IST. The09:30 health snapshot is stale and does not
 represent current capture status. Today's Drive upload is still pending at this check.
+
+## Follow-up check — 2026-10-05, 15:50IST
+
+Today's CAPTURE_RESULT.json confirms CLOSED withzero slot/decode errors and24,167,141feed updates.
+The automatic nnml-lean-postclose.service started precisely15:50IST and is activating/start at15:50:09.
+No October5 DRIVE_RECEIPT.json exists yet. Automatic post-close upload is running; completed copy verification
+is pending. October2 remains the latest verified completed Drive receipt. The09:30 health snapshot is stale.

@@ -108,7 +108,9 @@ not work started after this NO-GO.
 The running daily collector belongs to the separate NNML **market-data** programme. On October5 its capture
 closed successfully at15:31IST with24,167,141 updates. At15:36IST, upload was scheduled15:50IST and pending;
 the most recent previously verified completed Drive copy wasOctober2 (3,826 objects,344.4MiB).
-See `docs/COLLECTION_STATUS_20261004.md` for subsequent checks. No daily regulatory collection or regulatory
+Follow-up at15:50IST confirms the automatic post-close upload started on schedule; a completed October5
+Drive receipt is not yet present. October2 remains the latest verified completed copy. Today's local
+CAPTURE_RESULT also confirms zero slot/decode errors. See `docs/COLLECTION_STATUS_20261004.md` for evidence. No daily regulatory collection or regulatory
 Drive-upload automation was found; the frozen regulatory dataset is saved locally and in Git.
 
 ## Reproducible evidence

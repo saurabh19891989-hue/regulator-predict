@@ -13,7 +13,8 @@ records verified. Zero visible contamination;64 recognition disclosures. Exclusi
 Stop at the gate; no production or trading architecture is justified. Full results:
 reports/FINAL_GO_NO_GO_20261005.md, reports/FINAL_DECISION_20261005.json,
 reports/FINAL_GATE_REVIEW_20261005.md and reports/metrics.json.
-Market-data capture closed successfullyOctober5 15:31IST with24,167,141updates; Drive upload due15:50IST.
+Market-data capture closed successfullyOctober5 15:31IST with24,167,141updates; automatic Drive upload
+started15:50IST; completed verification is pending. Latest verified completed copy remainsOctober2.
 No daily regulatory collection/upload automation found. See docs/COLLECTION_STATUS_20261004.md.
 
 ## Earlier checkpoints (historical; superseded by final decision above)
