@@ -1,0 +1,285 @@
+{
+  "forecasts": [
+    {
+      "id": "Se272b0792d",
+      "p": {"7d": 0.005, "30d": 0.04, "60d": 0.09, "90d": 0.15, "180d": 0.30},
+      "next": {"final_action": 0.28, "revised_or_further_consultation": 0.07, "formal_withdrawal": 0.01, "no_further_official_step": 0.64},
+      "content": {"as_proposed": 0.63, "softened": 0.17, "tightened": 0.06, "mixed": 0.12, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Fit-for-purpose principles retained", "p": 0.63, "mech": "Finalize principles for selecting and adapting PRO instruments, retaining fit-for-purpose assessment across device evaluation.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "More flexible instrument adaptation", "p": 0.17, "mech": "Retain the framework while allowing greater flexibility in adapting existing instruments and documenting suitability.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "The draft is approximately sixteen months old and presents a principles-based framework. Routine clarification is more likely than redesign, but FDA guidance finalization has broad timing dispersion.",
+      "missing": ["Comment themes", "Finalization priority or target date", "Full draft recommendations"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "Sb91d276853",
+      "p": {"7d": 0.01, "30d": 0.04, "60d": 0.08, "90d": 0.12, "180d": 0.23},
+      "next": {"final_action": 0.21, "revised_or_further_consultation": 0.09, "formal_withdrawal": 0.02, "no_further_official_step": 0.68},
+      "content": {"as_proposed": 0.45, "softened": 0.22, "tightened": 0.11, "mixed": 0.17, "different_mechanism": 0.05},
+      "scenarios": [
+        {"s": "Sponsor safety framework clarified", "p": 0.45, "mech": "Finalize guidance clarifying sponsor safety assessment and reporting responsibilities for IND and bioavailability/bioequivalence studies.", "params": {}, "ev": [], "contra": []},
+        {"s": "Reporting implementation flexibility", "p": 0.22, "mech": "Provide additional flexibility in implementing sponsor safety assessments and reporting processes.", "params": {}, "ev": [], "contra": []}
+      ],
+      "notes": "The title identifies scope but provides no draft date or procedural status. Probabilities rely on FDA guidance base rates; substantive direction remains uncertain.",
+      "missing": ["Draft publication date", "Proposed reporting recommendations", "Comment and finalization status"],
+      "recognised_outcome": false,
+      "insufficient_evidence": true
+    },
+    {
+      "id": "S535506cc30",
+      "p": {"7d": 0.01, "30d": 0.035, "60d": 0.07, "90d": 0.11, "180d": 0.21},
+      "next": {"final_action": 0.19, "revised_or_further_consultation": 0.08, "formal_withdrawal": 0.02, "no_further_official_step": 0.71},
+      "content": {"as_proposed": 0.48, "softened": 0.19, "tightened": 0.13, "mixed": 0.16, "different_mechanism": 0.04},
+      "scenarios": [
+        {"s": "Donor eligibility framework", "p": 0.48, "mech": "Finalize recommendations on assessing donor eligibility for animal cells, tissues, and related products.", "params": {}, "ev": [], "contra": []},
+        {"s": "Risk-based flexibility", "p": 0.19, "mech": "Allow more flexibility in donor assessment according to product and donor risks.", "params": {}, "ev": [], "contra": []}
+      ],
+      "notes": "No procedural stage or proposed eligibility criteria are supplied. A specialized veterinary guidance receives a modest six-month finalization probability with substantial content uncertainty.",
+      "missing": ["Draft date", "Proposed donor eligibility criteria", "Consultation status"],
+      "recognised_outcome": false,
+      "insufficient_evidence": true
+    },
+    {
+      "id": "S7a08fa0fcf",
+      "p": {"7d": 0.005, "30d": 0.025, "60d": 0.06, "90d": 0.10, "180d": 0.22},
+      "next": {"final_action": 0.20, "revised_or_further_consultation": 0.10, "formal_withdrawal": 0.01, "no_further_official_step": 0.69},
+      "content": {"as_proposed": 0.57, "softened": 0.20, "tightened": 0.07, "mixed": 0.13, "different_mechanism": 0.03},
+      "scenarios": [
+        {"s": "Focused development guidance", "p": 0.57, "mech": "Retain recommendations focused on locally applied corticosteroids for short-term treatment of internal or external hemorrhoid symptoms.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Flexible development pathways", "p": 0.20, "mech": "Preserve the treatment scope while providing additional flexibility in recommended development programs.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "The draft is about ten months old and explicitly supports continued stakeholder discussion. That framing and typical guidance timelines favor further elapsed time before finalization.",
+      "missing": ["Detailed clinical recommendations", "Stakeholder feedback", "Agency finalization schedule"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "Sea64372682",
+      "p": {"7d": 0.01, "30d": 0.04, "60d": 0.08, "90d": 0.13, "180d": 0.26},
+      "next": {"final_action": 0.24, "revised_or_further_consultation": 0.09, "formal_withdrawal": 0.01, "no_further_official_step": 0.66},
+      "content": {"as_proposed": 0.56, "softened": 0.19, "tightened": 0.08, "mixed": 0.15, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Trial framework retained", "p": 0.56, "mech": "Finalize recommendations covering eligibility, trial design, and efficacy endpoints for neovascular age-related macular degeneration.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Broader trial flexibility", "p": 0.19, "mech": "Allow broader eligibility or additional trial design and endpoint options while retaining evidence-quality expectations.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "Nearly three years have elapsed since the draft. Its defined clinical scope supports eventual finalization, but draft age alone does not establish imminent publication.",
+      "missing": ["Comments on endpoints and eligibility", "Full draft", "Finalization priority"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "Saedf121836",
+      "p": {"7d": 0.025, "30d": 0.11, "60d": 0.23, "90d": 0.35, "180d": 0.57},
+      "next": {"final_action": 0.53, "revised_or_further_consultation": 0.16, "formal_withdrawal": 0.03, "no_further_official_step": 0.28},
+      "content": {"as_proposed": 0.47, "softened": 0.21, "tightened": 0.11, "mixed": 0.16, "different_mechanism": 0.05},
+      "scenarios": [
+        {"s": "Historical scenario revision adopted", "p": 0.47, "mech": "Adopt revised treatment of historical price scenarios in commodity derivatives stress testing.", "params": {}, "ev": [], "contra": []},
+        {"s": "Phased stress-testing changes", "p": 0.21, "mech": "Adopt the central revision with narrower application or additional implementation time.", "params": {}, "ev": [], "contra": []}
+      ],
+      "notes": "Technical SEBI consultations often lead to circulars within months. Without a consultation date or proposed scenario methodology, both timing and substantive direction remain weakly identified.",
+      "missing": ["Consultation date and deadline", "Proposed historical scenario methodology", "Implementation timetable"],
+      "recognised_outcome": false,
+      "insufficient_evidence": true
+    },
+    {
+      "id": "S591534befb",
+      "p": {"7d": 0.015, "30d": 0.08, "60d": 0.20, "90d": 0.34, "180d": 0.64},
+      "next": {"final_action": 0.59, "revised_or_further_consultation": 0.19, "formal_withdrawal": 0.02, "no_further_official_step": 0.20},
+      "content": {"as_proposed": 0.49, "softened": 0.27, "tightened": 0.04, "mixed": 0.18, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Two-circular modernization", "p": 0.49, "mech": "Adopt trading-technology revisions and consolidate common IT provisions for market infrastructure institutions.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Phased compliance simplification", "p": 0.27, "mech": "Preserve consolidation and simplification while extending implementation or narrowing operational requirements.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "Draft circulars and an established review program support adoption. Only one month has elapsed, and provisions spanning several infrastructure institutions can require operational coordination.",
+      "missing": ["Comment deadline and responses", "Detailed technology requirements", "Proposed implementation dates"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "S6943785a7c",
+      "p": {"7d": 0.01, "30d": 0.045, "60d": 0.10, "90d": 0.16, "180d": 0.32},
+      "next": {"final_action": 0.30, "revised_or_further_consultation": 0.06, "formal_withdrawal": 0.01, "no_further_official_step": 0.63},
+      "content": {"as_proposed": 0.74, "softened": 0.10, "tightened": 0.04, "mixed": 0.10, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Harmonized revision retained", "p": 0.74, "mech": "Finalize caprine anthelmintic guidance clarifying adequate infection and updating field-study considerations.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Field-study flexibility", "p": 0.10, "mech": "Retain harmonized definitions while adding flexibility in applying field-study recommendations.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "A narrow VICH revision favors substantive continuity. International coordination can govern publication timing, and the nearly four-year-old draft does not by itself establish readiness.",
+      "missing": ["VICH adoption status", "FDA implementation timetable", "Comments on infection and field-study criteria"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "Sb9ade2b2e5",
+      "p": {"7d": 0.01, "30d": 0.045, "60d": 0.095, "90d": 0.15, "180d": 0.29},
+      "next": {"final_action": 0.27, "revised_or_further_consultation": 0.08, "formal_withdrawal": 0.01, "no_further_official_step": 0.64},
+      "content": {"as_proposed": 0.59, "softened": 0.17, "tightened": 0.08, "mixed": 0.14, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Neonatal pharmacology framework", "p": 0.59, "mech": "Finalize clinical pharmacology recommendations for sponsors conducting neonatal drug and biologic studies.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Feasibility accommodations", "p": 0.17, "mech": "Retain neonatal study principles while allowing more flexibility in implementing clinical pharmacology assessments.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "The statutory connection supports policy durability, but the excerpt specifies draft issuance rather than a finalization deadline. Nearly three years of age leaves timing uncertain.",
+      "missing": ["Any finalization commitment", "Detailed neonatal study recommendations", "Stakeholder feasibility concerns"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "Sb83b51f2e9",
+      "p": {"7d": 0.01, "30d": 0.045, "60d": 0.11, "90d": 0.18, "180d": 0.36},
+      "next": {"final_action": 0.33, "revised_or_further_consultation": 0.12, "formal_withdrawal": 0.01, "no_further_official_step": 0.54},
+      "content": {"as_proposed": 0.58, "softened": 0.14, "tightened": 0.07, "mixed": 0.19, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Linear and nonlinear coverage retained", "p": 0.58, "mech": "Finalize expanded covariate-adjustment recommendations covering linear and nonlinear models.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Model-specific revisions", "p": 0.19, "mech": "Retain both model classes while combining additional methodological safeguards with flexibility in application.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "A revised draft shows prior iteration and a developed methodological scope. Eighteen months allows review, although expanded nonlinear-model recommendations could prompt additional revision.",
+      "missing": ["Feedback on nonlinear models", "Finalization schedule", "Full statistical recommendations"],
+      "recognised_outcome": true,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "S38e812fbd2",
+      "p": {"7d": 0.01, "30d": 0.035, "60d": 0.085, "90d": 0.14, "180d": 0.29},
+      "next": {"final_action": 0.27, "revised_or_further_consultation": 0.08, "formal_withdrawal": 0.01, "no_further_official_step": 0.64},
+      "content": {"as_proposed": 0.62, "softened": 0.15, "tightened": 0.08, "mixed": 0.13, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Broader literature framework", "p": 0.62, "mech": "Replace existing guidance with recommendations covering narrative reviews, systematic reviews, and meta-analyses in new animal drug applications.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Broader use with safeguards", "p": 0.13, "mech": "Expand accepted literature uses while adding quality safeguards and flexibility in documenting evidentiary relevance.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "Replacing an existing guidance provides a clear administrative path. The eight-month-old draft substantially broadens literature uses, which may require clarification before final publication.",
+      "missing": ["Proposed evidence-quality criteria", "Comment themes", "Finalization timetable"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "Sc83723bef8",
+      "p": {"7d": 0.01, "30d": 0.04, "60d": 0.08, "90d": 0.12, "180d": 0.23},
+      "next": {"final_action": 0.21, "revised_or_further_consultation": 0.08, "formal_withdrawal": 0.02, "no_further_official_step": 0.69},
+      "content": {"as_proposed": 0.51, "softened": 0.20, "tightened": 0.09, "mixed": 0.16, "different_mechanism": 0.04},
+      "scenarios": [
+        {"s": "Charging questions clarified", "p": 0.51, "mech": "Finalize a questions-and-answers framework explaining charging for investigational drugs under INDs.", "params": {}, "ev": [], "contra": []},
+        {"s": "Administrative flexibility", "p": 0.20, "mech": "Provide more flexible recommendations for documenting and administering investigational-drug charging arrangements.", "params": {}, "ev": [], "contra": []}
+      ],
+      "notes": "The questions-and-answers format suggests interpretive guidance, but the packet supplies no draft age or charging provisions. Timing follows broad FDA guidance base rates.",
+      "missing": ["Draft publication date", "Proposed charging interpretations", "Consultation and clearance status"],
+      "recognised_outcome": false,
+      "insufficient_evidence": true
+    },
+    {
+      "id": "S8e6e622db4",
+      "p": {"7d": 0.025, "30d": 0.12, "60d": 0.27, "90d": 0.42, "180d": 0.68},
+      "next": {"final_action": 0.63, "revised_or_further_consultation": 0.18, "formal_withdrawal": 0.02, "no_further_official_step": 0.17},
+      "content": {"as_proposed": 0.48, "softened": 0.26, "tightened": 0.05, "mixed": 0.19, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Derivatives simplification adopted", "p": 0.48, "mech": "Adopt proposed revisions across exchange-traded derivatives and commodity product, participation, and limit provisions.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Qualified or phased adoption", "p": 0.26, "mech": "Adopt substantial simplifications with carve-outs or longer transitions for selected derivative-market provisions.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "An established review series and roughly two months since consultation support action within six months. Coverage of multiple products and limits increases the chance of selective adoption or further consultation.",
+      "missing": ["Specific proposed limits and product changes", "Market feedback", "Adoption and transition schedule"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "S917443f737",
+      "p": {"7d": 0.015, "30d": 0.065, "60d": 0.15, "90d": 0.24, "180d": 0.42},
+      "next": {"final_action": 0.40, "revised_or_further_consultation": 0.07, "formal_withdrawal": 0.01, "no_further_official_step": 0.52},
+      "content": {"as_proposed": 0.64, "softened": 0.22, "tightened": 0.04, "mixed": 0.08, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Targeted class I enforcement discretion", "p": 0.64, "mech": "Finalize criteria identifying class I devices for which GUDID submission requirements will not be enforced.", "params": {"device_scope": "Specified subset of class I devices"}, "ev": ["E1"], "contra": []},
+        {"s": "Expanded submission relief", "p": 0.22, "mech": "Broaden qualifying class I categories or ease labeler determinations for GUDID enforcement discretion.", "params": {"device_scope": "Broader subset of class I devices"}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "A targeted update to an existing compliance policy is comparatively tractable. Six months since publication permits review, and the proposed relief favors continuity or modest expansion.",
+      "missing": ["Exact qualifying device criteria", "Relevant compliance timetable", "Labeler comments"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "S73b4778629",
+      "p": {"7d": 0.035, "30d": 0.15, "60d": 0.31, "90d": 0.46, "180d": 0.70},
+      "next": {"final_action": 0.65, "revised_or_further_consultation": 0.18, "formal_withdrawal": 0.02, "no_further_official_step": 0.15},
+      "content": {"as_proposed": 0.49, "softened": 0.25, "tightened": 0.04, "mixed": 0.17, "different_mechanism": 0.05},
+      "scenarios": [
+        {"s": "STP interoperability improvements", "p": 0.49, "mech": "Adopt messaging-framework changes addressing latency and costs when participants use different STP service providers.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Phased architecture transition", "p": 0.25, "mech": "Adopt enhancements with longer migration periods or transitional compatibility for existing service-provider arrangements.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "Four months since consultation and identifiable operational problems support adoption. Coordination among brokers, custodians, investors, and service providers creates implementation and revision risk.",
+      "missing": ["Proposed messaging architecture", "Service-provider feedback", "Migration timetable"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "S18e65332c7",
+      "p": {"7d": 0.005, "30d": 0.035, "60d": 0.08, "90d": 0.12, "180d": 0.23},
+      "next": {"final_action": 0.21, "revised_or_further_consultation": 0.08, "formal_withdrawal": 0.02, "no_further_official_step": 0.69},
+      "content": {"as_proposed": 0.53, "softened": 0.20, "tightened": 0.07, "mixed": 0.16, "different_mechanism": 0.04},
+      "scenarios": [
+        {"s": "Patient engagement recommendations", "p": 0.53, "mech": "Finalize recommendations for incorporating patient engagement into the design and conduct of device clinical investigations.", "params": {}, "ev": [], "contra": []},
+        {"s": "Flexible engagement approaches", "p": 0.20, "mech": "Emphasize adaptable engagement methods according to study context and sponsor resources.", "params": {}, "ev": [], "contra": []}
+      ],
+      "notes": "Only the guidance title is available. FDA process base rates imply a modest six-month chance, with substantive continuity more likely than a different mechanism conditional on finalization.",
+      "missing": ["Draft date", "Proposed engagement recommendations", "Finalization status"],
+      "recognised_outcome": false,
+      "insufficient_evidence": true
+    },
+    {
+      "id": "S511ac0376a",
+      "p": {"7d": 0.01, "30d": 0.045, "60d": 0.09, "90d": 0.14, "180d": 0.26},
+      "next": {"final_action": 0.24, "revised_or_further_consultation": 0.11, "formal_withdrawal": 0.01, "no_further_official_step": 0.64},
+      "content": {"as_proposed": 0.46, "softened": 0.24, "tightened": 0.09, "mixed": 0.17, "different_mechanism": 0.04},
+      "scenarios": [
+        {"s": "Verification framework finalized", "p": 0.46, "mech": "Finalize guidance on verification systems for prescription drugs covered by the Drug Supply Chain Security Act.", "params": {}, "ev": [], "contra": []},
+        {"s": "Implementation accommodations", "p": 0.24, "mech": "Retain verification objectives while adding flexibility in recommended operational implementation.", "params": {}, "ev": [], "contra": []}
+      ],
+      "notes": "The statutory implementation context modestly supports eventual completion. Without the draft, applicable deadlines, or review status, a near-term publication forecast remains chiefly a base-rate judgment.",
+      "missing": ["Draft date and revision history", "Applicable implementation deadlines", "Proposed verification expectations"],
+      "recognised_outcome": false,
+      "insufficient_evidence": true
+    },
+    {
+      "id": "Sbb8480c400",
+      "p": {"7d": 0.045, "30d": 0.19, "60d": 0.37, "90d": 0.52, "180d": 0.76},
+      "next": {"final_action": 0.72, "revised_or_further_consultation": 0.14, "formal_withdrawal": 0.02, "no_further_official_step": 0.12},
+      "content": {"as_proposed": 0.38, "softened": 0.25, "tightened": 0.15, "mixed": 0.17, "different_mechanism": 0.05},
+      "scenarios": [
+        {"s": "Uniform three-month lag", "p": 0.45, "mech": "Align educational sharing and usage with the stricter existing lag to maintain safeguards against misuse.", "params": {"uniform_time_lag": "3 calendar months"}, "ev": ["E1"], "contra": []},
+        {"s": "Uniform one-day lag", "p": 0.30, "mech": "Align educational sharing and usage with the shorter existing lag to preserve timely educational access.", "params": {"uniform_time_lag": "1 day"}, "ev": ["E1"], "contra": []},
+        {"s": "Intermediate uniform lag", "p": 0.20, "mech": "Replace both existing lags with a common compromise between educational utility and misuse prevention.", "params": {"uniform_time_lag": "7–60 days"}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "Conflicting operative lags create a concrete harmonization problem, and almost four months have elapsed. The excerpt omits the proposed replacement lag, leaving direction substantially more uncertain than adoption.",
+      "missing": ["Proposed uniform lag", "Feedback on educational utility and misuse", "Implementation and exception provisions"],
+      "recognised_outcome": false,
+      "insufficient_evidence": false
+    },
+    {
+      "id": "Sb9b230f0b6",
+      "p": {"7d": 0.005, "30d": 0.035, "60d": 0.075, "90d": 0.115, "180d": 0.22},
+      "next": {"final_action": 0.20, "revised_or_further_consultation": 0.08, "formal_withdrawal": 0.02, "no_further_official_step": 0.70},
+      "content": {"as_proposed": 0.50, "softened": 0.20, "tightened": 0.09, "mixed": 0.17, "different_mechanism": 0.04},
+      "scenarios": [
+        {"s": "Disease-specific development guidance", "p": 0.50, "mech": "Finalize recommendations for drug development in chronic rhinosinusitis with nasal polyps.", "params": {}, "ev": [], "contra": []},
+        {"s": "More flexible development recommendations", "p": 0.20, "mech": "Permit additional approaches within recommended clinical development programs.", "params": {}, "ev": [], "contra": []}
+      ],
+      "notes": "No draft date, trial recommendations, or procedural milestones are supplied. Timing and content probabilities therefore reflect general FDA disease-specific guidance base rates.",
+      "missing": ["Draft publication date", "Proposed trial and endpoint recommendations", "Comment and finalization status"],
+      "recognised_outcome": false,
+      "insufficient_evidence": true
+    },
+    {
+      "id": "Sbc4a9e7df1",
+      "p": {"7d": 0.01, "30d": 0.045, "60d": 0.10, "90d": 0.16, "180d": 0.32},
+      "next": {"final_action": 0.29, "revised_or_further_consultation": 0.12, "formal_withdrawal": 0.01, "no_further_official_step": 0.58},
+      "content": {"as_proposed": 0.55, "softened": 0.19, "tightened": 0.08, "mixed": 0.16, "different_mechanism": 0.02},
+      "scenarios": [
+        {"s": "Remote acquisition framework retained", "p": 0.55, "mech": "Finalize recommendations covering hardware and software used to collect and transmit remote clinical investigation data.", "params": {}, "ev": ["E1"], "contra": []},
+        {"s": "Technology-specific flexibility", "p": 0.19, "mech": "Retain the framework while allowing more context-dependent implementation across hardware, software, and clinical uses.", "params": {}, "ev": ["E1"], "contra": []}
+      ],
+      "notes": "Eighteen months allows substantial review, but broad coverage across technologies, stakeholders, and medical products creates coordination needs. Finalization is plausible within six months without being the dominant timing outcome.",
+      "missing": ["Stakeholder comment themes", "Full technical recommendations", "Agency finalization commitments"],
+      "recognised_outcome": true,
+      "insufficient_evidence": false
+    }
+  ]
+}

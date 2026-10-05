@@ -1,0 +1,262 @@
+{
+  "status": "PASS",
+  "runs": {
+    "ASTRA_CORE60": {
+      "batches": 20,
+      "distinct": 380,
+      "aliases": 380,
+      "coherence_repairs": []
+    },
+    "ASTRA_CAL60": {
+      "batches": 18,
+      "distinct": 298,
+      "aliases": 298,
+      "coherence_repairs": []
+    }
+  },
+  "usage": {
+    "input_tokens": 570791,
+    "cached_input_tokens": 98304,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 216429,
+    "reasoning_output_tokens": 18063
+  },
+  "batches": [
+    {
+      "batch_id": "ASTRA_CORE60_b001",
+      "forecasts": 20,
+      "output_sha256": "e67e92dbd3c255589e096ec516911af615d3da22382e25e2c0ed5f296c12104d",
+      "events_sha256": "5983d98d04e31d17d15a2d2407a0c823fd24c24aafb7f5031638a43a69058ed4"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b002",
+      "forecasts": 20,
+      "output_sha256": "097806cf7b545ce6b7854f7a9c4c87399c03e89c278dae2cadfa76b4f2c36dbf",
+      "events_sha256": "8bb88b56cb7a880ff5af5ba7670141cc71d8cc58839c629e119bc8cef97b86ed"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b003",
+      "forecasts": 20,
+      "output_sha256": "0e0cc6ed5afce8526a7ab0b7da63b56d5ece8ebc4112dc804b728a64fd326736",
+      "events_sha256": "9586e5f29485f36f9a79908d2b92461f89d4ce524b5571719d359e8ac807d007"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b004",
+      "forecasts": 20,
+      "output_sha256": "14be378f780079bfd41c5d97100fc78d202df99288da58a696a390bc6db13402",
+      "events_sha256": "35b3ea54a06963c0e97dd760231f896671e4cc5a5ab97e2b67dac1b3d4302c7c"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b005",
+      "forecasts": 20,
+      "output_sha256": "b03bf9a9778b7c6838dffe0e968ebeb1553aea37db8b2ad51180759d6d39ffab",
+      "events_sha256": "ab8ef91ba27d8f5c97acb15791f3551411025a010890e2a7eecd589226aec98b"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b006",
+      "forecasts": 20,
+      "output_sha256": "0e0ed2772e425cb1e8b9c014cbe66b9a78e5be72f575df317be792bdb66b3bf6",
+      "events_sha256": "d2044156a9b7250e3abdc3860c74f4c8a360877a6376930719246998e6b5a87b"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b007",
+      "forecasts": 20,
+      "output_sha256": "602dea33541f62c272015a89e596d15695ff49a70aa3c4b98ba62395cb134666",
+      "events_sha256": "45aa4f4aca369f68bcd3554b6a0c65308983420b3a47b5b4787d1ae9ee8a4bf0"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b008",
+      "forecasts": 20,
+      "output_sha256": "268a18b58b5d52825c0489f43cd38d914c1c08f58e68b26f38faa9849b36710f",
+      "events_sha256": "cabdd914da59a743c71f6012a1713876eacf42ec6075ff7b4a37a815ee75ce27"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b009",
+      "forecasts": 20,
+      "output_sha256": "ac776ddf171fa752b98373567fb01493708ceca4793a162f6815c36a9ebc7c87",
+      "events_sha256": "12acf9af75fe209c4d3d0f103bb1ae888cb5cc5fb7c88d3b7edac8d8c2ccf582"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b010",
+      "forecasts": 20,
+      "output_sha256": "0aa8434dcfa094ada1783d7878047ba781b42954a1e067ccafce3f1c1bff4f51",
+      "events_sha256": "d5b5a2533098bcb799a94cbc45b48843db2e36feaf04c9663ecd63ecb4ed0063"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "forecasts": 20,
+      "output_sha256": "8020c493ed7d1a1471515713045fac9648916d391fdf895fdb4fdc66e0a5f283",
+      "events_sha256": "98e8eef4e8fb712e920cbe36245857593bb48e683d8302aef6ba530fe5bea734"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "forecasts": 20,
+      "output_sha256": "7a812f693c130c92a4e3f7b61f84860a30a0d445c1b50fb5cc83f03fd377b32b",
+      "events_sha256": "ab636789cab8a9049daf57dcf6748f6d5e97effb96ccbbc007c35b62c49b7a29"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "forecasts": 20,
+      "output_sha256": "9e4ba26a2194f7a13e4c47ea37f8ce1c2a266393db28ccf2dd0e175d7d99c10f",
+      "events_sha256": "6539a01648f8198bb496663ebc29a96d27d680415addc74a57c4259395de10fb"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "forecasts": 20,
+      "output_sha256": "f0d2dbc06646f83422fafb5b8a7b942aa9db238d5c1deea825edbbee9659ce2c",
+      "events_sha256": "489deab089b9927058bf6a2cd19ec3c3a622f504ae327b838dad379f312e9b7f"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "forecasts": 20,
+      "output_sha256": "0dc889d9d388ebb9d4d87538c9eea9f6fac655a277ff28e26e5b303ff26a68c9",
+      "events_sha256": "5fd1cdb2a16ecdc0c66d63c49fba0c2a0be6dff8682800fbdefa9546204ecea7"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b016",
+      "forecasts": 20,
+      "output_sha256": "eed100ac8bb6d3fb501278fab920402ad5a1fd7d8c6fcdaa916269324cac922e",
+      "events_sha256": "0aa3b8997139be3a405ed146f1bd1f4ab84e1c835d8652ee32d6284f833bc4ba"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b017",
+      "forecasts": 20,
+      "output_sha256": "4248a600586da9fb6622ddf4c57888fc2b451011db82c0837d53114a08564195",
+      "events_sha256": "962c859ff7f69a5dc83842447a78c9a823f25a2127491ea9112361a5e2b4b7b6"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b018",
+      "forecasts": 20,
+      "output_sha256": "08e9e0f5a59dc9b277fbc0738fb53d34dd612c2b391c8efca34605fd1553e798",
+      "events_sha256": "586448ac9252efb02e429bbcedba947b686a90a6150b0c47b5fd03581b1f4e25"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b019",
+      "forecasts": 19,
+      "output_sha256": "925824fc39e7e853fdd8a061ee0af9d25cad01087956117452d086db3a34e068",
+      "events_sha256": "2bbe5e014d6d24c71457e90b563649bfdcf7bb98be7894384a063d9e5114acd1"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b020",
+      "forecasts": 1,
+      "output_sha256": "d21bc745ba9fc435affacd4ecca3a79f0cf8e878a828f0f1fbf8035f661d990d",
+      "events_sha256": "f29615be7efa438f04eb615ab88dd2da11ef8c07746c00d0f760cb8f5c3a3686"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b001",
+      "forecasts": 20,
+      "output_sha256": "9c9beac09b408c4e19972fb7b1602a15f779d4ff5a2ce37a524c26b2e2131927",
+      "events_sha256": "8b080e5c565ea17bdc6acb46f9d2d12fbea161456c3e9255f71a6c31a6a77de6"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b002",
+      "forecasts": 20,
+      "output_sha256": "b6017f260dff7b7530abb7b8195cb6a36328f905f8ea7c71a65bea0075a65460",
+      "events_sha256": "6b32903d08e8cfa08e81690798f5b7f448033540bfb9f52403451b9509a1a9a5"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b003",
+      "forecasts": 20,
+      "output_sha256": "719ffcb84c8922266b04921c21ba86fc69c6a3be8f89eae6a4ae0f1a4533ceca",
+      "events_sha256": "ebc79e1ca2a65cdea6134688a955c8ef3ce764295d97e1c533d2ed8b19afd9ea"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b004",
+      "forecasts": 20,
+      "output_sha256": "f8edf50d75b527b13335c11082fb64dea4a7704a958be52c4055d878a01d0042",
+      "events_sha256": "e8148e4676fdeb3784f6683ce97ad1a16a05b9c62ff186f2e8667463e4632379"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b005",
+      "forecasts": 20,
+      "output_sha256": "78ca6799161d25c2824025bdc1ff37766f06a5fd87f35427287598938c6601b4",
+      "events_sha256": "47153ff404b0dfe8d04a21d8b9b5d88f6bcd4381c2199a2806a7c92e2b9f5945"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b006",
+      "forecasts": 20,
+      "output_sha256": "8e7a47c35b5919deefdc208f8bc9893e961ffb073b21902cb5ffcbf0d8506f6f",
+      "events_sha256": "0743de4f9bed8fa0afc6cf95e9851b317a3ca4f494c35b9bde00ddd421685c89"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b007",
+      "forecasts": 20,
+      "output_sha256": "070580bf8118996d806a4be42950e374a3acb9958068a8aff8c36e57122e95a7",
+      "events_sha256": "94ef97b512807f2f6e5abad68dc1e368cccf7038faae5e721b99da5e79e46b3e"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b008",
+      "forecasts": 20,
+      "output_sha256": "a2c48f41d2138dc0151d31ba41d627ae7187d9d787aac6dcd4a19729e3f1fba5",
+      "events_sha256": "0e6aa78f82e16e990cd72e91b459987c58f85198c7fe3923077efb94be2e8b30"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b009",
+      "forecasts": 20,
+      "output_sha256": "4ba8e04ca3f0472a336ec30d56b6d0dbd0cce935fa189d3bab61013a7b9e4169",
+      "events_sha256": "af28f760e74850db6993045125c48084a97c0dfe7416172405da1d5986f0b180"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b010",
+      "forecasts": 20,
+      "output_sha256": "9c0bdbacb27e0f4d2da35dca078670f9700bc81e2529d53f7eebf6cdb0a63a93",
+      "events_sha256": "d321c596b69bf76fb6a9553a4d585d86c1c084254fa48ab304a583fdc3ab17cb"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b011",
+      "forecasts": 20,
+      "output_sha256": "c4a08f6c29ecdcd036212efea34c94fe559a1836886c1cda85a3ec764e81923b",
+      "events_sha256": "71f2b7b4cb894714772f9c77224e849843dfe3fb0c058cd3b1c95dcf5c3e083f"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b012",
+      "forecasts": 20,
+      "output_sha256": "61e6ca0726927773c81b5da921751f94b3b1df51e268e6ef0216244b4ba2f614",
+      "events_sha256": "12c140924af8a27e62ccbed79fbe09bb3d8d38042f71821fa86f1fff69d7d936"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b013",
+      "forecasts": 20,
+      "output_sha256": "0d4dbf87fcd1cd52e80b5463e3c9d57976b66666f8605d44000f6142c997a304",
+      "events_sha256": "93a05856353e34ee9929384cdb489faab3f6a86ca962e54ec1fe7766da6f1b6b"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b014",
+      "forecasts": 20,
+      "output_sha256": "ce39610eb4d1a2d309ffaf29238c4121018cd46c127f005d6c8152b2ffc51220",
+      "events_sha256": "5a9971a14a3d24bc09f759d510b33edb96b1d8953fbc4a9f033abec6e95d2a0b"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b015",
+      "forecasts": 12,
+      "output_sha256": "7ac8777210e07c47bf32103039f0156eb46fe41e7f74aeff08a07084965d7f9e",
+      "events_sha256": "e5ba4fbbbc7c9a3a94a4faaf285a430fd3f58c63fde6ca111f364f91757c03fd"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b016",
+      "forecasts": 4,
+      "output_sha256": "8e0a5b84a40818ba1e47f868977f5c7526a6fd53eeb9fa22a8312b5ca8f867d7",
+      "events_sha256": "b3b666327d7d350a8b39ac867e25a1f8f7358620a1c706f73bcf8855f34f5020"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b017",
+      "forecasts": 1,
+      "output_sha256": "b85625a04091f398df8aced3945faaf25374ae889a880292636e26b5d8737462",
+      "events_sha256": "743b24fd8eb207f2c402f79ba79d184a6e9fccb4bb52e3e3608b4499b7c85e5a"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b018",
+      "forecasts": 1,
+      "output_sha256": "33fc02b4f7d22b0e6dd8eff1417611bd879f4ea7623116efb8ae55ef27371b67",
+      "events_sha256": "7178d460da8245caff84e940e2e79fedb9e64c705ce034fcea2930a394a03ec8"
+    }
+  ],
+  "distinct_forecasts": 678,
+  "logical_forecasts": 1356,
+  "dataset_sha256": {
+    "snapshots/index.jsonl": "fa378d0c9c8981ce6d4a59ded4a22951ed5efd737b5a2561110ba1858be6e2a7",
+    "threads/threads.jsonl": "1ad2595e73b3c7a4948c82a0e8988c2a8cfa7186df79d468e59842c613c32490",
+    "evidence/evidence.jsonl": "9ccf6f832ceeef0fe127512c3e056c1ba656cc9b5b87b2d24c0049d314b45d4f",
+    "outcomes/outcomes.jsonl": "cec53d66390307636b4ffe34283b0428fe26dda05c388b76a397716ef7bdca9b"
+  }
+}

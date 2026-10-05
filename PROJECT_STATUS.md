@@ -1,5 +1,47 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
+## Final decision — 2026-10-05
+
+**NO-GO for the current Astra / SEBI-R30-FDA-H30 approach.** Frozen G1 and G5 fail; independent
+review agrees. HIST C90 baseline skill +0.320 is promising, but evidence-versus-title CI crosses zero,
+LATE C90 AUROC0.577 misses0.70, India AUROC0.456 misses0.65 and HIST-LATE gap0.310 exceeds0.10.
+At p>=0.5,19/42 positive matters get a warning; all-matter median lead is zero (23 misses), so G4 fails.
+Timing calibration fails; content accuracy96% merely matches the majority baseline. No TierC lift,
+trajectory ablation, parameter coverage, full masking or GOLD survival is established.
+All38 calls /678 distinct forecasts independently audited and1,356 logical rows ingested; ledger1,464
+records verified. Zero visible contamination;64 recognition disclosures. Exclusion preserves NO-GO.
+Stop at the gate; no production or trading architecture is justified. Full results:
+reports/FINAL_GO_NO_GO_20261005.md, reports/FINAL_DECISION_20261005.json,
+reports/FINAL_GATE_REVIEW_20261005.md and reports/metrics.json.
+Market-data capture closed successfullyOctober5 15:31IST with24,167,141updates; Drive upload due15:50IST.
+No daily regulatory collection/upload automation found. See docs/COLLECTION_STATUS_20261004.md.
+
+## Earlier checkpoints (historical; superseded by final decision above)
+
+## Current checkpoint — 2026-10-05, scaled scoring
+
+All38 fresh Astra calls completed:678 distinct forecasts plus678 same-input aliases. Full independent
+text/citation review and execution preflight PASS. Zero visible contamination;64 self-recognition disclosures.
+Unsupported conditional parameter guesses are documented, not certified as accurate. All1,356 scaled logical
+rows ingested without problems; hash-chain verification passes1,464 records, including108 excluded diagnostics.
+Final evaluation is running with ALL primary arm and same-model TITLE_ONLY; no legacy probe mixed in.
+Freeze remains327 threads /1,785 evidence /99 source-audited RAPID /zero GOLD, censor2026-09-24.
+Today market capture closed successfully15:31IST with24,167,141updates; Drive upload due15:50IST.
+No automated daily regulatory collection/upload was found. Predictive GO/NO-GO is pending scored metrics.
+
+## Earlier checkpoints (historical; superseded by the checkpoint above)
+
+
+## Live continuation — 2026-10-05
+
+The ordinary account window reopened after the user continued. Fifteen successful batches / 300 distinct
+forecasts were preserved from October4; the failed CAL60 b008 attempt was archived before retry. The remaining
+23 batches resumed with two workers. By the latest audit message, eighteen batches / 360 distinct forecasts
+were complete and independently reviewed without unresolved defects. No scaled output has been ingested or
+scored yet. Source freeze and observation cutoff remain unchanged. Eleven focused evaluation tests passed
+after DEV-016 fold-local preprocessing repair. Daily market collector timers were rechecked; today's09:05IST
+capture was not yet due. No daily regulatory collector/upload exists in this workspace.
+
 **Status:** ACTIVE. Full SEBI-R30/FDA-H30 source audit and Core60 packet release completed; isolated inference is running, with six completed batches (120 distinct forecasts).
 **Last updated:** 2026-10-04
 **Gate:** GATE 0 — frozen packet release passed; forecast output and empirical GO/NO-GO remain unresolved

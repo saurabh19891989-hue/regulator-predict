@@ -1,0 +1,8 @@
+{
+  "run": "ASTRA_CAL60",
+  "batch": "ASTRA_CAL60_b008",
+  "exit_code": 1,
+  "stdout": "{\"run\": \"ASTRA_CAL60\", \"batch_id\": \"ASTRA_CAL60_b008\", \"model\": \"gpt-6-astra\", \"started_at\": \"2026-10-04T10:54:58.558937+00:00\", \"completed_at\": \"2026-10-04T10:55:03.261297+00:00\", \"exit_code\": 1, \"unexpected_item_types\": [], \"usage\": [], \"packet_sha256\": \"6924ba93cc87a48a95f621f8e638254dea5d9cb029e641af9a3586a372a5ba9f\", \"events_path\": \"C:\\\\Users\\\\saura\\\\AppData\\\\Local\\\\Temp\\\\rpe_blind_sessions\\\\ASTRA_CAL60\\\\ASTRA_CAL60_b008\\\\events.jsonl\", \"session_ids\": [\"01a1068d-7e9f-7a63-8661-e099b9e86514\"], \"events_sha256\": \"13e012200dff3d4b1c328ca1b8db14143d418912d58f893a228ec3231a2fc9e8\", \"tool_controls\": \"shell, web, plugins, apps, multi-agent, memories disabled; no project docs\"}\n",
+  "stderr": "CLI failed or used unexpected tools; inspect receipt before any retry.\n",
+  "status": "FAILED"
+}

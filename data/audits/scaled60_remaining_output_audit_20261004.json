@@ -1,0 +1,696 @@
+{
+  "scope": "ASTRA_CORE60 b004-b020 and ASTRA_CAL60 b004-b018 only",
+  "expected_batches": 32,
+  "expected_distinct_forecasts": 558,
+  "complete": false,
+  "batches": [
+    {
+      "batch_id": "ASTRA_CORE60_b004",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 44,
+      "citation_references": 32,
+      "title_only": 6,
+      "insufficient_evidence": 6,
+      "empty_scenarios": 0,
+      "recognition_ids": [
+        "S0d3a00cf27",
+        "S95b417414e"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "eebe5e1fb57eb088ff8f5989baa2815866a0197a3a4f71a66c8863e011994c0a",
+      "output_sha256": "14be378f780079bfd41c5d97100fc78d202df99288da58a696a390bc6db13402",
+      "events_sha256": "35b3ea54a06963c0e97dd760231f896671e4cc5a5ab97e2b67dac1b3d4302c7c",
+      "session_ids": [
+        "01a10681-07b3-7032-b9c3-174d5f61e34c"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": true,
+      "evidence_hashes": [
+        "60a40a49887ab1281c4c226064c25afaa8915aecc19f4f77fadac26e1da1b132",
+        "1ef9209ff6193fb2edb7f64e745de13bbbe30b808e4912bc98eaafab99418b3b",
+        "8b8f547061d4bdb751aa76bf04146f4660fdf4eafa5a30ee9d8f93d603fbcf01",
+        "a364c11753b16edce9e4a94a4a499de4c698e2add6304914323e53e22c79a78d",
+        "33ed8e14c3da1f6720ccf20393f76dfb3f4de5bd2d0fdec330bb5a3a9f60e8e6",
+        "b919e320df8471ed49b7f3a7b9af6b93af0e02ce8d3c5d6774c7cedd83a9bc98",
+        "7da1e7e255919fde95fb6e5369dadc4109796baa4e9038e55910090de0e6b648",
+        "480b14aebae931dd14e874b35fa2b15095edf1a22ecb4cc0aa4f5bfa1fbc806c",
+        "a8b690eb0be49cf96788c31422668167bf9596bb132985311dcc07acb7bf43f6",
+        "baeefb4cc40775ead4208e01e57469d3aa92a095feb7d77f9fdf17cba133ed45",
+        "d03ddbb198037941f2d08e22ea01ad04af97503e4ce2aec89f93e1b306ec563b",
+        "a8596e876f2b4aa743bde3c0bd752b2e00556e1e955c4f25b7b2496ece5450f4",
+        "b6484ae41edca3eced23813e36bd8c5aaa811084a0252517a95bc7fd497e733f",
+        "7d467212085cc46ba5a43811f0f74b7c7efb2dfb307ea1dbae351a211f455b38"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T10:51:36.311333+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b004",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 21,
+      "citation_references": 21,
+      "title_only": 11,
+      "insufficient_evidence": 11,
+      "empty_scenarios": 11,
+      "recognition_ids": [
+        "Saa91e0e4a6",
+        "S460776ba14"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "8ae8f97d2e83d52001179d34bdf5792b150364a72e861fe5899040116b350207",
+      "output_sha256": "f8edf50d75b527b13335c11082fb64dea4a7704a958be52c4055d878a01d0042",
+      "events_sha256": "e8148e4676fdeb3784f6683ce97ad1a16a05b9c62ff186f2e8667463e4632379",
+      "session_ids": [
+        "01a10681-18bd-73c1-8946-18954636bc45"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": true,
+      "evidence_hashes": [
+        "baeefb4cc40775ead4208e01e57469d3aa92a095feb7d77f9fdf17cba133ed45",
+        "857b7e776f837be97cf59748227d2f416b557554ad1dba1684e8bec87e15f0a1",
+        "e1cc07c7c1123afb9342854cf47f4b7c927dade19709d8f01d7ceaa8d2aa985d",
+        "943853da94336e7a787de6e5503290f089baf3b7c96e238bbbf94e60576cd468",
+        "da0270a01eb9f2e565076005dd2d6ac2ca58c2c5ced1bb349a322062fce8cfc1",
+        "3a2282a925852ff5e2981317e016f6da92c3554861feffaeaea2a5c7ab39bf75",
+        "bbe867b315ea105bc78023c1f2e9668ce49e43b68e29457d16536e81e4d84af9",
+        "92bc9b5c849ed59a02532a836112705cce142b9cca739aa80bf0f3d298896b44",
+        "bafed7c88c29e953d56c5b7a80fa29be76e4581e027aeb23b6570a771438a5c9"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T10:51:53.624112+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b005",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 41,
+      "citation_references": 32,
+      "title_only": 8,
+      "insufficient_evidence": 8,
+      "empty_scenarios": 0,
+      "recognition_ids": [
+        "S77eef1197d",
+        "S050cf105b3"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "a68eecc630a1a9fbeb9150d68e462672d581bd1d66b20fe01daa86e94dfc1027",
+      "output_sha256": "b03bf9a9778b7c6838dffe0e968ebeb1553aea37db8b2ad51180759d6d39ffab",
+      "events_sha256": "ab8ef91ba27d8f5c97acb15791f3551411025a010890e2a7eecd589226aec98b",
+      "session_ids": [
+        "01a10683-cae3-7ca2-91d7-8dd6420b44d4"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "a8b690eb0be49cf96788c31422668167bf9596bb132985311dcc07acb7bf43f6",
+        "0617edc8a34087d004ed2ea9bbed8fcf6eb2f6e2dfdf802a0f3490d5b76939f1",
+        "8ef7965194f45585a43d73e92ab9b07e79105bbfd37810b40c62e9be1ad96bcd",
+        "72e87a11e17485bbec04857fb9192eae659de1f71fb85fc03d1c1d264d1516aa",
+        "b0d950b6e31ab6211a626a236e037a3b156b1563b0a1eff058a94605b5bdd09d",
+        "a8596e876f2b4aa743bde3c0bd752b2e00556e1e955c4f25b7b2496ece5450f4",
+        "857b7e776f837be97cf59748227d2f416b557554ad1dba1684e8bec87e15f0a1",
+        "ac217a72dfa6f8912eb71a3967fed56ad23102ffac3fe167b49f1ab0c248394c",
+        "487fce9e650c6a8f8766a7dab3a1099cd2be6a2109f8962d9250f180f4169a2d",
+        "164ecafc2e50462200f10a43bd7211ad267422255167dd745797dd9dd92943c7",
+        "8b8f547061d4bdb751aa76bf04146f4660fdf4eafa5a30ee9d8f93d603fbcf01",
+        "480b14aebae931dd14e874b35fa2b15095edf1a22ecb4cc0aa4f5bfa1fbc806c"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T10:52:09.971837+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b005",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 33,
+      "citation_references": 33,
+      "title_only": 5,
+      "insufficient_evidence": 5,
+      "empty_scenarios": 5,
+      "recognition_ids": [
+        "Scfe46c0c83",
+        "S8348801ea4"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "bb3156b1e6935c34472aa60f87cb46b905079143fad50d3f42a22befe91f5745",
+      "output_sha256": "78ca6799161d25c2824025bdc1ff37766f06a5fd87f35427287598938c6601b4",
+      "events_sha256": "47153ff404b0dfe8d04a21d8b9b5d88f6bcd4381c2199a2806a7c92e2b9f5945",
+      "session_ids": [
+        "01a10684-dabe-7bd2-b971-6f323e58edb5"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "59b7922ad382031b6beebdd77ecacc29660c3a46b129f48385d9af02a7de0f8d",
+        "0be87fcb1c59b8203ab59a937373dba87052d012ca9e2dbf8faa1da2e37d423e",
+        "f8a6238616adf6222a7c50b85f42820f25255079f70473adc38f026c8d2464e4",
+        "b67febbb8016f639d48cb595f25ad6fe51476d6eb22e5ae8a7fbec76925ad766",
+        "8009f243579af5f2e678c2ad3e7ac4f36ff5092ede5a4b185fafce73ca5a41c5",
+        "3a2282a925852ff5e2981317e016f6da92c3554861feffaeaea2a5c7ab39bf75",
+        "6d2007f570a691987c3ae9f05b70b7772c446c5c01a4c23e529c8276744eda54",
+        "c8e82ef8ed2d57744391885e74a591b07a8fd81adae411f4ef45b3487a00ab21",
+        "e9341346859f18794ea03fb7f8c5315d024b3078447c2786ff608cbc1b49b830",
+        "72e87a11e17485bbec04857fb9192eae659de1f71fb85fc03d1c1d264d1516aa",
+        "b919e320df8471ed49b7f3a7b9af6b93af0e02ce8d3c5d6774c7cedd83a9bc98",
+        "e1cc07c7c1123afb9342854cf47f4b7c927dade19709d8f01d7ceaa8d2aa985d",
+        "ac217a72dfa6f8912eb71a3967fed56ad23102ffac3fe167b49f1ab0c248394c",
+        "61c8e1652b8abbd379a36adf884380ec2f658a2978268ee9c81c0d7ff7a8c272",
+        "42fa0129c4e315ca94bf132a25cffd64050c051b2b2883ae0bb1aec25b8ce72c"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T10:52:35.405591+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b006",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 24,
+      "citation_references": 28,
+      "title_only": 10,
+      "insufficient_evidence": 11,
+      "empty_scenarios": 10,
+      "recognition_ids": [
+        "S47ad8dfe73"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "18bea358b029be6cc07a7c4fa04041a82442591d740facaa1feb5bd7f43a4cf9",
+      "output_sha256": "0e0ed2772e425cb1e8b9c014cbe66b9a78e5be72f575df317be792bdb66b3bf6",
+      "events_sha256": "d2044156a9b7250e3abdc3860c74f4c8a360877a6376930719246998e6b5a87b",
+      "session_ids": [
+        "01a10687-c1a6-73c2-884d-e961a7e5ae6d"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "6d2007f570a691987c3ae9f05b70b7772c446c5c01a4c23e529c8276744eda54",
+        "e58752b0f9b53e0cc97897a05ebb57b8b69a868044b8df545efc9691ff9b4617",
+        "da0270a01eb9f2e565076005dd2d6ac2ca58c2c5ced1bb349a322062fce8cfc1",
+        "e9341346859f18794ea03fb7f8c5315d024b3078447c2786ff608cbc1b49b830",
+        "3a2282a925852ff5e2981317e016f6da92c3554861feffaeaea2a5c7ab39bf75",
+        "33ed8e14c3da1f6720ccf20393f76dfb3f4de5bd2d0fdec330bb5a3a9f60e8e6",
+        "97764c5fab1621c838ff149861c25e4bbfbbd0dc4aba07c6fd89b3382c4416a7",
+        "b0d950b6e31ab6211a626a236e037a3b156b1563b0a1eff058a94605b5bdd09d",
+        "cba7648a86e40a8fda4ac735060221e0a6c800046a3f2ea5644036dbc16c555e",
+        "c8e82ef8ed2d57744391885e74a591b07a8fd81adae411f4ef45b3487a00ab21"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T10:52:54.652160+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b006",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 36,
+      "citation_references": 34,
+      "title_only": 4,
+      "insufficient_evidence": 4,
+      "empty_scenarios": 3,
+      "recognition_ids": [
+        "S58e27071d5"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "dcf6e940aded838e6846a5eef735ea2508a81d1d2bedde32c1e02984c16a9c93",
+      "output_sha256": "8e7a47c35b5919deefdc208f8bc9893e961ffb073b21902cb5ffcbf0d8506f6f",
+      "events_sha256": "0743de4f9bed8fa0afc6cf95e9851b317a3ca4f494c35b9bde00ddd421685c89",
+      "session_ids": [
+        "01a10687-c564-73b0-81f8-fecf20ca1d30"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "e16364d602bdd6c7ecf8a9802eac22ad6fd881f1be695f0fdbdc4a048d6f6597",
+        "59b7922ad382031b6beebdd77ecacc29660c3a46b129f48385d9af02a7de0f8d",
+        "bbe867b315ea105bc78023c1f2e9668ce49e43b68e29457d16536e81e4d84af9",
+        "a364c11753b16edce9e4a94a4a499de4c698e2add6304914323e53e22c79a78d",
+        "857b7e776f837be97cf59748227d2f416b557554ad1dba1684e8bec87e15f0a1",
+        "f405b71a089d99b45edce151af98dc0dbd266fde62bd1474633d18cfbabea932",
+        "d03ddbb198037941f2d08e22ea01ad04af97503e4ce2aec89f93e1b306ec563b",
+        "3a2282a925852ff5e2981317e016f6da92c3554861feffaeaea2a5c7ab39bf75",
+        "60a40a49887ab1281c4c226064c25afaa8915aecc19f4f77fadac26e1da1b132",
+        "10b8e0809d07c393cd8894ad3785cbeedbdfb13520e127733c8890b91d59b959",
+        "baeefb4cc40775ead4208e01e57469d3aa92a095feb7d77f9fdf17cba133ed45",
+        "943853da94336e7a787de6e5503290f089baf3b7c96e238bbbf94e60576cd468",
+        "b0d950b6e31ab6211a626a236e037a3b156b1563b0a1eff058a94605b5bdd09d",
+        "8ef7965194f45585a43d73e92ab9b07e79105bbfd37810b40c62e9be1ad96bcd",
+        "cd15b808ed851275194310c455ad3d576572d7b5c7638f3fe05e79978d808729",
+        "29a1ce7c95c60418f629f3925282e76cea5ac4ab6a4deba22bc3db1ba0d8525f"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T10:53:11.870089+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b007",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 21,
+      "citation_references": 21,
+      "title_only": 10,
+      "insufficient_evidence": 10,
+      "empty_scenarios": 10,
+      "recognition_ids": [
+        "Sb5ab522600"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "570c23af9b195751a95bae29b3fa16423d7bbc29319cdd43102509b399939dc9",
+      "output_sha256": "602dea33541f62c272015a89e596d15695ff49a70aa3c4b98ba62395cb134666",
+      "events_sha256": "45aa4f4aca369f68bcd3554b6a0c65308983420b3a47b5b4787d1ae9ee8a4bf0",
+      "session_ids": [
+        "01a1068a-ad67-7e83-bc19-d01c30e7e3b1"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "33ed8e14c3da1f6720ccf20393f76dfb3f4de5bd2d0fdec330bb5a3a9f60e8e6",
+        "97764c5fab1621c838ff149861c25e4bbfbbd0dc4aba07c6fd89b3382c4416a7",
+        "a8b690eb0be49cf96788c31422668167bf9596bb132985311dcc07acb7bf43f6",
+        "d03ddbb198037941f2d08e22ea01ad04af97503e4ce2aec89f93e1b306ec563b",
+        "baeefb4cc40775ead4208e01e57469d3aa92a095feb7d77f9fdf17cba133ed45",
+        "030d09adc59924049f85556bf3106072fffed95292b52e7738ced8dfbd778722",
+        "8ef7965194f45585a43d73e92ab9b07e79105bbfd37810b40c62e9be1ad96bcd",
+        "0be87fcb1c59b8203ab59a937373dba87052d012ca9e2dbf8faa1da2e37d423e",
+        "857b7e776f837be97cf59748227d2f416b557554ad1dba1684e8bec87e15f0a1",
+        "f471486376d66f129630560d081647be23557a4407050f27a7b33c7a88864f2d"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T23:37:00.755631+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b007",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 16,
+      "citation_references": 16,
+      "title_only": 10,
+      "insufficient_evidence": 10,
+      "empty_scenarios": 10,
+      "recognition_ids": [
+        "S42a1e0c665",
+        "Sa59609a580"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "a39dc36a8b3922f5cbb313364a6f5326e17ddd4752295be134c39e640832fa7b",
+      "output_sha256": "070580bf8118996d806a4be42950e374a3acb9958068a8aff8c36e57122e95a7",
+      "events_sha256": "94ef97b512807f2f6e5abad68dc1e368cccf7038faae5e721b99da5e79e46b3e",
+      "session_ids": [
+        "01a1068a-f470-7f21-883c-c527f7ae1391"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": true,
+      "evidence_hashes": [
+        "e16364d602bdd6c7ecf8a9802eac22ad6fd881f1be695f0fdbdc4a048d6f6597",
+        "60a40a49887ab1281c4c226064c25afaa8915aecc19f4f77fadac26e1da1b132",
+        "3a2282a925852ff5e2981317e016f6da92c3554861feffaeaea2a5c7ab39bf75",
+        "bbe867b315ea105bc78023c1f2e9668ce49e43b68e29457d16536e81e4d84af9",
+        "030d09adc59924049f85556bf3106072fffed95292b52e7738ced8dfbd778722",
+        "943853da94336e7a787de6e5503290f089baf3b7c96e238bbbf94e60576cd468",
+        "72e87a11e17485bbec04857fb9192eae659de1f71fb85fc03d1c1d264d1516aa",
+        "b0d950b6e31ab6211a626a236e037a3b156b1563b0a1eff058a94605b5bdd09d",
+        "59b7922ad382031b6beebdd77ecacc29660c3a46b129f48385d9af02a7de0f8d",
+        "8ef7965194f45585a43d73e92ab9b07e79105bbfd37810b40c62e9be1ad96bcd"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T23:37:13.516860+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b008",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 40,
+      "citation_references": 18,
+      "title_only": 11,
+      "insufficient_evidence": 11,
+      "empty_scenarios": 0,
+      "recognition_ids": [
+        "Scfadf319e2"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "7b4d4eb7dbafd1b856a4b88430d375deac68008a4662b09dd9a3f17260ade8ff",
+      "output_sha256": "268a18b58b5d52825c0489f43cd38d914c1c08f58e68b26f38faa9849b36710f",
+      "events_sha256": "cabdd914da59a743c71f6012a1713876eacf42ec6075ff7b4a37a815ee75ce27",
+      "session_ids": [
+        "01a1068d-2e40-7713-9f3c-ef911ebe3abf"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": true,
+      "evidence_hashes": [
+        "baeefb4cc40775ead4208e01e57469d3aa92a095feb7d77f9fdf17cba133ed45",
+        "e16364d602bdd6c7ecf8a9802eac22ad6fd881f1be695f0fdbdc4a048d6f6597",
+        "c8e82ef8ed2d57744391885e74a591b07a8fd81adae411f4ef45b3487a00ab21",
+        "e6914c6804aa92c37dc1c7ff18b58e0713f4cd3d7af852a5f2078807b339957a",
+        "e5ed024661bf0ae5fc5ad699e87e0436e27e9b6a1d7540f6d61edbb097de3860",
+        "ee7a48609d9119d4cf658a6b7e23da76bcc7790e610a11b67563ac7bc07fed27",
+        "10b8e0809d07c393cd8894ad3785cbeedbdfb13520e127733c8890b91d59b959",
+        "030d09adc59924049f85556bf3106072fffed95292b52e7738ced8dfbd778722",
+        "24cbc2055be702a39503acf1fffddaec0afe30f9579285478d2ed5fe79d0b513"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T23:37:32.376782+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b009",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 43,
+      "citation_references": 28,
+      "title_only": 8,
+      "insufficient_evidence": 8,
+      "empty_scenarios": 0,
+      "recognition_ids": [
+        "Sf167e5f899"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "56b4e805f46a72709ef6beeaeec6e45a05eb5e7822b5c3f272005c363f1b81ff",
+      "output_sha256": "ac776ddf171fa752b98373567fb01493708ceca4793a162f6815c36a9ebc7c87",
+      "events_sha256": "12acf9af75fe209c4d3d0f103bb1ae888cb5cc5fb7c88d3b7edac8d8c2ccf582",
+      "session_ids": [
+        "01a10946-6f5d-7cc0-bd19-3e1bdfa5e2de"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "f8a6238616adf6222a7c50b85f42820f25255079f70473adc38f026c8d2464e4",
+        "baeefb4cc40775ead4208e01e57469d3aa92a095feb7d77f9fdf17cba133ed45",
+        "da0270a01eb9f2e565076005dd2d6ac2ca58c2c5ced1bb349a322062fce8cfc1",
+        "164ecafc2e50462200f10a43bd7211ad267422255167dd745797dd9dd92943c7",
+        "6d2007f570a691987c3ae9f05b70b7772c446c5c01a4c23e529c8276744eda54",
+        "664b402bad976e7890342275684dbc490a28163286e629db86f2d4baa80a54dd",
+        "61c8e1652b8abbd379a36adf884380ec2f658a2978268ee9c81c0d7ff7a8c272",
+        "b0d950b6e31ab6211a626a236e037a3b156b1563b0a1eff058a94605b5bdd09d",
+        "487fce9e650c6a8f8766a7dab3a1099cd2be6a2109f8962d9250f180f4169a2d",
+        "8009f243579af5f2e678c2ad3e7ac4f36ff5092ede5a4b185fafce73ca5a41c5",
+        "10b8e0809d07c393cd8894ad3785cbeedbdfb13520e127733c8890b91d59b959",
+        "e5ed024661bf0ae5fc5ad699e87e0436e27e9b6a1d7540f6d61edbb097de3860"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T23:39:45.327019+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b008",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 17,
+      "citation_references": 17,
+      "title_only": 12,
+      "insufficient_evidence": 12,
+      "empty_scenarios": 12,
+      "recognition_ids": [
+        "S48ebcee6f3"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "6924ba93cc87a48a95f621f8e638254dea5d9cb029e641af9a3586a372a5ba9f",
+      "output_sha256": "a2c48f41d2138dc0151d31ba41d627ae7187d9d787aac6dcd4a19729e3f1fba5",
+      "events_sha256": "0e6aa78f82e16e990cd72e91b459987c58f85198c7fe3923077efb94be2e8b30",
+      "session_ids": [
+        "01a10946-6f5c-78b1-ac36-9461b1d8c020"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": true,
+      "evidence_hashes": [
+        "e1cc07c7c1123afb9342854cf47f4b7c927dade19709d8f01d7ceaa8d2aa985d",
+        "bbe867b315ea105bc78023c1f2e9668ce49e43b68e29457d16536e81e4d84af9",
+        "cd15b808ed851275194310c455ad3d576572d7b5c7638f3fe05e79978d808729",
+        "f8a6238616adf6222a7c50b85f42820f25255079f70473adc38f026c8d2464e4",
+        "0be87fcb1c59b8203ab59a937373dba87052d012ca9e2dbf8faa1da2e37d423e",
+        "da0270a01eb9f2e565076005dd2d6ac2ca58c2c5ced1bb349a322062fce8cfc1",
+        "a364c11753b16edce9e4a94a4a499de4c698e2add6304914323e53e22c79a78d",
+        "487fce9e650c6a8f8766a7dab3a1099cd2be6a2109f8962d9250f180f4169a2d"
+      ],
+      "resolved_provenance_findings": [
+        {
+          "issue": "Active archived event copy was the prior quota-failed attempt",
+          "resolution": "Parent replaced active event copy with current successful receipt event; failed attempt separately preserved",
+          "verified_successful_event_sha256": "0e6aa78f82e16e990cd72e91b459987c58f85198c7fe3923077efb94be2e8b30",
+          "preserved_failed_event_sha256": "13e012200dff3d4b1c328ca1b8db14143d418912d58f893a228ec3231a2fc9e8",
+          "verified_at": "2026-10-04T23:41:15.502249+00:00",
+          "failed_event_bytes_hash_verified": true,
+          "failed_attempt_agent_messages": 0
+        }
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T23:41:16.872231+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b009",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 42,
+      "citation_references": 18,
+      "title_only": 12,
+      "insufficient_evidence": 12,
+      "empty_scenarios": 0,
+      "recognition_ids": [
+        "S156d3cf5d6",
+        "S94feaff2d7"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "ff69f35ada98cfd7869367962fed08e7bceb5069c44850b4535ac82ae938ca59",
+      "output_sha256": "4ba8e04ca3f0472a336ec30d56b6d0dbd0cce935fa189d3bab61013a7b9e4169",
+      "events_sha256": "af28f760e74850db6993045125c48084a97c0dfe7416172405da1d5986f0b180",
+      "session_ids": [
+        "01a10948-e909-7981-80e2-4f6d0f0d878c"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "cd15b808ed851275194310c455ad3d576572d7b5c7638f3fe05e79978d808729",
+        "1ef9209ff6193fb2edb7f64e745de13bbbe30b808e4912bc98eaafab99418b3b",
+        "61c8e1652b8abbd379a36adf884380ec2f658a2978268ee9c81c0d7ff7a8c272",
+        "6d2007f570a691987c3ae9f05b70b7772c446c5c01a4c23e529c8276744eda54",
+        "664b402bad976e7890342275684dbc490a28163286e629db86f2d4baa80a54dd",
+        "3cc05e255f2bfd59e2f15a5aadfd8ec38ae26d481191d07a11690ca4e57e4cb3",
+        "857b7e776f837be97cf59748227d2f416b557554ad1dba1684e8bec87e15f0a1",
+        "b0d950b6e31ab6211a626a236e037a3b156b1563b0a1eff058a94605b5bdd09d"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T23:42:30.625312+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b010",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 34,
+      "citation_references": 36,
+      "title_only": 7,
+      "insufficient_evidence": 7,
+      "empty_scenarios": 7,
+      "recognition_ids": [
+        "S9779bb595d",
+        "S846c01fe50"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "8044d982cd0fc9d138cd28076c3fc57db412afb98108be0ed0163672dc88ac9c",
+      "output_sha256": "0aa8434dcfa094ada1783d7878047ba781b42954a1e067ccafce3f1c1bff4f51",
+      "events_sha256": "d5b5a2533098bcb799a94cbc45b48843db2e36feaf04c9663ecd63ecb4ed0063",
+      "session_ids": [
+        "01a10949-6cbe-7690-a6fb-105e606968d4"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "f8a6238616adf6222a7c50b85f42820f25255079f70473adc38f026c8d2464e4",
+        "3ea1e05d84323c2fa31122c9f542b076d0f689b010b987e06de73bf4baaa3281",
+        "61c8e1652b8abbd379a36adf884380ec2f658a2978268ee9c81c0d7ff7a8c272",
+        "60a40a49887ab1281c4c226064c25afaa8915aecc19f4f77fadac26e1da1b132",
+        "d5961ad5dd554fa6cf09dcc46973a587b4239d28431a475f0bfed4d5b5491536",
+        "6d2007f570a691987c3ae9f05b70b7772c446c5c01a4c23e529c8276744eda54",
+        "59b7922ad382031b6beebdd77ecacc29660c3a46b129f48385d9af02a7de0f8d",
+        "8009f243579af5f2e678c2ad3e7ac4f36ff5092ede5a4b185fafce73ca5a41c5",
+        "f405b71a089d99b45edce151af98dc0dbd266fde62bd1474633d18cfbabea932",
+        "1ef9209ff6193fb2edb7f64e745de13bbbe30b808e4912bc98eaafab99418b3b",
+        "b67febbb8016f639d48cb595f25ad6fe51476d6eb22e5ae8a7fbec76925ad766",
+        "e58752b0f9b53e0cc97897a05ebb57b8b69a868044b8df545efc9691ff9b4617",
+        "480fff40a118dad1aac5a3ece3f7e433515a8302c18bb13cb71047233ac97d2f"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T23:43:29.931276+00:00"
+    },
+    {
+      "batch_id": "ASTRA_CAL60_b010",
+      "status": "PASS",
+      "forecast_count": 20,
+      "scenario_count": 31,
+      "citation_references": 13,
+      "title_only": 14,
+      "insufficient_evidence": 14,
+      "empty_scenarios": 0,
+      "recognition_ids": [
+        "S7e56a23d55",
+        "S994f671b79",
+        "Sc5dc484c19"
+      ],
+      "observed_contamination_findings": [],
+      "mechanical_findings": [],
+      "packet_sha256": "2966c16bbe234357969c0904a419b9e60c64d245e41d505540ec421a6fc3d86f",
+      "output_sha256": "9c0bdbacb27e0f4d2da35dca078670f9700bc81e2529d53f7eebf6cdb0a63a93",
+      "events_sha256": "d321c596b69bf76fb6a9553a4d585d86c1c084254fa48ab304a583fdc3ab17cb",
+      "session_ids": [
+        "01a1094b-dcb1-7723-b723-7f76a420377f"
+      ],
+      "event_types": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "item.completed": 1,
+        "turn.completed": 1
+      },
+      "archive_events_present": false,
+      "evidence_hashes": [
+        "664b402bad976e7890342275684dbc490a28163286e629db86f2d4baa80a54dd",
+        "3cc05e255f2bfd59e2f15a5aadfd8ec38ae26d481191d07a11690ca4e57e4cb3",
+        "b67febbb8016f639d48cb595f25ad6fe51476d6eb22e5ae8a7fbec76925ad766",
+        "60a40a49887ab1281c4c226064c25afaa8915aecc19f4f77fadac26e1da1b132",
+        "e58752b0f9b53e0cc97897a05ebb57b8b69a868044b8df545efc9691ff9b4617",
+        "6d2007f570a691987c3ae9f05b70b7772c446c5c01a4c23e529c8276744eda54"
+      ],
+      "text_review_complete": true,
+      "reviewed_at": "2026-10-04T23:45:45.099980+00:00"
+    }
+  ],
+  "reviewed_evidence": {
+    "60a40a49887ab1281c4c226064c25afaa8915aecc19f4f77fadac26e1da1b132": "ASTRA_CORE60_b004",
+    "1ef9209ff6193fb2edb7f64e745de13bbbe30b808e4912bc98eaafab99418b3b": "ASTRA_CORE60_b004",
+    "8b8f547061d4bdb751aa76bf04146f4660fdf4eafa5a30ee9d8f93d603fbcf01": "ASTRA_CORE60_b004",
+    "a364c11753b16edce9e4a94a4a499de4c698e2add6304914323e53e22c79a78d": "ASTRA_CORE60_b004",
+    "33ed8e14c3da1f6720ccf20393f76dfb3f4de5bd2d0fdec330bb5a3a9f60e8e6": "ASTRA_CORE60_b004",
+    "b919e320df8471ed49b7f3a7b9af6b93af0e02ce8d3c5d6774c7cedd83a9bc98": "ASTRA_CORE60_b004",
+    "7da1e7e255919fde95fb6e5369dadc4109796baa4e9038e55910090de0e6b648": "ASTRA_CORE60_b004",
+    "480b14aebae931dd14e874b35fa2b15095edf1a22ecb4cc0aa4f5bfa1fbc806c": "ASTRA_CORE60_b004",
+    "a8b690eb0be49cf96788c31422668167bf9596bb132985311dcc07acb7bf43f6": "ASTRA_CORE60_b004",
+    "baeefb4cc40775ead4208e01e57469d3aa92a095feb7d77f9fdf17cba133ed45": "ASTRA_CORE60_b004",
+    "d03ddbb198037941f2d08e22ea01ad04af97503e4ce2aec89f93e1b306ec563b": "ASTRA_CORE60_b004",
+    "a8596e876f2b4aa743bde3c0bd752b2e00556e1e955c4f25b7b2496ece5450f4": "ASTRA_CORE60_b004",
+    "b6484ae41edca3eced23813e36bd8c5aaa811084a0252517a95bc7fd497e733f": "ASTRA_CORE60_b004",
+    "7d467212085cc46ba5a43811f0f74b7c7efb2dfb307ea1dbae351a211f455b38": "ASTRA_CORE60_b004",
+    "857b7e776f837be97cf59748227d2f416b557554ad1dba1684e8bec87e15f0a1": "ASTRA_CAL60_b004",
+    "e1cc07c7c1123afb9342854cf47f4b7c927dade19709d8f01d7ceaa8d2aa985d": "ASTRA_CAL60_b004",
+    "943853da94336e7a787de6e5503290f089baf3b7c96e238bbbf94e60576cd468": "ASTRA_CAL60_b004",
+    "da0270a01eb9f2e565076005dd2d6ac2ca58c2c5ced1bb349a322062fce8cfc1": "ASTRA_CAL60_b004",
+    "3a2282a925852ff5e2981317e016f6da92c3554861feffaeaea2a5c7ab39bf75": "ASTRA_CAL60_b004",
+    "bbe867b315ea105bc78023c1f2e9668ce49e43b68e29457d16536e81e4d84af9": "ASTRA_CAL60_b004",
+    "92bc9b5c849ed59a02532a836112705cce142b9cca739aa80bf0f3d298896b44": "ASTRA_CAL60_b004",
+    "bafed7c88c29e953d56c5b7a80fa29be76e4581e027aeb23b6570a771438a5c9": "ASTRA_CAL60_b004",
+    "0617edc8a34087d004ed2ea9bbed8fcf6eb2f6e2dfdf802a0f3490d5b76939f1": "ASTRA_CORE60_b005",
+    "8ef7965194f45585a43d73e92ab9b07e79105bbfd37810b40c62e9be1ad96bcd": "ASTRA_CORE60_b005",
+    "72e87a11e17485bbec04857fb9192eae659de1f71fb85fc03d1c1d264d1516aa": "ASTRA_CORE60_b005",
+    "b0d950b6e31ab6211a626a236e037a3b156b1563b0a1eff058a94605b5bdd09d": "ASTRA_CORE60_b005",
+    "ac217a72dfa6f8912eb71a3967fed56ad23102ffac3fe167b49f1ab0c248394c": "ASTRA_CORE60_b005",
+    "487fce9e650c6a8f8766a7dab3a1099cd2be6a2109f8962d9250f180f4169a2d": "ASTRA_CORE60_b005",
+    "164ecafc2e50462200f10a43bd7211ad267422255167dd745797dd9dd92943c7": "ASTRA_CORE60_b005",
+    "59b7922ad382031b6beebdd77ecacc29660c3a46b129f48385d9af02a7de0f8d": "ASTRA_CAL60_b005",
+    "0be87fcb1c59b8203ab59a937373dba87052d012ca9e2dbf8faa1da2e37d423e": "ASTRA_CAL60_b005",
+    "f8a6238616adf6222a7c50b85f42820f25255079f70473adc38f026c8d2464e4": "ASTRA_CAL60_b005",
+    "b67febbb8016f639d48cb595f25ad6fe51476d6eb22e5ae8a7fbec76925ad766": "ASTRA_CAL60_b005",
+    "8009f243579af5f2e678c2ad3e7ac4f36ff5092ede5a4b185fafce73ca5a41c5": "ASTRA_CAL60_b005",
+    "6d2007f570a691987c3ae9f05b70b7772c446c5c01a4c23e529c8276744eda54": "ASTRA_CAL60_b005",
+    "c8e82ef8ed2d57744391885e74a591b07a8fd81adae411f4ef45b3487a00ab21": "ASTRA_CAL60_b005",
+    "e9341346859f18794ea03fb7f8c5315d024b3078447c2786ff608cbc1b49b830": "ASTRA_CAL60_b005",
+    "61c8e1652b8abbd379a36adf884380ec2f658a2978268ee9c81c0d7ff7a8c272": "ASTRA_CAL60_b005",
+    "42fa0129c4e315ca94bf132a25cffd64050c051b2b2883ae0bb1aec25b8ce72c": "ASTRA_CAL60_b005",
+    "e58752b0f9b53e0cc97897a05ebb57b8b69a868044b8df545efc9691ff9b4617": "ASTRA_CORE60_b006",
+    "97764c5fab1621c838ff149861c25e4bbfbbd0dc4aba07c6fd89b3382c4416a7": "ASTRA_CORE60_b006",
+    "cba7648a86e40a8fda4ac735060221e0a6c800046a3f2ea5644036dbc16c555e": "ASTRA_CORE60_b006",
+    "e16364d602bdd6c7ecf8a9802eac22ad6fd881f1be695f0fdbdc4a048d6f6597": "ASTRA_CAL60_b006",
+    "f405b71a089d99b45edce151af98dc0dbd266fde62bd1474633d18cfbabea932": "ASTRA_CAL60_b006",
+    "10b8e0809d07c393cd8894ad3785cbeedbdfb13520e127733c8890b91d59b959": "ASTRA_CAL60_b006",
+    "cd15b808ed851275194310c455ad3d576572d7b5c7638f3fe05e79978d808729": "ASTRA_CAL60_b006",
+    "29a1ce7c95c60418f629f3925282e76cea5ac4ab6a4deba22bc3db1ba0d8525f": "ASTRA_CAL60_b006",
+    "030d09adc59924049f85556bf3106072fffed95292b52e7738ced8dfbd778722": "ASTRA_CORE60_b007",
+    "f471486376d66f129630560d081647be23557a4407050f27a7b33c7a88864f2d": "ASTRA_CORE60_b007",
+    "e6914c6804aa92c37dc1c7ff18b58e0713f4cd3d7af852a5f2078807b339957a": "ASTRA_CORE60_b008",
+    "e5ed024661bf0ae5fc5ad699e87e0436e27e9b6a1d7540f6d61edbb097de3860": "ASTRA_CORE60_b008",
+    "ee7a48609d9119d4cf658a6b7e23da76bcc7790e610a11b67563ac7bc07fed27": "ASTRA_CORE60_b008",
+    "24cbc2055be702a39503acf1fffddaec0afe30f9579285478d2ed5fe79d0b513": "ASTRA_CORE60_b008",
+    "664b402bad976e7890342275684dbc490a28163286e629db86f2d4baa80a54dd": "ASTRA_CORE60_b009",
+    "3cc05e255f2bfd59e2f15a5aadfd8ec38ae26d481191d07a11690ca4e57e4cb3": "ASTRA_CAL60_b009",
+    "3ea1e05d84323c2fa31122c9f542b076d0f689b010b987e06de73bf4baaa3281": "ASTRA_CORE60_b010",
+    "d5961ad5dd554fa6cf09dcc46973a587b4239d28431a475f0bfed4d5b5491536": "ASTRA_CORE60_b010",
+    "480fff40a118dad1aac5a3ece3f7e433515a8302c18bb13cb71047233ac97d2f": "ASTRA_CORE60_b010"
+  },
+  "limitations": [
+    "No outcome records parsed; canonical files hashed as opaque bytes only.",
+    "Recognition is self-report; no proof against latent memory influence."
+  ],
+  "updated_at": "2026-10-04T23:45:45.099980+00:00",
+  "dataset_hashes_verified": true,
+  "audited_batches": 14,
+  "audited_distinct_forecasts": 280
+}

@@ -1,0 +1,1260 @@
+{
+  "audit_date": "2026-10-05",
+  "scope": "CORE_11_15",
+  "status": "PASS",
+  "audit_kind": "bounded independent text/citation red-team audit",
+  "model_named_in_input": "gpt-6-astra",
+  "input_path": "C:\\Users\\saura\\Downloads\\regulator-predict\\data\\audits\\scaled60_text_review_input_CORE_11_15_20261005.json",
+  "input_sha256": "e58df4efc286799f8908247e96fc6e6bfc74445482c1b55901319b7c45df9975",
+  "summary": "All 100 forecasts and 40 supplied evidence profiles reviewed. No asserted post-cutoff outcome, visible cross-snapshot transfer, invalid same-profile citation, or visibly undisclosed outcome claim found. Eight snapshots contain nonblocking unsupported conditional numerical guesses.",
+  "audited_batch_ids": [
+    "ASTRA_CORE60_b011",
+    "ASTRA_CORE60_b012",
+    "ASTRA_CORE60_b013",
+    "ASTRA_CORE60_b014",
+    "ASTRA_CORE60_b015"
+  ],
+  "audited_snapshot_ids": [
+    "Sbc753e4d30",
+    "S365a5bde85",
+    "S24b6400e89",
+    "Se8ba78babd",
+    "S9b1b12fefe",
+    "S8dac3245b9",
+    "Sf178aa4a6a",
+    "Sf3b5766514",
+    "S6e9a297fc3",
+    "S63bb3c38aa",
+    "S0647f362ec",
+    "S68de664d3b",
+    "Sa034caed7d",
+    "S3e7129c433",
+    "S9bd7653742",
+    "S8ef6703593",
+    "S49f3ad46f7",
+    "S5850a4fe34",
+    "S23fd8a9e5d",
+    "S7f475b9b77",
+    "Sd3701be948",
+    "S6822b74057",
+    "S5102e60219",
+    "S52c27d6bbf",
+    "Sa61dda0e68",
+    "S13fbc45234",
+    "S5e66c94da8",
+    "S654a39b01c",
+    "S22671e5903",
+    "S43dbe996b4",
+    "Sea0ea85cef",
+    "Sa64549a749",
+    "S08373fdea5",
+    "S0e4a5e7ea8",
+    "Sc1688a63b6",
+    "S5201344288",
+    "Sc827e25536",
+    "S01e30fe39c",
+    "Sfbf2d0f1e9",
+    "Sa70d3b82ed",
+    "Sb59f09546a",
+    "S519d977f04",
+    "Scb45011ca1",
+    "S872fabc935",
+    "S6ee8b3e3ca",
+    "S0e9bc218df",
+    "Sc5b58156b6",
+    "S98026427cb",
+    "Safe94de614",
+    "S0d0035a7a5",
+    "Sb8cd3e8195",
+    "S3fe0607c6a",
+    "Sf01d88151a",
+    "Sec1551e69c",
+    "Seb27ba1de3",
+    "Safb7c51524",
+    "S7d743d9b36",
+    "S0849a50464",
+    "S72e4ff6b0f",
+    "S6a712174ce",
+    "S564ce60f6d",
+    "Sd65b57b1a2",
+    "S3c50127b06",
+    "S4ebd608030",
+    "Sb23d5d0736",
+    "Scb1b9b5004",
+    "Scb856082b3",
+    "S9332025d1a",
+    "Se9118ef529",
+    "S6d8a68496f",
+    "S07150dde93",
+    "S416cfef0e4",
+    "Sfa5b439710",
+    "Se4327836d5",
+    "S035aa630f9",
+    "Sc297df683d",
+    "S936eb64977",
+    "S4dbc738e7b",
+    "Se0efc50fd6",
+    "S283e3f047b",
+    "Se272b0792d",
+    "Sb91d276853",
+    "S535506cc30",
+    "S7a08fa0fcf",
+    "Sea64372682",
+    "Saedf121836",
+    "S591534befb",
+    "S6943785a7c",
+    "Sb9ade2b2e5",
+    "Sb83b51f2e9",
+    "S38e812fbd2",
+    "Sc83723bef8",
+    "S8e6e622db4",
+    "S917443f737",
+    "S73b4778629",
+    "S18e65332c7",
+    "S511ac0376a",
+    "Sbb8480c400",
+    "Sb9b230f0b6",
+    "Sbc4a9e7df1"
+  ],
+  "counts": {
+    "forecasts": 100,
+    "batches": 5,
+    "evidence_profiles": 40,
+    "with_evidence": 45,
+    "without_evidence": 55,
+    "scenarios": 153,
+    "ev_citations": 107,
+    "contra_citations": 4,
+    "recognised_outcome_true": 10,
+    "recognised_outcome_false": 90,
+    "unsupported_parameter_snapshots": 8,
+    "unsupported_parameter_fields": 15
+  },
+  "coverage": {
+    "all_original_forecast_fields_read": true,
+    "all_narrative_scenario_parameter_missing_information_strings_read": true,
+    "all_profiles_read": true,
+    "reading_method": "Read all 40 profiles in two ordered chunks and all 100 cases in four ordered chunks. A tool display truncation in the third case chunk was repaired by rereading cases 61-65 in full, covering the omitted text. Unicode numerical delimiters were checked programmatically."
+  },
+  "reconstruction": {
+    "status": "PASS",
+    "method": "Parsed only the five referenced original outputs and packets for reconstruction. Every raw forecast object equals its original parsed JSON object. Each original SNAPSHOT body equals header_verbatim plus its referenced profile (single newline join), after outer whitespace stripping and text newline normalization. Original packet/output snapshot membership matches exactly. No source narrative was omitted.",
+    "batch_results": [
+      {
+        "batch_id": "ASTRA_CORE60_b011",
+        "forecast_objects_equal": 20,
+        "whole_snapshot_bodies_equal": 20
+      },
+      {
+        "batch_id": "ASTRA_CORE60_b012",
+        "forecast_objects_equal": 20,
+        "whole_snapshot_bodies_equal": 20
+      },
+      {
+        "batch_id": "ASTRA_CORE60_b013",
+        "forecast_objects_equal": 20,
+        "whole_snapshot_bodies_equal": 20
+      },
+      {
+        "batch_id": "ASTRA_CORE60_b014",
+        "forecast_objects_equal": 20,
+        "whole_snapshot_bodies_equal": 20
+      },
+      {
+        "batch_id": "ASTRA_CORE60_b015",
+        "forecast_objects_equal": 20,
+        "whole_snapshot_bodies_equal": 20
+      }
+    ]
+  },
+  "recognised_ids": [
+    "Se8ba78babd",
+    "Sa61dda0e68",
+    "Sb59f09546a",
+    "S519d977f04",
+    "S3c50127b06",
+    "S416cfef0e4",
+    "S035aa630f9",
+    "S4dbc738e7b",
+    "Sb83b51f2e9",
+    "Sbc4a9e7df1"
+  ],
+  "recognition_review": {
+    "status": "PASS",
+    "all_flags_present_and_boolean": true,
+    "assessment": "All ten recognitions are explicitly disclosed by recognised_outcome=true. Their narratives make no remembered finalization-date or realized-content claim. No false-flagged forecast visibly claims knowledge of a post-cutoff outcome. Different flags on related snapshots do not by themselves demonstrate misconduct or contamination."
+  },
+  "contamination_findings": [],
+  "citation_issues": [],
+  "citation_review": {
+    "status": "PASS",
+    "assessment": "All 111 ev/contra references resolve to E1 or E2 within the cited snapshot profile. Title-only cases carry no evidence labels. Scenario citations provide the topic/proposal or process anchor; they do not authenticate every hypothetical modification.",
+    "scope_notes": [
+      {
+        "snapshot_id": "S4dbc738e7b",
+        "note": "E2 is the comment-period extension, used with E1 in alternative scenarios. It supports consultation/process uncertainty, not a demonstrated decision to narrow or rebalance enforcement priorities; those mechanisms remain conditional forecasts."
+      }
+    ]
+  },
+  "unsupported_parameter_findings": [
+    {
+      "snapshot_id": "Sf178aa4a6a",
+      "batch_id": "ASTRA_CORE60_b011",
+      "evidence_profile": "P09aa5bf0e3aa62b8",
+      "classification": "unsupported_conditional_numerical_guess",
+      "blocking": false,
+      "fields": [
+        {
+          "path": "scenarios[1].params.AUM_threshold",
+          "value": "Rs 20,000–30,000 crore"
+        },
+        {
+          "path": "scenarios[1].params.additional_transition",
+          "value": "0–12 months"
+        },
+        {
+          "path": "scenarios[2].params.averaging_window",
+          "value": "1–3 months"
+        }
+      ],
+      "explanation": "E1 supplies the proposed Rs 20,000 crore threshold and monthly daily-average method. The higher upper bound, transition range, and longer averaging window have no supplied numerical derivation.",
+      "contamination_assessment": "Presented within probabilistic future scenarios, not asserted as a realized outcome or an established post-cutoff fact. No rewrite performed."
+    },
+    {
+      "snapshot_id": "S9bd7653742",
+      "batch_id": "ASTRA_CORE60_b011",
+      "evidence_profile": "P01c30b1e9a8be8dc",
+      "classification": "unsupported_conditional_numerical_guess",
+      "blocking": false,
+      "fields": [
+        {
+          "path": "scenarios[0].params.base_price_reference",
+          "value": "T-0 to T-1 NAV or corresponding current-value reference"
+        },
+        {
+          "path": "scenarios[1].params.base_price_reference",
+          "value": "T-1 NAV"
+        },
+        {
+          "path": "scenarios[2].params.base_price_reference",
+          "value": "T-0 to T-1 reference"
+        }
+      ],
+      "explanation": "E1 identifies the existing T-2 NAV reference and its lag, but omits the replacement methodology. The T-0/T-1 predictions are extrapolations; the existing 20% and 5% band anchors are supported.",
+      "contamination_assessment": "Presented within probabilistic future scenarios, not asserted as a realized outcome or an established post-cutoff fact. No rewrite performed."
+    },
+    {
+      "snapshot_id": "S52c27d6bbf",
+      "batch_id": "ASTRA_CORE60_b012",
+      "evidence_profile": "P295634314f74480c",
+      "classification": "unsupported_conditional_numerical_guess",
+      "blocking": false,
+      "fields": [
+        {
+          "path": "scenarios[1].params.implementation_transition",
+          "value": "1–6 months"
+        }
+      ],
+      "explanation": "E1 supplies the funds-only netting mechanism, gross securities settlement, and delivery-based taxes, but no 1-6 month transition range.",
+      "contamination_assessment": "Presented within probabilistic future scenarios, not asserted as a realized outcome or an established post-cutoff fact. No rewrite performed."
+    },
+    {
+      "snapshot_id": "S01e30fe39c",
+      "batch_id": "ASTRA_CORE60_b012",
+      "evidence_profile": "P881e8e40b6af573c",
+      "classification": "unsupported_conditional_numerical_guess",
+      "blocking": false,
+      "fields": [
+        {
+          "path": "scenarios[0].params.Z_score_cap",
+          "value": "5–9.9"
+        }
+      ],
+      "explanation": "E1 supplies the existing Z-score cap of 10 and 15-year lookback, and says they are under review. It supplies neither a lower replacement cap nor the 5-9.9 range.",
+      "contamination_assessment": "Presented within probabilistic future scenarios, not asserted as a realized outcome or an established post-cutoff fact. No rewrite performed."
+    },
+    {
+      "snapshot_id": "S6ee8b3e3ca",
+      "batch_id": "ASTRA_CORE60_b013",
+      "evidence_profile": "P01c30b1e9a8be8dc",
+      "classification": "unsupported_conditional_numerical_guess",
+      "blocking": false,
+      "fields": [
+        {
+          "path": "scenarios[0].params.reference_lag",
+          "value": "0–1 trading day where operationally available"
+        },
+        {
+          "path": "scenarios[1].params.reference_lag",
+          "value": "0–1 trading day for affected categories"
+        }
+      ],
+      "explanation": "E1 identifies the lagged T-2 reference and existing bands, but does not state a 0-1 trading-day replacement. These are conditional reference-price guesses.",
+      "contamination_assessment": "Presented within probabilistic future scenarios, not asserted as a realized outcome or an established post-cutoff fact. No rewrite performed."
+    },
+    {
+      "snapshot_id": "S6d8a68496f",
+      "batch_id": "ASTRA_CORE60_b014",
+      "evidence_profile": "Pe0c9ce4769ec5f7e",
+      "classification": "unsupported_conditional_numerical_guess",
+      "blocking": false,
+      "fields": [
+        {
+          "path": "scenarios[1].params.individual_minimum_investment_INR",
+          "value": "5000–50000"
+        }
+      ],
+      "explanation": "E1 supplies the existing INR 200,000 and proposed INR 1,000 minimums. It does not supply the intermediate INR 5,000-50,000 alternative.",
+      "contamination_assessment": "Presented within probabilistic future scenarios, not asserted as a realized outcome or an established post-cutoff fact. No rewrite performed."
+    },
+    {
+      "snapshot_id": "Se4327836d5",
+      "batch_id": "ASTRA_CORE60_b014",
+      "evidence_profile": "P47d7d3588987527b",
+      "classification": "unsupported_conditional_numerical_guess",
+      "blocking": false,
+      "fields": [
+        {
+          "path": "scenarios[0].params.simplified_documentation_threshold_INR",
+          "value": "1000000–2000000"
+        },
+        {
+          "path": "scenarios[1].params.simplified_documentation_threshold_INR",
+          "value": "1500000–3000000"
+        },
+        {
+          "path": "scenarios[2].params.simplified_documentation_threshold_INR",
+          "value": "600000–1000000"
+        }
+      ],
+      "explanation": "E1 supplies the existing INR 500,000 threshold and a proposal to raise it, but no replacement value. All three forecast ranges are unsupported numerical extrapolations.",
+      "contamination_assessment": "Presented within probabilistic future scenarios, not asserted as a realized outcome or an established post-cutoff fact. No rewrite performed."
+    },
+    {
+      "snapshot_id": "Sbb8480c400",
+      "batch_id": "ASTRA_CORE60_b015",
+      "evidence_profile": "P06c25c545bfa8557",
+      "classification": "unsupported_conditional_numerical_guess",
+      "blocking": false,
+      "fields": [
+        {
+          "path": "scenarios[2].params.uniform_time_lag",
+          "value": "7–60 days"
+        }
+      ],
+      "explanation": "E1 supplies the existing one-day and three-month lags, but no 7-60 day compromise. Forecasts retaining either existing anchor are sourced anchors, not unsupported numerical values.",
+      "contamination_assessment": "Presented within probabilistic future scenarios, not asserted as a realized outcome or an established post-cutoff fact. No rewrite performed."
+    }
+  ],
+  "limits": [
+    "Hidden model memory and unexpressed influences on probabilities are unverifiable from output text. PASS means no visible contamination found, not proof that memory played no role.",
+    "This is a text and citation audit, not an accuracy, calibration, or realized-outcome assessment. No canonical outcomes, threads, evidence datasets, or web sources were accessed.",
+    "Source/packet release and execution receipt/hash gates belong to separate reviews; this report does not certify those gates.",
+    "General process-rate statements and hypothetical scenario elaborations were assessed as forecasting priors or predictions, not as newly asserted matter-specific historical events. Their empirical calibration was not validated.",
+    "Evidence profiles include truncated excerpts in the supplied packets. The audit assessed the supplied material, without inferring omitted source text.",
+    "Cross-snapshot transfer was checked for visible content, including title-only snapshots. Similar general forecasting language and differing recognition flags across snapshots cannot establish hidden transfer or concealed recognition."
+  ],
+  "per_snapshot": [
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "Sbc753e4d30",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S365a5bde85",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S24b6400e89",
+      "evidence_profile": "P37ae9ce03ad4b7f6",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "Se8ba78babd",
+      "evidence_profile": null,
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S9b1b12fefe",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S8dac3245b9",
+      "evidence_profile": "P61944ff22d775aa2",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "Sf178aa4a6a",
+      "evidence_profile": "P09aa5bf0e3aa62b8",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": true
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "Sf3b5766514",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S6e9a297fc3",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S63bb3c38aa",
+      "evidence_profile": "Paf3e9a92de1f44a8",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S0647f362ec",
+      "evidence_profile": "P9fcf246740581bae",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S68de664d3b",
+      "evidence_profile": "P6dcbb6ee45eed012",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "Sa034caed7d",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S3e7129c433",
+      "evidence_profile": "P411fc3a1d550ac51",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S9bd7653742",
+      "evidence_profile": "P01c30b1e9a8be8dc",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": true
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S8ef6703593",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S49f3ad46f7",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S5850a4fe34",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S23fd8a9e5d",
+      "evidence_profile": "Pc0dbbd59348af883",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b011",
+      "snapshot_id": "S7f475b9b77",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "Sd3701be948",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S6822b74057",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S5102e60219",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S52c27d6bbf",
+      "evidence_profile": "P295634314f74480c",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": true
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "Sa61dda0e68",
+      "evidence_profile": null,
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S13fbc45234",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S5e66c94da8",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S654a39b01c",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S22671e5903",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S43dbe996b4",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "Sea0ea85cef",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "Sa64549a749",
+      "evidence_profile": "P3ccc8a8e1a6e0243",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S08373fdea5",
+      "evidence_profile": "P51808dd069b4c716",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S0e4a5e7ea8",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "Sc1688a63b6",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S5201344288",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "Sc827e25536",
+      "evidence_profile": "P5303ececac443cb6",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "S01e30fe39c",
+      "evidence_profile": "P881e8e40b6af573c",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": true
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "Sfbf2d0f1e9",
+      "evidence_profile": "Pa706d0d8665cd702",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b012",
+      "snapshot_id": "Sa70d3b82ed",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Sb59f09546a",
+      "evidence_profile": null,
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S519d977f04",
+      "evidence_profile": null,
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Scb45011ca1",
+      "evidence_profile": "P9d31ae9d9a394d6d",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S872fabc935",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S6ee8b3e3ca",
+      "evidence_profile": "P01c30b1e9a8be8dc",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": true
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S0e9bc218df",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Sc5b58156b6",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S98026427cb",
+      "evidence_profile": "P179325fbb01cf15d",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Safe94de614",
+      "evidence_profile": "P038522734deaea2b",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S0d0035a7a5",
+      "evidence_profile": "P9c963d99a0bd7650",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Sb8cd3e8195",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S3fe0607c6a",
+      "evidence_profile": "P7fdd7b6fc5c05f3d",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Sf01d88151a",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Sec1551e69c",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Seb27ba1de3",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "Safb7c51524",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S7d743d9b36",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S0849a50464",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S72e4ff6b0f",
+      "evidence_profile": "P3680d9a9b9112c59",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b013",
+      "snapshot_id": "S6a712174ce",
+      "evidence_profile": "P05764e165ca85199",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S564ce60f6d",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Sd65b57b1a2",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S3c50127b06",
+      "evidence_profile": "Pd36f777077a36d43",
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S4ebd608030",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Sb23d5d0736",
+      "evidence_profile": "Pb2c69b0908be2b43",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Scb1b9b5004",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Scb856082b3",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S9332025d1a",
+      "evidence_profile": "Pf44b053de9d4c584",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Se9118ef529",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S6d8a68496f",
+      "evidence_profile": "Pe0c9ce4769ec5f7e",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": true
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S07150dde93",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S416cfef0e4",
+      "evidence_profile": "P3c4a24a6fdd77f8b",
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Sfa5b439710",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Se4327836d5",
+      "evidence_profile": "P47d7d3588987527b",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": true
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S035aa630f9",
+      "evidence_profile": null,
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Sc297df683d",
+      "evidence_profile": "Pc5394b69d7495f7e",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S936eb64977",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S4dbc738e7b",
+      "evidence_profile": "P3817a390fb21c453",
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "Se0efc50fd6",
+      "evidence_profile": "P5303ececac443cb6",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b014",
+      "snapshot_id": "S283e3f047b",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Se272b0792d",
+      "evidence_profile": "Pc542c2428167319d",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Sb91d276853",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S535506cc30",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S7a08fa0fcf",
+      "evidence_profile": "P9da570fbc7648fed",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Sea64372682",
+      "evidence_profile": "Pe075dbca49b58152",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Saedf121836",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S591534befb",
+      "evidence_profile": "Pd5defda2237c4ea3",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S6943785a7c",
+      "evidence_profile": "P3680d9a9b9112c59",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Sb9ade2b2e5",
+      "evidence_profile": "Pcc37c55f6e811851",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Sb83b51f2e9",
+      "evidence_profile": "Pd36f777077a36d43",
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S38e812fbd2",
+      "evidence_profile": "Pc5394b69d7495f7e",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Sc83723bef8",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S8e6e622db4",
+      "evidence_profile": "Pdbe1317cd61c4524",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S917443f737",
+      "evidence_profile": "Pd7caab16e2f744f0",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S73b4778629",
+      "evidence_profile": "Pc8c6793ac2873bea",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S18e65332c7",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "S511ac0376a",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Sbb8480c400",
+      "evidence_profile": "P06c25c545bfa8557",
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": true
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Sb9b230f0b6",
+      "evidence_profile": null,
+      "recognised_outcome": false,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    },
+    {
+      "batch_id": "ASTRA_CORE60_b015",
+      "snapshot_id": "Sbc4a9e7df1",
+      "evidence_profile": "Pd406fc1b84161c3b",
+      "recognised_outcome": true,
+      "text_status": "PASS",
+      "citation_status": "PASS",
+      "unsupported_parameter_finding": false
+    }
+  ],
+  "changes": "Only core_11_15_text_audit_20261005.json and core_11_15_text_audit_20261005.md written. No forecasts modified or ingested."
+}

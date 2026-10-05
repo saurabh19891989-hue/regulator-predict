@@ -1,5 +1,36 @@
 # CLAUDE.md — Regulatory Predictive Precursor Engine
 
+## Final decision — 2026-10-05
+
+**NO-GO for the current Astra / SEBI-R30-FDA-H30 approach.** Frozen G1 and G5 fail; independent
+review agrees. HIST C90 baseline skill +0.320 is promising, but evidence-versus-title CI crosses zero,
+LATE C90 AUROC0.577 misses0.70, India AUROC0.456 misses0.65 and HIST-LATE gap0.310 exceeds0.10.
+At p>=0.5,19/42 positive matters get a warning; all-matter median lead is zero (23 misses), so G4 fails.
+Timing calibration fails; content accuracy96% merely matches the majority baseline. No TierC lift,
+trajectory ablation, parameter coverage, full masking or GOLD survival is established.
+All38 calls /678 distinct forecasts independently audited and1,356 logical rows ingested; ledger1,464
+records verified. Zero visible contamination;64 recognition disclosures. Exclusion preserves NO-GO.
+Stop at the gate; no production or trading architecture is justified. Full results:
+reports/FINAL_GO_NO_GO_20261005.md, reports/FINAL_DECISION_20261005.json,
+reports/FINAL_GATE_REVIEW_20261005.md and reports/metrics.json.
+Market-data capture closed successfullyOctober5 15:31IST with24,167,141updates; Drive upload due15:50IST.
+No daily regulatory collection/upload automation found. See docs/COLLECTION_STATUS_20261004.md.
+
+## Earlier checkpoints (historical; superseded by final decision above)
+
+## Current checkpoint — 2026-10-05, scaled scoring
+
+All38 fresh Astra calls completed:678 distinct forecasts plus678 same-input aliases. Full independent
+text/citation review and execution preflight PASS. Zero visible contamination;64 self-recognition disclosures.
+Unsupported conditional parameter guesses are documented, not certified as accurate. All1,356 scaled logical
+rows ingested without problems; hash-chain verification passes1,464 records, including108 excluded diagnostics.
+Final evaluation is running with ALL primary arm and same-model TITLE_ONLY; no legacy probe mixed in.
+Freeze remains327 threads /1,785 evidence /99 source-audited RAPID /zero GOLD, censor2026-09-24.
+Today market capture closed successfully15:31IST with24,167,141updates; Drive upload due15:50IST.
+No automated daily regulatory collection/upload was found. Predictive GO/NO-GO is pending scored metrics.
+
+## Earlier checkpoints (historical; superseded by the checkpoint above)
+
 ## Current checkpoint — 2026-10-04
 The frozen canonical dataset has 327 threads (208 actions, 119 controls), 1,785 evidence records, 99 source-audited RAPID matters and zero promoted GOLD matters. The complete SEBI-R30/FDA-H30 cohort has a PASS packet-release audit: ASTRA_CORE60 has 20 T-design batches and ASTRA_CAL60 has 18 C-design batches covering 45 eligible matters. Together the 38 packets request 678 distinct forecasts plus 678 same-input arm aliases. Six batches / 120 distinct forecasts are saved and structurally valid; independent review passed the first 40. Remaining 32 batches resumed after an ordinary usage-window interruption. Scaled ledger ingestion and scoring remain pending. The retained cohort evidence is 61 distinct Tier B records, with no Tier C, so this run cannot measure Tier C lift. The prior repaired smoke remains diagnostic only (180-day model Brier 0.05587 versus grouped baseline 0.04441). See PROJECT_STATUS.md, RESULTS_LIVE.md and data/audits/core60_packet_release_20261004.md. The fixed observation boundary is 2026-09-24; no empirical GO/NO-GO has been reached.
 

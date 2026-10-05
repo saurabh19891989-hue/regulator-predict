@@ -1,0 +1,155 @@
+{
+  "status": "PASS",
+  "audited_batches": 38,
+  "audited_distinct_forecasts": 678,
+  "observable_contamination": 0,
+  "observable_contamination_rate": 0,
+  "recognised_distinct_forecasts": 64,
+  "recognised_ids": [
+    "S48819f1389",
+    "S7971233e95",
+    "Sad08763c65",
+    "Sbc75a10375",
+    "Sd1bd1b667d",
+    "S0d3a00cf27",
+    "S95b417414e",
+    "S77eef1197d",
+    "S050cf105b3",
+    "S47ad8dfe73",
+    "Sb5ab522600",
+    "Scfadf319e2",
+    "Sf167e5f899",
+    "S9779bb595d",
+    "S846c01fe50",
+    "Se8ba78babd",
+    "Sa61dda0e68",
+    "Sb59f09546a",
+    "S519d977f04",
+    "S3c50127b06",
+    "S416cfef0e4",
+    "S035aa630f9",
+    "S4dbc738e7b",
+    "Sb83b51f2e9",
+    "Sbc4a9e7df1",
+    "S97e5dc5657",
+    "S121aeff890",
+    "S7a419a53c4",
+    "Sb1daabf0d9",
+    "S17a5545581",
+    "S993c9b9279",
+    "Sae6aa94b17",
+    "S845b3e5899",
+    "Sf448233379",
+    "S84f524ad11",
+    "S6236a6c68e",
+    "Sd5fb29532d",
+    "S0d747c1585",
+    "S5f9fb0e546",
+    "S484a64646d",
+    "Se72fdc896d",
+    "Sf1d0dfea34",
+    "Saa91e0e4a6",
+    "S460776ba14",
+    "Scfe46c0c83",
+    "S8348801ea4",
+    "S58e27071d5",
+    "S42a1e0c665",
+    "Sa59609a580",
+    "S48ebcee6f3",
+    "S156d3cf5d6",
+    "S94feaff2d7",
+    "S7e56a23d55",
+    "S994f671b79",
+    "Sc5dc484c19",
+    "S0f962eab29",
+    "Sa746a2a3e4",
+    "S9ee1174d84",
+    "S95e8f90144",
+    "S4e3114fb81",
+    "Sba1cbd77ee",
+    "S1478dc44d8",
+    "S57c5533167",
+    "S293ca4e103"
+  ],
+  "reports": [
+    {
+      "report": "scaled60_first_output_audit_20261004.md",
+      "batch_ids": [
+        "ASTRA_CORE60_b001",
+        "ASTRA_CAL60_b001"
+      ],
+      "sha256": "d7dd0234c66e1fb77dbe421d07f94faf48bb96368ec562582fd808ea905d2748"
+    },
+    {
+      "report": "scaled60_second_output_audit_20261004.md",
+      "batch_ids": [
+        "ASTRA_CORE60_b002",
+        "ASTRA_CORE60_b003",
+        "ASTRA_CAL60_b002",
+        "ASTRA_CAL60_b003"
+      ],
+      "sha256": "053dbdff98c0f11e7390df309d9d50005085801915e149aaeb769521ef6c8f5a"
+    },
+    {
+      "report": "scaled60_remaining_output_audit_20261004.json",
+      "batch_ids": [
+        "ASTRA_CORE60_b004",
+        "ASTRA_CAL60_b004",
+        "ASTRA_CORE60_b005",
+        "ASTRA_CAL60_b005",
+        "ASTRA_CORE60_b006",
+        "ASTRA_CAL60_b006",
+        "ASTRA_CORE60_b007",
+        "ASTRA_CAL60_b007",
+        "ASTRA_CORE60_b008",
+        "ASTRA_CORE60_b009",
+        "ASTRA_CAL60_b008",
+        "ASTRA_CAL60_b009",
+        "ASTRA_CORE60_b010",
+        "ASTRA_CAL60_b010"
+      ],
+      "sha256": "298503ee733771964dad9d9eadc120ae4667749f37e80108b0214869cd351cca"
+    },
+    {
+      "report": "core_11_15_text_audit_20261005.json",
+      "batch_ids": [
+        "ASTRA_CORE60_b011",
+        "ASTRA_CORE60_b012",
+        "ASTRA_CORE60_b013",
+        "ASTRA_CORE60_b014",
+        "ASTRA_CORE60_b015"
+      ],
+      "sha256": "22aa5c00f3875456cd9d701810b33ab73f845eb18db7cb5ddbda7f66aba047c0"
+    },
+    {
+      "report": "core_16_20_text_audit_20261005.json",
+      "batch_ids": [
+        "ASTRA_CORE60_b016",
+        "ASTRA_CORE60_b017",
+        "ASTRA_CORE60_b018",
+        "ASTRA_CORE60_b019",
+        "ASTRA_CORE60_b020"
+      ],
+      "sha256": "ec56a890730373048f5b6421e7082faf1d346bb2e54e1f8dc5c45a10aef9e65e"
+    },
+    {
+      "report": "cal_11_18_text_audit_20261005.json",
+      "batch_ids": [
+        "ASTRA_CAL60_b011",
+        "ASTRA_CAL60_b012",
+        "ASTRA_CAL60_b013",
+        "ASTRA_CAL60_b014",
+        "ASTRA_CAL60_b015",
+        "ASTRA_CAL60_b016",
+        "ASTRA_CAL60_b017",
+        "ASTRA_CAL60_b018"
+      ],
+      "sha256": "323938931bc2523e66b2dc27d0d00b989c13348100a3ba8c455535a5576aa161"
+    }
+  ],
+  "limits": [
+    "Hidden memory cannot be certified absent.",
+    "Unsupported conditional parameter guesses are preserved; parameter coverage and mechanism accuracy unassessed.",
+    "Zero GOLD cases; source version immutability is not established."
+  ]
+}

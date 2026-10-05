@@ -4,3 +4,4 @@
 /data/evidence/evidence.jsonl -text whitespace=cr-at-eol
 /data/outcomes/outcomes.jsonl -text whitespace=cr-at-eol
 /data/forecasts/packets/** -text
+/data/forecasts/raw/** -text

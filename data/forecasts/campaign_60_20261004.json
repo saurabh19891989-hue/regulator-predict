@@ -1,204 +1,105 @@
 {
-  "completed_at": "2026-10-04T10:36:54.546279+00:00",
-  "status": "RUNNING_RESUMED",
-  "completed_distinct_forecasts": 120,
-  "jobs": [
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b001",
-      "status": "PASS"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b002",
-      "status": "PASS"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b003",
-      "status": "PASS"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b004",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b005",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b006",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b007",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b008",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b009",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b010",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b011",
-      "status": "NOT_RUN"
-    },
+  "completed_at": "2026-10-05T04:59:41.711892+00:00",
+  "status": "COMPLETE_NO_GO",
+  "resume_jobs": [
     {
       "run": "ASTRA_CORE60",
       "batch": "ASTRA_CORE60_b012",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b013",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b014",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b015",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b016",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b017",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b018",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b019",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CORE60",
-      "batch": "ASTRA_CORE60_b020",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b001",
       "status": "PASS"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b002",
-      "status": "PASS"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b003",
-      "status": "PASS_AFTER_BOUNDED_RETRY"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b004",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b005",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b006",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b007",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b008",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b009",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b010",
-      "status": "NOT_RUN"
-    },
-    {
-      "run": "ASTRA_CAL60",
-      "batch": "ASTRA_CAL60_b011",
-      "status": "NOT_RUN"
     },
     {
       "run": "ASTRA_CAL60",
       "batch": "ASTRA_CAL60_b012",
-      "status": "NOT_RUN"
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b013",
+      "status": "PASS"
     },
     {
       "run": "ASTRA_CAL60",
       "batch": "ASTRA_CAL60_b013",
-      "status": "NOT_RUN"
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b014",
+      "status": "PASS"
     },
     {
       "run": "ASTRA_CAL60",
       "batch": "ASTRA_CAL60_b014",
-      "status": "NOT_RUN"
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b015",
+      "status": "PASS"
     },
     {
       "run": "ASTRA_CAL60",
       "batch": "ASTRA_CAL60_b015",
-      "status": "NOT_RUN"
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b016",
+      "status": "PASS"
     },
     {
       "run": "ASTRA_CAL60",
       "batch": "ASTRA_CAL60_b016",
-      "status": "NOT_RUN"
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b017",
+      "status": "PASS"
     },
     {
       "run": "ASTRA_CAL60",
       "batch": "ASTRA_CAL60_b017",
-      "status": "NOT_RUN"
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b018",
+      "status": "PASS"
     },
     {
       "run": "ASTRA_CAL60",
       "batch": "ASTRA_CAL60_b018",
-      "status": "NOT_RUN"
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b019",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b020",
+      "status": "PASS"
     }
   ],
-  "reported_usage": {
-    "input_tokens": 77083,
-    "output_tokens": 29704,
-    "reasoning_output_tokens": 2335
+  "completed_batches": 38,
+  "distinct_forecasts": 678,
+  "logical_forecasts": 1356,
+  "usage_successful_inference": {
+    "input_tokens": 570791,
+    "cached_input_tokens": 98304,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 216429,
+    "reasoning_output_tokens": 18063
   },
-  "note": "First-window failure is preserved separately; six successful receipts present, remaining32 resumed after ordinary usage window reopened. No reset credit used.",
-  "completed_batches": 6
+  "execution_preflight": "PASS",
+  "execution_preflight_path": "data/audits/scaled60_execution_preflight_20261005.json",
+  "text_audit": "PASS",
+  "audited_distinct_forecasts": 678,
+  "observable_contamination": 0,
+  "recognised_distinct_forecasts": 64,
+  "ledger_records": 1464,
+  "decision": "NO-GO",
+  "report": "reports/FINAL_GO_NO_GO_20261005.md"
 }

@@ -1,0 +1,440 @@
+{
+  "kind": "conservative_G1_point_estimate_futility_bound",
+  "cohort": "entire frozen60case primarycohort",
+  "planned_HIST_C90_n": 100,
+  "bounds": {
+    "base_rate_elapsed": {
+      "full_n": 100,
+      "known_n": 55,
+      "unknown_n": 45,
+      "baseline_brier_full": 0.09810363187159171,
+      "minimum_possible_full_model_brier": 0.022431750000000004,
+      "maximum_possible_brier_skill": 0.7713463857346177,
+      "cannot_reach_frozen_G1_0_05": false
+    },
+    "stage_transition": {
+      "full_n": 100,
+      "known_n": 55,
+      "unknown_n": 45,
+      "baseline_brier_full": 0.12346396851916085,
+      "minimum_possible_full_model_brier": 0.022431750000000004,
+      "maximum_possible_brier_skill": 0.818313389168932,
+      "cannot_reach_frozen_G1_0_05": false
+    },
+    "heuristic": {
+      "full_n": 100,
+      "known_n": 55,
+      "unknown_n": 45,
+      "baseline_brier_full": 0.07160625000000001,
+      "minimum_possible_full_model_brier": 0.022431750000000004,
+      "maximum_possible_brier_skill": 0.6867347473160512,
+      "cannot_reach_frozen_G1_0_05": false
+    },
+    "logit_features": {
+      "full_n": 100,
+      "known_n": 55,
+      "unknown_n": 45,
+      "baseline_brier_full": 0.08908263076302957,
+      "minimum_possible_full_model_brier": 0.022431750000000004,
+      "maximum_possible_brier_skill": 0.7481916529870887,
+      "cannot_reach_frozen_G1_0_05": false
+    }
+  },
+  "observed_rows": [
+    {
+      "snapshot_id": "S00953fd06d",
+      "thread_id": "US-FDA-H-0001",
+      "cutoff_date": "2020-01-01",
+      "y": 0,
+      "p90": 0.075
+    },
+    {
+      "snapshot_id": "S0338ee55af",
+      "thread_id": "US-FDA-H-0022",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.1
+    },
+    {
+      "snapshot_id": "S070dab7451",
+      "thread_id": "US-FDA-H-0005",
+      "cutoff_date": "2020-07-01",
+      "y": 0,
+      "p90": 0.06
+    },
+    {
+      "snapshot_id": "S0b3c4ab78a",
+      "thread_id": "US-FDA-H-0026",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.11
+    },
+    {
+      "snapshot_id": "S1128beafbf",
+      "thread_id": "US-FDA-H-0014",
+      "cutoff_date": "2022-07-01",
+      "y": 0,
+      "p90": 0.085
+    },
+    {
+      "snapshot_id": "S12e4328c4a",
+      "thread_id": "US-FDA-H-0001",
+      "cutoff_date": "2021-01-01",
+      "y": 0,
+      "p90": 0.14
+    },
+    {
+      "snapshot_id": "S165b9eee4c",
+      "thread_id": "US-FDA-H-0026",
+      "cutoff_date": "2024-01-01",
+      "y": 0,
+      "p90": 0.115
+    },
+    {
+      "snapshot_id": "S194d2f838b",
+      "thread_id": "US-FDA-H-0005",
+      "cutoff_date": "2020-01-01",
+      "y": 0,
+      "p90": 0.025
+    },
+    {
+      "snapshot_id": "S1e936a2c0a",
+      "thread_id": "US-FDA-H-0026",
+      "cutoff_date": "2023-01-01",
+      "y": 0,
+      "p90": 0.06
+    },
+    {
+      "snapshot_id": "S2269f9ce5b",
+      "thread_id": "US-FDA-H-0019",
+      "cutoff_date": "2022-07-01",
+      "y": 0,
+      "p90": 0.13
+    },
+    {
+      "snapshot_id": "S287f7c408a",
+      "thread_id": "US-FDA-H-0028",
+      "cutoff_date": "2025-01-01",
+      "y": 0,
+      "p90": 0.12
+    },
+    {
+      "snapshot_id": "S321a6d3bac",
+      "thread_id": "US-FDA-H-0028",
+      "cutoff_date": "2024-07-01",
+      "y": 0,
+      "p90": 0.115
+    },
+    {
+      "snapshot_id": "S3da38abdef",
+      "thread_id": "US-FDA-H-0006",
+      "cutoff_date": "2021-01-01",
+      "y": 0,
+      "p90": 0.14
+    },
+    {
+      "snapshot_id": "S4258272c1b",
+      "thread_id": "US-FDA-H-0001",
+      "cutoff_date": "2020-07-01",
+      "y": 0,
+      "p90": 0.085
+    },
+    {
+      "snapshot_id": "S452a920e12",
+      "thread_id": "US-FDA-H-0027",
+      "cutoff_date": "2024-01-01",
+      "y": 0,
+      "p90": 0.15
+    },
+    {
+      "snapshot_id": "S484a64646d",
+      "thread_id": "US-FDA-H-0004",
+      "cutoff_date": "2020-07-01",
+      "y": 0,
+      "p90": 0.07
+    },
+    {
+      "snapshot_id": "S486224a1f7",
+      "thread_id": "US-FDA-H-0022",
+      "cutoff_date": "2022-07-01",
+      "y": 0,
+      "p90": 0.015
+    },
+    {
+      "snapshot_id": "S48ebcee6f3",
+      "thread_id": "US-FDA-H-0030",
+      "cutoff_date": "2024-07-01",
+      "y": 0,
+      "p90": 0.25
+    },
+    {
+      "snapshot_id": "S4f5a1e7aa0",
+      "thread_id": "US-FDA-H-0015",
+      "cutoff_date": "2022-01-01",
+      "y": 0,
+      "p90": 0.09
+    },
+    {
+      "snapshot_id": "S559241d7dd",
+      "thread_id": "US-FDA-H-0021",
+      "cutoff_date": "2024-01-01",
+      "y": 0,
+      "p90": 0.22
+    },
+    {
+      "snapshot_id": "S58e27071d5",
+      "thread_id": "US-FDA-H-0030",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.045
+    },
+    {
+      "snapshot_id": "S593ea49276",
+      "thread_id": "US-FDA-H-0016",
+      "cutoff_date": "2022-01-01",
+      "y": 0,
+      "p90": 0.09
+    },
+    {
+      "snapshot_id": "S5bee31f139",
+      "thread_id": "US-FDA-H-0022",
+      "cutoff_date": "2024-01-01",
+      "y": 0,
+      "p90": 0.17
+    },
+    {
+      "snapshot_id": "S62339f17d4",
+      "thread_id": "US-FDA-H-0008",
+      "cutoff_date": "2021-07-01",
+      "y": 0,
+      "p90": 0.17
+    },
+    {
+      "snapshot_id": "S6236a6c68e",
+      "thread_id": "US-FDA-H-0004",
+      "cutoff_date": "2020-01-01",
+      "y": 0,
+      "p90": 0.06
+    },
+    {
+      "snapshot_id": "S649245107c",
+      "thread_id": "US-FDA-H-0019",
+      "cutoff_date": "2023-01-01",
+      "y": 0,
+      "p90": 0.24
+    },
+    {
+      "snapshot_id": "S7c7513e723",
+      "thread_id": "US-FDA-H-0002",
+      "cutoff_date": "2020-01-01",
+      "y": 0,
+      "p90": 0.1
+    },
+    {
+      "snapshot_id": "S8348801ea4",
+      "thread_id": "US-FDA-H-0018",
+      "cutoff_date": "2023-01-01",
+      "y": 0,
+      "p90": 0.13
+    },
+    {
+      "snapshot_id": "S84f524ad11",
+      "thread_id": "US-FDA-H-0018",
+      "cutoff_date": "2022-01-01",
+      "y": 0,
+      "p90": 0.025
+    },
+    {
+      "snapshot_id": "S88e33f7768",
+      "thread_id": "US-FDA-H-0027",
+      "cutoff_date": "2023-01-01",
+      "y": 0,
+      "p90": 0.025
+    },
+    {
+      "snapshot_id": "S99891dc1ab",
+      "thread_id": "US-FDA-H-0019",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.23
+    },
+    {
+      "snapshot_id": "S9b1cef49b9",
+      "thread_id": "US-FDA-H-0009",
+      "cutoff_date": "2021-01-01",
+      "y": 0,
+      "p90": 0.13
+    },
+    {
+      "snapshot_id": "S9c27027731",
+      "thread_id": "US-FDA-H-0002",
+      "cutoff_date": "2021-07-01",
+      "y": 0,
+      "p90": 0.14
+    },
+    {
+      "snapshot_id": "S9d8333f7ec",
+      "thread_id": "US-FDA-H-0029",
+      "cutoff_date": "2024-01-01",
+      "y": 0,
+      "p90": 0.09
+    },
+    {
+      "snapshot_id": "S9d946d3bf0",
+      "thread_id": "US-FDA-H-0015",
+      "cutoff_date": "2022-07-01",
+      "y": 0,
+      "p90": 0.16
+    },
+    {
+      "snapshot_id": "Sa74d2c9e9b",
+      "thread_id": "US-FDA-H-0026",
+      "cutoff_date": "2024-07-01",
+      "y": 0,
+      "p90": 0.12
+    },
+    {
+      "snapshot_id": "Saf3bc2bcb0",
+      "thread_id": "US-FDA-H-0029",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.06
+    },
+    {
+      "snapshot_id": "Sb184870829",
+      "thread_id": "US-FDA-H-0012",
+      "cutoff_date": "2021-01-01",
+      "y": 0,
+      "p90": 0.03
+    },
+    {
+      "snapshot_id": "Sb5e05d04c0",
+      "thread_id": "US-FDA-H-0008",
+      "cutoff_date": "2022-01-01",
+      "y": 0,
+      "p90": 0.21
+    },
+    {
+      "snapshot_id": "Sb8c71a3e0f",
+      "thread_id": "US-FDA-H-0010",
+      "cutoff_date": "2022-01-01",
+      "y": 1,
+      "p90": 0.21
+    },
+    {
+      "snapshot_id": "Scb2ebf3972",
+      "thread_id": "US-FDA-H-0016",
+      "cutoff_date": "2022-07-01",
+      "y": 1,
+      "p90": 0.2
+    },
+    {
+      "snapshot_id": "Sd504f3384f",
+      "thread_id": "US-FDA-H-0025",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.25
+    },
+    {
+      "snapshot_id": "Sd5fb29532d",
+      "thread_id": "US-FDA-H-0013",
+      "cutoff_date": "2023-01-01",
+      "y": 0,
+      "p90": 0.22
+    },
+    {
+      "snapshot_id": "Sd6dfc22b16",
+      "thread_id": "US-FDA-H-0021",
+      "cutoff_date": "2023-01-01",
+      "y": 0,
+      "p90": 0.13
+    },
+    {
+      "snapshot_id": "Sd79d4bc736",
+      "thread_id": "US-FDA-H-0017",
+      "cutoff_date": "2022-07-01",
+      "y": 0,
+      "p90": 0.13
+    },
+    {
+      "snapshot_id": "Sda651cbaf7",
+      "thread_id": "US-FDA-H-0022",
+      "cutoff_date": "2023-01-01",
+      "y": 0,
+      "p90": 0.09
+    },
+    {
+      "snapshot_id": "Sddc72cdd59",
+      "thread_id": "US-FDA-H-0008",
+      "cutoff_date": "2020-07-01",
+      "y": 0,
+      "p90": 0.045
+    },
+    {
+      "snapshot_id": "Sde05e646ad",
+      "thread_id": "US-FDA-H-0010",
+      "cutoff_date": "2021-07-01",
+      "y": 0,
+      "p90": 0.12
+    },
+    {
+      "snapshot_id": "Se2c3aa22b5",
+      "thread_id": "US-FDA-H-0028",
+      "cutoff_date": "2024-01-01",
+      "y": 0,
+      "p90": 0.12
+    },
+    {
+      "snapshot_id": "Se8ddb0138c",
+      "thread_id": "US-FDA-H-0021",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.16
+    },
+    {
+      "snapshot_id": "Sea356bf32b",
+      "thread_id": "US-FDA-H-0001",
+      "cutoff_date": "2019-07-01",
+      "y": 0,
+      "p90": 0.02
+    },
+    {
+      "snapshot_id": "Sf51b136bf9",
+      "thread_id": "US-FDA-H-0025",
+      "cutoff_date": "2023-01-01",
+      "y": 0,
+      "p90": 0.21
+    },
+    {
+      "snapshot_id": "Sf8d39b8ff4",
+      "thread_id": "US-FDA-H-0028",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.12
+    },
+    {
+      "snapshot_id": "Sfbaa73c5dc",
+      "thread_id": "US-FDA-H-0025",
+      "cutoff_date": "2024-01-01",
+      "y": 0,
+      "p90": 0.22
+    },
+    {
+      "snapshot_id": "Sfd056a9b17",
+      "thread_id": "US-FDA-H-0027",
+      "cutoff_date": "2023-07-01",
+      "y": 0,
+      "p90": 0.16
+    }
+  ],
+  "claim_limit": "Missing model forecasts assigned zero squared error; this is an optimistic bound, not a measured complete-model Brier/CI.",
+  "dataset_sha256": {
+    "snapshots/index.jsonl": "fa378d0c9c8981ce6d4a59ded4a22951ed5efd737b5a2561110ba1858be6e2a7",
+    "threads/threads.jsonl": "1ad2595e73b3c7a4948c82a0e8988c2a8cfa7186df79d468e59842c613c32490",
+    "evidence/evidence.jsonl": "9ccf6f832ceeef0fe127512c3e056c1ba656cc9b5b87b2d24c0049d314b45d4f",
+    "outcomes/outcomes.jsonl": "cec53d66390307636b4ffe34283b0428fe26dda05c388b76a397716ef7bdca9b"
+  },
+  "baseline_implementation_commit": "79f98d1",
+  "early_stop_justified": false,
+  "note": "All optimistic bounds exceed the frozen +0.05 requirement; this exploratory calculation provides no reason to stop the planned forecasts."
+}

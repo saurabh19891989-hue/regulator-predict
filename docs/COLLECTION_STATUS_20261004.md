@@ -25,3 +25,24 @@ The existing health-check task is nnml-capture-health-check (Monday/Thursday17:0
 For the regulatory project, no daily collection/upload automation was found in its repository or local Codex
 automation directory. Its current frozen 327 threads and 1,785 evidence records remain in the local/Git
 workspace. This check does not claim that regulatory cases are being collected every day or uploaded to Drive.
+
+## Follow-up check — 2026-10-05, about05:07IST
+
+Direct systemd timer inspection confirms capture scheduled today09:05IST, health09:30IST and post-close
+15:50IST. At this early-morning check the latest health snapshot was October4 at16:15IST; it still records
+October2 as the latest closed session and successful Drive receipt, with no alerts. October5 capture was not
+yet due, so this check does not assert that today's data has already been captured or uploaded.
+
+## Follow-up check — 2026-10-05, about10:08IST
+
+The09:30IST health snapshot now reports capture_service active, no alerts and an open October5 session with
+65,271,181 local bytes. A live systemctl check confirms the capture service is active. The October5 Google
+Drive session directory is not present yet; post-close processing remains scheduled15:50IST. Latest verified
+completed upload remains October2. Current collection is confirmed; today's completed Drive upload is pending.
+
+## Follow-up check — 2026-10-05, about15:36IST
+
+Live journal confirms today's capture CLOSED successfully at15:31IST, with24,167,141 feed updates
+across four slots. The service is inactive after normal completion. Next capture isOctober6 09:05IST;
+today's post-close Drive copy remains scheduled15:50IST. The09:30 health snapshot is stale and does not
+represent current capture status. Today's Drive upload is still pending at this check.

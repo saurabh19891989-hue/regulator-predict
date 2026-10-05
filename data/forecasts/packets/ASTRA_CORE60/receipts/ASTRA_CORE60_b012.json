@@ -1,0 +1,25 @@
+{
+  "run": "ASTRA_CORE60",
+  "batch_id": "ASTRA_CORE60_b012",
+  "model": "gpt-6-astra",
+  "started_at": "2026-10-05T04:38:18.672952+00:00",
+  "completed_at": "2026-10-05T04:41:02.600270+00:00",
+  "exit_code": 0,
+  "unexpected_item_types": [],
+  "usage": [
+    {
+      "input_tokens": 14526,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 5248,
+      "reasoning_output_tokens": 444
+    }
+  ],
+  "packet_sha256": "5c2637f96c106b0339173711b7f798457ef1367c6e27d7af2e2d56bd0088a885",
+  "events_path": "C:\\Users\\saura\\AppData\\Local\\Temp\\rpe_blind_sessions\\ASTRA_CORE60\\ASTRA_CORE60_b012\\events.jsonl",
+  "session_ids": [
+    "01a10a5b-02a7-7d32-9dd8-8aa5f64c34e9"
+  ],
+  "events_sha256": "ab636789cab8a9049daf57dcf6748f6d5e97effb96ccbbc007c35b62c49b7a29",
+  "tool_controls": "shell, web, plugins, apps, multi-agent, memories disabled; no project docs"
+}

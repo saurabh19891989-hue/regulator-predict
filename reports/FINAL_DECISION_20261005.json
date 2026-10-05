@@ -1,0 +1,55 @@
+{
+  "decision": "NO-GO",
+  "scope": "Current frozen SEBI-R30/FDA-H30 RAPID study and Astra forecast approach; not universal unpredictability of regulation",
+  "rule": "NO-GO if G1 or G5 fails",
+  "G1": "FAIL: HIST title-only superiority not established and LATE AUROC below band",
+  "G5": "FAIL: HIST-LATE AUROC gap exceeds band and India AUROC below band; visible contamination check passes; exclusion preserves G1 failure",
+  "G2": "FAIL",
+  "G3": "Direction fails; mechanism unassessed",
+  "G4": "FAIL",
+  "audited_distinct_forecasts": 678,
+  "observable_contamination": 0,
+  "recognised_distinct_forecasts": 64,
+  "lead_time_distributions": {
+    "0.5": {
+      "positive_matters": 42,
+      "first_cross_histogram": {
+        "0": 23,
+        "7": 1,
+        "30": 12,
+        "90": 4,
+        "180": 2
+      },
+      "zero_meaning": "No threshold crossing within available audited 7/30/90/180-day snapshots; not same-day warning",
+      "detected_only_median": 30.0
+    },
+    "0.7": {
+      "positive_matters": 42,
+      "first_cross_histogram": {
+        "0": 25,
+        "7": 1,
+        "30": 11,
+        "90": 4,
+        "180": 1
+      },
+      "zero_meaning": "No threshold crossing within available audited 7/30/90/180-day snapshots; not same-day warning",
+      "detected_only_median": 30.0
+    },
+    "0.8": {
+      "positive_matters": 42,
+      "first_cross_histogram": {
+        "0": 33,
+        "7": 4,
+        "30": 5
+      },
+      "zero_meaning": "No threshold crossing within available audited 7/30/90/180-day snapshots; not same-day warning",
+      "detected_only_median": 30.0
+    }
+  },
+  "sensitivity": "NO-GO persists under \u00b10.05 numeric band changes; title superiority CI still crosses zero",
+  "metrics_sha256": "46029cdff70de97ac8643b9f0371d8e228fa563784de4596184d9790812fbe37",
+  "source_freeze": "data/snapshots/freeze_20261004.json",
+  "implementation_vintage": "79f98d1 with DEV-016 fold-local preprocessing",
+  "scoring_command": "python -m rpe.evaluate --primary-runs ASTRA_CORE60,ASTRA_CAL60 --title-runs ASTRA_CORE60,ASTRA_CAL60 --primary-arm ALL --probe [empty]",
+  "stop_at_gate": true
+}

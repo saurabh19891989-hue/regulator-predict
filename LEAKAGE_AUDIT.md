@@ -31,3 +31,14 @@ post-cutoff political facts or invalid citations, but that does not cure source/
 
 No source audit finding is interpreted as a predictive result. Pending or contaminated-rebuild verdicts are never GOLD.
 The fixed censor boundary remains 2026-09-24 despite the resumed audit date of 2026-09-27.
+
+## Scaled60 acceptance — 2026-10-05
+
+All678 distinct outputs across38 fresh Astra sessions received independent text/citation review.
+Zero observable contamination findings;64 self-recognition disclosures (9.44%). Hidden memory remains
+unverifiable. Unsupported conditional numeric guesses in the bounded reviews are retained unchanged;
+parameter coverage is unassessed. See data/audits/scaled60_full_acceptance_20261005.json for exact coverage.
+Execution preflight passed all source/packet/event/output hashes, unique sessions, disabled-tool logs and
+canonical schema/coherence checks; no coherence repairs needed. All1,356 scaled logical rows were ingested
+serially. Ledger verification passes1,464 records including108 old diagnostics, excluded from scoring.
+Zero GOLD; a clean visible-output audit does not establish immutable historical source versions.

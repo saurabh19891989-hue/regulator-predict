@@ -77,3 +77,24 @@ for blind forecasting; native research-agent billing is not visible to the Direc
 - Six successful calls now report 93,296 input and 35,606 output tokens, with 2,851 reasoning-output tokens
   separately reported (not added again). There are 120 distinct forecasts. Actual billing is unavailable.
 - The remaining 32 calls resumed, with two workers and a stop on any failure. Completed outputs are skipped.
+
+## Continuing ordinary usage windows — 2026-10-05
+
+Further quota stops preserved all successful outputs and failed receipts before retries. At10:07IST the native
+account reports ordinary usage allowed,0% current five-hour window and65% weekly usage; both reset credits
+remain available and unused. There are22 successful batches /440 distinct forecasts;16 batches resumed.
+The long-lived native output-audit context is stopped after its quota error. Its durable reports cover the first
+400 forecasts. Remaining text reviews will use fresh bounded contexts after outputs are ready, avoiding repeated
+reads and waits in an ever-growing context. Same Astra high audit routing and acceptance criteria are retained.
+No forecast, gate threshold, canonical source or outcome label is changed. Actual billing remains unknown.
+
+## Completed scaled inference — 2026-10-05
+
+All38 successful fresh Astra high calls completed:678 distinct forecasts and678 same-input aliases.
+Verified successful-call receipts total570,791 input tokens (98,304 cached) and216,429 output tokens;
+18,063 reasoning-output tokens are reported separately, not added again. Three failed quota attempts
+are preserved separately. Audit/Director usage is not included in these inference totals; billing unknown.
+The final bounded auditors hit the ordinary quota before durable reports; user continuation reopened
+the window. At15:35IST ordinary usage is allowed, primary1% and weekly81%; no reset credit redeemed.
+Fresh bounded Astra audits resumed for the remaining178 forecasts. All execution archives now reconcile;
+the old COREb012 event archive was replaced only after matching its preserved failed-attempt bytes.

@@ -1,0 +1,8 @@
+{
+  "run": "ASTRA_CAL60",
+  "batch": "ASTRA_CAL60_b012",
+  "exit_code": 0,
+  "stdout": "{\"run\": \"ASTRA_CAL60\", \"batch_id\": \"ASTRA_CAL60_b012\", \"model\": \"gpt-6-astra\", \"started_at\": \"2026-10-05T04:38:18.674970+00:00\", \"completed_at\": \"2026-10-05T04:41:13.305475+00:00\", \"exit_code\": 0, \"unexpected_item_types\": [], \"usage\": [{\"input_tokens\": 15538, \"cached_input_tokens\": 0, \"cache_write_input_tokens\": 0, \"output_tokens\": 5667, \"reasoning_output_tokens\": 291}], \"packet_sha256\": \"6de8bf3c39f1575da4099cad0efb6ca9e3e05edda28ce7fd445f79d028cfbddf\", \"events_path\": \"C:\\\\Users\\\\saura\\\\AppData\\\\Local\\\\Temp\\\\rpe_blind_sessions\\\\ASTRA_CAL60\\\\ASTRA_CAL60_b012\\\\events.jsonl\", \"session_ids\": [\"01a10a5b-02a7-7c13-b556-84da2d02aab0\"], \"events_sha256\": \"12c140924af8a27e62ccbed79fbe09bb3d8d38042f71821fa86f1fff69d7d936\", \"tool_controls\": \"shell, web, plugins, apps, multi-agent, memories disabled; no project docs\"}\n",
+  "stderr": "",
+  "status": "PASS"
+}

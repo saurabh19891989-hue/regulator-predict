@@ -1,0 +1,166 @@
+{
+  "completed_at": "2026-10-04T10:57:52.166262+00:00",
+  "status": "HALTED_FAILURE",
+  "resume_jobs": [
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b004",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b004",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b005",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b005",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b006",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b006",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b007",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b007",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b008",
+      "status": "PASS"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b008",
+      "status": "FAILED"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b009",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b009",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b010",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b010",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b011",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b011",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b012",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b012",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b013",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b013",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b014",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b014",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b015",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b015",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b016",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b016",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b017",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b017",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b018",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CAL60",
+      "batch": "ASTRA_CAL60_b018",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b019",
+      "status": "SKIPPED_AFTER_FAILURE"
+    },
+    {
+      "run": "ASTRA_CORE60",
+      "batch": "ASTRA_CORE60_b020",
+      "status": "SKIPPED_AFTER_FAILURE"
+    }
+  ]
+}
