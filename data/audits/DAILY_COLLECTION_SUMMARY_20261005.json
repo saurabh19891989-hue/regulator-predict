@@ -1,0 +1,123 @@
+{
+  "project_pause": "Regulatory research paused by explicit user request2026-10-05",
+  "window": "2026-09-21 through2026-10-05 inclusive",
+  "archive_sessions": 10,
+  "archive_objects": 9430,
+  "archive_bytes": 13129092725,
+  "closed_raw_files": 4653,
+  "sampled_chunks": 40,
+  "sampled_frames": 51179,
+  "sample_integrity_decode_pass": true,
+  "all_daily_copy_receipts_pass": true,
+  "fresh_today_checksum_matching_files": 620,
+  "fresh_today_checksum_differences": 0,
+  "normal_sessions_full_reported_coverage": 8,
+  "last10_calendar_days_market_sessions_expected_and_present": 5,
+  "calendar": [
+    {
+      "date": "2026-09-21",
+      "folder_present": false,
+      "calendar": "No folder in this archive; earliest archived date isSep22"
+    },
+    {
+      "date": "2026-09-22",
+      "folder_present": true,
+      "calendar": "PARTIAL: index gaps and4 unfinished raw files"
+    },
+    {
+      "date": "2026-09-23",
+      "folder_present": true,
+      "calendar": "PASS for planned subset: full reported coverage and sampled fresh spot data"
+    },
+    {
+      "date": "2026-09-24",
+      "folder_present": true,
+      "calendar": "PASS for planned subset: full reported coverage and sampled fresh spot data"
+    },
+    {
+      "date": "2026-09-25",
+      "folder_present": true,
+      "calendar": "PASS for planned subset: full reported coverage and sampled fresh spot data"
+    },
+    {
+      "date": "2026-09-26",
+      "folder_present": false,
+      "calendar": "Weekend: no session expected"
+    },
+    {
+      "date": "2026-09-27",
+      "folder_present": false,
+      "calendar": "Weekend: no session expected"
+    },
+    {
+      "date": "2026-09-28",
+      "folder_present": true,
+      "calendar": "PASS for planned subset: full reported coverage and sampled fresh spot data"
+    },
+    {
+      "date": "2026-09-29",
+      "folder_present": true,
+      "calendar": "PASS for planned subset: full reported coverage and sampled fresh spot data"
+    },
+    {
+      "date": "2026-09-30",
+      "folder_present": true,
+      "calendar": "PASS for planned subset: full reported coverage and sampled fresh spot data"
+    },
+    {
+      "date": "2026-10-01",
+      "folder_present": true,
+      "calendar": "PASS for planned subset: full reported coverage and sampled fresh spot data"
+    },
+    {
+      "date": "2026-10-02",
+      "folder_present": true,
+      "calendar": "NSE holiday: stored reconnect snapshots, not normal trading data"
+    },
+    {
+      "date": "2026-10-03",
+      "folder_present": false,
+      "calendar": "Weekend: no session expected"
+    },
+    {
+      "date": "2026-10-04",
+      "folder_present": false,
+      "calendar": "Weekend: no session expected"
+    },
+    {
+      "date": "2026-10-05",
+      "folder_present": true,
+      "calendar": "PASS for planned subset: full reported coverage and sampled fresh spot data"
+    }
+  ],
+  "findings": [
+    {
+      "code": "SEP22_PARTIAL",
+      "detail": "Stocks210/210 pass reported coverage but only1/6index spots and0/6index options;11alerts;4unfinalised .partial files."
+    },
+    {
+      "code": "HOLIDAY_FALSE_GREEN",
+      "detail": "Oct2officialNSE holiday. Four sampled chunks show219 spot updates, zero current-day last trades; all ltt datesOct1. 1908 reconnect errors. Coverage stillreports full coverage because it counts feed.currentTs minute buckets, not fresh trade ltt."
+    },
+    {
+      "code": "MASTER_NOT_BACKED_UP",
+      "detail": "All10Drive session roots omit dated instrument master; dated compressed masters remain locally in the plan directories. Historical contract expiry/strike/option-type identity is incompletely preserved in daily Drive archives."
+    },
+    {
+      "code": "SEP21_ABSENT",
+      "detail": "Sep21is a trading date but no session exists in this inspected archive; earliestfolderSep22. This does not establish absence in other archives."
+    }
+  ],
+  "limits": [
+    "Historical backup receipts were verified and current Drive inventories checked; full historical raw-file content was not rehashed.",
+    "40selectedclosedchunks were downloaded transiently into memory and validated; unfinalised Sep22 files were inventoried, not decoded.",
+    "Trade freshness measured in sampled spot records; not all option quote/Greeks quality or complete intraday continuity.",
+    "Universe is selected F&O stock/index subset with front futures and selected ATM-nearby options, not every strike or expiry."
+  ],
+  "recommended_fixes": [
+    "Preserve dated instrument masters on Drive, including the10still-local historical masters.",
+    "Add exchange holiday calendar and source-trade/quote freshness checks; do not count holiday initial snapshots as trading sessions.",
+    "Report incomplete raw closure and index coverage as explicit session exceptions."
+  ],
+  "production_changes_made": false
+}

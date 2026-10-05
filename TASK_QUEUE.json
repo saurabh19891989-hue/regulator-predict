@@ -240,7 +240,7 @@
   }
  ],
  "last_updated": "2026-10-05",
- "programme_state": "GATE_RESOLVED_NO_GO: stop at research gate; no deployment/trading build",
+ "programme_state": "PAUSED_BY_USER after formal NO-GO; separate market collection/storage check only",
  "current_checkpoint": {
   "freeze": "data/snapshots/freeze_20261004.json",
   "threads": 327,
@@ -263,7 +263,8 @@
   "focused_tests_passed": 11,
   "ledger_records": 1464,
   "decision": "NO-GO",
-  "report": "reports/FINAL_GO_NO_GO_20261005.md"
+  "report": "reports/FINAL_GO_NO_GO_20261005.md",
+  "user_paused": true
  },
  "status_vocabulary": [
   "COMPLETE",

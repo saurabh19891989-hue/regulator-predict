@@ -53,3 +53,14 @@ Today's CAPTURE_RESULT.json confirms CLOSED withzero slot/decode errors and24,16
 The automatic nnml-lean-postclose.service started precisely15:50IST and is activating/start at15:50:09.
 No October5 DRIVE_RECEIPT.json exists yet. Automatic post-close upload is running; completed copy verification
 is pending. October2 remains the latest verified completed Drive receipt. The09:30 health snapshot is stale.
+
+## Completed 15-day collection/storage audit — 2026-10-05
+
+October5 Drive copy is now verified: automatic receipt at15:52:27IST; fresh checksum comparison
+at16:18:59IST passes620 files withzero differences. Ten dailyDrivefolders (September22–October5)
+are present, totalling13.13GB. Forty sampled closed chunks pass SHA256/MD5/CRC/decoding.
+Important qualifications: September22 index coverage is incomplete and4raw partials remain; October2
+is an NSE holiday whose stored sampled prices haveOctober1last-trade timestamps despitegreen coverage;
+the dated instrument masters remain local and are absent fromdailyDrivearchives. Eight normal sessions
+fromSeptember23 onward havefull reported plannedcoverage. Full audit: docs/DAILY_COLLECTION_AUDIT_20261005.md.
+Regulatory research remains paused byuser; no production collection changes were made.

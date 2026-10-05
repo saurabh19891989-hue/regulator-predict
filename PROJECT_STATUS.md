@@ -1,5 +1,11 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
+## User pause — 2026-10-05
+
+Regulatory research paused at the user's explicit request after the formal NO-GO decision.
+The separately authorised daily market-data collection/storage audit does not resume model research.
+
+
 ## Final decision — 2026-10-05
 
 **NO-GO for the current Astra / SEBI-R30-FDA-H30 approach.** Frozen G1 and G5 fail; independent
