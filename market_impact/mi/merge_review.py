@@ -11,6 +11,7 @@ the Director rejected; keys are "edge:src>dst@origin", "event:EV_X", "drop:EV_X"
 Conflicts (two reviewers on the same key) keep the first reviewer in PRIORITY order and are written to
 review/merge_log.json.
 """
+import ast
 import glob
 import json
 import os
@@ -105,11 +106,14 @@ def main():
         ce_list = list(ce_block.get("overrides", [])) if isinstance(ce_block, dict) else []
         for f in o.get("findings", []) or []:
             blob = " ".join(str(v) for v in f.values())
-            for m in re.finditer(r'\{[^{}]*"ticker"\s*:\s*"[^"]+"[^{}]*"match"[^{}]*\}', blob):
+            for m in re.finditer(r"""\{[^{}]*['"]ticker['"]\s*:\s*['"][^'"]+['"][^{}]*['"]match['"][^{}]*\}""", blob):
                 try:
                     ce_list.append(json.loads(m.group(0)))
                 except json.JSONDecodeError:
-                    log["invalid"].append(f"{rid}: unparsable company-event fix {m.group(0)[:80]}")
+                    try:
+                        ce_list.append(ast.literal_eval(m.group(0)))     # findings holding dicts stringify with ' quotes
+                    except (ValueError, SyntaxError):
+                        log["invalid"].append(f"{rid}: unparsable company-event fix {m.group(0)[:80]}")
         for x in ce_list:
             k = (x.get("ticker"), str(x.get("match", "")).lower())
             key = f"ce:{k[0]}:{k[1]}"

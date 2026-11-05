@@ -99,11 +99,11 @@ BANKBARODA,2027-03,Year-end dividend/ FY27 guidance delivery (credit growth 13-1
 BANKINDIA,2027-01-22,Q3 FY27 results (inferred; Q2 reported 2026-10-23),results,0.9,1.0,0.9,
 BANKINDIA,2027-03,"Possible government OFS/QIP for capital or liquidity (model knowledge: government holding 73.4%, MPS-compliant)",corporate_action,0.15,-3.5,-0.525,
 BDL,2026-11-12,Q2 FY27 results (screener upcoming-date field),results,0.95,0.0,0.0,
-BDL,2027-03,"Large missile order(s) from DAC-cleared Rs2.12 lakh cr proposals (Akash-NG, Astra, Invar etc. share unknown)",other,0.4,7.5,3.0,
+BDL,2027-03,"Large missile order(s) from DAC-cleared Rs2.12 lakh cr proposals (Akash-NG, Astra, Invar etc. share unknown)",other,0.4,3.75,1.5,[RT_TOP_A] contract stage of the AoN already in P_DEFENCE_PROCUREMENT state
 BDL,2027-02,"Q3 FY27 results; execution of Rs26,176 cr order book (conversion pace is the key variable)",results,0.9,0.0,0.0,
 BDL,2027-03,Export contract announcement,other,0.15,6.5,0.975,
 BEL,2027-01,Q3 FY27 results (late Jan); Q2 reported 2026-10-30,results,0.9,0.0,0.0,
-BEL,2026-12,"Large single order(s) (e.g. air defence, EW suite) from DAC-cleared proposals; mgmt targets ~Rs55,000 cr FY27 inflow (ET Now 2026-10-30)",other,0.5,3.5,1.75,
+BEL,2026-12,"Large single order(s) (e.g. air defence, EW suite) from DAC-cleared proposals; mgmt targets ~Rs55,000 cr FY27 inflow (ET Now 2026-10-30)",other,0.5,1.75,0.875,[RT_TOP_A] guided inflow; AoN already in state
 BEL,2026-12,"FY27 revenue guidance delivery check at Q3 (Kotak raised target on guidance, NDTV Profit 2026-11-04)",guidance,0.7,0.0,0.0,
 BHARATFORG,2026-11-05,Q2 FY27 results (post-loss quarter; watch OPM recovery and exceptional items),results,1.0,0.0,0.0,
 BHARATFORG,2027-02,Q3 FY27 results,results,0.95,0.0,0.0,
@@ -155,7 +155,6 @@ COALINDIA,2026-11,"MCL IPO launch (~$1bn, offer for sale of up to 66 cr shares; 
 COALINDIA,2027-02,Q3 FY27 results (CIL reports around early Feb),results,0.95,0.0,0.0,
 COALINDIA,2026-12,Monthly production/offtake releases (1st of month): Oct output +19.3% y/y; sustained >10% growth with rake supply improves FY27 volumes,other,0.9,0.5,0.45,
 COALINDIA,2027-03,Notified-price revision or e-auction reform for FY28 (pricing committee),regulatory,0.2,2.0,0.4,
-COALINDIA,2027-03,Third interim dividend / FY27 payout (yield 6.75%; second interim record date 4 Nov 2026),corporate_action,0.6,0.75,0.44999999999999996,
 COCHINSHIP,2026-11-10,Q2 FY27 results (screener upcoming-date field),results,0.95,0.0,0.0,
 COCHINSHIP,2026-12,"EGM / shareholder approval for Rs1,800 cr ISRF transfer and related capex",corporate_action,0.85,0.5,0.425,
 COCHINSHIP,2027-03,Binding contracts converting from the 40-ship order announcement (2026-10-09) and further defence awards,other,0.5,1.0,0.5,[RT_TOP_B] announcement priced 9 Oct (+5%)
@@ -202,10 +201,10 @@ DRREDDY,2027-06,Possible US generic tariff extension,regulatory,0.1,-7.0,-0.7000
 EICHERMOT,2026-12-01,November sales print,other,1.0,0.0,0.0,
 EICHERMOT,2027-02,Q3 FY27 results (Q2 FY27 reported ~2026-10-28; numbers not retrieved),results,0.95,0.0,0.0,
 EICHERMOT,2026-12,New model launches / EV rollout (Flying Flea C6 sales in Europe),other,0.6,1.0,0.6,
-ENRIN,2026-11,FY26 (Sep-2026) annual and Q4 results; trading window closed from 2026-09-28 (scanx),results,0.95,0.5,0.475,
-ENRIN,2026-11,Siemens Energy AG FY results / outlook (global read-across),guidance,0.8,0.5,0.4,
+ENRIN,2026-11,FY26 (Sep-2026) annual and Q4 results; trading window closed from 2026-09-28 (scanx),results,0.95,0.0,0.0,[RT_TOP_A] symmetric
+ENRIN,2026-11,Siemens Energy AG FY results / outlook (global read-across),guidance,0.8,0.0,0.0,[RT_TOP_A] symmetric
 ENRIN,2027-01,Large HVDC/transmission order awards (PGCIL packages) that could lift backlog,other,0.35,5.0,1.75,
-ENRIN,2027-02,Q1 FY27 (Dec-2026 quarter) results,results,0.95,0.5,0.475,
+ENRIN,2027-02,Q1 FY27 (Dec-2026 quarter) results,results,0.95,0.0,0.0,[RT_TOP_A] symmetric
 ENRIN,2027-06,Transformer capacity expansion commissioning,capex,0.3,2.0,0.6,
 ETERNAL,2027-01-21,Q3 FY27 results (model knowledge: Q3 FY26 results were around 21 Jan),results,0.9,0.5,0.45,
 ETERNAL,2027-03,Gig-worker social-security contribution rules operationalised under labour codes,regulatory,0.3,-2.5,-0.75,
@@ -291,9 +290,7 @@ HINDCOPPER,2027-01,Arbitration award case: commercial court conditionally stayed
 HINDCOPPER,2027-06,Further government stake sale,corporate_action,0.15,-5.5,-0.825,
 HINDPETRO,2026-12,Visakhapatnam refinery fire: damage assessment and restart (unit shutdown extent not disclosed),other,0.8,-1.5,-1.2000000000000002,
 HINDPETRO,2027-01,Q3 FY27 results (late Jan/early Feb),results,0.95,0.0,0.0,
-HINDPETRO,2027-03,Centre decision on OMC compensation (Rs 75k cr ask across OMCs),regulatory,0.45,4.75,2.1375,
 HINDPETRO,2027-06,HRRL Barmer refinery commissioning (timing model knowledge; slippage risk),capex,0.3,2.0,0.6,
-HINDPETRO,2026-12,Retail price hike / excise change if Brent re-crosses $100,regulatory,0.12,5.0,0.6,
 HINDUNILVR,2027-01,Q3 FY27 results; price hikes post Diwali visible in volume/margin,results,0.9,0.0,0.0,
 HINDUNILVR,2026-11,Interim dividend Rs 19/share payment (declared with Q2 results),corporate_action,0.95,-0.5,-0.475,
 HINDUNILVR,2027-03,Share buyback announcement (management asked about it on 28 Oct 2026; none announced),corporate_action,0.1,3.5,0.35000000000000003,
@@ -343,11 +340,7 @@ INFY,2026-11-03,Dividend record date (interim) - passed; Livemint 2026-11-02,cor
 INFY,2026-12,US H-1B/outsourcing-tax action,regulatory,0.15,-3.5,-0.525,
 INFY,2027-03,"Possible fresh buyback/special return (cash-rich, low P/E)",corporate_action,0.2,2.25,0.45,
 IOC,2027-01,Q3 FY27 results (IOC reports late Jan / early Feb; date not yet announced) - inventory loss reversal risk if crude keeps falling,results,0.95,-0.5,-0.475,
-IOC,2027-03,"Centre decision on OMC compensation (Rs 75,000 cr ask across OMCs; LPG under-recovery)",regulatory,0.45,3.5,1.575,
-IOC,2026-12,"Retail petrol/diesel price hike or excise cut/hike if Brent re-crosses $100 (OMCs said they can absorb $85-90, hikes likely above $100)",regulatory,0.12,3.75,0.44999999999999996,
-IOC,2026-12,"Interim dividend / record date announcements (Maharatna PSU, yield 5.7%; 12% interim record date reported 24 Oct 2026 - company not verified)",corporate_action,0.5,0.75,0.375,
 IOC,2027-12,Panipat expansion (25->33 MMTPA) / Paradip-Gujarat petchem milestones (model knowledge),capex,0.2,1.5,0.30000000000000004,
-IOC,2027-02,US-Iran de-escalation after Democratic midterm win: Brent below $90 restores marketing margins,other,0.4,5.0,2.0,
 IRCTC,2026-11-12,"Q2 FY27 results (Sep quarter not yet reported in pack; date estimated from prior-year pattern, model knowledge)",results,0.9,0.0,0.0,
 IRCTC,2027-03,Government OFS in IRCTC planned in FY27 (floor typically at ~8-10% discount),corporate_action,0.4,-4.5,-1.8,
 IRCTC,2026-11,"Interim dividend announcement alongside H1 results (history, model knowledge)",corporate_action,0.6,1.0,0.6,
@@ -360,14 +353,10 @@ ITC,2027-01,Q3 FY27 results (cigarette volume/margin recovery vs tax pass-throug
 ITC,2026-12,Further cigarette price hikes / pack-size changes after Sept 16 hike,other,0.5,1.75,0.875,
 ITC,2026-12,Residual block/overhang from large FPI sellers after GQG 8 Oct sale,other,0.3,-2.5,-0.75,
 JINDALSTEL,2027-01,"Q3 FY27 results (late Jan; PL expects EBITDA ~Rs3,150 cr on 2.85 Mt as Angul ramps and coking coal +US$20-25/t lands)",results,0.97,0.0,0.0,
-JINDALSTEL,2026-12,Angul BF-II hot metal 12 ktpd by Dec-26; H2 production 6 Mt (0.96 Mt/month),capex,0.6,1.5,0.8999999999999999,
-JINDALSTEL,2026-12,Barbil-Angul 192 km slurry pipeline enters commercial operation (saves ~Rs700/t freight),capex,0.75,1.0,0.75,
-JINDALSTEL,2027-01,Roida iron ore mine resumes after forest/road clearances (mgmt: Dec-26 to Jan-27),regulatory,0.5,1.5,0.75,
-JINDALSTEL,2026-12,"Russian Black Sea coking coal supply resumes, easing coking coal (mgmt/MOFSL: Dec-Jan, subject to geopolitics)",other,0.3,4.0,1.2,
-JINDALSTEL,2027-03,"DGTR provisional/final finding or notified anti-dumping duty on HR flat steel (China, Japan, Russia); final due ~Jun 2027",regulatory,0.4,4.0,1.6,
-JINDALSTEL,2027-04-21,Safeguard duty steps down 12% -> 11.5% (year two) - minor,regulatory,0.85,-0.5,-0.425,
-JINDALSTEL,2027-06,2 Mtpa DRI plant and new pellet plant commissioning (imported equipment/shipping could delay),capex,0.5,1.0,0.5,
-JINDALSTEL,2026-12-16,India-EU FTA signing incl. steel quota (~1.64 Mt under discussion) vs CBAM drag on exports,regulatory,0.9,1.0,0.9,
+JINDALSTEL,2026-12,Angul BF-II hot metal 12 ktpd by Dec-26; H2 production 6 Mt (0.96 Mt/month),capex,0.6,0.0,0.0,[RT_TOP_A] guided; symmetric execution risk
+JINDALSTEL,2026-12,Barbil-Angul 192 km slurry pipeline enters commercial operation (saves ~Rs700/t freight),capex,0.75,0.0,0.0,[RT_TOP_A] guided; symmetric
+JINDALSTEL,2027-01,Roida iron ore mine resumes after forest/road clearances (mgmt: Dec-26 to Jan-27),regulatory,0.5,0.25,0.125,[RT_TOP_A] guided; clearance slippage risk
+JINDALSTEL,2027-06,2 Mtpa DRI plant and new pellet plant commissioning (imported equipment/shipping could delay),capex,0.5,-0.25,-0.125,[RT_TOP_A] guided; profile itself flags equipment/shipping delays
 JIOFIN,2026-11,Jio Platforms listing / price discovery after Rs ~36k cr (US$3.8bn) IPO; group sentiment spillover,other,0.85,0.5,0.425,
 JIOFIN,2027-01,Q3 FY27 results (mid-Jan 2027 est.; Q2 was 15 Oct 2026),results,0.95,0.0,0.0,
 JIOFIN,2027-03,Closing of BofA investment into Jio Credit after regulatory approvals,corporate_action,0.55,2.25,1.2375,
@@ -452,11 +441,10 @@ MAXHEALTH,2026-12,Supreme Court/NPPA follow-ups on medicine MRP and trade-margin
 MAXHEALTH,2027-02,"Q3 FY27 results: ARPOB, occupancy, new-bed ramp",results,0.95,0.0,0.0,
 MAXHEALTH,2027-03,Commissioning of new hospital capacity (bed expansion per CLSA/management),capex,0.5,1.5,0.75,
 MAXHEALTH,2027-04,Possible index/MSCI rebalance given FII reduction (low confidence),other,0.2,0.0,0.0,
-MAZDOCK,2026-12,P75I submarine contract signing with partner (if concluded),regulatory,0.3,16.5,4.95,
+MAZDOCK,2026-12,P75I submarine contract signing with partner (if concluded),regulatory,0.3,9.5,2.85,[RT_TOP_A] widely anticipated; NPV at ~8-10% margins over 10y
 MAZDOCK,2027-03,Order for three additional Kalvari-class submarines,regulatory,0.25,8.0,2.0,
-MAZDOCK,2026-11,Interim dividend (Rs 5 per share per Kotak Neo) record/payment,corporate_action,0.9,0.25,0.225,
-MAZDOCK,2027-02,Q3 FY27 results: provisions normalise? revenue rebound after Q2 trough,results,0.95,1.0,0.95,
-MAZDOCK,2027-05,Q4 FY27 results and FY28 guidance,results,0.95,0.5,0.475,
+MAZDOCK,2027-02,Q3 FY27 results: provisions normalise? revenue rebound after Q2 trough,results,0.95,0.0,0.0,[RT_TOP_A] symmetric after Q2 miss
+MAZDOCK,2027-05,Q4 FY27 results and FY28 guidance,results,0.95,0.0,0.0,[RT_TOP_A] symmetric
 MAZDOCK,2027-06,Government OFS in MDL (81% holding),corporate_action,0.08,-6.0,-0.48,
 MCX,2027-01,Q3 FY27 results (Q2 declared 3 Nov 2026),results,0.95,0.0,0.0,
 MCX,2027-03,Launch of coal and minerals trading platforms after Rs 200 cr investment,capex,0.4,1.5,0.6000000000000001,
@@ -584,12 +572,11 @@ POWERGRID,2026-11/2027-03,New TBCB/RTM project awards and ISTS bids (wins add to
 POWERGRID,2027-02,"Q3 FY27 results: capitalisation pace vs guided Rs 37,000-40,000 cr capex",results,0.95,0.5,0.475,
 POWERGRID,2027-05,Q4/FY27 results and FY28 capex/capitalisation guidance; final dividend,guidance,0.9,1.0,0.9,
 POWERGRID,2027-2029,CERC tariff period 2029-34 consultation (ROE and norms) - long-dated regulatory risk,regulatory,0.1,-3.0,-0.30000000000000004,
-POWERINDIA,2026-11,Q2 FY27 results (Sep quarter); share.market headline suggests a prior-year 15% jump on Q2; test of margin and backlog,results,0.95,1.0,0.95,
-POWERINDIA,2027-02,Q3 FY27 results,results,0.95,0.5,0.475,
+POWERINDIA,2026-11,Q2 FY27 results (Sep quarter); share.market headline suggests a prior-year 15% jump on Q2; test of margin and backlog,results,0.95,0.0,0.0,[RT_TOP_A] symmetric
+POWERINDIA,2027-02,Q3 FY27 results,results,0.95,0.0,0.0,[RT_TOP_A] symmetric
 POWERINDIA,2027-03,Large HVDC order awards (Barmer-type 6 GW renewable corridors) lifting backlog,other,0.35,6.5,2.275,
 POWERINDIA,2027-06,Karjan (Vadodara) 20th manufacturing unit progress; capacity addition,capex,0.5,1.5,0.75,
-POWERINDIA,2027-05,Q4 FY27 results and FY28 outlook,results,0.95,0.5,0.475,
-POWERINDIA,2026-12,Index rebalancing / FPI flows around AI-related stock sell-offs,other,0.4,-1.5,-0.6000000000000001,
+POWERINDIA,2027-05,Q4 FY27 results and FY28 outlook,results,0.95,0.0,0.0,[RT_TOP_A] symmetric
 PREMIERENE,2026-12,7 GW TOPCon cell plant commercial production start (company: 'shortly'),capex,0.8,2.25,1.8,
 PREMIERENE,2027-01,Q3 FY27 results,results,0.95,0.0,0.0,
 PREMIERENE,2027-07,First phase 6 GWh BESS commissioning,capex,0.5,1.75,0.875,
@@ -619,7 +606,6 @@ RVNL,2027-06,"Government OFS / stake sale (govt holds ~73%, model knowledge)",co
 SAIL,2027-02,Q3 FY27 results (Q2 on 2026-10-27),results,0.95,0.0,0.0,
 SAIL,2027-03,"Wage-agreement renewal for executives/workers due around end of the current cycle (model knowledge, unverified)",other,0.4,-3.5,-1.4000000000000001,
 SAIL,2027-06,Government stake sale (OFS) in SAIL,corporate_action,0.07,-5.5,-0.385,
-SAIL,2027-03,Safeguard duty tightening on steel imports,regulatory,0.25,4.0,1.0,
 SBICARD,2027-01-22,"Q3 FY27 results (date approximate; Q2 was 2026-10-23): credit cost vs ~6% FY27 guide, receivables growth in H2",results,0.9,0.5,0.45,
 SBICARD,2026-11,"Festive-season spends data (Oct-Nov) and cobrand ramp (Air India, Eternal)",other,0.8,0.5,0.4,
 SBICARD,2027,RBI/NPCI changes to card unsecured risk weights or interchange/MDR rules,regulatory,0.15,-4.0,-0.6,
@@ -681,7 +667,6 @@ TATAPOWER,2026-12,"Shirwata 1,800 MW PSP board approval and new NTPC/NHPC pumped
 TATASTEEL,2026-11,Q2 FY27 results (date not confirmed; analysts expected EBITDA to decline QoQ per Livemint 2026-10-18),results,0.95,0.0,0.0,
 TATASTEEL,2027-03,Dutch government joint letter of intent deadline (extended five months to March 2027): binding support for IJmuiden decarbonisation,regulatory,0.55,0.5,0.275,
 TATASTEEL,2027-02,Q3 FY27 results,results,0.95,0.0,0.0,
-TATASTEEL,2027-03,Safeguard duty tightening on Indian flat imports,regulatory,0.25,3.5,0.875,
 TCS,2027-01-09,"Q3 FY27 results (TCS reports ~9-12 Jan; date unconfirmed): cc growth, AI revenue, margin, variable pay",results,0.95,0.0,0.0,
 TCS,2026-11-17,Nvidia FQ3 results: AI-trade read-across to IT services (anti-AI rotation vs AI-capex confidence),other,0.95,0.5,0.475,
 TCS,2027-02,"H-1B $100,000 fee appeal / green-card freeze litigation outcomes",regulatory,0.4,-1.0,-0.4,
@@ -754,7 +739,6 @@ VOLTAS,2027-03,Peak summer season sell-in; share defence vs Daikin/LG/Blue Star 
 VOLTAS,2027-01,Q3 FY27 results,results,0.95,0.0,0.0,
 WAAREEENER,2026-12-04,Section 232 minimum import prices and 15% duty on polysilicon derivatives take effect (US),regulatory,0.85,0.0,0.0,
 WAAREEENER,2027-01,"Q3 FY27 results (Dec quarter); test of FY27 EBITDA guidance Rs 7,000-7,700 cr",results,0.95,0.0,0.0,
-WAAREEENER,2026-11,US ITC / Commerce follow-through on AD/CVD orders on Indian cells,regulatory,0.6,-1.5,-0.8999999999999999,
 WAAREEENER,2027-03,Completion of Waaree Green Data Centers integration / first data-centre capex disclosure,corporate_action,0.4,0.0,0.0,
 WAAREEENER,2027-02,Reversal or confirmation of cancelled ~3 GW US export orders,other,0.4,0.5,0.2,
 WIPRO,2027-01,Q3 FY27 results (mid-Jan); guidance for Q4 and large-deal rebound the CEO promised,results,0.95,0.0,0.0,

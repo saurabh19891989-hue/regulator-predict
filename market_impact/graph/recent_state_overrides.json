@@ -37,15 +37,33 @@
    "by": "RT_BACKBONE"
   },
   {
-   "node": "F_GOVT_CAPEX",
-   "state_ssu": 0.2,
-   "reason": "[RT_TOP_B] The +1.0 comes only from EV_GDP_Q1FY27_7_8, which maps a GDP beat to +10% government capex growth. Centre capex grew +12% y/y in Apr-Sep FY27 (CGA, BusinessLine 30 Oct 2026), against a budgeted FY27 BE of Rs12.2 lakh cr, which was already ~+9-11% over FY26 (The Hindu 1 Feb 2026). Since June, the change in expected capex growth is about +0.1 to +0.3 SSU. H1 fiscal deficit at 42.1% of target leaves no room for an upside H2 capex surprise. Today the +1.0 books +2.0 to +5.0% 'unpriced' upside to every capex name (KEI +3.0, BHEL +3.0, CGPOWER +3.5, POLYCAB +3.5, GVT&D +2.5, HAL +2.5, JSWSTEEL +2.0, POWERINDIA +5.0, TMCV +4.0, LT +3.5), mostly in stocks that fell 15-35% market-adjusted.",
-   "by": "RT_TOP_B"
+   "node": "P_RENEWABLE_SUPPORT",
+   "state_ssu": 0.6,
+   "reason": "[RT_TOP_A] The current 1.5 = EV_SOLAR_ALMM2_CELL_MANDATE +0.5 + EV_BESS_VGF_NOV26 +1.0. (a) ALMM List-II's 1 Jun 2026 effective date was notified by MNRE in Dec 2024 (model knowledge), so it was fully known before the 1 Jun baseline and is not a change since June. Since then the policy was WEAKENED: on 19 Jul 2026 the Centre deferred the domestic-cell sourcing mandate to 31 Dec 2026 for open-access and net-metering projects (Indian Express, ET, BusinessLine, 19 Jul). Waaree and Premier fell up to 6% that day (NDTV Profit 20 Jul), and module makers now seek more time (ET 1 Nov). Net ALMM change since June ~-0.2. (b) The BESS VGF (Rs14,500 cr, 92 GWh) is confirmed by Cabinet/PM India on 4 Nov. It is storage-specific, so +0.8 rather than +1.0 for a node whose company edges (Waaree/Premier +6) were sized on ALMM/DCR. Net ~0.6. This removes ~5.4% of 'unpriced' recent impact from each of WAAREEENER and PREMIERENE.",
+   "by": "RT_TOP_A"
+  },
+  {
+   "node": "F_STEEL_GLOBAL",
+   "state_ssu": 0.5,
+   "reason": "[RT_TOP_A] Wrong proxy. The observed series is HRC=F, CME US Midwest HRC futures (nodes_seed series). Its +20.6% since 1 Jun reflects the tariff-walled US market (Section 232; Nucor list price rises, GMK 9 Jun/11 Aug), not 'global HRC'. Ex-US prices did much less: EU mills lifted offers ~EUR50/t (~+8%, ArcelorMittal, GMK 10 Jul), while Asian/China export HRC was flat to softer ('Export offers stall, import prices lead declines', SMM 30 Oct; Indian HRC export to Europe eased to $660 FOB, SMM 23 Oct). A trade-weighted ex-US move of ~+5% = 0.5 SSU. Impact in my scope: TATASTEEL's direct F_STEEL_GLOBAL edge (+2, Europe ~30% of revenue) books +4.1% recent 'unpriced' upside from US prices that Tata Steel Europe does not sell into; the EU-specific uplift is already on the director edge NEW_EU_STEEL_ACCESS -> TATASTEEL.",
+   "by": "RT_TOP_A"
+  },
+  {
+   "node": "NEW_POWER_EQUIP_CAPACITY",
+   "state_ssu": 0.5,
+   "reason": "[RT_TOP_A] Missing since-June shock. On 3 Jul 2026 the Finance Ministry gave four Chinese-linked power-equipment makers a two-year exemption to bid in critical power tenders. Hitachi Energy fell ~7.9% and CG Power ~7.1% intraday, sector stocks up to 10-12% (ET, Livemint, CNBC TV18, Business Today, JM Financial, 3 Jul). Nomura called it an overreaction and the order says it sets no precedent (Business Today 6 Jul), so a half-unit (SSU = peer capacity cutting pricing ~100 bp) is proportionate. The graph has no event for it, so POWERINDIA (-4/SSU) and ENRIN (-3/SSU) carry 'unpriced' upside the market had in fact priced against.",
+   "by": "RT_TOP_A"
   },
   {
    "node": "P_DEFENCE_PROCUREMENT",
-   "state_ssu": 0.4,
-   "reason": "[RT_TOP_B] The +1.0 (= +10% domestic defence orders) comes from EV_DAC_APPROVALS_H2_26. DAC Acceptances of Necessity are not orders: the event text itself says 'AoN precedes contract signing by 1-3 years' and calls the 26 Oct Rs2.12 lakh cr figure's relation to the 7 Sep Rs1.10 lakh cr 'unverified'. Large AoN tranches are routine through the year (model knowledge), so the change in expected order flow since June is a fraction of 1 SSU. Market check: BDL -17.5%, MAZDOCK -27%, COCHINSHIP -17% and BEL -0.8% over 3 months (price_performance.csv). The +1.0 books +3% to COCHINSHIP and SOLARINDS, +5% to HAL and BDL, and +6% to MAZDOCK.",
+   "state_ssu": 0.5,
+   "reason": "[RT_TOP_A] EV_DAC_APPROVALS_H2_26 books +1.0 SSU (= +10% domestic ORDERS) for one DAC AoN of Rs1.10 lakh cr (7 Sep). AoNs are routine and precede contracts by 1-3 years (the event's own text). Comparable AoN rounds came every few months in 2025 (Rs1.05 lakh cr Jul 2025, ~Rs67k cr Aug 2025, ~Rs79k cr Oct 2025: model knowledge), so one round is roughly normal pipeline flow, not a 10% step-up in orders. The second Rs2.12 lakh cr clearance (NIE 26 Oct) is unverified versus the first. The market did not treat this as news: MAZDOCK -25%, COCHINSHIP -16%, BDL -11% since 1 Jun while AoNs were announced. The defence profiles' company_events also book the resulting contracts (BDL missile orders, BEL large orders), so a full-unit AoN state double counts the pipeline. 0.5 keeps a modest positive for the cumulative approvals flow (MOSL: Rs13 lakh cr approvals, 4 Oct).",
+   "by": "RT_TOP_A"
+  },
+  {
+   "node": "F_GOVT_CAPEX",
+   "state_ssu": 0.2,
+   "reason": "[RT_TOP_B] The +1.0 comes only from EV_GDP_Q1FY27_7_8, which maps a GDP beat to +10% government capex growth. Centre capex grew +12% y/y in Apr-Sep FY27 (CGA, BusinessLine 30 Oct 2026), against a budgeted FY27 BE of Rs12.2 lakh cr, which was already ~+9-11% over FY26 (The Hindu 1 Feb 2026). Since June, the change in expected capex growth is about +0.1 to +0.3 SSU. H1 fiscal deficit at 42.1% of target leaves no room for an upside H2 capex surprise. Today the +1.0 books +2.0 to +5.0% 'unpriced' upside to every capex name (KEI +3.0, BHEL +3.0, CGPOWER +3.5, POLYCAB +3.5, GVT&D +2.5, HAL +2.5, JSWSTEEL +2.0, POWERINDIA +5.0, TMCV +4.0, LT +3.5), mostly in stocks that fell 15-35% market-adjusted.",
    "by": "RT_TOP_B"
   },
   {
@@ -71,12 +89,6 @@
    "state_ssu": 0.4,
    "reason": "[RT_BOT_B] The state of 1.0 is from EV_USFDA_WARNING_WAVE_26: three warning letters in Jul-Aug 2026 (an Alembic site, Aurobindo's Eugia Unit 1, Dabur Silvassa), with what_already_moved 'size not fetched'. A few WLs in two months is normal FDA flow, not a step change in regime. The sector's realised moves since 1 Jun refute a sector-wide enforcement shock: AUROPHARMA, the WL recipient, is +18.6% market-adjusted, DIVISLAB +49.8%, GLENMARK +10.3%, DRREDDY +2.3%, TORNTPHARM +4.9%, ZYDUSLIFE +6.0%. At 1.0 the state books -4.2% for ZYDUSLIFE and -2.3% for TORNTPHARM as unpriced, which is the single biggest component of both names' bottom ranking. Company-specific inspections (Zydus Moraiya 5 obs, Oct 2026) belong in company events, where they already are.",
    "by": "RT_BOT_B"
-  },
-  {
-   "node": "P_RENEWABLE_SUPPORT",
-   "state_ssu": 0.6,
-   "reason": "[RT_N50_A] The event sum of 1.5 is made of ALMM List-II +0.5 and the BESS VGF +1.0. (1) ALMM-II's 1 Jun 2026 effective date was notified by MNRE in Dec 2024 (model knowledge), so the change since 1 Jun is nil. It also raises developer capex (FE, 21 Aug: 'solar project costs may rise 20%'), which is negative for IPPs (AGEL, Tata Power RE), not 'stronger support'. (2) The BESS VGF is confirmed (PIB/PM India, The Hindu, Moneycontrol, 4 Nov 2026: Rs14,500 cr for 92 GWh). It is a capex grant that competitive tariffs pass to discoms. At +1.0 SSU it books about +6% on AGEL (~Rs14,000 cr of market cap, roughly the whole subsidy) plus +4% on Tata Power and +4.8% on AESL. (3) PM-DHARA (Rs1.86 lakh cr green-energy transmission, Cabinet 30 Sep 2026) is missing from the catalogue, but power stocks fell on the day ('Power stocks fall despite PM-DHARA', Livemint 1 Oct), so the market's sensitivity to such announcements is low. Net change since June: BESS VGF ~0.3 + PM-DHARA ~0.3 = 0.6. This cuts unpriced since-June impact by about 5.4pp on ADANIGREEN, 3.6pp on TATAPOWER and 4.3pp on ADANIENSOL, the largest single item in all three.",
-   "by": "RT_N50_A"
   },
   {
    "node": "T_ENERGY_TRANSITION",

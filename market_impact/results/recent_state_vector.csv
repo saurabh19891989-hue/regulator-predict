@@ -1,6 +1,6 @@
 driver,state_ssu,source
 F_BRENT,0.0010522748455144004,observed
-F_STEEL_GLOBAL,2.0551601423487553,observed
+F_STEEL_GLOBAL,0.5,director_override
 F_IRON_ORE,-0.8302391052128607,observed
 F_COPPER,-0.23681790872851716,observed
 F_ALUMINIUM,-1.9613138227720905,observed
@@ -76,8 +76,9 @@ P_USFDA_ENFORCEMENT,0.4,director_override
 P_EV_POLICY,1.1,events
 NEW_AUTO_SAFETY_EMISSION_NORMS,0.8,events
 F_AUTO_DEMAND_IN,0.5,director_override
-P_DEFENCE_PROCUREMENT,0.4,director_override
+P_DEFENCE_PROCUREMENT,0.5,director_override
 F_COAL_INTL,0.7,director_override
+NEW_POWER_EQUIP_CAPACITY,0.5,director_override
 NEW_CABLE_NEW_ENTRANT_PRICING,1.0,director_override
 NEW_WC_COMPETITIVE_INTENSITY,1.0,director_override
 NEW_GENSET_PRICE_COMPETITION,1.0,director_override

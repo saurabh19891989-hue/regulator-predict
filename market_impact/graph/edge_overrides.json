@@ -345,6 +345,62 @@
    "by": "RT_BACKBONE"
   },
   {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "HINDPETRO",
+   "origin": "HINDPETRO",
+   "factor": 0.2,
+   "reason": "[RT_TOP_A] Double count with Brent. The profile's own mechanism says the -4.5 is '-3.6 via Brent edge' plus a supply-security premium. HPCL also has a direct F_BRENT edge (-3.0), and every Mideast event (EV_US_IRAN_CEASEFIRE_DEAL, EV_IRAN_TALKS_FAIL_ESCALATE, EV_HORMUZ_FULL_CLOSURE) shocks F_BRENT and C_MIDEAST_CONFLICT together. In the recent state, Brent is observed flat since 1 Jun, yet the edge still books -4.5% of Brent damage that did not happen. Keep ~-0.9 for the premium and freight/insurance on Gulf crude.",
+   "by": "RT_TOP_A"
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "IOC",
+   "origin": "IOC",
+   "factor": 0.25,
+   "reason": "[RT_TOP_A] Same double count. The mechanism reads 'Escalation (+1) ~ Brent +12% and diesel cracks wider', so it carries both the Brent and the crack channels, and IOC has its own F_BRENT and F_REFINING_MARGIN edges, which events shock directly. That books -3.5% in the recent state with Brent flat since June, and +3.5% in forward ceasefire paths on top of the F_BRENT path. Keep ~-0.9 for supply security.",
+   "by": "RT_TOP_A"
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "WAAREEENER",
+   "origin": "WAAREEENER",
+   "factor": 0.0,
+   "reason": "[RT_TOP_A] Node conflation with the wrong sign since June. P_US_TARIFF_INDIA (SSU +10 pp average tariff) fell (-0.6, after IEEPA tariffs were struck down), so this edge books +1.2% 'unpriced' upside. Waaree's US channel is governed by solar-specific AD/CVD, which rose sharply instead: Commerce final AD 123% plus CVD 126% on Indian cells/modules (14 Sep 2026), USITC final injury (15 Oct 2026), plus Section 232 MIPs. The generic tariff node no longer moves Waaree's US economics, and a US-India trade deal (forward +0.55) would not lift solar AD/CVD.",
+   "by": "RT_TOP_A"
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "PREMIERENE",
+   "origin": "PREMIERENE",
+   "factor": 0.0,
+   "reason": "[RT_TOP_A] Same conflation as WAAREEENER. Premier is 99% domestic. Its US exposure is indirect: AD/CVD diverts Indian exporters' modules into the domestic market. That is a domestic-price channel, not a generic-tariff one.",
+   "by": "RT_TOP_A"
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "COALINDIA",
+   "origin": "COALINDIA",
+   "factor": 0.5,
+   "reason": "[RT_TOP_A] SSU mismatch. The edge (+6) is sized for a blended +10% that assumes a 1-in-3 chance of an FSA notified-price hike (its mechanism). The only state on F_COAL_INDIA (+1.5, EV_INDIA_COAL_CRUNCH) is an e-auction-premium move (premiums ~94%) with no FSA change. E-auction is ~12% of CIL volume, so the blended effect is about half. Reported Q2 FY27 confirms the gain did not reach earnings: profit missed estimates on costs, analysts flagged weak e-auction realisations, and the stock fell 3-4% on results (Moneycontrol and Business Standard, 30 Oct). This halves the +9% 'unpriced' recent impact.",
+   "by": "RT_TOP_A"
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "JINDALSTEL",
+   "origin": "JINDALSTEL",
+   "factor": 0.87,
+   "reason": "[RT_TOP_A] EV/MCap slip. The +16 uses the AGENT_SPEC worked example's EV/MCap of 1.3. Actual: price Rs1,153 x ~102 cr shares = Rs1.18 lakh cr market cap; net debt Rs14,790 cr (Q2 FY27) gives EV/MCap ~1.13. +7% x NSR Rs70,078 x ~10.5 Mt = Rs5.15k cr = +41% of FY27E EBITDA ~Rs12.5k cr (Q2 2,504 + PL Q3 3,150/Q4 4,410), x1.13 x0.3 = +13.9.",
+   "by": "RT_TOP_A"
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "JINDALSTEL",
+   "origin": "JINDALSTEL",
+   "factor": 0.65,
+   "reason": "[RT_TOP_A] Persistence/EV consistency with the steel edge. Coking coal ~22% of ~Rs54k cr FY27E costs = Rs11.9k cr; +15% = Rs1.78k cr = -14% EBITDA, x1.13 x0.3 = -4.8 (the profile's -7.5 implies persistence ~0.5 while the steel edge uses 0.3). The two price legs move together and must fade at the same rate, or every cost-push steel rally books a spurious net loss and every coal fall a spurious gain.",
+   "by": "RT_TOP_A"
+  },
+  {
    "src": "P_RENEWABLE_SUPPORT",
    "dst": "SUZLON",
    "origin": "SUZLON",

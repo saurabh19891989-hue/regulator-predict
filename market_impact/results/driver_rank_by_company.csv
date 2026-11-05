@@ -599,17 +599,17 @@ CIPLA,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,0.472027999999999
 CIPLA,F_PRIVATE_CAPEX,Private corporate capex,0.4682420000000002,+10% capex growth
 CIPLA,F_RURAL_DEMAND,Rural consumption growth,0.4663220000000002,+5 pp
 CIPLA,F_CHINA_GDP,China growth / stimulus,-0.3880180000000001,+1 pp
-COALINDIA,F_COAL_INDIA,Indian domestic coal price & availability cost,6.0,+10% domestic coal cost (notified/e-auction)
-COALINDIA,F_POWER_DEMAND_IN,Indian electricity demand,3.76,+3 pp demand growth
-COALINDIA,F_COAL_INTL,International thermal coal price,2.5200000000000005,+15% seaborne thermal coal
-COALINDIA,F_MONSOON,Monsoon rainfall vs normal,-2.082090006167763,+10% above long-period average
+COALINDIA,F_POWER_DEMAND_IN,Indian electricity demand,3.28,+3 pp demand growth
+COALINDIA,F_COAL_INDIA,Indian domestic coal price & availability cost,3.0,+10% domestic coal cost (notified/e-auction)
+COALINDIA,F_COAL_INTL,International thermal coal price,2.16,+15% seaborne thermal coal
 COALINDIA,P_MINING_ROYALTY,Mining royalty / mineral tax burden,-2.0,+1 = higher
-COALINDIA,C_MIDEAST_CONFLICT,Middle East conflict intensity,1.7645340964285718,+1 = escalation
-COALINDIA,F_CHINA_GDP,China growth / stimulus,1.608023285714286,+1 pp
-COALINDIA,NEW_EL_NINO,ENSO state (El Nino strength),1.5742315789473682,+1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina
+COALINDIA,F_MONSOON,Monsoon rainfall vs normal,-1.8514057956414474,+10% above long-period average
+COALINDIA,C_MIDEAST_CONFLICT,Middle East conflict intensity,1.718971596428572,+1 = escalation
+COALINDIA,F_CHINA_GDP,China growth / stimulus,1.4848357857142862,+1 pp
+COALINDIA,NEW_EL_NINO,ENSO state (El Nino strength),1.386273684210526,+1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina
 COALINDIA,F_WAGES_IN,Indian wage / employee-cost inflation,-1.18452,+2 pp
-COALINDIA,F_BRENT,Brent crude oil price,1.1612558250892853,+10% Brent
-COALINDIA,F_USDINR,USD/INR exchange rate,1.087597,+3% USD/INR (rupee weaker)
+COALINDIA,F_BRENT,Brent crude oil price,1.1531558250892855,+10% Brent
+COALINDIA,F_USDINR,USD/INR exchange rate,1.0766619999999998,+3% USD/INR (rupee weaker)
 COALINDIA,T_ENERGY_TRANSITION,Energy transition investment,-1.00864,+1
 COALINDIA,F_COKING_COAL,Coking coal price,0.8,+15% coking coal
 COALINDIA,P_POWER_REFORM,Power market / DISCOM reform,0.8,+1 = reform progress
@@ -1142,7 +1142,6 @@ HINDCOPPER,P_FDI_RULES,FDI liberalisation,-0.27842400000000006,+1 = liberalisati
 HINDPETRO,NEW_OMC_MARKETING_MARGIN,OMC petrol+diesel marketing margin,11.981076000000002,+Rs1/litre average marketing margin (vs normal ~Rs3-4/l)
 HINDPETRO,F_REFINING_MARGIN,Refining margins (GRM / cracks),4.976,+$2/bbl gross refining margin
 HINDPETRO,NEW_OMC_COMPENSATION,Government compensation to OMCs for fuel/LPG under-recoveries,4.5,"+1 = Rs25,000 cr compensation to oil marketing companies"
-HINDPETRO,C_MIDEAST_CONFLICT,Middle East conflict intensity,-4.127542703869046,+1 = escalation
 HINDPETRO,F_BRENT,Brent crude oil price,-2.8238540157142857,+10% Brent
 HINDPETRO,C_RUSSIA,"Russia (oil discounts, defence, sanctions)",2.7923381142857138,+1 = closer trade access / larger discounts
 HINDPETRO,F_USDINR,USD/INR exchange rate,-2.2741520000000004,+3% USD/INR (rupee weaker)
@@ -1154,6 +1153,7 @@ HINDPETRO,NEW_RUSSIA_UKRAINE_WAR,Russia-Ukraine war / Western sanctions intensit
 HINDPETRO,F_CHINA_GDP,China growth / stimulus,-1.0594628571428573,+1 pp
 HINDPETRO,F_CPI_IN,India CPI inflation,-0.8476370000000001,+1 pp
 HINDPETRO,F_GDP_IN,India real GDP growth,0.8120598749999999,+1 pp
+HINDPETRO,F_REPO_IN,RBI repo rate,-0.7452571428571427,+25 bp repo
 HINDUNILVR,F_URBAN_DEMAND,Urban discretionary consumption growth,1.9466750000000004,+5 pp
 HINDUNILVR,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.5084199642857146,+1 = escalation
 HINDUNILVR,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,1.4766462500000002,+1 = broad cut (~2-5 pp on affected items)
@@ -1367,7 +1367,6 @@ INFY,F_GDP_IN,India real GDP growth,-0.3447861136363637,+1 pp
 IOC,NEW_OMC_MARKETING_MARGIN,OMC petrol+diesel marketing margin,6.488552,+Rs1/litre average marketing margin (vs normal ~Rs3-4/l)
 IOC,F_REFINING_MARGIN,Refining margins (GRM / cracks),3.952,+$2/bbl gross refining margin
 IOC,C_RUSSIA,"Russia (oil discounts, defence, sanctions)",3.5394230714285713,+1 = closer trade access / larger discounts
-IOC,C_MIDEAST_CONFLICT,Middle East conflict intensity,-3.5036199791666673,+1 = escalation
 IOC,NEW_OMC_COMPENSATION,Government compensation to OMCs for fuel/LPG under-recoveries,3.2,"+1 = Rs25,000 cr compensation to oil marketing companies"
 IOC,F_BRENT,Brent crude oil price,-2.309027404345239,+10% Brent
 IOC,F_USDINR,USD/INR exchange rate,-1.8372877500000002,+3% USD/INR (rupee weaker)
@@ -1377,6 +1376,7 @@ IOC,NEW_OPEC_PLUS_SUPPLY,OPEC+ crude supply decisions,1.4852663000000002,+1 mb/d
 IOC,C_RED_SEA,Red Sea / Suez shipping disruption,1.2656000000000003,+1 = disruption
 IOC,F_GDP_IN,India real GDP growth,1.062152625,+1 pp
 IOC,P_FUEL_TAX_IN,Fuel excise / retail price policy (+ = higher taxes/regulated squeeze),-1.005454,+1 = Rs 2/litre excise rise
+IOC,C_MIDEAST_CONFLICT,Middle East conflict intensity,-0.8786199791666671,+1 = escalation
 IOC,F_GAS_GLOBAL,Global natural gas / LNG price,-0.7,+15% gas/LNG price
 IOC,F_PRIVATE_CAPEX,Private corporate capex,0.6964500000000001,+10% capex growth
 IRCTC,NEW_RAIL_TICKET_FEE_POLICY,Railway convenience-fee / ticketing / catering policy,-6.0,"+1 = tightening (cuts convenience fees, opens ticketing to agents, or changes catering contracts)"
@@ -1439,20 +1439,20 @@ ITC,F_BRENT,Brent crude oil price,-0.5792194519642858,+10% Brent
 ITC,F_MONSOON,Monsoon rainfall vs normal,0.4965693294270832,+10% above long-period average
 ITC,F_RISK_SENTIMENT,Global risk aversion (VIX),-0.48301499999999997,+5 VIX points
 ITC,F_CHINA_GDP,China growth / stimulus,-0.44086771428571436,+1 pp
-JINDALSTEL,F_STEEL_INDIA,Indian domestic steel price,15.984,+7% domestic HRC/rebar price
-JINDALSTEL,F_STEEL_GLOBAL,Global HRC steel price,7.885933333333335,+10% global HRC
-JINDALSTEL,P_STEEL_DUTY_IN,Indian safeguard/anti-dumping duty on steel imports,6.394,+10 pp effective duty
-JINDALSTEL,F_COKING_COAL,Coking coal price,-4.864000000000001,+15% coking coal
-JINDALSTEL,F_CHINA_STEEL_EXPORTS,China steel exports,-3.1780000000000004,+15% y/y
+JINDALSTEL,F_STEEL_INDIA,Indian domestic steel price,13.904000000000002,+7% domestic HRC/rebar price
+JINDALSTEL,F_STEEL_GLOBAL,Global HRC steel price,6.859800000000002,+10% global HRC
+JINDALSTEL,P_STEEL_DUTY_IN,Indian safeguard/anti-dumping duty on steel imports,5.562000000000001,+10 pp effective duty
 JINDALSTEL,P_ANTI_DUMPING_IN,"Indian anti-dumping duties (chemicals, solar, others)",3.0,+1 = new broad duties
-JINDALSTEL,F_USDINR,USD/INR exchange rate,2.5954240957954546,+3% USD/INR (rupee weaker)
-JINDALSTEL,F_GOVT_CAPEX,Central + state government capex,2.5078527386363634,+10% capex growth
-JINDALSTEL,F_IRON_ORE,Iron ore price,-1.6860000000000002,+15% iron ore
+JINDALSTEL,F_CHINA_STEEL_EXPORTS,China steel exports,-2.8688600000000006,+15% y/y
+JINDALSTEL,F_COKING_COAL,Coking coal price,-2.5816799999999995,+15% coking coal
+JINDALSTEL,F_GOVT_CAPEX,Central + state government capex,2.3622527386363634,+10% capex growth
+JINDALSTEL,F_USDINR,USD/INR exchange rate,2.345824095795455,+3% USD/INR (rupee weaker)
+JINDALSTEL,F_IRON_ORE,Iron ore price,-1.79182,+15% iron ore
 JINDALSTEL,C_RED_SEA,Red Sea / Suez shipping disruption,-1.5573333333333337,+1 = disruption
 JINDALSTEL,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.53168,+25 bp yield
-JINDALSTEL,NEW_EU_STEEL_ACCESS,EU steel safeguard / CBAM burden on imports,-1.46,+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost)
-JINDALSTEL,NEW_FISCAL_SLIPPAGE_IN,General-government fiscal slippage / extra borrowing vs budget (Centre + states),-1.41213,+0.5 pp of GDP deficit above budget (~Rs2 lakh cr)
+JINDALSTEL,NEW_FISCAL_SLIPPAGE_IN,General-government fiscal slippage / extra borrowing vs budget (Centre + states),-1.373715,+0.5 pp of GDP deficit above budget (~Rs2 lakh cr)
 JINDALSTEL,F_COAL_INDIA,Indian domestic coal price & availability cost,-1.3684,+10% domestic coal cost (notified/e-auction)
+JINDALSTEL,NEW_EU_STEEL_ACCESS,EU steel safeguard / CBAM burden on imports,-1.3352,+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost)
 JINDALSTEL,P_MINING_ROYALTY,Mining royalty / mineral tax burden,-1.0,+1 = higher
 JIOFIN,F_RISK_SENTIMENT,Global risk aversion (VIX),-5.981777720643941,+5 VIX points
 JIOFIN,T_FINANCIALISATION,Household savings shift to financial assets,3.5656406249999995,+1
@@ -2942,18 +2942,18 @@ VOLTAS,NEW_FPI_DEBT_FLOWS,"Foreign portfolio flows into Indian government/corpor
 WAAREEENER,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,6.6981,+1 = stronger support
 WAAREEENER,NEW_SOLAR_CELL_MODULE_PRICE,Indian solar module / cell realisations,5.0,+10% Indian module/cell realisations
 WAAREEENER,T_ENERGY_TRANSITION,Energy transition investment,2.8158,+1
-WAAREEENER,P_US_TARIFF_INDIA,US tariffs on Indian goods,-2.123558906250001,+10 pp average tariff
 WAAREEENER,F_POWER_DEMAND_IN,Indian electricity demand,2.0,+3 pp demand growth
 WAAREEENER,F_USDINR,USD/INR exchange rate,-1.5225460000000002,+3% USD/INR (rupee weaker)
 WAAREEENER,F_REPO_IN,RBI repo rate,-1.46066,+25 bp repo
-WAAREEENER,C_RUSSIA,"Russia (oil discounts, defence, sanctions)",-1.278683642857143,+1 = closer trade access / larger discounts
 WAAREEENER,F_MONSOON,Monsoon rainfall vs normal,-1.100853788754112,+10% above long-period average
 WAAREEENER,F_CPI_IN,India CPI inflation,-1.0952674999999998,+1 pp
 WAAREEENER,F_USDCNY,USD/CNY,-1.04365165,+3% USD/CNY (yuan weaker)
-WAAREEENER,NEW_US_TARIFF_GLOBAL,US average effective tariff rate (all partners),-1.0272031249999996,+5 pp effective tariff rate
 WAAREEENER,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.017479732142857,+1 = escalation
 WAAREEENER,P_ANTI_DUMPING_IN,"Indian anti-dumping duties (chemicals, solar, others)",1.0,+1 = new broad duties
 WAAREEENER,F_ALUMINIUM,Aluminium price,-0.9000000000000001,+10% aluminium
+WAAREEENER,NEW_EL_NINO,ENSO state (El Nino strength),0.8893684210526316,+1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina
+WAAREEENER,F_SILVER,Silver price,-0.8,+12% silver
+WAAREEENER,F_GOLD,Gold price,-0.6824800000000001,+8% gold (USD)
 WIPRO,T_GENAI_SERVICES,GenAI substitution of IT/BPO labour (higher = more substitution),-5.945906249999999,+1
 WIPRO,F_US_GDP,US growth,3.2062239728084423,+1 pp
 WIPRO,P_US_VISA_OUTSOURCING,US H-1B / outsourcing restrictions,-3.0,+1 = material tightening

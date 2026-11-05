@@ -82,6 +82,238 @@
    "by": "DIRECTOR_CE"
   },
   {
+   "ticker": "JINDALSTEL",
+   "match": "DGTR provisional/final finding",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_INDIA_HR_STEEL_AD_PROVISIONAL",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "JINDALSTEL",
+   "match": "Safeguard duty steps down",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_STEEL_SAFEGUARD_STEPDOWN_2027; schedule wrong",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "JINDALSTEL",
+   "match": "India-EU FTA signing",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_INDIA_EU_FTA_SIGNED / NEW_EU_STEEL_ACCESS",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "JINDALSTEL",
+   "match": "Russian Black Sea coking coal",
+   "drop": true,
+   "reason": "[RT_TOP_A] commodity driver (F_COKING_COAL), not company-specific",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "JINDALSTEL",
+   "match": "Angul BF-II",
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.0,
+   "reason": "[RT_TOP_A] guided; symmetric execution risk",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "JINDALSTEL",
+   "match": "slurry pipeline",
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "reason": "[RT_TOP_A] guided; symmetric",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "JINDALSTEL",
+   "match": "Roida iron ore mine",
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.5,
+   "reason": "[RT_TOP_A] guided; clearance slippage risk",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "JINDALSTEL",
+   "match": "2 Mtpa DRI plant",
+   "impact_pct_low": -1.5,
+   "impact_pct_high": 1.0,
+   "reason": "[RT_TOP_A] guided; profile itself flags equipment/shipping delays",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "SAIL",
+   "match": "Safeguard duty tightening",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_INDIA_HR_STEEL_AD_PROVISIONAL; contradicted by Reuters 6 Oct",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "TATASTEEL",
+   "match": "Safeguard duty tightening",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_INDIA_HR_STEEL_AD_PROVISIONAL; contradicted by Reuters 6 Oct",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "HINDPETRO",
+   "match": "Centre decision on OMC compensation",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_LPG_COMPENSATION_CABINET",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "HINDPETRO",
+   "match": "Retail price hike / excise change",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_INDIA_RETAIL_FUEL_HIKE",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "IOC",
+   "match": "Centre decision on OMC compensation",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_LPG_COMPENSATION_CABINET",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "IOC",
+   "match": "Retail petrol/diesel price hike",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_INDIA_RETAIL_FUEL_HIKE",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "IOC",
+   "match": "US-Iran de-escalation",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of EV_US_IRAN_CEASEFIRE_DEAL",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "IOC",
+   "match": "Interim dividend",
+   "drop": true,
+   "reason": "[RT_TOP_A] dividend is not a relative-return event",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "MAZDOCK",
+   "match": "P75I submarine contract",
+   "impact_pct_low": 4.0,
+   "impact_pct_high": 15.0,
+   "reason": "[RT_TOP_A] widely anticipated; NPV at ~8-10% margins over 10y",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "MAZDOCK",
+   "match": "Q3 FY27 results",
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 10.0,
+   "reason": "[RT_TOP_A] symmetric after Q2 miss",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "MAZDOCK",
+   "match": "Q4 FY27 results",
+   "impact_pct_low": -8.5,
+   "impact_pct_high": 8.5,
+   "reason": "[RT_TOP_A] symmetric",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "MAZDOCK",
+   "match": "Interim dividend",
+   "drop": true,
+   "reason": "[RT_TOP_A] dividend is not a relative-return event",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "BDL",
+   "match": "Large missile order",
+   "impact_pct_low": 1.5,
+   "impact_pct_high": 6.0,
+   "reason": "[RT_TOP_A] contract stage of the AoN already in P_DEFENCE_PROCUREMENT state",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "BEL",
+   "match": "Large single order",
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "reason": "[RT_TOP_A] guided inflow; AoN already in state",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "WAAREEENER",
+   "match": "US ITC / Commerce follow-through",
+   "drop": true,
+   "reason": "[RT_TOP_A] occurred 14-15 Oct 2026",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "POWERINDIA",
+   "match": "Q2 FY27 results",
+   "impact_pct_low": -11.0,
+   "impact_pct_high": 11.0,
+   "reason": "[RT_TOP_A] symmetric",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "POWERINDIA",
+   "match": "Q3 FY27 results",
+   "impact_pct_low": -9.5,
+   "impact_pct_high": 9.5,
+   "reason": "[RT_TOP_A] symmetric",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "POWERINDIA",
+   "match": "Q4 FY27 results",
+   "impact_pct_low": -9.5,
+   "impact_pct_high": 9.5,
+   "reason": "[RT_TOP_A] symmetric",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "POWERINDIA",
+   "match": "Index rebalancing / FPI flows",
+   "drop": true,
+   "reason": "[RT_TOP_A] dup of F_FPI_FLOWS / EV_AI_CAPEX_RESET_RISK",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "ENRIN",
+   "match": "FY26 (Sep-2026)",
+   "impact_pct_low": -9.5,
+   "impact_pct_high": 9.5,
+   "reason": "[RT_TOP_A] symmetric",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "ENRIN",
+   "match": "Siemens Energy AG",
+   "impact_pct_low": -4.5,
+   "impact_pct_high": 4.5,
+   "reason": "[RT_TOP_A] symmetric",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "ENRIN",
+   "match": "Q1 FY27 (Dec-2026",
+   "impact_pct_low": -8.5,
+   "impact_pct_high": 8.5,
+   "reason": "[RT_TOP_A] symmetric",
+   "by": "RT_TOP_A"
+  },
+  {
+   "ticker": "COALINDIA",
+   "match": "Third interim dividend",
+   "drop": true,
+   "reason": "[RT_TOP_A] dividend is not a relative-return event",
+   "by": "RT_TOP_A"
+  },
+  {
    "ticker": "BPCL",
    "match": "compensation for LPG/fuel under-recoveries",
    "drop": true,
