@@ -1,0 +1,507 @@
+{
+ "reviewer": "RT_BOT_A",
+ "as_of": "2026-11-05",
+ "scope": "Bottom-13 of the 12m ranking: BAJFINANCE TATACAP BAJAJFINSV PERSISTENT ETERNAL PRESTIGE JIOFIN LENSKART YESBANK MEESHO TCS AUBANK TECHM",
+ "method": "Read the stock reports, profiles and rankings after the RT_EVENTS and RT_BACKBONE merge (08:31). Decomposed forward exposure by the final company edge and by entry node, and computed the implied expected forward driver moves (repo, 10y, VIX, S&P). Checked edges against the empirical pack and against prices on the 7-8 Oct hike days. Fetched news for Q2 results, AT1, ECL, IT visa and MSCI. Re-ran mi/graph.run on a redirected scratch output with all proposals below, with no files in results/ touched.",
+ "edge_scale": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "BAJFINANCE",
+   "origin": "BAJFINANCE",
+   "factor": 0.4,
+   "reason": "Profile's own arithmetic gives -1.2 (Rs376cr floating-funding cost + rollover = -2.5% EBT x persistence 0.5). The mechanism then adds 'P/E de-rating at 34x' to reach -3. That multiple channel is already the F_GSEC_10Y_IN edge (-2.5, 'cost of equity at P/E 34x') and the REPO -> GSEC (0.53) -> BAJFINANCE path. Keep the fundamental -1.2. Evidence: on 7-8 Oct (hike to 5.50%) BAJFINANCE fell -0.7% against Nifty -2.4%."
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "BAJFINANCE",
+   "origin": "BAJFINANCE",
+   "factor": 0.4,
+   "reason": "Mechanism computes -0.8 (Rs860cr = -3.2% PBT, 50% pass-through, persistence 0.5). It then lifts this to -5 for a 'multiple effect', which is the same discount-rate channel as the GSEC edge. 0.4 gives -2.0, still 2.5x the arithmetic."
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BAJFINANCE",
+   "origin": "BAJFINANCE",
+   "factor": 0.3,
+   "reason": "Empirical market-adjusted elasticity +0.01 per +5 VIX (t 0.04, 156 weeks, results/empirical_sensitivities.csv). The -2 is market beta, which the beta adjustment already removes. Forward catalogue VIX expectation is +1.5 SSU, so this edge alone books about -2.8 pp of forward exposure."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TATACAP",
+   "origin": "TATACAP",
+   "factor": 0.4,
+   "reason": "Own arithmetic is -0.8 (Rs330cr = -3.3% PBT, half re-priced through floating LAP/corporate/EBLR assets, persistence 0.5). The 'P/E 24.5x multiple effect' that lifts it to -3 duplicates the GSEC edge (-2.5) and the REPO->GSEC path. Q2 FY27 PAT rose 51% to Rs1,660cr and the stock gained 5% (ET 27-28 Oct)."
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "TATACAP",
+   "origin": "TATACAP",
+   "factor": 0.5,
+   "reason": "+50bp on Rs0.96 lakh cr = Rs480cr = 4.8% PBT, 50% passed through, persistence 0.5 gives -1.2. The -4 includes a multiple add-on already carried by the GSEC edge. 0.5 gives -2."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BAJAJFINSV",
+   "origin": "BAJAJFINSV",
+   "factor": 0.4,
+   "reason": "Look-through of BAJFINANCE's inflated -3 (x0.75). It is scaled with the BAJFINANCE fix; insurance float gains from higher yields offset further."
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "BAJAJFINSV",
+   "origin": "BAJAJFINSV",
+   "factor": 0.4,
+   "reason": "Look-through of BAJFINANCE -5 (x0.8). It inherits the same multiple double count, so it gets the same scale as BAJFINANCE (0.4)."
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BAJAJFINSV",
+   "origin": "BAJAJFINSV",
+   "factor": 0.3,
+   "reason": "Empirical market-adjusted elasticity -0.18 per +5 VIX (t -0.58). The -2 restates beta 1.06-1.14."
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "JIOFIN",
+   "origin": "JIOFIN",
+   "factor": 0.2,
+   "reason": "Mechanism: '+5 VIX ~ Nifty -3.5%; beta 1.47-1.57 ... -> -5'. This is market beta and is double counted with the beta adjustment. Empirical market-adjusted elasticity is +0.11 (t 0.26). The edge was the largest single forward channel (EV_AI_CAPEX_RESET_RISK -16.9% conditional for JIOFIN). -1 keeps a small growth-duration premium."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "YESBANK",
+   "origin": "YESBANK",
+   "factor": 0.5,
+   "reason": "Own arithmetic -1.5 (NIM -6bp on Rs2.9 lakh cr, persistence 0.5). The mechanism 'doubled for discount-rate effect', which is the GSEC edge plus the REPO->GSEC path."
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "YESBANK",
+   "origin": "YESBANK",
+   "factor": 0.5,
+   "reason": "The mechanism books AFS MTM (Rs250cr) as a P&L hit. Under RBI's 2023 investment-portfolio directions (effective Apr 2024; model knowledge), AFS unrealised losses go to the AFS reserve in equity, not P&L. The remaining channels are a small CET1 effect and discount rate."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "AUBANK",
+   "origin": "AUBANK",
+   "factor": 0.6,
+   "reason": "Own arithmetic -0.9 (net -Rs77cr = -1.8% PBT, persistence 0.5), plus a 'P/E 22x multiple effect' that duplicates the GSEC edge and path. Kept at -1.5 because the Q2 call (24 Oct) flagged margin pressure. The stock fell 8-10% on 26 Oct, and that move is in the realised return."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PRESTIGE",
+   "origin": "PRESTIGE",
+   "factor": 0.6,
+   "reason": "Mechanism splits -4 into PAT -2.0, demand -0.6 and multiple -1.4. Demand is the separate REPO -> F_HOUSING_DEMAND (-0.26) -> PRESTIGE (+5) path. The multiple is the GSEC edge (-1.0, cap rates and resi discounting) plus the REPO->GSEC path. Keep about -2.4."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ETERNAL",
+   "origin": "ETERNAL",
+   "factor": 0.6,
+   "reason": "Discount-rate channel (P/E ~700, Gordon 0.25/(r-g)) applies the full 25bp to a 25-year duration. Long yields move about 0.53x repo (backbone REPO->GSEC edge), so the duration effect belongs to the long rate. The forward catalogue's +62bp repo path (see findings) makes this edge -6 pp of forward exposure."
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ETERNAL",
+   "origin": "ETERNAL",
+   "factor": 0.4,
+   "reason": "Empirical market-adjusted elasticity +0.67 per +5 VIX (t 1.15, wrong sign). The profile's -2.5 is mostly beta (1.1-1.3)."
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ETERNAL",
+   "origin": "ETERNAL",
+   "factor": 0.4,
+   "reason": "Contradicted by the profile's own data: FII holding rose 29.1% -> 33.0% (Jun-Sep 2026) during the record FPI outflow, and the stock is +39% market-adjusted since June. A broad-flow beta of +3.5 books -5.6% of 'unpriced' recent impact that did not happen."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LENSKART",
+   "origin": "LENSKART",
+   "factor": 0.6,
+   "reason": "Same as ETERNAL: Gordon duration on a 25bp short-rate move. Long-rate beta to repo is about 0.53."
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "LENSKART",
+   "origin": "LENSKART",
+   "factor": 0.5,
+   "reason": "No empirical history (listed Nov 2025). -3 'after market component' is not supported; peer ETERNAL's empirical value is +0.67. Halved."
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LENSKART",
+   "origin": "LENSKART",
+   "factor": 0.4,
+   "reason": "FII holding rose 4.3% -> 18.3% in two quarters while aggregate FPI flows were at a record outflow. Stock-level flows are block supply from pre-IPO holders, not the macro FPI node. The stock is at an all-time high (+11% on 5 Nov after Q2)."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MEESHO",
+   "origin": "MEESHO",
+   "factor": 0.6,
+   "reason": "Same duration logic as ETERNAL/LENSKART. Long-rate beta to repo is about 0.53."
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "MEESHO",
+   "origin": "MEESHO",
+   "factor": 0.5,
+   "reason": "-4 'after market component' has no empirical support (listed Dec 2025). Peer ETERNAL's empirical value is +0.67. Halved."
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_REPO_IN",
+   "origin": "backbone_india.json",
+   "factor": 0.4,
+   "reason": "Output-gap reaction edge (0.8 SSU = 20bp per 1pp GDP). Summed over about 90 independent forward events, it turns good-growth news hawkish. EV_MONSOON27_FIRST_FORECAST_NORMAL adds +0.26 SSU expected repo, although a normal monsoon lowers food inflation. EV_BUDGET27_CAPEX_RAILWAY adds +0.31 SSU. Propagated repo moves total +1.35 SSU of the catalogue's +2.46 SSU (+62bp) 12m expectation, against +0.59 SSU from the explicit MPC events. The explicit Dec/Feb/Apr MPC odds (RT_EVENTS) already condition on growth and inflation. This is the same treatment RT_BACKBONE gave CPI->REPO (x0.5): RT_BACKBONE did not cover this edge, so there is no duplicate."
+  }
+ ],
+ "event_overrides": {
+  "EV_CPI_BREACH_6PCT": {
+   "entry_shocks": [
+    {
+     "node": "F_CPI_IN",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 0.9,
+     "note": "Oct CPI >6% (unchanged)"
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "CLAMPED at 0: the RBI response is carried by EV_RBI_DEC26_HIKE25/EV_RBI_FEB27_HIKE25 odds, which RT_EVENTS set with the 12 Nov CPI print as the swing factor"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.7,
+     "note": "inflation-risk premium only; hike-expectation part (~0.2) moved to the MPC events"
+    }
+   ],
+   "reason": "Double count of the RBI reaction. RT_EVENTS set EV_RBI_DEC26_HIKE25 (0.42) / FEB27 (0.27) with 'the 12 Nov Oct CPI print is the swing factor'. The breach event's own F_REPO_IN +0.4 SSU (p 0.6) books the same hike a second time. Keeping F_REPO_IN in entry_shocks at 0 clamps it, so CPI->REPO no longer propagates inside this event. Prob unchanged."
+  },
+  "EV_PULSES_VEG_SPIKE_WINTER": {
+   "entry_shocks": [
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 1.2,
+     "low": 0.8,
+     "high": 1.8,
+     "note": "unchanged"
+    },
+    {
+     "node": "F_CPI_IN",
+     "ssu": 1.0,
+     "low": 0.7,
+     "high": 1.4,
+     "note": "unchanged"
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.8,
+     "note": "clamped: RBI looks through supply-led food spikes (2026: CPI 2.8%->5.5% met by one 25bp hike); Feb/Apr MPC odds already carry part of this risk"
+    }
+   ],
+   "reason": "Unclamped, the CPI +1pp entry propagates through CPI->REPO into about +36bp of hikes (pre-RT_BACKBONE), or +18bp after x0.5. The result is -9.8% conditional for BAJFINANCE and -10.7% for YESBANK. A supply-led food spike is the case the RBI looks through, and the 2026 episode (CPI 2.8% -> 5.5%) drew one 25bp hike. Clamp F_REPO_IN at +0.3 SSU (~7bp). Prob unchanged."
+  },
+  "EV_RBI_GOLD_LOAN_TIGHTEN": {
+   "entry_shocks": [
+    {
+     "node": "P_RBI_PRUDENTIAL",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "broad NBFC spill-over only; a gold-loan/revolving-credit rule is not a system-wide risk-weight step"
+    },
+    {
+     "node": "F_UNSECURED_STRESS",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.8,
+     "note": "unchanged"
+    },
+    {
+     "node": "F_GOLD_DEMAND_IN",
+     "ssu": -0.3,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "unchanged"
+    },
+    {
+     "node": "MUTHOOTFIN",
+     "ssu": -3.0,
+     "low": -6.0,
+     "high": -1.0,
+     "note": "gold-lender-specific hit restored as a company entry (MUTHOOTFIN P_RBI_PRUDENTIAL edge -4 describes exactly this step)"
+    }
+   ],
+   "reason": "Node conflation. A gold-loan/revolving-credit rule is booked as a full system-wide P_RBI_PRUDENTIAL step (+1 = risk-weight-type tightening). Current conditional impacts are TATACAP -6.5, BAJFINANCE -6.1, AUBANK -5.7, YESBANK -5.6, SBIN -4.5 and HDFCBANK -4.3, larger than the gold lender MUTHOOTFIN (-5.0). Gold loans are <2% of BAJFINANCE AUM (profile). TATACAP says revolving-credit curbs touch 3-4% of AUM and that rule is already a TATACAP company event (ET BFSI 28 Oct). Keep 0.3 for NBFC spill-over and move the gold-lender hit to a MUTHOOTFIN company entry. Prob unchanged."
+  },
+  "EV_ECL_ROLLOUT_APR27": {
+   "entry_shocks": [
+    {
+     "node": "P_RBI_PRUDENTIAL",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "RT_EVENTS value, unchanged"
+    },
+    {
+     "node": "F_CREDIT_GROWTH_IN",
+     "ssu": -0.15,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "RT_EVENTS value, unchanged"
+    },
+    {
+     "node": "F_ASSET_QUALITY_IN",
+     "ssu": 0.15,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "RT_EVENTS value, unchanged"
+    },
+    {
+     "node": "BAJFINANCE",
+     "ssu": 1.98,
+     "low": 1.5,
+     "high": 2.5,
+     "note": "offset: NBFCs are outside the bank ECL directions (Ind AS 109 ECL since FY2018)"
+    },
+    {
+     "node": "TATACAP",
+     "ssu": 2.41,
+     "low": 1.8,
+     "high": 3.0,
+     "note": "offset: NBFC, outside the bank ECL directions"
+    },
+    {
+     "node": "JIOFIN",
+     "ssu": 1.08,
+     "low": 0.8,
+     "high": 1.4,
+     "note": "offset: NBFC/CIC, outside the bank ECL directions"
+    },
+    {
+     "node": "BAJAJFINSV",
+     "ssu": 0.18,
+     "low": 0.0,
+     "high": 0.4,
+     "note": "offset residual after the BAJFINANCE offset passes through the 0.75 holding link"
+    }
+   ],
+   "reason": "RT_EVENTS shocks and probability kept unchanged (0 / 0.9). Added company-entry offsets that cancel the generic-node impact on NBFCs. The 27 Apr 2026 RBI directions apply to commercial banks. NBFCs have used Ind AS 109 ECL since FY2018 with no regulatory floor; BAJFINANCE ECL coverage is 2.0% against the bank-floor-equivalent 1.2% (Kotak via ETBFSI, 2 May 2026). The event currently books BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67 conditional. Offsets equal these, net of the BAJFINANCE -> BAJAJFINSV 0.75 holding link. Cleaner alternative for the Director: give ECL a bank-only node."
+  },
+  "EV_ANTHROPIC_IPO_LISTING": {
+   "entry_shocks": [
+    {
+     "node": "T_GENAI_SERVICES",
+     "ssu": 0.25,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "halved: the S-1 news already moved Indian IT -2 to -5% on 27-28 Oct (event's own description)"
+    },
+    {
+     "node": "F_AI_CAPEX",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "unchanged"
+    }
+   ],
+   "reason": "The event's own description records that the S-1 news already moved Indian IT -2 to -5% on 27-28 Oct. The listing itself (p 0.85) should add only the residual substitution narrative. T_GENAI 0.5 -> 0.25, which cuts TCS/TECHM about -1.25 pp to about -0.6 pp expected. Prob unchanged."
+  }
+ },
+ "event_drop": {},
+ "recent_state_overrides": [
+  {
+   "node": "P_US_VISA_OUTSOURCING",
+   "state_ssu": 0.35,
+   "reason": "Event sum 0.9 (EV_INDIAN_IT_Q2_VISA_SHOCK 0.5 + EV_H1B_100K_FEE_COURT 0.4). Both include the H-1B fee, so it is double counted. Since 1 Jun the $100k fee was blocked by a second US judge (ET 1 Oct), and USCIS is clearing H-1B petitions without the fee (NDTV Profit 26 Oct). Analysts see little risk from the green-card (PERM) suspension because PERM filings were already falling (Reuters 11 Oct; ET 10 Oct). The Democratic midterm win lowers odds of a statutory tightening. Net change since June: green-card freeze plus the OPT fee proposal, about 0.35 of a 'material tightening'.",
+   "evidence": "https://news.google.com/rss/search?q=H-1B+fee+court+Indian+IT+stocks+when:45d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "node": "T_GENAI_SERVICES",
+   "state_ssu": 0.3,
+   "reason": "Single source: EV_IT_AI_DEFLATION_Q2FY27 +1.0, whose what_already_moved is 'Not quantified'. AI-driven pricing deflation is a LEVEL narrative that was priced before June: TCS was ~-35% in 2026 before October and -16.7% over 12m. Since June the market moved the other way. Nifty IT rose +16% in a month to 22 Oct on the 'anti-AI trade' (Upstox 22 Oct; CNBC TV18 13 Oct), and TCS (+4.1%) and TECHM (+14%) beat the market since 1 Jun. The incremental Q2 evidence (Infosys guidance cut to 1-2%, 23 Oct) supports a small change, about 0.3.",
+   "evidence": "https://news.google.com/rss/search?q=Nifty+IT+index+rally+anti-AI+trade+October+when:40d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "findings": [
+  {
+   "severity": "high",
+   "subject": "F_REPO_IN forward path (all rate-sensitive names)",
+   "issue": "Rate channel double counted across forward events. The catalogue implies an expected +2.46 SSU (+62bp) repo move over 12m, on top of the 7 Oct hike. The explicit MPC events (Dec 0.42, Feb 0.27, Apr cut 0.10) give +0.59 SSU (+15bp). Other events with explicit repo shocks add +0.52 (CPI breach, rupee break, stagflation). Propagation through CPI->REPO and GDP->REPO adds +1.35, including +0.26 from a NORMAL monsoon forecast and +0.31 from budget capex. The expected 10y G-sec move is +1.91 SSU (+48bp). Street forecasts are flat to lower: 7.25-7.35% for November (ET BFSI 4 Nov) and 6.75-7.0% by March per SBI Research (BS 1 Nov). F_REPO_IN is the largest final edge in forward exposure for BAJFINANCE (-6.2), TATACAP (-6.3), YESBANK, AUBANK, PRESTIGE and ETERNAL. Fixes proposed: GDP->REPO x0.4 (edge_scale), REPO clamps in EV_CPI_BREACH_6PCT and EV_PULSES_VEG_SPIKE_WINTER (event_overrides). Preferred engine fix: clamp F_REPO_IN in every non-RBI forward event dated before the last explicit MPC event (Apr 2027), so the MPC odds alone carry the policy path.",
+   "evidence": "results/event_impacts.csv; graph/edges_all.csv; https://news.google.com/rss/search?q=India+10-year+bond+yield+November+2026+when:10d&hl=en-IN&gl=IN&ceid=IN:en; https://news.google.com/rss/search?q=RBI+MPC+minutes+October+2026+further+tightening+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "Company REPO/CREDIT_SPREADS edges (BAJFINANCE, TATACAP, BAJAJFINSV, YESBANK, AUBANK, PRESTIGE)",
+   "issue": "Within-profile duplicate channel. Each mechanism computes the funding-cost effect (-0.8 to -1.5), then adds a 'P/E / multiple / discount-rate' layer to reach -2.5 to -5. Each profile also carries an F_GSEC_10Y_IN discount-rate edge, and the backbone REPO->GSEC (0.53) path re-enters it (half-damped). Scaled in edge_scale to the agents' own fundamental numbers. On the hike days (7-8 Oct) BAJFINANCE fell -0.7%, TATACAP -2.2% and BAJAJFINSV -2.5%, against Nifty -2.4%. The market did not price the -4 to -5% hike impact these edges imply.",
+   "evidence": "data/prices/close.csv 2026-10-06..08; companies/<T>.json mechanisms"
+  },
+  {
+   "severity": "high",
+   "subject": "EV_ECL_ROLLOUT_APR27 -> NBFCs",
+   "issue": "The bank ECL rollout is routed through generic nodes (P_RBI_PRUDENTIAL, F_ASSET_QUALITY_IN, F_CREDIT_GROWTH_IN), so it hits NBFCs that are outside the directions: BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08, BAJAJFINSV -1.67 conditional at p 0.9. NBFCs have applied Ind AS 109 ECL since FY2018 and already meet bank-style floors (BFL coverage 2.0% vs 1.2%). Offsets added in event_overrides. The cleaner fix is a bank-only ECL node.",
+   "evidence": "https://bfsi.economictimes.indiatimes.com/articles/shriram-finance-and-bajaj-finance-poised-for-ecl-compliance-amid-rbi-regulations/130685102 (2026-05-02); https://bfsi.economictimes.indiatimes.com/articles/rbis-new-ecl-framework-transforming-bank-provisions-by-2027/130557000 (2026-04-27)"
+  },
+  {
+   "severity": "high",
+   "subject": "mi/graph.py unpriced-recent rule (opposite-sign realised moves)",
+   "issue": "When the realised market-adjusted move has the opposite sign to the model impact, the full model impact is kept as 'unpriced'. BAJFINANCE: model -10.0, realised +14.3, unpriced -10.0. Same pattern for TATACAP (-9.7 vs +9.7), PRESTIGE, PERSISTENT, TCS, TECHM and MEESHO. This means the macro hit is still to come and the stock had an offsetting idiosyncratic surprise of +24pp. BAJFINANCE's Q2 (PAT +29%, AUM guidance +4pp) met previews, and NBFCs as a group outperformed (CHOLAFIN +12.3 market-adjusted). More likely the sensitivity is overstated or the shocks were anticipated. Proposal: if sign(realised) != sign(model) and |realised| > |model|, cap the unpriced share at 0.5 x model unless a dated stock-specific event of matching size is documented. This rule is not in my proposals or my simulated numbers. Applied, it would roughly halve the remaining unpriced -6.9/-7.2 for BAJFINANCE/TATACAP.",
+   "evidence": "results/rankings.csv; https://news.google.com/rss/search?q=Bajaj+Finance+Q2+results+margin+credit+cost+guidance+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "Forward catalogue global-risk skew (IT and high-beta names)",
+   "issue": "Summed over forward events, the expected 12m moves are F_US_EQUITIES -1.95 SSU (S&P -9.75%) and F_RISK_SENTIMENT +1.49 SSU (VIX +7.5 pts). They come from EV_AI_CAPEX_RESET_RISK, EV_US_RECESSION_RISK_2027 and EV_YEN_CARRY_UNWIND_RISK, with no upside counterpart (only EV_NVDA_NOV17_BEAT +0.4 SSU S&P). After my fixes this skew is the main remaining driver of PERSISTENT/TCS/TECHM forward exposure: US_EQUITIES edges are empirically supported (+1.07 to +2.15), so the edges are fine and the expectation is skewed. Recommend that the Director/RT_EVENTS add a balancing upside scenario (e.g. AI-capex re-acceleration / soft landing, S&P +3 SSU, VIX -1.5 SSU) or demean global risk nodes across the catalogue.",
+   "evidence": "results/event_impacts.csv; events/global_macro.json"
+  },
+  {
+   "severity": "medium",
+   "subject": "F_RISK_SENTIMENT company edges include market beta",
+   "issue": "Several profiles write the VIX edge as beta x market fall, which double counts with the ranking's beta adjustment. Empirical market-adjusted elasticities: BAJFINANCE +0.01 (t 0.04), BAJAJFINSV -0.18 (t -0.58), JIOFIN +0.11 (t 0.26), ETERNAL +0.67 (t 1.15). Edges are -2, -2, -5 and -2.5. Scaled for my names. A universe-wide check of RISK edges against the empirical pack is worth doing.",
+   "evidence": "results/empirical_sensitivities.csv"
+  },
+  {
+   "severity": "medium",
+   "subject": "BAJAJFINSV company event 'Bajaj Finance QIP Rs11,700cr and warrants'",
+   "issue": "Double count: BAJFINANCE's own QIP event (p 0.7) already reaches BAJAJFINSV through the 0.75 holding link. Subscribing to warrants at market price is not value-destructive for the parent. FIX: company_event_overrides {ticker: BAJAJFINSV, match: 'Bajaj Finance QIP', drop: true}.",
+   "evidence": "https://news.google.com/rss/search?q=Bajaj+Finance+QIP+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "JIOFIN company event 'Jio Platforms listing / price discovery' (2026-11, p 0.85)",
+   "issue": "Already occurred: Jio Platforms listed on 28 Oct 2026 after the 21-23 Oct IPO. The reaction is in the realised price. FIX: {ticker: JIOFIN, match: 'Jio Platforms listing', drop: true}.",
+   "evidence": "https://news.google.com/rss/search?q=Jio+Platforms+IPO+listing+date+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "AUBANK company event 'ECL framework effective' (2027-04, p 0.85, -5..+1)",
+   "issue": "Duplicates the catalogue event EV_ECL_ROLLOUT_APR27, which already hits AUBANK (-2.17 conditional) through generic nodes. Whether SFBs are in scope of the final directions is not verified in fetched text. FIX: {ticker: AUBANK, match: 'ECL framework effective', drop: true}.",
+   "evidence": "events/sector_policy.json; graph/event_overrides.json"
+  },
+  {
+   "severity": "low",
+   "subject": "PERSISTENT/TCS/TECHM company event 'Nvidia results ... AI-trade read-across' (2026-11-17)",
+   "issue": "Duplicates catalogue EV_NVDA_NOV17_BEAT (p 0.62), which already reaches all three via F_US_EQUITIES/F_RISK_SENTIMENT. The MARKET_WIDE regex does not catch it. FIX: drop with match 'Nvidia results' (PERSISTENT, TECHM) and 'Nvidia FQ3 results' (TCS).",
+   "evidence": "companies/PERSISTENT.json; companies/TCS.json; companies/TECHM.json"
+  },
+  {
+   "severity": "low",
+   "subject": "LENSKART company event 'Anniversary of IPO listing: lock-in expiries' (2026-11-10, p 0.5, -6..0)",
+   "issue": "No standard lock-in expires at 12 months. Under SEBI ICDR (model knowledge), pre-IPO non-promoter shares are locked 6 months and promoter minimum contribution 18 months. Pre-IPO holders have already sold (ADIA Rs2,390cr 21 Sep, Alpha Wave Rs1,985cr 12 Oct). FIX: {ticker: LENSKART, match: 'Anniversary of IPO listing', drop: true}.",
+   "evidence": "companies/LENSKART.json current_state"
+  },
+  {
+   "severity": "low",
+   "subject": "PRESTIGE company event 'Q2 FY27 financial results/ call follow-through' (2026-11, p 0.7)",
+   "issue": "Q2 FY27 is already reported and in the realised price; the profile says 'Sep column already in screener'. FIX: {ticker: PRESTIGE, match: 'call follow-through', drop: true}.",
+   "evidence": "companies/PRESTIGE.json"
+  },
+  {
+   "severity": "low",
+   "subject": "MEESHO company event 'MSCI index review / inclusion decision' (p 0.4, +2..+8)",
+   "issue": "Inclusion is now the base case (Livemint 29 Oct; JM Financial, Business Standard 23 Oct), and the stock already rose 6% on inclusion hopes on 6 Oct. FIX: prob 0.8, impact_pct_low 0, impact_pct_high 3.",
+   "evidence": "https://news.google.com/rss/search?q=Meesho+MSCI+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "BAJFINANCE company event 'QIP launch/closing Rs11,700cr' (p 0.7, -4..+1)",
+   "issue": "The 1.8% dilution was announced on 1 Oct and the stock fell 5-6% then. The EGM approved it on 2 Nov, and BFL has since risen to 1,064. The remaining risk is the pricing discount only. FIX: impact_pct_low -2, impact_pct_high +1.",
+   "evidence": "https://news.google.com/rss/search?q=Bajaj+Finance+QIP+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "YESBANK missing company event: Rs7,500cr equity raise",
+   "issue": "Missing stock-specific channel. The 4 Nov AGM sought approval for up to Rs7,500cr equity and Rs8,500cr debt after the Supreme Court voided the Rs8,415cr AT1 write-off (Reuters 15 Oct; ~250bp CET1, The Hindu 16 Oct). That is about 15% dilution at a ~Rs50k cr market cap. The AT1 hit is priced (stock -26% in October; model correctly books unpriced 0). Pricing-discount dilution is not priced yet. FIX: company_event_overrides add {ticker: YESBANK, date: '2027-02', event: 'Equity raise up to Rs7,500cr (QIP/preferential): pricing discount and ~15% dilution', type: corporate_action, prob: 0.7, impact_pct_low: -5, impact_pct_high: 0}.",
+   "evidence": "https://news.google.com/rss/search?q=Yes+Bank+seeks+7500+cr+equity+raise+AGM+when:10d&hl=en-IN&gl=IN&ceid=IN:en; https://news.google.com/rss/search?q=Yes+Bank+AT1+Supreme+Court+when:60d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "BAJFINANCE",
+   "issue": "VERDICT: too high — Model -13.8% 12m / -8.0% 3m (rank 200) is about 2x too negative; with my fixes it is about -6.4% / -4.2% (rank 197). Drivers: unpriced recent -10.0 against a realised +14.3 (opposite sign, see the engine finding), and forward -14.8. The forward part is dominated by F_REPO_IN (-6.2 pp), GSEC (-3.8) and SPREADS (-3.2). These are inflated by the +62bp implied repo path, the REPO/SPREADS edge multiple double count, ECL (NBFC-exempt) and gold-loan node conflation. A negative tilt is defensible: hiking cycle, the Q2 call flagged margins, Rs17,500cr raise. No single edge or event exceeds ±25%; the largest conditional is Iran escalation at about -10%. Recent run: Q2 PAT +29%, FY27 AUM guidance raised to 27% (19 Oct), +7% on 5 Nov with oil -18% for the week.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=BAJFINANCE+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "TATACAP",
+   "issue": "VERDICT: too high — Model -12.7% 12m (rank 199); with my fixes about -7.0%, still bottom-5. Same rate double count as BAJFINANCE (REPO final edge -6.3 pp), plus ECL (-2.41 conditional, NBFC-exempt) and gold-loan tightening (-6.5 conditional). Q2 PAT +51% to Rs1,660cr, loan book over Rs3 trn, stock +5% on results (27-29 Oct). The residual negative rests on the opposite-sign unpriced -7.2 (realised +9.7) and margin recovery only from Q4. Revolving-credit curbs (3-4% of AUM) are correctly a company event.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=TATACAP+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "BAJAJFINSV",
+   "issue": "VERDICT: too high — Model -10.2% (rank 198); with my fixes about -4.4% (rank ~176). Its edges are 0.8x look-throughs of BAJFINANCE's inflated REPO/SPREADS edges, plus a beta-type VIX edge (empirical -0.18, t -0.58). It also carried a QIP event that the holding link already passes through. Q2 PAT +23% (3 Nov). Insurance gains from higher reinvestment yields offset part of the rate hit.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=BAJAJFINSV+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "PERSISTENT",
+   "issue": "VERDICT: too high — Model -10.0% (rank 197). My fixes trim the recent part (T_GENAI and visa state, Nvidia event duplicate) but the stock stays near the bottom (-8.8%). That residual comes from the catalogue's global-risk skew: expected S&P -9.75% and VIX +7.5 with no upside scenario, through an empirically valid US_EQUITIES edge (+2.0). Stock-specific news since June is positive: 26 straight quarters of growth, a Rs4,265cr QIP placed at 5,550 with the stock now 6,141, and the Nagarro squeeze-out. The verdict depends on fixing the catalogue skew, not the edges.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=PERSISTENT+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "ETERNAL",
+   "issue": "VERDICT: too high — Model -8.5% (rank 196); with my fixes about -4.4%. The recent 'unpriced' -5.5 came mostly from F_FPI_FLOWS (-5.6), even though FIIs RAISED their stake 29.1% -> 33.0% during the outflow and the stock is +39% market-adjusted. Forward exposure is driven by REPO as a duration channel (scaled x0.6) and a beta-type VIX edge (empirical +0.67). The labour-code gig-worker cost (P_LABOUR_CODES -3, EV_LABOUR_CODES_RULES p 0.8) is a real, stock-specific negative and is retained.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=ETERNAL+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "PRESTIGE",
+   "issue": "VERDICT: too high — Model -7.0%; with my fixes about -4.6%. The REPO edge (-4) re-counts the housing-demand path and the multiple. The stock is +12.6% market-adjusted since June on record bookings (Rs7,225cr Q2, a Morgan Stanley beat), the CPPIB Rs3,000cr hospitality stake and Rs40,000cr of H2 launches. A rate-sensitive, levered developer (interest 45% of operating profit) merits a mild negative; -7% treated as unpriced against a +12.6% realised move is too much.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=PRESTIGE+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "JIOFIN",
+   "issue": "VERDICT: too high — Model -6.5% (rank 188); with my fixes about -3.0% (rank ~150). The forward -13.6 was led by a -5 VIX edge that is pure beta (empirical +0.11, t 0.26), plus ECL (NBFC-exempt, -1.08) and the rate path. The model correctly books no unpriced recent impact: the realised -8.4% includes Q2 PAT -51% (15 Oct) and a 25cr-share warrant allotment (30 Oct). The Jio Platforms listing event already happened on 28 Oct, so drop it.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=JIOFIN+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "LENSKART",
+   "issue": "VERDICT: too high — Model -6.9%; with my fixes about -2.4%. FPI and VIX edges are contradicted: FII holding rose 4.3% -> 18.3%, and the stock is at an all-time high after Q2 (OPM 22%, +11% on 5 Nov). The 'one-year lock-in expiry' event has no regulatory basis. Rich valuation (P/E 161) is the honest risk, but the model has no valuation-reversion channel, so it should not show up as macro downside.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=LENSKART+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "YESBANK",
+   "issue": "VERDICT: agree — Sign agreed, magnitude slightly too negative: model -6.6%, about -4.3% after my fixes, which include the new equity-raise dilution event. The big stock-specific shock, the SC voiding the Rs8,415cr AT1 write-off (~250bp CET1), is priced: -26% in October, realised -35.3% since June, and the model correctly books unpriced 0. The forward macro -10.4 relied on the same rate double count. The AFS-MTM GSEC edge is overstated. Remaining risks are the dilutive equity raise and the review petition outcome. SMBC support is upside.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=YESBANK+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "MEESHO",
+   "issue": "VERDICT: too high — Model -6.2%; with my fixes about -3.4%. The beta-type VIX edge (-4), the REPO duration channel and the US-risk tail skew drive the forward part. The recent 'unpriced' -5.2 (FPI -5.6) contradicts the +26.7% realised move: festive orders +75%, Q2 loss narrowed 68%, and MSCI inclusion likely. Analyst dispersion is real (Nomura Reduce TP 167). Low-confidence profile.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=MEESHO+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "TCS",
+   "issue": "VERDICT: too high — Model -7.9%; with my fixes about -6.1%, still bottom-10, mainly from the catalogue's US-equity/VIX skew. The recent -8.2 rested on T_GENAI +1.0 and visa +0.9 state changes since June. The AI-deflation de-rating happened before June (TCS ~-35% YTD pre-October, -16.7% 12m), and since June Nifty IT rallied 16% on the anti-AI trade. The H-1B fee is blocked and petitions are cleared without it, and analysts see little risk from the green-card freeze. The Nvidia company event double counted the catalogue. TCS trades at 16.5x P/E with a 2.6% yield. Its macro sensitivity is low and the edges are close to empirical.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=TCS+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "AUBANK",
+   "issue": "VERDICT: agree — Model -6.3%; about -3.4% after the rate fixes and dropping the duplicate ECL company event. The realised -7.1% already reflects the Q2 margin-pressure guidance (-8 to -10% on 26 Oct) and the 30 Oct data-leak probe, and the model correctly books only -0.9 unpriced. The remaining negatives are a modest rate drag, data-leak regulatory risk (0.4 x -2.25) and a pending universal-bank transition (upside). Whether ECL applies to SFBs is unverified.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=AUBANK+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "TECHM",
+   "issue": "VERDICT: too high — Model -7.4%; with my fixes about -5.8%. Same issues as TCS: T_GENAI/visa recent state, Nvidia duplicate, US-equity tail skew. Stock-specific news is positive: Q2 EBIT 14.8% on its margin path, the biggest one-day gain in six years (+8%, 16 Oct), Jefferies upgrade, 1:1 bonus. GenAI substitution on telecom/BPS (-4) is a legitimate long-run risk, but not one that changed since June by the +1 SSU booked.",
+   "evidence": "results/rankings.csv (run 2026-11-05 08:31); what-if rerun with this file's fixes in a scratch copy of the engine; https://news.google.com/rss/search?q=TECHM+shares+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ]
+}
