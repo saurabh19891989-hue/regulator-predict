@@ -1,0 +1,373 @@
+{
+ "name": "Bharat Heavy Electricals Ltd.",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Maharatna PSU (government 63%) manufacturing power-plant equipment (thermal BTG sets, boilers, turbines, generators), transmission (transformers, HVDC), industrial products, railway rolling stock/propulsion, renewable, oil and gas, and defence systems. FY26 sales Rs33,782 cr, TTM Rs37,782 cr (+29%), EBITDA margin 10% (from 4-5%), PAT Rs2,879 cr; Q2 FY27 sales Rs9,300 cr, EBITDA Rs1,026 cr, PAT Rs821 cr. Order book up 17% (T&D India 2026-10-15). Market cap Rs146,073 cr at 51x P/E, ROE 6%, borrowings down to Rs6,018 cr. Government stake 63% (promoter 58.17%).",
+ "revenue_mix": [
+  {
+   "segment": "power (thermal BTG, nuclear, hydro, gas)",
+   "share_pct": 65,
+   "geography": "India ~95%"
+  },
+  {
+   "segment": "industry, transmission, transportation, defence, renewables",
+   "share_pct": 35,
+   "geography": "India + small exports"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "BHEL",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Thermal capacity addition programme (~80+ GW planned; model knowledge) is the dominant demand driver; +3pp demand growth raises ordering confidence. Adani Power awarded BHEL up to Rs28,000 cr for four projects totalling 6,400 MW (2026-11-04). +3pp => ~+8% BTG order flow; revenue lag 2-3 years; EBITDA op. leverage 2x on 10% margin; EV/MCap 1.0, persistence 0.6 => ~+3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=BHEL+Q2+FY27+results+order+book+thermal+orders+Adani+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Business Standard/Financial Express: BHEL bags up to Rs28,000 cr Adani Power orders; shares +6%"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "BHEL",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Private thermal developers (Adani, JSW, Tata Power) and industrial customers ordering power equipment; +10% private capex => ~+4% order inflow => +2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "BHEL",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.2,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "NTPC/state gencos, nuclear, railways (transportation) and defence-adjacent orders are PSU/government funded; +10% capex => ~+5% order flow, x2 op. leverage x0.5 persistence => ~+3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "BHEL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 3.5,
+   "lag": ">12m",
+   "mechanism": "Transmission segment (transformers, HVDC/FACTS, switchgear) benefits from grid build-out; smaller share than power BTG.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "BHEL",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Transportation segment (locomotives, EMU/Vande Bharat propulsion, Kavach); +10% => ~+1% equity.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "BHEL",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Discom health and PSU gencos' ability to fund capex; receivable cycle of BHEL improves with reform progress.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "BHEL",
+   "relation": "input_cost",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Steel, castings and forgings ~14% of sales on long fixed-price contracts with only partial price-variation clauses. +7% => ~1.0% of sales vs 10% TTM EBITDA margin => -10% EBITDA; ~50% unrecovered => -5% x persistence 0.5 x EV/MCap 1.0 => -2.5, shaded to -2.0. Empirical F_STEEL_GLOBAL +1.92 (t=1.7) and F_IRON_ORE +5.73 (t=2.8) are positive and contradict the sign: they reflect the capital-goods/commodity-cycle beta (BHEL beta 1.7-1.8) rather than cost pass-through; the model should use the fundamental sign with a wide range.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "BHEL",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Copper windings and cabling ~4% of sales; +10% => 0.4% of sales => -4% EBITDA, half recoverable => -2% x 0.5 x 1.0 => ~-0.6 (empirical +0.89 t=0.9 contradicts, cycle proxy).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BHEL",
+   "relation": "funding_cost",
+   "w": -1.3,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Borrowings Rs6,018 cr (down from Rs9,015 cr) with interest Rs125 cr/quarter: +25bp = Rs15 cr = ~0.4% of EBITDA; main effect is the 50x P/E and customers' project financing. Repo 5.50% since 2026-10-07.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BHEL",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Imported components and technology licences; modest exports; +3% => ~-0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BHEL",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.7-1.8, 1y vol 38%, stock +57% in 12m at 50x P/E; CLSA 'cautious' / 43% downside from valuation (NDTV Profit 2026-10-15).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "BHEL",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": ">12m",
+   "mechanism": "Small defence/naval systems revenue; sympathy with the DAC Rs2.12 lakh cr clearances.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Adani Power",
+   "ticker": "ADANIPOWER",
+   "role": "customer",
+   "importance": "high",
+   "note": "Up to Rs28,000 cr for four thermal projects (6,400 MW), 2026-11-04; not a >25% revenue share yet"
+  },
+  {
+   "counterparty": "NTPC and state gencos",
+   "ticker": "NTPC",
+   "role": "customer",
+   "importance": "high",
+   "note": "Largest customer group for BTG sets"
+  },
+  {
+   "counterparty": "Indian Railways",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Locomotives, propulsion"
+  },
+  {
+   "counterparty": "Larsen & Toubro (L&T-MHI) / Chinese BTG makers",
+   "ticker": "LT",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Thermal BTG competitor"
+  },
+  {
+   "counterparty": "Steel plate/forging and copper suppliers",
+   "ticker": "SAIL",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Material cost ~55% of sales (model knowledge)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Q2 reported 2026-10-14: PAT +120% YoY)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.screener.in/company/BHEL/ (retrieved 2026-11-05); HDFC Sky 2026-10-14"
+  },
+  {
+   "date": "2026-12",
+   "event": "Formal contract signing/LoA conversion for Adani Power orders (up to Rs28,000 cr) and further thermal awards (NTPC, state gencos)",
+   "type": "other",
+   "prob": 0.7,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=BHEL+Q2+FY27+results+order+book+thermal+orders+Adani+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Order inflow vs FY27 target; brokers (CLSA) argue valuation already prices order wins",
+   "type": "guidance",
+   "prob": 0.8,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 6.0,
+   "source": "CLSA/NDTV Profit 2026-11-03 headline"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget 2027-28: power, railways and PSU capex allocations",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge of budget calendar"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs9,300 cr, EBITDA Rs1,026 cr (11%), PAT Rs821 cr; reported 2026-10-14",
+  "trend": "Margin recovery from -10% (Jun 2025 quarter) to 11%; order book +17%; thermal cycle upswing; stock +57% in 12m, -7% in 1m",
+  "valuation": "P/E 51x (earnings depressed), P/B 5.4x, ROCE 9%; broker views split (CLSA cautious, Religare target Rs491)",
+  "recent_developments": [
+   "2026-10-06: record high on thermal ordering cycle (Business Standard)",
+   "2026-10-14/15: Q2 PAT +120%, shares -4% on valuation concerns; CLSA flags rich valuation",
+   "2026-10-16: Financial Express: Rs40,000 cr+ BHEL thermal orders possible",
+   "2026-11-03: CLSA remains cautious despite thermal order win",
+   "2026-11-04: up to Rs28,000 cr Adani Power orders, stock +6%"
+  ]
+ },
+ "key_risks": [
+  "Valuation 51x with 6% ROE",
+  "Execution on fixed-price contracts, steel/copper cost inflation",
+  "Receivables and working capital",
+  "Competition and project delays; customer financing",
+  "PSU stake sale/OFS risk"
+ ],
+ "upside_triggers": [
+  "More thermal awards (NTPC, state)",
+  "Order book conversion lifting margins to 12-14%",
+  "Nuclear and HVDC wins",
+  "Defence/rail diversification"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BHEL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=BHEL+Q2+FY27+results+order+book+thermal+orders+Adani+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Adani Power order and Q2 FY27 headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=BHEL+CLSA+downside+thermal+power+orders+pipeline+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "CLSA valuation caution headlines (from pack)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+  }
+ ],
+ "ticker": "BHEL",
+ "as_of": "2026-11-05"
+}

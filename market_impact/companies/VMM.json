@@ -1,0 +1,375 @@
+{
+ "ticker": "VMM",
+ "name": "Vishal Mega Mart Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_RETAIL",
+ "tier": "MIDCAP_100",
+ "business_summary": "Value-retail chain (about 844 stores per Kalkine, Q2 FY27) selling apparel, general merchandise and FMCG/grocery to middle- and lower-income households, largely in tier-2/3 India. TTM sales Rs 13,910 cr (+18%), EBITDA Rs 1,987 cr (14.3%), profit Rs 897 cr. Sep-26 quarter: sales Rs 3,399 cr (+14%), OPM 12% (13% year ago), PAT Rs 158 cr (+4% y/y); festive timing shift into Q3 hurt SSSG and margin. Stock Rs 94 (-34% 12m, 52-week low on 2026-10-21/22). Promoters (Samayat, Kedaara-backed, model knowledge) 40.02%, FIIs falling 22.0% -> 18.8%, DIIs 36.5%.",
+ "revenue_mix": [
+  {
+   "segment": "apparel (own brands)",
+   "share_pct": 42,
+   "geography": "India, tier 2/3 heavy (model estimate)"
+  },
+  {
+   "segment": "general merchandise and home",
+   "share_pct": 28,
+   "geography": "India"
+  },
+  {
+   "segment": "FMCG and grocery",
+   "share_pct": 30,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "merchandise_cogs",
+   "share_of_costs_pct": 75
+  },
+  {
+   "input": "F_COTTON",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "rent_and_store_costs",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "employee",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "logistics_fuel",
+   "share_of_costs_pct": 5
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "VMM",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Mass-market urban and semi-urban households: +5pp urban growth -> +4pp sales x 25% contribution on Rs 13,910 cr = Rs 139 cr = 7.0% of EBITDA Rs 1,987 cr; EV/MCap 1.05; persistence 0.5 => +3.7, trimmed to 3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 per Business Standard 2026-10-21 and screener pack"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "VMM",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Tier-2/3 customer base (about 75% of stores outside metros, model estimate): +5pp rural/small-town growth -> +3pp sales x 25% = Rs 104 cr = 5.2% EBITDA x 0.5 x 1.05 => +2.7 to +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "VMM",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Customer wage growth drives mass-market spending; +2pp wages -> +2pp sales (Rs 280 cr x 25% = Rs 70 cr = 3.5% EBITDA x 0.5 x 1.05 => +1.8) minus employee cost drag.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "VMM",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+2pp food inflation squeezes discretionary wallet of low-income households (FMCG/grocery is ~30% of sales but low margin): -1% sales on discretionary at 25% = ~Rs 35 cr = 1.8% EBITDA... scaled => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "VMM",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Empirical -1.47/SSU (t=-2.8) - significant. Mechanism: logistics/diesel/plastics ~5% of costs (Rs 600 cr; +10% Brent -> +3% = 1% EBITDA) plus low-income households' fuel/LPG budget squeezed (demand channel); combined ~-1.0, weaker than the empirical.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Empirical sensitivity from market_impact/data/packs/VMM.md"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "VMM",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical -1.26 (t=-2.6); likely a second proxy for the energy-price/household-budget channel already in F_BRENT, so only -0.6 retained to avoid double counting.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Empirical sensitivity from market_impact/data/packs/VMM.md"
+    }
+   ]
+  },
+  {
+   "src": "F_COTTON",
+   "dst": "VMM",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Cotton-linked apparel inputs ~6% of Rs 11,923 cr costs; +10% cotton -> +6% garment cost = Rs 43 cr = 2.2% of EBITDA x 0.6 unrecovered x persistence 0.3 => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "VMM",
+   "relation": "fx_translation",
+   "w": -0.2,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Imports ~5% of COGS (electronics, some apparel, toys): +3% -> Rs 28 cr = 1.4% EBITDA x 0.6 x 0.5 => -0.25. Empirical +2.36 (t=+1.7) has the opposite sign (market-beta artefact), so the range includes positive values.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Empirical sensitivity from market_impact/data/packs/VMM.md"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "VMM",
+   "relation": "policy_effect",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Low-price apparel/FMCG already benefited from Sept-2025 rationalisation (model knowledge); another broad cut (+1) lifts volumes ~3% => +2.5. Probability low after 2026-10-08 Council with no rate cuts.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "PIB / ET 2026-10-08"
+    }
+   ]
+  },
+  {
+   "src": "NEW_VALUE_FASHION_COMPETITION",
+   "dst": "VMM",
+   "relation": "competition",
+   "w": -2.0,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Trent's Zudio (22% growth), Reliance, Max, DMart and e-commerce compete for the same household; +1 cuts SSSG ~1.5pp or margin 70 bp (~5% EBITDA) x persistence 0.4 => -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "VMM",
+   "relation": "competition",
+   "w": -1.0,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Quick commerce takes staples, general merchandise and basic baskets from stores in metros; small share of VMM sales: -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "VMM",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "49x trailing P/E; leases dominate interest (Rs 183 cr TTM): +25 bp repo -> -2% fair value, half transmitted => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VMM.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Contract apparel manufacturers and FMCG suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Own brands for most of sales."
+  },
+  {
+   "counterparty": "Trent (Zudio), DMart, Reliance Retail, Max, V-Mart",
+   "ticker": "TRENT",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Value-retail competition."
+  },
+  {
+   "counterparty": "Samayat Services LLP (promoter) / Kedaara Capital",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "Model knowledge: PE-backed promoter; has sold down via blocks."
+  },
+  {
+   "counterparty": "Mall and high-street landlords",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Rent ~8% of costs."
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: festive shift reverses (Diwali 2026-11-08, model knowledge) so SSSG and margin should rebound",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 12.0,
+   "source": "Business Standard 2026-10-21 (festive shift); model knowledge of calendar"
+  },
+  {
+   "date": "2026-12",
+   "event": "Promoter/PE block sale or share overhang (promoters 40.12% -> 40.02%, FIIs selling)",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 0.0,
+   "source": "market_impact/data/packs/VMM.md shareholding"
+  },
+  {
+   "date": "2027-03",
+   "event": "Store additions toward FY27 target (currently ~844 stores)",
+   "type": "capex",
+   "prob": 0.9,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "Kalkine India 2026-10-22"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 3,399 cr (+14%), operating profit Rs 412 cr (OPM 12% vs 13%), PAT Rs 158 cr (+4%); below estimates; shares -6-8%.",
+  "trend": "Revenue growth slowed from 20% in FY26 to 14%; margin softened on the festive shift; stock 12m -34%.",
+  "valuation": "P/E 49, price/book 5.6x, market cap Rs 44,196 cr; brokerages (Motilal Oswal) see 39% upside; Jefferies/Morgan Stanley up to 51% (2026-09-24, pre-Q2).",
+  "recent_developments": [
+   "2026-09-24: investor day; Jefferies, Morgan Stanley see up to 51% upside.",
+   "2026-10-08: 52-week low.",
+   "2026-10-21: Q2 below estimates, festive shift weighs on SSSG and margin; -6-8%.",
+   "2026-10-22: brokerages stay positive with target cuts."
+  ]
+ },
+ "key_risks": [
+  "SSSG deceleration",
+  "Competition from Zudio and DMart",
+  "Promoter/FII overhang",
+  "Low-income consumer stress and fuel inflation",
+  "Valuation at 49x"
+ ],
+ "upside_triggers": [
+  "Q3 festive recovery",
+  "Store-addition delivery",
+  "Private-label margin gains",
+  "Rural recovery"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_VALUE_FASHION_COMPETITION",
+   "type": "FACTOR",
+   "name": "Value-fashion and mass-retail competition intensity",
+   "ssu": "+1 = materially sharper expansion/discounting by Reliance Trends/Yousta, Max, Style Union, Myntra, V-Mart, DMart"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/VMM.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, price, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Vishal+Mega+Mart+Q2+FY27+SSSG+margin+festive+shift+when:90d",
+   "date": "2026-10-22",
+   "what": "Q2 results coverage (Business Standard, Moneycontrol, Kalkine)"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels and moves"
+  }
+ ]
+}

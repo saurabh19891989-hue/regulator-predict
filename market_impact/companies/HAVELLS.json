@@ -1,0 +1,388 @@
+{
+ "name": "Havells India Ltd.",
+ "industry": "I_CONSUMER_DURABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Electrical products leader: cables & wires (47% of Q2 FY27 sales), switchgear, lighting & fixtures, electrical consumer durables (fans, water heaters, appliances) and the Lloyd brand (ACs, refrigerators, washers). Debt-free, ROCE ~25%, EBITDA margin ~9%. Profit is exposed to copper/aluminium (inventory swings and cable contribution margin), construction and industrial capex cycles, and competition in cables and Lloyd. Stock is -28% in 12 months after margin pressure; UBS downgraded in Oct 2026.",
+ "revenue_mix": [
+  {
+   "segment": "Cables & wires",
+   "share_pct": 47,
+   "geography": "India (Q2 FY27 actual Rs2,999cr)"
+  },
+  {
+   "segment": "Switchgear, lighting, ECD and Lloyd (split approximate)",
+   "share_pct": 53,
+   "geography": "India ~95% / exports ~5%"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 28,
+   "note": "estimate (cables)"
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "F_STEEL_GLOBAL",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "imported components (USD)",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 6
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COPPER",
+   "dst": "HAVELLS",
+   "relation": "input_cost",
+   "w": 0.8,
+   "w_low": -1.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Cables ~47% of sales; copper+aluminium ~70% of cable COGS (~33% of group revenue). Pricing is metal-linked with ~30 days of stock: +10% copper => ~Rs70cr inventory gain (~3% of TTM EBITDA Rs2,302cr) on cables, minus higher costs in Lloyd/fans/switchgear and some demand elasticity; persistence 0.25 => ~+0.8. Pack empirical +0.96 (t=1.8) agrees. Pack gold +1.51 (t=2.5) and silver +0.91 (t=2.0) show metal-complex co-movement without a business link and are ignored.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.investywise.com/havells-india-q2-fy27-unaudited-financial-results-update/",
+     "date": "2026-10-22",
+     "note": "Q2 FY27: revenue Rs6,417cr (+34.6%), EBITDA Rs576cr (+30.5%), margin 8.98% vs 9.27%; cables Rs2,999cr (+47.9%) with contribution margin 13.9% vs 17.7% on aluminium price fall"
+    },
+    {
+     "source": "market_impact/data/packs/HAVELLS.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "HAVELLS",
+   "relation": "input_cost",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Aluminium cables/conductors: falling aluminium cut cables contribution margin to 13.9% from 17.7% in Q2 FY27 (inventory loss/repricing). Aluminium is -19.6% since June, so +10% would restore ~+0.5 via inventory gain and mix; partially offset by costs in fans/ACs.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.investywise.com/havells-india-q2-fy27-unaudited-financial-results-update/",
+     "date": "2026-10-22",
+     "note": "Q2 FY27: revenue Rs6,417cr (+34.6%), EBITDA Rs576cr (+30.5%), margin 8.98% vs 9.27%; cables Rs2,999cr (+47.9%) with contribution margin 13.9% vs 17.7% on aluminium price fall"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "HAVELLS",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Industrial/commercial cables, switchgear, motors; ~30% of sales; +10% private capex => revenue +4% => EBITDA +6% x persistence 0.5 => +2.0 (cables +47.9% in Q2 shows the cycle).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.investywise.com/havells-india-q2-fy27-unaudited-financial-results-update/",
+     "date": "2026-10-22",
+     "note": "Q2 FY27: revenue Rs6,417cr (+34.6%), EBITDA Rs576cr (+30.5%), margin 8.98% vs 9.27%; cables Rs2,999cr (+47.9%) with contribution margin 13.9% vs 17.7% on aluminium price fall"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "HAVELLS",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Power T&D, metro, railways cable/switchgear orders ~12% of sales; +10% => +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "public-sector share estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "HAVELLS",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Wires, switchgear, lighting and fans are installed at construction/finishing; ~40% of sales tied to new housing/repair; +10% sales => revenue +3.5% => EBITDA +5% x 0.5 => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "housing exposure share"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "HAVELLS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Power cables, busducts, switchgear for data centres and AI infrastructure; +1 => cables/switchgear orders +10% => EBITDA +3% x 0.5 => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HAVELLS.md",
+     "date": "2026-10-23",
+     "note": "brokerage commentary on cables growth; no data-centre disclosure verified"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "HAVELLS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Fans, appliances, water heaters, Lloyd ACs/refrigerators (~35% of sales) are discretionary; +5pp => EBITDA +4% x 0.4 => +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.investywise.com/havells-india-q2-fy27-unaudited-financial-results-update/",
+     "date": "2026-10-22",
+     "note": "Q2 FY27: revenue Rs6,417cr (+34.6%), EBITDA Rs576cr (+30.5%), margin 8.98% vs 9.27%; cables Rs2,999cr (+47.9%) with contribution margin 13.9% vs 17.7% on aluminium price fall"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "dst": "HAVELLS",
+   "relation": "competition",
+   "w": -1.1,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Lloyd and ECD (~25% of sales) in categories with price wars; +1pp margin give-up on that pool => group margin -0.25pp vs 9.1% => EBITDA -2.7% x 0.4 => -1.1. Cable competition (Polycab, KEI) is separate and shows in the cables contribution margin.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.investywise.com/havells-india-q2-fy27-unaudited-financial-results-update/",
+     "date": "2026-10-22",
+     "note": "Q2 FY27: revenue Rs6,417cr (+34.6%), EBITDA Rs576cr (+30.5%), margin 8.98% vs 9.27%; cables Rs2,999cr (+47.9%) with contribution margin 13.9% vs 17.7% on aluminium price fall"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HAVELLS",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Imports ~25% of Lloyd/ECD/lighting inputs (~10% of group costs); +3% => +0.3% cost => EBITDA -3% unpriced; half passed through; persistence 0.4 => -0.6, widened.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HAVELLS.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "HAVELLS",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Steel in fans, switchgear enclosures, motors ~3% of costs; +10% => EBITDA -3% before pricing => -0.5; pack empirical -1.14 (t=-1.8) agrees in sign, larger due to industrial-cycle co-movement.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HAVELLS.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "HAVELLS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Branded wires/cables gain from unorganised players under GST/BIS enforcement; +1 => cables share +2pp => EBITDA +3% x 0.5 => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "organised share-gain thesis"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "HAVELLS",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Net-cash, 39x P/E; +25bp => ~-0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HAVELLS.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Polycab India",
+   "ticker": "POLYCAB",
+   "role": "competitor",
+   "importance": "high",
+   "note": "cables and wires"
+  },
+  {
+   "counterparty": "KEI Industries",
+   "ticker": "KEI",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "cables, EHV"
+  },
+  {
+   "counterparty": "Voltas / Blue Star / LG",
+   "ticker": "VOLTAS",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Lloyd AC competition"
+  },
+  {
+   "counterparty": "Copper and aluminium producers (HINDCOPPER, HINDALCO, LME)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "metal price pass-through"
+  },
+  {
+   "counterparty": "Distributors / electricians (~1 lakh points) and builders/EPC",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "dealer incentives; project business"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date not announced; Q2 was 2026-10-22). Watch cable contribution margin and Lloyd profitability",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://www.investywise.com/havells-india-q2-fy27-unaudited-financial-results-update/"
+  },
+  {
+   "date": "2026-12",
+   "event": "Cable list-price / metal-pass-through repricing following aluminium decline; margin recovery or competitive price cuts",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "Q2 FY27 contribution margin 13.9% vs 17.7%"
+  },
+  {
+   "date": "2027-03",
+   "event": "Summer 2027 fan/Lloyd AC demand and price increases (industry hikes up to 8%)",
+   "type": "other",
+   "prob": 0.8,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs6,417cr (+34.6%), EBITDA Rs576cr (+30.5%, margin 8.98% vs 9.27%), PAT Rs353cr (+11%); cables Rs2,999cr (+47.9%) but cable contribution margin 13.9% vs 17.7% as aluminium fell; Motilal Oswal: revenue/EBITDA 12%/14% above its estimates. Q1 FY27 margin was 7.15% on copper/aluminium inflation.",
+  "trend": "Strong top line and cables volumes, but margin below the ~9.5-10% historical; shares made a new 52-week low on 2026-10-23 despite the beat. TTM sales ~Rs25,188cr, EBITDA ~Rs2,302cr (9.1%).",
+  "valuation": "P/E 39, 7x book (pack: price Rs1,073, mcap Rs67,337cr, -28% 12m, -16.7% 3m). Nomura Neutral and trimmed target (Moneycontrol 2026-10-23); UBS downgraded (2026-10-09); Citi Buy (2026-10-01); Motilal Neutral target Rs1,060.",
+  "recent_developments": [
+   "2026-10-22 Q2 FY27 results; EBITDA +30%",
+   "2026-10-23 stock hits 52-week low, down ~6% intraday on margin worry",
+   "2026-10-09 UBS downgrades Havells",
+   "2026-10-01 Citi Buy after correction"
+  ]
+ },
+ "key_risks": [
+  "Cable margin squeeze if aluminium/copper fall further or competitors cut price",
+  "Housing/capex slowdown",
+  "Lloyd losses and discounting",
+  "Rating downgrades and growth-to-value rotation",
+  "Rupee/imported component costs"
+ ],
+ "upside_triggers": [
+  "Metal stabilisation restores cables contribution margin toward 16-17%",
+  "Data-centre/power-capex cable orders",
+  "Summer 2027 demand",
+  "Market-share gains in switchgear"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "type": "FACTOR",
+   "name": "Consumer durables category promotional / discount intensity",
+   "ssu": "+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/HAVELLS.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, price, betas, headlines"
+  },
+  {
+   "url": "https://www.investywise.com/havells-india-q2-fy27-unaudited-financial-results-update/",
+   "date": "2026-10-22",
+   "what": "Q2 FY27 revenue and EBITDA"
+  },
+  {
+   "url": "https://nsearchives.nseindia.com/corporate/HAVELLS1_22102026141520_InfoUpdate_Q2_22102026.pdf",
+   "date": "2026-10-22",
+   "what": "Q2 FY27 info update (NSE; listed, not opened)"
+  },
+  {
+   "url": "https://www.multibagg.ai/market-pulse/articles/havells-q2fy27-profit-revenue-surge-cmvjmfg4i000k2bmricrhvv35",
+   "date": "2026-10-22",
+   "what": "Q2 and Q1 margin context"
+  }
+ ],
+ "ticker": "HAVELLS",
+ "as_of": "2026-11-05"
+}

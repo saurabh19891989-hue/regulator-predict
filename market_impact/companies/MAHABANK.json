@@ -1,0 +1,378 @@
+{
+ "name": "Bank of Maharashtra",
+ "industry": "I_PSU_BANKS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Pune-headquartered public-sector bank (government holds 73.6%) with a strong retail/MSME and CASA franchise; one of the best-performing PSU banks by RoA/RoE (ROE 22.6%). Q2 FY27 PAT Rs 2,310 cr (+41% y/y), NII +22%, total business +25.16%, asset quality improved. Stock +44% over 12m, market cap Rs 64.6k cr, P/E 8.1x, P/B 1.7x. Government is the main shareholder; FIIs 6.5% and DIIs 13.8%.",
+ "revenue_mix": [
+  {
+   "segment": "Retail and MSME banking",
+   "share_pct": 55,
+   "geography": "Maharashtra-heavy, pan-India"
+  },
+  {
+   "segment": "Corporate/wholesale and treasury",
+   "share_pct": 45,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 53,
+   "note": "interest expense Rs 16.9k cr TTM of Rs 31.7k cr revenue"
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "MAHABANK",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Total business +25.16% in Q2 (Indian Masterminds), NII +22%; PSU bank with leverage to loan growth; +3pp system credit growth -> advances +3.5pp -> NII +4% -> PPOP +5%; persistence 0.7 -> +3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bank+of+Maharashtra+Q2+Results+Net+profit+jumps+41%+NII+rises+22%+asset+quality+improves+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Q2 FY27 PAT Rs 2,310 cr (+41%), NII +22%, total business +25.16%, asset quality improved (CNBC TV18/Fortune India/Indian Masterminds)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "MAHABANK",
+   "relation": "funding_cost",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Low-cost CASA franchise (~50%+, model knowledge); +3pp deposit growth eases funding for 25% book growth; FCNR(B) inflows are a double-edged margin factor.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Banks+Q2+margins+FCNR+deposits+may+be+a+double-edged+sword+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "note": "FCNR(B) inflows boost deposits but are a margin drag (ET BFSI)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MAHABANK",
+   "relation": "funding_cost",
+   "w": 1.5,
+   "w_low": -1.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+25bp: ~55-60% of loans are EBLR/repo-linked and reprice in one quarter; deposits reprice over ~12m with CASA sticky. Gross NII +Rs 400 cr/yr first year vs deposit repricing -Rs 250 cr -> net +Rs 150 cr = +1.5% PBT; persistence 0.7 -> ~+1.0; adds momentum for PSU-bank NIM, +1.5 rounded (MS lists PNB/Axis as winners, NDTV Profit 7 Oct).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "MAHABANK",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Investment book ~Rs 1.2 lakh cr (30% of assets, model knowledge), AFS/FVTPL ~25% at modified duration ~2.5: +25bp = -0.6% -> ~Rs 190 cr = -1.9% PBT; RBI interest rate fluctuation reserve cushions; also discount-rate effect: -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "MAHABANK",
+   "relation": "demand_driver",
+   "w": -7.0,
+   "w_low": -11.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "Gross NPA ~1.6%, net NPA ~0.2% (model knowledge); credit cost ~0.4%. +50bp on advances ~Rs 2.7 lakh cr = Rs 1,350 cr = -13% of annual PBT (~Rs 10k cr); persistence 0.55 -> -7. Q2 asset quality improved.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bank+of+Maharashtra+Q2+Results+Net+profit+jumps+41%+NII+rises+22%+asset+quality+improves+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Q2 FY27 PAT Rs 2,310 cr (+41%), NII +22%, total business +25.16%, asset quality improved (CNBC TV18/Fortune India/Indian Masterminds)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "MAHABANK",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Retail unsecured is a small slice; PSU focus on MSME/agri/housing: -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "MAHABANK",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Government/PSU borrowers and infrastructure credit; +10% capex growth -> corporate credit demand +2pp; also state-government exposure: +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "MAHABANK",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Draft ECL provisioning (stage-wise, effective FY28 - model knowledge) and project-finance norms raise provisions; PSU banks with low coverage most exposed; -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MAHABANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "FII holding rising 5.55% -> 6.50%; 73.6% govt; thin float and mid-cap PSU beta 1.1-1.2 magnify flows: +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MAHABANK.md",
+     "date": "2026-11-05",
+     "note": "FII 5.55% Mar-26 -> 6.50% Sep-26; DII 13.76%"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "MAHABANK",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "MF buying for 4 straight quarters (ET 29 Sep); DII 13.76%; +10% flows -> +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bank+of+Maharashtra+5+midcap+stocks+see+MF+buying+for+4+straight+quarters+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "MF buying for 4 straight quarters (Economic Times)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "MAHABANK",
+   "relation": "demand_driver",
+   "w": 2.8,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> loans +1.5pp, credit cost -5bp -> PBT +5% x persistence 0.6 -> +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "MAHABANK",
+   "relation": "discount_rate",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts -> Nifty ~-3.5%; PSU bank beta 1.1-1.2 + 36% vol, stock +44% in 12m so profit-taking risk: -3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "MAHABANK",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "PSU bank FDI/privatisation liberalisation chatter lifts valuations of smaller PSU banks; the Bank-of-Maharashtra 73.6% govt stake leaves headroom for MPS-led sell-downs (supply risk); net +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "73.6% owner; recapitalisation and dividend demands; potential OFS/QIP supply"
+  },
+  {
+   "counterparty": "State Bank of India / Bank of Baroda / Canara / PNB",
+   "ticker": "SBIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "PSU bank peer set and sector index weight"
+  },
+  {
+   "counterparty": "Mutual funds",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "4 straight quarters of MF buying (ET)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 announced 26 Oct 2026)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Bank+of+Maharashtra+Q2+Results+Net+profit+jumps+41%+NII+rises+22%+asset+quality+improves+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Capital raise (QIP) or government sell-down to reach 25% minimum public shareholding trajectory",
+   "type": "corporate_action",
+   "prob": 0.2,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=Bank+of+Maharashtra+QIP+minimum+public+shareholding+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December: further hike; FCNR(B) deposit refinancing watch",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.5,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget: PSU bank reform, dividend and capital allocation",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=PSU+bank+reform+Union+Budget+2027+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs 2,136-2,310 cr (screener vs reported) +41% y/y; NII +22%; business +25%; asset quality improving; revenue growth 17% TTM",
+  "valuation": "P/E 8.1, P/B ~1.7 (Rs 84 vs BV 48.6), ROE 22.6%, dividend yield 2.6%; premium to PSU peers on RoE",
+  "recent_developments": [
+   "2026-09-28: PSU bank sell-off day, MAHABANK -5% (Zee Business)",
+   "2026-09-29: MF buying 4 straight quarters (ET)",
+   "2026-10-07: RBI repo hike boosts PSU bank margin hopes",
+   "2026-10-26: Q2 PAT +41%, NII +22%, stock +6% (NDTV Profit)",
+   "2026-11-02: Kalkine Q2 outlook"
+  ]
+ },
+ "key_risks": [
+  "Valuation after +44% 12m rally",
+  "Government supply (OFS/QIP) and MPS rules",
+  "Asset-quality reversals; ECL transition",
+  "Deposit cost rise and FCNR refinancing",
+  "Margin peak after hikes"
+ ],
+ "upside_triggers": [
+  "Continued 20%+ business growth with RoA ~1.5%",
+  "Further rate hikes aiding EBLR repricing",
+  "PSU bank re-rating on consolidation/privatisation",
+  "Credit rating or index inclusion"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Bank+of+Maharashtra+Q2+Results+Net+profit+jumps+41%+NII+rises+22%+asset+quality+improves+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bank+of+Maharashtra+5+midcap+stocks+see+MF+buying+for+4+straight+quarters+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "MF buying"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Banks+Q2+margins+FCNR+deposits+may+be+a+double-edged+sword+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-30",
+   "what": "FCNR margin drag"
+  },
+  {
+   "url": "market_impact/data/packs/MAHABANK.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  }
+ ],
+ "ticker": "MAHABANK",
+ "as_of": "2026-11-05"
+}

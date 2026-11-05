@@ -159,7 +159,7 @@
    "w_low": -14,
    "w_high": 2,
    "lag": "3-12m",
-   "mechanism": "Rules notified 2026-11-02 allow government intervention in fares in 'extraordinary situations' from 2027 (finalised before SC's Nov-16 deadline). +1 SSU = binding caps/pass-through limits in peak/stress periods. A cap that blocks ~20% of fuel/FX pass-through in stress quarters => -Rs 0.5-1k cr/yr = -4 to -9% EBITDA, x1.15 x persistence 1.0, but market reaction on 2026-11-02 was positive (rules milder than feared), so range allows +2. Central -6 for the cap-risk level; the Q2-26 sell-off on 2026-10-16 (-2%) was the opposite direction.",
+   "mechanism": "Rules notified 2026-11-02 allow government intervention in fares in 'extraordinary situations' from 2027 (finalised before SC's Nov-16 deadline). +1 SSU = binding caps/pass-through limits in peak/stress periods. A cap that blocks ~20% of fuel/FX pass-through in stress quarters => -Rs 0.5-1k cr/yr = -4 to -9% EBITDA, x1.15 x persistence 1.0, but market reaction on 2026-11-02 was positive (rules milder than feared), so range allows +2. Central -6 for the cap-risk level; the -2% reaction on 2026-10-16, when rules were first reported as finalised, shows the sign is two-sided.",
    "confidence": "low",
    "evidence": [
     {

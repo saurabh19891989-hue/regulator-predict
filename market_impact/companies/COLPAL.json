@@ -1,0 +1,355 @@
+{
+ "ticker": "COLPAL",
+ "name": "Colgate-Palmolive (India) Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_FMCG_STAPLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest toothpaste and toothbrush company (Colgate Strong Teeth, MaxFresh, Total, Vedshakti, Visible White; Palmolive, mouthwash). Debt-free, ROCE 108%, payout 112%. TTM sales Rs 6,391 cr (+9%), EBITDA Rs 1,908 cr (30%), PAT Rs 1,362 cr. Sep-26 quarter: sales Rs 1,706 cr (+12%), OPM 28% (31% a year ago), PAT Rs 342 cr (+4%), interim dividend Rs 24; the company stepped up advertising (Exchange4Media 2026-10-22). Stock Rs 1,688 hit a 52-week low on 2026-10-22; -23% 12m. Parent Colgate-Palmolive (US) holds 51%.",
+ "revenue_mix": [
+  {
+   "segment": "toothpaste",
+   "share_pct": 80,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "toothbrushes and others (mouthwash, personal care)",
+   "share_pct": 20,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_EDIBLE_OIL",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "minerals_silica_calcium_carbonate",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "sorbitol_glycerin_other",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "advertising_and_promotion",
+   "share_of_costs_pct": 18
+  },
+  {
+   "input": "employee_royalty_other",
+   "share_of_costs_pct": 44
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "COLPAL",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.3,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Palm-derived surfactants and glycerin ~10% of Rs 4,482 cr costs = Rs 448 cr; +10% -> Rs 45 cr = 2.4% of EBITDA Rs 1,908 cr x 60% unrecovered x persistence 0.4 x EV/MCap 1.0 => -0.6. Series is soybean oil (basis risk vs palm).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 per Moneycontrol 2026-10-22; cost shares are model estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "COLPAL",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Laminated tubes, cartons, brush plastics ~14% of costs (Rs 627 cr); +10% -> Rs 63 cr = 3.3% of EBITDA x 0.6 x 0.4 => -0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "COLPAL",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "Plastic resins/freight with ~0.35 elasticity to Brent over ~20% of costs: +10% -> +0.7% of costs = Rs 31 cr = 1.6% EBITDA x 0.6 x 0.4 => -0.4; overlaps F_PACKAGING.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "COLPAL",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.7,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Rural ~40% of sales (penetration-led); +5pp rural growth -> +2pp sales x 70% gross-margin drop-through = Rs 89 cr = 4.7% of EBITDA x persistence 0.5 => +2.3, trimmed to 2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "COLPAL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Urban premium (Visible White, Total) volumes: +5pp urban growth x 0.4 elasticity = +1.6pp sales x 70% = Rs 72 cr = 3.8% EBITDA x 0.5 => +1.9, trimmed to 1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "COLPAL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "Mix shift to premium variants lifts gross margin; judgemental +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "NEW_ORAL_CARE_COMPETITION",
+   "dst": "COLPAL",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "HUL, Dabur, Patanjali, Himalaya and herbal brands pressure share; +1 requires ~100 bp more A&P: Rs 64 cr = 3.4% of EBITDA x persistence 1.0 x EV/MCap 1.0 => -3.4; central -3. Q2 margin fell 3 pt as advertising was stepped up.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "COLPAL",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Toothpaste moved to a lower GST slab in the Sept-2025 rationalisation (model knowledge). The stock jumped ~7% on 2026-10-09 after the GST Council meeting (Moneycontrol/CNBC TV18) even though the Council made no broad rate cuts; the specific trigger is unverified. +1 broad cut => ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "COLPAL",
+   "relation": "fx_translation",
+   "w": -0.25,
+   "w_low": -1.0,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Imports (toothbrushes, mouthwash, intermediates) and parent royalty ~12% of costs: +3% -> Rs 16 cr = 0.85% EBITDA x 0.6 x 0.5 => -0.25. Empirical +2.13 (t=+1.5) opposite and not significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Empirical sensitivity from market_impact/data/packs/COLPAL.md"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "COLPAL",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "33x P/E, yield 2.9%, zero debt: defensive bond-proxy; +25 bp repo -> -2% fair value, half transmitted => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "COLPAL",
+   "relation": "discount_rate",
+   "w": 0.8,
+   "w_low": 0.1,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 13.7% stable; stock -17% in 3m. Market-wide effect demeaned downstream; residual +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COLPAL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Colgate-Palmolive Company (US) - parent, 51%",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "Royalty, technology, global sourcing; a global portfolio review reported 2026-09-14 (US brand sale, Yahoo Finance) is not India-specific."
+  },
+  {
+   "counterparty": "Hindustan Unilever (Pepsodent), Dabur (Red, Meswak), Patanjali (Dant Kanti), Himalaya",
+   "ticker": "HINDUNILVR",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Toothpaste share contest."
+  },
+  {
+   "counterparty": "Packaging, surfactant, mineral suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Tubes, calcium carbonate, silica."
+  },
+  {
+   "counterparty": "Distributors and retailers (~7 million outlets)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Model knowledge."
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: volume growth and A&P intensity",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge of reporting calendar"
+  },
+  {
+   "date": "2026-11",
+   "event": "Interim dividend Rs 24/share declared 2026-10-22 (record/pay date unverified)",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.4,
+   "source": "Moneycontrol / NDTV Profit 2026-10-22; Rs 24 on Rs 1,688 = 1.4%"
+  },
+  {
+   "date": "2027-06",
+   "event": "Parent portfolio action or open offer (low probability)",
+   "type": "corporate_action",
+   "prob": 0.05,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 15.0,
+   "source": "Yahoo Finance 2026-09-14 (US parent brand-sale report, India link unverified)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 1,706 cr (+12%), operating profit Rs 473 cr (OPM 28%), PAT Rs 342 cr (+4%); narrow miss to estimates.",
+  "trend": "Sales growth recovering (TTM +9% vs 0% in FY26) but margin down from 32% in Mar-26 to 28% on higher advertising.",
+  "valuation": "P/E 33.2, price/book 28x, yield 2.9%; 12m -23%, 52-week low Rs 1,564 near.",
+  "recent_developments": [
+   "2026-10-09: stock +5-8% after GST Council meeting.",
+   "2026-10-22: Q2 miss; 52-week low; Jefferies and Goldman comments.",
+   "2026-10-22: Rs 24 interim dividend."
+  ]
+ },
+ "key_risks": [
+  "Competition and rising A&P",
+  "Slow category growth in toothpaste",
+  "Raw-material inflation",
+  "Parent royalty",
+  "Rich valuation relative to growth"
+ ],
+ "upside_triggers": [
+  "Volume recovery",
+  "GST relief",
+  "Palm and crude easing",
+  "Valuation support from dividend yield"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_ORAL_CARE_COMPETITION",
+   "type": "FACTOR",
+   "name": "Oral-care competition intensity (HUL, Dabur, Patanjali, Himalaya)",
+   "ssu": "+1 = materially sharper discounting/advertising by rivals in toothpaste"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/COLPAL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, price, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Colgate+Palmolive+India+Q2+FY27+volume+growth+margin+GST+dividend+when:90d",
+   "date": "2026-10-22",
+   "what": "Q2 results coverage (NDTV Profit, Livemint, Exchange4Media)"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels and moves"
+  }
+ ]
+}

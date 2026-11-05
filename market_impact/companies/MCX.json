@@ -1,0 +1,395 @@
+{
+ "name": "Multi Commodity Exchange of India Ltd.",
+ "industry": "I_MARKET_INFRA",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's dominant commodity derivatives exchange (about 98% share of listed commodity futures/options): bullion (gold, silver), energy (crude oil, natural gas) and base metals contracts, regulated by SEBI. Revenue comes from transaction fees on futures and options turnover. Q2 FY27 revenue ~Rs 800 cr (+114% y/y), PAT Rs 455 cr (+130%); operating margin 76%; stock +81% over 12m and +50% in 2026 but fell 5-7% on 4 Nov despite results. It is investing Rs 200 cr in coal and minerals platforms and has near-zero debt.",
+ "revenue_mix": [
+  {
+   "segment": "Bullion (gold, silver) futures & options",
+   "share_pct": 45,
+   "geography": "India"
+  },
+  {
+   "segment": "Energy (crude, natural gas) futures & options",
+   "share_pct": 35,
+   "geography": "India"
+  },
+  {
+   "segment": "Base metals, other, data/tech income",
+   "share_pct": 20,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "NEW_TECH_PLATFORM",
+   "share_of_costs_pct": 25,
+   "note": "technology and clearing costs; opex Rs 189 cr Q2 on Rs 800 cr sales"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GOLD",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": -1.0,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Bullion (gold/silver) futures and options are the largest revenue lines (model knowledge ~40-50%). Revenue ~ notional turnover x fee. Gold +8% -> notional +8% on ~25% of revenue = +2% revenue; EBITDA margin 74-76% -> EBITDA +2.7%; EV/MCap 0.97; persistence 0.4 -> +1.0; volatility effect (gold -8.4% since June, silver -30%) raises option activity -> +1.5. Wide because volumes depend on volatility not level.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MCX+Q2+Results+Profit+rockets+130%+YoY+to+Rs+455+crore+revenue+jumps+114%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Q2 FY27 revenue ~Rs 800 cr (+114%), PAT Rs 455 cr (+130%) (Economic Times)"
+    }
+   ]
+  },
+  {
+   "src": "F_SILVER",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": -1.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Silver +12%: silver is the highest-turnover metal in retail options; +12% notional on ~20% of revenue = +2.4% -> EBITDA +3.2% x 0.4 persistence = +1.3; crash in silver (-30% since Jun) coincided with record volume => sign of price effect ambiguous; +1.5, wide.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MCX+Q2+Results+Profit+rockets+130%+YoY+to+Rs+455+crore+revenue+jumps+114%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Q2 FY27 revenue ~Rs 800 cr (+114%), PAT Rs 455 cr (+130%) (Economic Times)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": 1.3,
+   "w_low": -1.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Crude oil futures/options are the second-largest revenue line (~30%, model knowledge). +10% Brent -> notional +10% x 30% = +3% revenue -> EBITDA +4% x 0.4 = +1.6; empirical +1.32/SSU (t 1.8) agrees -> +1.3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MCX+Q2+Results+Profit+rockets+130%+YoY+to+Rs+455+crore+revenue+jumps+114%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Q2 FY27 revenue ~Rs 800 cr (+114%), PAT Rs 455 cr (+130%) (Economic Times)"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Natural gas options are a smaller line (~5% of revenue); +15% price -> +0.7% revenue -> +0.3 equity; empirical -0.66 (t -1.2) not significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": -0.3,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Base metals (copper, aluminium, zinc) ~8% of revenue; +10% -> +0.8% revenue; empirical aluminium +2.60/SSU (t 2.2) reflects commodity-volatility co-movement, shrunk to +0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Retail F&O/commodity participation is correlated; +20% traded value/demat additions -> +8% MCX options turnover -> +5% revenue -> EBITDA +6.5% x 0.5 = +3.2; empirical US equities +2.88 (t 2.7) supports risk-on link; +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_SEBI_DERIVATIVES",
+   "dst": "MCX",
+   "relation": "regulatory_risk",
+   "w": -5.0,
+   "w_low": -12.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "One tightening step (weekly-expiry curbs, lot-size increase, margin/position limits, higher CTT or option premium charges) cut options volumes 20-40% in equity (model knowledge on 2024-25 episode); on MCX options ~60% of revenue -> -15% revenue -> EBITDA -20% x 0.5 persistence x EV/MCap 0.97 -> -9.7, probability-weighted for 'a step' -> -5, range -12..-1.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Why+Bernstein+prefers+MCX+over+BSE+as+volumes+plummet+amid+CAS+chaos+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-09",
+     "note": "Bernstein prefers MCX over BSE as equity-derivative volumes fell (ET)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_COMMODITY_EXCHANGE_COMPETITION",
+   "dst": "MCX",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Entry/scale-up of BSE or NSE in commodity derivatives (BSE re-entered 2025, NSE application - model knowledge, verify). 10% share loss in bullion/crude options -> -10% revenue... assuming 25% at risk -> -7% EBITDA x 0.6 x 0.97 -> -4; rounded -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Household/institutional hedging and trading in commodities (gold ETF-spot linkage, MSME hedging) widens; MCX market share ~98% in listed commodity derivatives; revenue grew 128% TTM; +1 SSU -> +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "MCX",
+   "relation": "fx_translation",
+   "w": 1.2,
+   "w_low": -0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Rupee-denominated bullion/crude contracts rise with INR depreciation (gold INR price = USD price x USD/INR): +3% -> +3% notional on ~70% of revenue = +2% revenue -> EBITDA +2.7% x 0.4 = +1.1; empirical +3.83 (t 1.9) larger -> +1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -3.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Volatility spikes lift hedging demand but cut retail participation; empirical -0.79 (t -1.3); net small negative -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MCX",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 27.06% (swinging 26-30% in 2026) - ownership by foreign exchange-theme funds; +1.5 beyond beta.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MCX.md",
+     "date": "2026-11-05",
+     "note": "FII 26.07% Mar-26 -> 29.85% Jun-26 -> 27.06% Sep-26"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "MCX",
+   "relation": "regulatory_risk",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Minor; relevant only if bank participation (members) is curbed.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "BSE",
+   "ticker": "BSE",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "exchange peer; commodity derivatives re-entry and equity derivatives volume comparison"
+  },
+  {
+   "counterparty": "Brokers/clearing members",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "trading members pay transaction charges"
+  },
+  {
+   "counterparty": "SEBI",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "regulator controlling contract norms, margins, limits"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 declared 3 Nov 2026)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://news.google.com/rss/search?q=MCX+Q2+Results+Profit+rockets+130%+YoY+to+Rs+455+crore+revenue+jumps+114%+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget: possible commodity transaction tax (CTT) change",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Union+Budget+2027+commodity+transaction+tax+CTT+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Launch of coal and minerals trading platforms after Rs 200 cr investment",
+   "type": "capex",
+   "prob": 0.4,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=MCX+to+invest+200+crore+to+launch+coal+minerals+trading+platforms+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "SEBI board meeting on derivatives (options structure, expiry rules)",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Why+Bernstein+prefers+MCX+over+BSE+as+volumes+plummet+amid+CAS+chaos+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Sales Rs 800 cr vs Rs 374 cr a year ago (+114%); PAT Rs 455 cr (+130%); OPM 76%; Q1 revenue Rs 702 cr; earnings leverage from options volumes during sharp bullion/crude moves",
+  "valuation": "P/E 47.8, P/B 24, ROE 56%, dividend yield 0.24%; +28% 3m, +81% 12m; analyst targets e.g. Rs 3,700 (Religare, 4 Nov)",
+  "recent_developments": [
+   "2026-08-18: Rs 200 cr coal and minerals platform investment (ET EnergyWorld)",
+   "2026-09-09: Bernstein prefers MCX over BSE amid equity-derivative volume fall (ET)",
+   "2026-10-05: Jefferies: options volumes recover, commodities gaining traction (ET)",
+   "2026-11-03: Q2 PAT +130%, revenue +114% (Economic Times)",
+   "2026-11-04: shares -5-7% despite beat; reason in press unclear/valuation"
+  ]
+ },
+ "key_risks": [
+  "Regulatory curbs on options/expiries or CTT hike",
+  "Normalisation of commodity volatility cutting volumes",
+  "Valuation (P/E 48) after +81% 12m",
+  "Competition from BSE/NSE",
+  "Technology/outage events"
+ ],
+ "upside_triggers": [
+  "Sustained bullion/crude volatility",
+  "New products (coal, minerals, index options)",
+  "Fee/tariff revisions upward",
+  "Large FII inflows"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_COMMODITY_EXCHANGE_COMPETITION",
+   "type": "FACTOR",
+   "name": "Competition in commodity derivatives",
+   "ssu": "+1 = credible entrant/launch capturing ~10% of bullion/energy options volume"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=MCX+Q2+Results+Profit+rockets+130%+YoY+to+Rs+455+crore+revenue+jumps+114%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Explained+Key+factors+behind+the+7%+fall+seen+in+MCX+shares+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Post-result share reaction"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=MCX+to+invest+200+crore+to+launch+coal+minerals+trading+platforms+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-18",
+   "what": "coal/minerals platforms"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Why+Bernstein+prefers+MCX+over+BSE+as+volumes+plummet+amid+CAS+chaos+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-09",
+   "what": "derivative volume context"
+  },
+  {
+   "url": "market_impact/data/packs/MCX.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  }
+ ],
+ "ticker": "MCX",
+ "as_of": "2026-11-05"
+}

@@ -1,0 +1,394 @@
+{
+ "ticker": "GRASIM",
+ "name": "Grasim Industries Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CONGLOMERATE",
+ "tier": "NIFTY_50",
+ "business_summary": "Aditya Birla Group flagship holding company with a majority stake in UltraTech (cement) and Aditya Birla Capital (financial services), plus standalone businesses: viscose staple fibre (VSF) and fashion yarn, chemicals (caustic soda, chlorine derivatives, epichlorohydrin), Birla Opus decorative paints (loss-making build-out), B2B e-commerce (Birla Pivot), renewables and textiles. Q1 FY27 consolidated sales Rs48,716 cr, EBITDA Rs11,152 cr, PAT Rs3,846 cr; Q2 results not yet reported. Mcap Rs2.18 lakh cr, P/E 38; promoters raised stake to 45.07% (28 Sep).",
+ "revenue_mix": [
+  {
+   "segment": "cement (UltraTech)",
+   "share_pct": 52,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "financial services (ABCAPITAL)",
+   "share_pct": 22,
+   "geography": "India"
+  },
+  {
+   "segment": "VSF/cellulosic fashion yarn, textiles",
+   "share_pct": 8,
+   "geography": "India + export"
+  },
+  {
+   "segment": "chemicals",
+   "share_pct": 6,
+   "geography": "India"
+  },
+  {
+   "segment": "paints, B2B e-commerce, others",
+   "share_pct": 12,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COAL_INTL",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "Wood pulp, chemicals, salt",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "Interest/finance costs (financial services)",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "Other (freight, employee, raw materials)",
+   "share_of_costs_pct": 62
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "GRASIM",
+   "relation": "funding_cost",
+   "w": -1.8,
+   "w_low": -3.2,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Consolidated interest Rs4,298 cr/quarter (Jun 2026) incl. NBFC and UltraTech; standalone leverage rising with paint, chemical and renewable capex. +25bp on ~Rs60-70k cr floating non-financial debt (model estimate) -> -Rs150-175 cr = -1.5% PBT; plus holdco/long-duration P/E 38 -> -1.5% -> blended -1.8 incl. ABCAPITAL credit-cycle drag. RBI hiked to 5.50% on 7 Oct 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50% on 7 Oct 2026, stance 'calibrated tightening' (Reuters/The Hindu/Moneycontrol headlines)"
+    },
+    {
+     "source": "https://www.screener.in/company/GRASIM/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "GRASIM",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Paints (Birla Opus), B2B e-commerce, VSF/fashion linkage and ABCAPITAL retail credit; paints ~6-8% of revenue (model estimate) but loss-making so volume ramp raises operating leverage. +5pp urban demand -> paints/B2B revenue +3% and ABCAP loan growth -> consolidated EBITDA +2% -> x1.6 EV/MCap x0.5 -> +1.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "segment shares are model estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "GRASIM",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Direct (non-cement) channel only: decorative paints and building chemicals track housing completions. Cement housing exposure is carried via the ULTRACEMCO holding link, not here. +10% sales -> paints volume +2% -> EBITDA +0.6% of group -> +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "GRASIM",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Standalone chemicals (caustic soda is ~2,500 kWh/t, power ~45% of cost) and VSF use captive coal power; seaborne coal +15% -> chemical/VSF cost +4%. Empirical -1.18 (t -1.1) agrees. Cement fuel exposure is via the UltraTech link.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GRASIM/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_COTTON",
+   "dst": "GRASIM",
+   "relation": "output_price",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "VSF competes with cotton as a fibre; +10% cotton lifts VSF realisations and volumes. VSF ~8% of consolidated revenue (model estimate), EBITDA small; empirical +0.54 (t +0.9).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GRASIM/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "GRASIM",
+   "relation": "competition",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Chinese export push (+15% volumes/price cuts) pressures caustic soda, chlorine derivatives, epichlorohydrin (ECH commercial production began 21 Oct 2026, import-substituting) and VSF. Chemicals ~12% of EBITDA ex-cement; +15% -> chemicals EBITDA -10% -> -1.2% group -> x1.6 x0.5... -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Grasim+Industries+ECH+commercial+production+Suzlon+recyclable+blades+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Suzlon-Grasim recyclable-blade tie-up, both shares +5% (CNBC TV18/Business Today 4 Nov); ECH commercial production started in Gujarat (HDFC Sky 21 Oct); Birla family raised stake to 45.07% (scanx 28 Sep)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "GRASIM",
+   "relation": "fx_translation",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Imported wood pulp for VSF (~35% of VSF cost), imported ECH feed/other chemicals; USD debt in renewables partly hedged. +3% -> VSF/chem cost +1% -> -0.7 incl. UltraTech fuel import (via link).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "GRASIM",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Paints raw materials (TiO2, monomers, solvents ~30% of paint costs) and caustic-derivative chemicals are crude-linked; paints are currently loss-making so cost inflation deepens losses. Cement diesel/fuel is via the link.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "GRASIM",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "New anti-dumping/safeguard duties on VSF, caustic soda, chlorine derivatives and ECH protect domestic pricing; +1 SSU ~ +3% chemicals EBITDA.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ULTRACEMCO",
+   "dst": "GRASIM",
+   "relation": "holding_stake",
+   "w": 0.6,
+   "w_low": 0.45,
+   "w_high": 0.75,
+   "lag": "0-3m",
+   "mechanism": "Grasim holds ~56% of UltraTech (model knowledge) worth ~Rs2.0 lakh cr vs Grasim mcap Rs2.18 lakh cr, i.e. ~93% of Grasim's market cap before holding-company discount (20-35%) -> look-through weight ~0.6 (0.45-0.75).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ULTRACEMCO/consolidated/",
+     "date": "2026-11-05"
+    },
+    {
+     "source": "https://www.screener.in/company/GRASIM/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "ABCAPITAL",
+   "dst": "GRASIM",
+   "relation": "holding_stake",
+   "w": 0.2,
+   "w_low": 0.12,
+   "w_high": 0.28,
+   "lag": "0-3m",
+   "mechanism": "Grasim holds ~52% of Aditya Birla Capital (model knowledge) worth ~Rs0.57 lakh cr (mcap Rs1.09 lakh cr per pack) = ~26% of Grasim mcap; after 30% discount ~0.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ABCAPITAL/consolidated/",
+     "date": "2026-11-05"
+    },
+    {
+     "source": "https://www.screener.in/company/GRASIM/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "UltraTech Cement",
+   "ticker": "ULTRACEMCO",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~56%; dominates sum-of-parts"
+  },
+  {
+   "counterparty": "Aditya Birla Capital",
+   "ticker": "ABCAPITAL",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~52%"
+  },
+  {
+   "counterparty": "Aditya Birla Renewables",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "allotted 23.15 cr equity shares to Grasim (24 Sep)"
+  },
+  {
+   "counterparty": "Asian Paints, Berger, Kansai, JSW Paints",
+   "ticker": "ASIANPAINT",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Birla Opus price/market-share war"
+  },
+  {
+   "counterparty": "Wood-pulp suppliers (Canada, Brazil, Indonesia), Chinese VSF/caustic exporters",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "VSF input and competition"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (date not announced; Grasim reported Q1 on 12 Aug)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Grasim+Q2+results+date+paints+Birla+Opus+losses+UltraTech+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further promoter open-market purchases (stake already raised to 45.07%)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.5,
+   "source": "https://news.google.com/rss/search?q=Grasim+Industries+ECH+commercial+production+Suzlon+recyclable+blades+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Birla Opus profitability milestones / pricing war outcomes",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Possible holding-company simplification / listing events in ABC group (unverified)",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026) consolidated; Q2 not yet reported",
+  "trend": "Sales Rs48,716 cr (+21% y/y); OP Rs11,152 cr (23%); PAT Rs3,846 cr (+39% y/y). TTM sales Rs1,84,029 cr, PAT Rs11,261 cr; interest cost rising Rs4,298 cr/q.",
+  "valuation": "P/E 38, P/B 2.1; trades at a sum-of-parts holdco discount (UltraTech stake ~93% of mcap). 12m +11%, 6m +8%.",
+  "recent_developments": [
+   "2026-11-04 Suzlon tie-up for recyclable wind blades; Grasim +up to 5%",
+   "2026-10-30 new plant adds 50,000 t capacity (ad-hoc-news headline; unit unverified)",
+   "2026-10-21 commercial ECH production started in Gujarat (HDFC Sky headline)",
+   "2026-10-19 repaid Rs750 cr debt (ad-hoc-news)",
+   "2026-09-28 Birla family raised holding to 45.07% via open-market buys",
+   "2026-09-24 Aditya Birla Renewables allotted 23.15 cr shares to Grasim",
+   "2026-10-07 RBI hike to 5.50%"
+  ]
+ },
+ "key_risks": [
+  "UltraTech and ABCAPITAL valuations (look-through)",
+  "Paint-war losses and capex",
+  "Rising leverage and rate hikes",
+  "VSF/caustic Chinese competition",
+  "Holdco discount widening"
+ ],
+ "upside_triggers": [
+  "Birla Opus reaches EBITDA breakeven",
+  "Cement price hikes stick",
+  "Promoter buying",
+  "ECH/chemical ramp-up",
+  "Discount narrowing"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/GRASIM/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals through Jun 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Grasim+Industries+ECH+commercial+production+Suzlon+recyclable+blades+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "headlines on ECH, Suzlon, stake raise"
+  },
+  {
+   "url": "https://www.screener.in/company/ULTRACEMCO/consolidated/",
+   "date": "2026-11-05",
+   "what": "UltraTech mcap for look-through"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  }
+ ]
+}

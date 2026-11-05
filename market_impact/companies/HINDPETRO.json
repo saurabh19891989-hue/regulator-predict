@@ -1,0 +1,387 @@
+{
+ "ticker": "HINDPETRO",
+ "name": "Hindustan Petroleum Corporation Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_REFINING_OMC",
+ "tier": "MIDCAP_100",
+ "business_summary": "Marketing-heavy oil PSU: ~50 MMT annual product sales (~22% market share, ~22,000 retail outlets), refining ~24 MMTPA (Mumbai 9.5, Visakh 15 MMTPA after expansion, model knowledge), 48.99% of HPCL-Mittal Energy (Bathinda) and the Barmer HPCL Rajasthan Refinery (HRRL, 9 MMTPA) under commissioning. ONGC owns 54.9% (promoter). Retail prices are quasi-administered, so HPCL is more exposed to crude-driven under-recoveries than IOC. Q1 FY27 loss Rs 12.3k cr, then Q2 profit Rs 3.6k cr; Visakh refinery fire on 2 Nov.",
+ "revenue_mix": [
+  {
+   "segment": "marketing (petrol, diesel, LPG, lubes)",
+   "share_pct": 85,
+   "geography": "India"
+  },
+  {
+   "segment": "refining product sales and exports",
+   "share_pct": 12,
+   "geography": "India / Asia"
+  },
+  {
+   "segment": "others (gas, renewables, lubes)",
+   "share_pct": 3,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 88
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 88
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_BRENT",
+   "dst": "HINDPETRO",
+   "relation": "input_cost",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Marketing-heavy OMC (sales ~50 MMT vs refining 24 MMT). Calibration: operating profit swung from Rs 9.2k cr (Mar-26) to -Rs 16.1k cr (Jun-26) with Brent up ~40-50% and frozen pump prices, i.e. ~Rs -25k cr per quarter per +45%, or ~Rs -5.5k cr per quarter per +10% if sustained, offset ~25% by refining gain. Market looks through to temporary losses plus compensation/price hikes: a one-quarter-equivalent loss Rs ~2.5k cr per +10% = 3% of market cap Rs 81k cr, ... pack elasticity -2.73 (t -4.6) agrees; w = -3.0.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=HPCL+Q2+FY27+GRM+marketing+margin+Vizag+fire+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Q2 FY27 swing to profit Rs3,483 cr from Rs11,526 cr loss in Q1 (Zee Business, Reuters, NDTV Profit)"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "HINDPETRO",
+   "relation": "output_price",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "0-3m",
+   "mechanism": "GRM +$2 on 24 MMT (176m bbl) + 48.99% of HMEL 11.3 MMT (40m bbl) = 216m bbl x $2 = $430m = Rs 4.1k cr = ~20% of normalised EBITDA Rs 20k cr x EV/MCap 1.8 x persistence 0.3 => +10.8; haircut 50% (tax, levies, Vizag outage) => +5.0. Pack -2.28 (t -4.1) reflects the heating-oil proxy's crude co-movement, which is already in the Brent edge.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=HPCL+Q2+FY27+GRM+marketing+margin+Vizag+fire+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Q2 FY27 swing to profit Rs3,483 cr from Rs11,526 cr loss in Q1 (Zee Business, Reuters, NDTV Profit)"
+    }
+   ]
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "HINDPETRO",
+   "relation": "policy_effect",
+   "w": -1.5,
+   "w_low": -5.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+1 = Rs2/litre excise rise: ~45bn L petrol+diesel x Rs2 = Rs 9k cr = 45% of normalised EBITDA if absorbed; absorb 20% x 45% x 1.8 x 0.15 => -2.4; excise usually timed to crude falls (neutral) => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "note": "OMCs seek Rs75,000 cr; ICRA Rs530 cr/day losses"
+    }
+   ]
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "HINDPETRO",
+   "relation": "policy_effect",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Exports ~2-3 MMT; small. Rs 6/L x 3 MMT = Rs 2.2k cr x 20%... ~11% of EBITDA x 1.8 x 0.1 => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HINDPETRO",
+   "relation": "fx_translation",
+   "w": -2.2,
+   "w_low": -5.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "INR weaker raises rupee crude bill (all USD) while pump prices frozen: 3% on Rs 3.2 lakh cr crude bill = Rs 9.6k cr gross, ~60% recovered => -Rs 3.8k cr = -19% EBITDA x 1.8 x persistence 0.25 => -8.6 theoretical; market evidence weaker (pack -1.74 for IOC, HPCL beta high). Shrink => -2.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HINDPETRO",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -1.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Debt ~Rs 67k cr (interest Rs 1,259 cr in Sep-26 quarter), 40% floating: 25bp = Rs 67 cr = 1.3% of normalised PBT; discount-rate effect adds => -0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "HINDPETRO",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Fuel volumes +0.8pp per +1pp GDP: marketing margin on 50 MMT x +0.8% => EBITDA +1.2% x 1.8 => +1.0 (structural 1.0 minus subsidy drag).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "HINDPETRO",
+   "relation": "geopolitical_exposure",
+   "w": -4.5,
+   "w_low": -10.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation => Brent +12%: -3.6 via Brent edge, plus supply-security premium on ~60% Middle East crude and freight/insurance; Visakh refinery processes West Asian grades. Stock -3.3% over 3m, -21% over 12m.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "note": "OMCs seek Rs75,000 cr; ICRA Rs530 cr/day losses"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "HINDPETRO",
+   "relation": "input_cost",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "HPCL imports some Russian crude (Mittal/ HMEL joint volumes, model knowledge): $2.5 discount on ~40m bbl = $100m = Rs 0.95k cr = ~5% of EBITDA x 1.8 x 0.3 => +1.4. US tariff risk caps the benefit.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "HINDPETRO",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "LNG used in fuel mix and hydrogen at Mumbai/ Visakh; pack -0.81 (t -1.7); ~-1.5% EBITDA x 1.8 x 0.2 => -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDPETRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_OMC_COMPENSATION",
+   "dst": "HINDPETRO",
+   "relation": "policy_effect",
+   "w": 4.5,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = Rs 25k cr compensation; HPCL share ~22% = Rs 5.5k cr pre-tax, Rs 4.1k cr post-tax = 5.1% of market cap Rs 81k cr x 0.9 probability of cash form => +4.5. Centre will decide in 2027 (Moneycontrol 7 Sep).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "note": "OMCs seek Rs75,000 cr; ICRA Rs530 cr/day losses"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "ONGC (54.9% promoter)",
+   "ticker": "ONGC",
+   "role": "parent",
+   "importance": "high",
+   "note": "consolidates HPCL"
+  },
+  {
+   "counterparty": "Middle East & Russian crude suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Hormuz exposure"
+  },
+  {
+   "counterparty": "IOC, BPCL",
+   "ticker": "IOC",
+   "role": "competitor",
+   "importance": "high",
+   "note": "shared pricing regime"
+  },
+  {
+   "counterparty": "HMEL (48.99%)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "Bathinda refinery JV with Mittal"
+  },
+  {
+   "counterparty": "Reliance / Nayara",
+   "ticker": "RELIANCE",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "private fuel retail share"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "Visakhapatnam refinery fire: damage assessment and restart (unit shutdown extent not disclosed)",
+   "type": "other",
+   "prob": 0.8,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=HPCL+Q2+FY27+GRM+marketing+margin+Vizag+fire+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (late Jan/early Feb)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "model knowledge of calendar"
+  },
+  {
+   "date": "2027-03",
+   "event": "Centre decision on OMC compensation (Rs 75k cr ask across OMCs)",
+   "type": "regulatory",
+   "prob": 0.45,
+   "impact_pct_low": 1.5,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "HRRL Barmer refinery commissioning (timing model knowledge; slippage risk)",
+   "type": "capex",
+   "prob": 0.3,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "Retail price hike / excise change if Brent re-crosses $100",
+   "type": "regulatory",
+   "prob": 0.12,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): consolidated sales Rs 134,407 cr, operating profit Rs 9,048 cr (OPM 7%), net profit Rs 3,625 cr (EPS 17.04); standalone PAT Rs 3,483 cr; Q1 FY27 net loss Rs 12,265 cr",
+  "trend": "Swing from large Q1 under-recovery loss to profit as Brent eased and GRM stayed high; TTM EBITDA collapsed to Rs 9.1k cr (vs Rs 30.6k cr FY26)",
+  "valuation": "TTM P/E 56.6x (distorted by Q1 loss), P/B 1.5x, yield 6.35%; Nomura Neutral TP Rs 380 (26 Oct); Prabhudas Lilladher TP Rs 342",
+  "recent_developments": [
+   "2026-11-05: OMCs rally up to 7% as crude falls below $95",
+   "2026-11-03: shares +4% despite Visakh refinery fire",
+   "2026-11-02: major fire at Visakhapatnam refinery, no casualties",
+   "2026-10-22: Q2 beat; swings to profit",
+   "2026-09-23: ICRA - OMC losses Rs530 cr/day",
+   "FII share 17.3% -> 13.1% over two quarters"
+  ]
+ },
+ "key_risks": [
+  "Brent spikes with frozen pump prices",
+  "Vizag outage extent",
+  "LPG losses",
+  "HRRL delays",
+  "Weak balance sheet (interest cover)"
+ ],
+ "upside_triggers": [
+  "Compensation",
+  "Brent <$85",
+  "Wide GRM",
+  "HRRL start"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_OMC_COMPENSATION",
+   "type": "POLICY",
+   "name": "Government compensation to OMCs for fuel/LPG under-recoveries",
+   "ssu": "+1 = Rs25,000 cr compensation to oil marketing companies"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/HINDPETRO/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=HPCL+Q2+FY27+GRM+marketing+margin+Vizag+fire+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Q2 results and Vizag fire"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-07",
+   "what": "compensation ask"
+  }
+ ]
+}

@@ -1,0 +1,384 @@
+{
+ "ticker": "IRFC",
+ "name": "Indian Railway Finance Corporation Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_INFRA_POWER_FINANCE",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Government-owned (82.9%) borrowing arm of Indian Railways: raises funds from bond, term-loan and external markets and leases rolling stock and infrastructure assets to the Ministry of Railways on finance leases priced at its borrowing cost plus a thin ~0.40% spread, giving near-zero credit risk (zero NPA) and no tax for several years. Q2 FY27 PAT Rs1,958cr (+10.2% y/y), revenue +23.5% (lease income growth), finance costs Rs5,917cr (vs Rs4,544cr). FY27 borrowing programme up to Rs70,000cr, of which Rs24-28k cr ECBs. Diversifying into non-railway lending (HURL refinancing Rs12,800cr; loan book aiming to cross Rs1 lakh cr). Stock Rs80, -34% over 12m, -24.9% over 6m, near 52-week lows; interim dividend Rs1.15.",
+ "revenue_mix": [
+  {
+   "segment": "Lease income from Ministry of Railways",
+   "share_pct": 93,
+   "geography": "India"
+  },
+  {
+   "segment": "Loans to other PSUs/infra (HURL, etc.), interest and other income",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_GSEC_10Y_IN",
+   "share_of_costs_pct": 97
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 97
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "IRFC",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Earnings are insulated (cost-plus lease: lease rate = borrowing cost + ~0.40% spread, set by Ministry of Railways), so yields barely move PAT. Equity sensitivity is via (1) refinancing: ~Rs0.3 lakh cr/yr of maturities and Rs70,000cr new borrowing at higher coupons raise lease income AND interest equally (spread unchanged), (2) valuation: a bond-proxy PSU yield stock (div yield ~2.7% at Rs80 on Rs1.15+ interim) loses relative appeal when 10y goes 7.4-7.5%. +25bp => -1.0. Stock -34% over 12m already.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "India 10y G-sec ~7.4-7.5% in Oct 2026, multi-year high (Reuters/ET headlines); Nov outlook 7.25-7.35%"
+    },
+    {
+     "source": "https://www.kotakneo.com/news/stocks/irfc-share-price-in-focus-as-company-announces-q2-fy27-results/",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 PAT Rs1,958cr +10.2%, interim dividend Rs1.15; finance cost Rs5,917cr vs Rs4,544cr"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "IRFC",
+   "relation": "funding_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Borrowings ~Rs4.7 lakh cr (model estimate) mostly fixed-rate bonds/term loans (floating ~15%); lease rates reset annually and pass through. +25bp: ~Rs0.7 lakh cr floating x 0.25% = Rs175cr gross, passed through within months => residual lag cost ~Rs30cr = 0.4% of PAT x persistence 0.5; rating AAA. -0.4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening' (The Hindu, Reuters headlines)"
+    },
+    {
+     "source": "https://www.sahi.com/news/irfc-confirms-double-digit-growth-by-fy27-and-35-000-crore-disbursement-target",
+     "date": "2026",
+     "note": "cost-plus lease model, spread ~0.40%, disbursement target Rs35,000cr"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "IRFC",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Borrowing programme Rs70,000cr in FY27 (35-40% via ECBs): spreads widen funding cost, passed through in lease rate but spread is capped at ~0.40%; wider spreads raise rollover risk and slow disbursement growth (target Rs35,000cr). +50bp spreads on new Rs70,000cr = Rs350cr annual interest passed through; residual margin squeeze/volume effect ~-0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.angelone.in/news/stocks/irfc-plans-to-raise-up-to-28-000-crore-via-ecbs-in-fy27-cmd-manoj-kumar-dubey",
+     "date": "2026-06",
+     "note": "FY27 borrowing up to Rs70,000cr, ECB Rs24-28k cr"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "IRFC",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Railways capex funds extra-budgetary resources via IRFC: +10% capex plan => IRFC disbursement +~5% => assets and PAT +~4% over 2 yrs (margin 0.4% on a larger book) x persistence 0.5 x EV/MCap 1.0 (but EV/MCap is ~5x: debt Rs4.7 lakh cr vs mcap Rs1.05 lakh cr; use equity PAT basis) => +1.5. IRFC share of railway funding is shifting (budgetary support rising, EBR falling) - key long-run driver.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/irfc-confirms-double-digit-growth-by-fy27-and-35-000-crore-disbursement-target",
+     "date": "2026",
+     "note": "cost-plus lease model, spread ~0.40%, disbursement target Rs35,000cr"
+    }
+   ]
+  },
+  {
+   "src": "P_INFRA_SPENDING_ROADS",
+   "dst": "IRFC",
+   "relation": "policy_effect",
+   "w": 0.6,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "IRFC is diversifying into non-railway loans (HURL refinancing Rs12,800cr; loan book targeted to cross Rs1 lakh cr in FY27); higher infra spending expands PSU-borrower pipeline. +10% => +~0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/irfc-hurl-refinancing-fy27-borrowing-cmp9bnykkauaunv0j0ml38jsh",
+     "date": "2026",
+     "note": "HURL refinancing"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "IRFC",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "ECB share 35-40% of FY27 borrowings (Rs24-28k cr) and ~Rs1.2 lakh cr of foreign-currency debt (model estimate), fully hedged or passed through to the Railways under lease rate resets; unhedged residual / hedging cost spikes at INR 94.5. +3% USD/INR => hedging cost + sentiment => -0.5. Pack: -1.89 (t -0.8), not significant; agrees on sign.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.angelone.in/news/stocks/irfc-plans-to-raise-up-to-28-000-crore-via-ecbs-in-fy27-cmd-manoj-kumar-dubey",
+     "date": "2026-06",
+     "note": "FY27 borrowing up to Rs70,000cr, ECB Rs24-28k cr"
+    },
+    {
+     "source": "market_impact/data/packs/IRFC.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities; screener ratios blank"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "IRFC",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "PSU high-beta (1.5-1.6) stock; retail/F&O-driven. VIX +5 => Nifty -3.5% => beta ~1.55 => -5%, ~85% removed by demeaning; residual stock-specific high-beta effect -0.6. Not in empirical top-12.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IRFC.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities; screener ratios blank"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "IRFC",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold only 1.15% (promoters 82.9% after OFS in Q1 FY27: 84.65% -> 82.90%); flows are minor. +US$5bn/qtr => +3% Nifty x beta 1.6 => ~+4.8% market effect, mostly demeaned; PSU-bond-proxy dampens => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IRFC.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities; screener ratios blank"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "IRFC",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Retail ownership 12% and DII 4% (up from 2.9% in Mar 2026 as DIIs absorbed the OFS); SIP/DII +10% supports PSU small-cap demand; +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IRFC.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities; screener ratios blank"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "IRFC",
+   "relation": "policy_effect",
+   "w": 0.0,
+   "w_low": -0.3,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Placeholder: no PLI exposure; kept for completeness at zero to show explicit assessment.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "IRFC",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Central capex (railways is ~2/3 of PSU capex-linked rolling stock/track outlays) drives IRFC disbursement; +10% capex growth => IRFC disbursement +4% => PAT +~3% over 2yrs x 0.5 => +1.2. Overlaps with P_RAILWAY_CAPEX (De-duplicate: use the railway edge for rail-specific changes).",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "IRFC",
+   "relation": "funding_cost",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Tight liquidity (Oct 2026 RBI measures) raised bond yields; surplus liquidity eases primary-market borrowing costs by ~5bp on Rs70,000cr = Rs35cr, passed through; mostly valuation support => +0.4.",
+   "confidence": "low",
+   "evidence": []
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Ministry of Railways / Indian Railways",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "lessee of virtually all assets; cost-plus lease; ~93% of income"
+  },
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "82.9% promoter; OFS in Q1 FY27 reduced from 84.65%"
+  },
+  {
+   "counterparty": "RVNL",
+   "ticker": "RVNL",
+   "role": "competitor",
+   "importance": "low",
+   "note": "railway-PSU peer, not a direct competitor; sentiment comovement"
+  },
+  {
+   "counterparty": "PFC / REC",
+   "ticker": "PFC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "PSU infra lender peers"
+  },
+  {
+   "counterparty": "HURL (Hindustan Urvarak & Rasayan)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Rs12,800cr refinancing agreement (Multibagg headline, 2026)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 on 2026-10-15)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "pattern of prior dates; model estimate"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28: railway capex allocation and EBR vs budgetary support mix",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge of schedule"
+  },
+  {
+   "date": "2026-11/12",
+   "event": "ECB / bond issuance under Rs70,000cr programme and FY27 disbursement trajectory (target Rs35,000cr)",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.sahi.com/news/irfc-confirms-double-digit-growth-by-fy27-and-35-000-crore-disbursement-target"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC; any further hike raises bond yields",
+   "type": "regulatory",
+   "prob": 0.45,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027",
+   "event": "Possible further government stake sale (OFS) given 82.9% holding vs 75% MPS norm",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -1.0,
+   "source": "shareholding Mar 2026 84.65% -> Jun 2026 82.90% (pack); MPS norm from model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs1,958cr (+10.2%), lease income growth strong, finance cost Rs5,917cr",
+  "trend": "Steady, insulated earnings (cost-plus) but stock de-rating on slowing growth, OFS supply and share of railway funding shifting to budget",
+  "valuation": "Rs80; mcap ~Rs1.05 lakh cr (13,068 cr shares, model knowledge); screener ratios blank in pack; P/E ~13-14x on TTM PAT ~Rs7,700cr (derived); investing.com 'fair value' tools flagged ~49-54% downside (low-quality signal)",
+  "recent_developments": [
+   "2026-10-15 Q2 results, interim dividend Rs1.15, record date 2026-10-23",
+   "2026-10-30 52-week low",
+   "2026-09-29 52-week low despite Rs4,200cr loan deal",
+   "2026-06 Q1 OFS lowered promoter stake to 82.9%"
+  ]
+ },
+ "key_risks": [
+  "Cost-plus spread (~0.40%) is policy-set and can be reset by the Ministry",
+  "Railways funding mix shifting to budget (EBR share down)",
+  "Further OFS supply",
+  "Rising yields and FX hedging on ECB share",
+  "Valuation: stock still not cheap vs growth of ~10%"
+ ],
+ "upside_triggers": [
+  "Higher EBR share in Union Budget 2027-28",
+  "Faster non-railway loan growth",
+  "Higher payout",
+  "Spread revision upward",
+  "Index/ETF inclusion flows"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.kotakneo.com/news/stocks/irfc-share-price-in-focus-as-company-announces-q2-fy27-results/",
+   "date": "2026-10-15",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://www.angelone.in/news/stocks/irfc-plans-to-raise-up-to-28-000-crore-via-ecbs-in-fy27-cmd-manoj-kumar-dubey",
+   "date": "2026",
+   "what": "FY27 borrowing plan"
+  },
+  {
+   "url": "https://www.sahi.com/news/irfc-confirms-double-digit-growth-by-fy27-and-35-000-crore-disbursement-target",
+   "date": "2026",
+   "what": "disbursement target, spread"
+  },
+  {
+   "url": "https://www.multibagg.ai/market-pulse/articles/irfc-hurl-refinancing-fy27-borrowing-cmp9bnykkauaunv0j0ml38jsh",
+   "date": "2026",
+   "what": "HURL refinancing"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  }
+ ]
+}

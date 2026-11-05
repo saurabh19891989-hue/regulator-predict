@@ -1,0 +1,333 @@
+{
+ "ticker": "OIL",
+ "name": "Oil India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_OIL_UPSTREAM",
+ "tier": "MIDCAP_100",
+ "business_summary": "Second-largest Indian upstream PSU: ~3.4 Mt crude and ~3.2 BCM gas per year from Assam, Rajasthan and the Andamans, owns 69.6% of Numaligarh Refinery (NRL, 3 MMTPA, expanding), the Assam–Siliguri crude pipeline and overseas minority stakes (Russia, Mozambique, Libya). Government holds 56.7% (promoter); FII 7.2%; DII 20.7%. Q1 FY27 delivered record standalone PAT Rs 2,870 cr (consolidated Rs 4,027 cr), crude output +11%. Realisations track Brent; domestic gas price is administered.",
+ "revenue_mix": [
+  {
+   "segment": "crude oil",
+   "share_pct": 55,
+   "geography": "India (sold to Indian refiners at Brent-linked price)"
+  },
+  {
+   "segment": "gas",
+   "share_pct": 12,
+   "geography": "India"
+  },
+  {
+   "segment": "refining (NRL) and pipeline transport",
+   "share_pct": 28,
+   "geography": "India"
+  },
+  {
+   "segment": "others/overseas",
+   "share_pct": 5,
+   "geography": "Russia, Mozambique, Libya"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 60
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_BRENT",
+   "dst": "OIL",
+   "relation": "output_price",
+   "w": 5.0,
+   "w_low": 3.0,
+   "w_high": 8.0,
+   "lag": "0-3m",
+   "mechanism": "Crude sales ~3.4 Mt/yr (25m bbl) at ~$95 = Rs 22k cr; +10% realisation = +Rs 2.2k cr (net of ~20% royalty/cess = Rs 1.8k cr) = +13% of normalised consolidated EBITDA Rs 13.7k cr x EV/MCap 1.15 x persistence 0.4 => +6.9; NRL (refinery) and gas pricing offset slightly; haircut for windfall-tax risk => +5.0. Pack elasticity +4.52 (t +5.7) agrees; chosen central is shrunk modestly toward fundamentals.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Oil+India+Q2+FY27+profit+production+Numaligarh+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "note": "Q1 FY27 standalone PAT Rs2,870 cr record, consolidated Rs4,027 cr; crude output +11% (Business Standard, BusinessLine, CNBC TV18)"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "OIL",
+   "relation": "output_price",
+   "w": 0.9,
+   "w_low": 0.3,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "Via 69.6% subsidiary NRL (Numaligarh, 3 MMTPA, expanding to 9 MMTPA by ~2028, model knowledge): +$2 x 22m bbl = $44m = Rs 415 cr = 3% EBITDA x 1.15 x 0.3 => +1.0. Pack +3.45 (t +4.5) reflects Brent collinearity (HO=F proxy) already in the Brent edge.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "OIL",
+   "relation": "fx_translation",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Crude and part of gas priced off USD benchmarks: INR 3% weaker raises realisation 3% = Rs 0.69k cr = +5% of EBITDA x 1.15 x persistence 0.5 => +2.9. Pack +3.87 (t +1.6) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "OIL",
+   "relation": "output_price",
+   "w": 0.3,
+   "w_low": -0.8,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Domestic gas (~3.2 BCM) is sold at APM/ceiling-linked formulae with caps, so only the new-gas premium reacts: +15% LNG => +1.5% revenue-equivalent, mostly capped => +0.3. Pack -0.81 (t -1.2) is insignificant (Henry Hub proxy).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CRUDE_WINDFALL_TAX_IN",
+   "dst": "OIL",
+   "relation": "regulatory_risk",
+   "w": -1.8,
+   "w_low": -5.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+1 = SAED reimposed at ~Rs 10,000/tonne on domestic crude. 3.4 Mt x Rs 10,000 = Rs 340 cr = 2.5% EBITDA x 1.15 x persistence 0.5 => -1.4; add probability of a larger rate => -1.8. Govt is already reshuffling windfall levies on product exports (Aug-Oct 2026).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ONGC+Oil+India+windfall+tax+subsidy+sharing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Upstream vs downstream PSU energy: $100 crude splits India's oil sector (Value Research)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "OIL",
+   "relation": "funding_cost",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Debt Rs ~21k cr (interest Rs 302 cr/qtr): 25bp floating share 50% = Rs 26 cr = 0.7% of PBT; plus PSU dividend-yield discount effect => -0.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "OIL",
+   "relation": "geopolitical_exposure",
+   "w": 4.5,
+   "w_low": -1.0,
+   "w_high": 9.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation => Brent +12% => +6 via Brent edge; no Gulf-dependent assets or sales; some risk-off market impact. Mozambique Area-1 LNG (4% stake via OVL consortium) delay risk negligible. Net +4.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=ONGC+Oil+India+windfall+tax+subsidy+sharing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Upstream vs downstream PSU energy: $100 crude splits India's oil sector (Value Research)"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "OIL",
+   "relation": "geopolitical_exposure",
+   "w": 1.0,
+   "w_low": -1.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "OIL holds minority stakes (via consortium with IOC/BPCL/OVL) in Vankor, Taas-Yuryakh (model knowledge); easing sanctions would unlock dividends/ asset value; +1 ~ $300m asset-value release = Rs 2.8k cr = 4% of market cap Rs 70k cr x 0.25 probability-adj => +1.0. US tariff threats on Russia-linked trade cut this.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "OIL",
+   "relation": "discount_rate",
+   "w": 0.0,
+   "w_low": -1.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Pack shows +4.14 (t +1.6): spurious (Fed and Brent correlation) - weight zero; no fundamental link beyond global liquidity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Numaligarh Refinery (69.6%)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "consolidated"
+  },
+  {
+   "counterparty": "IOC, BPCL, HPCL (crude buyers)",
+   "ticker": "IOC",
+   "role": "customer",
+   "importance": "high",
+   "note": "Assam crude sold to NRL/IOC refineries"
+  },
+  {
+   "counterparty": "ONGC (competitor/JV partner in NELP blocks)",
+   "ticker": "ONGC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "production growth comparison"
+  },
+  {
+   "counterparty": "Government (royalty, SAED, dividend)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "56.7% promoter"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results/ dividend (screener shows Sep-26 quarter OP Rs 5,793 cr, OPM 46%; PAT not retrieved, ~Rs 4k cr derived from PBT)",
+   "type": "results",
+   "prob": 1.0,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://www.screener.in/company/OIL/consolidated/"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "Crude windfall levy reimposition / subsidy-sharing decision as part of OMC compensation",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=ONGC+Oil+India+windfall+tax+subsidy+sharing+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Exploration updates (KG basin gas discovery 22 Oct 2026) and production target of 1 Mt per quarter",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Oil+India+Q2+FY27+profit+production+Numaligarh+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026) per screener consolidated: operating profit Rs 5,793 cr, OPM 46%, PBT Rs 5,322 cr (net profit not extracted); Q1 FY27 standalone PAT Rs 2,870 cr, consolidated Rs 4,027 cr",
+  "trend": "Margins at multi-year highs (OPM 46% vs 27-35%) on Brent >$95 and +11% crude output",
+  "valuation": "P/E 8.3x, P/B 1.2x, dividend yield 2.64%; ROE 12.2%; 12-month range Rs 396-531; stock -4.3% 1m, -0.7% 12m",
+  "recent_developments": [
+   "2026-11-04: Brent falls below $90 on US midterm outcome, Middle East hopes",
+   "2026-10-22: gas discovery in Krishna-Godavari block",
+   "2026-09-24: Oil India beating ONGC on production growth (Livemint)",
+   "2026-08-10: Q1 record profit; CLSA sees >20% upside"
+  ]
+ },
+ "key_risks": [
+  "Brent decline",
+  "Windfall tax reimposition",
+  "Subsidy-sharing",
+  "Production slippage",
+  "NRL project delays"
+ ],
+ "upside_triggers": [
+  "Brent >$100",
+  "Higher crude output",
+  "KG gas discovery commercial",
+  "Russia asset repatriation"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CRUDE_WINDFALL_TAX_IN",
+   "type": "POLICY",
+   "name": "Windfall (SAED) tax on domestic crude",
+   "ssu": "+1 = SAED reimposed at ~Rs10,000/tonne"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/OIL/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals (screener consolidated)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Oil+India+Q2+FY27+profit+production+Numaligarh+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-10",
+   "what": "Q1 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ONGC+Oil+India+windfall+tax+subsidy+sharing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "upstream vs downstream"
+  }
+ ]
+}

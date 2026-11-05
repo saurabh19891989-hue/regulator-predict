@@ -1,0 +1,378 @@
+{
+ "ticker": "MAZDOCK",
+ "name": "Mazagon Dock Shipbuilders Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_DEFENCE",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "State-owned (81.2%) Mumbai shipyard building warships and submarines (Kolkata-class destroyers, Nilgiri-class P17A frigates, Scorpene submarines, P75 Kalvari), plus submarine refit and offshore work. FY26 sales Rs 13,006 cr, OPM 17%, PAT Rs 2,578 cr. The Sep-2026 quarter was weak: sales Rs 2,446 cr (-16.5% YoY), OP Rs 199 cr (8% margin), PAT Rs 344-346 cr (-54%) on higher provisions (Kotak Neo). Growth hinges on the Project 75I submarine contract (~Rs 90,000 cr with a German partner, unsigned as far as retrieved sources show) and three more Kalvari-class boats.",
+ "revenue_mix": [
+  {
+   "segment": "Warships and submarines (new build)",
+   "share_pct": 85,
+   "geography": "India (Navy)"
+  },
+  {
+   "segment": "Submarine refit and repair",
+   "share_pct": 10,
+   "geography": "India"
+  },
+  {
+   "segment": "Other / offshore",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "MAZDOCK",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 12.0,
+   "lag": "3-12m",
+   "mechanism": "Order book is thin relative to FY27 target (reported figures conflict: Rs 16,443 cr per unverified aggregator at 30-Sep-2026 vs Rs 27,415 cr per a DSIJ headline; management aims for Rs 1 lakh cr in FY27 only if P75I and Kalvari follow-ons are signed). +10% domestic naval/submarine orders raises inflow expectations by ~10% of ~Rs 1 lakh cr pipeline = Rs 10,000 cr = ~13% of mcap in revenue PV terms at ~12% margin x 70% share -> ~+6 after probability haircut.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/mazagon-dock-shares-brokerages-see-up-to-37-upside-after-q1-fy27-results-check-latest-target-prices-546532-2026-08-02",
+     "date": "2026-08-02",
+     "note": "P75I described as moving to imminent finalisation; not confirmed signed"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "MAZDOCK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Naval capex is part of defence capital outlay; +10% -> +3% pipeline value -> ~+2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "MAZDOCK",
+   "relation": "geopolitical_exposure",
+   "w": 3.0,
+   "w_low": -1.0,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "Naval and submarine urgency headline effect; fades quickly; persistence 0.25 on a ~12% sentiment move.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "MAZDOCK",
+   "relation": "geopolitical_exposure",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Raises global naval spending/escort demand; marginal for MDL's MoD order stream. Pack Brent +1.46 (t=1.7) and refining margin +2.10 (t=2.6) are high-beta defence/risk co-movements (beta 1.78), not cost channels; weight shrunk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_DEFENCE_EXPORTS",
+   "dst": "MAZDOCK",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Export frigate/destroyer/offshore interest (Southeast Asia, Gulf, Philippines-type deals) ~0 of revenue today; option value only.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "MAZDOCK",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Steel and plates ~10% of costs (model estimate); long-term contracts have price-variation clauses for part; +7% -> costs +0.7% -> at 8-16% OPM EBITDA -4% to -9%; 50% recovered; persistence 0.3 -> ~-0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "MAZDOCK",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Imported systems and kits (submarine technology, engines, weapons) ~25% of costs; contracts partly protected. +3% -> unrecovered cost +0.3% of revenue vs OPM 8% (Q2) -> EBITDA -4%; persistence 0.5; EV/MCap 0.85 -> ~-1. Pack -2.78 (t=-1.1) same sign.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MAZDOCK.md",
+     "date": "2026-11-05",
+     "note": "t=-1.1"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MAZDOCK",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Net cash but working capital-heavy with Rs 28,181 cr contingent liabilities; valuation duration at P/E 30. +25 bp -> ~-1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MAZDOCK",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": -0.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold only 1.7%; sentiment channel via PSU-defence basket liquidity; small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "NEW_DEFENCE_SHIPYARD_COMPETITION",
+   "dst": "MAZDOCK",
+   "relation": "competition",
+   "w": -5.0,
+   "w_low": -10.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "Cochin Shipyard, GRSE, L&T and private yards compete for frigate, submarine and auxiliary orders; one major program lost (e.g. P17B or follow-on submarines) removes ~Rs 30-40k cr of pipeline = ~15% of MDL EV x 40% probability -> ~-5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Indian Navy / Ministry of Defence",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "~100% of revenue"
+  },
+  {
+   "counterparty": "Thyssenkrupp Marine Systems / German partner (P75I)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Technology partner for ~Rs 90,000 cr P75I; contract status unconfirmed"
+  },
+  {
+   "counterparty": "Naval Group (France)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Scorpene licence and follow-ons"
+  },
+  {
+   "counterparty": "Cochin Shipyard",
+   "ticker": "COCHINSHIP",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Competes for naval and commercial orders"
+  },
+  {
+   "counterparty": "Bharat Electronics",
+   "ticker": "BEL",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Combat systems and sensors"
+  },
+  {
+   "counterparty": "Larsen & Toubro",
+   "ticker": "LT",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Private-sector submarine/warship builder (P75I rival bidder)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "P75I submarine contract signing with partner (if concluded)",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": 8.0,
+   "impact_pct_high": 25.0,
+   "source": "Business Today 2026-08-02 (brokerages: finalisation imminent); Sahi on delays"
+  },
+  {
+   "date": "2027-03",
+   "event": "Order for three additional Kalvari-class submarines",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": 4.0,
+   "impact_pct_high": 12.0,
+   "source": "Sahi 'two major orders by FY27'"
+  },
+  {
+   "date": "2026-11",
+   "event": "Interim dividend (Rs 5 per share per Kotak Neo) record/payment",
+   "type": "corporate_action",
+   "prob": 0.9,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 0.5,
+   "source": "https://www.kotakneo.com/news/stocks/mazagon-dock-q2-results-show-a-54-percent-profit-fall-and-interim-dividend-declaration/"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: provisions normalise? revenue rebound after Q2 trough",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 11.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4 FY27 results and FY28 guidance",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Government OFS in MDL (81% holding)",
+   "type": "corporate_action",
+   "prob": 0.08,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": -3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026, declared 2026-10-27): sales Rs 2,446 cr (-16.5% YoY), OP Rs 199 cr (OPM 8%), PAT Rs 346 cr (-54%) on higher provisions; interim dividend. Note: one aggregator cites EBITDA margin 18.4% and order book Rs 16,443 cr, inconsistent with screener (8%); unresolved.",
+  "trend": "Three-quarter margin and growth deceleration; stock -31% over 12 months, -27% in 3 months, -12% in 1 month.",
+  "valuation": "P/E 30.3, P/B 7.2, mcap Rs 74,454 cr; 12m range Rs 1,688-2,848.",
+  "recent_developments": [
+   "2026-08-02 Brokerages see up to 37% upside after Q1 FY27 (Business Today); Q1 PAT Rs 550 cr +22%",
+   "2026-10-27 Q2 FY27 results: profit slumps 54% on provisions, Rs 5 interim dividend (Kotak Neo); stock reportedly -10%",
+   "Management still targets a Rs 1 lakh cr order book in FY27 and 15-17% revenue growth (Maritime Gateway), contingent on P75I"
+  ]
+ },
+ "key_risks": [
+  "P75I signing delays or renegotiation",
+  "Provisions / cost overruns on fixed-price warship contracts; contingent liabilities Rs 28,181 cr",
+  "Thin order book until mega-orders land",
+  "Competition from Cochin, GRSE, L&T",
+  "Government OFS"
+ ],
+ "upside_triggers": [
+  "P75I and Kalvari follow-on contracts signed",
+  "Export order for warships",
+  "Execution catch-up lifting H2 revenue and margins",
+  "Defence budget uplift"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_DEFENCE_SHIPYARD_COMPETITION",
+   "type": "FACTOR",
+   "name": "Competition among Indian shipyards for major naval programmes",
+   "ssu": "+1 = a major naval programme awarded to a competing yard"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/MAZDOCK.md",
+   "date": "2026-11-05",
+   "what": "fundamentals; pack had no headlines"
+  },
+  {
+   "url": "https://www.kotakneo.com/news/stocks/mazagon-dock-q2-results-show-a-54-percent-profit-fall-and-interim-dividend-declaration/",
+   "date": "2026-10-27",
+   "what": "Q2 FY27 results, provisions"
+  },
+  {
+   "url": "https://univest.in/blogs/mazagon-dock-shipbuilders-q2-results-fy27-pat-344-crore",
+   "date": "2026-10-27",
+   "what": "Q2 FY27 PAT 344 cr, results date"
+  },
+  {
+   "url": "https://www.arthneeti.com/insights/mazagon-dock-shipbuilders-ltd-q2-fy27-earnings",
+   "date": "2026-10-27",
+   "what": "conflicting EBITDA margin and order book (unverified)"
+  },
+  {
+   "url": "https://www.maritimegateway.com/mazagon-dock-keeps-rs-1-lakh-crore-order-book-target-for-fy27-expects-15-17-revenue-growth/",
+   "date": "2026",
+   "what": "management guidance"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/mazagon-dock-shares-brokerages-see-up-to-37-upside-after-q1-fy27-results-check-latest-target-prices-546532-2026-08-02",
+   "date": "2026-08-02",
+   "what": "Q1 FY27 and P75I status"
+  }
+ ]
+}

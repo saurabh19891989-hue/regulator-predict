@@ -1,0 +1,373 @@
+{
+ "ticker": "ICICIAMC",
+ "name": "ICICI Prudential Asset Management Company Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AMC_WEALTH_BROKING",
+ "tier": "MIDCAP_100",
+ "business_summary": "One of India's largest mutual fund managers (ICICI Prudential Mutual Fund), also PMS, AIF and offshore advisory; very high operating margin (~73%). Recently listed (12m price data unavailable in pack), held ~51% by ICICI Bank and ~34.6% by Prudential plc (promoter group 85.60% after plc's 2026-08-26 block sale of up to 2%). Q2 FY27 PAT Rs889cr (+6.1% YoY) with higher yields on MF assets helping; Rs30 interim dividend. Mcap Rs1.46 lakh cr, P/E ~50, 52-week range Rs2,529-3,611; stock -10% in six months.",
+ "revenue_mix": [
+  {
+   "segment": "equity-oriented fund fees",
+   "share_pct": 75,
+   "geography": "India"
+  },
+  {
+   "segment": "debt/liquid fund fees",
+   "share_pct": 15,
+   "geography": "India"
+  },
+  {
+   "segment": "PMS/AIF/offshore advisory",
+   "share_pct": 10,
+   "geography": "India + offshore (model estimate)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 45
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ICICIAMC",
+   "relation": "demand_driver",
+   "w": 4.5,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "0-3m",
+   "mechanism": "AUM is ~70% equity-oriented (model estimate) so equity AUM/fees move with the market: +US$5bn FPI inflow/qtr ~ Nifty +2.5% -> equity AUM +2.5% (plus SIP effect) -> revenue +1.8% (equity ~75% of revenue) at 73% OPM => PAT +2.4%; stock's valuation multiple (50x P/E) amplifies sentiment ~2x => +4.5. Largely a market beta (~1.1); Director demeans cross-section.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,46,399cr, price 2962, P/E 49.8, FY25 PAT Rs2,651cr OPM 73%; promoter 85.60% (from 87.59%); 6m -10.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "ICICIAMC",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+10% monthly SIP+DII inflow (SIP ~Rs29k cr/month, model) = +Rs3k cr/month => +Rs36k cr/yr new equity AUM on ~Rs11 lakh cr AUM = +3.3% AUM; ICICI Pru MF gets ~13% market share => +Rs4.7k cr = +0.4% AUM => revenue +0.5%; plus market support Nifty +1.5% => +1.1%: combined PAT +1.8% x persistence 1.0 x P/E re-rating factor 1.4 => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,46,399cr, price 2962, P/E 49.8, FY25 PAT Rs2,651cr OPM 73%; promoter 85.60% (from 87.59%); 6m -10.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "ICICIAMC",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "+20% retail traded value / demat additions = risk appetite proxy: MF SIP additions +8% and lumpsum +10% => AUM growth +1%, plus sentiment; PAT +2% x 1.5 multiple => +3.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,46,399cr, price 2962, P/E 49.8, FY25 PAT Rs2,651cr OPM 73%; promoter 85.60% (from 87.59%); 6m -10.2%"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "ICICIAMC",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 10.0,
+   "lag": "3-12m",
+   "mechanism": "+1 structural: MF AUM/GDP rising (~17% to 25% over 5 years, model estimate) -> AUM CAGR +3pp above market -> PAT growth +4pp pa; capitalised on a 50x P/E growth stock => +6. The core long-run value driver.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,46,399cr, price 2962, P/E 49.8, FY25 PAT Rs2,651cr OPM 73%; promoter 85.60% (from 87.59%); 6m -10.2%"
+    }
+   ]
+  },
+  {
+   "src": "NEW_P_SEBI_MF_FEES",
+   "dst": "ICICIAMC",
+   "relation": "regulatory_risk",
+   "w": -6.0,
+   "w_low": -15.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = tighter SEBI regime on MF total expense ratio/brokerage/ exit loads (SEBI consulted on TER cuts in 2025, model knowledge; no specific Aug-Nov 2026 rule verified): a 5bp cut in blended yield of ~45bp revenue yield = -11% revenue; AMC passes part via lower opex => PAT -8%; persistence 1.0, partially mitigated by volumes => -6. Wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "SEBI TER consultation 2025; current status not fetched"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "ICICIAMC",
+   "relation": "policy_effect",
+   "w": -5.0,
+   "w_low": -12.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = higher equity LTCG/STCG or reinstated indexation changes: reduces MF returns -> flows -5% and valuation -1x P/E => -5; Budget Feb 2027 is the risk window.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "tax treatment; Budget not yet announced"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ICICIAMC",
+   "relation": "discount_rate",
+   "w": -4.0,
+   "w_low": -7.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts ~ Nifty -3%: equity AUM -3% -> revenue -2.2% -> PAT -3% x multiple compression 1.4 => -4; high-beta (1y vol 32% ann.).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,46,399cr, price 2962, P/E 49.8, FY25 PAT Rs2,651cr OPM 73%; promoter 85.60% (from 87.59%); 6m -10.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "ICICIAMC",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+5% S&P 500: global risk appetite -> FPI flows +US$1bn -> Indian equity +0.5%; ICICI Pru's offshore advisory/PMS/AIF small. +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,46,399cr, price 2962, P/E 49.8, FY25 PAT Rs2,651cr OPM 73%; promoter 85.60% (from 87.59%); 6m -10.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ICICIAMC",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+25bp: higher money-market/short-duration yields make debt funds more attractive (debt ~25% of AUM; yield on assets for AMC's own treasury +), but 50x P/E growth stock has long-duration cash flows: discount-rate -1.2; debt-fund inflows +0.4 => -0.8. Q2 earnings were lifted by higher MF yields (Business Standard).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ICICI+Prudential+AMC+Q2+FY27+AUM+market+share+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Q2 FY27 PAT Rs889cr +6.1% YoY, Rs30 interim dividend, record date Oct 21; Business Standard: higher MF yields lifted earnings"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ICICIAMC",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp: duration-driven valuation hit on a 50x P/E asset-light compounder; bond-fund AUM MTM-driven outflow risk small => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,46,399cr, price 2962, P/E 49.8, FY25 PAT Rs2,651cr OPM 73%; promoter 85.60% (from 87.59%); 6m -10.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "ICICIAMC",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP: household income and savings flows +1.5% and corporate earnings growth +2pp -> equity AUM growth +2pp => PAT +3% x persistence 1.0 => +3.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ICICIBANK",
+   "dst": "ICICIAMC",
+   "relation": "holding_stake",
+   "w": 0.1,
+   "w_low": 0.03,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "ICICI Bank holds ~51% (model knowledge; promoter group 85.60% includes Prudential plc ~34.6%) and is a distribution partner; ICICI Bank -1% -> group sentiment -0.1% on ICICI Pru AMC.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,46,399cr, price 2962, P/E 49.8, FY25 PAT Rs2,651cr OPM 73%; promoter 85.60% (from 87.59%); 6m -10.2%"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "ICICI Bank",
+   "ticker": "ICICIBANK",
+   "role": "parent",
+   "importance": "high",
+   "note": "~51% stake (model knowledge) and distribution partner"
+  },
+  {
+   "counterparty": "Prudential plc",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "selling down: block of up to 2% (~Rs3,190cr) on 2026-08-26; promoter group 85.60% from 87.59%"
+  },
+  {
+   "counterparty": "HDFC AMC / SBI MF / Nippon / Kotak AMC",
+   "ticker": "HDFCAMC",
+   "role": "competitor",
+   "importance": "high",
+   "note": "listed peers HDFCAMC, NIPPON etc.; fee competition"
+  },
+  {
+   "counterparty": "Distributors / SIP investors",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "SIP book is the stable flow"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-12",
+   "event": "Q3 FY27 results (estimated from Q2 on 2026-10-12)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model estimate from prior cycle"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget FY28: capital gains/STT/MF tax changes",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027",
+   "event": "Further Prudential plc stake sale (block/OFS) - overhang for share price",
+   "type": "corporate_action",
+   "prob": 0.4,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=ICICI+Prudential+Life+OR+ICICI+Securities+OR+ICICI+Bank+stake+ICICI+Prudential+AMC+IPO+listing+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "SEBI board meeting/consultation outcome on MF fees/TER and brokerage",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge; not verified"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs889cr +6.1% YoY; Rs30 dividend/share; Motilal Oswal sees up to 25% upside after 'all-round beat'",
+  "trend": "earnings growth slowing to mid-single digit; stock -3.8% (3m), -10.2% (6m) after promoter block sale; DII holding up to 8.4%",
+  "valuation": "P/E 49.8, mcap Rs1,46,399cr (screener); screener quarterly table not parsed in pack",
+  "recent_developments": [
+   "2026-10-12: Q2 FY27 PAT Rs889cr +6.1%, Rs30 interim dividend (ET)",
+   "2026-10-13: shares +2% on steady Q2 (Business Standard)",
+   "2026-09-09: RBI approval to hold up to 9.95% in Kotak and three other banks (ET)",
+   "2026-08-26/27: Prudential plc to sell up to 2%; stock -5% on block (Livemint/BS)"
+  ]
+ },
+ "key_risks": [
+  "equity market drawdown cutting AUM/fees",
+  "SEBI fee-cap regulation",
+  "promoter sell-down overhang",
+  "tax changes on MFs",
+  "competition from index/passive funds"
+ ],
+ "upside_triggers": [
+  "strong SIP flows and market",
+  "market-share gains in equity",
+  "new-segment growth (PMS/AIF)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_P_SEBI_MF_FEES",
+   "type": "POLICY",
+   "name": "SEBI mutual fund fee / TER / brokerage regime",
+   "ssu": "+1 = tightening step (TER or brokerage cut ~5bp)"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/ICICIAMC/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener (table partly empty in pack)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ICICI+Prudential+AMC+Q2+FY27+AUM+market+share+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-12",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ICICI+Prudential+Life+OR+ICICI+Securities+OR+ICICI+Bank+stake+ICICI+Prudential+AMC+IPO+listing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-26",
+   "what": "Prudential block sale and RBI approval"
+  }
+ ]
+}

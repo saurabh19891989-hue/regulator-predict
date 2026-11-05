@@ -14,6 +14,8 @@ RBI/SEBI/government sites). Label facts from memory as `"source": "model knowled
   (listed parent/subsidiary or large stake), `group_contagion` (same promoter group), `dominant_customer`
   (counterparty >25% of revenue/volume). Do not create company→company edges for price channels already covered by a
   shared driver (e.g. do not link COALINDIA → NTPC; both attach to `F_COAL_INDIA`).
+- **company_links unit:** `w` = % change in the TARGET company's equity value per **+1%** change in the SOURCE
+  company's equity value (e.g. parent holding 30% of a subsidiary worth 40% of the parent's value → w ≈ 0.4).
 - `INDUSTRY` nodes are labels only (company classification), never edge endpoints.
 - If a needed driver does not exist, propose it in `new_nodes_proposed` with id `NEW_<NAME>`, type, name and SSU,
   and use that id in your edges.

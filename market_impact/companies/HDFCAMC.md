@@ -26,3 +26,8 @@ Q3 results (Jan 2027), Union Budget (1 Feb 2027), monthly AMFI data, possible SE
 
 ## Bull and bear
 **Bull:** structural SIP growth, best-in-class returns on capital, distribution expansion, alternatives, benign regulatory outcome. **Bear:** 38x P/E leaves no room for a market drawdown, active share loss, fee compression, tax changes and slowing profit growth (+4% y/y).
+
+## Sizing notes and caveats
+Blended yield check: Q2 revenue ~Rs1,170cr x4 / QAAUM Rs9.69 lakh cr = ~48bp, consistent with the ~47bp reported for the prior year. PAT/AUM is ~31bp, so a 1% change in average AUM maps to roughly 1% in PAT given the 79% operating margin and largely fixed cost base. This is why the AUM-linked edges (flows, FPI, risk sentiment) are sized near 1:1 on earnings, then scaled by persistence and the EV/market-cap ratio (~0.97 given Rs8,000cr+ of treasury assets). Industry-level market effects are removed by the Director's cross-sectional demeaning, so only the beta above 1 and the flow-specific components should drive relative rankings.
+
+Evidence gaps: no Q2 yield or HDFC-AMC-specific SIP inflow figure was found; SEBI impact estimates (Jefferies -8-10% FY27 PBT, Centrum -6-10% over FY25-28E) were made on the draft rules and may overstate the final impact; the stake edge to HDFC Bank is intentionally small. Two new nodes (NEW_SEBI_MF_FEE_REG, NEW_AMC_COMPETITION) are proposed for the vocabulary.

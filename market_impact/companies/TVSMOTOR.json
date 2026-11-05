@@ -1,0 +1,564 @@
+{
+ "ticker": "TVSMOTOR",
+ "as_of": "2026-11-05",
+ "name": "TVS Motor Company Ltd.",
+ "industry": "I_AUTO_2W",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's third-largest two-wheeler maker and a leading three-wheeler/EV player (iQube, Orbiter, King EV Max), with Norton Motorcycles and Swiss E-Mobility Group assets. Motorcycles/scooters ~80% of revenue, exports ~28% of volumes, and a consumer-finance arm (TVS Credit) being demerged. Q2 FY27 (Sep 2026): record revenue Rs 17,103 cr (+39% y/y per FPJ; +44% per ET), profit up 46-52% (Rs 1,219-1,377 cr depending on perimeter), EBITDA +47%; record market share. October 2026 two-wheeler sales +22% to 5.15 lakh units; total +29%. Market cap ~Rs 2.1 lakh cr; stock +28.7% in 12 months. Screener dossier unavailable.",
+ "revenue_mix": [
+  {
+   "segment": "Motorcycles, scooters and mopeds (ICE)",
+   "share_pct": 72,
+   "geography": "India ~70% / exports ~30%"
+  },
+  {
+   "segment": "Electric two/three-wheelers",
+   "share_pct": 8,
+   "geography": "India, early exports"
+  },
+  {
+   "segment": "Three-wheelers",
+   "share_pct": 7,
+   "geography": "India and Africa"
+  },
+  {
+   "segment": "Parts, accessories, Norton and other",
+   "share_pct": 5,
+   "geography": "Global"
+  },
+  {
+   "segment": "Financial services (TVS Credit), to be demerged",
+   "share_pct": 8,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 2.5
+  },
+  {
+   "input": "F_RUBBER",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "Petrochemical plastics",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "Bought-out components",
+   "share_of_costs_pct": 40
+  },
+  {
+   "input": "Employee and other",
+   "share_of_costs_pct": 23.5
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Sundaram-Clayton / TVS Holdings promoter group",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "Srinivasan family; 2026-10-27 family dispute reports (Mallika Srinivasan, Lakshmi Venu challenging a settlement)"
+  },
+  {
+   "counterparty": "TVS Credit Services",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "Consumer-finance business to be demerged in 8-10 months (concall 2026-10-28)"
+  },
+  {
+   "counterparty": "Hero MotoCorp",
+   "ticker": "HEROMOTOCO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Mass-market rival"
+  },
+  {
+   "counterparty": "Bajaj Auto",
+   "ticker": "BAJAJ-AUTO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Premium and EV rival"
+  },
+  {
+   "counterparty": "Honda Motorcycle and Scooter India, Suzuki",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Scooter share rivals"
+  },
+  {
+   "counterparty": "Ather, Ola Electric",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "E-scooter rivals"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12-01",
+   "event": "November sales print",
+   "type": "other",
+   "prob": 1.0,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=TVS+Motor+2W+sales+rise+22%25+October+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=TVS+Motor+Q2+FY27+results+demerger+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-07",
+   "event": "Consumer-finance demerger (board approved 2026-10-28; NCLT and shareholder approvals pending, 8-10 months)",
+   "type": "corporate_action",
+   "prob": 0.35,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=TVS+Motor+Company+to+demerge+consumer+finance+and+related+businesses+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Srinivasan family dispute: court or settlement developments",
+   "type": "litigation",
+   "prob": 0.4,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=TVS+Motor+Srinivasan+family+dispute+Mallika+Srinivasan+Lakshmi+Venu+settlement+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "EV capacity ramp toward 80,000 units/month",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=TVS+Motor+concall+EV+capacity+80%2C000+units+a+month+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): record revenue Rs 17,103 cr; PAT +46-52% (Rs 1,219 cr on one basis, Rs 1,377 cr on another - reports differ); EBITDA +47%; record market share",
+  "trend": "Volume and share gains in India and exports, margin expansion, EV capacity expansion; Citi 'Sell' dissent while CLSA/Nomura see up to 15% upside",
+  "valuation": "Market cap ~Rs 2.1 lakh cr at Rs 4,471 (shares ~47.5 cr, model knowledge); P/E not retrieved. 12m +28.7%, 1m +12.3%",
+  "recent_developments": [
+   "2026-10-27: reports of Srinivasan family dispute (Goodreturns)",
+   "2026-10-28: Q2 beat; consumer finance to be demerged (Reuters, BusinessLine); EV capacity to rise to 80,000 units/month",
+   "2026-10-29: CLSA, Nomura see up to 15% upside; Motilal Oswal raises FY estimates by up to 11%; Citi stays Sell",
+   "2026-11-01: October 2W sales +22% (5.15 lakh), total +29%"
+  ]
+ },
+ "key_risks": [
+  "Rate hike and rising commodity costs ('cost overhang' per Upstox 2026-11-02)",
+  "Promoter family dispute and governance",
+  "EV supply (rare-earth magnets) and subsidy dependence",
+  "Competitive intensity in scooters and EVs",
+  "Demerger execution and loss of finance-arm earnings",
+  "Export currency shocks in Africa/LatAm"
+ ],
+ "upside_triggers": [
+  "Sustained share gains and 14%+ EBITDA margin",
+  "EV profitability inflection",
+  "Demerger value unlock",
+  "Export recovery in Africa/ASEAN",
+  "Further GST/consumption relief"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_RARE_EARTH_MAGNET_SUPPLY",
+   "type": "FACTOR",
+   "name": "China rare-earth magnet export availability",
+   "ssu": "+1 = tightening of supply"
+  },
+  {
+   "id": "NEW_2W_COMPETITIVE_INTENSITY",
+   "type": "FACTOR",
+   "name": "Competitive intensity in Indian two-wheelers/EV two-wheelers",
+   "ssu": "+1 = price/share war episode"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/TVSMOTOR.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack (no fundamentals)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=TVS+Motor+Q2+FY27+results+demerger+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "Q2 FY27 results and demerger"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=TVS+Motor+concall+consumer+finance+demerger+EV+capacity+80%2C000+units+a+month+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "Concall highlights"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=TVS+Motor+2W+sales+rise+22%25+to+5.15+lakh+units+in+October+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-01",
+   "what": "October sales"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=TVS+Motor+Srinivasan+family+dispute+Mallika+Srinivasan+Lakshmi+Venu+settlement+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "Family dispute"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "TVSMOTOR",
+   "relation": "demand_driver",
+   "w": 7.0,
+   "w_low": 3.0,
+   "w_high": 11.0,
+   "lag": "0-3m",
+   "mechanism": "Domestic 2W/3W ~70% of volumes. +10% industry volumes => TVS revenue +7%; incremental margin ~25% vs ~12.5% EBITDA margin (estimate; Q2 EBITDA +47% y/y per NDTV Profit) => EBITDA +14%; EV/MCap ~1.05; persistence 0.5 => ~+7. October 2W sales +22% to 5.15 lakh show momentum.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=TVS+Motor+2W+sales+rise+22%25+to+5.15+lakh+units+in+October+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "note": "ET Auto"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=TVS+Motor+Q2+FY27+results+demerger+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Record market share, 47% EBITDA growth"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "TVSMOTOR",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.2,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Aluminium (engine, wheels, castings) ~8% of costs => 7% of revenue; +10% => 0.7% of revenue; at 12.5% margin => EBITDA -5.6%; 40% passed through => -3.4%; x1.05 x0.3 => -1.1. Empirical -1.48 (t=-2.0) agrees. Aluminium is -19.6% since June, a current tailwind.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TVSMOTOR.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_ALUMINIUM -1.48, t -2.0"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium -19.6% since June"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "TVSMOTOR",
+   "relation": "input_cost",
+   "w": -1.3,
+   "w_low": -2.8,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Steel ~15% of costs => 13% of revenue; +7% => 0.9% of revenue => EBITDA -7.4%; 60% unrecovered => -4.4%; x1.05 x0.3 => -1.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "HRC +20.6% since June"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Cost share estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "TVSMOTOR",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Copper in wiring/motors (higher for EVs) ~2.5% of costs; fundamental effect is small (-0.3), but empirical -1.19 (t=-2.0) per +10% suggests extra cyclical co-movement; blended -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TVSMOTOR.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_COPPER -1.19, t -2.0"
+    }
+   ]
+  },
+  {
+   "src": "F_RUBBER",
+   "dst": "TVSMOTOR",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Tyres ~6% of costs; rubber ~35% of tyre cost; +10% rubber => tyre +3.5% => 0.18% of revenue => EBITDA -1.4% x1.05x0.3 => -0.3 (partly passed through).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Cost share estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "TVSMOTOR",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Petrol cost and petrochemical inputs (~5% of costs) weigh on commuter demand and margins; exports to oil-exporting economies partly offset. Empirical -0.44 (t=-1.0).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TVSMOTOR.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT -0.44, t -1.0"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TVSMOTOR",
+   "relation": "fx_translation",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Exports ~28% of volumes (Africa, LatAm, ASEAN, Middle East; USD pricing) vs imports ~10% of revenue (EV components, Norton, SEMG): net long ~18% of revenue; +3% => +0.54% of revenue; 70% flow-through (hedging) => EBITDA +3%; x1.05 x0.5 => +1.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Export share estimate"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=TVS+Motor+Q2+results+exports+strong+volumes+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "NDTV Profit preview: strong volumes, exports"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "TVSMOTOR",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -2.5,
+   "w_high": -0.7,
+   "lag": "0-3m",
+   "mechanism": "High-beta (1.5) quality compounder with premium multiple: significant empirical -1.55 (t=-3.1) per +25bp. US 10-year at 4.89%, +9.4% since June.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TVSMOTOR.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_US_10Y -1.55, t -3.1"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "US 10Y 4.894"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TVSMOTOR",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "~70% of 2W retail is financed (entry segment more price/EMI sensitive); +25bp => volumes -0.6% => EBITDA -1.2%; plus TVS Credit funding margin until demerger; x1.05x0.5-0.6 => -1.0. RBI hiked to 5.50% on 7 Oct.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+hikes+repo+rate+5.50%25+calibrated+tightening+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "SCC Online"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Auto+Ashok+Leyland+top+losers+RBI+rate+hike+auto+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "CNBC TV18: auto stocks fell on hike"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "TVSMOTOR",
+   "relation": "discount_rate",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical DXY -1.91 (t=-2.3) per +3% is a flow channel: a stronger dollar means FPI outflows from high-beta Indian discretionary stocks. +US$5bn quarterly inflow => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TVSMOTOR.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_DXY -1.91, t -2.3"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "TVSMOTOR",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": ">12m",
+   "mechanism": "EVs (iQube, Orbiter, e-3W) ~8-10% of volumes; EV capacity rising to 80,000 units/month (Business Upturn 2026-10-28). +1 stronger push => EV share +3pp => revenue +1-2%, margin accretion small initially; incentive-linked => +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=TVS+Motor+concall+consumer+finance+demerger+EV+capacity+80%2C000+units+a+month+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Business Upturn"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=TVS+Motor+ramp+up+EV+capacity+25+percent+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "note": "Forbes India"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RARE_EARTH_MAGNET_SUPPLY",
+   "dst": "TVSMOTOR",
+   "relation": "input_cost",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "China rare-earth magnet tightening constrains e-scooter motor supply; Q1 analyst calls flagged an EV capacity crunch (NDTV Profit 2026-08-10). +1 => EV output -15% (~1.5% of group volume) plus premium lost => EBITDA -3% x1.05x0.5 => ~-2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Festive+season+fear+EV+capacity+crunch+export+reliance+analyst+calls+Hero+RE+Bajaj+TVS+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "note": "NDTV Profit"
+    }
+   ]
+  },
+  {
+   "src": "NEW_2W_COMPETITIVE_INTENSITY",
+   "dst": "TVSMOTOR",
+   "relation": "competition",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Pricing/market-share war with Honda, Hero, Bajaj and EV start-ups (Ather, Ola). +1 => -1pp share (~-5% volume) or -1% price => EBITDA -10% x1.05x0.25 => -2.5. TVS currently gaining ('record market share', NDTV Profit).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=TVS+Motor+Q2+FY27+results+demerger+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Record market share"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "TVSMOTOR",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": ">12m",
+   "mechanism": "Premium 125cc+ motorcycles (Apache, Ronin, Raider), Jupiter 125, Norton, EVs lift ASP and margin. +1 => +1.5% ASP drop-through => EBITDA +10% x1.05 x0.25 => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=TVS+Motor+Q2+FY27+results+demerger+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Record Q2 revenue Rs 17,103 cr"
+    }
+   ]
+  },
+  {
+   "src": "C_AFRICA_LATAM",
+   "dst": "TVSMOTOR",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Exports ~28% of volumes; Africa+LatAm ~40% of exports => ~11% of volume. +1pp regional growth with export elasticity ~2 => +0.2% group revenue => EBITDA +0.5-1% => +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Export split estimate"
+    }
+   ]
+  },
+  {
+   "src": "C_SOUTH_SE_ASIA",
+   "dst": "TVSMOTOR",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.1,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "ASEAN, Bangladesh, Sri Lanka, Nepal exports ~10% of volumes; +1pp growth => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Export split estimate"
+    }
+   ]
+  }
+ ]
+}
