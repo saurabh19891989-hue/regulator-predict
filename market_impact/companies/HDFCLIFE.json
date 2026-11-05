@@ -26,10 +26,6 @@
   {
    "input": "F_WAGES_IN",
    "share_of_costs_pct": 15
-  },
-  {
-   "input": "P_IRDAI_REG",
-   "share_of_costs_pct": 12
   }
  ],
  "exposures": [
@@ -41,7 +37,7 @@
    "w_low": -14.0,
    "w_high": 3.0,
    "lag": "0-3m",
-   "mechanism": "IRDAI exposure draft (2026-09-23/24) proposes product-wise commission caps (payout capped at 25%) and a dark-pattern ban. Stock fell ~7% on the day; sector fell up to 26% (PB Fintech). Mechanism: bank/agent distributors earn less -> push less (volumes -5 to -10% in affected savings products) while insurers retain the saved commission (margin +). Net VNB hit: -5% volume x 20% margin... VNB -8% to +3% => PAT/value -8% x persistence 1.0 x EV/MCap 1 => -7 central. Systematix says IRDAI 'may need to revisit proposed cap' (BT 2026-09-25) so final rule may be diluted: wide range.",
+   "mechanism": "IRDAI exposure draft (2026-09-23/24) proposes product-wise commission caps (payout capped at 25%) and a dark-pattern ban. Stock fell ~7% on the day; sector fell up to 26% (PB Fintech). Mechanism: bank/agent distributors earn less -> push less (volumes -5 to -10% in affected savings products) while insurers retain the saved commission (margin +). Net: volumes -5 to -10% in capped products x ~60% of VNB from them => VNB -3 to -6% before cost retention; capitalised at 6x book/long-duration value (value moves more than VNB) => value -7 central (range -14 to +3 if diluted). Systematix says IRDAI 'may need to revisit proposed cap' (BT 2026-09-25) so final rule may be diluted: wide range.",
    "confidence": "medium",
    "evidence": [
     {

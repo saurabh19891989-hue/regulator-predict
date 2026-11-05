@@ -1,0 +1,387 @@
+{
+ "ticker": "COALINDIA",
+ "name": "Coal India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_MINING",
+ "tier": "NIFTY_50",
+ "business_summary": "World's largest coal producer (~780-800 Mt/yr, ~80% of India's domestic output) through subsidiaries (MCL, SECL, NCL, WCL, BCCL, ECL, CCL, NEC); ~75-80% of volume goes to power utilities under fixed-price fuel supply agreements (FSAs) at government-notified prices, the rest sold in e-auctions at a premium. Revenue Rs 1.69 lakh cr FY26; EBITDA Rs 37k cr. Government owns 61.1%. Pays high dividends (yield 6.75%). Subsidiaries MCL and SECL are heading for IPOs (SEBI cleared MCL on 5 Nov 2026).",
+ "revenue_mix": [
+  {
+   "segment": "FSA/notified coal to power & others",
+   "share_pct": 75,
+   "geography": "India (model knowledge)"
+  },
+  {
+   "segment": "e-auction coal",
+   "share_pct": 14,
+   "geography": "India"
+  },
+  {
+   "segment": "coking coal, washed, other",
+   "share_pct": 11,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "COALINDIA",
+   "relation": "output_price",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 12.0,
+   "lag": "0-3m",
+   "mechanism": "Domestic coal price +10% blended (e-auction premium moves immediately; notified FSA price changes are rare and politically constrained). Treat as +10% on e-auction (~12% of volume, ~Rs 22k cr revenue) plus +10% on FSA with probability 1/3: effective ~5% of revenue = Rs 8.4k cr; ~25% leaks to royalty/DMF/NMET => Rs 6.3k cr = +17% EBITDA (Rs 37k cr) x EV/MCap 0.85 x persistence 0.5 => +7.2; haircut for hike-denial and volume loss => +6.0. Q2 e-auction realisations were weak (analysts, 30 Oct).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Coal+India+Q2+FY27+production+offtake+e-auction+premium+realisation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: PAT Rs6,547 cr, EBITDA margin 19%; brokerages flag cost pressure, weak e-auction realisation (Moneycontrol, Upstox)"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "COALINDIA",
+   "relation": "output_price",
+   "w": 1.8,
+   "w_low": 0.3,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Seaborne thermal +15% (Newcastle ~$96): widens import-parity, lifts e-auction premiums and shifts blending users to domestic coal; imports already fell 111->104 Mt (News On AIR 2 Nov). Premium response elasticity ~0.4 on 12% volume => +0.7% revenue ... ~ +2.3% EBITDA x 0.85 x 0.5 +volume substitution => +1.8. No significant pack link (no coal factor in top-12).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "COALINDIA",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Pack elasticity +1.78 per +10% Brent (t +3.7, beta 0.81) is large relative to fundamentals: direct diesel cost for overburden removal is small (diesel ~4% of costs: +5% => -0.2% EBITDA). Fundamental channel is gas-to-coal switching: expensive LNG/oil shifts power and industry to coal. Shrunk toward arithmetic: +1.0 with low confidence; the empirical figure also captures energy-complex/PSU-dividend sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "COALINDIA",
+   "relation": "demand_driver",
+   "w": 2.8,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Power plants take ~75-80% of CIL despatch (model knowledge). +3pp electricity demand growth => +2.4% coal consumption => ~+20 Mt on ~800 Mt of CIL sales; contribution Rs ~1,200/t => Rs 2.4k cr = +6.5% EBITDA x 0.85 x 0.5 => +2.8. Plant stocks >18 Mt but not yet rebuilt (BusinessLine 16 Oct) so CIL is supply-bound by evacuation, not demand, in the short run.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Coal+India+Q2+results+volume+e-auction+premium+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "note": "October coal output +19.3% to 67.2 Mt (Business Standard 1 Nov)"
+    },
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "COALINDIA",
+   "relation": "output_price",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "BCCL (Bharat Coking Coal) board approved price hikes for certain coking grades (14 Oct 2026) and washed-coal sales at 5% above import parity (26 Sep). Coking ~6% of volume but ~12% of revenue-equivalent: +15% => +1.8% revenue => +4% EBITDA x 0.85 x persistence 0.25 => +0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Coal+India+Q2+FY27+production+offtake+e-auction+premium+realisation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: PAT Rs6,547 cr, EBITDA margin 19%; brokerages flag cost pressure, weak e-auction realisation (Moneycontrol, Upstox)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "COALINDIA",
+   "relation": "fx_translation",
+   "w": 1.2,
+   "w_low": -0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "INR 3% weaker raises import-parity coal in rupees => e-auction premium support, and substitution from imports (~6% of India's supply). Revenue +0.4% => EBITDA +1% x 0.85 x 0.5 => +0.5; plus marginal-exporter flows => +1.2 central with the pack coefficient (+1.80, t +1.3) as support.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "COALINDIA",
+   "relation": "discount_rate",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Net cash (cash >Rs 1.1 lakh cr incl. FDs, model knowledge): no funding-cost risk; stock is a 6.75% yield bond proxy, ~1.4% value per 25bp on its duration x 0.5 => -0.7.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "COALINDIA",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = higher royalty/cess. Royalty and levies are ~14% ad valorem plus fixed levies; a rise is passed to FSA consumers only with a lag and cap; assume 30% unrecovered of a +1pp rise => ~-1.2% EBITDA ... with probability of larger changes => -2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "COALINDIA",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Employee cost ~25% of operating costs (~Rs 32k cr, model knowledge); +2pp wage growth including NCWA-XI/labour-code provisions => +Rs 640 cr = -1.7% EBITDA x 0.85 x persistence 0.8 => -1.2. Brokerages flagged cost pressure post Q2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Coal+India+Q2+FY27+production+offtake+e-auction+premium+realisation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: PAT Rs6,547 cr, EBITDA margin 19%; brokerages flag cost pressure, weak e-auction realisation (Moneycontrol, Upstox)"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "COALINDIA",
+   "relation": "substitution",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "Renewable build-out and ethanol/gasification policy displace thermal coal at the margin; but demand growth to 2030 remains positive and CIL is guided to 1 bn t. -1.0 per unit shock reflects terminal-value risk on a 7x P/E stock.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "COALINDIA",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Discom payment reform keeps receivables low (CIL collects in advance for most FSA, model knowledge) and stabilises offtake; small positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COALINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "NTPC, state gencos, IPPs",
+   "ticker": "NTPC",
+   "role": "customer",
+   "importance": "high",
+   "note": "power ~75-80% of despatch"
+  },
+  {
+   "counterparty": "Steel makers (washed coking coal via BCCL/CCL)",
+   "ticker": "TATASTEEL",
+   "role": "customer",
+   "importance": "low",
+   "note": "small volumes"
+  },
+  {
+   "counterparty": "Indian Railways",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "rake availability for evacuation"
+  },
+  {
+   "counterparty": "Bharat Coking Coal (listed subsidiary)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "Q2 PAT Rs124 cr; price hikes on coking grades"
+  },
+  {
+   "counterparty": "MCL / SECL (IPO-bound subsidiaries)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "OFS of ~10%"
+  },
+  {
+   "counterparty": "Seaborne coal importers (Adani, Indonesia/ Australia suppliers)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "import parity caps e-auction premium"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "MCL IPO launch (~$1bn, offer for sale of up to 66 cr shares; SEBI approval 5 Nov); SECL DRHP filed 2 Nov",
+   "type": "corporate_action",
+   "prob": 0.65,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Coal+India+price+hike+MCL+IPO+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (CIL reports around early Feb)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge of calendar"
+  },
+  {
+   "date": "2026-12",
+   "event": "Monthly production/offtake releases (1st of month): Oct output +19.3% y/y; sustained >10% growth with rake supply improves FY27 volumes",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Coal+India+Q2+results+volume+e-auction+premium+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Notified-price revision or e-auction reform for FY28 (pricing committee)",
+   "type": "regulatory",
+   "prob": 0.2,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge; no dated notice retrieved"
+  },
+  {
+   "date": "2027-03",
+   "event": "Third interim dividend / FY27 payout (yield 6.75%; second interim record date 4 Nov 2026)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.5,
+   "source": "https://news.google.com/rss/search?q=Coal+India+price+hike+MCL+IPO+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 44,179 cr, operating profit Rs 8,499 cr (OPM 19%), net profit Rs 6,547 cr (EPS Rs 10.57) vs Rs 4,167 cr a year ago and Rs 8,850 cr in Q1 FY27",
+  "trend": "Volumes accelerating (October output +19.3% y/y to 67.2 Mt) but realisations and margins soft; costs rising",
+  "valuation": "P/E 7.3x, P/B 1.9x, yield 6.75%, ROE 28%; stock -4.3% 1m, -15.6% 6m, +4.3% 12m",
+  "recent_developments": [
+   "2026-11-05: SEBI approves Mahanadi Coalfields IPO (Reuters)",
+   "2026-11-03: Bloomberg - ~$1bn MCL IPO as soon as this month",
+   "2026-11-02: SECL files DRHP; coal imports fall to 104 Mt from 111 Mt",
+   "2026-10-30: shares -3 to -4% after Q2 on cost pressure and weak e-auction realisations",
+   "2026-10-14: BCCL approves price hikes for certain coking grades",
+   "2026-10-16: power-plant coal stocks above 18 Mt since late Sep, rebuild yet to begin"
+  ]
+ },
+ "key_risks": [
+  "Notified-price freeze while wages and costs rise",
+  "Weak e-auction premiums",
+  "Subsidiary IPO dilution and cash leakage",
+  "Renewable displacement",
+  "Government dividend demands"
+ ],
+ "upside_triggers": [
+  "Gas-to-coal switching from expensive LNG",
+  "Volume growth >10% with evacuation fixes",
+  "Notified-price hike",
+  "Subsidiary listings crystallising value"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/COALINDIA/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Coal+India+Q2+FY27+production+offtake+e-auction+premium+realisation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Q2 reaction"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Coal+India+price+hike+MCL+IPO+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-05",
+   "what": "MCL/SECL IPO"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Coal+India+Q2+results+volume+e-auction+premium+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-01",
+   "what": "output data"
+  }
+ ]
+}

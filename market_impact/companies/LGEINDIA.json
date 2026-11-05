@@ -1,0 +1,377 @@
+{
+ "name": "LG Electronics India Ltd.",
+ "industry": "I_CONSUMER_DURABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Indian subsidiary (85% owned by LG Electronics Inc., Korea) that manufactures and sells home appliances (refrigerators, washing machines, ACs, microwaves) and home entertainment (TVs) from plants in Noida and Pune, with Sri City capacity added; also B2B (commercial AC, display) and service/AMC businesses, and a growing export arm (60+ countries, record exports Q1 FY27). IPO'd in October 2025. EBITDA margin ~12.5% (Q1 FY27), the highest among listed appliance peers. Board approved entry into a new business on 2026-11-05 (details not read). Screener fundamentals for this ticker were empty in the data pack.",
+ "revenue_mix": [
+  {
+   "segment": "Home appliances & air solutions",
+   "share_pct": 68,
+   "geography": "India ~90% / exports ~10% (approximate; H&A grew 13.6% in Q1 FY27)"
+  },
+  {
+   "segment": "Home entertainment (TV, display)",
+   "share_pct": 32,
+   "geography": "India (Q1 FY27 segment growth +22.3%)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "imported components & royalty (USD-linked)",
+   "share_of_costs_pct": 45,
+   "note": "estimate"
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_SEMICONDUCTOR_SUPPLY",
+   "share_of_costs_pct": 10,
+   "note": "memory/panels, estimate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "LGEINDIA",
+   "relation": "fx_translation",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Imports of compressors/panels/components from LG group ~45% of costs (royalty to parent ~3.5% of sales also USD-linked, model knowledge); exports now material (record in Q1) give a natural hedge of ~10-12% of sales. Net USD short ~35% of costs => +3% USD/INR => +1.05% costs; at 12.5% margin EBITDA -7.4% unpriced, 60% passed through => -3%; persistence 0.4, EV/MCap ~0.95 => -1.1; shaded to -1.5 because pass-through lags.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/lg-electronics-india-q1-results-fy27/",
+     "date": "2026-08-13",
+     "note": "Q1 FY27: revenue ~Rs7,233cr (+15.5%), PAT Rs653cr (+27%), EBITDA margin ~12.5% (+106bp), record exports; FY27 target mid-teen growth, early double-digit EBITDA margin"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "LGEINDIA",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Copper/aluminium/steel ~12% of costs (AC, refrigerator, washing machine); +10% copper => +0.6% costs => EBITDA -4.3% unpriced; 70% passed through => -1.3%; persistence 0.4 => ~-0.5, shaded to -1.0 for AC-heavy summer mix.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+     "date": "2026-09-28",
+     "note": "AC/TV/appliance price hikes of up to 8% from 1 Oct on copper, aluminium, freight; Blue Star +8%, LG +5-7%, Daikin +8-10% from 16 Sep"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "LGEINDIA",
+   "relation": "input_cost",
+   "w": -1.8,
+   "w_low": -4.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Memory and panel-related cost spikes hit TVs and smart appliances (consumer electronics prices up 5-17% per industry reports); Home Entertainment margin 19% in Q1 so cushion exists. +1 tightening => TV BOM +4% on ~35% of sales => margin -0.9pp... after pass-through -0.4pp => EBITDA -3%, persistence 0.5 => ~-1.5, shaded to -1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.outlookbusiness.com/news/ac-prices-to-rise-5-15-as-expensive-copper-weak-rupee-and-new-energy-norms-push-costs",
+     "date": "2026",
+     "note": "industry price hikes on copper, memory chips, freight (search result, not fully read)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "LGEINDIA",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Appliances/consumer electronics are discretionary urban purchases; +5pp => revenue +4% at ~30% incremental margin on 12.5% base => EBITDA +9.6% x persistence 0.4 => ~+3.8; haircut to +3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/lg-electronics-india-q1-results-fy27/",
+     "date": "2026-08-13",
+     "note": "Q1 FY27: revenue ~Rs7,233cr (+15.5%), PAT Rs653cr (+27%), EBITDA margin ~12.5% (+106bp), record exports; FY27 target mid-teen growth, early double-digit EBITDA margin"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "LGEINDIA",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Premium mix (OLED TVs, large-capacity fridges/WM, AI AC) is the company's explicit strategy and drives record margin: +1 => ASP/mix +2% => EBITDA +6% x persistence 0.5 => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.economictimes.com/",
+     "date": "2026-10-18",
+     "note": "ET headline: LG Electronics, Polycab among picks as premiumisation drives growth (via pack; not read)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "dst": "LGEINDIA",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "+1pp category margin give-up across ~95% of sales => margin -0.95pp vs 12.5% => EBITDA -7.6% x persistence 0.4 => -3.0. LG has the highest margin among peers (12.5% vs 4-7%), so its downside to price competition from Samsung, Haier, Voltas, Daikin is large; it also has the strongest balance sheet to defend.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/lg-electronics-india-q1-results-fy27/",
+     "date": "2026-08-13",
+     "note": "Q1 FY27: revenue ~Rs7,233cr (+15.5%), PAT Rs653cr (+27%), EBITDA margin ~12.5% (+106bp), record exports; FY27 target mid-teen growth, early double-digit EBITDA margin"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "LGEINDIA",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Export platform: record quarterly exports in Q1 FY27 to 60+ countries from Indian plants (Noida, Pune, Sri City); +1 => exports +15% on ~10% of sales => revenue +1.5% => EBITDA +3% => ~+1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/lg-electronics-india-q1-results-fy27/",
+     "date": "2026-08-13",
+     "note": "Q1 FY27: revenue ~Rs7,233cr (+15.5%), PAT Rs653cr (+27%), EBITDA margin ~12.5% (+106bp), record exports; FY27 target mid-teen growth, early double-digit EBITDA margin"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "LGEINDIA",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "New homes pull ACs, fridges, washers; +10% sales => appliance volumes +1.5% => ~+1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "housing-appliance link"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "LGEINDIA",
+   "relation": "discount_rate",
+   "w": -0.9,
+   "w_low": -1.8,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "IPO'd Oct-2025 growth stock at premium multiple; zero debt; +25bp => ~-0.9 duration effect.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LGEINDIA.md",
+     "date": "2026-11-05",
+     "note": "no screener ratios in pack; valuation not verified"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LGEINDIA",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "Promoter holds 85% (LG Electronics Inc., Korea); free float only ~15% so flow sensitivity is high per rupee but turnover small; +$5bn => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LGEINDIA.md",
+     "date": "2026-11-05",
+     "note": "shareholding: promoters 85.00%, FIIs 2.60%, DIIs 8.73% (Sep 2026)"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "LGEINDIA",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Parent group redirects some Asian assembly capacity to India; Chinese rivals (Haier, Hisense) face trade friction in India; effect modest. Parent LG Electronics Inc. Q3 2026 preliminary earnings missed (WSJ 2026-10-07) - group-level weakness is a sentiment link.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LGEINDIA.md",
+     "date": "2026-10-07",
+     "note": "WSJ/Yahoo headlines on parent Q3 prelim earnings miss"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "LG Electronics Inc. (Korea)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "85% holder; supplies technology, components, charges royalty; parent Q3 2026 prelim earnings missed"
+  },
+  {
+   "counterparty": "Voltas",
+   "ticker": "VOLTAS",
+   "role": "competitor",
+   "importance": "high",
+   "note": "AC/appliance"
+  },
+  {
+   "counterparty": "Blue Star",
+   "ticker": "BLUESTARCO",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "AC"
+  },
+  {
+   "counterparty": "Samsung, Haier, Whirlpool, Godrej, Daikin",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "not in Nifty 200 (Godrej Appliances unlisted)"
+  },
+  {
+   "counterparty": "Organised retail (Reliance Digital, Croma, Vijay Sales) and e-commerce",
+   "ticker": "RELIANCE",
+   "role": "customer",
+   "importance": "medium",
+   "note": "channel partners; share not verified"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-05",
+   "event": "Q2 FY27 results declared: profit +26% YoY, revenue beat (per headlines); board approved foray into a new business (details not read). Stock +3.5% intraday",
+   "type": "results",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 4.0,
+   "source": "Moneycontrol / CNBC TV18 headlines 2026-11-05 via pack"
+  },
+  {
+   "date": "2026-11",
+   "event": "Citi '90-day positive catalyst watch' (opened 2026-10-01) runs to ~end Dec; MOFSL target Rs2,080, BOB Capital +20%, UBS Buy",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 6.0,
+   "source": "CNBC TV18 / Business Today 2026-10-01"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (festive-quarter sell-through); then summer 2027 AC season",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge on cadence"
+  },
+  {
+   "date": "2026-10",
+   "event": "Lock-in / anchor expiry overhang resolved: free float ~15%; any parent OFS or stake sale would be material (no evidence of plan)",
+   "type": "corporate_action",
+   "prob": 0.05,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -3.0,
+   "source": "model knowledge; shareholding from screener"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026) declared 2026-11-05: headlines say profit +26% and revenue beat estimates (figures not read; Q2 FY26 base: revenue Rs6,174cr, PAT Rs389cr, EBITDA margin 8.9%). Prior quarter Q1 FY27: revenue ~Rs7,233cr (+15.5%), PAT Rs653cr (+27%), EBITDA margin ~12.5%.",
+  "trend": "Premium mix, exports and Home Entertainment margin 19% lift profitability; guidance mid-teen revenue growth and early double-digit EBITDA margin. Stock Rs1,813, 3m +14.9%, 12m +11.0%; record high on 2026-10-05.",
+  "valuation": "Not available from the pack (screener empty); price Rs1,813 x ~67.9cr shares (model knowledge) implies mcap ~Rs1.2 lakh cr; one article cited Rs1.15 lakh cr (unverified).",
+  "recent_developments": [
+   "2026-11-05 Q2 FY27 results; new business approved (CNBC TV18)",
+   "2026-10-05 stock +6% to record high",
+   "2026-10-06/07 parent LG Electronics Inc. Q3 prelim miss; stock slid",
+   "2026-10-01 Citi positive catalyst watch; MOFSL target Rs2,080",
+   "2026-09-28 LG raises AC prices 5-7% from 1 Oct"
+  ]
+ },
+ "key_risks": [
+  "Rupee weakness with USD-linked imports and royalty",
+  "Memory/panel cost inflation in TVs",
+  "Price war from Samsung/Haier/Voltas",
+  "Parent-level weakness and royalty changes",
+  "Limited free float and stock-specific volatility",
+  "New-business capital allocation (details unknown)"
+ ],
+ "upside_triggers": [
+  "Premium mix and exports sustain 12%+ EBITDA margin",
+  "Copper and aluminium decline",
+  "Strong festive and summer 2027 demand",
+  "Index inclusion / flows"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "type": "FACTOR",
+   "name": "Consumer durables category promotional / discount intensity",
+   "ssu": "+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/LGEINDIA.md",
+   "date": "2026-11-05",
+   "what": "price, shareholding, headlines (screener ratios and financials were empty)"
+  },
+  {
+   "url": "https://www.kotakneo.com/news/stocks/lg-electronics-india-q1-results-fy27/",
+   "date": "2026-08-13",
+   "what": "Q1 FY27 results"
+  },
+  {
+   "url": "https://www.business-standard.com/amp/companies/quarterly-results/lg-electronics-india-q2-net-profit-down-27-3-on-margin-pressures-125111302052_1.html",
+   "date": "2025-11-13",
+   "what": "Q2 FY26 base: PAT Rs389cr"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+   "date": "2026-09-28",
+   "what": "AC price hikes"
+  }
+ ],
+ "ticker": "LGEINDIA",
+ "as_of": "2026-11-05"
+}

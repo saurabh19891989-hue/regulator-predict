@@ -1,0 +1,402 @@
+{
+ "name": "Zydus Lifesciences Ltd.",
+ "industry": "I_PHARMA_US_GENERICS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Ahmedabad-based diversified pharma: US generics and specialty (US ~42% of Q2 sales, Rs 3,315 cr), India formulations and consumer wellness, emerging markets, APIs and recent medical-device/biologics acquisitions. TTM sales Rs 30,378 cr (+24%), but Q2 FY27 operating margin fell to 24% (from 33%) and PAT dropped 27% to Rs 928 cr. Borrowings rose to Rs 13,966 cr after acquisitions. USFDA closed an inspection of the Moraiya plant with 5 observations (data integrity/QC flagged by NDTV Profit, 2026-10-26).",
+ "revenue_mix": [
+  {
+   "segment": "US (generics and specialty)",
+   "share_pct": 42,
+   "geography": "USA"
+  },
+  {
+   "segment": "India formulations",
+   "share_pct": 25,
+   "geography": "India"
+  },
+  {
+   "segment": "Consumer wellness",
+   "share_pct": 8,
+   "geography": "India"
+  },
+  {
+   "segment": "Emerging markets, Europe, APIs, other",
+   "share_pct": 25,
+   "geography": "various (model estimate; only US share is sourced)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 33
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 18
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "ZYDUSLIFE",
+   "relation": "fx_translation",
+   "w": 2.8,
+   "w_low": 1.2,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "US ~42% of Q2 sales (Rs 3,315 cr of Rs 7,910 cr). +3% USD/INR: US revenue +1.3% of group sales; other USD/EUR revenue ~10% adds 0.3%; imported RM/API ~12% of sales -0.35% => +1.2% of sales / OPM 24% = +5% EBITDA; hedged ~50% near-term, persistence 0.5, EV/MCap 1.1 -> +2.8. Empirical +3.31 (t=2.4) agrees in sign, higher.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Zydus+Lifesciences+Q2+FY27+results+US+business+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 FY27: profit -27% YoY, OPM 24% vs 33%, US revenue Rs 3,315 cr; stock -4% after 52-week high (CNBC TV18, Zee Business, Upstox)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "ZYDUSLIFE",
+   "relation": "regulatory_risk",
+   "w": -5.0,
+   "w_low": -14.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "Moraiya (Ahmedabad) closed with 5 observations incl. data-integrity/QC (Oct 2026). Moraiya is a large US-supply site (est. 20-25% of US sales -> ~10% of group sales; model estimate). OAI/Warning Letter risk 25% x impact (-12% value: EBITDA -6%, approvals delayed, multiple cut) + other-site risk -> -5 weighted.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Zydus+USFDA+Moraiya+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "USFDA inspection of Moraiya (Gujarat) plant closed with 5 observations incl. data-integrity and QC items (scanx 2026-10-13; NDTV Profit 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "ZYDUSLIFE",
+   "relation": "competition",
+   "w": -4.0,
+   "w_low": -8.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "US generics ~35% of sales. +5pp extra price erosion -> -1.75% of sales -> /OPM 24% = -7.3% EBITDA, persistence 0.5, EV/MCap 1.1 -> -4.0. Q2 margin already fell to 24% from 33% on lower high-margin gRevlimid-type volumes and mix (model knowledge on gRevlimid).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Zydus+Lifesciences+Q2+FY27+results+US+business+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 FY27: profit -27% YoY, OPM 24% vs 33%, US revenue Rs 3,315 cr; stock -4% after 52-week high (CNBC TV18, Zee Business, Upstox)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "ZYDUSLIFE",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -5.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "100% US tariff on branded/patented imports since 2026-09-29 exempts select Indian specialty drugs and generics sit outside it (model knowledge); Zydus has NCE/specialty ambitions and US Sentynl (specialty). +10pp on pharma tariffs: 3% of sales exposed x -50% margin hit -> -1.5 prob-weighted.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "India among 20 jurisdictions exempted"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "ZYDUSLIFE",
+   "relation": "geopolitical_exposure",
+   "w": -0.6,
+   "w_low": -2.5,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Pharma largely outside reciprocal tariffs on India so far (model knowledge); sentiment channel -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ZYDUSLIFE",
+   "relation": "funding_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Borrowings Rs 13,966 cr (Sep-26, up from Rs 3.2k cr in Mar-25 after acquisitions); interest Rs 187 cr/qtr. 50% floating: +25bp x Rs 7k cr = Rs 17 cr/yr vs annualised PBT ~Rs 4,000 cr = -0.4%; EV/MCap 1.1, persistence 0.5 -> -0.3; plus discount rate -> -0.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance calibrated tightening (Reuters/The Hindu headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ZYDUSLIFE",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "P/E 26; +25bp G-sec -> cost of equity +25bp -> value -1.7% x rate beta 0.7 -> -1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "ZYDUSLIFE",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Raw material ~33% of sales (model estimate), feedstock-linked ~10% of sales: +10% -> +1% of sales / OPM 24% = -4% EBITDA; ~40% passed through in India/EM; persistence 0.4, EV/MCap 1.1 -> -1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "ZYDUSLIFE",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "India formulations and consumer wellness (Sugarfree, Complan, Glucon-C, Nycil, EverYuth) ~35% of sales: +5pp urban consumption -> +1.5pp segment growth -> +1.5% earnings.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "T_GLP1",
+   "dst": "ZYDUSLIFE",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": -0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Zydus is positioned in India/EM obesity-diabetes generics and NCE pipelines (model knowledge; unverified for 2026). +1 SSU = faster generic GLP-1 launches -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ZYDUSLIFE",
+   "relation": "discount_rate",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FII 7.0% (low), promoter 75%; limited flow sensitivity: +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "ZYDUSLIFE",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -0.8,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Consumer wellness (Nutralite/EverYuth) uses edible oils (~1% of sales); mechanistically negative but empirical +1.99 (t=1.9) has opposite sign - treated as spurious; weight near zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ZYDUSLIFE",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Beta 0.5-0.65 to market; +5 VIX points -> -0.8 relative via defensive-flow mix (pack shows +0.26, t=0.6 insignificant).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "US pharmacy chains / wholesalers (McKesson, Cardinal, AmerisourceBergen buying groups)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "US generics concentrated buyers set price erosion"
+  },
+  {
+   "counterparty": "Indian/Chinese API and KSM suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "in-house API partly"
+  },
+  {
+   "counterparty": "Sun Pharma, Dr Reddy's, Lupin, Cipla",
+   "ticker": "SUNPHARMA",
+   "role": "competitor",
+   "importance": "high",
+   "note": "US generics/specialty and India"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: US margin recovery vs gRevlimid decline, acquisition integration",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Zydus+Lifesciences+Q2+FY27+results+US+business+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "USFDA classification of Moraiya inspection (VAI vs OAI/Warning Letter)",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -14.0,
+   "impact_pct_high": -5.0,
+   "source": "https://news.google.com/rss/search?q=Zydus+USFDA+Moraiya+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "USFDA classification favourable (NAI/VAI) with no further action",
+   "type": "regulatory",
+   "prob": 0.7,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Zydus+USFDA+Moraiya+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "New USFDA approvals / launches (e.g. hormone patch approved 2026-10-21); complex generics pipeline",
+   "type": "regulatory",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Zydus+Lifesciences+USFDA+approval+hormone+patch+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Section 232 pharma tariff scope extended to generics/specialty",
+   "type": "regulatory",
+   "prob": 0.08,
+   "impact_pct_low": -15.0,
+   "impact_pct_high": -6.0,
+   "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 7,910 cr, operating profit Rs 1,894 cr (24%), PAT Rs 928 cr (-27% YoY)",
+  "trend": "Revenue up 29% YoY (acquisitions) but margins compressed three quarters running (Q4 FY26 34% -> Jun-26 24% -> Sep-26 24%); borrowings and interest rising.",
+  "valuation": "Price Rs 1,189; P/E 26 (TTM EPS Rs 41.9, down from Rs 50.1 FY26); market cap Rs 1.19 lakh cr; 52-week high Rs 1,267. Bernstein sees ~30% upside (CNBC TV18 2026-10-14).",
+  "recent_developments": [
+   "2026-11-04 Q2 profit -27%, stock -4% from 52-week high (CNBC TV18)",
+   "2026-10-26 NDTV Profit: USFDA flags data integrity/QC issues at Gujarat (Moraiya) plant; 5 observations (inspection concluded 2026-10-13)",
+   "2026-10-21 final USFDA approval for hormone transdermal patch",
+   "2026-10-15 US$20m Sri Lanka plant deal",
+   "2026-09-27 USFDA concludes New Jersey office inspection; stock hits 52-week high",
+   "2026-08-11 Q1 FY27 profit -36% despite 22% revenue growth"
+  ]
+ },
+ "key_risks": [
+  "Moraiya OAI/Warning Letter",
+  "US price erosion and loss of gRevlimid-type profits",
+  "Integration of acquisitions and rising debt",
+  "US tariff scope creep",
+  "Margin pressure from medical-device/overseas businesses"
+ ],
+ "upside_triggers": [
+  "Clean USFDA outcome",
+  "New complex-generic and specialty launches",
+  "Margin recovery to 28%+",
+  "Deleveraging"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/ZYDUSLIFE/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in consolidated"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Zydus+Lifesciences+Q2+FY27+results+US+business+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Zydus+USFDA+Moraiya+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "USFDA Moraiya inspection"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "US tariff relief"
+  },
+  {
+   "url": "market_impact/data/packs/ZYDUSLIFE.md",
+   "date": "2026-11-05",
+   "what": "evidence pack"
+  }
+ ],
+ "ticker": "ZYDUSLIFE",
+ "as_of": "2026-11-05"
+}

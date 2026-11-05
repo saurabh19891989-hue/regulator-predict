@@ -1,0 +1,387 @@
+{
+ "ticker": "ATGL",
+ "name": "Adani Total Gas Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_GAS_DISTRIBUTION",
+ "tier": "MIDCAP_100",
+ "business_summary": "City gas distribution (CNG for vehicles, PNG for homes, commercial and industrial users) across ~35 geographical areas in India, plus a 50% stake in the IOCL-Adani gas JV; promoted by Adani Group (74.8% promoter incl. TotalEnergies' ~37.4%, model knowledge). Revenue Rs 5.9k cr in FY26 (TTM 6.8k cr); EBITDA margin has fallen from 25% to 17% as cheaper administered (APM) gas is replaced by costlier HPHT/NRG/spot gas. Q2 FY27 volume +12% y/y, net profit Rs 173 cr.",
+ "revenue_mix": [
+  {
+   "segment": "CNG",
+   "share_pct": 55,
+   "geography": "India (model knowledge)"
+  },
+  {
+   "segment": "industrial & commercial PNG",
+   "share_pct": 30,
+   "geography": "India"
+  },
+  {
+   "segment": "domestic PNG",
+   "share_pct": 15,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_GAS_GLOBAL",
+   "share_of_costs_pct": 65
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 30
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "ATGL",
+   "relation": "input_cost",
+   "w": -1.6,
+   "w_low": -4.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "LNG/spot +15%. Gas cost ~65% of revenue (Rs ~4.4k cr TTM); ~25% of mix is spot/LNG-linked -> cost +2.4% of revenue-equivalent; CNG/PNG price resets lag so ~50% unrecovered for 1-2 quarters: 0.5 x 1.9% x Rs 6.8k cr = ~Rs 65 cr = -5.4% EBITDA x EV/MCap 1.05 x persistence 0.25 => -1.4; add demand loss on industrial PNG => -1.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Total+Gas+Q2+results+CNG+volume+APM+gas+allocation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Q2 FY27: volume +12%, revenue +34%, EBITDA margin down on higher gas costs and APM cut (CNBC TV18, Republic, Business Standard)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Iran+war+Strait+of+Hormuz+LNG+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "Spot LNG surge, India gas demand drops"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CGD_APM_ALLOCATION",
+   "dst": "ATGL",
+   "relation": "policy_effect",
+   "w": -5.0,
+   "w_low": -9.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "+1 = 10pp cut in APM (administered, ~$6.75/mmbtu) gas allocation to CNG/domestic PNG, replaced by NRG/HPHT/spot gas at ~+$5/mmbtu premium. Gas cost ~Rs 4.4k cr; 10pp = Rs 440 cr at APM price, replacement +75% = +Rs 330 cr; 50% recovered by price => -Rs 165 cr = -13.7% EBITDA x 1.05 x persistence 0.5 => -7.2; haircut (partial prior pass-through) => -5.0. Q2 FY27 already absorbed an APM cut (Republic World, 23 Oct).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Total+Gas+Q2+results+CNG+volume+APM+gas+allocation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Q2 FY27: volume +12%, revenue +34%, EBITDA margin down on higher gas costs and APM cut (CNBC TV18, Republic, Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ATGL",
+   "relation": "substitution",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Conflicting channels. Positive: CNG's price advantage vs petrol/diesel widens when Brent rises, lifting CNG vehicle conversions and industrial switching (PNG saves vs LPG/fuel oil). Negative: HPHT/new gas and some term LNG are oil-linked (cost +), and Brent spikes raise discount rates for a 100x P/E stock. Pack elasticity -1.44 (t -1.4) leans negative; take -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ATGL",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "INR 3% weaker raises cost of USD-linked gas (about 40% of purchases imported or USD-linked) by ~1.2% of gas cost; unrecovered half for 1-2 quarters => -2% EBITDA x 1.05 x 0.4 => ~-0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ATGL",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Trading at 100x P/E and 12.4x book, equity duration is long; 25bp on the discount rate = ~1.5% on the 20+ year growth cash flows. Debt Rs ~2.5k cr (interest Rs 151 cr TTM) adds <1%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "ATGL",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "GDP +1pp: industrial/commercial PNG (~30% of volume) and vehicle activity grow ~1.2pp => volume +0.8% => EBITDA +1.2% (fixed network) x 1.05 x 1.0 structural => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "ATGL",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "CNG is ~55% of volume. +10% auto volumes (CNG fleets, taxis, buses) => CNG volume growth +~4pp => EBITDA +4% (CNG unit margin ~Rs 8-10/kg) x 1.05 x persistence 0.3 => +1.3; haircut for EV substitution in cities => +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "ATGL",
+   "relation": "substitution",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "+1 = stronger EV push (electric 3W/buses/cabs in cities where ATGL builds CNG stations): erodes CNG growth in 5-10 years; -3% terminal volume x high multiple (P/E 100) x persistence 1.0 /3 for probability => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "ATGL",
+   "relation": "geopolitical_exposure",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Hormuz closure raised Asian spot LNG ('most expensive in years', ToI 24 Aug) and cut India's gas demand (OilPrice 14 Oct); ATGL's marginal gas is LNG-linked so margins compress (Q2 EBITDA margin 17% vs 20% a year ago) even with a 'calibrated' CNG hike. Stock -11.6% over 3m. Central -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Iran+war+Strait+of+Hormuz+LNG+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "Spot LNG surge, India gas demand drops"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Total+Gas+CNG+price+hike+APM+cut+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "CNG price hike described as calibrated (Business Today 23 Oct)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ATGL",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 12.8% (stable); beta 1.2 to Nifty and 42% vol imply a flow sensitivity of ~+1.5% per +$5bn quarterly inflow for a high-multiple stock after market beta is removed.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ADANIENT",
+   "dst": "ATGL",
+   "relation": "group_contagion",
+   "w": 0.25,
+   "w_low": 0.05,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Unit: % change in ATGL equity value per +1% change in Adani Enterprises equity value. Same promoter group; group-wide governance/financing shocks (e.g. the Nov 2024 US indictment episode, model knowledge) moved all Adani stocks together; ATGL's separate TotalEnergies shareholding limits pass-through.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ATGL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "GAIL, ONGC, Petronet LNG, GSPC (gas sellers)",
+   "ticker": "GAIL",
+   "role": "supplier",
+   "importance": "high",
+   "note": "APM, HPHT, NRG and spot LNG"
+  },
+  {
+   "counterparty": "TotalEnergies (co-promoter ~37%)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "model knowledge"
+  },
+  {
+   "counterparty": "Adani Enterprises (promoter)",
+   "ticker": "ADANIENT",
+   "role": "parent",
+   "importance": "medium",
+   "note": "group link"
+  },
+  {
+   "counterparty": "IOCL (50:50 JV IOAGPL)",
+   "ticker": "IOC",
+   "role": "competitor",
+   "importance": "low",
+   "note": "JV partner, also sells fuel"
+  },
+  {
+   "counterparty": "IGL, MGL, Torrent Gas",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "other CGD operators"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Adani Total Gas usually reports in the second half of the month after quarter-end; date not announced)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge of calendar"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further CNG/PNG price revision as gas costs rise (a 'calibrated' hike was done 23 Oct)",
+   "type": "guidance",
+   "prob": 0.45,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Adani+Total+Gas+CNG+price+hike+APM+cut+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "APM allocation / pricing change to CGD (quarterly allocation cycle) or government PNG scheme (Aug 2026 'Govt scheme boosts PNG networks')",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Adani+Total+Gas+CNG+price+hike+APM+cut+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Adani-group legal/regulatory headline risk (US enforcement matters; status after mid-2026 not verified)",
+   "type": "litigation",
+   "prob": 0.1,
+   "impact_pct_low": -15.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge; not verified post-cutoff"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 1,944 cr (screener consolidated; press reports gross revenue Rs 2,102 cr, +34% y/y), operating profit Rs 328 cr (OPM 17%), net profit Rs 173 cr (+6% y/y)",
+  "trend": "Volumes +12% y/y; margin squeeze for 3 quarters: OPM 21% (Jun-25) -> 15% (Jun-26) -> 17% (Sep-26)",
+  "valuation": "P/E 100x TTM, P/B 12.4x, dividend yield 0.04%; ROE 14.4%; down 11.6% in 3 months, 12-month range Rs 454-860",
+  "recent_developments": [
+   "2026-10-22: Q2 results - revenue up 34% on 12% volume growth, EBITDA margin down",
+   "2026-10-23: calibrated CNG price hike; shares recovered from day's low",
+   "2026-09-18: stock +12% on volume spike (Dalal Street Investment Journal)",
+   "2026-09-21: stock -5% (Livemint)",
+   "2026-08-19: government scheme to boost PNG networks lifted gas stocks"
+  ]
+ },
+ "key_risks": [
+  "Further APM cuts",
+  "Spot LNG spikes (Hormuz)",
+  "Adani group governance/legal shocks",
+  "EV substitution",
+  "Valuation (100x P/E)"
+ ],
+ "upside_triggers": [
+  "LNG easing after US-Iran de-escalation",
+  "Price hikes sticking",
+  "Volume growth >12% with APM stabilisation"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CGD_APM_ALLOCATION",
+   "type": "POLICY",
+   "name": "CGD APM gas allocation",
+   "ssu": "+1 = 10pp cut in APM gas allocation to CNG/PNG(D)"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/ATGL/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Total+Gas+Q2+results+CNG+volume+APM+gas+allocation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-22",
+   "what": "Q2 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Total+Gas+CNG+price+hike+APM+cut+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "CNG hike and APM cut"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Iran+war+Strait+of+Hormuz+LNG+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "LNG context"
+  }
+ ]
+}

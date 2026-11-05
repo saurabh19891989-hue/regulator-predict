@@ -1,0 +1,331 @@
+{
+ "name": "Bharat Dynamics Ltd.",
+ "industry": "I_DEFENCE",
+ "tier": "MIDCAP_100",
+ "business_summary": "Government-owned (74.9%) maker of guided missiles and allied systems (Akash, Astra, Invar, Konkan/Milan, torpedoes and counter-measures), almost entirely for the Indian MoD. Revenue is lumpy and dependent on delivery milestones; FY26 sales Rs2,442 cr (-19%), TTM Rs2,766 cr, TTM EBITDA Rs352 cr (13%) and other income Rs440 cr (treasury) lift PAT to Rs521 cr. Order book Rs26,176 cr at Q1 FY27. Market cap Rs39,299 cr at 75x P/E; debt-free; stock -27% over 12 months and at a 52-week low (2026-10-28). Q1 FY27 sales Rs572 cr, PAT Rs119 cr.",
+ "revenue_mix": [
+  {
+   "segment": "missiles and weapon systems (Akash, Astra, Invar, torpedoes)",
+   "share_pct": 95,
+   "geography": "India (MoD) ~95%+, exports small"
+  },
+  {
+   "segment": "services / other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_SEMICONDUCTOR_SUPPLY",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "BDL",
+   "relation": "policy_effect",
+   "w": 5.0,
+   "w_low": 2.5,
+   "w_high": 9.0,
+   "lag": ">12m",
+   "mechanism": "Single-customer (MoD) guided-missile maker; order book Rs26,176 cr at Q1 FY27 vs TTM sales Rs2,766 cr (~9.5 years of revenue; NiftyTrader 2026-08-14). +10% domestic orders => ~+10% revenue after 2-3 years, op. leverage ~1.5x => EBITDA +15%; x EV/MCap ~0.85 (large cash) x persistence 0.5 => ~+6; shaded to 5.0 for timing slippage. DAC cleared Rs2.12 lakh cr proposals on 2026-10-26/27 and BDL gained up to 5%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bharat+Electronics+Rs+2.12+lakh+crore+procurement+DAC+approval+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "ET/Business Today: BEML, BDL, HAL, BEL, MTAR rise up to 5% after DAC clears Rs2.12 lakh crore"
+    }
+   ]
+  },
+  {
+   "src": "T_DEFENCE_EXPORTS",
+   "dst": "BDL",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": ">12m",
+   "mechanism": "Akash, Astra, Invar and torpedoes pursue export orders (Armenia, SE Asia); BDL exports small today but any large export win re-rates a Rs2,766 cr-sales company. Judgemental.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BDL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "BDL",
+   "relation": "geopolitical_exposure",
+   "w": 3.0,
+   "w_low": 0.0,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation accelerates missile replenishment orders and emergency procurement (precedent: May 2025 defence rally, model knowledge); beta 1.6-1.7 amplifies sentiment. +1 = escalation => ~+3 sentiment-led, mostly short-lived.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BDL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "BDL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Defence capital outlay is part of central capex; budgetary allocation underpins DAC approvals. Shaded because P_DEFENCE_PROCUREMENT already carries the direct effect.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BDL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BDL",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -2.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Two opposing channels: treasury income (other income Rs440 cr TTM vs EBITDA Rs352 cr; +25bp on ~Rs 7,500 cr deposits (assumed) = ~Rs19 cr = +2.6% PBT x0.5 persistence => ~+1.1) versus discount-rate duration on a 75x P/E stock (~-1.7). Net slightly negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BDL",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Imported components/licence content (Invar from Russia, French/Israeli electronics; ~25% import content, model knowledge) but MoD contracts often carry FERV clauses; net small negative. Empirical -2.93 (t=-1.1) is larger but noisy.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BDL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "BDL",
+   "relation": "geopolitical_exposure",
+   "w": -0.8,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Invar anti-tank missile built under Russian licence (model knowledge); sanctions or payment problems can disrupt kits and spares. Probability-weighted small negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BDL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "BDL",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Seekers and guidance electronics depend on imported chips; tightening delays deliveries (execution already lumpy: Q1 FY27 sales Rs572 cr vs Q2 FY26 Rs1,147 cr).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BDL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BDL",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Market beta ~1.6-1.7, 1y volatility 39%, stock at 52-week low (-27% over 12m); +5 VIX hits high-beta PSU defence names harder. Empirical +0.63 (t=0.8) has opposite sign, treated as noise.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BDL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "BDL",
+   "relation": "input_cost",
+   "w": 0.3,
+   "w_low": -0.8,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Fundamentally a small cost item (airframe materials ~2-3% of costs) but empirical sensitivity is positive (+1.59, t=1.0); cost-plus MoD contracts pass costs through, so the net is near zero. Shaded to +0.3 on the data.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BDL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Ministry of Defence (Army, Navy, Air Force)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Dominant customer (>90% of revenue, model knowledge); orders: Rs1,307 cr Navy (2026-10-15), Rs811 cr anti-airfield weapons (2026-09-23)"
+  },
+  {
+   "counterparty": "DRDO and licensors (MBDA/Rosoboronexport)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Designs and licences for Akash, Astra, Invar, Konkurs"
+  },
+  {
+   "counterparty": "Bharat Electronics Ltd",
+   "ticker": "BEL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Co-producer for Akash/missile electronics and competitor for MoD wallet"
+  },
+  {
+   "counterparty": "HAL / Mazagon Dock / BEML",
+   "ticker": "HAL",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Peer defence PSUs; share the DAC-approval sentiment"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-12",
+   "event": "Q2 FY27 results (screener upcoming-date field)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://www.screener.in/company/BDL/ (retrieved 2026-11-05)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Large missile order(s) from DAC-cleared Rs2.12 lakh cr proposals (Akash-NG, Astra, Invar etc. share unknown)",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": 3.0,
+   "impact_pct_high": 12.0,
+   "source": "https://news.google.com/rss/search?q=Bharat+Electronics+Rs+2.12+lakh+crore+procurement+DAC+approval+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results; execution of Rs26,176 cr order book (conversion pace is the key variable)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://news.google.com/rss/search?q=Bharat+Dynamics+Q1+FY27+results+order+book+execution+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Export contract announcement",
+   "type": "other",
+   "prob": 0.15,
+   "impact_pct_low": 3.0,
+   "impact_pct_high": 10.0,
+   "source": "model judgement"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs572 cr (+131% YoY), EBITDA Rs83 cr (15%), PAT Rs119 cr; Q2 due 2026-11-12",
+  "trend": "Lumpy deliveries; FY26 sales -19%; order inflow strong but conversion slow; stock de-rated",
+  "valuation": "P/E 75x on depressed TTM EPS, P/B 9.3x, ROCE 13.9%",
+  "recent_developments": [
+   "2026-08-14: Q1 revenue +131% YoY, PAT ~sixfold to Rs119 cr",
+   "2026-09-23/24: Rs811 cr MoD anti-airfield weapons contract",
+   "2026-10-08: Akash/Astra ramp-up seen driving growth (Moneycontrol)",
+   "2026-10-15: Rs1,307 cr Navy order",
+   "2026-10-27: DAC clears Rs2.12 lakh cr proposals; defence stocks rally up to 5-9%",
+   "2026-10-28: 52-week low"
+  ]
+ },
+ "key_risks": [
+  "Slow execution / lumpy revenue",
+  "Single-customer concentration",
+  "Valuation (75x on TTM)",
+  "Supply chain (Russia/electronics)",
+  "PSU divestment/OFS overhang"
+ ],
+ "upside_triggers": [
+  "Large Astra/Akash/Invar orders from DAC approvals",
+  "Execution catch-up, margin recovery",
+  "Export wins"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BDL.md",
+   "date": "2026-11-05",
+   "what": "price performance, empirical sensitivities, headlines (financials missing in pack)"
+  },
+  {
+   "url": "https://www.screener.in/company/BDL/",
+   "date": "2026-11-05",
+   "what": "Standalone fundamentals fetched directly: quarterly/annual P&L, ratios"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bharat+Dynamics+Q1+FY27+results+order+book+execution+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-14",
+   "what": "Q1 FY27 results / order book Rs26,176 cr"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bharat+Electronics+Rs+2.12+lakh+crore+procurement+DAC+approval+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "DAC Rs2.12 lakh crore headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+  }
+ ],
+ "ticker": "BDL",
+ "as_of": "2026-11-05"
+}
