@@ -30,7 +30,7 @@
   {"src": "C_RUSSIA", "dst": "F_BRENT", "origin": "geopolitics_trade.json", "factor": 0.4,
    "reason": "C_RUSSIA +1 = India's closer trade access/larger discounts. India's purchases do not add or remove barrels from the world market: Russia re-routes at a deeper discount (the mechanism text 'loss of 1.8 mb/d' assumes the barrels vanish). Global sanctions (Oct-2025 Rosneft/Lukoil) moved Brent ~+5%; an India-only shift is a fraction of that. -0.6 -> -0.24 (Brent -2.4% per step). Flow through the edge is 176; it also double-counts OMC discount benefits already on BPCL/IOC/HPCL's own C_RUSSIA edges."},
   {"src": "F_CHINA_GDP", "dst": "F_STEEL_GLOBAL", "origin": "global_macro.json", "factor": 0.25,
-   "reason": "global_macro 0.6 ('China ~50% of steel') is a total effect. backbone_global keeps only the direct 0.15 because the export (CHINA_GDP -> CHINA_STEEL_EXPORTS -> STEEL_GLOBAL, +0.26 after damping), iron-ore (+0.13) and coking-coal (+0.14) paths exist. Result: direct ~0.29 dedup, total ~0.8 SSU per pp."},
+   "reason": "global_macro 0.6 ('China ~50% of steel') is a total effect. backbone_global keeps only the direct 0.15 because the export (CHINA_GDP -> CHINA_STEEL_EXPORTS -> STEEL_GLOBAL, +0.26 after damping), iron-ore (+0.13) and coking-coal (+0.14) paths exist. Result: direct 0.15 after dedup (backbone_global's netted value), total ~0.67 SSU (+6.7% global HRC) per +1pp China GDP."},
   {"src": "F_US_GDP", "dst": "F_US_10Y", "origin": "global_macro.json", "factor": 0.4,
    "reason": "backbone_global (0.3) explicitly nets the Fed channel (US_GDP -> FED_FUNDS -> US_10Y = 0.36); global_macro 0.8 does not. Result: dedup ~0.31."},
   {"src": "F_COAL_INDIA", "dst": "F_POWER_PRICE_IN", "origin": "energy.json", "factor": 0.4,
