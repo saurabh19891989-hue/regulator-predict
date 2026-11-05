@@ -11,7 +11,7 @@ ONGC is India's biggest upstream producer and, through HPCL and MRPL, also a dow
 5. **Russia asset access (+1.0)** and **MRPL refining margins (+1.2)**.
 
 ## Worked transmission examples
-- Escalation -> Brent +12% -> ONGC realisation up (standalone EBITDA +Rs 7k cr/yr) -> OMC under-recoveries widen (HPCL -> consolidated drag, HPCL loses ~36% of mcap in Q1-like quarter) -> government debates windfall tax/sharing (third-order) -> ONGC's net gain shrinks; the stock lags crude.
+- Escalation -> Brent +12% -> ONGC realisation up (standalone EBITDA +Rs 7k cr/yr) -> OMC under-recoveries widen (HPCL -> consolidated drag, HPCL booked a Rs 12.3k cr loss in Q1, ~15% of its market cap) -> government debates windfall tax/sharing (third-order) -> ONGC's net gain shrinks; the stock lags crude.
 - Brent -9% (4 Nov) -> ONGC realisation down but HPCL margin up -> consolidated EBITDA less volatile; the share has risen 2.4% in a month.
 - INR depreciation -> USD realisation upside; at the same time OVL/HPCL USD debt is marked-to-market.
 - Gas: APM price formula capped, so higher spot LNG yields little for ONGC while GAIL/ATGL lose.

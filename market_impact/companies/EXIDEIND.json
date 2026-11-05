@@ -1,0 +1,375 @@
+{
+ "ticker": "EXIDEIND",
+ "as_of": "2026-11-05",
+ "name": "Exide Industries Ltd.",
+ "industry": "I_AUTO_COMPONENTS",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest lead-acid battery maker: automotive (OEM and replacement), industrial (telecom, UPS, solar, railways, submarine) and the lithium-ion cell venture Exide Energy Solutions (6 GWh Phase-I commissioned 2026-09-23). Near debt-free. Sep-26 quarter: sales Rs 5,026 cr (+20% y/y), OPM 12%, net profit Rs 386 cr (+75% y/y); stock jumped ~7% on 2026-11-04. The stock is -22% over three months and -9% over one month before results, P/E 23, market cap Rs 31,437 cr. Lead (~38% of revenue, estimate) is the swing input.",
+ "revenue_mix": [
+  {
+   "segment": "Automotive (OEM + replacement)",
+   "share_pct": 70,
+   "geography": "India ~95%"
+  },
+  {
+   "segment": "Industrial (telecom, UPS, solar, traction)",
+   "share_pct": 28,
+   "geography": "India"
+  },
+  {
+   "segment": "Lithium-ion / Exide Energy (pre-scale)",
+   "share_pct": 2,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_ZINC_LEAD",
+   "share_of_costs_pct": 43
+  },
+  {
+   "input": "Polypropylene and plastics (F_BRENT)",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "Other raw materials (acid, separators, copper)",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "Employee and other",
+   "share_of_costs_pct": 41
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Exide Energy Solutions",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "Li-ion cell JV/subsidiary; Rs 100 cr infusion on 2026-09-30"
+  },
+  {
+   "counterparty": "Amara Raja Energy & Mobility",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Main listed rival"
+  },
+  {
+   "counterparty": "Maruti, Hero, Bajaj, TVS, Tata Motors",
+   "ticker": "MARUTI",
+   "role": "customer",
+   "importance": "medium",
+   "note": "OEM battery supply"
+  },
+  {
+   "counterparty": "Hindustan Zinc / Vedanta (lead)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Domestic lead supply plus recycled and imported lead"
+  },
+  {
+   "counterparty": "SVOLT (technology partner)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Li-ion cell technology (model knowledge)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-04",
+   "event": "Q2 FY27 results delivered: net profit +75%, revenue +20%",
+   "type": "results",
+   "prob": 1.0,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Exide+Industries+Q2+results+net+profit+soars+75.1%25+YoY+to+Rs+386+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "Exide Energy Phase-I ramp-up and customer qualifications",
+   "type": "capex",
+   "prob": 0.7,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Exide+Energy+arm+commissions+Phase-I+of+6+GWh+lithium-ion+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further capital infusion into Exide Energy or customer MoUs",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Exide+Industries+infuses+Rs+100+crore+into+EV+battery+arm+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28 (energy storage, battery duties)",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 5,026 cr (+20% y/y), EBITDA Rs 606 cr (OPM 12%), net profit Rs 386 cr (+75% y/y)",
+  "trend": "Margins recovering from 9% in Sep-25 to 12%; revenue acceleration (+13% TTM); FII holding up from 10.3% to 13.2% in two quarters",
+  "valuation": "P/E 22.9, P/B 2.1 (370 vs BV 174), EV/EBITDA ~13x TTM (computed); ROE 7.5%",
+  "recent_developments": [
+   "2026-09-16: strategic battery pact with ExCom",
+   "2026-09-23: Exide Energy Phase-I (6 GWh) commissioned",
+   "2026-09-24: BDL order stocks-in-focus list",
+   "2026-09-30: stock jumps up to 10% on PM-DHARA scheme; Rs 100 cr infused in EV arm",
+   "2026-11-04: Q2 profit +75%, shares +7%"
+  ]
+ },
+ "key_risks": [
+  "Lead price spikes and lagged pass-through",
+  "Li-ion ramp execution, cell yield and customer wins",
+  "Competition (Amara Raja, global cell makers)",
+  "Weak OEM auto demand after rate hike",
+  "Import duties/tariff changes on cells",
+  "Lead recycling regulation (EPR)"
+ ],
+ "upside_triggers": [
+  "Sustained 12%+ OPM",
+  "Li-ion customer wins and PLI payouts",
+  "BESS orders",
+  "Lead price decline"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/EXIDEIND/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals (evidence pack)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Exide+Industries+Q2+results+net+profit+soars+75.1%25+YoY+to+Rs+386+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Exide+Energy+arm+commissions+Phase-I+of+6+GWh+lithium-ion+cell+manufacturing+plant+in+Bengaluru+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "Li-ion Phase-I"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=TARIL+Adani+Energy+Exide+Industries+jump+after+PM-DHARA+boost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-30",
+   "what": "PM-DHARA rally"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_ZINC_LEAD",
+   "dst": "EXIDEIND",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Lead alloy ~38% of revenue (model knowledge). +10% zinc/lead basket (lead moves ~0.7x) => +2.7% of revenue; OEM contracts are lead-linked with 1-3 month lag, replacement prices reset once or twice a year; ~25% unrecovered => 0.7% of revenue => EBITDA -5.6% at 12% OPM; x0.95 x persistence 0.25 => -1.3 to -1.5. Lead is not in the pack's sensitivity table.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/EXIDEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "Sep-26 qtr OPM 12% (vs 9% a year ago)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Lead share of cost is an estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "EXIDEIND",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 6.5,
+   "lag": "0-3m",
+   "mechanism": "OEM (2W/PV/CV) ~30% and replacement ~40% of revenue (replacement follows parc and with lag); +10% auto volumes => OEM +10% and replacement +3% => revenue +4%; incremental margin 30% vs 12% OPM => EBITDA +10%; x0.95 x0.5 => ~+4.5, trimmed to +4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Exide+Industries+Q2+results+net+profit+soars+75.1%25+YoY+to+Rs+386+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Revenue +20% y/y, net profit +75%"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "EXIDEIND",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": ">12m",
+   "mechanism": "Energy-storage demand (BESS, EV cells, telecom, UPS) is the growth option: Exide Energy Solutions commissioned Phase-I of its 6 GWh Li-ion cell plant in Bengaluru (2026-09-23), Rs 100 cr equity infused (2026-09-30), and Exide jumped up to 10% after the PM-DHARA scheme announcement (2026-09-30, details unverified). +1 => 2% value uplift on ramp visibility => +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Exide+Energy+arm+commissions+Phase-I+of+6+GWh+lithium-ion+cell+manufacturing+plant+in+Bengaluru+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "CNBC TV18"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=TARIL+Adani+Energy+Exide+Industries+jump+after+PM-DHARA+boost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "note": "Upstox"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "EXIDEIND",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.0,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "ACC PLI-linked incentives for Exide Energy's cell plant (milestone penalties/credits); +1 expansion/disbursement => cell economics improve; incentive stream ~Rs 100-150 cr/yr on Rs 31,400 cr cap (model estimate) => +4 with high uncertainty.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "PLI-ACC participation; amounts are estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_BATTERY_MATERIALS",
+   "dst": "EXIDEIND",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -3.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Net of two effects: higher cell costs squeeze Exide Energy's start-up margins (-1.5 over ramp) but make Li-ion a weaker substitute for lead-acid in 2W/UPS, helping legacy lead-acid (+1.0). Wide range reflects the sign ambiguity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Exide+Industries+vs+HBL+Power+Systems+better+BESS+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-03",
+     "note": "Equitymaster"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "EXIDEIND",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Polypropylene containers and separators ~6% of costs, crude-linked; +10% Brent => EBITDA -2% x0.95 x0.3 => -0.6. Empirical -0.88 (t=-1.5) agrees on sign.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/EXIDEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT -0.88, t -1.5"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "EXIDEIND",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Lead (partly imported/LME-linked), cell components and Li-ion equipment are USD costs vs exports ~5% of revenue; +3% => costs +0.9% of revenue gross, ~half passed through => EBITDA -3% x0.95 x0.3 => -0.8. Empirical +2.30 (t=1.4) is positive but insignificant; hence a wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/EXIDEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDINR +2.30, t 1.4"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "EXIDEIND",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "P/E 23 and EV capex dependence; +25bp => -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/EXIDEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 22.9"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "EXIDEIND",
+   "relation": "funding_cost",
+   "w": -0.6,
+   "w_low": -1.4,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Vehicle demand and OEM channel financing; +25bp => auto-volume drag -0.5% => EBITDA -1.5% x0.95 x0.4 => -0.6. Exide has near-zero debt so direct interest effect is negligible.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+hikes+repo+rate+5.50%25+calibrated+tightening+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "SCC Online"
+    }
+   ]
+  },
+  {
+   "src": "F_COTTON",
+   "dst": "EXIDEIND",
+   "relation": "demand_driver",
+   "w": 0.0,
+   "w_low": -1.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Empirical -2.95 (t=-2.9) is statistically strong but has no fundamental channel for batteries (cotton is a rural income/inflation proxy); treated as spurious/proxy for rural demand and kept at 0 with a wide range pending review.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/EXIDEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_COTTON -2.95, t -2.9"
+    }
+   ]
+  }
+ ]
+}

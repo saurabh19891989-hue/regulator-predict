@@ -1,0 +1,463 @@
+{
+ "ticker": "RELIANCE",
+ "name": "Reliance Industries Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CONGLOMERATE",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest private conglomerate: Oil-to-Chemicals (Jamnagar 1.4 mb/d refining plus petchem, fuel retail via Jio-bp), Jio Platforms (telecom, ~500m subscribers; listed separately on 28 Oct 2026 after a 5x-subscribed IPO), Reliance Retail (largest Indian retailer), upstream KG-D6, and New Energy (solar/battery giga-factories). Promoters hold 50.4%. Q2 FY27 profit rose ~41% on record O2C earnings and Jio strength; shares jumped 12% on 2 Nov, the best day since April 2020.",
+ "revenue_mix": [
+  {
+   "segment": "Oil-to-Chemicals (refining + petchem)",
+   "share_pct": 60,
+   "geography": "India ~45% / exports ~55% (model knowledge)"
+  },
+  {
+   "segment": "Retail",
+   "share_pct": 22,
+   "geography": "India"
+  },
+  {
+   "segment": "Digital services (Jio)",
+   "share_pct": 13,
+   "geography": "India"
+  },
+  {
+   "segment": "Oil & gas, other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 60
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 55
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "RELIANCE",
+   "relation": "output_price",
+   "w": 1.8,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Jamnagar ~1.4 mb/d = ~510m bbl/yr: +$2 = $1.0bn = Rs 9.6k cr = 4.9% of TTM group EBITDA (Rs 194k cr), x EV/MCap 1.15 x persistence 0.3 => +1.7. Q2 FY27 O2C EBITDA +68% on wide fuel cracks confirms the sign. Pack +0.41 (t +1.3) is in the same direction but smaller (HO=F proxy).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Reliance+Q2+FY27+net+profit+O2C+EBITDA+Jio+ARPU+retail+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: profit +41%, O2C EBITDA +68%, O2C revenue +44% to Rs2.31 lakh cr (Reuters, Business Standard, Moneycontrol)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "RELIANCE",
+   "relation": "input_cost",
+   "w": 0.3,
+   "w_low": -1.5,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "Offsetting channels: upstream (KG-D6, ~3% of EBITDA) and GRM benefit; petchem spreads compress when crude rises faster than product prices; retail (consumer spending) and Jio are largely insensitive. No significant pack link. Net close to zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "RELIANCE",
+   "relation": "policy_effect",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Jamnagar exports ~55% of fuel output (~30 MMT of petrol/diesel/ATF). An export levy of Rs 6/L on ~36bn L = Rs 21.6k cr = 11% of EBITDA x EV/MCap 1.15 x persistence 0.2 (levies reset fortnightly) => -2.5; round to -3.0. Levies were reset repeatedly Aug-Oct 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+windfall+tax+export+duty+diesel+ATF+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Export levies on petrol/diesel/ATF reset Aug-Oct 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_PETROCHEM_SPREADS",
+   "dst": "RELIANCE",
+   "relation": "output_price",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Polymers/polyester/PX EBITDA ~Rs 30k cr (model knowledge); +10% spread ~ +Rs 4k cr = 2% of EBITDA x 1.15 x 0.4 => +0.9; Q2 'chemical margins' also higher (Business Standard).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Reliance+Q2+FY27+net+profit+O2C+EBITDA+Jio+ARPU+retail+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: profit +41%, O2C EBITDA +68%, O2C revenue +44% to Rs2.31 lakh cr (Reuters, Business Standard, Moneycontrol)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "RELIANCE",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Net USD long operationally (export fuels/chemicals, upstream ~35% of EBITDA): +3% INR weaker = +Rs 2k cr (1% of EBITDA); offset by USD capex/imports for Jio/retail (devices), USD debt ($25bn gross, mostly hedged), and import-intensive retail. Net small negative in equity terms given foreign-investor selling on INR weakness; pack -0.96 (t -1.0).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "RELIANCE",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Net debt ~Rs 1.4 lakh cr, 30% floating: 25bp = Rs 105 cr = 0.2% EBITDA; the effect is valuation duration on a 21.6x P/E growth conglomerate: ~2% per 25bp x 0.5 => -1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "P_TELECOM_TARIFFS",
+   "dst": "RELIANCE",
+   "relation": "output_price",
+   "w": 4.0,
+   "w_low": 2.0,
+   "w_high": 6.5,
+   "lag": "3-12m",
+   "mechanism": "+10% ARPU via tariff hike: Jio revenue ~Rs 1.2 lakh cr/yr x 10% = Rs 12k cr at ~90% flow-through = Rs 10.8k cr = 5.6% group EBITDA x 1.15 x persistence 1.0 (tariff resets structural) => +6.4; haircut for pass-through erosion and competition => +4.0. Jio Platforms listing on 28 Oct raised visibility of Jio value.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Jio+Platforms+listing+market+cap+Reliance+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Jio Platforms listed 28 Oct 2026 after 5x-subscribed IPO; RIL +12% on 2 Nov (Reuters)"
+    },
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "RELIANCE",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Retail (revenue ~Rs 3.3 lakh cr, EBITDA ~Rs 25k cr) and Jio data usage: +5pp urban demand => retail EBITDA +7% = Rs 1.8k cr = 0.9% of group x 1.15 x 0.5 => +0.5; plus Jio => +0.8. Q2 retail was weak (NDTV Profit 2 Nov).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "RELIANCE",
+   "relation": "policy_effect",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+10pp US tariff on India: direct export exposure of textiles/polyester small; the Russia-oil secondary tariff (100% threat, Sep 2026) is the main tail. -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Reliance+Russia+oil+sanctions+US+tariff+India+Iran+war+crude+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "note": "US 100% tariff threat on Russian-oil buyers"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "RELIANCE",
+   "relation": "geopolitical_exposure",
+   "w": 0.8,
+   "w_low": -1.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+1 = freer Russian crude access: discount on up to 0.5 mb/d ($2.5 x 180m bbl = $450m = Rs 4.2k cr = 2% of EBITDA x 1.15 x 0.3 => +0.7); but sanctions actions have previously forced RIL to halt Rosneft supplies, so downside range included.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Reliance+Russia+oil+sanctions+US+tariff+India+Iran+war+crude+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "note": "US 100% tariff threat on Russian-oil buyers"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "RELIANCE",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": -3.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Hormuz disruption raises freight/insurance and crude sourcing cost (RIL imports ~60% from Middle East & Russia/US), but widens diesel/jet cracks (+) and supports Q2-type O2C windfalls; risk-off hits FII-heavy holdings. Net near zero with wide range; stock was -11% over 12m through the conflict.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Reliance+Q2+FY27+net+profit+O2C+EBITDA+Jio+ARPU+retail+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: profit +41%, O2C EBITDA +68%, O2C revenue +44% to Rs2.31 lakh cr (Reuters, Business Standard, Moneycontrol)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "RELIANCE",
+   "relation": "macro_transmission",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 16.7% (down from 18.7% in Mar 2026) of a mega-cap index heavyweight; +$5bn net inflow/qtr => +2.5% market-adjusted.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "RELIANCE",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Jamnagar AI data-centre JV (Google/Meta, model knowledge) and Jio cloud: acceleration of India data-centre demand adds optionality; +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "RELIANCE",
+   "dst": "JIOFIN",
+   "relation": "group_contagion",
+   "w": 0.12,
+   "w_low": 0.05,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "Unit: % change in JIOFIN equity value per +1% change in RELIANCE equity value. Jio Financial was demerged from RIL in 2023 and shares promoter-group holding entities and brand; sentiment and flow contagion, no earnings link.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RELIANCE/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Middle East / Russian / US crude suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Jamnagar slate; Russia exposure sanction-sensitive"
+  },
+  {
+   "counterparty": "Jio Platforms Ltd (listed subsidiary; ticker not in universe)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "largest value component; RIL stake after IPO not verified"
+  },
+  {
+   "counterparty": "Bharti Airtel, Vodafone Idea",
+   "ticker": "BHARTIARTL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "telecom tariff cycle"
+  },
+  {
+   "counterparty": "Indian Oil, BPCL, HPCL",
+   "ticker": "IOC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "fuel marketing; RIL exports cracks"
+  },
+  {
+   "counterparty": "Avenue Supermarts, Trent",
+   "ticker": "DMART",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "retail"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (RIL reports in the third week of January)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge of calendar"
+  },
+  {
+   "date": "2026-12",
+   "event": "Index inclusion/flows for newly listed Jio Platforms (fast entry into Nifty/Sensex/MSCI) with possible RIL weight changes",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Jio+Platforms+listing+market+cap+Reliance+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Jio tariff hike round post-listing (model expectation; not announced)",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge; no company announcement retrieved"
+  },
+  {
+   "date": "2027-06",
+   "event": "Reliance Retail listing/DRHP plans (management had guided to a listing; no filing retrieved)",
+   "type": "corporate_action",
+   "prob": 0.2,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge; not verified"
+  },
+  {
+   "date": "2026-12",
+   "event": "Windfall export-levy reviews on diesel/petrol/ATF (fortnightly)",
+   "type": "regulatory",
+   "prob": 0.8,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=India+windfall+tax+export+duty+diesel+ATF+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "US sanctions / 100% secondary-tariff outcome for Russian-oil buyers",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Reliance+Russia+oil+sanctions+US+tariff+India+Iran+war+crude+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): consolidated sales up ~30% y/y; operating profit Rs 56,616 cr (OPM 17%), PBT Rs 38,613 cr, EPS Rs 18.88 (profit ~Rs 25k cr, +41% y/y per Reuters); O2C EBITDA +68%, retail weak",
+  "trend": "Operating profit up 19% q/q; interest cost Rs 8.5k cr/qtr rising with capex; Jio listing completed",
+  "valuation": "P/E 21.6x TTM, P/B 1.9x, dividend yield 0.46%; ROE 8.9%; Goldman sees 58% upside, Moneycontrol ~33%; market cap Rs 17.7 lakh cr",
+  "recent_developments": [
+   "2026-11-02: shares +12% after record Q2 (best day since 2020)",
+   "2026-10-28: Jio Platforms listed; RIL -2% on listing day",
+   "2026-10-22: Jio IPO subscribed >5x",
+   "2026-10-14: ED seizure order on Reliance Power (Anil Ambani entity, not RIL)",
+   "2026-09-17: US 100% tariff threat on Russia-oil buyers"
+  ]
+ },
+ "key_risks": [
+  "Fuel cracks normalising",
+  "Windfall export duties",
+  "Russian-oil sanctions",
+  "Retail weakness",
+  "Capex-driven leverage"
+ ],
+ "upside_triggers": [
+  "Jio tariff hike",
+  "Retail IPO",
+  "Sustained diesel cracks",
+  "New Energy commissioning"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/RELIANCE/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Reliance+Q2+FY27+net+profit+O2C+EBITDA+Jio+ARPU+retail+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Q2 FY27"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Jio+Platforms+listing+market+cap+Reliance+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "Jio listing"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India+windfall+tax+export+duty+diesel+ATF+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "export levies"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Reliance+Russia+oil+sanctions+US+tariff+India+Iran+war+crude+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-17",
+   "what": "Russia/US"
+  }
+ ]
+}

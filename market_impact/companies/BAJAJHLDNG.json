@@ -1,0 +1,337 @@
+{
+ "ticker": "BAJAJHLDNG",
+ "name": "Bajaj Holdings & Investment Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CONGLOMERATE",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Listed investment holding company of the Bajaj group (promoters 51.46%). Its value is a portfolio of stakes in Bajaj Finserv (~38-39%), Bajaj Auto, Maharashtra Scooters and other investments, with NAV per share Rs21,062 (investments Rs2.34 lakh cr at 30 Jun 2026) against a share price of Rs10,799: a ~49% discount to NAV. Revenue (Rs924cr TTM) is dividends and interest from investees; reported consolidated profit (Q2 FY27 Rs1,993cr owner profit, +28% y/y; TTM Rs9,440cr) is dominated by its share of associates' earnings under equity accounting (book value Rs6,630/share). Interim dividend Rs65/share in Sep 2026. P/E 12.9, dividend yield 1.4%.",
+ "revenue_mix": [
+  {
+   "segment": "Dividend and interest income from investments",
+   "share_pct": 100,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BAJAJHLDNG",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Holdco discount to NAV (~49% on 30 Jun NAV: price Rs10,799 vs NAV Rs21,062) widens when yields rise; stock P/E 12.9, P/B 1.6 (BV Rs6,630). +25bp => discount +1pt of NAV (~2% of price) at 40% pass-through => -0.8. Underlying holdings' own rate sensitivity is captured via the company links.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "India 10y G-sec ~7.4-7.5% in Oct 2026, multi-year high (Reuters/ET headlines); Nov outlook 7.25-7.35%"
+    },
+    {
+     "source": "https://www.sahi.com/news/bajaj-holdings-declares-interim-dividend-of-65-per-share",
+     "date": "2026-09-15",
+     "note": "NAV/share Rs21,062 on investment market value Rs2.34 lakh cr at 2026-06-30; interim dividend Rs65"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BAJAJHLDNG",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Holdco-level effect only (the Bajaj Finserv/Bajaj Finance funding-cost impact flows through the BAJAJFINSV link): hikes slow NBFC/insurance growth sentiment that determines the holdco discount; -0.6 at low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening' (The Hindu, Reuters headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "BAJAJHLDNG",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "DII share 8.4% (up from 8.1%); SIP/DII +10% supports mid/large cap holdco demand and narrows the NAV discount (+2pt of discount -> +4% only if sustained); take +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJHLDNG.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities and fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BAJAJHLDNG",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FII 9.6%; beta 0.94-1.06; +US$5bn/qtr ~ +3% Nifty => +3%, one-third survives demeaning => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJHLDNG.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities and fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BAJAJHLDNG",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "No direct FX in a holdco; pack -2.51 per +3% USD/INR (t -1.7) arises from INR weakness coinciding with FPI outflows from financials. Shrunk to -1.0 as the FPI edge already carries part of that channel (de-duplicate).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJHLDNG.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities and fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "BAJAJHLDNG",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.6,
+   "lag": "0-3m",
+   "mechanism": "Pack: +1.61 per +5% S&P (t +2.1; market beta 0.94). Interpretation: global risk-on lifts financials/FPI flows. Shrunk by half to +0.8 to avoid duplicating the FPI/VIX channel.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJHLDNG.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities and fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BAJAJHLDNG",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Pack -0.63 per +5 VIX points (t -1.5, consistent). Holdco discounts widen in risk-off periods.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJHLDNG.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities and fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "BAJAJHLDNG",
+   "relation": "policy_effect",
+   "w": -0.6,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Holdco taxation (low effective tax noted by Screener: dividends from investees taxed) and investor demand for equity; a higher LTCG/STCG regime also lowers the monetisation value of holdings and the NAV multiple. Union Budget 1 Feb 2027. Low confidence.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "BAJAJHLDNG",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Portfolio is dominated by financial-services holdings (Bajaj Finserv/Finance/insurance) whose valuations ride financialisation; fully captured via the holdings link, so only a small holdco-premium residual (+1.0).",
+   "confidence": "low",
+   "evidence": []
+  }
+ ],
+ "company_links": [
+  {
+   "src": "BAJAJFINSV",
+   "dst": "BAJAJHLDNG",
+   "relation": "holding_stake",
+   "w": 0.38,
+   "w_low": 0.25,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Largest holding (about 39% of Bajaj Finserv per Trendlyne/Roic listings; added shares in April 2026 block deals: stake 38.41%). Investments' market value Rs2.34 lakh cr on 30 Jun 2026; BFS+Bajaj Auto each about one-third by value (weights from Trendlyne/Roic, unverified). A +1% move in BFS lifts NAV ~0.35-0.4%; the holdco follows NAV at ~1:1 (discount stable), so w=+0.38 (% change in BAJAJHLDNG per +1% in BFS).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/bajaj-holdings-declares-interim-dividend-of-65-per-share",
+     "date": "2026-09-15",
+     "note": "NAV/share Rs21,062 on investment market value Rs2.34 lakh cr at 2026-06-30; interim dividend Rs65"
+    },
+    {
+     "source": "https://www.angelone.in/news/stocks/bajaj-holdings-share-price-in-focus-as-company-acquires-over-20-9-lakh-bajaj-finserv-shares-for-370-53-crore-via-block-deal",
+     "date": "2026-04",
+     "note": "Block-deal purchase of BFS shares; stake 38.41%"
+    }
+   ]
+  },
+  {
+   "src": "BAJAJ-AUTO",
+   "dst": "BAJAJHLDNG",
+   "relation": "holding_stake",
+   "w": 0.3,
+   "w_low": 0.2,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Second large holding (~one-third of NAV by Trendlyne/Roic weights, unverified; BHIL also earns annual dividends from Bajaj Auto and group companies as 'sales'). +1% in Bajaj Auto => NAV +0.3% => holdco +0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/bajaj-holdings-declares-interim-dividend-of-65-per-share",
+     "date": "2026-09-15",
+     "note": "NAV/share Rs21,062 on investment market value Rs2.34 lakh cr at 2026-06-30; interim dividend Rs65"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Bajaj Finserv Ltd.",
+   "ticker": "BAJAJFINSV",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "largest investee; holds Bajaj Finance and Bajaj Allianz"
+  },
+  {
+   "counterparty": "Bajaj Auto Ltd.",
+   "ticker": "BAJAJ-AUTO",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "large investee and dividend source"
+  },
+  {
+   "counterparty": "Maharashtra Scooters Ltd.",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "holding/investee; itself trades at a ~55% discount to NAV (Whalesbook)"
+  },
+  {
+   "counterparty": "Bajaj Finance",
+   "ticker": "BAJFINANCE",
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "indirect via Bajaj Finserv"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01/02",
+   "event": "Q3 FY27 results (Q2 declared 2026-11-03)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "pattern of prior dates; model estimate"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28 (capital gains / holdco tax)",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge of schedule"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further block purchases of Bajaj Finserv shares via subsidiary/intra-group (April 2026 precedent raised stake to 38.41%)",
+   "type": "corporate_action",
+   "prob": 0.25,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 1.5,
+   "source": "https://www.angelone.in/news/stocks/bajaj-holdings-share-price-in-focus-as-company-acquires-over-20-9-lakh-bajaj-finserv-shares-for-370-53-crore-via-block-deal"
+  },
+  {
+   "date": "2027",
+   "event": "Corporate restructuring / holdco simplification that narrows the ~49% NAV discount (speculative; none announced)",
+   "type": "corporate_action",
+   "prob": 0.05,
+   "impact_pct_low": 10.0,
+   "impact_pct_high": 40.0,
+   "source": "model estimate; none announced"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): consolidated owner profit Rs1,993cr (+28%); standalone sales Rs182cr; Q1 FY27 PAT Rs2,708cr (-22% on prior-year one-off)",
+  "trend": "Stable look-through earnings growth; stock 3m -5.1%, 12m -10.6%; MarketsMojo downgraded to Sell (2026-11-04)",
+  "valuation": "Rs10,811; P/E 12.9, P/B 1.6; NAV Rs21,062 (30 Jun) => ~49% discount",
+  "recent_developments": [
+   "2026-11-03 Q2 results: owner profit +28% to Rs1,993cr",
+   "2026-09-15 interim dividend Rs65/share",
+   "2026-09-15 subsidiary announces large dividend (Business Today: arm 1600%)",
+   "2026-04 BHIL raised Bajaj Finserv stake via block deal to 38.41%"
+  ]
+ },
+ "key_risks": [
+  "Holdco discount (~49%) stays or widens",
+  "Concentration: two holdings ~two-thirds of NAV",
+  "Regulatory shocks to Bajaj Finance (RBI), insurance (IRDAI)",
+  "Capital-gains taxation",
+  "Governance/related-party structure"
+ ],
+ "upside_triggers": [
+  "Re-rating of Bajaj Finserv/Bajaj Auto",
+  "Discount compression via buyback/restructuring",
+  "Higher dividends from investees",
+  "Domestic inflows"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.sahi.com/news/bajaj-holdings-declares-interim-dividend-of-65-per-share",
+   "date": "2026-09-15",
+   "what": "NAV and dividend"
+  },
+  {
+   "url": "https://freepressjournal.in/business/bajaj-holdings-net-profit-declines-22-to-2708-crore-in-q1-fy27",
+   "date": "2026-07-31",
+   "what": "Q1 FY27"
+  },
+  {
+   "url": "https://www.angelone.in/news/stocks/bajaj-holdings-share-price-in-focus-as-company-acquires-over-20-9-lakh-bajaj-finserv-shares-for-370-53-crore-via-block-deal",
+   "date": "2026-04",
+   "what": "BFS stake purchase"
+  },
+  {
+   "url": "https://www.whalesbook.com/news/English/bankingfinance/Maharashtra-Scooters-Stock-Trades-at-55percent-Discount-to-Bajaj-Holdings-Value/69d856a0e0ea10058db4f99d",
+   "date": "2026",
+   "what": "Maharashtra Scooters discount"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Holdings+Q2+results+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Q2 FY27 headlines"
+  }
+ ]
+}

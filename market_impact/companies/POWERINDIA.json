@@ -1,0 +1,448 @@
+{
+ "ticker": "POWERINDIA",
+ "name": "Hitachi Energy India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Indian listed arm of Hitachi Energy (71.31% promoter), formerly ABB Power Products & Systems India. Makes power and traction transformers, HVDC converter stations and components, grid-connection solutions, power quality equipment, switchgear and services; serves utilities (PGCIL), renewables, data centres, rail and industry. Q1 FY27 (Apr-Jun 2026): revenue Rs 2,493.7 cr (+68.6%), EBITDA margin 16.0%, PAT Rs 294.2 cr (+123.5%), order intake Rs 5,096.5 cr, record backlog Rs 32,222.1 cr (company release). Financial year ends March. screener.in data was empty in the pack, so market cap (~Rs 1.25 lakh cr) is estimated from price Rs 28,130 x ~4.46 cr shares (model knowledge).",
+ "revenue_mix": [
+  {
+   "segment": "Transformers and components",
+   "share_pct": 40,
+   "geography": "India + exports"
+  },
+  {
+   "segment": "HVDC / grid integration / systems",
+   "share_pct": 30,
+   "geography": "India"
+  },
+  {
+   "segment": "Power quality, switchgear, services",
+   "share_pct": 30,
+   "geography": "India ~65% / export ~35%"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "POWERINDIA",
+   "relation": "demand_driver",
+   "w": 8.0,
+   "w_low": 3.0,
+   "w_high": 13.0,
+   "lag": "3-12m",
+   "mechanism": "Backlog Rs 32,222 cr is ~3x LTM-implied sales; HVDC, grid integration and transformers lead orders. +1 unit = +20% order intake -> +10% revenue at ~45% contribution margin on 16% EBITDA... incremental EBITDA +4.5% of revenue = +28% EBITDA; persistence 0.5; EV/MCap ~1.0 -> ~+14, haircut for already priced-in growth (P/E >100) -> +8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.hitachienergy.com/news-and-events/press-releases/2026/08/hitachi-energy-india-limited-announces-q1-fy27-results",
+     "date": "2026-08",
+     "note": "Q1 FY27 revenue Rs 2,493.7 cr +68.6%; EBITDA 16.0%; PAT Rs 294.2 cr +123.5%; backlog Rs 32,222.1 cr; data centres significant in orders"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "POWERINDIA",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "PGCIL/state utilities fund HVDC corridors and substations; +10% capex growth -> +4% revenue -> EBITDA +11% (45% contribution) -> persistence 0.5 -> ~+5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "POWERINDIA",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 1.5,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Release says data centres contributed significantly to Q1 orders; DC connections, power quality and transformers. +1 unit = +20% DC-linked demand (~20% of non-HVDC orders) -> +4% revenue -> EBITDA +11%; persistence 0.5 -> ~+5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.hitachienergy.com/news-and-events/press-releases/2026/08/hitachi-energy-india-limited-announces-q1-fy27-results",
+     "date": "2026-08",
+     "note": "Q1 FY27 revenue Rs 2,493.7 cr +68.6%; EBITDA 16.0%; PAT Rs 294.2 cr +123.5%; backlog Rs 32,222.1 cr; data centres significant in orders"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "POWERINDIA",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 0.8,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "Moves with global AI sentiment: Hitachi Energy India fell with AI-related stocks on 2026-10-13, 10-15 and 10-30 (up to 5-6%, Moneycontrol) and -6% on 2026-10-23. +10% AI capex growth -> sentiment/valuation +3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "POWERINDIA",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Renewable evacuation, BESS (first 165 MW/330 MWh order), 900 GW non-fossil target by FY36 (company release). +1 unit -> +15% pipeline -> ~+4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.hitachienergy.com/news-and-events/press-releases/2026/08/hitachi-energy-india-limited-announces-q1-fy27-results",
+     "date": "2026-08",
+     "note": "Q1 FY27 revenue Rs 2,493.7 cr +68.6%; EBITDA 16.0%; PAT Rs 294.2 cr +123.5%; backlog Rs 32,222.1 cr; data centres significant in orders"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "POWERINDIA",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Stronger support raises HVDC/grid connection solutions for renewable zones (Barmer-type projects).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "POWERINDIA",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Copper windings ~12% of costs; ~70% recovered by price-variation clauses; +10% -> cost +1.2%, 30% unrecovered = 0.36% -> EBITDA -2.2% at 16% OPM; persistence 0.25 -> ~-0.6, rounded -0.8 for export/fixed-price orders. Pack shows no significant link (not listed in top 12).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "POWERINDIA",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "CRGO and structural steel ~8% of costs; +7% -> EBITDA -2.3% unrecovered 30% -> persistence 0.3 -> ~-0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "POWERINDIA",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Imports from Hitachi Energy global (HVDC valves, components) are ~35% of materials; exports are 33.6% of non-HVDC orders (release), a partial natural hedge. +3% -> net unhedged cost +0.5% of revenue -> EBITDA -3% -> persistence 0.5 x 0.9 -> ~-1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "POWERINDIA",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.7,
+   "lag": "0-3m",
+   "mechanism": "P/E >100 on a long-duration growth story (valuation partly offset by net cash). +25 bp -> ~-2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "POWERINDIA",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": -0.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs 12.0% (rose to 12.4% in Jun-2026 quarter, now 11.96%); +$5bn/qtr inflows support high-multiple names.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "POWERINDIA",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.2-1.3; +5 VIX points -> -1.5 relative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "NEW_POWER_EQUIP_CAPACITY",
+   "dst": "POWERINDIA",
+   "relation": "competition",
+   "w": -4.0,
+   "w_low": -9.0,
+   "w_high": -0.7,
+   "lag": "3-12m",
+   "mechanism": "Siemens Energy India, GE Vernova T&D, CG Power and imports add capacity; company asks for a 'level-playing-field policy' (release). +1 unit = 100 bp margin pressure -> EBITDA -6% at 16% OPM; persistence 0.7, prob 0.6 -> ~-4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.hitachienergy.com/news-and-events/press-releases/2026/08/hitachi-energy-india-limited-announces-q1-fy27-results",
+     "date": "2026-08",
+     "note": "Q1 FY27 revenue Rs 2,493.7 cr +68.6%; EBITDA 16.0%; PAT Rs 294.2 cr +123.5%; backlog Rs 32,222.1 cr; data centres significant in orders"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "POWERINDIA",
+   "relation": "geopolitical_exposure",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Release warns 'prolonged geopolitical tension could slow the energy transition'; supply-chain delays for imported components and Gulf export projects. Small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.hitachienergy.com/news-and-events/press-releases/2026/08/hitachi-energy-india-limited-announces-q1-fy27-results",
+     "date": "2026-08",
+     "note": "Q1 FY27 revenue Rs 2,493.7 cr +68.6%; EBITDA 16.0%; PAT Rs 294.2 cr +123.5%; backlog Rs 32,222.1 cr; data centres significant in orders"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Hitachi Energy / Hitachi Ltd",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "71.31% owner; technology, components and RPT approvals (shareholders approved material RPTs 2026-10-12)"
+  },
+  {
+   "counterparty": "Power Grid Corporation of India and state utilities",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "HVDC and transmission"
+  },
+  {
+   "counterparty": "Data-centre and renewable developers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Growing share of orders"
+  },
+  {
+   "counterparty": "Siemens Energy India",
+   "ticker": "ENRIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "HVDC and transformers"
+  },
+  {
+   "counterparty": "GE Vernova T&D India",
+   "ticker": "GVT&D",
+   "role": "competitor",
+   "importance": "high",
+   "note": "T&D equipment"
+  },
+  {
+   "counterparty": "ABB India",
+   "ticker": "ABB",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Electrification peer"
+  },
+  {
+   "counterparty": "CG Power",
+   "ticker": "CGPOWER",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Transformers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (Sep quarter); share.market headline suggests a prior-year 15% jump on Q2; test of margin and backlog",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 12.0,
+   "source": "model knowledge of calendar; Q2 FY26 precedent via share.market"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 10.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "Large HVDC order awards (Barmer-type 6 GW renewable corridors) lifting backlog",
+   "type": "other",
+   "prob": 0.35,
+   "impact_pct_low": 3.0,
+   "impact_pct_high": 10.0,
+   "source": "Sahi 'Hitachi Energy targets double-digit margins and 6 GW Barmer project conclusion' (via search)"
+  },
+  {
+   "date": "2027-06",
+   "event": "Karjan (Vadodara) 20th manufacturing unit progress; capacity addition",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.hitachienergy.com/news-and-events/press-releases/2026/08/hitachi-energy-india-limited-announces-q1-fy27-results"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4 FY27 results and FY28 outlook",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 10.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "Index rebalancing / FPI flows around AI-related stock sell-offs",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 4.0,
+   "source": "Moneycontrol AI-stocks headlines Oct 2026"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): revenue Rs 2,493.7 cr (+68.6%), EBITDA 16.0%, PAT Rs 294.2 cr (+123.5%), order intake Rs 5,096.5 cr (vs Rs 11,339 cr Q1 FY26 incl. HVDC), backlog Rs 32,222.1 cr. Q2 FY27 not yet reported.",
+  "trend": "Execution surge; stock Rs 28,130, +37.5% in 12 months but -19.3% in 6 months and -11% in 1 month; +6% on 2026-11-04.",
+  "valuation": "Not available from screener (pack empty); P/E likely >100 on TTM (estimate). Chris Wood (Jefferies) names it a pick (2026-09-25, ET/CNBC TV18).",
+  "recent_developments": [
+   "2026-09-25 Chris Wood calls energy India's best structural story, picks Hitachi Energy",
+   "2026-10-12 shareholders approve material RPTs",
+   "2026-10-13/15/30 AI-related stock sell-offs, shares -4% to -5%",
+   "2026-10-23 capital goods index -4%; Hitachi Energy -6%",
+   "2026-11-04 shares +6% (Equitymaster)"
+  ]
+ },
+ "key_risks": [
+  "Valuation extremely sensitive to AI-capex and rate sentiment",
+  "HVDC order lumpiness (intake fell YoY in Q1)",
+  "Peer capacity additions and pricing",
+  "Related-party and imported-content dependence",
+  "Geopolitics slowing transition projects"
+ ],
+ "upside_triggers": [
+  "Big HVDC awards (backlog >Rs 40,000 cr)",
+  "Sustained 16%+ EBITDA margin",
+  "BESS and data-centre orders",
+  "Capacity ramp at Karjan"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_POWER_EQUIP_CAPACITY",
+   "type": "FACTOR",
+   "name": "Power/T&D equipment capacity additions vs demand (pricing pressure)",
+   "ssu": "+1 = peer capacity additions outpace demand enough to cut order pricing/margins ~100 bp"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.hitachienergy.com/news-and-events/press-releases/2026/08/hitachi-energy-india-limited-announces-q1-fy27-results",
+   "date": "2026-08",
+   "what": "company Q1 FY27 press release (fetched)"
+  },
+  {
+   "url": "market_impact/data/packs/POWERINDIA.md",
+   "date": "2026-11-05",
+   "what": "price performance, shareholding, headlines (fundamentals empty)"
+  },
+  {
+   "url": "https://www.sahi.com/news/hitachi-energy-targets-double-digit-margins-and-6-gw-barmer-project-conclusion-4950-PE1_COR",
+   "date": "2026",
+   "what": "margin and Barmer project (summary only)"
+  }
+ ]
+}

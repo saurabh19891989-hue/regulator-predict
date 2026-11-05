@@ -1,0 +1,397 @@
+{
+ "ticker": "TATACOMM",
+ "name": "Tata Communications Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_TELECOM",
+ "tier": "MIDCAP_100",
+ "business_summary": "Global enterprise network and digital-services company (ex-VSNL), 58.85% held by Tata group (Panatone Finvest 44.8%, Tata Sons 14.07%). Core connectivity (MPLS, SD-WAN, internet, subsea/ IZO), media and entertainment, and a growing digital portfolio (cloud, CPaaS/Kaleyra, IoT, security, collaboration). TTM revenue ~Rs26.0k cr (Q2 FY27 Rs6,688 cr, +9.6% y/y), EBITDA ~Rs5.2k cr (21.3% margin in Q2, record), PAT Rs336-341 cr in Q2 (+86%). Announced a $450m 'AI Super Highway' build (2026-10-26).",
+ "revenue_mix": [
+  {
+   "segment": "core connectivity & legacy data/voice",
+   "share_pct": 60,
+   "geography": "India ~50% / international ~50% (estimate)"
+  },
+  {
+   "segment": "digital platform (cloud, CPaaS, IoT, security, collaboration, media)",
+   "share_pct": 40,
+   "geography": "global; digital platform revenue +18.6% y/y in Q2"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "network and bandwidth costs (access, backhaul, license)",
+   "share_of_costs_pct": 42
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "manpower and other opex",
+   "share_of_costs_pct": 53
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "TATACOMM",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "AI Super Highway ($450m, targets up to 40% share of AI-network demand) and GPU/cloud (Vayu) benefit from AI data-centre interconnect demand. +10% AI capex growth => ~+3% growth in data-centre/interconnect-linked revenue (est. 10% of revenue) => +0.3% revenue at ~35% incremental margin => EBITDA +2%; x EV/MCap 1.23 x persistence 1.0 (structural) = +2.5. Low-medium confidence: capex ($450m ~Rs3.8k cr) is ~75% of annual EBITDA, so returns risk is real.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/ (headline: Tata Communications to build $450-million AI Super Highway, targets up to 40% market share)",
+     "date": "2026-10-26",
+     "note": "AI Super Highway $450m over 3-5 years, construction from Q4 FY27 subject to vendor selection/approvals (search summary)"
+    },
+    {
+     "source": "https://www.tatacommunications.com/press-release/q2-fy2027-financial-results",
+     "date": "2026-10-15",
+     "note": "Q2 FY27: gross revenue +9.6%, digital platform +18.6%, data +12.2%, EBITDA Rs1,422 cr margin 21.3%, PAT Rs341 cr (company; via search summary)"
+    },
+    {
+     "source": "market_impact/data/packs/TATACOMM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance, headlines"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "TATACOMM",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Indian data-centre build-out drives long-haul fibre, hosting/cloud interconnect and IZO/ Cloud-network demand; robust double-digit order book growth cited by management in Q2 (brokerage note via search). +1 SSU => +2% on equity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.tatacommunications.com/press-release/q2-fy2027-financial-results",
+     "date": "2026-10-15",
+     "note": "Q2 FY27: gross revenue +9.6%, digital platform +18.6%, data +12.2%, EBITDA Rs1,422 cr margin 21.3%, PAT Rs341 cr (company; via search summary)"
+    },
+    {
+     "source": "market_impact/data/packs/TATACOMM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance, headlines"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "TATACOMM",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Enterprise/MNC customers (300 of Fortune 500) buy network, security and collaboration; +5% IT spend growth => +1.5% core data revenue => EBITDA +2.6% (19-21% margin) x1.23 x0.5 = +1.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACOMM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance, headlines"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "TATACOMM",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "India enterprise connectivity and digital services (about half of revenue): +1pp GDP => +0.8% revenue => EBITDA +1.5% x1.23 x0.8 = +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACOMM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance, headlines"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TATACOMM",
+   "relation": "fx_translation",
+   "w": 0.8,
+   "w_low": -0.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "~45-50% of revenue USD/GBP-linked; USD costs ~30% of cost base; net long USD ~Rs6k cr/yr, ~50% hedged: +3% => +Rs90 cr = +1.7% EBITDA x1.23 x0.5 = +1.0; offset by USD debt translation => +0.8. Pack: DXY +0.91 (t +0.9), consistent in sign.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TATACOMM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated fundamentals through Sep-2026 (fetched directly; pack had no dossier)"
+    },
+    {
+     "source": "market_impact/data/packs/TATACOMM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance, headlines"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TATACOMM",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Net debt ~Rs11.4k cr (net debt/EBITDA 2.2x per MOFSL note via search), ~50% floating: +25bp = ~Rs14 cr/yr = 1.3% of TTM PAT Rs1,089 cr; x ~0.8 = -1.0 incl. demand drag.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.tatacommunications.com/press-release/q2-fy2027-financial-results",
+     "date": "2026-10-15",
+     "note": "Q2 FY27: gross revenue +9.6%, digital platform +18.6%, data +12.2%, EBITDA Rs1,422 cr margin 21.3%, PAT Rs341 cr (company; via search summary)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TATACOMM",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -3.5,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "P/E 41.2 and negative-growth-adjusted compounding: +25bp on ~11% cost of equity => -2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TATACOMM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated fundamentals through Sep-2026 (fetched directly; pack had no dossier)"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "TATACOMM",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Power for network and data centres ~4-5% of opex (~Rs0.9k cr, estimate); +15% price with ~30% pass-through => Rs95 cr = -1.8% EBITDA x1.23 x0.3 persistence = -0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACOMM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance, headlines"
+    }
+   ]
+  },
+  {
+   "src": "NEW_ENTERPRISE_CONNECTIVITY_PRICING",
+   "dst": "TATACOMM",
+   "relation": "competition",
+   "w": -5.0,
+   "w_low": -10.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "+1 SSU = 5% decline in enterprise connectivity (MPLS/SD-WAN/IZO) pricing. Core connectivity ~40% of revenue (~Rs10k cr): -5% = -Rs520 cr = -10% EBITDA x1.23 x persistence 0.5 = -6.2; set -5 for partial offset. Competition from Airtel Business, Jio, hyperscalers' own networks.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.tatacommunications.com/press-release/q2-fy2027-financial-results",
+     "date": "2026-10-15",
+     "note": "Q2 FY27: gross revenue +9.6%, digital platform +18.6%, data +12.2%, EBITDA Rs1,422 cr margin 21.3%, PAT Rs341 cr (company; via search summary)"
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "TATACOMM",
+   "relation": "geopolitical_exposure",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Tata Comm owns/operates subsea cable systems (TGN) and gateways; Red Sea cuts raise restoration costs and reroute traffic, but also lift demand for diverse capacity; net ambiguous, near zero: -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACOMM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance, headlines"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "TATACOMM",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding fell from 17.2% to 13.6% in Sep-2025 and 13.55% in Sep-2026 while DII rose to 20.2%; beta 1.1. +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TATACOMM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated fundamentals through Sep-2026 (fetched directly; pack had no dossier)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "TATACOMM",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Pack +0.65 (t +1.5) is of opposite sign to a normal beta-1.1 stock; insignificant. Fundamentals imply modestly negative; set -0.5 with wide range. Pack also shows F_COAL_INTL +2.85 (t +2.0): no mechanism, treated as coincidental co-movement and not modelled.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACOMM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance, headlines"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Airtel Business / Jio",
+   "ticker": "BHARTIARTL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "enterprise connectivity"
+  },
+  {
+   "counterparty": "Hyperscalers (AWS, Azure, Google)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "also competitor in cloud networking"
+  },
+  {
+   "counterparty": "Tata Sons / Panatone",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "58.85% promoter holding"
+  },
+  {
+   "counterparty": "Network equipment & fibre vendors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "AI Super Highway vendor selection pending"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (digital EBITDA break-even target; double-digit EBITDA growth guided for FY27)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.tatacommunications.com/press-release/q2-fy2027-financial-results"
+  },
+  {
+   "date": "2027-03",
+   "event": "AI Super Highway construction start (Q4 FY27 subject to vendor selection / approvals)",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.moneycontrol.com/ (headline: Tata Communications to build $450-million AI Super Highway, targets up to 40% market share)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Digital portfolio EBITDA break-even announcement",
+   "type": "guidance",
+   "prob": 0.3,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.tatacommunications.com/press-release/q2-fy2027-financial-results"
+  },
+  {
+   "date": "2026-11",
+   "event": "Dividend/AGM-related corporate actions (dividend yield 1.0%)",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "https://www.screener.in/company/TATACOMM/consolidated/"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep-2026): revenue Rs6,688 cr (+9.6%), EBITDA Rs1,422 cr (21.3% vs 19.2%), PAT Rs336-341 cr vs Rs183 cr; digital platform +18.6%, data +12.2%, digital margin -3.6% (losses halved); net debt/EBITDA ~2.2x; cash capex +60% y/y",
+  "trend": "Accelerating EBITDA (+21%), improving margin, digital losses narrowing; capex rising for AI network",
+  "valuation": "P/E 41.2, price ~Rs1,746-1,748, mcap ~Rs49.8k cr (52w Rs1,322-2,110), EV/EBITDA ~12x; Motilal Neutral with target Rs1,980 (2026-10-16)",
+  "recent_developments": [
+   "2026-10-15: Q2 FY27 results, shares +10-14% from lows",
+   "2026-10-16: Motilal Oswal Neutral Rs1,980",
+   "2026-10-26: $450m AI Super Highway announced; 40% market-share target"
+  ]
+ },
+ "key_risks": [
+  "Execution and return on $450m AI network capex",
+  "Enterprise connectivity price erosion and hyperscaler disintermediation",
+  "Digital losses not turning positive",
+  "Rupee and USD hedging",
+  "Leverage with rising capex",
+  "Subsea/Red Sea outages"
+ ],
+ "upside_triggers": [
+  "Digital EBITDA break-even",
+  "AI data-centre interconnect order wins",
+  "EBITDA growth >15%",
+  "Operating leverage on high-margin data",
+  "Rating upgrades"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_ENTERPRISE_CONNECTIVITY_PRICING",
+   "type": "THEME",
+   "name": "Enterprise connectivity pricing pressure",
+   "ssu": "+1 = 5% decline in MPLS/SD-WAN/IZO prices"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/TATACOMM/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in consolidated fundamentals through Sep-2026 (fetched directly; pack had no dossier)"
+  },
+  {
+   "url": "market_impact/data/packs/TATACOMM.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities, price performance, headlines"
+  },
+  {
+   "url": "https://www.tatacommunications.com/press-release/q2-fy2027-financial-results",
+   "date": "2026-10-15",
+   "what": "Q2 FY27: gross revenue +9.6%, digital platform +18.6%, data +12.2%, EBITDA Rs1,422 cr margin 21.3%, PAT Rs341 cr (company; via search summary)"
+  },
+  {
+   "url": "https://www.moneycontrol.com/ (headline: Tata Communications to build $450-million AI Super Highway, targets up to 40% market share)",
+   "date": "2026-10-26",
+   "what": "AI Super Highway $450m over 3-5 years, construction from Q4 FY27 subject to vendor selection/approvals (search summary)"
+  }
+ ]
+}

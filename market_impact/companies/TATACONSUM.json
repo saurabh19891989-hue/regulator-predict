@@ -1,0 +1,370 @@
+{
+ "ticker": "TATACONSUM",
+ "name": "Tata Consumer Products Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_FMCG_STAPLES",
+ "tier": "NIFTY_50",
+ "business_summary": "Tata group's FMCG company: India tea (Tata Tea, Tetley), coffee (Tata Coffee, Eight O'Clock), salt (Tata Salt), Tata Sampann pulses/spices, Soulfull, ready-to-drink (Tata Gluco Plus, Himalayan, NourishCo), Capital Foods (Ching's, Smith & Jones) and Organic India, an International business (UK, US, Canada, Australia) and a stake in the Tata Starbucks JV (model knowledge on portfolio). Q2 FY27: revenue Rs5,661cr (+14%), EBITDA +18% to Rs794cr (margin 14.0%), PAT ~Rs470cr (+16%). India tea/coffee revenue fell 1% on flat volume while growth businesses grew 40% (Sampann +57%, RTD +47%). Stock Rs1,077; P/E 62, P/B 4.8, ROE 7.4%; mcap Rs1.07 lakh cr.",
+ "revenue_mix": [
+  {
+   "segment": "India packaged beverages (tea, coffee)",
+   "share_pct": 22,
+   "geography": "India (Q2 revenue Rs1,244cr)"
+  },
+  {
+   "segment": "India foods (salt, Sampann, Soulfull, Capital Foods, Organic India)",
+   "share_pct": 28,
+   "geography": "India (approx.)"
+  },
+  {
+   "segment": "International (tea, coffee, RTD)",
+   "share_pct": 30,
+   "geography": "UK/Europe, US, Canada, Australia (approx.)"
+  },
+  {
+   "segment": "Non-branded and other (plantations, Tata Coffee exports, NourishCo)",
+   "share_pct": 20,
+   "geography": "mixed (approx.)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COCOA_COFFEE_TEA",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 5
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COCOA_COFFEE_TEA",
+   "dst": "TATACONSUM",
+   "relation": "input_cost",
+   "w": -3.3,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Tea and coffee raw material ~20% of revenue (tea/coffee ~40% of COGS, COGS ~50% of sales; model estimate). +15% cost => +3% of revenue; ~50% recovered through price hikes in 6 months => net 1.5% of revenue => EBITDA -10.7% at 14% margin; x EV/MCap 1.05 x persistence 0.3 => -3.4. Q2: higher tea and salt costs cut India tea/coffee profit share (Investywise); company has raised prices (Rediff 2026-11-04).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/tata-consumer-products-q2-results-revenue-up-14-to-5661-cr",
+     "date": "2026-10-26",
+     "note": "Q2 FY27 revenue Rs5,661cr +14%, EBITDA +18%, margin 14.0%; India tea/coffee -1%; growth businesses +40%"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "TATACONSUM",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Packaging ~6% of revenue; +10% => 0.6% of revenue; 40% passed through => 0.36% => EBITDA -2.6% x 1.05 x 0.3 => -0.8.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "TATACONSUM",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.1,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Freight, fuel and polymer packaging ~4% of revenue linked to oil; +10% Brent => +0.2% of revenue after pass-through => EBITDA -1.4% x 1.05 x 0.3 + indirect => -0.5. Agrees with pack (-0.27, t -0.7, not significant).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACONSUM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "TATACONSUM",
+   "relation": "demand_driver",
+   "w": 1.7,
+   "w_low": 0.7,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Tea, salt and staples are ~35% rural. +5pp rural growth => volumes +1.5% => revenue +1.5% x incremental margin 30% / base 14% => EBITDA +3.2% x 1.05 x persistence 0.5 => +1.7. India tea/coffee volume flat in Q2 (subdued demand).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/tata-consumer-products-q2-results-revenue-up-14-to-5661-cr",
+     "date": "2026-10-26",
+     "note": "Q2 FY27 revenue Rs5,661cr +14%, EBITDA +18%, margin 14.0%; India tea/coffee -1%; growth businesses +40%"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "TATACONSUM",
+   "relation": "demand_driver",
+   "w": 2.3,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Premium/growth portfolio (Sampann, RTD, Capital Foods, Organic India, Starbucks JV) is urban-skewed; growth businesses +40% in Q2, Sampann +57%, RTD +47%. +5pp urban demand => revenue +2% x 30%/14% => EBITDA +4.3% x 1.05 x 0.5 => +2.3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/tata-consumer-products-q2-results-revenue-up-14-to-5661-cr",
+     "date": "2026-10-26",
+     "note": "Q2 FY27 revenue Rs5,661cr +14%, EBITDA +18%, margin 14.0%; India tea/coffee -1%; growth businesses +40%"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "TATACONSUM",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Food CPI 7.74% (Sep). +2pp squeezes household budgets and trade-down: volumes -0.5% => EBITDA -1% x 1.05 x 0.5 => -0.5; plus input inflation that exceeds price hikes => -0.8. Offsetting: pricing power on branded tea/salt.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+CPI+inflation+September+2026+when:40d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "CPI 5.54% in Sep 2026, food inflation 7.74% (CNBC/ET headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TATACONSUM",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "62x P/E, 4.8x book, ROE 7.4% (screener): long-duration; net cash-light balance sheet. +25bp G-sec => ~-2% on multiple at 50% CoE pass-through => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TATACONSUM/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 62, BV Rs223, ROE 7.4%, mcap Rs1.07 lakh cr; Q2 OPM 14%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "India 10y G-sec ~7.4-7.5% in Oct 2026, multi-year high (Reuters/ET headlines); Nov outlook 7.25-7.35%"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TATACONSUM",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "International ~30% of revenue (UK, US, Canada, Australia; EBITDA share ~20%) gains from rupee weakness; imported coffee, tea blends, nuts/pulses ~8% of revenue lose. +3%: +0.6% EBITDA translation vs -1.7% import cost => ~-1% x 1.05 x 0.5 => -0.5. Pack: -0.58 (t -0.5), agrees in sign.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACONSUM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "TATACONSUM",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Pack: +0.88 per +5 VIX points, t +2.8 (market beta 0.90): defensive FMCG attracts rotation when risk-off. Kept at +0.8 (shrunk slightly toward fundamentals; mostly removed by market demeaning).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACONSUM.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "TATACONSUM",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Value-added/branded mix (Sampann, Capital Foods, RTD) gains from premiumisation: +1 => growth businesses +2pp growth (15% of revenue) => revenue +0.3% at higher margin => EBITDA +0.8% persistent => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/tata-consumer-products-q2-results-revenue-up-14-to-5661-cr",
+     "date": "2026-10-26",
+     "note": "Q2 FY27 revenue Rs5,661cr +14%, EBITDA +18%, margin 14.0%; India tea/coffee -1%; growth businesses +40%"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "TATACONSUM",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Quick commerce channels are over-indexed for Capital Foods, Sampann and RTD; +1 => channel growth adds ~0.5% to revenue at accretive margin => +0.8.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "TATACONSUM",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Packaged food/beverage GST cuts lower shelf prices; +1 (~2-5pp) => volumes +1.5-2% => EBITDA +3.5% x 1.05 x 0.3 => +1.0. Tea/salt already low-rate, so effect smaller than for other FMCG.",
+   "confidence": "low",
+   "evidence": []
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Tea estates/auctions (Assam, Kenya, Sri Lanka)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "tea cost drives India beverage margin"
+  },
+  {
+   "counterparty": "Hindustan Unilever",
+   "ticker": "HINDUNILVR",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Brooke Bond/Lipton, Bru"
+  },
+  {
+   "counterparty": "Nestle India",
+   "ticker": "NESTLEIND",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "coffee"
+  },
+  {
+   "counterparty": "Britannia / ITC",
+   "ticker": "ITC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "staples and foods"
+  },
+  {
+   "counterparty": "Tata Sons",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "Tata group promoter"
+  },
+  {
+   "counterparty": "Starbucks (Tata Starbucks JV)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "50:50 JV, equity-accounted"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 on 2026-10-26)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "pattern of prior dates; model estimate"
+  },
+  {
+   "date": "2026-11/12",
+   "event": "Additional price increases / tea cost trajectory (Q2 call: price hikes support H2)",
+   "type": "guidance",
+   "prob": 0.6,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "Upstox/Rediff headlines 2026-10-26, 2026-11-04"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4 FY27 results and FY28 outlook",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model estimate"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs5,661cr (+14%), EBITDA Rs794cr (+18%, 14.0%), PAT ~Rs470cr (+16%); standalone profit Rs243cr (-15%)",
+  "trend": "Double-digit revenue growth driven by foods/RTD/international; core India tea weak; margin recovering with price hikes",
+  "valuation": "Rs1,077; P/E 62, P/B 4.8; +10.4% 1m, -8.6% 12m; Motilal Oswal target Rs1,230 (2026-10-08)",
+  "recent_developments": [
+   "2026-10-26 Q2 results; stock +6-7% next day; Citi and Morgan Stanley constructive",
+   "2026-11-04 Rediff: strong revenue/margin growth amid price hikes",
+   "2026-10-10 stock -13% over 3 months before results; MOSL sees 21% upside"
+  ]
+ },
+ "key_risks": [
+  "Tea/coffee/cocoa cost inflation outpacing price hikes",
+  "Weak India tea demand",
+  "High valuation (62x P/E)",
+  "Integration of acquisitions (Capital Foods, Organic India)",
+  "Competition from HUL and regional brands"
+ ],
+ "upside_triggers": [
+  "Pricing recovery restoring margin >15%",
+  "Growth businesses (+40%) scaling",
+  "Tea cost normalisation",
+  "GST cuts or rural recovery"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.psuconnect.in/financial/tata-consumer-products-q2-results-revenue-up-14-to-5661-cr",
+   "date": "2026-10-26",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://www.investywise.com/?p=123309",
+   "date": "2026-10-26",
+   "what": "Q2 summary and segments"
+  },
+  {
+   "url": "https://www.screener.in/company/TATACONSUM/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals (fetched)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India+CPI+inflation+September+2026+when:40d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-12",
+   "what": "CPI 5.54%, food 7.74%"
+  }
+ ]
+}

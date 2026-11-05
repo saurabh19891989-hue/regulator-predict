@@ -1,0 +1,388 @@
+{
+ "name": "KEI Industries Ltd.",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Indian manufacturer of power cables (EHV up to 400 kV, HT, LT), house wires, control/instrumentation cables and stainless-steel wire, plus a small EPC arm. Q2 FY27 revenue Rs 3,776 cr (+38.5%), EBITDA margin 9.97%, PAT Rs 262 cr; wire & cable order book Rs 4,927 cr (Rs 991 cr exports, ~50% US). Debt-free with Rs 698 cr cash. Guides 25%+ FY27 revenue growth, 20% CAGR over 3-4 years and 11-12% EBITDA margin as Sanand EHV Phase 2 ramps (Mar 2027). Stock is -27% in 3 months on a Q2 margin miss and UltraTech's Sept entry into cables.",
+ "revenue_mix": [
+  {
+   "segment": "Cables (EHV/HT/LT/control)",
+   "share_pct": 78,
+   "geography": "India ~88% / export ~12% (split approximate, model knowledge)"
+  },
+  {
+   "segment": "House wires",
+   "share_pct": 18,
+   "geography": "India (dealer network)"
+  },
+  {
+   "segment": "Stainless steel wire, EPC and others",
+   "share_pct": 4,
+   "geography": "India/export"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "Polymers/insulation compounds (PVC, XLPE), steel, packaging",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "Power, freight, other",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_CABLE_NEW_ENTRANT_PRICING",
+   "dst": "KEI",
+   "relation": "competition",
+   "w": -5.0,
+   "w_low": -10.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "UltraTech (Aditya Birla) launched Ultravolt W&C on 3 Sep 2026 with Rs 1,800 cr initial capex; Nuvama expects aggressive pricing/channel investment -> margin pressure and interim de-rating. +1 = incumbent W&C gross margin -100 bp industry-wide (house wires/LT cables first, EHV least exposed). KEI OPM ~10-11%: -100 bp = EBITDA -9%; ~35% of KEI revenue is the contested LT/house-wire/HT segment so -100 bp on that = -3.5 bp group... scaled with share-loss risk -> EBITDA ~-6%; EV/MCap 0.98; persistence 0.5 (structural but fades as incumbents respond) -> ~-3, plus de-rating risk -> central -5. Partly priced: W&C stocks fell up to 16% in a week and KEI -27% in 3m.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.business-standard.com/markets/news/can-ultratech-s-cables-wire-foray-charge-up-its-shares-what-analysts-say-126090400362_1.html",
+     "date": "2026-09-04",
+     "note": "KEI -8% on the day; Nuvama: aggressive pricing and channel investment could cause interim de-rating"
+    },
+    {
+     "source": "market_impact/data/packs/KEI.md",
+     "date": "2026-11-05",
+     "note": "KEI 3m -27.2%, 1m -10.7% (Yahoo closes)"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "KEI",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "EHV/HT cables for transmission, substations, renewable evacuation and metros; Sanand EHV Phase 2 (commissioning ~Mar 2027) adds Rs 1,500-1,700 cr revenue potential. +1 = grid build-out 10% above plan -> EHV/HT volumes +6% (~40% of revenue) -> +2.4% revenue; operating leverage 1.5x -> EBITDA +3.6%; EV/MCap 0.98; persistence 1.0 x 0.8 (competition) -> ~+3; add multiple support -> +4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html",
+     "date": "2026-10-22",
+     "note": "EHV capacity expansion at Sanand, Phase 2 by March 2027; 20% revenue CAGR guided 3-4 yrs"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "KEI",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "Utilities, discoms, railways/metro, roads and water projects take ~30% of demand. +10% government capex -> +3% volumes -> +3% revenue; fixed-cost leverage 1.6x -> EBITDA +4.8%; EV/MCap 0.98; persistence 0.5 -> +2.3; plus growth-multiple support -> ~+3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html",
+     "date": "2026-10-22",
+     "note": "Domestic wire & cable sales +46% y/y in Q2 FY27; management guides 25%+ revenue growth FY27"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "KEI",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Industrial, data-centre, real-estate and RE-developer demand ~35% of volume. +10% private capex -> +3.5% volumes -> EBITDA +5% at leverage 1.4x; EV/MCap 0.98 x persistence 0.5 -> ~+2.4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html",
+     "date": "2026-10-22",
+     "note": "Order book Rs 4,927 cr incl. Rs 991 cr exports"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "KEI",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Data-centre power cabling (LT/HT, building wire) was a stated driver of Ultravolt's entry and of incumbents' growth. +1 = data-centre capex 20% above plan -> cable demand ~+1.5% of KEI revenue; EBITDA +2.5%; persistence 1.0 x EV/MCap 0.98 x 0.8 -> ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets",
+     "date": "2026-09-03",
+     "note": "Headline via Google News: Aditya Birla Group enters wires, cables biz with Rs 1,800-crore investment amid data centre boom (page not fetched)"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "KEI",
+   "relation": "input_cost",
+   "w": 0.8,
+   "w_low": -1.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Copper is ~55% of cost (estimate; RM ~88% of costs). Pricing is LME-linked daily for LT/house wires and via price-variation clauses for HT/EHV, so a +10% move is largely passed through, giving inventory gains short term (positive) but higher working capital and some demand deferral. Q2 FY27 gross margin fell y/y from 'inventory valuation impacts', i.e. the inventory effect is real and can reverse. Net: +10% copper -> inventory gain ~1% of revenue for 1 quarter -> EBITDA +9% on a quarter, persistence 0.1 -> +0.9; demand deferral offsets -> +0.8. Empirical +0.92 (t +0.9) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html",
+     "date": "2026-10-22",
+     "note": "Gross margin declined y/y on inventory valuation impacts and EPC losses"
+    },
+    {
+     "source": "market_impact/data/packs/KEI.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_COPPER +0.92 (t +0.9)"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "KEI",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "House wires and LT cables ~25-30% of revenue (estimate). +10% residential sales -> +4% in that segment -> +1.1% revenue -> EBITDA +1.8%; x0.98 x persistence 0.5 -> ~+0.9, plus sentiment -> +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KEI.md",
+     "date": "2026-11-05",
+     "note": "Pack: KEI sales TTM Rs 13,393 cr, +25%"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "KEI",
+   "relation": "fx_translation",
+   "w": 0.6,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Exports ~12% of revenue (US ~50% of Rs 991 cr export order book), priced in USD; copper is LME-linked so import cost passes through. +3% USD/INR -> +0.36% revenue at ~100% margin -> EBITDA +3%; hedging halves it; x0.98 x persistence 0.5 -> ~+0.6 (rounded).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html",
+     "date": "2026-10-22",
+     "note": "Export order book Rs 991 cr, ~50% from the US"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "KEI",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Almost debt-free (cash Rs 698 cr; interest Rs 70 cr TTM vs EBITDA Rs 1,474 cr) so the earnings channel is small; main channel is the multiple (37x trailing) and customers' (builders, EPC) funding cost. +25 bp -> ~-1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html",
+     "date": "2026-10-22",
+     "note": "Debt-free, cash and bank Rs 698 cr"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "KEI",
+   "relation": "policy_effect",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "US is ~6% of revenue (half of ~12% exports, estimate) at above-average margin. +10 pp tariff -> ~20% volume loss on that slice -> -1.2% revenue at ~15% margin -> EBITDA -1.6%; x0.98 x persistence 0.5 -> ~-0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html",
+     "date": "2026-10-22",
+     "note": "~50% of export orders from the US"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "KEI",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical +2.25 per +5% S&P (t +2.1) with market beta 1.45; most of this is beta, not a causal link (US exposure is only ~6% of revenue), so shrunk to ~+1.0 for the residual.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KEI.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_US_EQUITIES +2.25 (t +2.1), beta 1.45"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Power Grid, state utilities, discoms, railways/metro, EPC contractors",
+   "ticker": "POWERGRID",
+   "role": "customer",
+   "importance": "high",
+   "note": "Large share of HT/EHV demand; no single customer >25%"
+  },
+  {
+   "counterparty": "Polycab India",
+   "ticker": "POLYCAB",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Largest listed peer"
+  },
+  {
+   "counterparty": "Havells",
+   "ticker": "HAVELLS",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "House wires"
+  },
+  {
+   "counterparty": "UltraTech Cement (Ultravolt)",
+   "ticker": "ULTRACEMCO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "New entrant from 3 Sep 2026, Rs 1,800 cr"
+  },
+  {
+   "counterparty": "Copper cathode/rod suppliers (LME-linked)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "~55% of costs; pass-through in contracts"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Dec quarter)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html"
+  },
+  {
+   "date": "2027-03",
+   "event": "Sanand EHV Phase 2 commercial production",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html"
+  },
+  {
+   "date": "2026-12",
+   "event": "Ultravolt commercial launch / first visible pricing response in LT & house wires",
+   "type": "other",
+   "prob": 0.45,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 0.0,
+   "source": "https://www.business-standard.com/markets/news/can-ultratech-s-cables-wire-foray-charge-up-its-shares-what-analysts-say-126090400362_1.html"
+  },
+  {
+   "date": "2027-02",
+   "event": "Annual margin step-up toward 11-12% guided EBITDA band evidenced in Q3/Q4",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 5.0,
+   "source": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-21/22: revenue Rs 3,776 cr +38.5% y/y; EBITDA Rs 377 cr (OPM 9.97% vs 9.88%); PAT Rs 262 cr +29%; domestic W&C +46%",
+  "trend": "Volume-led growth but margin below consensus (EBITDA miss), gross margin down on inventory valuation and EPC losses.",
+  "valuation": "Market cap Rs 39,060 cr, P/E 37 trailing (Screener); 52w Rs 3,652-5,931; price Rs 4,084 vs Rs 4,856 on 4 Sep; Jefferies sees ~45% upside after Q2 (headline).",
+  "recent_developments": [
+   "2026-09-03/04: UltraTech launches Ultravolt; KEI -8% intraday, W&C stocks -up to 16% in a week",
+   "2026-10-21/22: Q2 results miss; stock -8% to -11%, near 52w low",
+   "2026-10-22: guidance 25%+ FY27 growth, order book record"
+  ]
+ },
+ "key_risks": [
+  "Pricing/margin pressure from UltraTech and other new entrants",
+  "Copper volatility and inventory-valuation swings",
+  "EPC segment losses",
+  "Execution of Sanand Phase 2 on time",
+  "US tariff exposure on export book",
+  "Working capital build as sales grow 25%+"
+ ],
+ "upside_triggers": [
+  "Margin recovery to 11-12% as guided",
+  "Sanand EHV ramp and EHV order wins",
+  "Data-centre and grid capex",
+  "Incumbent pricing discipline against Ultravolt"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CABLE_NEW_ENTRANT_PRICING",
+   "type": "THEME",
+   "name": "New-entrant pricing pressure in wires & cables",
+   "ssu": "+1 = incumbent W&C gross margin -100 bp industry-wide"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://finance.yahoo.com/markets/stocks/articles/kei-industries-ltd-bom-517569-110400925.html",
+   "date": "2026-10-22",
+   "what": "Q2 FY27 earnings-call highlights: orders, capex, guidance"
+  },
+  {
+   "url": "https://www.business-standard.com/markets/news/can-ultratech-s-cables-wire-foray-charge-up-its-shares-what-analysts-say-126090400362_1.html",
+   "date": "2026-09-04",
+   "what": "UltraTech Ultravolt entry and analyst view"
+  },
+  {
+   "url": "market_impact/data/packs/KEI.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack: quarterly table, price performance, empirical sensitivities, headlines"
+  },
+  {
+   "url": "https://www.screener.in/company/KEI/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals (via pack)"
+  }
+ ],
+ "ticker": "KEI",
+ "as_of": "2026-11-05"
+}

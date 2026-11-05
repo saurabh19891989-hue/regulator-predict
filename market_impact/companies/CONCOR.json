@@ -1,0 +1,407 @@
+{
+ "ticker": "CONCOR",
+ "name": "Container Corporation of India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_LOGISTICS_PORTS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Government-controlled (54.8%) rail container logistics operator: inland container depots, rail haulage for EXIM (~75% of TEU) and domestic cargo, warehousing, port and cold-chain activities. Revenue Rs9.1k cr TTM (+1%), EBITDA Rs1.94k cr (21%), PAT Rs1.22k cr, debt-free. Q2 FY27 throughput 14.48 lakh TEU (+0.53% y/y); H1 +4.48%. Q2 consolidated profit Rs353.7 cr (vs Rs380.0 cr), interim dividend Rs1.90 (record 2026-11-11). Competes with private container train operators and trucking; pays Indian Railways haulage charges.",
+ "revenue_mix": [
+  {
+   "segment": "EXIM containers",
+   "share_pct": 70,
+   "geography": "JNPT/Mundra/Pipavav-linked hinterland, North India ICDs"
+  },
+  {
+   "segment": "domestic containers",
+   "share_pct": 22,
+   "geography": "India"
+  },
+  {
+   "segment": "warehousing, terminal, other",
+   "share_pct": 8,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "railway haulage charges and terminal access",
+   "share_of_costs_pct": 58
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "handling, manpower, other opex",
+   "share_of_costs_pct": 37
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "CONCOR",
+   "relation": "policy_effect",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "EXIM ~75% of TEU volume; US ~15-18% of India's container exports (estimate). +10pp tariff => exports -3% (US-bound -15%) => EXIM -1.5% => total volume -1.1% => revenue -Rs100 cr at ~60% drop-through = -Rs60 cr = -3.1% EBITDA (Rs1,936 cr); EV/MCap ~0.88 (net cash); persistence 0.5 => -1.4. EXIM volume was flat in Q2 FY27 (-0.07% per one source) vs H1 +4.6%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/concor-reports-q2-fy27-throughput-of-14-48-lakh-teus-up-0-53-yoy",
+     "date": "2026-10",
+     "note": "Q2 FY27 throughput 14,48,379 TEU (+0.53% y/y); EXIM ~-0.07%, domestic +2.4% (sources differ)"
+    },
+    {
+     "source": "https://sahi.com/news/concor-targets-9-5-volume-growth-in-fy27-led-by-15-domestic-segment-surge-2853-PE1_COR",
+     "date": "2026",
+     "note": "FY27 guidance 9.5% volume growth, domestic +15%; H1 growth only 4.48%"
+    },
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "CONCOR",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Container volumes grow ~1.5x GDP: +1pp GDP => +1.5% volumes => revenue +1.1% (~Rs100 cr) at 60% drop-through => EBITDA +3.1% x0.88 x persistence 0.8 = +2.2; set 2.5 with domestic mix. FY27 volume guidance 9.5% vs H1 4.5% shows demand lag.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://sahi.com/news/concor-targets-9-5-volume-growth-in-fy27-led-by-15-domestic-segment-surge-2853-PE1_COR",
+     "date": "2026",
+     "note": "FY27 guidance 9.5% volume growth, domestic +15%; H1 growth only 4.48%"
+    },
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RAIL_FREIGHT_TARIFF",
+   "dst": "CONCOR",
+   "relation": "input_cost",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "+1 SSU = +5% Indian Railways haulage/ terminal access charges. Haulage is ~55-60% of costs (estimate; expenses Rs7.2k cr TTM => ~Rs4.2k cr); +5% = Rs210 cr; ~50% passed on over 6 months => Rs105 cr = -5.4% EBITDA; x0.88 x persistence 0.5 (competitive limits) = -2.4; rounded -3.0 for slower pass-through in a flat-volume year.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://indianmasterminds.com/news/concor-q2-fy27-results-net-profit-353-crore-1-90-interim-dividend-247644/",
+     "date": "2026-11-02",
+     "note": "Q2 FY27 consolidated profit Rs353.66 cr vs Rs379.98 cr; interim dividend Rs1.90, record date 2026-11-11"
+    },
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CONTAINER_LOGISTICS_COMPETITION",
+   "dst": "CONCOR",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "+1 SSU = 2pp loss of rail container market share to private container train operators (Adani, Gateway Rail, etc.) and road/coastal: revenue -2% (Rs180 cr) => EBITDA -5.6% x0.88 x0.6 = -3.0. EBITDA margin has slipped 23% -> 21% over FY23-FY26 and sales growth only 1-2% in FY26 (pack), consistent with share pressure.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "CONCOR",
+   "relation": "policy_effect",
+   "w": 0.7,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "+10% rail capex (DFC, terminals, double-stack) adds capacity and cuts transit times; benefit to CONCOR is modest and shared with private CTOs: +0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "CONCOR",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+1 SSU = faster relocation of manufacturing to India lifts export containers (EXIM ~75% of volume): +2% EXIM volumes => +1.5% volumes => EBITDA +2.3% x0.88 x0.7 = +1.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://sahi.com/news/concor-targets-9-5-volume-growth-in-fy27-led-by-15-domestic-segment-surge-2853-PE1_COR",
+     "date": "2026",
+     "note": "FY27 guidance 9.5% volume growth, domestic +15%; H1 growth only 4.48%"
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "CONCOR",
+   "relation": "geopolitical_exposure",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Red Sea disruption raises ocean freight, lengthens voyages and can cause port congestion/ dwell at JNPT/Mundra; mixed for rail logistics: slightly negative to volumes (-0.8% EXIM) offset by higher handling/storage revenue. Net -1.0, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "CONCOR",
+   "relation": "input_cost",
+   "w": 0.3,
+   "w_low": -1.0,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Road trucking (CONCOR competes with trucks) becomes dearer with diesel, shifting freight to rail (+) while CONCOR's drayage/terminal diesel (~5% of costs) rises (-); net +0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "CONCOR",
+   "relation": "fx_translation",
+   "w": -0.4,
+   "w_low": -1.5,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Weaker rupee lifts exports but EXIM mix is two-way (imports ~50% of EXIM), so net volume effect is near zero; no foreign debt. Pack -1.35 (t -0.8) for +3% is insignificant; keep -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "CONCOR",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Debt-free, 2% dividend-yield value stock (P/E 27.5): +25bp => -0.8; net-cash balance earns interest, partially offsetting.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "CONCOR",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FII 8.1% (low) and high market beta 1.5 (pack): +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_SHIPPING_RATES",
+   "dst": "CONCOR",
+   "relation": "demand_driver",
+   "w": -0.6,
+   "w_low": -2.0,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "+25% ocean freight raises trade cost and may delay shipments; Forbes (2026-10-19 headline) notes rising freight cost could leave retailers with unsold inventory; net volumes slightly lower: -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CONCOR.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Indian Railways",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "haulage and DFC capacity; tariffs set by the railway ministry"
+  },
+  {
+   "counterparty": "Adani Ports / Gateway Distriparks / Gujarat Pipavav",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "private container train and port-adjacent logistics; Pipavav Q2 container volumes +17% (CNBC TV18 2026-10-07)"
+  },
+  {
+   "counterparty": "Shipping lines (MSC, Maersk, CMA CGM)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "EXIM customers"
+  },
+  {
+   "counterparty": "Government of India (DIPAM)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "54.8% holder; strategic disinvestment status unverified"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-11",
+   "event": "Record date for second interim dividend Rs1.90/share",
+   "type": "corporate_action",
+   "prob": 1.0,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 0.0,
+   "source": "https://indianmasterminds.com/news/concor-q2-fy27-results-net-profit-353-crore-1-90-interim-dividend-247644/"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 volumes (provisional throughput) and results (Feb)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge (quarterly cadence)"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 volume guidance 9.5% vs H1 4.5%: miss/ revision risk",
+   "type": "guidance",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://sahi.com/news/concor-targets-9-5-volume-growth-in-fy27-led-by-15-domestic-segment-surge-2853-PE1_COR"
+  },
+  {
+   "date": "2027-03",
+   "event": "Railway freight tariff / land licence fee policy changes",
+   "type": "regulatory",
+   "prob": 0.2,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge; no dated 2026 notification found in sources reviewed"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep-2026): sales Rs2,379 cr, EBITDA Rs550 cr (23%), PAT Rs354 cr (consolidated, vs Rs380 cr yr ago); throughput 14.48 lakh TEU (+0.53%)",
+  "trend": "Volumes recovering from a weak Q2 base but guidance (9.5% FY27) looks ambitious: H1 +4.48%; margin 21-23% below 24-25% target",
+  "valuation": "P/E 27.5, mcap Rs33.6k cr at Rs441 (52w Rs404-550), dividend yield 2.0%, near-zero net debt; stock -18.7% 12m, -13.9% 3m",
+  "recent_developments": [
+   "2026-07/08: Q1 volumes +9% but below FY27 guidance of 9.5% (Sahi)",
+   "2026-08-03: Q1 PAT +7.7%, EBITDA margin 23.6% (scanx.trade headline)",
+   "2026-10-21: H1 FY27 throughput +4.48% to 28.53 lakh TEU; EXIM +4.57%",
+   "2026-11-02: Q2 results: consolidated PAT Rs353.66 cr; interim dividend Rs1.90"
+  ]
+ },
+ "key_risks": [
+  "Competition from private container train operators",
+  "Railway tariff increases not passed through",
+  "EXIM weakness from US tariffs and Red Sea dislocation",
+  "Government ownership/ policy uncertainty (disinvestment, land licence fee)",
+  "Volume guidance shortfall"
+ ],
+ "upside_triggers": [
+  "EXIM recovery and China+1",
+  "DFC double-stack capacity",
+  "Cost efficiencies and margin recovery towards 24-25%",
+  "Strategic stake sale"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_RAIL_FREIGHT_TARIFF",
+   "type": "POLICY",
+   "name": "Indian Railways freight/haulage tariff changes",
+   "ssu": "+1 = +5% haulage/terminal access charges"
+  },
+  {
+   "id": "NEW_CONTAINER_LOGISTICS_COMPETITION",
+   "type": "THEME",
+   "name": "Private container train operators and road competition",
+   "ssu": "+1 = 2pp rail container market share loss for CONCOR"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/CONCOR.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, sensitivities; Google News results were noise"
+  },
+  {
+   "url": "https://www.psuconnect.in/financial/concor-reports-q2-fy27-throughput-of-14-48-lakh-teus-up-0-53-yoy",
+   "date": "2026-10",
+   "what": "Q2 FY27 throughput 14,48,379 TEU (+0.53% y/y); EXIM ~-0.07%, domestic +2.4% (sources differ)"
+  },
+  {
+   "url": "https://indianmasterminds.com/news/concor-q2-fy27-results-net-profit-353-crore-1-90-interim-dividend-247644/",
+   "date": "2026-11-02",
+   "what": "Q2 FY27 consolidated profit Rs353.66 cr vs Rs379.98 cr; interim dividend Rs1.90, record date 2026-11-11"
+  },
+  {
+   "url": "https://sahi.com/news/concor-targets-9-5-volume-growth-in-fy27-led-by-15-domestic-segment-surge-2853-PE1_COR",
+   "date": "2026",
+   "what": "FY27 guidance 9.5% volume growth, domestic +15%; H1 growth only 4.48%"
+  }
+ ]
+}
