@@ -1,0 +1,31 @@
+{
+ "nodes": 400,
+ "new_nodes": 22,
+ "edges": 707,
+ "edges_by_layer": {
+  "company": 564,
+  "event_edges": 133,
+  "company_link": 10
+ },
+ "edges_dropped_unknown_or_industry": 0,
+ "events": 161,
+ "occurred_events": 61,
+ "profiles": 47,
+ "empirical_sign_conflicts": 1,
+ "assumptions": {
+  "damping": {
+   "1": 1.0,
+   "2": 0.8,
+   "3": 0.6,
+   "4": 0.45
+  },
+  "priced_share_forward": 0.5,
+  "recent_convergence": 0.3,
+  "residual_cap": 10.0,
+  "max_depth": 4
+ },
+ "recent_state_drivers": {
+  "observed": 21,
+  "from_events": 56
+ }
+}

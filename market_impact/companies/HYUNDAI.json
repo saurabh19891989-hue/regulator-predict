@@ -1,0 +1,529 @@
+{
+ "ticker": "HYUNDAI",
+ "as_of": "2026-11-05",
+ "name": "Hyundai Motor India Ltd.",
+ "industry": "I_AUTO_PV",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's second-largest passenger-vehicle maker (82.5% owned by Hyundai Motor Company, Korea), listed October 2024. SUV-led portfolio (Creta, Venue, Alcazar, Exter) plus Grand i10/Aura/i20, Verna, Ioniq/Creta Electric. ~78% domestic, ~20% exports (Middle East, Africa, Latin America, South Asia; 4 million cumulative exports). Talegaon (Pune) plant inaugurated 2026-10-14 under a Rs 11,000 cr plan to 2030, lifting capacity toward 11.4 lakh units. Debt-free; pays royalty to the parent (~3.5% of sales, model knowledge). Sep-26 quarter: sales Rs 20,696 cr (record), OPM 10%, net profit Rs 1,196 cr (-24% y/y).",
+ "revenue_mix": [
+  {
+   "segment": "Passenger vehicles - domestic",
+   "share_pct": 78,
+   "geography": "India"
+  },
+  {
+   "segment": "Passenger vehicles - exports",
+   "share_pct": 20,
+   "geography": "Middle East, Africa, Latin America, South Asia (model knowledge)"
+  },
+  {
+   "segment": "Services/parts/other",
+   "share_pct": 2,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 2
+  },
+  {
+   "input": "NEW_PGM_PRICES",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "Plastics/petrochemical",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "Bought-out components and electronics (incl. imported)",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "Royalty to Hyundai Motor Co (~3.5% of sales)",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "Employee and other",
+   "share_of_costs_pct": 25
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Hyundai Motor Company (Korea)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "82.5% shareholder; platform, royalty, CKD/imported parts; announced $15.5bn plan through 2032 (Moneycontrol 2026-10-14)"
+  },
+  {
+   "counterparty": "Hyundai Mobis / Kia ecosystem suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Captive supply base"
+  },
+  {
+   "counterparty": "Maruti Suzuki",
+   "ticker": "MARUTI",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Market leader; share rival"
+  },
+  {
+   "counterparty": "Mahindra & Mahindra",
+   "ticker": "M&M",
+   "role": "competitor",
+   "importance": "high",
+   "note": "SUV share rival"
+  },
+  {
+   "counterparty": "Tata Motors PV",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Compact SUV and EV rival"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-01",
+   "event": "Monthly sales print (Oct) - strong October per Upstox; December print on 2026-12-01",
+   "type": "other",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Hyundai+Motor+Ashok+Leyland+NIFTY+Auto+strong+October+sales+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (margin recovery test; CLSA expects recovery)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Hyundai+Motor+India+Nomura+new+model+cycle+CLSA+margin+recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "New model launches (Bayon / new Venue cycle) driving volumes",
+   "type": "other",
+   "prob": 0.7,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Hyundai+Motor+India+Q2+review+Bayon+comeback+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Talegaon Phase-1 ramp-up: start-up costs and depreciation vs volume gains",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Hyundai+inaugurates+Pune+plant+Rs+11000+crore+ETAuto+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28 (auto tax/EV measures)",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 20,696 cr (record), EBITDA Rs 1,974 cr (OPM ~10%; 9.5% per NDTV Profit), net profit Rs 1,196 cr (-24% y/y)",
+  "trend": "Volume records but margin compression from 13% (FY25) to ~10% on commodity, FX, royalty and new-plant costs; share slide flagged; stock +6% on results as the worst looks priced in",
+  "valuation": "P/E 37.8, P/B 8.4, EV/EBITDA ~22x TTM (computed); ROE ~30%",
+  "recent_developments": [
+   "2026-09-30: highest-ever monthly sales in September",
+   "2026-10-14: Pune plant inaugurated; Rs 11,000 cr investment to 2030; parent announces $15.5bn plan through 2032",
+   "2026-10-28/29: Q2 profit -24%, shares +5-6%; Morgan Stanley and Nomura constructive, Jefferies warns on share",
+   "2026-11-02: Nifty Auto +1.6% on strong October sales"
+  ]
+ },
+ "key_risks": [
+  "Margin stuck near 10% as steel/PGM costs rise and the Pune plant depreciates",
+  "Market-share loss to M&M, Tata, Maruti, Kia and Toyota",
+  "Royalty/related-party changes",
+  "Rate hike and weak September demand",
+  "Semiconductor/rare-earth supply",
+  "Rupee and Korean-won cost pass-through"
+ ],
+ "upside_triggers": [
+  "Margin recovery to 12%+ with new launches (CLSA thesis)",
+  "Export volume ramp from Pune",
+  "Hybrid/EV launches",
+  "Further GST relief",
+  "FPI return to Indian autos"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_PGM_PRICES",
+   "type": "FACTOR",
+   "name": "Platinum-group metal prices (Pt/Pd/Rh) for catalytic converters",
+   "ssu": "+10% basket price"
+  },
+  {
+   "id": "NEW_PV_SUV_COMPETITION",
+   "type": "FACTOR",
+   "name": "Intensity of new-model competition in India passenger vehicles",
+   "ssu": "+1 = major new-model wave by rivals (about -1pp share for incumbent)"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/HYUNDAI/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals (evidence pack)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Hyundai+Motor+India+Q2+FY27+results+margin+volume+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "Q2 FY27 results coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Hyundai+Motor+India+Talegaon+Pune+plant+exports+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "Pune plant inauguration"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Hyundai+Motor+India+Jefferies+Morgan+Stanley+Q2+market+share+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-29",
+   "what": "Brokerage reaction"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "HYUNDAI",
+   "relation": "demand_driver",
+   "w": 9.0,
+   "w_low": 4.0,
+   "w_high": 14.0,
+   "lag": "0-3m",
+   "mechanism": "100% passenger vehicles, ~78% domestic. +10% industry volumes with share held => revenue +8-10%; incremental contribution ~22% vs 10% Q2 OPM => EBITDA +17-22%; EV/MCap ~0.97 (debt free); persistence 0.5 => ~+9. Q2 FY27 sales were a record (Rs 20,696 cr) but margin 10% shows demand alone is not enough.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HYUNDAI/consolidated/",
+     "date": "2026-11-05",
+     "note": "Sep-26 quarter sales 20,696 cr, OPM 10%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Hyundai+Motor+India+Q2+FY27+results+margin+volume+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Record sales, margin pressure"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "HYUNDAI",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Steel ~12% of costs => 10.8% of revenue; +7% => 0.76% of revenue; at 10% OPM => EBITDA -7.6%; ~40% passed through via price hikes => -4.5%; x0.97 x0.3 => -1.3. Global HRC +20.6% since June is a live headwind.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "HRC +20.6% since June"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Hyundai+Motor+India+Q2+FY27+results+margin+volume+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Upstox: rising costs hit Q2 margins"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "HYUNDAI",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Aluminium ~3% of costs => 2.7% of revenue; +10% => EBITDA -2.7%; 60% unrecovered => -1.6%; x0.97x0.3 => -0.5. Aluminium -19.6% since June is a tailwind to Q3/Q4 margins.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium -19.6% since June"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "HYUNDAI",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.9,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Copper ~2% of costs; +10% => 0.18% of revenue => EBITDA -1.8%; 60% unrecovered => -1.1%; x0.97x0.3 => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Cost share estimate"
+    }
+   ]
+  },
+  {
+   "src": "NEW_PGM_PRICES",
+   "dst": "HYUNDAI",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Platinum-group metals in catalytic converters ~3% of costs (model knowledge); +10% => EBITDA -2.7%; mostly recovered via pass-through over 2 quarters => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Cost share estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "HYUNDAI",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Plastics/petrochemicals ~6% of costs (+10% Brent => ~+4% resin => ~0.2% of revenue) plus higher running cost lowers demand for petrol/diesel PVs. EBITDA -2% from cost, -1% from demand; x0.97 x0.3-0.5 => ~-1. Empirical -0.74 (t=-1.3) agrees on sign.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HYUNDAI/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT -0.74, t -1.3"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent +15% in 3 months"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HYUNDAI",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -2.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Exports ~20% of volumes (USD/other) vs imported parts/CKD ~15-20% of revenue plus royalty to parent (~3.5%, model knowledge, linked to USD/KRW): near-neutral net. +3% INR depreciation => +0.6% of revenue from exports, -0.6% from imports/royalty. Empirical +2.42 (t=1.6) suggests a modest positive; sign uncertain.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HYUNDAI/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDINR +2.42, t 1.6"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Export and import shares are estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HYUNDAI",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "~80% of PVs are financed; +25bp repo => EMI +0.5% => volume -0.7% (assumption) => EBITDA -1.5%; x0.97 x0.5 => -0.7. RBI hiked 25bp to 5.50% on 7 Oct 2026 and says cuts are off the table near term.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+highlights+repo+rate+hiked+5.5%25+calibrated+tightening+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Repo 5.50%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Auto+sales+growth+twin+test+higher+rates+GST+2.0+base+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Autocar Professional"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "HYUNDAI",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "P/E 37.8: +25bp on cost of equity => ~-2% pure DCF; cash-rich so tempered.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HYUNDAI/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 37.8"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "HYUNDAI",
+   "relation": "policy_effect",
+   "w": 5.0,
+   "w_low": 1.5,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Further broad GST cut (+1 = 2-5pp price cut): ~3% price reduction x elasticity 1.2 => volumes +3.6% => EBITDA +8.8% (22% incremental margin on 10% OPM); policy is structural (1.0) but Hyundai's share of any boost is ~13% market share-weighted and the Sept-2025 cut is already in the base => +5. Event risk is on the upside only if the government acts again.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Small+car+sales+revive+on+back+of+GST+relief+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "Rediff"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=One+year+of+GST+2.0+auto+industry+best-ever+sales+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Industry commentary"
+    }
+   ]
+  },
+  {
+   "src": "NEW_PV_SUV_COMPETITION",
+   "dst": "HYUNDAI",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "New-model waves from Maruti, Tata, Mahindra, Kia, Toyota in the compact SUV segment erode Hyundai's share (market-share slide flagged by Moneycontrol 2026-09-23; Jefferies caution 2026-10-29). +1 (strong wave) => -1pp share ~ -8% volume => EBITDA -18% x0.97 x0.25 persistence ~-4; reduced to -3 given Bayon/new Venue response.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hyundai+Motor+can+new+models+reverse+the+market+share+slide+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Moneycontrol"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Hyundai+Motor+India+shares+surge+Q2+Morgan+Stanley+bullish+Jefferies+warns+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Brokerage views"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "HYUNDAI",
+   "relation": "input_cost",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Chip/rare-earth shortages halt lines; +1 => ~-2% annual volume, operating leverage 22% on 10% OPM => EBITDA -4.4%; x0.97 x0.5 => -2.1, rounded -2.5. Hyundai Motor Group supply chain relies on Korea/China electronics.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Nexperia 2025 precedent"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "HYUNDAI",
+   "relation": "geopolitical_exposure",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Exports (~20% of volumes) go to the Middle East, Africa and Latin America; Gulf escalation disrupts shipping and demand and lifts oil. +1 => export volumes -10% => revenue -2% => EBITDA -4% x0.97 x0.3 => -1.2. Brent hit $100+ on 8 Oct 2026 on Hormuz risk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Brent+price+tops+%24100+on+Hormuz+risk+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Oil & Gas Middle East"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Hyundai+inaugurates+Pune+plant+4+million+exports+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "V3Cars: 4 million exports milestone"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "HYUNDAI",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": ">12m",
+   "mechanism": "SUV-led mix (Creta, Alcazar, Venue) lifts ASP; EV and hybrid (Pune plant plans hybrid production, RushLane 2026-10-14). +1 => +1% ASP at full drop-through => EBITDA +10% x0.97 x0.2 => ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hyundai+India+New+Pune+Plant+Rs+11000+Cr+Investment+Hybrid+Production+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "RushLane"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "HYUNDAI",
+   "relation": "discount_rate",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding fell from 5.43% (Mar) to 3.19% (Sep 2026) after the IPO lock-in period; DIIs absorbed (11.85%). +US$5bn quarterly inflow => ~+1.5% for a stock with 3% FII ownership and beta 1.2; moves are flow-driven, not fundamental.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HYUNDAI/consolidated/",
+     "date": "2026-11-05",
+     "note": "Shareholding table"
+    }
+   ]
+  }
+ ]
+}

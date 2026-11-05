@@ -1,0 +1,517 @@
+{
+ "ticker": "IDEA",
+ "name": "Vodafone Idea Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_TELECOM",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's third-largest mobile operator (193.1m subscribers at Jun-2026; ARPU Rs195 in Q1 FY27, 4G/5G-led recovery after years of subscriber losses). Revenue Rs45.5k cr TTM, EBITDA margin ~43%, but interest (~Rs20.7k cr TTM) exceeds EBITDA; the Mar-2026 quarter profit of Rs51,970 cr was a one-off gain tied to the AGR relief, not operations. The government owns ~49% after converting dues to equity; Aditya Birla/Vodafone promoters hold ~25.6%. Survival and equity value hinge on (a) tariff hikes, (b) AGR/spectrum dues relief and deferral, (c) Rs35,000 cr bank funding for a Rs45,000 cr 3-year capex plan, (d) stabilising subscriber share against Jio and Airtel.",
+ "revenue_mix": [
+  {
+   "segment": "mobile services (prepaid ~ 90% of subs, postpaid remainder)",
+   "share_pct": 97,
+   "geography": "India 100% (Mumbai, Delhi, Gujarat, UP, Kerala, etc. 17 priority circles for 5G/4G)"
+  },
+  {
+   "segment": "enterprise/handsets/other",
+   "share_pct": 3,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "network opex incl. tower rentals & energy (largely Indus Towers, Airtel-owned and others)",
+   "share_of_costs_pct": 38
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 9
+  },
+  {
+   "input": "licence fees/spectrum usage charges (~8% of AGR) and regulatory levies",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "employee cost and distribution/other",
+   "share_of_costs_pct": 39
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_TELECOM_TARIFFS",
+   "dst": "IDEA",
+   "relation": "output_price",
+   "w": 22,
+   "w_low": 10,
+   "w_high": 35,
+   "lag": "0-3m",
+   "mechanism": "+10% ARPU on a Rs45.5k cr revenue base (TTM) = ~+Rs4.1k cr, almost all dropping to EBITDA because network opex is largely fixed: TTM EBITDA Rs19.4k cr so EBITDA +21%. Net debt incl. AGR/spectrum dues is ~Rs2 lakh cr-scale (model knowledge, unverified) vs mcap Rs1.39 lakh cr so EV/MCap ~2.3; persistence 0.5 (competition/churn erodes part of a hike within 1-2 yrs) => +21*2.3*0.5 = ~+24, trimmed to +22 for churn risk. Highest-leverage channel: Vi ARPU Rs195 vs Airtel Rs264 leaves headroom, and Airtel's Oct-2026 postpaid +Rs50 hike plus complimentary roaming shows hikes are resuming. Empirical pack sensitivities show no significant tariff proxy (factor not in the 30-series), so no data conflict.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/vodafone-idea-q1-results-loss-narrows-to-rs3754-crore-as-revenue-rises-customer-arpu-reaches-rs195-548396-2026-08-10",
+     "date": "2026-08-10",
+     "note": "Q1 FY27: ARPU Rs195, EBITDA Rs5,034 cr, loss Rs3,754 cr"
+    },
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/jio-ipo-why-bharti-airtel-share-price-is-rising-ahead-of-rs-30213-crore-offer-562037-2026-10-16",
+     "date": "2026-10-16",
+     "note": "Jio IPO Rs30,213 cr; ~90% of proceeds to cut debt; Airtel postpaid +Rs50 hike"
+    },
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AGR_SPECTRUM_RELIEF",
+   "dst": "IDEA",
+   "relation": "policy_effect",
+   "w": 12,
+   "w_low": 5,
+   "w_high": 20,
+   "lag": "3-12m",
+   "mechanism": "Govt has frozen AGR dues at ~Rs87,695 cr (reported, subject to reassessment) with capped annual payments (Rs124 cr/yr x6, Rs100 cr/yr x4 then balance later, reported) and holds ~49% via dues-to-equity. One further SSU = additional relief/reassessment/deferral worth ~Rs20k cr NPV; against mcap Rs1.39 lakh cr that is ~+14% of equity if fully equity-accruing; persistence 1.0 (structural) but haircut for the share already priced after the Dec-2025/2026 relief and dilution risk => +12. Spectrum dues of Rs7k/15k/28k cr in FY27/28/29 make deferral or restructuring the single biggest swing factor (HSBC bearish on this overhang, 2026-09-08).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/vodafone-idea-progresses-on-45-000-crore-funding-as-sbi-approves-loan-share-3338-PE1_COR",
+     "date": "2026-09",
+     "note": "Rs45,000 cr 3-yr capex plan; spectrum dues Rs7,000 cr FY27, Rs15,000 cr FY28, Rs28,000 cr FY29 (reported)"
+    },
+    {
+     "source": "https://www.moneycontrol.com/ (headline: Telecom sector AGR dues remain at Rs 1.41 lakh crore; Vodafone Idea nearly half)",
+     "date": "2026-08-13",
+     "note": "sector AGR dues headline (Google News RSS, article body not read)"
+    },
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_TELECOM_SHARE_COMPETITION",
+   "dst": "IDEA",
+   "relation": "competition",
+   "w": -8,
+   "w_low": -18,
+   "w_high": -2,
+   "lag": "3-12m",
+   "mechanism": "Vi is the sub-scale third player (193.1m subs, ARPU Rs195). +1 SSU = Jio/Airtel price discounting or 5G-led share grab costing Vi ~1pp of revenue share and 3% of ARPU: revenue -3% (-Rs1.4k cr) => EBITDA -7%; x EV/MCap 2.3 x persistence 0.5 = -8. Jio IPO (Rs30,213 cr, ~90% to debt reduction, 2026-10-16) and Airtel's 5G push are the sources; Vi 'free roaming' proposition (2026-09-25) is a defensive response.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/jio-ipo-why-bharti-airtel-share-price-is-rising-ahead-of-rs-30213-crore-offer-562037-2026-10-16",
+     "date": "2026-10-16",
+     "note": "Jio IPO Rs30,213 cr; ~90% of proceeds to cut debt; Airtel postpaid +Rs50 hike"
+    },
+    {
+     "source": "https://telecomtalk.info/vodafone-idea-q1-fy27-loss-narrows-arpu-up-and-more/1010616/",
+     "date": "2026-08",
+     "note": "Q1 FY27 detail: 193.1m subs, first positive net adds since merger, capex orders Rs9,000 cr"
+    },
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "IDEA",
+   "relation": "funding_cost",
+   "w": -4,
+   "w_low": -9,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "Vi must raise ~Rs35,000 cr debt (SBI-led, Rs25k cr funded) plus likely equity for a Rs45k cr 3-yr capex plan and Rs50k cr of spectrum payments to FY29; +50bp spreads on ~Rs25k cr new funded debt = Rs125 cr/yr (~0.7% of EBITDA) directly, but the larger channel is market access/equity-raise pricing for a company with EBITDA < interest (Q1 interest Rs5,120 cr vs EBITDA Rs5,034 cr). Judgemental: -4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/vodafone-idea-3-5-billion-debt-financing-sbi/",
+     "date": "2026-09-11",
+     "note": "SBI-led consortium ~$3.5bn (Rs35,000 cr incl Rs10,000 cr non-funded)"
+    },
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/vodafone-idea-q1-results-loss-narrows-to-rs3754-crore-as-revenue-rises-customer-arpu-reaches-rs195-548396-2026-08-10",
+     "date": "2026-08-10",
+     "note": "Q1 FY27: ARPU Rs195, EBITDA Rs5,034 cr, loss Rs3,754 cr"
+    },
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "IDEA",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Long-duration turnaround equity: +25bp on a high cost of equity (~15%) cuts value of terminal cash flows ~2-3%; most dues carry fixed rates so cash-flow effect is small. No significant empirical rate series in the pack (US 10Y -1.04, t -0.8, same sign).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "IDEA",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "New SBI-led facility (~Rs25k cr funded) will be floating/MCLR-linked: +25bp = ~Rs60 cr/yr vs ~Rs20.7k cr TTM interest (0.3%) and ~0.3% of EBITDA; plus a modest equity-discount effect. Also hits subscriber ability to pay marginally. -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/vodafone-idea-3-5-billion-debt-financing-sbi/",
+     "date": "2026-09-11",
+     "note": "SBI-led consortium ~$3.5bn (Rs35,000 cr incl Rs10,000 cr non-funded)"
+    },
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "IDEA",
+   "relation": "fx_translation",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Network equipment (Nokia/Ericsson/Samsung capex orders Rs9,000 cr placed) and some licence/vendor payables are USD-linked; ~8% of opex plus imported capex. +3% USD/INR raises capex by ~Rs400-450 cr over the plan (3% x ~Rs15k cr/yr imported) and opex by ~0.25% => EBITDA ~-0.3%, but capex funding risk is the bigger issue; x2.3 x 0.5. Pack shows +2.13 (t +0.7): not significant and opposite sign, likely high-beta noise; kept negative on fundamentals, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://telecomtalk.info/vodafone-idea-q1-fy27-loss-narrows-arpu-up-and-more/1010616/",
+     "date": "2026-08",
+     "note": "Q1 FY27 detail: 193.1m subs, first positive net adds since merger, capex orders Rs9,000 cr"
+    },
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "IDEA",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Power & fuel ~9% of opex (~Rs2.35k cr, model estimate) mostly via tower companies on pass-through contracts; +15% power with ~50% retained = ~Rs175 cr = -0.9% EBITDA; x2.3 x persistence 0.4 = -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "IDEA",
+   "relation": "macro_transmission",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Market beta 1.5 and 43% annualised vol: +5 VIX points typically coincides with a market -3 to -4% and a high-beta, retail-heavy, leveraged stock under-performing. Pack: +0.61 (t +0.7) insignificant; retained on fundamentals (financing access) with low confidence. Pack also shows F_GOLD -3.87 (t -2.3) and F_SILVER -2.42 (t -2.0): these are risk-appetite/retail-liquidity proxies, not business links; and F_IRON_ORE +6.19 (t +2.0) is a China-cycle/high-beta artefact (no fundamental channel) - not modelled.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "IDEA",
+   "relation": "macro_transmission",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold ~5.8-6.2% and the stock is a liquid high-beta proxy for risk-on flows; +US$5bn quarterly net inflow lifts high-beta names ~2-3% beyond market beta.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "IDEA",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Mobile demand is inelastic; +1pp GDP lifts discretionary data upgrades and prepaid-to-higher-pack migration: ~+0.5% revenue => +1.1% EBITDA x2.3 x0.4 ~= +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/vodafone-idea-q1-results-loss-narrows-to-rs3754-crore-as-revenue-rises-customer-arpu-reaches-rs195-548396-2026-08-10",
+     "date": "2026-08-10",
+     "note": "Q1 FY27: ARPU Rs195, EBITDA Rs5,034 cr, loss Rs3,754 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "IDEA",
+   "relation": "macro_transmission",
+   "w": -1.5,
+   "w_low": -3.9,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical -3.87 per +8% gold (t -2.3) in the pack; mechanism is flight-to-safety/retail-liquidity, not fundamental. Shrunk toward zero (weight -1.5) and flagged low confidence; assembler may drop it if it duplicates F_RISK_SENTIMENT.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "IDEA",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Higher US yields tighten EM funding and weigh on leveraged EM equities; pack -1.04 (t -0.8), consistent in sign but insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Indus Towers",
+   "ticker": "INDUSTOWER",
+   "role": "supplier",
+   "importance": "high",
+   "note": "largest tower lessor; Vi is a major tenant and was historically a credit overhang; Vi also leases from ATC and Summit"
+  },
+  {
+   "counterparty": "Reliance Jio / Bharti Airtel",
+   "ticker": "BHARTIARTL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "market-share and ARPU gap; Jio IPO Rs30,213 cr Oct-2026"
+  },
+  {
+   "counterparty": "Nokia, Ericsson, Samsung",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Rs9,000 cr capex orders placed (2026-08)"
+  },
+  {
+   "counterparty": "SBI-led bank consortium",
+   "ticker": "SBIN",
+   "role": "supplier",
+   "importance": "high",
+   "note": "~Rs35,000 cr facility (Rs25k cr funded) reported 2026-09-11; status (final vs in-principle) unverified"
+  },
+  {
+   "counterparty": "Government of India / DoT",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "~49% shareholder; sets AGR/spectrum dues schedule"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-14",
+   "event": "Q2 FY27 results (date not announced as of 2026-10-22; mid-Nov expected). Watch ARPU (>Rs200?), net adds, EBITDA, capex pace, debt-raise status",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.kotakneo.com/news/stocks/vodafone-idea-shares-rise-20-percent-in-six-months-q2-fy27-results-rally/"
+  },
+  {
+   "date": "2026-12",
+   "event": "Next industry-wide tariff hike (Nomura base case Dec quarter 2026 after Airtel postpaid hike and Jio IPO)",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": 5.0,
+   "impact_pct_high": 18.0,
+   "source": "https://www.businesstoday.in/markets/stocks/story/jio-ipo-why-bharti-airtel-share-price-is-rising-ahead-of-rs-30213-crore-offer-562037-2026-10-16"
+  },
+  {
+   "date": "2026-12",
+   "event": "Financial close / first drawdown of SBI-led Rs35,000 cr facility with lender conditions (promoter continuity, guarantees)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": 3.0,
+   "impact_pct_high": 12.0,
+   "source": "https://www.kotakneo.com/news/stocks/vodafone-idea-3-5-billion-debt-financing-sbi/"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 spectrum instalment (Rs7,000 cr scheduled FY27) paid on time without distress equity raise",
+   "type": "regulatory",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.sahi.com/news/vodafone-idea-progresses-on-45-000-crore-funding-as-sbi-approves-loan-share-3338-PE1_COR"
+  },
+  {
+   "date": "2027-03",
+   "event": "Further govt relief / AGR reassessment outcome or spectrum deferral",
+   "type": "regulatory",
+   "prob": 0.2,
+   "impact_pct_low": 8.0,
+   "impact_pct_high": 25.0,
+   "source": "model knowledge + https://www.moneycontrol.com/ (AGR dues headline 2026-08-13)"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge (regular quarterly cadence)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Equity raise / follow-on (dilution) to fund capex or dues",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": -2.0,
+   "source": "model knowledge; HSBC bearish note 2026-09-08 cites funding overhang"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun-2026): revenue Rs11,689 cr (+6% y/y), EBITDA Rs5,034 cr (43.1%), net loss Rs3,754 cr, ARPU Rs195 (Rs177 yr ago), subs 193.1m (+0.3m q/q: first net add since the merger). Q2 (Sep-2026) not yet reported.",
+  "trend": "Improving operating trend (ARPU +10% y/y, EBITDA +9% y/y, losses narrowing) but interest ~= EBITDA; stock +14% in 6m, +36% in 12m, -3% in 1m and ~-20% from Sep peak (25-month high ~Rs15.8 in early Sep) per Kotak Neo.",
+  "valuation": "Mcap Rs1.39 lakh cr at Rs12.8; negative book value (-Rs3.30); no meaningful P/E (reported FY26 profit Rs34,552 cr is the one-off); EV roughly Rs3 lakh cr-scale incl. AGR/spectrum dues (model estimate, unverified) => EV/EBITDA ~15x TTM.",
+  "recent_developments": [
+   "2026-08-10: Q1 FY27 results; ARPU Rs195, first positive net subscriber add since merger (CNBC TV18/Business Today)",
+   "2026-08-20: Citi target Rs17 citing funding visibility and ARPU recovery (CNBC TV18 headline)",
+   "2026-09-08: HSBC raises target but stays bearish (~46% downside), citing spectrum payment funding overhang (CNBC TV18/Moneycontrol headlines)",
+   "2026-09-09/10: Jefferies initiates Buy, Rs20 target ('high-beta turnaround')",
+   "2026-09-11: SBI-led consortium ~$3.5bn debt support reported (Kotak Neo); finalisation status unclear",
+   "2026-09-16: shares fell after a TRAI order (headline only; content not read)",
+   "2026-09-25: 'free roaming' proposition lifts stock (NDTV Profit headline)",
+   "2026-10-07: Airtel hikes postpaid by Rs50 (read-across positive for Vi)",
+   "2026-10-22: stock ~Rs11.5, ~-20% in one month (Kotak Neo)",
+   "2026-10-29: telcos urge Centre to accept TRAI backhaul spectrum fee proposal (Livemint headline)"
+  ]
+ },
+ "key_risks": [
+  "Funding gap: Rs45k cr capex + Rs50k cr spectrum dues to FY29 vs bank facility of ~Rs35k cr; lender conditions (promoter continuity) could delay drawdown",
+  "Equity dilution (follow-on or further dues-to-equity) from an already-levered cap table",
+  "Tariff-hike stall as Jio IPO capital deployed for share gains",
+  "Spectrum instalment steps up Rs7k -> 15k -> 28k cr (FY27-29)",
+  "AGR reassessment goes against the company; TRAI/DoT regulatory orders (backhaul fee, roaming)",
+  "Subscriber reversal if 4G/5G network upgrade is slower than planned",
+  "Counterparty exposure to towers/vendors"
+ ],
+ "upside_triggers": [
+  "Tariff hike of 10-15% across industry in Dec-quarter",
+  "Financial close of bank debt and faster 4G/5G capex ramp",
+  "Further AGR/spectrum relief or deferral from govt (largest equity value swing)",
+  "Q2/Q3 ARPU >Rs200 and sustained positive net adds",
+  "Strategic/foreign investor entry or promoter infusion"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_AGR_SPECTRUM_RELIEF",
+   "type": "POLICY",
+   "name": "Government AGR/spectrum dues relief for stressed telcos",
+   "ssu": "+1 = further material relief worth ~Rs20,000 cr NPV (freeze, reassessment, deferral or waiver)"
+  },
+  {
+   "id": "NEW_TELECOM_SHARE_COMPETITION",
+   "type": "THEME",
+   "name": "Jio/Airtel price and share competition vs Vi",
+   "ssu": "+1 = intensification costing Vi ~1pp revenue share / 3% ARPU"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/IDEA.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, price performance, empirical sensitivities, Google News headlines"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/vodafone-idea-q1-results-loss-narrows-to-rs3754-crore-as-revenue-rises-customer-arpu-reaches-rs195-548396-2026-08-10",
+   "date": "2026-08-10",
+   "what": "Q1 FY27: ARPU Rs195, EBITDA Rs5,034 cr, loss Rs3,754 cr"
+  },
+  {
+   "url": "https://telecomtalk.info/vodafone-idea-q1-fy27-loss-narrows-arpu-up-and-more/1010616/",
+   "date": "2026-08",
+   "what": "Q1 FY27 detail: 193.1m subs, first positive net adds since merger, capex orders Rs9,000 cr"
+  },
+  {
+   "url": "https://www.kotakneo.com/news/stocks/vodafone-idea-3-5-billion-debt-financing-sbi/",
+   "date": "2026-09-11",
+   "what": "SBI-led consortium ~$3.5bn (Rs35,000 cr incl Rs10,000 cr non-funded)"
+  },
+  {
+   "url": "https://www.sahi.com/news/vodafone-idea-progresses-on-45-000-crore-funding-as-sbi-approves-loan-share-3338-PE1_COR",
+   "date": "2026-09",
+   "what": "Rs45,000 cr 3-yr capex plan; spectrum dues Rs7,000 cr FY27, Rs15,000 cr FY28, Rs28,000 cr FY29 (reported)"
+  },
+  {
+   "url": "https://www.kotakneo.com/news/stocks/vodafone-idea-shares-rise-20-percent-in-six-months-q2-fy27-results-rally/",
+   "date": "2026-10-22",
+   "what": "Q2 date not announced; expected mid-Nov; ~10 lakh sequential subs add expected by one broker"
+  },
+  {
+   "url": "https://www.moneycontrol.com/ (headline: Telecom sector AGR dues remain at Rs 1.41 lakh crore; Vodafone Idea nearly half)",
+   "date": "2026-08-13",
+   "what": "sector AGR dues headline (Google News RSS, article body not read)"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/jio-ipo-why-bharti-airtel-share-price-is-rising-ahead-of-rs-30213-crore-offer-562037-2026-10-16",
+   "date": "2026-10-16",
+   "what": "Jio IPO Rs30,213 cr; ~90% of proceeds to cut debt; Airtel postpaid +Rs50 hike"
+  }
+ ]
+}

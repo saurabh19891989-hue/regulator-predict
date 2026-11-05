@@ -1,0 +1,336 @@
+{
+ "name": "Godfrey Phillips India Ltd.",
+ "industry": "I_ALCOHOL_TOBACCO",
+ "business_summary": "Second-tier Indian cigarette maker (Four Square, Red & White, Cavanders; Marlboro distributed under a Philip Morris International arrangement), with smaller chewing/pan-masala, leaf-tobacco export and convenience-retail (24Seven/Lasa) lines. Promoters (K.K. Modi group) hold 72.6%. Almost debt-free with large treasury investments (a Trade Brains piece cites ~Rs 6,000 cr of reserves, 2026-09-23). Highly exposed to the tax regime: Q1 FY27 net profit fell ~44% y/y.",
+ "revenue_mix": [
+  {
+   "segment": "Cigarettes (own + Marlboro)",
+   "share_pct": 85,
+   "geography": "India ~95% / exports ~5% (approximate, model knowledge)"
+  },
+  {
+   "segment": "Tobacco leaf & other",
+   "share_pct": 8,
+   "geography": "export-heavy"
+  },
+  {
+   "segment": "Retail / pan masala / other",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "NEW_TOBACCO_EXCISE",
+   "share_of_costs_pct": null,
+   "note": "excise/taxes netted from revenue"
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 10,
+   "note": "imported leaf/filter inputs, Marlboro-related (approximate)"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_TOBACCO_EXCISE",
+   "dst": "GODFRYPHLP",
+   "relation": "regulatory_risk",
+   "w": -7.5,
+   "w_low": -14.0,
+   "w_high": -3.0,
+   "lag": "0-3m",
+   "mechanism": "Cigarettes ~90% of EBIT, less diversified and less pricing power than ITC. +10% tax burden: ~60% price pass-through, volume -4-5%, margin squeeze => cigarette EBIT about -8%, group -7.5%; structural persistence 1.0; EV/MCap ~0.85 (net cash) => -6.5 to -7.5. Evidence: Q1 FY27 sales 1,206 cr (vs 1,486 cr), OPM 15% (vs 23%), PAT 198 cr (-44% y/y).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Godfrey+Phillips+Q1+results+cigarette+tax+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-27",
+     "note": "NDTV Profit: Godfrey Phillips Q1 profit falls 44%, margins contract sharply"
+    },
+    {
+     "source": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener quarterly table: Jun-26 OP 181 vs 338"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "GODFRYPHLP",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": -0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Enforcement against illicit/duty-evaded sticks returns volume to legal brands. Small-cap smoker mix is more price-sensitive and vulnerable to illicit substitution, so enforcement upside is larger than for ITC: +1 => legal volume +3% => EBIT +4% x persistence 0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=illicit+cigarette+trade+tax+hike+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-13",
+     "note": "New Indian Express: cigarette industry stares at turbulent FY27 as tax hike, illicit trade cloud outlook"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "GODFRYPHLP",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Premium cigarettes (Marlboro, Four Square) skew to urban consumers: +5pp urban growth => volumes +1.5%, EBIT +3% at high operating leverage, x0.5 persistence => ~+1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack: Marlboro premium positioning"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "GODFRYPHLP",
+   "relation": "demand_driver",
+   "w": 0.7,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Red & White / lower-priced brands sell in smaller towns and rural India; +5pp rural => volumes +1%; EBIT +2% x0.5 persistence => +0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=weak+monsoon+rural+demand+FMCG+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Moneycontrol: weak monsoon pressures rural demand"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "GODFRYPHLP",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Imported tobacco/filter components and Marlboro-linked costs (~10% of costs) vs export leaf revenue. Net slightly negative; empirical -2.86 (t=-1.1) is statistically weak and the stock's 1.3 beta makes it a risk-off proxy rather than an FX stock.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical F_USDINR -2.86, t=-1.1"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "GODFRYPHLP",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Cartons, foils, filters ~7% of costs. +10% => costs +0.7% => EBITDA -0.9% at 23% margin; 40% passthrough; persistence 0.5 => -0.3 to -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Cost structure estimate; model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "GODFRYPHLP",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Logistics, polymer filters, retail energy; indirect. Empirical -1.19 (t=-1.3) includes beta; fundamental effect small ~ -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m); pack sensitivity -1.19, t=-1.3"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "GODFRYPHLP",
+   "relation": "discount_rate",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Debt-free; treasury income ~Rs 100 cr+ per year benefits from higher yields but valuation multiple (P/E 20.5) falls: net -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 20.5, interest cost 3 cr per quarter"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "GODFRYPHLP",
+   "relation": "macro_transmission",
+   "w": -1.3,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "1y volatility 47% annualised, market beta 1.3-1.5, thin float (promoters 72.6%). +5 VIX points => high-beta midcap -1.3 (beta 1.3 x typical -1% Nifty).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+     "date": "2026-11-05",
+     "note": "price 1,803, 12m -40.3%, 1y vol 47%"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GODFRYPHLP",
+   "relation": "macro_transmission",
+   "w": 1.2,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 7.9%; midcap. +US$5bn/quarter inflows lift high-beta midcaps ~+1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+     "date": "2026-11-05",
+     "note": "FII 7.86% (Sep-26)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "ITC",
+   "ticker": "ITC",
+   "role": "competitor",
+   "importance": "high",
+   "note": "price leader; Godfrey follows hikes (Business Today 2026-09-23)"
+  },
+  {
+   "counterparty": "Philip Morris International",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Marlboro brand licence/distribution arrangement (model knowledge)"
+  },
+  {
+   "counterparty": "Tobacco farmers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "leaf procurement in AP/Karnataka"
+  },
+  {
+   "counterparty": "VST Industries",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "low",
+   "note": "not in universe"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (trading window closed 28 Sep 2026; date unverified)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "scanx.trade 2026-09-28"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget: tobacco tax change",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": -4.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further price hikes following ITC",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "Business Today 2026-09-23"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs 1,206 cr, operating profit 181 cr (15%), PAT 198 cr (vs 356 cr). Q2 not yet reported in sources",
+  "trend": "sharp profit decline after tax regime; stock at multi-month lows (-40% in 12m, 52w range 1,641-3,074)",
+  "valuation": "P/E 20.5, dividend yield 2.75%, price 1,803, mcap Rs 28,119 cr",
+  "recent_developments": [
+   "2026-10-22 ET: among stocks down up to 53% from yearly peaks",
+   "2026-10-08 fresh 52-week low (Univest)",
+   "2026-09-23 stock +2% on cigarette price hike",
+   "2026-09-28 trading window closed ahead of Q2 results"
+  ]
+ },
+ "key_risks": [
+  "Further tax steps or illicit substitution",
+  "Weak premium-cigarette volume",
+  "Marlboro contract changes",
+  "Low liquidity/high beta"
+ ],
+ "upside_triggers": [
+  "Enforcement against illicit trade",
+  "Price hikes stick without volume loss",
+  "Tax stability"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_TOBACCO_EXCISE",
+   "type": "POLICY",
+   "name": "Cigarette excise / tobacco tax burden (India)",
+   "ssu": "+10% rise in the tax burden per cigarette stick"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/GODFRYPHLP/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals and pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Godfrey+Phillips+Q1+results+cigarette+tax+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-07-27",
+   "what": "Q1 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ITC+Godfrey+Phillips+cigarette+price+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "price hike"
+  }
+ ],
+ "ticker": "GODFRYPHLP",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

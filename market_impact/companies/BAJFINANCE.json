@@ -1,0 +1,476 @@
+{
+ "ticker": "BAJFINANCE",
+ "name": "Bajaj Finance Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_NBFC_VEHICLE_CONSUMER",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest diversified non-bank lender (AUM Rs5.85 lakh cr at Sep 2026, +26.5% y/y): consumer durables/digital EMI, personal and business loans, SME, mortgages (via ~89%-owned Bajaj Housing Finance, AUM Rs1.5 lakh cr), vehicle and gold loans, deposits and cards. Q2 FY27 PAT Rs6,266cr (+29%), NII +24%. Promoter group (Bajaj Finserv) 54.7%. The board approved a Rs17,500cr capital raise on 2026-10-01/02 (QIP Rs11,700cr plus warrants Rs5,800cr to Bajaj Finserv) and management warned on margins in the Q2 call.",
+ "revenue_mix": [
+  {
+   "segment": "consumer finance (durables, digital, personal, cards)",
+   "share_pct": 40,
+   "geography": "India urban+rural (model est.)"
+  },
+  {
+   "segment": "SME and commercial lending",
+   "share_pct": 20,
+   "geography": "India"
+  },
+  {
+   "segment": "mortgages incl. Bajaj Housing",
+   "share_pct": 26,
+   "geography": "India"
+  },
+  {
+   "segment": "mobility, gold, deposits/other",
+   "share_pct": 14,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 28
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 14
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "BAJFINANCE",
+   "relation": "funding_cost",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Borrowings ~Rs4.3 lakh cr (model est., ~74% of AUM); ~35% floating (bank term loans, T-bill/repo-linked) = Rs1.5 lakh cr x 25bp = Rs376cr/yr; most assets fixed-rate (NIM compresses until repricing). vs PBT ~Rs27,000cr => -1.4%; fixed-rate funding reprices on rollover (~+10bp more over 12m) => -2.5% EBT; persistence 0.5 => ~-1.2; add P/E derating at 34x (long-duration growth stock) => ~-3. Management flagged margin pressure on the Q2 call.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (The Hindu / SCC Online)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finance+Q2+FY27+GNPA+credit+cost+NIM+guidance+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Q2 PAT Rs6,266cr +29%, NII +24%, AUM Rs5.85 lakh cr +26.5%, FY27 growth view lifted; margin warning on call (CNBC TV18 2026-10-21)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BAJFINANCE",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "10y +25bp raises NBFC marginal funding (NCD/bond spreads over G-sec) and the cost of equity: at P/E 34x (P/B 5.6x), +25bp on COE ~ -2 to -3% of value.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "BAJFINANCE",
+   "relation": "funding_cost",
+   "w": -5.0,
+   "w_low": -9.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "+50bp spreads on market borrowings (~40% of funding = Rs1.7 lakh cr) = Rs860cr/yr = -3.2% of PBT, 50% pass-through to lending rates => -1.6%, persistence 0.5 -> -0.8; multiple effect (NBFC beta to credit spreads is high; stock fell 10% in a month before QIP) => -5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finance+shares+fall+5%+capital+raise+CNBC+TV18+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "note": "stock -5% on raise plan; -6% on 2026-09-23"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "BAJFINANCE",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus liquidity lowers short-term funding (CP, bank lines) by ~5bp => +0.3% EBT; sentiment +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "BAJFINANCE",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth lifts BFL's addressable demand; BFL AUM already +26.5% so incremental share gain small; AUM +1-1.5pp => PAT +2%, persistence 0.75 ... ~+2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finance+Q2+FY27+GNPA+credit+cost+NIM+guidance+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Q2 PAT Rs6,266cr +29%, NII +24%, AUM Rs5.85 lakh cr +26.5%, FY27 growth view lifted; margin warning on call (CNBC TV18 2026-10-21)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "BAJFINANCE",
+   "relation": "regulatory_risk",
+   "w": -5.0,
+   "w_low": -9.0,
+   "w_high": -2.5,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost on on-book AUM ~Rs5.5 lakh cr = Rs2,750cr = ~10% of PBT; persistence 0.5 => -5 (EV/equity ~1 as financial). Asset quality has been improving (analysts bullish on 'asset quality gains' 2026-10-21).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finance+Q2+FY27+GNPA+credit+cost+NIM+guidance+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Q2 PAT Rs6,266cr +29%, NII +24%, AUM Rs5.85 lakh cr +26.5%, FY27 growth view lifted; margin warning on call (CNBC TV18 2026-10-21)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "BAJFINANCE",
+   "relation": "demand_driver",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "Unsecured (personal, business, consumer-durable EMI, credit cards) ~35-40% of AUM = ~Rs2 lakh cr (model est.): +1pp delinquency x LGD 70% = Rs1,400cr = ~5% of PBT x persistence 0.5 = -2.5; plus sentiment/de-rating => -3.5. Pack t-stats not available for this factor.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+banks+loans+against+gold+stress+NBFC+Reuters+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Reuters: top NBFCs flag early stress in gold loans"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "BAJFINANCE",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "RBI has precedent of tightening on BFL itself (2023 ban on eCOM and Insta EMI card, model knowledge) and on NBFC risk weights/co-lending; a step costs ~-3 via growth/product restrictions and compliance.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "BAJFINANCE",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Consumer durable/lifestyle/digital finance and personal-loan origination track urban consumption; +5pp urban demand => volumes +3-4%, credit cost down slightly => PAT +4%, persistence 0.6 => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "BAJFINANCE",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Bajaj Housing Finance (AUM Rs1.5 lakh cr, ~26% of group AUM; BFL holds ~89%, model knowledge) rides home-loan demand: +10% sales volume => BHFL disbursals +6% => group +1.5% PAT x 0.7 => ~+1.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Housing+Finance+Q2+FY27+AUM+crosses+1.5+lakh+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Kalkine/Investing.com"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "BAJFINANCE",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Auto/2W/3W/tractor (mobility) finance ~8-10% of AUM; +10% auto volumes => +4% AUM growth in that segment => +0.4% group PAT; plus consumer-finance linkages => +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BAJFINANCE",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 19.8%, falling (21.3% in March); high-multiple growth financials are the first FPI-sensitive names; +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BAJFINANCE",
+   "relation": "demand_driver",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "1y volatility 32% vs bank ~25%; market beta 1.24-1.29; VIX +5pts => -2% beyond beta.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "BAJFINANCE",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": -0.5,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.16 (t=1.7): proxies shared rate/liquidity beta rather than the small gold-loan book (<2% of AUM, model knowledge). Reuters (2026-10-21) flags gold-loan stress at top NBFCs, so a gold-price fall is a second-order credit risk. Shrunk to +0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+banks+loans+against+gold+stress+NBFC+Reuters+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Reuters: top NBFCs flag early stress in gold loans"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BAJFINANCE",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Small ECB/foreign-currency borrowings (hedged) => negligible direct effect; the INR move drives FPI sentiment. Empirical +1.10 (t=0.9) is insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "BAJFINANCE",
+   "relation": "macro_transmission",
+   "w": 0.0,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.74 (t=2.6) is significant but has no fundamental path (BFL funds consumer/SME rather than steel); treated as cyclical-beta artefact; weight 0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "BAJAJFINSV",
+   "dst": "BAJFINANCE",
+   "relation": "group_contagion",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "w = % change in BAJFINANCE equity per +1% in BAJAJFINSV equity (source-equity-move units); parent is 51% owner and the warrant/QIP package ties group funding; BFL dominates parent value so reverse causality (BAJFINANCE->BAJAJFINSV) is far larger (see BAJAJFINSV).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finserv+approves+5,800+crore+warrant+subscription+in+Bajaj+Finance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "scanx.trade"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Bajaj Finserv Ltd",
+   "ticker": "BAJAJFINSV",
+   "role": "parent",
+   "importance": "high",
+   "note": "~51% holder; subscribing to Rs5,800cr warrants"
+  },
+  {
+   "counterparty": "Bajaj Housing Finance",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "AUM Rs1.5 lakh cr, listed (not in the universe)"
+  },
+  {
+   "counterparty": "SBI / large banks / mutual funds",
+   "ticker": "SBIN",
+   "role": "supplier",
+   "importance": "high",
+   "note": "bank term loans, NCD/CP investors fund ~74% of AUM"
+  },
+  {
+   "counterparty": "HDFC Bank / ICICI / consumer-finance lenders",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "banks pushing unsecured/consumer; Tata Capital, Jio Financial in digital"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "QIP launch/closing for Rs11,700cr (approvals pending: shareholder postal ballot/ SEBI QIP floor price)",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Bajaj+Finance+capital+raise+17,500+crore+QIP+approval+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01-26",
+   "event": "Q3 FY27 results (date inferred from cadence: Q2 on 2026-10-19)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Bajaj+Finance+Q2+FY27+GNPA+credit+cost+NIM+guidance+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC and NBFC regulation changes after hike to 5.50%",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Quarterly business update (Q3 FY27 AUM, deposits) around 2027-01-03/04",
+   "type": "guidance",
+   "prob": 0.9,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Bajaj+Finance+shares+jump+5%+after+Q2+business+update+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs6,266cr +29% y/y (screener 'Net Profit' Rs5,536cr differs: likely definition/minority; unresolved); NII +24%; AUM +26.5% to Rs5.85 lakh cr; FY27 growth guidance raised; margin warning after call; analysts remain bullish on asset quality (Nomura, CLSA, JPM).",
+  "valuation": "P/E 34.1x, P/B 5.6x (Rs1,065 / BV Rs178); 52w range Rs788-1,178; stock +0.7% 12m, -7% 3m, +10.5% 1m; 1y vol 32%.",
+  "recent_developments": [
+   "2026-09-23/24: stock -5/6% on plan to seek capital-raise approval",
+   "2026-10-01/02: board approves Rs17,500cr raise: QIP Rs11,700cr + Rs5,800cr warrants to Bajaj Finserv",
+   "2026-10-05: Q2 business update AUM +26.5%; stock +5%",
+   "2026-10-19: Q2 PAT +29%; 2026-10-21: stock -3% on margin warning; Reuters flags gold-loan stress at NBFCs"
+  ]
+ },
+ "key_risks": [
+  "Margin compression from RBI hike and rising funding spreads",
+  "Unsecured/consumer credit stress, gold-loan stress",
+  "Equity dilution (~1.8% QIP plus ~0.9% warrants) and price overhang",
+  "RBI product/prudential restrictions",
+  "High multiple (34x P/E) vulnerable to de-rating"
+ ],
+ "upside_triggers": [
+  "Capital raise completed at a small discount - removes the overhang",
+  "Credit cost falls (analysts expect asset-quality gains)",
+  "Pass-through of higher rates to lending yields",
+  "AUM growth guidance raised again at Q3"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BAJFINANCE.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Finance+capital+raise+17,500+crore+QIP+approval+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-02",
+   "what": "capital raise details"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Finance+Q2+FY27+GNPA+credit+cost+NIM+guidance+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-19",
+   "what": "Q2 results and call"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Indian+banks+loans+against+gold+stress+NBFC+Reuters+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "gold loan stress"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}

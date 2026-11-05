@@ -1,0 +1,344 @@
+{
+ "ticker": "ETERNAL",
+ "name": "Eternal Ltd. (Zomato, Blinkit, Hyperpure, District)",
+ "as_of": "2026-11-05",
+ "industry": "I_INTERNET_PLATFORMS",
+ "tier": "NIFTY_50",
+ "business_summary": "Holding company of Zomato (food delivery, dining out/District), Blinkit (quick commerce, now inventory-led) and Hyperpure (B2B supplies). Q2 FY27 revenue Rs 24,138 cr (+78% y/y, boosted by Blinkit's shift to an inventory model), operating profit Rs 752 cr (3.1% margin), PAT Rs 125 cr, market cap Rs 3.44 lakh cr at ~700x trailing P/E. Value rests on Blinkit scale (3,500-5,000 store targets) and food delivery profitability; FIIs hold 33%.",
+ "revenue_mix": [
+  {
+   "segment": "Blinkit quick commerce (approx.)",
+   "share_pct": 65,
+   "geography": "India top-30 cities"
+  },
+  {
+   "segment": "Food delivery (Zomato) + District (approx.)",
+   "share_pct": 22,
+   "geography": "India"
+  },
+  {
+   "segment": "Hyperpure / others (approx.)",
+   "share_pct": 13,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Cost of goods (Blinkit inventory, Hyperpure)",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "Delivery partner payouts (fuel-linked)",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 2
+  },
+  {
+   "input": "Marketing, tech, employee, other",
+   "share_of_costs_pct": 28
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "ETERNAL",
+   "relation": "demand_driver",
+   "w": 8.0,
+   "w_low": 3.0,
+   "w_high": 15.0,
+   "lag": ">12m",
+   "mechanism": "Blinkit is now the largest profit/value driver (inventory-led, revenue 24,138 cr in Q2 vs 13,590 cr a year ago largely from model change and 78% growth). +1 unit of q-comm adoption (faster order growth/higher AOV) -> Blinkit GOV +10% -> adj. EBITDA +~15% (store-level operating leverage) -> equity +8 at EV/MCap ~1.0, persistence 1.0 because it is the thesis; market already prices heavily (P/E 699).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Eternal+Q2+results+Blinkit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Q2 FY27 profit +92% to Rs125 cr, revenue +78%; Blinkit Rs184 cr (adj. EBITDA per headline), targets 3,500-5,000 stores; missed estimates, shares -3.5% then flat"
+    },
+    {
+     "source": "https://www.screener.in/company/ETERNAL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 revenue 24,138 cr, OP 752 cr, PAT 125 cr; mcap 3,44,421 cr, P/E 699"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "ETERNAL",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 3.0,
+   "w_high": 11.0,
+   "lag": "3-12m",
+   "mechanism": "Food delivery and q-comm are urban discretionary/convenience categories. +5pp urban demand growth -> GOV growth +4-5pp -> contribution +6-8% at ~3% EBITDA/revenue margin with 40-50% incremental margin -> EBITDA +20%; persistence 0.3 and EV/MCap 1.0 -> +6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ETERNAL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 revenue 24,138 cr, OP 752 cr, PAT 125 cr; mcap 3,44,421 cr, P/E 699"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ETERNAL",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "P/E ~700 and ROE <1%: value is nearly all long-dated growth. +25 bp -> discount-rate change on 25+ year duration ~ -2.5% (1/(r-g) with r-g~7%: 0.25/7=-3.5% damped 0.7). Empirical US 10y -1.46 (t -1.8) agrees in sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ETERNAL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 revenue 24,138 cr, OP 752 cr, PAT 125 cr; mcap 3,44,421 cr, P/E 699"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ETERNAL",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold ~33% and Eternal is the top-held consumer-internet name; +$5bn/qtr inflows -> relative rerating ~+3.5; FII holding moved 29.1% -> 33.0% between Jun and Sep-26 (screener).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ETERNAL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 revenue 24,138 cr, OP 752 cr, PAT 125 cr; mcap 3,44,421 cr, P/E 699"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ETERNAL",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.1-1.3 and 34% annual vol; +5 VIX points (risk aversion) -> market -4% with high-multiple growth beta ~1.3 and excess duration -> -2.5 after removing market component partially (pack: risk sentiment +0.67 t 1.2, opposite sign but insignificant, so weight shrunk to modest).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ETERNAL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 revenue 24,138 cr, OP 752 cr, PAT 125 cr; mcap 3,44,421 cr, P/E 699"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ETERNAL",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "~1/2 of delivery partner fleet runs on petrol bikes; rider payout ~6-7% of GOV, fuel ~10-12% of payout. +10% Brent -> fuel +4% -> payout inflation (partly compensated via per-order pay) -> costs +0.1% of GOV vs 3% adjusted EBITDA/GOV = -3%; persistence 0.3 -> -0.8. Pack -0.62 (t -0.9) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "delivery partner economics (model memory)"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "ETERNAL",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "Labour codes introduce gig/platform-worker social security contributions (1-2% of turnover, capped at 5% of payouts to workers; model knowledge). At payouts ~6.5% of GOV the cap is ~0.3% of GOV (~10% of adjusted EBITDA) if levied in full -> equity -3 after pass-through of ~half via fees and persistence 1.0. Rules/implementation timing uncertain.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-11",
+     "note": "Labour code gig-worker provisions"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "ETERNAL",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Liberalisation of FDI in inventory-based e-commerce would let foreign-owned rivals (Amazon Now, Flipkart Minutes, Zepto) hold inventory; Eternal is Indian-owned with an inventory model already. Share loss of 5% of Blinkit GOV at 20% decremental margin -> EBITDA -10% -> equity -3. Direction uncertain and event is speculative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "FDI e-commerce rules history"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ETERNAL",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Blinkit imports electronics/GM, Hyperpure small; USD-priced cloud/ads. +3% USD/INR -> costs +0.2% of revenue -> -0.5. Pack shows +2.12 (t 1.1), opposite sign, insignificant (likely proxy for FPI/market-risk co-movement); not adopted.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ETERNAL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 revenue 24,138 cr, OP 752 cr, PAT 125 cr; mcap 3,44,421 cr, P/E 699"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "ETERNAL",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Restaurant menu inflation lowers delivery frequency; for Blinkit grocery inflation raises AOV. Net slightly negative: -0.5. Pack edible oil -4.37 (t -2.9) is the strongest empirical link but the mechanism is unclear (growth-vs-commodity-cycle rotation); only 12% of that weight adopted via this edge.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ETERNAL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 revenue 24,138 cr, OP 752 cr, PAT 125 cr; mcap 3,44,421 cr, P/E 699"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Restaurant partners",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Commission supply side"
+  },
+  {
+   "counterparty": "Swiggy",
+   "ticker": "SWIGGY",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Q2: Swiggy loss Rs922 cr, Instamart loss Rs895 cr; stock -17% to 52w low 23 Oct"
+  },
+  {
+   "counterparty": "Info Edge",
+   "ticker": "NAUKRI",
+   "role": "parent",
+   "importance": "medium",
+   "note": "Info Edge holds an Eternal stake (size unverified) - see NAUKRI link"
+  },
+  {
+   "counterparty": "Zepto, Amazon Now, Flipkart Minutes, Reliance JioMart",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Quick-commerce rivals"
+  },
+  {
+   "counterparty": "Delivery partners (gig workforce)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Labour-code exposure"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-21",
+   "event": "Q3 FY27 results (model knowledge: Q3 FY26 results were around 21 Jan)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "Q2 results were on 2026-10-21 (Moneycontrol/Upstox)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Gig-worker social-security contribution rules operationalised under labour codes",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 1.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "Blinkit store count milestones towards 3,500 (and 5,000 by FY28 per CIOL)",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Eternal+Blinkit+5000+stores+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Block deals/stake sales by large holders (Goldman block 16 Oct was Rs169 cr; small)",
+   "type": "corporate_action",
+   "prob": 0.4,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 0.5,
+   "source": "Inc42/Entrackr 2026-10-16"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep-26): revenue Rs 24,138 cr (+78%), operating profit Rs 752 cr, PAT Rs 125 cr (+92%) - missed estimates; Blinkit Rs 184 cr (profit metric per headline).",
+  "trend": "Operating margin up from 1.6% (Jun-25) to 3.1%; profit growth modest versus revenue due to depreciation, interest (Rs155 cr, leases) and investment.",
+  "valuation": "P/E ~699, P/B 11, ROE 0.4%; price near 52-week high (Rs 357 vs 358), +38.6% in 6m.",
+  "recent_developments": [
+   "2026-09-29 Goldman Sachs expects ~16% upside (CNBC TV18)",
+   "2026-10-16 Goldman block sale Rs169 cr",
+   "2026-10-21 Q2 results: PAT Rs125 cr, miss; stock -3.5% then flat next day with brokers bullish",
+   "2026-10-22/23 Swiggy Instamart losses widen, Swiggy -17%: relative competitive positive for Eternal",
+   "2026-10-21 Livemint: founder's Temple device / Dark AI venture questions"
+  ]
+ },
+ "key_risks": [
+  "Blinkit growth slowdown or price war with Zepto/Amazon",
+  "Gig labour-code costs",
+  "Valuation at ~700x earnings",
+  "Regulatory (CCI, FDI e-commerce rules)",
+  "Heavy capex/leases"
+ ],
+ "upside_triggers": [
+  "Blinkit adjusted EBITDA margin expansion",
+  "Swiggy/Instamart retrenchment",
+  "FPI inflows into growth names"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/ETERNAL/consolidated/",
+   "date": "2026-11-05",
+   "what": "Fundamentals via pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Eternal+Q2+results+Blinkit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-22",
+   "what": "Q2 coverage (headlines only)"
+  }
+ ]
+}

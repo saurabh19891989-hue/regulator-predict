@@ -1,0 +1,407 @@
+{
+ "name": "L&T Finance Ltd.",
+ "industry": "I_NBFC_VEHICLE_CONSUMER",
+ "tier": "MIDCAP_100",
+ "business_summary": "Retail-focused NBFC (Lakshya 2026 strategy: ~97% retail target) with ~Rs 1.35 lakh cr retail book (+29% y/y in Q2 FY27) across rural business finance (2W, farm, microfinance), personal and consumer loans, home loans/LAP, SME and urban finance. L&T Ltd owns ~65.9%. Q2 FY27 PAT Rs 973-975 cr (+33% y/y) on cost efficiency and AI-led productivity; stock fell up to 6% on results day on margin/funding concerns; NBFC peers face funding-cost headwinds after the 7 Oct repo hike.",
+ "revenue_mix": [
+  {
+   "segment": "Rural business finance (2W, farm, MFI)",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "Urban finance (home, LAP, PL, consumer, SME)",
+   "share_pct": 55,
+   "geography": "India"
+  },
+  {
+   "segment": "Wholesale/other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 40,
+   "note": "interest Rs 7.4k cr TTM of revenue Rs 20.0k cr"
+  },
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "LTF",
+   "relation": "funding_cost",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "~40-45% of ~Rs 1 lakh cr borrowings are bank loans on repo/MCLR-linked floating rates; assets (2W, farm, MFI, PL, home) mostly fixed or slow-reset. +25bp on Rs ~42k cr = Rs 105 cr vs TTM financing profit Rs 4.9k cr = -2.1%; plus NCD repricing (+Rs 100 cr over 2 yrs) with 30% asset pass-through -> -2.5%; persistence 0.6 -> ~-1.5, rounded to -2 for ET BFSI warning that EPS cuts could reach 12% across NBFCs.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finance+L%26T+Finance+HDB+among+NBFCs+facing+higher+funding+costs+EPS+cuts+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-03",
+     "note": "NBFCs facing higher funding costs; EPS cuts could reach 12% (ET BFSI)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hike 25bp to 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "LTF",
+   "relation": "funding_cost",
+   "w": -4.0,
+   "w_low": -7.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "+50bp on ~Rs 55k cr of NCD/sub-debt/CP refinancing in 12m = Rs 275 cr = -5.6% of financing profit; pass-through 40%; persistence 0.6 -> ~-2.0 to -4 incl. growth slowdown. The company accepted sub-bond bids on 9 Oct, showing market access.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finance+L%26T+Finance+HDB+among+NBFCs+facing+higher+funding+costs+EPS+cuts+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-03",
+     "note": "NBFCs facing higher funding costs; EPS cuts could reach 12% (ET BFSI)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "LTF",
+   "relation": "demand_driver",
+   "w": -5.5,
+   "w_low": -9.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "Credit cost ~2.3-2.6% on retail book (model knowledge). +50bp on Rs ~1.35 lakh cr = Rs 675 cr = -14% of Rs 4.9k cr financing profit; persistence 0.4 -> -5.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=L%26T+Finance+Q2+net+profit+rises+33%+to+Rs+975+crore+retail+loans+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 PAT Rs 975 cr (+33%), income +27%, retail book +29% to Rs 1,34,600 cr (ET/FPJ)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "LTF",
+   "relation": "demand_driver",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Microfinance + personal loans + consumer loans ~25% of book (model knowledge); +1pp stage-3 on that slice, LGD 65%: Rs 1.35L x 25% x 1% x 0.65 = Rs 220 cr = -4.5% PBT; persistence 0.6 -> -2.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "LTF",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Rural business finance (2W, farm, MFI) ~45% of book; +5pp rural demand growth -> disbursement +4pp and lower collection stress -> NII +3%, credit cost -10bp -> PBT +6% x persistence 0.5 -> +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "LTF",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Monsoon drives tractor/farm equipment finance and MFI collection efficiency; +10% above LPA -> +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "LTF",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "2W and tractor finance ~25% of book; +10% volumes -> disbursement +2.5pp on that slice ~ +0.6pp book growth; EBIT leverage -> +1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "LTF",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "10y yield feeds NCD pricing and P/B discount rate; 2.4x P/B so higher duration than HFCs: -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "LTF",
+   "relation": "demand_driver",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Fuel price lifts operating cost for CV/3W/2W users and rural cashflows; empirical -0.87/SSU (t -1.5) agrees weakly; -0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "LTF",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Microfinance/unsecured risk-weights, co-lending and DLG norms; one tightening step ~ -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LTF",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.8-2.0 per pack; FIIs 7.4%; DIIs 15.8%; +1.5 beyond beta.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "LTF",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -3.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Empirical +3.48/SSU (t 2.3) is judged a risk-on proxy not a fundamental (no material FX debt: ECB <5% of borrowings, hedged - model knowledge). Rupee weakness has coincided with higher yields -> small negative; wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "LTF",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Empirical +2.00/SSU (t 2.3) reflects cyclical/industrial risk-on; rural/CE/infra finance links weak after infra wind-down. Judged mostly coincidental, +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "LT",
+   "dst": "LTF",
+   "relation": "holding_stake",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Per +10% move in LT equity value: parent holds 65.9% and supplies brand/capital; sentiment spillover only (LT's engineering earnings do not drive LTF); +1.5 per +10% (assumed unit: % equity of dst per +10% of src).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Larsen & Toubro",
+   "ticker": "LT",
+   "role": "parent",
+   "importance": "high",
+   "note": "65.9% promoter, brand and capital support"
+  },
+  {
+   "counterparty": "Banks, NCD/CP investors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "funding; borrowings ~Rs 1 lakh cr"
+  },
+  {
+   "counterparty": "Bajaj Finance / Shriram Finance / M&M Finance",
+   "ticker": "BAJFINANCE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "retail NBFC peers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 was 15 Oct 2026)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=L%26T+Finance+Q2+net+profit+rises+33%+to+Rs+975+crore+retail+loans+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December; second hike would extend funding-cost pressure",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Further NCD/sub-debt raising (Rs 1,000 cr NCDs allotted 4 Nov; sub-bond bids 9 Oct) to fund 25%+ book growth",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=L%26T+Finance+allots+NCDs+private+placement+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 close: Lakshya 2026 targets (RoA >2.8%, RoE >16%) delivery check",
+   "type": "guidance",
+   "prob": 0.6,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=L%26T+Finance+Lakshya+is+delivery+Sudipta+Roy+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs 973 cr (+32-33% y/y; screener 701 -> 973 over four quarters), retail book +29%, revenue +27%; interest cost flat q/q at Rs 1,970 cr; stock -11.9% 3m despite beat",
+  "valuation": "P/E 20.3, P/B ~2.4 (Rs 279 vs BV 117), ROE 11.2% (screener); brokerage targets up to Rs 330 (Motilal Oswal) / 31% upside",
+  "recent_developments": [
+   "2026-09-24: NBFC stocks hit (PB Fintech -23%; Bajaj, LTF fall) - Business Today",
+   "2026-10-03: ET BFSI: higher funding costs could cut EPS up to 12% for Bajaj, LTF, HDB",
+   "2026-10-07: RBI hikes repo 25bp",
+   "2026-10-15/16: record Q2; shares fall up to 6% (CNBC TV18)",
+   "2026-11-04: Rs 1,000 cr NCDs allotted (scanx)"
+  ]
+ },
+ "key_risks": [
+  "Funding-cost inflation and spread compression",
+  "Rural/microfinance asset-quality relapse",
+  "Regulatory tightening on unsecured/MFI",
+  "Competition from banks and Bajaj",
+  "Valuation (P/B 2.4) with ROE 11-12%"
+ ],
+ "upside_triggers": [
+  "Margins stabilise as pricing resets",
+  "Credit cost <2.2%",
+  "Strong rural festive and rabi demand",
+  "Lakshya RoA delivery and re-rating"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=L%26T+Finance+Q2+net+profit+rises+33%+to+Rs+975+crore+retail+loans+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Finance+L%26T+Finance+HDB+among+NBFCs+facing+higher+funding+costs+EPS+cuts+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-03",
+   "what": "NBFC funding cost EPS risk"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "market_impact/data/packs/LTF.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  }
+ ],
+ "ticker": "LTF",
+ "as_of": "2026-11-05"
+}

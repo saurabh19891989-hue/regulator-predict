@@ -1,0 +1,466 @@
+{
+ "ticker": "VBL",
+ "name": "Varun Beverages Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_FMCG_STAPLES",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "One of the world's largest PepsiCo bottlers: Pepsi, 7UP, Mirinda, Mountain Dew, Tropicana, Gatorade, Aquafina in India (about 80%+ of sales) plus Nepal, Sri Lanka, Morocco, Zambia, Zimbabwe, DRC and South Africa. Calendar-year company; strongly seasonal (Q1/Q2 peak, Q4 trough). TTM sales Rs 16,454 cr, EBITDA Rs 4,294 cr (26%), PAT Rs 3,032 cr; almost debt free (interest Rs 29 cr). September-2026 quarter (Q3 CY26): screener sales Rs 3,822 cr (+25% y/y), OPM 24% vs 26%, PAT Rs 659 cr (+14%); media reported +33% revenue growth and PAT Rs 828 cr on a different basis, so the consolidation basis is unverified. Promoters 59.43%; FIIs 19.5% -> 17.5% in two quarters.",
+ "revenue_mix": [
+  {
+   "segment": "carbonated soft drinks (PepsiCo portfolio)",
+   "share_pct": 65,
+   "geography": "India ~82% / international ~18% (model estimate)"
+  },
+  {
+   "segment": "juices and non-carbonated (Tropicana, Slice, Gatorade, Sting)",
+   "share_pct": 15,
+   "geography": "India and Africa"
+  },
+  {
+   "segment": "packaged drinking water, dairy beverages, other",
+   "share_pct": 20,
+   "geography": "India and international"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_SUGAR",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 20
+  },
+  {
+   "input": "concentrate_USD_linked",
+   "share_of_costs_pct": 17
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "power_fuel",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "freight_employee_other",
+   "share_of_costs_pct": 35
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_SUGAR",
+   "dst": "VBL",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Sugar ~14% of costs = Rs 1,702 cr on cost base Rs 12,160 cr; +10% -> Rs 170 cr = 4.0% of EBITDA (Rs 4,294 cr). Fixed consumer price points limit pass-through (50% unrecovered), persistence 0.35, EV/MCap 1.0 => -0.7. Sugar is +27.8% since June (2.8 SSU) and +18.6% in 3m, so the 24% Sep-quarter margin vs 26% is partly this (Moneycontrol 2026-10-30: margins contract).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "VBL",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.4,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "PET resin/preforms ~20% of costs = Rs 2,432 cr; PET moves ~0.6x with PX/MEG feedstock: +10% -> +6% = Rs 146 cr = 3.4% of EBITDA x 0.5 x 0.35 => -0.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "VBL",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Crude -> PX -> PET (~0.5), diesel freight and plant fuel; +10% Brent ~ +5% PET (Rs 122 cr = 2.8% of EBITDA) x 0.5 x 0.35 => -0.5; partly overlaps F_CHEM_FEEDSTOCK so -0.4 kept. Empirical +0.50 (t=+0.8) has the opposite sign but is not significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "VBL",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -0.6,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "Cans/crowns ~5% of costs (Rs 608 cr) with ~60% aluminium content: +10% -> Rs 36 cr = 0.85% of EBITDA x 0.5 x 0.35 => -0.15. Aluminium is -19.6% since June (tailwind).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "VBL",
+   "relation": "fx_translation",
+   "w": -0.2,
+   "w_low": -1.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Concentrate (17% of costs), imported resin and capex are USD-linked: +3% -> Rs 62 cr = 1.4% of EBITDA; Africa/Nepal earnings (about 18% of sales) translate favourably (+0.5% of EBITDA). Net -0.9% x 0.5 => about -0.4 but the empirical +4.03/SSU (t=+2.4, beta 1.29) disagrees strongly, plausibly a flows/market-beta artefact; central -0.2 with a range spanning the empirical estimate.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "VBL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+5pp urban consumption growth -> +2pp revenue (volume elasticity ~0.4 for discretionary beverage) x 40% incremental margin = Rs 132 cr = 3.1% of EBITDA x persistence 0.5 => +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "VBL",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Small-town/rural outlets ~40% of India volumes; +5pp growth -> +1.5pp revenue x 40% = Rs 99 cr = 2.3% EBITDA x 0.5 => +1.2 (haircut for lower-priced Rs 10 packs).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "NEW_SUMMER_TEMPERATURE",
+   "dst": "VBL",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Q1+Q2 (Mar-Jun) ~65% of annual sales; +1C hotter season ~ +3-4% volume x 40% incremental margin on Rs 16,454 cr = Rs 230-260 cr = ~5.5% of EBITDA x persistence 0.5 (one season) x EV/MCap 1.0 => +3.0. Relevant for 2027 summer, not before March.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "VBL",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Carbonated drinks moved to a 40% GST slab in the 2025 rationalisation (model knowledge); a cut to 18% for beverages would lift volumes ~3-4% and margin: ~+3. 57th GST Council (2026-10-08) made no rate cuts (PIB/ET), so probability is low.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "C_AFRICA_LATAM",
+   "dst": "VBL",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Morocco, Zambia, Zimbabwe, DRC, South Africa operations (~18% of sales; Mondelez distribution pact in Zimbabwe 2026-09-24): +1pp regional growth -> +0.2pp group revenue, high margin drop-through => +0.4; offset by FX/political risk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CSD_PRICE_COMPETITION",
+   "dst": "VBL",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Coca-Cola bottlers, Reliance Campa and regional brands are fighting for share. +1 (sharper discounting/promotions) cuts 2-3% volume or 1-2pt margin: ~Rs 100-170 cr = 2.3-4% EBITDA; sensitivity unproven.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FSSAI_FOOD_REGULATION",
+   "dst": "VBL",
+   "relation": "regulatory_risk",
+   "w": -1.0,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Sugar-labelling / HFSS rules or state sugar taxes are a tail risk for carbonates; 2026-10-13 FSSAI tightening headlines concern online food; probability-weighted -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "VBL",
+   "relation": "discount_rate",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "48.5x trailing P/E, almost no debt (interest Rs 29 cr): pure discount-rate channel; +25 bp repo -> -1.5% fair value, half passes through => -0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "VBL",
+   "relation": "discount_rate",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "High-beta (1.2-1.3) large cap with FII ownership falling 19.51% -> 17.53%; stock -15% in 6m. Inflow reversal +1.0 beyond market-wide effect.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VBL.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "PepsiCo (franchisor, concentrate supplier)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "Exclusive bottling franchise in India and several African markets; concentrate priced in USD; renewal terms are a long-term driver."
+  },
+  {
+   "counterparty": "PET resin/preform and aluminium can suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Largest packaging inputs."
+  },
+  {
+   "counterparty": "Sugar mills and traders",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Spot purchases; sugar rose 27.8% since June."
+  },
+  {
+   "counterparty": "Coca-Cola bottlers (HCCB), Reliance Consumer (Campa), Parle Agro",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Share fight in carbonates and packaged water."
+  },
+  {
+   "counterparty": "Distributors and kirana / modern trade / horeca",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "No single customer >25% (model knowledge)."
+  },
+  {
+   "counterparty": "Mondelez International (exclusive distribution in Zimbabwe)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "Signed 2026-09-24; Economic Times."
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q4 CY26 / FY (Dec-26) results; seasonally weakest quarter, key for margin outlook",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge of calendar-year reporting"
+  },
+  {
+   "date": "2027-04",
+   "event": "Start of peak season (Q1 CY27): volume growth and summer weather determine FY27 earnings",
+   "type": "guidance",
+   "prob": 1.0,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 10.0,
+   "source": "model inference; seasonality visible in screener quarterly data"
+  },
+  {
+   "date": "2027-06",
+   "event": "Launch/progress of planned alcohol business (The Core, 2026-09-21: VBL 'wants to build an alcohol business'); regulatory licensing required",
+   "type": "other",
+   "prob": 0.3,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Varun+Beverages+alcohol (The Core 2026-09-21)"
+  },
+  {
+   "date": "2026-09-24",
+   "event": "COO Manmohan Rupal Paul resigned effective 2026-09-24 (occurred); watch for further leadership change",
+   "type": "other",
+   "prob": 1.0,
+   "impact_pct_low": -1.5,
+   "impact_pct_high": 0.5,
+   "source": "scanx.trade 2026-09-24"
+  },
+  {
+   "date": "2027-01",
+   "event": "Capacity commissioning at new plants in India/Africa to support 2027 season",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "model inference"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q3 CY26 (Sep 2026): screener sales Rs 3,822 cr (+25% y/y), OPM 24% (26% a year ago), PAT Rs 659 cr (+14%); press cites +33% revenue growth and PAT Rs 828 cr, probably a different basis. Dividend Rs 0.50/share.",
+  "trend": "Volume-led growth with margin contraction (sugar, PET, mix, higher Africa share); share price -14.8% in 6m and -7.6% in 12m.",
+  "valuation": "P/E 48.5, price/book 7.8x, yield 0.35%; BofA Buy with Rs 550 target (2026-11-04), GF Value suggests 70% upside (unreliable).",
+  "recent_developments": [
+   "2026-09-21: The Core reports VBL wants to build an alcohol business.",
+   "2026-09-24: COO resigned; Mondelez distribution pact in Zimbabwe.",
+   "2026-10-07: Rs 4.1 cr solar investment for UP plants.",
+   "2026-10-30: Q3 results; shares fell 3-4% on margin contraction despite 14% profit growth.",
+   "2026-11-04: BofA maintains Buy, target Rs 550, eyes portfolio expansion."
+  ]
+ },
+ "key_risks": [
+  "Sugar and PET inflation without pricing room",
+  "Weak or rainy summer 2027",
+  "PepsiCo relationship and franchise terms",
+  "Africa political and FX risk (DRC, Zimbabwe, Zambia)",
+  "GST/sugar tax and HFSS regulation",
+  "Reported-number basis ambiguity and rich valuation (48x)"
+ ],
+ "upside_triggers": [
+  "Hot summer 2027",
+  "Sugar and aluminium relief (aluminium -19.6% since June)",
+  "GST cut on beverages",
+  "Africa margin catch-up and Mondelez distribution",
+  "Portfolio expansion into new categories"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_FSSAI_FOOD_REGULATION",
+   "type": "FACTOR",
+   "name": "FSSAI / packaged-food and beverage regulation intensity",
+   "ssu": "+1 = materially stricter packaged-food labelling/HFSS/sugar rules"
+  },
+  {
+   "id": "NEW_CSD_PRICE_COMPETITION",
+   "type": "FACTOR",
+   "name": "Soft-drink price competition intensity (Coca-Cola, Campa, regional)",
+   "ssu": "+1 = materially sharper discounting/ad spend in carbonated soft drinks"
+  },
+  {
+   "id": "NEW_SUMMER_TEMPERATURE",
+   "type": "FACTOR",
+   "name": "Summer temperature vs normal",
+   "ssu": "+1 = season ~1C hotter than normal in Mar-Jun"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/VBL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, price, empirical sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Varun+Beverages+Q3+2026+volume+margin+guidance+Africa+when:90d",
+   "date": "2026-10-30",
+   "what": "Q3 CY26 earnings coverage (ET, Moneycontrol, NDTV Profit, Yahoo Finance call highlights)"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels and moves"
+  }
+ ]
+}

@@ -1,0 +1,398 @@
+{
+ "ticker": "FEDERALBNK",
+ "name": "Federal Bank Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Kerala-based private bank (est. 1931) with retail, MSME, agri, gold-loan, corporate and large NRI/remittance franchises. Market cap Rs83,353cr, P/E 16x, P/B ~1.95x. Q2 FY27 standalone PAT record Rs1,386cr (+45% y/y), NII +26%, NPAs at a decadal low. Stock +41.9% over 12 months. In September 2026 press reports said it was in advanced talks to acquire Jana Small Finance Bank in a ~Rs6,500cr share swap; on 2026-10-19 Federal said it had no plan to buy a stake (stock +4-5%, Jana -10 to -14%). FIIs hold 28.5%.",
+ "revenue_mix": [
+  {
+   "segment": "retail and NRI banking",
+   "share_pct": 45,
+   "geography": "India (Kerala ~35-40% of business, model est.)"
+  },
+  {
+   "segment": "MSME, agri and gold loans",
+   "share_pct": 25,
+   "geography": "India"
+  },
+  {
+   "segment": "corporate and treasury",
+   "share_pct": 30,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 58
+  },
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "FEDERALBNK",
+   "relation": "funding_cost",
+   "w": 0.5,
+   "w_low": -2.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Mid-size private bank with ~55-60% repo/EBLR-linked loans; repo +25bp lifts NIM transiently (+3-5bp on ~Rs3.2 lakh cr earning assets = ~Rs130cr = 3.5% of PAT, persistence 0.25 => +0.9) minus P/E de-rating at 16x (-0.5) => +0.5; Simply Wall St (2026-10-12) calls Indian lenders like Federal 'built for higher rates'.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (The Hindu / SCC Online)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "FEDERALBNK",
+   "relation": "discount_rate",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "AFS book ~Rs0.5 lakh cr x duration 2.5 x 25bp = ~Rs310cr = 5.7% of PAT x 0.25 persistence = -1.4; plus COE effect => -1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "FEDERALBNK",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth; Federal's loan growth sensitive (gold, MSME, retail), PAT +4.5%, persistence 0.7 => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "FEDERALBNK",
+   "relation": "funding_cost",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "NRI and Kerala retail deposits are a strength (CASA ~30%, model knowledge); +3pp deposit growth lowers marginal cost, supports NIM => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "FEDERALBNK",
+   "relation": "regulatory_risk",
+   "w": -9.0,
+   "w_low": -15.0,
+   "w_high": -4.0,
+   "lag": "3-12m",
+   "mechanism": "Advances ~Rs2.6 lakh cr (model est. from revenue): +50bp credit cost = Rs1,300cr pre-tax = Rs975cr post-tax vs TTM PAT Rs5,388cr = -18%; persistence 0.5 => -9. NPAs currently at decadal low (Q2), so slippage risk is skewed.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Federal+Bank+Q2+FY27+NIM+GNPA+advances+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Q2 PAT +45% to record Rs1,386cr, NII +26%, NPAs at decadal low (Upstox/India Infoline)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "FEDERALBNK",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Unsecured/cards smaller (~8% of loans) and gold-loan stress flagged by Reuters 2026-10-21; Federal's gold loan book is meaningful (model knowledge ~8-10% of advances) => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+banks+loans+against+gold+stress+NBFC+Reuters+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Reuters"
+    }
+   ]
+  },
+  {
+   "src": "F_GULF_REMITTANCES",
+   "dst": "FEDERALBNK",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Kerala NRI franchise: NRI deposits ~20% of deposits and remittance fee income (model knowledge); +10% Gulf remittances raises NRI CASA, low-cost deposits and fee/forex income => NIM +2bp, fee +3% => PAT +2.5%, persistence 0.75, => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "C_GCC",
+   "dst": "FEDERALBNK",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GCC growth supports NRI employment and remittances; effect via F_GULF_REMITTANCES; +1.5 direct.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "FEDERALBNK",
+   "relation": "geopolitical_exposure",
+   "w": -3.5,
+   "w_low": -7.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Escalation hits Gulf jobs/remittances and NRI deposits (Kerala is the most exposed state) and raises oil-led inflation; sentiment hit -3.5. Brent empirical +0.69 (t=1.5) reflects the opposite (oil-rich GCC income) in mild upswings; a conflict is different - low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "FEDERALBNK",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": -1.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Empirical +0.69 (t=1.5), refining margin +0.76 (t=1.8): higher oil lifts Gulf incomes and remittances to Kerala; modest +0.5 retained.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "FEDERALBNK",
+   "relation": "fx_translation",
+   "w": 0.8,
+   "w_low": -1.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.68 (t=1.4): weaker rupee increases NRI remittance and deposit inflows; +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "FEDERALBNK",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 6.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs 28.5% and rising (26.05% in March), high for a midcap bank; also Blackstone/Fairfax strategic shareholders (model knowledge); +4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "FEDERALBNK",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Tightening step (ECL, risk weights on unsecured/gold, LCR) cost -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "FEDERALBNK",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Beta ~1.0; modest.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/FEDERALBNK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Jana Small Finance Bank",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "reported acquisition target; Federal denied plan to buy stake on 2026-10-19"
+  },
+  {
+   "counterparty": "Federal's NRI/Gulf depositors and remitters",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "NRI deposits and remittance fees"
+  },
+  {
+   "counterparty": "South Indian Bank / CSB / HDFC Bank / ICICI",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "deposit competition in Kerala"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-16",
+   "event": "Q3 FY27 results (inferred; Q2 reported 2026-10-16)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Federal+Bank+Q2+FY27+NIM+GNPA+advances+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Renewed Jana SFB acquisition announcement or definitive withdrawal",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Federal+Bank+Jana+Small+Finance+Bank+acquisition+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC after hike to 5.50%",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.5,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04-01",
+   "event": "RBI ECL framework effective (model knowledge)",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Canara+Bank+15,000+crore+ECL+provision+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Record PAT Rs1,386cr standalone (+45% y/y; screener consolidated Rs1,568cr), NII +26%, stable slippages, margins expanded, NPAs at decadal low; brokerages bullish (Prabhudas Lilladher TP Rs400).",
+  "valuation": "P/E 16.0x, P/B ~1.95x (Rs337 / BV Rs173); 52w range Rs232-372; +41.9% 12m, +13.6% 6m, -4.6% 3m, +5.5% 1m; 1y vol 25%.",
+  "recent_developments": [
+   "2026-08-25: shares -3/4% on report of Jana SFB stake acquisition",
+   "2026-09-25: CNBC TV18/Moneycontrol - deal in final stages, share swap ~Rs6,500cr",
+   "2026-10-16: Q2 record profit",
+   "2026-10-19: Federal says no plan to buy Jana stake; stock +4-5%"
+  ]
+ },
+ "key_risks": [
+  "Jana SFB or other M&A dilution/integration risk",
+  "Gulf geopolitics hitting NRI inflows",
+  "Credit cost normalisation from decadal-low NPAs",
+  "Stock already +42% in 12 months (valuation)"
+ ],
+ "upside_triggers": [
+  "NIM expansion post-hike",
+  "Continued credit-cost decline",
+  "Strategic investors/FPI stake rises",
+  "Improved fee income from NRI franchise"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/FEDERALBNK.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Federal+Bank+Q2+FY27+NIM+GNPA+advances+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Federal+Bank+Jana+Small+Finance+Bank+acquisition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-19",
+   "what": "Jana SFB deal reports and denial"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}

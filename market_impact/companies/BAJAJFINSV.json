@@ -1,0 +1,433 @@
+{
+ "ticker": "BAJAJFINSV",
+ "name": "Bajaj Finserv Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_NBFC_VEHICLE_CONSUMER",
+ "tier": "NIFTY_50",
+ "business_summary": "Financial-services holding company of the Bajaj group. Holds about 51% of Bajaj Finance (NBFC, the dominant earnings and value driver), plus general insurer Bajaj General Insurance (BAGIC) and life insurer Bajaj Life (BALIC) (Allianz exited the JVs - model knowledge, verify), Bajaj Finserv Lending, AMC and health/securities units. Q2 FY27 consolidated PAT Rs2,758cr per headlines (+23%), NII +24%, AUM +26%; screener consolidated net profit incl. minorities Rs5,952cr. Subscribing Rs5,800cr warrants in Bajaj Finance. Stock -11.9% over 3 months; Goldman initiated a sell call; analysts flagged insurance concerns. New BAGIC CEO Deepak Reddy from Jan 2027 and plan to enter reinsurance.",
+ "revenue_mix": [
+  {
+   "segment": "lending (Bajaj Finance, consolidated)",
+   "share_pct": 72,
+   "geography": "India"
+  },
+  {
+   "segment": "general insurance",
+   "share_pct": 16,
+   "geography": "India"
+  },
+  {
+   "segment": "life insurance",
+   "share_pct": 10,
+   "geography": "India"
+  },
+  {
+   "segment": "other (AMC, health, securities)",
+   "share_pct": 2,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 28
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "BAJAJFINSV",
+   "relation": "funding_cost",
+   "w": -2.0,
+   "w_low": -4.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "~75% of look-through value is Bajaj Finance (-3.0 per +25bp repo, see BAJFINANCE). Insurance float gains (~15% of value) from higher reinvestment yields (+0.3) partly offset => ~-2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (The Hindu / SCC Online)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BAJAJFINSV",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "BFL -2.5 x 75% weight = -1.9; insurance investment books gain on reinvestment yields but suffer MTM on bond books; net -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "BAJAJFINSV",
+   "relation": "funding_cost",
+   "w": -4.0,
+   "w_low": -7.5,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "BFL -5.0 x ~0.8 weight (holding-company discount means leverage to BFL) = -4; insurance largely unaffected.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "BAJAJFINSV",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -7.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "BFL: +50bp credit cost = -5.0 x 0.8 look-through weight = -4; insurance credit exposure small.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finserv+Q2+FY27+insurance+Allianz+general+insurance+life+new+business+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Q2 PAT Rs2,758cr +23%, NII +24%, AUM +26% (Moneycontrol/ET); shares rebounded 2-4% 2026-11-04, Goldman sell call, Jefferies trims target"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "BAJAJFINSV",
+   "relation": "demand_driver",
+   "w": -2.8,
+   "w_low": -5.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "BFL -3.5 x 0.8 = -2.8; Bajaj Finserv Lending also unsecured SME loans.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+banks+loans+against+gold+stress+NBFC+Reuters+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Reuters"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "BAJAJFINSV",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "BFL +2.0 x 0.8 + insurance premium growth with credit-linked cross-sell (credit life) => ~+1.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "BAJAJFINSV",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -6.5,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Tightening steps (commission/expense-of-management caps, surrender-value norms, GST input-credit loss after individual life/health GST exemption in Sep 2025 - model knowledge) hit margins of general insurer (BAGIC) and life insurer (BALIC): insurance ~20% of value x EBITDA -15% ... ~-3 incl. sentiment. Analysts flagged 'insurance concerns' on 2026-11-04.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Finserv+shares+rebound+after+Q2+beat+analysts+trim+targets+on+insurance+concerns+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "BusinessLine/Jefferies"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "BAJAJFINSV",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "BFL -3.0 x 0.8 = -2.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "BAJAJFINSV",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "BFL +2.5 x 0.8 weight; insurance protection and health demand as urban incomes rise.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BAJAJFINSV",
+   "relation": "demand_driver",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.06-1.14; VIX +5 hits both BFL multiple and insurer valuations; -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BAJAJFINSV",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FII holding only 8.2% (promoters 58.7%, public 22%): flow sensitivity lower than peers; +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "BAJAJFINSV",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Agrees with empirical -0.79 (t=-2.1): oil -> inflation/rates and motor-claims inflation at BAGIC.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "BAJAJFINSV",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.66 (t=2.9) is the largest significant coefficient; probably common rate/liquidity beta (gold up when real rates fall) rather than gold-loan exposure; shrunk to +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "BAJAJFINSV",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": -0.3,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.03 (t=2.0): cyclical risk-on beta (copper up = growth up); no direct path; shrunk to +0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "BAJFINANCE",
+   "dst": "BAJAJFINSV",
+   "relation": "holding_stake",
+   "w": 0.75,
+   "w_low": 0.55,
+   "w_high": 0.95,
+   "lag": "0-3m",
+   "mechanism": "w = % change in BAJAJFINSV equity per +1% in BAJFINANCE equity (source-equity-move units). ~51% of Rs6.63 lakh cr mcap = Rs3.4 lakh cr vs BAJAJFINSV mcap Rs2.95 lakh cr (insurance extra) => look-through weight >1; holdco discount and insurance noise bring effective beta to ~0.75 (confirm with regression).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BAJFINANCE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    },
+    {
+     "source": "market_impact/data/packs/BAJAJFINSV.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Bajaj Finance Ltd",
+   "ticker": "BAJFINANCE",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~51% stake, majority of profit"
+  },
+  {
+   "counterparty": "Bajaj General Insurance",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "CEO transition: Deepak Reddy designate from Jan 2027 (ANI 2026-10-24)"
+  },
+  {
+   "counterparty": "Bajaj Life Insurance",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "life insurance, regulatory margins"
+  },
+  {
+   "counterparty": "HDFC Life / SBI Life / ICICI Prudential",
+   "ticker": "HDFCLIFE",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "life insurance peers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Bajaj Finance QIP Rs11,700cr and warrants Rs5,800cr to Bajaj Finserv (cash outflow Rs5,800cr over 18m)",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -2.5,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Bajaj+Finance+capital+raise+17,500+crore+QIP+approval+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Deepak Reddy takes over as BAGIC CEO; Tapan Singhel exits",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Deepak+Reddy+appointed+CEO+Designate+of+Bajaj+General+Insurance+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01-28",
+   "event": "Q3 FY27 results (date inferred; Q2 reported 2026-11-03)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Bajaj+Finserv+Q2+FY27+insurance+Allianz+general+insurance+life+new+business+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "IRDAI regulations/consultations on commissions or expenses; plus Bajaj's reinsurance licence application",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Bajaj+Finserv+Plans+To+Apply+For+Reinsurance+Business+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs2,758cr +23%, NII +24%, AUM +26%; premium growth reported in insurance subsidiaries (Sep 2026); analysts trimmed targets on insurance concerns, Goldman sell, Jefferies still positive.",
+  "valuation": "P/E 27.3x, P/B 3.4x (Rs1,840 / BV Rs524), 52w range Rs1,597-2,127; -11.9% 3m, -11.4% 12m, +4.8% 1m; sum-of-parts discount to Bajaj Finance look-through value.",
+  "recent_developments": [
+   "2026-10-01/02: approves Rs5,800cr warrants in Bajaj Finance",
+   "2026-10-24: Deepak Reddy CEO-designate at BAGIC",
+   "2026-11-03: Q2 results; 2026-11-04: shares +2-4% after Goldman sell call and target trims"
+  ]
+ },
+ "key_risks": [
+  "Bajaj Finance margin/credit cycle (largest value driver)",
+  "Insurance profitability and IRDAI rules",
+  "Holding-company discount, group funding of the BFL warrants",
+  "Management transition at BAGIC"
+ ],
+ "upside_triggers": [
+  "BFL margin stabilisation and a clean QIP",
+  "Insurance new-business margin recovery",
+  "Reinsurance entry",
+  "Narrowing of holdco discount"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BAJAJFINSV.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Finserv+Q2+FY27+insurance+Allianz+general+insurance+life+new+business+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Q2 results and insurance news"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Finance+capital+raise+17,500+crore+QIP+approval+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-02",
+   "what": "warrant subscription"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}

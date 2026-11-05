@@ -1,0 +1,364 @@
+{
+ "name": "Yes Bank Ltd.",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Private bank rebuilt since the 2020 RBI-led reconstruction, with SMBC (Japan) the largest strategic shareholder. Deposits Rs 3.54 lakh cr and total assets Rs 5.15 lakh cr (Sep 2026); revenue Rs 8,650 cr in Q2 FY27, net profit Rs 1,084 cr (+63-65% YoY), NII +23%. On 2026-10-15 the Supreme Court voided the 2020 write-off of Rs 8,415 cr AT1 bonds; the post-tax earnings/capital hit is estimated at Rs 5,200-5,400 cr and was not booked in Q2. Stock down 23% in a month, trading at 0.94x book.",
+ "revenue_mix": [
+  {
+   "segment": "Retail, MSME and commercial banking",
+   "share_pct": 65,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "Corporate / wholesale and treasury",
+   "share_pct": 35,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 67
+  },
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 15
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "YESBANK",
+   "relation": "funding_cost",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Roughly half of advances are repo/EBLR-linked (model knowledge) and reprice in 1-3m while CASA/term deposits reprice slower, so a +25bp hike compresses NIM ~5-8bp near term: 6bp x Rs 2.9 lakh cr loans (assumed) = Rs 175 cr = ~3% of annualised PBT (~Rs 5,800 cr); EV/MCap ~1 for bank; persistence 0.5 -> -1.5, doubled for discount-rate effect on a sub-1x book stock -> -3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance calibrated tightening (Reuters/The Hindu headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "YESBANK",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Investments Rs 99,968 cr (Sep-26); assume ~40% AFS with duration ~2.5y: +25bp = Rs 250 cr MTM = ~4% of annualised PBT, partly absorbed by AFS reserve; plus cost-of-equity effect on valuation -> -3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "YESBANK",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Deposits Rs 3.54 lakh cr and loans growing mid-teens; +3pp system credit growth -> bank growth ~+2.5pp, operating leverage 1.5x on thin RoA (RoE 7%) -> +4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "YESBANK",
+   "relation": "funding_cost",
+   "w": 3.5,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Yes Bank's cost of funds is above peers (interest expense Rs 5,830 cr on Rs 8,650 cr revenue, 67%); easier system deposit growth lowers term-deposit pricing: -10bp cost of funds = Rs 350 cr = +6% PBT; probability of a +3pp system shift transmitting ~half -> +3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "YESBANK",
+   "relation": "demand_driver",
+   "w": -10.0,
+   "w_low": -18.0,
+   "w_high": -4.0,
+   "lag": "3-12m",
+   "mechanism": "Advances assumed Rs 2.9 lakh cr; +50bp credit cost = Rs 1,450 cr vs TTM net profit Rs 4,195 cr (PBT ~Rs 5,600 cr) = -26% PAT; persistence 0.5, EV/MCap 1 -> -13, trimmed to -10 because current credit cost is low (financing profit shows provisions benefit; asset quality stable per Q2 coverage).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Yes+Bank+AT1+Supreme+Court+SMBC+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Supreme Court quashed Rs 8,415 cr AT1 write-off; stock -15-20% in two days; Q2 profit +65% but AT1 hit (~Rs 5,217 cr post-tax per ET headline; ~Rs 5,400 cr per CNBC TV18) not booked (Reuters 2026-10-17)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "YESBANK",
+   "relation": "demand_driver",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Retail unsecured and MFI/credit-card book is a minority (model estimate ~10-12% of loans); +1pp delinquencies -> credit cost +10bp = Rs 290 cr = ~5% PAT x 0.5 persistence -> -2.5; trimmed to -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "YESBANK",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Tighter capital/liquidity norms hit a low-ROA bank hardest; AT1 ruling already raises capital-adequacy debate (brokerage notes 2026-10-16: 'capital risks'); -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Yes+Bank+AT1+Supreme+Court+SMBC+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Supreme Court quashed Rs 8,415 cr AT1 write-off; stock -15-20% in two days; Q2 profit +65% but AT1 hit (~Rs 5,217 cr post-tax per ET headline; ~Rs 5,400 cr per CNBC TV18) not booked (Reuters 2026-10-17)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "YESBANK",
+   "relation": "discount_rate",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 47.8% (Sep-26, screener, near foreign limit), beta ~1.2; +US$5bn/qtr inflow -> +3% relative.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "YESBANK",
+   "relation": "funding_cost",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Surplus liquidity of +Rs 1 lakh cr lowers interbank rates and certificates-of-deposit cost; wholesale/borrowings Rs 78,410 cr (15% of liabilities) -> +2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "YESBANK",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Turnaround story levered to credit cycle: +1pp GDP -> credit growth +1.5pp and lower credit cost; high beta (1.2) -> +4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "YESBANK",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Infra bonds/tier-2 and CD funding priced at a premium; +50bp spreads on ~Rs 78k cr borrowings x 50% repricing = Rs 195 cr = -3% PBT x 0.5 -> -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "YESBANK",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Bank is near-flat in FX; rupee weakness is mainly sentiment/FPI. Empirical +3.33 per SSU (t=1.6, insignificant) disagrees; treated as noise, weight small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/YESBANK/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "SMBC (Sumitomo Mitsui Banking Corp.)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "largest shareholder; reportedly factored the AT1 risk when investing (Moneycontrol 2026-10-22)"
+  },
+  {
+   "counterparty": "AT1 bondholders",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "claim of Rs 8,415 cr restored by SC ruling"
+  },
+  {
+   "counterparty": "HDFC Bank / ICICI Bank / Axis Bank",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "deposit and retail-loan competition"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "Yes Bank decision on further legal remedy (review/curative petition) on AT1 ruling; provisioning decision for Rs 8.4k cr write-off reversal",
+   "type": "litigation",
+   "prob": 0.5,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Yes+Bank+AT1+Supreme+Court+SMBC+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: first booking (or not) of AT1 liability, NIM post-hike",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Yes+Bank+Q2+results+net+interest+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC early Dec: further repo hike",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "SMBC raises stake / capital infusion (Reuters 2026-10-14 lists large cross-border financial deals; SMBC reportedly priced in adverse AT1 verdict, Moneycontrol 2026-10-22)",
+   "type": "corporate_action",
+   "prob": 0.15,
+   "impact_pct_low": 3.0,
+   "impact_pct_high": 12.0,
+   "source": "https://news.google.com/rss/search?q=Yes+Bank+SMBC+stake+open+offer+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs 8,650 cr, net profit Rs 1,084 cr, interest expense Rs 5,830 cr",
+  "trend": "Earnings improving (TTM PAT Rs 4,195 cr vs Rs 2,447 cr in FY25) with stable asset quality, but AT1 ruling is a capital/earnings overhang; target prices cut (Nomura Rs 18, Citi/Goldman Sell).",
+  "valuation": "Price Rs 16.0, P/B 0.94 (BV 17.0), P/E 12 (screener); market cap Rs 50,192 cr; ROE 7%. Down 30% over 12m.",
+  "recent_developments": [
+   "2026-10-15 SC quashes Rs 8,415 cr AT1 write-off; stock falls up to 20% intraday (Business Standard/Reuters headlines)",
+   "2026-10-17 Q2 profit +65%; AT1 hit not booked pending further appeal (Reuters)",
+   "2026-10-21 Nomura cuts target to Rs 18; ten brokers with Sell (IndiaIPO)",
+   "2026-10-22 SMBC reportedly factored in the adverse verdict (Moneycontrol)",
+   "2026-10-07 RBI hiked repo 25bp to 5.50%"
+  ]
+ },
+ "key_risks": [
+  "AT1 liability booked in full, reducing CET1 and earnings by ~Rs 5.2-5.4k cr (about 10% of net worth Rs 53.4k cr)",
+  "Reputational damage in capital markets / tier-1 funding",
+  "Rate hike squeezes NIM; low RoA leaves little buffer",
+  "Legacy stressed assets / security receipts",
+  "Foreign shareholding near limit limits upside on FPI inflows"
+ ],
+ "upside_triggers": [
+  "Review/curative petition succeeds or liability settled at discount",
+  "SMBC raises stake or injects capital",
+  "NIM stabilises as deposit costs ease",
+  "Credit-rating upgrades"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/YESBANK/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in consolidated financials"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Yes+Bank+AT1+Supreme+Court+SMBC+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-22",
+   "what": "AT1 ruling coverage (Reuters, ET, Moneycontrol, CNBC TV18 headlines)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Yes+Bank+Q2+results+net+interest+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-17",
+   "what": "Q2 FY27 results headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "Repo hike"
+  },
+  {
+   "url": "market_impact/data/packs/YESBANK.md",
+   "date": "2026-11-05",
+   "what": "evidence pack"
+  }
+ ],
+ "ticker": "YESBANK",
+ "as_of": "2026-11-05"
+}

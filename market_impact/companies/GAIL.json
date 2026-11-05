@@ -1,0 +1,426 @@
+{
+ "ticker": "GAIL",
+ "name": "GAIL (India) Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_GAS_DISTRIBUTION",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest gas midstream PSU: owns/operates >11,500 km natural-gas pipelines (roughly 50% of national transmission, model knowledge), gas marketing (domestic + long-term LNG contracts incl. US cargoes), LPG recovery (6 units, ~2,300 km LPG pipeline), a 810 ktpa polyethylene petrochemical plant at Pata, and stakes in Petronet LNG (12.5%), city-gas distributors and OPaL. Government of India owns ~51.9% (promoter) plus ~7.6% via other government holders. Earnings are driven by marketing margins, transmission volumes x PNGRB tariffs, LPG/liquid prices and petchem spreads. Q2 FY27 PAT Rs ~4.7k cr, more than double a year earlier.",
+ "revenue_mix": [
+  {
+   "segment": "natural gas marketing (trading)",
+   "share_pct": 75,
+   "geography": "India (imported LNG + domestic gas); share is model knowledge, FY25 approximation"
+  },
+  {
+   "segment": "natural gas transmission",
+   "share_pct": 6,
+   "geography": "India"
+  },
+  {
+   "segment": "LPG & liquid hydrocarbons",
+   "share_pct": 6,
+   "geography": "India"
+  },
+  {
+   "segment": "petrochemicals (PE) ",
+   "share_pct": 4,
+   "geography": "India"
+  },
+  {
+   "segment": "other (city gas stakes, E&P, power, trading)",
+   "share_pct": 9,
+   "geography": "India / US / Singapore"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_GAS_GLOBAL",
+   "share_of_costs_pct": 85
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 55
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "GAIL",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Gas/LNG +15%. GAIL buys ~ all gas (gas purchase ~85% of costs, model knowledge) and sells through marketing at pass-through formulas, so unit margin is only partly hit, but spot-LNG-priced volumes are cut by demand destruction (fertiliser, CGD industrial, power) and transmission throughput falls. GAIL's US Henry-Hub-linked LNG (Cheniere/Cove Point, model knowledge) gains relative to spot, partly offsetting. Rough arithmetic: transmission+marketing EBITDA ~Rs 18k cr normalised; 2% volume loss on transmission (~Rs 6k cr EBITDA at 70% margin) and ~5% lower marketing volumes => ~-4% EBITDA x EV/MCap 1.05 x persistence 0.3 => ~-1.3 to -1.6. Pack elasticity -0.22 (t -0.7, series is Henry Hub not LNG) is directionally consistent but insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Iran+war+Strait+of+Hormuz+LNG+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "Hormuz closure lifted Asian spot LNG; India gas demand fell (OilPrice 14 Oct, Reuters 2 Oct)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=GAIL+Gas+blended+pricing+LNG+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-12",
+     "note": "GAIL Gas moves to blended pricing as LNG rates rise (ET 12 Sep)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "GAIL",
+   "relation": "output_price",
+   "w": 1.2,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Brent +10%: LPG/liquid-hydrocarbon (LPG ~1.2 MMT/yr, model knowledge) and polymer realisations rise with crude; oil-indexed LNG cost lags 3-6 months; liquid-fuel substitution widens gas marketing margins (Q1-Q2 FY27 profit jump coincided with Brent >$100: Q1 PAT 4,671, Q2 4,724 vs 1,481 in Mar-26 quarter). LPG+LH EBIT ~Rs 2.5k cr: +10% price ~ +Rs 800 cr (4.4% of 18k EBITDA) x 1.05 x persistence 0.3 => +1.4, minus oil-linked gas cost drag => +1.2. Pack shows no Brent link in top-12 (insignificant); low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=GAIL+Q2+results+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: PAT ~Rs4,650-4,724 cr, revenue +17-33% y/y; GAIL Gas IPO approved (ET, Moneycontrol, BS)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "GAIL",
+   "relation": "fx_translation",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "INR 3% weaker raises rupee cost of USD-priced LNG (>50% of gas portfolio imported) before sales prices adjust; LPG/petchem are USD-parity priced so partially offset; USD debt is small. Net ~-3.5% EBITDA hit x 1.05 x persistence 0.3 => ~-1.1. Pack elasticity -1.78 (t -1.5) agrees on sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "GAIL",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Debt Rs ~16k cr (interest Rs 323 cr/qtr) so funding-cost effect on earnings is negligible (<0.5% of PBT per 25bp); the effect is through the discount rate on a 3% dividend-yield PSU trading at 9.6x P/E. Duration-style estimate: ~5% value change per 100bp => 1.2% per 25bp x 0.5 (partly priced by growth) => -0.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "GAIL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "GDP +1pp lifts gas consumption (power, fertiliser, CGD, refineries) by ~1.2pp (elasticity ~1.2) => transmission+marketing volumes +1.2% => EBITDA +1.5-2% (operating leverage on fixed pipeline) x 1.05 x persistence 1.0 (structural volume path) => +1.7; haircut for gas-price-driven volume volatility => +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "P_FERT_SUBSIDY",
+   "dst": "GAIL",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Fertiliser plants take ~25-30% of GAIL volumes (model knowledge) at pooled prices; a higher subsidy envelope sustains pooled-gas offtake at high LNG prices and avoids offtake cuts and payment delays. +1 step ~ +2% volume stability on ~25% of volumes => EBITDA +1% x 1.05 x 0.7 => ~+0.8. Also GAIL signed MoU with RCF for a Maharashtra fertiliser project (PSU Watch 30 Oct 2026).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=GAIL+Q2+results+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: PAT ~Rs4,650-4,724 cr, revenue +17-33% y/y; GAIL Gas IPO approved (ET, Moneycontrol, BS)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_PNGRB_TARIFF",
+   "dst": "GAIL",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": ">12m",
+   "mechanism": "One step = PNGRB unified-tariff / network-tariff reduction of ~10%. Transmission EBIT ~Rs 5.5k cr (~30% of EBITDA, model knowledge FY25); 10% tariff cut => -Rs 600 cr = -3.3% EBITDA x EV/MCap 1.05 x persistence 0.8 (structural) => -2.8, round to -3.0. PNGRB tariff reviews are periodic and discretionary; timing unknown.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "GAIL",
+   "relation": "geopolitical_exposure",
+   "w": -1.5,
+   "w_low": -5.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation (Hormuz) cuts Qatari LNG supply to India (Petronet, where GAIL holds 12.5%, model knowledge) and spikes spot LNG; GAIL's US term cargoes and Brent-linked LPG gains cushion margins but throughput and Petronet-associated earnings fall. Share rose +5.6% in 3m through the conflict, so the realised net effect has been mixed; central -1.5 with wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Iran+war+Strait+of+Hormuz+LNG+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "Hormuz closure lifted Asian spot LNG; India gas demand fell (OilPrice 14 Oct, Reuters 2 Oct)"
+    }
+   ]
+  },
+  {
+   "src": "F_PETROCHEM_SPREADS",
+   "dst": "GAIL",
+   "relation": "output_price",
+   "w": 1.1,
+   "w_low": 0.4,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Pata plant 810 ktpa PE (+ expansion pipeline, model knowledge). +10% polymer-naphtha spread ~ +$55/t x 0.65 Mt = ~$36m ~ Rs 340 cr (1.9% of Rs 18k cr EBITDA) x 1.05 x persistence 0.4 => +0.8; add operating gearing => +1.1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "GAIL",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Gas-fired power is <10% of GAIL volumes but is the swing buyer when RLNG is affordable; +3pp power demand growth adds marginal offtake only in lower-price states. ~+0.4% EBITDA x 1.05 x persistence 0.5 ~ +0.3-0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GAIL/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Qatar/ADNOC/US LNG sellers (Cheniere, Cove Point/Sabine contracts)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "term LNG ~14 mtpa-equivalent portfolio (model knowledge); US cargoes hedge Hormuz risk"
+  },
+  {
+   "counterparty": "ONGC / Oil India (domestic APM & non-APM gas)",
+   "ticker": "ONGC",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "domestic gas allocated to priority sectors; GAIL markets it"
+  },
+  {
+   "counterparty": "Petronet LNG (12.5% stake, Dahej/Kochi)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "regasification capacity and dividend income; Petronet seeking US LNG under renewed Qatar deal (Egypt Oil & Gas 3 Nov 2026)"
+  },
+  {
+   "counterparty": "Fertiliser plants (urea pool)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "~25-30% of volumes, pooled-gas pricing"
+  },
+  {
+   "counterparty": "CGD companies incl. Indraprastha, MGL, ATGL",
+   "ticker": "ATGL",
+   "role": "customer",
+   "importance": "medium",
+   "note": "APM-cut replacement gas and HPHT gas sold to CGDs"
+  },
+  {
+   "counterparty": "GAIL Gas Ltd (subsidiary, IPO planned FY28, up to 25% dilution)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "board approved 30 Oct 2026"
+  },
+  {
+   "counterparty": "Indian Oil, HPCL, BPCL",
+   "ticker": "IOC",
+   "role": "competitor",
+   "importance": "low",
+   "note": "LPG / liquid fuels substitution; IOC is a Petronet co-promoter"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (GAIL typically reports late Jan/early Feb; exact date not announced)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge on reporting calendar"
+  },
+  {
+   "date": "2027-03",
+   "event": "Board declares interim dividend / record date for FY27 (payout ~41%; yield 2.95%)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.5,
+   "source": "https://www.screener.in/company/GAIL/consolidated/"
+  },
+  {
+   "date": "2027-06",
+   "event": "GAIL Gas IPO DRHP filing (board approved 30 Oct 2026; listing guided FY28, up to 25% dilution)",
+   "type": "corporate_action",
+   "prob": 0.35,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=GAIL+Gas+IPO+board+approves+subsidiary+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "PNGRB decision on revised unified/network tariffs",
+   "type": "regulatory",
+   "prob": 0.2,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge; no dated notice retrieved"
+  },
+  {
+   "date": "2027-03",
+   "event": "Normalisation (or re-escalation) of Hormuz LNG flows: spot LNG easing restores industrial/fertiliser volumes",
+   "type": "other",
+   "prob": 0.45,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Iran+war+Strait+of+Hormuz+LNG+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2028",
+   "event": "Usar (Maharashtra) petchem and Pata expansion commissioning (timing model knowledge)",
+   "type": "capex",
+   "prob": 0.15,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=GAIL+petrochemical+Pata+LNG+gas+transmission+tariff+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): consolidated sales Rs 47,139 cr (+33% y/y), operating profit Rs 6,992 cr (OPM 15%), net profit Rs 4,724 cr (EPS 7.18) vs Rs 1,989 cr a year earlier; standalone PAT Rs 4,650 cr (+8% q/q)",
+  "trend": "Earnings step-up from Q1 FY27 (Rs 4,671 cr) after a weak Q4 FY26 (Rs 1,481 cr, OPM 4%); record gas volumes in Q2 per earnings-call headline, slight miss vs consensus (Investing.com 1 Nov)",
+  "valuation": "P/E 9.6x TTM EPS 19.2, ~1.26x book (Rs 147), dividend yield 2.95%; ROE 8.7% (3y avg 11.3%)",
+  "recent_developments": [
+   "2026-10-30: Q2 results; board approves GAIL Gas IPO with up to 25% stake dilution (FY28)",
+   "2026-10-30: MoU with RCF for Maharashtra fertiliser project",
+   "2026-11-03: Nomura raises target, keeps Buy; shares +3-4% post results",
+   "2026-09-12: GAIL Gas moves to blended pricing as LNG costs spike amid US-Iran war",
+   "2026-08-27: GAIL outlines pipeline, LNG-sourcing, petchem and clean-energy expansion",
+   "FII holding rose 13.0% (Mar) to 16.6% (Sep 2026) while DII fell 20.5% to 17.9%"
+  ]
+ },
+ "key_risks": [
+  "Hormuz/Qatar LNG disruption and spot-LNG price spikes cutting throughput",
+  "PNGRB tariff cut or unified-tariff restructuring",
+  "Petchem losses and Pata outages",
+  "Normalisation of Q1-Q2 marketing windfall (earnings quality: H1 FY27 PAT Rs 9.4k cr vs Rs 7.6k cr for all of FY26)",
+  "Government pressure to cross-subsidise fertiliser/CGD users"
+ ],
+ "upside_triggers": [
+  "Sustained liquid-fuel prices keeping gas marketing margins fat",
+  "GAIL Gas IPO value unlock",
+  "US LNG contracts valued at a premium to spot",
+  "Tariff certainty and new pipeline commissioning (Mumbai-Nagpur-Jharsuguda, etc.)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_PNGRB_TARIFF",
+   "type": "POLICY",
+   "name": "PNGRB gas pipeline tariff regulation",
+   "ssu": "+1 = tariff cut / unified-tariff reduction of ~10%"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/GAIL/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=GAIL+Q2+results+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Q2 FY27 results coverage (ET, BS, Moneycontrol, CNBC TV18)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=GAIL+Gas+IPO+board+approves+subsidiary+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "GAIL Gas IPO approval"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Iran+war+Strait+of+Hormuz+LNG+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "LNG/Hormuz context"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=GAIL+Brent+crude+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-01",
+   "what": "GAIL earnings-call transcript headline (Investing.com), Brent sensitivity coverage"
+  }
+ ]
+}

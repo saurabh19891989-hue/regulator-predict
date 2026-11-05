@@ -1,0 +1,431 @@
+{
+ "ticker": "BANKBARODA",
+ "name": "Bank of Baroda",
+ "as_of": "2026-11-05",
+ "industry": "I_PSU_BANKS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Bank of Baroda is India's second-largest public-sector bank by business (government holds ~64%), with retail, MSME, agri, corporate and treasury segments and a large international franchise (UAE, UK, Africa, Asia; ~15% of advances, model estimate). Q2 FY27 net profit Rs6,532cr (+35.8% y/y, record; aided by lower provisions and one-offs incl. NSE stake sale gains), NII Rs13,026cr (+9%), global NIM 2.74% (2.96% a year ago), GNPA 1.78%, NNPA 0.37%. FY27 guidance raised to 13-15% credit growth and 11-13% deposit growth. Trades at 0.74x book, P/E 5.4, dividend yield ~3.4%. Overhangs: ECL transition, NMC/BR Shetty $15bn suit, margin compression, and a rising-rate cycle.",
+ "revenue_mix": [
+  {
+   "segment": "Net interest income (domestic+international lending)",
+   "share_pct": 72,
+   "geography": "India ~80% / international ~20% of advances (approx., model estimate)"
+  },
+  {
+   "segment": "Fee, forex and other non-interest income",
+   "share_pct": 14,
+   "geography": "India mostly"
+  },
+  {
+   "segment": "Treasury/trading and other one-offs",
+   "share_pct": 14,
+   "geography": "India/international"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 62
+  },
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 62
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BANKBARODA",
+   "relation": "discount_rate",
+   "w": -1.4,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Two channels. (1) Treasury MTM: investment book ~Rs5 lakh cr (model estimate), AFS/FVTPL ~Rs1.3 lakh cr x modified duration ~3 x 0.25% = ~Rs1,000cr pre-tax = ~Rs730cr post-tax = ~0.6% of Rs1.29 lakh cr mcap (one-off, partly reverses). (2) Cost of equity: P/B 0.74 on ROE 12.7%; +25bp G-sec passes ~50% to CoE => P/B ~-2.5%. Sum ~-3, shrunk to -1.4 for persistence/offset from higher asset yields. 10y at 7.4-7.5% (3y high). No significant empirical estimate in pack.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "India 10y G-sec ~7.4-7.5% in Oct 2026, multi-year high (Reuters/ET headlines); Nov outlook 7.25-7.35%"
+    },
+    {
+     "source": "market_impact/data/packs/BANKBARODA.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities and screener fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BANKBARODA",
+   "relation": "funding_cost",
+   "w": 0.5,
+   "w_low": -1.5,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "EBLR/repo-linked loans ~40-45% of domestic book (model knowledge) reprice within a quarter; deposits (global CoD 4.71%) lag. +25bp: ~Rs5 lakh cr x 0.25% = Rs1,250cr gross, ~60% offset by deposit repricing over 6m => NIM +2-3bp ~ Rs500cr/yr = ~2% of annualised PAT Rs26,100cr; x persistence 0.5 x EV/MCap 1.0 => ~+1.0; net of slower credit demand and bond MTM (captured in F_GSEC edge) => +0.5. Sign genuinely uncertain: tightening cycle also lifts credit costs. First hike in ~4 years on 2026-10-07 (calibrated tightening).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening' (The Hindu, Reuters headlines)"
+    },
+    {
+     "source": "https://www.psuconnect.in/financial/bank-of-baroda-q2-net-profit-jumps-36-to-6-532-cr",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 PAT Rs6,532cr +35.8%, NII Rs13,026cr +9%, GNPA 1.78%, NNPA 0.37%"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "BANKBARODA",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.5,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Guidance raised to 13-15% advances growth. +3pp industry growth => BoB avg advances +1.5% (~Rs18,000cr on ~Rs12 lakh cr, model estimate) x net spread ~2.7% (yield 7.41% less marginal funding ~4.7%) = ~Rs490cr, less opex/provisions => ~Rs300cr post-tax = ~1.2% of PAT; x persistence 0.5 x EV/MCap 1.0 plus small re-rating => ~+1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/bank-of-baroda-profit-recovery-ppt-cmvv89fk400ew2klzqsj77pce",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 presentation summary; global NIM 2.74%, CoD 4.71%, yield on advances 7.41%; FY27 credit growth guidance raised to 13-15%, deposits 11-13% (Moneycontrol/ET Bfsi headlines 2026-10-30)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "BANKBARODA",
+   "relation": "funding_cost",
+   "w": 0.9,
+   "w_low": 0.3,
+   "w_high": 1.6,
+   "lag": "3-12m",
+   "mechanism": "Deposit growth guided 11-13% vs credit 13-15%; gap filled with costlier CDs/FCNR(B). +3pp deposit growth displaces ~1.5% of funding priced ~120bp above CASA/term deposits => ~3bp NIM => ~Rs570cr/yr pre-tax = ~1.6% PAT; x persistence 0.5 => ~+0.8-0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/bank-of-baroda-profit-recovery-ppt-cmvv89fk400ew2klzqsj77pce",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 presentation summary; global NIM 2.74%, CoD 4.71%, yield on advances 7.41%; FY27 credit growth guidance raised to 13-15%, deposits 11-13% (Moneycontrol/ET Bfsi headlines 2026-10-30)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "BANKBARODA",
+   "relation": "demand_driver",
+   "w": -6.0,
+   "w_low": -10.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost x ~Rs12 lakh cr advances = Rs6,000cr pre-tax = Rs4,500cr post-tax = ~17% of annualised PAT Rs26,100cr; EV/MCap 1.0; persistence 0.4 (cycle reverses over 1-2 yrs) => ~-6.9; trimmed to -6.0 because stock already at 0.74x P/B discounts a worse cycle. Current: GNPA 1.78% (2.16% yr ago), NNPA 0.37%, Q2 provisions Rs2,382cr.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/bank-of-baroda-q2-net-profit-jumps-36-to-6-532-cr",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 PAT Rs6,532cr +35.8%, NII Rs13,026cr +9%, GNPA 1.78%, NNPA 0.37%"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "BANKBARODA",
+   "relation": "demand_driver",
+   "w": -0.6,
+   "w_low": -1.3,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Retail unsecured (personal loans+cards) ~6-7% of advances (model estimate) = ~Rs78,000cr; +1pp delinquency x LGD 70% = ~Rs550cr pre-tax = ~1.6% of PAT; x persistence 0.4 => ~-0.6. Much smaller than for private banks/NBFCs.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/bank-of-baroda-q2-net-profit-jumps-36-to-6-532-cr",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 PAT Rs6,532cr +35.8%, NII Rs13,026cr +9%, GNPA 1.78%, NNPA 0.37%"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "BANKBARODA",
+   "relation": "regulatory_risk",
+   "w": -3.5,
+   "w_low": -8.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "RBI expected-credit-loss (ECL) transition: Canara Bank disclosed a one-time hit of Rs12-15k cr on a similar ~Rs12 lakh cr book (2026-10-15, stock -6%). Assume BoB comparable Rs8-12k cr (model assumption, not disclosed) = ~6-9% of Rs1.29 lakh cr mcap pre-tax, absorbed through reserves over 1-2 yrs, CET1 impact limited by strong profit. Market partly priced (BoB held up on Q2). Also HTM MTM scrutiny.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.indiainfoline.com/news/companies/canara-bank-share-price-falls-6-near-52-week-low-after-15000-crore-ecl-provision-warning",
+     "date": "2026-10-15",
+     "note": "Canara ECL one-time provision up to Rs15,000cr, CET1 12.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "BANKBARODA",
+   "relation": "funding_cost",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus liquidity lowers CD/CP costs and money-market rates, helping CoF by ~2bp on ~Rs19 lakh cr earning assets (NII 13,026x4/2.74%) => ~Rs380cr = ~1.5% PAT x persistence 0.25 => ~+0.4. Oct 2026 liquidity-tightening measures (ET 2026-10-12) are a headwind.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "10y at 3y high as RBI liquidity measure weighs"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "BANKBARODA",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.6,
+   "lag": "3-12m",
+   "mechanism": "PSU banks are lead lenders to infra/PSU capex. +10% govt capex growth => corporate credit +~0.7pp for BoB (corporate ~40% of book) => PAT +~0.9% plus lower slippages; x persistence 0.5 => ~+0.8.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BANKBARODA",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 10.3% (up from 9.7% in Mar 2026); +US$5bn/qtr FPI inflow ~ +3% Nifty, BoB beta 1.17 => ~+3.5% broad-market effect, of which ~half is stock-specific reweighting toward PSU banks; the Director's cross-sectional demeaning removes the market part.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKBARODA.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities and screener fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "F_GULF_REMITTANCES",
+   "dst": "BANKBARODA",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Large UAE/GCC franchise and NRI deposit/remittance fees; FCNR(B) deposits are guided to support H2 funding. +10% remittances => CASA/NRI deposits +~1% and fee income +~Rs100cr => ~+0.5% PAT; x persistence 0.5 => ~+0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/bank-of-baroda-profit-recovery-ppt-cmvv89fk400ew2klzqsj77pce",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 presentation summary; global NIM 2.74%, CoD 4.71%, yield on advances 7.41%; FY27 credit growth guidance raised to 13-15%, deposits 11-13% (Moneycontrol/ET Bfsi headlines 2026-10-30)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "BANKBARODA",
+   "relation": "geopolitical_exposure",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "International book ~Rs2 lakh cr (~15% of advances; UAE/Gulf/Africa; model estimate); escalation (Brent already 95) raises Gulf credit costs and disrupts FCNR inflows; also legacy NMC Health (Abu Dhabi) fraud legal tail. +1 escalation => international PAT (~20% of group, model estimate) -5% => -1% PAT; x persistence 0.5, rounded up for tail risk.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "BANKBARODA",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": -0.2,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Pack shows significant co-movement (+2.92 per +15% iron ore, t +2.1) but there is no direct link; metals/mining ~5-7% of corporate book and rising steel/ore prices improve cash flows of large borrowers (lower slippages). Fundamental estimate ~+0.4; shrunk toward data only modestly because co-movement is largely cyclical beta (market beta 1.17).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKBARODA.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities and screener fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "BANKBARODA",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Subsidiaries/associates (BoB Capital, BoB Financial; NSE stake monetisation gains in Q2 FY27 per Rediff headline 2026-10-30) gain from retail financialisation; small share of group value (~3-5%) => +0.5.",
+   "confidence": "low",
+   "evidence": []
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "63.97% promoter holding; recapitalisation backstop and MIP/dividend policy"
+  },
+  {
+   "counterparty": "State Bank of India",
+   "ticker": "SBIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "largest PSU peer, deposit and corporate competition"
+  },
+  {
+   "counterparty": "Canara Bank",
+   "ticker": "CANBK",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "PSU peer, same ECL transition"
+  },
+  {
+   "counterparty": "Punjab National Bank",
+   "ticker": "PNB",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "PSU peer"
+  },
+  {
+   "counterparty": "NSE",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "BoB sold part of its NSE stake in Q2 FY27 (Rediff headline 2026-10-30)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 was 2026-10-30; typical late-Jan/early-Feb timing)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "pattern of prior results dates; model estimate"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC decision after the Oct hike to 5.50%; further hike risk (UBI saw 5.75-6% in H2 FY27)",
+   "type": "regulatory",
+   "prob": 0.45,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "RBI ECL framework transition effective/disclosure of BoB's one-time ECL provision estimate",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -1.0,
+   "source": "https://www.indiainfoline.com/news/companies/canara-bank-share-price-falls-6-near-52-week-low-after-15000-crore-ecl-provision-warning (peer disclosure; BoB timing unverified)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Bombay High Court proceedings in BR Shetty (NMC Healthcare) $15bn damages suit; bank says not yet served and will defend",
+   "type": "litigation",
+   "prob": 0.03,
+   "impact_pct_low": -30.0,
+   "impact_pct_high": -5.0,
+   "source": "https://www.livemint.com/ (via Google News 2026-10-13/14); probability is of a material adverse ruling within 12m, conditional impact if it occurs"
+  },
+  {
+   "date": "2027-03",
+   "event": "Year-end dividend/ FY27 guidance delivery (credit growth 13-15%)",
+   "type": "guidance",
+   "prob": 0.7,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.multibagg.ai/market-pulse/articles/bank-of-baroda-profit-recovery-ppt-cmvv89fk400ew2klzqsj77pce"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs6,532cr (+35.8% y/y; Q1 FY27 only ~Rs1,278cr after a one-off ~Rs5,670cr charge), NII Rs13,026cr (+9%), global NIM 2.74%, GNPA 1.78%, NNPA 0.37%, provisions Rs2,382cr",
+  "trend": "Asset quality improving, growth accelerating, margins compressing as deposit costs lag; profit quality flattered by one-offs",
+  "valuation": "Rs250; P/B 0.74 (BV Rs338), P/E 5.4 on depressed TTM, dividend yield 3.4%; 1y vol 28%; -13% over 12m",
+  "recent_developments": [
+   "2026-10-07 RBI repo +25bp to 5.50%; 10y G-sec 7.4-7.5% by late Oct (BoB exposed to MTM)",
+   "2026-10-13/14 BR Shetty files $15bn suit; stock -3%",
+   "2026-10-30 Q2 results; FY27 credit growth guidance raised to 13-15%; stock +5% on 2026-11-02 with JM upgrade to Buy and Nomura positive",
+   "2026-10-15 peer Canara flags Rs12-15k cr ECL hit - read-across to PSU banks"
+  ]
+ },
+ "key_risks": [
+  "ECL transition hit to reserves/CET1 and dividends",
+  "Rising yields -> AFS/FVTPL MTM and HTM scrutiny",
+  "NIM compression (2.74% vs 2.96%) as deposit costs lag; guidance dependence on FCNR(B)",
+  "NMC/BR Shetty litigation and legacy Gulf exposure",
+  "Profit quality: one-offs (NSE stake sale gains) inflate Q2",
+  "Unsecured/MSME slippages if the hike cycle deepens"
+ ],
+ "upside_triggers": [
+  "Sustained credit growth >14% with stable NIM",
+  "Lower-than-feared ECL estimate",
+  "Higher dividend payout / capital return",
+  "Re-rating of PSU banks toward 1x book",
+  "FCNR(B) deposit inflows lowering funding cost"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.psuconnect.in/financial/bank-of-baroda-q2-net-profit-jumps-36-to-6-532-cr",
+   "date": "2026-10-30",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://www.multibagg.ai/market-pulse/articles/bank-of-baroda-profit-recovery-ppt-cmvv89fk400ew2klzqsj77pce",
+   "date": "2026-10-30",
+   "what": "Q2 presentation summary, NIM/CoD"
+  },
+  {
+   "url": "https://www.investywise.com/?p=126382",
+   "date": "2026-10-30",
+   "what": "Q2 FY27 PAT summary"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bank+of+Baroda+B+R+Shetty+lawsuit+when:40d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "BR Shetty $15bn suit headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike to 5.50%"
+  },
+  {
+   "url": "https://www.indiainfoline.com/news/companies/canara-bank-share-price-falls-6-near-52-week-low-after-15000-crore-ecl-provision-warning",
+   "date": "2026-10-15",
+   "what": "Peer ECL disclosure"
+  },
+  {
+   "url": "https://www.screener.in/company/BANKBARODA/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals via pack"
+  }
+ ]
+}

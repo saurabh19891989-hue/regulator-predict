@@ -1,0 +1,489 @@
+{
+ "ticker": "BOSCHLTD",
+ "as_of": "2026-11-05",
+ "name": "Bosch Ltd.",
+ "industry": "I_AUTO_COMPONENTS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India-listed arm (70.5% held by Robert Bosch GmbH) of the global technology group. Mobility solutions (~85% of revenue, model knowledge): diesel and gasoline fuel-injection and powertrain systems, braking/ADAS electronics, two-wheeler and power-sports, and a large automotive aftermarket. Non-mobility: power tools, building technology, energy products. Net-cash, near debt-free; operating margin ~13-14%; sizeable treasury income. Q1 FY27 sales Rs 5,842 cr (+22% y/y), OPM 14%. Stock at a record high on 2026-11-04 (+76% since April) with first-ever bonus/split board meeting on 2026-11-06. P/E 64, price/book 10x.",
+ "revenue_mix": [
+  {
+   "segment": "Mobility (powertrain, brakes/electronics, 2W, aftermarket)",
+   "share_pct": 85,
+   "geography": "India ~90% / exports ~10% (model knowledge)"
+  },
+  {
+   "segment": "Non-mobility (power tools, building tech, energy)",
+   "share_pct": 15,
+   "geography": "India predominantly"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Imported/electronic components incl. semiconductors",
+   "share_of_costs_pct": 20
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "Employee cost",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "Royalty/licences to Robert Bosch GmbH (assumed ~3% of sales)",
+   "share_of_costs_pct": 3
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Robert Bosch GmbH",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "70.54% promoter; technology licensor, royalty payer and component supplier"
+  },
+  {
+   "counterparty": "Bosch Home Comfort India",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "Separately listed group entity (not a Bosch Ltd subsidiary per pack); Q2 loss Rs 41.7 cr reported 2026-11-02"
+  },
+  {
+   "counterparty": "Tata Motors, Mahindra, Maruti, Ashok Leyland, Hero, TVS, Bajaj Auto",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Diversified OEM base; no single customer >25% (model knowledge)"
+  },
+  {
+   "counterparty": "Continental, Denso, Delphi/Aptiv, Marelli",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Global tier-1s in injection and electronics"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-06",
+   "event": "Board meeting to consider first-ever bonus issue and share sub-division (and likely Q2 FY27 results, unverified)",
+   "type": "corporate_action",
+   "prob": 0.9,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Bosch+bonus+split+November+6+board+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (date not confirmed; may coincide with Nov 6 board meeting)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Bosch+Limited+Q2+FY27+board+meeting+date+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results and demand read-through for festive quarter",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28 (auto/CV, capex, GST commentary)",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-04",
+   "event": "Bonus/split effective and possible index/ETF flow effects",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs 5,842 cr, OPM 14%, net profit Rs 706 cr (-37% y/y on prior-year one-off gain); Q2 FY27 pending",
+  "trend": "Revenue growth accelerated (+22% y/y Q1 vs +11% FY26); margin edging up from 13% to 14%; EPS recovering sequentially",
+  "valuation": "P/E 64.4, P/B 10.3, EV/EBITDA ~51x TTM (computed from pack); well above 3-year norms (model knowledge)",
+  "recent_developments": [
+   "2026-08-10: Q1 FY27 revenue +22%, mobility +25.7% (Autocar Professional)",
+   "2026-09-23: Bosch GmbH keeps outlook despite auto output drop and EV drain (Automotive News)",
+   "2026-10-07: RBI repo hiked to 5.50% (headwind for vehicle finance)",
+   "2026-11-02/03: board to consider bonus and split on Nov 6; stock +5% to record high",
+   "2026-11-04: analyst note that tighter safety rules support long-term growth (scanx)"
+  ]
+ },
+ "key_risks": [
+  "Valuation de-rating: 64x P/E leaves little margin for a Q2 miss",
+  "Electronics/semiconductor supply disruption",
+  "Structural ICE-to-EV shift hitting diesel injection",
+  "Rate-hike cycle dampening vehicle demand",
+  "Rupee weakness raising import cost (net importer)",
+  "Royalty/related-party changes with parent"
+ ],
+ "upside_triggers": [
+  "Q2 beat with margin >14%",
+  "Bonus/split liquidity and retail participation",
+  "Faster content-per-vehicle gains from ADAS/safety mandates",
+  "CV/tractor upcycle",
+  "Further GST or tax relief for vehicles"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_AUTO_SAFETY_EMISSION_NORMS",
+   "type": "POLICY",
+   "name": "Auto safety and emission norm tightening (ADAS/airbags, CAFE-III, BS-VII)",
+   "ssu": "+1 = a material tightening step"
+  },
+  {
+   "id": "NEW_RARE_EARTH_MAGNET_SUPPLY",
+   "type": "FACTOR",
+   "name": "China rare-earth magnet export availability",
+   "ssu": "+1 = tightening of supply"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/BOSCHLTD/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals via evidence pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bosch+Q1+revenue+mobility+25.7%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-11",
+   "what": "Q1 FY27 mobility growth"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bosch+bonus+split+November+6+board+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Bonus/split board meeting"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+hikes+repo+rate+5.50%25+calibrated+tightening+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bosch+tighter+safety+rules+could+support+long-term+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Safety norms note"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "BOSCHLTD",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 3.0,
+   "w_high": 10.0,
+   "lag": "0-3m",
+   "mechanism": "Mobility ~85% of revenue (model knowledge; Q1 FY27 mobility +25.7% y/y per Autocar Professional); India share of mobility ~85% => +10% industry volumes ~ +8% revenue. Incremental margin ~25% vs 14% OPM => EBITDA +14%; EV/MCap ~0.95 (net cash); persistence 0.5 => ~+6.6. Stock already prices strong demand (P/E 64).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BOSCHLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 5,842 cr (+22% y/y), OPM 14%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Bosch+Q1+revenue+mobility+25.7%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-11",
+     "note": "Mobility +25.7%"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "BOSCHLTD",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Steel/forgings ~8% of costs (model knowledge) = ~7% of revenue; +7% => 0.5% of revenue; at 14% OPM => EBITDA -3.5%; ~50% passed through => -1.7%; x0.95 x persistence 0.3 => -0.5. Widened to -0.9 because pack shows empirical -1.34 per +10% global steel (t=-1.7, not significant).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BOSCHLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_STEEL_GLOBAL -1.34, t -1.7"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Global HRC +20.6% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "BOSCHLTD",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Aluminium die-castings ~5% of costs => 4.3% of revenue; +10% => 0.43% of revenue => EBITDA -3.1%; 50% unrecovered => -1.5%; x0.95 x0.3 => -0.45. Aluminium is -19.6% since June, a current tailwind (reverse sign).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium -19.6% since 2026-06-01"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Cost share is an estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "BOSCHLTD",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Copper (windings, sensors, harness) ~3% of costs => 2.6% of revenue; +10% => EBITDA -1.8%; 50% unrecovered => -0.9%; x0.95 x0.3 => -0.26.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Cost share is an estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "BOSCHLTD",
+   "relation": "input_cost",
+   "w": -4.0,
+   "w_low": -9.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Electronics/semiconductors are ~20% of mobility inputs (model knowledge). +1 (tightening, as in the 2025 Nexperia/chip disruption) => customer line stoppages and component shortage, ~-3% revenue; operating leverage 25% => EBITDA -5.4%; persistence 0.5 pushes down to ~-4.5 incl. expedite costs.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Nexperia-type disruption precedent (2025)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Bosch+outlook+autos+output+drop+EV+drain+Automotive+News+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Bosch GmbH keeps outlook despite lower auto output"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BOSCHLTD",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Net importer: imported components/royalty-linked purchases ~20% of revenue vs exports ~6% (model knowledge) => net short ~14% of revenue; +3% => -0.4% of revenue => EBITDA -3%; 50% pass-through => -1.5%; x0.95 x0.5 => -0.7. Empirical -1.15 (t=-0.8) supports sign. INR already -6.5% over 12m.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BOSCHLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDINR -1.15, t -0.8"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49, +6.5% 12m"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BOSCHLTD",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "P/E 64 and ROE ~15%: very long-duration equity. +25bp on cost of equity with (r-g)~4.5% => ~-2.5% on pure DCF, tempered by cash-rich balance sheet.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BOSCHLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 64.4, 10.3x book"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+hikes+repo+rate+5.50%25+calibrated+tightening+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BOSCHLTD",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Higher repo raises vehicle-loan EMIs for CV/tractor/2W/PV buyers: ~-0.5% volumes per 25bp (assumption) => mobility revenue -0.4%; EBITDA -0.7%; x0.95x0.5 => -0.35. Discount-rate effect captured separately via G-sec to avoid double counting.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+hikes+repo+rate+5.50%25+calibrated+tightening+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "First hike in ~4 years; stance calibrated tightening"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Auto+sales+growth+twin+test+higher+rates+GST+2.0+base+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Autocar Professional: rates + tough GST 2.0 base"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "BOSCHLTD",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Diesel systems exposure: higher fuel cost lowers freight/trucking profitability and CV/tractor demand; pass-through to pumps limited. Empirical -0.26 (t=-0.5) is insignificant. +10% Brent => ~-0.5% via CV/diesel demand sentiment; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BOSCHLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT -0.26, t -0.5"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99, +15% 3m"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "BOSCHLTD",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.5,
+   "lag": ">12m",
+   "mechanism": "Diesel/gasoline injection and ICE powertrain ~45-50% of mobility (model knowledge). +1 (a materially stronger EV push) lifts EV share ~5pp over 3 years => ICE content -5% on ~45% of revenue => -2.3% revenue, high-margin => EBITDA -6%; structural (persistence 1.0) but offset by content-per-EV and aftermarket => -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Powertrain mix is an estimate"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Bosch+sticks+to+outlook+despite+autos+output+drop+and+EV+drain+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Automotive News: EV drain on Bosch"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AUTO_SAFETY_EMISSION_NORMS",
+   "dst": "BOSCHLTD",
+   "relation": "regulatory_risk",
+   "w": 2.5,
+   "w_low": 0.0,
+   "w_high": 5.0,
+   "lag": ">12m",
+   "mechanism": "Tighter safety (airbags/ESC/ADAS) and emission/CAFE norms raise content per vehicle for braking, sensors, gasoline direct injection and OBD, where Bosch has leading share. +1 step => ~+2% revenue on 3-year view at above-average margin => EBITDA +4%; x0.95 => ~+2.5 (analyst note, scanx 2026-11-04).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bosch+tighter+safety+rules+could+support+long-term+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "scanx.trade analyst note"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Content-per-vehicle logic"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "BOSCHLTD",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "Premium mix in PV/2W lifts electronics, ABS/ESP and gasoline GDI content; Bosch 2W & power sports segment benefits. +1 => ~+1% revenue at above-average margin => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Mix argument, not company-quantified"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "BOSCHLTD",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.0,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Post-GST 2.0 (Sept 2025) the cuts lifted small-car and 2W demand; a further broad cut (+1) adds ~+3% auto volumes => mobility revenue +2.5%, EBITDA +4.4%; policy effects persist (1.0) but are shared across the industry and the 2025 cut is already in base => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=One+year+of+GST+2.0+auto+industry+best-ever+sales+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Industry commentary"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Small+car+sales+revive+on+back+of+GST+relief+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "Rediff"
+    }
+   ]
+  }
+ ]
+}

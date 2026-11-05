@@ -1,0 +1,380 @@
+{
+ "name": "Kotak Mahindra Bank Ltd.",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "NIFTY_50",
+ "business_summary": "Diversified financial group led by Kotak Mahindra Bank (retail, commercial, corporate banking, treasury) with subsidiaries in vehicle finance (Kotak Prime/Investments), broking, investment banking, asset management, life and general insurance. Q2 FY27 advances +24.7% and deposits +23.2% YoY; consolidated PAT Rs 5,645 cr (+26%). Anup Kumar Saha named MD & CEO with RBI approval (30 Sep 2026), ending leadership uncertainty. Sector-wide FCNR(B) inflows are inflating deposits but pressuring NIM into Q3.",
+ "revenue_mix": [
+  {
+   "segment": "Banking (retail, commercial, corporate, treasury)",
+   "share_pct": 75,
+   "geography": "India ~98%"
+  },
+  {
+   "segment": "Subsidiaries (Prime, Securities, AMC, IB, Life, General)",
+   "share_pct": 25,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 45,
+   "note": "interest expense ~45% of revenue (Rs 31,143 cr TTM interest of Rs 73,545 cr revenue)"
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "KOTAKBANK",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.2,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+3pp system loan growth: Kotak is growing ~24.7% YoY (Q2 update) so its loan growth is partly share gain, system-beta ~1.2; +3pp -> NII +3.5% -> PPOP +4.5%; ROE-multiple flows via P/B; persistence 0.7 (growth compounds) -> ~+3.1.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Kotak+Mahindra+Bank+Q2+update+advances+rise+24.7%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Q2 advances +24.7% YoY, deposits +23.2% (Moneycontrol/scanx)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "KOTAKBANK",
+   "relation": "funding_cost",
+   "w": 1.0,
+   "w_low": -2.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+25bp repo: ~35-40% of book is EBLR/repo-linked and reprices in ~1 quarter (model knowledge) while term deposits reprice over 12m; gross NIM +3-5bp near term (+1.5% NII) but FCNR(B) cost drag (management: further Q3 pressure) and later deposit repricing offset; higher-for-longer also lifts discount rate. Net ~+1.0, wide.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Reuters/The Hindu headlines)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Kotak+says+FCNR+to+put+further+pressure+on+Q3+margins+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Kotak: FCNR(B) deposits to pressure Q3 margins; repo repricing and deployment to help (ET BFSI)"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "KOTAKBANK",
+   "relation": "discount_rate",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Empirical -0.98/SSU (t -0.8) is insignificant; Fed path matters via FPI flows (FII 24.65%, falling) and FCNR(B) refinancing cost. Small negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "KOTAKBANK",
+   "relation": "demand_driver",
+   "w": -7.0,
+   "w_low": -11.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "Credit cost +50bp on loans ~Rs 5 lakh cr (model knowledge) = ~Rs 2,500 cr vs standalone PBT ~Rs 22,000 cr (TTM PAT Rs 21.5k cr cons.) -> PBT -11%; persistence 0.6; no EV gearing for banks -> ~-7. Q2 asset quality improved (The Hindu), so starting point is benign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Kotak+Mahindra+Bank+Q2+net+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "Q2 FY27 consolidated PAT Rs 5,645 cr (+26%); standalone Rs 4,212 cr (+29%); asset quality better"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "KOTAKBANK",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Unsecured retail/cards/PL run down after FY24-25 tightening, still ~8-10% of advances (model knowledge, unverified). +1pp delinquencies on that slice at 60% LGD = ~0.05% of loans ~ -2% PBT; persistence 0.6 -> ~-1.2, rounded to -1.5 for contagion to sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "KOTAKBANK",
+   "relation": "funding_cost",
+   "w": 1.2,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp system deposit growth eases liquidity and CD/FCNR dependence; Kotak deposits +23.2% (Q2 update) already outpacing system; modest +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Kotak+Mahindra+Bank+Q2+update+advances+rise+24.7%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Q2 advances +24.7% YoY, deposits +23.2% (Moneycontrol/scanx)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "KOTAKBANK",
+   "relation": "discount_rate",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "+25bp 10y: AFS/FVTPL book ~Rs 40-50k cr at duration ~2 (model knowledge) -> MTM ~-Rs 250 cr (~-1% PBT); partly offset by reinvestment yield; also raises P/B discount rate. Net ~-0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "KOTAKBANK",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "Kotak Securities/AMC/Investment Banking/Life ~10% of group PAT (model knowledge); +20% market activity -> +10% fee income there -> +1% group PAT; persistence 0.8 -> ~+0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "KOTAKBANK",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Kotak was barred from onboarding via digital channels / issuing new cards in Apr 2024 (model knowledge) and later cleared; a fresh tightening step (IT/KYC, unsecured risk-weights) carries asymmetric downside; 1 step ~-2 expected, tail -6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "KOTAKBANK",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 24.65% (falling from 26.4% in Mar-26); +US$5bn/qtr FPI inflows historically lift large private banks ~1.5-2.5% beyond beta; FPI selling was a drag in 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KOTAKBANK.md",
+     "date": "2026-11-05",
+     "note": "shareholding: FII 26.40% -> 24.65% Mar-Sep 2026; DII 38.54%"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "KOTAKBANK",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.2,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP growth -> +1.5pp loan growth and better asset quality -> ~+2 to +4% equity; RBI raised FY27 growth forecast to 7.1% (Oct policy).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Reuters/The Hindu headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "KOTAKBANK",
+   "relation": "discount_rate",
+   "w": -2.2,
+   "w_low": -4.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts -> Nifty ~-3.5%; Kotak beta ~0.7-0.8 per the pack -> ~-2.6; partially offset by defensive quality bid; use -2.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "KOTAKBANK",
+   "relation": "fx_translation",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Little direct FX; rupee weakness raises FCNR(B) liability valuation but swap-hedged (RBI swap window); sentiment effect via FPI. Small negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "HDFC Bank / ICICI Bank / Axis Bank",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "private bank deposit/loan competition; HDFC Bank CEO comparison in press"
+  },
+  {
+   "counterparty": "Kotak Securities / Kotak AMC / Kotak Life",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "~10% of group profit (model knowledge)"
+  },
+  {
+   "counterparty": "RBI",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "regulator; FCNR(B) swap window closed 31 Aug 2026"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date unconfirmed; Q2 was 24 Oct 2026); NIM guided to see FCNR pressure",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Kotak+Mahindra+Bank+Q2+net+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December policy: further hike would be a second step after 7 Oct hike",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -1.5,
+   "impact_pct_high": 1.5,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Anup Saha assumes office as MD & CEO (effective date unverified); first strategy communication",
+   "type": "other",
+   "prob": 0.8,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Kotak+Mahindra+Bank+Anup+Saha+MD+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Loan growth accelerating (24.7%), deposits +23.2%, profit +26% y/y, asset quality improving; margin to be pressured by FCNR in Q3 before repo repricing helps",
+  "valuation": "P/E 21.9, P/B ~2.4 (price 466 vs BV 196 per screener; stock +18.5% in 3m, near 52w high 469); premium to PSU banks, in line with large private peers",
+  "recent_developments": [
+   "2026-09-30: RBI approves Anup Saha as MD & CEO; shares +3% (CNBC TV18)",
+   "2026-10-05: Q2 business update - advances +24.7%, deposits +23.2% (Moneycontrol)",
+   "2026-10-06/07: Goldman, Citi, HSBC upgrade/raise targets (NDTV Profit, BusinessLine)",
+   "2026-10-07: RBI hikes repo 25bp to 5.50% (Reuters)",
+   "2026-10-24: Q2 PAT +26% cons.; FCNR drag flagged for Q3 (The Hindu, ET BFSI)"
+  ]
+ },
+ "key_risks": [
+  "FCNR(B) deposits (~US$133bn system inflow) refinancing cliff and NIM compression",
+  "Rate-hike cycle raising cost of deposits faster than asset repricing",
+  "Execution risk under new CEO",
+  "Unsecured / MFI stress re-emerging",
+  "Regulatory action repeat (IT governance)",
+  "High valuation after +18.5% 3m rally"
+ ],
+ "upside_triggers": [
+  "NIM trough in Q3 followed by EBLR repricing tailwind",
+  "Sustained 20%+ loan growth with improving credit cost",
+  "Clear strategy from new CEO; subsidiary value unlock",
+  "FPI return to Indian financials"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Kotak+Mahindra+Bank+Q2+net+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-24",
+   "what": "Q2 FY27 results coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Kotak+Mahindra+Bank+Q2+update+advances+rise+24.7%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-05",
+   "what": "Q2 business update"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Kotak+says+FCNR+to+put+further+pressure+on+Q3+margins+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "FCNR margin commentary"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike"
+  },
+  {
+   "url": "market_impact/data/packs/KOTAKBANK.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  }
+ ],
+ "ticker": "KOTAKBANK",
+ "as_of": "2026-11-05"
+}

@@ -1,0 +1,374 @@
+{
+ "ticker": "INDIANB",
+ "name": "Indian Bank",
+ "as_of": "2026-11-05",
+ "industry": "I_PSU_BANKS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Chennai-based public sector bank (founded 1907; merged Allahabad Bank in 2020), 73.84% government-owned. Deposits and advances of roughly Rs10 lakh cr and Rs8 lakh cr (derived), strong in south India with retail/agri/MSME focus. Q2 FY27: net profit Rs3,462cr (+15%, headline; screener Rs3,541cr), NII +18%, and a Rs1,388cr gain on sale of NSE shares was disclosed on 2026-10-16 (whether fully in Q2 profit is unverified). Mcap Rs1.2 lakh cr, P/E 9.1, P/B 1.38, ROE 15.4%, dividend yield 2.1%.",
+ "revenue_mix": [
+  {
+   "segment": "retail, agri & MSME lending",
+   "share_pct": 55,
+   "geography": "India (south-heavy)"
+  },
+  {
+   "segment": "corporate lending",
+   "share_pct": 25,
+   "geography": "India"
+  },
+  {
+   "segment": "treasury & other income",
+   "share_pct": 20,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 60
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 14
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "INDIANB",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp system loan growth: PSU banks have been growing 10-14% (UCO guides 12-14%); NII +3% -> PAT +4% x 0.5 => +2. Higher-beta than ICICI because PSU deposit growth lags, but operating leverage is also higher.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Bank+Q2+FY27+NIM+GNPA+Allahabad+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 profit +15% (Rs3,462cr), NII +18%, shares fell 3% then recovered (CNBC TV18/Business Standard/NiftyTrader)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "INDIANB",
+   "relation": "funding_cost",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.8,
+   "lag": "3-12m",
+   "mechanism": "+3pp deposit growth: PSU CASA ~38-40% (model knowledge); CoF -5bp -> NIM +3bp -> PAT +2-3% x 0.5 => +1.5. Deposit growth is the binding constraint for PSU banks, so a modest positive.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=banks+deposit+growth+credit+growth+RBI+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-14",
+     "note": "system deposit growth 15.4%"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "INDIANB",
+   "relation": "funding_cost",
+   "w": 0.3,
+   "w_low": -2.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp: ~60% of loans are EBLR/repo-linked (PSU banks highest in sector, model knowledge) on ~Rs8 lakh cr loans (derived) => asset yield +15bp; deposits reprice with ~3-6 month lag on ~50% => CoF +8bp => NIM +7bp = +2.5% NII, PBT +4%, PAT +4% x 0.25 = +1.0; less valuation/credit-demand -0.7 => +0.3. Hike on 2026-10-07 favours PSU banks relative to ICICI (-0.5).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "INDIANB",
+   "relation": "discount_rate",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+25bp: investment book ~Rs2.5 lakh cr (derived, ~28% of assets) with AFS/HFT ~40% at duration ~2.5 => MTM ~Rs600cr pre-tax = ~3.5% of annual PBT (~Rs17k cr) x 0.5 persistence (recovers as bonds roll to par) => -1.0; discount-rate effect at 1.38x P/B => -0.8; total -1.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIANB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs3,541cr (headlines Rs3,462cr), TTM Rs13,220cr, mcap Rs1,20,176cr, P/E 9.1, P/B 1.38, ROE 15.4%, govt 73.84%"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "INDIANB",
+   "relation": "regulatory_risk",
+   "w": -8.0,
+   "w_low": -12.0,
+   "w_high": -4.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost: loans ~Rs8 lakh cr x 0.5% = Rs4,000cr vs annual PBT ~Rs17.5k cr => PAT -23%; persistence 0.5, EV/MCap 1.0 => -11; PSU PCR is high (>90% on NPAs, model knowledge) and recoveries are strong so the effective hit is lower => -8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Bank+Q2+FY27+NIM+GNPA+Allahabad+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 profit +15% (Rs3,462cr), NII +18%, shares fell 3% then recovered (CNBC TV18/Business Standard/NiftyTrader)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "INDIANB",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Unsecured retail is <8% of the PSU book (model knowledge): +1pp delinquencies x 8% x 60% = 5bp = Rs400cr = 2.3% of PBT x 0.5 => -1.2, rounded -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIANB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs3,541cr (headlines Rs3,462cr), TTM Rs13,220cr, mcap Rs1,20,176cr, P/E 9.1, P/B 1.38, ROE 15.4%, govt 73.84%"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "INDIANB",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Tightening step (provisioning on project finance, ECL framework from FY28 per RBI plans, model knowledge): PSU banks with ROE 15% and CET1 ~14% have room, but ECL provisioning transitions weigh on payout: -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "RBI ECL transition plan not re-verified"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "INDIANB",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+10% central+state capex growth feeds infra/PSU corporate loan demand where Indian Bank is a lender (infra/corporate ~30% of loans, model estimate): credit growth +1pp, PAT +2% x 0.7 => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIANB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs3,541cr (headlines Rs3,462cr), TTM Rs13,220cr, mcap Rs1,20,176cr, P/E 9.1, P/B 1.38, ROE 15.4%, govt 73.84%"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "INDIANB",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs only 6.9% (up from 5.8%) but PSU banks are the high-beta channel for domestic/FII rotation: +US$5bn => Nifty +2% x beta 1.2 = +2.4 ; discounted for lower FII ownership => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIANB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs3,541cr (headlines Rs3,462cr), TTM Rs13,220cr, mcap Rs1,20,176cr, P/E 9.1, P/B 1.38, ROE 15.4%, govt 73.84%"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "INDIANB",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -5.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts ~ Nifty -3% x beta 1.2-1.27 = -3.8; PSU banks fall more in risk-off => -3.0 after domestic flows. Largely market-wide.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIANB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs3,541cr (headlines Rs3,462cr), TTM Rs13,220cr, mcap Rs1,20,176cr, P/E 9.1, P/B 1.38, ROE 15.4%, govt 73.84%"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "INDIANB",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.2,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP: loan growth +1.5pp and credit cost -5bp (=+3% PBT) => PAT +5% x persistence 0.6 => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "INDIANB",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus liquidity: lowers CoF on CDs/bulk (~10% of funding) by ~15bp => NIM +2bp + treasury gains => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIANB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs3,541cr (headlines Rs3,462cr), TTM Rs13,220cr, mcap Rs1,20,176cr, P/E 9.1, P/B 1.38, ROE 15.4%, govt 73.84%"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "INDIANB",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Minimal FX book (foreign branches small, model knowledge); channel is FPI sentiment; pack has no significant INR coefficient. -0.8 low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIANB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs3,541cr (headlines Rs3,462cr), TTM Rs13,220cr, mcap Rs1,20,176cr, P/E 9.1, P/B 1.38, ROE 15.4%, govt 73.84%"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India (73.84% owner)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "recapitalisation, dividend payout, PSU merger policy (EAC-PM consolidation paper 2026-08-26)"
+  },
+  {
+   "counterparty": "SBI / Bank of Baroda / PNB / Canara / Union Bank",
+   "ticker": "SBIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "PSU peers; SBI record Q1 FY27 profit Rs21,121cr"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-15",
+   "event": "Q3 FY27 results (estimated from Q2 on 2026-10-15); NII, margin and one-off gains watched",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model estimate from prior cycle"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December (hold/hike)",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027",
+   "event": "Formal PSU bank consolidation announcement involving Indian Bank (EAC-PM paper, rumours 2026-09; PIB fact-check on 'merger of 9 PSU banks')",
+   "type": "corporate_action",
+   "prob": 0.07,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 12.0,
+   "source": "https://news.google.com/rss/search?q=Indian+Bank+merger+PSU+banks+consolidation+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Interim dividend / further monetisation of NSE stake and NSE IPO progress (one-off gains)",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Indian+Bank+NSE+share+sale+gain"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): net profit Rs3,541cr (screener; Rs3,462cr headline), revenue Rs19,149cr, interest expense Rs11,389cr, operating expenses Rs7,099cr (+24% YoY), financing profit Rs661cr",
+  "trend": "earnings +15% YoY with NII +18%; opex rising; one-off NSE gain may flatter Q2; stock +9.7% in the last month",
+  "valuation": "P/E 9.1, P/B 1.38, dividend yield 2.1%, ROE 15.4% (screener)",
+  "recent_developments": [
+   "2026-10-15: Q2 profit +15%, NII +18%; shares fell >3% intraday then rose to +5% from low (CNBC TV18/Business Standard)",
+   "2026-10-16: Rs1,388cr gain from NSE share sale disclosed (ET)",
+   "2026-09-20: PIB fact-checked PSU-merger reports naming Indian Bank (ET)",
+   "2026-08-26: EAC-PM paper on consolidation of equal-sized banks (ET BFSI)"
+  ]
+ },
+ "key_risks": [
+  "margin compression from deposit competition and hike lag",
+  "non-recurring gains may inflate Q2",
+  "PSU consolidation policy shocks",
+  "govt dividend/payout and capital needs",
+  "MTM on large bond book"
+ ],
+ "upside_triggers": [
+  "repo hike lifting EBLR yields",
+  "further NSE-related gains",
+  "credit growth >12%",
+  "re-rating on RoA >1.2%"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/INDIANB/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener financials via evidence pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Indian+Bank+Q2+FY27+NIM+GNPA+Allahabad+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Q2 results headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Indian+Bank+merger+PSU+banks+consolidation+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-20",
+   "what": "PSU consolidation"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  }
+ ]
+}

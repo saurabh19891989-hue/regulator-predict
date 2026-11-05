@@ -1,0 +1,396 @@
+{
+ "name": "Blue Star Ltd.",
+ "industry": "I_CONSUMER_DURABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Air-conditioning and commercial-refrigeration specialist: (1) electro-mechanical projects and commercial AC systems (MEP, data-centre cooling, ~66% of Q2 FY27 revenue), (2) unitary products (room ACs, VRF, chillers, coolers, water purifiers; seasonal, peak in Q4/Q1), (3) professional electronics and industrial solutions. Largest after-sales service network for AC. Low margin (7% EBITDA), working-capital intensive, copper/aluminium and USD-import heavy. MedTech business sold in Q2 FY27 (Rs23cr exceptional gain).",
+ "revenue_mix": [
+  {
+   "segment": "Electro-mechanical projects & commercial AC",
+   "share_pct": 66,
+   "geography": "India (+Qatar/UAE small); Q2 FY27 share, full-year ~40%"
+  },
+  {
+   "segment": "Unitary products (room AC, coolers, purifiers)",
+   "share_pct": 31,
+   "geography": "India; Q2 share, full-year ~50% due to Q4/Q1 seasonality"
+  },
+  {
+   "segment": "Professional equipment & industrial solutions",
+   "share_pct": 3,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 10,
+   "note": "estimate"
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "imported compressors/components (USD)",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COPPER",
+   "dst": "BLUESTARCO",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Copper+aluminium ~15% of total costs (copper ~10%, model estimate; compressors, coils, tubing). +10% copper => +1.0% costs => EBITDA -14% at 7% margin; ~70% recovered through three 2026 price hikes (latest +8% from 1 Oct) => -4%; EV/MCap 1.05, persistence 0.4 => -1.7. Pack empirical is +1.89 (t=1.9), opposite sign: it reflects copper as a global-growth proxy; model keeps the cost sign but widens the range to include +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+     "date": "2026-09-28",
+     "note": "AC/TV/appliance price hikes of up to 8% from 1 Oct on copper, aluminium, freight; Blue Star +8%, LG +5-7%, Daikin +8-10% from 16 Sep"
+    },
+    {
+     "source": "market_impact/data/packs/BLUESTARCO.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "BLUESTARCO",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "Aluminium ~5% of costs; +10% => +0.5% costs => EBITDA -7%, ~70% recovered, persistence 0.4 => -0.8. Aluminium is -19.6% since June (factor_state), a tailwind already arriving in H2 costs.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+     "date": "2026-09-28",
+     "note": "AC/TV/appliance price hikes of up to 8% from 1 Oct on copper, aluminium, freight; Blue Star +8%, LG +5-7%, Daikin +8-10% from 16 Sep"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BLUESTARCO",
+   "relation": "fx_translation",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Imported compressors/components ~25% of costs (estimate); +3% USD/INR => +0.75% costs => EBITDA -10.7% at 7% margin; ~60% passed through => -4.3%; persistence 0.4 => -1.8. Pack empirical +2.83 (t=1.4) conflicts in sign but is insignificant; rupee at 94.5 (+6.5% 12m) is cited by industry as a driver of 2026 price hikes.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+     "date": "2026-09-28",
+     "note": "AC/TV/appliance price hikes of up to 8% from 1 Oct on copper, aluminium, freight; Blue Star +8%, LG +5-7%, Daikin +8-10% from 16 Sep"
+    },
+    {
+     "source": "market_impact/data/packs/BLUESTARCO.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "BLUESTARCO",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Room AC (unitary products) revenue ~50% of full-year sales and highly seasonal; +5pp urban consumption/AC volume growth => group revenue +3% => EBITDA +12% on ~45% contribution margin of the unitary pool x persistence 0.5 => ~+3. Q2 consumer softness was attributed to unfavourable weather and GST-related deferment.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/blue-star-q2-fy-27-results-put-share-price-in-focus/",
+     "date": "2026-10-29",
+     "note": "Q2 FY27 rev Rs2,931cr (+21%), PAT Rs124cr incl Rs23cr exceptional MedTech gain; EMPS rev +16.3% but EBIT margin 6.9% (-190bp); order book Rs7,229cr"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "BLUESTARCO",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Inverter/5-star/Wi-Fi AC and new BEE norms raise ASPs; +1 => mix +1pp margin on unitary => EBITDA +3%, persistence 0.5 => +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.outlookbusiness.com/news/ac-prices-to-rise-5-15-as-expensive-copper-weak-rupee-and-new-energy-norms-push-costs",
+     "date": "2026",
+     "note": "AC prices 5-15% higher on copper, weak rupee and new energy norms (search result, not read in full)"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "BLUESTARCO",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Data-centre precision cooling and MEP projects are the fastest-growing commercial line; one aggregator (Trade Brains 2026-10-13) cites very high growth guidance and ~20% EBITDA margins for the data-centre cooling business (unverified). +1 => EMPS orders +10% => EBITDA +5%, persistence 0.6 => ~+3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BLUESTARCO.md",
+     "date": "2026-10-13",
+     "note": "search headline: 'Data Centre Cooling Stock with 233% Revenue Growth Guidance and 20% EBITDA Margins' (Trade Brains, not read)"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "BLUESTARCO",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Commercial AC and MEP orders (offices, factories, data centres, hospitals); order book Rs7,229cr (+). +10% private capex => EMPS revenue +4% => EBITDA +5% x persistence 0.5 => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/blue-star-q2-fy-27-results-put-share-price-in-focus/",
+     "date": "2026-10-29",
+     "note": "Q2 FY27 rev Rs2,931cr (+21%), PAT Rs124cr incl Rs23cr exceptional MedTech gain; EMPS rev +16.3% but EBIT margin 6.9% (-190bp); order book Rs7,229cr"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "BLUESTARCO",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Metro/rail, airports, hospitals, defence cooling; ~15% of project orders; +10% => +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "public-sector project share estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "BLUESTARCO",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "New homes drive RAC replacement/first-time purchase and residential MEP; +10% sales => unitary +1.5% => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "housing-AC link"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BLUESTARCO",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "60x P/E, working-capital funded (interest Rs75cr TTM); +25bp => ~-0.8 via duration.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BLUESTARCO.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "dst": "BLUESTARCO",
+   "relation": "competition",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Unitary products ~45% of full-year sales; +1pp category margin give-up on that pool => group margin -0.45pp vs 7% base => EBITDA -6.4% x persistence 0.4 => -2.5. Voltas is deliberately prioritising share over margin (Business Standard 2026-09-23) and LG/Daikin are raising capacity.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VOLTAS.md",
+     "date": "2026-09-23",
+     "note": "headline 'Voltas eyes growth over margins in near term, bets on market share gains' (via pack; not read in full)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Voltas",
+   "ticker": "VOLTAS",
+   "role": "competitor",
+   "importance": "high",
+   "note": "room-AC share leader (17.3% secondary share); aggressive on share over margin"
+  },
+  {
+   "counterparty": "LG Electronics India",
+   "ticker": "LGEINDIA",
+   "role": "competitor",
+   "importance": "high",
+   "note": "large-capacity appliance maker raising AC prices 5-7%"
+  },
+  {
+   "counterparty": "Havells (Lloyd)",
+   "ticker": "HAVELLS",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Lloyd AC brand"
+  },
+  {
+   "counterparty": "Daikin, Carrier, Samsung, Hitachi/Johnson Controls",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "not in Nifty 200"
+  },
+  {
+   "counterparty": "Compressor/component vendors (Chinese, Thai, Japanese)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "USD-priced; supply disruptions affect output"
+  },
+  {
+   "counterparty": "Data-centre developers, real-estate & industrial clients",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "EMPS order book Rs7,229cr at 30 Sep 2026"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date not announced); off-season quarter, watch EMPS margin and unitary inventory ahead of summer",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge on cadence"
+  },
+  {
+   "date": "2027-03",
+   "event": "Peak summer-season AC sell-in (Feb-May 2027); temperature outcomes decide FY27 Q4 and FY28 Q1 unitary revenue",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 10.0,
+   "source": "https://www.kotakneo.com/news/stocks/blue-star-q2-fy-27-results-put-share-price-in-focus/"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further AC price increase after three in 2026 (latest +8% from 1 Oct) if copper/INR stay elevated",
+   "type": "guidance",
+   "prob": 0.3,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 EMPS EBIT margin guided >6.5% (aspiration 7.0-7.5%) - delivery vs guidance after Q2 6.9%",
+   "type": "guidance",
+   "prob": 0.6,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.sahi.com/news/blue-star-guides-segment-2-margin-over-6-5-for-fy27-amid-cautious-outlook-44-PE1_CORPO"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs2,931cr (+21%), EBITDA Rs203cr (OPM ~7%), PAT Rs124cr (+25%) incl Rs23cr exceptional MedTech gain => core profit roughly flat; EMPS revenue +16.3% with EBIT margin 6.9% (-190bp) on project delays; unitary revenue +29%; order book Rs7,229cr. Management sees H2 recovery and strong October demand (scanx.trade headline 2026-10-30).",
+  "trend": "Top line strong, margins squeezed by copper, rupee and execution delays; stock -10.5% in 6m, -18.4% in 12m, near 52-week low in early Oct.",
+  "valuation": "P/E 60, 9.3x book, ROCE 21%; price Rs1,566, mcap Rs32,190cr (pack). UBS initiated Buy (+26% upside, 2026-10-09), Motilal Oswal Neutral (target Rs1,510).",
+  "recent_developments": [
+   "2026-10-29 Q2 FY27 results; shares fell ~5% next day (NDTV Profit)",
+   "2026-09-28 AC price hike of 8% from 1 Oct",
+   "2026-10-09 UBS initiates Buy on Blue Star and LG Electronics India (Zee Business)",
+   "2026-10-30 'H2 recovery, strong Oct demand' commentary (scanx.trade)"
+  ]
+ },
+ "key_risks": [
+  "Copper/aluminium rebound and rupee weakness squeeze unitary margin",
+  "EMPS project delays and cost overruns",
+  "Weak summer 2027 / early monsoon cuts AC volumes",
+  "Discount war led by Voltas and LG",
+  "Inventory build ahead of summer"
+ ],
+ "upside_triggers": [
+  "Aluminium (-19.6% since June) and copper easing",
+  "Data-centre cooling orders and margin",
+  "Hot summer 2027",
+  "Strong October-November festive sell-through"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "type": "FACTOR",
+   "name": "Consumer durables category promotional / discount intensity",
+   "ssu": "+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BLUESTARCO.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, price, empirical betas, headlines"
+  },
+  {
+   "url": "https://www.kotakneo.com/news/stocks/blue-star-q2-fy-27-results-put-share-price-in-focus/",
+   "date": "2026-10-29",
+   "what": "Q2 FY27 segments and order book"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+   "date": "2026-09-28",
+   "what": "price hikes and input costs"
+  },
+  {
+   "url": "https://www.sahi.com/news/blue-star-guides-segment-2-margin-over-6-5-for-fy27-amid-cautious-outlook-44-PE1_CORPO",
+   "date": "2026",
+   "what": "FY27 segment margin guidance (date approximate)"
+  }
+ ],
+ "ticker": "BLUESTARCO",
+ "as_of": "2026-11-05"
+}

@@ -178,6 +178,14 @@ def path_str(net, start, path):
 
 def run(draws=400):
     nodes, edges, events, profiles, dropped = assemble()
+    groups = (load_json(R("events", "dedup.json")) or {}).get("exclusive_groups", [])
+    for g in groups:
+        for key in ("prob_by_3m", "prob_by_12m"):
+            tot_p = sum(float(e.get(key, 0)) for e in events if e["event_id"] in g)
+            if tot_p > 1:
+                for e in events:
+                    if e["event_id"] in g:
+                        e[key] = float(e.get(key, 0)) / tot_p
     flags = empirical_flags(edges)
     net = Network(nodes, edges)
     drivers = [n for n, v in nodes.items() if v["type"] in DRIVER]

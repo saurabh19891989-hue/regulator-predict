@@ -1,0 +1,335 @@
+{
+ "ticker": "JUBLFOOD",
+ "name": "Jubilant FoodWorks Ltd. (Domino's India, Popeyes, Dunkin')",
+ "as_of": "2026-11-05",
+ "industry": "I_QSR_FOOD_SERVICES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Master franchisee of Domino's Pizza in India, Sri Lanka, Bangladesh and Turkey (Turkey ~5% of revenue, model knowledge) plus Popeyes, Hong's Kitchen and Dunkin'. TTM sales Rs 9,838 cr, EBITDA margin ~20% (post-IndAS), PAT Rs 450 cr, P/E 78. 3,820 stores at Q2 FY27 (Oct 2026 update). Domino's India LFL +4% versus store growth; stock -24% in 12 months, near 52-week low.",
+ "revenue_mix": [
+  {
+   "segment": "Domino's India (approx.)",
+   "share_pct": 83,
+   "geography": "India"
+  },
+  {
+   "segment": "Popeyes and others India (approx.)",
+   "share_pct": 5,
+   "geography": "India"
+  },
+  {
+   "segment": "International (Turkey, Sri Lanka, Bangladesh) (approx.)",
+   "share_pct": 12,
+   "geography": "Turkey ~5%, others"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DAIRY (cheese)",
+   "share_of_costs_pct": 13
+  },
+  {
+   "input": "F_WHEAT (flour)",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "Other food, vegetables, chicken",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 21
+  },
+  {
+   "input": "F_BRENT (delivery, fuel)",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "Rent, royalty, marketing, other",
+   "share_of_costs_pct": 46
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "JUBLFOOD",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Domino's India LFL is only +4% on 12% revenue growth; +5pp urban demand -> LFL +2.5pp -> revenue +2.5%; ~45% decremental margin on a 20% (IndAS) EBITDA margin -> EBITDA +5.6%; EV/MCap 1.15, persistence 0.5-0.6 -> ~+3.7.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Jubilant+FoodWorks+Q2+business+update+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Q2 FY27 revenue +11.9% to Rs2,608.7 cr; Domino's India LFL +4%; stores 3,820; shares -4 to -6% (Reuters/CNBC TV18/ET)"
+    },
+    {
+     "source": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 2,570 cr, OP 504 cr (20%), PAT 100 cr; mcap 29,848 cr, P/E 78"
+    }
+   ]
+  },
+  {
+   "src": "F_DAIRY",
+   "dst": "JUBLFOOD",
+   "relation": "input_cost",
+   "w": -1.4,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Cheese/dairy ~10% of revenue (model knowledge). +8% -> +0.8% of revenue -> EBITDA -4%; 40% priced through -> -2.4%; EV/MCap 1.15, persistence 0.5 -> -1.4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 2,570 cr, OP 504 cr (20%), PAT 100 cr; mcap 29,848 cr, P/E 78"
+    }
+   ]
+  },
+  {
+   "src": "F_WHEAT",
+   "dst": "JUBLFOOD",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Flour/dough ~4% of revenue; +10% -> +0.4% of revenue -> EBITDA -2%; 40% passed on; persistence 0.4 -> -0.6. Pack shows +1.26 for DMART and nothing significant here.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 2,570 cr, OP 504 cr (20%), PAT 100 cr; mcap 29,848 cr, P/E 78"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "JUBLFOOD",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Delivery fuel and LPG ~2.5% of revenue; +10% Brent -> +5% on that base -> +0.12% of revenue -> EBITDA -0.6%; x EV/MCap 1.15 x persistence 0.3 = -0.2; adding a consumer wallet/demand squeeze brings it to -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 2,570 cr, OP 504 cr (20%), PAT 100 cr; mcap 29,848 cr, P/E 78"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "JUBLFOOD",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Employee cost ~17% of revenue (stores, riders). +2pp wage inflation -> +0.34% of revenue -> EBITDA -1.7%; half passed on; persistence 0.5; EV/MCap 1.15 -> -1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 2,570 cr, OP 504 cr (20%), PAT 100 cr; mcap 29,848 cr, P/E 78"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "JUBLFOOD",
+   "relation": "substitution",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "Aggregator-owned and quick-commerce food brands (Zomato/Swiggy bistro, cloud kitchens) and rising aggregator dependence erode Domino's frequency and margin; 3% order share loss at 45% decremental margin -> EBITDA -7% -> equity -3 after offset by Domino's brand strength.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Jubilant+FoodWorks+Q2+business+update+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Q2 FY27 revenue +11.9% to Rs2,608.7 cr; Domino's India LFL +4%; stores 3,820; shares -4 to -6% (Reuters/CNBC TV18/ET)"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "JUBLFOOD",
+   "relation": "demand_driver",
+   "w": -0.6,
+   "w_low": -2.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Menu price increases ~3% p.a. recover input inflation, but +2pp food inflation squeezes discretionary eating out; net -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 2,570 cr, OP 504 cr (20%), PAT 100 cr; mcap 29,848 cr, P/E 78"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "JUBLFOOD",
+   "relation": "discount_rate",
+   "w": -1.8,
+   "w_low": -3.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "P/E 78; Rs 120 cr quarterly interest is mostly lease interest; borrowing floating debt small. +25bp -> -1.8 (growth-duration).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 2,570 cr, OP 504 cr (20%), PAT 100 cr; mcap 29,848 cr, P/E 78"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "JUBLFOOD",
+   "relation": "fx_translation",
+   "w": -0.2,
+   "w_low": -0.8,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "Master-franchise royalty (~3% of sales, USD-linked, model knowledge) and imported kitchen equipment; +3% -> +0.09% of revenue -> -0.2. Turkey (Domino's Turkey ~5% of revenue, TRY depreciation) is a separate FX channel not captured by USD/INR.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "royalty structure"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "JUBLFOOD",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs 13.3% (down from 17.3% in Mar-26); DIIs hold 40%; modest FPI flow sensitivity +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 2,570 cr, OP 504 cr (20%), PAT 100 cr; mcap 29,848 cr, P/E 78"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Domino's Pizza Inc. / Yum / Restaurant Brands (Popeyes)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "Master franchise agreements"
+  },
+  {
+   "counterparty": "Jubilant Bhartia group",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "Promoter 40.3%"
+  },
+  {
+   "counterparty": "Eternal / Swiggy",
+   "ticker": "ETERNAL",
+   "role": "customer",
+   "importance": "medium",
+   "note": "Aggregators; delivery orders"
+  },
+  {
+   "counterparty": "Westlife, Devyani, Sapphire",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "QSR peers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-10",
+   "event": "Q2 FY27 results (Sep quarter not yet in pack; board date estimated, model knowledge)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "Q2 update already out 2026-10-07"
+  },
+  {
+   "date": "2027-01-08",
+   "event": "Q3 FY27 business update",
+   "type": "guidance",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "pattern from Oct 7 2026 update"
+  },
+  {
+   "date": "2026-12",
+   "event": "Store additions guidance towards ~3,800-4,000 stores and Popeyes expansion",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Jubilant+FoodWorks+Popeyes+expansion+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27: sales Rs 2,570 cr (+14%), OP Rs 504 cr (19.6%), PAT Rs 100 cr (+6%); Popeyes LFL 40%+ (Business Standard 14 Aug). Q2 update (7 Oct): revenue +11.9% to Rs 2,608.7 cr, Domino's India LFL +4%, 3,820 stores.",
+  "trend": "Growth decelerating from 14% to 12%; LFL low-single-digit; margin stable ~20%.",
+  "valuation": "P/E 78, P/B 13, ROE 21%; target Rs 625 (Motilal Oswal, 14 Oct), price Rs 452 near 52-week low 398.",
+  "recent_developments": [
+   "2026-10-08 shares -4% to -6% after Q2 update (ET, CNBC TV18, Zee)",
+   "2026-10-14 Motilal Oswal Buy TP Rs 625 (+47%)",
+   "2026-10-21 near 52-week low",
+   "2026-08-13/14 Q1 results: PAT +6%, Popeyes LFL 40%+"
+  ]
+ },
+ "key_risks": [
+  "LFL stagnation",
+  "Aggregator margin pressure",
+  "Cheese/dairy inflation",
+  "Turkey FX and demand",
+  "Premium valuation"
+ ],
+ "upside_triggers": [
+  "Domino's LFL recovery",
+  "Popeyes scale",
+  "Lower rates/consumption stimulus"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/JUBLFOOD/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals via pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Jubilant+FoodWorks+Q2+business+update+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-08",
+   "what": "Q2 update headlines (bodies not retrieved)"
+  }
+ ]
+}

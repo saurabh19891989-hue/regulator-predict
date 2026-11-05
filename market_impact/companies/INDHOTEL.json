@@ -1,0 +1,314 @@
+{
+ "ticker": "INDHOTEL",
+ "name": "Indian Hotels Company Ltd. (Taj, Vivanta, Ginger, Seleqtions)",
+ "as_of": "2026-11-05",
+ "industry": "I_HOTELS_TRAVEL",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest hospitality company (Taj, SeleQtions, Vivanta, Gateway, Ginger, Tree of Life brands) with an asset-light growth strategy (management contracts) and ~700-hotel portfolio target by FY27 (Business Standard, 22 Oct 2026). Q2 FY27 revenue Rs 2,566 cr (+21%); FY27 revenue growth guidance raised to 15-17%. Stock at 52-week high (Rs 868, +29.7% in 6m). Screener dossier unavailable, so margins and valuation are model knowledge.",
+ "revenue_mix": [
+  {
+   "segment": "Hotels - rooms (approx.)",
+   "share_pct": 55,
+   "geography": "India ~85%, overseas 15%"
+  },
+  {
+   "segment": "F&B, banquets and others (approx.)",
+   "share_pct": 35,
+   "geography": "India"
+  },
+  {
+   "segment": "Fees and other (approx.)",
+   "share_pct": 10,
+   "geography": "India & overseas"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Employee cost",
+   "share_of_costs_pct": 38
+  },
+  {
+   "input": "F_FOOD_INFLATION_IN (F&B inputs)",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "F_BRENT (power & fuel)",
+   "share_of_costs_pct": 9
+  },
+  {
+   "input": "Other operating",
+   "share_of_costs_pct": 39
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_TRAVEL_DEMAND",
+   "dst": "INDHOTEL",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Rooms ~55% of revenue; premium/luxury supply is constrained so demand converts to ARR. +10% travel demand -> RevPAR +9% -> revenue +5% -> EBITDA +9% (high incremental margin ~65%, EBITDA margin ~36% model knowledge). EV/MCap ~1.0, persistence 0.5 -> ~+4.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IHCL+Q2+FY27+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-25",
+     "note": "IHCL Q2 FY27 revenue Rs2,566 cr (+21%), FY27 revenue growth guidance raised to 15-17% (+300 bp); 52-week high (Upstox, ET HospitalityWorld, Hotelier India)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "INDHOTEL",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Corporate travel, weddings and MICE scale with GDP; +1pp GDP -> hospitality demand +2% -> EBITDA +4% (op leverage) -> persistence 0.5 -> +2; plus rerating of cyclicals +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IHCL+Q2+FY27+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-25",
+     "note": "IHCL Q2 FY27 revenue Rs2,566 cr (+21%), FY27 revenue growth guidance raised to 15-17% (+300 bp); 52-week high (Upstox, ET HospitalityWorld, Hotelier India)"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "INDHOTEL",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": ">12m",
+   "mechanism": "Luxury/upscale spending shift (domestic leisure, destination weddings) lifts ARR for Taj/Vivanta. Structural; +1 unit ~ +2% ARR with 80% flow-through -> EBITDA +4.5%; equity +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IHCL+Q2+FY27+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-25",
+     "note": "IHCL Q2 FY27 revenue Rs2,566 cr (+21%), FY27 revenue growth guidance raised to 15-17% (+300 bp); 52-week high (Upstox, ET HospitalityWorld, Hotelier India)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "INDHOTEL",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Urban discretionary spend drives leisure/F&B/banquets; +5pp urban demand growth -> revenue +2.5% -> EBITDA +4% -> persistence 0.5 -> ~+2 plus sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IHCL+Q2+FY27+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-25",
+     "note": "IHCL Q2 FY27 revenue Rs2,566 cr (+21%), FY27 revenue growth guidance raised to 15-17% (+300 bp); 52-week high (Upstox, ET HospitalityWorld, Hotelier India)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "INDHOTEL",
+   "relation": "geopolitical_exposure",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation disrupts Gulf air hubs, raises airfares and cuts inbound/outbound travel; IHCL has Gulf/Middle East inbound feeder and its own Dubai/Doha/Riyadh management contracts. -1.2% revenue in affected quarter, EBITDA -2% plus risk-off beta 1.3 -> -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "IHCL Gulf presence"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "INDHOTEL",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "High-beta (1.3) consumer-cyclical; stock +17.9% in 1m on risk-on. +$5bn inflows -> +2.5 relative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDHOTEL.md",
+     "date": "2026-11-05",
+     "note": "price perf & beta"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "INDHOTEL",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Low net debt, so funding cost minor; value is growth-duration (EV/EBITDA high-20s est.). +25bp -> -1.5 (damped 0.5).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDHOTEL.md",
+     "date": "2026-11-05",
+     "note": "pack"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "INDHOTEL",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Staff cost ~25% of revenue (incl. reimbursed managed-hotel cost). +2pp wages -> +0.5% of revenue; half passed via ARR/fees -> EBITDA -0.7% pre; persistence 0.5 -> -0.4; rounding -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "hotel cost structure"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "INDHOTEL",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Power and fuel ~6-7% of revenue; +10% Brent -> gas/LPG +5% -> +0.3% of revenue -> EBITDA -1%; plus airfares dent travel. Persistence 0.3 -> -0.3; with demand channel -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "hotel cost structure"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "INDHOTEL",
+   "relation": "fx_translation",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Foreign guests (~15-20% of hotel revenue USD-linked) and overseas hotels gain when INR weakens; +3% -> revenue +0.5% -> EBITDA +1.3% -> persistence 0.5 -> +0.6; some FPI sentiment drag offsets.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "IHCL mix"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Tata Sons",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "Promoter"
+  },
+  {
+   "counterparty": "ITC Hotels, Lemon Tree, Leela, Chalet, Juniper",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Peers; Motilal Oswal sees up to 34% upside across sector (Financial Express, 2 Oct)"
+  },
+  {
+   "counterparty": "Airlines (IndiGo)",
+   "ticker": "INDIGO",
+   "role": "customer",
+   "importance": "low",
+   "note": "Air capacity drives hotel demand"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02-05",
+   "event": "Q3 FY27 results (peak season Oct-Dec)",
+   "type": "results",
+   "prob": 0.85,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "Q2 on 2026-10-21 (Upstox)"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget (tourism/hotel infrastructure measures)",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "New signings / opening announcements towards 700-hotel target",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Indian+Hotels+700+hotels+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27: revenue Rs 2,566 cr (+21% y/y), record; guidance raised to 15-17% FY27 revenue growth (Hotelier India, ET HospitalityWorld 22-25 Oct).",
+  "trend": "Strong RevPAR and fee growth; peers report occupancy 78.6% and RevPAR +14.3% (SAMHI, Nov 2026).",
+  "valuation": "Not retrievable (screener blocked). Model view: EV/EBITDA high-20s; price +17.9% in 1m.",
+  "recent_developments": [
+   "2026-10-21/22 52-week high on guidance upgrade; brokers raise estimates (Business Standard)",
+   "2026-10-28 52-week high Rs 812",
+   "2026-10-31 PL Capital Diwali pick with up to 42% upside (ET Now)",
+   "2026-10-02 Motilal Oswal sees up to 34% upside in sector"
+  ]
+ },
+ "key_risks": [
+  "Sharp rally leaves valuation rich",
+  "Gulf/geopolitical travel shocks",
+  "New supply and airfares",
+  "Execution of 700-hotel roll-out"
+ ],
+ "upside_triggers": [
+  "Peak-season ARR growth, wedding season",
+  "Further guidance upgrades",
+  "Falling rates/FPI inflows"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=IHCL+Q2+FY27+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-25",
+   "what": "Q2 FY27 headlines (bodies not retrieved)"
+  },
+  {
+   "url": "market_impact/data/packs/INDHOTEL.md",
+   "date": "2026-11-05",
+   "what": "price performance, sensitivities, headlines; screener dossier unavailable"
+  }
+ ]
+}

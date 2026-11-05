@@ -1,0 +1,392 @@
+{
+ "name": "Nestle India Ltd.",
+ "industry": "I_FMCG_STAPLES",
+ "business_summary": "Indian arm (62.8% Nestle SA, model knowledge) of the global food group: Maggi noodles and sauces, Nescafe, KitKat/Munch chocolates, milk products (Nestle a+ dahi, Milkmaid), infant nutrition (Cerelac, Lactogen), pet care. Q2 FY27: sales Rs 6,788 cr (+20% y/y), operating margin 24%, PAT Rs 1,010 cr (+36%) with advertising spend +46%. Stock nonetheless fell ~9% on 15 Oct on management's inflation warning, then dropped to a six-month low after FSSAI notices (21-22 Oct 2026).",
+ "revenue_mix": [
+  {
+   "segment": "Prepared dishes & cooking aids (Maggi)",
+   "share_pct": 30,
+   "geography": "India ~97%"
+  },
+  {
+   "segment": "Milk products & nutrition",
+   "share_pct": 30,
+   "geography": "India"
+  },
+  {
+   "segment": "Beverages (Nescafe)",
+   "share_pct": 15,
+   "geography": "India"
+  },
+  {
+   "segment": "Confectionery (KitKat, Munch)",
+   "share_pct": 15,
+   "geography": "India"
+  },
+  {
+   "segment": "Other / exports",
+   "share_pct": 10,
+   "geography": "India ~93% / exports ~7%"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DAIRY",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_COCOA_COFFEE_TEA",
+   "share_of_costs_pct": 13
+  },
+  {
+   "input": "F_WHEAT",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_EDIBLE_OIL",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "F_SUGAR",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_DAIRY",
+   "dst": "NESTLEIND",
+   "relation": "input_cost",
+   "w": -1.6,
+   "w_low": -3.0,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Milk and milk products ~25% of costs (approximate, model knowledge); costs ~76% of sales. +8% milk => costs +2.0% => 1.5% of sales => EBITDA -6.3% at 24% margin; ~50% price pass-through => -3.2; persistence 0.5; EV/MCap 1.0 => -1.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Nestle+India+inflation+food+inflation+reality+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "ET: Nestle India says rising inflation, particularly food inflation, is a reality"
+    }
+   ]
+  },
+  {
+   "src": "F_COCOA_COFFEE_TEA",
+   "dst": "NESTLEIND",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Green coffee and cocoa ~13% of costs. +15% => costs +1.95% => 1.5% of sales => EBITDA -6.2%; 50% pricing recovery => -3.1; persistence 0.5 => -1.5. Cocoa/coffee are volatile imports priced in USD.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NESTLEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "gross margin sensitivity from OPM 24% vs 26% in Mar-26 quarter"
+    }
+   ]
+  },
+  {
+   "src": "F_WHEAT",
+   "dst": "NESTLEIND",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.4,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "Wheat flour for Maggi ~8% of costs. +10% => costs +0.8% => 0.6% of sales => EBITDA -2.5%; 50% pass-through; persistence 0.5 => -0.6. Empirical +0.62 (t=1.1) has the opposite sign but is insignificant (food-inflation demand co-movement).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NESTLEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical F_WHEAT +0.62, t=+1.1"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "NESTLEIND",
+   "relation": "input_cost",
+   "w": -0.55,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Palm/vegetable oils ~7% of costs (snacks, noodles). +10% => EBITDA -2.2%; 50% passthrough, persistence 0.5 => -0.55. India cut import duty 24 Sep 2026.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+cuts+edible+oil+import+duty+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Reuters 2026-09-23"
+    }
+   ]
+  },
+  {
+   "src": "F_SUGAR",
+   "dst": "NESTLEIND",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "Sugar ~4% of costs. +10% => EBITDA -1.3%; 50% pass-through; persistence 0.5 => -0.3. Sugar is +27.8% since June and +18.6% in three months. Empirical +0.85 (t=1.6) opposite sign, treated as noise.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NESTLEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "F_SUGAR +27.8% since 2026-06-01 (factor_state.md)"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "NESTLEIND",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -1.8,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Packaging ~12% of costs. +10% => costs +1.2% => EBITDA -3.8%; 50% passthrough, persistence 0.5 => -0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NESTLEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "cost-structure estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "NESTLEIND",
+   "relation": "fx_translation",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "~15% of costs imported/USD-linked (coffee, cocoa, packaging, some finished goods) => +3% INR weakness => EBITDA -1.4% before pass-through; persistence 0.5 => -0.4. Empirical +1.26 (t=1.2) opposite sign, insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NESTLEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical F_USDINR +1.26, t=+1.2; USD/INR 94.49"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "NESTLEIND",
+   "relation": "demand_driver",
+   "w": 2.2,
+   "w_low": 1.0,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Urban ~65-70% of sales; strong quick-commerce channel (NDTV Profit preview 2026-10-14). +5pp urban => sales +3.3% x 40% incremental margin/24% => EBITDA +5.5%, persistence 0.5 => +2.7; trimmed to +2.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NESTLEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "sales growth +20% y/y in Sep-26 quarter; Q1 +25%"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "NESTLEIND",
+   "relation": "demand_driver",
+   "w": 0.9,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Rural ~20-25% of sales: +5pp => sales +1.2%, EBITDA +2% x 0.5 persistence => +0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=weak+monsoon+rural+demand+FMCG+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Moneycontrol 2026-10-05"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FOOD_SAFETY_REG",
+   "dst": "NESTLEIND",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "FSSAI notices on baby-food claims (Lactogen) and an unsafe sample reported 3 Oct raise recall/ban/label risk. Infant nutrition ~7-8% of sales, higher margin. +1 step => infant-nutrition sales -10% and brand cost => EBITDA -3.5% plus multiple penalty; persistence 0.5; probability-weighted => -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Nestle+India+Zydus+Wellness+FSSAI+notice+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Moneycontrol/Livemint: FSSAI notices to Nestle India, Zydus Wellness; shares at six-month low"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Nestle+India+sample+unsafe+food+regulator+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-03",
+     "note": "Investing.com: Nestle India product sample declared unsafe"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "NESTLEIND",
+   "relation": "discount_rate",
+   "w": -1.3,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "P/E 60.9, ROE 74%, negligible funding cost: multiple is the only channel. +25bp repo => ~-1.3 on valuation duration.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NESTLEIND/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 60.9, mcap Rs 2.42 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "NESTLEIND",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Quick-commerce is Nestle's fastest channel (Maggi, KitKat, coffee); +1 acceleration => +1% sales mix gain at favourable gross margin => EBITDA +1.5%... persistence 1.0 x 0.5 execution => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Nestle+Q2+preview+Q-Comm+lead+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "NDTV Profit: Q-Comm to lead growth"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Nestle SA",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "royalty ~4.5% of sales and technical support (model knowledge)"
+  },
+  {
+   "counterparty": "Dairy farmer cooperatives (Punjab, Haryana, UP)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "fresh milk procurement"
+  },
+  {
+   "counterparty": "Quick-commerce platforms",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "channel growth"
+  },
+  {
+   "counterparty": "Hindustan Unilever / Britannia / ITC",
+   "ticker": "HINDUNILVR",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "foods and beverages"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Oct-Dec quarter); inflation vs pricing action",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge on calendar; date unverified"
+  },
+  {
+   "date": "2026-12",
+   "event": "FSSAI follow-up on Lactogen claims (compliance reply, possible penalty/label change)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": -1.0,
+   "source": "Livemint 2026-10-21"
+  },
+  {
+   "date": "2026-12",
+   "event": "Price increases on Maggi/beverages to offset inflation",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.0,
+   "source": "The Core 2026-11-03 (industry post-Diwali price rises)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 6,788 cr (+20% y/y), operating profit 1,598 cr (24%), PAT 1,010 cr (+36%); ad spend +46%",
+  "trend": "strong volume growth, margin held by pricing but management flagged inflation; ad spend rising",
+  "valuation": "P/E 60.9 vs sector ~40; price 1,256, 52w 1,147-1,553; -18% over 3 months",
+  "recent_developments": [
+   "2026-10-22 shares at six-month low after FSSAI notice (Lactogen)",
+   "2026-10-15 shares fell up to 9% on Q2 despite +36% profit (inflation commentary)",
+   "2026-10-03 product sample declared unsafe by regulator (Investing.com)",
+   "2026-10-13 Q2 preview: PAT may top Rs 1,000 cr"
+  ]
+ },
+ "key_risks": [
+  "Milk, coffee, cocoa inflation",
+  "FSSAI infant-nutrition scrutiny",
+  "High multiple leaves no room for error",
+  "Royalty hikes or parent actions"
+ ],
+ "upside_triggers": [
+  "Commodity relief (cocoa/coffee easing)",
+  "Quick-commerce growth",
+  "Successful price hikes without volume loss"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_FOOD_SAFETY_REG",
+   "type": "POLICY",
+   "name": "FSSAI food-safety / labelling enforcement intensity",
+   "ssu": "+1 = materially stricter enforcement on packaged-food claims, sampling and recalls"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/NESTLEIND/consolidated/",
+   "date": "2026-11-05",
+   "what": "quarterly table and ratios"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Nestle+India+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Q2 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Nestle+India+Zydus+Wellness+FSSAI+notice+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-22",
+   "what": "FSSAI notices"
+  }
+ ],
+ "ticker": "NESTLEIND",
+ "as_of": "2026-11-05",
+ "tier": "NIFTY_50"
+}

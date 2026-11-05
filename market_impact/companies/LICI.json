@@ -1,0 +1,386 @@
+{
+ "name": "Life Insurance Corporation of India",
+ "industry": "I_LIFE_INSURANCE",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest life insurer (about 66% share of new business premium) by assets (Rs ~55 lakh cr), selling participating, non-par, ULIP, term, health and annuity products via ~14 lakh agents. Government owned 96.5% until an Aug 2026 OFS of Rs 31,552 cr raised public float to 10% (promoters 90.0% at Sep 2026). Q1 FY27 PAT Rs 13,492 cr (+23% y/y), VNB +61%. Large equity portfolio drives volatile reported profit. Targets mid-20% VNB margin and a higher non-par share; exploring health insurance and fintech.",
+ "revenue_mix": [
+  {
+   "segment": "Participating (par) life",
+   "share_pct": 70,
+   "geography": "India"
+  },
+  {
+   "segment": "Non-par, ULIP, annuity, group",
+   "share_pct": 30,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "F_GSEC_10Y_IN",
+   "share_of_costs_pct": 0,
+   "note": "liability duration; costs are benefits paid and commissions"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "LICI",
+   "relation": "discount_rate",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "LIC's equity portfolio (~one-third of AUM; Rs 15 lakh cr+, model knowledge) drives realised gains (a large part of reported PAT: FY26 PAT Rs 57.4k cr) and the embedded value. +5 VIX pts ~ Nifty -3.5% -> equity AUM -Rs 50k cr; shareholders' share ~5-10% of par surplus plus solvency fund exposure; market-beta 1.2 -> -3.5 net.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LICI",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs only 1.55% (rose after OFS) so direct effect small, but newly widened float (10%) makes LICI a liquid index constituent: +US$5bn/qtr flows -> ~+1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LICI.md",
+     "date": "2026-11-05",
+     "note": "Promoters 96.5% -> 90.0%; FIIs 0.44% -> 1.55%; DIIs 0.99% -> 6.18% post OFS"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "LICI",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "DIIs went 0.99% -> 6.18% after the Aug OFS; MF SIP/DII inflows (+10%) support absorption of any further govt sales and raise LIC's own equity gains: +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=LIC+Stock+After+31552+Crore+OFS+Public+Float+Hits+10%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "note": "Government OFS Rs 31,552 cr; public float 10% (NiftyTrader); CEO: no fresh stake sale soon (ET Now 7 Aug)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "LICI",
+   "relation": "discount_rate",
+   "w": -0.5,
+   "w_low": -3.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "~75% of AUM in G-sec/debt, mostly held to maturity (model knowledge): +25bp yield lifts reinvestment yield (+) but cuts EV via discount-rate/book MTM on the AFS slice (-). Net ~0, slight negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LICI",
+   "relation": "discount_rate",
+   "w": -0.3,
+   "w_low": -2.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Hike raises bank FD rates (competition for savings products) and bond yields; positive for annuity/guaranteed product pricing. Net ~0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hike to 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "LICI",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "66% market share in new business premium (screener) so household savings shift into insurance/MF raises premium base: +1 SSU -> NBP +4% -> VNB +5%; Q1 FY27 VNB +61% y/y (Business Standard); P/EV ~0.7 so +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=LIC+gains+after+Q1+PAT+jumps+23%+YoY+13492+cr+VNB+surges+61%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "Q1 FY27 PAT Rs 13,492 cr; VNB +61% y/y (Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "LICI",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> +1pp household income -> premium +1.5pp; persistence 0.7 -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "LICI",
+   "relation": "substitution",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Gold is the household-savings substitute for traditional endowment/par products; +8% gold (USD) raises gold demand and cuts savings flow to insurance by ~1%; empirical -1.34/SSU (t -1.6) is larger; shrunk to -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "LICI",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Proposed distribution reforms/commission caps (LIC sees limited impact) and product-margin caps; IRDAI tightening one step -> VNB margin -100bp -> ~-1.5%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=LIC+sees+limited+impact+from+proposed+insurance+distribution+reforms+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "LIC sees limited impact from proposed insurance distribution reforms (Financial Express)"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "LICI",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "GST exemption on individual life insurance premia and ITC allowance on group life/health (ET, 8 Oct 2026) lowers customer cost 18%; demand tailwind but ITC-driven margin neutral: +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Input+Tax+Credit+on+group+health+and+life+insurance+allowed+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "ITC on group health and life insurance allowed (Economic Times)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "LICI",
+   "relation": "demand_driver",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "LIC Mutual funds/housing-loan exposure (LICHFL) small; minor equity-credit linkage via LICHSGFIN stake.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "LICI",
+   "relation": "policy_effect",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "LTCG/STCG on equity is borne partly by LIC's realised gains; govt reportedly may revisit LTCG (ET 3 Nov, SBI chairman); a rise cuts post-tax gains: +1 step -> ~-1.5, a cut would be positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "LICHSGFIN",
+   "dst": "LICI",
+   "relation": "holding_stake",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Per +10% move in LICHSGFIN equity value: LIC's 45.24% stake (~Rs 13k cr) is ~2.5% of LICI's Rs 5.16 lakh cr market cap -> +0.25% per +10%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LICHSGFIN.md",
+     "date": "2026-11-05",
+     "note": "promoter holding 45.24%, mcap Rs 29,148 cr"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "90% holder post OFS; further MPS dilution to 75% by 2032 (model knowledge)"
+  },
+  {
+   "counterparty": "LIC Housing Finance",
+   "ticker": "LICHSGFIN",
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "45.24% stake"
+  },
+  {
+   "counterparty": "SBI Life / HDFC Life",
+   "ticker": "SBILIFE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "private life insurers gaining share of VNB"
+  },
+  {
+   "counterparty": "NSE",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "LIC plans to raise its NSE stake (BusinessLine 30 Aug)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (week of 2 Nov per Upstox; exact date unverified)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Q2+results+this+week+LIC+ITC+ONGC+Airtel+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Further government OFS (CEO said no fresh sale soon)",
+   "type": "corporate_action",
+   "prob": 0.12,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -2.0,
+   "source": "https://news.google.com/rss/search?q=LIC+Stock+After+31552+Crore+OFS+Public+Float+Hits+10%+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget: possible LTCG/insurance tax changes",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=govt+may+revisit+LTCG+tax+SBI+chairman+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Health-insurance or fintech acquisition announcement",
+   "type": "corporate_action",
+   "prob": 0.2,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=LIC+weighing+plans+to+invest+in+health+insurance+fintech+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026) on screener; Q2 due in early Nov 2026",
+  "trend": "Premium ~Rs 2.4 lakh cr/qtr; PAT Rs 13.5k cr in Q1 (+23% y/y), Mar-26 quarter Rs 23.4k cr; VNB +61% y/y in Q1",
+  "valuation": "P/E 8.6, P/B ~2.9 on book, ROE 38%; dividend yield 2.4%; trades at discount to EV (peers ~2x EV)",
+  "recent_developments": [
+   "2026-08-07: Q1 PAT +23%, VNB +61%; no fresh stake sale soon (CEO Doraiswamy)",
+   "2026-08-10: OFS of Rs 31,552 cr completed; float 10%",
+   "2026-08-30/09-17: LIC plans higher NSE stake, long-term strategic investor",
+   "2026-10: shares fell 7.3% in Oct ahead of Q2 (Goodreturns)",
+   "2026-11-01: Q2 results scheduled this week"
+  ]
+ },
+ "key_risks": [
+  "Equity market fall hits realised gains and EV",
+  "Further govt stake sales/overhang",
+  "Regulatory margin or commission caps",
+  "VNB-margin shortfall vs mid-20% target",
+  "Policyholder surplus distribution to shareholders (par bonus) politics"
+ ],
+ "upside_triggers": [
+  "Rising non-par share and VNB margin",
+  "MPS-driven float increase attracts index inclusion flows",
+  "Strong equity market and realised gains",
+  "Valuation re-rating toward 1x EV"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=LIC+gains+after+Q1+PAT+jumps+23%+YoY+13492+cr+VNB+surges+61%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-07",
+   "what": "Q1 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=LIC+Stock+After+31552+Crore+OFS+Public+Float+Hits+10%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-10",
+   "what": "OFS and float"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=LIC+sees+limited+impact+from+proposed+insurance+distribution+reforms+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-07",
+   "what": "distribution reforms"
+  },
+  {
+   "url": "market_impact/data/packs/LICI.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  }
+ ],
+ "ticker": "LICI",
+ "as_of": "2026-11-05"
+}

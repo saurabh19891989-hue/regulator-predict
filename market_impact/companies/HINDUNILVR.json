@@ -1,0 +1,401 @@
+{
+ "name": "Hindustan Unilever Ltd.",
+ "industry": "I_FMCG_STAPLES",
+ "business_summary": "India's largest FMCG company: Home Care (detergents, dishwash), Beauty & Personal Care (skin, hair, oral), and Foods & Refreshment (tea, coffee, Horlicks, Kissan). Ice cream was demerged into Kwality Wall's India (model knowledge; Q1 FY27 sales growth reported by that entity). 61.9% owned by Unilever. At a Capital Markets Day in Sept 2026 HUL set a 22-24% EBITDA-margin ambition and raised capex intent to ~3% of turnover. Q2 FY27 sales Rs 18,226 cr (+14.5% y/y) with margin pressure from rising input costs.",
+ "revenue_mix": [
+  {
+   "segment": "Home Care",
+   "share_pct": 36,
+   "geography": "India ~99%"
+  },
+  {
+   "segment": "Beauty & Personal Care",
+   "share_pct": 37,
+   "geography": "India"
+  },
+  {
+   "segment": "Foods & Refreshment",
+   "share_pct": 22,
+   "geography": "India"
+  },
+  {
+   "segment": "Other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_EDIBLE_OIL",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 18,
+   "note": "crude-linked chemicals (LAB, surfactants) and plastics packaging, approximate"
+  },
+  {
+   "input": "F_COCOA_COFFEE_TEA",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 12,
+   "note": "imported share of inputs, approximate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_BRENT",
+   "dst": "HINDUNILVR",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Crude-linked surfactants/LAB and polymer packaging ~18% of costs (approx., model knowledge). +10% Brent => derivatives +6% => costs +1.1% => at costs 77% of sales = 0.83% of sales => EBITDA -3.6% at 23% margin; pricing offsets ~50% => -1.8%; persistence 0.5, EV/MCap 1.0 => -0.9. Empirical -0.38 (t=-1.0) agrees on sign and is smaller. Livemint 2026-10-28 reports margin pressure from crude.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=HUL+margin+pressure+crude+input+costs+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Livemint: HUL faces margin pressure as crude prices surge and input costs rise"
+    },
+    {
+     "source": "https://www.screener.in/company/HINDUNILVR/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 OPM 22% vs 24%; Brent +15% over 3m"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "HINDUNILVR",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Palm-derived fatty acids/noodle oil ~10% of costs. +10% => costs +1.0% => 0.77% of sales => EBITDA -3.3%; 50% pass-through => -1.7; persistence 0.5 => -0.8. India cut edible-oil import duty on 24 Sep 2026, a partial offset.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+cuts+edible+oil+import+duty+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Reuters: India cuts edible oil import duty ahead of festivals"
+    }
+   ]
+  },
+  {
+   "src": "F_COCOA_COFFEE_TEA",
+   "dst": "HINDUNILVR",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Tea/coffee (Brooke Bond, Bru) ~6% of costs. +15% => costs +0.9% => 0.7% of sales => EBITDA -3.0%; 60% pricing recovery => -1.2; persistence 0.5 => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDUNILVR/consolidated/",
+     "date": "2026-11-05",
+     "note": "Foods & Refreshment ~22% of sales (approx.)"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "HINDUNILVR",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Packaging 10% of costs (partly overlaps crude; kept for paper/board and film not tied to Brent). +10% => costs +1.0% => EBITDA -3.3% => 50% passthrough => -1.7 x 0.5 persistence => -0.8; shaded to -0.6 to avoid double count with F_BRENT.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDUNILVR/consolidated/",
+     "date": "2026-11-05",
+     "note": "cost structure approximations"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HINDUNILVR",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "~12% of inputs imported/USD-linked. +3% => costs +0.36% => 0.28% of sales => EBITDA -1.2%; pass-through half => persistence 0.5 => -0.3; rounded to -0.5 including royalty-related USD sentiment. Royalty to Unilever is a % of INR turnover (no FX).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDUNILVR/consolidated/",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49, +6.5% 12m"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "HINDUNILVR",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Rural ~36-40% of sales (model knowledge). +5pp rural growth => group volume +1.8% x 40% incremental margin / 23% margin => EBITDA +3.1% x persistence 0.5 => +1.5. Weak 2026 monsoon is the live risk; HUL volume growth recovered in Q2 per company.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=weak+monsoon+rural+demand+FMCG+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Moneycontrol: weak monsoon pressures rural demand"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=HUL+Q2+volume+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Moneycontrol: HUL up after Q2 on volume growth optimism"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "HINDUNILVR",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Urban ~60% of sales; premium beauty/personal care. +5pp urban => sales +3% x 40% incremental margin / 23% => EBITDA +5.2% x persistence 0.5 => +2.6; trimmed to +2.0 for overlap with rural.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Deccan+Herald+India+consumers+are+back+stocks+aren't+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Deccan Herald: consumers are back, stocks aren't"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HINDUNILVR",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "P/E 41.6, 92% payout, debt-free: duration-like multiple. +25bp repo => ~-1.0 on valuation. No funding-cost channel.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDUNILVR/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 41.6, dividend yield 2.04%"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "HINDUNILVR",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "A further broad GST cut adds to affordability after the Sept 2025 reform that lowered rates on many personal-care/food items (model knowledge). +1 => volume +1.5% => EBITDA +2.5% x persistence 0.5 => +1.0; Oct 2026 GST ITC easing also noted.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=GST+Council+input+tax+credit+FMCG+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Outlook Money: FMCG rally as GST Council eases ITC rules"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "HINDUNILVR",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Strategy shift toward premium beauty, wellbeing, new categories (Capital Markets Day Sept 2026). +1 => mix adds ~0.5pp gross margin => EBITDA +2% x persistence 1.0 x 0.5 execution haircut => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=HUL+capital+markets+day+New+India+strategy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "note": "ET/Moneycontrol: Capital Markets Day; 22-24% EBITDA margin target"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "HINDUNILVR",
+   "relation": "competition",
+   "w": 0.4,
+   "w_low": -1.5,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Quick-commerce favours D2C and small brands (competition) but is also a growth channel for HUL's premium range; net near zero, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDUNILVR/consolidated/",
+     "date": "2026-11-05",
+     "note": "company strategy commentary; unverified"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "HINDUNILVR",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding fell from 10.1% to 9.26% in two quarters; stock at ~6-year lows (Business Standard 2026-10-27). +US$5bn inflow => ~+1.0 for a large defensive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDUNILVR/consolidated/",
+     "date": "2026-11-05",
+     "note": "FII 9.26% Sep-26"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Unilever PLC",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "61.9% holder; royalty ~3.45% of turnover (model knowledge)"
+  },
+  {
+   "counterparty": "Kwality Wall's India",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "demerged ice-cream business; not in universe"
+  },
+  {
+   "counterparty": "Palm-oil, surfactant and tea suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "commodity-linked"
+  },
+  {
+   "counterparty": "Nestle India / ITC / Dabur / Godrej Consumer",
+   "ticker": "NESTLEIND",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "packaged goods shelf competition"
+  },
+  {
+   "counterparty": "Quick-commerce platforms",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "growing channel share"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results; price hikes post Diwali visible in volume/margin",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge on reporting calendar; date unverified"
+  },
+  {
+   "date": "2026-11",
+   "event": "Interim dividend Rs 19/share payment (declared with Q2 results)",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 0.0,
+   "source": "Upstox 2026-10-28; ex-date mechanical price drop"
+  },
+  {
+   "date": "2027-03",
+   "event": "Share buyback announcement (management asked about it on 28 Oct 2026; none announced)",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 5.0,
+   "source": "CNBC TV18 2026-10-28"
+  },
+  {
+   "date": "2026-12",
+   "event": "Post-Diwali price increases across FMCG to recover input cost",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.0,
+   "source": "The Core 2026-11-03"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 18,226 cr (+14.5% y/y), operating profit 4,089 cr (22% vs 24%), PAT 2,796 cr (+4%); company reported 2,790 cr",
+  "trend": "volume growth at a 14-quarter high, but margin pressured by crude, palm and tea; reinvestment per new strategy",
+  "valuation": "P/E 41.6 (vs long-run mid-40s, model knowledge), price 1,982 vs 52w 1,758-2,480; hit 6-year low on 27 Oct",
+  "recent_developments": [
+   "2026-11-04 company outlines 'New India' growth strategy, 22-24% EBITDA target (scanx)",
+   "2026-10-28 Q2 results; Rs 19 dividend",
+   "2026-10-27 shares hit over 6-year low pre-results",
+   "2026-09-07 Capital Markets Day: capex ~3% of turnover",
+   "2026-09-28 Telangana govt partnership to scale Suvidha"
+  ]
+ },
+ "key_risks": [
+  "Input-cost inflation outrunning pricing",
+  "Weak monsoon cutting rural volume",
+  "Competition from regional/D2C brands and quick commerce",
+  "Rising capex diluting margin"
+ ],
+ "upside_triggers": [
+  "Volume-led growth sustaining 8-10%+",
+  "Palm/crude relief",
+  "Buyback or special capital return",
+  "FPI return to defensives"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/HINDUNILVR/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Hindustan+Unilever+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "Q2 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=HUL+capital+markets+day+New+India+strategy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-07",
+   "what": "Capital Markets Day"
+  }
+ ],
+ "ticker": "HINDUNILVR",
+ "as_of": "2026-11-05",
+ "tier": "NIFTY_50"
+}

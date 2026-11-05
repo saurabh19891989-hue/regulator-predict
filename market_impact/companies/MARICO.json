@@ -1,0 +1,349 @@
+{
+ "name": "Marico Ltd.",
+ "industry": "I_FMCG_STAPLES",
+ "business_summary": "Parachute coconut oil (about 60% share of branded coconut oil per Open Magazine 2026-11-03), Saffola edible oils and foods, value-added hair oils (Nihar, Hair & Care), Set Wet, Livon, digital-first brands (Beardo, Just Herbs, Plix acquisition reported Oct 2026) and international (Bangladesh, Vietnam, MENA, South Africa) ~25% of revenue (approximate). FY26 margin compressed to ~15% when copra spiked; copra has since eased ~35% from peak (ET 2026-11-02). Q2 FY27: Parachute volume growth at a 22-quarter high; FY27 growth and margin guidance raised.",
+ "revenue_mix": [
+  {
+   "segment": "India: coconut oil (Parachute)",
+   "share_pct": 28,
+   "geography": "India"
+  },
+  {
+   "segment": "India: Saffola & foods",
+   "share_pct": 18,
+   "geography": "India"
+  },
+  {
+   "segment": "India: value-added hair oils & personal care",
+   "share_pct": 22,
+   "geography": "India"
+  },
+  {
+   "segment": "International",
+   "share_pct": 25,
+   "geography": "Bangladesh, Vietnam, MENA, South Africa"
+  },
+  {
+   "segment": "Digital-first brands",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "NEW_COPRA_COCONUT_OIL",
+   "share_of_costs_pct": 28
+  },
+  {
+   "input": "F_EDIBLE_OIL",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 6
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_COPRA_COCONUT_OIL",
+   "dst": "MARICO",
+   "relation": "input_cost",
+   "w": -3.8,
+   "w_low": -7.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "Copra ~28% of costs (approximate, model knowledge); costs ~82% of sales. +15% copra => costs +4.2% => 3.4% of sales => EBITDA -19% at 18% margin; Marico repices within 1-2 quarters (~60% passthrough) => -7.6; persistence 0.5; EV/MCap ~0.97 => -3.8. Realised both ways: FY26 margin ~15% on copra spike; copra -35% from peak (ET 2026-11-02) drove the Q2 profit growth that was a 51-quarter high (CNBC TV18).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Marico+copra+prices+ease+35%+from+peak+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "ET: Marico sees copra prices ease 35% from peak, crude-linked costs and vegetable oil inflation pose risks"
+    },
+    {
+     "source": "https://www.screener.in/company/MARICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "OPM 13% (Mar-26 qtr) to 19% (Jun-26) to 18% (Sep-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "MARICO",
+   "relation": "input_cost",
+   "w": -1.1,
+   "w_low": -2.2,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Safflower/rice-bran/sunflower oils for Saffola ~10% of costs. +10% => costs +1.0% => 0.82% of sales => EBITDA -4.6%; 50% pass-through => -2.3; persistence 0.5 => -1.1. Empirical -0.58 (t=-0.7). Duty cut on 24 Sep 2026 partially helps.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+cuts+edible+oil+import+duty+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Reuters 2026-09-23"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "MARICO",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "HDPE bottles, cartons ~10% of costs. +10% => costs +1.0% => EBITDA -4.6%... 50% passthrough, 0.5 persistence, overlap with crude-linked => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MARICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "cost estimate; model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "MARICO",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Light liquid paraffin (hair oils) and chemicals ~6% of costs, crude-linked: +10% Brent => +6% input => costs +0.36% => 0.3% of sales => EBITDA -1.6%; 50% passthrough, persistence 0.5 => -0.4. Empirical -0.39 (t=-1.0) agrees. ET Nov 2026 flags crude-linked cost risk.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MARICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical F_BRENT -0.39, t=-1.0"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "MARICO",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.7,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Rural is a large share of Parachute/ hair-oil demand (~45% of India, approximate). +5pp rural => India volume +2pp x 0.75 India share, 40% incremental margin/18% => EBITDA +3.3%... persistence 0.5 => +1.7 rounded to +2.0 given the Q2 rural rebound.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Marico+Q2+volume+growth+rural+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Business Standard: higher volumes, profit growth guidance positive"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "MARICO",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Foods, premium hair care and digital-first brands skew urban (~30% of India). +5pp urban => EBITDA +2.4% x 0.5 persistence => +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MARICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "digital-first and foods drive growth per BusinessLine 2026-11-02"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "MARICO",
+   "relation": "fx_translation",
+   "w": 0.4,
+   "w_low": -0.6,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "International (~25% revenue) translates into more INR when INR weakens, but local currencies (BDT, VND, EGP) are also under pressure; imported oils/paraffin offset. Net +0.4, low confidence. Empirical -0.61 (t=-0.5) insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MARICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MARICO",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.3,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "P/E ~60 on reported EPS; net cash. +25bp repo => ~-1.2 on valuation duration.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MARICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 59.9, mcap Rs 1.15 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "MARICO",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Foods (Saffola, Gruhshree), digital-first brands (Plix, Beardo) lift mix; +1 => mix adds ~0.7pp margin => EBITDA +3.5% x persistence 1.0 x 0.3 haircut => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Marico+Plix+buyout+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "BusinessLine: Plix buyout"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MARICO",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.1,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "Defensive large/midcap; +US$5bn inflow => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MARICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "price +11.8% in 1 month"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Coconut farmers / copra traders (Kerala, Tamil Nadu, Karnataka)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "copra procurement"
+  },
+  {
+   "counterparty": "Saffola edible-oil suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "safflower, rice bran"
+  },
+  {
+   "counterparty": "Regional coconut-oil brands",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "gain share when copra spikes"
+  },
+  {
+   "counterparty": "Dabur / Godrej Consumer / HUL",
+   "ticker": "DABUR",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "hair oils, personal care"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 business update and results (about Jan-Feb 2027)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge; Q2 business update was 4-5 Oct 2026 (Business Today)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Parachute price cuts or pack changes as copra falls",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.0,
+   "source": "ET 2026-11-02"
+  },
+  {
+   "date": "2026-11",
+   "event": "Plix acquisition completion/integration",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "BusinessLine 2026-10-15"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 2,722 cr (+12% y/y), operating profit 490 cr (18%), screener net profit 683 cr including 330 cr other income; news report PAT Rs 550 cr (+31%) - difference unexplained (possible exceptional items)",
+  "trend": "copra relief driving volume recovery and margin rebuild; FY27 guidance raised on 2 Nov 2026 (exact numbers not retrieved)",
+  "valuation": "P/E 59.9 (inflated by non-operating income), price 888 vs 52w 706-898 - near highs",
+  "recent_developments": [
+   "2026-11-03 shares +6-8% on strong Q2, raised FY27 growth guidance",
+   "2026-11-02 Q2: profit growth a 51-quarter high, revenue slight miss (CNBC TV18)",
+   "2026-11-03 Parachute volume growth at 22-quarter high (Zee Business)",
+   "2026-10-15 Plix buyout",
+   "2026-10-05 Q2 update: double-digit revenue growth"
+  ]
+ },
+ "key_risks": [
+  "Copra rebound squeezing margin",
+  "Vegetable-oil inflation for Saffola",
+  "Valuation already at 52w high",
+  "Crude-linked cost spike"
+ ],
+ "upside_triggers": [
+  "Copra stays low",
+  "Foods/digital scale",
+  "International recovery"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_COPRA_COCONUT_OIL",
+   "type": "FACTOR",
+   "name": "Copra / coconut oil price",
+   "ssu": "+15% copra price"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/MARICO/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in retrieved directly (pack lacked fundamentals)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Marico+Q2+FY27+results+copra+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Q2 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Marico+copra+prices+ease+35%+from+peak+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-02",
+   "what": "copra relief"
+  }
+ ],
+ "ticker": "MARICO",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

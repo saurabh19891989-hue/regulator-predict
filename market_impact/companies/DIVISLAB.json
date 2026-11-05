@@ -1,0 +1,413 @@
+{
+ "name": "Divi's Laboratories Ltd.",
+ "industry": "I_CDMO_API",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Hyderabad-based maker of generic APIs, custom-synthesis intermediates for global innovators and nutraceutical ingredients (carotenoids), almost debt-free. TTM sales Rs 11,230 cr, EBITDA Rs 3,967 cr (35%), PAT Rs 2,925 cr. Q1 FY27 (Jun 2026) sales Rs 3,080 cr (+28% YoY), OPM 41%, PAT Rs 902 cr. Valuation rich (P/E 90, market cap Rs 2.68 lakh cr) on custom-synthesis and GLP-1 supply expectations; shares +48% in 12 months and a Nifty 50 inclusion candidate.",
+ "revenue_mix": [
+  {
+   "segment": "Custom synthesis (CS)",
+   "share_pct": 58,
+   "geography": "~90% export, US/EU innovators (model knowledge)"
+  },
+  {
+   "segment": "Generic APIs",
+   "share_pct": 40,
+   "geography": "export ~80% (model knowledge)"
+  },
+  {
+   "segment": "Nutraceuticals and other",
+   "share_pct": 2,
+   "geography": "mostly export"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 35
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 14
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_GLP1",
+   "dst": "DIVISLAB",
+   "relation": "demand_driver",
+   "w": 8.0,
+   "w_low": 2.0,
+   "w_high": 16.0,
+   "lag": "3-12m",
+   "mechanism": "Market narrative (Citi 2026-09-23, CNBC TV18 2026-10-19) links Divi's to oral GLP-1 (orforglipron/oral semaglutide) intermediates and contract supply; Jun-26 OPM jumped to 41% from 30% a year earlier and sales +28% YoY. Scenario: +1 SSU = oral-GLP-1 adoption ahead of plan -> +10% FY28 EBITDA at 90x P/E, EV/MCap 1.0, persistence 0.8 -> ~+8. Counterparty names are NOT confirmed in a primary source I could retrieve; model knowledge/market reports only.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Divi's+Laboratories+shares+gain+weight+loss+drug+EU+panel+backing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "EU panel backs Eli Lilly oral GLP-1 pill; Divi's +2% (CNBC TV18/Equitypandit). Citi Buy, Rs 11,700 target on oral Wegovy upside (NDTV Profit 2026-09-23)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "DIVISLAB",
+   "relation": "fx_translation",
+   "w": 2.2,
+   "w_low": 0.8,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "~85-90% of revenue is exports (model knowledge). +3% USD/INR: foreign-currency revenue ~+2.6% of sales; imported RM ~15% of sales x3% = -0.45%; net +2.1% of sales / OPM 35% = +6% EBITDA; hedging and 3-12m price re-negotiation, persistence 0.4, EV/MCap 1.0 -> +2.4, trimmed to 2.2. Empirical +1.61 (t=1.2) agrees in sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "DIVISLAB",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -6.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "US 100% tariff on branded/patented drugs took effect 2026-09-29 with exemptions for India and 19 other jurisdictions on specialty drugs (Business Standard/Open Magazine headlines). Divi's sells APIs/intermediates not finished doses; API and generic inputs historically outside scope (model knowledge). Tail: +10pp tariff on API-linked flows -> customer renegotiation -3% of US-linked revenue (~30% of sales) -> EBITDA -3%, P/E 90 -> -1.5 prob-weighted.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "US exempts select Indian speciality drugs from 100% tariff"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "DIVISLAB",
+   "relation": "geopolitical_exposure",
+   "w": -0.8,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Pharma has so far been outside reciprocal tariffs on India (model knowledge); +10pp average tariff would hit sentiment mainly. Weight -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "DIVISLAB",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Generic APIs ~40% of sales (model knowledge): +15% Chinese export volume/price cuts -> ~-5% on those prices = -2% of sales / OPM 35% = -5.7% EBITDA, persistence 0.5, mitigated by backward-integrated scale -> -3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "DIVISLAB",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.0,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Custom synthesis for global pharma/nutraceutical clients; Jefferies lists Divi's among CRDMO winners (ET 2026-10-13). Incremental 5% order flow = +2.5% sales at 41% incremental margin ~ +7% EBITDA x 0.5 persistence -> +3.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "DIVISLAB",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Solvents/reagents/intermediates ~35% of sales, of which feedstock-linked ~15%: +10% -> +1.5% of sales, 50% passed to cost-plus customers -> 0.75% of sales / OPM 41% = -1.8% EBITDA x 0.4 persistence -> -0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "DIVISLAB",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Power/fuel and petro-derived solvents ~7-8% of sales; +10% Brent -> +0.4% sales cost -> -1% EBITDA x 0.4 -> -0.4. Empirical +0.49 (t=1.0) has opposite sign but is insignificant and probably beta/INR proxy.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "DIVISLAB",
+   "relation": "competition",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Generic API customers (~40% of sales) push price cuts when finished-dose erosion rises: +5pp erosion -> -1.5% on API prices -> -0.6% sales / OPM 35% = -1.7% EBITDA, persistence 0.5, EV/MCap 1 -> -0.9; add valuation de-rating of CDMO peers -> -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "DIVISLAB",
+   "relation": "regulatory_risk",
+   "w": -6.0,
+   "w_low": -15.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "Stricter inspections: Visakhapatnam/Choutuppal units are mostly clean historically (model knowledge) but an OAI/warning on a major unit would hit ~10% of sales (EBITDA -3%) but the P/E-90 de-rating dominates (~-15 to -20% value, persistence 0.5); weighted by ~0.4 plausibility of a material observation -> -6; wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "DIVISLAB",
+   "relation": "discount_rate",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding 20.4% and high-multiple growth stock: +US$5bn quarterly inflow -> +3% relative. Possible Nifty 50 inclusion in March 2027 review (ET 2026-10-06) adds passive demand.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "DIVISLAB",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Long-duration equity (P/E 90): +25bp G-sec -> cost of equity +25bp -> value -2.5% x beta to local rates 0.5 -> -1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "DIVISLAB",
+   "relation": "macro_transmission",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points -> high-multiple names de-rate; pack beta 0.8-0.9; -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "DIVISLAB",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Employee cost ~14% of sales (model); +2pp wage inflation -> +0.3% of sales -> -0.7% EBITDA, persistence 0.5 -> -0.3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DIVISLAB/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Large innovator pharma (incl. reported GLP-1 programmes)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "CS contracts; names confidential; market reports link Lilly/Novo programmes (not confirmed in primary source)"
+  },
+  {
+   "counterparty": "Chinese intermediates/RM suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "selective key-starting-material imports; backward integration reduces exposure"
+  },
+  {
+   "counterparty": "Laurus Labs, Sai Life, Anthem, Syngene (CRDMO peers)",
+   "ticker": "LAURUSLABS",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Jefferies CRDMO framework (ET 2026-10-13)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (screener shows Jun-26 as latest; Sep-26 quarter pending)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Divi's+Laboratories+Q2+FY27+Results+Outlook+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "NSE March 2027 index review - Divi's possible Nifty 50 inclusion (ET 2026-10-06; Sahi: ~US$824m inflows)",
+   "type": "corporate_action",
+   "prob": 0.45,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Divi's+Labs+TVS+Motor+could+replace+Max+Healthcare+HDFC+Life+NSE+March+2027+index+review+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "European Commission decision following EU panel nod for Lilly oral GLP-1 (positive opinion 2026-10-17/19)",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Divi's+Laboratories+shares+gain+weight+loss+drug+EU+panel+backing+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "New Kakinada/Visakhapatnam capex commissioning (CWIP Rs 2,113 cr at Mar-26)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://www.screener.in/company/DIVISLAB/consolidated/"
+  },
+  {
+   "date": "2027-06",
+   "event": "USFDA inspection of a major unit leading to OAI/warning",
+   "type": "regulatory",
+   "prob": 0.07,
+   "impact_pct_low": -18.0,
+   "impact_pct_high": -6.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs 3,080 cr, EBITDA Rs 1,255 cr (41%), PAT Rs 902 cr; Q2 FY27 pending",
+  "trend": "Margin and growth inflection (OPM 30% Jun-25 -> 41% Jun-26); 3m +20.8%, 6m +50.4%.",
+  "valuation": "P/E 90, P/B 16, market cap Rs 2.68 lakh cr, dividend yield 0.3% (screener); sell-side Citi target Rs 11,700.",
+  "recent_developments": [
+   "2026-10-19 EU panel backing for Lilly oral GLP-1 lifts Divi's ~2% (CNBC TV18)",
+   "2026-10-13 Jefferies CRDMO framework names Divi's (ET)",
+   "2026-10-06 ET/Sahi: Divi's, TVS Motor candidates for March 2027 Nifty 50 review; ~US$824m inflows potential",
+   "2026-09-23 Citi Buy, target Rs 11,700 on oral Wegovy upside (NDTV Profit)",
+   "Sep-26 shareholding: promoters 51.87%, FIIs 20.38%, DIIs 19.08%"
+  ]
+ },
+ "key_risks": [
+  "Valuation: P/E 90 leaves no room for a growth miss",
+  "GLP-1 customer concentration and order lumpiness",
+  "US pharma tariffs/Section 232 tail",
+  "USFDA observations",
+  "China API price competition"
+ ],
+ "upside_triggers": [
+  "Nifty 50 inclusion",
+  "Confirmed long-term GLP-1 supply contracts",
+  "New CS projects ramping with new capex",
+  "INR depreciation"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/DIVISLAB/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in consolidated financials through Jun-2026 quarter"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Divi's+Laboratories+shares+gain+weight+loss+drug+EU+panel+backing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-19",
+   "what": "GLP-1 / EU panel headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "US pharma tariff exemptions"
+  },
+  {
+   "url": "market_impact/data/packs/DIVISLAB.md",
+   "date": "2026-11-05",
+   "what": "evidence pack incl. empirical sensitivities"
+  }
+ ],
+ "ticker": "DIVISLAB",
+ "as_of": "2026-11-05"
+}

@@ -1,0 +1,385 @@
+{
+ "ticker": "BANKINDIA",
+ "name": "Bank of India",
+ "as_of": "2026-11-05",
+ "industry": "I_PSU_BANKS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Government-owned (73.38%) public-sector bank with a sizeable international franchise (branches and subsidiaries abroad) alongside domestic retail, MSME, agriculture and corporate lending. Market cap Rs62,599cr at P/E 5.0x and P/B 0.66x, dividend yield 3.4%. Q2 FY27 standalone PAT Rs3,202cr (+25% y/y) on strong NII and recoveries; management guides NIM to improve to 2.55% in H2 FY27 after the RBI hike (repo 5.50%). Key issues: NIM sustainability once deposits reprice, treasury sensitivity to yields, ECL transition (April 2027), possible government OFS.",
+ "revenue_mix": [
+  {
+   "segment": "retail and MSME/agri banking",
+   "share_pct": 45,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "wholesale / corporate",
+   "share_pct": 35,
+   "geography": "India ~80% / overseas ~20% (model estimate)"
+  },
+  {
+   "segment": "treasury",
+   "share_pct": 20,
+   "geography": "India + overseas"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 60
+  },
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "BANKINDIA",
+   "relation": "funding_cost",
+   "w": 2.5,
+   "w_low": -1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "PSU banks: ~60% of loans are repo-linked (EBLR) and reprice immediately (PSBs raised repo-linked lending rates by 25bp on 2026-10-09), deposits reprice slowly; management guides NIM to 2.55% in H2 FY27. +10bp NIM on ~Rs10 lakh cr earning assets = Rs1,000cr pre-tax = Rs750cr post-tax = ~6% of TTM PAT Rs12,517cr; persistence 0.25 => +1.5; P/B 0.66 means re-rating potential from earnings upgrade => +2.5 with wide range because deposit repricing could erase it within 6-12 months.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bank+of+India+sees+NIM+improving+to+2.55%+in+H2+FY27+after+RBI+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "management expects NIM 2.55% in H2 (Moneycontrol)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (The Hindu / SCC Online)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BANKINDIA",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -5.5,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "PSU banks hold large G-sec books (~25-28% of assets, AFS ~35%; model est.): AFS ~Rs1 lakh cr x duration 2.5 x 25bp = Rs625cr = ~5% of PAT, persistence 0.25 = -1.3, plus COE/P-B effect => -3. Matches the sign of empirical US10Y -1.23 (t=-1.7).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "BANKINDIA",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp credit growth: PSU loan growth currently lags private banks; NII +3.5%, operating leverage => PAT +5%, persistence 0.6 => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "BANKINDIA",
+   "relation": "funding_cost",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "PSU banks have structural deposit-share loss; +3pp deposit growth eases CD ratio and funding cost => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "BANKINDIA",
+   "relation": "regulatory_risk",
+   "w": -10.0,
+   "w_low": -16.0,
+   "w_high": -5.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost on ~Rs7 lakh cr advances (model est.) = Rs3,500cr pre-tax = Rs2,600cr post-tax = -21% of TTM PAT; persistence 0.5 => -10. At P/B 0.66 and low earnings multiple (P/E 5), the market already discounts a credit cycle, so risk is asymmetric to the downside only if slippages rise.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bank+of+India+Q2+FY27+profit+3,202+crore+GNPA+NIM+advances+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Q2 PAT +25% to Rs3,202cr on strong NII and recoveries (Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "BANKINDIA",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "BoI unsecured retail is small (~6-8% of loans, model); +1pp delinquency => -0.9% PAT x 0.5; sentiment -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "BANKINDIA",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -8.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "ECL framework (effective 2027-04-01, model knowledge) forces day-1 provisioning; Canara fell 6% on a Rs15,000cr warning. BoI GNPA is low but ECL on stage-2 and standard assets applies; transition can be spread over years; -4 and wide band.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Canara+Bank+15,000+crore+ECL+provision+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Canara fell 6% on Rs15,000cr ECL provision warning (India Infoline)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BANKINDIA",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 7.6%; PSU banks are a high-beta domestic flow trade; +US$5bn/qtr => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "BANKINDIA",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+10% government capex growth boosts PSU infra/wholesale credit demand and fee income; PSU banks have largest infra exposures => PAT +2.5% x 0.6 = +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "BANKINDIA",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP growth lowers slippages and lifts credit growth; PSU beta higher => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BANKINDIA",
+   "relation": "fx_translation",
+   "w": 0.8,
+   "w_low": -2.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "BoI runs an overseas book (~15-20% of business; model knowledge): rupee depreciation lifts INR value of foreign income and FX trading gains; but FPI outflow risk offsets. +0.8; empirical USDCNY -2.46 (t=-1.0) insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "BANKINDIA",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical -0.65 (t=-1.0); consistent with inflation/yield channel.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BANKINDIA",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "1y vol 33%, beta 1.27 to VIX-linked risk-off; empirical coefficient is positive (+0.66, t=1.3), contradictory sign; central -1.5 retained from beta, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BANKINDIA.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India (73.38% owner)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "capital support, OFS/dilution risk, dividend policy"
+  },
+  {
+   "counterparty": "SBI / Bank of Baroda / Canara / PNB",
+   "ticker": "SBIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "PSU peers; SBI Q2 PAT +14% aided by exceptional gains (Moneycontrol 2026-11-03)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-22",
+   "event": "Q3 FY27 results (inferred; Q2 reported 2026-10-23)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Bank+of+India+Q2+FY27+profit+3,202+crore+GNPA+NIM+advances+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC; another hike would extend EBLR repricing gains",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04-01",
+   "event": "RBI ECL framework effective; PSU banks flag large transition provisions (Canara Rs15,000cr warning)",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Canara+Bank+15,000+crore+ECL+provision+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Possible government OFS/QIP for capital or liquidity (model knowledge: government holding 73.4%, MPS-compliant)",
+   "type": "corporate_action",
+   "prob": 0.15,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Standalone PAT Rs3,202cr (+25% y/y), screener consolidated Rs3,310cr; NII strong, recoveries high; profit flat q/q on screener; management expects NIM 2.55% in H2.",
+  "valuation": "P/E 5.0x, P/B 0.66x (Rs138 / BV Rs207), div yield 3.4%; 52w range Rs124-178; -3.4% 3m, -3.1% 12m, +4.3% 1m; 1y vol 33%.",
+  "recent_developments": [
+   "2026-10-07: RBI hikes repo to 5.50%",
+   "2026-10-09: PSU banks raise repo-linked lending rates by 25bp (TradingView)",
+   "2026-10-15: Canara Bank -6% on Rs15,000cr ECL warning",
+   "2026-10-23: BoI Q2 PAT +25%; NIM guide 2.55% H2 FY27",
+   "2026-11-03: SBI Q2 PAT +14%, one-time gain; SBI data breach reported"
+  ]
+ },
+ "key_risks": [
+  "NIM gain reverses as deposit rates rise",
+  "ECL day-1 provisions (April 2027) and credit-cycle turn",
+  "Treasury MTM losses if yields keep rising",
+  "Government OFS/dilution",
+  "Overseas book and geopolitical exposure"
+ ],
+ "upside_triggers": [
+  "Sustained NIM expansion and PAT upgrades from repricing",
+  "ROE ~12.4% vs P/B 0.66 re-rating towards 1.0x",
+  "Dividend payout increase",
+  "Credit growth acceleration"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BANKINDIA.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bank+of+India+Q2+FY27+profit+3,202+crore+GNPA+NIM+advances+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bank+of+India+sees+NIM+improving+to+2.55%+in+H2+FY27+after+RBI+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "NIM guidance"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+hike+5.5%+FCNR(B)+rupee+banks+NIM+deposit+rates+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "PSU lending-rate repricing"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Canara+Bank+15,000+crore+ECL+provision+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "ECL read-across"
+  }
+ ]
+}

@@ -1,0 +1,383 @@
+{
+ "name": "Ashok Leyland Ltd.",
+ "industry": "I_AUTO_CV_TRACTOR",
+ "tier": "MIDCAP_100",
+ "business_summary": "Hinduja-group maker of medium and heavy commercial vehicles (M&HCV), LCVs, buses, defence vehicles, engines and spares; also Switch Mobility (EV) and a captive financing associate. FY26 sales Rs44,007 cr, TTM EBITDA margin 12.8%, PAT Rs3,581 cr; Q1 FY27 sales Rs9,634 cr, EBITDA 10%, PAT Rs609 cr, record volume 48,763 units. Almost debt-free, ROE 30%, dividend yield 2.1%. Market cap Rs100,472 cr at 26x P/E. Cyclical: volumes follow GDP, freight, infrastructure and financing conditions. Segment mix is model knowledge.",
+ "revenue_mix": [
+  {
+   "segment": "M&HCV + LCV vehicles",
+   "share_pct": 80,
+   "geography": "India ~88% / exports ~12% (unverified)"
+  },
+  {
+   "segment": "spares, engines, power solutions, Switch EV",
+   "share_pct": 20,
+   "geography": "India + Europe/UK (Switch)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "F_RUBBER",
+   "share_of_costs_pct": 5
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GDP_IN",
+   "dst": "ASHOKLEY",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "M&HCV volumes are ~2.5-3x GDP-cyclical (freight tonnage, mining, construction). +1pp GDP => ~+4% industry volume; operating leverage ~2x on 13% margin => EBITDA +8%; x EV/MCap 1.0 x persistence 0.5 => ~+4, shaded to 3.5. Oct 2026 sales +23% to 21,888 units, Sep +28% to 24,049 (record Q1 volume 48,763).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Ashok+Leyland+Q1+FY27+results+margin+guidance+CV+industry+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-14",
+     "note": "Financial Express: CV volumes record 48,763 units in Q1; Upstox: EBITDA margin impacted by rising material costs"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "ASHOKLEY",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Tippers, haulers and construction trucks follow road/rail/mining capex. +10% capex growth => ~+4% volume in ~35% of CV segments => ~+1.5% total volume, x2 operating leverage => EBITDA +3%, plus sentiment and state-capex timing; central +3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASHOKLEY.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_INFRA_SPENDING_ROADS",
+   "dst": "ASHOKLEY",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Road construction drives tipper and multi-axle demand (~25% of M&HCV); +10% roads spend => ~+2.5% volumes => ~+1.5 after persistence 0.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASHOKLEY.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "ASHOKLEY",
+   "relation": "input_cost",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Steel (sheet, forgings, castings) ~15% of costs. +7% => cost base Rs39,185 cr x 15% x 7% = ~Rs410 cr = ~7% of EBITDA Rs5,732 cr; ~50% recovered through price hikes with lag => -3.6% EBITDA x persistence 0.5 x EV/MCap 1.0 => -1.8. Q1 FY27 margin fell ~1pt on material costs (Economic Times 2026-08-18). Global HRC +20.6% since June signals ongoing pressure.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Ashok+Leyland+Q1+FY27+results+margin+guidance+CV+industry+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-18",
+     "note": "Economic Times: record June quarter, margin fell a full point"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "ASHOKLEY",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Aluminium (castings, radiators) ~3% of costs; +10% => +0.3% costs => ~-2% EBITDA, half recovered, persistence 0.5 => -0.5; empirical -1.62 (t=-1.8) is larger, so central shaded to -0.9.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASHOKLEY.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RUBBER",
+   "dst": "ASHOKLEY",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Tyres (rubber-linked) ~5% of costs; +10% rubber => ~+0.4% costs => ~-1.7% EBITDA, partial pass-through => ~-0.7 after persistence.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASHOKLEY.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ASHOKLEY",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -2.5,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Diesel is the largest operating cost for fleet owners (~50-60% of running cost), so +10% Brent compresses operator margins, delays fleet replacement and hurts used-CV values; also raises India inflation and eases around EV transition. Empirical -1.52 per SSU, t=-2.8 (strong) matches. Crude's 5 Nov fall helped the stock (Business Standard headline 'TaMo CV, Ashok Leyland, Maruti rally up to 8% as crude tumbles').",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Ashok+Leyland+shares+surge+November+2026+reason+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Business Standard: rally as crude oil price tumbles (headline)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ASHOKLEY",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "~90% of CVs are financed; +25bp raises EMI ~0.3% and dealer/fleet funding cost (company itself is nearly debt-free, interest Rs169 cr). RBI hiked to 5.50% on 2026-10-07 and auto stocks fell (CNBC TV18 2026-10-07). Includes discount-rate effect at 26x P/E.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "ASHOKLEY",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "CRIF (Business Standard 2026-08-19) flags CV loan stress; +50bp credit costs tightens NBFC CV lending (and hits the Hinduja Leyland Finance associate). Equity impact via volumes ~-1% and associate earnings.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASHOKLEY.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ASHOKLEY",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -1.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Exports ~10-12% of volume (Middle East, Africa, SAARC; model knowledge) vs imported electronics/components; net small positive. +3% => ~+0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASHOKLEY.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "ASHOKLEY",
+   "relation": "policy_effect",
+   "w": 0.6,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": ">12m",
+   "mechanism": "Switch Mobility electric buses/LCVs benefit from PM e-Bus Sewa/PM E-DRIVE subsidies; EV business still loss-making so valuation impact modest.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASHOKLEY.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "ASHOKLEY",
+   "relation": "geopolitical_exposure",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Gulf is a key export region (UAE, Saudi) and escalation lifts Brent/diesel; both reduce demand. Partially double-counted with F_BRENT so shaded.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASHOKLEY.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Tata Motors Commercial Vehicles",
+   "ticker": "TMCV",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Market leader in M&HCV; CV peer rallied with ASHOKLEY on 2026-11-05"
+  },
+  {
+   "counterparty": "VE Commercial Vehicles (Eicher/Volvo)",
+   "ticker": "EICHERMOT",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Eicher owns 54.4% of VECV (model knowledge)"
+  },
+  {
+   "counterparty": "Hinduja Leyland Finance (captive NBFC, associate)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Financing partner; stake holding not a listed-universe link"
+  },
+  {
+   "counterparty": "Steel and aluminium suppliers",
+   "ticker": "JSWSTEEL",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Sheet and forged steel"
+  },
+  {
+   "counterparty": "Fleet operators, STUs, defence",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Fragmented; no >25% customer"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (Sep quarter; expected mid-Nov)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "company reports Q2 in Nov historically (model knowledge); Q1 reported 2026-08-13"
+  },
+  {
+   "date": "2026-12-01",
+   "event": "November 2026 sales release (strong-volume trend; Oct +23%, Sep +28%)",
+   "type": "other",
+   "prob": 0.98,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Ashok+Leyland+shares+surge+November+2026+reason+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results; commentary on FY27 peak-cycle ('output to peak in FY2027 before two-year dip', Automotive World 2026-09-30)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Ashok+Leyland+GST+commercial+vehicles+demand+outlook+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Next RBI MPC meeting (further hike would hit CV financing sentiment)",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs9,634 cr, EBITDA Rs970 cr (10%), PAT Rs609 cr; Q2 results pending",
+  "trend": "Strong domestic CV volume: Sep sales +28%, Oct +23% to 21,888 units; margins squeezed ~1pt by materials in Q1",
+  "valuation": "P/E 26x, P/B 7.6x, ROE 30%; mid-cycle-to-peak earnings multiple",
+  "recent_developments": [
+   "2026-08-14: Q1 results, record volumes, margin -1pt on material cost",
+   "2026-10-01: Sept sales +28% to 24,049 units",
+   "2026-10-07: RBI repo hike to 5.50% drags auto stocks (CNBC TV18)",
+   "2026-10-12: tie-up with TMB for custom vehicle loans",
+   "2026-11-02: Oct sales +23%",
+   "2026-11-05: stock up ~9-12%, +19% in four sessions, with crude oil falling (NDTV Profit, Business Standard, Economic Times headlines)"
+  ]
+ },
+ "key_risks": [
+  "Peak-cycle fear: output to peak in FY27 then two-year dip (Automotive World 2026-09-30)",
+  "Steel/commodity inflation vs price hikes",
+  "Higher rates and CV-loan stress",
+  "Crude/diesel rebound",
+  "Promoter pledge 40.1% (screener)"
+ ],
+ "upside_triggers": [
+  "Crude falling further",
+  "Infrastructure capex and mining volume surge",
+  "Export recovery in Africa/Middle East",
+  "Margin recovery via price hikes"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/ASHOKLEY.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Jun 2026, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Ashok+Leyland+Q1+FY27+results+margin+guidance+CV+industry+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-18",
+   "what": "Q1 FY27 headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Ashok+Leyland+shares+surge+November+2026+reason+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-05",
+   "what": "Nov 5 rally headlines (reasons not read in full)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Ashok+Leyland+GST+commercial+vehicles+demand+outlook+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-30",
+   "what": "Demand outlook / cycle headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+  }
+ ],
+ "ticker": "ASHOKLEY",
+ "as_of": "2026-11-05"
+}

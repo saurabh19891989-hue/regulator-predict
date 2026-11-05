@@ -1,0 +1,362 @@
+{
+ "name": "Dabur India Ltd.",
+ "industry": "I_FMCG_STAPLES",
+ "business_summary": "Ayurvedic and natural-health FMCG: healthcare (Chyawanprash, Honey, Hajmola, Dabur Red), home & personal care (Odonil, Odomos, Dabur Amla, Vatika), foods (Real juices, Badshah spices acquired 2023), and Sesa Care (merger approved by NCLT 25 Sep 2026). International ~25% of revenue (Middle East, Egypt, Turkey, Nigeria, Bangladesh; approximate). Promoters (Burman family) own 66.25%. Q2 FY27 PAT ~Rs 499-506 cr (+12%); global CEO Mohit Malhotra resigned on 4 Nov 2026 (effective 13 Nov), successor Herjit Singh Bhalla.",
+ "revenue_mix": [
+  {
+   "segment": "Healthcare",
+   "share_pct": 30,
+   "geography": "India"
+  },
+  {
+   "segment": "Home & personal care",
+   "share_pct": 35,
+   "geography": "India"
+  },
+  {
+   "segment": "Foods & beverages",
+   "share_pct": 15,
+   "geography": "India"
+  },
+  {
+   "segment": "International",
+   "share_pct": 20,
+   "geography": "MENA, Africa, South Asia (approximate)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_EDIBLE_OIL",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "F_SUGAR",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 5
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "DABUR",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Rural ~45% of India sales (company disclosure, model knowledge). +5pp rural growth => sales +2.1% x 35% incremental margin/18% => EBITDA +4.1%, persistence 0.5 => +2.0. Dabur said in Oct 2026 that rural outpaces urban.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dabur+shares+jump+rural+demand+outpaces+urban+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "note": "Moneycontrol: FMCG growth accelerates, rural demand outpaces urban"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=weak+monsoon+rural+demand+FMCG+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "weak monsoon risk"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "DABUR",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.8,
+   "lag": "3-12m",
+   "mechanism": "Urban ~55% of India sales; +5pp => sales +2.7% x 35% / 18% => EBITDA +5.2% x 0.5 = +2.6, trimmed to +1.5 for overlap and weaker urban premium mix.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DABUR/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 sales +11.7% y/y"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "DABUR",
+   "relation": "input_cost",
+   "w": -1.4,
+   "w_low": -2.5,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Packaging ~12% of costs (glass/PET/cartons for Real, honey, hair oil). +10% => costs +1.2% => 0.98% of sales => EBITDA -5.4%; 50% pass-through => -2.7; persistence 0.5 => -1.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Rising+input+costs+FMCG+margins+Q2+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-11",
+     "note": "Business Standard: rising input costs weigh on FMCG margins"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "DABUR",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Coconut/vegetable oils (Anmol, Vatika) ~6% of costs. +10% => costs +0.6% => 0.49% of sales => EBITDA -2.7%; 50% passthrough, persistence 0.5 => -0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+cuts+edible+oil+import+duty+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Reuters 2026-09-23"
+    }
+   ]
+  },
+  {
+   "src": "F_SUGAR",
+   "dst": "DABUR",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Sugar/fruit concentrates for Real juices ~4% of costs. +10% => EBITDA -1.8%; 50% passthrough; persistence 0.5 => -0.4. Sugar +27.8% since June.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DABUR/consolidated/",
+     "date": "2026-11-05",
+     "note": "F_SUGAR +27.8% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "DABUR",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.3,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Light liquid paraffin, surfactants, PET ~5% of costs. +10% Brent => EBITDA -1.4%; 50% pass-through; persistence 0.5 => -0.35; empirical -0.73 (t=-1.7) is larger, blended to -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DABUR/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical F_BRENT -0.73, t=-1.7"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "DABUR",
+   "relation": "fx_translation",
+   "w": 0.5,
+   "w_low": -0.8,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "International ~20-25% of revenue in USD-linked/volatile currencies; weaker rupee raises translated profit but Egypt/Turkey/Nigeria depreciation offsets. Net +0.5, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DABUR/consolidated/",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "DABUR",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "P/E 33.7, low debt (interest Rs 40 cr per quarter), 70% payout: valuation channel => -1.0 per +25bp.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DABUR/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 33.7, dividend yield 2.1%"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "DABUR",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Hair oil, shampoo, ayurvedic products were moved to lower GST slabs in the Sept 2025 reform (model knowledge); a further cut is a small positive; +1 => volume +1.5% => EBITDA +2.9% x 0.5 persistence => +1.0 (conservative given partial price relief).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=GST+Council+input+tax+credit+FMCG+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Outlook Money 2026-10-09"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FOOD_SAFETY_REG",
+   "dst": "DABUR",
+   "relation": "regulatory_risk",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Honey, juices and spice products are exposed to FSSAI sampling; Nestle/Zydus notices (Oct 2026) show enforcement intensity rising. +1 => ~2% of sales disrupted => EBITDA -0.8%... probability-weighted => -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Nestle+India+Zydus+Wellness+FSSAI+notice+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "FSSAI notices to Nestle and Zydus Wellness"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "DABUR",
+   "relation": "macro_transmission",
+   "w": 0.9,
+   "w_low": 0.1,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "FII 9.6% (down from 10.0%); stock -25% in 12m. +US$5bn inflow => +0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DABUR/consolidated/",
+     "date": "2026-11-05",
+     "note": "FII 9.60% Sep-26"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Sesa Care",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "merger approved by NCLT 2026-09-25 (Business Today)"
+  },
+  {
+   "counterparty": "Honey, herb and edible-oil suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "agri inputs"
+  },
+  {
+   "counterparty": "Marico / HUL / Godrej Consumer / Patanjali",
+   "ticker": "MARICO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "hair oil, oral care, health foods"
+  },
+  {
+   "counterparty": "Modern trade and quick-commerce",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "channels"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-13",
+   "event": "CEO Mohit Malhotra steps down; Herjit Singh Bhalla takes over (global CEO transition)",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 1.0,
+   "source": "BW Businessworld 2026-11-04"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Oct-Dec); winter portfolio (chyawanprash) and rural recovery",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge; date unverified"
+  },
+  {
+   "date": "2026-12",
+   "event": "Sesa Care merger effective-date filings",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 0.5,
+   "source": "HDFC Sky 2026-09-25"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 3,563 cr (+11.7% y/y), operating profit 632 cr (18%), PAT Rs 499 cr per screener (+12%); Moneycontrol reports Rs 506 cr beat",
+  "trend": "volume growth accelerating, rural ahead of urban; margins steady at ~18%",
+  "valuation": "P/E 33.7, price 387 vs 52w 354-534; -25% over 12m",
+  "recent_developments": [
+   "2026-11-04 Q2 beats estimates; global CEO resigns",
+   "2026-10-06 Q2 update: FMCG 'strongest performance in recent quarters'",
+   "2026-10-07 Nomura Buy, Goldman Neutral",
+   "2026-09-25 NCLT approves Sesa Care merger",
+   "2026-09-23 HUL/Dabur near Covid-low valuations"
+  ]
+ },
+ "key_risks": [
+  "CEO transition",
+  "Input-cost inflation",
+  "Weak monsoon",
+  "Competition from regional brands"
+ ],
+ "upside_triggers": [
+  "Rural volume recovery",
+  "Margin expansion from mix",
+  "Sesa Care synergies"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_FOOD_SAFETY_REG",
+   "type": "POLICY",
+   "name": "FSSAI food-safety / labelling enforcement intensity",
+   "ssu": "+1 = materially stricter enforcement on packaged-food claims, sampling and recalls"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/DABUR/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Dabur+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 and CEO coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Dabur+CEO+Malhotra+resigns+successor+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "CEO transition"
+  }
+ ],
+ "ticker": "DABUR",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

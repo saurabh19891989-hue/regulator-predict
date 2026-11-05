@@ -1,0 +1,362 @@
+{
+ "name": "LIC Housing Finance Ltd.",
+ "industry": "I_HOUSING_FINANCE",
+ "tier": "MIDCAP_100",
+ "business_summary": "Housing finance company (NHB/RBI regulated) promoted by LIC (45.24%), financing individual home purchase/construction (97% retail book in H1 FY27), plus LAP, developer/project finance and LRD. Portfolio ~Rs 3 lakh cr; funded mainly by NCDs and bank borrowings. Q2 FY27 PAT ~Rs 1,507 cr (+11% y/y); Stage 3 2.05%; Rs 553 cr retail recoveries; mgmt targets 14-15% disbursement growth. Trades at 0.65x book and ~4.9x earnings.",
+ "revenue_mix": [
+  {
+   "segment": "Individual home loans",
+   "share_pct": 88,
+   "geography": "India (strong in Tier-2/3 and salaried)"
+  },
+  {
+   "segment": "LAP, developer and LRD",
+   "share_pct": 12,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 70,
+   "note": "interest Rs 19.7k cr of Rs 28.6k cr revenue"
+  },
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "LICHSGFIN",
+   "relation": "funding_cost",
+   "w": 3.0,
+   "w_low": -2.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "+25bp repo: Morgan Stanley estimates +7.2% PBT (7 Oct 2026) because asset book is largely floating (LIC HFL PLR-linked) and reprices faster than market borrowings (NCD ~50%, bank ~20-25%, deposits/NHB rest - model knowledge). PBT +7.2% x persistence 0.5 -> ~+3.6; haircut for higher discount rate and spread-compression risk -> +3.0, range -2..+6. Empirical Fed funds +4.43/SSU (t 2.9) is a rate-cycle co-movement, agrees in sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Why+is+LIC+Housing+Finance+share+price+up+today+Morgan+Stanley+RBI+25+bps+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Morgan Stanley sees 7.2% PBT boost for LIC HFL from 25bp repo hike (Business Upturn headline)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "LICHSGFIN",
+   "relation": "funding_cost",
+   "w": -3.0,
+   "w_low": -5.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "~85% of borrowings are market-linked; interest Rs 19.7k cr TTM. +50bp on ~Rs 2.7 lakh cr liabilities with ~40% repricing in a year = Rs 540 cr vs financing profit Rs 7.6k cr = -7%; pass-through 40% -> -4.3%; persistence 0.5 -> -3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "LICHSGFIN",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "+25bp G-sec lifts NCD pricing (bond market benchmark) and the P/B discount rate; lender trades at 0.65x book so downside to multiple limited; -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "LICHSGFIN",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+10% housing sales -> disbursement growth +3pp (mgmt targets 14-15% growth, Q2 disbursements +11%) -> AUM +1pp -> NII +1.5%; leverage on 97% retail book; persistence 0.7 -> +1.0; plus spread-stability effect -> +2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=LIC+Housing+Finance+recovers+553+crore+retail+portfolio+Q2+14-15%+disbursements+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Rs 553 cr recoveries from retail portfolio; targets 14-15% disbursement growth (Livemint)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "LICHSGFIN",
+   "relation": "demand_driver",
+   "w": -7.0,
+   "w_low": -12.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "Credit cost currently ~0.2-0.3% (Stage 3 2.05%, Rs 553 cr retail recoveries in Q2). +50bp on ~Rs 3 lakh cr book = Rs 1.5k cr = -19% of Rs 7.6k cr financing profit; persistence 0.4 -> -7.6; asymmetry because developer exposure and the Essel/Subhash Chandra-guarantee loans (four firms offering full repayment, 8 Oct) are legacy stress points.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=LIC+Housing+Finance+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "Q2 PAT up 11% (BusinessLine; headline prints Rs 150.7 cr, likely Rs 1,507 cr per screener); Stage 3 2.05%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Four+firms+offer+full+repayment+LIC+Housing+Finance+Subhash+Chandra+guarantee+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Four firms offer full repayment on loans backed by Subhash Chandra guarantee (Millennium Post)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "LICHSGFIN",
+   "relation": "funding_cost",
+   "w": 0.5,
+   "w_low": -0.3,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Banks' deposit growth keeps competing bank housing loans cheap (bank home-loan rates 7.1-7.35%, Upstox 7 Oct) - competition narrows LIC HFL's spread; ambiguous, tiny positive via system liquidity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_HOUSING_POLICY",
+   "dst": "LICHSGFIN",
+   "relation": "policy_effect",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Interest subvention, PMAY-U 2.0, Sec 24/80EEA tax changes raise affordable-home demand: +1 step -> disbursements +3% -> ~+2.5; LIC HFL has Tier-2/3 affordable mix.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "LICHSGFIN",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "NHB/RBI scale-based HFC regulation (risk weights, LTV, project-finance provisioning) tightening raises provisions and capital need; -2 expected.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "LICHSGFIN",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth: housing credit grows faster in expansions; LIC HFL market share declining (portfolio growth ~7-8%). +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "LICHSGFIN",
+   "relation": "discount_rate",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Empirical +4.43/SSU t=2.9 over 3y reflects a rate-cycle regime where rising rates coincided with HFC NIM expansion; judged partly coincidental and shrunk to +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LICHSGFIN",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs fell 21.47% -> 18.93% (Jun -> Sep 2026); beta 1.39; flow reversal would unwind some of the pressure.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LICHSGFIN.md",
+     "date": "2026-11-05",
+     "note": "FII 21.47% Jun-26 -> 18.93% Sep-26"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "LICI",
+   "dst": "LICHSGFIN",
+   "relation": "holding_stake",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Per +10% move in LICI equity value: LIC holds 45.24% (promoter); sentiment link on LIC deal flow/support and parent-brand sentiment; reverse link is the scale effect. +1.0 per +10% (assumed unit: % equity of dst per +10% of src).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Life Insurance Corporation of India",
+   "ticker": "LICI",
+   "role": "parent",
+   "importance": "high",
+   "note": "45.24% promoter; distribution via LIC agents"
+  },
+  {
+   "counterparty": "HDFC Bank / SBI / Bajaj Housing Finance",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "prime home loans compete on rates (7.1-7.35% bank offers)"
+  },
+  {
+   "counterparty": "NCD investors / banks / NHB",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "funding"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 was 30 Oct 2026; Q3 likely late Jan/early Feb)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=LIC+Housing+Finance+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December: further hike would help HFC NIM near-term but hurt demand",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Resolution of Essel/Subhash Chandra-guarantee exposures (full repayment offers noted 8 Oct)",
+   "type": "litigation",
+   "prob": 0.5,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Four+firms+offer+full+repayment+LIC+Housing+Finance+Subhash+Chandra+guarantee+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Profit +11% y/y; H1 spreads narrowed as lending yield fell faster than cost of funds (Multibagg AI); Stage 3 2.05% but coverage dropped; disbursements +11%",
+  "valuation": "P/E 4.9, P/B 0.65, dividend yield 1.9%; deep discount to Bajaj/HDFC peers; analysts Hold (target Rs 520, ICICI Sec and Prabhudas Lilladher, 3 Nov)",
+  "recent_developments": [
+   "2026-10-07: RBI hikes repo; Morgan Stanley sees +7.2% PBT for LIC HFL",
+   "2026-10-08: four firms offer full repayment on Subhash Chandra-guaranteed loans",
+   "2026-10-31: Q2 PAT +11%",
+   "2026-11-01: mgmt sees double-digit growth in H2, portfolio to ~Rs 3.5 lakh cr (BusinessLine)",
+   "2026-11-03: Rs 553 cr recoveries; targets 14-15% disbursement growth; brokerages Hold"
+  ]
+ },
+ "key_risks": [
+  "Spread compression from competitive prime pricing and lower lending yields",
+  "Stage 3 coverage decline and legacy developer / guarantee exposures",
+  "Wholesale funding cost if spreads widen",
+  "Slower housing demand if rate hikes persist",
+  "Low ROA (1.9-2%)"
+ ],
+ "upside_triggers": [
+  "Rate-hike NIM benefit (PLR resets before liabilities)",
+  "Sharper recoveries and write-backs",
+  "Improved disbursement momentum (H2 14-15% target)",
+  "Re-rating toward 1x book"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=LIC+Housing+Finance+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-31",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=LIC+Housing+Finance+recovers+553+crore+retail+portfolio+Q2+14-15%+disbursements+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Earnings call highlights"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Why+is+LIC+Housing+Finance+share+price+up+today+Morgan+Stanley+RBI+25+bps+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "MS rate-hike impact"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Four+firms+offer+full+repayment+LIC+Housing+Finance+Subhash+Chandra+guarantee+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-08",
+   "what": "Guarantee loans"
+  },
+  {
+   "url": "market_impact/data/packs/LICHSGFIN.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  }
+ ],
+ "ticker": "LICHSGFIN",
+ "as_of": "2026-11-05"
+}

@@ -1,0 +1,301 @@
+{
+ "ticker": "LENSKART",
+ "name": "Lenskart Solutions Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_RETAIL",
+ "tier": "MIDCAP_100",
+ "business_summary": "Vertically integrated eyewear company (design, manufacturing, retail, e-commerce) with ~2,800+ stores in India and abroad (Owndays in Japan, Singapore, Middle East). TTM sales Rs 10,383 cr (+41%), EBITDA margin 21-22%, PAT Rs 797 cr; market cap Rs 1.26 lakh cr at P/E 161, price Rs 725 (all-time high after Q2). Listed Nov 2025 (IPO price ~Rs 402, shares +80-90% since). Promoters 17.5%, FIIs 18%, DIIs 27%.",
+ "revenue_mix": [
+  {
+   "segment": "India eyewear (approx.)",
+   "share_pct": 70,
+   "geography": "India"
+  },
+  {
+   "segment": "International (Owndays etc.) (approx.)",
+   "share_pct": 30,
+   "geography": "Japan, SE Asia, Middle East"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "COGS: frames, lenses, contact lenses",
+   "share_of_costs_pct": 38
+  },
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 24
+  },
+  {
+   "input": "Rent, marketing, other",
+   "share_of_costs_pct": 32
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "LENSKART",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Eyewear is a needs-plus-discretionary urban category (sunglasses, premium lenses, second pair). +5pp urban demand -> SSSG +3pp -> revenue +3% -> EBITDA +5% with 40% incremental margin on 22% margin = +5.5% EBITDA; EV/MCap 1.0, persistence 0.6 -> +3.3, plus growth-multiple effect -> +5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lenskart+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Q2 revenue +36%, PAT 2.3x to Rs232 cr; international margin 10.6% on 29.5% growth; long-term 25% margin target; shares +11% to ATH (Entrackr, Inc42, Multibagg AI)"
+    },
+    {
+     "source": "https://www.screener.in/company/LENSKART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 2,845 cr, OP 622 cr (22%), PAT 232 cr; mcap 1,25,926 cr, P/E 161"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "LENSKART",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": ">12m",
+   "mechanism": "Rising AOV (Gold membership, blue-cut/progressive lenses, branded frames) supports ASP; +1 unit ~ +3% AOV with 70% flow-through -> EBITDA +9% -> persistence 0.4 -> +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lenskart+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Q2 revenue +36%, PAT 2.3x to Rs232 cr; international margin 10.6% on 29.5% growth; long-term 25% margin target; shares +11% to ATH (Entrackr, Inc42, Multibagg AI)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LENSKART",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "P/E 161, ROE 6%, so equity is almost all long-dated growth; +25bp -> -2.5 (damped 0.7 of Gordon sensitivity).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LENSKART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 2,845 cr, OP 622 cr (22%), PAT 232 cr; mcap 1,25,926 cr, P/E 161"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LENSKART",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding rose 4.3% -> 18.3% in two quarters as pre-IPO holders sold (Alpha Wave block Rs1,985 cr on Oct 12, ADIA Rs2,390 cr on Sep 21, headlines); free float growing, FPI flows drive price; +3 per +$5bn.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LENSKART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 2,845 cr, OP 622 cr (22%), PAT 232 cr; mcap 1,25,926 cr, P/E 161"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Lenskart+block+deal+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Block deals Alpha Wave, ADIA"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "LENSKART",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "35% annualised vol and recent-IPO supply overhang (promoters hold 17.5%): +5 VIX -> -3 after market component.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LENSKART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 2,845 cr, OP 622 cr (22%), PAT 232 cr; mcap 1,25,926 cr, P/E 161"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "LENSKART",
+   "relation": "fx_translation",
+   "w": -0.3,
+   "w_low": -1.5,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Imports of frames/lenses/contact lenses ~12% of revenue (model knowledge) -> +3% USD/INR costs +0.36% of revenue -> EBITDA -1.6%; offset by international revenue (~30% of sales, Owndays/Japan, SE Asia, Middle East) that translates higher; net -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lenskart+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Q2 revenue +36%, PAT 2.3x to Rs232 cr; international margin 10.6% on 29.5% growth; long-term 25% margin target; shares +11% to ATH (Entrackr, Inc42, Multibagg AI)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "LENSKART",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Polycarbonate/CR-39 lens resins and acetate frames are petrochemical-linked, ~8% of COGS (~2.4% of revenue). +10% -> EBITDA -1.1%; persistence 0.4 -> -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "eyewear cost structure"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "LENSKART",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Store staff, optometrists and factory labour ~20% of revenue; +2pp -> +0.4% of revenue -> EBITDA -1.8%; half passed through; persistence 0.6 -> -0.6; rounded -1.0 for store-roll-out wage competition.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "labour share"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "LENSKART",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Spectacle frames/lenses GST was cut in the Sep-2025 rationalisation (model knowledge); further cuts lower prices -> volume +1% -> +1.5 including sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-09",
+     "note": "GST rationalisation"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Essilor/Luxottica, Chinese frame suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Imported raw materials; model knowledge"
+  },
+  {
+   "counterparty": "Titan (Eye+)",
+   "ticker": "TITAN",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Branded competitor"
+  },
+  {
+   "counterparty": "Alpha Wave Ventures / ADIA / SoftBank",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "Pre-IPO investors selling via block deals"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02-05",
+   "event": "Q3 FY27 results (festive/winter quarter)",
+   "type": "results",
+   "prob": 0.85,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "Q2 on 2026-11-04 (Entrackr)"
+  },
+  {
+   "date": "2026-11-10",
+   "event": "Anniversary of IPO listing (10 Nov 2025): lock-in expiries of promoter/pre-IPO holders possible; block-deal supply risk (verify RHP)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 0.0,
+   "source": "model knowledge of SEBI lock-in rules; block deals 2026-09-21, 2026-10-12"
+  },
+  {
+   "date": "2027-03",
+   "event": "Store roll-out update toward 10,000 stores (Investing.com Q2 slides)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Lenskart+10000+stores+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep-26): sales Rs 2,845 cr (+36%), OP Rs 622 cr (22%), PAT Rs 232 cr (2.3x); international margin 10.6% on 29.5% growth.",
+  "trend": "Margin expansion 18% -> 22% over five quarters; mgmt aims 25% long-term margin and 10,000 stores.",
+  "valuation": "P/E 161, P/B 13.6, ROE 6.3%; +11% on 5 Nov to all-time high, +90% from IPO price.",
+  "recent_developments": [
+   "2026-09-21 ADIA sells ~2% for Rs 2,390 cr",
+   "2026-10-12 Alpha Wave block ~Rs 1,985 cr, shares -5%",
+   "2026-11-04/05 Q2 results; shares +6-11% to ATH; five brokerages bullish (Moneycontrol)"
+  ]
+ },
+ "key_risks": [
+  "Valuation (P/E 161)",
+  "Pre-IPO selling overhang",
+  "Competition from Titan and local chains",
+  "Store roll-out execution",
+  "Consumer slowdown"
+ ],
+ "upside_triggers": [
+  "SSSG and margin beat",
+  "International scale-up",
+  "Index inclusion flows"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/LENSKART/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals via pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Lenskart+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-05",
+   "what": "Q2 headlines (bodies not retrieved)"
+  }
+ ]
+}

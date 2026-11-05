@@ -1,0 +1,375 @@
+{
+ "ticker": "CANBK",
+ "name": "Canara Bank",
+ "as_of": "2026-11-05",
+ "industry": "I_PSU_BANKS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Canara Bank (govt ownership 62.93%) is a top-four PSU bank with a strong South-India retail, agri and gold-loan franchise and subsidiaries in asset management (Canara Robeco), life insurance (Canara HSBC Life) and others. Q2 FY27: PAT Rs5,175cr (+8.4% y/y), NII Rs11,005cr, NIM 2.55%, GNPA 1.33%, NNPA 0.30%, advances +19.5% y/y, total business Rs30.72 lakh cr (+15.9%). Treasury losses weighed and on 2026-10-15 management flagged a one-time ECL provision of Rs12-15k cr recognised over ~2 years (CET1 12.80%, no equity raise planned). P/B 0.86, P/E 5.45, dividend yield 3.5%.",
+ "revenue_mix": [
+  {
+   "segment": "Net interest income",
+   "share_pct": 75,
+   "geography": "India ~97%"
+  },
+  {
+   "segment": "Fee, commission, forex",
+   "share_pct": 12,
+   "geography": "India"
+  },
+  {
+   "segment": "Treasury and other (incl. subsidiary dividends)",
+   "share_pct": 13,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 65
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "CANBK",
+   "relation": "discount_rate",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Larger than BoB: investment book ~Rs5 lakh cr, AFS/FVTPL ~Rs1.6 lakh cr (model estimate) x duration 3 x 0.25% = ~Rs1,200cr pre-tax (~0.8% of Rs1.107 lakh cr mcap post-tax); Q2 already carried treasury losses (ET 2026-10-15). Cost-of-equity channel: P/B 0.86, +25bp G-sec => ~50% to CoE => P/B ~-2.4%. Sum ~-3.2; trimmed for reversal and higher asset yields. 10y 7.4-7.5% in Oct.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "India 10y G-sec ~7.4-7.5% in Oct 2026, multi-year high (Reuters/ET headlines); Nov outlook 7.25-7.35%"
+    },
+    {
+     "source": "https://www.freepressjournal.in/business/canara-bank-net-profit-rises-840-to-5175-crore-in-q2-fy27",
+     "date": "2026-10-14",
+     "note": "Q2 FY27 PAT Rs5,175cr +8.4%, NIM 2.55%, GNPA 1.33%, NNPA 0.30%, advances +19.5%"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "CANBK",
+   "relation": "funding_cost",
+   "w": 0.4,
+   "w_low": -1.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "~50% of domestic advances repo/EBLR-linked (model knowledge); deposits reprice with lag. +25bp: ~Rs6 lakh cr x 0.25% = Rs1,500cr gross, ~60% offset over 6m => ~2bp NIM on ~Rs17.3 lakh cr earning assets (NII 11,005x4/2.55%) = ~Rs350cr = ~1.6% of annualised PAT Rs21,500cr; x persistence 0.5 => ~+0.8, less demand/credit-cost drag => +0.4. NIM guide 2.5-2.6%, 'floor 2.5%'.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening' (The Hindu, Reuters headlines)"
+    },
+    {
+     "source": "https://www.inkl.com/news/canara-bank-sees-nim-floor-at-2-5-confident-of-absorbing-ecl-hit-without-fresh-equity",
+     "date": "2026-10-15",
+     "note": "NIM floor 2.5%, absorb ECL without fresh equity"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "CANBK",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.5,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Canara advances +19.5% y/y (Q2) - already fast. +3pp industry growth => +1.5% avg advances (~Rs18,000cr) x spread ~2.5% = Rs450cr, ~Rs270cr post-tax net = ~1.3% PAT; x persistence 0.5 + small re-rating => ~+1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/canara-bank-net-profit-rises-840-to-5175-crore-in-q2-fy27",
+     "date": "2026-10-14",
+     "note": "Q2 FY27 PAT Rs5,175cr +8.4%, NIM 2.55%, GNPA 1.33%, NNPA 0.30%, advances +19.5%"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "CANBK",
+   "relation": "funding_cost",
+   "w": 0.9,
+   "w_low": 0.3,
+   "w_high": 1.6,
+   "lag": "3-12m",
+   "mechanism": "Total business growth 15.9% y/y vs advances 19.5% implies deposits lag credit => reliance on costlier wholesale. +3pp deposits displaces ~1.5% of funding priced ~120bp higher => ~3bp NIM => ~1.7% PAT x 0.5 => +0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/canara-bank-net-profit-rises-840-to-5175-crore-in-q2-fy27",
+     "date": "2026-10-14",
+     "note": "Q2 FY27 PAT Rs5,175cr +8.4%, NIM 2.55%, GNPA 1.33%, NNPA 0.30%, advances +19.5%"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "CANBK",
+   "relation": "demand_driver",
+   "w": -7.0,
+   "w_low": -11.0,
+   "w_high": -3.5,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost x ~Rs12 lakh cr advances = Rs6,000cr pre-tax = Rs4,500cr post-tax = ~21% of annualised PAT Rs21,500cr; x persistence 0.4 x EV/MCap 1.0 => -8.4; trimmed to -7.0 since GNPA is at a record-low 1.33% (cycle risk asymmetrical) but the stock is cheap. 23 straight quarters of NNPA improvement.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/canara-bank-net-profit-rises-840-to-5175-crore-in-q2-fy27",
+     "date": "2026-10-14",
+     "note": "Q2 FY27 PAT Rs5,175cr +8.4%, NIM 2.55%, GNPA 1.33%, NNPA 0.30%, advances +19.5%"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "CANBK",
+   "relation": "demand_driver",
+   "w": -0.4,
+   "w_low": -0.9,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Retail unsecured ~3-4% of book (model estimate) = ~Rs45,000cr; +1pp delinquency x LGD 70% = ~Rs315cr pre-tax = ~1.1% PAT x 0.4 => -0.4.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "CANBK",
+   "relation": "regulatory_risk",
+   "w": -4.5,
+   "w_low": -9.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "Management-disclosed one-time ECL provision Rs12-15k cr (some Rs2-3k cr is HTM MTM), recognised over ~1-2 yrs, CET1 12.80% / CRAR 17.19%, no fresh equity planned. Rs15,000cr = 13.5% of Rs1.107 lakh cr mcap pre-tax, ~10% post-tax; the stock already fell 6% on disclosure and management says it is absorbable => residual ~-4.5 (wide range, dilution possible).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.indiainfoline.com/news/companies/canara-bank-share-price-falls-6-near-52-week-low-after-15000-crore-ecl-provision-warning",
+     "date": "2026-10-15",
+     "note": "one-time ECL provision Rs12-15k cr over ~2 yrs; CET1 12.80%; stock -6%"
+    },
+    {
+     "source": "https://www.inkl.com/news/canara-bank-sees-nim-floor-at-2-5-confident-of-absorbing-ecl-hit-without-fresh-equity",
+     "date": "2026-10-15",
+     "note": "NIM floor 2.5%, absorb ECL without fresh equity"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "CANBK",
+   "relation": "funding_cost",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus lowers CD/CP and bulk deposit costs ~2bp on ~Rs17 lakh cr => ~Rs340cr = 1.6% PAT x 0.25 => +0.4; RBI's Oct liquidity-tightening measures are a headwind.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "CANBK",
+   "relation": "macro_transmission",
+   "w": 2.4,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FII share fell from 14.2% (Mar 2026) to 12.3% (Sep 2026), i.e. already net selling; market beta 1.40-1.46 is the highest among PSU banks. +US$5bn/qtr ~ +3% Nifty => ~+4.3% for beta 1.43, of which about half survives demeaning of the market factor.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CANBK.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "CANBK",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.6,
+   "lag": "3-12m",
+   "mechanism": "Lead lender to infra/PSU capex; +10% capex growth => corporate credit +~0.7pp => ~+0.9% PAT x 0.5 => +0.8.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "CANBK",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Agri ~20% of advances (model knowledge, strong rural/agri franchise); +10% above-LPA monsoon lowers agri slippages ~10bp on Rs2.4 lakh cr => ~Rs240cr pre-tax = ~1.1% PAT x 0.4 => +0.4.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "CANBK",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Gold loans (agri/retail) are a growth engine; +8% gold raises collateral value and loan sizes: gold loans ~Rs1.2 lakh cr (model estimate) x 4% => +Rs4,800cr balances x spread 3% = ~Rs140cr = ~0.5% PAT => +0.5. Pack: -0.30 (t -0.4) - not significant, sign differs; weak evidence either way. Gold -8% since June.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CANBK.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "CANBK",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Listed subsidiaries/associates (Canara Robeco AMC 51%, Canara HSBC Life - listed in 2025 per model knowledge, verify) gain from SIP/DII flows; combined stake value est. 5-10% of mcap; +10% flows lifts their value ~5-8% => +0.5.",
+   "confidence": "low",
+   "evidence": []
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "62.93% promoter; recapitalisation, dividend policy"
+  },
+  {
+   "counterparty": "Bank of Baroda",
+   "ticker": "BANKBARODA",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "PSU peer, same ECL transition"
+  },
+  {
+   "counterparty": "State Bank of India",
+   "ticker": "SBIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "PSU leader"
+  },
+  {
+   "counterparty": "Canara Robeco AMC / Canara HSBC Life",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "listed subsidiaries (model knowledge, verify)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 declared 2026-10-14; typical late-Jan timing)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "pattern of prior dates; model estimate"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC after Oct hike to 5.50%; further hike would lift yields/MTM",
+   "type": "regulatory",
+   "prob": 0.45,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "ECL transition begins: one-time Rs12-15k cr provision phased over ~2 years (management estimate); timing of RBI effective date unverified",
+   "type": "regulatory",
+   "prob": 0.7,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": -1.0,
+   "source": "https://www.indiainfoline.com/news/companies/canara-bank-share-price-falls-6-near-52-week-low-after-15000-crore-ecl-provision-warning"
+  },
+  {
+   "date": "2027",
+   "event": "Possible equity raise (management: 'option, no decision') if ECL absorption stresses CET1 below ~12%",
+   "type": "corporate_action",
+   "prob": 0.15,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://www.inkl.com/news/canara-bank-sees-nim-floor-at-2-5-confident-of-absorbing-ecl-hit-without-fresh-equity"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs5,175cr (+8.4%), NII Rs11,005cr, NIM 2.55%, GNPA 1.33%, NNPA 0.30%, advances +19.5%, treasury losses",
+  "trend": "Fast growth and clean asset quality; margin squeezed, treasury hit by rising yields, ECL overhang",
+  "valuation": "Rs122; P/B 0.86 (BV Rs141), P/E 5.45, div yield 3.5%; -12% over 12m; near 52-week low (Rs115)",
+  "recent_developments": [
+   "2026-10-14 Q2 results; stock +5% intraday",
+   "2026-10-15 ECL one-time provision warning of up to Rs15,000cr; stock -6% near 52-week low",
+   "2026-10-07 RBI hike to 5.50%; 10y yield 7.4-7.5% (treasury MTM)",
+   "FIIs cut stake 14.24% -> 12.27% Mar-Sep 2026; DIIs rose 10.9% -> 12.4%"
+  ]
+ },
+ "key_risks": [
+  "ECL transition and possible equity dilution",
+  "Further yield rise -> AFS/HTM mark-to-market",
+  "NIM at the 2.5% floor as deposits lag 19.5% credit growth",
+  "Fast growth (19.5%) raising later slippages",
+  "FII selling and PSU bank de-rating"
+ ],
+ "upside_triggers": [
+  "Smaller ECL charge or longer phasing",
+  "NIM stabilising above 2.55% with repo-linked assets repricing",
+  "Value unlock from listed subsidiaries",
+  "Dividend growth",
+  "Stable credit cost <0.5% with GNPA <1.5%"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.freepressjournal.in/business/canara-bank-net-profit-rises-840-to-5175-crore-in-q2-fy27",
+   "date": "2026-10-14",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://www.indiainfoline.com/news/companies/canara-bank-share-price-falls-6-near-52-week-low-after-15000-crore-ecl-provision-warning",
+   "date": "2026-10-15",
+   "what": "ECL provision warning"
+  },
+  {
+   "url": "https://www.inkl.com/news/canara-bank-sees-nim-floor-at-2-5-confident-of-absorbing-ecl-hit-without-fresh-equity",
+   "date": "2026-10-15",
+   "what": "NIM floor, no fresh equity"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike to 5.50%"
+  },
+  {
+   "url": "https://www.screener.in/company/CANBK/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals via pack"
+  }
+ ]
+}

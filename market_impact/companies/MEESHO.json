@@ -1,0 +1,290 @@
+{
+ "ticker": "MEESHO",
+ "name": "Meesho Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_INTERNET_PLATFORMS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Zero-commission value e-commerce marketplace for tier-2+ India with in-house logistics (Valmo) and growing ad monetisation. Listed Dec 2025; price Rs 235.7 (+26.6% in 3m), 1y vol 54%. Q2 FY27: loss narrowed ~68%, marketplace revenue +34% to Rs 4,120 cr; content commerce NMV +152% (Upstox, 6 Oct); festive orders +75% on day 1. Acquired Kirana Club for Rs 202 cr (June 2026). Screener dossier not retrievable; fundamentals are headline-only.",
+ "revenue_mix": [
+  {
+   "segment": "Marketplace (ads, fees, logistics, approx.)",
+   "share_pct": 100,
+   "geography": "India, tier-2+ 75%+ of customers (model knowledge)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Logistics (fuel-linked)",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "Marketing and tech",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "Employee and other",
+   "share_of_costs_pct": 25
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "MEESHO",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Meesho's buyers are mostly tier-2+ and value-seeking; +5pp rural/semi-urban demand growth -> orders +4% -> revenue +4% (take rate ~10-12% on ads/fees); contribution margin ~5% of GOV with 60% incremental -> EBITDA swings large from low base -> +4 after persistence 0.5 and growth-multiple.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Meesho+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Q2 loss narrowed 68% (Storyboard18 3 Nov); marketplace revenue +34% to Rs4,120 cr (Exchange4Media); shares +2% (Business Standard)"
+    },
+    {
+     "source": "market_impact/data/packs/MEESHO.md",
+     "date": "2026-11-05",
+     "note": "price 235.72, 1y vol 54%; screener dossier unavailable"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "MEESHO",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Smaller share of buyers; +5pp urban demand -> +0.8% orders -> ~+1.5 with growth multiple.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MEESHO.md",
+     "date": "2026-11-05",
+     "note": "price 235.72, 1y vol 54%; screener dossier unavailable"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "MEESHO",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Apparel/value goods dominate GMV; GST cut -> lower prices -> order volume +2% and conversion; 'festive sale orders +75% on Day 1' (Upstox 11 Oct). Net +3 incl. sentiment; persistence 0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Meesho+festive+orders+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-11",
+     "note": "Day-1 festive orders +75% YoY (Upstox)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "MEESHO",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Logistics (Valmo + 3PL) is ~45% of costs (model knowledge) and fuel ~20% of logistics cost; +10% Brent -> logistics +1% -> ~+0.4% of revenue; with EBITDA near breakeven/early profit the equity effect is -1 (persistence 0.3, higher on growth-multiple).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Meesho+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Q2 loss narrowed 68% (Storyboard18 3 Nov); marketplace revenue +34% to Rs4,120 cr (Exchange4Media); shares +2% (Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "MEESHO",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "Gig/platform-worker contributions and logistics-partner costs rise under labour codes; 0.3% of GOV on ~8% net take rate = EBITDA -5% of potential steady-state margin; -1.5 after pass-through.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-11",
+     "note": "labour codes"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MEESHO",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -5.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Loss-making/early-profit platform with ~1.0 lakh cr market cap (price Rs 236 x ~450 cr shares, model knowledge): duration ~35y; +25bp -> -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MEESHO.md",
+     "date": "2026-11-05",
+     "note": "price 235.72, 1y vol 54%; screener dossier unavailable"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MEESHO",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.0,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "Recent listing (Dec 2025), possible MSCI inclusion (NDTV Profit 6 Oct), and block deals (23 Sep, Rs 900 cr) make flows a key price driver.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Meesho+MSCI+inclusion+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "note": "Stock jumps 6% on potential MSCI inclusion"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "MEESHO",
+   "relation": "discount_rate",
+   "w": -4.0,
+   "w_low": -8.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "54% annualised vol; +5 VIX points -> -4 after market component.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MEESHO.md",
+     "date": "2026-11-05",
+     "note": "price 235.72, 1y vol 54%; screener dossier unavailable"
+    }
+   ]
+  },
+  {
+   "src": "F_COTTON",
+   "dst": "MEESHO",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Apparel price inflation lowers affordability; sellers pass cotton price rises through; +10% cotton -> apparel price +1% -> orders -0.5% -> -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "apparel mix"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Flipkart / Shopsy, Amazon",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Value e-commerce rivals"
+  },
+  {
+   "counterparty": "Valmo logistics partners",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Logistics network"
+  },
+  {
+   "counterparty": "Eternal (Blinkit), Swiggy",
+   "ticker": "ETERNAL",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Consumer-internet peer group"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-28",
+   "event": "Q3 FY27 results (festive quarter) - first full festive period post-IPO",
+   "type": "results",
+   "prob": 0.85,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 12.0,
+   "source": "Q2 results on ~2026-10-28"
+  },
+  {
+   "date": "2026-11",
+   "event": "MSCI index review / inclusion decision",
+   "type": "corporate_action",
+   "prob": 0.4,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Meesho+MSCI+inclusion+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Kirana Club acquisition tranche update (Reg 30 filing 3 Nov)",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "Howl.Link note on Meesho Reg 30, 2026-11-03"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27: loss narrowed 68% y/y; marketplace revenue +34% to Rs 4,120 cr; contribution margin expanded; mgmt says 6% margin gains will partly fund lower prices (Multibagg 4 Nov).",
+  "trend": "Rapid growth; margins improving; analysts split (Nomura Reduce TP Rs 167, -27%; Jefferies/Motilal up to +25%).",
+  "valuation": "Not retrievable (screener blocked); mcap ~Rs 1.0 lakh cr (price x ~450 cr shares, model estimate).",
+  "recent_developments": [
+   "2026-09-22 UBS raises target, stock +12%",
+   "2026-09-23 block deal Rs 900 cr",
+   "2026-09-25 Nomura initiates Reduce, stock -6%",
+   "2026-10-06 MSCI inclusion hopes, +6%",
+   "2026-10-11/12 festive orders +75%, stock +5%",
+   "2026-10-29 Q2 results"
+  ]
+ },
+ "key_risks": [
+  "Valuation",
+  "Heavy competition from Flipkart/Amazon",
+  "Price investment erodes margin",
+  "Block-deal supply",
+  "Regulatory (labour codes, consumer protection)"
+ ],
+ "upside_triggers": [
+  "Ad monetisation",
+  "MSCI inclusion",
+  "Profit inflection"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Meesho+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-29",
+   "what": "Q2 headlines (bodies not retrieved)"
+  },
+  {
+   "url": "market_impact/data/packs/MEESHO.md",
+   "date": "2026-11-05",
+   "what": "pack"
+  }
+ ]
+}

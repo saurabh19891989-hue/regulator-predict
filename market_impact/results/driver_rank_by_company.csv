@@ -1,0 +1,706 @@
+company,driver,driver_name,pct_equity_per_ssu,ssu
+APARINDS,C_MIDEAST_CONFLICT,Middle East conflict intensity,-5.783125,+1 = escalation
+APARINDS,T_GRID_ELECTRIFICATION,Grid & electrification capex,4.0,+1
+APARINDS,P_US_TARIFF_INDIA,US tariffs on Indian goods,-2.3668699999999996,+10 pp average tariff
+APARINDS,T_ENERGY_TRANSITION,Energy transition investment,2.0,+1
+APARINDS,F_CPI_IN,India CPI inflation,-1.7640000000000002,+1 pp
+APARINDS,F_US_EQUITIES,US equity market,1.6282499999999998,+5% S&P 500
+APARINDS,F_BRENT,Brent crude oil price,-1.6279666666666668,+10% Brent
+APARINDS,F_REPO_IN,RBI repo rate,-1.58,+25 bp repo
+APARINDS,F_GOVT_CAPEX,Central + state government capex,1.49325,+10% capex growth
+APARINDS,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,1.1199999999999999,+1 = stronger support
+APARINDS,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.0319325000000001,+5 VIX points
+APARINDS,F_CHINA_GDP,China growth / stimulus,1.024,+1 pp
+APARINDS,F_ALUMINIUM,Aluminium price,1.0,+10% aluminium
+APARINDS,F_COPPER,Copper price,1.0,+10% copper
+APARINDS,F_FOOD_INFLATION_IN,India food inflation,-0.9591750000000001,+2 pp
+APLAPOLLO,F_GSEC_10Y_IN,India 10-year G-sec yield,-4.800000000000001,+25 bp yield
+APLAPOLLO,F_CPI_IN,India CPI inflation,-3.9046000000000007,+1 pp
+APLAPOLLO,F_REPO_IN,RBI repo rate,-3.6386666666666665,+25 bp repo
+APLAPOLLO,F_GOVT_CAPEX,Central + state government capex,2.5,+10% capex growth
+APLAPOLLO,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.0388125000000006,+1 = escalation
+APLAPOLLO,F_HOUSING_DEMAND,Residential real-estate sales,2.0,+10% sales volume
+APLAPOLLO,F_PRIVATE_CAPEX,Private corporate capex,1.5,+10% capex growth
+APLAPOLLO,F_STEEL_INDIA,Indian domestic steel price,1.3796799999999998,+7% domestic HRC/rebar price
+APLAPOLLO,F_US_10Y,US 10-year Treasury yield,-1.2671999999999997,+25 bp yield
+APLAPOLLO,P_FERT_SUBSIDY,Fertiliser subsidy generosity,-1.0799999999999998,+1 = higher subsidy
+APLAPOLLO,F_FOOD_INFLATION_IN,India food inflation,-0.9926700000000002,+2 pp
+APLAPOLLO,F_RURAL_DEMAND,Rural consumption growth,0.9892,+5 pp
+APLAPOLLO,F_RISK_SENTIMENT,Global risk aversion (VIX),-0.6785459999999999,+5 VIX points
+APLAPOLLO,P_FUEL_TAX_IN,Fuel excise / retail price policy (+ = higher taxes/regulated squeeze),-0.65148,+1 = Rs 2/litre excise rise
+APLAPOLLO,F_US_GDP,US growth,-0.6102,+1 pp
+ASHOKLEY,C_MIDEAST_CONFLICT,Middle East conflict intensity,-6.871625,+1 = escalation
+ASHOKLEY,F_GOVT_CAPEX,Central + state government capex,3.56,+10% capex growth
+ASHOKLEY,F_GDP_IN,India real GDP growth,3.4865000000000004,+1 pp
+ASHOKLEY,F_RURAL_DEMAND,Rural consumption growth,2.3599000000000006,+5 pp
+ASHOKLEY,F_BRENT,Brent crude oil price,-2.15645,+10% Brent
+ASHOKLEY,F_STEEL_INDIA,Indian domestic steel price,-1.8302400000000003,+7% domestic HRC/rebar price
+ASHOKLEY,F_MONSOON,Monsoon rainfall vs normal,1.6879575000000002,+10% above long-period average
+ASHOKLEY,P_INFRA_SPENDING_ROADS,Road/highway awarding,1.5,+10%
+ASHOKLEY,F_CPI_IN,India CPI inflation,-1.3692000000000002,+1 pp
+ASHOKLEY,F_REPO_IN,RBI repo rate,-1.224,+25 bp repo
+ASHOKLEY,C_RUSSIA,"Russia (oil discounts, defence, sanctions)",0.97146,+1 = closer trade access / larger discounts
+ASHOKLEY,P_FUEL_TAX_IN,Fuel excise / retail price policy (+ = higher taxes/regulated squeeze),-0.9114299999999999,+1 = Rs 2/litre excise rise
+ASHOKLEY,F_ALUMINIUM,Aluminium price,-0.9000000000000001,+10% aluminium
+ASHOKLEY,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-0.8,+50 bp credit cost
+ASHOKLEY,F_STEEL_GLOBAL,Global HRC steel price,-0.7679070000000002,+10% global HRC
+ASIANPAINT,F_GSEC_10Y_IN,India 10-year G-sec yield,-5.800000000000001,+25 bp yield
+ASIANPAINT,F_CPI_IN,India CPI inflation,-2.9134,+1 pp
+ASIANPAINT,F_REPO_IN,RBI repo rate,-2.7649646666666667,+25 bp repo
+ASIANPAINT,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.745,+1 = escalation
+ASIANPAINT,NEW_CONSUMER_DURABLES_PRICE_WAR,Consumer durables category promotional / discount intensity,-2.5,"+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances"
+ASIANPAINT,F_US_10Y,US 10-year Treasury yield,-2.218885,+25 bp yield
+ASIANPAINT,F_HOUSING_DEMAND,Residential real-estate sales,2.0,+10% sales volume
+ASIANPAINT,F_URBAN_DEMAND,Urban discretionary consumption growth,1.8000000000000003,+5 pp
+ASIANPAINT,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.62,+US$5 bn net inflow per quarter
+ASIANPAINT,F_CHEM_FEEDSTOCK,"Chemical feedstock (benzene, propylene, etc.)",-1.6,+10% feedstock
+ASIANPAINT,F_RURAL_DEMAND,Rural consumption growth,1.5790999999999997,+5 pp
+ASIANPAINT,F_DXY,US dollar index,-1.3720000000000003,+3% DXY
+ASIANPAINT,P_FERT_SUBSIDY,Fertiliser subsidy generosity,-1.3199999999999998,+1 = higher subsidy
+ASIANPAINT,F_BRENT,Brent crude oil price,-1.0507300000000002,+10% Brent
+ASIANPAINT,F_USDINR,USD/INR exchange rate,-1.0296750000000001,+3% USD/INR (rupee weaker)
+AXISBANK,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-8.5,+50 bp credit cost
+AXISBANK,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-7.5359,+1 = tightening step
+AXISBANK,C_MIDEAST_CONFLICT,Middle East conflict intensity,-4.273125,+1 = escalation
+AXISBANK,F_RURAL_DEMAND,Rural consumption growth,4.1872,+5 pp
+AXISBANK,F_GDP_IN,India real GDP growth,3.9899500000000003,+1 pp
+AXISBANK,F_CREDIT_GROWTH_IN,Bank credit growth,2.916,+3 pp
+AXISBANK,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.8499250000000003,+US$5 bn net inflow per quarter
+AXISBANK,F_RISK_SENTIMENT,Global risk aversion (VIX),-2.733955,+5 VIX points
+AXISBANK,F_CPI_IN,India CPI inflation,-2.58496,+1 pp
+AXISBANK,F_REPO_IN,RBI repo rate,-2.3757959999999994,+25 bp repo
+AXISBANK,F_DXY,US dollar index,-2.17185,+3% DXY
+AXISBANK,F_US_EQUITIES,US equity market,2.1632000000000002,+5% S&P 500
+AXISBANK,F_MONSOON,Monsoon rainfall vs normal,2.1352312500000004,+10% above long-period average
+AXISBANK,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.0,+25 bp yield
+AXISBANK,F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse),-2.0,+1 pp delinquencies
+BAJAJFINSV,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-8.4866,+1 = tightening step
+BAJAJFINSV,F_REPO_IN,RBI repo rate,-7.2257602499999996,+25 bp repo
+BAJAJFINSV,F_CREDIT_SPREADS_IN,Indian corporate credit spreads,-7.0,+50 bp spreads
+BAJAJFINSV,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-7.0,+50 bp credit cost
+BAJAJFINSV,F_CPI_IN,India CPI inflation,-6.9801935,+1 pp
+BAJAJFINSV,F_GSEC_10Y_IN,India 10-year G-sec yield,-6.2124999999999995,+25 bp yield
+BAJAJFINSV,F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse),-4.9,+1 pp delinquencies
+BAJAJFINSV,F_RISK_SENTIMENT,Global risk aversion (VIX),-4.3454412499999995,+5 VIX points
+BAJAJFINSV,C_MIDEAST_CONFLICT,Middle East conflict intensity,-3.5615625000000004,+1 = escalation
+BAJAJFINSV,F_URBAN_DEMAND,Urban discretionary consumption growth,3.5,+5 pp
+BAJAJFINSV,F_US_10Y,US 10-year Treasury yield,-3.0390274999999995,+25 bp yield
+BAJAJFINSV,F_FOOD_INFLATION_IN,India food inflation,-3.001334700000001,+2 pp
+BAJAJFINSV,P_IRDAI_REG,Insurance regulation tightening (IRDAI),-3.0,+1 = tightening
+BAJAJFINSV,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.9920375,+US$5 bn net inflow per quarter
+BAJAJFINSV,F_RURAL_DEMAND,Rural consumption growth,2.8283,+5 pp
+BAJFINANCE,F_CPI_IN,India CPI inflation,-7.112743400000001,+1 pp
+BAJFINANCE,F_REPO_IN,RBI repo rate,-6.586911333333333,+25 bp repo
+BAJFINANCE,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-6.423075,+1 = tightening step
+BAJFINANCE,F_GSEC_10Y_IN,India 10-year G-sec yield,-6.23,+25 bp yield
+BAJFINANCE,F_CREDIT_SPREADS_IN,Indian corporate credit spreads,-5.48,+50 bp spreads
+BAJFINANCE,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-5.48,+50 bp credit cost
+BAJFINANCE,F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse),-3.8360000000000003,+1 pp delinquencies
+BAJFINANCE,F_RISK_SENTIMENT,Global risk aversion (VIX),-3.4227400000000006,+5 VIX points
+BAJFINANCE,F_FOOD_INFLATION_IN,India food inflation,-3.0408892499999998,+2 pp
+BAJFINANCE,F_US_10Y,US 10-year Treasury yield,-2.881765,+25 bp yield
+BAJFINANCE,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.8135250000000003,+US$5 bn net inflow per quarter
+BAJFINANCE,F_URBAN_DEMAND,Urban discretionary consumption growth,2.74,+5 pp
+BAJFINANCE,F_US_EQUITIES,US equity market,2.3850250000000006,+5% S&P 500
+BAJFINANCE,F_RURAL_DEMAND,Rural consumption growth,2.356466666666666,+5 pp
+BAJFINANCE,F_DXY,US dollar index,-2.2769500000000003,+3% DXY
+BANKBARODA,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-6.4235299999999995,+1 = tightening step
+BANKBARODA,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-6.0,+50 bp credit cost
+BANKBARODA,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.0970375,+US$5 bn net inflow per quarter
+BANKBARODA,F_RURAL_DEMAND,Rural consumption growth,1.5254400000000004,+5 pp
+BANKBARODA,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.4,+25 bp yield
+BANKBARODA,F_DXY,US dollar index,-1.3172750000000002,+3% DXY
+BANKBARODA,F_US_10Y,US 10-year Treasury yield,-1.24892,+25 bp yield
+BANKBARODA,F_US_EQUITIES,US equity market,1.0525,+5% S&P 500
+BANKBARODA,C_MIDEAST_CONFLICT,Middle East conflict intensity,-0.9479375000000001,+1 = escalation
+BANKBARODA,F_CREDIT_GROWTH_IN,Bank credit growth,0.9172,+3 pp
+BANKBARODA,F_GOVT_CAPEX,Central + state government capex,0.91358,+10% capex growth
+BANKBARODA,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,0.9000000000000001,+3 pp
+BANKBARODA,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-0.8420000000000001,+1 = higher
+BANKBARODA,F_RISK_SENTIMENT,Global risk aversion (VIX),-0.8330225000000001,+5 VIX points
+BANKBARODA,F_GDP_IN,India real GDP growth,0.766965,+1 pp
+BANKINDIA,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-10.0,+50 bp credit cost
+BANKINDIA,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-9.61385,+1 = tightening step
+BANKINDIA,F_RURAL_DEMAND,Rural consumption growth,4.5628,+5 pp
+BANKINDIA,F_GDP_IN,India real GDP growth,4.304924999999999,+1 pp
+BANKINDIA,F_GSEC_10Y_IN,India 10-year G-sec yield,-3.0,+25 bp yield
+BANKINDIA,F_CREDIT_GROWTH_IN,Bank credit growth,2.874,+3 pp
+BANKINDIA,F_RISK_SENTIMENT,Global risk aversion (VIX),-2.1891125,+5 VIX points
+BANKINDIA,F_GOVT_CAPEX,Central + state government capex,2.1807000000000003,+10% capex growth
+BANKINDIA,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.0051875,+US$5 bn net inflow per quarter
+BANKINDIA,F_US_EQUITIES,US equity market,1.7143000000000002,+5% S&P 500
+BANKINDIA,F_US_10Y,US 10-year Treasury yield,-1.5820799999999997,+25 bp yield
+BANKINDIA,F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse),-1.5,+1 pp delinquencies
+BANKINDIA,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,1.5,+3 pp
+BANKINDIA,F_MONSOON,Monsoon rainfall vs normal,1.3886718749999998,+10% above long-period average
+BANKINDIA,NEW_USDJPY,USD/JPY exchange rate,1.22205,+3% USD/JPY (yen weaker)
+BHARTIARTL,P_TELECOM_TARIFFS,Mobile tariff hikes,5.43889,+10% ARPU via tariff hike
+BHARTIARTL,NEW_TELECOM_SHARE_COMPETITION,Jio/Airtel price and share competition vs Vi,-5.0,+1 = intensification costing the incumbent ~1pp revenue share / 3% ARPU
+BHARTIARTL,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.25591,+US$5 bn net inflow per quarter
+BHARTIARTL,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.2447500000000002,+1 = escalation
+BHARTIARTL,F_CPI_IN,India CPI inflation,-1.995,+1 pp
+BHARTIARTL,F_REPO_IN,RBI repo rate,-1.8054469999999998,+25 bp repo
+BHARTIARTL,F_DXY,US dollar index,-1.6838200000000003,+3% DXY
+BHARTIARTL,F_GDP_IN,India real GDP growth,1.5129624999999998,+1 pp
+BHARTIARTL,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.5,+25 bp yield
+BHARTIARTL,F_US_EQUITIES,US equity market,1.1301250000000003,+5% S&P 500
+BHARTIARTL,F_FOOD_INFLATION_IN,India food inflation,-1.0847812500000003,+2 pp
+BHARTIARTL,F_US_10Y,US 10-year Treasury yield,-1.0691249999999999,+25 bp yield
+BHARTIARTL,F_RISK_SENTIMENT,Global risk aversion (VIX),-0.9640460000000001,+5 VIX points
+BHARTIARTL,F_RURAL_DEMAND,Rural consumption growth,0.9577000000000001,+5 pp
+BHARTIARTL,F_BRENT,Brent crude oil price,-0.8978791666666666,+10% Brent
+BLUESTARCO,F_GSEC_10Y_IN,India 10-year G-sec yield,-4.4,+25 bp yield
+BLUESTARCO,F_URBAN_DEMAND,Urban discretionary consumption growth,3.0,+5 pp
+BLUESTARCO,T_DATA_CENTRES_IN,Indian data-centre build-out,3.0,+1
+BLUESTARCO,NEW_CONSUMER_DURABLES_PRICE_WAR,Consumer durables category promotional / discount intensity,-2.5,"+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances"
+BLUESTARCO,F_PRIVATE_CAPEX,Private corporate capex,2.5,+10% capex growth
+BLUESTARCO,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.345625,+1 = escalation
+BLUESTARCO,F_CPI_IN,India CPI inflation,-2.11365,+1 pp
+BLUESTARCO,F_REPO_IN,RBI repo rate,-2.0052383999999996,+25 bp repo
+BLUESTARCO,F_USDINR,USD/INR exchange rate,-1.9005480000000001,+3% USD/INR (rupee weaker)
+BLUESTARCO,F_COPPER,Copper price,-1.78,+10% copper
+BLUESTARCO,F_US_10Y,US 10-year Treasury yield,-1.5743599999999998,+25 bp yield
+BLUESTARCO,F_HOUSING_DEMAND,Residential real-estate sales,1.5,+10% sales volume
+BLUESTARCO,F_CHINA_GDP,China growth / stimulus,-1.4080000000000001,+1 pp
+BLUESTARCO,C_CHINA,China (demand and competition),-1.1386312500000002,+1 pp China growth
+BLUESTARCO,F_DXY,US dollar index,-1.1364000000000003,+3% DXY
+BOSCHLTD,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,6.56255,+1 = broad cut (~2-5 pp on affected items)
+BOSCHLTD,F_AUTO_DEMAND_IN,Indian vehicle demand,6.0,+10% volumes
+BOSCHLTD,F_SEMICONDUCTOR_SUPPLY,Chip/electronics component supply tightness (higher = tighter),-4.0,+1 = tightening
+BOSCHLTD,P_EV_POLICY,EV incentives / mandates,-3.0,+1 = stronger EV push
+BOSCHLTD,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.7665625,+1 = escalation
+BOSCHLTD,NEW_AUTO_SAFETY_EMISSION_NORMS,"Auto safety and emission norm tightening (ADAS/airbags, CAFE-III, BS-VII)",2.5,+1 = a material tightening step
+BOSCHLTD,NEW_RARE_EARTH_SUPPLY,Rare-earth magnet / critical-mineral availability to Indian manufacturers,-2.4000000000000004,"+1 = materially tighter supply (licence delays, controls reimposed)"
+BOSCHLTD,F_CPI_IN,India CPI inflation,-2.156,+1 pp
+BOSCHLTD,F_REPO_IN,RBI repo rate,-2.0005959999999994,+25 bp repo
+BOSCHLTD,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.0,+25 bp yield
+BOSCHLTD,T_PREMIUMISATION,Consumer premiumisation,1.5,+1
+BOSCHLTD,F_RURAL_DEMAND,Rural consumption growth,1.4086000000000003,+5 pp
+BOSCHLTD,F_USDINR,USD/INR exchange rate,-1.3192000000000002,+3% USD/INR (rupee weaker)
+BOSCHLTD,F_BRENT,Brent crude oil price,-1.1750333333333332,+10% Brent
+BOSCHLTD,F_FOOD_INFLATION_IN,India food inflation,-1.1723250000000003,+2 pp
+BRITANNIA,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,2.7008,+1 = broad cut (~2-5 pp on affected items)
+BRITANNIA,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.5665,+1 = escalation
+BRITANNIA,F_URBAN_DEMAND,Urban discretionary consumption growth,2.5,+5 pp
+BRITANNIA,F_RURAL_DEMAND,Rural consumption growth,1.9260000000000002,+5 pp
+BRITANNIA,F_WHEAT,Wheat price,-1.27308,+10% wheat
+BRITANNIA,F_DXY,US dollar index,-1.24788,+3% DXY
+BRITANNIA,F_PACKAGING,"Packaging cost (paper, plastics)",-1.1,+10% packaging cost
+BRITANNIA,F_EDIBLE_OIL,Palm / edible oil price,-1.07308,+10% edible oils
+BRITANNIA,F_GOLD,Gold price,1.0,+8% gold (USD)
+BRITANNIA,NEW_FSSAI_FOOD_REGULATION,FSSAI / packaged-food regulation intensity,-1.0,+1 = materially stricter packaged-food labelling/HFSS/online-sale rules
+BRITANNIA,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,0.9039400000000001,+US$5 bn net inflow per quarter
+BRITANNIA,F_BRENT,Brent crude oil price,-0.8809333333333332,+10% Brent
+BRITANNIA,F_CPI_IN,India CPI inflation,-0.8624000000000002,+1 pp
+BRITANNIA,F_DAIRY,Milk / dairy input cost,-0.84616,+8% milk procurement price
+BRITANNIA,F_SUGAR,Sugar price,-0.8,+10% sugar
+CANBK,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-7.81471,+1 = tightening step
+CANBK,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-7.000000000000001,+50 bp credit cost
+CANBK,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-2.614,+1 = higher
+CANBK,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.5320300000000002,+US$5 bn net inflow per quarter
+CANBK,F_DXY,US dollar index,-1.83846,+3% DXY
+CANBK,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.8000000000000003,+25 bp yield
+CANBK,F_US_10Y,US 10-year Treasury yield,-1.7205599999999999,+25 bp yield
+CANBK,F_RURAL_DEMAND,Rural consumption growth,1.7153600000000002,+5 pp
+CANBK,F_US_EQUITIES,US equity market,1.2675,+5% S&P 500
+CANBK,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.006818,+5 VIX points
+CANBK,F_GOVT_CAPEX,Central + state government capex,0.92798,+10% capex growth
+CANBK,F_CREDIT_GROWTH_IN,Bank credit growth,0.9004,+3 pp
+CANBK,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,0.9000000000000001,+3 pp
+CANBK,F_MONSOON,Monsoon rainfall vs normal,0.8837275000000001,+10% above long-period average
+CANBK,F_GDP_IN,India real GDP growth,0.8657549999999999,+1 pp
+CUMMINSIND,NEW_GENSET_PRICE_COMPETITION,Genset / engine price competition in India,-7.000000000000001,+5 pp realised-price erosion in the domestic genset/engine market
+CUMMINSIND,F_PRIVATE_CAPEX,Private corporate capex,5.0,+10% capex growth
+CUMMINSIND,T_DATA_CENTRES_IN,Indian data-centre build-out,4.0,+1
+CUMMINSIND,F_GOVT_CAPEX,Central + state government capex,2.5,+10% capex growth
+CUMMINSIND,F_US_EQUITIES,US equity market,2.255675,+5% S&P 500
+CUMMINSIND,F_AI_CAPEX,Global AI / data-centre capex,1.512,+10% growth
+CUMMINSIND,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.2571875000000006,+1 = escalation
+CUMMINSIND,F_CPI_IN,India CPI inflation,-1.1452,+1 pp
+CUMMINSIND,F_REPO_IN,RBI repo rate,-1.024,+25 bp repo
+CUMMINSIND,F_COAL_INTL,International thermal coal price,-1.0,+15% seaborne thermal coal
+CUMMINSIND,C_GCC,Gulf Cooperation Council economies,1.0,+1 pp growth
+CUMMINSIND,F_COPPER,Copper price,-0.92,+10% copper
+CUMMINSIND,F_STEEL_INDIA,Indian domestic steel price,-0.8252,+7% domestic HRC/rebar price
+CUMMINSIND,F_US_GDP,US growth,0.7817099999999999,+1 pp
+CUMMINSIND,F_CHINA_GDP,China growth / stimulus,-0.7725125,+1 pp
+DABUR,F_RURAL_DEMAND,Rural consumption growth,2.1161,+5 pp
+DABUR,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.7081250000000003,+1 = escalation
+DABUR,F_URBAN_DEMAND,Urban discretionary consumption growth,1.5,+5 pp
+DABUR,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,1.4859999999999998,+1 = broad cut (~2-5 pp on affected items)
+DABUR,F_PACKAGING,"Packaging cost (paper, plastics)",-1.4,+10% packaging cost
+DABUR,F_CPI_IN,India CPI inflation,-1.1620000000000001,+1 pp
+DABUR,F_REPO_IN,RBI repo rate,-1.04,+25 bp repo
+DABUR,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,0.8299250000000001,+US$5 bn net inflow per quarter
+DABUR,F_MONSOON,Monsoon rainfall vs normal,0.8153287499999999,+10% above long-period average
+DABUR,F_EDIBLE_OIL,Palm / edible oil price,-0.79135,+10% edible oils
+DABUR,F_FOOD_INFLATION_IN,India food inflation,-0.6318375,+2 pp
+DABUR,F_BRENT,Brent crude oil price,-0.5836083333333334,+10% Brent
+DABUR,NEW_FOOD_SAFETY_REG,FSSAI food-safety / labelling enforcement intensity,-0.5,"+1 = materially stricter enforcement on packaged-food claims, sampling and recalls"
+DABUR,F_SUGAR,Sugar price,-0.4,+10% sugar
+DABUR,F_US_EQUITIES,US equity market,0.37612500000000015,+5% S&P 500
+DIVISLAB,T_GLP1,GLP-1 / obesity drug adoption,8.0,+1
+DIVISLAB,P_USFDA_ENFORCEMENT,USFDA inspection/enforcement intensity,-5.4,+1 = stricter
+DIVISLAB,T_CHINA_PLUS_ONE,China+1 manufacturing relocation to India,3.5000000000000004,+1
+DIVISLAB,F_CHINA_CHEM_EXPORTS,China chemical/API dumping intensity,-3.0,+15% export volumes / price cuts
+DIVISLAB,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.656,+US$5 bn net inflow per quarter
+DIVISLAB,F_RISK_SENTIMENT,Global risk aversion (VIX),-2.307,+5 VIX points
+DIVISLAB,F_USDINR,USD/INR exchange rate,2.120998,+3% USD/INR (rupee weaker)
+DIVISLAB,F_US_EQUITIES,US equity market,1.9399500000000003,+5% S&P 500
+DIVISLAB,F_US_GENERIC_PRICING,US generic drug price erosion (higher = worse),-1.5,+5 pp erosion
+DIVISLAB,P_US_PHARMA_TARIFF,US tariffs on pharmaceuticals,-1.5,+10 pp on Indian pharma exports
+DIVISLAB,NEW_USDJPY,USD/JPY exchange rate,1.4201850000000003,+3% USD/JPY (yen weaker)
+DIVISLAB,C_US_CHINA_DECOUPLING,US–China trade decoupling,1.4000000000000004,+1 = more decoupling
+DIVISLAB,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.2,+25 bp yield
+DIVISLAB,F_US_10Y,US 10-year Treasury yield,-1.1844300000000003,+25 bp yield
+DIVISLAB,P_US_TARIFF_INDIA,US tariffs on Indian goods,-1.1056624999999998,+10 pp average tariff
+DMART,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,4.1190750000000005,+1 = broad cut (~2-5 pp on affected items)
+DMART,F_URBAN_DEMAND,Urban discretionary consumption growth,4.0,+5 pp
+DMART,C_MIDEAST_CONFLICT,Middle East conflict intensity,-3.20325,+1 = escalation
+DMART,T_QUICK_COMMERCE,Quick-commerce disruption of retail/FMCG distribution,-3.0,+1
+DMART,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.80797,+US$5 bn net inflow per quarter
+DMART,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.2,+25 bp yield
+DMART,F_DXY,US dollar index,-2.04154,+3% DXY
+DMART,T_FORMALISATION,Formalisation of the economy,2.0,+1
+DMART,F_US_10Y,US 10-year Treasury yield,-1.8073000000000001,+25 bp yield
+DMART,F_US_EQUITIES,US equity market,1.4211500000000001,+5% S&P 500
+DMART,F_CPI_IN,India CPI inflation,-1.4140000000000001,+1 pp
+DMART,F_REPO_IN,RBI repo rate,-1.2986556,+25 bp repo
+DMART,F_BRENT,Brent crude oil price,-1.2226249999999999,+10% Brent
+DMART,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.190182,+5 VIX points
+DMART,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-1.111,+1 = higher
+ETERNAL,T_QUICK_COMMERCE,Quick-commerce disruption of retail/FMCG distribution,8.0,+1
+ETERNAL,F_URBAN_DEMAND,Urban discretionary consumption growth,6.0,+5 pp
+ETERNAL,F_RISK_SENTIMENT,Global risk aversion (VIX),-4.0423875,+5 VIX points
+ETERNAL,C_MIDEAST_CONFLICT,Middle East conflict intensity,-4.0078125,+1 = escalation
+ETERNAL,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.6748125000000007,+US$5 bn net inflow per quarter
+ETERNAL,F_US_EQUITIES,US equity market,3.0238750000000008,+5% S&P 500
+ETERNAL,P_LABOUR_CODES,Labour code implementation cost,-3.0,+1 = implementation
+ETERNAL,P_FDI_RULES,FDI liberalisation,-3.0,+1 = liberalisation
+ETERNAL,F_CPI_IN,India CPI inflation,-2.758000000000001,+1 pp
+ETERNAL,F_DXY,US dollar index,-2.649625000000001,+3% DXY
+ETERNAL,F_REPO_IN,RBI repo rate,-2.46,+25 bp repo
+ETERNAL,NEW_USDJPY,USD/JPY exchange rate,2.0490625000000002,+3% USD/JPY (yen weaker)
+ETERNAL,F_FOOD_INFLATION_IN,India food inflation,-1.9996625,+2 pp
+ETERNAL,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,1.755,+1 = broad cut (~2-5 pp on affected items)
+ETERNAL,F_US_10Y,US 10-year Treasury yield,-1.488375,+25 bp yield
+FEDERALBNK,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-9.0,+50 bp credit cost
+FEDERALBNK,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-7.740309999999999,+1 = tightening step
+FEDERALBNK,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.9690374999999998,+US$5 bn net inflow per quarter
+FEDERALBNK,F_GULF_REMITTANCES,Gulf economy / remittances,3.0,+10%
+FEDERALBNK,F_RISK_SENTIMENT,Global risk aversion (VIX),-2.9890225,+5 VIX points
+FEDERALBNK,F_CREDIT_GROWTH_IN,Bank credit growth,2.9244,+3 pp
+FEDERALBNK,F_RURAL_DEMAND,Rural consumption growth,2.7578400000000003,+5 pp
+FEDERALBNK,F_US_EQUITIES,US equity market,2.6693000000000002,+5% S&P 500
+FEDERALBNK,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,2.5,+3 pp
+FEDERALBNK,F_DXY,US dollar index,-2.2004750000000004,+3% DXY
+FEDERALBNK,F_US_10Y,US 10-year Treasury yield,-2.02812,+25 bp yield
+FEDERALBNK,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.8000000000000003,+25 bp yield
+FEDERALBNK,NEW_USDJPY,USD/JPY exchange rate,1.78359,+3% USD/JPY (yen weaker)
+FEDERALBNK,F_GDP_IN,India real GDP growth,1.7765549999999997,+1 pp
+FEDERALBNK,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-1.594,+1 = higher
+GAIL,NEW_PNGRB_TARIFF,PNGRB gas pipeline tariff regulation,-3.0,+1 = tariff cut / unified-tariff reduction of ~10%
+GAIL,F_GDP_IN,India real GDP growth,1.554,+1 pp
+GAIL,F_GAS_GLOBAL,Global natural gas / LNG price,-1.368,+15% gas/LNG price
+GAIL,F_USDINR,USD/INR exchange rate,-1.29576,+3% USD/INR (rupee weaker)
+GAIL,F_PETROCHEM_SPREADS,Petrochemical / polymer spreads,1.1,+10% polymer-naphtha spreads
+GAIL,F_RURAL_DEMAND,Rural consumption growth,0.9924000000000002,+5 pp
+GAIL,P_FERT_SUBSIDY,Fertiliser subsidy generosity,0.8,+1 = higher subsidy
+GAIL,F_MONSOON,Monsoon rainfall vs normal,0.68172875,+10% above long-period average
+GAIL,F_DXY,US dollar index,-0.65991,+3% DXY
+GAIL,F_BRENT,Brent crude oil price,0.63071,+10% Brent
+GAIL,F_CPI_IN,India CPI inflation,-0.5712000000000002,+1 pp
+GAIL,F_REPO_IN,RBI repo rate,-0.504,+25 bp repo
+GAIL,F_POWER_DEMAND_IN,Indian electricity demand,0.4,+3 pp demand growth
+GAIL,P_US_TARIFF_INDIA,US tariffs on Indian goods,-0.38284799999999997,+10 pp average tariff
+GAIL,C_RUSSIA,"Russia (oil discounts, defence, sanctions)",-0.3328199999999999,+1 = closer trade access / larger discounts
+GODFRYPHLP,NEW_TOBACCO_EXCISE,Cigarette excise / tobacco tax burden (India),-7.5,+10% rise in the tax burden per cigarette stick
+GODFRYPHLP,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.9415625,+1 = escalation
+GODFRYPHLP,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.8864775000000003,+5 VIX points
+GODFRYPHLP,T_FORMALISATION,Formalisation of the economy,1.5,+1
+GODFRYPHLP,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.3149625,+US$5 bn net inflow per quarter
+GODFRYPHLP,F_US_EQUITIES,US equity market,1.2978750000000001,+5% S&P 500
+GODFRYPHLP,F_URBAN_DEMAND,Urban discretionary consumption growth,1.2,+5 pp
+GODFRYPHLP,F_DXY,US dollar index,-1.057925,+3% DXY
+GODFRYPHLP,NEW_USDJPY,USD/JPY exchange rate,0.8928625,+3% USD/JPY (yen weaker)
+GODFRYPHLP,F_RURAL_DEMAND,Rural consumption growth,0.8862999999999999,+5 pp
+GODFRYPHLP,F_BRENT,Brent crude oil price,-0.6631416666666667,+10% Brent
+GODFRYPHLP,F_USDINR,USD/INR exchange rate,-0.5798,+3% USD/INR (rupee weaker)
+GODFRYPHLP,F_US_10Y,US 10-year Treasury yield,-0.5636849999999999,+25 bp yield
+GODFRYPHLP,F_CPI_IN,India CPI inflation,-0.518,+1 pp
+GODFRYPHLP,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-0.5175,+1 = higher
+GODREJCP,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.934062500000001,+1 = escalation
+GODREJCP,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,2.6009599999999997,+1 = broad cut (~2-5 pp on affected items)
+GODREJCP,F_URBAN_DEMAND,Urban discretionary consumption growth,2.0,+5 pp
+GODREJCP,F_EDIBLE_OIL,Palm / edible oil price,-1.782215,+10% edible oils
+GODREJCP,F_RURAL_DEMAND,Rural consumption growth,1.5936,+5 pp
+GODREJCP,F_CPI_IN,India CPI inflation,-1.0752000000000002,+1 pp
+GODREJCP,F_PACKAGING,"Packaging cost (paper, plastics)",-1.0,+10% packaging cost
+GODREJCP,F_REPO_IN,RBI repo rate,-0.9640000000000002,+25 bp repo
+GODREJCP,F_BRENT,Brent crude oil price,-0.8426233333333335,+10% Brent
+GODREJCP,F_REFINING_MARGIN,Refining margins (GRM / cracks),-0.7,+$2/bbl gross refining margin
+GODREJCP,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,0.6669325,+US$5 bn net inflow per quarter
+GODREJCP,F_MONSOON,Monsoon rainfall vs normal,0.657388125,+10% above long-period average
+GODREJCP,F_USDINR,USD/INR exchange rate,0.65636,+3% USD/INR (rupee weaker)
+GODREJCP,F_FOOD_INFLATION_IN,India food inflation,-0.5846400000000002,+2 pp
+GODREJCP,P_WINDFALL_EXPORT_TAX,Windfall / export taxes on commodities,0.336,+1 = imposition
+HDFCBANK,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-6.0,+50 bp credit cost
+HDFCBANK,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-5.7603100000000005,+1 = tightening step
+HDFCBANK,C_MIDEAST_CONFLICT,Middle East conflict intensity,-4.5165625,+1 = escalation
+HDFCBANK,F_GDP_IN,India real GDP growth,4.052555,+1 pp
+HDFCBANK,F_RURAL_DEMAND,Rural consumption growth,3.7434400000000005,+5 pp
+HDFCBANK,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.658962500000001,+US$5 bn net inflow per quarter
+HDFCBANK,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,3.5000000000000004,+3 pp
+HDFCBANK,F_CREDIT_GROWTH_IN,Bank credit growth,2.4244,+3 pp
+HDFCBANK,F_DXY,US dollar index,-2.3563250000000004,+3% DXY
+HDFCBANK,F_MONSOON,Monsoon rainfall vs normal,1.9230056250000003,+10% above long-period average
+HDFCBANK,F_US_10Y,US 10-year Treasury yield,-1.91289,+25 bp yield
+HDFCBANK,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.8000000000000003,+25 bp yield
+HDFCBANK,F_CPI_IN,India CPI inflation,-1.7444000000000004,+1 pp
+HDFCBANK,F_REPO_IN,RBI repo rate,-1.6105364000000002,+25 bp repo
+HDFCBANK,F_US_EQUITIES,US equity market,1.5175000000000003,+5% S&P 500
+HINDUNILVR,C_MIDEAST_CONFLICT,Middle East conflict intensity,-3.3581250000000002,+1 = escalation
+HINDUNILVR,F_URBAN_DEMAND,Urban discretionary consumption growth,2.0,+5 pp
+HINDUNILVR,F_RURAL_DEMAND,Rural consumption growth,1.6575,+5 pp
+HINDUNILVR,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,1.6059999999999999,+1 = broad cut (~2-5 pp on affected items)
+HINDUNILVR,F_BRENT,Brent crude oil price,-1.1453916666666668,+10% Brent
+HINDUNILVR,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.129925,+US$5 bn net inflow per quarter
+HINDUNILVR,F_CPI_IN,India CPI inflation,-1.078,+1 pp
+HINDUNILVR,T_PREMIUMISATION,Consumer premiumisation,1.0,+1
+HINDUNILVR,F_REPO_IN,RBI repo rate,-0.96,+25 bp repo
+HINDUNILVR,F_DXY,US dollar index,-0.9598500000000001,+3% DXY
+HINDUNILVR,F_EDIBLE_OIL,Palm / edible oil price,-0.8913500000000001,+10% edible oils
+HINDUNILVR,F_MONSOON,Monsoon rainfall vs normal,0.71409375,+10% above long-period average
+HINDUNILVR,F_USDINR,USD/INR exchange rate,-0.6596,+3% USD/INR (rupee weaker)
+HINDUNILVR,F_PACKAGING,"Packaging cost (paper, plastics)",-0.6,+10% packaging cost
+HINDUNILVR,F_COCOA_COFFEE_TEA,"Cocoa, coffee, tea prices",-0.6,+15% beverage commodities
+ICICIBANK,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-4.2,+50 bp credit cost
+ICICIBANK,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-4.09714,+1 = tightening step
+ICICIBANK,F_GDP_IN,India real GDP growth,3.5141699999999996,+1 pp
+ICICIBANK,F_RISK_SENTIMENT,Global risk aversion (VIX),-3.0789775,+5 VIX points
+ICICIBANK,F_RURAL_DEMAND,Rural consumption growth,3.0164400000000002,+5 pp
+ICICIBANK,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.3765625,+1 = escalation
+ICICIBANK,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.3509625000000005,+US$5 bn net inflow per quarter
+ICICIBANK,F_US_EQUITIES,US equity market,2.1823,+5% S&P 500
+ICICIBANK,F_DXY,US dollar index,-1.9915250000000002,+3% DXY
+ICICIBANK,F_MONSOON,Monsoon rainfall vs normal,1.6380206250000002,+10% above long-period average
+ICICIBANK,F_CREDIT_GROWTH_IN,Bank credit growth,1.6136,+3 pp
+ICICIBANK,NEW_USDJPY,USD/JPY exchange rate,1.4626100000000002,+3% USD/JPY (yen weaker)
+ICICIBANK,F_USDINR,USD/INR exchange rate,-1.4181732,+3% USD/INR (rupee weaker)
+ICICIBANK,F_US_10Y,US 10-year Treasury yield,-1.3775400000000002,+25 bp yield
+ICICIBANK,F_CPI_IN,India CPI inflation,-1.3487432,+1 pp
+IDEA,P_TELECOM_TARIFFS,Mobile tariff hikes,21.92188,+10% ARPU via tariff hike
+IDEA,NEW_AGR_SPECTRUM_RELIEF,Government AGR/spectrum dues relief for stressed telcos,12.0,"+1 = further material relief worth ~Rs20,000 cr NPV"
+IDEA,NEW_TELECOM_SHARE_COMPETITION,Jio/Airtel price and share competition vs Vi,-8.0,+1 = intensification costing the incumbent ~1pp revenue share / 3% ARPU
+IDEA,F_CREDIT_SPREADS_IN,Indian corporate credit spreads,-4.0,+50 bp spreads
+IDEA,F_RISK_SENTIMENT,Global risk aversion (VIX),-3.9019325,+5 VIX points
+IDEA,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.0648875000000007,+US$5 bn net inflow per quarter
+IDEA,F_CPI_IN,India CPI inflation,-2.8245000000000005,+1 pp
+IDEA,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.8,+25 bp yield
+IDEA,F_US_EQUITIES,US equity market,2.7646250000000006,+5% S&P 500
+IDEA,F_REPO_IN,RBI repo rate,-2.5705959999999997,+25 bp repo
+IDEA,F_US_10Y,US 10-year Treasury yield,-2.345425,+25 bp yield
+IDEA,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.2822875,+1 = escalation
+IDEA,NEW_USDJPY,USD/JPY exchange rate,1.9607875,+3% USD/JPY (yen weaker)
+IDEA,F_DXY,US dollar index,-1.881775,+3% DXY
+IDEA,F_USDINR,USD/INR exchange rate,-1.87107,+3% USD/INR (rupee weaker)
+IDFCFIRSTB,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-14.000000000000002,+50 bp credit cost
+IDFCFIRSTB,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-9.114125000000001,+1 = tightening step
+IDFCFIRSTB,F_RURAL_DEMAND,Rural consumption growth,6.055860000000002,+5 pp
+IDFCFIRSTB,F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse),-5.0,+1 pp delinquencies
+IDFCFIRSTB,F_GDP_IN,India real GDP growth,4.776562500000001,+1 pp
+IDFCFIRSTB,F_RISK_SENTIMENT,Global risk aversion (VIX),-4.360455,+5 VIX points
+IDFCFIRSTB,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.249925,+US$5 bn net inflow per quarter
+IDFCFIRSTB,F_US_EQUITIES,US equity market,3.0701250000000004,+5% S&P 500
+IDFCFIRSTB,F_MONSOON,Monsoon rainfall vs normal,2.7732787500000002,+10% above long-period average
+IDFCFIRSTB,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,2.5,+3 pp
+IDFCFIRSTB,F_DXY,US dollar index,-2.3118500000000006,+3% DXY
+IDFCFIRSTB,NEW_USDJPY,USD/JPY exchange rate,2.1351375000000004,+3% USD/JPY (yen weaker)
+IDFCFIRSTB,F_CPI_IN,India CPI inflation,-2.0448063999999997,+1 pp
+IDFCFIRSTB,F_REPO_IN,RBI repo rate,-1.866215,+25 bp repo
+IDFCFIRSTB,F_CREDIT_GROWTH_IN,Bank credit growth,1.765,+3 pp
+INDHOTEL,F_TRAVEL_DEMAND,Air/hotel/tourism demand,5.0,+10%
+INDHOTEL,C_MIDEAST_CONFLICT,Middle East conflict intensity,-4.7096875,+1 = escalation
+INDHOTEL,F_GDP_IN,India real GDP growth,4.064000000000001,+1 pp
+INDHOTEL,T_PREMIUMISATION,Consumer premiumisation,3.0,+1
+INDHOTEL,F_RURAL_DEMAND,Rural consumption growth,2.5784000000000007,+5 pp
+INDHOTEL,F_URBAN_DEMAND,Urban discretionary consumption growth,2.5,+5 pp
+INDHOTEL,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.3848875,+US$5 bn net inflow per quarter
+INDHOTEL,F_MONSOON,Monsoon rainfall vs normal,1.945846875,+10% above long-period average
+INDHOTEL,F_CPI_IN,India CPI inflation,-1.7472,+1 pp
+INDHOTEL,F_REPO_IN,RBI repo rate,-1.564,+25 bp repo
+INDHOTEL,F_DXY,US dollar index,-1.2737749999999999,+3% DXY
+INDHOTEL,F_US_EQUITIES,US equity market,1.1318,+5% S&P 500
+INDHOTEL,F_FOOD_INFLATION_IN,India food inflation,-0.9500400000000001,+2 pp
+INDHOTEL,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-0.94,+1 = higher
+INDHOTEL,F_US_10Y,US 10-year Treasury yield,-0.8778300000000001,+25 bp yield
+INDIANB,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-8.0,+50 bp credit cost
+INDIANB,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-5.54511,+1 = tightening step
+INDIANB,F_RURAL_DEMAND,Rural consumption growth,3.8824800000000006,+5 pp
+INDIANB,F_GDP_IN,India real GDP growth,3.850955,+1 pp
+INDIANB,F_RISK_SENTIMENT,Global risk aversion (VIX),-3.8046135,+5 VIX points
+INDIANB,F_US_EQUITIES,US equity market,2.3757000000000006,+5% S&P 500
+INDIANB,F_GOVT_CAPEX,Central + state government capex,2.1057599999999996,+10% capex growth
+INDIANB,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.8000000000000003,+25 bp yield
+INDIANB,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.7950225000000002,+US$5 bn net inflow per quarter
+INDIANB,F_MONSOON,Monsoon rainfall vs normal,1.7173406249999998,+10% above long-period average
+INDIANB,NEW_USDJPY,USD/JPY exchange rate,1.7127900000000003,+3% USD/JPY (yen weaker)
+INDIANB,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,1.5,+3 pp
+INDIANB,F_CREDIT_GROWTH_IN,Bank credit growth,1.4764,+3 pp
+INDIANB,F_DXY,US dollar index,-1.4444450000000004,+3% DXY
+INDIANB,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.3935,+1 = escalation
+INDUSINDBK,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-16.0,+50 bp credit cost
+INDUSINDBK,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-10.486925,+1 = tightening step
+INDUSINDBK,F_RURAL_DEMAND,Rural consumption growth,7.016300000000001,+5 pp
+INDUSINDBK,F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse),-6.0,+1 pp delinquencies
+INDUSINDBK,F_GDP_IN,India real GDP growth,5.543962499999999,+1 pp
+INDUSINDBK,F_RISK_SENTIMENT,Global risk aversion (VIX),-5.208886500000001,+5 VIX points
+INDUSINDBK,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,4.1889775,+US$5 bn net inflow per quarter
+INDUSINDBK,F_US_EQUITIES,US equity market,3.7805750000000002,+5% S&P 500
+INDUSINDBK,F_US_10Y,US 10-year Treasury yield,-3.0562400000000007,+25 bp yield
+INDUSINDBK,F_DXY,US dollar index,-2.997955000000001,+3% DXY
+INDUSINDBK,F_MONSOON,Monsoon rainfall vs normal,2.9600643750000004,+10% above long-period average
+INDUSINDBK,NEW_USDJPY,USD/JPY exchange rate,2.5923125000000002,+3% USD/JPY (yen weaker)
+INDUSINDBK,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,2.5,+3 pp
+INDUSINDBK,F_CREDIT_GROWTH_IN,Bank credit growth,1.937,+3 pp
+INDUSINDBK,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-1.6675,+1 = higher
+IOC,C_MIDEAST_CONFLICT,Middle East conflict intensity,-8.787875000000001,+1 = escalation
+IOC,C_RUSSIA,"Russia (oil discounts, defence, sanctions)",5.60398,+1 = closer trade access / larger discounts
+IOC,F_REFINING_MARGIN,Refining margins (GRM / cracks),4.0,+$2/bbl gross refining margin
+IOC,NEW_OMC_COMPENSATION,Government compensation to OMCs for fuel/LPG under-recoveries,3.2,"+1 = Rs25,000 cr compensation to oil marketing companies"
+IOC,P_WINDFALL_EXPORT_TAX,Windfall / export taxes on commodities,-2.7199999999999998,+1 = imposition
+IOC,F_BRENT,Brent crude oil price,-2.4990700000000006,+10% Brent
+IOC,F_USDINR,USD/INR exchange rate,-1.8957600000000003,+3% USD/INR (rupee weaker)
+IOC,F_PETROCHEM_SPREADS,Petrochemical / polymer spreads,1.5,+10% polymer-naphtha spreads
+IOC,F_GDP_IN,India real GDP growth,1.281,+1 pp
+IOC,P_FUEL_TAX_IN,Fuel excise / retail price policy (+ = higher taxes/regulated squeeze),-1.0227699999999997,+1 = Rs 2/litre excise rise
+IOC,F_DXY,US dollar index,-0.9719100000000003,+3% DXY
+IOC,F_RURAL_DEMAND,Rural consumption growth,0.8166,+5 pp
+IOC,F_GAS_GLOBAL,Global natural gas / LNG price,-0.7,+15% gas/LNG price
+IOC,F_MONSOON,Monsoon rainfall vs normal,0.6366037499999999,+10% above long-period average
+IOC,F_CPI_IN,India CPI inflation,-0.5208000000000002,+1 pp
+IRCTC,NEW_RAIL_TICKET_FEE_POLICY,Railway convenience-fee / ticketing / catering policy,-6.0,"+1 = tightening (cuts convenience fees, opens ticketing to agents, or changes catering contracts)"
+IRCTC,F_TRAVEL_DEMAND,Air/hotel/tourism demand,4.0,+10%
+IRCTC,F_GDP_IN,India real GDP growth,2.74,+1 pp
+IRCTC,C_INDIA_PAKISTAN,India–Pakistan tension,-2.0,+1 = escalation
+IRCTC,F_RURAL_DEMAND,Rural consumption growth,1.744,+5 pp
+IRCTC,F_MONSOON,Monsoon rainfall vs normal,1.6770312500000002,+10% above long-period average
+IRCTC,F_FOOD_INFLATION_IN,India food inflation,-1.4090000000000003,+2 pp
+IRCTC,P_RAILWAY_CAPEX,Railway capex,1.2,+10%
+IRCTC,F_CPI_IN,India CPI inflation,-1.12,+1 pp
+IRCTC,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.029925,+US$5 bn net inflow per quarter
+IRCTC,F_REPO_IN,RBI repo rate,-1.0,+25 bp repo
+IRCTC,F_DXY,US dollar index,-0.6998500000000001,+3% DXY
+IRCTC,P_US_TARIFF_INDIA,US tariffs on Indian goods,-0.5316216666666668,+10 pp average tariff
+IRCTC,F_US_EQUITIES,US equity market,0.5,+5% S&P 500
+IRCTC,F_DAIRY,Milk / dairy input cost,-0.4387000000000001,+8% milk procurement price
+ITC,NEW_TOBACCO_EXCISE,Cigarette excise / tobacco tax burden (India),-5.0,+10% rise in the tax burden per cigarette stick
+ITC,F_RURAL_DEMAND,Rural consumption growth,1.5458,+5 pp
+ITC,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,1.1250499999999999,+1 = broad cut (~2-5 pp on affected items)
+ITC,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.017955,+US$5 bn net inflow per quarter
+ITC,F_URBAN_DEMAND,Urban discretionary consumption growth,1.0,+5 pp
+ITC,F_USDINR,USD/INR exchange rate,0.90424,+3% USD/INR (rupee weaker)
+ITC,T_FORMALISATION,Formalisation of the economy,0.8,+1
+ITC,F_CPI_IN,India CPI inflation,-0.7560000000000001,+1 pp
+ITC,C_MIDEAST_CONFLICT,Middle East conflict intensity,-0.7098750000000003,+1 = escalation
+ITC,F_REPO_IN,RBI repo rate,-0.6799999999999999,+25 bp repo
+ITC,F_MONSOON,Monsoon rainfall vs normal,0.58713375,+10% above long-period average
+ITC,F_WHEAT,Wheat price,-0.45481000000000005,+10% wheat
+ITC,F_US_EQUITIES,US equity market,0.45225,+5% S&P 500
+ITC,F_FOOD_INFLATION_IN,India food inflation,-0.4110750000000001,+2 pp
+ITC,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-0.40499999999999997,+1 = higher
+JIOFIN,P_SEBI_DERIVATIVES,SEBI F&O / market-structure tightening,-21.600000000000005,+1 = tightening step
+JIOFIN,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-12.204875000000001,+1 = higher
+JIOFIN,F_RISK_SENTIMENT,Global risk aversion (VIX),-6.4038075,+5 VIX points
+JIOFIN,F_US_EQUITIES,US equity market,4.1135,+5% S&P 500
+JIOFIN,F_CPI_IN,India CPI inflation,-3.9726749999999997,+1 pp
+JIOFIN,F_REPO_IN,RBI repo rate,-3.6543940000000004,+25 bp repo
+JIOFIN,F_GSEC_10Y_IN,India 10-year G-sec yield,-3.6,+25 bp yield
+JIOFIN,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.5498875000000005,+US$5 bn net inflow per quarter
+JIOFIN,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-3.3338500000000004,+1 = tightening step
+JIOFIN,NEW_USDJPY,USD/JPY exchange rate,3.0097249999999995,+3% USD/JPY (yen weaker)
+JIOFIN,F_CREDIT_SPREADS_IN,Indian corporate credit spreads,-3.0,+50 bp spreads
+JIOFIN,T_FINANCIALISATION,Household savings shift to financial assets,2.5,+1
+JIOFIN,F_CREDIT_GROWTH_IN,Bank credit growth,2.350375,+3 pp
+JIOFIN,F_US_10Y,US 10-year Treasury yield,-2.3139749999999997,+25 bp yield
+JIOFIN,F_DXY,US dollar index,-2.2927750000000002,+3% DXY
+JUBLFOOD,F_URBAN_DEMAND,Urban discretionary consumption growth,4.0,+5 pp
+JUBLFOOD,T_QUICK_COMMERCE,Quick-commerce disruption of retail/FMCG distribution,-3.0,+1
+JUBLFOOD,C_MIDEAST_CONFLICT,Middle East conflict intensity,-2.489625,+1 = escalation
+JUBLFOOD,F_CPI_IN,India CPI inflation,-1.9992000000000005,+1 pp
+JUBLFOOD,F_DAIRY,Milk / dairy input cost,-1.9208599999999998,+8% milk procurement price
+JUBLFOOD,F_REPO_IN,RBI repo rate,-1.7840000000000003,+25 bp repo
+JUBLFOOD,F_FOOD_INFLATION_IN,India food inflation,-1.6870650000000003,+2 pp
+JUBLFOOD,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.593865,+US$5 bn net inflow per quarter
+JUBLFOOD,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,1.1868,+1 = broad cut (~2-5 pp on affected items)
+JUBLFOOD,F_DXY,US dollar index,-1.1717300000000004,+3% DXY
+JUBLFOOD,F_WAGES_IN,Indian wage / employee-cost inflation,-1.0,+2 pp
+JUBLFOOD,F_MONSOON,Monsoon rainfall vs normal,0.87833625,+10% above long-period average
+JUBLFOOD,F_BRENT,Brent crude oil price,-0.8707666666666667,+10% Brent
+JUBLFOOD,F_WHEAT,Wheat price,-0.86043,+10% wheat
+JUBLFOOD,F_US_EQUITIES,US equity market,0.7795500000000002,+5% S&P 500
+KOTAKBANK,P_SEBI_DERIVATIVES,SEBI F&O / market-structure tightening,-9.600000000000001,+1 = tightening step
+KOTAKBANK,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-7.000000000000001,+50 bp credit cost
+KOTAKBANK,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-6.464565,+1 = tightening step
+KOTAKBANK,F_GDP_IN,India real GDP growth,4.3623825,+1 pp
+KOTAKBANK,F_RURAL_DEMAND,Rural consumption growth,4.102060000000001,+5 pp
+KOTAKBANK,F_RISK_SENTIMENT,Global risk aversion (VIX),-3.101545,+5 VIX points
+KOTAKBANK,F_CREDIT_GROWTH_IN,Bank credit growth,2.9706,+3 pp
+KOTAKBANK,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-2.8515000000000006,+1 = higher
+KOTAKBANK,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.2060750000000002,+US$5 bn net inflow per quarter
+KOTAKBANK,F_US_EQUITIES,US equity market,2.176575,+5% S&P 500
+KOTAKBANK,F_MONSOON,Monsoon rainfall vs normal,1.6694887499999997,+10% above long-period average
+KOTAKBANK,NEW_USDJPY,USD/JPY exchange rate,1.5248725000000003,+3% USD/JPY (yen weaker)
+KOTAKBANK,F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse),-1.5,+1 pp delinquencies
+KOTAKBANK,F_DXY,US dollar index,-1.4737500000000003,+3% DXY
+KOTAKBANK,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,1.2,+3 pp
+LENSKART,F_URBAN_DEMAND,Urban discretionary consumption growth,5.0,+5 pp
+LENSKART,F_RISK_SENTIMENT,Global risk aversion (VIX),-4.3033875,+5 VIX points
+LENSKART,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.1348125000000002,+US$5 bn net inflow per quarter
+LENSKART,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,3.015,+1 = broad cut (~2-5 pp on affected items)
+LENSKART,T_PREMIUMISATION,Consumer premiumisation,3.0,+1
+LENSKART,F_US_EQUITIES,US equity market,2.984325,+5% S&P 500
+LENSKART,F_CPI_IN,India CPI inflation,-2.774800000000001,+1 pp
+LENSKART,F_REPO_IN,RBI repo rate,-2.476,+25 bp repo
+LENSKART,F_DXY,US dollar index,-2.2256250000000004,+3% DXY
+LENSKART,NEW_USDJPY,USD/JPY exchange rate,2.0940375,+3% USD/JPY (yen weaker)
+LENSKART,F_FOOD_INFLATION_IN,India food inflation,-1.5087975000000002,+2 pp
+LENSKART,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.3978125000000001,+1 = escalation
+LENSKART,F_US_10Y,US 10-year Treasury yield,-1.2428999999999997,+25 bp yield
+LENSKART,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-1.2225000000000001,+1 = higher
+LENSKART,F_WAGES_IN,Indian wage / employee-cost inflation,-1.0,+2 pp
+MARICO,NEW_COPRA_COCONUT_OIL,Copra / coconut oil price,-3.8,+15% copra price
+MARICO,F_RURAL_DEMAND,Rural consumption growth,2.1044,+5 pp
+MARICO,F_CPI_IN,India CPI inflation,-1.3776000000000004,+1 pp
+MARICO,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.2997500000000004,+1 = escalation
+MARICO,F_REPO_IN,RBI repo rate,-1.232,+25 bp repo
+MARICO,F_EDIBLE_OIL,Palm / edible oil price,-1.2096200000000001,+10% edible oils
+MARICO,F_URBAN_DEMAND,Urban discretionary consumption growth,1.2,+5 pp
+MARICO,T_PREMIUMISATION,Consumer premiumisation,1.0,+1
+MARICO,F_MONSOON,Monsoon rainfall vs normal,0.8642775,+10% above long-period average
+MARICO,F_PACKAGING,"Packaging cost (paper, plastics)",-0.8,+10% packaging cost
+MARICO,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,0.75591,+US$5 bn net inflow per quarter
+MARICO,F_FOOD_INFLATION_IN,India food inflation,-0.7490700000000001,+2 pp
+MARICO,F_BRENT,Brent crude oil price,-0.4480666666666666,+10% Brent
+MARICO,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,0.4392,+1 = broad cut (~2-5 pp on affected items)
+MARICO,F_DXY,US dollar index,-0.3758200000000001,+3% DXY
+MEESHO,F_RISK_SENTIMENT,Global risk aversion (VIX),-5.453865,+5 VIX points
+MEESHO,F_RURAL_DEMAND,Rural consumption growth,4.504,+5 pp
+MEESHO,C_MIDEAST_CONFLICT,Middle East conflict intensity,-4.299375,+1 = escalation
+MEESHO,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,3.738,+1 = broad cut (~2-5 pp on affected items)
+MEESHO,F_US_EQUITIES,US equity market,3.67,+5% S&P 500
+MEESHO,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.5897750000000004,+US$5 bn net inflow per quarter
+MEESHO,F_CPI_IN,India CPI inflation,-3.3600000000000003,+1 pp
+MEESHO,F_REPO_IN,RBI repo rate,-3.0,+25 bp repo
+MEESHO,NEW_USDJPY,USD/JPY exchange rate,2.629,+3% USD/JPY (yen weaker)
+MEESHO,F_DXY,US dollar index,-2.4195500000000005,+3% DXY
+MEESHO,F_MONSOON,Monsoon rainfall vs normal,2.14629375,+10% above long-period average
+MEESHO,F_FOOD_INFLATION_IN,India food inflation,-1.8270000000000002,+2 pp
+MEESHO,P_LABOUR_CODES,Labour code implementation cost,-1.5,+1 = implementation
+MEESHO,F_URBAN_DEMAND,Urban discretionary consumption growth,1.5,+5 pp
+MEESHO,F_BRENT,Brent crude oil price,-1.4935000000000003,+10% Brent
+NAUKRI,P_SEBI_DERIVATIVES,SEBI F&O / market-structure tightening,-12.0,+1 = tightening step
+NAUKRI,F_US_EQUITIES,US equity market,5.68975,+5% S&P 500
+NAUKRI,F_RISK_SENTIMENT,Global risk aversion (VIX),-4.274205000000001,+5 VIX points
+NAUKRI,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-4.01625,+1 = higher
+NAUKRI,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.987425,+US$5 bn net inflow per quarter
+NAUKRI,F_GDP_IN,India real GDP growth,3.93375,+1 pp
+NAUKRI,T_GENAI_SERVICES,GenAI substitution of IT/BPO labour (higher = more substitution),-3.76,+1
+NAUKRI,F_GSEC_10Y_IN,India 10-year G-sec yield,-3.6,+25 bp yield
+NAUKRI,F_CPI_IN,India CPI inflation,-3.22525,+1 pp
+NAUKRI,F_US_10Y,US 10-year Treasury yield,-3.0431999999999997,+25 bp yield
+NAUKRI,F_REPO_IN,RBI repo rate,-3.005,+25 bp repo
+NAUKRI,F_DXY,US dollar index,-2.5648500000000003,+3% DXY
+NAUKRI,F_RURAL_DEMAND,Rural consumption growth,2.4438,+5 pp
+NAUKRI,NEW_USDJPY,USD/JPY exchange rate,2.2051749999999997,+3% USD/JPY (yen weaker)
+NAUKRI,F_FED_FUNDS,US Fed funds rate,-1.8210999999999997,+25 bp
+NESTLEIND,F_URBAN_DEMAND,Urban discretionary consumption growth,2.2,+5 pp
+NESTLEIND,NEW_FOOD_SAFETY_REG,FSSAI food-safety / labelling enforcement intensity,-2.0,"+1 = materially stricter enforcement on packaged-food claims, sampling and recalls"
+NESTLEIND,F_DAIRY,Milk / dairy input cost,-1.8375100000000002,+8% milk procurement price
+NESTLEIND,F_COCOA_COFFEE_TEA,"Cocoa, coffee, tea prices",-1.5,+15% beverage commodities
+NESTLEIND,F_CPI_IN,India CPI inflation,-1.4224000000000003,+1 pp
+NESTLEIND,F_REPO_IN,RBI repo rate,-1.268,+25 bp repo
+NESTLEIND,T_QUICK_COMMERCE,Quick-commerce disruption of retail/FMCG distribution,1.0,+1
+NESTLEIND,C_MIDEAST_CONFLICT,Middle East conflict intensity,-0.9830625000000002,+1 = escalation
+NESTLEIND,F_RURAL_DEMAND,Rural consumption growth,0.9108000000000002,+5 pp
+NESTLEIND,F_PACKAGING,"Packaging cost (paper, plastics)",-0.9000000000000001,+10% packaging cost
+NESTLEIND,F_FOOD_INFLATION_IN,India food inflation,-0.7734300000000001,+2 pp
+NESTLEIND,F_WHEAT,Wheat price,-0.718755,+10% wheat
+NESTLEIND,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,0.6918,+1 = broad cut (~2-5 pp on affected items)
+NESTLEIND,F_EDIBLE_OIL,Palm / edible oil price,-0.6687550000000001,+10% edible oils
+NESTLEIND,F_USDINR,USD/INR exchange rate,-0.60748,+3% USD/INR (rupee weaker)
+NYKAA,F_URBAN_DEMAND,Urban discretionary consumption growth,6.0,+5 pp
+NYKAA,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,4.55655,+1 = broad cut (~2-5 pp on affected items)
+NYKAA,NEW_BEAUTY_RETAIL_COMPETITION,"Beauty retail competition intensity (Tira, Sephora, Purplle, quick commerce)",-3.0,+1 = materially sharper discounting/expansion by rival beauty retailers and q-commerce
+NYKAA,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.729925,+US$5 bn net inflow per quarter
+NYKAA,F_US_10Y,US 10-year Treasury yield,-2.6994000000000002,+25 bp yield
+NYKAA,F_DXY,US dollar index,-2.17985,+3% DXY
+NYKAA,T_PREMIUMISATION,Consumer premiumisation,2.0,+1
+NYKAA,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.4831249999999998,+1 = escalation
+NYKAA,F_US_EQUITIES,US equity market,1.39775,+5% S&P 500
+NYKAA,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.212955,+5 VIX points
+NYKAA,F_USDINR,USD/INR exchange rate,-1.1596,+3% USD/INR (rupee weaker)
+NYKAA,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-1.075,+1 = higher
+NYKAA,F_CPI_IN,India CPI inflation,-1.036,+1 pp
+NYKAA,F_US_GDP,US growth,-1.0032,+1 pp
+NYKAA,T_QUICK_COMMERCE,Quick-commerce disruption of retail/FMCG distribution,-1.0,+1
+SHRIRAMFIN,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-5.166925,+1 = tightening step
+SHRIRAMFIN,F_CPI_IN,India CPI inflation,-4.772162500000001,+1 pp
+SHRIRAMFIN,F_MONSOON,Monsoon rainfall vs normal,4.623153125,+10% above long-period average
+SHRIRAMFIN,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-4.5,+50 bp credit cost
+SHRIRAMFIN,C_MIDEAST_CONFLICT,Middle East conflict intensity,-4.397812500000001,+1 = escalation
+SHRIRAMFIN,F_REPO_IN,RBI repo rate,-4.363696999999999,+25 bp repo
+SHRIRAMFIN,F_GDP_IN,India real GDP growth,4.3324,+1 pp
+SHRIRAMFIN,F_RURAL_DEMAND,Rural consumption growth,4.237633333333334,+5 pp
+SHRIRAMFIN,F_AUTO_DEMAND_IN,Indian vehicle demand,3.5000000000000004,+10% volumes
+SHRIRAMFIN,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,3.035340000000001,+1 = broad cut (~2-5 pp on affected items)
+SHRIRAMFIN,F_US_10Y,US 10-year Treasury yield,-2.8776375000000005,+25 bp yield
+SHRIRAMFIN,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.7923125000000004,+US$5 bn net inflow per quarter
+SHRIRAMFIN,F_CREDIT_SPREADS_IN,Indian corporate credit spreads,-2.5,+50 bp spreads
+SHRIRAMFIN,F_FOOD_INFLATION_IN,India food inflation,-2.4771075000000007,+2 pp
+SHRIRAMFIN,F_CREDIT_GROWTH_IN,Bank credit growth,2.4173125,+3 pp
+TORNTPHARM,NEW_NPPA_DRUG_PRICE_CONTROL,India NPPA/NLEM drug price control and trade-margin regulation,-3.0,+1 = one tightening step (NLEM expansion or trade-margin cap)
+TORNTPHARM,P_USFDA_ENFORCEMENT,USFDA inspection/enforcement intensity,-2.1,+1 = stricter
+TORNTPHARM,F_CPI_IN,India CPI inflation,-2.0188,+1 pp
+TORNTPHARM,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.013925,+US$5 bn net inflow per quarter
+TORNTPHARM,F_REPO_IN,RBI repo rate,-1.8385364000000002,+25 bp repo
+TORNTPHARM,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.8000000000000003,+25 bp yield
+TORNTPHARM,F_URBAN_DEMAND,Urban discretionary consumption growth,1.5,+5 pp
+TORNTPHARM,F_US_10Y,US 10-year Treasury yield,-1.22952,+25 bp yield
+TORNTPHARM,F_FOOD_INFLATION_IN,India food inflation,-1.0977225000000002,+2 pp
+TORNTPHARM,F_DXY,US dollar index,-1.01025,+3% DXY
+TORNTPHARM,C_AFRICA_LATAM,Africa & Latin America demand,1.0,+1 pp growth
+TORNTPHARM,F_US_GENERIC_PRICING,US generic drug price erosion (higher = worse),-1.0,+5 pp erosion
+TORNTPHARM,F_US_EQUITIES,US equity market,0.9493,+5% S&P 500
+TORNTPHARM,F_CHEM_FEEDSTOCK,"Chemical feedstock (benzene, propylene, etc.)",-0.8,+10% feedstock
+TORNTPHARM,P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,-0.794,+1 = higher
+VBL,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,3.4482,+1 = broad cut (~2-5 pp on affected items)
+VBL,NEW_CSD_PRICE_COMPETITION,"Soft-drink price competition intensity (Coca-Cola, Campa, regional)",-3.0,+1 = materially sharper discounting/ad spend in carbonated soft drinks
+VBL,NEW_SUMMER_TEMPERATURE,Summer temperature vs normal,3.0,+1 = season ~1C hotter than normal in Mar-Jun
+VBL,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.7131875,+1 = escalation
+VBL,F_URBAN_DEMAND,Urban discretionary consumption growth,1.5,+5 pp
+VBL,F_RURAL_DEMAND,Rural consumption growth,1.3494,+5 pp
+VBL,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.0609475,+US$5 bn net inflow per quarter
+VBL,NEW_FSSAI_FOOD_REGULATION,FSSAI / packaged-food regulation intensity,-1.0,+1 = materially stricter packaged-food labelling/HFSS/online-sale rules
+VBL,F_SUGAR,Sugar price,-0.8,+10% sugar
+VBL,F_DXY,US dollar index,-0.7858950000000002,+3% DXY
+VBL,F_CPI_IN,India CPI inflation,-0.7672,+1 pp
+VBL,F_REPO_IN,RBI repo rate,-0.6839999999999999,+25 bp repo
+VBL,F_CHEM_FEEDSTOCK,"Chemical feedstock (benzene, propylene, etc.)",-0.6,+10% feedstock
+VBL,F_BRENT,Brent crude oil price,-0.5898166666666667,+10% Brent
+VBL,F_MONSOON,Monsoon rainfall vs normal,0.558241875,+10% above long-period average
+YESBANK,F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),-10.0,+50 bp credit cost
+YESBANK,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-7.58585,+1 = tightening step
+YESBANK,F_GDP_IN,India real GDP growth,5.5944875000000005,+1 pp
+YESBANK,F_RURAL_DEMAND,Rural consumption growth,5.4535,+5 pp
+YESBANK,F_CPI_IN,India CPI inflation,-5.3031615,+1 pp
+YESBANK,F_REPO_IN,RBI repo rate,-4.821524,+25 bp repo
+YESBANK,F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,3.5000000000000004,+3 pp
+YESBANK,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.452275,+US$5 bn net inflow per quarter
+YESBANK,F_MONSOON,Monsoon rainfall vs normal,3.3693562499999996,+10% above long-period average
+YESBANK,F_GSEC_10Y_IN,India 10-year G-sec yield,-3.3,+25 bp yield
+YESBANK,F_FOOD_INFLATION_IN,India food inflation,-2.9606535000000003,+2 pp
+YESBANK,F_CREDIT_GROWTH_IN,Bank credit growth,2.7421875,+3 pp
+YESBANK,NEW_FX_RESERVES_IN,India FX reserves,2.6067169999999997,+US$25bn reserves (RBI buys / net inflows)
+YESBANK,F_DXY,US dollar index,-2.5170500000000007,+3% DXY
+YESBANK,F_US_10Y,US 10-year Treasury yield,-2.3244374999999997,+25 bp yield

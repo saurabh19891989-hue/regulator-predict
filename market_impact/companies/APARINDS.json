@@ -1,0 +1,384 @@
+{
+ "name": "Apar Industries Ltd.",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Indian electrification play with three segments: (1) conductors (aluminium alloy/ACSR/HTLS, large export share), (2) transformer and specialty oils (base-oil based; KSA unit under way), (3) power, telecom and specialty cables (incl. renewables, EV, defence). FY26 sales Rs22,902 cr (+23%), TTM Rs25,605 cr, EBITDA margin 9.5% TTM, Q2 FY27 PAT Rs447 cr (+78% YoY) with margin +190bp YoY. Metal-linked pricing makes revenue volatile while per-tonne conversion margins drive profit. Market cap Rs66,330 cr, P/E 47x, stock +90% in 12 months. Segment/geography splits are model knowledge, not verified in fetched sources.",
+ "revenue_mix": [
+  {
+   "segment": "conductors",
+   "share_pct": 35,
+   "geography": "export-heavy (~40% group exports, unverified)"
+  },
+  {
+   "segment": "transformer and specialty oils",
+   "share_pct": 25,
+   "geography": "India + exports, KSA plant coming"
+  },
+  {
+   "segment": "power/telecom/specialty cables",
+   "share_pct": 40,
+   "geography": "India majority"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 15
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "APARINDS",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.0,
+   "w_high": 8.0,
+   "lag": ">12m",
+   "mechanism": "Conductors (AAAC/ACSR/HTLS) and transformer oils are the T&D build-out plays; Q2 FY27 earnings-call headline cites order strength. Structural: +1 SSU ~ +8% T&D-linked volume growth, EBITDA op. leverage ~1.5x, EV/MCap ~1.1, persistence 0.5 (priced at 47x PE already) => ~ +4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Apar+Industries+Q2+FY27+conductors+transformer+oils+exports+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "Yahoo: 'Profit jumps 78% as order ...' earnings call highlights (headline only)"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "APARINDS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Domestic conductor/cable orders from PGCIL, state utilities, railways follow central/state capex. +10% capex growth ~ +3% domestic volumes, EBITDA +4.5%, x1.1 x0.5 persistence ~ +2.5, shaded to 1.5 because T_GRID_ELECTRIFICATION already carries the structural part (layering).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "APARINDS",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": ">12m",
+   "mechanism": "Renewable-evacuation conductors, solar/EV/specialty cables and (via KSA unit) specialty oils. Judgemental; no company-disclosed numeric split in fetched sources.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "APARINDS",
+   "relation": "input_cost",
+   "w": 1.0,
+   "w_low": -3.0,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Aluminium alloy rod is ~30% of costs (model knowledge) but conductor contracts are mostly LME-linked back-to-back, so margin per tonne is roughly neutral; +10% LME raises revenue/working capital and brings inventory gains (~1 month stock => ~+2% EBITDA one-off) but squeezes working-capital finance (interest Rs504 cr TTM). Net small positive; empirical +2.3/SSU t=1.5 agrees in sign, not significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "APARINDS",
+   "relation": "input_cost",
+   "w": 0.6,
+   "w_low": -2.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Copper is the cable conductor (~10% of costs, model knowledge); pass-through pricing as for aluminium; inventory gain/loss dominates. Empirical +1.45 t=1.1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "APARINDS",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Transformer/specialty oil base oils are crude derivatives (oils ~25-30% of revenue, base oil ~70% of oil cost; model knowledge). +10% Brent => base oil ~+6% with 1-2 month price lag; unrecovered ~0.5% of group revenue ~ Rs 125 cr/yr vs EBITDA Rs2,426 cr => ~-5% EBITDA, persistence 0.25, EV/MCap 1.1 => ~ -1.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "APARINDS",
+   "relation": "fx_translation",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Exports are a large share (~40%, model knowledge) of revenue; metal is USD/LME-linked so net exposure is the conversion margin (~Rs 1,200 cr). +3% USD/INR => ~+1.5% EBITDA before hedges, persistence 0.5, EV/MCap 1.1 => ~+0.8; partly hedged so shaded to +1.0 incl. translation of foreign-subsidiary earnings.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "APARINDS",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "RBI hiked repo to 5.50% on 2026-10-07 (calibrated tightening). Interest cost Rs504 cr TTM, screener flags high cost of borrowing; +25bp on ~Rs 5,000-6,000 cr borrowings (assumed) = Rs 13-15 cr = ~0.6% of EBITDA; the larger channel is the discount rate on a 47x P/E stock (duration effect ~ -1.2).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "APARINDS",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Market beta 1.4-1.5, 1y vol 46%, +90% in 12 months, FIIs raised stake to 12.55%; a +5 VIX shock hits high-multiple mid-cap capital goods harder than market. Empirical -0.53 (t=-0.7).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "APARINDS",
+   "relation": "policy_effect",
+   "w": -2.5,
+   "w_low": -7.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "US/Americas conductors, transformer oil and cable exports (US share not verified in fetched sources). +10pp tariff on ~10% of revenue at 30% pricing pass-through => ~-3% revenue-equiv, margin 9.5% => ~-10% EBITDA if borne 30%, persistence 0.25-0.5 => ~-2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "APARINDS",
+   "relation": "geopolitical_exposure",
+   "w": -1.0,
+   "w_low": -4.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "KSA specialty-oil unit (Yanbu lubeHub supply pact, 2026-10-14) and Gulf/Africa conductor exports; escalation delays projects and shipping, but higher energy prices lift Gulf capex over time. Ambiguous sign; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md",
+     "date": "2026-10-14",
+     "note": "scanx.trade: KSA unit signs supply pact at Yanbu lubeHub"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "APARINDS",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical +3.36/SSU, t=+2.5 (beta 1.21); plausible channel is US data-centre/grid capex sentiment feeding conductor/specialty-cable demand plus global-risk appetite. Shrunk toward zero to 1.2 because mechanism is indirect.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APARINDS.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Power Grid Corp / state transmission utilities / railways",
+   "ticker": "POWERGRID",
+   "role": "customer",
+   "importance": "high",
+   "note": "Conductor and cable demand; model knowledge, not a >25% single customer"
+  },
+  {
+   "counterparty": "Hindalco / aluminium primary producers",
+   "ticker": "HINDALCO",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Aluminium alloy rod/ingot supply (model knowledge)"
+  },
+  {
+   "counterparty": "Polycab India",
+   "ticker": "POLYCAB",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Power/telecom cables"
+  },
+  {
+   "counterparty": "Base-oil suppliers and transformer OEMs (Hitachi Energy, Siemens Energy, Indian OEMs)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Specialty oils input and customers"
+  },
+  {
+   "counterparty": "Chinese cable maker (70% stake via subsidiary, announced 2026-10-30)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "Terms not verified beyond headline"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (likely last week of Jan/early Feb)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge of reporting calendar; Q2 reported 2026-10-29"
+  },
+  {
+   "date": "2026-12",
+   "event": "Completion of 70% acquisition of Chinese cable maker by subsidiary (announced 2026-10-30)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Apar+Industries+Chinese+cable+maker+70%+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "KSA specialty-oil unit ramp-up / further promoter stake sale (promoter holding fell 57.76% to 55.42% in Sep 2026 quarter)",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 2.0,
+   "source": "market_impact/data/packs/APARINDS.md"
+  },
+  {
+   "date": "2027-01",
+   "event": "Possible US tariff/anti-dumping action affecting conductor or oil exports",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -1.0,
+   "source": "model judgement"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs6,931 cr, EBITDA Rs721 cr (10%), PAT Rs447 cr, EPS 106.8",
+  "trend": "Record earnings run: PAT Rs263/252/209/253/467/447 cr over six quarters; EBITDA margin stepped up from 8% to 10-11% in H1 FY27",
+  "valuation": "P/E 47x, P/B 7.9x, ROCE 31.8%; high vs 5-year history, priced for continued margin expansion",
+  "recent_developments": [
+   "2026-09-10: CARE upgrades rating to AA/stable",
+   "2026-09-21: AGM resolutions approved",
+   "2026-10-14: KSA unit signs supply pact at Yanbu lubeHub",
+   "2026-10-29: Q2 PAT +78%, EBITDA beat, shares +5%",
+   "2026-10-30: subsidiary to acquire 70% of a Chinese cable maker",
+   "Sep 2026 quarter: promoter holding fell to 55.42% from 57.76%; FII 12.55%"
+  ]
+ },
+ "key_risks": [
+  "Valuation: 47x P/E after +90% 12m; de-rating on any margin miss",
+  "Aluminium/copper volatility and working-capital intensity",
+  "US tariff or trade-remedy action on exports",
+  "Rising rates (repo 5.50%) on a high-cost borrowing base",
+  "Promoter selling / overhang",
+  "China acquisition execution risk"
+ ],
+ "upside_triggers": [
+  "T&D and renewable order inflow acceleration",
+  "Specialty-oil share gains / KSA unit ramp",
+  "Margin sustaining >10%",
+  "Further rating upgrades lowering funding cost"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/APARINDS.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026, empirical sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Apar+Industries+Q2+FY27+conductors+transformer+oils+exports+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-31",
+   "what": "Q2 FY27 headlines (Upstox, Yahoo call highlights, Investing.com '$2.4bn platform')"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Apar+Industries+Chinese+cable+maker+70%+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-02",
+   "what": "Chinese acquisition headlines (scanx, Wire & Cable India)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+  }
+ ],
+ "ticker": "APARINDS",
+ "as_of": "2026-11-05"
+}

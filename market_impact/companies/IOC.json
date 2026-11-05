@@ -1,0 +1,453 @@
+{
+ "ticker": "IOC",
+ "name": "Indian Oil Corporation Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_REFINING_OMC",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest integrated oil company (Maharatna PSU, government ~71% incl. 19.6% other govt holders): ~80 MMTPA refining across 10 refineries (~33% of India's capacity), ~50% share of petroleum product sales through ~40,000 fuel stations, 14,500+ km of product/crude pipelines, LPG and petrochemicals (~4 MMT), plus gas, lubricants, renewables and EV ventures. Retail petrol/diesel/LPG prices are quasi-administered, so marketing margins swing opposite to crude while refining margins swing with it. Q2 FY27 PAT Rs 21.6k cr (record, with inventory gains) after a Q1 loss.",
+ "revenue_mix": [
+  {
+   "segment": "petroleum products - domestic marketing (petrol, diesel, LPG, ATF)",
+   "share_pct": 80,
+   "geography": "India"
+  },
+  {
+   "segment": "petrochemicals",
+   "share_pct": 4,
+   "geography": "India / exports"
+  },
+  {
+   "segment": "exports of products",
+   "share_pct": 8,
+   "geography": "Asia, Africa, Europe"
+  },
+  {
+   "segment": "gas, pipelines, other",
+   "share_pct": 8,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 85
+  },
+  {
+   "input": "F_GAS_GLOBAL",
+   "share_of_costs_pct": 2
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 85
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_BRENT",
+   "dst": "IOC",
+   "relation": "input_cost",
+   "w": -2.2,
+   "w_low": -4.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Brent +10% (~$9.5/bbl). Retail petrol/diesel/LPG prices are frozen, so marketing under-recovers ~Rs5.6/litre while GRM and inventory gains offset. Calibration from the quarter-to-quarter swing: IOC operating profit fell from Rs 24.8k cr (Mar-26) to Rs 4.1k cr (Jun-26) when Brent spiked, then rebounded to Rs 33.8k cr in Sep-26 with inventory gains. A sustained +10% costs roughly Rs 10k cr/yr after GRM uplift (~ -17% of normalised EBITDA ~Rs 60k cr) x EV/MCap 1.7 x persistence 0.25 (govt compensation / price hikes) => ~-7 gross; the market evidently discounts compensation and pass-through (pack elasticity -1.80, t -3.7), so shrink toward data: -2.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IOC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "ICRA: OMCs lose Rs530 cr/day at retail prices frozen; OMCs seek Rs75,000 cr, Centre to decide in 2027 (Moneycontrol 7 Sep)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+Q2+results+GRM+marketing+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 PAT Rs21,630 cr (standalone) on refining margins + inventory gains (The Hindu, CNBC TV18, Investing.com)"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "IOC",
+   "relation": "output_price",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "GRM +$2/bbl on ~75 MMT throughput (~550m bbl): +$1.1bn = ~Rs 10k cr pre-tax (~17% of normalised EBITDA Rs 60k cr) x EV/MCap 1.7 x persistence 0.3 (margin spikes fade within 2-3 quarters) = +8.7 theoretical; haircut 50% for tax, windfall-levy leakage and for the pack's contrary estimate => +4.0. Pack shows -1.30 (t -2.8) because the series (HO=F, heating-oil futures) co-moves with Brent, so the pack coefficient mostly reflects crude-level exposure already in the Brent edge; sign conflict explained, not accepted.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IOC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+Q2+results+GRM+marketing+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 PAT Rs21,630 cr (standalone) on refining margins + inventory gains (The Hindu, CNBC TV18, Investing.com)"
+    }
+   ]
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "IOC",
+   "relation": "policy_effect",
+   "w": -1.0,
+   "w_low": -4.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+1 = Rs2/litre excise rise. If retail prices are held, OMCs absorb it: ~78bn litres petrol+diesel x Rs2 = Rs15.6k cr (26% of normalised EBITDA). Government usually times excise changes against crude declines (neutral for OMCs) and the 1 Nov 2026 'tax twist' headline concerns this; assume 25% absorbed x 26% x 1.7 x 0.15 persistence => ~-1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "ICRA: OMCs lose Rs530 cr/day at retail prices frozen; OMCs seek Rs75,000 cr, Centre to decide in 2027 (Moneycontrol 7 Sep)"
+    }
+   ]
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "IOC",
+   "relation": "policy_effect",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "IOC exports only ~5-8% of throughput (model knowledge), so export levies on diesel/petrol/ATF cut realisations on a small volume: Rs 6/L on ~3 MMT exports ~ Rs 2.2k cr = 3.7% of normalised EBITDA x 1.7 x persistence 0.15 => -0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+windfall+tax+export+duty+diesel+ATF+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Export levies on petrol/diesel/ATF reset repeatedly Aug-Oct 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "IOC",
+   "relation": "fx_translation",
+   "w": -1.8,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "INR 3% weaker raises crude import cost (all USD) before retail resets; USD borrowings (~$6bn, model knowledge) create MTM losses; product price parity gives only partial offset. Cost +3% on ~Rs 7 lakh cr crude bill = Rs 21k cr gross, ~85% recovered via import-parity pricing on the refining side but not on frozen retail => net ~-Rs 3k cr = -5% EBITDA x 1.7 x 0.25 persistence => -2.1; pack -1.74 (t -1.2) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IOC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "IOC",
+   "relation": "funding_cost",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Gross debt ~Rs 1.3 lakh cr, ~40% floating: 25bp = Rs 130 cr = 0.4% of PBT; main channel is the discount rate on a 5.7%-yield, P/B 0.9 PSU. Duration approx 1.5% per 25bp x 0.4 => -0.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IOC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "IOC",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "GDP +1pp lifts fuel demand ~0.8pp (diesel is GDP-elastic): IOC sells ~100 MMT, marketing margin Rs ~3.5/L on incremental volume plus refinery utilisation => EBITDA +1.5% x 1.7 x 1.0 structural, minus fuel-subsidy drag => +1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IOC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "IOC",
+   "relation": "geopolitical_exposure",
+   "w": -3.5,
+   "w_low": -8.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation (+1) ~ Brent +12% and diesel cracks wider. IOC sources ~55-60% of crude from Middle East (model knowledge) and trimmed West-Asia term volumes (Business Standard 21 Oct 2026). Marketing under-recoveries dominate (-2.6 via Brent) plus supply-security premium and freight/insurance; GRM windfall adds back +1. Net ~ -3.5. De-escalation hopes after the US midterms (4 Nov) helped OMCs rally up to 7% on 5 Nov.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IOC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "ICRA: OMCs lose Rs530 cr/day at retail prices frozen; OMCs seek Rs75,000 cr, Centre to decide in 2027 (Moneycontrol 7 Sep)"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "IOC",
+   "relation": "input_cost",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+1 = larger Russian discounts / freer access. IOC buys Russian Urals on spot (~25% of slate in peak years, model knowledge). $2.5/bbl discount on ~140m bbl = $350m = Rs 3.3k cr = 5.5% of normalised EBITDA x 1.7 x 0.3 => +2.8. Downside risk from the US 100% tariff threat on Russian-oil buyers (Sep 2026).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Reliance+Russia+oil+sanctions+US+tariff+India+Iran+war+crude+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "note": "US 100% tariff threat on Russian-oil buyers; MEA response"
+    }
+   ]
+  },
+  {
+   "src": "F_PETROCHEM_SPREADS",
+   "dst": "IOC",
+   "relation": "output_price",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "IOC petchem ~3.5 Mt polymers/PX/PTA (model knowledge): +10% spreads ~ +$60/t x 3.5 Mt = $210m = Rs 2.0k cr = 3.3% of normalised EBITDA x 1.7 x 0.35 persistence => +2.0, haircut for China oversupply => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IOC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "IOC",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Gas/LNG +15%: refineries burn gas and use it for hydrogen, plus IOC Gas marketing; ~2-3% of opex => +0.4% opex x ... ~-1.5% EBITDA x 1.7 x 0.3 => -0.8. Pack -0.80 (t -2.1) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IOC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in dossier + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_OMC_COMPENSATION",
+   "dst": "IOC",
+   "relation": "policy_effect",
+   "w": 3.2,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = government compensation of ~Rs 25k cr to OMCs for LPG/fuel under-recoveries (OMCs seek Rs 75k cr; Centre to decide in 2027). IOC share ~38% = Rs 9.5k cr pre-tax, ~Rs 7.1k cr post-tax = 3.5% of Rs 2.05 lakh cr market cap; probability of cash (vs bonds/none) discount 0.9 => +3.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "ICRA: OMCs lose Rs530 cr/day at retail prices frozen; OMCs seek Rs75,000 cr, Centre to decide in 2027 (Moneycontrol 7 Sep)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Middle East crude suppliers (Saudi Aramco, ADNOC, Iraq SOMO) under annual term deals",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "IOC trimming West-Asia annual volumes amid the Iran war (BS 21 Oct 2026)"
+  },
+  {
+   "counterparty": "Russian crude suppliers (spot)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "discounted barrels; US secondary-tariff risk"
+  },
+  {
+   "counterparty": "ONGC / Oil India domestic crude",
+   "ticker": "ONGC",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "~12% of IOC's crude slate (model knowledge)"
+  },
+  {
+   "counterparty": "BPCL, HPCL",
+   "ticker": "HINDPETRO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "same regulated retail pricing environment; compensation will be shared"
+  },
+  {
+   "counterparty": "Reliance / Nayara (private refiners)",
+   "ticker": "RELIANCE",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "export-oriented refiners capture cracks without retail drag"
+  },
+  {
+   "counterparty": "Indian Oil-Adani Gas JV (50%)",
+   "ticker": "ATGL",
+   "role": "customer",
+   "importance": "low",
+   "note": "CGD JV partner of Adani Total Gas"
+  },
+  {
+   "counterparty": "Chennai Petroleum (51.9%), Petronet LNG (12.5%), IOCL Lanka",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "model knowledge"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (IOC reports late Jan / early Feb; date not yet announced) - inventory loss reversal risk if crude keeps falling",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge of calendar; NDTV Profit 2 Nov 'Can refining gains offset H2 pain?'"
+  },
+  {
+   "date": "2027-03",
+   "event": "Centre decision on OMC compensation (Rs 75,000 cr ask across OMCs; LPG under-recovery)",
+   "type": "regulatory",
+   "prob": 0.45,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Retail petrol/diesel price hike or excise cut/hike if Brent re-crosses $100 (OMCs said they can absorb $85-90, hikes likely above $100)",
+   "type": "regulatory",
+   "prob": 0.12,
+   "impact_pct_low": 1.5,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Interim dividend / record date announcements (Maharatna PSU, yield 5.7%; 12% interim record date reported 24 Oct 2026 - company not verified)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.5,
+   "source": "https://www.screener.in/company/IOC/consolidated/"
+  },
+  {
+   "date": "2027-12",
+   "event": "Panipat expansion (25->33 MMTPA) / Paradip-Gujarat petchem milestones (model knowledge)",
+   "type": "capex",
+   "prob": 0.2,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.5,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-02",
+   "event": "US-Iran de-escalation after Democratic midterm win: Brent below $90 restores marketing margins",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Iran+war+Strait+of+Hormuz+LNG+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): consolidated sales Rs 253,967 cr, operating profit Rs 33,797 cr (OPM 13%), net profit Rs 22,503 cr (EPS Rs 15.16); standalone PAT Rs 21,630 cr vs loss of Rs 1,141 cr in Q1 FY27 and Rs 8,191 cr in Q2 FY26",
+  "trend": "Violent swing: Q4 FY26 PAT Rs 15.2k cr -> Q1 FY27 loss (crude spike, frozen retail) -> Q2 record on refining margins and inventory gains; management flagged LPG losses persisting; analysts expect H2 pain as inventory gains reverse and crude falls",
+  "valuation": "P/E 4.3x trailing (flattered by Q2), P/B 0.89x, dividend yield 5.7%, ROE 20.5%; Nomura target implies ~42% upside (CNBC TV18 2 Nov 2026)",
+  "recent_developments": [
+   "2026-10-30: Q2 results beat; shares +3-5% on 2 Nov",
+   "2026-10-21: IOC to trim West-Asian crude under annual deals amid Iran war (Business Standard)",
+   "2026-11-01: Government decision on petrol/diesel taxes - 'tax twist' for OMCs (Livemint)",
+   "2026-11-05: OMCs rally up to 7% as crude falls below $95",
+   "2026-09-07: OMCs seek Rs75,000 cr for fuel losses, Centre to decide in 2027",
+   "2026-09-23: ICRA - OMC losses Rs530 cr/day at unchanged pump prices"
+  ]
+ },
+ "key_risks": [
+  "Brent re-spike with retail prices frozen",
+  "LPG under-recovery persisting (Q2 flagged)",
+  "Reversal of Q2 inventory gains as crude falls",
+  "Windfall levies on exports",
+  "Compensation not delivered",
+  "Hormuz disruption to term crude supply"
+ ],
+ "upside_triggers": [
+  "Brent <$85 with stable pump prices",
+  "Government compensation/LPG subsidy funding",
+  "Wide diesel cracks",
+  "Russian discount access"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_OMC_COMPENSATION",
+   "type": "POLICY",
+   "name": "Government compensation to OMCs for fuel/LPG under-recoveries",
+   "ssu": "+1 = Rs25,000 cr compensation to oil marketing companies"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/IOC/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals to Sep 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Indian+Oil+Q2+results+GRM+marketing+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Q2 FY27 results and call coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "under-recovery, compensation ask"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India+windfall+tax+export+duty+diesel+ATF+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "export levies"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Reliance+Russia+oil+sanctions+US+tariff+India+Iran+war+crude+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-17",
+   "what": "Russia/US tariff context"
+  }
+ ]
+}

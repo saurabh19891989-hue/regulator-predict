@@ -1,0 +1,426 @@
+{
+ "ticker": "HDFCBANK",
+ "name": "HDFC Bank Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest private-sector bank (market cap ~Rs11.6 lakh cr), merged with HDFC Ltd in July 2023. Retail, wholesale and mortgage lending, deposits, cards and payments; subsidiaries include HDFC Life (about half owned), HDFC AMC (about half owned), HDB Financial (model knowledge). Q2 FY27 standalone PAT Rs19,510cr (+4.7% y/y), NII +10%, deposits +19%. Stock is down ~23.5% over 12 months (52w low late Oct 2026) amid leadership transition: Anup Bagchi named MD & CEO on 2026-10-01 after RBI sign-off, and further senior executives have left.",
+ "revenue_mix": [
+  {
+   "segment": "retail (incl. mortgages, cards, auto, PL)",
+   "share_pct": 55,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "wholesale / commercial",
+   "share_pct": 30,
+   "geography": "India"
+  },
+  {
+   "segment": "treasury and others",
+   "share_pct": 15,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 58
+  },
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "HDFCBANK",
+   "relation": "funding_cost",
+   "w": -0.5,
+   "w_low": -3.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Post-merger HDFC Bank has the largest floating, repo/EBLR-linked book (~55-60% of loans, model estimate) so loans reprice at once; deposits (CASA trails time deposits, Q2) reprice with a lag => transient NIM gain (+5-10bp per sell-side), worth +0.5-1% of PAT at persistence 0.25; but P/E de-rating from tighter policy (-1.5). Net -0.5 with a wide band.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (The Hindu / SCC Online)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "HDFCBANK",
+   "relation": "discount_rate",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Q2 PAT growth was held to 4.7% by a Rs1,610cr treasury drop (NiftyTrader 2026-10-17): treasury MTM is live. 10y +25bp on ~Rs1.2 lakh cr AFS/HFT x duration 2.5 = ~Rs750cr = ~1% of PAT, persistence 0.25; cost-of-equity effect ~-1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=HDFC+Bank+Q2+results+October+2026+net+interest+margin+advances+deposits+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 standalone PAT Rs19,510cr (+4.7%), NII +10%, deposits +19%, treasury drop Rs1,610cr (Moneycontrol/NiftyTrader)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "HDFCBANK",
+   "relation": "funding_cost",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Core constraint is credit-deposit ratio normalisation after the HDFC Ltd merger: deposits +18.8% in Q2 but CASA share falling. +3pp deposit growth lowers marginal funding cost and lets loan growth outpace deposits; ~Rs27 lakh cr loans, NII +3%, PAT +4.5%, persistence 0.75 => +3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=HDFC+Bank+Q2+FY27+Update+deposits+rise+18.8%+CASA+trails+time+deposits+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "NiftyTrader"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "HDFCBANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth => HDFC Bank loan growth capped by deposits; incremental effect on PAT ~+3.5% at 0.75 persistence = ~+2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "HDFCBANK",
+   "relation": "regulatory_risk",
+   "w": -6.0,
+   "w_low": -10.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost on ~Rs27 lakh cr loans = Rs13,500cr pre-tax = Rs10,100cr post-tax vs TTM PAT Rs83,685cr = -12%; persistence 0.5 => -6. Current credit cost is among the lowest in the sector.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=HDFC+Bank+Q2+results+October+2026+net+interest+margin+advances+deposits+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 standalone PAT Rs19,510cr (+4.7%), NII +10%, deposits +19%, treasury drop Rs1,610cr (Moneycontrol/NiftyTrader)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "HDFCBANK",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Unsecured (cards, PL) ~Rs2.4 lakh cr (~9%): +1pp delinquency x LGD 80% = Rs1,900cr pre-tax = 1.7% of PAT x 0.5 => -0.9; sector sentiment adds -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "HDFCBANK",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Largest FPI holding in the index: FIIs fell from 44.05% (Mar) to 39.39% (Sep) while stock -23.5% over 12 months. A US$5bn/qtr swing is ~0.4% of mcap Rs11.6 lakh cr; flow-beta approach => +3.5. Reversal is the main re-rating lever.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "HDFCBANK",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -4.5,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "As India's largest bank (D-SIB) it carries the highest capital buffer; a tightening step (CRR/SLR/LCR, ECL) costs ~-2. RBI approval was also needed for the new CEO.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=HDFC+Bank+CEO+Anup+Bagchi+Jagdishan+successor+RBI+approval+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "HDFC Bank names Anup Bagchi MD & CEO; shares -2.3% on 2026-10-05"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "HDFCBANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP => loans +1.5pp, credit cost down; PAT +3-4%, persistence 0.75 => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "HDFCBANK",
+   "relation": "demand_driver",
+   "w": -0.3,
+   "w_low": -1.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Empirical -0.91/SSU (t=-2.0) is a rotation pattern (money leaving US to India? or the reverse) not a causal link; shrunk almost to zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "HDFCBANK",
+   "relation": "geopolitical_exposure",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Brent -> CPI/INR -> RBI path and FPI risk appetite. Pack empirical Brent -0.56/SSU (t=-1.7) is consistent in sign: Brent +10% -> -0.6%; scenario escalation = +20-30% Brent => -2.5 incl. risk-off.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "HDFCBANK",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Matches empirical -0.56 (t=-1.7): higher oil raises India's CAD/INR pressure and rate expectations.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "HDFCBANK",
+   "relation": "macro_transmission",
+   "w": 0.0,
+   "w_low": -1.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical +2.09 (t=2.3) and cotton -1.29 (t=-2.4) are statistically significant but have no fundamental path to a bank (likely a spurious period effect); set to ~0 and ignored.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "HDFCLIFE",
+   "dst": "HDFCBANK",
+   "relation": "holding_stake",
+   "w": 0.05,
+   "w_low": 0.03,
+   "w_high": 0.08,
+   "lag": "0-3m",
+   "mechanism": "w = % change in HDFCBANK equity value per +1% in HDFCLIFE equity (source-equity-move units). HDFC Bank holds ~50% of HDFC Life (model knowledge; Rs1.2-1.5 lakh cr mcap) => ~5-6% of its own mcap in look-through value, less holding discount.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "stake ~50% approximate, unverified"
+    }
+   ]
+  },
+  {
+   "src": "HDFCAMC",
+   "dst": "HDFCBANK",
+   "relation": "holding_stake",
+   "w": 0.04,
+   "w_low": 0.02,
+   "w_high": 0.07,
+   "lag": "0-3m",
+   "mechanism": "w per +1% in HDFCAMC equity: ~52% stake in HDFC AMC, value ~4% of HDFC Bank mcap (model knowledge).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "stake ~52% approximate"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "ICICI Bank / Axis / Kotak / SBI",
+   "ticker": "ICICIBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "deposit and loan competition; ICICI gaining on CASA and loan growth"
+  },
+  {
+   "counterparty": "HDFC Life Insurance",
+   "ticker": "HDFCLIFE",
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "~50% stake"
+  },
+  {
+   "counterparty": "HDFC AMC",
+   "ticker": "HDFCAMC",
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "~52% stake"
+  },
+  {
+   "counterparty": "HDB Financial Services",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "listed NBFC subsidiary (model knowledge)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-17",
+   "event": "Q3 FY27 results - first full quarter under CEO Bagchi (date inferred; Q2 on 2026-10-17)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=HDFC+Bank+Q2+results+October+2026+net+interest+margin+advances+deposits+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further senior-management departures or appointments (BusinessLine 2026-11-02: another senior executive departs)",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=HDFC+Bank+shares+slips+another+Senior+Executive+departs+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC after 'calibrated tightening' hike to 5.50%",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -2.5,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "RBI ECL provisioning framework in force from 2027-04-01 (model knowledge)",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Canara+Bank+15,000+crore+ECL+provision+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Standalone PAT Rs19,510cr (+4.7% y/y); NII +10%; deposits +19%; treasury loss of Rs1,610cr held profit growth down; margins 'stabilise' (Investing.com slides) but brokerages flag margin pressure; Elara sees growth reviving and TP Rs923 (+27%).",
+  "valuation": "P/E 14.6x, P/B ~1.9x (Rs753 / BV Rs391); 52w range Rs669-1,018; stock -23.5% 12m, +2.6% 3m, +5.9% 1m after CEO clarity; dividend yield 1.7%.",
+  "recent_developments": [
+   "2026-10-01: Anup Bagchi named MD & CEO (outside the earlier Bharucha/Bagchi shortlist news 2026-09-14)",
+   "2026-10-05: stock -2.3% on CEO choice; fresh 52-week low late October",
+   "2026-10-17/19: Q2 results; shares -2% on 2026-10-19 on margin concerns",
+   "2026-11-02: another senior executive departs; 2026-11-03: +2.9% rebound, led Nifty gainers"
+  ]
+ },
+ "key_risks": [
+  "Leadership transition and executive attrition",
+  "NIM and CASA pressure; merger-related high-cost borrowings still running off",
+  "Credit-deposit ratio and slower loan growth",
+  "FPI selling (FII share 44%->39%)",
+  "RBI prudential tightening; ECL transition",
+  "Unsecured and agri/MSME stress"
+ ],
+ "upside_triggers": [
+  "Stabilised management and credible guidance from Bagchi",
+  "Faster deposit growth/CASA recovery narrowing CD ratio",
+  "Further RBI hike improving NIM before deposit repricing",
+  "FPI return as valuation sits at decade-low relative multiples"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/HDFCBANK.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals and headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=HDFC+Bank+Q2+results+October+2026+net+interest+margin+advances+deposits+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-17",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=HDFC+Bank+CEO+Anup+Bagchi+Jagdishan+successor+RBI+approval+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-01",
+   "what": "CEO appointment"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}

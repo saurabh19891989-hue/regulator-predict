@@ -1,0 +1,347 @@
+{
+ "name": "APL Apollo Tubes Ltd.",
+ "industry": "I_BUILDING_MATERIALS",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest branded structural steel tubes maker: MS black pipes, galvanised and pre-galvanised tubes and hollow sections from ~10 plants, sold through a large distributor network into housing, urban infrastructure, solar structures and irrigation. Pure conversion model: HRC is ~90% of costs and prices are reset to hold EBITDA per tonne (~Rs6,000/t). Q2 FY27 volume a record 9.63 lakh t (+13% YoY), sales Rs7,002 cr, EBITDA Rs578 cr (8%), PAT Rs382 cr. TTM sales Rs24,860 cr, EBITDA margin 7.9%, market cap Rs60,639 cr (46x P/E), nearly debt-free.",
+ "revenue_mix": [
+  {
+   "segment": "structural / black / galvanised steel tubes",
+   "share_pct": 100,
+   "geography": "India ~95%+ (UAE/Nepal small, unverified)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 90
+  },
+  {
+   "input": "F_ZINC_LEAD",
+   "share_of_costs_pct": 3
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "APLAPOLLO",
+   "relation": "input_cost",
+   "w": 1.5,
+   "w_low": -4.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "HRC/GP coil is ~90% of costs but product prices are reset to hold EBITDA/tonne (~Rs6,000/t in Q2 FY27 on ~Rs72,700/t realisation; sales Rs7,002 cr / 9.63 lakh t). +7% steel = ~Rs5,000/t; ~3 weeks of inventory (~0.22 Mt) => one-off gain ~Rs110 cr = ~5.7% of TTM EBITDA Rs1,972 cr; persistence 0.25, EV/MCap ~1.0 => +1.4. Offset: price hikes slow volumes (price hikes 2026-09-23 and 2026-10-01). Empirical steel factors not significant.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=APL+Apollo+Tubes+Q2+FY27+volume+guidance+EBITDA+per+tonne+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "TradingView: record Q2 volume and INR 6,000/ton EBITDA despite supply and UAE disruptions"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=APL+Apollo+Tubes+price+hike+steel+HRC+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "NDTV Profit: APL Apollo raises product prices; further hike Oct 1"
+    }
+   ]
+  },
+  {
+   "src": "P_STEEL_DUTY_IN",
+   "dst": "APLAPOLLO",
+   "relation": "policy_effect",
+   "w": -0.5,
+   "w_low": -3.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Safeguard/anti-dumping on flat steel lifts HRC price (+10pp duty ~ +5% HRC): inventory gain short-term (+) but raises cost of competing imports of tubes less than input, and strengthens integrated mills (Tata/JSW/JSPL) that sell branded tubes. Sign genuinely ambiguous; central slightly negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APLAPOLLO.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "APLAPOLLO",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Structural tubes and black pipes go into residential, commercial and urban infrastructure. +10% housing sales => ~+3% volumes, EBITDA op. leverage ~1.3x => +4% EBITDA x EV/MCap 1.0 x persistence 0.5 => +2.0. Volume growth Q2 FY27 was +13% YoY (record 9.63 lakh t) vs FY27 target in question per Livemint 2026-10-06.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APLAPOLLO.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "APLAPOLLO",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Railway/station, airport, solar-structure and irrigation projects use structural hollow sections. +10% capex growth => ~+4% volumes, +5% EBITDA, x1.0 x0.5 => ~+2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APLAPOLLO.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "APLAPOLLO",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Warehousing, industrial sheds, data-centre and solar mounting structures; +10% private capex => ~+2.5% volumes => +1.5 equity after persistence.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APLAPOLLO.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "APLAPOLLO",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Irrigation pipes, greenhouses and agri structures plus tier-3 housing; +5pp rural growth => ~+1.5% volumes => ~+1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APLAPOLLO.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "APLAPOLLO",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Repo hiked to 5.50% on 2026-10-07. Interest only Rs156 cr TTM vs EBITDA Rs1,972 cr so direct cost small (25bp x ~Rs 2,500 cr debt = Rs6 cr). Larger effect: P/E 46x discount-rate duty and weaker building/channel credit.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+    }
+   ]
+  },
+  {
+   "src": "F_ZINC_LEAD",
+   "dst": "APLAPOLLO",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Zinc for galvanising ~3% of costs; +10% zinc => +0.3% cost => ~-4% EBITDA if unrecovered, but passed through in 1-2 months => -0.3 after persistence 0.25.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APLAPOLLO.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "APLAPOLLO",
+   "relation": "fx_translation",
+   "w": 0.4,
+   "w_low": -0.8,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Domestic HRC priced at import parity, so a weaker rupee lifts steel prices (inventory gain, as for F_STEEL_INDIA); small direct FX exposure (UAE/Nepal operations, some exports). +3% USD/INR => ~+0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APLAPOLLO.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "APLAPOLLO",
+   "relation": "geopolitical_exposure",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Q2 FY27 call headline cites 'supply and UAE disruptions' (TradingView 2026-10-26); escalation hits Gulf exports/sourcing and freight. Details not verified; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=APL+Apollo+Tubes+Q2+FY27+volume+guidance+EBITDA+per+tonne+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "TradingView headline"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "APLAPOLLO",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -1.8,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Beta ~1.0 and FIIs have been trimming (37.5% to 34.2% since Mar 2026) while DIIs add; empirical +0.45 (t=1.0) has opposite sign - treated as noise, central shaded small negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/APLAPOLLO.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "JSW Steel / Tata Steel / SAIL (HRC suppliers)",
+   "ticker": "JSWSTEEL",
+   "role": "supplier",
+   "importance": "high",
+   "note": "HRC/GP coil; largest cost line (~90%)"
+  },
+  {
+   "counterparty": "Tata Steel (Tata Structura / branded tubes)",
+   "ticker": "TATASTEEL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Integrated mill competing in branded tubes"
+  },
+  {
+   "counterparty": "Distributors / dealers (~800 distributors, model knowledge)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Highly fragmented; no customer >25%"
+  },
+  {
+   "counterparty": "Hi-Tech Pipes, Jindal Saw etc.",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Smaller peers; Hi-Tech reported revenue +79% in Q1 FY27 (Yahoo headline 2026-08-14)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 volume update (company releases quarterly volumes in first days of quarter-end month+1) and results late Jan",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "pattern: Q2 volumes released 2026-10-01, results 2026-10-26"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further product price revisions tracking HRC (steel +20.6% since 2026-06-01)",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "market_impact/results/factor_state.md; NDTV Profit 2026-09-23"
+  },
+  {
+   "date": "2027-03",
+   "event": "Safeguard duty / anti-dumping decision on flat steel (policy)",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 3.0,
+   "source": "model judgement"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 volume target (company guidance; Livemint 2026-10-06 asks if achievable) scored at Q4",
+   "type": "guidance",
+   "prob": 0.6,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=APL+Apollo+Tubes+Q2+FY27+volume+guidance+EBITDA+per+tonne+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs7,002 cr, EBITDA Rs578 cr, PAT Rs382 cr (+26% YoY), record volume 9.63 lakh t",
+  "trend": "Q1 FY27 was weak (sales 5,607, PAT 263) on supply issues; Q2 rebounded strongly",
+  "valuation": "P/E 46x, P/B 10.6x, ROCE 31.8%; premium to steel and building-material peers",
+  "recent_developments": [
+   "2026-09-23: raises product prices, further hike from 2026-10-01 (NDTV Profit)",
+   "2026-10-01: Q2 volume +13% YoY to 9.63 lakh t",
+   "2026-10-26: Q2 results, EBITDA beat, record volume (CNBC TV18)",
+   "2026-10-06: Livemint questions FY27 volume-target attainability",
+   "Sep 2026 quarter: DIIs 20.8% (+2.2pp), FIIs 34.2% (-1.0pp)"
+  ]
+ },
+ "key_risks": [
+  "Steel price reversal causing inventory losses",
+  "Competition from integrated mills' branded tubes",
+  "Valuation 46x P/E",
+  "Volume target miss for FY27",
+  "Middle East/UAE disruption"
+ ],
+ "upside_triggers": [
+  "Housing and infrastructure volume acceleration",
+  "Value-added product mix lifting EBITDA/t above Rs6,000",
+  "Further capacity commissioning"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/APLAPOLLO.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=APL+Apollo+Tubes+Q2+FY27+volume+guidance+EBITDA+per+tonne+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "Q2 FY27 call highlight headlines (Yahoo, TradingView, Investing.com)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=APL+Apollo+Tubes+price+hike+steel+HRC+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "Price hike headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+  }
+ ],
+ "ticker": "APLAPOLLO",
+ "as_of": "2026-11-05"
+}

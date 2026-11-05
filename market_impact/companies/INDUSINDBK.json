@@ -1,0 +1,388 @@
+{
+ "ticker": "INDUSINDBK",
+ "name": "IndusInd Bank Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Mid-sized private bank (vehicle finance, microfinance, cards, corporate, forex) in a turnaround after FY25-26 accounting and asset-quality problems. Promoter (Hinduja) holding is only 15.82%; FIIs 30.5%, DIIs 41.3%. Q2 FY27 net profit Rs1,242cr (screener; Moneycontrol Rs1,176cr, a swing from Rs437cr loss a year earlier) on lower credit cost; NIM was hit 7-8bp by FCNR(B) deposits, management expects recovery in Q3/Q4 and is growing gold loans while staying cautious on microfinance. Mcap Rs71k cr, ~1.05x book, ROE 1.4% (screener, TTM profit Rs3,001cr).",
+ "revenue_mix": [
+  {
+   "segment": "vehicle finance & consumer",
+   "share_pct": 35,
+   "geography": "India"
+  },
+  {
+   "segment": "corporate/wholesale",
+   "share_pct": 38,
+   "geography": "India"
+  },
+  {
+   "segment": "microfinance, cards, other retail",
+   "share_pct": 20,
+   "geography": "India"
+  },
+  {
+   "segment": "treasury/forex/fees",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 15
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "INDUSINDBK",
+   "relation": "regulatory_risk",
+   "w": -16.0,
+   "w_low": -26.0,
+   "w_high": -9.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost: loans ~Rs3.5 lakh cr (derived) x 0.5% = Rs1,750cr vs TTM PBT ~Rs4,000cr => PBT -44%; persistence 0.5, EV/MCap 1.0 => -22; trimmed to -16 because operating buffers (PCR, floating provisions) are above average after FY26. Thin earnings make the stock the most credit-cost-convex name in the batch with IDFC First.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSINDBK.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,242cr (Moneycontrol reports Rs1,176cr), TTM Rs3,001cr, mcap Rs71,113cr, P/B ~1.05, ROE 1.4%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=IndusInd+Bank+Q2+FY27+NIM+net+profit+microfinance+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "NIM recovery expected Q3/Q4; FCNR drove 7-8bp hit (ET BFSI); plans to grow gold loans, cautious on microfinance (CNBC TV18 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "INDUSINDBK",
+   "relation": "demand_driver",
+   "w": -6.0,
+   "w_low": -12.0,
+   "w_high": -2.5,
+   "lag": "3-12m",
+   "mechanism": "MFI ~8% and cards/PL/vehicle-linked unsecured ~15% of loans (model knowledge, MFI cut sharply in FY26). +1pp delinquencies x 23% x 60% loss = 14bp of loans = Rs490cr = ~12% of PBT; persistence 0.5 => -6. Management is cautious on microfinance (CNBC TV18).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IndusInd+Bank+Q2+FY27+NIM+net+profit+microfinance+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "NIM recovery expected Q3/Q4; FCNR drove 7-8bp hit (ET BFSI); plans to grow gold loans, cautious on microfinance (CNBC TV18 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "INDUSINDBK",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "IndusInd's loan growth is low-single/low-double digit (below system); +3pp system growth adds ~+1.5pp to its own, NII +1.5% but operating leverage on a thin base => PAT +5% x persistence 0.5 => +2.5, rounded 2.0 given weaker franchise momentum.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSINDBK.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,242cr (Moneycontrol reports Rs1,176cr), TTM Rs3,001cr, mcap Rs71,113cr, P/B ~1.05, ROE 1.4%"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "INDUSINDBK",
+   "relation": "funding_cost",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "IndusInd's deposits lagged peers (reliance on bulk/CD and FCNR(B)); +3pp deposit growth lowers CoF -8bp -> NIM +5bp -> NII +1.5%, PAT +5% x 0.5 => +2.5. FCNR(B) inflows cost 7-8bp NIM this quarter (ET BFSI), showing the funding-mix sensitivity.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IndusInd+Bank+Q2+FY27+NIM+net+profit+microfinance+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "NIM recovery expected Q3/Q4; FCNR drove 7-8bp hit (ET BFSI); plans to grow gold loans, cautious on microfinance (CNBC TV18 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "INDUSINDBK",
+   "relation": "funding_cost",
+   "w": -0.3,
+   "w_low": -2.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp: EBLR share ~35-40% of loans; deposit repricing lags -> NIM +4bp for 2 qtrs => PAT +4% x 0.25 = +1.0; valuation/credit offset -1.3 => net ~-0.3. Management expects NIM recovery in Q3/Q4 partly from asset repricing.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=IndusInd+Bank+Q2+FY27+NIM+net+profit+microfinance+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "NIM recovery expected Q3/Q4; FCNR drove 7-8bp hit (ET BFSI); plans to grow gold loans, cautious on microfinance (CNBC TV18 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "INDUSINDBK",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "+25bp US 10Y: FII-heavy register (30.5%) and USD funding cost via FCNR(B)/swaps; pack empirical -1.27 per SSU (t=-1.7) - partial agreement, shrunk to -0.8 because most of the co-movement is high beta (1.24).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSINDBK.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,242cr (Moneycontrol reports Rs1,176cr), TTM Rs3,001cr, mcap Rs71,113cr, P/B ~1.05, ROE 1.4%"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "INDUSINDBK",
+   "relation": "fx_translation",
+   "w": -0.3,
+   "w_low": -2.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Pack empirical +2.38 (t=1.3, not significant, beta 1.44). Economics: forex/trade-finance fees gain from volatility, FCNR(B) swap cost rises with INR weakness and FPI outflows; offsetting, central -0.3 with symmetric range - disagrees with the data on sign but data are not significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSINDBK.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,242cr (Moneycontrol reports Rs1,176cr), TTM Rs3,001cr, mcap Rs71,113cr, P/B ~1.05, ROE 1.4%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "INDUSINDBK",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp: investment book ~Rs1.1 lakh cr (derived), AFS ~20% duration 2 => MTM ~Rs110cr = 2.5% of PBT x 0.25 = -0.6; discount rate on 1.05x P/B stock adds -0.9 => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSINDBK.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,242cr (Moneycontrol reports Rs1,176cr), TTM Rs3,001cr, mcap Rs71,113cr, P/B ~1.05, ROE 1.4%"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "INDUSINDBK",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Bank is under closer supervisory attention after the FY25 derivative-accounting lapse (model knowledge: Rs~2,000cr net-worth hit, CEO change Apr 2025); a tightening step (e.g. growth caps, higher provisions, governance directions) is a tail on a 1.05x P/B stock => -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 derivative accounting discrepancy and leadership change; current RBI restrictions not verified"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "INDUSINDBK",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 30.5% (up from 28.6% Mar 2026) and beta 1.24-1.44; +US$5bn ~ Nifty +2% x 1.3 = +2.6, plus re-rating of a turnaround story => +4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSINDBK.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,242cr (Moneycontrol reports Rs1,176cr), TTM Rs3,001cr, mcap Rs71,113cr, P/B ~1.05, ROE 1.4%"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "INDUSINDBK",
+   "relation": "discount_rate",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts ~ Nifty -3% x beta 1.3 = -3.9; -3.5 after domestic support. Pack empirical +0.40 per SSU is market-adjusted so not comparable.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSINDBK.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,242cr (Moneycontrol reports Rs1,176cr), TTM Rs3,001cr, mcap Rs71,113cr, P/B ~1.05, ROE 1.4%"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "INDUSINDBK",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Management plans to grow gold loans (CNBC TV18, 2026-10-26): +8% gold lifts collateral values/ticket size; gold loans are ~3% of the book (target, model estimate): ticket size +8% lifts that segment's income ~+8% x 3% of NII = +0.25% PAT, plus sentiment => +0.4. Pack empirical -0.43 (t=-0.4) is noise.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IndusInd+Bank+Q2+FY27+NIM+net+profit+microfinance+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "NIM recovery expected Q3/Q4; FCNR drove 7-8bp hit (ET BFSI); plans to grow gold loans, cautious on microfinance (CNBC TV18 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "INDUSINDBK",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP: CV, vehicle, MSME and MFI credit quality improve; credit cost -10bp on thin base = PBT +9%, plus growth => PAT +11% x persistence 0.35 => +4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Hinduja Group (promoters)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "promoter holding 15.82% (Sep 2026); RBI/SEBI approvals govern stake changes"
+  },
+  {
+   "counterparty": "HDFC Bank / ICICI / Kotak / Axis / IDFC First",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "cards, vehicle and corporate banking competition"
+  },
+  {
+   "counterparty": "FCNR(B) depositors and swap counterparties (RBI window closed Aug 31, 2026)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "FCNR(B) inflows cost 7-8bp NIM in Q2"
+  },
+  {
+   "counterparty": "Vehicle-finance and MFI borrowers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "largest asset-quality swing"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-23",
+   "event": "Q3 FY27 results (estimated); management guides NIM recovery in Q3/Q4",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "model estimate; NIM guidance https://news.google.com/rss/search?q=IndusInd+Bank+NIM+recovery"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December (further hike/hold)",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027",
+   "event": "Adverse supervisory/enforcement or litigation outcome linked to FY25 derivative-accounting lapse (SEBI/ED/shareholder suits)",
+   "type": "litigation",
+   "prob": 0.15,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": -2.0,
+   "source": "model knowledge; status not verified"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): net profit Rs1,242cr (screener) vs loss Rs437cr Q2 FY26; Q1 Rs1,037cr; revenue Rs11,796cr; NIM hit 7-8bp by FCNR(B)",
+  "trend": "profit recovery; NIM expected to recover in H2; credit cost falling; stock -10% in 3m, +15% in 12m",
+  "valuation": "P/B 1.05x, P/E 23.7 on depressed TTM earnings, ROE 1.4% (screener)",
+  "recent_developments": [
+   "2026-10-23: Q2 profit beat; NIM hit from foreign deposits to ease in Q3 (Reuters)",
+   "2026-10-26: shares +2%; Jefferies cut target despite profit swing (ET)",
+   "2026-10-24: management expects NIM recovery Q3/Q4 (ET BFSI)",
+   "2026-10-26: plans to grow gold loans, cautious on microfinance (CNBC TV18)"
+  ]
+ },
+ "key_risks": [
+  "asset quality relapse in MFI/vehicle loans",
+  "NIM stays low on deposit mix",
+  "regulatory/legal overhang from FY25 accounting issue",
+  "governance/management stability"
+ ],
+ "upside_triggers": [
+  "NIM recovery",
+  "credit cost normalisation toward 1.5%",
+  "re-rating from 1.05x P/B toward 1.3x",
+  "promoter/ownership clarity"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/INDUSINDBK/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener financials via evidence pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IndusInd+Bank+Q2+FY27+NIM+net+profit+microfinance+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "Q2 FY27 headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=FCNR(B)+deposits+RBI+swap+window+banks+NIM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-31",
+   "what": "FCNR(B) window"
+  }
+ ]
+}

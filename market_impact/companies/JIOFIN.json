@@ -1,0 +1,411 @@
+{
+ "name": "Jio Financial Services Ltd.",
+ "industry": "I_NBFC_VEHICLE_CONSUMER",
+ "tier": "NIFTY_50",
+ "business_summary": "Holding company (RBI-registered NBFC-ND-SI) demerged from Reliance in 2023, building a consumer-facing financial supermarket: Jio Credit/Jio Finance (lending; AUM >Rs 30,000 cr in Q1 FY27), JioBlackRock Asset Management (50:50 with BlackRock), Jio Payments Solutions, Jio Insurance Broking, a 50% stake in Jio Payments Bank and an insurance venture with Allianz. In August 2026 Bank of America agreed to buy up to 49.9% of Jio Credit for Rs 18,268 cr. Q2 FY27 PAT Rs 340 cr (-51% y/y) on higher funding and operating costs; stock P/E 92, P/B 1.16.",
+ "revenue_mix": [
+  {
+   "segment": "Lending (Jio Credit/Jio Finance)",
+   "share_pct": 65,
+   "geography": "India"
+  },
+  {
+   "segment": "Payments, broking, asset management, treasury/other",
+   "share_pct": 35,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 50,
+   "note": "interest Rs 578 cr of ~Rs1,166 cr total Q2 expenses"
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "JIOFIN",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Early-stage lender (Jio Credit AUM >Rs30k cr, Q1 FY27); revenue Rs 5.6k cr TTM +123%. +3pp system credit growth eases funding/demand; scale-up thesis: +10% AUM -> NII +10% on operating leverage; w ~+2.5 (small system beta, large idiosyncratic).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Jio+Credit+AUM+tops+30000+crore+Jio+Payments+Bank+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-26",
+     "note": "Jio Credit AUM >Rs 30,000 cr in Q1 FY27; Payments Bank operational turnaround (Fortune India)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "JIOFIN",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "P/E 92 and ROE 1.2%: stock is a long-duration growth asset. A +25bp yield raises discount rate on cash flows 10+ years out: duration ~20 -> -5% on terminal value share ~60% -> ~-3 net after partial offset from lender spread.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "JIOFIN",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "No retail deposit base; wholesale/bank funded (interest Rs 578 cr in Q2, ~Rs 2.3k cr annualised, ~Rs 30k cr debt). +25bp repo -> ~+Rs 60 cr funding cost on floating bank lines vs operating profit ~Rs 4.3k cr annualised = -1.4% EBITDA; plus yield pass-through partial; persistence 0.5 -> ~-0.7; combined with growth drag -> -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Jio+Financial+Services+Q2+Profit+Halves+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 PAT Rs 340 cr (-51% y/y); NII +165%; total expenses Rs 1,166 cr (Economic Times/Upstox/Reuters)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "JIOFIN",
+   "relation": "funding_cost",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "AAA/NBFC spreads widen +50bp: on ~Rs30k cr debt = Rs150 cr = ~3.5% of annualised operating profit, but also slows disbursal growth; multiple-weighted -3. Q3 FY26 interest cost jump (Rs 212 cr -> 578 cr in 5 quarters) shows funding is the swing item.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "JIOFIN",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Book is mortgage/LAP, loans against securities and digital personal credit (model knowledge); AUM seasoning small so +1pp delinquency affects <1% of equity value but sentiment-sensitive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "JIOFIN",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.4,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "JioBlackRock AMC (regular plans since 17 Aug 2026), broking (to launch with BlackRock), wealth: +20% traded value/demat additions lifts fee pools; currently small in P&L so option value dominates; ~+1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=JioBlackRock+regular+plans+distributor+push+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-18",
+     "note": "JioBlackRock opens regular plans, steps up distributor push (Moneycontrol)"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "JIOFIN",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Core investment case: household financialisation (MF, insurance, payments) is what the 'financial supermarket' monetises; stock trades at P/B 1.16 but P/E 92, i.e. paying for the optionality.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_DIGITAL_PAYMENTS",
+   "dst": "JIOFIN",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Jio Payments Solutions/Payments Bank (operational turnaround, Fortune India 26 Aug); UPI economics are weak so effect small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Jio+Credit+AUM+tops+30000+crore+Jio+Payments+Bank+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-26",
+     "note": "Jio Credit AUM >Rs 30,000 cr in Q1 FY27; Payments Bank operational turnaround (Fortune India)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "JIOFIN",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "NBFC-ND-SI with core-investment-company structure; risk-weight/leverage or digital-lending rule changes slow the build-out of lending.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "JIOFIN",
+   "relation": "regulatory_risk",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Insurance JV with Allianz and broking subsidiary subject to IRDAI; launch timing sensitive to tightening; minor.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "JIOFIN",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "Market beta 1.5 per pack; FIIs fell 11.27% -> 10.00% (Jun -> Oct 2026); +US$5bn/qtr inflows add ~2.5% beyond beta because stock is a large-cap growth name in the Nifty 50.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/JIOFIN.md",
+     "date": "2026-11-05",
+     "note": "FII 11.27% Jun-26 -> 10.00% Oct-26"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "JIOFIN",
+   "relation": "discount_rate",
+   "w": -5.0,
+   "w_low": -8.0,
+   "w_high": -2.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points ~ Nifty -3.5%; beta 1.47-1.57 (pack) plus long-duration valuation -> -5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "JIOFIN",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "DIIs hold 12.7-13.3%; index weight means SIP inflows buy mechanically; +10% flow ~ +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "structural reasoning; see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "RELIANCE",
+   "dst": "JIOFIN",
+   "relation": "group_contagion",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Per +10% move in RELIANCE equity value: promoter group holds ~51%; Jio Platforms IPO sentiment (Oct 2026) and brand-group flows move both; beta of JIOFIN to RELIANCE ~0.3-0.4 in sentiment episodes -> +2.0 per +10% (assumed unit: % equity of dst per +10% equity of src).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Jio+Platforms+IPO+Jio+Financial+Reliance+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Jio Platforms IPO (~$3.8bn, ~$143-146bn valuation) launched 22 Oct; JIOFIN -1% on 28 Oct (Livemint/Reuters)"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "BlackRock",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "50:50 JioBlackRock AMC and broking JV; BlackRock/BofA partnership for lending"
+  },
+  {
+   "counterparty": "Bank of America",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "to acquire up to 49.9% of Jio Credit, Rs 18,268 cr (Aug 2026)"
+  },
+  {
+   "counterparty": "Allianz",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "insurance JV, launch pending"
+  },
+  {
+   "counterparty": "Reliance Industries",
+   "ticker": "RELIANCE",
+   "role": "parent",
+   "importance": "high",
+   "note": "promoter group; shared brand and distribution (Jio/retail)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Jio Platforms listing / price discovery after Rs ~36k cr (US$3.8bn) IPO; group sentiment spillover",
+   "type": "other",
+   "prob": 0.85,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Jio+Platforms+IPO+Jio+Financial+Reliance+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (mid-Jan 2027 est.; Q2 was 15 Oct 2026)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Jio+Financial+Services+Q2+Profit+Halves+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Closing of BofA investment into Jio Credit after regulatory approvals",
+   "type": "corporate_action",
+   "prob": 0.55,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Jio+Financial+Services+Bank+of+America+Jio+Credit+joint+venture+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Launch of stock broking with BlackRock and Allianz insurance venture",
+   "type": "other",
+   "prob": 0.45,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Jio+Financial+CEO+Hitesh+Sethia+Stock+Broking+BlackRock+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Income >2x y/y (Sales Rs 1,699 cr vs 981 cr) and NII +165%, but PAT Rs 340 cr (-51% y/y vs one-off Q2 FY26 gain); Q1 FY27 PAT Rs 830 cr; interest cost Rs 578 cr vs 136 cr a year ago",
+  "valuation": "P/E 92 TTM, P/B 1.16, ROE 1.2% - priced for the build-out, not for current earnings; MOFSL target Rs 300 (37% upside) after cutting FY27 EPS",
+  "recent_developments": [
+   "2026-08-12: BofA to buy up to 49.9% of Jio Credit (Rs 18,268 cr); stock +3%",
+   "2026-08-17: JioBlackRock opens regular mutual fund plans",
+   "2026-09-09: targets 100m customers; stock broking launch with BlackRock soon (CNBC TV18/LinkedIn)",
+   "2026-10-15: Q2 PAT -51% y/y; MOFSL cuts FY27 estimates (Business Standard)",
+   "2026-10-22/28: Jio Platforms IPO launched; JIOFIN -1% (Livemint)",
+   "2026-10-30: 25 crore shares allotted, promoter holding to ~51%"
+  ]
+ },
+ "key_risks": [
+  "Funding cost and spread widening on a wholesale-funded balance sheet",
+  "Execution/credit seasoning of fast-growing unsecured and digital books",
+  "Valuation premium (P/E 92) vs ROE 1.2%",
+  "Overhang/competition for retail flows from Jio Platforms IPO",
+  "RBI regulation of NBFCs and CIC structure",
+  "Related-party/brand dependence on Reliance Jio ecosystem"
+ ],
+ "upside_triggers": [
+  "BofA deal closing validating Jio Credit valuation",
+  "Rapid AUM scale-up with stable credit cost",
+  "Broking/insurance launches monetising Jio distribution",
+  "Index and passive inflows plus FPI return"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Jio+Financial+Services+Q2+Profit+Halves+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Q2 FY27 results coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Jio+Financial+Services+Bank+of+America+Jio+Credit+joint+venture+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-12",
+   "what": "BofA JV in Jio Credit"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Jio+Platforms+IPO+Jio+Financial+Reliance+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-22",
+   "what": "Jio Platforms IPO"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Jio+Credit+AUM+tops+30000+crore+Jio+Payments+Bank+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-26",
+   "what": "Jio Credit AUM"
+  },
+  {
+   "url": "market_impact/data/packs/JIOFIN.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  }
+ ],
+ "ticker": "JIOFIN",
+ "as_of": "2026-11-05"
+}

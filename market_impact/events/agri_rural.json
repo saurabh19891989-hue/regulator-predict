@@ -1,0 +1,3260 @@
+{
+ "events": [
+  {
+   "event_id": "EV_SWMONSOON26_DEFICIT",
+   "title": "2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-09-30",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "IMD: June-Sept rainfall 759.4 mm vs 868.6 mm LPA (1971-2020), i.e. 87% of LPA / -12.6%. Lowest since 2015 (758.2 mm); fourth-lowest since 2001. Monthly: June 65% of normal, July ~101% (central India +33%), August 84%, September 92.4%. East and North-East India recorded its driest monsoon since 1901 (1,017.1 mm). 282 districts (38%) deficient; 15 states below normal; drought declared in parts of Maharashtra and Karnataka; South peninsula ~-23% by 28 Sep. IMD had forecast 92% of LPA (13 Apr) cut to 90% (29 May), so the aggregate was anticipated but June was far worse than forecast. Strong El Nino in progress (IMD 30 Sep: strong El Nino over equatorial Pacific, expected to strengthen through end-2026 and peak ~Nov); Indian Ocean Dipole neutral, i.e. no positive-IOD offset.",
+   "what_already_moved": "Aggregate was forecast since April, so little index reaction; downstream moves: Indian sugar +27.8% since 1 Jun (global ICE raw sugar, factor_state), Nifty FMCG hit fresh 52-week low (Dalal Street Investment Journal, Oct 2026), India food CPI 7.74% in Sep from 5.52% in Jul.",
+   "entry_shocks": [
+    {
+     "node": "F_MONSOON",
+     "ssu": -1.26,
+     "low": -1.3,
+     "high": -1.2,
+     "note": "Season total -12.6% vs LPA; SSU is +10% so -1.26 SSU."
+    },
+    {
+     "node": "F_POWER_DEMAND_IN",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.4,
+     "note": "Deficient rain raises irrigation pumping and cooling load; small positive (low confidence)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_SWMONSOON26_DEFICIT",
+      "F_MONSOON",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Lower kharif output (rice, pulses, oilseeds, vegetables) lifts food prices; see EV_FOOD_CPI_SEP26 for the realised level."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SWMONSOON26_DEFICIT",
+      "F_MONSOON",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "Lower kharif income/volumes in rain-fed districts depress rural spend, then tractors, two-wheelers and entry cars."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_SWMONSOON26_DEFICIT",
+      "F_MONSOON",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Food-led CPI rise reinforces RBI calibrated tightening (repo 5.50% on 7 Oct 2026); higher policy rate hits rate-sensitives and NBFCs."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SWMONSOON26_DEFICIT",
+      "F_MONSOON",
+      "F_COTTON"
+     ],
+     "explanation": "Cotton, soybean, sugarcane acreage/yield damage tightens supply (cotton sowing -23% by 10 Jul)."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ESCORTS",
+     "direction": "-",
+     "why": "Tractor volumes depend on kharif income and reservoir-fed irrigation"
+    },
+    {
+     "ticker": "M&M",
+     "direction": "-",
+     "why": "Tractor/Farm equipment segment and rural SUVs; partially offset by strong SUV demand"
+    },
+    {
+     "ticker": "HEROMOTOCO",
+     "direction": "-",
+     "why": "Rural two-wheeler share is high"
+    },
+    {
+     "ticker": "COROMANDEL",
+     "direction": "-",
+     "why": "Fertiliser/agrochem volumes"
+    },
+    {
+     "ticker": "PIIND",
+     "direction": "-",
+     "why": "Agrochemical demand in drought-hit states"
+    },
+    {
+     "ticker": "DABUR",
+     "direction": "-",
+     "why": "Rural staples volume risk plus input inflation"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.thehindu.com/sci-tech/energy-and-environment/southwest-monsoon-ends-with-12-deficit/article71529423.ece",
+     "date": "2026-09-30",
+     "title": "Southwest monsoon ends with 12% deficit - The Hindu"
+    },
+    {
+     "url": "https://www.business-standard.com/industry/agriculture/2026-monsoon-ends-with-nearly-13-rain-deficit-worst-since-2015-imd-126093001389_1.html",
+     "date": "2026-09-30",
+     "title": "2026 monsoon ends with nearly 13% rain deficit, worst since 2015: IMD - Business Standard"
+    },
+    {
+     "url": "https://www.indiatoday.in/science/story/india-ends-monsoon-with-13-rainfall-deficit-receives-just-87-of-normal-rain-3006662-2026-09-30",
+     "date": "2026-09-30",
+     "title": "India Today: monsoon ends 13% deficit, 282 districts deficient"
+    },
+    {
+     "url": "https://www.indiatoday.in/science/story/el-nino-neutral-iod-india-rainfall-post-monsoon-3007171-2026-10-01",
+     "date": "2026-10-01",
+     "title": "IMD 30 Sep: strong El Nino, neutral IOD"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_ELNINO26_STRONG",
+   "title": "Strong El Nino of 2026-27 peaking around Nov-Dec 2026",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-10-01",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "IMD (30 Sep 2026 press conference): strong El Nino conditions prevail over the equatorial Pacific, with SSTs significantly above average in the east-central and eastern Pacific; IMD MMCFS and global models indicate further strengthening through end-2026 (press talk of a 'super El Nino'; Indian Express 14 Aug: strongest in decades possible by year-end). IOD neutral and forecast to stay neutral through the north-east monsoon. IMD expected October rain below normal. Historically El Nino also lifts hot, dry winter-spring risk for rabi crops (heat at grain fill in Feb-Mar) and depresses the next monsoon only if it persists into spring; by April-May 2027 it usually decays.",
+   "what_already_moved": "ENSO status itself not a traded price; downstream moves captured in monsoon, food-inflation and sugar events.",
+   "entry_shocks": [
+    {
+     "node": "F_MONSOON",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "Incremental forward effect: raises odds of weak post-monsoon rain and a warm rabi season; avoids double-counting the realised monsoon deficit by keeping the shock small."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "Forward risk to rabi output/price expectations (SSU +2pp)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_ELNINO26_STRONG",
+      "F_MONSOON",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "Weak soil moisture and low reservoir carry-over cut rabi acreage and rural incomes through FY27 H2."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_ELNINO26_STRONG",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Prolonged food inflation keeps RBI biased to further tightening."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_ELNINO26_STRONG",
+      "F_MONSOON",
+      "F_POWER_DEMAND_IN",
+      "F_POWER_PRICE_IN"
+     ],
+     "explanation": "Hot, dry winter-spring raises power demand and exchange prices, helping merchant/thermal generators."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TATAPOWER",
+     "direction": "+",
+     "why": "Power-price upside if demand surprises"
+    },
+    {
+     "ticker": "NTPC",
+     "direction": "+",
+     "why": "Higher thermal PLF in dry year"
+    },
+    {
+     "ticker": "HINDUNILVR",
+     "direction": "-",
+     "why": "Rural staples volume and commodity cost risk"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.indiatoday.in/science/story/el-nino-neutral-iod-india-rainfall-post-monsoon-3007171-2026-10-01",
+     "date": "2026-10-01",
+     "title": "IMD: strong El Nino to strengthen, neutral IOD"
+    },
+    {
+     "url": "https://www.business-standard.com/industry/agriculture/2026-monsoon-ends-with-nearly-13-rain-deficit-worst-since-2015-imd-126093001389_1.html",
+     "date": "2026-09-30",
+     "title": "IMD: El Nino to peak in November; October rain below normal"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_KHARIF26_OUTPUT_HIT",
+   "title": "Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-09-29",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "Agriculture Ministry (29 Sep) set a 2026-27 foodgrain target of 373.93 MT vs 376.56 MT estimated for 2025-26 (-0.7%), with a rabi target of 177.72 MT vs 174.51 MT actual; a first (kharif) advance estimate is not yet published (usually Sept-Oct; not found). Kharif acreage reached 1,056.7 lakh ha by 25 Aug (record-ish headline) but paddy area was ~4% lower in mid-Sep (about 1.7 mn ha less than a year ago: Karnataka -454k ha, Telangana -446k, AP -190k, MP -175k, TN -140k, Maharashtra -115k). Reuters (17 Sep): India rice output faces the biggest drop in two decades, though FCI stocks cushion exports (article behind paywall; magnitude not verified). Central Pool grain stocks 925.85 LMT on 1 Jul 2026 vs buffer norm 411.2 LMT (Business Today 8 Oct).",
+   "what_already_moved": "Domestic rice export price pressure: broken-rice export quotes crossed US$360/t in early Nov (IREF, 3 Nov). F_SUGAR (global) +27.8% since 1 Jun. Corn output estimates cut (Global Agriculture, 15 Sep).",
+   "entry_shocks": [
+    {
+     "node": "F_RICE",
+     "ssu": 0.6,
+     "low": 0.2,
+     "high": 1.2,
+     "note": "Global/Indian rice export prices (+10% SSU): broken rice >$360/t but ample FCI stock caps the rise."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 0.9,
+     "note": "Kharif shortfall component of the food-price rise (realised level in EV_FOOD_CPI_SEP26)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_KHARIF26_OUTPUT_HIT",
+      "F_RICE",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Rice and pulses are large in the CPI food basket; FCI open-market sales partly offset."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_KHARIF26_OUTPUT_HIT",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Higher CPI pushes RBI to a further hike."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_KHARIF26_OUTPUT_HIT",
+      "F_RICE",
+      "P_SUGAR_ETHANOL",
+      "F_SUGAR"
+     ],
+     "explanation": "Grain-based ethanol demand (broken rice, FCI rice) competes with food/feed, tightening rice supply."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "KRBL",
+     "direction": "+",
+     "why": "Basmati/non-basmati exporter benefits from higher rice prices if no curbs"
+    },
+    {
+     "ticker": "LTFOODS",
+     "direction": "+",
+     "why": "Rice exporter"
+    },
+    {
+     "ticker": "PIIND",
+     "direction": "-",
+     "why": "Weak kharif demand for agrochemicals"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/",
+     "date": "2026-09-29",
+     "title": "Foodgrain output estimate for 2026-27 reduced marginally - Financial Express"
+    },
+    {
+     "url": "https://www.downtoearth.org.in/agriculture/india-sets-lower-food-production-target-for-2026-27-as-el-ni%C3%B1o-clouds-rabi-season",
+     "date": "2026-09-30",
+     "title": "DTE: lower food production target, paddy area down ~1.7 mn ha"
+    },
+    {
+     "url": "https://www.reuters.com/world/india/india-rice-output-faces-biggest-drop-two-decades-stocks-cushion-exports-2026-09-17/",
+     "date": "2026-09-17",
+     "title": "Reuters: rice output biggest drop in two decades (headline only)"
+    },
+    {
+     "url": "https://www.businesstoday.in/latest/economy/story/global-food-security-faces-fresh-risks-but-indias-grain-buffer-offers-a-cushion-560357-2026-10-08",
+     "date": "2026-10-08",
+     "title": "Central Pool 925.85 LMT on 1 Jul vs norm 411.2 LMT"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_RESERVOIR_LOW26",
+   "title": "Reservoir storage at multi-year low after weak monsoon (south India worst)",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-10-15",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "CWC bulletin of 15 Oct 2026: 178 major reservoirs hold 126.717 BCM = 68.58% of live capacity, 41.19 BCM (24.5%) below the same date last year and ~24.9 BCM below the 10-year average. On 24 Sep, storage was 70% vs 10-yr average 76.62% and 79% in 2025 (Indian Express: lowest in 10 years). South India (AP, Telangana, Karnataka, Kerala, TN) was at ~50% vs 87% a year ago; Pennar and Cauvery basins are most stressed (Mettur, Somasila, Aliyar critical), while Narmada and Mahanadi basins have surplus. Raises rabi irrigation, drinking-water and hydropower risks for Jan-Jun 2027.",
+   "what_already_moved": "No direct price series; supports weak rabi sowing (EV_RABI_SOWING_LAG26) and hydro generation shortfall.",
+   "entry_shocks": [
+    {
+     "node": "F_MONSOON",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": -0.1,
+     "note": "Carry-over effect on irrigation-dependent rabi crop (kept small to avoid double count with EV_SWMONSOON26_DEFICIT)."
+    },
+    {
+     "node": "F_POWER_PRICE_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.7,
+     "note": "Lower hydro availability and higher summer demand lift exchange prices (SSU +15%)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RESERVOIR_LOW26",
+      "F_MONSOON",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Lower irrigation water reduces rabi wheat/pulses/oilseed yields and pushes up cereal/vegetable prices."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RESERVOIR_LOW26",
+      "F_POWER_PRICE_IN",
+      "F_COAL_INDIA"
+     ],
+     "explanation": "Less hydro raises coal-fired dispatch and e-auction coal demand."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RESERVOIR_LOW26",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Persistent food inflation keeps long yields elevated."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "COALINDIA",
+     "direction": "+",
+     "why": "Higher thermal dispatch"
+    },
+    {
+     "ticker": "NTPC",
+     "direction": "+",
+     "why": "Thermal PLF"
+    },
+    {
+     "ticker": "IEX",
+     "direction": "+",
+     "why": "Higher power-exchange volumes/prices"
+    },
+    {
+     "ticker": "NHPC",
+     "direction": "-",
+     "why": "Hydro output shortfall"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://indianexpress.com/article/india/central-water-commission-cwc-live-reservoir-storage-report-september-seventy-percent-capacity-south-india-crisis-el-nino-10898033/",
+     "date": "2026-09-28",
+     "title": "At 70%, India's water reserves at 10-year low - Indian Express"
+    },
+    {
+     "url": "https://www.downtoearth.org.in/water/indias-reservoirs-remain-31-below-full-capacity-after-monsoon-southern-states-face-water-shortages",
+     "date": "2026-10-19",
+     "title": "CWC 15 Oct: 68.58% of capacity, 24.5% below last year"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_FOOD_CPI_SEP26",
+   "title": "Food-led inflation spike: CPI 5.54% and food CPI 7.74% in Sep 2026; WPI 11.39% (series high)",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-10-12",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "MoSPI (12 Oct, new base 2024=100): headline CPI 5.54% in Sep vs 4.83% in Aug and 4.45% in Jul (23-month high on comparable basis); food inflation 7.74% vs 5.97% in Aug and 5.52% in Jul; rural 6.08% vs urban 4.88% (rural up from 5.24%). Onion retail prices roughly doubled y/y (NDTV; ToI: 41 of 42 essential commodities up y/y, onion +113%, tomato +59% y/y per AgroSpectrum). WPI (14 Oct): 11.39% y/y in Sep from 9.9% in Aug, a series high, on food, fuel and manufactured goods; WPI food was 7.1% in Aug (20-month high) on vegetables, milk, spices, edible oils and sugar; core WPI 8.1%. RBI Oct bulletin: broad-based food price increase. RBI projected FY27 CPI at 5.2% on 7 Oct. Reuters: print boosts the case for further hikes. Milk: Karnataka (Nandini) raised milk Rs 8/l from 1 Nov; Aavin products up to 25% and Amul ghee/butter up (reports).",
+   "what_already_moved": "RBI repo hiked 25 bp to 5.50% on 7 Oct and stance changed to 'calibrated tightening' (The Hindu); Brent 94.99 on 5 Nov (+15.2% 3m), edible oil -7.7% 1m after duty cut.",
+   "entry_shocks": [
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 1.1,
+     "low": 0.9,
+     "high": 1.3,
+     "note": "Food CPI +2.2 pp from Jul (5.52%) to Sep (7.74%); SSU +2pp."
+    },
+    {
+     "node": "F_CPI_IN",
+     "ssu": 1.1,
+     "low": 0.9,
+     "high": 1.3,
+     "note": "Headline CPI +1.1 pp from Jul (4.45%) to Sep (5.54%); partly fuel/gold, not only food."
+    },
+    {
+     "node": "F_DAIRY",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "Milk procurement/retail price hikes by cooperatives (Karnataka +Rs 8/l = about +17% retail on Rs 46 blue packet; unverified base)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FOOD_CPI_SEP26",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "CPI near the 6% ceiling; MPC said cuts are off the table, more hikes flagged but cautious (minutes)."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FOOD_CPI_SEP26",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Policy hikes and inflation premium lift 10-yr G-sec yields."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FOOD_CPI_SEP26",
+      "F_FOOD_INFLATION_IN",
+      "F_URBAN_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "Real-income squeeze on low-income households reduces discretionary spend, affecting entry vehicles."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FOOD_CPI_SEP26",
+      "F_DAIRY",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Dairy price hikes feed back into CPI food."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "Rate-sensitive valuation and funding costs"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "Funding costs and rural/semi-urban stress"
+    },
+    {
+     "ticker": "BRITANNIA",
+     "direction": "-",
+     "why": "Input cost inflation (wheat, edible oil, milk)"
+    },
+    {
+     "ticker": "NESTLEIND",
+     "direction": "-",
+     "why": "Milk and packaging cost inflation"
+    },
+    {
+     "ticker": "DMART",
+     "direction": "-",
+     "why": "Food inflation drags volumes/mix"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://timesofindia.indiatimes.com/business/india-business/retail-inflation-at-almost-2-year-high-at-5-54-in-september-driven-by-food-prices-surge/articleshow/134890491.cms",
+     "date": "2026-10-12",
+     "title": "Retail inflation 5.54% in Sep; food 7.74% - ToI"
+    },
+    {
+     "url": "https://m.economictimes.com/news/economy/indicators/indias-retail-inflation-quickens-to-5-54-in-september-from-4-83-in-august/articleshow/134889203.cms",
+     "date": "2026-10-12",
+     "title": "ET: rural inflation 6.08%, urban 4.88%"
+    },
+    {
+     "url": "https://www.thehindu.com/business/Economy/september-wpi-inflation-rises-to-1139-as-food-fuel-and-manufactured-goods-prices-increase/article71582698.ece",
+     "date": "2026-10-14",
+     "title": "WPI 11.39% in Sep - The Hindu"
+    },
+    {
+     "url": "https://www.thehindu.com/business/Economy/data-suggests-broad-based-increase-in-food-prices-rbi-bulletin/article71616686.ece",
+     "date": "2026-10-28",
+     "title": "RBI Bulletin: broad-based food price rise"
+    },
+    {
+     "url": "https://www.moneycontrol.com/news/india/karnataka-hikes-nandini-milk-prices-by-rs-8-per-litre-from-november-1-14063636.html",
+     "date": "2026-10-07",
+     "title": "Nandini milk +Rs 8/l from 1 Nov"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_RABI_SOWING_LAG26",
+   "title": "Rabi sowing sharply behind: 37.56 lakh ha vs 69.02 lakh ha a year ago; wheat 0.19 lakh ha vs 3.34",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-11-03",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "Agriculture Ministry data as of 30 Oct 2026 (Business Today, 3 Nov): total rabi area 37.56 lakh ha (-45.6%); wheat 0.19 vs 3.34 lakh ha; pulses 9.45 vs 19.56 (gram 5.90 vs 14.35); oilseeds 20.97 vs 38.62 (rapeseed-mustard 20.50 vs 38.07); coarse cereals 3.78 vs 4.22. Causes: inadequate soil moisture, high daytime temperature, limited irrigation/canal water. Wheat is normally sown Oct-Nov (full season 336 lakh ha in 2025-26) so the lag is recoverable until about 15 Dec, but the sowing window and soil-moisture constraints are real. Government's rabi target is 177.72 MT. Business Standard (24 Oct) had expected wheat acreage steady; actual early data weaker. Rajasthan sowing delayed (BS, 2 Nov).",
+   "what_already_moved": "Wheat (CBOT proxy) -14.7% 1m (factor_state), mostly the global Black-Sea/export-ban context; domestic prices not yet moved on sowing news (not verified).",
+   "entry_shocks": [
+    {
+     "node": "F_WHEAT",
+     "ssu": 0.2,
+     "low": -0.2,
+     "high": 0.8,
+     "note": "Early sowing lag adds a small risk premium; global wheat already -1.3% since 1 Jun."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "Forward cereal/pulses/mustard price pressure if the lag is not made up."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RABI_SOWING_LAG26",
+      "F_WHEAT",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Lower 2027 wheat/pulses/mustard crops lift cereal, pulses and edible-oil prices from Mar 2027."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RABI_SOWING_LAG26",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Spring CPI stays high, prolonging the hiking bias."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RABI_SOWING_LAG26",
+      "F_EDIBLE_OIL",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Mustard acreage halving raises edible-oil import needs in FY28."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIWILMAR",
+     "direction": "+",
+     "why": "Edible-oil import margins if domestic mustard weak"
+    },
+    {
+     "ticker": "UPL",
+     "direction": "-",
+     "why": "Rabi agrochemical volumes"
+    },
+    {
+     "ticker": "CHAMBLFERT",
+     "direction": "-",
+     "why": "Rabi fertiliser offtake if area is low"
+    },
+    {
+     "ticker": "ITC",
+     "direction": "-",
+     "why": "Atta/staples input cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.businesstoday.in/latest/economy/story/indias-rabi-sowing-falls-46-to-37-56-lakh-hectares-wheat-acreage-plunges-94-565374-2026-11-03",
+     "date": "2026-11-03",
+     "title": "Rabi sowing falls 46%; wheat 0.19 lakh ha - Business Today"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_RABI_MSP_2728",
+   "title": "Cabinet raises rabi MSPs for 2027-28: wheat only +Rs 25 to Rs 2,610/q, oilseeds/pulses by more",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-09-30",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "CCEA (30 Sep 2026): wheat MSP +Rs 25 to Rs 2,610/q (about +1.0%); barley +Rs 136 to Rs 2,286/q; gram +Rs 83; lentil +Rs 390; rapeseed-mustard +Rs 413; safflower +Rs 675 (largest); estimated payout Rs 90,962 crore. The muted wheat hike reflects ample FCI stocks and prior low wheat prices; the larger oilseed/pulses increases aim to cut edible-oil and pulses imports. Same day: PM-DHARA transmission and BESS scheme (Rs 1,86,405 crore, 135 GW RE evacuation, 50 GWh BESS; not rural) and Green Energy Corridor Phase III approved.",
+   "what_already_moved": "No traded reaction attributable.",
+   "entry_shocks": [
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.1,
+     "low": 0.0,
+     "high": 0.2,
+     "note": "Small cost-push through procurement prices (wheat +1%)."
+    },
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": 0.05,
+     "low": 0.0,
+     "high": 0.15,
+     "note": "Modest farm-income support; muted vs inflation of 5.5%."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RABI_MSP_2728",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "Real MSP gain small, so little rural-demand lift for 2W/tractors."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RABI_MSP_2728",
+      "F_EDIBLE_OIL",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Higher mustard/safflower MSP raises domestic oilseed floor prices (+413 on mustard) and edible oil costs."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RABI_MSP_2728",
+      "F_RURAL_DEMAND",
+      "F_URBAN_DEMAND",
+      "F_GDP_IN"
+     ],
+     "explanation": "Not meaningful for GDP."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIWILMAR",
+     "direction": "-",
+     "why": "Higher oilseed procurement floor raises crush cost"
+    },
+    {
+     "ticker": "MARICO",
+     "direction": "-",
+     "why": "Safflower/sunflower input costs"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.deccanherald.com/india/cabinet-raises-wheat-msp-by-rs-25-to-rs-2610-per-quintal-for-2027-28-4165268",
+     "date": "2026-09-30",
+     "title": "Wheat MSP +Rs 25 to Rs 2,610/q - Deccan Herald"
+    },
+    {
+     "url": "https://m.economictimes.com/news/economy/policy/cabinet-clears-rs-2-79-lakh-crore-package-rabi-msp-hike-for-six-crops-rs-1-86-lakh-crore-for-pm-dhara-rs-1790-crore-for-delhi-traffic-system/articleshow/134589858.cms",
+     "date": "2026-09-30",
+     "title": "Cabinet clears Rs 2.79 lakh crore package - ET"
+    },
+    {
+     "url": "https://newsonair.gov.in/union-cabinet-hikes-minimum-support-prices-for-rabi-crops-for-2027-28-marketing-season/",
+     "date": "2026-10-01",
+     "title": "Rabi MSP hike: lentil +390, mustard +413, gram +83, wheat +25, barley +136 - AIR"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_EDIBLEOIL_DUTY_CUT26",
+   "title": "India cuts edible-oil import duties from 24 Sep 2026 (crude palm/soy 10% to 5%, crude sunflower to zero)",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-09-24",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "Notification of 23 Sep, effective 24 Sep: basic customs duty on crude palm and soya oil 10% to 5%; refined palm/soy 32.5% to 27.5%; crude sunflower 10% to 0%; refined sunflower 32.5% to 22.5%. Rationale: sharp rise in food inflation before festivals (WPI food 7.1% in Aug, edible oils among drivers). Government asked companies to pass on the cut. Oils & Fats International expects sunflower oil imports +30% in 2026/27. Duty had been raised in Sep 2024 and halved on crude oils in May 2025 (model knowledge).",
+   "what_already_moved": "Palm/edible-oil proxy -7.7% in 1m, +4.0% in 3m, +1.9% since 1 Jun (factor_state); domestic pass-through unclear.",
+   "entry_shocks": [
+    {
+     "node": "F_EDIBLE_OIL",
+     "ssu": 0.0,
+     "low": -0.3,
+     "high": 0.5,
+     "note": "Domestic landed cost down ~5 pp; global price effect of larger Indian demand roughly offsets (global price shock ~0)."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": -0.1,
+     "low": -0.25,
+     "high": 0.0,
+     "note": "Edible oil about 3-4% of food basket; a 5 pp duty cut lowers retail oil ~3-4%."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_EDIBLEOIL_DUTY_CUT26",
+      "F_EDIBLE_OIL",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Lower landed oil prices trim food CPI by 0.1-0.2 pp over 3 months."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_EDIBLEOIL_DUTY_CUT26",
+      "F_EDIBLE_OIL",
+      "F_PACKAGING"
+     ],
+     "explanation": "Cheaper oil improves margins for FMCG users of palm/soy oil (soaps, biscuits, snacks)."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_EDIBLEOIL_DUTY_CUT26",
+      "F_EDIBLE_OIL",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN"
+     ],
+     "explanation": "Slightly lower CPI path."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIWILMAR",
+     "direction": "+",
+     "why": "Refining/import margin: wider refined-crude duty gap (27.5 vs 5)"
+    },
+    {
+     "ticker": "BRITANNIA",
+     "direction": "+",
+     "why": "Palm oil input easing"
+    },
+    {
+     "ticker": "HINDUNILVR",
+     "direction": "+",
+     "why": "Palm-derived soap inputs"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.business-standard.com/economy/news/govt-cuts-import-duty-on-refined-palm-oil-and-soybean-oil-to-27-5-126092301504_1.html",
+     "date": "2026-09-23",
+     "title": "Govt cuts import duties on palm, soya and sunflower oils - Business Standard"
+    },
+    {
+     "url": "https://www.business-standard.com/economy/news/govt-cuts-import-duty-on-refined-palm-oil-and-soybean-oil-to-27-5-126092301504_1.html",
+     "date": "2026-09-23",
+     "title": "See also Hindu/ETV Bharat/New Indian Express coverage 23-25 Sep 2026"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_SUGAR_SHORTFALL26",
+   "title": "Sugar supply shock: 2025-26 output cut to ~306 lakh t, retail sugar at record, first duty-free raw sugar imports in a decade",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-08-20",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "Food ministry (21-22 Aug): 2025-26 (Oct-Sep) sugar output ~306 lakh t, 11% below the 343 lakh t initial projection; opening stock 1 Oct 2026 ~33-34 lakh t vs 50 lakh t a year earlier. Retail sugar Rs 58.2/kg, +20% in a month and +26% y/y. DGFT (20 Aug) allowed duty-free import of 10 lakh t raw sugar under a TRQ until 31 Oct; stockholding limits on bulk traders were considered; fortnightly sale quotas to mills from September; mills told to report output monthly (Oct). ISMA (24-26 Aug, 26 Oct) says no shortage and that stocks are sufficient; 107 mills began crushing 2026-27 by 26 Oct. FRP for 2026-27 raised only Rs 10/q; mills and ISMA seek a sugar MSP (minimum selling price, Rs 31/kg since 2019 - model knowledge) increase; Karnataka cane farmers protesting. Centre set up a panel to review sugar prices/farmers' payments. Global raw sugar (ICE proxy) +27.8% since 1 Jun but -11.3% in 1m (18.47 c/lb on 5 Nov).",
+   "what_already_moved": "ICE sugar: +27.0% 6m, +27.8% since 2026-06-01, -11.3% 1m, +18.6% 3m (factor_state); Indian retail +26% y/y.",
+   "entry_shocks": [
+    {
+     "node": "F_SUGAR",
+     "ssu": 2.8,
+     "low": 2.0,
+     "high": 3.2,
+     "note": "Realised +27.8% since 1 Jun in ICE raw sugar (SSU +10%); Indian ex-mill prices rose similarly."
+    },
+    {
+     "node": "P_SUGAR_ETHANOL",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "Policy tilted against millers: duty-free imports, stock limits, ethanol diversion curbed (see ethanol event)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_SUGAR_SHORTFALL26",
+      "F_SUGAR",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Sugar weight small (about 1% of CPI) but visible in WPI food and festive sweet prices."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SUGAR_SHORTFALL26",
+      "F_SUGAR",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN"
+     ],
+     "explanation": "Contributes a few bp to CPI."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SUGAR_SHORTFALL26",
+      "F_SUGAR",
+      "P_SUGAR_ETHANOL"
+     ],
+     "explanation": "Government prioritises consumer prices over miller margins, raising odds of import/stock-limit measures whenever prices spike."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BALRAMCHIN",
+     "direction": "+",
+     "why": "High sugar realisations but ethanol diversion curtailed: net depends on cane availability"
+    },
+    {
+     "ticker": "TRIVENI",
+     "direction": "+",
+     "why": "Sugar + distillery integrated"
+    },
+    {
+     "ticker": "DALBHARAT",
+     "direction": "+",
+     "why": "Sugar segment"
+    },
+    {
+     "ticker": "BRITANNIA",
+     "direction": "-",
+     "why": "Sugar input cost"
+    },
+    {
+     "ticker": "NESTLEIND",
+     "direction": "-",
+     "why": "Sugar/milk costs"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://timesofindia.indiatimes.com/business/india-business/sugar-output-may-dip-11-from-initial-estimate-government/articleshow/133413529.cms",
+     "date": "2026-08-22",
+     "title": "Sugar output may dip 11%: Government - ToI"
+    },
+    {
+     "url": "https://newsonair.gov.in/government-allows-duty-free-imports-of-10-lakh-tonnes-of-raw-sugar-until-31st-october/",
+     "date": "2026-08-20",
+     "title": "Duty-free imports of 10 lakh t raw sugar until 31 Oct - AIR"
+    },
+    {
+     "url": "https://timesofindia.indiatimes.com/business/india-business/why-india-is-considering-sugar-imports-as-prices-hit-record-levels/articleshow/133318646.cms",
+     "date": "2026-08-18",
+     "title": "Why India is considering sugar imports - ToI/Reuters"
+    },
+    {
+     "url": "https://money.rediff.com/news/market/isma-107-sugar-mills-begin-crushing-ample-stock-for-india/56919320261026",
+     "date": "2026-10-26",
+     "title": "ISMA: 107 mills crushing, stock enough"
+    },
+    {
+     "url": "https://agrospectrumindia.com/news/8/33951/isma-welcomes-rs-10-qtl-hike-in-sugarcane-frp-for-2026-27-calls-for-timely-alignment-of-sugar-msp-and-ethanol-prices.html",
+     "date": "2026-09-30",
+     "title": "FRP +Rs 10/q for 2026-27 (date approximate)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_ETHANOL_ESY27_TENDER",
+   "title": "OMC ethanol tender ESY 2026-27: no cane juice/syrup/B-heavy ethanol; maize price incentive cut; grain-based ethanol takes over",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-10-17",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "Oil marketing companies invited bids for 1,100 crore litres of ethanol for Nov 2026-Oct 2027 while barring sugarcane juice, sugar syrup and B-heavy molasses (CNBC-TV18 17 Oct; Hindu/ToI 18 Oct), i.e. zero sugar diversion; last year about 289 crore litres were initially allocated to cane-based feedstocks. Maize-ethanol incentive cut from Rs 5.79 to Rs 2.79/l, taking maize ethanol to Rs 68.86/l; broken-rice/damaged-food-grain ethanol priced at Rs 64/l; a feedstock-switch clause pays the lower price. Industry expects DFG/broken rice ethanol to rise from ~80 to >700 crore litres, raising competition with food/feed and maize. Grain ethanol is ~76% of supply (AIDA, July). Grain distillers pushing for price revision (FE, 2 Nov). Government argues (Aug) that only ~9% of sugar was diverted in 2025-26 and about 75% of ethanol is grain-based.",
+   "what_already_moved": "F_SUGAR -11.3% over 1m to 5 Nov after the tender and imports; no distiller equity move quantified.",
+   "entry_shocks": [
+    {
+     "node": "P_SUGAR_ETHANOL",
+     "ssu": -1.0,
+     "low": -1.5,
+     "high": -0.5,
+     "note": "Policy shift against sugar-based ethanol (negative for mills' distillery profits; positive for sugar availability)."
+    },
+    {
+     "node": "F_SUGAR",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "More sugar available for the domestic market, lower domestic sugar prices."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_ETHANOL_ESY27_TENDER",
+      "P_SUGAR_ETHANOL",
+      "F_SUGAR"
+     ],
+     "explanation": "Zero diversion adds ~30-35 lakh t sugar to supply (289 crore litres cane-based), cooling prices."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_ETHANOL_ESY27_TENDER",
+      "F_SUGAR",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Marginally lower food CPI."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_ETHANOL_ESY27_TENDER",
+      "F_RICE",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Heavy broken-rice/FCI-rice demand for ethanol tightens rice/feed markets (poultry feed) and could prompt export curbs."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_ETHANOL_ESY27_TENDER",
+      "P_SUGAR_ETHANOL",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "Lower-cost ethanol supply modestly helps OMC blending economics (cheaper feedstock)."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BALRAMCHIN",
+     "direction": "-",
+     "why": "Loses ethanol diversion/B-heavy volumes; has also built grain/maize distillery"
+    },
+    {
+     "ticker": "TRIVENI",
+     "direction": "-",
+     "why": "Alcohol segment PBIT sensitivity"
+    },
+    {
+     "ticker": "PRAJIND",
+     "direction": "+",
+     "why": "Grain distillery equipment/engineering demand"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "Cheaper ethanol blending feedstock"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.cnbctv18.com/india/india-bars-sugarcane-juice-syrup-based-ethanol-in-2026-27-tender-omcs-seek-1100-crore-litres-20014065.htm",
+     "date": "2026-10-17",
+     "title": "India bars sugarcane juice, syrup-based ethanol; OMCs seek 1,100 crore litres - CNBC-TV18"
+    },
+    {
+     "url": "https://www.chinimandi.com/esy-2026-27-ethanol-tender-has-india-abandoned-its-maize-farmers-to-promote-lowest-ex-mill-price-ethanol/",
+     "date": "2026-10-19",
+     "title": "ESY 2026-27 tender: maize incentive cut, DFG at Rs 64/l - ChiniMandi"
+    },
+    {
+     "url": "https://www.thehindu.com/news/national/india-bars-sugar-based-ethanol-in-2026-27-tender-cuts-maize-incentive/article71599459.ece",
+     "date": "2026-10-18",
+     "title": "India bars sugar-based ethanol in 2026-27 tender - The Hindu"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_WHEAT_EXPORT_FREE26",
+   "title": "Government lifts wheat and wheat-product export ban (24 Aug 2026)",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-08-24",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "DGFT notification (24 Aug): wheat (incl. durum) export policy revised from 'prohibited' to 'free' with immediate effect; wheat flour, maida, semolina also freed. Follows limited permission in Feb 2026. Rationale: farmers' interests amid depressed local prices after record 2025-26 crop (120.6 MT per Bloomberg) and record projected stocks (USDA); Black Sea/war disruption lifted global prices. Bangladesh sought Indian wheat. Since then monsoon failure and rabi sowing lag (wheat 0.19 vs 3.34 lakh ha on 30 Oct) raise the risk of reversal.",
+   "what_already_moved": "CBOT wheat proxy: -14.7% 1m, -1.3% since 1 Jun (factor_state); Food stocks (flour millers) rallied on the day per Fortune India.",
+   "entry_shocks": [
+    {
+     "node": "F_WHEAT",
+     "ssu": 0.2,
+     "low": -0.3,
+     "high": 0.6,
+     "note": "Adds Indian supply to global market (bearish) but India's price is not export-competitive; net small."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.1,
+     "low": 0.0,
+     "high": 0.3,
+     "note": "Domestic wheat/flour price upside if exports take off."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_WHEAT_EXPORT_FREE26",
+      "F_WHEAT",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Export access supports domestic wheat prices; combined with weak rabi sowing raises 2027 flour inflation risk."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_WHEAT_EXPORT_FREE26",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN"
+     ],
+     "explanation": "Cereals (wheat) weight about 3.5% in CPI."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_WHEAT_EXPORT_FREE26",
+      "F_WHEAT",
+      "F_PACKAGING"
+     ],
+     "explanation": "Not material."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ITC",
+     "direction": "-",
+     "why": "Atta (Aashirvaad) input cost if wheat firms"
+    },
+    {
+     "ticker": "BRITANNIA",
+     "direction": "-",
+     "why": "Wheat flour input"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.deccanchronicle.com/business/economics/govt-lifts-export-ban-on-wheat-and-its-products-1981807",
+     "date": "2026-08-24",
+     "title": "India Lifts Wheat Export Ban - Deccan Chronicle"
+    },
+    {
+     "url": "https://www.thehindu.com/news/national/government-lifts-ban-on-wheat-exports-cites-farmers-interests-amid-depressed-local-prices/article71386093.ece",
+     "date": "2026-08-25",
+     "title": "Government lifts ban on wheat exports - The Hindu"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_RURAL_DEMAND_SOFT26",
+   "title": "Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-11-02",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "Tractors Oct 2026: M&M domestic 62,626 (-13% y/y; company attributes to Diwali shifting to 8 Nov from Oct last year), Apr-Oct domestic 325,498 (+2% y/y), exports +40% to 2,220; Escorts Kubota 16,412 (-10.9%). Sept tractor sales fell on weak monsoon (New Indian Express 1 Oct). Two-wheelers: Honda 2W Oct +11-13%; Navratri-period bike sales +5.8% while passenger vehicles -13.7% to -22% on GST-2.0 high base (Autopunditz/NIE); EV 2W Oct >223,000. FMCG: Oct value growth reported at 15% (India Business Trade); Q2 FY27 demand resilient but analysts flag H2 risk from weakest monsoon since 2015 and input inflation (BusinessLine 16 Oct); Patanjali Foods holding 15% FMCG growth guidance despite rural weakness. Rural CPI 6.08% (Sep) vs urban 4.88%. VB-G RAM G (replacement for MGNREGA): person-days fell about 50% in first month, -61% in July (BS/Indian Express, Aug), partly sowing pause. Smaller FMCG firms squeezed by costs and slowing rural demand (ET, 5 Nov). Rural wage data (Labour Bureau) not retrieved: data gap.",
+   "what_already_moved": "Nifty FMCG hit 52-week low (Oct); Reuters 3 Nov: auto stocks rose on strong October sales.",
+   "entry_shocks": [
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "Qualitative estimate: slowing rural volume growth of about 1-3 pp relative to trend (SSU +5pp). Not directly measured; low confidence."
+    },
+    {
+     "node": "F_WAGES_IN",
+     "ssu": 0.0,
+     "low": -0.2,
+     "high": 0.1,
+     "note": "No clean rural wage series retrieved; treat as unchanged."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RURAL_DEMAND_SOFT26",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "Tractors and entry 2W are the most rural-linked autos."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RURAL_DEMAND_SOFT26",
+      "F_RURAL_DEMAND",
+      "F_UNSECURED_STRESS"
+     ],
+     "explanation": "Rural income squeeze raises microfinance/vehicle-loan delinquency risk with a lag."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RURAL_DEMAND_SOFT26",
+      "F_RURAL_DEMAND",
+      "F_UNSECURED_STRESS",
+      "F_ASSET_QUALITY_IN"
+     ],
+     "explanation": "Higher credit costs at rural lenders in FY28 H1."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ESCORTS",
+     "direction": "-",
+     "why": "Tractor demand"
+    },
+    {
+     "ticker": "M&M",
+     "direction": "-",
+     "why": "Tractor volumes but SUV strength offsets"
+    },
+    {
+     "ticker": "HEROMOTOCO",
+     "direction": "+",
+     "why": "Festive 2W demand held up"
+    },
+    {
+     "ticker": "BAJAJ-AUTO",
+     "direction": "+",
+     "why": "Exports and festive demand"
+    },
+    {
+     "ticker": "HINDUNILVR",
+     "direction": "-",
+     "why": "Rural volumes H2"
+    },
+    {
+     "ticker": "CHOLAFIN",
+     "direction": "-",
+     "why": "Vehicle/tractor finance stress"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/",
+     "date": "2026-11-02",
+     "title": "Mahindra sells 64,846 tractors in Oct 2026 - Global Agriculture"
+    },
+    {
+     "url": "https://www.thehindubusinessline.com/companies/weak-monsoon-looms-over-fmcg-margins-despite-strong-q2-demand/article71552538.ece",
+     "date": "2026-10-16",
+     "title": "Weak monsoon looms over FMCG margins - BusinessLine"
+    },
+    {
+     "url": "https://www.autopunditz.com/post/festive-two-wheeler-vs-car-sales-2026-navratri",
+     "date": "2026-10-21",
+     "title": "Festive 2026: two-wheelers outpace cars - Autopunditz"
+    },
+    {
+     "url": "https://indiabusinesstrade.in/diwali-boosts-fmcg-sales-growth-jumps-to-15-in-october.htm",
+     "date": "2026-11-02",
+     "title": "FMCG growth 15% in October"
+    },
+    {
+     "url": "https://indianexpress.com/article/india/vb-g-ram-g-rural-jobs-decline-minimum-wages-10825474/",
+     "date": "2026-08-10",
+     "title": "VB-G RAM G person-days decline - Indian Express"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_FERT_COST_SQUEEZE26",
+   "title": "Fertiliser subsidy pressure: gas ~US$28/MMBtu, DAP >US$900/t, sulphur ~US$900/t; urea imports cheaper at ~US$390/t",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-10-02",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "Industry estimates (RuralVoice, 2 Oct): subsidy could reach Rs 3 lakh crore in FY27; gas for urea rose from ~US$15 to ~US$28/MMBtu after the Iran-US war; domestic urea cost >Rs 62,000/t; DAP >US$900/t; sulphur ~US$900/t with supply below normal (Qatar gas/sulphur disruptions). Imported urea fell from >US$900/t to ~US$400 after China resumed exports: RCF tender (finalised 13 Aug) secured 17 lakh t at US$390.25-393.65/t vs US$444.9-449.3 and US$935-959 in earlier tenders; IPL tender for 17 lakh t (Dec 1 shipment) issued. Fertiliser ministry said in July that Rs 70K crore spent and funds were adequate. Rabi NBS (nutrient-based subsidy) rates for DAP/NPK still awaited as of 25 Oct (RuralVoice: delayed decisions keep DAP prices high). Rabi fertiliser requirement projected at 38 MT. Chambal Fertilisers Q2 results steady (4 Nov).",
+   "what_already_moved": "F_GAS_GLOBAL (Henry Hub proxy) -7.0% since 1 Jun but +12% 3m; sulphur/DAP not in factor_state.",
+   "entry_shocks": [
+    {
+     "node": "F_FERTILISER_INPUTS",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.6,
+     "note": "Higher gas and DAP/sulphur costs (+15% SSU); partly offset by urea import prices at ~$390."
+    },
+    {
+     "node": "P_FERT_SUBSIDY",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "Subsidy generosity rising (budget allocations being overshot); NBS revision pending."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FERT_COST_SQUEEZE26",
+      "F_FERTILISER_INPUTS",
+      "P_FERT_SUBSIDY"
+     ],
+     "explanation": "Government must raise NBS rates to avoid farm-gate price increases in a drought year."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FERT_COST_SQUEEZE26",
+      "P_FERT_SUBSIDY",
+      "F_GDP_IN"
+     ],
+     "explanation": "Higher subsidy bill (Rs 3 lakh crore vs Rs 1.7-1.9 lakh crore budgeted, model knowledge) crowds out other spending."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FERT_COST_SQUEEZE26",
+      "P_FERT_SUBSIDY",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Wider fiscal deficit adds to G-sec supply/term premium."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "CHAMBLFERT",
+     "direction": "+",
+     "why": "Subsidy-backed margins if NBS rates raised; gas cost pass-through"
+    },
+    {
+     "ticker": "COROMANDEL",
+     "direction": "+",
+     "why": "Phosphatic subsidy uplift; input-cost risk"
+    },
+    {
+     "ticker": "RCF",
+     "direction": "-",
+     "why": "Gas costs"
+    },
+    {
+     "ticker": "FACT",
+     "direction": "+",
+     "why": "Pass-through"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html",
+     "date": "2026-10-02",
+     "title": "High gas and sulphur prices could push fertiliser subsidy to Rs 3 lakh crore - RuralVoice"
+    },
+    {
+     "url": "https://indianexpress.com/article/business/india-urea-imports-1-7-million-tonnes-lower-prices-rabi-season-10832540/",
+     "date": "2026-08-14",
+     "title": "India locks in 1.7 mn t urea import at lower prices - Indian Express"
+    },
+    {
+     "url": "https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/",
+     "date": "2026-09-29",
+     "title": "Rabi fertiliser requirement 38 MT"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_COTTON_TIGHT26",
+   "title": "Cotton: kharif sowing down sharply, MSP +7.2%, record 2026-27 imports expected, cotton price firm",
+   "category": "agri_rural",
+   "status": "occurred",
+   "date": "2026-07-10",
+   "window_end": null,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "description": "Fibre2Fashion (10 Jul): India's kharif cotton sowing fell 23%, 2026/27 balance sheet at risk; (31 Aug CMB): tight balance, firm prices, rising imports; (1 Oct): cotton MSP up 7.2% and 'what changes when the duty returns' (the import-duty exemption status is unclear: articles titled 'duty relief' and 'duty returns'; verify the exact date and rate before use). BusinessLine (2 Nov): 2026-27 cotton imports to scale a new peak amid crop concerns and duty relief. Deficient rain adds yield risk in Maharashtra, Telangana, Karnataka. ICE cotton 78.11 c/lb: +19.7% 12m, +1.9% since 1 Jun.",
+   "what_already_moved": "ICE cotton +1.9% since 1 Jun, -4.7% 3m, +0.8% 1m (factor_state).",
+   "entry_shocks": [
+    {
+     "node": "F_COTTON",
+     "ssu": 0.2,
+     "low": -0.3,
+     "high": 0.8,
+     "note": "Domestic cotton firm vs ICE; the import pull supports ICE modestly."
+    },
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": 0.0,
+     "low": -0.1,
+     "high": 0.1,
+     "note": "Higher cotton MSP supports farmers, but the crop is down."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_COTTON_TIGHT26",
+      "F_COTTON",
+      "I_TEXTILES"
+     ],
+     "explanation": "Yarn spreads squeezed if cotton cost rises faster than yarn prices."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_COTTON_TIGHT26",
+      "F_COTTON",
+      "F_USDINR"
+     ],
+     "explanation": "Higher imports add to import bill; minor."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_COTTON_TIGHT26",
+      "F_COTTON",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "Cotton-belt farm income down in Maharashtra/Telangana where yield is lost."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "WELSPUNLIV",
+     "direction": "-",
+     "why": "Cotton cost"
+    },
+    {
+     "ticker": "KPRMILL",
+     "direction": "-",
+     "why": "Cotton yarn input"
+    },
+    {
+     "ticker": "PAGEIND",
+     "direction": "-",
+     "why": "Cotton hosiery input cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.thehindubusinessline.com/economy/agri-business/indias-2026-27-cotton-imports-to-scale-new-peak-amid-crop-concerns-duty-relief/article71649049.ece",
+     "date": "2026-11-02",
+     "title": "India's 2026-27 cotton imports to scale new peak - BusinessLine"
+    },
+    {
+     "url": "https://www.fibre2fashion.com/news/prime-content/textile-news/indian-cotton-msp-up-7-2-what-changes-when-the-duty-returns-313917-newsdetails.htm",
+     "date": "2026-10-01",
+     "title": "Indian cotton MSP up 7.2% - Fibre2Fashion (headline only; paywalled)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_CPI_OCT26_ABOVE6",
+   "title": "October CPI (released 12 Nov) prints at or above 6.0% (RBI ceiling)",
+   "category": "agri_rural",
+   "status": "scheduled",
+   "date": "2026-11-12",
+   "window_end": null,
+   "prob_by_3m": 0.35,
+   "prob_by_12m": 0.35,
+   "description": "Sept CPI 5.54% (food 7.74%), onion roughly doubled y/y, milk and ghee/butter price hikes from Nov 1, festive demand and Brent ~US$95 (+15% in 3 months). Offsets: edible-oil duty cut (24 Sep), sugar cooling (-11% 1m), vegetables seasonal mean reversion, base effects in the new 2024=100 series. RBI projects FY27 CPI 5.2%. My probability that October prints >=6.0% is 35%; central expectation ~5.7-5.9% (model estimate, no consensus found).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_CPI_IN",
+     "ssu": 0.8,
+     "low": 0.5,
+     "high": 1.2,
+     "note": "Conditional on >=6.0% print: about +0.5 pp vs Sep 5.54% (SSU +1pp)."
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.8,
+     "low": 0.4,
+     "high": 2.0,
+     "note": "Raises odds of a 25-50 bp December/February hike (market-implied SSU +25bp)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CPI_OCT26_ABOVE6",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Print at ceiling tilts MPC to Dec hike."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CPI_OCT26_ABOVE6",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN",
+      "I_PRIVATE_BANKS"
+     ],
+     "explanation": "Yield rise cuts bank treasury gains; deposit-rate pressure."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CPI_OCT26_ABOVE6",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND"
+     ],
+     "explanation": "Higher EMIs dampen housing sales."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "Rate/valuation"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "Funding costs"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "Mortgage rate sensitivity"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://timesofindia.indiatimes.com/business/india-business/retail-inflation-at-almost-2-year-high-at-5-54-in-september-driven-by-food-prices-surge/articleshow/134890491.cms",
+     "date": "2026-10-12",
+     "title": "Sept CPI 5.54%"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_NEMONSOON26_DEFICIT",
+   "title": "North-east monsoon (Oct-Dec) 2026 deficient in south peninsula",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2026-12-31",
+   "window_end": "2026-12-31",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.45,
+   "description": "NE monsoon onset expected Oct 15-21 (IMD, 1 Oct). IMD says El Nino is strengthening and IOD stays neutral through NEM; it expected below-normal October rain. El Nino usually enhances NEM over Tamil Nadu/south coastal AP (positive link), but 2026 reservoirs in the Cauvery/Pennar basins are very low and Drishti IAS (13 Oct) discusses a 'Tamil Nadu anomaly' in super El Nino years. IMD's seasonal NEM forecast was not retrieved (data gap). Probability: deficient (<90% LPA) 0.40, normal 0.35, above 0.25 (model judgement). Resolved by Dec 31.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_MONSOON",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "Conditional on a deficient NEM; local to TN/AP/Karnataka/Kerala."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "Rice, vegetables and Cauvery delta crops."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_NEMONSOON26_DEFICIT",
+      "F_MONSOON",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "South rural income and hydro generation fall."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_NEMONSOON26_DEFICIT",
+      "F_MONSOON",
+      "F_POWER_PRICE_IN"
+     ],
+     "explanation": "Southern power demand/pumping rise, hydro low."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_NEMONSOON26_DEFICIT",
+      "F_RURAL_DEMAND",
+      "F_UNSECURED_STRESS"
+     ],
+     "explanation": "MFI stress in Tamil Nadu/Karnataka."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "CHOLAFIN",
+     "direction": "-",
+     "why": "South rural vehicle finance"
+    },
+    {
+     "ticker": "TVSMOTOR",
+     "direction": "-",
+     "why": "South 2W demand"
+    },
+    {
+     "ticker": "CREDITACC",
+     "direction": "-",
+     "why": "Karnataka/TN microfinance"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.dtnext.in/news/tamilnadu/northeast-monsoon-may-begin-between-october-15-21-imd",
+     "date": "2026-10-01",
+     "title": "NE monsoon may begin Oct 15-21 - DT Next"
+    },
+    {
+     "url": "https://www.indiatoday.in/science/story/el-nino-neutral-iod-india-rainfall-post-monsoon-3007171-2026-10-01",
+     "date": "2026-10-01",
+     "title": "IMD: neutral IOD through NEM"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_NEMONSOON26_NORMAL_UP",
+   "title": "North-east monsoon 2026 normal or above-normal (relief for southern reservoirs)",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2026-12-31",
+   "window_end": "2026-12-31",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.6,
+   "description": "Complement of EV_NEMONSOON26_DEFICIT: normal-or-above NEM (probability 0.60). El Nino years often (not always) boost NEM rains over TN and coastal Andhra; a cyclone (Cyclone 'Arnab' referenced by Business Today, 3 Nov) can add rain. Would partially restore southern reservoirs, lifting 2027 rabi/summer outlook and reducing hydro/power stress.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_MONSOON",
+     "ssu": 0.5,
+     "low": 0.0,
+     "high": 1.0,
+     "note": "Conditional on normal-to-above NEM, local south India."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": -0.2,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "Easing rice/vegetable prices in the south."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_NEMONSOON26_NORMAL_UP",
+      "F_MONSOON",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "Southern rural incomes stabilise."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_NEMONSOON26_NORMAL_UP",
+      "F_MONSOON",
+      "F_POWER_PRICE_IN"
+     ],
+     "explanation": "Hydro recovers, power prices ease."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_NEMONSOON26_NORMAL_UP",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "2W/tractor demand recovers in south in Q4 FY27."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TVSMOTOR",
+     "direction": "+",
+     "why": "South 2W demand"
+    },
+    {
+     "ticker": "NHPC",
+     "direction": "+",
+     "why": "Hydro"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.dtnext.in/news/tamilnadu/northeast-monsoon-may-begin-between-october-15-21-imd",
+     "date": "2026-10-01",
+     "title": "NE monsoon may begin Oct 15-21 - DT Next"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_WHEAT27_CROP_BELOW",
+   "title": "India 2027 wheat crop (harvest Mar-Apr 2027) below 2026's record ~120 MT",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2027-04-15",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.65,
+   "description": "2025-26 wheat crop was a record ~120.6 MT (Bloomberg, Aug 2026). 2027 crop faces: wheat sown 0.19 vs 3.34 lakh ha at 30 Oct (full season ~336 lakh ha last year), poor soil moisture and low reservoirs, an El Nino winter with heat risk at grain fill. Recovery is possible if sowing accelerates in Nov (soil moisture, mid-Nov cooler weather) and if irrigation holds in Punjab/Haryana/UP (canal-irrigated, groundwater-fed, not rain-dependent). I put 65% on 2027 output below 2026 (central estimate 108-116 MT) and 25% on a fall >8%. Central Pool stocks (925.85 LMT on 1 Jul) cushion availability so the effect is mainly sentiment/price, not scarcity. Government rabi target 177.72 MT.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_WHEAT",
+     "ssu": 0.5,
+     "low": 0.0,
+     "high": 1.2,
+     "note": "Conditional on a shortfall: global wheat (+10% SSU) tailwind via lost Indian exports; domestic flour up."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.4,
+     "low": 0.1,
+     "high": 0.9,
+     "note": "Cereal, atta and gram inflation Apr-Jun 2027 (SSU +2pp)."
+    },
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": -0.2,
+     "low": -0.4,
+     "high": 0.0,
+     "note": "Lower wheat marketed surplus in north India; offset by higher prices."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_WHEAT27_CROP_BELOW",
+      "F_WHEAT",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Cereals about 9% of CPI; government can release FCI stock (OMSS) and curb exports, limiting the price rise."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_WHEAT27_CROP_BELOW",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Keeps CPI >5.5% into Q1 FY28."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_WHEAT27_CROP_BELOW",
+      "F_WHEAT",
+      "P_FERT_SUBSIDY"
+     ],
+     "explanation": "Not a main channel; government may extend free grain, lifting food-subsidy bill."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ITC",
+     "direction": "-",
+     "why": "Atta input"
+    },
+    {
+     "ticker": "BRITANNIA",
+     "direction": "-",
+     "why": "Wheat flour"
+    },
+    {
+     "ticker": "KRBL",
+     "direction": "+",
+     "why": "Substitution to rice"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.businesstoday.in/latest/economy/story/indias-rabi-sowing-falls-46-to-37-56-lakh-hectares-wheat-acreage-plunges-94-565374-2026-11-03",
+     "date": "2026-11-03",
+     "title": "Wheat sowing 0.19 vs 3.34 lakh ha"
+    },
+    {
+     "url": "https://www.deccanchronicle.com/business/economics/govt-lifts-export-ban-on-wheat-and-its-products-1981807",
+     "date": "2026-08-24",
+     "title": "Wheat record 120.6 MT; record stocks"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_WHEAT_EXPORT_BAN_BACK",
+   "title": "Government re-imposes wheat/flour export curbs before the 2027 harvest",
+   "category": "agri_rural",
+   "status": "risk_scenario",
+   "date": "2027-02-15",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.22,
+   "description": "Export ban was lifted only on 24 Aug 2026; weak sowing and rising atta prices could prompt a policy reversal (India's record is to reverse quickly: May 2022 ban). Central Pool stocks are 2.2x norm, which argues against curbs. Probability 12% by early Feb, 22% by end-May 2027.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_WHEAT",
+     "ssu": -0.3,
+     "low": -0.8,
+     "high": 0.0,
+     "note": "Global wheat up on Indian absence is already small; domestic prices fall (domestic price channel in F_FOOD_INFLATION_IN)."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": -0.2,
+     "low": -0.4,
+     "high": 0.0,
+     "note": "Lower domestic cereals inflation."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_WHEAT_EXPORT_BAN_BACK",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN"
+     ],
+     "explanation": "Curb caps flour prices."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_WHEAT_EXPORT_BAN_BACK",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Slightly reduces the hiking bias."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_WHEAT_EXPORT_BAN_BACK",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Lower yields."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ITC",
+     "direction": "+",
+     "why": "Lower input costs"
+    },
+    {
+     "ticker": "BRITANNIA",
+     "direction": "+",
+     "why": "Lower wheat cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.deccanchronicle.com/business/economics/govt-lifts-export-ban-on-wheat-and-its-products-1981807",
+     "date": "2026-08-24",
+     "title": "Wheat export ban lifted 24 Aug 2026"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RICE_BROKEN_EXPORT_CURB",
+   "title": "India re-imposes curbs on broken-rice exports",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.35,
+   "prob_by_12m": 0.45,
+   "description": "IREF warned on 3 Nov that India may re-impose restrictions on 100% broken rice exports as international prices cross US$360/t and domestic demand rises from ethanol distillers and poultry feed. No curbs announced yet. The ethanol tender (zero sugar diversion; broken rice priced Rs 64/l) could pull large volumes of broken rice into fuel; Reuters flagged the biggest rice output drop in ~2 decades. Offsetting factor: huge Central Pool rice stocks. Probability 35% by early Feb; 45% by Nov 2027.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_RICE",
+     "ssu": -0.3,
+     "low": -0.8,
+     "high": 0.0,
+     "note": "Global rice price effect of curb is positive for importers, but Indian domestic rice falls; node is global/Indian export price (+10% SSU), which would rise elsewhere: net -0.3 domestic, global +0.5 (ambiguous)."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": -0.1,
+     "low": -0.3,
+     "high": 0.0,
+     "note": "Domestic cereal price relief."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RICE_BROKEN_EXPORT_CURB",
+      "F_RICE",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Domestic broken rice/feed prices ease."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RICE_BROKEN_EXPORT_CURB",
+      "F_RICE",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "Rice farmers' realisation lower in deficit year, weakening rural income."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RICE_BROKEN_EXPORT_CURB",
+      "F_RICE",
+      "F_CPI_IN"
+     ],
+     "explanation": "Small CPI relief."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "KRBL",
+     "direction": "-",
+     "why": "Export volumes (mostly basmati, affected less)"
+    },
+    {
+     "ticker": "LTFOODS",
+     "direction": "-",
+     "why": "Exports"
+    },
+    {
+     "ticker": "VENKEYS",
+     "direction": "+",
+     "why": "Poultry feed costs"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://m.economictimes.com/news/economy/agriculture/india-may-reimpose-broken-rice-export-restrictions-as-prices-cross-360-per-tonne-iref/articleshow/135493265.cms",
+     "date": "2026-11-03",
+     "title": "India may reimpose broken rice export restrictions - ET/PTI"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_NBS_RABI_HIKE",
+   "title": "Cabinet approves higher rabi-season NBS subsidy rates for P&K fertilisers (and DAP special package)",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2026-11-30",
+   "window_end": "2027-01-31",
+   "prob_by_3m": 0.85,
+   "prob_by_12m": 0.95,
+   "description": "As of 25 Oct the NBS rates for rabi (Oct 2026-Mar 2027) were still pending, which kept global DAP prices high and left supply uncertain (RuralVoice). Sulphur/ammonia/phosphoric acid costs high (DAP >US$900/t). Rabi 2026-27 requirement ~38 MT of urea/DAP/NPK. Historically the Cabinet approves NBS rates for rabi in Sep-Nov (model knowledge). Probability approval with higher per-kg subsidy: 85% by end-Feb; 15% of a late/limited or ad hoc special-package route.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_FERT_SUBSIDY",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "Conditional: higher NBS rates to hold farm-gate MRP flat."
+    },
+    {
+     "node": "F_FERTILISER_INPUTS",
+     "ssu": -0.2,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "Clearer demand signals; imports contracted."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_NBS_RABI_HIKE",
+      "P_FERT_SUBSIDY",
+      "F_FERTILISER_INPUTS"
+     ],
+     "explanation": "Resolves import uncertainty."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_NBS_RABI_HIKE",
+      "P_FERT_SUBSIDY",
+      "F_GDP_IN"
+     ],
+     "explanation": "Wider fiscal deficit by Rs 0.3-1.0 lakh crore."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_NBS_RABI_HIKE",
+      "P_FERT_SUBSIDY",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Slightly higher G-sec supply."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "COROMANDEL",
+     "direction": "+",
+     "why": "Higher subsidy supports phosphatic margins"
+    },
+    {
+     "ticker": "CHAMBLFERT",
+     "direction": "+",
+     "why": "Subsidy and supply certainty"
+    },
+    {
+     "ticker": "PARADEEP",
+     "direction": "+",
+     "why": "DAP producer"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html",
+     "date": "2026-10-02",
+     "title": "Fertiliser subsidy could reach Rs 3 lakh crore"
+    },
+    {
+     "url": "https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/",
+     "date": "2026-09-29",
+     "title": "Rabi requirement 38 MT"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_FERT_SUBSIDY_TOPUP_WINTER",
+   "title": "Supplementary demand for grants adds fertiliser subsidy top-up in winter session",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.6,
+   "prob_by_12m": 0.9,
+   "description": "Fertiliser subsidy running above budget: industry sees up to Rs 3 lakh crore for FY27. Parliament's winter session (typically late Nov-Dec) and the Budget-session supplementary grants (Feb) are the usual vehicles. Probability that supplementary demands incl. an extra fertiliser subsidy of at least Rs 50,000 crore are passed by end-March 2027: 90%; by mid-Dec: 60% (date of session not verified).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_FERT_SUBSIDY",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "Conditional: extra allocation passed."
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "Larger borrowing/fiscal slippage perception (SSU +25 bp)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FERT_SUBSIDY_TOPUP_WINTER",
+      "P_FERT_SUBSIDY",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Adds fiscal slippage."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FERT_SUBSIDY_TOPUP_WINTER",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "Higher benchmark yields widen corporate spreads."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FERT_SUBSIDY_TOPUP_WINTER",
+      "F_CREDIT_SPREADS_IN",
+      "I_NBFC_VEHICLE_CONSUMER"
+     ],
+     "explanation": "NBFC funding costs rise."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "CHAMBLFERT",
+     "direction": "+",
+     "why": "Receivable relief from timely subsidy payments"
+    },
+    {
+     "ticker": "COROMANDEL",
+     "direction": "+",
+     "why": "Same"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html",
+     "date": "2026-10-02",
+     "title": "Subsidy to Rs 3 lakh crore"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_SUGAR_MSP_HIKE",
+   "title": "Sugar minimum selling price raised above Rs 31/kg (or panel recommends)",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2027-01-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.2,
+   "prob_by_12m": 0.4,
+   "description": "Industry (ISMA) seeks timely alignment of sugar MSP (unchanged at Rs 31/kg since Feb 2019, model knowledge) with FRP (+Rs 10/q for 2026-27) and ethanol prices; Centre set up a panel to review sugar prices and farmers' payments; Karnataka cane farmers are protesting for higher cane price and sugar MSP. Retail sugar at Rs 58/kg is far above MSP, so the government has little reason to raise MSP while prices are high; a hike becomes likelier if prices fall as cane crushing (107 mills started) gets going and ethanol diversion is zero. Probability 20% by end-Jan 2027, 40% by Nov 2027.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_SUGAR_ETHANOL",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 1.2,
+     "note": "Conditional: higher MSP favours millers."
+    },
+    {
+     "node": "F_SUGAR",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "Raises domestic floor prices."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_SUGAR_MSP_HIKE",
+      "P_SUGAR_ETHANOL",
+      "F_SUGAR"
+     ],
+     "explanation": "Floor price support."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SUGAR_MSP_HIKE",
+      "F_SUGAR",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Small CPI effect."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_SUGAR_MSP_HIKE",
+      "P_SUGAR_ETHANOL",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "Cane-belt incomes (UP, Maharashtra, Karnataka)."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BALRAMCHIN",
+     "direction": "+",
+     "why": "Sugar realisations"
+    },
+    {
+     "ticker": "TRIVENI",
+     "direction": "+",
+     "why": "Realisations"
+    },
+    {
+     "ticker": "DALBHARAT",
+     "direction": "+",
+     "why": "Sugar segment"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://agrospectrumindia.com/news/8/33951/isma-welcomes-rs-10-qtl-hike-in-sugarcane-frp-for-2026-27-calls-for-timely-alignment-of-sugar-msp-and-ethanol-prices.html",
+     "date": "2026-09-30",
+     "title": "ISMA seeks sugar MSP alignment (date approximate)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_SUGAR_EXPORT_QUOTA_2627",
+   "title": "Government permits commercial sugar exports in 2026-27",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.03,
+   "prob_by_12m": 0.07,
+   "description": "With 2025-26 output cut to 306 lakh t, opening stock ~33-34 lakh t, first duty-free imports in a decade, zero ethanol diversion adding ~30 lakh t, but no firm 2026-27 production estimate yet (ISMA awaiting Sept-Oct rain; govt tracking monthly). Export permission would require comfortable stocks and prices near MSP; only the EU TRQ (5,841 t) and US raw sugar quota (extra 542 t) apply. Probability of a meaningful (>5 lakh t) export quota by end-May 2027: 7%. A second duty-free import window is more likely (see EV_SUGAR_IMPORT_WINDOW2).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_SUGAR",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "Conditional: exports lift domestic prices, but world sugar falls on the extra supply; global node shocked by -0.5."
+    },
+    {
+     "node": "P_SUGAR_ETHANOL",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "Favourable to millers."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_SUGAR_EXPORT_QUOTA_2627",
+      "P_SUGAR_ETHANOL",
+      "F_SUGAR"
+     ],
+     "explanation": "Mill realisations improve."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SUGAR_EXPORT_QUOTA_2627",
+      "F_SUGAR",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Domestic price risk."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_SUGAR_EXPORT_QUOTA_2627",
+      "P_SUGAR_ETHANOL",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "Cane payments."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BALRAMCHIN",
+     "direction": "+",
+     "why": "Exports"
+    },
+    {
+     "ticker": "TRIVENI",
+     "direction": "+",
+     "why": "Exports"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.chinimandi.com/ethanol-supply-in-esy-2026-27-sugar-economics-may-decide-the-feedstock-mix/",
+     "date": "2026-09-13",
+     "title": "ESY 2026-27 feedstock economics (ChiniMandi)"
+    },
+    {
+     "url": "https://newsonair.gov.in/government-allows-duty-free-imports-of-10-lakh-tonnes-of-raw-sugar-until-31st-october/",
+     "date": "2026-08-20",
+     "title": "Duty-free import TRQ"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_SUGAR_IMPORT_WINDOW2",
+   "title": "A second duty-free raw-sugar import window / stock limits are announced",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.35,
+   "description": "The first 10 lakh t TRQ ended on 31 Oct 2026. Sugar prices fell 11% in the last month (ICE) as ISMA says there is no shortage. A second window is likely only if domestic prices re-spike before the main crushing flow (Dec-Mar) or the 2026-27 estimate disappoints (cane damaged by drought in Maharashtra/Karnataka). Probability 25% by mid-Feb, 35% by Nov 2027.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_SUGAR",
+     "ssu": -0.3,
+     "low": -0.8,
+     "high": 0.0,
+     "note": "Conditional: global raw-sugar demand uplift (+) offset by domestic price cap; net small."
+    },
+    {
+     "node": "P_SUGAR_ETHANOL",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "Negative for mills."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_SUGAR_IMPORT_WINDOW2",
+      "P_SUGAR_ETHANOL",
+      "F_SUGAR"
+     ],
+     "explanation": "Caps domestic sugar prices."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SUGAR_IMPORT_WINDOW2",
+      "F_SUGAR",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Marginal CPI relief."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_SUGAR_IMPORT_WINDOW2",
+      "P_SUGAR_ETHANOL",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "Lower mill margins and cane payments."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BALRAMCHIN",
+     "direction": "-",
+     "why": "Capped realisation"
+    },
+    {
+     "ticker": "TRIVENI",
+     "direction": "-",
+     "why": "Same"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://newsonair.gov.in/government-allows-duty-free-imports-of-10-lakh-tonnes-of-raw-sugar-until-31st-october/",
+     "date": "2026-08-20",
+     "title": "TRQ 10 lakh t until 31 Oct 2026"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_BUDGET27_AGRI_RURAL",
+   "title": "Union Budget FY28 (1 Feb 2027) raises agri/rural spending and fertiliser subsidy; PM-Kisan/rural jobs top-up",
+   "category": "agri_rural",
+   "status": "scheduled",
+   "date": "2027-02-01",
+   "window_end": null,
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.7,
+   "description": "Budget on 1 Feb 2027 (date: model knowledge of convention; not verified). Pressures: fertiliser subsidy ~Rs 3 lakh crore in FY27, drought relief, VB-G RAM G funding after person-days fell (50%/61% in Jul-Aug), food subsidy (grain glut swelling bill per FE), rabi MSP payout Rs 90,962 crore. Fiscal consolidation and a Rs 1.86 lakh crore PM-DHARA scheme compete for space. Probability that the Budget raises combined agri + rural development + fertiliser allocation by more than 8% y/y: 70%; remaining 30%: flat/consolidation (model judgement, low confidence).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "Conditional: transfers/jobs top-up."
+    },
+    {
+     "node": "P_FERT_SUBSIDY",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "Higher FY28 fertiliser allocation."
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "Fiscal slippage risk (SSU +25 bp)."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BUDGET27_AGRI_RURAL",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "Rural transfers support 2W/tractor FY28."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET27_AGRI_RURAL",
+      "F_RURAL_DEMAND",
+      "F_GDP_IN"
+     ],
+     "explanation": "Consumption support."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_BUDGET27_AGRI_RURAL",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "Fiscal slippage widens spreads."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ESCORTS",
+     "direction": "+",
+     "why": "Tractors"
+    },
+    {
+     "ticker": "HEROMOTOCO",
+     "direction": "+",
+     "why": "2W"
+    },
+    {
+     "ticker": "COROMANDEL",
+     "direction": "+",
+     "why": "Subsidy"
+    },
+    {
+     "ticker": "PIIND",
+     "direction": "+",
+     "why": "Agrochemicals"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/",
+     "date": "2026-09-29",
+     "title": "Agriculture target and fertiliser needs"
+    },
+    {
+     "url": "https://indianexpress.com/article/india/vb-g-ram-g-rural-jobs-decline-minimum-wages-10825474/",
+     "date": "2026-08-10",
+     "title": "VB-G RAM G decline"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_MONSOON27_FIRST_FORECAST_NORMAL",
+   "title": "IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA)",
+   "category": "agri_rural",
+   "status": "scheduled",
+   "date": "2027-04-15",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.68,
+   "description": "Strong El Nino typically peaks in Nov-Jan and decays by spring; the next monsoon is often normal after a deficient year but not guaranteed (e.g. 2015-16: 2016 normal at 97%). IMD first forecast usually mid-April, update end-May. Probability that the first forecast is >=96% LPA: 68%; 'below normal' (<96%): 32%, which includes re-intensifying El Nino or negative IOD signals. Prior model-based judgement; ENSO forecasts for spring 2027 not yet retrievable.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_MONSOON",
+     "ssu": 1.0,
+     "low": 0.4,
+     "high": 1.8,
+     "note": "Conditional forecast near +3% to -3% vs LPA relative to the 2026 -12.6%: swing about +10 pp, but forecasts only partly realised."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": -0.2,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "Expectations effect on 2027 food prices."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_MONSOON27_FIRST_FORECAST_NORMAL",
+      "F_MONSOON",
+      "F_RURAL_DEMAND"
+     ],
+     "explanation": "Rural sentiment recovery before kharif sowing."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_MONSOON27_FIRST_FORECAST_NORMAL",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "Tractor/2W pre-buying."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_MONSOON27_FIRST_FORECAST_NORMAL",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Easing food inflation lets RBI end the hiking cycle."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ESCORTS",
+     "direction": "+",
+     "why": "Tractors"
+    },
+    {
+     "ticker": "HEROMOTOCO",
+     "direction": "+",
+     "why": "2W"
+    },
+    {
+     "ticker": "UPL",
+     "direction": "+",
+     "why": "Agrochemicals"
+    },
+    {
+     "ticker": "PIIND",
+     "direction": "+",
+     "why": "Agrochemicals"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.thehindu.com/sci-tech/energy-and-environment/southwest-monsoon-ends-with-12-deficit/article71529423.ece",
+     "date": "2026-09-30",
+     "title": "IMD forecast record in 2026 (92%, then 90% vs 87% actual)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_MONSOON27_DEFICIT_FORECAST",
+   "title": "IMD April 2027 forecast says below-normal monsoon (<96% LPA) - second weak year risk",
+   "category": "agri_rural",
+   "status": "risk_scenario",
+   "date": "2027-04-15",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.32,
+   "description": "Complement of EV_MONSOON27_FIRST_FORECAST_NORMAL at 32%: a second consecutive weak monsoon would arrive with low reservoirs, depleted soil moisture and high food inflation. Strong El Nino events can persist (e.g. 1997-98 then La Nina; 2015-16 normal) but mid-2027 persistence/negative IOD is a recognised tail. Includes 10% probability of <92% LPA forecast.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_MONSOON",
+     "ssu": -1.0,
+     "low": -1.8,
+     "high": -0.4,
+     "note": "Conditional: forecast -4% to -8% vs LPA."
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "Expectation effects; pulses, vegetables, cereals."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_MONSOON27_DEFICIT_FORECAST",
+      "F_MONSOON",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Hoarding/expectation price effects."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_MONSOON27_DEFICIT_FORECAST",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Further tightening bias."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_MONSOON27_DEFICIT_FORECAST",
+      "F_REPO_IN",
+      "F_ASSET_QUALITY_IN"
+     ],
+     "explanation": "Rural credit costs rise."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ESCORTS",
+     "direction": "-",
+     "why": "Tractor demand"
+    },
+    {
+     "ticker": "CHOLAFIN",
+     "direction": "-",
+     "why": "Rural vehicle finance"
+    },
+    {
+     "ticker": "HINDUNILVR",
+     "direction": "-",
+     "why": "Rural volumes"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.indiatoday.in/science/story/el-nino-neutral-iod-india-rainfall-post-monsoon-3007171-2026-10-01",
+     "date": "2026-10-01",
+     "title": "El Nino strengthening through end-2026"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RURAL_RELIEF_PACKAGE",
+   "title": "Centre announces drought relief / rural support package (extra VB-G RAM G days, input subsidy, PM-Kisan top-up)",
+   "category": "agri_rural",
+   "status": "anticipated",
+   "date": "2026-12-31",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.35,
+   "prob_by_12m": 0.55,
+   "description": "Drought declared in parts of Maharashtra and Karnataka; 282 districts rain-deficient; VB-G RAM G person-days fell ~50% and the minister reports 'no major crisis' (Chouhan, 29 Sep). State governments are announcing own relief (e.g. Chhattisgarh and UP pre-Diwali paddy support; Congress demanding Rs 3,358/q paddy). A central package is more likely after state memoranda and the NDMA/inter-ministerial team reports (Dec-Feb) and is the usual route in drought years; fiscal space tight. Probability 35% by end-Feb, 55% by Nov 2027.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "Conditional: Rs 20-40k crore support, offsetting about a third of the income loss."
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.1,
+     "low": 0.0,
+     "high": 0.3,
+     "note": "Small fiscal impact."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RURAL_RELIEF_PACKAGE",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "Supports H2 rural spending."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RURAL_RELIEF_PACKAGE",
+      "F_RURAL_DEMAND",
+      "F_UNSECURED_STRESS"
+     ],
+     "explanation": "Reduces microfinance delinquency risk."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RURAL_RELIEF_PACKAGE",
+      "F_UNSECURED_STRESS",
+      "F_ASSET_QUALITY_IN"
+     ],
+     "explanation": "Lower credit costs for rural lenders."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ESCORTS",
+     "direction": "+",
+     "why": "Tractors"
+    },
+    {
+     "ticker": "CREDITACC",
+     "direction": "+",
+     "why": "Microfinance asset quality"
+    },
+    {
+     "ticker": "HEROMOTOCO",
+     "direction": "+",
+     "why": "2W"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.downtoearth.org.in/agriculture/india-sets-lower-food-production-target-for-2026-27-as-el-ni%C3%B1o-clouds-rabi-season",
+     "date": "2026-09-30",
+     "title": "Chouhan: no major crisis, problem in some areas"
+    },
+    {
+     "url": "https://indianexpress.com/article/india/vb-g-ram-g-rural-jobs-decline-minimum-wages-10825474/",
+     "date": "2026-08-10",
+     "title": "VB-G RAM G person-days decline"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_PULSES_VEG_SPIKE_WINTER",
+   "title": "Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk",
+   "category": "agri_rural",
+   "status": "risk_scenario",
+   "date": "2027-01-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.15,
+   "prob_by_12m": 0.25,
+   "description": "Sept food CPI 7.74% and rising; rabi pulses (gram -59%, lentil -49% sown area at 30 Oct), mustard acreage halved, weak reservoirs, El Nino heat risk and milk/ghee price hikes (Nandini +Rs 8/l; Amul ghee/butter +Rs 40/l) could push food inflation above 9%. Government tools: FCI OMSS (grain), duty cuts (edible oil, pulses), stock limits, export curbs. Probability 15% by Feb 2027 print window, 25% by Mar 2027.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 1.2,
+     "low": 0.8,
+     "high": 1.8,
+     "note": "Conditional: food CPI +2.4 pp above Sep (SSU +2pp)."
+    },
+    {
+     "node": "F_CPI_IN",
+     "ssu": 1.0,
+     "low": 0.7,
+     "high": 1.4,
+     "note": "Headline above 6.5%."
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_PULSES_VEG_SPIKE_WINTER",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN"
+     ],
+     "explanation": "Headline above the 6% ceiling for 2+ quarters."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_PULSES_VEG_SPIKE_WINTER",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "MPC delivers 50-75 bp cumulative hikes."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_PULSES_VEG_SPIKE_WINTER",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Credit growth slows, hurting NBFC/banks and housing."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "Higher-for-longer rates"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "Funding costs"
+    },
+    {
+     "ticker": "DMART",
+     "direction": "-",
+     "why": "Real-income squeeze"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.businesstoday.in/latest/economy/story/indias-rabi-sowing-falls-46-to-37-56-lakh-hectares-wheat-acreage-plunges-94-565374-2026-11-03",
+     "date": "2026-11-03",
+     "title": "Gram -59%, lentil -49%"
+    },
+    {
+     "url": "https://timesofindia.indiatimes.com/business/india-business/retail-inflation-at-almost-2-year-high-at-5-54-in-september-driven-by-food-prices-surge/articleshow/134890491.cms",
+     "date": "2026-10-12",
+     "title": "Sept food CPI 7.74%"
+    }
+   ],
+   "confidence": "low"
+  }
+ ],
+ "edges": [
+  {
+   "src": "F_MONSOON",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "macro_transmission",
+   "w": -0.75,
+   "w_low": -1.2,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "+10% rain vs LPA raises kharif output; each 10% rain shortfall historically adds roughly 1-2 pp to food CPI via cereals/pulses/vegetables",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/Economy/september-wpi-inflation-rises-to-1139-as-food-fuel-and-manufactured-goods-prices-increase/article71582698.ece",
+     "date": "2026-10-14",
+     "note": "Food inflation rose 2.2 pp (Jul-Sep 2026) as monsoon fell 12.6% below LPA; confounded with onion/oil/milk"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.15,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "~45% of rural income is agricultural; rain governs kharif output, farm wages and tractor/2W demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.thehindubusinessline.com/companies/weak-monsoon-looms-over-fmcg-margins-despite-strong-q2-demand/article71552538.ece",
+     "date": "2026-10-16",
+     "note": "Analysts see weakest monsoon since 2015 threatening H2 rural demand"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Agriculture ~15% of GVA plus rural consumption spillover; 10% rain deviation moves GDP ~0.2-0.5 pp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Historical elasticity from RBI/NCAER studies; not verified for 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_POWER_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "Weak rain raises irrigation pumping, cooling load; demand growth rises when rain is deficient",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2023 and 2024 hot/dry spells raised power demand; sign only"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_COTTON",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "Rain-fed cotton (Maharashtra, Telangana, Gujarat) yield loss lifts prices",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.fibre2fashion.com/news/prime-content/textile-news/indian-cotton-msp-up-7-2-what-changes-when-the-duty-returns-313917-newsdetails.htm",
+     "date": "2026-10-01",
+     "note": "Kharif cotton sowing -23% by 10 Jul; balance sheet at risk"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.7,
+   "w_low": 0.55,
+   "w_high": 0.85,
+   "lag": "0-3m",
+   "mechanism": "Food and beverages weight about 37% of CPI (2024=100 series approx., model knowledge)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://timesofindia.indiatimes.com/business/india-business/retail-inflation-at-almost-2-year-high-at-5-54-in-september-driven-by-food-prices-surge/articleshow/134890491.cms",
+     "date": "2026-10-12",
+     "note": "Headline +0.71 pp and food +1.77 pp Aug-Sep: ratio ~0.4 incl. other items"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_REPO_IN",
+   "relation": "macro_transmission",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "RBI hikes in response to food-led CPI near ceiling; +1 pp CPI shifts expected policy by about 30 bp over 6-12 months",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+     "date": "2026-10-07",
+     "note": "Repo +25 bp to 5.50%, stance 'calibrated tightening'; FY27 CPI projected 5.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "Edible oils ~3-4% of food basket; +10% oil gives +0.4 pp food CPI",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.business-standard.com/economy/news/govt-cuts-import-duty-on-refined-palm-oil-and-soybean-oil-to-27-5-126092301504_1.html",
+     "date": "2026-09-23",
+     "note": "Edible oils among WPI food drivers"
+    }
+   ]
+  },
+  {
+   "src": "F_DAIRY",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "macro_transmission",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Milk ~15-20% of food CPI; procurement hike passes to retail",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/india/karnataka-hikes-nandini-milk-prices-by-rs-8-per-litre-from-november-1-14063636.html",
+     "date": "2026-10-07",
+     "note": "Nandini +Rs 8/l from 1 Nov"
+    }
+   ]
+  },
+  {
+   "src": "F_RICE",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "macro_transmission",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Cereals ~9% of CPI, rice about half; +10% rice gives +0.5 pp food CPI",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://m.economictimes.com/news/economy/agriculture/india-may-reimpose-broken-rice-export-restrictions-as-prices-cross-360-per-tonne-iref/articleshow/135493265.cms",
+     "date": "2026-11-03",
+     "note": "Broken-rice export price >$360/t"
+    }
+   ]
+  },
+  {
+   "src": "F_WHEAT",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "Wheat/atta ~3.5% of CPI, government stocks buffer",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CPI basket weights"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Rural share of 2W/tractor/entry car volumes ~40-50%; +5 pp rural spend gives about +2.5% vehicle volumes",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/",
+     "date": "2026-11-02",
+     "note": "Tractor volumes -13% in Oct, +2% Apr-Oct"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "F_UNSECURED_STRESS",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "Weaker rural income raises microfinance/vehicle-loan delinquencies (pp per +5 pp rural growth)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2019-20 and 2024-25 MFI stress episodes"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "F_GDP_IN",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.4,
+   "w_high": 1.1,
+   "lag": "3-12m",
+   "mechanism": "Rural consumption ~20% of GDP; +5 pp growth adds about 1 pp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "National accounts shares"
+    }
+   ]
+  },
+  {
+   "src": "P_SUGAR_ETHANOL",
+   "dst": "F_SUGAR",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "More favourable ethanol/export policy raises diversion/exports, lowering domestic supply and lifting prices",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://timesofindia.indiatimes.com/business/india-business/sugar-output-may-dip-11-from-initial-estimate-government/articleshow/133413529.cms",
+     "date": "2026-08-22",
+     "note": "Govt: about 9% of sugar diverted to ethanol in 2025-26"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "F_FERTILISER_INPUTS",
+   "relation": "input_cost",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "Gas is ~70-80% of ammonia/urea cash cost",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html",
+     "date": "2026-10-02",
+     "note": "Gas for urea $15 to $28/MMBtu"
+    }
+   ]
+  },
+  {
+   "src": "F_FERTILISER_INPUTS",
+   "dst": "P_FERT_SUBSIDY",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "3-12m",
+   "mechanism": "Government holds farm-gate MRP, so higher input costs raise subsidy (NBS/urea)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html",
+     "date": "2026-10-02",
+     "note": "FY27 subsidy up to Rs 3 lakh crore"
+    }
+   ]
+  },
+  {
+   "src": "P_FERT_SUBSIDY",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Bigger subsidy bill raises central borrowing and term premium (SSU +25 bp per +1 SSU)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Rs 1 lakh crore overshoot ~ +3 to 10 bp"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "F_ASSET_QUALITY_IN",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": ">12m",
+   "mechanism": "Rural slowdown raises credit costs at rural lenders",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Historical"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Less hydro, more pumping and cooling raise exchange prices when monsoon is weak",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.downtoearth.org.in/water/indias-reservoirs-remain-31-below-full-capacity-after-monsoon-southern-states-face-water-shortages",
+     "date": "2026-10-19",
+     "note": "Reservoirs 24.5% below last year; hydropower concerns"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "EMI burden",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Historic"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Higher rates slow credit growth",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Historic"
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [],
+ "factor_state_notes": [
+  {
+   "node": "F_MONSOON",
+   "value": "SW monsoon 2026: 759.4 mm vs LPA 868.6 mm = 87% of LPA (-12.6%), lowest since 2015; June 65%, July ~101%, Aug 84%, Sep 92.4% of normal; East/NE India driest since 1901; 282 districts (38%) deficient; ENSO: strong El Nino, IOD neutral (IMD 30 Sep)",
+   "as_of": "2026-09-30",
+   "source": "https://www.thehindu.com/sci-tech/energy-and-environment/southwest-monsoon-ends-with-12-deficit/article71529423.ece"
+  },
+  {
+   "node": "F_MONSOON",
+   "value": "NE monsoon 2026 (Oct-Dec): onset expected 15-21 Oct; IMD sees neutral IOD; October rain below normal; seasonal NE monsoon outcome not yet available (my odds: deficient 40%, normal 35%, above 25%)",
+   "as_of": "2026-10-01",
+   "source": "https://www.dtnext.in/news/tamilnadu/northeast-monsoon-may-begin-between-october-15-21-imd"
+  },
+  {
+   "node": "F_CPI_IN",
+   "value": "CPI (2024=100) Sep 2026 5.54% y/y (Aug 4.83%, Jul 4.45%); rural 6.08%, urban 4.88%; October print due 12 Nov; RBI FY27 CPI projection 5.2% (7 Oct)",
+   "as_of": "2026-10-12",
+   "source": "https://m.economictimes.com/news/economy/indicators/indias-retail-inflation-quickens-to-5-54-in-september-from-4-83-in-august/articleshow/134889203.cms"
+  },
+  {
+   "node": "F_FOOD_INFLATION_IN",
+   "value": "Food CPI Sep 2026 7.74% y/y (Aug 5.97%, Jul 5.52%); WPI Sep 2026 11.39% (Aug 9.9%; series high); WPI food Aug 7.1%; onion retail ~+113% y/y, tomato ~+59% y/y; retail prices of 41 of 42 essentials up y/y",
+   "as_of": "2026-10-14",
+   "source": "https://www.thehindu.com/business/Economy/september-wpi-inflation-rises-to-1139-as-food-fuel-and-manufactured-goods-prices-increase/article71582698.ece"
+  },
+  {
+   "node": "F_REPO_IN",
+   "value": "RBI repo 5.50% after 25 bp hike on 7 Oct 2026 (was 5.25% since Dec 2025); stance 'calibrated tightening'; FY27 GDP projection 7.1%, CPI 5.2% (agri-relevant: food inflation key). Next MPC early Dec 2026 (date not verified)",
+   "as_of": "2026-10-07",
+   "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece"
+  },
+  {
+   "node": "F_RURAL_DEMAND",
+   "value": "Rural: M&M domestic tractors Oct 62,626 (-13% y/y; Diwali shift), Apr-Oct +2%; Escorts Kubota Oct 16,412 (-10.9%); Honda 2W Oct +11%; festive bikes +5.8%; FMCG value growth Oct ~15% (Diwali Nov 8); VB-G RAM G person-days -50% (first month), -61% in July; rural labour wage data not retrieved",
+   "as_of": "2026-11-02",
+   "source": "https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/"
+  },
+  {
+   "node": "F_WHEAT",
+   "value": "Rabi 2026-27 sowing at 30 Oct: total 37.56 lakh ha vs 69.02 (-45.6%); wheat 0.19 vs 3.34; gram 5.90 vs 14.35; mustard 20.50 vs 38.07; wheat MSP 2027-28 Rs 2,610/q (+25); 2025-26 wheat output ~120.6 MT; Central Pool wheat+rice 925.85 LMT on 1 Jul 2026 vs norm 411.2 LMT; wheat export ban lifted 24 Aug 2026",
+   "as_of": "2026-11-03",
+   "source": "https://www.businesstoday.in/latest/economy/story/indias-rabi-sowing-falls-46-to-37-56-lakh-hectares-wheat-acreage-plunges-94-565374-2026-11-03"
+  },
+  {
+   "node": "F_RICE",
+   "value": "Foodgrain target 2026-27 373.93 MT (vs 376.56 MT est. 2025-26); rabi target 177.72 MT; paddy area ~1.7 mn ha lower mid-Sep; broken-rice export price >US$360/t (3 Nov); paddy procurement target KMS 2026-27 708.64 lakh t (lower than actuals of last 3 yrs); Punjab storage bottleneck",
+   "as_of": "2026-11-03",
+   "source": "https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/"
+  },
+  {
+   "node": "F_FERTILISER_INPUTS",
+   "value": "Urea import tender 13 Aug: 17 lakh t at US$390-394/t CFR (vs >US$900 earlier); DAP >US$900/t; sulphur ~US$900/t; gas for urea ~US$28/MMBtu (US$15 pre-war); FY27 fertiliser subsidy could reach Rs 3 lakh crore; rabi NBS rates pending as of 25 Oct",
+   "as_of": "2026-10-02",
+   "source": "https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html"
+  },
+  {
+   "node": "F_SUGAR",
+   "value": "Sugar 2025-26 output ~306 lakh t (-11% vs 343 initial); opening stock 1 Oct 2026 ~33-34 lakh t (vs 50); retail Rs 58.2/kg (+26% y/y, 22 Aug); 10 lakh t duty-free raw sugar TRQ to 31 Oct; ICE raw sugar 18.47 c/lb (+27.8% since 1 Jun, -11.3% 1m); 2026-27: 107 mills crushing by 26 Oct, cane FRP +Rs 10/q, no formal 2026-27 output estimate found",
+   "as_of": "2026-10-26",
+   "source": "https://timesofindia.indiatimes.com/business/india-business/sugar-output-may-dip-11-from-initial-estimate-government/articleshow/133413529.cms"
+  },
+  {
+   "node": "P_SUGAR_ETHANOL",
+   "value": "ESY 2026-27 ethanol tender: 1,100 crore litres, no cane juice/syrup/B-heavy; maize ethanol Rs 68.86/l (incentive cut Rs 5.79 to 2.79), broken rice/DFG Rs 64/l; grain-based share ~76% of supply (July)",
+   "as_of": "2026-10-19",
+   "source": "https://www.chinimandi.com/esy-2026-27-ethanol-tender-has-india-abandoned-its-maize-farmers-to-promote-lowest-ex-mill-price-ethanol/"
+  },
+  {
+   "node": "F_EDIBLE_OIL",
+   "value": "Import duty from 24 Sep 2026: crude palm/soy 5% (was 10%), crude sunflower 0%, refined palm/soy 27.5%, refined sunflower 22.5% (was 32.5%); ICE-proxy palm oil index 1203 (-7.7% 1m)",
+   "as_of": "2026-09-24",
+   "source": "https://www.business-standard.com/economy/news/govt-cuts-import-duty-on-refined-palm-oil-and-soybean-oil-to-27-5-126092301504_1.html"
+  },
+  {
+   "node": "F_COTTON",
+   "value": "Cotton: kharif sowing -23% (10 Jul); MSP +7.2% (Oct 1 article headline); 2026-27 imports expected at record; ICE 78.11 c/lb (+19.7% 12m); duty status ambiguous - verify",
+   "as_of": "2026-11-02",
+   "source": "https://www.thehindubusinessline.com/economy/agri-business/indias-2026-27-cotton-imports-to-scale-new-peak-amid-crop-concerns-duty-relief/article71649049.ece"
+  },
+  {
+   "node": "F_DAIRY",
+   "value": "Nandini (KMF) milk +Rs 8/l from 1 Nov 2026 (blue-packet toned milk about Rs 54); Aavin products up to 25% and Amul ghee/butter +Rs 40/l reported",
+   "as_of": "2026-10-07",
+   "source": "https://www.moneycontrol.com/news/india/karnataka-hikes-nandini-milk-prices-by-rs-8-per-litre-from-november-1-14063636.html"
+  },
+  {
+   "node": "F_WAGES_IN",
+   "value": "DATA GAP: no verified 2026 rural wage growth figure retrieved (Labour Bureau/RBI). Do not assume a value; rural CPI 6.08% suggests real rural wage growth is close to zero or negative.",
+   "as_of": "2026-11-05",
+   "source": "model knowledge / data gap"
+  },
+  {
+   "node": "F_GOVT_CAPEX",
+   "value": "Cabinet 30 Sep 2026 approved PM-DHARA (Rs 1,86,405 crore through FY2032-33; 135 GW RE evacuation; 50 GWh BESS) and Green Energy Corridor Phase III: relevant to T_GRID_ELECTRIFICATION, not rural demand",
+   "as_of": "2026-09-30",
+   "source": "https://ddindia.co.in/2026/09/cabinet-approves-%E2%82%B91-86-lakh-crore-pm-dhara-scheme-for-green-energy-transmission/"
+  },
+  {
+   "node": "F_MONSOON",
+   "value": "Reservoirs: CWC 15 Oct 2026, 178 reservoirs at 126.717 BCM = 68.58% of capacity, 24.5% below last year; South India ~50% vs 87% a year ago (24 Sep)",
+   "as_of": "2026-10-15",
+   "source": "https://www.downtoearth.org.in/water/indias-reservoirs-remain-31-below-full-capacity-after-monsoon-southern-states-face-water-shortages"
+  }
+ ]
+}

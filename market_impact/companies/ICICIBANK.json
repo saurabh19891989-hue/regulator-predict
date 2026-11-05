@@ -1,0 +1,457 @@
+{
+ "ticker": "ICICIBANK",
+ "name": "ICICI Bank Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "NIFTY_50",
+ "business_summary": "India's second-largest private bank (retail, SME, corporate, treasury) with a ~Rs14 lakh cr loan book (derived), granular retail deposits and subsidiaries in life insurance, general insurance and asset management. Q2 FY27 PAT Rs14,843cr (+20% YoY), NII +18%, NIM down ~12bp YoY on FCNR(B) deposits and lower rates earlier in the year, provisions lower. Stock at 1480, near 52-week high, +10.7% over 12 months. Valued at a premium to peers on ROE ~17% and clean asset quality.",
+ "revenue_mix": [
+  {
+   "segment": "net interest income (retail+SME+corporate)",
+   "share_pct": 68,
+   "geography": "India ~95%"
+  },
+  {
+   "segment": "fees, treasury, other income",
+   "share_pct": 24,
+   "geography": "India"
+  },
+  {
+   "segment": "insurance/AMC subsidiary profit share",
+   "share_pct": 8,
+   "geography": "India (model estimate)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "ICICIBANK",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp system loan growth -> ICICI NII/fee +~3% (loan-led, NIM flat) -> PAT +3.5%; persistence 0.5, EV/MCap ~1 (bank, P/B based) => +1.7, rounded to +2.0. RBI expects credit growth to moderate from 18-19% as the hike transmits, so the risk is skewed to the downside.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=banks+deposit+growth+credit+growth+RBI+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI: credit growth to moderate from 18-19% as rate hike transmits"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=ICICI+Bank+Q2+NIM+GNPA+advances+deposits+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 FY27 PAT Rs14,843cr +20%, NII +18%, NIM down 12bp YoY, provisions lower (Fortune India/Business Standard/Upstox headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "ICICIBANK",
+   "relation": "funding_cost",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "+3pp deposit growth/funding ease -> cost of funds -5bp on ~4.5% CoF -> NIM +3-4bp (~+1% NII) and more room to lend; PAT +1.5-2%, persistence 0.5 => +0.8-1.2. System deposit growth was 15.4% in Aug 2026 (highest since Dec 2016) so funding is not scarce; the marginal value is lower than for deposit-short banks.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=banks+deposit+growth+credit+growth+RBI+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-14",
+     "note": "Bank deposit growth 15.4%, highest since Dec 2016 (Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ICICIBANK",
+   "relation": "funding_cost",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp: ~50-55% of loans are repo/EBLR-linked and reprice within a quarter, deposits reprice with a lag -> NIM +6-8bp for 2-3 quarters => NII +1.5%, PAT +2% x persistence 0.25 = +0.5. Offsets: valuation/discount-rate (P/B ~3x for a bank growing 14-16%) -0.7 and slower credit demand -0.3 => net ~-0.5. Sign is genuinely uncertain: RBI hiked to 5.50% on 2026-10-07 (first in ~4 yrs); NIM benefit shows from Q3/Q4 FY27. Do not stack with the G-sec edge for the valuation part.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    },
+    {
+     "source": "market_impact/data/packs/ICICIBANK.md",
+     "date": "2026-11-05",
+     "note": "evidence pack: price 1480.4, 12m +10.7%, empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ICICIBANK",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp G-sec: AFS/HFT book ~20% of ~Rs3.5 lakh cr investments (model knowledge, unverified) x modified duration ~2 -> MTM ~Rs250-300cr pre-tax = ~0.4% of annual PAT (~Rs58k cr); the main channel is the discount rate on a ~3x P/B stock: +25bp on cost of equity ~ -1% to value => -1.2 total. Moderated because ICICI's trading book is small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "investment book composition not fetched; verify in Q2 FY27 investor presentation"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "ICICIBANK",
+   "relation": "regulatory_risk",
+   "w": -4.2,
+   "w_low": -7.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost: loans ~Rs14 lakh cr (approx, derived) x 0.5% = Rs7k cr vs annual PBT ~Rs78k cr => PAT -9%; persistence 0.5 => -4.2. Q2 FY27 provisions fell and asset quality improved so starting point is benign (credit cost well below the through-cycle level) - convex downside.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ICICI+Bank+Q2+NIM+GNPA+advances+deposits+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 FY27 PAT Rs14,843cr +20%, NII +18%, NIM down 12bp YoY, provisions lower (Fortune India/Business Standard/Upstox headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "ICICIBANK",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "+1pp delinquencies on the unsecured book (cards+PL+business banking small-ticket ~9-10% of loans, model knowledge): 10% x 1pp x 65% loss = 6.5bp of loans = ~Rs900cr = 1.2% of PBT x persistence 0.5 => ~-0.6; rounded -0.8 to include fee/volume cutback. ICICI is less exposed than IDFC First or IndusInd.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIBANK.md",
+     "date": "2026-11-05",
+     "note": "evidence pack: price 1480.4, 12m +10.7%, empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "ICICIBANK",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "One tightening step (higher risk weights on unsecured/NBFC, LCR/ project-finance provisioning, deposit run-off factors): capital-light bank with CET1 well above minimum so impact on growth is modest; +1 step -> ROE -20bp -> ~-1.5% value. Counterweight: RBI eased several rules in 2025 so direction of travel is uncertain.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "RBI 2025-26 regulatory easing vs tightening cycle; not re-verified for Aug-Nov 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ICICIBANK",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "+US$5bn/qtr FPI inflow: ICICI is among the most owned FII stocks (FII ~45% of float, model knowledge) with beta ~0.9 to Nifty; +US$5bn ~ Nifty +2% => ICICI +2% in a flow-driven rerating. Market-wide component is demeaned by the Director; relative impact is higher than average because of FII weight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIBANK.md",
+     "date": "2026-11-05",
+     "note": "evidence pack: price 1480.4, 12m +10.7%, empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ICICIBANK",
+   "relation": "fx_translation",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+3% USD/INR (weaker rupee): small direct P&L effect (foreign-currency book ~5% of loans, hedged); FCNR(B) swap cost and FPI-outflow risk dominate. Pack's empirical -1.35 per SSU (t=-1.7, weak) agrees in sign and size; INR is 94.49, +6.5% in 12m.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIBANK.md",
+     "date": "2026-11-05",
+     "note": "evidence pack: price 1480.4, 12m +10.7%, empirical sensitivities"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=FCNR(B)+deposits+RBI+swap+window+banks+NIM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "FCNR(B) inflows pressed NIM 7-8bp at peers; ICICI 'FCNR(B) deposits press NIM' (TradingView 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "ICICIBANK",
+   "relation": "funding_cost",
+   "w": 0.6,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus liquidity lowers CD/bulk funding rates and lifts treasury yields; ~5bp NIM on the marginal 15% of funding => +0.6. RBI hiked while system liquidity is tighter than 2025, so absence of surplus is a mild headwind.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "T_DIGITAL_PAYMENTS",
+   "dst": "ICICIBANK",
+   "relation": "regulatory_risk",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Govt introduced 0.4% MDR on merchant UPI payments above Rs2,000 (capped Rs300/txn) on 2026-09-15: ICICI is a top merchant acquirer/sponsor bank so acquiring fee pool opens up; stock rallied that day. Merchant-payments fees ~Rs1-2k cr industry-wide for ICICI => <1% of PAT x persistence 1.0 => +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ICICI+Bank+UPI+MDR+merchant+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-15",
+     "note": "Paytm, SBI, YES, ICICI shares rally after 0.4% MDR on merchant UPI (Upstox); MDR fixed 0.4% for txns >Rs2,000, cap Rs300 (Moneycontrol)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ICICIBANK",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "+10% Brent: INR/CPI/RBI-hike channel (macro_transmission through USDINR and repo already counted) leaves only a residual sentiment effect; pack empirical -0.30 (t=-1.0) agrees. Brent at ~$95 (+15% in 3m).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIBANK.md",
+     "date": "2026-11-05",
+     "note": "evidence pack: price 1480.4, 12m +10.7%, empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ICICIBANK",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -3.5,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points ~ Nifty -3%; ICICI beta 0.9 => -2.7 absolute, partly defensive quality premium => -2.0. Largely market-wide; Director demeans cross-section.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIBANK.md",
+     "date": "2026-11-05",
+     "note": "evidence pack: price 1480.4, 12m +10.7%, empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "ICICIBANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP growth -> loan growth +1.5pp, lower credit cost -5bp -> PAT +3.5%; persistence 0.7 => +2.5. RBI raised FY27 GDP forecast to 7.1% on 2026-10-07 (Moneycontrol).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI GDP forecast raised to 7.1%"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ICICIGI",
+   "dst": "ICICIBANK",
+   "relation": "holding_stake",
+   "w": 0.04,
+   "w_low": 0.02,
+   "w_high": 0.06,
+   "lag": "0-3m",
+   "mechanism": "ICICI Bank owns ~51.3% of ICICI Lombard (pack promoter holding 51.28%); stake ~Rs41k cr (51.3% x ~Rs80k cr mcap) = ~4% of ICICI Bank mcap (~Rs10.6 lakh cr) => 1% move in ICICIGI = ~0.04% ICICI Bank.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIGI.md",
+     "date": "2026-11-05",
+     "note": "promoter 51.28% Sep 2026"
+    }
+   ]
+  },
+  {
+   "src": "ICICIAMC",
+   "dst": "ICICIBANK",
+   "relation": "holding_stake",
+   "w": 0.07,
+   "w_low": 0.04,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "ICICI Bank holds ~51% of ICICI Prudential AMC (model knowledge; promoter group 85.60% incl. Prudential plc); stake ~Rs75k cr = ~7% of ICICI Bank mcap => 1% move in ICICIAMC = ~0.07% ICICI Bank.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIAMC.md",
+     "date": "2026-11-05",
+     "note": "promoter group 85.60%"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "ICICI Lombard General Insurance",
+   "ticker": "ICICIGI",
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "~51% stake; bancassurance and loan-linked insurance distribution"
+  },
+  {
+   "counterparty": "ICICI Prudential AMC",
+   "ticker": "ICICIAMC",
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "~51% stake (model knowledge); listed Dec 2025"
+  },
+  {
+   "counterparty": "ICICI Prudential Life Insurance",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "~51% stake; not in Nifty 200 batch universe; Q2 FY27 PAT +25% (scanx headline 2026-10-13)"
+  },
+  {
+   "counterparty": "HDFC Bank / Axis / Kotak / SBI",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "HDFC Bank Q2 net +5%, missed estimates (Financial Express 2026-10-18) - ICICI taking share in deposits/loans"
+  },
+  {
+   "counterparty": "RBI",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "regulator; repo 5.50%"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-17",
+   "event": "Q3 FY27 results (date estimated from Q2 on 2026-10-17)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "model estimate from prior cycle"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December meeting: further hike or hold; hold with hawkish guidance likely",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 1.5,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "NIM trough: management/peers guide NIM recovery in Q3/Q4 as FCNR(B) funding normalises and the hike reprices loans",
+   "type": "guidance",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=IndusInd+Bank+NIM+recovery+Q3+Q4"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs14,843cr +20% YoY, NII +18%, NIM down 12bp YoY, asset quality improved, provisions fell",
+  "trend": "earnings growth strong but NIM under pressure from FCNR(B) deposits and falling-then-rising rates; stock re-rated +10% in last month",
+  "valuation": "fundamentals not fetched (screener unavailable in pack); at 1480 roughly 3x P/B (model estimate); brokers bullish after Q2 (Goldman 45% upside headline)",
+  "recent_developments": [
+   "2026-10-07: RBI hiked repo to 5.50%, first hike in ~4 years, stance 'calibrated tightening'",
+   "2026-10-17: Q2 FY27 PAT Rs14,843cr +20%",
+   "2026-10-19: stock fell ~1% after results despite earnings beat; Goldman/JPMorgan raised targets",
+   "2026-09-15: UPI merchant MDR of 0.4% (>Rs2,000) introduced - shares rallied",
+   "2026-11-05: shares +3.5% to near 52-week high Rs1,480 (BusinessLine)"
+  ]
+ },
+ "key_risks": [
+  "NIM compression persists (FCNR(B) cost, deposit competition)",
+  "credit growth slows as RBI hike transmits",
+  "unsecured/MFI credit-cost relapse",
+  "regulatory tightening (RBI)",
+  "INR weakness triggering FPI outflows"
+ ],
+ "upside_triggers": [
+  "NIM recovery in Q3/Q4 as loans reprice",
+  "continued low credit cost",
+  "MDR/UPI monetisation",
+  "subsidiary value unlocking (AMC, insurance)"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=ICICI+Bank+Q2+NIM+GNPA+advances+deposits+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-17",
+   "what": "Q2 FY27 result headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike to 5.50%"
+  },
+  {
+   "url": "market_impact/data/packs/ICICIBANK.md",
+   "date": "2026-11-05",
+   "what": "evidence pack (no fundamentals table)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ICICI+Bank+UPI+MDR+merchant+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-15",
+   "what": "UPI MDR"
+  }
+ ]
+}

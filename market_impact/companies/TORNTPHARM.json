@@ -1,0 +1,393 @@
+{
+ "name": "Torrent Pharmaceuticals Ltd.",
+ "industry": "I_PHARMA_DOMESTIC",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Ahmedabad-based branded-generics company strong in chronic cardiac, CNS, gastro and diabetes in India, with Brazil, Germany, the US and RoW. After acquiring/merging JB Chemicals (consolidated from the Mar-2026 quarter) quarterly sales stepped up from Rs 3.3k cr to Rs 4.9-5.0k cr. Q2 FY27: sales Rs 4,979 cr (+51%), operating profit Rs 1,666 cr (33.5%), net profit Rs 534 cr (-10% YoY) because interest (Rs 300 cr) and depreciation/amortisation (Rs 609 cr) jumped. Borrowings Rs 14,107 cr.",
+ "revenue_mix": [
+  {
+   "segment": "India branded formulations (incl. JB)",
+   "share_pct": 58,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "Brazil",
+   "share_pct": 10,
+   "geography": "LatAm"
+  },
+  {
+   "segment": "Germany/Europe",
+   "share_pct": 9,
+   "geography": "Europe"
+  },
+  {
+   "segment": "US generics",
+   "share_pct": 10,
+   "geography": "US"
+  },
+  {
+   "segment": "RoW and CDMO",
+   "share_pct": 13,
+   "geography": "various"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "TORNTPHARM",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Borrowings Rs 14,107 cr (Sep-26) after the JB Chemicals acquisition; interest Rs 300 cr/qtr. Assume 50% floating: +25bp x Rs 7,050 cr = Rs 18 cr/yr vs PBT ~Rs 2,900 cr annualised = -0.6%; plus P/E-82 discount-rate effect; persistence 0.5, EV/MCap 1.08 -> -1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance calibrated tightening (Reuters/The Hindu headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TORNTPHARM",
+   "relation": "discount_rate",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "P/E 82 (distorted by amortisation), market cap Rs 1.79 lakh cr, long-duration defensive growth: +25bp -> cost of equity +25bp -> -2.5% x beta to rates 0.7 -> -1.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TORNTPHARM",
+   "relation": "fx_translation",
+   "w": 0.8,
+   "w_low": -0.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "International business ~40% of sales (Brazil, Germany, US, RoW; model knowledge) but Brazil/Germany earn in BRL/EUR; US ~8-10% of sales; imported APIs ~20% of costs. +3% USD/INR: foreign revenue +1.1% of sales, import cost -0.5% => +0.6% of sales / OPM 33% = +1.8% EBITDA x persistence 0.4 -> +0.8. Empirical +0.92 (t=0.8) agrees.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "TORNTPHARM",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "RM ~25% of sales; feedstock-linked ~8%: +10% -> +0.8% of sales / OPM 33% = -2.4% EBITDA; NLEM formulations allow WPI-linked annual price increase (~25% of India sales) -> net -1.7%, persistence 0.3, EV/MCap 1.1 -> -0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_NPPA_DRUG_PRICE_CONTROL",
+   "dst": "TORNTPHARM",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "India branded generics ~55-60% of sales post-JB (model estimate). A tightening step (NLEM expansion, trade-margin caps, UCPMP enforcement) on ~25% of India sales cutting prices 5% -> -0.7% of group sales; /OPM 33% = -2.1% EBITDA; cardiac/diabetes brands where Torrent is strong could be hit harder; structural (persistence 1.0), EV/MCap 1.08, probability-weighted -> -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Torrent+Pharma+Q2+FY27+JB+Chemicals+India+US+Brazil+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "headline context only; NPPA parameters from model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "TORNTPHARM",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Chronic-therapy volumes (cardiac, CNS, gastro) grow ~1.2x IPM; +5pp urban consumption growth -> +1pp IPM volume growth -> +1.5% earnings; defensive so low beta.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "TORNTPHARM",
+   "relation": "competition",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "US ~8-9% of pre-JB sales, revenue +24% YoY in Q2 (Upstox). +5pp erosion on a ~Rs 1,600 cr annualised US book = -Rs 80 cr = -1.4% EBITDA, persistence 0.5 -> -0.8; plus peers' read-across -> -1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Torrent+Pharma+Q2+FY27+JB+Chemicals+India+US+Brazil+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Q2 FY27: revenue +51%, net profit -10% to Rs 534 cr (higher interest and amortisation after JB integration), US revenue +24%, EBITDA Rs 1,656-1,666 cr (CNBC TV18, Upstox, scanx)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "TORNTPHARM",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -8.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Dahej/Indrad plants supply US and EU; a warning letter on a main site would delay approvals (US ~10% of sales) -> EBITDA -3%, multiple compression; probability-weighted -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "TORNTPHARM",
+   "relation": "regulatory_risk",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "100% US tariff on branded/patented drugs since 2026-09-29 exempts select Indian specialty drugs; generics outside scope (model knowledge). Torrent's US exposure is generic and small -> -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "India among 20 jurisdictions exempted (Business Standard, Firstpost headlines)"
+    }
+   ]
+  },
+  {
+   "src": "C_AFRICA_LATAM",
+   "dst": "TORNTPHARM",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Brazil ~10-12% of sales (model knowledge); +1pp LatAm growth -> +0.8% local sales; BRL sensitivity separate (not a vocabulary node).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "TORNTPHARM",
+   "relation": "discount_rate",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FII ownership ~11% (model), moderate beta (0.45-0.5 to market per pack); +US$5bn inflow -> +2.0% relative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "TORNTPHARM",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Large field-force (MR) payroll ~20% of sales; +2pp wage inflation -> +0.4% of sales / OPM 33% = -1.2% EBITDA, persistence 0.5, EV/MCap 1.1 -> -0.7; trimmed -0.5 given price increases.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "JB Chemicals & Pharmaceuticals (acquired from KKR-owned entity)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "acquisition financed with debt; integration drives 51% revenue growth (model knowledge for deal; consolidated numbers from screener)"
+  },
+  {
+   "counterparty": "Wholesalers/stockists in India",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "chronic therapy distribution"
+  },
+  {
+   "counterparty": "Chinese/Indian API suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "some in-house API"
+  },
+  {
+   "counterparty": "Sun Pharma, Mankind, Cipla, Alkem",
+   "ticker": "SUNPHARMA",
+   "role": "competitor",
+   "importance": "high",
+   "note": "domestic branded market"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: JB integration synergy delivery, interest and amortisation drag",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Torrent+Pharma+Q2+FY27+JB+Chemicals+India+US+Brazil+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Management changes: Executive Director Amal Kelshikar resigned (disclosed 2026-10-16); further succession announcements",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Torrent+Pharmaceuticals+accepts+resignation+of+Executive+Director+Amal+Kelshikar+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "NPPA/NLEM revision or annual WPI-linked price notification for FY28",
+   "type": "regulatory",
+   "prob": 0.7,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "USFDA inspection outcome at a major plant (Dahej/Indrad)",
+   "type": "regulatory",
+   "prob": 0.08,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": -4.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 4,979 cr, op profit Rs 1,666 cr, PAT Rs 534 cr",
+  "trend": "Revenue step-up from JB; profit squeezed by financing and PPA amortisation; US +24%. Stock 12m +31%, 3m -5%.",
+  "valuation": "Price Rs 4,694; P/E 82 on reported EPS (inflated by amortisation); market cap Rs 1.79 lakh cr; analysts: Geojit Rs 5,581 target, Prabhudas Rs 5,500, Nomura Neutral Rs 4,670.",
+  "recent_developments": [
+   "2026-10-23 Q2 FY27: revenue +51%, PAT -10%, misses estimates (CNBC TV18)",
+   "2026-10-29 scanx: EBITDA +53% to Rs 1,656 cr",
+   "2026-10-16 Executive Director Amal Kelshikar resigns",
+   "2026-09-28 Torrent raises investment in Torrent Urja 27 to Rs 11.88 cr (captive power 26% stake)",
+   "2026-10-07 RBI hiked repo 25bp"
+  ]
+ },
+ "key_risks": [
+  "Leverage and amortisation weigh on EPS after JB",
+  "Integration/synergy slippage",
+  "India price control and trade-margin regulation",
+  "USFDA risk at Dahej/Indrad",
+  "Premium valuation vs defensive peers"
+ ],
+ "upside_triggers": [
+  "JB synergy beats",
+  "Deleveraging faster than planned",
+  "Brand launches (obesity, diabetes) in India",
+  "Brazil growth"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_NPPA_DRUG_PRICE_CONTROL",
+   "type": "POLICY",
+   "name": "India NPPA/NLEM drug price control and trade-margin regulation",
+   "ssu": "+1 = one tightening step (NLEM expansion or trade-margin cap)"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/TORNTPHARM/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in consolidated quarterly, annual and balance sheet"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Torrent+Pharma+Q2+FY27+JB+Chemicals+India+US+Brazil+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 results headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "US tariff relief"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "Repo hike"
+  },
+  {
+   "url": "market_impact/data/packs/TORNTPHARM.md",
+   "date": "2026-11-05",
+   "what": "evidence pack"
+  }
+ ],
+ "ticker": "TORNTPHARM",
+ "as_of": "2026-11-05"
+}

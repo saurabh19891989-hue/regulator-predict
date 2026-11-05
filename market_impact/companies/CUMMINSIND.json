@@ -1,0 +1,420 @@
+{
+ "ticker": "CUMMINSIND",
+ "name": "Cummins India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Indian arm of Cummins Inc. (USA, 51% promoter). Designs, makes and services diesel and alternative-fuel engines (2.8-100 L) and generator sets up to 3 MW, plus alternators, filtration, turbo components and aftermarket. Segments: Power Generation (largest, includes data-centre and commercial backup), Industrial (rail, mining, construction, marine, defence), Distribution (parts and service) and exports. Debt-free, ~70% payout, high ROE (30%). FY26 sales Rs 12,143 cr, OPM 21%; the Sep-2026 quarter shows OPM collapsing to 15%, the key debate. Revenue-segment splits are from model knowledge, not freshly sourced.",
+ "revenue_mix": [
+  {
+   "segment": "Power Generation (gensets, alternators)",
+   "share_pct": 60,
+   "geography": "mostly India; model estimate"
+  },
+  {
+   "segment": "Industrial engines",
+   "share_pct": 15,
+   "geography": "India (rail, mining, construction)"
+  },
+  {
+   "segment": "Distribution (parts, service, aftermarket)",
+   "share_pct": 25,
+   "geography": "India + exports"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COPPER",
+   "dst": "CUMMINSIND",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Copper (alternator windings, cables, imported Stamford alternators) ~8% of costs (model estimate; materials+resale were 66.5% of revenue in Q1 FY27 vs 63.0%). +10% copper -> costs +0.8% -> at 15% OPM EBITDA -5.3%; ~50% passed on with a 1-2 quarter lag -> -2.7%; EV/MCap ~0.97; persistence 0.25 -> ~-0.65, rounded to -0.8 given Q2 evidence that recovery is lagging. Pack shows +0.89 (t=+1.1) which is demand-cycle co-movement, not a cost channel; disagreement noted, weight shrunk toward zero range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "CUMMINSIND",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Steel/castings/forgings ~12% of costs (model estimate). +7% -> costs +0.84% -> EBITDA -5.6% at 15% OPM; half recovered via price lists with a lag; persistence 0.3; EV/MCap 0.97 -> ~-0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "CUMMINSIND",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.9,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Aluminium (alternator/engine castings) ~4% of costs; +10% -> costs +0.4% -> EBITDA -2.7%; half recovered, persistence 0.25 -> ~-0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "NEW_GENSET_PRICE_COMPETITION",
+   "dst": "CUMMINSIND",
+   "relation": "competition",
+   "w": -7.0,
+   "w_low": -14.0,
+   "w_high": -2.5,
+   "lag": "0-3m",
+   "mechanism": "Domestic power-gen is ~45% of revenue (model estimate). +5 pp realised-price erosion on that slice = -2.25% of revenue, nearly all falling to EBITDA -> EBITDA -15% at 15% OPM; persistence 0.5; EV/MCap 0.97 -> ~-7. Q2 FY27 OPM fell ~680 bp YoY (22%->15%) and revenue grew only 4%, consistent with price/mix/cost-recovery pressure; cause not confirmed from management commentary (earnings call not retrieved).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "pack: screener.in + Google News headlines (ET, NDTV Profit, CNBC TV18)",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 OPM 15% vs 22% a year ago; stock -10 to -15% on result day"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "CUMMINSIND",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Industrial engines, gensets and distribution are capex-linked. +10% private capex growth -> revenue elasticity ~0.6 -> +6% revenue; incremental EBITDA margin ~30% of revenue -> EBITDA +1.8% of revenue = +12% on 15% OPM; persistence 0.5; EV/MCap 0.97 -> ~+5.8, haircut to +5 for operating-leverage uncertainty.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "CUMMINSIND",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Infrastructure, mining, rail, construction-equipment engines and large gensets for public projects. +10% govt capex -> revenue +2.5% -> EBITDA +5% (30% incremental margin on 15% OPM) -> x0.5 persistence x0.97 -> ~+2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "CUMMINSIND",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.0,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Data-centre backup power is a headline growth driver (HDFC Sky 2026-10-01 'capex revival' piece; a Q2 FY26 analyst note flagged data-centre execution as unusually high and not repeating at that scale). Assume DC ~15% of power-gen orders; +1 theme unit = +20% DC demand -> +3% revenue at 35% contribution margin -> EBITDA +7%; persistence 0.6 -> ~+4. Wide range because DC order lumpiness and price competition erode the margin.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "CUMMINSIND",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -1.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Exports ~20-25% of revenue (model estimate) vs imported components (alternators, electronics, group purchases) ~16% of revenue. +3% USD/INR: export revenue +0.7% of revenue, imported cost +0.5% of revenue -> net ~+0.2% of revenue, largely hedged -> ~neutral.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "CUMMINSIND",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Debt-free (interest Rs 3 cr/qtr) so no funding cost; effect is via valuation duration (P/E 49.5, ROE 30%) and customers' financing of capex. +25 bp -> ~-1% on a long-duration multiple, in line with high-P/E capital goods.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "CUMMINSIND",
+   "relation": "macro_transmission",
+   "w": 2.3,
+   "w_low": 0.8,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Pack: +2.53 per +5% S&P (t=+3.1, beta to Nifty 0.73). Interpreted as AI/data-centre capex and parent-group (Cummins Inc.) sentiment proxy; mechanism partly overlaps T_DATA_CENTRES_IN so central weight shrunk slightly.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CUMMINSIND.md",
+     "date": "2026-11-05",
+     "note": "t=+3.1"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "CUMMINSIND",
+   "relation": "macro_transmission",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Pack shows -3.78 per +15% coal (t=-2.3) but there is no clear fundamental channel (coal-fired power buyers are not genset customers; higher coal = India power cost stress could even raise backup-power demand). Weight shrunk to -1.0 pending a mechanism; treat as statistical.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CUMMINSIND.md",
+     "date": "2026-11-05",
+     "note": "t=-2.3"
+    }
+   ]
+  },
+  {
+   "src": "C_GCC",
+   "dst": "CUMMINSIND",
+   "relation": "geopolitical_exposure",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Exports (Middle East, Africa, Europe, SE Asia) are ~20-25% of revenue; GCC infrastructure/oil-gas capex drives export gensets and engines. +1 pp GCC growth -> export revenue +1.5% -> EBITDA +3% -> x0.5 -> ~+1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "CUMMINSIND",
+   "relation": "policy_effect",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Small direct US export share; indirect via Cummins group intercompany flows and Indian customers' capex confidence. +10 pp tariff -> ~-0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Cummins Inc. (USA)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "51% promoter; technology licences, royalties, imported components and export channel. US EPA heavy-duty NOx rules weigh on parent sentiment (UBS target cut 2026-09-30, Investing.com)."
+  },
+  {
+   "counterparty": "Data-centre developers / colocation operators",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Large backup genset orders; lumpy"
+  },
+  {
+   "counterparty": "Kirloskar Oil Engines, Caterpillar/Rolls-Royce mtu, Mahindra Powerol, Kohler",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Genset price competition; none of the listed peers in Nifty 200 data set"
+  },
+  {
+   "counterparty": "Indian Railways (diesel locomotive engines)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Industrial segment"
+  },
+  {
+   "counterparty": "Steel/casting/alternator vendors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Cost pass-through with lag"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Dec-2026 quarter): test of whether OPM recovers from 15%",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 10.0,
+   "source": "model knowledge of reporting calendar; Q2 reported 2026-11-04/05"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4 FY27 results and final dividend declaration",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "Management/analyst follow-up: brokerages cut estimates and targets after the Q2 miss; possible further de-rating or stabilisation",
+   "type": "guidance",
+   "prob": 0.8,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 4.0,
+   "source": "inferred from 2026-11-05 headlines"
+  },
+  {
+   "date": "2027-06",
+   "event": "Large data-centre/commercial genset order announcements or evidence of data-centre order slowdown",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "HDFC Sky 2026-10-01; Yahoo Finance 2026-10-28 headline (parent data-centre deal)"
+  },
+  {
+   "date": "2027-03",
+   "event": "US EPA heavy-duty emission regulation outcome affecting Cummins Inc. group sentiment (indirect)",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "Investing.com 2026-09-30 (UBS)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 3,301 cr per screener (+4% YoY; press cites Rs 3,247 cr), OPM 15% vs 22%, net profit Rs 507 cr (-18% YoY; one outlet cites Rs 467 cr after exceptional items). Q1 FY27: OPM 18%.",
+  "trend": "Three consecutive quarters of falling OPM (21% -> 18% -> 15%) with flat-to-low growth; stock -15% on result day, -23% over 3 months.",
+  "valuation": "P/E 49.5, P/B 14, market cap Rs 1.15 lakh cr (screener, 2026-11-05) before part of the result-day fall; 5y profit CAGR 31%. Historically a premium-multiple stock; de-rating risk if OPM does not recover.",
+  "recent_developments": [
+   "2026-09-30 UBS lowers target on EPA regulation concerns (Investing.com)",
+   "2026-10-01 HDFC Sky: Cummins India a 'key winner of India's capex revival'",
+   "2026-11-04/05 Q2 FY27 results: profit -18% YoY, margin -680 bp, shares fall 10-15% (ET, NDTV Profit, CNBC TV18, Business Standard)",
+   "FII holding fell to 19.5% from 21.2%, DII rose to 20.8% (screener, Sep 2026)"
+  ]
+ },
+ "key_risks": [
+  "Margin reset: price competition in gensets and slow cost pass-through; cause not yet confirmed from the earnings call",
+  "Data-centre order lumpiness and price pressure",
+  "Valuation (P/E ~50) leaves little room for further misses",
+  "Parent-group (Cummins Inc.) regulatory/sentiment overhang from EPA rules",
+  "Copper/steel/aluminium spikes with lagged pass-through"
+ ],
+ "upside_triggers": [
+  "Evidence that Q2 margin hit is one-off (mix, provisions, warranty, inventory) and Q3 OPM returns to 18%+",
+  "Large data-centre / infrastructure order wins",
+  "Export recovery in Middle East/Africa",
+  "Cost deflation in copper/aluminium (aluminium -19.6% since June)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_GENSET_PRICE_COMPETITION",
+   "type": "FACTOR",
+   "name": "Genset / engine price competition in India",
+   "ssu": "+5 pp realised-price erosion in the domestic genset/engine market"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/CUMMINSIND.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, price performance, empirical sensitivities, headlines"
+  },
+  {
+   "url": "https://www.sahi.com/blogs/cummins-india-q1-results-fy27",
+   "date": "2026-07",
+   "what": "Q1 FY27 EBITDA margin 17.98%, materials 66.5% of revenue (via web search summary)"
+  },
+  {
+   "url": "https://trendlyne.com/posts/5397555/cummins-india-q2fy26-result-review",
+   "date": "2025-11",
+   "what": "Q2 FY26 review: data-centre execution unusually high (prior-year base)"
+  },
+  {
+   "url": "https://www.investing.com (UBS target cut on EPA regulation)",
+   "date": "2026-09-30",
+   "what": "Pack headline only"
+  },
+  {
+   "url": "https://hdfcsky.com (How Cummins India Became a Key Winner of India's Capex Revival)",
+   "date": "2026-10-01",
+   "what": "Pack headline only"
+  }
+ ]
+}

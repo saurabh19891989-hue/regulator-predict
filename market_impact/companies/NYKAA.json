@@ -1,0 +1,326 @@
+{
+ "ticker": "NYKAA",
+ "name": "FSN E-Commerce Ventures Ltd. (Nykaa)",
+ "as_of": "2026-11-05",
+ "industry": "I_RETAIL",
+ "tier": "MIDCAP_100",
+ "business_summary": "Omnichannel beauty, personal-care and fashion retailer (Nykaa, Nykaa Fashion, Nykaa Man, owned brands such as Kay Beauty and Dot & Key; Superstore and distribution arms). TTM sales Rs 11,309 cr (+28%), EBITDA Rs 951 cr (8.4%), profit Rs 327 cr. Sep-26 quarter: sales Rs 3,006 cr (+28%), EBITDA Rs 263 cr (8.7%), PAT Rs 101 cr (about 3x y/y); fashion turned profitable; board approved acquiring 82% of Simply Nam (premium makeup) on 2026-11-04. Stock Rs 347, +38% in 12m, P/E ~300 and 60x book: priced for years of margin expansion. Promoters 52.07%, FIIs rose to 15.65%.",
+ "revenue_mix": [
+  {
+   "segment": "beauty and personal care (BPC)",
+   "share_pct": 75,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "fashion",
+   "share_pct": 14,
+   "geography": "India"
+  },
+  {
+   "segment": "others (distribution, Superstore, Nysaa)",
+   "share_pct": 11,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "product_cogs_third_party_and_owned_brands",
+   "share_of_costs_pct": 58
+  },
+  {
+   "input": "fulfilment_logistics",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "marketing_and_discounts",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "employee_rent_other",
+   "share_of_costs_pct": 18
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "NYKAA",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 2.5,
+   "w_high": 10.0,
+   "lag": "3-12m",
+   "mechanism": "Discretionary urban beauty/fashion, beta ~1.2: +5pp urban growth -> +6pp GMV/revenue; contribution margin ~28% on TTM sales Rs 11,309 cr => +Rs 190 cr = 20% of EBITDA Rs 951 cr; EV/MCap 1.0; persistence 0.3 (cyclical) => +6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 results per Economic Times 2026-11-04 and screener pack"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "NYKAA",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": ">12m",
+   "mechanism": "Beauty premiumisation (higher AOV, imported and prestige brands) is the structural leg of the thesis; judgemental +2 per unit with low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "NEW_BEAUTY_RETAIL_COMPETITION",
+   "dst": "NYKAA",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Rivals (Tira by Reliance, Sephora, Purplle, Amazon/Flipkart, quick commerce) raise discounting/marketing; +1 cuts EBITDA margin ~100 bp = Rs 110 cr = 11% of EBITDA x persistence 0.3 => -3.3; central -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "NYKAA",
+   "relation": "competition",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Blinkit/Instamart/Zepto expanding beauty assortment: ambiguous (channel for Nykaa brands, rival for replenishment); modest negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "NYKAA",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Equity duration very long (P/E ~300): +25 bp repo -> ~-3% fair value, one-third transmitted => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "NYKAA",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Empirical -1.67/SSU (t=-2.4) - the only significant beta. Long-duration growth stocks sell off when global yields rise. US 10Y is 4.89%, +9.4% since June; carried at -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Empirical sensitivity from market_impact/data/packs/NYKAA.md"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "NYKAA",
+   "relation": "discount_rate",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "High-beta (~1.0-1.1) midcap with FII holding up 12.40% -> 15.65% in two quarters; +US$5 bn/qtr inflow adds residual +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "NYKAA",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Imported finished beauty brands and ingredients ~10% of COGS (Rs 800 cr): +3% -> Rs 24 cr = 2.5% of EBITDA x 60% unrecovered x persistence 0.5 => -0.75 to -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Q2/H1 FY27 financials per screener.in pack; cost shares are model estimates unless stated"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "NYKAA",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 0.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Beauty and personal care sits mostly in the 18% slab; broad cut (+1) would lift volumes ~5% => +3. Low probability: 57th GST Council (2026-10-08) made no rate cuts.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NYKAA.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "PIB / ET 2026-10-08"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Brand partners (L'Oreal, Estee Lauder, Unilever, P&G, Indian D2C brands)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Marketplace and inventory model; brand terms drive gross margin."
+  },
+  {
+   "counterparty": "Tira (Reliance Retail), Sephora India, Purplle, Amazon, Flipkart, Myntra",
+   "ticker": "RELIANCE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Beauty competition."
+  },
+  {
+   "counterparty": "Owned-brand contract manufacturers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Kay Beauty, Dot & Key, Nykaa Cosmetics."
+  },
+  {
+   "counterparty": "Simply Nam (82% acquisition, premium makeup)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "ET 2026-11-04."
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (festive quarter, highest GMV)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 10.0,
+   "source": "model knowledge of reporting calendar"
+  },
+  {
+   "date": "2026-12",
+   "event": "Completion of Simply Nam 82% stake acquisition",
+   "type": "corporate_action",
+   "prob": 0.8,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.5,
+   "source": "Economic Times 2026-11-04"
+  },
+  {
+   "date": "2026-12",
+   "event": "Block deals / promoter or PE sell-downs into strength",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 0.0,
+   "source": "model inference; DII stake fell 25.35% -> 22.35%"
+  },
+  {
+   "date": "2027-03",
+   "event": "Index rebalancing candidate (Nifty Next 50 inclusion given Rs ~1 lakh cr market cap)",
+   "type": "other",
+   "prob": 0.2,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 4.0,
+   "source": "model inference from market cap and NSE index methodology"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 3,006 cr (+28%), EBITDA Rs 263 cr (8.7%), PAT Rs 101 cr (+207%).",
+  "trend": "28% growth with margin expansion from 4.3% (FY22) to 8.4% TTM; fashion profitable; Nomura and Jefferies raised targets on 2026-11-05.",
+  "valuation": "P/E ~300, price/book 60x, market cap Rs 99,734 cr; EV/EBITDA >100x TTM.",
+  "recent_developments": [
+   "2026-10-04: Q2 update - net revenue growth late twenties, GMV high twenties.",
+   "2026-10-29: stock at 52-week high.",
+   "2026-11-04: Q2 PAT triples to Rs 101 cr; Simply Nam acquisition.",
+   "2026-11-05: Nomura, Jefferies hike target prices; shares +3%."
+  ]
+ },
+ "key_risks": [
+  "Extreme valuation (P/E 300) - any growth or margin miss produces large drawdowns",
+  "Competition from Tira, Sephora, quick commerce",
+  "Discretionary-demand slowdown",
+  "Rising global yields",
+  "Promoter/DII selling into strength"
+ ],
+ "upside_triggers": [
+  "Continued 25%+ growth with EBITDA margin trending to 10%+",
+  "Fashion profitability scaling",
+  "Owned-brand mix",
+  "Index inclusion"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_BEAUTY_RETAIL_COMPETITION",
+   "type": "FACTOR",
+   "name": "Beauty retail competition intensity (Tira, Sephora, Purplle, quick commerce)",
+   "ssu": "+1 = materially sharper discounting/expansion by rival beauty retailers and q-commerce"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/NYKAA.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, price, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Nykaa+Q2+FY27+Simply+Nat+GMV+EBITDA+margin+when:90d",
+   "date": "2026-11-04",
+   "what": "Q2 results coverage (ET, Investing.com, Zee Business)"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels and moves"
+  }
+ ]
+}

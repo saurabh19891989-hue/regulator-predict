@@ -1,0 +1,422 @@
+{
+ "ticker": "BHARTIARTL",
+ "name": "Bharti Airtel Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_TELECOM",
+ "tier": "NIFTY_50",
+ "business_summary": "India's second-largest mobile operator (premium ARPU Rs264 in Q1 FY27; 681m customers across 15 countries incl. ~14 in Africa), with fixed broadband/DTH, enterprise (Airtel Business, Nxtra data centres) and a 50% stake in Indus Towers (model knowledge). Q1 FY27 consolidated revenue Rs58,539 cr (+18.4% y/y), EBITDA Rs33.6k cr (57.4%), PAT Rs10.0k cr. Q2 FY27 results are due 2026-11-05 (today). Key themes: tariff repair (Oct-2026 postpaid +Rs50), Jio IPO (Rs30,213 cr), 5G monetisation, Africa growth.",
+ "revenue_mix": [
+  {
+   "segment": "India mobile",
+   "share_pct": 52,
+   "geography": "India"
+  },
+  {
+   "segment": "Africa",
+   "share_pct": 19,
+   "geography": "14 African countries (USD-linked)"
+  },
+  {
+   "segment": "Homes, enterprise, DTH, digital, others",
+   "share_pct": 29,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "network opex incl. energy and tower rentals",
+   "share_of_costs_pct": 35
+  },
+  {
+   "input": "licence fees/spectrum charges",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "employee and other opex",
+   "share_of_costs_pct": 53
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_TELECOM_TARIFFS",
+   "dst": "BHARTIARTL",
+   "relation": "output_price",
+   "w": 5.5,
+   "w_low": 3.0,
+   "w_high": 8.0,
+   "lag": "0-3m",
+   "mechanism": "India mobile revenue ~Rs1.2 lakh cr annualised (Q1 FY27 India business Rs41.2k cr/qtr, mobile ~75%); +10% ARPU = ~+Rs12k cr/yr at ~100% drop-through vs TTM consolidated EBITDA Rs1.25 lakh cr => +9.8% EBITDA; EV/MCap ~1.17 (net debt incl. leases ~Rs2 lakh cr, model estimate); persistence 0.5 => +5.7, trimmed to +5.5 as the Oct-2026 postpaid hike (+Rs50) is partly priced. Pack has no tariff proxy.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://telecomtalk.info/bhartiairtel-arpu-rs264-postpaid-base-30million-q1fy27/1010410/",
+     "date": "2026-08",
+     "note": "Q1 FY27: ARPU Rs264, India EBITDA margin 60.1%, consol revenue Rs58,539 cr, EBITDA Rs33,599 cr"
+    },
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/jio-ipo-why-bharti-airtel-share-price-is-rising-ahead-of-rs-30213-crore-offer-562037-2026-10-16",
+     "date": "2026-10-16",
+     "note": "Jio IPO Rs30,213 cr; Airtel postpaid +Rs50; Nomura base case tariff hike Dec-qtr"
+    },
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_TELECOM_SHARE_COMPETITION",
+   "dst": "BHARTIARTL",
+   "relation": "competition",
+   "w": -5,
+   "w_low": -12,
+   "w_high": -1,
+   "lag": "3-12m",
+   "mechanism": "+1 SSU = Jio/Vi price discounting or share grab costing Airtel ~1pp revenue share / 3% ARPU: India mobile revenue -3% (-Rs3.7k cr) => EBITDA -3%; x1.17 x persistence 0.5 = -1.8, scaled up to -5 for the Jio post-IPO deleveraging risk and asymmetric tail. Airtel leads ARPU (Rs264 vs Vi Rs195, Jio ~ higher scale), so asymmetric risk is moderate.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/jio-ipo-why-bharti-airtel-share-price-is-rising-ahead-of-rs-30213-crore-offer-562037-2026-10-16",
+     "date": "2026-10-16",
+     "note": "Jio IPO Rs30,213 cr; Airtel postpaid +Rs50; Nomura base case tariff hike Dec-qtr"
+    },
+    {
+     "source": "https://telecomtalk.info/bhartiairtel-arpu-rs264-postpaid-base-30million-q1fy27/1010410/",
+     "date": "2026-08",
+     "note": "Q1 FY27: ARPU Rs264, India EBITDA margin 60.1%, consol revenue Rs58,539 cr, EBITDA Rs33,599 cr"
+    },
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BHARTIARTL",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Net debt ~Rs2 lakh cr (incl. leases) with ~Rs22k cr TTM interest; ~half floating/short-tenor: +25bp = ~Rs250 cr = 0.2% of EBITDA and ~0.7% of PAT (TTM Rs36.4k cr); plus household-spending channel. -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BHARTIARTL",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "P/E 41 (long-duration compounder): +25bp on ~11% cost of equity lowers fair value ~1.5%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BHARTIARTL",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Offsetting: Africa (~15-20% of EBITDA, USD-linked revenue, model estimate) gains in INR terms; USD debt/leases (~40% of net debt, estimate) and imported capex (~Rs39k cr/yr capex, partly USD) lose. Net small negative. Pack: -0.50 (t -0.5), consistent.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "BHARTIARTL",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Diesel/power for towers is a pass-through via Indus; Africa units (Nigeria, others) see FX/oil linkage that can be positive when oil rises. Pack shows +0.55 (t +1.5): positive sign probably from defensive rotation when oil spikes and Africa revenue linkage; model keeps near-zero with a wide band.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "C_AFRICA_LATAM",
+   "dst": "BHARTIARTL",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Airtel Africa ~14 countries, ~15-20% of group EBITDA (estimate); +1pp regional growth => ~+1% Africa revenue => +0.2% group EBITDA; x1.17 x1.0 structural, plus an FX-stability benefit, rounded to 0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://telecomtalk.info/bhartiairtel-arpu-rs264-postpaid-base-30million-q1fy27/1010410/",
+     "date": "2026-08",
+     "note": "Q1 FY27: ARPU Rs264, India EBITDA margin 60.1%, consol revenue Rs58,539 cr, EBITDA Rs33,599 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BHARTIARTL",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 25.4% (down from 27.8% in Mar 2026): FPI selling has been a drag; +US$5bn quarterly inflows reverse part. Pack shows US equities -0.92 (t -1.7): Airtel acts as a defensive when US equities rally and flows rotate to tech.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "BHARTIARTL",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Incremental data usage, upgrades to postpaid/home broadband: +1pp GDP ~ +0.5% revenue => +0.8% EBITDA x1.17 x0.5 = +0.5, plus enterprise demand; +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://telecomtalk.info/bhartiairtel-arpu-rs264-postpaid-base-30million-q1fy27/1010410/",
+     "date": "2026-08",
+     "note": "Q1 FY27: ARPU Rs264, India EBITDA margin 60.1%, consol revenue Rs58,539 cr, EBITDA Rs33,599 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "BHARTIARTL",
+   "relation": "discount_rate",
+   "w": 0.3,
+   "w_low": -0.8,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Pack gives +0.79 per +25bp (t +1.9): defensive/low-beta stocks relatively benefit when yields rise on strong-growth risk-on-risk-off rotation; fundamentals imply a slightly negative discount-rate effect. Weight shrunk to +0.3 with sign uncertain.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AGR_SPECTRUM_RELIEF",
+   "dst": "BHARTIARTL",
+   "relation": "policy_effect",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Relief to Vi reduces its default/exit risk (positive for sector pricing) but keeps a weaker rival alive: net competition effect on Airtel small negative. Airtel also pays its own AGR/spectrum instalments (Rs ~Rs 5-10k cr/yr, estimate).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "BHARTIARTL",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Nxtra data-centre arm and enterprise connectivity: ~3% of EBITDA growing 20%+ (estimate): +0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "INDUSTOWER",
+   "dst": "BHARTIARTL",
+   "relation": "holding_stake",
+   "w": 0.039,
+   "w_low": 0.03,
+   "w_high": 0.045,
+   "lag": "0-3m",
+   "mechanism": "Airtel holds ~50% of Indus Towers (model knowledge; Indus promoter group 51.26%): at Indus mcap Rs1.0 lakh cr the stake is ~Rs50k cr = ~3.9% of Airtel's Rs12.84 lakh cr mcap, so +1% Indus equity = +0.039% Airtel (holding discount ignored).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "mcap Rs1,00,329 cr, promoters 51.26%"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Reliance Jio",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Jio Platforms IPO Rs30,213 cr (closed 2026-10-24)"
+  },
+  {
+   "counterparty": "Vodafone Idea",
+   "ticker": "IDEA",
+   "role": "competitor",
+   "importance": "high",
+   "note": "third player; subscriber share"
+  },
+  {
+   "counterparty": "Indus Towers",
+   "ticker": "INDUSTOWER",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~50% stake plus largest tenant"
+  },
+  {
+   "counterparty": "Ericsson, Nokia, Samsung, Huawei-free RAN vendors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "5G RAN capex"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-05",
+   "event": "Q2 FY27 results (today): ARPU, India margin, Africa, capex",
+   "type": "results",
+   "prob": 1.0,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "https://www.livemint.com/ (headline 2026-11-05, via evidence pack)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Next industry tariff hike (prepaid) after Airtel postpaid +Rs50; Nomura base case Dec quarter",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": 3.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.businesstoday.in/markets/stocks/story/jio-ipo-why-bharti-airtel-share-price-is-rising-ahead-of-rs-30213-crore-offer-562037-2026-10-16"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge (quarterly cadence)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Spectrum auction / backhaul spectrum fee decision (TRAI proposal; telcos urged Centre to accept, 2026-10-29)",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 1.0,
+   "source": "https://www.livemint.com/ (headline 2026-10-29 via search; body not read)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun-2026): revenue Rs58,539 cr (+18.4% y/y, +5.7% q/q), EBITDA Rs33,599 cr (57.4%), India EBITDA margin 60.1%, PAT Rs10,012 cr; ARPU Rs264 (Rs250 yr ago); postpaid base 30m (+1m, record); India capex Rs9,698 cr. Q2 due 2026-11-05.",
+  "trend": "Steady double-digit revenue growth, expanding margins (OPM 49% FY25 -> 57% TTM), ARPU rising ~5-6% y/y",
+  "valuation": "P/E 41.1, mcap Rs12.84 lakh cr, price Rs2,057; 8.4x book; 1.2% dividend yield; EV/EBITDA ~12x TTM (own estimate with net debt ~Rs2 lakh cr)",
+  "recent_developments": [
+   "2026-10-07: postpaid tariffs +Rs50 with complimentary international roaming; shares +2% (Business Today, Moneycontrol headlines)",
+   "2026-10-16: shares rise ahead of Jio IPO Rs30,213 cr (Business Today)",
+   "2026-09-30: Kotak Equities sees 24% upside, EBITDA CAGR 14% (Business Today headline)",
+   "2026-11-04: Q2 preview: double-digit revenue growth expected, ARPU in focus (Business Standard headline)",
+   "2026-11-05: Q2 results due; stock +13.7% in 1 month to Rs2,058"
+  ]
+ },
+ "key_risks": [
+  "Tariff-hike delay or Jio IPO-funded price aggression",
+  "Africa FX devaluations (naira, kwacha) and Nigeria regulation",
+  "Spectrum/AGR/backhaul fee outflows",
+  "Capex intensity of 5G and fibre",
+  "Valuation premium (41x P/E)"
+ ],
+ "upside_triggers": [
+  "Industry prepaid hike in Dec-quarter",
+  "Postpaid and home-broadband mix shift",
+  "Africa margin expansion and de-leveraging",
+  "Strong Q2 ARPU beat (>Rs270)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_TELECOM_SHARE_COMPETITION",
+   "type": "THEME",
+   "name": "Jio/Airtel price and share competition vs Vi",
+   "ssu": "+1 = intensification costing the incumbent ~1pp revenue share / 3% ARPU"
+  },
+  {
+   "id": "NEW_AGR_SPECTRUM_RELIEF",
+   "type": "POLICY",
+   "name": "Government AGR/spectrum dues relief for stressed telcos",
+   "ssu": "+1 = further material relief worth ~Rs20,000 cr NPV"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BHARTIARTL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://telecomtalk.info/bhartiairtel-arpu-rs264-postpaid-base-30million-q1fy27/1010410/",
+   "date": "2026-08",
+   "what": "Q1 FY27: ARPU Rs264, India EBITDA margin 60.1%, consol revenue Rs58,539 cr, EBITDA Rs33,599 cr"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/jio-ipo-why-bharti-airtel-share-price-is-rising-ahead-of-rs-30213-crore-offer-562037-2026-10-16",
+   "date": "2026-10-16",
+   "what": "Jio IPO Rs30,213 cr; Airtel postpaid +Rs50; Nomura base case tariff hike Dec-qtr"
+  }
+ ]
+}

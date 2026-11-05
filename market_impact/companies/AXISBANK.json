@@ -1,0 +1,368 @@
+{
+ "ticker": "AXISBANK",
+ "name": "Axis Bank Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "NIFTY_50",
+ "business_summary": "India's third-largest private-sector bank (retail, SME, corporate, treasury; Rs13.8 lakh cr gross advances at Sep 2026; branches across India plus DIFC and Singapore and a GIFT City unit). Includes subsidiaries Axis Finance, Axis AMC, Axis Securities, Axis Capital and the (Max-linked) Axis Max Life stake (model knowledge). Promoter holding only 7.86%; FIIs 38%, DIIs 44.5%. Q2 FY27 PAT Rs7,003cr standalone (+38% y/y) as provisions fell, but NII growth lagged balance-sheet growth and the shares fell ~4% on the results as costs and fees missed estimates.",
+ "revenue_mix": [
+  {
+   "segment": "retail banking incl. cards/PL/mortgages",
+   "share_pct": 45,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "wholesale / corporate and SME",
+   "share_pct": 40,
+   "geography": "India ~95%, DIFC/Singapore ~5% (model estimate)"
+  },
+  {
+   "segment": "treasury and other",
+   "share_pct": 15,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "AXISBANK",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -3.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Repo +25bp (RBI hiked to 5.50% on 2026-10-07). ~50% of loans repo/EBLR-linked reprice at once while deposits lag, so a transient NIM gain (sell-side: up to ~10bp for large banks) but Axis has the highest term-deposit/FCNR(B) share among top banks and the hike lifts de-rating risk. NIM +4bp on ~Rs17 lakh cr earning assets = Rs680cr/yr = ~2% of PAT; persistence 0.25 -> +0.5; offset by P/E compression from higher discount rate (-1.5) => ~-1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (The Hindu / SCC Online)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+could+boost+large+banks+net+interest+margins+10+bps+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-11",
+     "note": "report: large banks NIM +up to 10bp (Moneycontrol)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "AXISBANK",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "10y +25bp: AFS/FVTPL book ~Rs1 lakh cr x mod. duration ~2.5 x 0.25% = ~Rs600cr MTM loss = ~1.5% of annual PAT (persistence 0.25 -> -0.4); cost-of-equity +25bp on a 13x P/E bank ~ -1.6%. Total ~-2. Model-knowledge estimate of investment book size.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/AXISBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "AXISBANK",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth lifts Axis advances (already +23% y/y, Rs13.8 lakh cr gross) ~3pp more; NII +3% on constant NIM, opex leverage => PAT +4%; persistence 0.5-0.75 => ~+3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Axis+Bank+Q2+business+update+gross+advances+13.8+lakh+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "note": "gross advances +23% y/y (Economic Times)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "AXISBANK",
+   "relation": "funding_cost",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Deposit growth +3pp eases the LDR/CD-ratio constraint (deposits +21% vs advances +23%) and lowers marginal cost of funds ~3-5bp => NII +1%; plus unconstrained loan growth. ~+2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/AXISBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "AXISBANK",
+   "relation": "regulatory_risk",
+   "w": -8.5,
+   "w_low": -14.0,
+   "w_high": -4.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost on Rs13.8 lakh cr advances = Rs6,900cr pre-tax = ~Rs5,200cr post-tax vs TTM PAT Rs30,000cr = -17% EPS; persistence 0.5; EV/MCap ~1 => -8.5. Asset quality currently improving (provisions fell in Q2) so near-term skew is mild.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Axis+Bank+Q2+FY27+NIM+slippages+GNPA+credit+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 PAT +38% to Rs7,003cr (standalone), advances +23%, deposits +21%, NII +12%; missed estimates (Moneycontrol/Fortune India/Reuters)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "AXISBANK",
+   "relation": "demand_driver",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Unsecured retail (cards, PL) ~Rs1.2 lakh cr (model estimate ~9% of loans): +1pp delinquency x LGD 80% = ~Rs960cr pre-tax = ~2.4% of PAT; persistence 0.5 -> ~-1.2; plus sentiment/sector de-rating => -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/AXISBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "AXISBANK",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "A tightening step (risk-weights, LCR run-off, ECL transition from FY28, digital-deposit outflow norms) raises capital/liquidity costs; CET1 buffer is comfortable so effect is mainly P/E: ~-2.5 per step.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (The Hindu / SCC Online)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "AXISBANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 38.05% (down from 42.04% in Mar 2026): +US$5bn/qtr FPI inflow historically lifts large private banks ~2-4% market-adjusted (flow beta); empirical t-stats on market-adjusted macro series are weak so central shrunk to +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/AXISBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "AXISBANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP growth raises credit demand (~1.5x loan elasticity) and lowers credit costs; PAT +3-5%; persistence 0.5-1.0 => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/AXISBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "AXISBANK",
+   "relation": "geopolitical_exposure",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation: Brent up (pack: Brent already +49.5% 12m) -> CPI up, INR weaker -> RBI more hawkish (it hiked on 2026-10-07 'amid geopolitical tensions'), risk-off FPI selling of financials. Axis has DIFC/Dubai/Sharjah presence and Gulf NRI deposits. Est. -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+set+to+announce+repo+rate+decision+amid+geopolitical+tensions+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "DD India"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "AXISBANK",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "VIX +5pts => FPI risk-off; Axis beta 1.2-1.26 to Nifty; roughly -1.5% market-adjusted (empirical coefficient for VIX not significant).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/AXISBANK.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "AXISBANK",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -3.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Rupee weakness (+3%) triggers FPI outflows and imported inflation, but FCNR(B)-swap-related and Dubai/Singapore assets give small positive translation. Net ~-0.8; low confidence. Q2 NIM was dragged by FCNR(B) inflows (sell-side previews).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Axis+Bank+Q2+preview+NIM+may+fall+on+FCNR(B)+flows+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Business Standard"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "ICICI Bank / HDFC Bank / Kotak",
+   "ticker": "ICICIBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "deposit-gathering competition keeps CASA under pressure"
+  },
+  {
+   "counterparty": "Axis Max Life Insurance",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "stake value small vs bank (model knowledge)"
+  },
+  {
+   "counterparty": "Citi India consumer business (acquired Mar 2023)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "integrated; cost synergy mostly realised (model knowledge)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-16",
+   "event": "Q3 FY27 results (date inferred from prior-year cadence; Q2 reported 2026-10-17)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "inferred; Q2 date per Reuters 2026-10-17"
+  },
+  {
+   "date": "2026-12",
+   "event": "Next RBI MPC after 'calibrated tightening' hike to 5.50%: further hike would lift NIM expectations but hurt valuations",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Quarter-end FCNR(B) swap-window maturities and deposit-repricing cycle (NIM sensitivity)",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Axis+Bank+Q2+preview+NIM+may+fall+on+FCNR(B)+flows+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "RBI ECL provisioning framework effective 2027-04-01 (model knowledge; PSU banks flag large day-1 hits, Canara Rs15,000cr warning)",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Canara+Bank+15,000+crore+ECL+provision+warning+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Standalone PAT Rs7,003cr (+38% y/y) helped by lower provisions; gross advances +23% y/y, deposits +21%, NII +12%; NIM under pressure from FCNR(B) inflows and deposit mix; fee income and costs disappointed. Screener consolidated PAT Rs7,666cr flat q/q.",
+  "valuation": "P/E 13.2x, P/B ~1.7x (Rs1,275 / BV Rs738); within the 52w range Rs1,150-1,418; stock +1.5% 3m, +4.0% 12m, 1y vol 25%.",
+  "recent_developments": [
+   "2026-10-06: Q2 business update - gross advances Rs13.8 lakh cr (+23% y/y) (ET)",
+   "2026-10-07: RBI hikes repo to 5.50% (Axis 'defied' the post-MPC slump per The Week 2026-10-08)",
+   "2026-10-17/19: Q2 PAT +38% but misses on costs/fees; stock -4 to -5% on 2026-10-19, brokerages mostly kept Buy",
+   "FII ownership down 4pp in 6 months to 38.05%"
+  ]
+ },
+ "key_risks": [
+  "NIM compression if FCNR(B)/term-deposit funding persists and deposit competition intensifies",
+  "Unsecured retail and gold-loan stress (Reuters 2026-10-21 on NBFC gold-loan stress)",
+  "FPI selling of financials (FII share 42%->38%)",
+  "RBI prudential tightening / ECL transition",
+  "Cost ratio (Citi integration, branch expansion) not yet leveraging"
+ ],
+ "upside_triggers": [
+  "Further RBI hike repricing loans faster than deposits",
+  "Fee income recovery and cost normalisation in H2",
+  "Falling credit cost (provisions already lower in Q2)",
+  "FPI inflow return into large private banks after HDFC Bank stabilises"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/AXISBANK.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, price, empirical sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Axis+Bank+Q2+FY27+NIM+slippages+GNPA+credit+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-17",
+   "what": "Q2 results coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike to 5.50%"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+could+boost+large+banks+net+interest+margins+10+bps+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-11",
+   "what": "NIM impact of hike"
+  }
+ ]
+}

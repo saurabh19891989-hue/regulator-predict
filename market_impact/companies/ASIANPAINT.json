@@ -1,0 +1,369 @@
+{
+ "name": "Asian Paints Ltd.",
+ "industry": "I_BUILDING_MATERIALS",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest decorative-paint and home-decor company (~50%+ share of organised decorative paints; model knowledge). Sells wall paints, waterproofing, wall coverings, adhesives (via Sleek/Apco), kitchens/bath, lighting; international arm in ~15 countries. Raw materials (TiO2, monomers, resins, solvents, additives) are ~60% of sales and largely petrochemical-linked; profitability depends on price increases, mix and the competitive intensity from Grasim's Birla Opus. Net cash, ROCE ~26%, P/E ~49 so the stock is highly duration- and margin-sensitive.",
+ "revenue_mix": [
+  {
+   "segment": "Decorative paints India",
+   "share_pct": 85,
+   "geography": "India (urban ~60% / rural ~40%); approx, model knowledge"
+  },
+  {
+   "segment": "Industrial & protective coatings incl. JVs",
+   "share_pct": 5,
+   "geography": "India"
+  },
+  {
+   "segment": "International",
+   "share_pct": 9,
+   "geography": "Asia, Middle East, Africa"
+  },
+  {
+   "segment": "Home decor / others",
+   "share_pct": 1,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 35,
+   "note": "monomers, resins, solvents, additives, TiO2 (approx.)"
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 3,
+   "note": "direct fuel/freight"
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "other (advertising, distribution, TiO2 imports)",
+   "share_of_costs_pct": 50
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "ASIANPAINT",
+   "relation": "input_cost",
+   "w": -1.6,
+   "w_low": -3.0,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Monomers, resins, solvents, additives and TiO2 are ~35% of costs (gross margin 39.6% => RM ~60% of sales, ~72% of expenses; ~half feedstock-linked ~ 30-35%). +10% feedstock => +~3% costs => EBITDA -13% unpriced (costs/EBITDA = 4.3x); price hikes recover about half within 1-2 quarters => -6.5%; EV/MCap ~1.0, persistence 0.25 => ~-1.6. Q2 FY27 gross margin -349bp on raw-material inflation is the live example.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.indmoney.com/blog/stocks/asian-paints-q2-results-analysis",
+     "date": "2026-10-29",
+     "note": "Q2 FY27: cons sales +16.9% to Rs9,954cr; volume +6.8% (decorative +6.4%, value +14.5%); gross margin -349bp to 39.6%; PBDIT margin 15.6% (-202bp); PAT ~Rs1,068cr"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ASIANPAINT",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Direct crude channel only (diesel freight, mineral spirit, plastic packaging ~8% of costs, ~7% pass-through of +10% Brent => ~0.5% cost => EBITDA -2%, half recovered, persistence 0.3 => ~-0.3...-0.6). Indirect petrochemical channel is carried by F_CHEM_FEEDSTOCK to avoid double counting. Pack empirical -0.94 (t=-2.3) is larger because it also captures feedstock, INR and macro; model blends toward it.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASIANPAINT.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    },
+    {
+     "source": "market_impact/data/packs/ASIANPAINT.md",
+     "date": "2026-09-06",
+     "note": "pack/search headline (Upstox) 'what to expect from paint stocks as festive season nears, oil stays elevated' (headline via search; not read in full)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ASIANPAINT",
+   "relation": "fx_translation",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Imports (TiO2, specialty additives, some resins) ~15% of costs; +3% USD/INR => +0.45% cost => EBITDA -2% unpriced; half recovered; persistence 0.4 => -0.4...-0.8. International subsidiaries (~10% of sales, GCC/Asia/Africa) give small translation offset. Pack: DXY elasticity -2.29 (t=-3.1) agrees in sign (strong USD hurts); model keeps a smaller direct INR weight because DXY also proxies EM risk-off.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASIANPAINT.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "ASIANPAINT",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "New-construction and finishing demand is ~25-30% of decorative volume (repaint ~70%, model knowledge). +10% housing sales => volume +2% after 6-12m lag => revenue +2% at ~40% contribution margin => EBITDA +5%; EV/MCap 1.0, persistence 0.5 => +2.5, haircut to +2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "repaint/new-build split from company disclosures in earlier years; not re-verified"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "ASIANPAINT",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.8,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Urban is ~60% of decorative sales; +5pp urban consumption growth => volume +2% => EBITDA +5%; persistence 0.4 => +2.0, haircut to +1.8. Q2 FY27 volume +6.4% vs FY27 decorative guidance 8-10% cited by one aggregator shows demand below plan.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.indmoney.com/blog/stocks/asian-paints-q2-results-analysis",
+     "date": "2026-10-29",
+     "note": "Q2 FY27: cons sales +16.9% to Rs9,954cr; volume +6.8% (decorative +6.4%, value +14.5%); gross margin -349bp to 39.6%; PBDIT margin 15.6% (-202bp); PAT ~Rs1,068cr"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "ASIANPAINT",
+   "relation": "demand_driver",
+   "w": 1.4,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Rural/semi-urban ~35-40% of decorative sales; +5pp rural growth => volume +1.5% => EBITDA +3.5% x persistence 0.5 => +1.7, haircut to +1.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "rural share estimate; not verified"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "dst": "ASIANPAINT",
+   "relation": "competition",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Used here as category promotional/discount intensity in paints (Birla Opus from Grasim, JSW, Berger, Kansai). +1pp of sales given up => EBITDA margin 16% -> 15% => EBITDA -6%; persistence 0.4 => -2.5. Q2 PBDIT margin -202bp (gross margin -349bp, partly offset by opex) is partly promotional; brokerages flag FY27 margin pressure.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.indmoney.com/blog/stocks/asian-paints-q2-results-analysis",
+     "date": "2026-10-29",
+     "note": "Q2 FY27: cons sales +16.9% to Rs9,954cr; volume +6.8% (decorative +6.4%, value +14.5%); gross margin -349bp to 39.6%; PBDIT margin 15.6% (-202bp); PAT ~Rs1,068cr"
+    },
+    {
+     "source": "market_impact/data/packs/ASIANPAINT.md",
+     "date": "2026-10-30",
+     "note": "pack headline (Moneycontrol) 'Brokerages see Asian Paints margin under pressure in FY27' (via pack headlines; article body not read)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ASIANPAINT",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Long-duration 49x P/E stock with ROE ~22%; +25bp G-sec => ~-1% via DCF duration (no debt; net cash).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASIANPAINT.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ASIANPAINT",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding rose 12.1% -> 13.8% (Mar -> Sep 2026) as stock de-rated; +$5bn quarterly inflow => ~+1% relative for a liquid index heavyweight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASIANPAINT.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "C_SOUTH_SE_ASIA",
+   "dst": "ASIANPAINT",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "International ~10% of sales (Nepal, Bangladesh, Sri Lanka, Egypt/GCC, etc., model knowledge); +1pp growth => EBITDA +0.5% => small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "international mix"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Grasim Industries (Birla Opus)",
+   "ticker": "GRASIM",
+   "role": "competitor",
+   "importance": "high",
+   "note": "aggressive capacity (~1,000 mn litres) and dealer incentives since 2024; main source of share loss and margin pressure"
+  },
+  {
+   "counterparty": "Berger, Kansai Nerolac, JSW Paints, Indigo, Akzo",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Berger and Kansai not in Nifty 200"
+  },
+  {
+   "counterparty": "TiO2 producers (Chemours, Tronox, Chinese)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "imported pigment; price follows China capacity"
+  },
+  {
+   "counterparty": "Dealers / painters (~1.5 lakh retail points)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "working capital and incentive-driven"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Interim dividend Rs5.75/share: ex-date/record date reached in early Nov (stock rose 2.7% on 3 Nov ahead of ex-date); exact dates not verified",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 0.0,
+   "source": "pack headlines 2026-11-03; ET 2026-10-29 results article"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date not announced; historically mid/late Jan). Watch gross margin recovery after price increases and decorative volume vs 8-10% guidance",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge on cadence"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further list-price increase / festive promotions: raw-material inflation passthrough decision; Birla Opus reaction",
+   "type": "guidance",
+   "prob": 0.4,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 4.0,
+   "source": "search headline Business Standard 2026-09-06 (: paint makers expect healthy FY27 demand despite price increase; not read in full)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Leo Puri (ex-JPMorgan) named next chairman (announced 2026-09-08); effective date not verified",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "ET Retail headline 2026-09-08"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): consolidated net sales Rs9,954cr (+16.9%), volume +6.8% (decorative +6.4%, value +14.5% => ~8% price/mix), gross margin 39.6% (-349bp YoY), PBDIT margin 15.6% (-202bp), PAT ~Rs1,068cr (+7.5%); interim dividend Rs5.75.",
+  "trend": "Value growth is price-led; volume growth below the 8-10% FY27 decorative guidance cited by one aggregator; margins squeezed by raw-material inflation and competition. TTM sales Rs38,632cr, OPM ~19% (pack, screener) but latest quarter 16%.",
+  "valuation": "P/E 48.9, 10.7x book, dividend yield 1.1%; price Rs2,525, 12m +1.6%, 3m -8.3% (pack). Brokerage targets cut after Q2 (TradingView headlines 2026-10-29/30: Rs2,808-2,925).",
+  "recent_developments": [
+   "2026-10-29 Q2 FY27 results: profit +7%, margin contraction, miss vs estimates (NDTV Profit headline)",
+   "2026-10-30 brokerages trim target prices; see FY27 margin under pressure (Moneycontrol/BusinessLine headlines)",
+   "2026-09-08 Leo Puri named next chairman (ET Retail)",
+   "2026-11-04 Smiti Holding pledged 4.03cr shares to Bajaj Finance; audit committee cleared trading plan non-implementation (scanx.trade headlines) - governance noise, impact unverified"
+  ]
+ },
+ "key_risks": [
+  "Further crude/TiO2 spike without equal price hikes",
+  "Birla Opus-led discounting prolongs margin compression",
+  "Weak urban housing/repaint demand",
+  "Rupee depreciation raising imported pigment costs",
+  "Rate-driven de-rating of a 49x P/E"
+ ],
+ "upside_triggers": [
+  "Crude/feedstock easing (Brent -5.6% in 1m) lifting gross margin back toward 42-43%",
+  "Competitive intensity moderating as Birla Opus rationalises",
+  "Festive and wedding-season volume beat"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "type": "FACTOR",
+   "name": "Consumer durables category promotional / discount intensity",
+   "ssu": "+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/ASIANPAINT.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, price, empirical sensitivities, headlines"
+  },
+  {
+   "url": "https://www.indmoney.com/blog/stocks/asian-paints-q2-results-analysis",
+   "date": "2026-10-29",
+   "what": "Q2 FY27 numbers (volume, gross margin, PBDIT)"
+  },
+  {
+   "url": "https://www.exchange4media.com/marketing-news/asian-paints-q2-net-profit-rises-75-to-rs-1068-crore-159639.html",
+   "date": "2026-10-29",
+   "what": "Q2 FY27 profit and dividend"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "factor levels"
+  }
+ ],
+ "ticker": "ASIANPAINT",
+ "as_of": "2026-11-05"
+}

@@ -1,0 +1,323 @@
+{
+ "name": "Astral Ltd.",
+ "industry": "I_BUILDING_MATERIALS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Branded plastic plumbing (CPVC/PVC pipes and fittings, water tanks, bath ware) plus fast-growing adhesives/sealants and a new paints arm (Gem Paints), selling through distributors to housing, agri and infrastructure. FY26 sales Rs6,569 cr, TTM EBITDA margin 16%, PAT Rs576 cr; Q1 FY27 PAT Rs120 cr (+52% YoY, paints and adhesives accelerated, CNBC TV18 2026-08-12). Net cash. Market cap Rs37,442 cr at 63x P/E, near 52-week low; FII holding fell to 11.1% in the Sep quarter. Segment split is model knowledge.",
+ "revenue_mix": [
+  {
+   "segment": "plumbing / pipes and fittings",
+   "share_pct": 65,
+   "geography": "India ~95%"
+  },
+  {
+   "segment": "adhesives, sealants, paints, others",
+   "share_pct": 35,
+   "geography": "India + UK/US adhesives subsidiaries"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 50
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 3
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "ASTRAL",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "PVC/CPVC resin is ~45-50% of costs (model knowledge), priced off ethylene/EDC and imports. +10% resin => costs +4.5% = ~Rs255 cr/yr; ~70% passed through within the quarter, rest absorbed => ~-4% EBITDA transient; inventory gains from rising prices offset ~half; persistence 0.25-0.5 x EV/MCap 0.97 => ~-0.8. Empirical Brent/refining-margin sensitivities are positive (+0.81 t=1.5; +0.98 t=2.0), consistent with inventory-gain/restocking effects when prices rise, so range includes +1.0. Plastic-pipe makers expected to rebound as PVC prices recover (TradingView 2026-09-03).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Astral+PVC+prices+Q2+FY27+volume+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-03",
+     "note": "TradingView: plastic pipe makers poised to bounce back in Q2 as PVC prices recover"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "ASTRAL",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Plumbing, drainage and bathware are ~half new-construction driven. +10% housing sales => ~+4.5% volume x operating leverage 1.4 => EBITDA +6%; x0.97 x persistence 0.5 => ~+2.9, shaded to 2.5 for repair/replacement base.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASTRAL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "ASTRAL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Jal Jeevan Mission, AMRUT and municipal water/sewage projects use PVC/CPVC/HDPE; +10% capex growth => ~+2% volume => +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASTRAL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "ASTRAL",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Agri pipes and rural plumbing demand follow rainfall/irrigation; +10% above LPA => ~+1.5% volume => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASTRAL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ASTRAL",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Net cash business (interest Rs58 cr vs EBITDA Rs1,108 cr) so direct cost negligible; at 63x P/E the multiple is rate-duration sensitive, and housing finance costs weigh on demand. Repo hiked to 5.50% on 2026-10-07.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "ASTRAL",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Anti-dumping or safeguard duties on PVC resin imports (recurring DGTR cases; model knowledge, status unverified) raise resin prices by ~5-10% and squeeze pipe makers; domestic resin makers lobby for duty. +1 = new broad duties => ~-1.5 equity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASTRAL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ASTRAL",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "CPVC compound and some resin/additives are imported (est. ~15-20% of RM, model knowledge); +3% USD/INR => ~+0.5% costs => ~-3% EBITDA before pricing, persistence 0.25 => ~-0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASTRAL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "ASTRAL",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical -1.14 per +25bp (t=-1.9, beta 0.75): a long-duration, low-beta quality compounder; higher global yields compress P/E 63x. Shaded for overlap with F_REPO_IN.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASTRAL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ASTRAL",
+   "relation": "discount_rate",
+   "w": 0.8,
+   "w_low": -0.5,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.10 per +5 VIX (t=+2.6) - Astral behaves defensively (beta 0.96) when risk-off hits cyclicals; plausible via domestic-consumption quality rotation, but weak causal story, so shaded to +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ASTRAL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Supreme Industries",
+   "ticker": "SUPREMEIND",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Largest plastic-pipe competitor; targets 15-17% pipe volume growth FY27 (Sahi 2026-08-19)"
+  },
+  {
+   "counterparty": "Finolex, Prince, Jain Irrigation etc.",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Pipes"
+  },
+  {
+   "counterparty": "PVC resin suppliers (Reliance, Finolex Industries, imports)",
+   "ticker": "RELIANCE",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Resin ~45-50% of costs (model knowledge)"
+  },
+  {
+   "counterparty": "Asian Paints / Pidilite",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Paints (Gem Paints) and adhesives/sealants competition"
+  },
+  {
+   "counterparty": "Distributors / plumbers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Fragmented channel; no customer >25%"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (Sep quarter; imminent per GuruFocus 2026-11-04 'Earnings to watch')",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Astral+PVC+prices+Q2+FY27+volume+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11-16",
+   "event": "Analyst and investor meetings hosted by Astral",
+   "type": "guidance",
+   "prob": 0.95,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "scanx.trade 2026-11-04 (headline in pack)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Completion/integration news of DSS acquisition (Investec maintains Buy, target Rs1,710; deal terms not verified)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "scanx.trade 2026-11-04 (headline in pack)"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge of calendar"
+  },
+  {
+   "date": "2027-03",
+   "event": "DGTR/government decision on PVC resin anti-dumping",
+   "type": "regulatory",
+   "prob": 0.2,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 0.5,
+   "source": "model knowledge, unverified"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs1,578 cr, EBITDA Rs231 cr (15%), PAT Rs120 cr; Q2 pending",
+  "trend": "Revenue recovery (TTM +17%); EBITDA margin 15-16%; paints/adhesives drive growth; stock -11% over 6m",
+  "valuation": "P/E 63x, P/B 9.3x, ROCE 19%; rich vs history but below 52-week high of Rs1,769",
+  "recent_developments": [
+   "2026-08-12/13: Q1 PAT +52%, stock +9% (brokers CITI, UBS, CLSA positive)",
+   "2026-09-03: pipe makers poised to rebound as PVC prices recover",
+   "2026-09-24: ICICI Securities Buy, target Rs1,831",
+   "2026-11-03: GST penalty/demand of Rs82 lakh from Howrah authorities (immaterial)",
+   "2026-11-04: Investec Buy, target Rs1,710, on DSS acquisition; analyst meeting on 2026-11-16"
+  ]
+ },
+ "key_risks": [
+  "PVC resin volatility and de-stocking",
+  "Competition in paints/adhesives",
+  "Valuation 63x P/E",
+  "Housing slowdown from rate hikes",
+  "Execution of DSS acquisition (details unverified)"
+ ],
+ "upside_triggers": [
+  "Volume recovery in pipes",
+  "Paints/adhesives margin ramp",
+  "Stable/falling resin prices",
+  "DSS acquisition accretion"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/ASTRAL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Jun 2026, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Astral+PVC+prices+Q2+FY27+volume+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-24",
+   "what": "Q1 FY27 and PVC/pipe cycle headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+  }
+ ],
+ "ticker": "ASTRAL",
+ "as_of": "2026-11-05"
+}

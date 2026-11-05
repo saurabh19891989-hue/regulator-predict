@@ -1,0 +1,412 @@
+{
+ "name": "ITC Ltd.",
+ "industry": "I_ALCOHOL_TOBACCO",
+ "business_summary": "Diversified Indian conglomerate. Cigarettes are the profit engine (roughly three-quarters or more of segment EBIT, model knowledge, approximate), with a growing FMCG-others portfolio (Aashirvaad atta/spices, Sunfeast biscuits, Bingo, Yippee noodles, Classmate, personal care), paperboard/paper/packaging, and agri-business (leaf tobacco, wheat, spices, soya exports). Hotels were demerged into ITC Hotels (listed Jan 2025). Near debt-free, ~5% dividend yield. Since the 1 Feb 2026 shift to a higher excise-based tobacco tax regime (model knowledge on regime; Q1/Q2 FY27 reports confirm sharp profit damage) ITC has taken repeated price hikes and is trading volume against margin.",
+ "revenue_mix": [
+  {
+   "segment": "Cigarettes",
+   "share_pct": 45,
+   "geography": "India ~100% (approximate, model knowledge)"
+  },
+  {
+   "segment": "FMCG-others",
+   "share_pct": 25,
+   "geography": "India ~97%"
+  },
+  {
+   "segment": "Agri business",
+   "share_pct": 15,
+   "geography": "India ~60% / export ~40%"
+  },
+  {
+   "segment": "Paperboards, paper & packaging",
+   "share_pct": 12,
+   "geography": "India 80% / export 20%"
+  },
+  {
+   "segment": "Other (IT, etc.)",
+   "share_pct": 3,
+   "geography": "mixed"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "NEW_TOBACCO_EXCISE",
+   "share_of_costs_pct": null,
+   "note": "Excise/taxes on cigarettes are netted from net revenue; pass-through is the key variable"
+  },
+  {
+   "input": "F_WHEAT",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_EDIBLE_OIL",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_TOBACCO_EXCISE",
+   "dst": "ITC",
+   "relation": "regulatory_risk",
+   "w": -5.0,
+   "w_low": -9.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "Cigarettes ~75% of EBIT (approx). A further +10% tax burden/stick: ITC passes ~70% via price, volume falls ~3-4% plus mix/illicit shift, cigarette EBIT about -6%; x0.75 share = group EBIT -4.5%; structural so persistence 1.0; EV/MCap ~0.97 => about -5. Q2 FY27 shows the realised version: screener operating margin 28% vs 34% a year earlier, PAT -18.5%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ITC+cigarette+tax+Q2+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "Reuters headline: ITC Q2 profit down ~20% as higher prices dent demand; screener Sep-26 qtr PAT 4,229 cr vs 5,187 cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=ITC+Q1+cigarette+tax+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-31",
+     "note": "New Indian Express: tax hikes hit ITC, Q1 profit -27%"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "ITC",
+   "relation": "demand_driver",
+   "w": 1.4,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "FMCG-others (~25% revenue, ~11% EBIT approx) and agri (atta, spices) are rural-sensitive; cigarettes less so. +5pp rural growth => FMCG-others sales +2%, EBIT +4%, group EBIT +0.6%... plus cigarette volume uplift in rural/semi-urban ~+0.5pp => group EBITDA +1.5%; persistence 0.5; EV/MCap 0.97 => ~+1.4 (rounded with agri upside).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=weak+monsoon+rural+demand+FMCG+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Moneycontrol: weak monsoon pressures rural demand ahead of festive season"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "ITC",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Premium cigarettes, hotels-linked brand halo, urban packaged foods. +5pp urban growth => cigarette volumes +1%, FMCG-others +3% => group EBITDA +2%; persistence 0.5 => ~+1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ITC/consolidated/",
+     "date": "2026-11-05",
+     "note": "FMCG segment growth at 14-quarter high per Q2 coverage (NiftyTrader 2026-11-03)"
+    }
+   ]
+  },
+  {
+   "src": "F_WHEAT",
+   "dst": "ITC",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Wheat ~8% of costs (atta, biscuits, noodles). +10% => costs +0.8% on the FMCG part (~35% of group costs) => group costs +0.3%, EBITDA -0.45% at 32% margin; 50% passthrough, persistence 0.5 => -0.1; agri trading/procurement benefits offset. Empirical +0.54 (t=1.0) has opposite sign, consistent with the agri offset; net kept small and sign-uncertain.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ITC/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical sensitivity F_WHEAT +0.54, t=+1.0"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "ITC",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.9,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Palm/oil used in biscuits, snacks, noodles (~3% of group costs). +10% => costs +0.3% => EBITDA -0.5%; 50% passthrough, persistence 0.5 => -0.12; agri-business edible-oil trading marginal. Rounded to -0.3 for packaged-food-wide cost creep.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+edible+oil+import+duty+cut+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Reuters: India cuts edible oil import duty (lower oil prices help food makers)"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "ITC",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Packaging (BOPP/laminates, cartons) ~6% of costs for FMCG; ITC's own paperboard arm benefits from higher packaging prices (partial natural hedge). +10% => costs +0.6% => EBITDA -1.2%, 50% passthrough, hedge 40% => -0.35 after persistence 0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ITC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Paperboard/packaging segment recovery noted in Q2 coverage (Kalkine 2026-11-04)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ITC",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.1,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Fuel (paperboard mills, logistics), BOPP and polymer packaging ~4% of costs linked to crude. +10% Brent => costs +0.25%, EBITDA -0.4%... plus market-risk sentiment: ITC acts as defensive. Persistence 0.5, EV/MCap 0.97 => ~-0.5 (wider than arithmetic to include logistics). Brent is +15% over 3m (94.99).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ITC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Brent 94.99, +15.2% 3m (factor_state.md)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ITC",
+   "relation": "fx_translation",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Agri exports (~15% of revenue, ~USD-linked) and leaf-tobacco exports gain from a weaker rupee; imports (pulp, packaging inputs, some cigarette materials) offset. Net ~ +1.4% EBITDA per +3% INR weakness => persistence 0.5 => ~+0.7... empirical +2.04 (t=2.1) larger; blended to +1.0 with range reflecting disagreement.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ITC/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical F_USDINR +2.04, t=+2.1"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ITC",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -1.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Cash-rich, dividend-yield stock (5.2%), P/E 18.5; no funding cost. +25bp repo => required equity yield up; defensive-high-dividend duration ~12 => -0.6 after partial offset by inflows to defensives.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ITC/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 18.5, dividend yield 5.17%"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ITC",
+   "relation": "macro_transmission",
+   "w": 1.2,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 33.2% (down from 34.8% in Mar-26); GQG sold 2.91% in a Rs 9,395 cr block on 8 Oct 2026. +US$5bn/quarter inflow => liquid index heavyweight +1.2 (index-weight beta effect).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ITC+GQG+block+deal+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Upstox/Moneycontrol: GQG sells 2.91% of ITC for Rs 9,395 crore"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "ITC",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "GST Council 8 Oct 2026 widened input-tax-credit scope (stock +5% intraday on 9 Oct). A further broad rate cut would lift FMCG-others/hotel-adjacent demand; cigarettes sit in the highest slab/excise regime and gain nothing. FMCG-others ~15% of group EBITDA: +3% sales and +6% EBIT => group +0.9%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=GST+Council+input+tax+credit+ITC+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Outlook Money: Colgate, ITC rally as GST Council proposes easing ITC rules"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "ITC",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": -0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Stronger enforcement against illicit/low-tax cigarettes (CEO Sanjiv Puri flagged illicit-trade risk, Storyboard18 2026-08-27) would return volume to legal players; a theme proxy. +1 => legal volume +1.5% => cigarette EBIT +2% => group +1.5% x persistence 0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ITC+Sanjiv+Puri+illicit+trade+cigarette+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-27",
+     "note": "Storyboard18: Puri backs FSSAI scrutiny, flags illicit-trade risk after tax hike"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Tobacco farmers (AP, Karnataka, Gujarat)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "leaf tobacco procurement; agri business"
+  },
+  {
+   "counterparty": "Godfrey Phillips India",
+   "ticker": "GODFRYPHLP",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "cigarettes; price-hike followers"
+  },
+  {
+   "counterparty": "VST Industries",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "low",
+   "note": "cigarettes; not in universe"
+  },
+  {
+   "counterparty": "Hindustan Unilever / Nestle / Britannia",
+   "ticker": "HINDUNILVR",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "packaged food/personal care shelf competition"
+  },
+  {
+   "counterparty": "ITC Hotels",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "ITC retains ~40% stake post demerger (model knowledge); not in universe"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (cigarette volume/margin recovery vs tax pass-through)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge on reporting calendar; date unverified"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget: any change to tobacco excise/GST compensation structure",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": -3.0,
+   "source": "model knowledge; conditional on a tax increase; a standstill is the base case"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further cigarette price hikes / pack-size changes after Sept 16 hike",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "CNBC TV18 2026-09-16 (price hike precedent)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Residual block/overhang from large FPI sellers after GQG 8 Oct sale",
+   "type": "other",
+   "prob": 0.3,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": -1.0,
+   "source": "Business Standard 2026-10-08"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 20,269 cr (+3.9% y/y), operating profit 5,645 cr, OPM 28% (vs 34%), PAT 4,229 cr (-18.5% y/y)",
+  "trend": "Cigarette net revenue and margin are squeezed by the tax regime; FMCG-others growth at a 14-quarter high; paper recovering",
+  "valuation": "P/E 18.5, dividend yield 5.2%, price 279 vs 52w range 253-413, -31.8% over 12m (screener 2026-11-05)",
+  "recent_developments": [
+   "2026-11-02 Reuters: Q2 profit -20% as higher prices dent demand",
+   "2026-10-08 GQG sells 2.91% in Rs 9,395 cr block, stock -4%",
+   "2026-10-09 GST Council eases ITC rules; ITC +5% intraday",
+   "2026-09-16 cigarette price hike (Classic Connect, Gold Flake Super Star)",
+   "2026-10-05 Citi upgrades to Buy citing 17% upside"
+  ]
+ },
+ "key_risks": [
+  "Further tax increases or a cigarette volume collapse as illicit supply fills the gap",
+  "FMCG-others margin dilution from input-cost inflation",
+  "Continued FPI selling",
+  "Paper/packaging pricing from Chinese imports"
+ ],
+ "upside_triggers": [
+  "Tax stability and enforcement against illicit trade",
+  "Cigarette volume stabilisation after price hikes",
+  "FMCG-others EBITDA margin expansion toward 10-11%",
+  "Stake monetisation/hotel value unlock"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_TOBACCO_EXCISE",
+   "type": "POLICY",
+   "name": "Cigarette excise / tobacco tax burden (India)",
+   "ssu": "+10% rise in the tax burden per cigarette stick"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/ITC/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals, price performance, sensitivities"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ITC+cigarette+tax+Q2+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-02",
+   "what": "Q2 FY27 coverage (Reuters, NDTV Profit, Economic Times headlines)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ITC+GQG+block+deal+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-08",
+   "what": "GQG block deal"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=GST+Council+input+tax+credit+ITC+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "GST Council ITC easing"
+  }
+ ],
+ "ticker": "ITC",
+ "as_of": "2026-11-05",
+ "tier": "NIFTY_50"
+}

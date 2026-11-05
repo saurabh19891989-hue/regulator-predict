@@ -1,0 +1,391 @@
+{
+ "name": "Voltas Ltd.",
+ "industry": "I_CONSUMER_DURABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Tata Group air-conditioning and projects company. Unitary cooling products (room ACs, commercial refrigeration; ~80% of Q1 FY27 revenue) is India's top room-AC brand (17.3% secondary share, FY27 to June). Electro-mechanical projects (MEP, water, rail; ~15%) and engineered products/ Voltas Beko (appliances JV with Arcelik) and an Atomberg JV announced in Q1. EBITDA margin only ~4% TTM, so profits are hypersensitive to copper, USD/INR, discounting and summer weather. Legacy Qatar project litigation is a tail liability.",
+ "revenue_mix": [
+  {
+   "segment": "Unitary cooling products",
+   "share_pct": 81,
+   "geography": "India (Q1 FY27 share; seasonal)"
+  },
+  {
+   "segment": "Electro-mechanical projects & services",
+   "share_pct": 15,
+   "geography": "India + Middle East (legacy)"
+  },
+  {
+   "segment": "Engineered products & others",
+   "share_pct": 4,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "imported compressors/electronics (USD)",
+   "share_of_costs_pct": 28
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 5
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COPPER",
+   "dst": "VOLTAS",
+   "relation": "input_cost",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Copper ~8% and aluminium ~3% of total costs (RAC BOM ~25% metals; UCP ~80% of sales). +10% copper => +0.8% costs; costs/EBITDA ~24x at 4% margin => EBITDA -19%; ~70% recovered via price hikes => -6%; persistence 0.35, EV/MCap ~1.0 => -2.1.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+     "date": "2026-09-28",
+     "note": "AC/TV/appliance price hikes of up to 8% from 1 Oct on copper, aluminium, freight; Blue Star +8%, LG +5-7%, Daikin +8-10% from 16 Sep"
+    },
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/voltas-q1-fy27-results-cmst7qsjb59gj0zo551ppccli",
+     "date": "2026-08-14",
+     "note": "Q1 FY27: rev Rs4,674cr (+18.7%), PAT Rs213cr (+51%), UCP rev +32% to Rs3,794cr, UCP EBIT 5.3%, RAC volume +45%, 1m units in 81 days, secondary share 17.3%"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "VOLTAS",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Aluminium ~3% of costs; +10% => +0.3% costs => EBITDA -7%, ~70% recovered, persistence 0.35 => -0.7. Aluminium is -19.6% since June: a tailwind to H2 costs.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+     "date": "2026-09-28",
+     "note": "AC/TV/appliance price hikes of up to 8% from 1 Oct on copper, aluminium, freight; Blue Star +8%, LG +5-7%, Daikin +8-10% from 16 Sep"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "VOLTAS",
+   "relation": "fx_translation",
+   "w": -3.0,
+   "w_low": -5.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Imported compressors and electronics ~25-30% of costs (USD-priced). +3% USD/INR => +0.8% costs => EBITDA -20%; ~60% passed through => -8%; persistence 0.4 => -3.2. Pack empirical is +2.87 (t=1.6), opposite sign; it likely co-moves with the USD/CNY channel below and risk-on episodes. Treated as low-medium confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VOLTAS.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "VOLTAS",
+   "relation": "fx_translation",
+   "w": 3.5,
+   "w_low": 0.8,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "Chinese components/compressors ~20% of costs; yuan -3% vs USD makes imports cheaper (cost -0.6%, EBITDA +15% unpriced, +6% after pass-through, persistence 0.35 => +2.1) and eases competitor Chinese-sourced costs equally. Pack empirical +7.29 (t=3.1) is large and significant; model shrinks toward mechanism but accepts a high upper bound. Note the pair with USD/INR: a pure USD move raises INR cost, a CNY-only depreciation lowers it.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VOLTAS.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "VOLTAS",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "0-3m",
+   "mechanism": "Room AC is ~80% of Q1 revenue; +5pp urban growth => revenue +3.5%, at 4% margin and ~25% contribution => EBITDA +20% unpriced, x persistence 0.4 => +3 (operating leverage dominates). Q1 FY27 UCP revenue +32% on +45% RAC volume shows the sensitivity.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/voltas-q1-fy27-results-cmst7qsjb59gj0zo551ppccli",
+     "date": "2026-08-14",
+     "note": "Q1 FY27: rev Rs4,674cr (+18.7%), PAT Rs213cr (+51%), UCP rev +32% to Rs3,794cr, UCP EBIT 5.3%, RAC volume +45%, 1m units in 81 days, secondary share 17.3%"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "dst": "VOLTAS",
+   "relation": "competition",
+   "w": -6.0,
+   "w_low": -11.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "+1pp category margin give-up on UCP (80% of sales) => group margin -0.8pp vs 4.0% TTM base => EBITDA -20% x persistence 0.35 => -7, shaded to -6. Voltas states it is prioritising share over margin (Sep 2026 analyst meet), which makes it the most exposed name; Goldman (Sell, target Rs1,075) cites margin headwinds.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/voltas-q1-fy27-results-cmst7qsjb59gj0zo551ppccli",
+     "date": "2026-08-14",
+     "note": "Q1 FY27: rev Rs4,674cr (+18.7%), PAT Rs213cr (+51%), UCP rev +32% to Rs3,794cr, UCP EBIT 5.3%, RAC volume +45%, 1m units in 81 days, secondary share 17.3%"
+    },
+    {
+     "source": "market_impact/data/packs/VOLTAS.md",
+     "date": "2026-09-23",
+     "note": "headlines: Voltas eyes growth over margins; brokerages reset targets (NDTV Profit, Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "VOLTAS",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Inverter/5-star mix and Beko appliances JV; +1 => margin +0.5pp on UCP => EBITDA +8% x persistence 0.4 => ~+1 (shaded).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/voltas-q1-fy27-results-cmst7qsjb59gj0zo551ppccli",
+     "date": "2026-08-14",
+     "note": "Q1 FY27: rev Rs4,674cr (+18.7%), PAT Rs213cr (+51%), UCP rev +32% to Rs3,794cr, UCP EBIT 5.3%, RAC volume +45%, 1m units in 81 days, secondary share 17.3%"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "VOLTAS",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Housing sales drive first-time RAC purchases; +10% => UCP volume +1.5% => +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "housing-AC link"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "VOLTAS",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Projects segment (water, rail, power; ~15% of sales and loss/low-margin) benefits from public capex; +10% => +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/voltas-q1-fy27-results-cmst7qsjb59gj0zo551ppccli",
+     "date": "2026-08-14",
+     "note": "Q1 FY27: rev Rs4,674cr (+18.7%), PAT Rs213cr (+51%), UCP rev +32% to Rs3,794cr, UCP EBIT 5.3%, RAC volume +45%, 1m units in 81 days, secondary share 17.3%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "VOLTAS",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "78x P/E on depressed earnings; very long duration; +25bp => ~-1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/VOLTAS.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Blue Star",
+   "ticker": "BLUESTARCO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "commercial and room AC"
+  },
+  {
+   "counterparty": "LG Electronics India",
+   "ticker": "LGEINDIA",
+   "role": "competitor",
+   "importance": "high",
+   "note": "AC and appliances"
+  },
+  {
+   "counterparty": "Havells (Lloyd)",
+   "ticker": "HAVELLS",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Lloyd ACs"
+  },
+  {
+   "counterparty": "Tata Sons / Tata Group",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "promoter; no listed holding in universe"
+  },
+  {
+   "counterparty": "Arcelik (Voltas Beko JV)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "appliances JV, loss-making ramp"
+  },
+  {
+   "counterparty": "Atomberg Innovation (JV announced Aug 2026)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "fans/appliances JV"
+  },
+  {
+   "counterparty": "Compressor vendors (China/Thailand/Japan)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "USD-priced"
+  },
+  {
+   "counterparty": "OHL (Qatar project counterparty)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "Qatar court dismissed OHL appeal on 2026-11-04"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (date not verified; SEBI deadline 14 Nov). Off-season quarter; watch UCP margin after 1 Oct price hike and share trends",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "pack shows quarters only through Jun 2026"
+  },
+  {
+   "date": "2026-11-04",
+   "event": "Qatar court dismissed OHL appeal in pending Voltas litigation (outcome relative to Voltas not read in full; direction likely favourable)",
+   "type": "litigation",
+   "prob": 1.0,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "scanx.trade headline via pack 2026-11-04"
+  },
+  {
+   "date": "2027-03",
+   "event": "Peak summer season sell-in; share defence vs Daikin/LG/Blue Star at 17.3% share",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": 12.0,
+   "source": "https://www.multibagg.ai/market-pulse/articles/voltas-q1-fy27-results-cmst7qsjb59gj0zo551ppccli"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge on cadence"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026, reported 2026-08-14): revenue Rs4,674cr (+18.7%), OPM 4.9%, PAT Rs213cr (+51%); UCP revenue Rs3,794cr (+32%), UCP EBIT 5.3% (vs 3.6% a year ago, 8.6% in Q1 FY25); RAC volumes +45%, 1m RACs in 81 days; secondary share 17.3%, lead ~4pp. Q2 FY27 results not yet in the pack.",
+  "trend": "Share gains bought with price; margins recovering from trough but far below FY25. TTM sales ~Rs14,980cr, EBITDA ~Rs592cr (4%).",
+  "valuation": "P/E 77.6, 5.7x book, ROE 6%; price Rs1,095, 3m -14.2%, 12m -19.6%; hit 52-week low in Sep. Goldman Sell (Rs1,075); Jefferies/HSBC Buy; Nuvama upgrade (2026-09-23).",
+  "recent_developments": [
+   "2026-11-04 Qatar court dismissed OHL appeal (scanx.trade)",
+   "2026-09-28 industry AC price hike: Voltas stock +up to 3%",
+   "2026-09-23 analyst meet: growth over margins, brokerages split (Jefferies cut target, Nuvama upgrade)",
+   "2026-08-14 Q1 FY27 results; JV with Atomberg"
+  ]
+ },
+ "key_risks": [
+  "Copper/INR spike with discounting prevents price recovery",
+  "Mild summer 2027 leaves channel inventory",
+  "Share-over-margin strategy keeps UCP margin below 6%",
+  "Beko/Atomberg JV losses",
+  "Qatar litigation tail"
+ ],
+ "upside_triggers": [
+  "Aluminium/copper correction and rupee stabilisation",
+  "Hot summer and weak competitor supply",
+  "Margin recovery toward 7-8% UCP EBIT with scale",
+  "Positive Qatar litigation outcome"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CONSUMER_DURABLES_PRICE_WAR",
+   "type": "FACTOR",
+   "name": "Consumer durables category promotional / discount intensity",
+   "ssu": "+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/VOLTAS.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, price, empirical betas, headlines"
+  },
+  {
+   "url": "https://www.multibagg.ai/market-pulse/articles/voltas-q1-fy27-results-cmst7qsjb59gj0zo551ppccli",
+   "date": "2026-08-14",
+   "what": "Q1 FY27 results"
+  },
+  {
+   "url": "https://nsearchives.nseindia.com/corporate/VOLTAS_RB_14082026181014_Signed_CoveringandInvestorPresentation.pdf",
+   "date": "2026-08-14",
+   "what": "Q1 FY27 investor presentation (not opened; listed in search)"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/ac-price-hike-bosch-home-comfort-blue-star-voltas-lg-electronics-shares-climb-details-here-558149-2026-09-28",
+   "date": "2026-09-28",
+   "what": "AC price hikes and input costs"
+  }
+ ],
+ "ticker": "VOLTAS",
+ "as_of": "2026-11-05"
+}

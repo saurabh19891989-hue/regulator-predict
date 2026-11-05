@@ -1,0 +1,373 @@
+{
+ "ticker": "IDFCFIRSTB",
+ "name": "IDFC FIRST Bank Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Retail-focused private bank formed in 2018 from IDFC Bank and Capital First; widely held (no promoter; FII 36.7%, DII 25.4%, govt 7.8%). Loan book ~Rs2.7 lakh cr (derived) growing ~30% (Q2 FY27) in consumer finance, vehicles, MSME, cards and MFI, funded by a rapidly built CASA/retail deposit base. Profit recovered from FY26 trough: Q1 FY27 Rs1,075cr, Q2 Rs1,045cr (~3x Rs352cr a year earlier) but RoE only ~4-6% and TTM profit Rs2,941cr on a Rs66k cr market cap.",
+ "revenue_mix": [
+  {
+   "segment": "retail & business banking (vehicle, consumer, cards, MFI, home)",
+   "share_pct": 72,
+   "geography": "India"
+  },
+  {
+   "segment": "corporate/ wholesale & treasury",
+   "share_pct": 28,
+   "geography": "India (model estimate)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 58
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 18
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "IDFCFIRSTB",
+   "relation": "regulatory_risk",
+   "w": -14.0,
+   "w_low": -22.0,
+   "w_high": -8.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost: loans ~Rs2.7 lakh cr (derived; revenue/yield) x 0.5% = Rs1,350cr vs TTM PBT ~Rs3,900cr (PAT 2,941/0.75) => PBT -35%, PAT -35%; persistence 0.5, EV/MCap 1.0 => -17; trimmed to -14 because management can offset with lower opex. Earnings base is thin (ROE 3.8%) so the stock is far more convex to credit cost than ICICI (-4.2).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=IDFC+First+Bank+Q2+net+interest+margin+gross+NPA+credit+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "Q2 FY27 profit Rs1,045cr (~3x YoY), loan assets +30% (Times of India/ET headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "IDFCFIRSTB",
+   "relation": "demand_driver",
+   "w": -5.0,
+   "w_low": -9.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "Cards, personal loans, MFI and consumer-finance are ~25-30% of loans (model knowledge). +1pp delinquencies x 27% x 60% loss = 16bp of loans = Rs440cr = ~11% of PBT; persistence 0.5 => -5.5, rounded -5. This is the swing factor behind the FY26 earnings trough (Mar-2026 qtr profit only Rs319cr).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "IDFCFIRSTB",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth: IDFC is growing ~25-30% (loan assets +30% in Q2) so incremental system growth adds ~+3pp to its own growth, NII +3%, PAT +8% on operating leverage (fixed-cost base) x persistence 0.5 => +2.5-3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IDFC+First+Bank+Q2+net+interest+margin+gross+NPA+credit+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "Q2 FY27 profit Rs1,045cr (~3x YoY), loan assets +30% (Times of India/ET headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "IDFCFIRSTB",
+   "relation": "funding_cost",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "IDFC is deposit-dependent (CASA ~47%, retail deposits ~80%+ of funding; model knowledge): +3pp system deposit growth -> CoF -8bp on ~5.8% (interest 5,737 on revenue 11,922 in Q2) => NIM +5bp = +1.5% NII, PAT +5%; persistence 0.5 => +2.5. Cost of deposits is the key lever behind the NIM recovery story.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "IDFCFIRSTB",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -3.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "+25bp: ~40-45% of loans repo-linked (EBLR) vs ~35% of liabilities term-deposits repricing slowly -> NIM +4-5bp for 2-3 qtrs => PAT +4% x 0.25 = +1.0; offsets: valuation/credit demand -1.5 and risk to borrowers' EMI burden -0.5 (rate-sensitive MFI/vehicle customers) => net -1.0. Low confidence in sign.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "IDFCFIRSTB",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp G-sec: investment book ~Rs0.8-0.9 lakh cr, trading/AFS small (model knowledge) -> MTM ~0.3% of PAT; main channel is discount rate on a thin-RoE 1.35x P/B stock with long-duration earnings growth: +25bp -> -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "IDFCFIRSTB",
+   "relation": "funding_cost",
+   "w": 1.2,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus liquidity: IDFC relies on infra bonds/CDs/borrowings for ~25% of funding; marginal funding -15bp x 25% of liabilities = NIM +4bp => PAT +4% x 0.25 => +1.0, +1.2 with treasury.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "IDFCFIRSTB",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Tightening step on unsecured retail/MFI risk weights or NBFC lending hits a high-growth, unsecured-heavy franchise: capital CET1 ~ mid-teens (model knowledge) so growth cap rather than capital shortfall; ROE -40bp on 5% base => -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "IDFCFIRSTB",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 36.7% (Sep 2026) with beta 1.17: +US$5bn flows ~ Nifty +2% => +2.3 market + a stock-specific multiple on liquid, retail-franchise stories => +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "IDFCFIRSTB",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -5.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points ~ Nifty -3% x beta 1.17 => -3.5; less given domestic-flow support => -3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "IDFCFIRSTB",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> consumer/vehicle/MSME demand and lower stress; credit growth +2pp, credit cost -10bp (=+10% PBT) => PAT +10%; persistence 0.35 => +3.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "IDFCFIRSTB",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Minimal direct FX book; pack empirical +0.96 per SSU (t=0.7, not significant) disagrees in sign; economic reasoning: weaker INR hurts consumer budgets and FPI sentiment. Kept small and low-confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "IDFCFIRSTB",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Digital-first retail bank targeting credit-invisible customers (MSME, consumer finance) benefits from UPI/GST/AA-led formalisation: +1 => customer acquisition cost lower, credit data better => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IDFCFIRSTB.md",
+     "date": "2026-11-05",
+     "note": "screener: Sep-2026 qtr net profit Rs1,045cr, TTM Rs2,941cr, mcap Rs66,170cr, P/B ~1.35, ROE 3.8%; empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Retail depositors / CASA base",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "deposit franchise is the NIM engine"
+  },
+  {
+   "counterparty": "ICICI Bank / HDFC Bank / Axis / Kotak",
+   "ticker": "ICICIBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "deposit and retail-loan competition"
+  },
+  {
+   "counterparty": "IndusInd Bank",
+   "ticker": "INDUSINDBK",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "similar unsecured/MFI-exposed mid-size private bank"
+  },
+  {
+   "counterparty": "RBI",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "regulator; no promoter - widely held (promoter 0.00%)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-24",
+   "event": "Q3 FY27 results (estimated from Q2 on 2026-10-24); watch credit cost, NIM, opex",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "model estimate from prior cycle"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December - hold or further hike; stance 'calibrated tightening'",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 year-end: management target of sustained ~1% RoA path / credit-cost normalisation",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge - management medium-term targets not re-verified"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): net profit Rs1,045cr (+196% YoY, -3% QoQ), revenue Rs11,922cr, interest expense Rs5,737cr, operating expenses Rs7,079cr; loan assets +30%",
+  "trend": "profit recovery from FY26 trough on lower credit cost/opex leverage; stock -10% in 3m despite +9% in 6m (oversold per Business Today 2026-10-26)",
+  "valuation": "mcap Rs66,170cr, P/E 22.5, P/B ~1.35, ROE 3.8% (screener, 2026-11-05)",
+  "recent_developments": [
+   "2026-10-24: Q2 FY27 profit Rs1,045cr, loan assets +30% (ToI/ET)",
+   "2026-10-26: stock oversold after results (Business Today)",
+   "2026-10-07: RBI hiked repo to 5.50%",
+   "2026-10-06: stock -3% on Q2 business update day while KMB/Axis/IndusInd gained (Business Today)"
+  ]
+ },
+ "key_risks": [
+  "credit cost relapse in MFI/cards/vehicle book",
+  "deposit-cost war as RBI tightens",
+  "thin RoE means little buffer",
+  "wide-held ownership: no promoter backstop; capital raises dilutive"
+ ],
+ "upside_triggers": [
+  "credit cost normalising to ~2%",
+  "opex leverage and NIM recovery",
+  "deposit costs falling relative to peers",
+  "rate hike lifts EBLR yields"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/IDFCFIRSTB/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener financials via evidence pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IDFC+First+Bank+Q2+net+interest+margin+gross+NPA+credit+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-24",
+   "what": "Q2 FY27 headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  }
+ ]
+}

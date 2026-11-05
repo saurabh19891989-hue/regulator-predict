@@ -1,0 +1,363 @@
+{
+ "ticker": "SWIGGY",
+ "name": "Swiggy Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_INTERNET_PLATFORMS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Hyperlocal commerce platform: food delivery, Instamart quick commerce, out-of-home dining (Dineout), supply chain/distribution (Scootsy) and other. TTM consolidated sales Rs 26,914 cr (+42%); operating loss Rs 2,904 cr (OPM -11%); Sep-26 quarter sales Rs 7,571 cr (+36%), net loss Rs 922 cr (Rs 791 cr in June), with Instamart loss reported at Rs 895 cr. Market cap Rs 52,156 cr at Rs 189, down 54% in 12 months, record low after Q2 on 2026-10-23 (-15% to -17%). Tencent exited via a Rs 982 cr block on 2026-10-30. FIIs fell from 14.6% to 8.9% and DIIs rose to 34.5% in Sept 2026 quarter; there is no promoter. Cash flow from operations was -Rs 2,898 cr in FY26, funded by a large equity raise (financing inflow Rs 9,397 cr).",
+ "revenue_mix": [
+  {
+   "segment": "food delivery (marketplace)",
+   "share_pct": 40,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "Instamart quick commerce",
+   "share_pct": 35,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "out-of-home, supply chain, platform and other",
+   "share_pct": 25,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "delivery_partner_payouts",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "dark_store_and_inventory_costs",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "marketing_and_discounts",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "employee_tech_other",
+   "share_of_costs_pct": 30
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_QCOMMERCE_COMPETITION",
+   "dst": "SWIGGY",
+   "relation": "competition",
+   "w": -8.0,
+   "w_low": -18.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "Instamart loss Rs 895 cr/qtr (~Rs 3,580 cr/yr). Competitor escalation +1 (Blinkit targets 3,500 dark stores by Mar-27 per Moneycontrol 2026-10-21; Flipkart Minutes overtook Instamart in dark-store count, Indian Retailer 2026-08-29) raises burn ~25% (Rs ~900 cr/yr) for ~2 years = Rs 1,800 cr = 3.5% of mcap, plus lower terminal share => -8. Stock fell ~16% on 2026-10-23 on this theme (Reuters/Bloomberg).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "https://www.screener.in/company/SWIGGY/consolidated/"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "SWIGGY",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": -3.0,
+   "w_high": 8.0,
+   "lag": ">12m",
+   "mechanism": "Faster category adoption expands TAM but shares it with better-capitalised rivals; net positive only if Instamart reaches contribution break-even. Judgemental +3 with wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "https://www.screener.in/company/SWIGGY/consolidated/"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "SWIGGY",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Food delivery and quick commerce are urban discretionary: +5pp urban growth -> +4pp GOV; at ~11% operating loss/revenue the operating leverage is large: +4pp x Rs 26,914 cr x 30% contribution margin = Rs 320 cr, ~1.5 years persistence => ~Rs 480 cr = 0.9% of mcap, scaled up for terminal-value effect => +4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "https://www.screener.in/company/SWIGGY/consolidated/"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SWIGGY",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Cash-burning growth equity; value is long-duration. +25 bp repo -> -3% fair value, half transmitted => -1.5. Interest cost is Rs 218 cr TTM (leases).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "https://www.screener.in/company/SWIGGY/consolidated/"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "SWIGGY",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Empirical -5.08/SSU (t=-1.5), not significant, shrunk to -2.5 for the global growth-style discount-rate effect.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Empirical sensitivity from market_impact/data/packs/SWIGGY.md"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "SWIGGY",
+   "relation": "discount_rate",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Beta ~1.3; FIIs cut 14.59% -> 8.86% in two quarters and Tencent exited. +US$5 bn/qtr inflow reversal gives +3 beyond market effect.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "https://www.screener.in/company/SWIGGY/consolidated/"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "SWIGGY",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+2pp food inflation raises menu prices/grocery basket and squeezes order frequency; ~1% of GOV => -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "https://www.screener.in/company/SWIGGY/consolidated/"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "SWIGGY",
+   "relation": "policy_effect",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Gig-worker social-security contributions (1-2% of turnover capped at 5% of worker payouts, model knowledge of the Social Security Code) add ~0.6% of revenue (Rs ~160 cr/yr) = ~0.3% of mcap per year, capitalised ~3 years plus wage-inflation risk => -3. Timing of implementation unverified.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "https://www.screener.in/company/SWIGGY/consolidated/"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FSSAI_FOOD_REGULATION",
+   "dst": "SWIGGY",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "FSSAI moving to tighten the $80-bn online food market (Business Today 2026-10-13): licensing of dark stores and cloud kitchens raises compliance cost and risks suspensions.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "https://www.screener.in/company/SWIGGY/consolidated/"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "SWIGGY",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Rider fuel costs feed into per-order payouts (~30% of costs): +10% Brent ~ +3% petrol/diesel retail effect (taxes dominate) => +0.3% of cost = Rs ~90 cr = 0.2% of mcap... scaled with persistence => -0.5 to -0.7. Empirical -0.73 (t=-0.7).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SWIGGY.md (screener.in + Yahoo + Google News, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "Empirical sensitivity from market_impact/data/packs/SWIGGY.md"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Eternal (Zomato, Blinkit)",
+   "ticker": "ETERNAL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Market leader in food delivery and quick commerce; Blinkit 3,500 dark-store target by Mar-27 (Moneycontrol 2026-10-21)."
+  },
+  {
+   "counterparty": "Zepto, Flipkart Minutes, Amazon Now, BigBasket",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Flipkart Minutes ahead of Instamart in dark-store count (Aug 2026)."
+  },
+  {
+   "counterparty": "Restaurants and FMCG brands (advertising)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Take rates and ad income."
+  },
+  {
+   "counterparty": "Delivery partners (gig workforce)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Payout inflation and labour-code risk."
+  },
+  {
+   "counterparty": "Tencent, SoftBank, Prosus and other early holders",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "Tencent exited Rs 982 cr 2026-10-30; further overhang."
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: Instamart contribution margin and loss trajectory (festive quarter)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -15.0,
+   "impact_pct_high": 15.0,
+   "source": "model knowledge of reporting calendar; Reuters 2026-10-22"
+  },
+  {
+   "date": "2026-12",
+   "event": "More block deals / large holder exits after Tencent (Rs 982 cr, 2026-10-30)",
+   "type": "corporate_action",
+   "prob": 0.4,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 0.0,
+   "source": "Moneycontrol / Business Today 2026-10-30"
+  },
+  {
+   "date": "2026-12",
+   "event": "Regulatory action on quick commerce (CCI / FSSAI / dark-store rules)",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "Business Today 2026-10-13 (FSSAI); CCI model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "Instamart break-even / contribution-positive target commentary and fundraising need",
+   "type": "guidance",
+   "prob": 0.3,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 12.0,
+   "source": "Reuters 2026-10-22: Swiggy to deepen Instamart presence in existing markets"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 7,571 cr (+36%), operating loss Rs 772 cr (OPM -10%), net loss Rs 922 cr (June quarter: Rs 791 cr). Reuters: Instamart losses widened to Rs 895 cr.",
+  "trend": "Losses narrowed from Rs 1,197 cr in Jun-25 to Rs 791 cr in Jun-26 but widened in Sep-26 as Instamart expansion and competition intensified.",
+  "valuation": "Market cap Rs 52,156 cr (~1.9x TTM sales); price/book 3.1x; loss-making so no P/E.",
+  "recent_developments": [
+   "2026-08-29: Flipkart Minutes overtakes Instamart in dark-store count in top-10 cities.",
+   "2026-10-13: FSSAI to tighten oversight of online food market.",
+   "2026-10-21: Eternal Q2 - Blinkit expansion to 3,500 dark stores by Mar-27.",
+   "2026-10-22/23: Swiggy Q2; shares -15-17% to a record low (Reuters).",
+   "2026-10-30: Tencent exits via Rs 982 cr block."
+  ]
+ },
+ "key_risks": [
+  "Quick-commerce price war and cash burn",
+  "Funding need if losses persist (cash from operations -Rs 2,898 cr in FY26)",
+  "Gig-worker labour-code costs",
+  "Overhang from investor exits",
+  "Regulatory action (CCI, FSSAI, dark-store rules)"
+ ],
+ "upside_triggers": [
+  "Instamart contribution break-even",
+  "Rivals' discipline or regulatory curbs on discounting",
+  "Food delivery profit growth",
+  "Valuation reset attracting DII buying (DIIs now 34.5%)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_QCOMMERCE_COMPETITION",
+   "type": "FACTOR",
+   "name": "Quick-commerce competitive intensity (Blinkit, Zepto, Flipkart Minutes, Amazon)",
+   "ssu": "+1 = materially faster dark-store expansion/discounting by rivals"
+  },
+  {
+   "id": "NEW_FSSAI_FOOD_REGULATION",
+   "type": "FACTOR",
+   "name": "FSSAI / packaged-food and online food regulation intensity",
+   "ssu": "+1 = materially stricter online-food/packaged-food rules"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/SWIGGY/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in quarterly results, shareholding, cash flow (fetched 2026-11-05)"
+  },
+  {
+   "url": "market_impact/data/packs/SWIGGY.md",
+   "date": "2026-11-05",
+   "what": "Yahoo price performance, sensitivities, headlines (no screener dossier in pack)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Swiggy+Instamart+Q2+FY27+loss+Eternal+Zepto+competition+when:90d",
+   "date": "2026-10-23",
+   "what": "Q2 reaction: The Tech Portal, Inc42, Moneycontrol, Reuters"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels and moves"
+  }
+ ]
+}

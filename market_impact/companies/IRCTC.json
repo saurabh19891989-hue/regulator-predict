@@ -1,0 +1,306 @@
+{
+ "ticker": "IRCTC",
+ "name": "Indian Railway Catering and Tourism Corporation Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_RAILWAYS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Navratna PSU holding the monopoly on online railway ticketing (convenience fees), railway catering, Rail Neer packaged water and tourism. TTM sales Rs 5,425 cr, EBITDA margin ~31% (falling from 47% in FY22 as low-margin catering grows), PAT Rs 1,393 cr, almost debt-free, dividend yield 2.0%, government owns 62.4% with a planned FY27 OFS. The stock is at 2020 levels, -36% in 12 months, de-rating on slowing earnings growth and railway-PSU sentiment.",
+ "revenue_mix": [
+  {
+   "segment": "Catering (approx.)",
+   "share_pct": 44,
+   "geography": "India"
+  },
+  {
+   "segment": "Internet ticketing (approx.)",
+   "share_pct": 24,
+   "geography": "India"
+  },
+  {
+   "segment": "Tourism (approx.)",
+   "share_pct": 22,
+   "geography": "India"
+  },
+  {
+   "segment": "Rail Neer and others (approx.)",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_FOOD_INFLATION_IN (catering inputs)",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_PACKAGING (Rail Neer)",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "Employee, license fees, other",
+   "share_of_costs_pct": 40
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_TRAVEL_DEMAND",
+   "dst": "IRCTC",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 2.0,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Internet ticketing convenience fees (~25% of revenue, ~60% segment margin) plus catering/tourism track passenger volumes. +10% travel demand -> ticketing/tourism volume +6% -> EBITDA +6% (33% margin, ~50% incremental); EV/MCap 0.85 (net cash); persistence 0.8 -> ~+4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IRCTC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 1,370 cr, OPM 28%, PAT 330 cr; mcap 36,720 cr, P/E 26.6"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RAIL_TICKET_FEE_POLICY",
+   "dst": "IRCTC",
+   "relation": "regulatory_risk",
+   "w": -6.0,
+   "w_low": -15.0,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "Convenience fees (~Rs 1,300 cr, ~85% margin) are set by the Railway Board. A 25% cut = EBITDA -18% (persistence 1.0, EV/MCap 0.85 -> -15), weighted by an assumed ~40% chance of a binding tightening step per +1 unit -> -6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "Convenience-fee structure historically changed by Railways"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "IRCTC",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Catering (~45% of revenue per model knowledge) operates on licence fees/pass-through, but Q1 catering revenue +34% has thinner margin; food/packaging input +2pp -> catering margin -30 bp of segment -> EBITDA -1.3% -> persistence 0.3 -> -0.4; plus tariff caps -> -0.8. Pack wheat +0.87 (t 1.4) opposite sign, insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IRCTC+Q1+FY27+OFS+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-13",
+     "note": "Q1 revenue +18% to Rs1,369.5 cr; PAT flat; catering revenue +34%; govt plans FY27 OFS (Upstox/Sahi/Moneycontrol)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "IRCTC",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Debt-free with Rs 3,000+ cr treasury (model knowledge) so +25bp lifts interest income slightly (+0.4%) but dividend-yield stock (2.0%, P/E 26.6) is rate-sensitive: net -1.0. Pack Fed funds +2.75 (t 2.1) is not a causal channel (likely correlated PSU-rally).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IRCTC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 1,370 cr, OPM 28%, PAT 330 cr; mcap 36,720 cr, P/E 26.6"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "IRCTC",
+   "relation": "geopolitical_exposure",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation led to rail travel restrictions/diversions in May 2025 (model knowledge); border-region trains cancelled, tourism bookings cut; -1% to -3% revenue in a quarter, EBITDA -3% -> -2 incl. PSU risk-off.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-05",
+     "note": "Operation Sindoor impacts"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "IRCTC",
+   "relation": "policy_effect",
+   "w": 1.2,
+   "w_low": 0.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Sentiment co-movement with the railway PSU basket (RVNL, IRFC, IRCON; Livemint 17 Oct: whole group down ~40% in a year). Fundamental link is weak: passenger numbers rise with capacity (Vande Bharat etc.); +10% capex -> +0.5% passenger capacity, plus basket flow +0.7. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=railway+PSU+stocks+derailed+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Livemint: railway PSU stocks down 40% in a year"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "IRCTC",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Rail Neer (~9% of revenue) uses PET resin/packaging ~30% of its cost; +10% -> +0.25% of revenue -> EBITDA -1% -> persistence 0.3 -> -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11",
+     "note": "Rail Neer cost share"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "IRCTC",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs only 3.5% (from 4.9%) and falling; PSU consumer name has low FPI sensitivity; +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IRCTC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 1,370 cr, OPM 28%, PAT 330 cr; mcap 36,720 cr, P/E 26.6"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "IRCTC",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Rail travel and tourism volumes scale with GDP/income: +1pp GDP -> volumes +1.2% -> EBITDA +1.5% -> persistence 0.8, plus beta 1.3 -> +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/IRCTC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 sales 1,370 cr, OPM 28%, PAT 330 cr; mcap 36,720 cr, P/E 26.6"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Indian Railways / Railway Board",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "Regulator, licensor, promoter (62.4% govt)"
+  },
+  {
+   "counterparty": "Private OTAs (MakeMyTrip, ixigo, Paytm)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Rail ticket agents"
+  },
+  {
+   "counterparty": "RVNL / IRFC / CONCOR",
+   "ticker": "RVNL",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Sentiment peers in railway PSU basket"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-12",
+   "event": "Q2 FY27 results (Sep quarter not yet reported in pack; date estimated from prior-year pattern, model knowledge)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "pack shows latest quarter Jun-26"
+  },
+  {
+   "date": "2027-03",
+   "event": "Government OFS in IRCTC planned in FY27 (floor typically at ~8-10% discount)",
+   "type": "corporate_action",
+   "prob": 0.4,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=IRCTC+OFS+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Interim dividend announcement alongside H1 results (history, model knowledge)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun-26): sales Rs 1,370 cr (+18%), OP Rs 387 cr, OPM 28% vs 34% a year earlier, PAT Rs 330 cr flat y/y; catering revenue +34%.",
+  "trend": "Revenue up but EBITDA flat: mix shift to lower-margin catering and tourism; margins down from 35% to 28%.",
+  "valuation": "P/E 26.6, P/B 8.5, ROE 34%, ROCE 46%, dividend yield 2.0%; near 52-week low of Rs 435, high 721.",
+  "recent_developments": [
+   "2026-08-12/13 Q1: profit flat, govt plans FY27 OFS",
+   "2026-09-08/11 52-week lows",
+   "2026-09-30 railway PSU stocks rally 14% (Zee Business)",
+   "2026-10-14 NDTV Profit: IRCTC back at 2020 levels, margins squeezed",
+   "2026-10-16 QCI food-safety audit partnership",
+   "2026-10-17 Livemint: railway PSU stocks down 40% in a year"
+  ]
+ },
+ "key_risks": [
+  "Policy caps on fees",
+  "OFS supply overhang",
+  "Margin dilution from catering",
+  "Railway PSU sentiment"
+ ],
+ "upside_triggers": [
+  "Convenience-fee increase",
+  "Strong passenger growth",
+  "Dividend yield support"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_RAIL_TICKET_FEE_POLICY",
+   "type": "POLICY",
+   "name": "Railway convenience-fee / ticketing / catering policy",
+   "ssu": "+1 = tightening (cuts convenience fees, opens ticketing to agents, or changes catering contracts)"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/IRCTC/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals via pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IRCTC+Q1+FY27+OFS+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-13",
+   "what": "Q1 FY27 and OFS headlines"
+  }
+ ]
+}
