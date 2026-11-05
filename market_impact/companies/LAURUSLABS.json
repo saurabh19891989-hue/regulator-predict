@@ -1,0 +1,371 @@
+{
+ "ticker": "LAURUSLABS",
+ "name": "Laurus Labs Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CDMO_API",
+ "tier": "MIDCAP_100",
+ "business_summary": "Hyderabad-based API, formulations and CDMO company. Segments (model knowledge, verify): Generics (ARV APIs/finished doses, oncology, cardio) ~55-60%, Laurus Synthesis (CDMO/ contract development, ~20-25% and rising fast), Laurus Bio (enzymes/ biologics CDMO, ~5%). Export-heavy (~75-80% of revenue: US, Europe, Africa/Asia ARV tenders). Q2 FY27: revenue Rs 2,206 cr (+33% YoY), EBITDA Rs 750 cr (34%), PAT Rs 436 cr (+126%); CDMO surge. Bought 60% of Canadian oligonucleotide biotech Galenvs Sciences and SI&C Resins (total ~Rs 64 cr, 2026-10-29/11-02) and invested Rs 107.8 cr in KRKA Pharma via rights issue (2026-10-16). Management guides 30%+ EBITDA margin with ~Rs 3,000 cr capex (Trade Brains 2026-11-03). Mcap Rs 1.25 lakh cr, P/E 93, stock +136% in 12m.",
+ "revenue_mix": [
+  {
+   "segment": "Generics (ARV, oncology, cardio APIs and FDFs)",
+   "share_pct": 55,
+   "geography": "US/Europe/Africa/Asia; ARV tenders (Global Fund/PEPFAR)"
+  },
+  {
+   "segment": "Laurus Synthesis (CDMO + specialty ingredients)",
+   "share_pct": 32,
+   "geography": "US/Europe pharma innovators"
+  },
+  {
+   "segment": "Laurus Bio and others",
+   "share_pct": 13,
+   "geography": "global"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "LAURUSLABS",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 11.0,
+   "lag": ">12m",
+   "mechanism": "CDMO growth is the stock's key driver: orders from Western innovators diversifying away from China (BIOSECURE-style policies). CDMO ~32% of Rs 8,000 cr revenue growing ~50%+; each +1 theme unit adds ~10pp to CDMO growth = +3pp group sales at ~35% incremental EBITDA vs 30% base -> +3.5% EBITDA first year, compounded by order visibility to +15% EBITDA over 3 yrs; EV/MCap 1.03, persistence 1.0 -> +6.0. Nuvama sees 24% upside on CDMO shift (ET 2026-10-16).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+capex+CDMO+order+book+Nuvama+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Laurus shifts gears as CDMO emerges as key growth driver (ET 2026-10-16)"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "LAURUSLABS",
+   "relation": "geopolitical_exposure",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": ">12m",
+   "mechanism": "Decoupling steers US innovator outsourcing from Chinese CDMOs to Indian ones. +1 unit -> same direction as T_CHINA_PLUS_ONE but narrower (US only) -> +3.0 (not additive with T_CHINA_PLUS_ONE; the assembler should treat overlap).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+capex+CDMO+order+book+Nuvama+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "CDMO order flows; Nuvama note"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "LAURUSLABS",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Chinese API/intermediate price cuts +15%: hits Laurus's commoditised ARV/API prices (Generics ~55% of sales; China competes in intermediates). 5% price cut on 25% of sales = -1.3% revenue at 100% drop-through = -4.2% EBITDA at 30% OPM; partly offset by cheaper intermediates (RM 45% of costs, 10% share China, -1.5% cost = +2%) -> net -2% EBITDA; EV/MCap 1.03, persistence 0.5 -> -1.0; with multiple risk -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+Q2+FY27+CDMO+revenue+share+ARV+synthesis+segment+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Q2 margin 34% shows pricing intact; risk is asymmetric"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "LAURUSLABS",
+   "relation": "fx_translation",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 6.5,
+   "lag": "0-3m",
+   "mechanism": "~85% of revenue USD/EUR-linked (exports + CDMO contracts), imported RM ~25% of costs (≈19% of sales): net 66% x 3% = +2% of sales; at 34% OPM = +5.8% EBITDA; ~50% hedged -> +2.9%; plus operating leverage; EV/MCap 1.03, persistence 0.5 -> +1.5; for a 93x P/E stock the earnings-revision effect is magnified x2.5 -> +4.0. Empirical +2.46 (t=1.3) lower.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+Q2+FY27+CDMO+revenue+share+ARV+synthesis+segment+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Q2 FY27 EBITDA margin 34.5% (Investing.com 2026-10-29); INR -1.9% in 1m"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "LAURUSLABS",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "APIs are historically exempt; CDMO exports of branded-drug intermediates sit in a grey area now that branded drugs face 100% tariffs from 2026-09-29 (India's speciality drugs exempt). Customers may shift to US-based supply (reshoring) - CDMO order risk. 15% probability x -10% -> -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "US 100% branded pharma tariff; India speciality exemption (Business Standard 2026-09-29)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "LAURUSLABS",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -12.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Concentrated in a few Visakhapatnam / Anakapalli sites feeding CDMO and generics; an OAI hits CDMO onboarding and customer audits. 15% probability x -25% equity (concentration + 93x P/E) -> -4.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+Q2+FY27+CDMO+revenue+share+ARV+synthesis+segment+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Large, concentrated capex: Rs 3,000 cr (Trade Brains 2026-11-03)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LAURUSLABS",
+   "relation": "funding_cost",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Net debt ~Rs 3,000 cr (interest Rs 44 cr/qtr = Rs 176 cr/yr on ~Rs 2,200 cr+ capex capitalised); +25bp = Rs 5 cr = 0.2% EBITDA; discount-rate on 93x P/E dominates: duration ~20 yrs -> -2.0 + funding -> -1.8 net of persistence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+pharma+stock+30%+EBITDA+margin+guidance+Rs+3,000+crore+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Interest Rs 44 cr in Sep-26 quarter (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "LAURUSLABS",
+   "relation": "competition",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Generic formulations (US, FDF) ~15% of sales; +5pp erosion -> -0.75% sales -> -2.5% EBITDA, persistence 0.5, EV/MCap 1.03 -> -1.3 (less given API/CDMO mix) -> -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+Q2+FY27+CDMO+revenue+share+ARV+synthesis+segment+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Generics segment still majority of revenue"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LAURUSLABS",
+   "relation": "discount_rate",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding up from 25.8% to 30.8% in two quarters; stock beta ~0.9-1.05; high momentum. +US$5bn -> +4% x beta ~1 + repositioning -> +3.0 beyond market.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+Q2+FY27+CDMO+revenue+share+ARV+synthesis+segment+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Shareholding Sep 2026: FII 30.84% (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "T_GLP1",
+   "dst": "LAURUSLABS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 4.0,
+   "lag": ">12m",
+   "mechanism": "Peptide/oligonucleotide CDMO (Galenvs acquisition, GLP-1 peptide APIs) could address obesity-drug supply; model knowledge only - option value; +1 unit -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Laurus+Labs+Canadian+oligonucleotide+acquisition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "Laurus buys Galenvs (oligonucleotide) and SI&C Resins (Moneycontrol 2026-10-29)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Global Fund / PEPFAR ARV tenders",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "ARV generics ~25-30% of sales (model); donor funding risk"
+  },
+  {
+   "counterparty": "Large pharma innovators (CDMO customers)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "contract-term concentration"
+  },
+  {
+   "counterparty": "Chinese intermediate suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "RM"
+  },
+  {
+   "counterparty": "Divi's Labs, Aurobindo, Syngene, Piramal Pharma",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "CDMO/API peers"
+  },
+  {
+   "counterparty": "Galenvs Sciences (60%), SI&C Resins, KRKA Pharma (stake)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "Oct 2026 acquisitions/ investments"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: CDMO order conversion, 30%+ EBITDA margin sustain",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": 12.0,
+   "source": "https://news.google.com/rss/search?q=Laurus+Labs+Q2+FY27+CDMO+revenue+share+ARV+synthesis+segment+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Completion of Galenvs (60%) and SI&C Resins deals",
+   "type": "corporate_action",
+   "prob": 0.8,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Laurus+Labs+Canadian+oligonucleotide+acquisition+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Commissioning of FY27 capex tranche (Rs 3,000 cr program)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Laurus+Labs+pharma+stock+30%+EBITDA+margin+guidance+Rs+3,000+crore+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Possible BIOSECURE-style US legislation changes",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 10.0,
+   "source": "https://news.google.com/rss/search?q=Laurus+Labs+capex+CDMO+order+book+Nuvama+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Inclusion/weight changes in Nifty Next 50 or MSCI after market-cap growth (low confidence)",
+   "type": "other",
+   "prob": 0.2,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Laurus+Labs+Q2+FY27+CDMO+revenue+share+ARV+synthesis+segment+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 2,206 cr (+33% YoY), EBITDA Rs 750 cr (34%), PAT Rs 436 cr (+126%).",
+  "trend": "Six consecutive quarters of sales growth and margin expansion from 24% (Jun-25) to 34%; TTM PAT Rs 1,332 cr vs Rs 358 cr FY25.",
+  "valuation": "Rs 2,318; P/E 93, P/B 20.7; mcap Rs 1.25 lakh cr; 52-wk 913-2,442; Nuvama +24% target (2026-10-16).",
+  "recent_developments": [
+   "2026-11-02 Rs 64 cr acquisitions for peptide/ oligonucleotide",
+   "2026-10-30 52-week high after Q2; 19% rally in 4 days (Business Standard)",
+   "2026-10-29 acquires 60% of Galenvs Sciences (Canada)",
+   "2026-10-16 invests Rs 107.8 cr in KRKA Pharma rights issue",
+   "2026-09-15 Moneycontrol: capex gamble pays off as CDMO orders drive earnings"
+  ]
+ },
+ "key_risks": [
+  "Valuation 93x TTM P/E and 20x book",
+  "Customer/product concentration in CDMO",
+  "USFDA/ site concentration",
+  "ARV tender and donor-funding risk",
+  "Chinese pricing pressure on APIs",
+  "Large capex execution"
+ ],
+ "upside_triggers": [
+  "BIOSECURE-type policy",
+  "Large multi-year CDMO contracts",
+  "Peptide/oligo capacity ramp",
+  "INR weakness"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/LAURUSLABS.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Laurus+Labs+Q2+FY27+CDMO+revenue+share+ARV+synthesis+segment+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-29",
+   "what": "Q2 FY27"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Laurus+Labs+Canadian+oligonucleotide+acquisition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-29",
+   "what": "Galenvs acquisition"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Laurus+Labs+capex+CDMO+order+book+Nuvama+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "CDMO driver thesis"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Laurus+Labs+pharma+stock+30%+EBITDA+margin+guidance+Rs+3,000+crore+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Margin guidance and capex"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Laurus+Labs+KRKA+Pharma+rights+issue+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "KRKA investment"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "Tariff"
+  }
+ ]
+}
