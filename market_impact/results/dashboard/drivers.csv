@@ -1,0 +1,199 @@
+driver,name,standard_shock,since_june_ssu,since_june_source,companies_moved,footprint,indirect_share,gains,losses
+C_MIDEAST_CONFLICT,Middle East conflict intensity,+1 = escalation,1.0,events,166,301.8,0.802,"OIL +8.6, ONGC +7.0, MCX +2.3, COCHINSHIP +2.1, VAML +2.1","INDIGO -5.8, FEDERALBNK -5.0, GMRAIRPORT -4.9, AXISBANK -4.4, HINDPETRO -4.1"
+F_FPI_FLOWS,Foreign portfolio flows into Indian equities,+US$5 bn net inflow per quarter,-1.6,events,135,298.2,0.146,"MOTILALOFS +7.1, PAYTM +5.0, ICICIAMC +4.9, 360ONE +4.2, SBIN +4.2","JSWSTEEL -0.6, NATIONALUM -0.5, OIL -0.5, ONGC -0.5, VAML -0.5"
+F_REPO_IN,RBI repo rate,+25 bp repo,1.0,events,183,277.9,0.33,"LICHSGFIN +1.9, BANKINDIA +1.0, PAYTM +0.6, MAHABANK +0.3, UNIONBANK +0.2","PRESTIGE -4.9, YESBANK -4.5, TATACAP -4.4, GODREJPROP -4.4, BAJFINANCE -4.4"
+F_USDINR,USD/INR exchange rate,+3% USD/INR (rupee weaker),-0.37,observed,171,276.9,0.45,"BIOCON +4.3, JSWSTEEL +3.4, LAURUSLABS +3.3, DRREDDY +3.0, ONGC +2.9","TATACAP -3.3, VOLTAS -3.2, YESBANK -3.1, AUBANK -3.0, PRESTIGE -3.0"
+F_RISK_SENTIMENT,Global risk aversion (VIX),+5 VIX points,0.11,observed,143,256.5,0.552,"TATACONSUM +0.7, JSWSTEEL +0.7, ASTRAL +0.7, ONGC +0.6, OIL +0.6","MOTILALOFS -6.2, JIOFIN -6.0, IREDA -5.8, ICICIAMC -5.7, MEESHO -5.1"
+P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,+1 = broad cut (~2-5 pp on affected items),0.0,events,117,253.9,0.799,"HYUNDAI +9.8, TMCV +8.0, TVSMOTOR +7.3, MARUTI +7.0, EICHERMOT +6.4","NMDC -0.1, NATIONALUM -0.1, OIL -0.1, JINDALSTEL -0.1, APARINDS -0.1"
+F_URBAN_DEMAND,Urban discretionary consumption growth,+5 pp,0.2,events,115,247.0,0.542,"INDIGO +6.4, NYKAA +6.0, ETERNAL +5.8, GMRAIRPORT +5.4, TRENT +5.0","JSWENERGY -0.6, PERSISTENT -0.5, RVNL -0.5, TECHM -0.4, SOLARINDS -0.4"
+F_CPI_IN,India CPI inflation,+1 pp,1.15,events,156,240.4,0.969,"PIIND +0.4, NATIONALUM +0.2, OIL +0.2, HINDCOPPER +0.2, ONGC +0.2","YESBANK -4.9, BAJFINANCE -4.5, TATACAP -4.4, GMRAIRPORT -4.0, PRESTIGE -3.7"
+F_RURAL_DEMAND,Rural consumption growth,+5 pp,-0.25,events,107,233.3,0.827,"INDUSINDBK +8.1, IDFCFIRSTB +6.7, BANKINDIA +5.4, M&MFIN +5.1, YESBANK +5.1","PRESTIGE -1.0, JSWENERGY -0.8, RVNL -0.8, PERSISTENT -0.8, TECHM -0.7"
+F_ASSET_QUALITY_IN,Credit cost / NPA cycle (higher = worse),+50 bp credit cost,,,38,231.0,0.075,,"INDUSINDBK -16.0, IDFCFIRSTB -14.0, YESBANK -10.2, BANKINDIA -10.1, FEDERALBNK -9.0"
+F_GDP_IN,India real GDP growth,+1 pp,0.5,events,96,199.7,0.651,"INDUSINDBK +7.0, IDFCFIRSTB +5.5, BANKINDIA +5.3, FEDERALBNK +5.1, KOTAKBANK +4.8","PRESTIGE -1.9, JSWENERGY -1.9, PERSISTENT -1.5, RVNL -1.4, TECHM -1.3"
+F_GOVT_CAPEX,Central + state government capex,+10% capex growth,1.0,events,87,182.7,0.507,"POWERINDIA +4.8, TMCV +4.5, ENRIN +4.0, POLYCAB +3.8, CGPOWER +3.7","PRESTIGE -0.7, SUZLON -0.7, JSWENERGY -0.6, MARUTI -0.6, PERSISTENT -0.6"
+F_BRENT,Brent crude oil price,+10% Brent,0.0,observed,143,179.4,0.623,"OIL +5.5, ONGC +4.0, LT +1.3, MCX +1.3, COALINDIA +1.2","BPCL -4.6, INDIGO -3.2, HINDPETRO -2.8, GMRAIRPORT -2.4, IOC -2.3"
+F_MONSOON,Monsoon rainfall vs normal,+10% above long-period average,-1.56,events,115,174.1,0.92,"INDUSINDBK +5.3, IDFCFIRSTB +4.7, YESBANK +3.9, M&MFIN +3.8, SHRIRAMFIN +3.2","ADANIPOWER -3.2, COALINDIA -2.1, ENRIN -1.9, BHEL -1.5, WAAREEENER -1.1"
+F_GSEC_10Y_IN,India 10-year G-sec yield,+25 bp yield,1.55,director_override,103,173.9,0.096,"HDFCLIFE +0.5, MFSL +0.3, SBILIFE +0.3","ADANIGREEN -3.8, JIOFIN -3.3, IREDA -3.3, YESBANK -3.3, BANKINDIA -3.1"
+NEW_US_TARIFF_GLOBAL,US average effective tariff rate (all partners),+5 pp effective tariff rate,,,128,170.1,1.0,"JSWSTEEL +0.6, DRREDDY +0.4, TATACONSUM +0.4, SAIL +0.4, ASTRAL +0.4","MOTILALOFS -3.8, ICICIAMC -3.5, JIOFIN -3.3, IREDA -3.3, INDUSINDBK -3.1"
+F_PRIVATE_CAPEX,Private corporate capex,+10% capex growth,,,80,162.1,0.836,"CUMMINSIND +4.8, INDUSINDBK +4.4, SIEMENS +4.2, BANKINDIA +3.6, IDFCFIRSTB +3.6","PRESTIGE -1.1, JSWENERGY -1.0, PERSISTENT -0.9, RVNL -0.8, TECHM -0.7"
+F_CHINA_GDP,China growth / stimulus,+1 pp,0.3,events,125,157.6,0.988,"NMDC +4.8, VAML +3.6, HINDALCO +2.7, HINDCOPPER +2.7, NATIONALUM +2.4","VOLTAS -2.5, TVSMOTOR -2.1, MOTILALOFS -1.9, ASHOKLEY -1.8, TMCV -1.7"
+F_FOOD_INFLATION_IN,India food inflation,+2 pp,2.0,events,124,153.7,0.958,"DMART +0.2, NATIONALUM +0.2, OIL +0.2, HINDCOPPER +0.1, PIIND +0.1","YESBANK -3.2, TATACAP -2.7, BAJFINANCE -2.6, GMRAIRPORT -2.3, AUBANK -2.2"
+P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",+1 = tightening step,,,39,152.4,0.474,"POWERGRID +0.1, BSE +0.1, SUPREMEIND +0.1","BANKINDIA -6.0, CANBK -5.7, INDUSINDBK -5.1, TATACAP -5.0, UNIONBANK -4.8"
+NEW_USDJPY,USD/JPY exchange rate,+3% USD/JPY (yen weaker),-0.5,events,112,152.0,1.0,"MOTILALOFS +3.7, ICICIAMC +3.2, JIOFIN +2.9, IREDA +2.7, 360ONE +2.7","HINDZINC -0.5, NATIONALUM -0.3, ASTRAL -0.3, TATACONSUM -0.3, JSWSTEEL -0.3"
+P_CAPITAL_GAINS_TAX,Capital-gains / securities tax burden,+1 = higher,,,94,145.7,0.752,"JSWSTEEL +0.2, NATIONALUM +0.2, OIL +0.2, ONGC +0.2, VAML +0.2","BSE -8.3, GROWW -7.1, MOTILALOFS -7.1, ICICIAMC -6.6, 360ONE -5.8"
+F_WAGES_IN,Indian wage / employee-cost inflation,+2 pp,0.0,events,88,133.8,0.868,"INDUSINDBK +3.7, IDFCFIRSTB +3.0, VMM +2.8, SBICARD +2.7, BANKINDIA +2.3","PERSISTENT -2.2, TECHM -2.0, TCS -1.8, GROWW -1.5, FORTIS -1.4"
+NEW_FISCAL_SLIPPAGE_IN,General-government fiscal slippage / extra borrowing vs budget (Centre + states),+0.5 pp of GDP deficit above budget (~Rs2 lakh cr),,,105,130.0,1.0,"SUZLON +0.1, COCHINSHIP +0.1, MARUTI +0.1, SRF +0.1, GLENMARK +0.1","BANKINDIA -2.3, YESBANK -2.2, PFC -2.0, UNIONBANK -1.7, PNB -1.7"
+F_US_EQUITIES,US equity market,+5% S&P 500,0.23,observed,101,121.9,0.735,"NAUKRI +3.1, MOTILALOFS +2.8, CUMMINSIND +2.3, BSE +2.2, DIXON +2.0","JSWSTEEL -0.2, NATIONALUM -0.2, SAIL -0.2, SRF -0.1, VAML -0.1"
+P_US_TARIFF_INDIA,US tariffs on Indian goods,+10 pp average tariff,-0.6,events,101,117.7,0.849,"NATIONALUM +0.6, OIL +0.6, VAML +0.6, BIOCON +0.6, JSWSTEEL +0.6","BHARATFORG -3.0, APARINDS -2.4, WAAREEENER -2.1, MOTILALOFS -2.0, CONCOR -2.0"
+F_DXY,US dollar index,+3% DXY,0.74,observed,100,116.7,0.972,"MANKIND +1.4, TMPV +1.3, VOLTAS +0.8, JSWSTEEL +0.7, ONGC +0.7","MOTILALOFS -2.4, MUTHOOTFIN -2.0, PAYTM -1.6, ICICIAMC -1.6, SBIN -1.4"
+F_US_GDP,US growth,+1 pp,1.2,events,63,113.3,0.846,"LTM +3.7, MPHASIS +3.6, HCLTECH +3.2, WIPRO +3.2, COFORGE +3.2","SWIGGY -1.1, BPCL -1.0, BSE -0.9, ASTRAL -0.9, UPL -0.8"
+P_RENEWABLE_SUPPORT,Renewable / transmission policy support,+1 = stronger support,1.5,events,33,110.0,0.403,"IREDA +9.6, ADANIGREEN +7.0, SUZLON +6.9, PREMIERENE +6.9, WAAREEENER +6.7","ADANIPOWER -1.0, BHARATFORG -0.5, COALINDIA -0.5, TMPV -0.4, VOLTAS -0.3"
+NEW_OPEC_PLUS_SUPPLY,OPEC+ crude supply decisions,+1 mb/d OPEC+ production (quota/actual),,,89,107.3,1.0,"BPCL +3.0, INDIGO +1.9, HINDPETRO +1.8, IOC +1.5, LT +1.4","OIL -3.5, ONGC -2.6, MCX -0.9, COALINDIA -0.7, BAJAJ-AUTO -0.7"
+F_FED_FUNDS,US Fed funds rate,+25 bp,1.62,observed,87,106.5,0.832,LICHSGFIN +0.9,"BSE -3.7, SWIGGY -2.8, POLICYBZR -2.3, PERSISTENT -1.4, BIOCON -1.3"
+F_US_10Y,US 10-year Treasury yield,+25 bp yield,1.68,observed,89,105.8,0.921,"PREMIERENE +0.3, TMPV +0.3, COCHINSHIP +0.2, JSWSTEEL +0.2, RVNL +0.2","MUTHOOTFIN -1.9, BSE -1.8, NYKAA -1.8, SHRIRAMFIN -1.7, TVSMOTOR -1.7"
+C_INDIA_PAKISTAN,India–Pakistan tension,+1 = escalation,,,54,104.5,0.867,"MAZDOCK +6.3, BDL +6.2, HAL +5.9, BEL +5.6, SOLARINDS +4.9","IRCTC -2.1, MOTILALOFS -1.4, ADANIPORTS -1.1, PAYTM -0.9, ICICIAMC -0.9"
+F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse),+1 pp delinquencies,,,33,102.2,0.474,"JSWENERGY +0.1, RVNL +0.1, PRESTIGE +0.1, PERSISTENT +0.1, SOLARINDS +0.1","INDUSINDBK -7.8, IDFCFIRSTB -6.6, SBICARD -6.4, BAJFINANCE -4.0, LTF -3.6"
+F_CREDIT_SPREADS_IN,Indian corporate credit spreads,+50 bp spreads,0.5,events,48,101.7,0.248,"RVNL +0.1, PERSISTENT +0.1, SOLARINDS +0.1, APARINDS +0.1, PREMIERENE +0.1","BAJFINANCE -5.0, ABCAPITAL -4.2, BAJAJFINSV -4.1, TATACAP -4.0, IDEA -4.0"
+T_GENAI_SERVICES,GenAI substitution of IT/BPO labour (higher = more substitution),+1,1.0,events,45,101.1,0.592,"POWERINDIA +0.9, PAYTM +0.7, CUMMINSIND +0.7, ENRIN +0.5, TATACOMM +0.5","WIPRO -5.9, MPHASIS -4.9, INFY -4.9, NAUKRI -4.1, HCLTECH -3.9"
+F_HOUSING_DEMAND,Residential real-estate sales,+10% sales volume,,,46,92.5,0.451,"GODREJPROP +5.9, LODHA +5.9, PRESTIGE +4.8, DLF +3.5, OBEROIRLTY +3.4","JSWENERGY -0.3, MUTHOOTFIN -0.3, PERSISTENT -0.2, LTF -0.2, PFC -0.2"
+T_ENERGY_TRANSITION,Energy transition investment,+1,0.5,events,33,91.9,0.485,"IREDA +6.0, POWERINDIA +5.5, ENRIN +4.1, ADANIGREEN +4.0, PREMIERENE +3.8","COALINDIA -1.0, BHARATFORG -1.0, TMPV -0.9, VOLTAS -0.6, ADANIPOWER -0.4"
+F_AUTO_DEMAND_IN,Indian vehicle demand,+10% volumes,-0.1,events,27,89.6,0.0,"HYUNDAI +9.0, TMCV +7.0, TVSMOTOR +7.0, BOSCHLTD +6.0, MARUTI +5.5",
+T_FINANCIALISATION,Household savings shift to financial assets,+1,,,35,89.1,0.47,"ICICIAMC +7.5, MOTILALOFS +7.2, BSE +6.7, GROWW +6.6, 360ONE +5.9","YESBANK -1.0, HDFCBANK -0.9, FEDERALBNK -0.7, UNIONBANK -0.7, INDUSINDBK -0.6"
+F_STEEL_INDIA,Indian domestic steel price,+7% domestic HRC/rebar price,1.35,events,30,87.9,0.082,"JINDALSTEL +16.0, SAIL +14.8, JSWSTEEL +8.8, TATASTEEL +8.0, NMDC +1.9","TMCV -2.2, BHEL -2.0, MARUTI -2.0, ASHOKLEY -1.8, SUZLON -1.8"
+F_CREDIT_GROWTH_IN,Bank credit growth,+3 pp,,,46,83.1,0.607,"MAHABANK +2.9, KOTAKBANK +2.4, YESBANK +2.2, FEDERALBNK +2.1, AXISBANK +2.1","LTF -2.4, IREDA -2.2, MUTHOOTFIN -1.9, M&MFIN -1.7, RECLTD -1.7"
+NEW_FPI_DEBT_FLOWS,"Foreign portfolio flows into Indian government/corporate bonds (FAR, index-linked)",+US$5 bn net debt inflow per quarter,,,67,81.7,1.0,"ADANIGREEN +1.4, YESBANK +1.3, TATACAP +1.2, IREDA +1.2, JIOFIN +1.2","JSWSTEEL -0.7, LAURUSLABS -0.7, DRREDDY -0.6, NATIONALUM -0.6, OIL -0.6"
+T_PREMIUMISATION,Consumer premiumisation,+1,,,35,80.4,0.28,"INDHOTEL +3.7, LENSKART +3.2, PHOENIXLTD +3.1, LGEINDIA +3.1, RADICO +3.1",
+C_US_CHINA_DECOUPLING,US–China trade decoupling,+1 = more decoupling,-0.1,events,54,80.2,0.98,"VOLTAS +2.1, DIXON +1.7, AUROPHARMA +1.7, SIEMENS +0.9, LAURUSLABS +0.8","BOSCHLTD -2.5, MOTHERSON -2.2, TATASTEEL -2.1, HYUNDAI -2.0, UPL -1.7"
+NEW_EL_NINO,ENSO state (El Nino strength),+1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina,,,65,80.1,1.0,"ADANIPOWER +1.9, COALINDIA +1.6, ENRIN +1.6, BHEL +1.3, ADANIENSOL +0.9","INDUSINDBK -2.0, IDFCFIRSTB -1.7, M&MFIN -1.7, SHRIRAMFIN -1.4, YESBANK -1.3"
+NEW_FX_RESERVES_IN,India FX reserves (RBI intervention),+US$25bn reserves (RBI buys / net inflows),-2.2,events,45,73.4,1.0,"YESBANK +3.3, BAJFINANCE +1.9, IDFCFIRSTB +1.8, TATACAP +1.8, AUBANK +1.7","JSWSTEEL -0.3, LAURUSLABS -0.3, NATIONALUM -0.3, OIL -0.3, ONGC -0.3"
+NEW_RUSSIA_UKRAINE_WAR,Russia-Ukraine war / Western sanctions intensity on Russia,"+1 = escalation (new sanctions round, strikes on energy/port infrastructure); -1 = ceasefire/sanctions relief",,,41,69.6,1.0,"OIL +2.7, ONGC +2.3, HINDPETRO +1.2, RELIANCE +0.8, MCX +0.8","INDIGO -1.7, BRITANNIA -1.5, GODREJCP -1.4, VMM -1.0, ATGL -1.0"
+F_AI_CAPEX,Global AI / data-centre capex,+10% growth,-0.3,events,31,65.1,0.838,"POWERINDIA +4.4, TATACOMM +3.1, ENRIN +3.1, CGPOWER +2.1, CUMMINSIND +1.9","BOSCHLTD -1.0, MARUTI -0.8, MOTHERSON -0.6, HYUNDAI -0.5, M&M -0.5"
+C_RUSSIA,"Russia (oil discounts, defence, sanctions)",+1 = closer trade access / larger discounts,1.0,events,27,63.7,0.862,"BPCL +4.4, IOC +3.5, HINDPETRO +2.8, ONGC +1.0, OIL +0.8","BHARATFORG -2.0, WAAREEENER -1.3, APARINDS -1.3, CONCOR -1.2, LAURUSLABS -0.9"
+T_DATA_CENTRES_IN,Indian data-centre build-out,+1,,,24,62.1,0.263,"POWERINDIA +5.7, CUMMINSIND +4.1, ENRIN +3.7, ABB +3.3, BLUESTARCO +3.1","VAML -0.1, JINDALSTEL -0.1"
+T_CHINA_PLUS_ONE,China+1 manufacturing relocation to India,+1,,,11,56.5,0.532,"LAURUSLABS +5.9, DIXON +4.0, DIVISLAB +3.5, PIIND +2.9, SIEMENS +2.7","BIOCON -0.4, DRREDDY -0.3, NATIONALUM -0.3, OIL -0.3, JSWSTEEL -0.3"
+P_IRDAI_REG,Insurance regulation tightening (IRDAI),+1 = tightening,,,16,56.0,0.163,"YESBANK +0.1, HDFCBANK +0.1, FEDERALBNK +0.1, IDFCFIRSTB +0.1, UNIONBANK +0.1","POLICYBZR -14.2, MFSL -9.2, HDFCLIFE -7.2, ICICIGI -4.1, ABCAPITAL -3.1"
+F_LIQUIDITY_IN,Indian banking system liquidity,+1 lakh crore surplus liquidity,-0.9,events,38,54.6,0.8,"YESBANK +2.8, IDFCFIRSTB +1.5, BAJFINANCE +1.5, TATACAP +1.4, AUBANK +1.3",HDFCLIFE -0.1
+F_DEPOSIT_GROWTH_IN,Bank deposit growth / funding ease,+3 pp,,,24,53.1,0.575,"YESBANK +3.8, HDFCBANK +3.7, FEDERALBNK +2.7, UNIONBANK +2.6, IDFCFIRSTB +2.4","HDFCLIFE -0.4, SBICARD -0.4, IREDA -0.3, MUTHOOTFIN -0.3, LTF -0.2"
+T_GRID_ELECTRIFICATION,Grid & electrification capex,+1,,,12,51.5,0.0,"POWERINDIA +8.0, ENRIN +6.0, GVT&D +6.0, ADANIENSOL +5.0, CGPOWER +5.0",
+F_STEEL_GLOBAL,Global HRC steel price,+10% global HRC,2.06,observed,23,49.9,0.81,"JINDALSTEL +7.9, SAIL +7.3, JSWSTEEL +4.4, TATASTEEL +4.0, CHOLAFIN +1.0","TMPV -3.0, TMCV -1.1, BHEL -1.0, MARUTI -1.0, CGPOWER -0.9"
+P_US_VISA_OUTSOURCING,US H-1B / outsourcing restrictions,+1 = material tightening,0.9,events,11,49.7,0.459,"VMM +0.5, INDUSINDBK +0.5, SBICARD +0.4, TRENT +0.4, TMCV +0.4","INFY -4.0, HCLTECH -3.5, MPHASIS -3.5, LTM -3.5, TCS -3.2"
+F_POWER_DEMAND_IN,Indian electricity demand,+3 pp demand growth,1.2,events,29,49.6,0.379,"COALINDIA +3.8, ENRIN +3.7, BHEL +3.2, IREDA +2.5, ADANIPOWER +2.5","VAML -1.1, JINDALSTEL -0.9, IDEA -0.7, TATACOMM -0.6, INDUSTOWER -0.5"
+F_EQUITY_ACTIVITY_IN,Indian equity market volumes & retail activity,+20% traded value / demat additions,,,10,47.6,0.285,"GROWW +7.7, BSE +7.6, MOTILALOFS +6.3, 360ONE +4.7, ICICIAMC +2.6","LICI -0.2, GODREJPROP -0.2, LODHA -0.2, PRESTIGE -0.2, PAYTM -0.2"
+P_DEFENCE_PROCUREMENT,Indian defence procurement & indigenisation,+10% domestic orders,1.0,events,9,47.4,0.329,"MAZDOCK +6.3, BEL +5.8, BDL +5.4, HAL +5.3, SOLARINDS +3.6",
+P_FDI_RULES,FDI liberalisation,+1 = liberalisation,0.5,events,8,46.5,0.729,"DIXON +4.4, UNIONBANK +3.2, PNB +3.2, SIEMENS +0.9, LAURUSLABS +0.9","ETERNAL -2.9, BIOCON -0.5, DRREDDY -0.3, JSWSTEEL -0.3, NATIONALUM -0.3"
+F_DOMESTIC_FLOWS,Domestic SIP / DII flows,+10% monthly SIP + DII inflow,,,24,45.1,0.184,"BSE +4.3, GROWW +3.8, MOTILALOFS +3.2, 360ONE +3.0, ICICIAMC +2.8",
+P_TELECOM_TARIFFS,Mobile tariff hikes,+10% ARPU via tariff hike,0.3,events,4,44.7,0.275,"IDEA +21.9, BHARTIARTL +5.5, RELIANCE +4.0, INDUSTOWER +2.0","YESBANK -0.2, BAJFINANCE -0.2, GMRAIRPORT -0.2, TATACAP -0.2, PRESTIGE -0.2"
+P_SEBI_DERIVATIVES,SEBI F&O / market-structure tightening,+1 = tightening step,-0.1,events,8,44.1,0.504,"HDFCAMC +0.3, LICI +0.1, GODREJPROP +0.1, LODHA +0.1, PRESTIGE +0.1","GROWW -10.6, BSE -10.5, MCX -5.9, MOTILALOFS -3.9, 360ONE -2.9"
+NEW_INCOME_TAX_RELIEF_IN,Personal income-tax relief,+Rs1 lakh cr annual relief (~0.26% of GDP),,,15,44.0,1.0,"NYKAA +1.0, ETERNAL +0.9, TRENT +0.8, LENSKART +0.8, INDIGO +0.7","PFC -0.7, POWERINDIA -0.6, POWERGRID -0.6, ADANIGREEN -0.5, JINDALSTEL -0.5"
+P_POWER_REFORM,Power market / DISCOM reform,+1 = reform progress,,,22,42.0,0.304,"PFC +4.0, RECLTD +4.0, ADANIENSOL +3.5, TATAPOWER +2.6, IREDA +2.5",NATIONALUM -0.1
+F_USDCNY,USD/CNY,+3% USD/CNY (yuan weaker),-0.47,observed,12,41.1,0.667,"VOLTAS +3.4, DIXON +2.5, DRREDDY +0.5, AUROPHARMA +0.5, LUPIN +0.4","TATASTEEL -2.7, HEROMOTOCO -2.0, TIINDIA -1.5, MOTHERSON -1.5, WAAREEENER -1.0"
+T_FORMALISATION,Formalisation of the economy,+1,0.3,events,21,41.1,0.661,"KALYANKJIL +4.0, TITAN +3.0, DMART +2.1, MUTHOOTFIN +1.9, HAVELLS +1.5","LTF -0.2, M&MFIN -0.2, SBICARD -0.2, IREDA -0.1, RECLTD -0.1"
+F_ALUMINIUM,Aluminium price,+10% aluminium,-1.96,observed,17,39.6,0.0,"VAML +10.0, NATIONALUM +6.5, HINDALCO +6.0, APARINDS +1.0, HAVELLS +0.5","TMPV -3.4, TVSMOTOR -1.2, HEROMOTOCO -1.0, ASHOKLEY -0.9, WAAREEENER -0.9"
+P_LABOUR_CODES,Labour code implementation cost,+1 = implementation,,,11,38.9,0.799,"KALYANKJIL +1.2, TITAN +1.0, IDFCFIRSTB +0.8, VMM +0.6, INDUSINDBK +0.6","SWIGGY -2.9, ETERNAL -2.8, MEESHO -1.4, PAGEIND -0.7, PERSISTENT -0.5"
+P_PLI,Production-linked incentive schemes,+1 = expansion/disbursement,,,15,38.9,0.689,"DIXON +4.6, EXIDEIND +4.0, LAURUSLABS +1.9, SIEMENS +1.6, CGPOWER +1.4","BIOCON -0.1, GLENMARK -0.1, PERSISTENT -0.1, DRREDDY -0.1, TATASTEEL -0.1"
+NEW_RARE_EARTH_SUPPLY,"Critical-mineral supply tightness (China export controls on rare earths, magnets, graphite, Ga/Ge)",+1 = new/tighter export-control round,,,21,38.6,0.911,"POWERINDIA +0.2, ENRIN +0.1, PREMIERENE +0.1, TATAPOWER +0.1, JSWENERGY +0.1","HYUNDAI -3.5, BOSCHLTD -3.4, TVSMOTOR -2.9, MARUTI -2.6, TMCV -2.1"
+F_DAIRY,Milk / dairy input cost,+8% milk procurement price,,,8,38.5,0.906,"LICHSGFIN +0.2, DMART +0.1, VAML +0.1, HINDCOPPER +0.1, NATIONALUM +0.1","NESTLEIND -1.7, JUBLFOOD -1.7, BRITANNIA -0.8, YESBANK -0.7, BAJFINANCE -0.6"
+P_HOUSING_POLICY,Affordable-housing / home-loan support,+1 = stronger support,,,17,37.7,0.665,"LICHSGFIN +2.9, GODREJPROP +2.4, LODHA +2.4, AMBUJACEM +2.4, PRESTIGE +2.3","RVNL -0.1, JSWENERGY -0.1"
+NEW_OMC_MARKETING_MARGIN,OMC petrol+diesel marketing margin,+Rs1/litre average marketing margin (vs normal ~Rs3-4/l),-0.5,director_override,3,37.0,0.425,"HINDPETRO +12.0, IOC +6.5, BPCL +6.0, SAIL +0.2, POWERINDIA +0.1","BAJFINANCE -0.2, TATACAP -0.2, PRESTIGE -0.2, JSWENERGY -0.2, GMRAIRPORT -0.2"
+P_EV_POLICY,EV incentives / mandates,+1 = stronger EV push,1.1,events,25,36.1,0.539,"TVSMOTOR +3.0, TMPV +2.3, TIINDIA +1.5, M&M +1.5, POWERINDIA +1.3","BOSCHLTD -3.0, ATGL -1.0, MARUTI -0.8, BPCL -0.4, BHARATFORG -0.2"
+F_EU_GDP,Europe growth,+1 pp,0.22,events,20,34.9,0.363,"TMPV +2.0, PERSISTENT +1.8, WIPRO +1.6, TMCV +1.6, MOTHERSON +1.5",RVNL -0.1
+P_STEEL_DUTY_IN,Indian safeguard/anti-dumping duty on steel imports,+10 pp effective duty,,,15,33.3,0.853,"JINDALSTEL +6.4, SAIL +5.0, JSWSTEEL +3.3, TATASTEEL +3.2, NMDC +1.4","TMCV -0.9, BHEL -0.8, MARUTI -0.8, ASHOKLEY -0.7, SUZLON -0.7"
+NEW_RURAL_TRANSFERS_IN,"Rural/household cash transfers (PM-KISAN, state women's DBT, rural employment guarantee spending)",+0.25% of GDP additional transfers (~Rs1 lakh cr/yr),,,5,32.9,1.0,"INDUSINDBK +0.6, M&MFIN +0.6, IDFCFIRSTB +0.5, MEESHO +0.4, VMM +0.4","POWERINDIA -0.5, PFC -0.5, POWERGRID -0.5, ADANIGREEN -0.4, ADANIENT -0.4"
+P_USFDA_ENFORCEMENT,USFDA inspection/enforcement intensity,+1 = stricter,1.0,events,11,32.6,0.141,,"DIVISLAB -5.7, ZYDUSLIFE -4.2, LAURUSLABS -3.8, BIOCON -3.5, AUROPHARMA -3.0"
+F_US_GENERIC_PRICING,US generic drug price erosion (higher = worse),+5 pp erosion,,,11,32.0,0.0,,"AUROPHARMA -5.0, LUPIN -5.0, DRREDDY -4.0, ZYDUSLIFE -4.0, CIPLA -3.5"
+F_COKING_COAL,Coking coal price,+15% coking coal,1.3,events,13,31.7,0.462,"COALINDIA +0.8, NMDC +0.6, APLAPOLLO +0.5, CHOLAFIN +0.3, M&MFIN +0.2","SAIL -5.6, JINDALSTEL -4.9, JSWSTEEL -4.1, TATASTEEL -2.4, TMPV -0.8"
+F_TRAVEL_DEMAND,Air/hotel/tourism demand,+10%,,,8,31.5,0.0,"GMRAIRPORT +9.0, INDIGO +9.0, INDHOTEL +5.0, IRCTC +4.0, ADANIENT +3.0",
+P_RAILWAY_CAPEX,Railway capex,+10%,,,9,31.4,0.515,"RVNL +6.1, SIEMENS +2.1, IRFC +1.6, SAIL +1.4, IRCTC +1.2",SUZLON -0.1
+F_EDIBLE_OIL,Palm / edible oil price,+10% edible oils,0.19,observed,9,29.7,0.678,"UPL +1.5, PATANJALI +1.5, LICHSGFIN +0.1","GODREJCP -1.7, MARICO -1.2, BRITANNIA -1.1, HINDUNILVR -0.9, DABUR -0.8"
+F_GOLD,Gold price,+8% gold (USD),-1.05,observed,11,29.2,0.631,"MUTHOOTFIN +3.5, HINDZINC +2.8, MCX +2.1, BRITANNIA +1.0, BAJAJFINSV +0.7","IDEA -1.6, PREMIERENE -1.2, LICI -0.8, WAAREEENER -0.7, KALYANKJIL -0.7"
+F_COPPER,Copper price,+10% copper,-0.24,observed,21,28.2,0.0,"HINDCOPPER +6.0, VEDL +1.5, ADANIENT +1.2, POLYCAB +1.0, SBICARD +1.0","VOLTAS -2.0, BLUESTARCO -1.5, TMPV -1.2, LGEINDIA -1.0, SUZLON -0.9"
+T_DIGITAL_PAYMENTS,Digital payments / UPI disruption of incumbents,+1,,,16,27.7,0.764,"PAYTM +4.0, JIOFIN +1.7, ICICIAMC +1.5, MOTILALOFS +1.4, BSE +1.3","SBICARD -1.0, HDFCBANK -0.1, INDUSINDBK -0.1, YESBANK -0.1, UNIONBANK -0.1"
+F_GOLD_DEMAND_IN,Indian jewellery/gold demand volume,+10%,,,2,27.1,0.588,"KALYANKJIL +7.0, TITAN +5.0, BIOCON +0.3, JSWSTEEL +0.2, LAURUSLABS +0.2","VOLTAS -0.2, MOTILALOFS -0.2, INDIGO -0.2, HINDPETRO -0.1, TATACAP -0.1"
+NEW_AGRI_IMPORT_DUTY_IN,Indian import duties on edible oils / pulses,+10 pp effective import duty,,,1,26.3,1.0,"LICHSGFIN +0.2, DMART +0.1, VAML +0.1","YESBANK -0.5, BAJFINANCE -0.5, VMM -0.4, TATACAP -0.4, GMRAIRPORT -0.4"
+F_CHINA_STEEL_EXPORTS,China steel exports,+15% y/y,,,11,26.1,0.97,"TMPV +1.0, TMCV +0.7, BHEL +0.6, MARUTI +0.6, ASHOKLEY +0.5","SAIL -4.5, JINDALSTEL -3.2, JSWSTEEL -2.6, TATASTEEL -2.4, APLAPOLLO -0.6"
+F_SEMICONDUCTOR_SUPPLY,Chip/electronics component supply tightness (higher = tighter),+1 = tightening,,,10,25.8,0.0,,"DIXON -4.5, BOSCHLTD -4.0, MARUTI -3.0, MOTHERSON -3.0, TMPV -3.0"
+F_RICE,Rice price,+10% rice,0.6,events,2,25.4,0.864,"LICHSGFIN +0.1, DMART +0.1","RADICO -3.1, UNITDSPR -0.5, YESBANK -0.4, BAJFINANCE -0.4, VMM -0.3"
+T_QUICK_COMMERCE,Quick-commerce disruption of retail/FMCG distribution,+1,,,8,24.2,0.116,"ETERNAL +8.0, SWIGGY +3.0, NESTLEIND +1.0, TATACONSUM +0.8, HINDUNILVR +0.4","JUBLFOOD -3.0, DMART -2.9, NYKAA -1.0, VMM -1.0, PHOENIXLTD -0.4"
+F_CHINA_CHEM_EXPORTS,China chemical/API dumping intensity,+15% export volumes / price cuts,,,14,23.4,0.275,"JINDALSTEL +1.0, PREMIERENE +1.0, CIPLA +0.8, DRREDDY +0.8, AUROPHARMA +0.8","UPL -3.0, PIIND -3.0, DIVISLAB -3.0, SRF -2.7, LAURUSLABS -1.5"
+F_CHEM_FEEDSTOCK,"Chemical feedstock (benzene, propylene, etc.)",+10% feedstock,,,17,22.2,0.25,SUPREMEIND +0.4,"SRF -2.2, ASIANPAINT -1.6, AUROPHARMA -1.6, PIDILITIND -1.2, UPL -1.2"
+P_INFRA_SPENDING_ROADS,Road/highway awarding,+10%,,,4,22.0,0.751,"TMCV +2.7, ASHOKLEY +1.7, RVNL +1.1, IRFC +0.7, POWERINDIA +0.5",SUZLON -0.1
+P_ANTI_DUMPING_IN,"Indian anti-dumping duties (chemicals, solar, others)",+1 = new broad duties,0.4,events,14,21.5,0.274,"JINDALSTEL +3.0, PREMIERENE +3.0, SRF +1.3, TATAPOWER +1.0, WAAREEENER +1.0","SUPREMEIND -2.0, ASTRAL -1.6, AUROPHARMA -0.5, PIDILITIND -0.4, ASIANPAINT -0.3"
+F_IRON_ORE,Iron ore price,+15% iron ore,-0.83,observed,7,20.7,0.339,"NMDC +9.1, SAIL +1.2, TATASTEEL +1.1, ADANIPORTS +0.5, HAL +0.5","JINDALSTEL -1.7, JSWSTEEL -1.1, TMPV -0.7, TMCV -0.2, BHEL -0.2"
+F_REFINING_MARGIN,Refining margins (GRM / cracks),+$2/bbl gross refining margin,0.6,events,9,20.6,0.039,"HINDPETRO +5.0, BPCL +4.9, IOC +4.0, RELIANCE +1.6, ONGC +1.2","INDIGO -0.9, GODREJCP -0.7, VMM -0.6, HINDZINC -0.5, MRF -0.4"
+F_WHEAT,Wheat price,+10% wheat,-0.13,observed,3,20.1,0.863,"LICHSGFIN +0.1, DMART +0.1","BRITANNIA -1.2, JUBLFOOD -0.7, NESTLEIND -0.7, ITC -0.4, YESBANK -0.3"
+P_MINING_ROYALTY,Mining royalty / mineral tax burden,+1 = higher,,,12,19.7,0.0,,"HINDCOPPER -3.0, NATIONALUM -3.0, NMDC -3.0, COALINDIA -2.0, HINDZINC -1.5"
+F_GULF_REMITTANCES,Gulf economy / remittances,+10%,,,3,19.2,0.713,"FEDERALBNK +3.0, KALYANKJIL +1.3, LODHA +0.6, PRESTIGE +0.5, OBEROIRLTY +0.4","BIOCON -0.3, JSWSTEEL -0.2, LAURUSLABS -0.2, DRREDDY -0.2, NATIONALUM -0.2"
+T_GLP1,GLP-1 / obesity drug adoption,+1,,,6,19.0,0.0,"DIVISLAB +8.0, DRREDDY +4.0, BIOCON +3.0, LAURUSLABS +1.5, ZYDUSLIFE +1.5",
+F_US_TECH_SPEND,US/EU enterprise IT services spend,+5% growth,-0.6,events,8,18.9,0.0,"PERSISTENT +5.0, TCS +4.0, TECHM +3.5, NAUKRI +1.5, TATACOMM +1.5",
+NEW_MSP_HIKE_IN,Minimum support price increase above normal,+5 pp weighted MSP increase above the usual ~6%,,,0,18.5,1.0,"INDUSINDBK +0.4, LICHSGFIN +0.4, BANKINDIA +0.4, FEDERALBNK +0.3, KOTAKBANK +0.3","JSWENERGY -0.3, PRESTIGE -0.3, LENSKART -0.3, GMRAIRPORT -0.2, JUBLFOOD -0.2"
+NEW_AGRI_TRADE_CURBS_IN,"Food-price supply measures (export bans/duties, stock limits, import-duty cuts on food)",+1 = one new measure on a major food item,,,1,18.5,1.0,"RADICO +0.6, YESBANK +0.3, VMM +0.3, BAJFINANCE +0.3, TATACAP +0.3","LICHSGFIN -0.1, DMART -0.1"
+F_COAL_INTL,International thermal coal price,+15% seaborne thermal coal,0.7,director_override,14,18.1,0.242,"COALINDIA +2.5, TATAPOWER +1.1, ADANIENT +1.0, NTPC +1.0, JSWENERGY +0.7","AMBUJACEM -2.4, ULTRACEMCO -1.7, GRASIM -1.2, CUMMINSIND -1.0, RECLTD -1.0"
+NEW_NPPA_DRUG_PRICE_CONTROL,India NPPA/NLEM drug price control and trade-margin regulation,+1 = one tightening step (NLEM expansion or trade-margin cap),,,5,18.0,0.0,,"MAXHEALTH -6.0, FORTIS -5.0, MANKIND -3.0, TORNTPHARM -3.0, APOLLOHOSP -1.0"
+P_FUEL_TAX_IN,Fuel excise / retail price policy (+ = higher taxes/regulated squeeze),+1 = Rs 2/litre excise rise,-0.5,events,4,16.9,0.632,"BANKINDIA +0.2, JINDALSTEL +0.2, PNB +0.2, PFC +0.1, UNIONBANK +0.1","BPCL -4.0, HINDPETRO -1.5, IOC -1.0, INDIGO -0.8, LENSKART -0.1"
+P_WINDFALL_EXPORT_TAX,Windfall / export taxes on commodities,+1 = imposition,1.0,events,6,15.7,0.384,"INDIGO +0.4, GODREJCP +0.3, VMM +0.3, MRF +0.2","HINDZINC -4.0, RELIANCE -3.4, BPCL -2.7, IOC -1.8, HINDPETRO -1.6"
+T_DEFENCE_EXPORTS,Indian defence exports,+1,,,6,15.5,0.0,"SOLARINDS +5.0, BDL +3.0, BEL +2.0, BHARATFORG +2.0, HAL +2.0",
+NEW_CONSUMER_DURABLES_PRICE_WAR,Consumer durables category promotional / discount intensity,"+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances",,,5,15.1,0.0,,"VOLTAS -6.0, LGEINDIA -3.0, ASIANPAINT -2.5, BLUESTARCO -2.5, HAVELLS -1.1"
+NEW_AGR_SPECTRUM_RELIEF,Government AGR/spectrum dues relief for stressed telcos,"+1 = further material relief worth ~Rs20,000 cr NPV",,,3,14.0,0.0,"IDEA +12.0, INDUSTOWER +1.5",BHARTIARTL -0.5
+NEW_AGROCHEM_PRICES_GLOBAL,Global agrochemical prices and channel destocking,+10% global agchem active prices / volumes,,,2,14.0,0.0,"UPL +8.0, PIIND +6.0",
+F_COAL_INDIA,Indian domestic coal price & availability cost,+10% domestic coal cost (notified/e-auction),1.5,events,7,13.8,0.113,"COALINDIA +6.0, NLCINDIA +0.4, NTPC +0.2, ADANIGREEN +0.2, TATAPOWER +0.2","JINDALSTEL -1.4, VAML -1.3, HINDALCO -1.0, NATIONALUM -1.0, ADANIPOWER -0.7"
+P_FERT_SUBSIDY,Fertiliser subsidy generosity,+1 = higher subsidy,0.5,events,1,13.8,0.943,GAIL +0.8,"BANKINDIA -0.2, PFC -0.2, YESBANK -0.2, POWERGRID -0.2, ADANIGREEN -0.2"
+F_GAS_GLOBAL,Global natural gas / LNG price,+15% gas/LNG price,1.0,director_override,10,13.6,0.368,"MCX +0.5, ONGC +0.5, COALINDIA +0.5, JSWENERGY +0.3, TATAPOWER +0.3","ATGL -1.6, GAIL -1.4, ENRIN -0.8, IOC -0.7, TATASTEEL -0.6"
+P_GOLD_IMPORT_DUTY,Gold import duty,+5 pp,,,4,13.2,0.563,"MUTHOOTFIN +1.5, HINDZINC +1.0, VOLTAS +0.1, MOTILALOFS +0.1, INDIGO +0.1","KALYANKJIL -3.3, TITAN -2.5, BIOCON -0.1, LAURUSLABS -0.1, JSWSTEEL -0.1"
+NEW_TELECOM_SHARE_COMPETITION,Jio/Airtel price and share competition vs Vi,+1 = intensification costing the incumbent ~1pp revenue share / 3% ARPU,,,2,13.0,0.0,,"IDEA -8.0, BHARTIARTL -5.0"
+C_RED_SEA,Red Sea / Suez shipping disruption,+1 = disruption,1.0,events,9,12.9,0.803,"COCHINSHIP +2.7, HINDPETRO +1.6, IOC +1.3, BPCL +0.8, RELIANCE +0.5","CONCOR -1.6, JINDALSTEL -1.6, MRF -0.7, TATACOMM -0.5, INDIGO -0.3"
+NEW_TOBACCO_EXCISE,Cigarette excise / tobacco tax burden (India),+10% rise in the tax burden per cigarette stick,,,2,12.5,0.0,,"GODFRYPHLP -7.5, ITC -5.0"
+C_GCC,Gulf Cooperation Council economies,+1 pp growth,0.0,events,5,12.5,0.403,"LT +3.5, FEDERALBNK +2.0, KALYANKJIL +1.2, CUMMINSIND +1.0, TITAN +0.6","BIOCON -0.1, LAURUSLABS -0.1, JSWSTEEL -0.1, DRREDDY -0.1, GLENMARK -0.1"
+NEW_CEMENT_PRICE_IN,Indian cement trade price (realisation),+Rs10/bag (~+2.5%),,,2,12.5,0.0,"AMBUJACEM +6.5, ULTRACEMCO +6.0",
+P_US_PHARMA_TARIFF,US tariffs on pharmaceuticals,+10 pp on Indian pharma exports,0.2,events,6,12.2,0.194,,"BIOCON -2.7, AUROPHARMA -2.4, SUNPHARMA -1.8, LAURUSLABS -1.4, DIVISLAB -1.3"
+NEW_NSE_BSE_OPTIONS_SHARE,BSE share of index-options premium turnover vs NSE,+5 pp BSE market share,,,1,12.0,0.0,BSE +12.0,
+F_PACKAGING,"Packaging cost (paper, plastics)",+10% packaging cost,,,11,11.7,0.0,,"RADICO -1.8, DABUR -1.4, BRITANNIA -1.1, GODREJCP -1.0, NESTLEIND -0.9"
+NEW_SEBI_MF_FEE_REG,SEBI mutual fund fee / TER / brokerage regulation,-5bp on active-equity gross fee yield,,,2,11.0,0.0,,"ICICIAMC -6.0, HDFCAMC -5.0"
+F_POWER_PRICE_IN,Indian power exchange (IEX) prices,+15% average spot power price,1.9,director_override,10,10.8,0.0,"ADANIPOWER +2.3, JSWENERGY +1.8, ADANIGREEN +0.7, TATAPOWER +0.7, NLCINDIA +0.5","IDEA -0.8, VAML -0.8, TATACOMM -0.7, JINDALSTEL -0.6, INDUSTOWER -0.5"
+NEW_EU_STEEL_ACCESS,EU steel safeguard / CBAM burden on imports,+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost),1.0,events,4,9.4,0.78,"TATASTEEL +0.5, TMCV +0.3, BHEL +0.2, MARUTI +0.2, ASHOKLEY +0.2","SAIL -1.8, JINDALSTEL -1.5, JSWSTEEL -1.3, NMDC -0.2, APLAPOLLO -0.2"
+NEW_POWER_EQUIP_CAPACITY,Power/T&D equipment capacity additions vs demand (pricing pressure),+1 = peer capacity additions outpace demand enough to cut order pricing/margins ~100 bp,,,3,9.0,0.0,,"POWERINDIA -4.0, ENRIN -3.0, SIEMENS -2.0"
+F_PETROCHEM_SPREADS,Petrochemical / polymer spreads,+10% polymer-naphtha spreads,,,5,9.0,0.156,"SRF +2.5, IOC +1.5, GAIL +1.1, RELIANCE +1.0","SUPREMEIND -1.5, RADICO -0.2, DABUR -0.2, BRITANNIA -0.1, GODREJCP -0.1"
+NEW_SOLAR_CELL_MODULE_PRICE,Indian solar module / cell realisations,+10% Indian module/cell realisations,,,2,9.0,0.0,"WAAREEENER +5.0, PREMIERENE +4.0",
+NEW_OMC_COMPENSATION,Government compensation to OMCs for fuel/LPG under-recoveries,"+1 = Rs25,000 cr compensation to oil marketing companies",,,3,8.7,0.0,"HINDPETRO +4.5, IOC +3.2",ONGC -1.0
+C_AFRICA_LATAM,Africa & Latin America demand,+1 pp growth,,,7,8.4,0.0,"SOLARINDS +2.0, UPL +1.5, GLENMARK +1.2, TORNTPHARM +1.0, TVSMOTOR +1.0",
+NEW_QCOMMERCE_COMPETITION,"Quick-commerce competitive intensity (Blinkit, Zepto, Flipkart Minutes, Amazon)",+1 = materially faster dark-store expansion/discounting by rivals,,,1,8.0,0.0,,SWIGGY -8.0
+NEW_US_TARIFF_UK_EU_AUTOS,US tariff on UK/EU-built passenger vehicles,+10pp tariff on UK/EU autos entering the US,,,1,8.0,0.0,,TMPV -8.0
+NEW_WTG_PRICING_COMPETITION,Wind-turbine pricing competition,+1 = realised WTG price per MW -5%,,,1,8.0,0.0,,SUZLON -8.0
+NEW_FOOD_SAFETY_REG,FSSAI / packaged-food regulation intensity,+1 = materially stricter packaged-food labelling/HFSS/online-sale rules,,,6,7.5,0.0,,"NESTLEIND -2.0, PATANJALI -1.5, SWIGGY -1.5, BRITANNIA -1.0, VBL -1.0"
+F_SILVER,Silver price,+12% silver,-2.5,observed,4,7.2,0.0,"HINDZINC +3.5, MCX +1.5","PREMIERENE -1.4, WAAREEENER -0.8"
+NEW_GENSET_PRICE_COMPETITION,Genset / engine price competition in India,+5 pp realised-price erosion in the domestic genset/engine market,,,1,7.0,0.0,,CUMMINSIND -7.0
+NEW_GOLD_LOAN_COMPETITION,"Gold-loan competitive intensity (bank/NBFC entry, yield compression)",+1 = ~100bp industry gold-loan yield compression or ~3pp share shift to banks/new entrants,,,1,7.0,0.0,,MUTHOOTFIN -7.0
+NEW_2W_COMPETITIVE_INTENSITY,Competitive intensity in Indian two-wheelers/EV two-wheelers,+1 = price/share war episode,,,3,7.0,0.0,,"EICHERMOT -2.5, TVSMOTOR -2.5, BAJAJ-AUTO -2.0"
+F_ZINC_LEAD,Zinc / lead price,+10% zinc,,,3,6.5,0.0,"HINDZINC +3.8, VEDL +0.9","EXIDEIND -1.5, APLAPOLLO -0.3"
+NEW_RAIL_TICKET_FEE_POLICY,Railway convenience-fee / ticketing / catering policy,"+1 = tightening (cuts convenience fees, opens ticketing to agents, or changes catering contracts)",,,1,6.0,0.0,,IRCTC -6.0
+NEW_WC_COMPETITIVE_INTENSITY,Competitive intensity in Indian wires & cables,+1 = new entrants/capacity cause ~100 bp sustained W&C margin erosion,,,1,6.0,0.0,,POLYCAB -6.0
+NEW_AIRFARE_REGULATION,Airfare caps / government fare intervention,+1 = binding fare caps in stress periods,,,1,6.0,0.0,,INDIGO -6.0
+NEW_DEFENCE_PRIVATE_COMPETITION,Private/foreign competition for large Indian military aircraft programmes,+1 = a major aircraft/helicopter programme awarded to a non-HAL player,,,1,6.0,0.0,,HAL -6.0
+NEW_UPI_MDR,UPI merchant discount rate / incentive policy,+1 = MDR or take-rate introduced on UPI merchant payments (~+5bp),,,1,6.0,0.0,PAYTM +6.0,
+NEW_AIRPORT_TARIFF_REGULATION,Airport tariff regulation outcomes (AERA),+1 = control-period order raising aero yield ~10%,,,1,6.0,0.0,GMRAIRPORT +6.0,
+NEW_BANK_INFRA_LENDING_COMPETITION,Bank competition in power/infrastructure lending,+1 = banks take ~5pp of power/infra lending share or compress spreads ~25bp,,,1,6.0,0.0,,PFC -6.0
+F_FERTILISER_INPUTS,Ammonia / urea / phosphate input prices,+15% fertiliser inputs,1.0,events,1,5.8,0.913,GAIL +0.4,"SOLARINDS -0.5, PFC -0.1, BANKINDIA -0.1, POWERINDIA -0.1, POWERGRID -0.1"
+F_COCOA_COFFEE_TEA,"Cocoa, coffee, tea prices",+15% beverage commodities,,,3,5.7,0.0,,"TATACONSUM -3.3, NESTLEIND -1.5, HINDUNILVR -0.6, BRITANNIA -0.3"
+F_RUBBER,Natural / synthetic rubber price,+10% rubber,,,3,5.4,0.0,,"MRF -3.3, ASHOKLEY -0.7, MARUTI -0.5, HEROMOTOCO -0.3, TMCV -0.3"
+NEW_INDIA_CV_SHARE_PRESSURE,Market-share pressure in Indian medium and heavy CVs,+1 = 2 pp market share loss to competitors,,,1,5.0,0.0,,TMCV -5.0
+NEW_ENTERPRISE_CONNECTIVITY_PRICING,Enterprise connectivity pricing pressure,+1 = 5% decline in MPLS/SD-WAN/IZO prices,,,1,5.0,0.0,,TATACOMM -5.0
+NEW_ORACLE_PARENT_STRESS,Oracle Corp credit / AI-capex stress,"+1 = one stress episode (force majeure, debt negotiation headlines), roughly -5% for OFSS",,,1,5.0,0.0,,OFSS -5.0
+NEW_CABLE_NEW_ENTRANT_PRICING,New-entrant pricing pressure in wires & cables,+1 = incumbent W&C gross margin -100 bp industry-wide,,,1,5.0,0.0,,KEI -5.0
+NEW_VALUE_FASHION_COMPETITION,Value-fashion and mass-retail competition intensity,"+1 = materially sharper expansion/discounting by Reliance Trends/Yousta, Max, Style Union, Myntra, V-Mart",,,2,5.0,0.0,,"TRENT -3.0, VMM -2.0"
+NEW_DEFENCE_SHIPYARD_COMPETITION,Competition among Indian shipyards for major naval programmes,+1 = a major naval programme awarded to a competing yard,,,1,5.0,0.0,,MAZDOCK -5.0
+NEW_BROKER_PRICING,Retail broking fee/pricing pressure,+1 = broad fee cut or free-trade move by a large rival or exchange,,,1,5.0,0.0,,GROWW -5.0
+NEW_CGD_APM_ALLOCATION,CGD APM gas allocation,+1 = 10pp cut in APM gas allocation to CNG/PNG(D),,,1,5.0,0.0,,ATGL -5.0
+F_SHIPPING_RATES,Global container / freight rates,+25%,0.3,events,3,4.4,0.0,"COCHINSHIP +2.0, ADANIPORTS +0.3","JINDALSTEL -0.8, CONCOR -0.6, BPCL -0.4, MRF -0.3"
+NEW_SHIPBUILDING_POLICY,Shipbuilding & maritime policy support,"+1 = stronger support (financial assistance, ISRF, yard infrastructure funding)",,,1,4.0,0.0,COCHINSHIP +4.0,
+NEW_INNERWEAR_COMPETITION,Innerwear share competition (mass and D2C),+1 = 2pp share loss to rivals,,,1,4.0,0.0,,PAGEIND -4.0
+NEW_COPRA_COCONUT_OIL,Copra / coconut oil price,+15% copra price,,,1,3.8,0.0,,MARICO -3.8
+F_SUGAR,Sugar price,+10% sugar,2.78,observed,3,3.8,0.076,,"UNITDSPR -1.3, BRITANNIA -0.8, VBL -0.8, DABUR -0.4, NESTLEIND -0.3"
+NEW_EDIBLE_OIL_IMPORT_DUTY,India effective import duty on crude edible oils,+5 pp effective import duty on crude palm/soy/sunflower oil,,,1,3.5,0.0,PATANJALI +3.5,
+NEW_AMC_COMPETITION,"AMC competition intensity (passives, new entrants)",+1 = 0.5pp loss of active-equity AUM market share,,,1,3.5,0.0,,HDFCAMC -3.5
+NEW_CRUDE_WINDFALL_TAX_IN,Windfall (SAED) tax on domestic crude,"+1 = SAED reimposed at ~Rs10,000/tonne",,,2,3.3,0.0,,"OIL -1.8, ONGC -1.5"
+F_BATTERY_MATERIALS,Lithium / battery cell cost,+15% battery cell cost,0.0,events,4,3.2,0.0,,"IREDA -1.0, TMPV -0.9, ADANIGREEN -0.5, EXIDEIND -0.5, M&M -0.3"
+NEW_SUMMER_TEMPERATURE,Summer temperature vs normal,+1 = season ~1C hotter than normal in Mar-Jun,,,1,3.0,0.0,VBL +3.0,
+F_COTTON,Cotton price,+10% cotton,0.19,observed,3,3.0,0.0,GRASIM +0.5,"PAGEIND -1.2, TRENT -0.5, MEESHO -0.4, VMM -0.4"
+NEW_CONTAINER_LOGISTICS_COMPETITION,Private container train operators and road competition,+1 = 2pp rail container market share loss for CONCOR,,,1,3.0,0.0,,CONCOR -3.0
+NEW_COMMODITY_EXCHANGE_COMPETITION,Competition in commodity derivatives,+1 = credible entrant/launch capturing ~10% of bullion/energy options volume,,,1,3.0,0.0,,MCX -3.0
+NEW_BEAUTY_RETAIL_COMPETITION,"Beauty retail competition intensity (Tira, Sephora, Purplle, quick commerce)",+1 = materially sharper discounting/expansion by rival beauty retailers and q-commerce,,,1,3.0,0.0,,NYKAA -3.0
+NEW_CERC_ROE,CERC allowed regulated ROE for transmission,+50 bp allowed ROE,,,1,3.0,0.0,POWERGRID +3.0,
+NEW_NAT_CAT_LOSSES,Natural catastrophe insured losses (India floods/cyclones),+1 = major cat year adding ~2pp to industry combined ratio,,,1,3.0,0.0,,ICICIGI -3.0
+NEW_CSD_PRICE_COMPETITION,"Soft-drink price competition intensity (Coca-Cola, Campa, regional)",+1 = materially sharper discounting/ad spend in carbonated soft drinks,,,1,3.0,0.0,,VBL -3.0
+NEW_DOMESTIC_AIRLINE_CAPACITY,Domestic airline industry capacity additions by competitors,+1 = +5% industry capacity,,,1,3.0,0.0,,INDIGO -3.0
+NEW_PNGRB_TARIFF,PNGRB gas pipeline tariff regulation,+1 = tariff cut / unified-tariff reduction of ~10%,,,1,3.0,0.0,,GAIL -3.0
+NEW_ORAL_CARE_COMPETITION,"Oral-care competition intensity (HUL, Dabur, Patanjali, Himalaya)",+1 = materially sharper discounting/advertising by rivals in toothpaste,,,1,3.0,0.0,,COLPAL -3.0
+NEW_REFRIGERANT_PRICES,Global refrigerant gas prices,+10% HFC/HFO refrigerant prices,,,1,3.0,0.0,SRF +3.0,
+NEW_RAIL_FREIGHT_TARIFF,Indian Railways freight/haulage tariff changes,+1 = +5% haulage/terminal access charges,,,1,3.0,0.0,,CONCOR -3.0
+NEW_STATE_LIQUOR_POLICY,State excise / liquor pricing policy (key states),"+1 = adverse change in excise duty or pricing in UP, Rajasthan, Karnataka, Maharashtra",,,1,3.0,0.0,,RADICO -3.0
+NEW_PV_SUV_COMPETITION,Intensity of new-model competition in India passenger vehicles,+1 = major new-model wave by rivals (about -1pp share for incumbent),,,1,3.0,0.0,,HYUNDAI -3.0
+NEW_NCR_AIRPORT_COMPETITION,New NCR airport competing with Delhi,+1 = 5% of Delhi passengers diverted,,,1,2.5,0.0,,GMRAIRPORT -2.5
+NEW_ALUMINA_PRICE,Alumina price (FOB Australia),+15% alumina,,,2,2.5,0.0,NATIONALUM +2.0,HINDALCO -0.5
+NEW_AUTO_SAFETY_EMISSION_NORMS,"Auto safety and emission norm tightening (ADAS/airbags, CAFE-III, BS-VII)",+1 = a material tightening step,,,1,2.5,0.0,BOSCHLTD +2.5,
+P_SUGAR_ETHANOL,Sugar export / ethanol blending policy,+1 = more favourable to millers,-1.5,events,2,2.2,0.279,,"UNITDSPR -0.9, RADICO -0.8, BRITANNIA -0.2, VBL -0.2, DABUR -0.1"
+NEW_US_AUTO_PARTS_TARIFFS,US tariffs on imported autos and auto parts (incl. Mexico/USMCA),+10pp average tariff,,,1,2.0,0.0,,MOTHERSON -2.0
+NEW_STATE_EXCISE_ALCOHOL,State excise / pricing policy for alcohol,+1 = adverse change of Maharashtra/Karnataka scale (Popular NSV about -20%),,,1,2.0,0.0,,UNITDSPR -2.0
+C_SOUTH_SE_ASIA,South & South-East Asia demand,+1 pp growth,,,2,1.9,0.0,"TVSMOTOR +0.8, EICHERMOT +0.5, ASIANPAINT +0.3, GODREJCP +0.2",
+NEW_CEMENT_PRICE,Cement price (India),+5% cement price,,,0,1.8,0.0,,"GODREJPROP -0.4, LODHA -0.4, PRESTIGE -0.4, DLF -0.3, OBEROIRLTY -0.3"
+NEW_AIRCRAFT_ENGINE_SUPPLY,Aircraft/engine supply disruption,+1 = further engine groundings/delivery delays,,,1,1.5,0.0,,INDIGO -1.5
+NEW_TBCB_BID_DISCOUNTS,Winning-bid discount intensity in transmission TBCB auctions,+1 = 10% lower winning equity IRR vs base,,,1,1.5,0.0,,POWERGRID -1.5
+NEW_TOWER_TENANCY_EXITS,Net tenancy exits from towers (Jio/others),"+1 = 5,000 net tenancy exits",,,1,1.2,0.0,,INDUSTOWER -1.2

@@ -1,0 +1,19 @@
+industry,stocks,exp_3m,exp_12m,best,worst
+Capital Goods,24,2.84,5.79,MAZDOCK,APARINDS
+Oil Gas & Consumable Fuels,9,2.49,5.04,COALINDIA,ATGL
+Construction,2,1.59,3.96,LT,RVNL
+Metals & Mining,12,2.22,3.87,JINDALSTEL,VAML
+Power,9,1.42,2.9,TATAPOWER,JSWENERGY
+Chemicals,5,1.45,2.88,SOLARINDS,PIDILITIND
+Telecommunication,4,0.94,2.42,IDEA,TATACOMM
+Construction Materials,3,1.05,1.89,AMBUJACEM,GRASIM
+Consumer Durables,8,0.86,1.06,BLUESTARCO,ASIANPAINT
+Automobile and Auto Components,14,0.72,0.95,TMPV,HYUNDAI
+Fast Moving Consumer Goods,14,-0.01,0.04,GODFRYPHLP,UNITDSPR
+Services,4,-0.78,-1.33,CONCOR,GMRAIRPORT
+Textiles,1,-1.55,-1.98,PAGEIND,PAGEIND
+Healthcare,15,-1.49,-2.32,LUPIN,TORNTPHARM
+Consumer Services,12,-1.72,-2.77,VMM,ETERNAL
+Financial Services,48,-1.49,-3.22,LICHSGFIN,BAJFINANCE
+Realty,6,-2.44,-4.12,DLF,PRESTIGE
+Information Technology,10,-3.03,-6.21,OFSS,PERSISTENT
