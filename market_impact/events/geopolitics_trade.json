@@ -1,0 +1,2659 @@
+{
+ "events": [
+  {
+   "event_id": "EV_IRAN_WAR_HORMUZ_OCT26",
+   "title": "Iran war: Hormuz tanker attacks and Gulf strikes push Brent to six-month high (peak ~$117, 30 Oct), then retreat on ceasefire talks",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-10-30",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "The US/Israel-Iran war (running since roughly Feb-Mar 2026 per Aug 2026 'after 6 months of war' coverage) re-escalated in Oct 2026: IRGC-claimed tanker fires/mines on the Hormuz route (11 tankers in 9 days per IRGC-linked report), Houthi strikes on Saudi Arabia, Brent briefly >$117 on 30 Oct. From 2 Nov Brent fell sharply (steepest weekly loss since 2022) on a draft US-Iran ceasefire proposal; Tehran called it 'insufficient' on 3 Nov. Hormuz crude flows had largely recovered to pre-war levels by 1 Oct (Guardian). Brent quotes in news differ by contract/date (4 Nov: $90-104 across outlets); the model uses the factor_state close.",
+   "what_already_moved": "factor_state 2026-11-05: Brent 94.99 (1m -5.6%, 3m +15.2%, 12m +49.5%, flat since 1 Jun); refining margin +15.4% since 1 Jun; USD/INR 94.49 (rupee had neared record low ~96 in Sep-Oct, RBI hiked repo to 5.50% on 7 Oct); FPI equity outflows Rs ~3 lakh cr in CY26 (Rs 48,056 cr in Oct to 25 Oct); India VIX 15.3 (3m +26%).",
+   "entry_shocks": [
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "escalation already priced in part; now partly unwound"
+    },
+    {
+     "node": "F_BRENT",
+     "ssu": 1.5,
+     "low": 1.0,
+     "high": 2.2,
+     "note": "3-month change +15% (SSU=10%); peak much higher"
+    },
+    {
+     "node": "F_REFINING_MARGIN",
+     "ssu": 1.0,
+     "low": 0.4,
+     "high": 1.6,
+     "note": "cracks +15% since 1 Jun (~+$0.6/bbl... roughly 0.5-1 SSU)"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": -0.8,
+     "low": -1.2,
+     "high": -0.4,
+     "note": "record FPI selling in 2026"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OCT26",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "India imports ~85% of crude; higher Brent widens CAD and weakens INR (rupee near 96)."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OCT26",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Oil and fuel pass-through lift CPI; RBI hiked 25 bp on 7 Oct and flagged more."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OCT26",
+      "F_BRENT",
+      "F_REFINING_MARGIN",
+      "RELIANCE"
+     ],
+     "explanation": "Wide cracks help export refiners; higher feedstock costs hurt OMC marketing margins (HINDPETRO)."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OCT26",
+      "C_MIDEAST_CONFLICT",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Risk-off raises VIX and FPI selling, pressuring high-beta midcaps."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDPETRO",
+     "direction": "-",
+     "why": "regulated retail prices compress marketing margin when crude is high"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": "same"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "-",
+     "why": "same, offset by refining gains"
+    },
+    {
+     "ticker": "RELIANCE",
+     "direction": "+",
+     "why": "export refining margins; KG gas"
+    },
+    {
+     "ticker": "ONGC",
+     "direction": "+",
+     "why": "upstream realisations"
+    },
+    {
+     "ticker": "INDIGO",
+     "direction": "-",
+     "why": "ATF cost and Gulf airspace"
+    },
+    {
+     "ticker": "ASIANPAINT",
+     "direction": "-",
+     "why": "crude-derived inputs"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Brent+Hormuz+tanker+fire+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "Brent Hits $117 as Tanker Catches Fire in Strait of Hormuz - OilPrice.com"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Iran+ceasefire+talks+oil+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Oil Ends Lower Ahead of U.S.-Iran Ceasefire Talks, Steepest Weekly Loss Since 2022 - EnergyNow"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+hike+repo+October+2026+MPC+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "RBI hikes repo rate to 5.50%, stance calibrated tightening - The Hindu"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_RUSSIA_SANCTIONS_WAIVER_OCT26",
+   "title": "US 60-day waiver of Russia sanctions law / 100% secondary-tariff threat on buyers of Russian oil (India)",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-10-17",
+   "window_end": "2026-12-16",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "In Sep 2026 Trump signed a Russia sanctions law (Graham bill) letting the US tariff buyers of Russian oil up to 100%. On ~17 Oct he waived it for 60 days (Rubio: a pause to analyse global impact; India 'cannot stop buying overnight'). India's Russian crude imports stabilised ~1.8-1.9 mb/d; total crude imports hit record 5.4-5.6 mb/d in Oct with UAE/Venezuelan/US diversification. Waiver lapses around mid-Dec 2026 unless extended.",
+   "what_already_moved": "No tariff imposed. Russian crude discount and Indian refiners' access preserved; Brent not materially moved by it (flat since 1 Jun).",
+   "entry_shocks": [
+    {
+     "node": "C_RUSSIA",
+     "ssu": 0.6,
+     "low": 0.3,
+     "high": 1.0,
+     "note": "access preserved vs a threatened loss"
+    },
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "removal of a tail 100% threat (SSU = +10pp avg tariff)"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RUSSIA_SANCTIONS_WAIVER_OCT26",
+      "C_RUSSIA",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "Discounted Russian barrels sustain refiners' margins."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RUSSIA_SANCTIONS_WAIVER_OCT26",
+      "C_RUSSIA",
+      "F_BRENT",
+      "F_CPI_IN"
+     ],
+     "explanation": "Avoiding loss of ~1.8 mb/d prevents a Brent spike and CPI pass-through."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RUSSIA_SANCTIONS_WAIVER_OCT26",
+      "P_US_TARIFF_INDIA",
+      "F_USDINR",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Lower tariff-tail risk supports INR and FPI sentiment."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "RELIANCE",
+     "direction": "+",
+     "why": "Jamnagar Russian-crude flexibility (export product sanctions caveat)"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "+",
+     "why": "discounted crude"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "discounted crude"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "+",
+     "why": "discounted crude"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "+",
+     "why": "less tariff-risk premium on India exporters"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Trump+60-day+tariff+waiver+Russian+oil+India+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-18",
+     "title": "60-day Russia sanctions waiver offers India tariff relief - India Today"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+Russia+oil+imports+October+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "title": "No pressure from US to cut Russian oil imports, Indian oil minister says - Reuters"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_US_PHARMA_232_SEP26",
+   "title": "US Section 232 pharma tariff (100%) takes effect 29 Sep 2026; select Indian speciality drugs/ingredients exempted",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-09-29",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Section 232 pharmaceutical tariffs entered into force 29 Sep 2026. A waiver covers select speciality drugs from ~20 countries including India. In July Trump had threatened a 200% tariff on generics; generics so far not hit (Indian firms argue US needs low-cost generics). Sun Pharma reportedly offered cheaper drugs to the administration (MFN-style pricing deals). Exact HS scope of exemptions and generics treatment not verified from primary text.",
+   "what_already_moved": "No quantified index move retrieved; generic exposure treated as a live tail (see EV_PHARMA_GENERICS_TARIFF).",
+   "entry_shocks": [
+    {
+     "node": "P_US_PHARMA_TARIFF",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "branded/speciality tariff in force with India carve-outs; generics spared (SSU=+10pp on Indian pharma exports; effective average small)"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_PHARMA_232_SEP26",
+      "P_US_PHARMA_TARIFF",
+      "F_US_GENERIC_PRICING"
+     ],
+     "explanation": "Tariff on competitors' branded products and MFN deals shift US pricing power; generic price erosion pressure persists."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_PHARMA_232_SEP26",
+      "P_US_PHARMA_TARIFF",
+      "F_US_GENERIC_PRICING",
+      "SUNPHARMA"
+     ],
+     "explanation": "Speciality-heavy exporters (Sun, Lupin, Zydus) carry the exemption-dependency risk."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SUNPHARMA",
+     "direction": "-",
+     "why": "speciality portfolio relies on exemption"
+    },
+    {
+     "ticker": "DRREDDY",
+     "direction": "-",
+     "why": "US generics ~45% of sales; generics tail"
+    },
+    {
+     "ticker": "CIPLA",
+     "direction": "-",
+     "why": "US exposure"
+    },
+    {
+     "ticker": "LUPIN",
+     "direction": "-",
+     "why": "US exposure"
+    },
+    {
+     "ticker": "ZYDUSLIFE",
+     "direction": "-",
+     "why": "US exposure"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Section+232+pharma+tariff+generic+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "title": "US waives 100% tariff on select Indian speciality drugs - The Indian Express"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Trump+pharma+tariff+India+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-22",
+     "title": "Trump's 200% generic tariff threat would imperil Americans: Indian pharma - The Hindu"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_H1B_100K_FEE_COURT",
+   "title": "US $100,000 H-1B fee (new ~$103k proposal Aug 2026) blocked by court; administration appeals; DHS proposes $70k/$30k OPT fees",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-10-12",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "A $100k H-1B fee policy (first announced Sep 2025) was blocked in court; White House review cleared a new ~$103,265 fee proposal in Aug 2026; an appeals-court loss was appealed on ~12 Oct 2026; USCIS reportedly approves petitions without the fee for now. On 7-8 Oct DHS proposed fees of $70k (initial OPT) and $30k (subsequent OPT). Status: litigation pending, proposed rules unfinalised.",
+   "what_already_moved": "Not isolated in factor data; IT services stocks priced a partial tightening.",
+   "entry_shocks": [
+    {
+     "node": "P_US_VISA_OUTSOURCING",
+     "ssu": 0.4,
+     "low": 0.2,
+     "high": 0.8,
+     "note": "policy proposed and partly enjoined; SSU=+1 material tightening"
+    },
+    {
+     "node": "T_GENAI_SERVICES",
+     "ssu": 0.0,
+     "low": -0.2,
+     "high": 0.2,
+     "note": "no direct"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_H1B_100K_FEE_COURT",
+      "P_US_VISA_OUTSOURCING",
+      "F_WAGES_IN"
+     ],
+     "explanation": "Higher onsite cost pushes offshoring and wage competition for Indian talent."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_H1B_100K_FEE_COURT",
+      "P_US_VISA_OUTSOURCING",
+      "F_US_TECH_SPEND",
+      "INFY"
+     ],
+     "explanation": "Margin pressure on onsite-heavy delivery; more offshore mix."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "onsite headcount"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "onsite headcount"
+    },
+    {
+     "ticker": "HCLTECH",
+     "direction": "-",
+     "why": "onsite headcount"
+    },
+    {
+     "ticker": "WIPRO",
+     "direction": "-",
+     "why": "onsite headcount"
+    },
+    {
+     "ticker": "LTIM",
+     "direction": "-",
+     "why": "US mix"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=H-1B+fee+court+rule+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "title": "Trump Appeals Court Loss That Blocked $100,000 H-1B Fee - Bloomberg Law"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=H-1B+fee+India+IT+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-25",
+     "title": "US proposes raising H-1B fee to over USD 100,000 - Reuters/TOI"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_INDIA_CHINA_THAW_SEP26",
+   "title": "India-China thaw: Xi visit around BRICS summit in India (mid-Sep 2026), flights resume, Chinese-investment curbs eased",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-09-12",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Xi Jinping made a ~24-hour visit to India around the BRICS summit (12-13 Sep 2026); direct flights resume (China Southern Guangzhou-Delhi), trade/investment restrictions eased. Analysts (The Diplomat, Lowy) say not a reset; the border dispute persists (Arunachal remarks 28 Oct; face-offs reported). Chinese FDI approvals were very low in FY26 (1 proposal) but government is mulling further easing of Press Note 3 (reported as 'PN2' in some outlets) in late Oct.",
+   "what_already_moved": "Not isolated in market data.",
+   "entry_shocks": [
+    {
+     "node": "P_FDI_RULES",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "selective liberalisation for border-country FDI"
+    },
+    {
+     "node": "C_US_CHINA_DECOUPLING",
+     "ssu": -0.1,
+     "low": -0.3,
+     "high": 0.1,
+     "note": "mild"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_CHINA_THAW_SEP26",
+      "P_FDI_RULES",
+      "T_CHINA_PLUS_ONE"
+     ],
+     "explanation": "Chinese JV capital/component access aids electronics manufacturing scale-up."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_CHINA_THAW_SEP26",
+      "P_FDI_RULES",
+      "P_PLI",
+      "DIXON"
+     ],
+     "explanation": "JV approvals (EMS, components) accelerate PLI-linked capacity at Dixon-type firms."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_CHINA_THAW_SEP26",
+      "P_FDI_RULES",
+      "F_STEEL_GLOBAL",
+      "F_STEEL_INDIA"
+     ],
+     "explanation": "Easier trade does not remove safeguard/anti-dumping duties; steel import pressure unchanged."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DIXON",
+     "direction": "+",
+     "why": "Chinese JV approvals / components"
+    },
+    {
+     "ticker": "TATAMOTORS",
+     "direction": "-",
+     "why": "rare-earth/magnet dependence eased (+) offset by competition"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "-",
+     "why": "cheaper Chinese steel if duties relaxed"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+China+Xi+Jinping+visit+border+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "title": "Xi's India Visit: Key Takeaways - India's World"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Press+Note+3+relaxation+Chinese+investment+India+approved+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "Govt plans further easing of FDI rules for China-linked investments - PSU Watch/ET"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_INDIA_UK_CETA_EFFECTIVE",
+   "title": "India-UK CETA in force (implementation phase; exports to UK +15% y/y to ~$2bn in Aug)",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-07",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "India-UK CETA took effect in mid-2026 (exact effective date not verified; Swarajya 13 Oct 2026 says trade rose 15% in August 'after FTA takes effect'; CBIC origin-rules circular 29 Sep; first UK car import approvals Sep). Zero/low duty on most Indian textiles, leather, marine, gems; UK auto/whisky quotas phase in.",
+   "what_already_moved": "UK-bound exports +15% (Aug 2026).",
+   "entry_shocks": [
+    {
+     "node": "C_EU_UK",
+     "ssu": 0.2,
+     "low": 0.1,
+     "high": 0.4,
+     "note": "market access gain; small versus total exports"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_UK_CETA_EFFECTIVE",
+      "C_EU_UK",
+      "F_URBAN_DEMAND"
+     ],
+     "explanation": "Cheaper UK imports (cars, whisky) add modest premium consumption."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_UK_CETA_EFFECTIVE",
+      "C_EU_UK",
+      "T_PREMIUMISATION",
+      "UNITDSPR"
+     ],
+     "explanation": "Scotch tariff cut helps spirits importers/blenders; Indian apparel exporters gain."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "UNITDSPR",
+     "direction": "+",
+     "why": "Scotch tariff cut"
+    },
+    {
+     "ticker": "PAGEIND",
+     "direction": "0",
+     "why": "limited"
+    },
+    {
+     "ticker": "MARUTI",
+     "direction": "-",
+     "why": "UK car imports minor"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+UK+CETA+come+into+force+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-13",
+     "title": "India-UK Trade Jumps 15 Per Cent To Nearly $2 Billion In August After FTA Takes Effect - Swarajya"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_NZ_FTA_INFORCE",
+   "title": "India-New Zealand FTA enters into force (20 Oct 2026)",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-10-20",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "FTA in force from ~20 Oct 2026 (Manorama Yearbook; New Indian Express 20 Oct). Small trade partner; minor market effect. Other in-force deals this year: UK; EFTA/others per India FTA trackers (not independently verified).",
+   "what_already_moved": "No measurable move.",
+   "entry_shocks": [
+    {
+     "node": "C_EU_UK",
+     "ssu": 0.02,
+     "low": 0.0,
+     "high": 0.05,
+     "note": "negligible; placeholder"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_NZ_FTA_INFORCE",
+      "C_EU_UK",
+      "F_URBAN_DEMAND"
+     ],
+     "explanation": "Negligible demand effect."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ITC",
+     "direction": "0",
+     "why": "agri exports, marginal"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+EFTA+Oman+New+Zealand+FTA+in+force+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-20",
+     "title": "India-New Zealand trade pact kicks in - New Indian Express"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_US_MIDTERMS_DEM_CONGRESS",
+   "title": "US midterms (3 Nov 2026): Democrats win control of Congress; oil falls, US equities surge",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-11-03",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Democrats took Congress (CFR/Al Jazeera 4 Nov). Markets read it as a check on the Iran war and possibly tariffs (Chatham House cautions presidential tariff powers under other statutes persist; USTR Greer says policy 'hasn't changed' despite a SCOTUS ruling). Dow +1,500 on 4 Nov; Brent slipped below $90-95 per outlets.",
+   "what_already_moved": "S&P +; Nifty50 +7.4% in 1m to 5 Nov; Brent -5.6% 1m.",
+   "entry_shocks": [
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": -0.4,
+     "low": -0.8,
+     "high": 0.0,
+     "note": "VIX moves modestly"
+    },
+    {
+     "node": "F_US_EQUITIES",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "relief rally"
+    },
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": -0.2,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "lower odds of escalation; limited legal change"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_MIDTERMS_DEM_CONGRESS",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Lower risk aversion supports FPI return."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_MIDTERMS_DEM_CONGRESS",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Stronger INR reduces imported inflation."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "FPI-heavy large cap"
+    },
+    {
+     "ticker": "ICICIBANK",
+     "direction": "+",
+     "why": "FPI-heavy"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "+",
+     "why": "US risk-on"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=US+midterm+results+House+tariffs+Iran+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "Democrats Win Control of Congress - Council on Foreign Relations"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Brent+crude+Hormuz+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "Crude oil prices fall below $90 as Vance blames GOP defeat on Iran war - CNBC"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_RED_SEA_HOUTHI_ESCALATION_Q3",
+   "title": "Red Sea: Houthi attacks on shipping and Saudi targets resume (Jul-Oct 2026) while carriers partially return to Suez",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-10-10",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Mixed picture: Suez transits +27% in Aug and carriers edging back (K+N, Seatrade Sep), but a deadly ship attack (Aug), Houthi strikes on Riyadh airport (10 Oct), and Saudi plans for an assault to break the 'chokehold' (Reuters 3 Oct). Freight/insurance elevated for Europe-bound Indian exports.",
+   "what_already_moved": "Shipping-rate move not in factor_state (F_SHIPPING_RATES unavailable); treat as directional.",
+   "entry_shocks": [
+    {
+     "node": "C_RED_SEA",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "partial disruption, vs normalisation trend"
+    },
+    {
+     "node": "F_SHIPPING_RATES",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.8,
+     "note": "unverified level"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RED_SEA_HOUTHI_ESCALATION_Q3",
+      "F_SHIPPING_RATES",
+      "F_CPI_IN"
+     ],
+     "explanation": "Higher freight lifts landed costs."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RED_SEA_HOUTHI_ESCALATION_Q3",
+      "F_SHIPPING_RATES",
+      "F_USDINR"
+     ],
+     "explanation": "Costlier trade widens CAD marginally."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RED_SEA_HOUTHI_ESCALATION_Q3",
+      "C_RED_SEA",
+      "F_SHIPPING_RATES",
+      "CONCOR"
+     ],
+     "explanation": "Port/logistics volumes and exporters' margins."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIPORTS",
+     "direction": "+",
+     "why": "transhipment diversion, volume"
+    },
+    {
+     "ticker": "TATACHEM",
+     "direction": "-",
+     "why": "freight on exports"
+    },
+    {
+     "ticker": "PAGEIND",
+     "direction": "-",
+     "why": "European exporters"
+    },
+    {
+     "ticker": "WELSPUNLIV",
+     "direction": "-",
+     "why": "Europe/US exports"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Red+Sea+shipping+Suez+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-04",
+     "title": "Ocean carriers accelerate their return to the Suez Canal - Kuehne+Nagel"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Houthi+Saudi+Arabia+attack+Red+Sea+October+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-10",
+     "title": "Twelve killed in Houthi attack at Riyadh airport - The Guardian"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_US_IRAN_CEASEFIRE_DEAL",
+   "title": "US-Iran ceasefire/peace framework agreed and holding",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-02-28",
+   "prob_by_3m": 0.45,
+   "prob_by_12m": 0.65,
+   "description": "Talks in Doha/Washington (draft circulated 2 Nov; Trump 'progress', Tehran says proposal insufficient; fresh strikes on Qeshm 3 Nov). Post-midterm political pressure (Vance blamed the loss on the war) raises odds of a deal, but earlier truces failed. Probability reflects a signed framework that cuts Hormuz attacks for >30 days.",
+   "what_already_moved": "Brent already -5.6% in 1m on hopes, so part is priced.",
+   "entry_shocks": [
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": -1.0,
+     "low": -1.5,
+     "high": -0.5,
+     "note": "de-escalation"
+    },
+    {
+     "node": "F_BRENT",
+     "ssu": -1.5,
+     "low": -2.5,
+     "high": -0.8,
+     "note": "Brent toward $80-85"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": -0.2,
+     "note": "VIX falls"
+    },
+    {
+     "node": "F_REFINING_MARGIN",
+     "ssu": -0.8,
+     "low": -1.5,
+     "high": -0.2,
+     "note": "cracks normalise"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_IRAN_CEASEFIRE_DEAL",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "Lower crude strengthens INR."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_IRAN_CEASEFIRE_DEAL",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "CPI relief cancels further RBI tightening."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_IRAN_CEASEFIRE_DEAL",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "HDFCBANK"
+     ],
+     "explanation": "Rate-peak narrative helps rate-sensitives, NBFCs and banks' valuations."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_IRAN_CEASEFIRE_DEAL",
+      "C_MIDEAST_CONFLICT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "FPI returns."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INDIGO",
+     "direction": "+",
+     "why": "fuel"
+    },
+    {
+     "ticker": "ASIANPAINT",
+     "direction": "+",
+     "why": "inputs"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "+",
+     "why": "marketing margin"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "marketing margin"
+    },
+    {
+     "ticker": "ONGC",
+     "direction": "-",
+     "why": "price realisation"
+    },
+    {
+     "ticker": "RELIANCE",
+     "direction": "-",
+     "why": "GRM normalises"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "+",
+     "why": "rates/FPI"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Iran+ceasefire+talks+oil+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Trump signals progress on Iran deal as Tehran pushes faster ceasefire - Al Jazeera"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_IRAN_TALKS_FAIL_ESCALATE",
+   "title": "Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2026-12-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.3,
+   "prob_by_12m": 0.4,
+   "description": "Iran has threatened Gulf oil and AI facilities if attacks renew (Guardian 22 Oct); IRGC claims repeated tanker hits; Saudi-Houthi front active. Probability of a sustained (>2 weeks) Brent >$110 episode.",
+   "what_already_moved": "Oct 2026 episode peaked ~$117.",
+   "entry_shocks": [
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": 1.2,
+     "low": 0.6,
+     "high": 2.0,
+     "note": "re-escalation"
+    },
+    {
+     "node": "F_BRENT",
+     "ssu": 2.5,
+     "low": 1.5,
+     "high": 5.0,
+     "note": "+25% to >$115"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 1.2,
+     "low": 0.6,
+     "high": 2.5,
+     "note": "VIX +6 pts"
+    },
+    {
+     "node": "F_GAS_GLOBAL",
+     "ssu": 1.0,
+     "low": 0.3,
+     "high": 2.0,
+     "note": "LNG via Qatar at risk"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_IRAN_TALKS_FAIL_ESCALATE",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "INR toward 97-98, RBI intervention."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_TALKS_FAIL_ESCALATE",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Another RBI hike likely."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_IRAN_TALKS_FAIL_ESCALATE",
+      "F_BRENT",
+      "F_REPO_IN",
+      "F_CREDIT_SPREADS_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "Higher funding costs and spreads compress NBFC margins."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_TALKS_FAIL_ESCALATE",
+      "F_GAS_GLOBAL",
+      "F_FERTILISER_INPUTS",
+      "CHAMBLFERT"
+     ],
+     "explanation": "LNG shortage lifts urea/fertiliser input cost and subsidy burden."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INDIGO",
+     "direction": "-",
+     "why": "fuel"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "-",
+     "why": "marketing margins"
+    },
+    {
+     "ticker": "ONGC",
+     "direction": "+",
+     "why": "realisations"
+    },
+    {
+     "ticker": "OIL",
+     "direction": "+",
+     "why": "realisations"
+    },
+    {
+     "ticker": "GAIL",
+     "direction": "-",
+     "why": "LNG"
+    },
+    {
+     "ticker": "PIDILITIND",
+     "direction": "-",
+     "why": "derivatives"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Iran+threatens+strike+oil+AI+facilities+Gulf+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "title": "Iran threatens to strike oil and AI facilities across Gulf if US and Israel renew attacks - The Guardian"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_HORMUZ_FULL_CLOSURE",
+   "title": "Hormuz effectively closed for >2 weeks (Brent > $150)",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2027-01-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.04,
+   "prob_by_12m": 0.07,
+   "description": "Tail risk: full interdiction of Hormuz/Gulf export infrastructure after talks fail. Flows had normalised by Oct, and Iran appears to prefer tolls/harassment (Al Jazeera 5 Oct), so odds are low but non-zero; Brent briefly hit 117 with partial attacks.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": 2.5,
+     "low": 2.0,
+     "high": 3.0,
+     "note": "extreme"
+    },
+    {
+     "node": "F_BRENT",
+     "ssu": 6.0,
+     "low": 4.0,
+     "high": 9.0,
+     "note": "+60% to ~$150"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 3.0,
+     "low": 2.0,
+     "high": 5.0,
+     "note": "VIX +15"
+    },
+    {
+     "node": "F_GAS_GLOBAL",
+     "ssu": 3.0,
+     "low": 2.0,
+     "high": 5.0,
+     "note": "Qatar LNG offline"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_HORMUZ_FULL_CLOSURE",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "INR >100 risk."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_HORMUZ_FULL_CLOSURE",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_GDP_IN"
+     ],
+     "explanation": "Stagflationary shock to GDP growth."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_HORMUZ_FULL_CLOSURE",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Yield spike hits bank treasury books."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INDIGO",
+     "direction": "-",
+     "why": "fuel"
+    },
+    {
+     "ticker": "ONGC",
+     "direction": "+",
+     "why": "realisations"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "-",
+     "why": "margins"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Is+Iran+charging+a+toll+to+allow+oil+traffic+through+Hormuz+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "title": "Is Iran charging a toll to allow oil traffic through Hormuz? - Al Jazeera"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_US_INTERIM_DEAL_SIGNED",
+   "title": "India-US interim trade agreement formally signed/announced",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2026-12-31",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.4,
+   "prob_by_12m": 0.65,
+   "description": "Talks have repeatedly 'stalled' (Reuters 6 Oct) yet US officials say '98-99% done' (16 Oct), Trump says 'pretty close, different from previous pacts' (21 Oct), and the White House already lists an India deal among 'promises kept' (3 Nov) without a signed text. A 'forward MFN' clause is under discussion. Hurdles: agriculture/dairy, Russian oil, US wanting competitor-country tariffs first (The Hindu 22 Sep). A narrow interim deal is the modal outcome. Midterm result may reduce US urgency or raise it. Current effective US tariff level on India is not verified from a primary source (legal basis shifted after a SCOTUS ruling; Greer says policy 'hasn't changed').",
+   "what_already_moved": "Nifty50 +7.4% in 1m partly reflects deal hopes.",
+   "entry_shocks": [
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": -1.0,
+     "low": -1.8,
+     "high": -0.3,
+     "note": "average tariff cut ~10pp vs now (uncertain base)"
+    },
+    {
+     "node": "T_CHINA_PLUS_ONE",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "relative advantage vs Asian peers"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_US_INTERIM_DEAL_SIGNED",
+      "P_US_TARIFF_INDIA",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Cuts tail risk, FPI inflow."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_US_INTERIM_DEAL_SIGNED",
+      "P_US_TARIFF_INDIA",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "INR support, lower imported inflation."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_US_INTERIM_DEAL_SIGNED",
+      "T_CHINA_PLUS_ONE",
+      "P_PLI",
+      "DIXON"
+     ],
+     "explanation": "Export-oriented manufacturing orders."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_US_INTERIM_DEAL_SIGNED",
+      "P_US_TARIFF_INDIA",
+      "C_USA",
+      "PAGEIND"
+     ],
+     "explanation": "Textile/apparel exporters regain US competitiveness."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "WELSPUNLIV",
+     "direction": "+",
+     "why": "US home textiles"
+    },
+    {
+     "ticker": "PAGEIND",
+     "direction": "0",
+     "why": "domestic"
+    },
+    {
+     "ticker": "DIXON",
+     "direction": "+",
+     "why": "exports"
+    },
+    {
+     "ticker": "KPITTECH",
+     "direction": "+",
+     "why": "US exposure"
+    },
+    {
+     "ticker": "TITAN",
+     "direction": "0",
+     "why": "jewellery tariffs"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+US+trade+deal+Trump+Modi+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "India-US trade deal 'pretty close,' says Trump - DW"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=White+House+India+trade+deal+list+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "White House lists India among nations with new Trump trade deals"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+US+tariff+rate+Indian+exports+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "title": "Explainer: Why have India-US trade talks stalled again - Reuters"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_US_TALKS_COLLAPSE",
+   "title": "India-US talks collapse; US raises tariffs on Indian goods (broad, >=10pp more)",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2027-01-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.07,
+   "prob_by_12m": 0.15,
+   "description": "Downside: Indian refusal on agriculture/Russia-oil conditions (TheWire: 'Will Modi walk away?'), plus Dec-16 waiver lapse. Constrained by new Democratic Congress and legal limits on tariff powers.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": 1.5,
+     "low": 0.8,
+     "high": 3.0,
+     "note": "+15pp"
+    },
+    {
+     "node": "C_USA",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": -0.1,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_US_TALKS_COLLAPSE",
+      "P_US_TARIFF_INDIA",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "FPI outflow."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_US_TALKS_COLLAPSE",
+      "P_US_TARIFF_INDIA",
+      "F_GDP_IN"
+     ],
+     "explanation": "Export-hit growth drag ~0.2-0.4pp."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_US_TALKS_COLLAPSE",
+      "P_US_TARIFF_INDIA",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "INR weakens, imported inflation."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "WELSPUNLIV",
+     "direction": "-",
+     "why": "US ~60% revenue"
+    },
+    {
+     "ticker": "DIXON",
+     "direction": "-",
+     "why": "exports"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "sentiment"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Will+Modi+Walk+Away+From+a+Trade+Deal+With+Trump+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "Will Modi Walk Away From a Trade Deal With Trump? - The Core"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RUSSIA_WAIVER_EXTENDED",
+   "title": "US extends/lets lapse quietly the Russia-oil sanctions waiver (~16 Dec 2026)",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2026-12-16",
+   "window_end": "2027-02-15",
+   "prob_by_3m": 0.6,
+   "prob_by_12m": 0.7,
+   "description": "Rubio called it a 60-day pause; Reuters (19 Oct) links it to midterm politics and the trade-deal prospects. Post-midterm and energy-price-sensitive, extension or no-enforcement is more likely than not.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_RUSSIA",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "continuity"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RUSSIA_WAIVER_EXTENDED",
+      "C_RUSSIA",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "Margin continuity."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RUSSIA_WAIVER_EXTENDED",
+      "C_RUSSIA",
+      "F_BRENT",
+      "F_CPI_IN"
+     ],
+     "explanation": "No supply shock."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "IOC",
+     "direction": "+",
+     "why": "crude cost"
+    },
+    {
+     "ticker": "RELIANCE",
+     "direction": "+",
+     "why": "feedstock"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Russian+oil+India+sanctions+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "Trump's Russia sanctions waiver eases India's energy woes - Reuters"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RUSSIA_TARIFF_ENFORCED",
+   "title": "Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2026-12-17",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.1,
+   "prob_by_12m": 0.15,
+   "description": "Law allows up to 100% tariffs on buyers. Indian imports ~1.8-1.9 mb/d. If enforced India would shift to UAE/US/Venezuela barrels, raising costs by $3-6/bbl and tightening product markets.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_RUSSIA",
+     "ssu": -1.0,
+     "low": -1.5,
+     "high": -0.5,
+     "note": "loss of access"
+    },
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": 2.5,
+     "low": 1.0,
+     "high": 5.0,
+     "note": "if applied at 25-50pp"
+    },
+    {
+     "node": "F_BRENT",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 1.5,
+     "note": "supply reshuffle"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RUSSIA_TARIFF_ENFORCED",
+      "C_RUSSIA",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "Lost discount hits refiners."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RUSSIA_TARIFF_ENFORCED",
+      "P_US_TARIFF_INDIA",
+      "F_USDINR"
+     ],
+     "explanation": "INR weaker."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RUSSIA_TARIFF_ENFORCED",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Tighter RBI."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "RELIANCE",
+     "direction": "-",
+     "why": "Russian crude discount + Nayara issues"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "-",
+     "why": "cost"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": "cost"
+    },
+    {
+     "ticker": "MRPL",
+     "direction": "-",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+Must+Not+Give+Up+Russian+Oil+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "title": "India Must Not Give Up Russian Oil - ORF"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_EU_FTA_SIGNED",
+   "title": "India-EU FTA signed at ceremony (planned 16 Dec 2026)",
+   "category": "geopolitics_trade",
+   "status": "scheduled",
+   "date": "2026-12-16",
+   "window_end": null,
+   "prob_by_3m": 0.85,
+   "prob_by_12m": 0.92,
+   "description": "The Hindu (24 Sep) and trade press report signing on 16 Dec; Goyal-Sefcovic talks continuing, customs issues being ironed out (2 Nov). Includes quota of ~1 lakh cars at lower tariffs in year one (Autocar India 13 Sep). Signing is not entry into force: EU Parliament/Council ratification and Indian steps typically take 12+ months; probability of entry into force by 31 May 2027 is about 0.07.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_EU_UK",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "expectation of future access"
+    },
+    {
+     "node": "T_CHINA_PLUS_ONE",
+     "ssu": 0.1,
+     "low": 0.0,
+     "high": 0.3,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_EU_FTA_SIGNED",
+      "C_EU_UK",
+      "F_URBAN_DEMAND"
+     ],
+     "explanation": "Cheaper EU imports (cars, wine, machinery) over 2-5 yrs."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_EU_FTA_SIGNED",
+      "C_EU_UK",
+      "T_PREMIUMISATION",
+      "MARUTI"
+     ],
+     "explanation": "Import car quota competes at premium segment."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_EU_FTA_SIGNED",
+      "C_EU_UK",
+      "F_STEEL_INDIA",
+      "TATASTEEL"
+     ],
+     "explanation": "CBAM terms and EU steel quota matter for steel exporters."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TATASTEEL",
+     "direction": "+",
+     "why": "EU access if CBAM relief"
+    },
+    {
+     "ticker": "MOTHERSON",
+     "direction": "+",
+     "why": "EU auto parts"
+    },
+    {
+     "ticker": "MARUTI",
+     "direction": "-",
+     "why": "premium import competition"
+    },
+    {
+     "ticker": "PAGEIND",
+     "direction": "0",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+EU+FTA+signing+December+16+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "title": "India-EU FTA to be signed on December 16 - The Hindu"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+EU+FTA+customs+December+signing+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "India And EU Iron Out Customs Issues Ahead Of FTA Signing - Swarajya"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_INDIA_CHILE_CANADA_FTA",
+   "title": "India concludes FTA negotiations with Chile and/or Canada (targets: year-end 2026)",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2026-12-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.35,
+   "prob_by_12m": 0.6,
+   "description": "Goyal (27 Oct): Chile talks 'quite ripe' for conclusion; Canada talks progressing toward year-end target (5th round, commercial pacts signed 16 Oct). Indian trade-deal target slippage is common, so odds moderate; low direct market impact.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_AFRICA_LATAM",
+     "ssu": 0.05,
+     "low": 0.0,
+     "high": 0.1,
+     "note": "Chile: copper/lithium, pulses"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_CHILE_CANADA_FTA",
+      "C_AFRICA_LATAM",
+      "F_COPPER"
+     ],
+     "explanation": "Secure copper cathode/lithium supply."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_CHILE_CANADA_FTA",
+      "F_COPPER",
+      "HINDCOPPER"
+     ],
+     "explanation": "Domestic copper miners face import competition."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDCOPPER",
+     "direction": "-",
+     "why": "import duty cut"
+    },
+    {
+     "ticker": "VEDL",
+     "direction": "0",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+Canada+OR+Chile+FTA+talks+conclude+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "India's FTA talks with Chile near conclusion: Goyal"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_H1B_FEE_REINSTATED",
+   "title": "Appeals court allows $100k H-1B fee (or new rule finalised) and/or OPT fee rule finalised",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.3,
+   "description": "Administration appealed (12 Oct); courts have so far ruled against; DHS OPT fee proposal is at comment stage. Democratic House cannot block fees administratively. Probability that a fee of >=$50k becomes enforceable for new H-1B petitions by 12 months set at 0.30.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_US_VISA_OUTSOURCING",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "material tightening"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_H1B_FEE_REINSTATED",
+      "P_US_VISA_OUTSOURCING",
+      "F_WAGES_IN"
+     ],
+     "explanation": "Offshoring push, GCC expansion."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_H1B_FEE_REINSTATED",
+      "P_US_VISA_OUTSOURCING",
+      "T_DATA_CENTRES_IN",
+      "T_GENAI_SERVICES"
+     ],
+     "explanation": "Global capability centres in India benefit; services margins hit."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_H1B_FEE_REINSTATED",
+      "P_US_VISA_OUTSOURCING",
+      "F_URBAN_DEMAND",
+      "DLF"
+     ],
+     "explanation": "GCC office leasing supports commercial real estate."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "onsite cost"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "onsite"
+    },
+    {
+     "ticker": "HCLTECH",
+     "direction": "-",
+     "why": "onsite"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "+",
+     "why": "GCC office demand"
+    },
+    {
+     "ticker": "LTIM",
+     "direction": "-",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=H-1B+fee+court+rule+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "title": "Trump Appeals Court Loss That Blocked $100,000 H-1B Fee Policies"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_PHARMA_GENERICS_TARIFF",
+   "title": "US imposes tariffs on generic drugs (200% threat) or removes India's speciality exemption",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2027-02-28",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.05,
+   "prob_by_12m": 0.12,
+   "description": "Trump threatened 200% in July, but generics are acknowledged supply-critical, and Indian industry argues US consumers would lose. Democrats in Congress add resistance. Alternative positive path: India-US deal explicitly protects generics (probability ~0.30 within 12 months, unmodelled). Also MFN price-deal pressure on branded US sales continues.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_US_PHARMA_TARIFF",
+     "ssu": 3.0,
+     "low": 1.5,
+     "high": 6.0,
+     "note": "+30pp effective on generics lines"
+    },
+    {
+     "node": "F_US_GENERIC_PRICING",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 2.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_PHARMA_GENERICS_TARIFF",
+      "P_US_PHARMA_TARIFF",
+      "F_US_GENERIC_PRICING"
+     ],
+     "explanation": "Prices rise or supply gaps; partial pass-through."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_PHARMA_GENERICS_TARIFF",
+      "P_US_PHARMA_TARIFF",
+      "SUNPHARMA"
+     ],
+     "explanation": "Indian exporters' US margins fall."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_PHARMA_GENERICS_TARIFF",
+      "P_US_PHARMA_TARIFF",
+      "P_USFDA_ENFORCEMENT",
+      "DRREDDY"
+     ],
+     "explanation": "Plant-level US capacity pivot."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DRREDDY",
+     "direction": "-",
+     "why": "US generics"
+    },
+    {
+     "ticker": "LUPIN",
+     "direction": "-",
+     "why": "US generics"
+    },
+    {
+     "ticker": "CIPLA",
+     "direction": "-",
+     "why": "US"
+    },
+    {
+     "ticker": "ZYDUSLIFE",
+     "direction": "-",
+     "why": "US"
+    },
+    {
+     "ticker": "TORNTPHARM",
+     "direction": "+",
+     "why": "domestic-heavy relative"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Trump+pharma+tariff+India+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-22",
+     "title": "Trump's 200% generic tariff threat would imperil Americans: Indian pharma - The Hindu"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_CHINA_FDI_EASING_PN3",
+   "title": "India further eases Press Note 3 rules for China/border-country FDI (approval timelines, minority stakes)",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2026-12-31",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.5,
+   "prob_by_12m": 0.7,
+   "description": "ET/NIE (27 Oct): government considering simplifying application process and easing norms. FY26 approvals were minimal (1 Chinese proposal), so effects are gradual. Political constraint from border incidents (Arunachal row).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_FDI_RULES",
+     "ssu": 0.7,
+     "low": 0.3,
+     "high": 1.2,
+     "note": "liberalisation step"
+    },
+    {
+     "node": "T_CHINA_PLUS_ONE",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_FDI_EASING_PN3",
+      "P_FDI_RULES",
+      "P_PLI"
+     ],
+     "explanation": "EMS and component JVs approved faster."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_FDI_EASING_PN3",
+      "P_FDI_RULES",
+      "F_SEMICONDUCTOR_SUPPLY"
+     ],
+     "explanation": "Components availability."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_FDI_EASING_PN3",
+      "P_FDI_RULES",
+      "P_EV_POLICY",
+      "TATAMOTORS"
+     ],
+     "explanation": "Chinese battery/EV tech partnerships."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DIXON",
+     "direction": "+",
+     "why": "JV approvals"
+    },
+    {
+     "ticker": "TATAMOTORS",
+     "direction": "+",
+     "why": "magnet/battery tech"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "-",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Govt+likely+to+further+ease+PN2+norms+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "Govt likely to further ease norms to attract investments - New Indian Express"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_CHINA_BORDER_INCIDENT",
+   "title": "Serious India-China border clash or rollback of thaw (casualties / flights and FDI easing reversed)",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2027-03-31",
+   "window_end": null,
+   "prob_by_3m": 0.03,
+   "prob_by_12m": 0.07,
+   "description": "Face-offs reported (Al Jazeera 27 Oct), Arunachal remarks (BBC 28 Oct); no agreed boundary resolution. Low probability of a lethal clash.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_US_CHINA_DECOUPLING",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": ""
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 2.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_CHINA_BORDER_INCIDENT",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Risk-off."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_CHINA_BORDER_INCIDENT",
+      "C_US_CHINA_DECOUPLING",
+      "F_SEMICONDUCTOR_SUPPLY"
+     ],
+     "explanation": "Component/rare-earth supply restrictions."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_CHINA_BORDER_INCIDENT",
+      "F_SEMICONDUCTOR_SUPPLY",
+      "DIXON"
+     ],
+     "explanation": "EMS output delays."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DIXON",
+     "direction": "-",
+     "why": "Chinese components"
+    },
+    {
+     "ticker": "BEL",
+     "direction": "+",
+     "why": "defence"
+    },
+    {
+     "ticker": "HAL",
+     "direction": "+",
+     "why": "defence"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India-China+border+face-offs+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "India-China border face-offs test Modi six years after deadly clash - Al Jazeera"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_PAK_CRISIS",
+   "title": "India-Pakistan military crisis (terror attack, cross-border strikes) after Op Sindoor (May 2025)",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2027-03-31",
+   "window_end": null,
+   "prob_by_3m": 0.03,
+   "prob_by_12m": 0.09,
+   "description": "Border shooting in Punjab (12 Oct) and continued rhetoric; Pakistan is also fighting the Taliban (Oct). Trump repeats claims of mediating the 2025 conflict. Any new crisis would likely be brief but equities react.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_INDIA_PAKISTAN",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 2.0,
+     "note": "escalation"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 1.0,
+     "low": 0.4,
+     "high": 2.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_PAK_CRISIS",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Short-lived outflow."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_PAK_CRISIS",
+      "C_INDIA_PAKISTAN",
+      "P_DEFENCE_PROCUREMENT"
+     ],
+     "explanation": "Emergency procurement."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_PAK_CRISIS",
+      "P_DEFENCE_PROCUREMENT",
+      "HAL"
+     ],
+     "explanation": "Order inflow for defence PSUs."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HAL",
+     "direction": "+",
+     "why": "orders"
+    },
+    {
+     "ticker": "BEL",
+     "direction": "+",
+     "why": "orders"
+    },
+    {
+     "ticker": "INDIGO",
+     "direction": "-",
+     "why": "airspace closures"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+Pakistan+tension+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "title": "A Punjab Border Shooting Puts India-Pakistan Tensions Back in Focus - IR Insider"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RED_SEA_SUEZ_NORMALISATION",
+   "title": "Container lines broadly return to Suez/Red Sea routing; freight rates fall",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2027-02-28",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.45,
+   "description": "Carriers were edging toward 'full Suez return' in Sep, but Houthi-Saudi fighting and Iran war make the route unreliable. Needs a Gaza/Iran de-escalation and Houthi quiet.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_RED_SEA",
+     "ssu": -0.8,
+     "low": -1.0,
+     "high": -0.3,
+     "note": "normalisation"
+    },
+    {
+     "node": "F_SHIPPING_RATES",
+     "ssu": -0.8,
+     "low": -1.5,
+     "high": -0.2,
+     "note": "freight falls"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RED_SEA_SUEZ_NORMALISATION",
+      "F_SHIPPING_RATES",
+      "F_CPI_IN"
+     ],
+     "explanation": "Cheaper freight."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RED_SEA_SUEZ_NORMALISATION",
+      "F_SHIPPING_RATES",
+      "F_PACKAGING"
+     ],
+     "explanation": "Lower input freight."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RED_SEA_SUEZ_NORMALISATION",
+      "C_RED_SEA",
+      "ADANIPORTS"
+     ],
+     "explanation": "Port transhipment benefit unwinds."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIPORTS",
+     "direction": "-",
+     "why": "diversion benefit fades"
+    },
+    {
+     "ticker": "WELSPUNLIV",
+     "direction": "+",
+     "why": "freight"
+    },
+    {
+     "ticker": "TATACHEM",
+     "direction": "+",
+     "why": "freight"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Container+lines+full+Suez+return+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-01",
+     "title": "Container lines edge towards full Suez and Red Sea return - Seatrade Maritime"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RED_SEA_CLOSURE",
+   "title": "Red Sea shipping closed again (Houthi campaign broadens; Bab el-Mandeb largely avoided)",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2027-02-28",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.15,
+   "prob_by_12m": 0.25,
+   "description": "Houthis active against Saudi targets and shipping; Saudis plan offensive. Re-closure sends rates up and diverts via Cape.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_RED_SEA",
+     "ssu": 1.5,
+     "low": 0.8,
+     "high": 2.5,
+     "note": "disruption"
+    },
+    {
+     "node": "F_SHIPPING_RATES",
+     "ssu": 1.5,
+     "low": 0.8,
+     "high": 3.0,
+     "note": "+35% to +75%"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RED_SEA_CLOSURE",
+      "F_SHIPPING_RATES",
+      "F_CPI_IN"
+     ],
+     "explanation": "Imported-cost inflation."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RED_SEA_CLOSURE",
+      "F_SHIPPING_RATES",
+      "F_USDINR"
+     ],
+     "explanation": "Terms of trade worsen."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RED_SEA_CLOSURE",
+      "C_RED_SEA",
+      "F_BRENT",
+      "HINDPETRO"
+     ],
+     "explanation": "Oil risk premium widens."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIPORTS",
+     "direction": "+",
+     "why": "transhipment"
+    },
+    {
+     "ticker": "PAGEIND",
+     "direction": "-",
+     "why": "Europe exports"
+    },
+    {
+     "ticker": "WELSPUNLIV",
+     "direction": "-",
+     "why": "freight"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Houthi+Saudi+Arabia+attack+Red+Sea+October+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-03",
+     "title": "Saudis plan assault on Houthis to break Red Sea chokehold - Reuters"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_BANGLADESH_RESET_OR_RUPTURE",
+   "title": "India-Bangladesh relations: PM Tarique Rahman visit to India happens (reset) vs deterioration (trade/border curbs)",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": null,
+   "prob_by_3m": 0.15,
+   "prob_by_12m": 0.35,
+   "description": "Rahman skipped BRICS (Oct), Hasina extradition unresolved, 'fish diplomacy' sour; Dhaka keeps an India visit 'on the table' (India Today 5 Oct). Probability = visit/reset occurs within 12m; a further deterioration (curbs on land-port trade, apparel transhipment) is a separate ~0.20 tail not modelled. Direct Nifty 200 exposure is small.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_SOUTH_SE_ASIA",
+     "ssu": 0.1,
+     "low": 0.0,
+     "high": 0.2,
+     "note": "modest"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BANGLADESH_RESET_OR_RUPTURE",
+      "C_SOUTH_SE_ASIA",
+      "F_COTTON"
+     ],
+     "explanation": "Bangladesh apparel competes with Indian textiles; cotton/yarn exports to Dhaka."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BANGLADESH_RESET_OR_RUPTURE",
+      "C_SOUTH_SE_ASIA",
+      "F_URBAN_DEMAND"
+     ],
+     "explanation": "Negligible."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIPOWER",
+     "direction": "+",
+     "why": "Bangladesh PPA payment normalisation"
+    },
+    {
+     "ticker": "WELSPUNLIV",
+     "direction": "0",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Bangladesh+election+India+relations+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "title": "Bangladesh keeps Tarique Rahman's India visit on table amid strained ties - India Today"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_CHINA_PLUS_ONE_ELECTRONICS",
+   "title": "China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": null,
+   "prob_by_3m": 0.6,
+   "prob_by_12m": 0.8,
+   "description": "OfficeChai (11 Sep) says ~50% of US smartphone imports now come from India; Apple's India push (Tata Electronics exports ~Rs 1 trn in FY26; iPhone 18 Pro/Pro Max exports). Bloomberg (19 Oct): India will not become the next China (value capture is low). Probability = continued y/y growth in electronics exports through 12m; a US semiconductor/electronics tariff is a downside risk.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "T_CHINA_PLUS_ONE",
+     "ssu": 0.6,
+     "low": 0.2,
+     "high": 1.0,
+     "note": ""
+    },
+    {
+     "node": "P_PLI",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_PLUS_ONE_ELECTRONICS",
+      "T_CHINA_PLUS_ONE",
+      "P_PLI"
+     ],
+     "explanation": "Supplier base, PLI disbursals."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_PLUS_ONE_ELECTRONICS",
+      "T_CHINA_PLUS_ONE",
+      "F_PRIVATE_CAPEX"
+     ],
+     "explanation": "Capex pipeline."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_PLUS_ONE_ELECTRONICS",
+      "F_PRIVATE_CAPEX",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Capex lifts industrial demand."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DIXON",
+     "direction": "+",
+     "why": "EMS"
+    },
+    {
+     "ticker": "HAL",
+     "direction": "0",
+     "why": ""
+    },
+    {
+     "ticker": "TITAN",
+     "direction": "0",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Apple+iPhone+India+exports+production+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "Apple's iPhone Factories Won't Make India the Next China - Bloomberg"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=50%+of+US+smartphones+imported+from+India+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-11",
+     "title": "50% Of US Smartphones Are Now Imported From India - OfficeChai"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_DEFENCE_EXPORT_ORDERS",
+   "title": "New BrahMos/defence export contracts (Philippines follow-on, Indonesia, Vietnam or others) announced",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": null,
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.5,
+   "description": "Philippines praised BrahMos and signalled more purchases (3 Nov); BrahMos MD calls it the leading export product; India post-Sindoor procurement spree. Probability = at least one new export order >US$300m announced in 12 months (BrahMos Aerospace is a JV, not a listed Nifty 200 stock; listed beneficiaries are mainly suppliers).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "T_DEFENCE_EXPORTS",
+     "ssu": 0.6,
+     "low": 0.2,
+     "high": 1.2,
+     "note": ""
+    },
+    {
+     "node": "P_DEFENCE_PROCUREMENT",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_DEFENCE_EXPORT_ORDERS",
+      "T_DEFENCE_EXPORTS",
+      "P_DEFENCE_PROCUREMENT"
+     ],
+     "explanation": "Export success raises indigenisation push."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_DEFENCE_EXPORT_ORDERS",
+      "T_DEFENCE_EXPORTS",
+      "HAL"
+     ],
+     "explanation": "Order book visibility."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_DEFENCE_EXPORT_ORDERS",
+      "P_DEFENCE_PROCUREMENT",
+      "F_GOVT_CAPEX",
+      "BEL"
+     ],
+     "explanation": "Supports PSU defence capex cycle."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BEL",
+     "direction": "+",
+     "why": "radar/electronics supplier"
+    },
+    {
+     "ticker": "HAL",
+     "direction": "+",
+     "why": "orders"
+    },
+    {
+     "ticker": "BDL",
+     "direction": "+",
+     "why": "missiles"
+    },
+    {
+     "ticker": "BHARATFORG",
+     "direction": "+",
+     "why": "artillery exports"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Philippines+praises+India+BrahMos+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Philippines praises India's BrahMos missile as 'Unmatched' - Defence Watch"
+    }
+   ],
+   "confidence": "low"
+  }
+ ],
+ "edges": [
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_BRENT",
+   "relation": "macro_transmission",
+   "w": 6.0,
+   "w_low": 3.0,
+   "w_high": 10.0,
+   "lag": "0-3m",
+   "mechanism": "Gulf escalation raises risk premium and disrupts Hormuz flows; observed Oct 2026 spike to ~$117 on tanker attacks",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Brent+Hormuz+tanker+fire+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Brent >$117 on Hormuz tanker fire"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "India imports ~85% of crude; higher oil widens CAD and drives INR weakness",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Rupee+RBI+record+low+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Rupee near record low amid oil"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "fuel, transport and input pass-through; partial since retail fuel prices administered",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+hike+repo+October+2026+MPC+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI cites inflation risk from oil"
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "F_SHIPPING_RATES",
+   "relation": "macro_transmission",
+   "w": 1.8,
+   "w_low": 0.8,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Cape rerouting lengthens voyages and removes capacity",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Red+Sea+shipping+Suez+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-04",
+     "note": "carriers returning to Suez"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "tariff escalation lowers earnings outlook and sentiment, prompting FPI selling",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=FPI+outflow+India+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "note": "record 2026 FPI outflows"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "F_REFINING_MARGIN",
+   "relation": "input_cost",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "discounted Russian crude supports Indian refiners' realised margins",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+Russia+oil+imports+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "imports 1.8-1.9 mb/d"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "F_BRENT",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "more Russian barrels reaching market restrain Brent; loss of 1.8 mb/d would lift prices",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Russian+oil+India+sanctions+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-20",
+     "note": "waiver unlikely to cut prices much"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "F_WAGES_IN",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": ">12m",
+   "mechanism": "offshoring into GCCs raises demand for Indian tech talent",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=H-1B+fee+India+IT+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-25",
+     "note": "fee proposal"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "T_CHINA_PLUS_ONE",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "approving China-linked JVs adds to component ecosystem",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Press+Note+3+China+FDI+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "further easing mulled"
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [],
+ "factor_state_notes": [
+  "RBI repo rate 5.50% after 25 bp hike at 7 Oct 2026 MPC; stance 'calibrated tightening'; FY27 GDP projection 7.1%; minutes (21 Oct) flag more hikes but wary of aggressive cycle. Source: The Hindu 2026-10-07 / Reuters 2026-10-21 (Google News RSS query 'RBI hike repo October 2026 MPC').",
+  "USD/INR approached a record low (~96) in late Sep-early Oct 2026; 94.49 on 2026-11-05 per factor_state; India FX reserves $726.03 bn at 16 Oct (down $8.58 bn w/w). Source: Moneycontrol 2026-10-16.",
+  "FPI net equity outflow CY2026 about Rs 2.95-3.12 lakh crore (record); Oct 2026 Rs ~48,000-52,000 cr to 25 Oct. Source: Business Standard 2026-10-13, Moneycontrol 2026-11-01, The Hindu 2026-10-25.",
+  "India crude imports record 5.4-5.6 mb/d in Oct 2026; Russian crude ~1.8-1.9 mb/d (stabilised after waiver); Sep imports of Russian and US crude were cut with UAE share up. Source: ThePrint 2026-10-31, TOI 2026-11-01, The Hindu 2026-10-30.",
+  "Brent: factor_state close 94.99 on 2026-11-05; intraday/headline quotes 4 Nov ranged $90-104 across outlets (CNBC <$90, NDTV ~$104); 6-month high ~$117 on 2026-10-30. Treat levels with caution.",
+  "US legal basis of tariffs on India unverified: SCOTUS ruling on tariff powers referenced 4 Nov 2026 (ABC); USTR Greer says policy 'hasn't changed'; India-US interim deal not signed; Russia sanctions waiver runs to ~2026-12-16. A primary-source check of the current effective US tariff rate on Indian goods is still needed.",
+  "Section 232 pharma tariff at 100% effective 2026-09-29 with exemptions for select speciality drugs of ~20 countries incl. India. Source: Business Standard / The Hindu 2026-09-29.",
+  "US midterms 2026-11-03: Democrats won control of Congress (CFR 2026-11-04).",
+  "India-EU FTA signing planned 2026-12-16 (The Hindu 2026-09-24). India-UK CETA in force from mid-2026 (exact date unverified); India-NZ FTA in force ~2026-10-20."
+ ]
+}

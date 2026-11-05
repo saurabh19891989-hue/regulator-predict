@@ -1,0 +1,3410 @@
+{
+ "events": [
+  {
+   "event_id": "EV_FED_SEP26_HIKE",
+   "title": "Fed delivers first hike in years (16 Sep 2026), new chair Warsh",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-09-16",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "FOMC (unanimous, per WSJ headline) raised the target range 25 bp to 3.75-4.00% (range inferred from the 28 Oct statement holding at 3-3/4 to 4 percent) and signalled one more hike in 2026. Kevin Warsh was sworn in as Fed chair on 18 Sep (Reuters headline), after the oil-driven inflation surge.",
+   "what_already_moved": "Fed funds +25 bp. US 10y +~42 bp since 1 Jun (4.47% -> 4.89%, factor_state.md); DXY +2.2% since 1 Jun; Reuters 7 Oct: hawkish Fed triggered EM outflows in September.",
+   "entry_shocks": [
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": 1.0,
+     "low": 1.0,
+     "high": 1.0,
+     "note": "+25 bp delivered"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 1.4,
+     "note": "part of the ~+1.7 SSU 10y rise since June, partly oil/term premium"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": 0.4,
+     "low": 0.2,
+     "high": 0.7,
+     "note": "dollar firmer on rate differential"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FED_SEP26_HIKE",
+      "F_FED_FUNDS",
+      "F_US_10Y",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "higher US yields pull portfolio flows from EM equities"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FED_SEP26_HIKE",
+      "F_DXY",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "stronger dollar weakens rupee, adds imported inflation"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FED_SEP26_HIKE",
+      "F_FED_FUNDS",
+      "F_US_10Y",
+      "F_GSEC_10Y_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "US yields lift Indian G-sec yields and limit RBI easing room (RBI hiked to 5.5% on 7 Oct)"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI-heavy ownership; most sensitive to outflows"
+    },
+    {
+     "ticker": "ICICIBANK",
+     "direction": "-",
+     "why": "same"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "rate-sensitive and FPI-owned"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Fed%20approves%20interest%20rate%20hike%2C%20signals%20one%20more%20to%20come%20this%20year&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-16",
+     "title": "Fed approves interest rate hike, signals one more to come this year - CNBC"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Fed%20policymakers%20divided%20over%20rate-hike%20logic%20in%20September%2C%20minutes%20show%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Fed policymakers divided over rate-hike logic in September, minutes show - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Trump%20will%20swear%20in%20Warsh%20on%20Friday%20to%20lead%20US%20Federal%20Reserve%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-18",
+     "title": "Trump will swear in Warsh on Friday to lead US Federal Reserve - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Hawkish%20Fed%20triggers%20emerging%20market%20outflows%20in%20September%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Hawkish Fed triggers emerging market outflows in September - Reuters"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_FED_OCT26_HOLD",
+   "title": "Fed holds at 3.75-4.00% with two hawkish dissents (28 Oct 2026)",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-10-28",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "FOMC held the range at 3-3/4 to 4 percent by a 10-2 vote; Cook and Hammack wanted a 25 bp hike. Statement: activity expanding at a strong pace, productivity strong, inflation elevated, 'will deliver price stability'. Sets up a December hike debate.",
+   "what_already_moved": "Hold was expected (Reuters 20 Oct: economists saw skip in Oct, hike in Dec). Treasuries rallied into early Nov (10y 4.89%, -7% over 1m in level terms).",
+   "entry_shocks": [
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "no change; hawkish tilt (2 hike dissents)"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "1m move into early Nov as oil fell and hold was priced"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FED_OCT26_HOLD",
+      "F_US_10Y",
+      "F_DXY"
+     ],
+     "explanation": "lower yields soften the dollar"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FED_OCT26_HOLD",
+      "F_DXY",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "softer dollar brings FPIs back (FPI bought Rs 20,834 cr in four sessions to 4 Nov, most since 2023)"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "FPI return benefits most-owned banks"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "+",
+     "why": "IT as USD earner when INR firm is mixed; yields fall helps valuation"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+     "date": "2026-10-28",
+     "title": "Federal Reserve issues FOMC statement, 28 Oct 2026"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Fed%20to%20skip%20October%20but%20raise%20rates%20again%20in%20December%2C%20nearly%20all%20economists%20say%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-20",
+     "title": "Fed to skip October but raise rates again in December, nearly all economists say - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Foreign%20Investors%20Step%20Up%20India%20Bets%20With%20Rs%2020%2C834%20Crore%20Stock%20Buying%20In%20Four%20Days%20-%20NDTV%20Profit&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "title": "Foreign Investors Step Up India Bets With Rs 20,834 Crore Stock Buying In Four Days - NDTV Profit"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_UST_SELLOFF_SEP26",
+   "title": "US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-09-23",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "10y briefly rose above 5.05%, a 19-year high (ET/CNBC 23 Sep), driven by oil-led inflation (CPI 3.7% in Sept), Fed hikes and deficit/term-premium worries; 30y hit highest since 2004 (24 Sep). By 5 Nov the 10y was ~4.89% (factor_state.md). French 10y near 5% too (9 Oct).",
+   "what_already_moved": "US 10y: 4.47% (1 Jun) -> ~5.05% peak (23 Sep) -> 4.89% (5 Nov). DXY 101.4, +2.2% since 1 Jun. India: FPI outflow CY26 ~Rs 3.1 trn; USD/INR touched ~96+ then 94.49.",
+   "entry_shocks": [
+    {
+     "node": "F_US_10Y",
+     "ssu": 1.7,
+     "low": 1.4,
+     "high": 2.4,
+     "note": "net +42 bp since 1 Jun (peak +58 bp)"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": 0.73,
+     "low": 0.5,
+     "high": 1.0,
+     "note": "+2.2% since 1 Jun"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_UST_SELLOFF_SEP26",
+      "F_US_10Y",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "yield gap vs India shrinks; EM equity/debt funds sell"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_UST_SELLOFF_SEP26",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "outflows weaken rupee and lift G-sec yields"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_UST_SELLOFF_SEP26",
+      "F_US_10Y",
+      "F_US_EQUITIES",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "valuation hit to US equities raises VIX, amplifying EM outflows"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "long-duration, FPI-owned"
+    },
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI ownership, NIM pressure from funding costs"
+    },
+    {
+     "ticker": "ADANIPORTS",
+     "direction": "-",
+     "why": "USD debt refinancing sensitivity"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=10-year%20Treasury%20yield%20rockets%20to%2019-year%20high&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "title": "10-year Treasury yield rockets to 19-year high - CNBC"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=US%2030-Year%20Yield%20Hits%20Highest%20Since%202004%20as%20Bond%20Selloff%20Deepens%20-%20Bloomberg&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "title": "US 30-Year Yield Hits Highest Since 2004 as Bond Selloff Deepens - Bloomberg"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Treasury%20Yields%20Fall%20as%20Democrats%20Sweep%20Congress%20-%20TradingView&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "Treasury Yields Fall as Democrats Sweep Congress - TradingView"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_BOJ_SEP26_HIKE",
+   "title": "BoJ hikes to 31-year high (18 Sep 2026); yen near 160 in Aug",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-09-18",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "BoJ raised its policy rate to a 31-year high (BBC 18 Sep); a Reuters poll (23 Oct) expects 1.50% in December, implying the current rate is ~1.25% (inferred, not verified). Yen had neared/breached 160 per USD in Aug; USD/JPY broke support on 22 Oct as US yields fell. Takaichi government supports hikes.",
+   "what_already_moved": "USD/JPY ~160 (Aug) -> lower after BoJ hike and falling UST yields (no price series in factor_state.md; unquantified). JGB yields at multi-decade highs (Sept).",
+   "entry_shocks": [
+    {
+     "node": "NEW_USDJPY",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": -0.2,
+     "note": "yen firmer vs August peak; approx -1.5% (unverified level)"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "carry-unwind jitters"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BOJ_SEP26_HIKE",
+      "NEW_USDJPY",
+      "F_RISK_SENTIMENT"
+     ],
+     "explanation": "yen strength forces carry-trade deleveraging, lifting VIX"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BOJ_SEP26_HIKE",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "risk-off reduces EM equity allocations"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_BOJ_SEP26_HIKE",
+      "NEW_USDJPY",
+      "F_DXY",
+      "F_GOLD"
+     ],
+     "explanation": "weaker dollar side effect supports gold/metals"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI proxy"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "~",
+     "why": "Japan/Korea demand exposure minor"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Japan%20raises%20interest%20rate%20to%20new%2031-year%20high%20to%20curb%20rising%20prices%20-%20BBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-18",
+     "title": "Japan raises interest rate to new 31-year high to curb rising prices - BBC"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=BOJ%20to%20raise%20rates%20to%201.50%25%20in%20December%2C%20sticking%20to%20quarterly%20pace%3A%20Reuters%20poll&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "BOJ to raise rates to 1.50% in December, sticking to quarterly pace: Reuters poll"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Yen%27s%20Breach%20of%20160%20to%20Dollar%20Puts%20Traders%20on%20Intervention%20Watch%20-%20Bloomberg&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-31",
+     "title": "Yen's Breach of 160 to Dollar Puts Traders on Intervention Watch - Bloomberg"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_AI_SELLOFF_OCT26",
+   "title": "AI/tech selloff and capex-forecast pause (Oct 2026)",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-10-22",
+   "window_end": "2026-10-30",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Nasdaq -5% in October ('AI stocks lost $5 trn', Yahoo 1 Nov); S&P/Nasdaq sharply lower 22 Oct on AI-spending doubts + Iran war; Alphabet worst week since 2011 and Intel record crash (week to 30 Oct); CoreWeave -25% (16 Oct); Google and Microsoft deferred raising capex forecasts (CNBC 29 Oct). Big-tech 2026 capex still ~US$725-828 bn (various estimates). Partial rebound 2-3 Nov.",
+   "what_already_moved": "Nasdaq -5% (Oct); S&P 500 7,688.6 (-1.7% 1m, +1.2% since 1 Jun); VIX 16.6 (+10.7% 1m). Nifty IT: +11% in five sessions mid-Oct on 'reverse AI trade', then -2% to -5% on 27-28 Oct as global AI stocks rebounded (Anthropic IPO).",
+   "entry_shocks": [
+    {
+     "node": "F_US_EQUITIES",
+     "ssu": -0.35,
+     "low": -1.0,
+     "high": -0.2,
+     "note": "S&P 1m -1.7% (Nasdaq -5%)"
+    },
+    {
+     "node": "F_AI_CAPEX",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "capex guidance raise postponed, not cut"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 0.35,
+     "low": 0.2,
+     "high": 0.8,
+     "note": "VIX +1.7pts 1m"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_AI_SELLOFF_OCT26",
+      "F_US_EQUITIES",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "US equity drawdown lifts VIX and cuts EM flows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_AI_SELLOFF_OCT26",
+      "F_AI_CAPEX",
+      "F_US_TECH_SPEND",
+      "C_USA"
+     ],
+     "explanation": "hyperscaler capex discipline spreads to enterprise tech budgets"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_AI_SELLOFF_OCT26",
+      "F_AI_CAPEX",
+      "F_US_TECH_SPEND",
+      "C_USA",
+      "TCS"
+     ],
+     "explanation": "US tech-spend caution is a headwind for Indian IT discretionary demand; but 'AI winner' rotation out of AI hardware helped IT in mid-Oct"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INFY",
+     "direction": "~",
+     "why": "trades inversely to AI-winner basket (Oct reverse trade)"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "~",
+     "why": "same"
+    },
+    {
+     "ticker": "DIXON",
+     "direction": "-",
+     "why": "electronics/AI-hardware sentiment"
+    },
+    {
+     "ticker": "SIEMENS",
+     "direction": "-",
+     "why": "data-centre capex proxy"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=AI%20buildout%20hits%20snag%20as%20Google%20and%20Microsoft%20put%20off%20raising%20capex%20forecasts%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "AI buildout hits snag as Google and Microsoft put off raising capex forecasts - CNBC"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Nasdaq%20Sinks%205%25%20in%20October%20as%20AI%20Stock%20Selloff%20Hits%20Tech%20-%20TradingView&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "Nasdaq Sinks 5% in October as AI Stock Selloff Hits Tech - TradingView"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Alphabet%20Posts%20Worst%20Week%20Since%202011%2C%20Intel%20Suffers%20Record%20Crash%20-%20TradingView&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "Alphabet Posts Worst Week Since 2011, Intel Suffers Record Crash - TradingView"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Why%20CoreWeave%27s%2025%25%20Tumble%20Is%20A%20Warning%20To%20AI%20Financiers%20-%20Forbes&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "title": "Why CoreWeave's 25% Tumble Is A Warning To AI Financiers - Forbes"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_US_Q3_DATA_MIXED",
+   "title": "US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-10-29",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "BEA: Q3 GDP +3.4% annualised (Q2 2.2%), led by consumer spending and AI investment (29 Oct). September CPI 3.7% y/y on gasoline (14 Oct). September payrolls +29,000, unemployment 4.2% (2 Oct) after +162k in Aug (4.1%). Strong output/high inflation/soft hiring leaves the Fed torn; October jobs report due Fri 6 Nov (date not verified).",
+   "what_already_moved": "GDP +1.2pp q/q annualised acceleration; CPI 3.7%; unemployment +0.1pp.",
+   "entry_shocks": [
+    {
+     "node": "F_US_GDP",
+     "ssu": 1.2,
+     "low": 0.8,
+     "high": 1.6,
+     "note": "Q3 acceleration from 2.2% to 3.4%"
+    },
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": 0.5,
+     "low": 0.0,
+     "high": 1.0,
+     "note": "hike pricing for Dec supported by CPI/GDP, offset by weak jobs"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_Q3_DATA_MIXED",
+      "F_US_GDP",
+      "C_USA"
+     ],
+     "explanation": "strong US demand supports export demand"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_Q3_DATA_MIXED",
+      "F_US_GDP",
+      "F_US_10Y",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "strong growth keeps yields high, a headwind for EM flows"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_Q3_DATA_MIXED",
+      "C_USA",
+      "F_US_TECH_SPEND",
+      "INFY"
+     ],
+     "explanation": "resilient US activity underpins IT services demand even as pricing falls"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INFY",
+     "direction": "+",
+     "why": "US ~55-60% of revenue (model knowledge)"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "+",
+     "why": "US ~50%"
+    },
+    {
+     "ticker": "SUNPHARMA",
+     "direction": "+",
+     "why": "US specialty/generics exposure"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=US%20GDP%20growth%20accelerates%20to%203.4%25%20in%20Q3%202026%20-%20ANI/Firstpost&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "US GDP growth accelerates to 3.4% in Q3 2026 - ANI/Firstpost"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Consumer%20prices%20rose%203.7%25%20annually%20in%20September%20as%20gas%20prices%20skyrocket%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "Consumer prices rose 3.7% annually in September as gas prices skyrocket - CNBC"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Labor%20market%20faltered%20in%20September%20as%20jobs%20increased%20by%20just%2029%2C000%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "title": "Labor market faltered in September as jobs increased by just 29,000 - CNBC"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_US_MIDTERMS_DEM_SWEEP",
+   "title": "US midterms (3 Nov 2026): Democrats win House and Senate",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-11-03",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Democrats won control of both chambers (News On AIR, NDTV, The Hindu, 4 Nov); Trump posted a 'veto' message. Implications: gridlock on tax/fiscal, oversight of tariffs and H-1B; but tariffs are mostly executive (Section 301/232 after the Supreme Court struck IEEPA tariffs, $81 bn refunds, Jul 2026), so little immediate relief (Business Journals 4 Nov). Lame-duck Trump may seek quick trade deals (TOI/GTRI 4 Nov); Fortune 3 Nov: tariffs, Iran action and shutdown risk after the vote. Treasury yields fell; Nifty rallied.",
+   "what_already_moved": "Sensex +1,268 to +1,400 pts on 5 Nov, Nifty >24,300; 5-day winning streak; FPIs bought Rs 20,834 cr in four sessions (most since 2023); US 10y 4.89%.",
+   "entry_shocks": [
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": -0.1,
+     "low": -0.4,
+     "high": 0.2,
+     "note": "deal urgency vs executive tariff powers; sign uncertain"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "flows turned positive in first week of Nov"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": -0.2,
+     "low": -0.4,
+     "high": 0.0,
+     "note": "gridlock = less fiscal expansion"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_MIDTERMS_DEM_SWEEP",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "inflows support rupee"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_MIDTERMS_DEM_SWEEP",
+      "P_US_TARIFF_INDIA",
+      "F_GDP_IN",
+      "F_PRIVATE_CAPEX"
+     ],
+     "explanation": "possible trade deal / lower tariff uncertainty helps export sectors and capex"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_MIDTERMS_DEM_SWEEP",
+      "F_US_10Y",
+      "F_GSEC_10Y_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "lower US yields ease Indian yields, reopening RBI optionality"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DIXON",
+     "direction": "+",
+     "why": "export electronics benefit from tariff relief"
+    },
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "FPI return"
+    },
+    {
+     "ticker": "TITAN",
+     "direction": "+",
+     "why": "jewellery/gems exports (US ~30% of segment, model knowledge)"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Democrats%20Take%20Control%20Of%20US%20Congress.%20What%20It%20Means%20For%20India%20-%20NDTV&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "Democrats Take Control Of US Congress. What It Means For India - NDTV"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=US%20midterms%3A%20What%20Trump%27s%20defeat%20means%20for%20Europe%20and%20global%20markets%20-%20Euronews&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "US midterms: What Trump's defeat means for Europe and global markets - Euronews"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Sensex%20Surges%201%2C268%20Points%3B%20Nifty%20Tops%2024%2C300%20on%20Strong%20Global%20Cues%20-%20HDFC%20Sky&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "title": "Sensex Surges 1,268 Points; Nifty Tops 24,300 on Strong Global Cues - HDFC Sky"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Wall%20Street%20is%20bracing%20for%20a%20fresh%20wave%20of%20tariffs%2C%20Iran%20action%20%28and%20potentially%20a%20government%20shutdown%29%20after%20the%20midterms%20-%20Fortune&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Wall Street is bracing for a fresh wave of tariffs, Iran action (and potentially a government shutdown) after the midterms - Fortune"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_FPI_RECORD_OUTFLOW_2026",
+   "title": "Record FPI equity outflow from India in CY2026",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-10-18",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "FPIs sold ~Rs 3.12 trn (~US$33 bn at 94.5) of Indian equities in CY26 by 18 Oct, the biggest annual outflow ever (CNBC-TV18 5 Oct: ~$30 bn; Business Standard 13 Oct: nearly double 2025). October net selling Rs 35-52k cr depending on date; first net buying streak started 2 Nov.",
+   "what_already_moved": "Rupee: 96-ish low then 94.49 (-1.1% since 1 Jun but +6.5% 12m). Nifty50 +4.6% since 1 Jun, -4.4% 12m.",
+   "entry_shocks": [
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": -2.0,
+     "low": -2.6,
+     "high": -1.4,
+     "note": "~US$10 bn per quarter outflow vs 5bn SSU (inferred from $33 bn over ~10 months)"
+    },
+    {
+     "node": "F_USDINR",
+     "ssu": 0.5,
+     "low": 0.3,
+     "high": 0.8,
+     "note": "rupee depreciation pressure over 12m"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FPI_RECORD_OUTFLOW_2026",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "capital outflow weakens INR"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FPI_RECORD_OUTFLOW_2026",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "weaker INR imports inflation"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FPI_RECORD_OUTFLOW_2026",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "I_PRIVATE_BANKS"
+     ],
+     "explanation": "RBI tightening squeezes bank margins and credit growth"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "highest FPI ownership"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "+",
+     "why": "USD revenue earners benefit from weaker INR"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "+",
+     "why": "same"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=FPIs%20hit%20the%20sell%20button%20again%3A%20Rs%203.12%20lakh%20crore%20exits%20Indian%20equities%20in%202026%20-%20TOI&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-18",
+     "title": "FPIs hit the sell button again: Rs 3.12 lakh crore exits Indian equities in 2026 - TOI"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Record%20FPI%20outflows%20top%203%20trillion%20in%20CY26%2C%20nearly%20double%202025%20tally%20-%20Business%20Standard&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-13",
+     "title": "Record FPI outflows top 3 trillion in CY26, nearly double 2025 tally - Business Standard"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Foreign%20investors%20withdraw%20Rs%2034%2C843%20crore%20from%20Indian%20stocks%20-%20TOI&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "Foreign investors withdraw Rs 34,843 crore from Indian stocks - TOI"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_CHINA_Q3_STIMULUS_PIVOT",
+   "title": "China Q3 GDP 4.5% on exports; stimulus pivot still thin",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-10-18",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "China Q3 GDP growth 4.5% y/y (CNBC 18 Oct) beating estimates on surging exports; IMF urged more stimulus amid deflation (15 Oct); Bloomberg 23 Oct: authorities barely eased austerity; Reuters 25 Oct: stimulus 'keeps missing the mark'. USD/CNY 6.67 (-1.4% since 1 Jun). Steel HRC +20.6% since 1 Jun; iron ore -12.5%; copper -2.4%.",
+   "what_already_moved": "Exports-led strength; domestic demand weak; yuan stronger.",
+   "entry_shocks": [
+    {
+     "node": "C_CHINA",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.7,
+     "note": "growth steady but stimulus thin"
+    },
+    {
+     "node": "F_USDCNY",
+     "ssu": -0.47,
+     "low": -0.8,
+     "high": -0.2,
+     "note": "yuan stronger -1.4%"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_Q3_STIMULUS_PIVOT",
+      "C_CHINA",
+      "F_COPPER"
+     ],
+     "explanation": "industrial demand supports base metals"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_Q3_STIMULUS_PIVOT",
+      "F_USDCNY",
+      "F_CHINA_CHEM_EXPORTS"
+     ],
+     "explanation": "strong export push keeps price pressure on Indian chemicals/steel"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_Q3_STIMULUS_PIVOT",
+      "C_CHINA",
+      "F_STEEL_GLOBAL",
+      "P_STEEL_DUTY_IN",
+      "TATASTEEL"
+     ],
+     "explanation": "higher global steel supports Indian steel margins"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDALCO",
+     "direction": "+",
+     "why": "copper/aluminium exposure"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "+",
+     "why": "global HRC +20%"
+    },
+    {
+     "ticker": "VEDL",
+     "direction": "+",
+     "why": "base metals"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=China%27s%20third-quarter%20economic%20growth%20quickens%20to%204.5%25%20as%20exports%20surge%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-18",
+     "title": "China's third-quarter economic growth quickens to 4.5% as exports surge - CNBC"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China%20Barely%20Eased%20Austerity%20Before%20Shift%20Into%20Stimulus%20Mode%20-%20Bloomberg&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "China Barely Eased Austerity Before Shift Into Stimulus Mode - Bloomberg"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=IMF%20China%20stimulus%20deflation&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "title": "IMF calls on China to provide more economic stimulus"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_INDIAN_IT_Q2_VISA_SHOCK",
+   "title": "Indian IT: weakest Q2 in 3 years, Infosys guidance cut, US green card freeze",
+   "category": "global_macro",
+   "status": "occurred",
+   "date": "2026-10-09",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Q2 FY27: TCS profit +15% YoY, revenue +11% YoY, TCV $9.6 bn (8 Oct); Infosys CC growth 1.5% and FY27 guidance cut to 1-2% (23 Oct); weak growth, pricing deflation, AI revenue rising. US froze green card filings for TCS, Wipro, HCL, Cognizant and Microsoft (9 Oct, Reuters/Indian Express); H-1B fee extended (19 Sep). TCS down ~35% in 2026 before an Oct reverse-AI-trade rally (Nifty IT +16% in a month to 22 Oct).",
+   "what_already_moved": "Nifty IT +16% in a month to 22 Oct (Upstox), then -2% to -5% on 27-28 Oct.",
+   "entry_shocks": [
+    {
+     "node": "P_US_VISA_OUTSOURCING",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "green card freeze, H-1B fee extension"
+    },
+    {
+     "node": "F_US_TECH_SPEND",
+     "ssu": -0.3,
+     "low": -0.8,
+     "high": 0.2,
+     "note": "muted discretionary spend per Q2 commentary"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIAN_IT_Q2_VISA_SHOCK",
+      "P_US_VISA_OUTSOURCING",
+      "F_WAGES_IN"
+     ],
+     "explanation": "onshore hiring cost rises, margins compress"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIAN_IT_Q2_VISA_SHOCK",
+      "F_US_TECH_SPEND",
+      "C_USA",
+      "INFY"
+     ],
+     "explanation": "soft client budgets feed through to guidance cuts"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIAN_IT_Q2_VISA_SHOCK",
+      "T_GENAI_SERVICES",
+      "F_US_TECH_SPEND",
+      "I_IT_SERVICES"
+     ],
+     "explanation": "genAI deflation compresses pricing, offset by large-deal TCV"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "FY27 guidance cut to 1-2%"
+    },
+    {
+     "ticker": "WIPRO",
+     "direction": "-",
+     "why": "green card freeze"
+    },
+    {
+     "ticker": "HCLTECH",
+     "direction": "-",
+     "why": "same"
+    },
+    {
+     "ticker": "PERSISTENT",
+     "direction": "+",
+     "why": "midcap IT outperforming per previews"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Infosys%20cuts%20FY27%20revenue%20growth%20guidance%20to%201-2%25%2C%20Q2%20CC%20revenue%20growth%20at%201.5%25%20-%20Fortune%20India&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "Infosys cuts FY27 revenue growth guidance to 1-2%, Q2 CC revenue growth at 1.5% - Fortune India"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Trump%20administration%20freezes%20green%20cards%20for%20Microsoft%2C%20IT%20firms%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "title": "Trump administration freezes green cards for Microsoft, IT firms - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=TCS%20Q2%20results%3A%20Net%20profit%20rises%2015%25%20to%20Rs%2013%2C884%20crore%20-%20Upstox&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "title": "TCS Q2 results: Net profit rises 15% to Rs 13,884 crore - Upstox"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Trump%20extends%20H-1B%20fee%20amid%20push%20to%20restrict%20foreign%20hiring%20-%20New%20Indian%20Express&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "title": "Trump extends H-1B fee amid push to restrict foreign hiring - New Indian Express"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_NVDA_NOV17_BEAT",
+   "title": "Nvidia FQ3 results (reported 17 Nov): beat-and-raise, AI demand intact",
+   "category": "global_macro",
+   "status": "scheduled",
+   "date": "2026-11-17",
+   "window_end": null,
+   "prob_by_3m": 0.62,
+   "prob_by_12m": 0.62,
+   "description": "Nvidia reports 17 Nov (Motley Fool 2 Nov). Last print (26 Aug) revenue $96 bn, +106%, guiding ~70% growth into 2028. Sell-signal chatter and 'valuation reset' (Moneycontrol 3 Nov) lower the bar; probability of beat-and-raise with stock reaction >= flat ~0.62 (our estimate). Complement: the disappointment outcome is covered by EV_AI_CAPEX_RESET_RISK.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_AI_CAPEX",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "confirms capex"
+    },
+    {
+     "node": "F_US_EQUITIES",
+     "ssu": 0.4,
+     "low": 0.0,
+     "high": 1.0,
+     "note": "relief"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": -0.4,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "VIX lower"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_NVDA_NOV17_BEAT",
+      "F_US_EQUITIES",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "risk-on supports EM flows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_NVDA_NOV17_BEAT",
+      "F_AI_CAPEX",
+      "F_POWER_DEMAND_IN",
+      "T_DATA_CENTRES_IN"
+     ],
+     "explanation": "AI buildout supports Indian data-centre/power themes"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_NVDA_NOV17_BEAT",
+      "T_GENAI_SERVICES",
+      "F_US_TECH_SPEND",
+      "I_IT_SERVICES"
+     ],
+     "explanation": "AI-winner trade has recently been negative for Indian IT (27-28 Oct)"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "inverse to AI-winner rally (Oct pattern)"
+    },
+    {
+     "ticker": "SIEMENS",
+     "direction": "+",
+     "why": "data-centre electrification"
+    },
+    {
+     "ticker": "POLYCAB",
+     "direction": "+",
+     "why": "cables for data centres"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Nvidia%20Reports%20Nov.%2017.%20History%20Says%20What%20Its%20Stock%20Usually%20Does%20Next%20-%20Motley%20Fool&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "Nvidia Reports Nov. 17. History Says What Its Stock Usually Does Next - Motley Fool"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Nvidia%20revenue%20soars%20106%25%2C%20beats%20expectations%20-%20ABC%20News&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-26",
+     "title": "Nvidia revenue soars 106%, beats expectations - ABC News"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=AI%20chipmakers%20face%20a%20valuation%20reset%20even%20as%20supply%20stays%20sold%20out%20-%20Moneycontrol&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "AI chipmakers face a valuation reset even as supply stays sold out - Moneycontrol"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_FED_DEC26_HIKE25",
+   "title": "FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25%",
+   "category": "global_macro",
+   "status": "scheduled",
+   "date": "2026-12-09",
+   "window_end": null,
+   "prob_by_3m": 0.58,
+   "prob_by_12m": 0.58,
+   "description": "FOMC meets 8-9 Dec (fed calendar, with SEP). Reuters 20 Oct: nearly all economists expected a Dec hike; Cook and Hammack dissented for a hike on 28 Oct; 3.7% CPI, 3.4% GDP. Against: weak Sept payrolls (+29k), falling oil/yields after midterms, Trump pressure on Warsh, AI selloff. Hike 0.58, hold 0.42 (our judgment; check Nov 6 jobs report and 10 Dec CPI).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": 1.0,
+     "low": 1.0,
+     "high": 1.0,
+     "note": "+25 bp"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "already largely priced"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "dollar bid"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FED_DEC26_HIKE25",
+      "F_FED_FUNDS",
+      "F_US_10Y",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "yield rise draws money from EM"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FED_DEC26_HIKE25",
+      "F_DXY",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "INR pressure and imported inflation"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FED_DEC26_HIKE25",
+      "F_FED_FUNDS",
+      "F_US_GDP",
+      "C_USA",
+      "INFY"
+     ],
+     "explanation": "tighter policy slows US growth and tech budgets with a lag"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "rate-sensitive"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "+",
+     "why": "weaker INR"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Fed%20to%20skip%20October%20but%20raise%20rates%20again%20in%20December%2C%20nearly%20all%20economists%20say%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-20",
+     "title": "Fed to skip October but raise rates again in December, nearly all economists say - Reuters"
+    },
+    {
+     "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+     "date": "2026-10-28",
+     "title": "FOMC calendar"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Federal%20Reserve%20preview%3A%20A%20pause%20before%20a%20December%20hike%20-%20ING&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "Federal Reserve preview: A pause before a December hike - ING"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_FED_DEC26_HOLD",
+   "title": "FOMC 8-9 Dec 2026: hold at 3.75-4.00%",
+   "category": "global_macro",
+   "status": "scheduled",
+   "date": "2026-12-09",
+   "window_end": null,
+   "prob_by_3m": 0.42,
+   "prob_by_12m": 0.42,
+   "description": "Complement of the hike event: weak labour data, post-midterm yield decline and lower oil could keep the Fed on hold; Cook/Hammack dissents would likely repeat. Mutually exclusive with EV_FED_DEC26_HIKE25.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "no change"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": -0.4,
+     "low": -0.8,
+     "high": 0.0,
+     "note": "relief vs priced hike"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "dollar softer"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FED_DEC26_HOLD",
+      "F_US_10Y",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "easier yields support EM flows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FED_DEC26_HOLD",
+      "F_DXY",
+      "F_USDINR",
+      "F_REPO_IN"
+     ],
+     "explanation": "firmer INR gives RBI room to pause"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FED_DEC26_HOLD",
+      "F_FPI_FLOWS",
+      "F_EQUITY_ACTIVITY_IN",
+      "I_AMC_WEALTH_BROKING"
+     ],
+     "explanation": "flows boost capital-market activity"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "FPI"
+    },
+    {
+     "ticker": "BSE",
+     "direction": "+",
+     "why": "market activity"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "+",
+     "why": "rate relief"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Fed%20holds%20rates%20steady%20despite%20concerns%20over%20inflation%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "title": "Fed holds rates steady despite concerns over inflation - CNBC"
+    },
+    {
+     "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+     "date": "2026-10-28",
+     "title": "FOMC calendar"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Traders%20now%20see%20little%20chance%20of%20a%20Fed%20rate%20hike%20in%20October%20after%20weak%20jobs%20report%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "title": "Traders now see little chance of a Fed rate hike in October after weak jobs report - CNBC"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_FED_H1_2027_PLATEAU",
+   "title": "Fed on hold Jan-Apr 2027 FOMCs (27 Jan, 17 Mar, 28 Apr) near 4%",
+   "category": "global_macro",
+   "status": "anticipated",
+   "date": "2027-04-28",
+   "window_end": null,
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.45,
+   "description": "Base path: after at most one more hike the Fed holds at ~3.75-4.25% through the April 2027 meeting (Sept SEP showed low-4% for 2027 per Bondsavvy headline). Paths (plateau 0.45, further hikes 0.30, cuts 0.25) are mutually exclusive outcomes by 28 Apr 2027 relative to the post-Dec level. Meeting dates from federalreserve.gov calendar (2027: Jan 26-27, Mar 16-17, Apr 27-28; the page lists them as such).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "no net change after Dec"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": -0.2,
+     "low": -0.8,
+     "high": 0.3,
+     "note": "yields drift lower as inflation fades from oil"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FED_H1_2027_PLATEAU",
+      "F_US_10Y",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "stable US yields stabilise G-secs"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FED_H1_2027_PLATEAU",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "steady flows hold INR"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FED_H1_2027_PLATEAU",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "inflation glide allows RBI hold"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "steady flows"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "~",
+     "why": "neutral"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+     "date": "2026-10-28",
+     "title": "FOMC calendar"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=September%202026%20Fed%20Dot%20Plot%20Sees%20Low%204%25%20Fed%20Funds%20in%202027%20-%20Bondsavvy&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-16",
+     "title": "September 2026 Fed Dot Plot Sees Low 4% Fed Funds in 2027 - Bondsavvy"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_FED_H1_2027_CUTS",
+   "title": "Fed cuts >=25 bp by Apr 2027 (growth scare / AI bust / lower inflation)",
+   "category": "global_macro",
+   "status": "anticipated",
+   "date": "2027-04-28",
+   "window_end": null,
+   "prob_by_3m": 0.05,
+   "prob_by_12m": 0.25,
+   "description": "Labour weakness (+29k payrolls), AI capex retrenchment or oil collapse on an Iran deal could reverse the hikes by April 2027; Trump pressures Warsh (Fortune 7 Sep, Yahoo 6 Oct). Cut-by-April probability 0.25 (our judgment).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": -1.5,
+     "low": -3.0,
+     "high": -1.0,
+     "note": "-25 to -75 bp"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": -1.0,
+     "low": -2.0,
+     "high": -0.3,
+     "note": "yields fall"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": -0.6,
+     "low": -1.2,
+     "high": -0.2,
+     "note": "dollar weaker"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FED_H1_2027_CUTS",
+      "F_DXY",
+      "F_USDINR"
+     ],
+     "explanation": "weaker dollar firms INR"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FED_H1_2027_CUTS",
+      "F_US_10Y",
+      "F_FPI_FLOWS",
+      "F_EQUITY_ACTIVITY_IN"
+     ],
+     "explanation": "yields/flows lift Indian equities"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FED_H1_2027_CUTS",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_REPO_IN",
+      "I_PRIVATE_BANKS"
+     ],
+     "explanation": "rupee strength opens RBI easing"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "FPI"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "+",
+     "why": "rates"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "INR strength vs growth scare"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=White%20House%20ups%20pressure%20on%20Kevin%20Warsh%27s%20Fed%20as%20Wall%20Street%20expects%20hike%20-%20Fortune&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "title": "White House ups pressure on Kevin Warsh's Fed as Wall Street expects hike - Fortune"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Here%20We%20Go%21%20Trump%20threw%20Fed%20Chair%20Warsh%20under%20the%20bus%20over%20interest%20rates%20-%20Yahoo&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "title": "Here We Go! Trump threw Fed Chair Warsh under the bus over interest rates - Yahoo"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_FED_H1_2027_FURTHER_HIKES",
+   "title": "Fed hikes >=50 bp cumulative beyond Oct level by Apr 2027",
+   "category": "global_macro",
+   "status": "anticipated",
+   "date": "2027-04-28",
+   "window_end": null,
+   "prob_by_3m": 0.1,
+   "prob_by_12m": 0.3,
+   "description": "Oil-driven or sticky inflation (3.7% CPI), strong GDP, and 'multiple hikes likely' (Sept minutes, Scotsman Guide 7 Oct) may push the funds rate to >=4.25-4.50% (i.e. at least two hikes from now) by April 2027. P=0.30 (our judgment).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": 2.0,
+     "low": 1.0,
+     "high": 3.0,
+     "note": "+50 to +75 bp total"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": 1.0,
+     "low": 0.4,
+     "high": 2.0,
+     "note": "10y to ~5.2-5.4%"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 1.5,
+     "note": "stronger dollar"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FED_H1_2027_FURTHER_HIKES",
+      "F_US_10Y",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "another outflow wave"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FED_H1_2027_FURTHER_HIKES",
+      "F_DXY",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "rupee back toward 96-98"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FED_H1_2027_FURTHER_HIKES",
+      "F_FED_FUNDS",
+      "F_US_GDP",
+      "F_US_TECH_SPEND",
+      "I_IT_SERVICES"
+     ],
+     "explanation": "US slowdown hits IT demand but INR gain cushions margins"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "~",
+     "why": "INR tailwind vs demand"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Fed%20policymakers%20saw%20multiple%202026%20rate%20hikes%20as%20likely%2C%20September%20FOMC%20minutes%20show&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Fed policymakers saw multiple 2026 rate hikes as likely, September FOMC minutes show"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=J.P.%20Morgan%20sees%20Fed%20rate%20hikes%20going%20out%20with%20a%20bang%20this%20year%20-%20TheStreet&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "title": "J.P. Morgan sees Fed rate hikes going out with a bang this year - TheStreet"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_BOJ_DEC26_HIKE_150",
+   "title": "BoJ Dec 2026 meeting: hike to 1.50% (quarterly pace)",
+   "category": "global_macro",
+   "status": "scheduled",
+   "date": "2026-12-18",
+   "window_end": null,
+   "prob_by_3m": 0.65,
+   "prob_by_12m": 0.7,
+   "description": "Reuters poll 23 Oct: BoJ to raise to 1.50% in December, keeping a quarterly pace; ex-BoJ official sees 2% by mid-2027 (BigGo 23 Sep). Exact meeting date (~17-18 Dec) not verified. P(hike by Dec meeting)=0.65 (our estimate; poll majority but yen/JGB sensitivity).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "NEW_USDJPY",
+     "ssu": -0.5,
+     "low": -1.2,
+     "high": 0.0,
+     "note": "yen firmer"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "carry jitters"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": -0.1,
+     "low": -0.4,
+     "high": 0.1,
+     "note": "minor"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BOJ_DEC26_HIKE_150",
+      "NEW_USDJPY",
+      "F_RISK_SENTIMENT"
+     ],
+     "explanation": "carry-trade deleveraging"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BOJ_DEC26_HIKE_150",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "EM outflows"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_BOJ_DEC26_HIKE_150",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "INR and yields"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "~",
+     "why": "Japan/Korea demand minor"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=BOJ%20to%20raise%20rates%20to%201.50%25%20in%20December%2C%20sticking%20to%20quarterly%20pace%3A%20Reuters%20poll&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "BOJ to raise rates to 1.50% in December, sticking to quarterly pace: Reuters poll"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Ex-BOJ%20Official%20Sees%20Quarterly%20Rate%20Hikes%20Pushing%20Policy%20to%202%25%20by%20Mid-2027&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "title": "Ex-BOJ Official Sees Quarterly Rate Hikes Pushing Policy to 2% by Mid-2027"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_ECB_DEC26_HIKE",
+   "title": "ECB December 2026 meeting: 25 bp hike to 2.75% then pause",
+   "category": "global_macro",
+   "status": "scheduled",
+   "date": "2026-12-10",
+   "window_end": null,
+   "prob_by_3m": 0.6,
+   "prob_by_12m": 0.6,
+   "description": "ECB hiked to 2.5% on 10 Sep (CNBC) and held on 29 Oct (CNBC); Reuters 29 Oct: governors see a December hike likely followed by a pause; gas near EUR100/MWh. Meeting date approximate. P(hike)=0.6 (our estimate). Growth hit from yields (France 10y near 5%) is a risk to EU demand.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_EU_GDP",
+     "ssu": -0.1,
+     "low": -0.2,
+     "high": 0.0,
+     "note": "tightening drag per 25 bp"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": -0.1,
+     "low": -0.3,
+     "high": 0.1,
+     "note": "euro supported"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_ECB_DEC26_HIKE",
+      "F_EU_GDP",
+      "C_EU_UK"
+     ],
+     "explanation": "EU/UK demand softer"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_ECB_DEC26_HIKE",
+      "C_EU_UK",
+      "F_US_TECH_SPEND"
+     ],
+     "explanation": "European tech budgets"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_ECB_DEC26_HIKE",
+      "C_EU_UK",
+      "I_IT_SERVICES",
+      "HCLTECH"
+     ],
+     "explanation": "Europe ~25-30% of Indian IT revenue (model knowledge)"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HCLTECH",
+     "direction": "-",
+     "why": "Europe exposure"
+    },
+    {
+     "ticker": "WIPRO",
+     "direction": "-",
+     "why": "Europe exposure"
+    },
+    {
+     "ticker": "SUNPHARMA",
+     "direction": "~",
+     "why": "limited"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=ECB%20governors%20see%20December%20hike%20likely%20followed%20by%20pause%2C%20sources%20say%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "ECB governors see December hike likely followed by pause, sources say - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=European%20Central%20Bank%20keeps%20key%20interest%20rate%20on%20hold%20at%202.5%25%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "European Central Bank keeps key interest rate on hold at 2.5% - CNBC"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=ECB%20hikes%20interest%20rates%20to%202.5%25%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-10",
+     "title": "ECB hikes interest rates to 2.5% - CNBC"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_US_CHINA_TRUCE_EXTENDED",
+   "title": "US-China trade truce (expires 10 Jan 2027) extended or upgraded to a bigger deal",
+   "category": "global_macro",
+   "status": "scheduled",
+   "date": "2027-01-10",
+   "window_end": null,
+   "prob_by_3m": 0.7,
+   "prob_by_12m": 0.72,
+   "description": "Truce was extended two months to 10 Jan at the Trump-Xi summit (Reuters/CNBC 23-24 Sep) while a bigger deal is negotiated. P(extension/deal by 10 Jan)=0.70 (our estimate). Supports China exports/risk assets; could intensify Chinese dumping of steel/chemicals into India.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_US_CHINA_DECOUPLING",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "less decoupling"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": -0.2,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "calmer"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_CHINA_TRUCE_EXTENDED",
+      "C_US_CHINA_DECOUPLING",
+      "T_CHINA_PLUS_ONE"
+     ],
+     "explanation": "less urgency to relocate supply chains"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_CHINA_TRUCE_EXTENDED",
+      "T_CHINA_PLUS_ONE",
+      "P_PLI"
+     ],
+     "explanation": "weaker China+1 case for Indian manufacturing"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_CHINA_TRUCE_EXTENDED",
+      "C_CHINA",
+      "F_COPPER",
+      "HINDALCO"
+     ],
+     "explanation": "China demand supports metals"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DIXON",
+     "direction": "-",
+     "why": "China+1 narrative loses edge"
+    },
+    {
+     "ticker": "HINDALCO",
+     "direction": "+",
+     "why": "metals"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=US%2C%20China%20agree%20to%20extend%20trade%20truce%20by%20two%20months%2C%20work%20on%20bigger%20deal%2C%20Bessent%20says%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "title": "US, China agree to extend trade truce by two months, work on bigger deal, Bessent says - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=US-China%20trade%20truce%20extended%20to%20January%202027%20as%20Trump-Xi%20summit%20puts%20bigger%20deal%20in%20focus%20-%20Fortune%20India&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "title": "US-China trade truce extended to January 2027 as Trump-Xi summit puts bigger deal in focus - Fortune India"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_US_INDIA_TRADE_DEAL",
+   "title": "US-India trade deal concluded by 31 Mar 2027",
+   "category": "global_macro",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": null,
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.45,
+   "description": "Talks stalled again in Sept (Business Standard 30 Sep); India exploring 'forward MFN' clause (Moneycontrol 29 Sep); tariff history 10% -> threatened 100% (Moneycontrol 17 Sep); midterm loss may push Trump for quick deals but reduces Indian urgency (Telangana Today 5 Nov). Current effective US tariff on India not verified from a primary source. P(deal by 3m)=0.25, by 12m=0.45 (our estimate).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": -1.0,
+     "low": -2.0,
+     "high": -0.3,
+     "note": "effective tariff -10pp central; level uncertain"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.7,
+     "note": "sentiment"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_INDIA_TRADE_DEAL",
+      "P_US_TARIFF_INDIA",
+      "F_GDP_IN"
+     ],
+     "explanation": "export growth"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_INDIA_TRADE_DEAL",
+      "P_US_TARIFF_INDIA",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "INR supported"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_INDIA_TRADE_DEAL",
+      "P_US_TARIFF_INDIA",
+      "F_GDP_IN",
+      "F_PRIVATE_CAPEX"
+     ],
+     "explanation": "capex"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TITAN",
+     "direction": "+",
+     "why": "jewellery exports"
+    },
+    {
+     "ticker": "DIXON",
+     "direction": "+",
+     "why": "electronics exports"
+    },
+    {
+     "ticker": "SUNPHARMA",
+     "direction": "+",
+     "why": "pharma tariff clarity"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India-US%20Trade%20Deal%3A%20Where%20the%20Edge%20Lies%2C%20and%20What%20It%20Will%20Cost%20-%20ORF&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "India-US Trade Deal: Where the Edge Lies, and What It Will Cost - ORF"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Why%20have%20India-US%20trade%20talks%20stalled%20again%20and%20what%27s%20next%3F%20-%20Business%20Standard&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "title": "Why have India-US trade talks stalled again and what's next? - Business Standard"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Urgency%20of%20a%20trade%20deal%20with%20US%20fades%20for%20India%20with%20midterm%20outcome%3A%20Report%20-%20Telangana%20Today&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "title": "Urgency of a trade deal with US fades for India with midterm outcome: Report - Telangana Today"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=How%20India%27s%20US%20tariffs%20changed%20from%2010%25%20to%20a%20potential%20100%25%20-%20Moneycontrol&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "title": "How India's US tariffs changed from 10% to a potential 100% - Moneycontrol"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_US_INDIA_TARIFF_ESCALATION",
+   "title": "US raises tariffs on India (Section 301/Russia-sanctions-related) in H1 2027",
+   "category": "global_macro",
+   "status": "risk_scenario",
+   "date": "2027-03-31",
+   "window_end": null,
+   "prob_by_3m": 0.1,
+   "prob_by_12m": 0.2,
+   "description": "Fortune 3 Nov: markets braced for a fresh wave of tariffs after the midterms; 100% tariff threats (Hindu 21 Sep) and Russia sanctions-law exposure (Moneycontrol 25 Sep). P=0.10 by Feb, 0.20 by 12m (our estimate). Pharma exemption for India and 19 others on 100% specialty pharma tariff (LawStreet 1 Oct).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": 2.0,
+     "low": 1.0,
+     "high": 5.0,
+     "note": "+20pp central"
+    },
+    {
+     "node": "F_USDINR",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_INDIA_TARIFF_ESCALATION",
+      "P_US_TARIFF_INDIA",
+      "F_GDP_IN"
+     ],
+     "explanation": "export drag"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_INDIA_TARIFF_ESCALATION",
+      "P_US_TARIFF_INDIA",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "outflows"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_INDIA_TARIFF_ESCALATION",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "inflation"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TITAN",
+     "direction": "-",
+     "why": "exports"
+    },
+    {
+     "ticker": "DIXON",
+     "direction": "-",
+     "why": "exports"
+    },
+    {
+     "ticker": "SUNPHARMA",
+     "direction": "-",
+     "why": "pharma tariffs"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Wall%20Street%20is%20bracing%20for%20a%20fresh%20wave%20of%20tariffs%2C%20Iran%20action%20-%20Fortune&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Wall Street is bracing for a fresh wave of tariffs, Iran action - Fortune"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=100%25%20U.S.%20tariff%20threat%3A%20Can%20India%27s%20new%20trade%20deals%20reduce%20its%20dependence%20on%20America%3F%20-%20The%20Hindu&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "title": "100% U.S. tariff threat: Can India's new trade deals reduce its dependence on America? - The Hindu"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_CHINA_NPC_MAR27_BIG_STIMULUS",
+   "title": "China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push",
+   "category": "global_macro",
+   "status": "anticipated",
+   "date": "2027-03-10",
+   "window_end": null,
+   "prob_by_3m": 0.2,
+   "prob_by_12m": 0.35,
+   "description": "Q3 GDP 4.5% reduces urgency; IMF and Economist (1 Oct) note a 'stimulus pivot' mostly in language. The Dec Central Economic Work Conference and March 2027 NPC (growth target, 15th FYP year 2) are decision points. P(large, >1.5% of GDP incremental fiscal/consumption package)=0.35 by NPC. Dates approximate.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "C_CHINA",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.8,
+     "note": "+1 pp growth impulse"
+    },
+    {
+     "node": "F_USDCNY",
+     "ssu": -0.3,
+     "low": -0.8,
+     "high": 0.0,
+     "note": "yuan up"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_NPC_MAR27_BIG_STIMULUS",
+      "C_CHINA",
+      "F_COPPER"
+     ],
+     "explanation": "base metals up"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_NPC_MAR27_BIG_STIMULUS",
+      "F_COPPER",
+      "F_ALUMINIUM"
+     ],
+     "explanation": "metals complex"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_NPC_MAR27_BIG_STIMULUS",
+      "C_CHINA",
+      "F_IRON_ORE",
+      "F_STEEL_GLOBAL",
+      "TATASTEEL"
+     ],
+     "explanation": "Indian steel/metals earnings"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDALCO",
+     "direction": "+",
+     "why": "metals"
+    },
+    {
+     "ticker": "VEDL",
+     "direction": "+",
+     "why": "metals"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "+",
+     "why": "steel"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=China%27s%20Stimulus%20Pivot%20Is%20Real%20in%20Tense%2C%20Not%20Yet%20in%20Substance%20-%20IndraStra&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "title": "China's Stimulus Pivot Is Real in Tense, Not Yet in Substance - IndraStra"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China%20is%20giving%20its%20economy%20a%20big%20shot%20in%20the%20arm%20Economist&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "title": "The Economist: China is giving its economy a big shot in the arm"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_ANTHROPIC_IPO_LISTING",
+   "title": "Anthropic IPO prices and lists (proposed ticker ANT), Nov 2026-Q1 2027",
+   "category": "global_macro",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": null,
+   "prob_by_3m": 0.65,
+   "prob_by_12m": 0.85,
+   "description": "Anthropic S-1 reported (WSJ 20 Oct; Reuters 29 Sep); public filing expected as early as 23 Oct; IPO talked of at ~US$2 trn (Equiti 17 Oct, unverified). On 27-28 Oct Indian IT fell 2-5% as the IPO sparked a global AI-stock rally -- a signal the market sees frontier-AI success as negative for IT outsourcers. Listing date unknown; P(listed by Feb 2027)=0.65, by 12m 0.85. Also tests AI-funding appetite.",
+   "what_already_moved": "Nifty IT -2% to -5% on 27-28 Oct.",
+   "entry_shocks": [
+    {
+     "node": "T_GENAI_SERVICES",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "AI substitution narrative"
+    },
+    {
+     "node": "F_AI_CAPEX",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "fresh capital for compute"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_ANTHROPIC_IPO_LISTING",
+      "T_GENAI_SERVICES",
+      "F_US_TECH_SPEND"
+     ],
+     "explanation": "enterprise budgets shift to AI vendors"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_ANTHROPIC_IPO_LISTING",
+      "T_GENAI_SERVICES",
+      "I_IT_SERVICES"
+     ],
+     "explanation": "pricing deflation in IT outsourcing"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_ANTHROPIC_IPO_LISTING",
+      "T_GENAI_SERVICES",
+      "F_WAGES_IN",
+      "TCS"
+     ],
+     "explanation": "fresher hiring and utilisation reset"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "AI substitution narrative"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "same"
+    },
+    {
+     "ticker": "COFORGE",
+     "direction": "-",
+     "why": "same"
+    },
+    {
+     "ticker": "PERSISTENT",
+     "direction": "-",
+     "why": "same"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Anthropic%20S-1%20Shows%20Red-Hot%20Growth%2C%20Risks%20and%20Massive%20Computing%20Costs%20-%20WSJ&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-20",
+     "title": "Anthropic S-1 Shows Red-Hot Growth, Risks and Massive Computing Costs - WSJ"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=TCS%2C%20Infosys%2C%20other%20IT%20stocks%20drop%20up%20to%203%25%20as%20Anthropic%20IPO%20sparks%20rally%20in%20global%20AI%20stocks%20-%20ET&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "TCS, Infosys, other IT stocks drop up to 3% as Anthropic IPO sparks rally in global AI stocks - ET"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Anthropic%20could%20file%20for%20IPO%20Friday%20-%20TradingView&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "title": "Anthropic could file for IPO Friday - TradingView"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_FPI_TURN_POSITIVE_Q1_2027",
+   "title": "FPIs turn net buyers of Indian equities in Nov 2026-Jan 2027 quarter",
+   "category": "global_macro",
+   "status": "anticipated",
+   "date": "2027-01-31",
+   "window_end": null,
+   "prob_by_3m": 0.5,
+   "prob_by_12m": 0.55,
+   "description": "Early Nov turn: Rs 20,834 cr bought in four sessions (NDTV Profit 5 Nov), after 8 weekly Nifty losses to 1 Oct and record CY26 outflows. Sustained quarterly net inflow depends on UST yields (4.9%), oil, rupee ~94.5, Q3 earnings. P(Nov-Jan net quarter positive)=0.5 (our estimate; momentum vs mean-reverting flows).",
+   "what_already_moved": "Nifty +~7% in Oct-Nov rally 1m (factor_state: Nifty50 +7.4% 1m).",
+   "entry_shocks": [
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": 1.0,
+     "low": -0.5,
+     "high": 2.0,
+     "note": "+$5 bn net in quarter"
+    },
+    {
+     "node": "F_USDINR",
+     "ssu": -0.25,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "INR firm"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FPI_TURN_POSITIVE_Q1_2027",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "INR supported"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FPI_TURN_POSITIVE_Q1_2027",
+      "F_FPI_FLOWS",
+      "F_EQUITY_ACTIVITY_IN"
+     ],
+     "explanation": "market activity"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FPI_TURN_POSITIVE_Q1_2027",
+      "F_EQUITY_ACTIVITY_IN",
+      "I_AMC_WEALTH_BROKING",
+      "BSE"
+     ],
+     "explanation": "exchange/broker earnings"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "FPI weighted"
+    },
+    {
+     "ticker": "ICICIBANK",
+     "direction": "+",
+     "why": "same"
+    },
+    {
+     "ticker": "BSE",
+     "direction": "+",
+     "why": "volumes"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "INR strength"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Foreign%20Investors%20Step%20Up%20India%20Bets%20With%20Rs%2020%2C834%20Crore%20Stock%20Buying%20In%20Four%20Days%20-%20NDTV%20Profit&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "title": "Foreign Investors Step Up India Bets With Rs 20,834 Crore Stock Buying In Four Days - NDTV Profit"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Markets%20extend%20gains%20for%20fourth%20day%3B%20FPI%20buying%20highest%20in%20a%20year%20-%20Business%20Standard&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Markets extend gains for fourth day; FPI buying highest in a year - Business Standard"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Indian%2010-year%20bond%20yields%20may%20ease%20to%206.75%25-7%25%20by%20March%202027%2C%20rupee%20likely%20to%20appreciate%20-%20SBI%20Research&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "Indian 10-year bond yields may ease to 6.75%-7% by March 2027, rupee likely to appreciate - SBI Research"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_AI_CAPEX_RESET_RISK",
+   "title": "AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes",
+   "category": "global_macro",
+   "status": "risk_scenario",
+   "date": "2027-02-15",
+   "window_end": null,
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.28,
+   "description": "Signals: Google/Microsoft deferring capex-forecast raises (29 Oct), CoreWeave -25% (16 Oct), $3.5 trn 'shadow financing' (MacroMicro), Nvidia-OpenAI $250 bn guarantee talks (WSJ 26 Jul), October Nasdaq -5%. Trigger window: Nvidia 17 Nov, Q4 megacap results late Jan 2027. P(material cut to 2027 capex growth or credit event, Nasdaq drawdown >15%) = 0.12 by Feb, 0.28 by 12m (our judgment; includes Nvidia disappointment).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_AI_CAPEX",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.5,
+     "note": "capex growth -30 pp"
+    },
+    {
+     "node": "F_US_EQUITIES",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.5,
+     "note": "S&P -15%"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 4.0,
+     "low": 2.0,
+     "high": 8.0,
+     "note": "VIX +20 pts"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_AI_CAPEX_RESET_RISK",
+      "F_US_EQUITIES",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "EM outflows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_AI_CAPEX_RESET_RISK",
+      "F_AI_CAPEX",
+      "F_US_TECH_SPEND",
+      "C_USA"
+     ],
+     "explanation": "US tech budgets"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_AI_CAPEX_RESET_RISK",
+      "F_US_EQUITIES",
+      "F_US_GDP",
+      "F_FED_FUNDS"
+     ],
+     "explanation": "wealth effect slows US growth; Fed eases, helping EM later"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "tech demand; partly hedged by INR"
+    },
+    {
+     "ticker": "SIEMENS",
+     "direction": "-",
+     "why": "data-centre capex"
+    },
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Either%20AI%20or%20public%20debt%20could%20crash%20markets.%20But%20probably%20not%20both%20-%20The%20Economist&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "Either AI or public debt could crash markets. But probably not both - The Economist"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=The%20AI%20buildout%20rests%20on%20hidden%20debt%20-%20GIS%20Reports&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-18",
+     "title": "The AI buildout rests on hidden debt - GIS Reports"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=AI%20hyperscalers%20are%20expected%20to%20finish%20the%20year%20spending%20%24828%20billion%20on%20capex%20-%20Business%20Insider&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "AI hyperscalers are expected to finish the year spending $828 billion on capex - Business Insider"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_US_RECESSION_RISK_2027",
+   "title": "US recession (two negative quarters or NBER-style) beginning by mid-2027",
+   "category": "global_macro",
+   "status": "risk_scenario",
+   "date": "2027-06-30",
+   "window_end": null,
+   "prob_by_3m": 0.06,
+   "prob_by_12m": 0.25,
+   "description": "Weak Sep payrolls (+29k), 4.2% unemployment, oil shock, Fed hikes, AI-capex dependence of GDP (Q3 3.4% 'AI investment' led) and yields at 19-year highs raise risk. 'Brutal AI selloff stirs recession fears' (Reuters 2 Nov). P(by 3m)=0.06, by 12m 0.25 (our estimate; consensus not verified).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_US_GDP",
+     "ssu": -3.0,
+     "low": -4.5,
+     "high": -1.5,
+     "note": "-3 pp vs trend"
+    },
+    {
+     "node": "F_US_EQUITIES",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.5,
+     "note": "-15%"
+    },
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.0,
+     "note": "Fed cuts 75 bp"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_RECESSION_RISK_2027",
+      "F_US_GDP",
+      "C_USA"
+     ],
+     "explanation": "US demand falls"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_RECESSION_RISK_2027",
+      "C_USA",
+      "F_US_TECH_SPEND"
+     ],
+     "explanation": "IT/pharma export demand"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_RECESSION_RISK_2027",
+      "F_US_GDP",
+      "F_FED_FUNDS",
+      "F_US_10Y",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "later: lower yields help EM"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "US demand"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "US demand"
+    },
+    {
+     "ticker": "SUNPHARMA",
+     "direction": "~",
+     "why": "defensive"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=COMMENTARY%3A%20Brutal%20AI%20selloff%20stirs%20recession%20fears%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "COMMENTARY: Brutal AI selloff stirs recession fears - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=US%20job%20growth%20undershoots%20expectations%20in%20September%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "title": "US job growth undershoots expectations in September - Reuters"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_YEN_CARRY_UNWIND_RISK",
+   "title": "Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action",
+   "category": "global_macro",
+   "status": "risk_scenario",
+   "date": "2027-01-31",
+   "window_end": null,
+   "prob_by_3m": 0.06,
+   "prob_by_12m": 0.18,
+   "description": "Yen neared 160 in Aug 2026; BoJ at 31-year-high rates; hawkish BoJ/Takaichi plus falling UST yields push USD/JPY down; analog Aug 2024 (VIX spike, EM selloff, ~-6% Nikkei day). P(VIX >30 episode linked to yen)=0.06 by 3m, 0.18 by 12m (our estimate).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "NEW_USDJPY",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.5,
+     "note": "-9% USD/JPY"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 5.0,
+     "low": 2.5,
+     "high": 9.0,
+     "note": "VIX +25 pts"
+    },
+    {
+     "node": "F_US_EQUITIES",
+     "ssu": -1.5,
+     "low": -3.0,
+     "high": -0.7,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_YEN_CARRY_UNWIND_RISK",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "EM outflows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_YEN_CARRY_UNWIND_RISK",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "INR"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_YEN_CARRY_UNWIND_RISK",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "inflation/RBI"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "FPI"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "+",
+     "why": "INR weaker"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Japan%20Has%20Left%20the%20Zero-Rate%20World.%20What%20Happens%20to%20the%20Yen%20Carry%20Trade%3F%20-%20IndraStra&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "title": "Japan Has Left the Zero-Rate World. What Happens to the Yen Carry Trade? - IndraStra"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=USD/JPY%20Breaks%20Support%20as%20Falling%20Treasury%20Yields%20Favor%20the%20Yen%20-%20Investing.com&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "title": "USD/JPY Breaks Support as Falling Treasury Yields Favor the Yen - Investing.com"
+    }
+   ],
+   "confidence": "low"
+  }
+ ],
+ "edges": [
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "F_US_10Y",
+   "relation": "macro_transmission",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "10y beta to policy ~0.4",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_DXY",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "yield differential supports dollar",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "INR beta to DXY ~0.5 with RBI smoothing",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -0.7,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "narrower yield gap, EM de-risking",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -1.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "dollar strength = EM outflows",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.9,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "VIX up reduces EM allocations",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "F_RISK_SENTIMENT",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "equity drawdowns raise VIX",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "global risk appetite",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "F_US_EQUITIES",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "AI hardware/megacap weight in S&P",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "F_US_TECH_SPEND",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "enterprise follows hyperscaler cues",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_US_TECH_SPEND",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "IT budgets pro-cyclical",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "C_USA",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.4,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "US demand growth proxy",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_US_10Y",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.4,
+   "lag": "0-3m",
+   "mechanism": "growth lifts real yields",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_US_EQUITIES",
+   "relation": "macro_transmission",
+   "w": 0.6,
+   "w_low": 0.2,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "earnings",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "F_US_GDP",
+   "relation": "macro_transmission",
+   "w": -0.08,
+   "w_low": -0.2,
+   "w_high": -0.02,
+   "lag": "3-12m",
+   "mechanism": "policy lag",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "F_US_EQUITIES",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "discount rate",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_US_EQUITIES",
+   "relation": "discount_rate",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "valuation",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "macro_transmission",
+   "w": 0.35,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "global yield spillover",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.25,
+   "w_low": -0.5,
+   "w_high": -0.08,
+   "lag": "0-3m",
+   "mechanism": "flows drive INR",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "debt-flow component",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "imported price pass-through",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "risk-off weakens INR",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "flows lift traded value",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "F_GDP_IN",
+   "relation": "policy_effect",
+   "w": -0.15,
+   "w_low": -0.4,
+   "w_high": -0.04,
+   "lag": "3-12m",
+   "mechanism": "US exports ~2% of GDP; per +10pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "F_USDINR",
+   "relation": "policy_effect",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "export earnings and sentiment",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "F_FPI_FLOWS",
+   "relation": "policy_effect",
+   "w": -0.15,
+   "w_low": -0.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "sentiment",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "T_CHINA_PLUS_ONE",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "3-12m",
+   "mechanism": "relocation incentives",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "C_CHINA",
+   "dst": "F_COPPER",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.4,
+   "lag": "0-3m",
+   "mechanism": "China ~55% of copper demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "C_CHINA",
+   "dst": "F_STEEL_GLOBAL",
+   "relation": "macro_transmission",
+   "w": 0.6,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "China ~50% of steel",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "C_CHINA",
+   "dst": "F_IRON_ORE",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "China ~70% of seaborne ore",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "F_ALUMINIUM",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "base-metal correlation",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "F_STEEL_INDIA",
+   "relation": "macro_transmission",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "import parity",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_EU_GDP",
+   "dst": "C_EU_UK",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.4,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "demand proxy",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "NEW_USDJPY",
+   "dst": "F_RISK_SENTIMENT",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "per +3% USDJPY; yen up raises VIX via carry unwind",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "NEW_USDJPY",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.7,
+   "lag": "0-3m",
+   "mechanism": "carry unwind drains EM",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "NEW_USDJPY",
+   "dst": "F_DXY",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "yen ~14% of DXY",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "NEW_USDJPY",
+   "relation": "macro_transmission",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "rate differential",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "F_US_TECH_SPEND",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": -0.3,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "budget shift to AI vendors; net sign uncertain",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "F_WAGES_IN",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "onshore/local hiring cost",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "T_DATA_CENTRES_IN",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "global AI build spills to India",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / empirical rule of thumb",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_USDJPY",
+   "type": "FACTOR",
+   "name": "USD/JPY exchange rate",
+   "ssu": "+3% USD/JPY (yen weaker)"
+  }
+ ],
+ "factor_state_notes": [
+  {
+   "node": "F_FED_FUNDS",
+   "fact": "Fed target range 3.75-4.00% after 16 Sep 2026 hike (+25 bp); held 28 Oct by 10-2 vote (Cook, Hammack dissent for hike); next FOMC 8-9 Dec 2026; 2027: Jan 26-27, Mar 16-17, Apr 27-28, Jun 8-9. Chair Warsh sworn in 18 Sep.",
+   "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "date": "2026-10-28"
+  },
+  {
+   "node": "F_US_10Y",
+   "fact": "~4.89% on 5 Nov; peaked >5.05% on 23 Sep (19-year high); 30y highest since 2004 (24 Sep).",
+   "source": "factor_state.md; CNBC/ET 23 Sep",
+   "date": "2026-11-05"
+  },
+  {
+   "node": "F_DXY",
+   "fact": "DXY 101.4 (+2.2% since 1 Jun).",
+   "source": "market_impact/results/factor_state.md",
+   "date": "2026-11-05"
+  },
+  {
+   "node": "F_US_GDP",
+   "fact": "US Q3 GDP +3.4% annualised (Q2 2.2%); Sept CPI 3.7% y/y; Sept payrolls +29k, unemployment 4.2%; Oct jobs report due 6 Nov (date unverified).",
+   "source": "Firstpost/ANI 29 Oct; CNBC 14 Oct; CNBC 2 Oct (headlines)",
+   "date": "2026-10-29"
+  },
+  {
+   "node": "F_US_EQUITIES",
+   "fact": "S&P 500 7,688.6 on 5 Nov; Nasdaq fell 5% in Oct; 'AI stocks lost $5 trn'.",
+   "source": "factor_state.md; TradingView 4 Nov",
+   "date": "2026-11-05"
+  },
+  {
+   "node": "US_POLITICS",
+   "fact": "Democrats won House and Senate on 3 Nov 2026; tariffs now via Section 301/232 after Supreme Court struck IEEPA tariffs (refunds ~$81 bn, Jul 2026); US-China truce to 10 Jan 2027; post-midterm shutdown risk flagged (Fortune 3 Nov; deadline unverified).",
+   "source": "NDTV/The Hindu 4 Nov; LawStreet 15 Jul; Firstpost 24 Sep",
+   "date": "2026-11-04"
+  },
+  {
+   "node": "F_FPI_FLOWS",
+   "fact": "CY26 FPI equity outflow ~Rs 3.12 trn by 18 Oct (record); Oct net selling Rs 35-52k cr; early Nov net buying Rs 20,834 cr over four sessions (most since 2023).",
+   "source": "TOI 18 Oct; NDTV Profit 5 Nov (headlines)",
+   "date": "2026-11-05"
+  },
+  {
+   "node": "F_USDINR",
+   "fact": "USD/INR 94.49 (5 Nov); 94.92 on 16 Oct; SBI Research sees rupee appreciating and Indian 10y easing to 6.75-7% by Mar 2027.",
+   "source": "factor_state.md; Telangana Today 16 Oct; ET/bfsi 1 Nov",
+   "date": "2026-11-05"
+  },
+  {
+   "node": "F_REPO_IN",
+   "fact": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, stance 'calibrated tightening', near-term cuts 'off the table'; minutes flag more hikes but wary of aggressive cycle.",
+   "source": "The Hindu 7 Oct; Reuters 21 Oct (headlines)",
+   "date": "2026-10-21"
+  },
+  {
+   "node": "F_GDP_IN",
+   "fact": "Finance ministry estimates Q2 FY27 GDP +7.35%; IMF FY27 forecast 7.0%; IMF flags Super El Nino risk.",
+   "source": "ET 29 Oct; Business Standard 13 Oct",
+   "date": "2026-10-29"
+  },
+  {
+   "node": "F_CHINA_GDP",
+   "fact": "China Q3 GDP +4.5% y/y (beat); USD/CNY 6.67.",
+   "source": "CNBC 18 Oct; factor_state.md",
+   "date": "2026-10-18"
+  },
+  {
+   "node": "ECB_BOJ",
+   "fact": "ECB deposit rate 2.5% after Sept hike, held 29 Oct, Dec hike signalled. BoJ at 31-year high after 18 Sep hike (level ~1.25% inferred); Reuters poll: 1.50% in Dec.",
+   "source": "CNBC 29 Oct; BBC 18 Sep; Reuters 23 Oct",
+   "date": "2026-10-29"
+  },
+  {
+   "node": "INDIAN_IT",
+   "fact": "Infosys FY27 guidance cut to 1-2% (Q2 CC +1.5%); TCS Q2 revenue +11% YoY, TCV $9.6 bn; Nifty IT +16% in a month to 22 Oct then -2% to -5% on 27-28 Oct.",
+   "source": "Fortune India 23 Oct; Upstox 8 and 22 Oct",
+   "date": "2026-10-28"
+  },
+  {
+   "node": "INDEX",
+   "fact": "Sensex +1,268 pts on 5 Nov, Nifty above 24,300; Nifty 50 24,461 per factor_state.md.",
+   "source": "HDFC Sky 5 Nov; factor_state.md",
+   "date": "2026-11-05"
+  }
+ ]
+}

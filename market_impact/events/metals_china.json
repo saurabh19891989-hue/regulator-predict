@@ -1,0 +1,2957 @@
+{
+ "events": [
+  {
+   "event_id": "EV_STEEL_RALLY_2026",
+   "title": "Global and Indian steel prices at multi-year highs (global HRC +60% y/y)",
+   "category": "metals_china",
+   "status": "occurred",
+   "date": "2026-08-01",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Global HRC futures are +60% y/y, +26% in 6m and +20.6% since 1 Jun 2026 (factor_state). Indian domestic HRC hit a four-year high in Sep-Oct 2026 and rebar extended its rally by late Oct (flat-long spread turned negative). Reported drivers: higher coking-coal costs (Aug), demand recovery (India finished-steel demand +7.5% in H1 FY27, worldsteel sees India +7.9% in 2026), tighter supply after EU quota/CBAM regime diverted flows, Indian safeguard duty in force, and Chinese output discipline. I could not fetch article bodies, so the relative weight of each cause is NOT verified (headline-level evidence only). Counter-currents: Reuters (6 Oct) says the steel ministry is unlikely to seek new import curbs; Awaz (19 Oct) quotes limited upside; iron ore is falling (cost relief) while coking coal is firm.",
+   "what_already_moved": "Global HRC +20.6% since 2026-06-01, +6.2% in last month, +60.4% y/y (factor_state 2026-11-05). Indian prices: 4-year high reported 22 Sep 2026 (The Hindu/ET); experts saw another Rs 2,000/t (29 Sep). Exact Indian HRC Rs/t level not verified.",
+   "entry_shocks": [
+    {
+     "node": "F_STEEL_GLOBAL",
+     "ssu": 2.06,
+     "low": 1.8,
+     "high": 2.3,
+     "note": "+20.6% since 1 Jun (factor_state); y/y +60%"
+    },
+    {
+     "node": "F_STEEL_INDIA",
+     "ssu": 1.4,
+     "low": 0.9,
+     "high": 2.0,
+     "note": "estimate ~+10% since June: 'four-year high' reports; exact Rs/t not verified"
+    },
+    {
+     "node": "F_COKING_COAL",
+     "ssu": 1.2,
+     "low": 0.8,
+     "high": 1.8,
+     "note": "coking coal reported +25% in Aug 2026 (OilPrice/Reuters headlines), volatile in Oct"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_STEEL_RALLY_2026",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Higher domestic HRC lifts realisations at integrated producers (Q2 FY27: JSW net profit up 3x, Jindal Steel profit +21%, SAIL profit +315%)."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_STEEL_RALLY_2026",
+      "F_STEEL_INDIA",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Steel feeds WPI/construction costs; small CPI contribution adds to RBI's hawkish turn (repo hiked to 5.50% on 7 Oct)."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_STEEL_RALLY_2026",
+      "F_STEEL_INDIA",
+      "F_HOUSING_DEMAND",
+      "F_COKING_COAL"
+     ],
+     "explanation": "Costlier rebar/HRC raises construction and capital-goods input costs, squeezing EPC/pipe/auto-component margins with a lag; also encourages scrap/DRI substitution that can feed back into raw-material demand."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_STEEL_RALLY_2026",
+      "F_STEEL_INDIA",
+      "MARUTI"
+     ],
+     "explanation": "Auto OEMs/appliance makers face steel cost inflation (steel is ~15-20% of auto BOM) partly passed through with price hikes."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "+",
+     "why": "price-sensitive flat steel producer"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "+",
+     "why": "India ops benefit; Europe weak (EU demand warning)"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "direction": "+",
+     "why": "long-product/rebar leverage"
+    },
+    {
+     "ticker": "SAIL",
+     "direction": "+",
+     "why": "highest operating leverage to domestic prices"
+    },
+    {
+     "ticker": "APLAPOLLO",
+     "direction": "-",
+     "why": "pipe maker input cost, partly passed through"
+    },
+    {
+     "ticker": "MARUTI",
+     "direction": "-",
+     "why": "steel input cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Steel+prices+at+four-year+high;+trend+to+continue+in+H2:+report&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-22",
+     "title": "Steel prices at four-year high; trend to continue in H2: report"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Steel+prices+may+rise+another+Rs+2,000+per+tonne:+Industry+experts&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "title": "Steel prices may rise another Rs 2,000 per tonne: Industry experts"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Nomura+remains+bullish+on+steel+stocks+as+HRC+hits+four-year+high&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "Nomura remains bullish on steel stocks as HRC hits four-year high"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Steel+prices:+Rebar+extends+rally+while+domestic+flat-long+spread+turns+negative&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "title": "Steel prices: Rebar extends rally while domestic flat-long spread turns negative"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=JSW+Steel+Q2+net+up+three-fold+on+higher+volumes,+better+realisation&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "JSW Steel Q2 net up three-fold on higher volumes, better realisation"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India's+Steel+Demand+Stays+Robust+in+Apr-Aug+2026+(PIB)&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "title": "India's Steel Demand Stays Robust in Apr-Aug 2026 (PIB)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_COKING_COAL_SURGE_AUG26",
+   "title": "Coking coal price spike squeezes Indian steel margins",
+   "category": "metals_china",
+   "status": "occurred",
+   "date": "2026-08-19",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Global coking coal prices rose ~25% in August 2026 (Reuters/OilPrice, 19-20 Aug; GMK 2 Sep 'rose significantly'); prices stayed volatile in October (GMK 21 Oct) and BMI raised its forecast on supply risks (19 Oct); China domestic coking coal supply shocks (Argus 28 Oct). India imports ~85% of its coking coal, so integrated mills (JSW, Tata, SAIL, Jindal) face a cost squeeze that partly offsets higher steel prices (SMM 23 Oct: 'coal costs squeeze margins').",
+   "what_already_moved": "Coking coal ~+25% in Aug 2026 per Reuters/OilPrice headlines; no factor_state series (series=null) so level not verified.",
+   "entry_shocks": [
+    {
+     "node": "F_COKING_COAL",
+     "ssu": 1.67,
+     "low": 1.0,
+     "high": 2.0,
+     "note": "+25% in Aug (SSU +15%); partially retraced/volatile since"
+    },
+    {
+     "node": "F_STEEL_INDIA",
+     "ssu": 0.4,
+     "low": 0.2,
+     "high": 0.7,
+     "note": "cost-push passed into prices (Reuters 8 Sep)"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_COKING_COAL_SURGE_AUG26",
+      "F_COKING_COAL",
+      "TATASTEEL"
+     ],
+     "explanation": "Coking coal ~35-40% of Indian BF steel cost; +25% lifts cost/t by ~Rs 2,500-3,500 before pricing."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_COKING_COAL_SURGE_AUG26",
+      "F_COKING_COAL",
+      "F_STEEL_INDIA",
+      "SAIL"
+     ],
+     "explanation": "Mills pass cost into HRC/rebar (Reuters: prices set to rise on coal costs), restoring part of the spread."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_COKING_COAL_SURGE_AUG26",
+      "F_COKING_COAL",
+      "F_STEEL_INDIA",
+      "F_CPI_IN"
+     ],
+     "explanation": "Higher steel adds to construction costs and WPI manufacturing inflation."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SAIL",
+     "direction": "-",
+     "why": "most exposed to imported coking coal (limited captive)"
+    },
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "-",
+     "why": "import-dependent coal"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "direction": "-",
+     "why": "has some captive coal; thermal/coking mix"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "-/+",
+     "why": "captive coal in India, UK/NL exposure"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Indian+steel+mills+face+margin+squeeze+as+global+coking+coal+prices+rise&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-19",
+     "title": "Indian steel mills face margin squeeze as global coking coal prices rise"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Coking+Coal+Prices+Surge+25%,+Squeezing+India's+Steelmakers&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-20",
+     "title": "Coking Coal Prices Surge 25%, Squeezing India's Steelmakers"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=BMI+has+raised+its+forecast+for+coking+coal+prices+amid+supply+risks&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "BMI has raised its forecast for coking coal prices amid supply risks"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Coking+Coal+Outlook:+China+Supply+Shocks+and+Price+Trends&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "title": "Coking Coal Outlook: China Supply Shocks and Price Trends"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_IRON_ORE_TWO_YEAR_LOW",
+   "title": "Iron ore at two-year low; NMDC price cuts then partial hike",
+   "category": "metals_china",
+   "status": "occurred",
+   "date": "2026-07-10",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Iron ore (TIO=F) is $91.95/t: -12.5% since 1 Jun, -17% in 6m, -12% y/y. Mining.com (15 Oct) reported a two-year low on weak Chinese demand and rising supply; Simandou ramp-up offsets supply cuts elsewhere (Macquarie, 3 Nov); BMI cut its forecast (19 Aug). NMDC cut lump/fines prices in July and again on 8 Aug (lump Rs 5,250/t, fines Rs 4,500/t per scanx), then raised lump by Rs 150/t on 9 Sep holding fines. NMDC output +18% y/y in Oct (5.04 Mt) but sales -12%.",
+   "what_already_moved": "Iron ore -12.5% since 1 Jun 2026 (factor_state); NMDC lump Rs 5,250/t after Aug cut, +Rs 150 in Sep.",
+   "entry_shocks": [
+    {
+     "node": "F_IRON_ORE",
+     "ssu": -0.83,
+     "low": -1.0,
+     "high": -0.6,
+     "note": "-12.5% since 1 Jun / SSU 15%"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_IRON_ORE_TWO_YEAR_LOW",
+      "F_IRON_ORE",
+      "NMDC"
+     ],
+     "explanation": "Lower realisations cut NMDC revenue/EBITDA per tonne; volumes (sales -12% in Oct) also soft."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRON_ORE_TWO_YEAR_LOW",
+      "F_IRON_ORE",
+      "F_STEEL_GLOBAL",
+      "F_STEEL_INDIA"
+     ],
+     "explanation": "Cheaper ore lowers steel cost floor in China/India; offsets coking coal."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_IRON_ORE_TWO_YEAR_LOW",
+      "F_IRON_ORE",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Producers with merchant ore purchases (JSW, Jindal) gain margin while captive-ore holders (Tata, SAIL, NMDC) lose upstream value."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "NMDC",
+     "direction": "-",
+     "why": "realisation falls with benchmark"
+    },
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "+",
+     "why": "buys ore"
+    },
+    {
+     "ticker": "VEDL",
+     "direction": "-",
+     "why": "iron ore segment small"
+    },
+    {
+     "ticker": "COALINDIA",
+     "direction": "0",
+     "why": "no link"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Iron+ore+price+slips+to+two-year+low+on+concerns+over+weak+demand,+rising+supply&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "title": "Iron ore price slips to two-year low on concerns over weak demand, rising supply"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=NMDC+cuts+iron+ore+prices+from+August+8&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-08",
+     "title": "NMDC cuts iron ore prices from August 8"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=NMDC+raises+lump+ore+price+by+Rs+150/tonne,+holds+price+of+fines&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-09",
+     "title": "NMDC raises lump ore price by Rs 150/tonne, holds price of fines"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Simandou+Iron-Ore+Ramp-Up+Offsets+Global+Supply+Cuts,+Macquarie+Says&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Simandou Iron-Ore Ramp-Up Offsets Global Supply Cuts, Macquarie Says"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=NMDC+October+iron+ore+output+rises+18%,+but+sales+fall+12%&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "NMDC October iron ore output rises 18%, but sales fall 12%"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_EU_STEEL_REGIME_CBAM_HITS_INDIA",
+   "title": "EU quota-halving steel regime and CBAM cut Indian steel exports to EU",
+   "category": "metals_china",
+   "status": "occurred",
+   "date": "2026-07-01",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "EU CBAM definitive period began 1 Jan 2026 (certificate purchases from 2027, model knowledge); the EU's new steel import regime (replacing the safeguard; smaller quotas, higher out-of-quota tariff, melt-and-pour rules) applies from mid-2026 (LSE 6 Oct; Reuters/Outlook Business 21 Jul: Indian exports to Europe set to fall ~40%). India's H1 FY27 steel exports to the EU fell ~20% y/y while Americas +262% and Africa +96% (Moneycontrol 2 Nov; SMM 3 Nov). Studies (GMK 18 Aug; S&P/Sandbag 10 Aug) say CBAM cost may be smaller than feared. Net effect: exporters redirect volume to domestic market or other regions, which tempers Indian price gains and raises domestic competition; Tata Steel Europe, conversely, benefits from reduced imports (but Tata warns of falling EU demand, 25 Aug).",
+   "what_already_moved": "India H1 FY27 steel exports to EU about -20% y/y; Americas +262%, Africa +96% (Moneycontrol, 2 Nov 2026).",
+   "entry_shocks": [
+    {
+     "node": "NEW_EU_STEEL_ACCESS",
+     "ssu": 1.0,
+     "low": 0.6,
+     "high": 1.4,
+     "note": "+1 = tighter EU access (quota cut + CBAM); defined in new_nodes_proposed"
+    },
+    {
+     "node": "F_STEEL_INDIA",
+     "ssu": -0.15,
+     "low": -0.4,
+     "high": 0.0,
+     "note": "export diversion adds domestic supply"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_EU_STEEL_REGIME_CBAM_HITS_INDIA",
+      "NEW_EU_STEEL_ACCESS",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Diverted export tonnes soften Indian domestic pricing at the margin."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_EU_STEEL_REGIME_CBAM_HITS_INDIA",
+      "NEW_EU_STEEL_ACCESS",
+      "F_STEEL_INDIA",
+      "F_CPI_IN"
+     ],
+     "explanation": "Slightly dampens construction-cost inflation."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_EU_STEEL_REGIME_CBAM_HITS_INDIA",
+      "NEW_EU_STEEL_ACCESS",
+      "C_EU_UK",
+      "TATASTEEL"
+     ],
+     "explanation": "Tata Steel's European operations gain from fewer imports but face weak EU demand; aluminium/MSME exporters bear compliance cost."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "-",
+     "why": "export share to EU/ Americas shifting; moderate"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "+/-",
+     "why": "EU protection helps NL/UK, demand weak"
+    },
+    {
+     "ticker": "HINDALCO",
+     "direction": "-",
+     "why": "Novelis/aluminium CBAM compliance; Indian aluminium exports to EU"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "direction": "-",
+     "why": "SS/export exposure small"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India's+steel+exports+to+EU+fall+20%+amid+CBAM,+quotas;+Americas+surge+262%,+Africa+96%&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "India's steel exports to EU fall 20% amid CBAM, quotas; Americas surge 262%, Africa 96%"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=What+the+EU's+new+steel+regime+means+for+India:+smaller+quotas,+a+higher+penalty+and+a+carbon+price&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "title": "What the EU's new steel regime means for India: smaller quotas, a higher penalty and a carbon price"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Indian+steelmakers+pivot+home+as+Europe+tightens+imports,+China+squeezes+margins&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-21",
+     "title": "Indian steelmakers pivot home as Europe tightens imports, China squeezes margins"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=The+impact+of+the+CBAM+on+the+Indian+steel+industry+may+be+less+than+expected+-+study&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-18",
+     "title": "The impact of the CBAM on the Indian steel industry may be less than expected - study"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_PRECIOUS_METALS_CRASH_2026",
+   "title": "Gold and silver slump from January 2026 peaks (silver -53%, gold -24%)",
+   "category": "metals_china",
+   "status": "occurred",
+   "date": "2026-01-15",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Gold peaked at ~$5,419/oz in Jan 2026 and is ~$4,128 (-8.4% since 1 Jun, -12.4% in 6m); silver is $52.5 (-30% since 1 Jun, -34% in 6m, -53% from the Jan peak; Indian silver below Rs 2 lakh/kg since 23-24 Oct, 11-month low). Reported causes (headline-level, bodies not fetched): the 2026 Iran war lifted oil, yields and the dollar; US inflation at a 3-year high pushed markets to price Fed HIKES (Fed held on 28 Oct under Chair Warsh, December hike bet - NY Post); US 10Y 4.89% (+9% since June), DXY +2.2% since June; weak physical silver market and ETF/investor retreat (Metals Focus 29 Oct); gold heading for its biggest yearly drop in 11 years (investingLive 28 Oct). Outlook is split: Metals Focus path to $6,000 gold / silver >$90 requires renewed investor confidence; Investing.com scenario of $3,100 before a rally; HSBC sees limited silver gains; Goldman (28 Aug) forecast gold climbing on central-bank buying.",
+   "what_already_moved": "Gold -8.4% and silver -30.0% since 2026-06-01; silver -14.1% in the last month (factor_state).",
+   "entry_shocks": [
+    {
+     "node": "F_GOLD",
+     "ssu": -1.05,
+     "low": -1.2,
+     "high": -0.9,
+     "note": "-8.4% since 1 Jun / SSU 8%"
+    },
+    {
+     "node": "F_SILVER",
+     "ssu": -2.5,
+     "low": -2.8,
+     "high": -2.2,
+     "note": "-30% since 1 Jun / SSU 12%"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": 1.5,
+     "low": 1.2,
+     "high": 1.8,
+     "note": "yield +9.4% since June ~ +40 bp"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": 0.7,
+     "low": 0.5,
+     "high": 0.9,
+     "note": "+2.2% since June / SSU 3%"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_PRECIOUS_METALS_CRASH_2026",
+      "F_GOLD",
+      "TITAN"
+     ],
+     "explanation": "Lower gold cuts jeweller inventory gains but can revive volume demand (Dhanteras buying) - net mixed."
+    },
+    {
+     "order": 2,
+     "path": [
+      "EV_PRECIOUS_METALS_CRASH_2026",
+      "F_GOLD",
+      "MUTHOOTFIN"
+     ],
+     "explanation": "Gold-loan NBFCs' collateral value falls (LTV risk) and loan growth driven by gold price slows."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_PRECIOUS_METALS_CRASH_2026",
+      "F_SILVER",
+      "HINDZINC"
+     ],
+     "explanation": "Hindustan Zinc is a top-3 silver producer; silver -30% trims by-product earnings even though zinc/lead and cost cuts drove a +142% Q2 profit."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_PRECIOUS_METALS_CRASH_2026",
+      "F_GOLD",
+      "F_GOLD_DEMAND_IN",
+      "F_USDINR"
+     ],
+     "explanation": "Cheaper gold boosts Indian demand volumes and gold imports, widening the current-account deficit and pressuring the rupee."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_PRECIOUS_METALS_CRASH_2026",
+      "F_US_10Y",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "The same rates/dollar shock that crushed gold also drives FPI outflows from India."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "MUTHOOTFIN",
+     "direction": "-",
+     "why": "collateral value and AUM growth"
+    },
+    {
+     "ticker": "TITAN",
+     "direction": "+/-",
+     "why": "lower price supports volumes, hits inventory margin"
+    },
+    {
+     "ticker": "KALYANKJIL",
+     "direction": "+/-",
+     "why": "same"
+    },
+    {
+     "ticker": "HINDZINC",
+     "direction": "-",
+     "why": "silver by-product revenue"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Silver+prices+fall+53%+from+peak:+Should+buyers+wait+or+buy+now?&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "title": "Silver prices fall 53% from peak: Should buyers wait or buy now?"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Silver+loses+more+than+half+its+value+from+record+high:+What+went+wrong+and+will+it+recover?&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "title": "Silver loses more than half its value from record high: What went wrong and will it recover?"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Gold+heads+for+its+biggest+yearly+drop+in+11+years+as+the+Iran+war+lifts+yields+and+the+dollar&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "title": "Gold heads for its biggest yearly drop in 11 years as the Iran war lifts yields and the dollar"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Fed+holds+interest+rates+steady+-+investors+bet+on+December+rate+hike&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "title": "Fed holds interest rates steady - investors bet on December rate hike"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Gold's+path+to+$6,000+and+silver's+return+above+$90+depend+on+renewed+investor+confidence+-+Metals+Focus&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "Gold's path to $6,000 and silver's return above $90 depend on renewed investor confidence - Metals Focus"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Silver+could+see+further+losses+against+gold+as+physical+market+weakens+-+Metals+Focus&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "Silver could see further losses against gold as physical market weakens - Metals Focus"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_BASE_METALS_ALUMINIUM_SLIDE",
+   "title": "Aluminium -20% since June; copper off record; Nifty Metal -7% in October",
+   "category": "metals_china",
+   "status": "occurred",
+   "date": "2026-06-01",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Aluminium (ALI=F) $3,200/t is -19.6% since 1 Jun, -8% in 6m though +15.8% y/y; LME cash ~$3,000-3,130 through October with ~236-241kt stocks (AL Circle). Copper hit a record in Sep (Indian Express 10 Sep; US tariff stockpiling) but is -2.4% since June, -4.7% in 3m, +28% y/y at $6.37/lb; Fastmarkets notes record-low TCs and war-hit supply chains (LME Week). Zinc not in factor_state; Hindustan Zinc reported Q2 profit +142% to Rs 6,412 cr (19 Oct) and cut its FY27 cost-of-production guidance. Nifty Metal fell ~7% in October (Upstox 29 Oct) and 2% on 21 Oct (Hindalco, Vedanta, SAIL) before rebounding in early November. China aluminium processing PMI 48.9 in Oct.",
+   "what_already_moved": "Aluminium -19.6% and copper -2.4% since 2026-06-01; Nifty Metal -7% in Oct 2026.",
+   "entry_shocks": [
+    {
+     "node": "F_ALUMINIUM",
+     "ssu": -1.96,
+     "low": -2.2,
+     "high": -1.7,
+     "note": "-19.6% since June / SSU 10%"
+    },
+    {
+     "node": "F_COPPER",
+     "ssu": -0.24,
+     "low": -0.4,
+     "high": -0.1,
+     "note": "-2.4% since June; +28% y/y"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BASE_METALS_ALUMINIUM_SLIDE",
+      "F_ALUMINIUM",
+      "HINDALCO"
+     ],
+     "explanation": "Hindalco/NALCO/Vedanta Aluminium earn LME-linked realisations; -20% on a ~$3,200 base compresses Q3-Q4 FY27 margins (NALCO Q2 profit still +28%)."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BASE_METALS_ALUMINIUM_SLIDE",
+      "F_ALUMINIUM",
+      "F_COAL_INDIA",
+      "NATIONALUM"
+     ],
+     "explanation": "Lower aluminium realisation reduces captive-coal/power advantage; partly offset by lower alumina cost."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BASE_METALS_ALUMINIUM_SLIDE",
+      "F_COPPER",
+      "HINDCOPPER",
+      "POLYCAB"
+     ],
+     "explanation": "Copper cost relief helps cable/wire makers (Polycab), hurting Hindustan Copper's price realisation."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_BASE_METALS_ALUMINIUM_SLIDE",
+      "F_ALUMINIUM",
+      "F_CHINA_GDP",
+      "F_IRON_ORE"
+     ],
+     "explanation": "The same China-demand worry (PMI 49.3) also weighs on iron ore, linking base-metal and ferrous weakness."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDALCO",
+     "direction": "-",
+     "why": "LME aluminium & copper"
+    },
+    {
+     "ticker": "NATIONALUM",
+     "direction": "-",
+     "why": "pure aluminium price taker"
+    },
+    {
+     "ticker": "VEDL",
+     "direction": "-",
+     "why": "aluminium, zinc, silver mix"
+    },
+    {
+     "ticker": "HINDCOPPER",
+     "direction": "-",
+     "why": "copper price"
+    },
+    {
+     "ticker": "POLYCAB",
+     "direction": "+",
+     "why": "input cost relief"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=LME+aluminium+price+cools+nearly+1%+on+October+29&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "LME aluminium price cools nearly 1% on October 29"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Hindalco,+Vedanta+Aluminium,+SAIL:+Metal+stocks+slide+as+Nifty+Metal+sheds+2%&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "Hindalco, Vedanta Aluminium, SAIL: Metal stocks slide as Nifty Metal sheds 2%"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India's+Hindustan+Zinc+records+two-fold+profit+jump,+cuts+annual+production+cost+forecast&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "India's Hindustan Zinc records two-fold profit jump, cuts annual production cost forecast"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Why+have+copper+prices+hit+a+record+high?&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-10",
+     "title": "Why have copper prices hit a record high?"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Base+metals+head+to+LME+Week+2026+with+record-low+TCs,+war-hit+supply+chains&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "Base metals head to LME Week 2026 with record-low TCs, war-hit supply chains"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_CHINA_Q3_GDP_AND_MINI_STIMULUS",
+   "title": "China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged",
+   "category": "metals_china",
+   "status": "occurred",
+   "date": "2026-09-29",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "China Q3 2026 GDP grew 4.5% y/y, beating forecasts, driven by AI-boom exports (Reuters/CNBC 18-19 Oct), on track for the annual target. On 29 Sep China launched a 'mini stimulus' for affordable housing and infrastructure; home sales posted a modest recovery (Bloomberg 8 Oct). But Reuters commentary (25 Oct) says stimulus keeps missing the mark (weak domestic demand); official manufacturing PMI fell to 49.3 in October (BS 31 Oct); LPR unchanged for the 17th month (19 Oct), PBOC studying overnight rate as policy rate. Property remains a fiscal drag (EAF 4 Oct). Net: export-led growth with weak property/steel demand; Chinese surplus capacity is pushed abroad.",
+   "what_already_moved": "USD/CNY -1.4% since June (yuan stronger); iron ore -12.5% since June despite GDP beat.",
+   "entry_shocks": [
+    {
+     "node": "F_CHINA_GDP",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.5,
+     "note": "Q3 4.5% beat; Q2 comparison not verified"
+    },
+    {
+     "node": "F_USDCNY",
+     "ssu": -0.45,
+     "low": -0.7,
+     "high": -0.2,
+     "note": "-1.4% since June / SSU 3%"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_Q3_GDP_AND_MINI_STIMULUS",
+      "F_CHINA_GDP",
+      "F_COPPER"
+     ],
+     "explanation": "Export/AI/grid demand supports copper and industrial metals."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_Q3_GDP_AND_MINI_STIMULUS",
+      "F_CHINA_GDP",
+      "F_IRON_ORE",
+      "NMDC"
+     ],
+     "explanation": "Weak property keeps steel and iron ore demand soft despite headline growth."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_Q3_GDP_AND_MINI_STIMULUS",
+      "F_CHINA_GDP",
+      "F_CHINA_STEEL_EXPORTS",
+      "F_STEEL_INDIA"
+     ],
+     "explanation": "Domestic weakness pushes Chinese steel/chemical surplus into exports (Sep steel exports 10.49 Mt, +3.3% m/m), pressuring Indian prices and prompting trade remedies."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_Q3_GDP_AND_MINI_STIMULUS",
+      "F_CHINA_GDP",
+      "F_CHINA_CHEM_EXPORTS",
+      "P_ANTI_DUMPING_IN"
+     ],
+     "explanation": "Chemical/API overcapacity exports trigger DGTR probes and anti-dumping duties."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TATASTEEL",
+     "direction": "-/+",
+     "why": "Asia export competition vs China demand"
+    },
+    {
+     "ticker": "HINDALCO",
+     "direction": "+",
+     "why": "China demand for aluminium/copper"
+    },
+    {
+     "ticker": "NMDC",
+     "direction": "+",
+     "why": "only if property improves"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=China's+economy+grows+4.5+percent+in+Q3,+beating+forecasts&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "China's economy grows 4.5 percent in Q3, beating forecasts"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China+launches+'mini+stimulus'+targeting+affordable+homes,+infrastructure&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "title": "China launches 'mini stimulus' targeting affordable homes, infrastructure"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=COMMENTARY:+Why+China's+stimulus+keeps+missing+the+mark&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-25",
+     "title": "COMMENTARY: Why China's stimulus keeps missing the mark"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China's+factory+activity+eases+in+October,+manufacturing+PMI+falls+to+49.3&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "title": "China's factory activity eases in October, manufacturing PMI falls to 49.3"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China+leaves+loan+rates+steady+for+17th+consecutive+month&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "China leaves loan rates steady for 17th consecutive month"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China's+September+steel+exports+at+10.492+million+mt&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "China's September steel exports at 10.492 million mt"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26",
+   "title": "DGTR opens wave of anti-dumping probes on Chinese chemicals, APIs and steel",
+   "category": "metals_china",
+   "status": "occurred",
+   "date": "2026-09-22",
+   "window_end": "2026-10-12",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Between late Sep and mid Oct 2026 DGTR initiated probes on glycine (22 Sep), seven Chinese products incl. key drug ingredients such as Pen-G and salts (29 Sep, 10 Oct), five further products (5-8 Oct), textile chemicals (6 Oct), caprolactam from China/Russia/Thailand/US (11 Oct); a hot-rolled flat steel probe on China/Japan/Russia and CRGO/amorphous metal probes opened 26-27 Jun 2026. Duties extended on phthalic anhydride (13 Aug, 5 years), melamine proposed (29 Sep), titanium dioxide duty promised by the Centre (23 Sep). ET (5 Aug) notes final duties 'crawl' because the finance ministry often does not notify DGTR recommendations - probes are not duties. Context: India-China trade deficit >$100bn in 2026 (The Hindu 14 Oct), India-China thaw (Xi Delhi visit, Press Note easing).",
+   "what_already_moved": "Probes initiated; no duty yet imposed on most. Impact so far is sentiment (Trade Brains 30 Sep 'stocks to benefit').",
+   "entry_shocks": [
+    {
+     "node": "P_ANTI_DUMPING_IN",
+     "ssu": 0.4,
+     "low": 0.2,
+     "high": 0.7,
+     "note": "probes initiated; duties not yet notified"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26",
+      "P_ANTI_DUMPING_IN",
+      "F_CHINA_CHEM_EXPORTS"
+     ],
+     "explanation": "Credible duties reduce Chinese landed-price undercutting in chemicals/APIs."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26",
+      "P_ANTI_DUMPING_IN",
+      "F_PETROCHEM_SPREADS",
+      "SRF"
+     ],
+     "explanation": "Domestic producers regain pricing power; specialty/commodity chemical spreads recover."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26",
+      "P_ANTI_DUMPING_IN",
+      "F_CHEM_FEEDSTOCK",
+      "PIDILITIND"
+     ],
+     "explanation": "Downstream users (paints, adhesives, textiles, pharma formulators) face higher input costs."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26",
+      "P_ANTI_DUMPING_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Broad duties add marginally to core goods inflation."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SRF",
+     "direction": "+",
+     "why": "fluorochemicals/packaging film trade defence"
+    },
+    {
+     "ticker": "PIIND",
+     "direction": "+",
+     "why": "agchem dumping protection"
+    },
+    {
+     "ticker": "PIDILITIND",
+     "direction": "-",
+     "why": "raw-material cost"
+    },
+    {
+     "ticker": "LAURUSLABS",
+     "direction": "-/+",
+     "why": "API competition and input cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=DGTR+launches+five+anti-dumping+probes+on+Chinese+products,+steps+up+trade-remedy+action&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "title": "DGTR launches five anti-dumping probes on Chinese products, steps up trade-remedy action"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+Launches+Anti-Dumping+Probes+Into+Seven+Chinese+Products,+Including+Key+Drug+Ingredients&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "title": "India Launches Anti-Dumping Probes Into Seven Chinese Products, Including Key Drug Ingredients"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+launches+anti-dumping+investigation+Into+Caprolactam+imports&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-11",
+     "title": "India launches anti-dumping investigation Into Caprolactam imports"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+launches+anti-dumping+probe+into+hot-rolled+flat+steel+imports+from+China,+Japan+and+Russia&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-06-26",
+     "title": "India launches anti-dumping probe into hot-rolled flat steel imports from China, Japan and Russia"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Despite+swadeshi+push,+anti-dumping+duties+against+Chinese+firms+crawl&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-05",
+     "title": "Despite swadeshi push, anti-dumping duties against Chinese firms crawl"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India's+trade+deficit+with+China+crosses+$100+billion+in+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "India's trade deficit with China crosses $100 billion in 2026"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_US_CHINA_TRUCE_JAN10_EXTENDED",
+   "title": "US-China truce (incl. rare-earth control suspension) extended again or converted into a deal by 10 Jan 2027",
+   "category": "metals_china",
+   "status": "scheduled",
+   "date": "2027-01-10",
+   "window_end": null,
+   "prob_by_3m": 0.65,
+   "prob_by_12m": 0.65,
+   "description": "Trump-Xi talks (Sep) extended the US-China trade truce by two months to 10 Jan 2027 (Reuters 23 Sep; Firstpost 24 Sep). China's suspension of its Oct-2025 rare-earth/export-control package runs to the same date; headlines (Startup Fortune 29 Oct, Environmental Leader 30 Oct) stress the legal deadlines (10 Nov for certain provisions; gallium 27 Nov) still stand while the political truce is extended. Post US midterms (GOP setback; Multibagg 4 Nov) trade politics may shift. Probability that China keeps the suspension in force/extends past 10 Jan: ~0.65 (judgement). The 10 Jan 2027 date falls inside the 3-month window (to ~5 Feb), so prob_by_3m should equal prob_by_12m.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "C_US_CHINA_DECOUPLING",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "relief vs current baseline"
+    },
+    {
+     "node": "NEW_RARE_EARTH_SUPPLY",
+     "ssu": -0.2,
+     "low": -0.4,
+     "high": 0.0,
+     "note": "supply stays open"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_US_CHINA_TRUCE_JAN10_EXTENDED",
+      "NEW_RARE_EARTH_SUPPLY",
+      "F_AUTO_DEMAND_IN",
+      "MARUTI"
+     ],
+     "explanation": "Continued magnet licensing avoids production stoppages in EVs/2Ws (ACMA warned of Nov risk)."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_US_CHINA_TRUCE_JAN10_EXTENDED",
+      "C_US_CHINA_DECOUPLING",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Lower trade tension eases global risk aversion, supporting EM flows."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_CHINA_TRUCE_JAN10_EXTENDED",
+      "C_US_CHINA_DECOUPLING",
+      "T_CHINA_PLUS_ONE",
+      "DIXON"
+     ],
+     "explanation": "A durable truce slightly weakens the China+1 relocation urgency."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "MARUTI",
+     "direction": "+",
+     "why": "magnet/component access"
+    },
+    {
+     "ticker": "M&M",
+     "direction": "+",
+     "why": "EV programmes"
+    },
+    {
+     "ticker": "TVSMOTOR",
+     "direction": "+",
+     "why": "EV two-wheelers"
+    },
+    {
+     "ticker": "DIXON",
+     "direction": "-/+",
+     "why": "China+1 urgency vs input availability"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=US,+China+extend+trade+truce+until+January+10+ahead+of+Trump-Xi+talks&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "title": "US, China extend trade truce until January 10 ahead of Trump-Xi talks"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Rare+Earth+Truce+Is+Extended,+but+Its+Legal+Deadlines+Stand&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "Rare Earth Truce Is Extended, but Its Legal Deadlines Stand"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China's+Rare+Earth+Truce+Runs+Out+January+10,+Not+November&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "China's Rare Earth Truce Runs Out January 10, Not November"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China's+rare+earth+leverage+has+an+expiration+date:+November+10&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "China's rare earth leverage has an expiration date: November 10"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RARE_EARTH_CONTROLS_REIMPOSED",
+   "title": "China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics",
+   "category": "metals_china",
+   "status": "risk_scenario",
+   "date": "2026-11-10",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.25,
+   "description": "Risk that Beijing lets the suspension lapse (10 Nov legal date or 10 Jan truce end) or tightens licensing (gallium 27 Nov; yttrium disruptions per ChemAnalyst 22 Oct). India's EV and electronics supply chains depend on Chinese magnets (ACMA, 2 Sep: India's EV ambitions hit 'roadblock'; HT explainer: China controls supply 'with the pen', not an embargo). India is building domestic magnet capacity (Oct 2026) but remains exposed. Probability judgemental: Chinese incentives to keep flows (Diplomat/China-Global South Project 23-24 Sep) lower the odds; EU supplies continued (Traders Union 15 Oct).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "NEW_RARE_EARTH_SUPPLY",
+     "ssu": 1.5,
+     "low": 0.8,
+     "high": 2.5,
+     "note": "+1 = materially tighter magnet availability for India"
+    },
+    {
+     "node": "C_US_CHINA_DECOUPLING",
+     "ssu": 0.8,
+     "low": 0.4,
+     "high": 1.2,
+     "note": "escalation"
+    },
+    {
+     "node": "F_SEMICONDUCTOR_SUPPLY",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "gallium/germanium spill-over"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RARE_EARTH_CONTROLS_REIMPOSED",
+      "NEW_RARE_EARTH_SUPPLY",
+      "F_AUTO_DEMAND_IN",
+      "TVSMOTOR"
+     ],
+     "explanation": "Magnet shortages curb EV/2W and ICE component output (motors, sensors)."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RARE_EARTH_CONTROLS_REIMPOSED",
+      "NEW_RARE_EARTH_SUPPLY",
+      "P_EV_POLICY",
+      "TMPV"
+     ],
+     "explanation": "EV roll-outs slip; policy support is discussed to build domestic supply."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RARE_EARTH_CONTROLS_REIMPOSED",
+      "C_US_CHINA_DECOUPLING",
+      "T_CHINA_PLUS_ONE",
+      "DIXON"
+     ],
+     "explanation": "Decoupling accelerates China+1 and domestic magnet/PLI plays."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RARE_EARTH_CONTROLS_REIMPOSED",
+      "NEW_RARE_EARTH_SUPPLY",
+      "F_AUTO_DEMAND_IN",
+      "F_GDP_IN"
+     ],
+     "explanation": "Output losses in autos (a large manufacturing GDP share) shave growth."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TMPV",
+     "direction": "-",
+     "why": "EV portfolio"
+    },
+    {
+     "ticker": "TVSMOTOR",
+     "direction": "-",
+     "why": "EV 2W"
+    },
+    {
+     "ticker": "MOTHERSON",
+     "direction": "-",
+     "why": "electronics/wiring"
+    },
+    {
+     "ticker": "M&M",
+     "direction": "-",
+     "why": " EV/SUV motors"
+    },
+    {
+     "ticker": "DIXON",
+     "direction": "-",
+     "why": "component imports"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India's+EV+ambitions+hit+China's+rare+earth+roadblock;+supply+chain+risks+extend+to+batteries:+ACMA&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-02",
+     "title": "India's EV ambitions hit China's rare earth roadblock; supply chain risks extend to batteries: ACMA"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China's+looming+November+export+controls+test+rare+earth+refining,+recycling+ambitions&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-10",
+     "title": "China's looming November export controls test rare earth refining, recycling ambitions"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Global+Yttrium+Supply+Risks+Rise+as+China's+Export+Restrictions+Disrupt+International+Trade&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "title": "Global Yttrium Supply Risks Rise as China's Export Restrictions Disrupt International Trade"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+Moves+To+Cut+China+Dependence+In+Rare+Earth+Magnet+Supply&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "India Moves To Cut China Dependence In Rare Earth Magnet Supply"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China's+November+27+Gallium+Deadline+Leaves+America+Exposed&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "China's November 27 Gallium Deadline Leaves America Exposed"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_HR_STEEL_AD_PROVISIONAL",
+   "title": "DGTR recommends/imposes anti-dumping duty on hot-rolled flat steel from China, Japan, Russia",
+   "category": "metals_china",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": "2027-06-30",
+   "prob_by_3m": 0.2,
+   "prob_by_12m": 0.55,
+   "description": "DGTR initiated the HR flat-steel AD probe on 26 Jun 2026 (Livemint; GMK 29 Jun); statutory timeline is 12 months (18 max) so final findings fall ~Jun 2027, provisional recommendations possible earlier. Finance-ministry notification is the bottleneck (ET 5 Aug: duties crawl). Counter-signal: Reuters (6 Oct) reports the steel ministry is unlikely to seek new curbs despite an import surge, and H1 FY27 imports rose ~24% (Policy Edge 23 Oct). Safeguard duty (12% year 1, falling 11.5%/11%, model knowledge; imposed 31 Dec 2025 for 3 years per BS/Mint) already protects flat steel. Probability that a notified AD/provisional duty exists by 12m: ~0.45-0.55; by 3m ~0.2. The 30 Oct ET Infra headline 'Government proposes 12% safeguard duty' could not be read - treat as unresolved (may refer to a new product scope).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_STEEL_DUTY_IN",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 1.5,
+     "note": "+8 pp incremental on HR flat from three origins (judgement)"
+    },
+    {
+     "node": "F_STEEL_INDIA",
+     "ssu": 0.4,
+     "low": 0.1,
+     "high": 0.8,
+     "note": "via edge"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_HR_STEEL_AD_PROVISIONAL",
+      "P_STEEL_DUTY_IN",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Duties raise floor price for HRC and protect JSW/Tata/SAIL volumes."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_HR_STEEL_AD_PROVISIONAL",
+      "P_STEEL_DUTY_IN",
+      "F_STEEL_INDIA",
+      "APLAPOLLO"
+     ],
+     "explanation": "Pipe/tube and auto-grade users face higher input costs."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_HR_STEEL_AD_PROVISIONAL",
+      "F_STEEL_INDIA",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Higher steel prices feed construction cost and WPI, nudging RBI further."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "+",
+     "why": "HR flat exposure largest"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "SAIL",
+     "direction": "+",
+     "why": "flat share"
+    },
+    {
+     "ticker": "APLAPOLLO",
+     "direction": "-",
+     "why": "raw-material cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+launches+anti-dumping+probe+into+hot-rolled+flat+steel+imports+from+China,+Japan+and+Russia&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-06-26",
+     "title": "India launches anti-dumping probe into hot-rolled flat steel imports from China, Japan and Russia"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+steel+ministry+unlikely+to+seek+new+curbs+on+cheap+imports,+government+source+says&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "title": "India steel ministry unlikely to seek new curbs on cheap imports, government source says"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Government+proposes+12%+safeguard+duty+on+steel+imports+to+protect+local+industry&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "Government proposes 12% safeguard duty on steel imports to protect local industry"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Centre+imposes+steel+safeguard+duty+for+3+years;+up+to+12%+on+imports&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-12-31",
+     "title": "Centre imposes steel safeguard duty for 3 years; up to 12% on imports"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Steel+Demand+Outpaces+Output+in+H1+FY27+as+Imports+Rise+24%&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "Steel Demand Outpaces Output in H1 FY27 as Imports Rise 24%"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_STEEL_SAFEGUARD_STEPDOWN_2027",
+   "title": "Scheduled step-down of India's steel safeguard duty (12% -> 11.5%) in year two",
+   "category": "metals_china",
+   "status": "scheduled",
+   "date": "2027-04-21",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.85,
+   "description": "Safeguard duty on flat steel imports: provisional 12% from 21 Apr 2025; final 3-year duty notified 31 Dec 2025 (Mint/BS) with a declining schedule (12%, 11.5%, 11%; model knowledge, exact year boundaries not verified). Expiry ~Apr 2028, i.e. renewal is a 2028 question. Step-down is small (-0.5 pp) and largely priced; the important variable is whether government accelerates relief if prices inflate (HRC at four-year high) - separate low-probability scenario below.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_STEEL_DUTY_IN",
+     "ssu": -0.05,
+     "low": -0.08,
+     "high": 0.0,
+     "note": "-0.5 pp / SSU 10 pp"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_STEEL_SAFEGUARD_STEPDOWN_2027",
+      "P_STEEL_DUTY_IN",
+      "F_STEEL_INDIA",
+      "SAIL"
+     ],
+     "explanation": "Marginally lowers import parity price."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_STEEL_SAFEGUARD_STEPDOWN_2027",
+      "F_STEEL_INDIA",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Negligible inflation effect."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SAIL",
+     "direction": "-",
+     "why": "tiny"
+    },
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "-",
+     "why": "tiny"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Centre+imposes+steel+safeguard+duty+for+3+years;+up+to+12%+on+imports&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-12-31",
+     "title": "Centre imposes steel safeguard duty for 3 years; up to 12% on imports"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Safeguard+duty,+higher+prices+to+keep+steel+makers'+profitability+steady&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-06",
+     "title": "Safeguard duty, higher prices to keep steel makers' profitability steady"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_STEEL_SAFEGUARD_EARLY_RELAXATION",
+   "title": "India relaxes steel import curbs early (safeguard cut/exemptions) after inflation or FTA pressure",
+   "category": "metals_china",
+   "status": "risk_scenario",
+   "date": "2027-02-01",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.07,
+   "prob_by_12m": 0.15,
+   "description": "Downstream users (auto, pipes, capital goods) lobby against high steel prices; Indian Express (2 Nov) and LinkedIn (7 Oct) pieces question protection; trade deals (UK: 1.1 Mt duty-free steel; EU FTA 1.64 Mt quota under discussion) create carve-outs. Union Budget (1 Feb 2027) is a natural trigger. Honest odds low because ministry signals no appetite for change and domestic mills remain below capacity-utilisation targets.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_STEEL_DUTY_IN",
+     "ssu": -0.8,
+     "low": -1.5,
+     "high": -0.3,
+     "note": "relaxation of ~5-10 pp"
+    },
+    {
+     "node": "F_STEEL_INDIA",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": -0.2,
+     "note": "via edge"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_STEEL_SAFEGUARD_EARLY_RELAXATION",
+      "P_STEEL_DUTY_IN",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Lower import parity cuts realisations."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_STEEL_SAFEGUARD_EARLY_RELAXATION",
+      "F_STEEL_INDIA",
+      "F_CPI_IN"
+     ],
+     "explanation": "Eases inflation"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_STEEL_SAFEGUARD_EARLY_RELAXATION",
+      "F_STEEL_INDIA",
+      "F_GOVT_CAPEX",
+      "LT"
+     ],
+     "explanation": "Cheaper steel helps EPC margins/volumes."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "SAIL",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "LT",
+     "direction": "+",
+     "why": "input cost relief"
+    },
+    {
+     "ticker": "APLAPOLLO",
+     "direction": "+",
+     "why": " "
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Does+Indian+steel+really+need+so+much+protection?&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Does Indian steel really need so much protection?"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+will+be+able+to+export+1.1+million+tonnes+of+steel+to+the+UK+duty-free&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-16",
+     "title": "India will be able to export 1.1 million tonnes of steel to the UK duty-free"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+EU+FTA+-+1.64+Million+Tonne+Steel+Quota+and+New+EU+Import+Regime&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-14",
+     "title": "India EU FTA - 1.64 Million Tonne Steel Quota and New EU Import Regime"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_EU_FTA_SIGNING_DEC16",
+   "title": "India-EU FTA signed (planned 16 Dec 2026) with CBAM work plan; rollout Mar-Apr 2027",
+   "category": "metals_china",
+   "status": "scheduled",
+   "date": "2026-12-16",
+   "window_end": "2027-04-30",
+   "prob_by_3m": 0.8,
+   "prob_by_12m": 0.9,
+   "description": "Hindu (24 Sep) reports signing on 16 Dec; Goyal (23 Oct, Moneycontrol) says signature by December and rollout Mar-Apr 2027; the Commission sent the deal to the Council on ~11 Sep. Text includes a dedicated CBAM annex/work plan for SMEs and aluminium exporters (ET/ANI 30 Jul) and a steel quota (~1.64 Mt per Vajiram). Goyal also warned EU carbon tax would hurt European industry (23 Oct) - risk of slippage. Impact on metals: modest easing of EU access for steel/aluminium within quota; textiles, autos, chemicals benefit more.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "NEW_EU_STEEL_ACCESS",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "easier quota access for India"
+    },
+    {
+     "node": "C_EU_UK",
+     "ssu": 0.2,
+     "low": 0.1,
+     "high": 0.4,
+     "note": "better trade relations"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_EU_FTA_SIGNING_DEC16",
+      "NEW_EU_STEEL_ACCESS",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Quota access redirects volume to EU, slightly firming domestic prices."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_EU_FTA_SIGNING_DEC16",
+      "C_EU_UK",
+      "F_USDINR",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Trade deal sentiment supports rupee/flows."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_EU_FTA_SIGNING_DEC16",
+      "C_EU_UK",
+      "F_AUTO_DEMAND_IN",
+      "TMPV"
+     ],
+     "explanation": "Lower EU car tariffs help JLR sourcing and premium imports."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDALCO",
+     "direction": "+",
+     "why": "CBAM support for aluminium; Novelis"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "+/-",
+     "why": " "
+    },
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "+",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India-EU+FTA+to+be+signed+on+December+16&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "title": "India-EU FTA to be signed on December 16"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India-EU+FTA+to+be+signed+by+December+2026,+rollout+expected+by+March-April+2027:+Piyush+Goyal&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "India-EU FTA to be signed by December 2026, rollout expected by March-April 2027: Piyush Goyal"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India-EU+FTA+includes+dedicated+CBAM+annexure+to+address+exporters'+concerns,+support+SMEs&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-30",
+     "title": "India-EU FTA includes dedicated CBAM annexure to address exporters' concerns, support SMEs"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_CHINA_STEEL_OUTPUT_CURB_2027",
+   "title": "China enforces steel output cuts / export licensing discipline ('anti-involution')",
+   "category": "metals_china",
+   "status": "anticipated",
+   "date": "2027-01-31",
+   "window_end": "2027-06-30",
+   "prob_by_3m": 0.3,
+   "prob_by_12m": 0.5,
+   "description": "Fastmarkets (17 Sep) reported an anti-price-war policy and industry self-discipline initiative to accelerate supply-side adjustment; CISA (4 Aug) urged mills to comply with export regulations (export licensing). Chinese crude output was falling in Aug (Yahoo 16 Aug) while September steel exports were still 10.49 Mt (+3.3% m/m). A formal 2027 output-control order (typically announced around Dec CEWC / Q1 NPC) would lift global HRC and lower iron ore. Probability of an explicit, enforced cut: ~0.3 by 3m, 0.5 by 12m (judgement).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_CHINA_STEEL_EXPORTS",
+     "ssu": -0.6,
+     "low": -1.0,
+     "high": -0.2,
+     "note": "-9% y/y exports"
+    },
+    {
+     "node": "F_IRON_ORE",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "lower ore demand"
+    },
+    {
+     "node": "F_STEEL_GLOBAL",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_STEEL_OUTPUT_CURB_2027",
+      "F_CHINA_STEEL_EXPORTS",
+      "F_STEEL_GLOBAL"
+     ],
+     "explanation": "Fewer Chinese exports firm Asian HRC."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_STEEL_OUTPUT_CURB_2027",
+      "F_STEEL_GLOBAL",
+      "F_STEEL_INDIA",
+      "SAIL"
+     ],
+     "explanation": "Import parity rises, lifting Indian prices."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_STEEL_OUTPUT_CURB_2027",
+      "F_IRON_ORE",
+      "NMDC"
+     ],
+     "explanation": "Lower ore demand reduces NMDC realisation."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_STEEL_OUTPUT_CURB_2027",
+      "F_IRON_ORE",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Cheaper ore plus higher steel widens spreads."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SAIL",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "NMDC",
+     "direction": "-",
+     "why": "ore price"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=China's+anti-price-war+policy,+steel+industry's+self-discipline+initiative+to+accelerate+supply-side+adjustment:+sources&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "title": "China's anti-price-war policy, steel industry's self-discipline initiative to accelerate supply-side adjustment: sources"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=CISA+has+called+on+Chinese+steelmakers+to+comply+with+steel+export+regulations&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-04",
+     "title": "CISA has called on Chinese steelmakers to comply with steel export regulations"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China's+September+steel+exports+at+10.492+million+mt&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "China's September steel exports at 10.492 million mt"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_CHINA_STEEL_EXPORT_FLOOD",
+   "title": "Chinese steel/aluminium export surge floods Asia as China demand stays weak",
+   "category": "metals_china",
+   "status": "risk_scenario",
+   "date": "2026-12-01",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.25,
+   "description": "If property stays weak and the Fed-driven dollar rise persists, mills export more (Europe turning protectionist: 'Asia braces for Europe's turn', 30 Oct; EU/UK/US barriers). India's import share would rise despite the safeguard (H1 FY27 imports +24%). Odds judgemental.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_CHINA_STEEL_EXPORTS",
+     "ssu": 1.5,
+     "low": 0.8,
+     "high": 2.5,
+     "note": "+22% y/y"
+    },
+    {
+     "node": "F_STEEL_GLOBAL",
+     "ssu": -1.0,
+     "low": -2.0,
+     "high": -0.4,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_STEEL_EXPORT_FLOOD",
+      "F_CHINA_STEEL_EXPORTS",
+      "F_STEEL_GLOBAL"
+     ],
+     "explanation": "Asian HRC export price falls."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_STEEL_EXPORT_FLOOD",
+      "F_STEEL_GLOBAL",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Import parity falls; Indian realisations slip."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_STEEL_EXPORT_FLOOD",
+      "F_STEEL_INDIA",
+      "P_STEEL_DUTY_IN",
+      "TATASTEEL"
+     ],
+     "explanation": "Triggers fresh trade remedies (feedback)."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "direction": "-",
+     "why": " "
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Asia+Braces+for+Europe's+Turn+on+Chinese+Overcapacity&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "Asia Braces for Europe's Turn on Chinese Overcapacity"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Steel+Demand+Outpaces+Output+in+H1+FY27+as+Imports+Rise+24%&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "Steel Demand Outpaces Output in H1 FY27 as Imports Rise 24%"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_CHINA_CEWC_STIMULUS_DEC26",
+   "title": "China Central Economic Work Conference / NPC (Dec 2026-Mar 2027): larger-than-expected fiscal or property stimulus",
+   "category": "metals_china",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-03-15",
+   "prob_by_3m": 0.3,
+   "prob_by_12m": 0.45,
+   "description": "Mini-stimulus (29 Sep) and Q3 4.5% growth reduce urgency; Reuters (25 Oct) says stimulus keeps missing; 17 months of unchanged LPR; PBOC reform of policy-rate framework (19 Oct). A bigger fiscal/housing package would lift ferrous and base metals. Probability of materially above-consensus package ~0.30 by 3m. CEWC is usually mid-December; NPC early March.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_CHINA_GDP",
+     "ssu": 0.4,
+     "low": 0.2,
+     "high": 0.8,
+     "note": "+0.4 pp 2027 growth"
+    },
+    {
+     "node": "F_IRON_ORE",
+     "ssu": 0.6,
+     "low": 0.2,
+     "high": 1.2,
+     "note": "+9% direct"
+    },
+    {
+     "node": "F_COPPER",
+     "ssu": 0.4,
+     "low": 0.1,
+     "high": 0.8,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_CEWC_STIMULUS_DEC26",
+      "F_CHINA_GDP",
+      "F_IRON_ORE",
+      "NMDC"
+     ],
+     "explanation": "Higher steel/ore demand lifts NMDC realisation."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_CEWC_STIMULUS_DEC26",
+      "F_IRON_ORE",
+      "F_STEEL_GLOBAL",
+      "F_STEEL_INDIA"
+     ],
+     "explanation": "Global HRC up; Indian prices follow."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_CEWC_STIMULUS_DEC26",
+      "F_CHINA_GDP",
+      "F_COPPER",
+      "HINDALCO"
+     ],
+     "explanation": "Base metals up."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_CEWC_STIMULUS_DEC26",
+      "F_CHINA_GDP",
+      "F_USDCNY",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Stronger China draws EM flows away from India (relative) while lifting commodity exporters."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "NMDC",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "HINDALCO",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "VEDL",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "+",
+     "why": " "
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=China's+growth+dilemma:+More+stimulus,+but+where+is+the+demand?&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "China's growth dilemma: More stimulus, but where is the demand?"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=COMMENTARY:+Why+China's+stimulus+keeps+missing+the+mark&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-25",
+     "title": "COMMENTARY: Why China's stimulus keeps missing the mark"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China's+central+bank+studies+making+overnight+rate+its+main+policy+rate&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "China's central bank studies making overnight rate its main policy rate"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_CHINA_PROPERTY_RELAPSE",
+   "title": "China property-sector credit event / sharp relapse (large developer or LGFV default)",
+   "category": "metals_china",
+   "status": "risk_scenario",
+   "date": "2027-01-15",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.05,
+   "prob_by_12m": 0.1,
+   "description": "China's property bust continues to drain local finances (EAF 4 Oct); sales recovery after the stimulus is only 'modest' (Bloomberg 8 Oct). A disorderly default would push iron ore, copper, steel and the yuan down and risk-off globally. Low odds given policy backstops.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_CHINA_GDP",
+     "ssu": -0.8,
+     "low": -1.5,
+     "high": -0.3,
+     "note": "growth hit"
+    },
+    {
+     "node": "F_IRON_ORE",
+     "ssu": -1.3,
+     "low": -2.5,
+     "high": -0.6,
+     "note": "-20%"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 1.2,
+     "low": 0.5,
+     "high": 2.5,
+     "note": "VIX +6"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CHINA_PROPERTY_RELAPSE",
+      "F_CHINA_GDP",
+      "F_IRON_ORE",
+      "NMDC"
+     ],
+     "explanation": "Ore price drops."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CHINA_PROPERTY_RELAPSE",
+      "F_IRON_ORE",
+      "F_STEEL_GLOBAL",
+      "F_STEEL_INDIA"
+     ],
+     "explanation": "Lower global steel; Chinese exports rise."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CHINA_PROPERTY_RELAPSE",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Risk-off hits Indian flows and the rupee."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "NMDC",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "TATASTEEL",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "HINDALCO",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "VEDL",
+     "direction": "-",
+     "why": " "
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=The+fiscal+fallout+from+China's+property+bust&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-04",
+     "title": "The fiscal fallout from China's property bust"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=China+Home+Sales+Post+Modest+Recovery+After+Latest+Stimulus&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "title": "China Home Sales Post Modest Recovery After Latest Stimulus"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027",
+   "title": "Finance ministry notifies anti-dumping duties on a meaningful batch of Chinese chemicals/APIs/others",
+   "category": "metals_china",
+   "status": "anticipated",
+   "date": "2027-02-28",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.3,
+   "prob_by_12m": 0.7,
+   "description": "Probes launched Sep-Oct 2026 (glycine, Pen-G, caprolactam, textile chemicals, TiO2 promise) reach preliminary/final findings within 6-12 months; ET (5 Aug) warns that notification lags and many recommendations lapse. Government rhetoric (swadeshi push; Centre promised TiO2 duty on 23 Sep) is stronger than 2025. India-China thaw (Xi visit; Press Note easing 27 Oct) adds ambivalence. Probability at least a handful of new duties notified: ~0.30 by 3m, 0.70 by 12m.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_ANTI_DUMPING_IN",
+     "ssu": 0.7,
+     "low": 0.3,
+     "high": 1.2,
+     "note": "broad new duties"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027",
+      "P_ANTI_DUMPING_IN",
+      "F_CHINA_CHEM_EXPORTS",
+      "SRF"
+     ],
+     "explanation": "Chinese undercutting of chemical producers is blunted."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027",
+      "P_ANTI_DUMPING_IN",
+      "F_CHEM_FEEDSTOCK",
+      "PIDILITIND"
+     ],
+     "explanation": "Downstream users pay more."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027",
+      "P_ANTI_DUMPING_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Slight CPI uplift."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SRF",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "PIIND",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "SOLARINDS",
+     "direction": "+/-",
+     "why": "explosives/ammonium nitrate inputs"
+    },
+    {
+     "ticker": "PIDILITIND",
+     "direction": "-",
+     "why": " "
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+launches+anti-dumping+probes+into+five+Chinese+products+after+domestic+industry+complaints&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "title": "India launches anti-dumping probes into five Chinese products after domestic industry complaints"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Centre+promises+to+impose+anti-dumping+duty+on+Chinese+titanium+dioxide+imports&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "title": "Centre promises to impose anti-dumping duty on Chinese titanium dioxide imports"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Despite+swadeshi+push,+anti-dumping+duties+against+Chinese+firms+crawl&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-05",
+     "title": "Despite swadeshi push, anti-dumping duties against Chinese firms crawl"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_PRESS_NOTE_EASING_CHINA_FDI",
+   "title": "India eases Press Note 2/3 FDI paperwork for Chinese-linked investors (<10% Chinese ownership)",
+   "category": "metals_china",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.4,
+   "prob_by_12m": 0.65,
+   "description": "ET/BusinessLine (27 Oct): government working to simplify Press Note 2 applications for border-country investors, including a lighter route for firms with <10% Chinese ownership; backdrop is Xi's visit to Delhi (reported 10-11 Sep) and the India-China thaw. Benefits electronics manufacturing (JVs with Chinese component firms), solar and EV supply chains; sits uneasily with the AD wave and rare-earth dependence. Visit outcomes were not verified.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_FDI_RULES",
+     "ssu": 0.4,
+     "low": 0.2,
+     "high": 0.8,
+     "note": "selective liberalisation"
+    },
+    {
+     "node": "T_CHINA_PLUS_ONE",
+     "ssu": -0.1,
+     "low": -0.3,
+     "high": 0.1,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_PRESS_NOTE_EASING_CHINA_FDI",
+      "P_FDI_RULES",
+      "DIXON"
+     ],
+     "explanation": "Faster JV approvals for electronics/component makers."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_PRESS_NOTE_EASING_CHINA_FDI",
+      "P_FDI_RULES",
+      "P_PLI",
+      "F_PRIVATE_CAPEX"
+     ],
+     "explanation": "More approved Chinese-linked investment lifts capex."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_PRESS_NOTE_EASING_CHINA_FDI",
+      "F_PRIVATE_CAPEX",
+      "F_CHINA_CHEM_EXPORTS",
+      "PREMIERENE"
+     ],
+     "explanation": "Technology access for solar/EV vs. import competition."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DIXON",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "TMPV",
+     "direction": "+/-",
+     "why": " "
+    },
+    {
+     "ticker": "WAAREEENER",
+     "direction": "-/+",
+     "why": "Chinese competition vs tech access"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Government+mulls+simplifying+application+process+under+Press+Note+2+to+ease+FDI+flow+from+border+nations&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "Government mulls simplifying application process under Press Note 2 to ease FDI flow from border nations"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Xi+to+Spend+24+Hours+in+Delhi+as+China+Confirms+India+Trip&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-10",
+     "title": "Xi to Spend 24 Hours in Delhi as China Confirms India Trip"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_UNION_BUDGET_FEB27_METALS",
+   "title": "Union Budget 2027-28 (1 Feb 2027): customs-duty relief on coking coal/critical minerals/scrap vs. higher protection",
+   "category": "metals_china",
+   "status": "scheduled",
+   "date": "2027-02-01",
+   "window_end": null,
+   "prob_by_3m": 0.85,
+   "prob_by_12m": 0.9,
+   "description": "Budget presented on 1 Feb 2027 (date per convention, not verified). ET (2 Nov): fiscal deficit may overshoot FY27 target by up to Rs 1.2 lakh crore, limiting giveaways; Voice Gambia/ET (27 Oct) reports plans for new duties on plastics, used tyres and scrap metal. Metals-relevant outcomes: (a) cut on coking coal/ferro-alloy/critical-mineral duties (prob 0.35), (b) higher duty on scrap/steel inputs, (c) mining royalty/NMDC dividend and rare-earth mission funding. Modelled as the ~0.35 chance of input-duty relief; opposite case is the status quo.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_COKING_COAL",
+     "ssu": -0.3,
+     "low": -0.6,
+     "high": 0.0,
+     "note": "landed cost after duty cut"
+    },
+    {
+     "node": "P_MINING_ROYALTY",
+     "ssu": 0.0,
+     "low": -0.2,
+     "high": 0.2,
+     "note": "no change"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_UNION_BUDGET_FEB27_METALS",
+      "F_COKING_COAL",
+      "JSWSTEEL"
+     ],
+     "explanation": "Lower landed coking-coal cost raises margin."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_UNION_BUDGET_FEB27_METALS",
+      "F_COKING_COAL",
+      "F_STEEL_INDIA",
+      "LT"
+     ],
+     "explanation": "Lower cost-push moderates steel prices."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_UNION_BUDGET_FEB27_METALS",
+      "F_STEEL_INDIA",
+      "F_CPI_IN"
+     ],
+     "explanation": "Minor CPI effect."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SAIL",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "JSWSTEEL",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "NMDC",
+     "direction": "0",
+     "why": " "
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Fiscal+deficit+likely+to+exceed+FY27+target+by+up+to+Rs+1.2+lakh+crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "Fiscal deficit likely to exceed FY27 target by up to Rs 1.2 lakh crore"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Government+Plans+New+Duties+on+Plastics,+Used+Tyres+and+Scrap+Metal&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "Government Plans New Duties on Plastics, Used Tyres and Scrap Metal"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_PRECIOUS_METALS_REBOUND_H1_2027",
+   "title": "Gold/silver rebound as Fed hike fears fade or Iran war ends",
+   "category": "metals_china",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.45,
+   "description": "Peace talks between Iran and the US/Qatar (Guardian 2 Nov; Reuters 2 Nov: no breakthrough) cut oil below $90 on 4 Nov and lifted silver off $49. A US-Iran settlement would lower yields and the dollar, reviving ETF demand; central-bank buying (Goldman 28 Aug) and Metals Focus ($6,000 gold needs investor confidence) support a recovery; HSBC and Metals Focus (29 Oct) caution silver may lag. Probability gold >$4,500 within 3m ~0.25; by 12m ~0.45; silver >$65 ~0.30.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_GOLD",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 2.0,
+     "note": "+8%"
+    },
+    {
+     "node": "F_SILVER",
+     "ssu": 1.5,
+     "low": 0.5,
+     "high": 3.0,
+     "note": "+18%"
+    },
+    {
+     "node": "F_US_10Y",
+     "ssu": -1.0,
+     "low": -1.6,
+     "high": -0.4,
+     "note": "-25 bp"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_PRECIOUS_METALS_REBOUND_H1_2027",
+      "F_GOLD",
+      "MUTHOOTFIN"
+     ],
+     "explanation": "Collateral values and gold-loan growth recover."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_PRECIOUS_METALS_REBOUND_H1_2027",
+      "F_SILVER",
+      "HINDZINC"
+     ],
+     "explanation": "Silver by-product earnings rebuild."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_PRECIOUS_METALS_REBOUND_H1_2027",
+      "F_GOLD",
+      "F_GOLD_DEMAND_IN",
+      "F_USDINR"
+     ],
+     "explanation": "Demand volumes fall, import bill moderates."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_PRECIOUS_METALS_REBOUND_H1_2027",
+      "F_US_10Y",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Lower US yields help FPI inflows and rupee."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "MUTHOOTFIN",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "HINDZINC",
+     "direction": "+",
+     "why": " "
+    },
+    {
+     "ticker": "TITAN",
+     "direction": "-/+",
+     "why": " "
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Oil+price+falls+amid+hope+of+a+breakthrough+to+end+Iran+war&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "Oil price falls amid hope of a breakthrough to end Iran war"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Gold+Is+Forecast+to+Climb+as+Central+Banks+Buy+the+Precious+Metal+-+Goldman+Sachs&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-28",
+     "title": "Gold Is Forecast to Climb as Central Banks Buy the Precious Metal - Goldman Sachs"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Silver+prices+are+tarnished+but+not+forgotten.+Why+HSBC+thinks+gains+in+white+metal+may+be+limited?&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "title": "Silver prices are tarnished but not forgotten. Why HSBC thinks gains in white metal may be limited?"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Silver+Gains+As+Dollar+Eases+And+Oil+Falls+After+Iranian+And+Qatari+Peace+Talks&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Silver Gains As Dollar Eases And Oil Falls After Iranian And Qatari Peace Talks"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_PRECIOUS_METALS_FURTHER_SLIDE",
+   "title": "Gold falls to ~$3,500 / silver to ~$40 on Fed hike(s) and strong dollar",
+   "category": "metals_china",
+   "status": "risk_scenario",
+   "date": "2026-12-16",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.2,
+   "prob_by_12m": 0.3,
+   "description": "Markets price a December Fed hike (NY Post 28 Oct) after US inflation hit a 3-year high; each hot CPI print has pushed gold down (Reuters 14 Oct). Investing.com (22 Oct) cited a drop to $3,100 before a rally. A hike plus higher-for-longer would take gold toward $3,500 (-15%) and silver toward $40 (-24%). Mirror image of the rebound event; they are mutually exclusive over the same window.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_GOLD",
+     "ssu": -1.9,
+     "low": -3.0,
+     "high": -1.0,
+     "note": "-15%"
+    },
+    {
+     "node": "F_SILVER",
+     "ssu": -2.0,
+     "low": -3.5,
+     "high": -1.0,
+     "note": "-24%"
+    },
+    {
+     "node": "F_FED_FUNDS",
+     "ssu": 1.0,
+     "low": 1.0,
+     "high": 2.0,
+     "note": "+25 bp hike"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_PRECIOUS_METALS_FURTHER_SLIDE",
+      "F_GOLD",
+      "MUTHOOTFIN"
+     ],
+     "explanation": "LTV stress for gold loans."
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_PRECIOUS_METALS_FURTHER_SLIDE",
+      "F_SILVER",
+      "HINDZINC"
+     ],
+     "explanation": "Silver earnings fall."
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_PRECIOUS_METALS_FURTHER_SLIDE",
+      "F_FED_FUNDS",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Fed tightening drives outflows and rupee weakness."
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "MUTHOOTFIN",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "HINDZINC",
+     "direction": "-",
+     "why": " "
+    },
+    {
+     "ticker": "VEDL",
+     "direction": "-",
+     "why": " "
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Fed+holds+interest+rates+steady+-+investors+bet+on+December+rate+hike&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "title": "Fed holds interest rates steady - investors bet on December rate hike"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Gold+drops+over+1%+as+hot+US+inflation+data+boosts+Fed+hike+bets&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "Gold drops over 1% as hot US inflation data boosts Fed hike bets"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Gold+Price+Outlook:+A+Drop+to+$3,100+Before+a+Rally+to+$10,000?&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "title": "Gold Price Outlook: A Drop to $3,100 Before a Rally to $10,000?"
+    }
+   ],
+   "confidence": "low"
+  }
+ ],
+ "edges": [
+  {
+   "src": "F_COKING_COAL",
+   "dst": "F_STEEL_INDIA",
+   "relation": "input_cost",
+   "w": 0.3,
+   "w_low": 0.15,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Coking coal ~35-40% of BF steel cost; mills pass ~half into prices",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+steel+prices+set+to+rise+further+on+coking+coal+costs",
+     "date": "2026-09-08",
+     "note": "Reuters: prices set to rise on coal costs"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "F_STEEL_INDIA",
+   "relation": "output_price",
+   "w": 0.45,
+   "w_low": 0.25,
+   "w_high": 0.7,
+   "lag": "0-3m",
+   "mechanism": "Import-parity linkage damped by safeguard duty and freight",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "F_STEEL_GLOBAL",
+   "relation": "input_cost",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "ore ~25% of cost; weak pass-through",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_STEEL_EXPORTS",
+   "dst": "F_STEEL_GLOBAL",
+   "relation": "competition",
+   "w": -0.35,
+   "w_low": -0.6,
+   "w_high": -0.15,
+   "lag": "0-3m",
+   "mechanism": "+15% Chinese exports (~15 Mt/yr extra) depresses Asian HRC export prices",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_IRON_ORE",
+   "relation": "demand_driver",
+   "w": 0.55,
+   "w_low": 0.3,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "Property/infra drive ~60% of Chinese steel demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_COPPER",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.4,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "China ~55% of copper demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_ALUMINIUM",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "China ~60% of aluminium demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_CHINA_STEEL_EXPORTS",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -1.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "weaker domestic demand pushes steel into exports",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_STEEL_DUTY_IN",
+   "dst": "F_STEEL_INDIA",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "+10 pp duty raises domestic price ~3% (partial pass-through to ~0.4 SSU)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.03,
+   "w_low": 0.01,
+   "w_high": 0.06,
+   "lag": "3-12m",
+   "mechanism": "steel in WPI/construction costs; small CPI weight",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "input_cost",
+   "w": -0.05,
+   "w_low": -0.12,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "costlier rebar raises construction cost",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EU_STEEL_ACCESS",
+   "dst": "F_STEEL_INDIA",
+   "relation": "output_price",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "exports diverted to domestic market add supply",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RARE_EARTH_SUPPLY",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.9,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "magnet shortages cut EV/2W/component output",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "NEW_RARE_EARTH_SUPPLY",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "escalation tightens Chinese licensing",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RARE_EARTH_SUPPLY",
+   "dst": "P_EV_POLICY",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "supply scarcity prompts domestic magnet incentives",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_GOLD",
+   "relation": "discount_rate",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "higher real yields raise gold's opportunity cost",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_GOLD",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "stronger dollar lowers USD gold",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "F_GOLD_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "higher price depresses volume demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_SILVER",
+   "dst": "F_GOLD",
+   "relation": "substitution",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "investor co-movement",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "F_CHINA_CHEM_EXPORTS",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "duties divert Chinese volumes to other markets",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "F_CHEM_FEEDSTOCK",
+   "relation": "policy_effect",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "protected domestic intermediates cost more to downstream users",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "F_PETROCHEM_SPREADS",
+   "relation": "competition",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Chinese export surge compresses domestic spreads",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge / analyst judgement",
+     "date": "2026-11-05",
+     "note": "order-of-magnitude estimate"
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_EU_STEEL_ACCESS",
+   "type": "POLICY",
+   "name": "EU import access for steel/aluminium (quota cut + CBAM)",
+   "ssu": "+1 = materially tighter access (quota roughly halved, 50% out-of-quota tariff, carbon cost)"
+  },
+  {
+   "id": "NEW_RARE_EARTH_SUPPLY",
+   "type": "FACTOR",
+   "name": "Rare-earth magnet / critical-mineral availability to Indian manufacturers",
+   "ssu": "+1 = materially tighter supply (licence delays, controls reimposed)"
+  }
+ ],
+ "factor_state_notes": [
+  {
+   "note": "RBI repo rate 5.50% after 25 bp hike on 7 Oct 2026; stance shifted to 'calibrated tightening'; FY27 GDP projection 7.1%",
+   "source": "The Hindu / Reuters / ETV Bharat, 2026-10-07 (headlines)",
+   "node": "F_REPO_IN"
+  },
+  {
+   "note": "India CPI above RBI 4% midpoint for third successive month as of Aug data (reported 14 Sep 2026); level not verified",
+   "source": "Livemint 2026-09-14 (headline)",
+   "node": "F_CPI_IN"
+  },
+  {
+   "note": "India Q1 FY27 GDP growth reported as 7.8% y/y (headline); RBI sees FY27 7.1%",
+   "source": "Times of India 2026-09-08, SME Futures 2026-09-09; ETV Bharat 2026-10-07",
+   "node": "F_GDP_IN"
+  },
+  {
+   "note": "China Q3 2026 GDP +4.5% y/y; official manufacturing PMI 49.3 in Oct; LPR unchanged 17 months",
+   "source": "Reuters/CNBC 2026-10-18; Business Standard 2026-10-31; Reuters 2026-10-19",
+   "node": "F_CHINA_GDP"
+  },
+  {
+   "note": "US Fed held rates 28 Oct 2026 (Chair Warsh); US inflation 3-year high; markets price a December hike",
+   "source": "CNBC 2026-10-28; NY Post 2026-10-28; ABC 2026-11-04",
+   "node": "F_FED_FUNDS"
+  },
+  {
+   "note": "Gold peaked ~$5,419/oz in Jan 2026; silver down ~53% from Jan peak; gold -24% to ~$4,128",
+   "source": "Inshorts/Economic Times 2026-10-28; factor_state",
+   "node": "F_GOLD"
+  },
+  {
+   "note": "Brent below $90 on 4 Nov 2026 on Iran-war peace hopes (factor_state shows 94.99 close)",
+   "source": "CNBC 2026-11-04",
+   "node": "F_BRENT"
+  },
+  {
+   "note": "China steel exports 10.49 Mt in Sep 2026 (+3.3% m/m); India H1 FY27 steel imports +24%, demand +7.5%",
+   "source": "SMM 2026-10-14; GMK 2026-10-15; Policy Edge 2026-10-23; PIB 2026-10-23",
+   "node": "F_CHINA_STEEL_EXPORTS"
+  },
+  {
+   "note": "Indian steel safeguard: 3-year duty (up to 12%) notified 31 Dec 2025; expiry ~2028; HR flat AD probe (China/Japan/Russia) opened 26 Jun 2026; Reuters 6 Oct: ministry unlikely to seek new curbs; ET Infra 30 Oct headline 'Government proposes 12% safeguard duty' unresolved",
+   "source": "BS/Mint 2025-12-31; Livemint 2026-06-26; Reuters 2026-10-06; ET Infra 2026-10-30",
+   "node": "P_STEEL_DUTY_IN"
+  },
+  {
+   "note": "Iron ore $91.95/t, two-year low 15 Oct; NMDC lump Rs 5,250/t, fines Rs 4,500/t (Aug), lump +Rs 150 in Sep; NMDC Oct output 5.04 Mt (+18%), sales -12%",
+   "source": "Mining.com 2026-10-15; scanx 2026-08-08; Hindu 2026-09-09; CNBC TV18 2026-11-02",
+   "node": "F_IRON_ORE"
+  },
+  {
+   "note": "Aluminium LME ~$3,000-3,130/t in Oct, stocks ~236-241 kt; Hindustan Zinc Q2 FY27 profit Rs 6,412 cr (+142%)",
+   "source": "AL Circle 2026-10-30; Reuters 2026-10-19",
+   "node": "F_ALUMINIUM"
+  },
+  {
+   "note": "US-China truce extended to 10 Jan 2027; rare-earth legal deadlines 10 Nov (some provisions) and gallium 27 Nov",
+   "source": "Reuters 2026-09-23; Environmental Leader 2026-10-30; InvestorNews 2026-11-02",
+   "node": "C_US_CHINA_DECOUPLING"
+  },
+  {
+   "note": "India-EU FTA signing planned 16 Dec 2026, rollout Mar-Apr 2027",
+   "source": "The Hindu 2026-09-24; Moneycontrol 2026-10-23",
+   "node": "C_EU_UK"
+  },
+  {
+   "note": "India-China trade deficit >$100bn in 2026",
+   "source": "The Hindu 2026-10-14",
+   "node": "C_CHINA"
+  }
+ ]
+}

@@ -1,0 +1,2042 @@
+{
+ "events": [
+  {
+   "event_id": "EV_RBI_OCT26_HIKE",
+   "title": "RBI hikes repo 25bp to 5.50%, stance 'calibrated tightening'",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-10-07",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "RBI MPC raised repo by 25bp to 5.50% on 7 Oct 2026 and said near-term cuts are 'off the table'; FY27 GDP forecast raised to 7.1%, FY27 CPI forecast to 5.2% (per Business Standard/Moneycontrol headlines). Sector-policy relevance: tightening cycle hits NBFC/housing finance margins and rate-sensitives.",
+   "what_already_moved": "Headline-level only: Nifty 50 closed 24,461 on 5 Nov, +7.4% in 1m despite the hike (factor_state.md); US 10Y 4.89%. Exact bond-yield reaction not verified.",
+   "entry_shocks": [
+    {
+     "node": "F_REPO_IN",
+     "ssu": 1.0,
+     "low": 1.0,
+     "high": 1.0,
+     "note": "+25bp, occurred"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.6,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "yield response, unverified"
+    },
+    {
+     "node": "F_LIQUIDITY_IN",
+     "ssu": -0.3,
+     "low": -1.0,
+     "high": 0.2,
+     "note": "calibrated tightening may drain liquidity"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_OCT26_HIKE",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Higher policy rate slows loan growth"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_OCT26_HIKE",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN",
+      "F_HOUSING_DEMAND"
+     ],
+     "explanation": "Higher yields and mortgage rates dent housing demand, then housing-finance/developer equity"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_OCT26_HIKE",
+      "F_REPO_IN",
+      "F_CREDIT_SPREADS_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "Funding-cost rise squeezes NBFC spreads"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "NBFC funding cost rises"
+    },
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+/-",
+     "why": "deposit repricing vs NIM"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "mortgage-rate sensitivity"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.thehindu.com/business/Economy/rbi-mpc-meeting-highlights-october-2026/",
+     "date": "2026-10-07",
+     "title": "RBI MPC hikes repo to 5.5% (via Google News search)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo",
+     "date": "2026-10-14",
+     "title": "Business Standard: RBI MPC hikes repo by 25 bps to 5.5%"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_ECL_ROLLOUT_APR27",
+   "title": "RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start)",
+   "category": "sector_policy",
+   "status": "scheduled",
+   "date": "2027-04-01",
+   "window_end": "2027-04-01",
+   "prob_by_3m": 0.1,
+   "prob_by_12m": 0.62,
+   "description": "RBI's ECL framework replaces incurred-loss provisioning. SBI estimates Rs 19,500 crore post-tax hit (3 Nov 2026); Federal Bank flagged 1.5-2% net worth hit (Jul 2026). CS Setty (3 Nov) said RBI working group is still fine-tuning implementation and RBI will meet bank CEOs on readiness. 1 Apr 2027 start date is model knowledge/ not verified in fetched headlines; transition glide-path likely spreads the hit over years.",
+   "what_already_moved": "No market price reaction isolated; banks' preparedness stories 3-5 Nov 2026.",
+   "entry_shocks": [
+    {
+     "node": "P_RBI_PRUDENTIAL",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "one tightening step, transition-smoothed"
+    },
+    {
+     "node": "F_CREDIT_GROWTH_IN",
+     "ssu": -0.5,
+     "low": -1.5,
+     "high": 0.0,
+     "note": "banks price in higher provisions on unsecured/MSME"
+    },
+    {
+     "node": "F_ASSET_QUALITY_IN",
+     "ssu": 0.5,
+     "low": 0.0,
+     "high": 1.5,
+     "note": "reported credit cost higher (accounting, not cash)"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_ECL_ROLLOUT_APR27",
+      "P_RBI_PRUDENTIAL",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Higher provisioning lifts lending spreads and trims growth in risky segments"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_ECL_ROLLOUT_APR27",
+      "P_RBI_PRUDENTIAL",
+      "F_ASSET_QUALITY_IN",
+      "SBIN"
+     ],
+     "explanation": "Day-1 net worth hit and higher run-rate credit cost hits PSU banks most, which have thinner buffers"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SBIN",
+     "direction": "-",
+     "why": "Rs 19,500cr post-tax estimate"
+    },
+    {
+     "ticker": "FEDERALBNK",
+     "direction": "-",
+     "why": "1.5-2% net-worth hit"
+    },
+    {
+     "ticker": "BANKBARODA",
+     "direction": "-",
+     "why": "PSU capital buffers"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.moneycontrol.com/",
+     "date": "2026-11-03",
+     "title": "SBI puts ECL models in place, estimates Rs 19,500-crore post-tax impact (headline via Google News)"
+    },
+    {
+     "url": "https://www.ndtvprofit.com/",
+     "date": "2026-07-17",
+     "title": "Federal Bank flags 1.5-2% net-worth hit from RBI ECL norms (headline)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_ECL_DEFERRED",
+   "title": "RBI defers or phases ECL (longer glide path / delayed start)",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2027-03-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.15,
+   "prob_by_12m": 0.38,
+   "description": "Alternative outcome to on-time ECL start: RBI working group is 'still fine tuning' (Setty, 3 Nov 2026) and several banks (e.g. Bank of India, 24 Oct) have not begun provisioning, so a delay or longer transition is plausible.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_RBI_PRUDENTIAL",
+     "ssu": -0.6,
+     "low": -1.2,
+     "high": 0.0,
+     "note": "relief vs base case"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_ECL_DEFERRED",
+      "P_RBI_PRUDENTIAL",
+      "F_ASSET_QUALITY_IN",
+      "SBIN"
+     ],
+     "explanation": "Deferral removes day-1 capital hit; PSU banks re-rate"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SBIN",
+     "direction": "+",
+     "why": "relief"
+    },
+    {
+     "ticker": "BANKBARODA",
+     "direction": "+",
+     "why": "relief"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.business-standard.com/",
+     "date": "2026-11-03",
+     "title": "RBI to meet bank CEOs to review ECL preparedness (headline)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_SEBI_CAS_DERIV_REVERSAL",
+   "title": "SEBI partly reverses derivative expiry-settlement rule after closing-auction (CAS) volatility",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2026-11-30",
+   "window_end": "2026-12-31",
+   "prob_by_3m": 0.7,
+   "prob_by_12m": 0.85,
+   "description": "After the Closing Auction Session launch caused expiry-day swings (Sept 2026), SEBI moved to rework derivative expiry closing price determination; Reuters (5 Oct) reported a partial reversal (30-min VWAP may return). Jefferies calls it a bigger positive for brokers than exchanges (16 Oct).",
+   "what_already_moved": "Not quantified.",
+   "entry_shocks": [
+    {
+     "node": "P_SEBI_DERIVATIVES",
+     "ssu": -0.4,
+     "low": -0.8,
+     "high": 0.0,
+     "note": "loosening step"
+    },
+    {
+     "node": "F_EQUITY_ACTIVITY_IN",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "restores trader confidence"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_SEBI_CAS_DERIV_REVERSAL",
+      "P_SEBI_DERIVATIVES",
+      "F_EQUITY_ACTIVITY_IN",
+      "BSE"
+     ],
+     "explanation": "Stable settlement supports derivatives volumes and exchange/broker revenue"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_SEBI_CAS_DERIV_REVERSAL",
+      "F_EQUITY_ACTIVITY_IN",
+      "F_DOMESTIC_FLOWS",
+      "ANGELONE"
+     ],
+     "explanation": "Higher activity lifts broker revenue"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BSE",
+     "direction": "+",
+     "why": "derivative volume"
+    },
+    {
+     "ticker": "ANGELONE",
+     "direction": "+",
+     "why": "retail F&O activity"
+    },
+    {
+     "ticker": "CDSL",
+     "direction": "+",
+     "why": "activity"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.reuters.com/",
+     "date": "2026-10-05",
+     "title": "India markets regulator to partly reverse derivative settlement rules (Reuters via search)"
+    },
+    {
+     "url": "https://www.business-standard.com/",
+     "date": "2026-10-16",
+     "title": "Jefferies: CAS rule change bigger positive for brokers vs exchanges"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_SEBI_FNO_CURBS_RISK",
+   "title": "SEBI tightens F&O further (weekly-expiry scrapping, higher margins/lot sizes)",
+   "category": "sector_policy",
+   "status": "risk_scenario",
+   "date": "2027-02-15",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.07,
+   "prob_by_12m": 0.2,
+   "description": "Media (31 Aug 2026) discuss scrapping weekly expiries; SEBI already limited weekly expiries to one benchmark per exchange (2024-25). A further tightening step would cut retail F&O volumes. Probability is a judgement from discussion pieces, not a SEBI proposal.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_SEBI_DERIVATIVES",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "tightening"
+    },
+    {
+     "node": "F_EQUITY_ACTIVITY_IN",
+     "ssu": -1.0,
+     "low": -2.0,
+     "high": -0.3,
+     "note": "retail turnover falls ~20%"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_SEBI_FNO_CURBS_RISK",
+      "P_SEBI_DERIVATIVES",
+      "F_EQUITY_ACTIVITY_IN",
+      "BSE"
+     ],
+     "explanation": "Lower option premium turnover cuts exchange transaction revenue"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_SEBI_FNO_CURBS_RISK",
+      "F_EQUITY_ACTIVITY_IN",
+      "ANGELONE"
+     ],
+     "explanation": "Broker revenue and active clients fall"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BSE",
+     "direction": "-",
+     "why": "index options revenue concentrated"
+    },
+    {
+     "ticker": "ANGELONE",
+     "direction": "-",
+     "why": "F&O-reliant"
+    },
+    {
+     "ticker": "360ONE",
+     "direction": "-/0",
+     "why": "wealth less affected"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=SEBI+F%26O+weekly+expiry+rules",
+     "date": "2026-08-31",
+     "title": "How scrapping weekly F&O expiries could reshape retail trading"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_SEBI_SEP26_BOARD",
+   "title": "SEBI board (24 Sep 2026): PMS overhaul, wider FPI access, advertising code, REIT/AIF reforms",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-09-24",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Board approved PMS revamp, easier settlements, new ad code and FPI commodity-trade access (per Outlook Money, ET, Moneycontrol headlines). Incremental market-structure liberalisation; SME-IPO changes (min application Rs 1 lakh) proposed 16 Oct. Also SEBI cleared Adani group of minimum public shareholding charge via settlement (28 Sep).",
+   "what_already_moved": "No isolated price move.",
+   "entry_shocks": [
+    {
+     "node": "P_SEBI_DERIVATIVES",
+     "ssu": -0.1,
+     "low": -0.3,
+     "high": 0.0,
+     "note": "mildly liberalising"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": 0.1,
+     "low": 0.0,
+     "high": 0.3,
+     "note": "wider FPI access, small"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_SEBI_SEP26_BOARD",
+      "P_SEBI_DERIVATIVES",
+      "F_EQUITY_ACTIVITY_IN",
+      "CDSL"
+     ],
+     "explanation": "Market-access easing lifts activity and depository/exchange revenue"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "CDSL",
+     "direction": "+",
+     "why": "activity"
+    },
+    {
+     "ticker": "HDFCAMC",
+     "direction": "+/0",
+     "why": "PMS/AIF rules"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.outlookmoney.com/",
+     "date": "2026-09-25",
+     "title": "Sebi Board Meeting: PMS Overhaul, Easier Settlements, New Ad Code (headline)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_BUDGET27_CGT_STT_RELIEF",
+   "title": "Union Budget 2027-28 cuts LTCG/STT burden on equities",
+   "category": "sector_policy",
+   "status": "scheduled",
+   "date": "2027-02-01",
+   "window_end": "2027-02-01",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.28,
+   "description": "FM Sitharaman opened the door to a capital-gains/STT review (13 Oct 2026); pre-budget meetings from 12 Oct. Nifty rose 1.6% on LTCG relief hopes (3 Nov). Budget date 1 Feb 2027 is conventional, not yet confirmed in fetched sources. Probability of a material cut judged ~28%; fiscal constraints and 2024 hike to 12.5% argue against.",
+   "what_already_moved": "Hope premium: Nifty 50 +1.6% around 3 Nov 2026 (Multibagg AI headline).",
+   "entry_shocks": [
+    {
+     "node": "P_CAPITAL_GAINS_TAX",
+     "ssu": -1.0,
+     "low": -1.5,
+     "high": -0.3,
+     "note": "lower LTCG and/or STT"
+    },
+    {
+     "node": "F_EQUITY_ACTIVITY_IN",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "turnover up"
+    },
+    {
+     "node": "F_DOMESTIC_FLOWS",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "retail inflows"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET27_CGT_STT_RELIEF",
+      "P_CAPITAL_GAINS_TAX",
+      "F_DOMESTIC_FLOWS",
+      "MKT_NIFTY50"
+     ],
+     "explanation": "Lower post-tax return boosts retail/DII flows"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_BUDGET27_CGT_STT_RELIEF",
+      "P_CAPITAL_GAINS_TAX",
+      "F_EQUITY_ACTIVITY_IN",
+      "BSE"
+     ],
+     "explanation": "Higher turnover lifts exchanges/brokers/AMCs"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BSE",
+     "direction": "+",
+     "why": "turnover"
+    },
+    {
+     "ticker": "ANGELONE",
+     "direction": "+",
+     "why": "turnover"
+    },
+    {
+     "ticker": "HDFCAMC",
+     "direction": "+",
+     "why": "flows"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.zeebiz.com/",
+     "date": "2026-10-13",
+     "title": "FM Sitharaman addresses STT, LTCG tax debate (headline)"
+    },
+    {
+     "url": "https://economictimes.indiatimes.com/",
+     "date": "2026-09-23",
+     "title": "Budget 2027-28 process begins October 12"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_BUDGET27_NO_TAX_RELIEF",
+   "title": "Budget 2027-28 leaves capital-gains/STT unchanged (or raises)",
+   "category": "sector_policy",
+   "status": "scheduled",
+   "date": "2027-02-01",
+   "window_end": "2027-02-01",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.72,
+   "description": "Complementary outcome: no change to LTCG/STT (about 72%), including small chance of a hike. Hope premium in Nifty unwinds modestly.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_CAPITAL_GAINS_TAX",
+     "ssu": 0.1,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "no relief; small hike tail"
+    },
+    {
+     "node": "F_EQUITY_ACTIVITY_IN",
+     "ssu": -0.1,
+     "low": -0.4,
+     "high": 0.0,
+     "note": "disappointment"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET27_NO_TAX_RELIEF",
+      "P_CAPITAL_GAINS_TAX",
+      "F_DOMESTIC_FLOWS",
+      "MKT_NIFTY50"
+     ],
+     "explanation": "Unwind of relief expectations"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BSE",
+     "direction": "-",
+     "why": "relief premium unwind"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.business-today.in/",
+     "date": "2026-10-15",
+     "title": "LTCG tax rollback: will the government deliver? (headline)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_BUDGET27_CAPEX_RAILWAY",
+   "title": "Union Budget 2027-28 capex/railway allocation (infra, railways, defence)",
+   "category": "sector_policy",
+   "status": "scheduled",
+   "date": "2027-02-01",
+   "window_end": "2027-02-01",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.9,
+   "description": "Budget will set FY28 capex, railways and defence outlays. Base case: central capex growth ~10% and railways capex up high single digits (model assumption; no fetched figures). Vande Bharat sleeper completed 160 kmph Kavach trial (10 Sep 2026), supporting the order pipeline.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "F_GOVT_CAPEX",
+     "ssu": 0.8,
+     "low": 0.0,
+     "high": 1.5,
+     "note": "+8% capex growth vs ~10 SSU base; scenario"
+    },
+    {
+     "node": "P_RAILWAY_CAPEX",
+     "ssu": 0.8,
+     "low": 0.0,
+     "high": 1.5,
+     "note": "+8%"
+    },
+    {
+     "node": "P_DEFENCE_PROCUREMENT",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 2.0,
+     "note": "+10% domestic"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET27_CAPEX_RAILWAY",
+      "P_RAILWAY_CAPEX",
+      "IRCON"
+     ],
+     "explanation": "Railway outlays flow to wagon/track/signalling contractors"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_BUDGET27_CAPEX_RAILWAY",
+      "F_GOVT_CAPEX",
+      "P_INFRA_SPENDING_ROADS",
+      "LT"
+     ],
+     "explanation": "Capex lifts order inflow for EPC and cement"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "RVNL",
+     "direction": "+",
+     "why": "railway orders"
+    },
+    {
+     "ticker": "TITAGARH",
+     "direction": "+",
+     "why": "wagons/Vande Bharat"
+    },
+    {
+     "ticker": "LT",
+     "direction": "+",
+     "why": "EPC"
+    },
+    {
+     "ticker": "HAL",
+     "direction": "+",
+     "why": "defence"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.livemint.com/",
+     "date": "2026-09-12",
+     "title": "Vande Bharat sleeper Kavach trial (headline)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_AIRTEL_POSTPAID_HIKE",
+   "title": "Bharti Airtel raises postpaid plans by Rs 50 (3-11%)",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-10-07",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Airtel hiked all postpaid plan prices by Rs 50 from 8 Oct 2026, adding free annual international roaming. Prepaid/headline Jio-Airtel hikes not yet announced; media expects 12-15% hike in 4-5 months.",
+   "what_already_moved": "Not isolated.",
+   "entry_shocks": [
+    {
+     "node": "P_TELECOM_TARIFFS",
+     "ssu": 0.3,
+     "low": 0.2,
+     "high": 0.5,
+     "note": "postpaid-only, small share of base"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_AIRTEL_POSTPAID_HIKE",
+      "P_TELECOM_TARIFFS",
+      "BHARTIARTL"
+     ],
+     "explanation": "Postpaid ARPU lift directly raises Airtel EBITDA"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BHARTIARTL",
+     "direction": "+",
+     "why": "postpaid mix"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.livemint.com/",
+     "date": "2026-10-07",
+     "title": "Airtel introduces new postpaid plans, hikes prices by 3-11%"
+    },
+    {
+     "url": "https://economictimes.indiatimes.com/",
+     "date": "2026-10-08",
+     "title": "Airtel hikes all postpaid plan prices by Rs 50"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_TELECOM_TARIFF_HIKE_2027",
+   "title": "Broad mobile tariff hike by Jio/Airtel (12-15%)",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2027-03-01",
+   "window_end": "2027-04-30",
+   "prob_by_3m": 0.2,
+   "prob_by_12m": 0.75,
+   "description": "Livemint (7 Oct 2026) and CNBC TV18 (13 Aug) cite brokerages expecting 12-15% tariff hikes within 4-5 months, ahead of Jio's IPO. Timing uncertain; Vodafone Idea could lag. Probability within 12m ~75% (judgement).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_TELECOM_TARIFFS",
+     "ssu": 1.2,
+     "low": 0.8,
+     "high": 1.5,
+     "note": "+12-15% ARPU"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_TELECOM_TARIFF_HIKE_2027",
+      "P_TELECOM_TARIFFS",
+      "BHARTIARTL"
+     ],
+     "explanation": "ARPU +12% at ~90% flow-through lifts EBITDA ~15-20%"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_TELECOM_TARIFF_HIKE_2027",
+      "P_TELECOM_TARIFFS",
+      "F_CPI_IN"
+     ],
+     "explanation": "Telecom has small CPI weight, so about +0.05pp"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_TELECOM_TARIFF_HIKE_2027",
+      "P_TELECOM_TARIFFS",
+      "IDEA"
+     ],
+     "explanation": "Vi gains if it follows; subscriber loss risk"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BHARTIARTL",
+     "direction": "+",
+     "why": "ARPU"
+    },
+    {
+     "ticker": "IDEA",
+     "direction": "+",
+     "why": "ARPU and AGR relief"
+    },
+    {
+     "ticker": "INDUSTOWER",
+     "direction": "+",
+     "why": "tenancy"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.livemint.com/",
+     "date": "2026-10-07",
+     "title": "Mobile bills may rise again: 12-15% hike likely in 4-5 months"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_SATCOM_LAUNCH",
+   "title": "Satellite broadband (Starlink/OneWeb/Jio-SES) clearance and commercial launch",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2027-01-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.2,
+   "prob_by_12m": 0.6,
+   "description": "DCC approved satcom spectrum framework (8-9 Sep 2026); players await cabinet nod and security clearance. Business Standard (8 Oct) says Starlink entry is stalled; parliamentary panel took up the matter 14 Oct. Pricing dispute (administrative allocation) remains.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_TELECOM_TARIFFS",
+     "ssu": -0.1,
+     "low": -0.3,
+     "high": 0.0,
+     "note": "marginal competition for fixed/rural broadband"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_SATCOM_LAUNCH",
+      "P_TELECOM_TARIFFS",
+      "BHARTIARTL"
+     ],
+     "explanation": "Rural broadband competition marginal for mobile ARPU near-term"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BHARTIARTL",
+     "direction": "-/0",
+     "why": "OneWeb stake offsets"
+    },
+    {
+     "ticker": "RELIANCE",
+     "direction": "-/0",
+     "why": "Jio fixed-wireless competition"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.business-standard.com/",
+     "date": "2026-10-08",
+     "title": "Starlink's India entry: why launch is stalled"
+    },
+    {
+     "url": "https://www.medianama.com/",
+     "date": "2026-09-10",
+     "title": "Starlink, OneWeb and Jio await cabinet nod"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_US_PHARMA_TARIFF_SEP26",
+   "title": "US 100% pharma tariff takes effect 29 Sep 2026; select Indian speciality drugs waived",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-09-29",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Business Standard/Indian Express (29 Sep 2026): Trump's 100% pharma tariff kicked in; select Indian speciality drugs got exemption. Earlier (22 Jul) Trump threatened 200% on generics; Indian generics were seen competitive. Scope of generics coverage per fetched headlines is unclear.",
+   "what_already_moved": "Not isolated.",
+   "entry_shocks": [
+    {
+     "node": "P_US_PHARMA_TARIFF",
+     "ssu": 3.0,
+     "low": 0.0,
+     "high": 6.0,
+     "note": "effective rate on exposed Indian exports, mostly branded/speciality; generics largely spared (unverified)"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_US_PHARMA_TARIFF_SEP26",
+      "P_US_PHARMA_TARIFF",
+      "SUNPHARMA"
+     ],
+     "explanation": "Speciality exposure (Ilumya, Winlevi etc.) partly waived"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_US_PHARMA_TARIFF_SEP26",
+      "P_US_PHARMA_TARIFF",
+      "F_US_GENERIC_PRICING",
+      "AUROPHARMA"
+     ],
+     "explanation": "Tariffs on competitors' branded supply push US generic pricing; Indian generic makers gain share if exempt"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SUNPHARMA",
+     "direction": "-",
+     "why": "speciality US exposure"
+    },
+    {
+     "ticker": "LUPIN",
+     "direction": "-/0",
+     "why": "US generics"
+    },
+    {
+     "ticker": "DRREDDY",
+     "direction": "-/0",
+     "why": "US generics"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.business-standard.com/",
+     "date": "2026-09-29",
+     "title": "Trump's 100% pharma tariff kicks in today, select Indian drugs get relief"
+    },
+    {
+     "url": "https://www.moneycontrol.com/",
+     "date": "2026-07-22",
+     "title": "Why Indian pharma isn't panicking on 200% tariff threat"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_USFDA_WARNING_WAVE_26",
+   "title": "USFDA warning letters: Alembic, Aurobindo-Eugia, Dabur (Jul-Aug 2026)",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-08-14",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Warning letters to an Alembic site (21 Jul, patient consent), Eugia Pharma Unit 1 of Aurobindo (14 Aug, sterile manufacturing) and Dabur's Silvassa facility (7 Aug). Aurobindo shares fell on 14 Aug (CNBC TV18).",
+   "what_already_moved": "Aurobindo stock decline on 14 Aug (size not fetched).",
+   "entry_shocks": [
+    {
+     "node": "P_USFDA_ENFORCEMENT",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "stricter on sterile/injectables"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_USFDA_WARNING_WAVE_26",
+      "P_USFDA_ENFORCEMENT",
+      "AUROPHARMA"
+     ],
+     "explanation": "Import-alert risk on injectables hits Aurobindo US revenue"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_USFDA_WARNING_WAVE_26",
+      "P_USFDA_ENFORCEMENT",
+      "F_US_GENERIC_PRICING",
+      "ZYDUSLIFE"
+     ],
+     "explanation": "Supply gaps support US generic prices for compliant peers"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "AUROPHARMA",
+     "direction": "-",
+     "why": "Eugia warning letter"
+    },
+    {
+     "ticker": "ALKEM",
+     "direction": "-",
+     "why": "related to Alembic?"
+    },
+    {
+     "ticker": "ZYDUSLIFE",
+     "direction": "+",
+     "why": "peer share gain"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.thehindu.com/",
+     "date": "2026-08-14",
+     "title": "US FDA issues warning letter to Eugia Pharma"
+    },
+    {
+     "url": "https://www.fiercepharma.com/",
+     "date": "2026-07-21",
+     "title": "Alembic site slapped with FDA warning letter"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_IT_AI_DEFLATION_Q2FY27",
+   "title": "IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-10-08",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Q2 FY27 previews (28 Sep, 4 Oct) called for subdued growth with AI-driven price deflation; TCS reported 8 Oct. IndiaIPO (9 Oct) notes TCS rose on the 'anti-AI trade' but earnings risks build. Reported dispersion across TCS/Infosys/HCLTech/Wipro on AI deals and hiring (NDTV Profit 23 Oct).",
+   "what_already_moved": "Not quantified.",
+   "entry_shocks": [
+    {
+     "node": "T_GENAI_SERVICES",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "AI substitution pressure on legacy services"
+    },
+    {
+     "node": "F_US_TECH_SPEND",
+     "ssu": -0.3,
+     "low": -1.0,
+     "high": 0.2,
+     "note": "cautious client budgets"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_IT_AI_DEFLATION_Q2FY27",
+      "T_GENAI_SERVICES",
+      "INFY"
+     ],
+     "explanation": "AI productivity pass-through compresses T&M revenue"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_IT_AI_DEFLATION_Q2FY27",
+      "T_GENAI_SERVICES",
+      "F_WAGES_IN",
+      "TCS"
+     ],
+     "explanation": "Lower hiring tempers wage pressure but pressures top line"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "AI deflation"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "-",
+     "why": "growth"
+    },
+    {
+     "ticker": "LTIM",
+     "direction": "-",
+     "why": "mid-tier"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.ndtvprofit.com/",
+     "date": "2026-10-23",
+     "title": "TCS vs Infosys vs HCLTech vs Wipro: Q2 AI, deal wins"
+    },
+    {
+     "url": "https://economictimes.indiatimes.com/",
+     "date": "2026-10-04",
+     "title": "IT Q2 preview: muted growth, AI deflation"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_CAFE3_NOTIFIED",
+   "title": "CAFE-III fuel-efficiency norms notified (30 Sep 2026); no small-car carve-out; 3x credit for BEVs",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-09-30",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Power ministry notified CAFE-III, tightening passenger vehicle benchmark 16.7% over five years; no special benefit for small cars (Business Standard, ET). Heavier fleets face pressure; EV super-credits reward BEV makers.",
+   "what_already_moved": "Not isolated.",
+   "entry_shocks": [
+    {
+     "node": "P_EV_POLICY",
+     "ssu": 0.8,
+     "low": 0.4,
+     "high": 1.2,
+     "note": "stronger EV push"
+    },
+    {
+     "node": "F_AUTO_DEMAND_IN",
+     "ssu": -0.1,
+     "low": -0.4,
+     "high": 0.1,
+     "note": "cost pass-through on small cars"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_CAFE3_NOTIFIED",
+      "P_EV_POLICY",
+      "TATAMOTORS"
+     ],
+     "explanation": "EV super-credits favour Tata Motors PV and M&M"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CAFE3_NOTIFIED",
+      "P_EV_POLICY",
+      "F_BATTERY_MATERIALS",
+      "MARUTI"
+     ],
+     "explanation": "Maruti needs hybrids/EV and compliance cost; pricing power limited"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "MARUTI",
+     "direction": "-",
+     "why": "small-car mix, no carve-out"
+    },
+    {
+     "ticker": "M&M",
+     "direction": "+",
+     "why": "EV credits"
+    },
+    {
+     "ticker": "TATAMOTORS",
+     "direction": "+",
+     "why": "EV share"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.business-standard.com/",
+     "date": "2026-09-30",
+     "title": "CAFE-3 norms notified without carve-out for small cars"
+    },
+    {
+     "url": "https://economictimes.indiatimes.com/",
+     "date": "2026-09-30",
+     "title": "CAFE III: 3x credit for battery EVs"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_PM_EDRIVE_EXT",
+   "title": "PM E-DRIVE extended to March 2028; e2W incentive cut to Rs 5,000",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-08-11",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Govt extended PM E-DRIVE for electric two-wheelers to March 2028, with higher allocation but lower per-vehicle incentive (Rs 5,000) per ET Auto/Autocar/Mint (11-12 Aug 2026).",
+   "what_already_moved": "Not isolated.",
+   "entry_shocks": [
+    {
+     "node": "P_EV_POLICY",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "longer runway, lower per-unit"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_PM_EDRIVE_EXT",
+      "P_EV_POLICY",
+      "BAJAJ-AUTO"
+     ],
+     "explanation": "e2W demand continuity; subsidy cut hurts price-competitive OEMs"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_PM_EDRIVE_EXT",
+      "P_EV_POLICY",
+      "F_BATTERY_MATERIALS",
+      "TVSMOTOR"
+     ],
+     "explanation": "OEM margin tied to battery cost pass-through"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TVSMOTOR",
+     "direction": "+/-",
+     "why": "e2W"
+    },
+    {
+     "ticker": "BAJAJ-AUTO",
+     "direction": "+/-",
+     "why": "Chetak"
+    },
+    {
+     "ticker": "EICHERMOT",
+     "direction": "0",
+     "why": "ICE"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.autocarindia.com/",
+     "date": "2026-08-12",
+     "title": "PM E-Drive subsidy for e2Ws extended to March 2028"
+    },
+    {
+     "url": "https://auto.economictimes.indiatimes.com/",
+     "date": "2026-08-11",
+     "title": "e2W incentive cut to Rs 5,000"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_DAC_APPROVALS_H2_26",
+   "title": "DAC clears Rs 1.10 lakh crore (7 Sep) and further proposals (Rs 2.12 lakh crore reported 26 Oct)",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-09-07",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "DAC accorded AoN to Rs 1.10 lakh crore (about $11.6bn) of proposals, 98% from Indian industry (The Hindu, 7 Sep). New Indian Express (26 Oct) reports another clearance of Rs 2.12 lakh crore; relationship to 7 Sep figure is unverified. AoN precedes contract signing by 1-3 years.",
+   "what_already_moved": "Not isolated.",
+   "entry_shocks": [
+    {
+     "node": "P_DEFENCE_PROCUREMENT",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 2.0,
+     "note": "domestic orders +10% eq. over multi-year"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_DAC_APPROVALS_H2_26",
+      "P_DEFENCE_PROCUREMENT",
+      "HAL"
+     ],
+     "explanation": "AoN feeds HAL/BEL order books"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_DAC_APPROVALS_H2_26",
+      "P_DEFENCE_PROCUREMENT",
+      "T_DEFENCE_EXPORTS",
+      "BEL"
+     ],
+     "explanation": "Domestic scale supports exports and component suppliers"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HAL",
+     "direction": "+",
+     "why": "platforms"
+    },
+    {
+     "ticker": "BEL",
+     "direction": "+",
+     "why": "electronics"
+    },
+    {
+     "ticker": "MAZDOCK",
+     "direction": "+",
+     "why": "naval"
+    },
+    {
+     "ticker": "BDL",
+     "direction": "+",
+     "why": "missiles"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.thehindu.com/",
+     "date": "2026-09-07",
+     "title": "DAC clears Rs 1.10 lakh crore proposals"
+    },
+    {
+     "url": "https://www.newindianexpress.com/",
+     "date": "2026-10-26",
+     "title": "Centre clears defence procurement worth Rs 2.12 lakh crore"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_POWER_DISTRIB_REFORM",
+   "title": "Electricity (Amendment) Bill / distribution parallel licensing and DISCOM privatisation steps",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-04-15",
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.45,
+   "description": "MoP proposed parallel-licensing framework to introduce distribution competition (Powerline, 18 Sep 2026); Renewable Watch (1 Oct) lists privatisation, debt relief, market access as solutions. SC rejected IEX's challenge to market coupling (about 3 Aug 2026). Bill passage in Winter/Budget session is uncertain; prior attempts stalled.",
+   "what_already_moved": "Not quantified.",
+   "entry_shocks": [
+    {
+     "node": "P_POWER_REFORM",
+     "ssu": 1.0,
+     "low": 0.3,
+     "high": 1.5,
+     "note": "reform step"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_POWER_DISTRIB_REFORM",
+      "P_POWER_REFORM",
+      "F_POWER_PRICE_IN",
+      "IEX"
+     ],
+     "explanation": "Market coupling can compress price spreads and volumes at exchange level"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_POWER_DISTRIB_REFORM",
+      "P_POWER_REFORM",
+      "F_POWER_DEMAND_IN",
+      "TATAPOWER"
+     ],
+     "explanation": "Better DISCOM finances improve receivables of gencos and T&D players"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TATAPOWER",
+     "direction": "+",
+     "why": "distribution licences"
+    },
+    {
+     "ticker": "NTPC",
+     "direction": "+",
+     "why": "receivables"
+    },
+    {
+     "ticker": "POWERGRID",
+     "direction": "+",
+     "why": "DISCOM payment security"
+    },
+    {
+     "ticker": "IEX",
+     "direction": "-",
+     "why": "market coupling"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.powerlinemagazine.in/",
+     "date": "2026-09-18",
+     "title": "Parallel Licensing framework proposed by MoP"
+    },
+    {
+     "url": "https://powerpeakdigest.com/",
+     "date": "2026-08-03",
+     "title": "IEX plea against market coupling rejected by SC"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_LABOUR_CODES_RULES",
+   "title": "Labour codes: states finalise rules (deadline 31 Oct 2026), wider operational rollout",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2026-12-31",
+   "window_end": "2027-04-01",
+   "prob_by_3m": 0.5,
+   "prob_by_12m": 0.8,
+   "description": "Centre pushed states/UTs to finalise Labour Code rules by 31 Oct 2026 (Rediff 25 Sep); Chief Labour Commissioner engaging Railway Board (4 Nov). Kerala forming a panel (22 Oct) signals state resistance. Codes took effect nationally in Nov 2025 (model knowledge).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_LABOUR_CODES",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "implementation"
+    },
+    {
+     "node": "F_WAGES_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.8,
+     "note": "gratuity/PF cost at 50% wage definition"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_LABOUR_CODES_RULES",
+      "P_LABOUR_CODES",
+      "F_WAGES_IN",
+      "TEAMLEASE"
+     ],
+     "explanation": "Higher statutory costs raise staffing cost, formalisation lifts compliant staffing firms"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_LABOUR_CODES_RULES",
+      "P_LABOUR_CODES",
+      "T_FORMALISATION",
+      "TCS"
+     ],
+     "explanation": "IT/labour-intensive firms see one-off provisions, small margin drag"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "gratuity provisions"
+    },
+    {
+     "ticker": "INDHOTEL",
+     "direction": "-",
+     "why": "labour-heavy"
+    },
+    {
+     "ticker": "TRENT",
+     "direction": "-/0",
+     "why": "retail staffing"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.rediff.com/",
+     "date": "2026-09-25",
+     "title": "Centre pushes states to finalise labour Code rules by October 31"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_ECOM_FDI_EXPORT_INVENTORY",
+   "title": "FDI eased for export-only inventory e-commerce; domestic B2C rules unchanged",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-08-24",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "DPIIT relaxed FDI norms for export-oriented inventory-based e-commerce (Bar and Bench 24 Aug); DGFT notified rules 5 Aug; domestic B2C rules unchanged (Moneycontrol 4 Sep). Retail trade bodies flag FDI concerns over Amazon/Flipkart quick commerce (8 Jul).",
+   "what_already_moved": "No domestic quick-commerce impact.",
+   "entry_shocks": [
+    {
+     "node": "P_FDI_RULES",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.4,
+     "note": "narrow liberalisation"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_ECOM_FDI_EXPORT_INVENTORY",
+      "P_FDI_RULES",
+      "T_QUICK_COMMERCE",
+      "ETERNAL"
+     ],
+     "explanation": "Domestic rules unchanged, so no direct benefit to quick commerce"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ETERNAL",
+     "direction": "0",
+     "why": "no change"
+    },
+    {
+     "ticker": "DMART",
+     "direction": "0",
+     "why": "domestic unchanged"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.barandbench.com/",
+     "date": "2026-08-24",
+     "title": "DPIIT relaxes FDI norms for export-oriented inventory-based e-commerce"
+    },
+    {
+     "url": "https://www.moneycontrol.com/",
+     "date": "2026-09-04",
+     "title": "India opens inventory-based e-commerce to FDI for exports"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_QCOMM_FDI_CRACKDOWN",
+   "title": "Government tightens FDI-linked inventory/marketplace rules hitting quick commerce",
+   "category": "sector_policy",
+   "status": "risk_scenario",
+   "date": "2027-03-01",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.04,
+   "prob_by_12m": 0.12,
+   "description": "Domestic retailer lobby pressing; foreign-owned operating models under lens (Business Standard 12 Jul 2026). Judgement-based low odds of formal restriction on dark-store inventory models.",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_FDI_RULES",
+     "ssu": -1.0,
+     "low": -1.5,
+     "high": -0.3,
+     "note": "tightening"
+    },
+    {
+     "node": "T_QUICK_COMMERCE",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "growth drag"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_QCOMM_FDI_CRACKDOWN",
+      "P_FDI_RULES",
+      "T_QUICK_COMMERCE",
+      "ETERNAL"
+     ],
+     "explanation": "Restrictions slow dark-store expansion for Eternal/Swiggy"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_QCOMM_FDI_CRACKDOWN",
+      "T_QUICK_COMMERCE",
+      "F_URBAN_DEMAND"
+     ],
+     "explanation": "Slower quick-commerce discretionary spend"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ETERNAL",
+     "direction": "-",
+     "why": "dark-store model"
+    },
+    {
+     "ticker": "SWIGGY",
+     "direction": "-",
+     "why": "dark-store model"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.business-standard.com/",
+     "date": "2026-07-12",
+     "title": "Why foreign-owned ecom firms' operating models are under the lens"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RBI_GOLD_LOAN_TIGHTEN",
+   "title": "RBI tightens gold-loan / unsecured and NBFC-bank lending norms after early stress",
+   "category": "sector_policy",
+   "status": "risk_scenario",
+   "date": "2027-01-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.1,
+   "prob_by_12m": 0.3,
+   "description": "Reuters (21 Oct 2026): top NBFCs flag early stress in gold loans; RBI governor (11 Sep) said RBI never intended NBFCs to offer revolving credit; NBFC bank-borrowing dependence rising (RBI Bulletin). RBI already finalised gold-loan norms in 2025 (model knowledge). Odds are judgement.",
+   "what_already_moved": "Not quantified.",
+   "entry_shocks": [
+    {
+     "node": "P_RBI_PRUDENTIAL",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "tightening"
+    },
+    {
+     "node": "F_UNSECURED_STRESS",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.8,
+     "note": "delinquency drift"
+    },
+    {
+     "node": "F_GOLD_DEMAND_IN",
+     "ssu": -0.3,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "gold loan availability"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_GOLD_LOAN_TIGHTEN",
+      "P_RBI_PRUDENTIAL",
+      "F_CREDIT_GROWTH_IN",
+      "MUTHOOTFIN"
+     ],
+     "explanation": "Lower LTVs and tighter disbursal slow gold-loan AUM growth"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_GOLD_LOAN_TIGHTEN",
+      "F_UNSECURED_STRESS",
+      "F_ASSET_QUALITY_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "Spillover raises credit costs across NBFC unsecured books"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "MUTHOOTFIN",
+     "direction": "-",
+     "why": "gold loans"
+    },
+    {
+     "ticker": "MANAPPURAM",
+     "direction": "-",
+     "why": "gold loans"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "unsecured"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.reuters.com/",
+     "date": "2026-10-21",
+     "title": "Top Indian non-bank lenders flag early signs of stress in loans against gold"
+    },
+    {
+     "url": "https://www.cnbctv18.com/",
+     "date": "2026-09-11",
+     "title": "RBI never intended NBFCs to offer revolving credit"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_IRDAI_COMMISSION_RESET",
+   "title": "IRDAI resets insurance commission/expense rules; post-GST-exemption demand",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.15,
+   "prob_by_12m": 0.5,
+   "description": "Commentary (12 Oct 2026) says IRDAI wants to reset commission rules as penetration stalls. Health premium GST was exempted in Sept 2025 (model knowledge); one-year-on, ITC on group health/life policies allowed (ET 8 Oct 2026). Insurance Amendment Act 2025 enabled FDI/ composites per reports (details unverified).",
+   "what_already_moved": "n/a",
+   "entry_shocks": [
+    {
+     "node": "P_IRDAI_REG",
+     "ssu": 0.7,
+     "low": 0.2,
+     "high": 1.2,
+     "note": "distribution cost caps"
+    }
+   ],
+   "chains": [
+    {
+     "order": 3,
+     "path": [
+      "EV_IRDAI_COMMISSION_RESET",
+      "P_IRDAI_REG",
+      "SBILIFE"
+     ],
+     "explanation": "Commission caps lower distribution cost but may hit agent push"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_IRDAI_COMMISSION_RESET",
+      "P_IRDAI_REG",
+      "F_DOMESTIC_FLOWS",
+      "HDFCLIFE"
+     ],
+     "explanation": "Slower new business growth offsets margin gain"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SBILIFE",
+     "direction": "+/-",
+     "why": "commission cap"
+    },
+    {
+     "ticker": "HDFCLIFE",
+     "direction": "+/-",
+     "why": "distribution"
+    },
+    {
+     "ticker": "ICICIGI",
+     "direction": "+/-",
+     "why": "ITC on group health"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://www.moneycontrol.com/",
+     "date": "2026-10-06",
+     "title": "How health insurance premiums have changed one year after GST removal"
+    },
+    {
+     "url": "https://economictimes.indiatimes.com/",
+     "date": "2026-10-08",
+     "title": "ITC on group health and life insurance allowed"
+    }
+   ],
+   "confidence": "low"
+  }
+ ],
+ "edges": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Higher repo raises lending rates and slows credit offtake",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/",
+     "date": "2026-10-07",
+     "note": "model knowledge; elasticity assumption"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "macro_transmission",
+   "w": 0.6,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Policy hike lifts front-end and, partially, 10Y yields",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/",
+     "date": "2026-10-07",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "macro_transmission",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Mortgage rates track G-sec; sales volumes respond",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.economictimes.indiatimes.com/",
+     "date": "2026-09-28",
+     "note": "Anarock Q3 sales +3% (other source -6%): rates sensitivity unproven"
+    }
+   ]
+  },
+  {
+   "src": "P_SEBI_DERIVATIVES",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "policy_effect",
+   "w": -15.0,
+   "w_low": -25.0,
+   "w_high": -5.0,
+   "lag": "0-3m",
+   "mechanism": "Tightening reduces retail derivative turnover (+1 tightening step = ~-15% activity)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.sebi.gov.in/",
+     "date": "2025-09-01",
+     "note": "SEBI study: 2024 F&O measures cut retail volumes; model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_DOMESTIC_FLOWS",
+   "relation": "policy_effect",
+   "w": -4.0,
+   "w_low": -8.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Higher tax lowers retail equity appetite",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.zeebiz.com/",
+     "date": "2026-10-13",
+     "note": "assumption"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "policy_effect",
+   "w": -6.0,
+   "w_low": -12.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "STT/CGT drives turnover",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.zeebiz.com/",
+     "date": "2026-10-13",
+     "note": "assumption"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "policy_effect",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Tighter prudential norms slow risky credit",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/",
+     "date": "2026-11-03",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "F_ASSET_QUALITY_IN",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "ECL front-loads provisions (reported credit cost)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/",
+     "date": "2026-11-03",
+     "note": "SBI Rs 19,500cr hit"
+    }
+   ]
+  },
+  {
+   "src": "P_TELECOM_TARIFFS",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.04,
+   "w_low": 0.02,
+   "w_high": 0.08,
+   "lag": "0-3m",
+   "mechanism": "Telecom ~2% of CPI basket",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.mospi.gov.in/",
+     "date": "2026-10-01",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "F_US_GENERIC_PRICING",
+   "relation": "policy_effect",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Plant shutdowns tighten supply, reducing price erosion",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.fda.gov/",
+     "date": "2026-08-14",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "F_BATTERY_MATERIALS",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Stronger EV push lifts battery cell demand",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.pib.gov.in/",
+     "date": "2026-10-01",
+     "note": "assumption"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "policy_effect",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Market coupling narrows price spreads",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://powerpeakdigest.com/",
+     "date": "2026-08-03",
+     "note": "SC rejects IEX challenge"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "F_WAGES_IN",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "Wage-definition change raises statutory costs",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rediff.com/",
+     "date": "2026-09-25",
+     "note": "model knowledge"
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [],
+ "factor_state_notes": [
+  {
+   "node": "F_REPO_IN",
+   "note": "RBI repo 5.50% after 7 Oct 2026 MPC (+25bp hike, stance 'calibrated tightening')",
+   "source": "https://www.business-standard.com/ (Google News search)",
+   "date": "2026-10-14"
+  },
+  {
+   "node": "F_GDP_IN",
+   "note": "RBI FY27 GDP forecast 7.1% (raised 40bp)",
+   "source": "Business Standard via Google News",
+   "date": "2026-10-07"
+  },
+  {
+   "node": "F_CPI_IN",
+   "note": "RBI FY27 CPI forecast 5.2% (raised 20bp)",
+   "source": "Business Standard via Google News",
+   "date": "2026-10-07"
+  },
+  {
+   "node": "F_ASSET_QUALITY_IN",
+   "note": "SBI estimates Rs 19,500cr post-tax ECL impact; Federal Bank 1.5-2% net worth",
+   "source": "Moneycontrol 3 Nov / NDTV Profit 17 Jul 2026",
+   "date": "2026-11-03"
+  },
+  {
+   "node": "F_HOUSING_DEMAND",
+   "note": "Housing: Anarock Q3 2026 top-7 city sales +3% to >1 lakh units; another report says -6%",
+   "source": "ET 28 Sep; BW 5 Oct 2026",
+   "date": "2026-09-28"
+  },
+  {
+   "node": "P_US_PHARMA_TARIFF",
+   "note": "US 100% pharma tariff effective 29 Sep 2026 with exemptions for select Indian speciality drugs",
+   "source": "Business Standard 29 Sep 2026",
+   "date": "2026-09-29"
+  },
+  {
+   "node": "P_TELECOM_TARIFFS",
+   "note": "Airtel postpaid +Rs 50 from 8 Oct 2026; broader 12-15% hike expected",
+   "source": "Livemint 7 Oct 2026",
+   "date": "2026-10-07"
+  },
+  {
+   "node": "P_DEFENCE_PROCUREMENT",
+   "note": "DAC AoN Rs 1.10 lakh crore on 7 Sep 2026; Rs 2.12 lakh crore reported 26 Oct",
+   "source": "The Hindu; New Indian Express",
+   "date": "2026-10-26"
+  }
+ ]
+}

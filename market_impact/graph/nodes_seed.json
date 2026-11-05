@@ -1,0 +1,3248 @@
+[
+ {
+  "id": "F_BRENT",
+  "type": "FACTOR",
+  "name": "Brent crude oil price",
+  "ssu": "+10% Brent",
+  "series": "BZ=F"
+ },
+ {
+  "id": "F_GAS_GLOBAL",
+  "type": "FACTOR",
+  "name": "Global natural gas / LNG price",
+  "ssu": "+15% gas/LNG price",
+  "series": "NG=F"
+ },
+ {
+  "id": "F_COAL_INTL",
+  "type": "FACTOR",
+  "name": "International thermal coal price",
+  "ssu": "+15% seaborne thermal coal",
+  "series": "MTF=F"
+ },
+ {
+  "id": "F_COAL_INDIA",
+  "type": "FACTOR",
+  "name": "Indian domestic coal price & availability cost",
+  "ssu": "+10% domestic coal cost (notified/e-auction)",
+  "series": null
+ },
+ {
+  "id": "F_COKING_COAL",
+  "type": "FACTOR",
+  "name": "Coking coal price",
+  "ssu": "+15% coking coal",
+  "series": null
+ },
+ {
+  "id": "F_POWER_PRICE_IN",
+  "type": "FACTOR",
+  "name": "Indian power exchange (IEX) prices",
+  "ssu": "+15% average spot power price",
+  "series": null
+ },
+ {
+  "id": "F_POWER_DEMAND_IN",
+  "type": "FACTOR",
+  "name": "Indian electricity demand",
+  "ssu": "+3 pp demand growth",
+  "series": null
+ },
+ {
+  "id": "F_REFINING_MARGIN",
+  "type": "FACTOR",
+  "name": "Refining margins (GRM / cracks)",
+  "ssu": "+$2/bbl gross refining margin",
+  "series": "HO=F"
+ },
+ {
+  "id": "F_PETROCHEM_SPREADS",
+  "type": "FACTOR",
+  "name": "Petrochemical / polymer spreads",
+  "ssu": "+10% polymer-naphtha spreads",
+  "series": null
+ },
+ {
+  "id": "F_STEEL_GLOBAL",
+  "type": "FACTOR",
+  "name": "Global HRC steel price",
+  "ssu": "+10% global HRC",
+  "series": "HRC=F"
+ },
+ {
+  "id": "F_STEEL_INDIA",
+  "type": "FACTOR",
+  "name": "Indian domestic steel price",
+  "ssu": "+7% domestic HRC/rebar price",
+  "series": null
+ },
+ {
+  "id": "F_IRON_ORE",
+  "type": "FACTOR",
+  "name": "Iron ore price",
+  "ssu": "+15% iron ore",
+  "series": "TIO=F"
+ },
+ {
+  "id": "F_COPPER",
+  "type": "FACTOR",
+  "name": "Copper price",
+  "ssu": "+10% copper",
+  "series": "HG=F"
+ },
+ {
+  "id": "F_ALUMINIUM",
+  "type": "FACTOR",
+  "name": "Aluminium price",
+  "ssu": "+10% aluminium",
+  "series": "ALI=F"
+ },
+ {
+  "id": "F_ZINC_LEAD",
+  "type": "FACTOR",
+  "name": "Zinc / lead price",
+  "ssu": "+10% zinc",
+  "series": null
+ },
+ {
+  "id": "F_GOLD",
+  "type": "FACTOR",
+  "name": "Gold price",
+  "ssu": "+8% gold (USD)",
+  "series": "GC=F"
+ },
+ {
+  "id": "F_SILVER",
+  "type": "FACTOR",
+  "name": "Silver price",
+  "ssu": "+12% silver",
+  "series": "SI=F"
+ },
+ {
+  "id": "F_BATTERY_MATERIALS",
+  "type": "FACTOR",
+  "name": "Lithium / battery cell cost",
+  "ssu": "+15% battery cell cost",
+  "series": null
+ },
+ {
+  "id": "F_WHEAT",
+  "type": "FACTOR",
+  "name": "Wheat price",
+  "ssu": "+10% wheat",
+  "series": "ZW=F"
+ },
+ {
+  "id": "F_RICE",
+  "type": "FACTOR",
+  "name": "Rice price",
+  "ssu": "+10% rice",
+  "series": null
+ },
+ {
+  "id": "F_SUGAR",
+  "type": "FACTOR",
+  "name": "Sugar price",
+  "ssu": "+10% sugar",
+  "series": "SB=F"
+ },
+ {
+  "id": "F_COTTON",
+  "type": "FACTOR",
+  "name": "Cotton price",
+  "ssu": "+10% cotton",
+  "series": "CT=F"
+ },
+ {
+  "id": "F_EDIBLE_OIL",
+  "type": "FACTOR",
+  "name": "Palm / edible oil price",
+  "ssu": "+10% edible oils",
+  "series": "ZS=F"
+ },
+ {
+  "id": "F_DAIRY",
+  "type": "FACTOR",
+  "name": "Milk / dairy input cost",
+  "ssu": "+8% milk procurement price",
+  "series": null
+ },
+ {
+  "id": "F_COCOA_COFFEE_TEA",
+  "type": "FACTOR",
+  "name": "Cocoa, coffee, tea prices",
+  "ssu": "+15% beverage commodities",
+  "series": null
+ },
+ {
+  "id": "F_PACKAGING",
+  "type": "FACTOR",
+  "name": "Packaging cost (paper, plastics)",
+  "ssu": "+10% packaging cost",
+  "series": null
+ },
+ {
+  "id": "F_FERTILISER_INPUTS",
+  "type": "FACTOR",
+  "name": "Ammonia / urea / phosphate input prices",
+  "ssu": "+15% fertiliser inputs",
+  "series": null
+ },
+ {
+  "id": "F_CHEM_FEEDSTOCK",
+  "type": "FACTOR",
+  "name": "Chemical feedstock (benzene, propylene, etc.)",
+  "ssu": "+10% feedstock",
+  "series": null
+ },
+ {
+  "id": "F_RUBBER",
+  "type": "FACTOR",
+  "name": "Natural / synthetic rubber price",
+  "ssu": "+10% rubber",
+  "series": null
+ },
+ {
+  "id": "F_USDINR",
+  "type": "FACTOR",
+  "name": "USD/INR exchange rate",
+  "ssu": "+3% USD/INR (rupee weaker)",
+  "series": "INR=X"
+ },
+ {
+  "id": "F_DXY",
+  "type": "FACTOR",
+  "name": "US dollar index",
+  "ssu": "+3% DXY",
+  "series": "DX-Y.NYB"
+ },
+ {
+  "id": "F_USDCNY",
+  "type": "FACTOR",
+  "name": "USD/CNY",
+  "ssu": "+3% USD/CNY (yuan weaker)",
+  "series": "CNY=X"
+ },
+ {
+  "id": "F_REPO_IN",
+  "type": "FACTOR",
+  "name": "RBI repo rate",
+  "ssu": "+25 bp repo",
+  "series": null
+ },
+ {
+  "id": "F_GSEC_10Y_IN",
+  "type": "FACTOR",
+  "name": "India 10-year G-sec yield",
+  "ssu": "+25 bp yield",
+  "series": null
+ },
+ {
+  "id": "F_LIQUIDITY_IN",
+  "type": "FACTOR",
+  "name": "Indian banking system liquidity",
+  "ssu": "+1 lakh crore surplus liquidity",
+  "series": null
+ },
+ {
+  "id": "F_CREDIT_SPREADS_IN",
+  "type": "FACTOR",
+  "name": "Indian corporate credit spreads",
+  "ssu": "+50 bp spreads",
+  "series": null
+ },
+ {
+  "id": "F_US_10Y",
+  "type": "FACTOR",
+  "name": "US 10-year Treasury yield",
+  "ssu": "+25 bp yield",
+  "series": "^TNX"
+ },
+ {
+  "id": "F_FED_FUNDS",
+  "type": "FACTOR",
+  "name": "US Fed funds rate",
+  "ssu": "+25 bp",
+  "series": "^IRX"
+ },
+ {
+  "id": "F_FPI_FLOWS",
+  "type": "FACTOR",
+  "name": "Foreign portfolio flows into Indian equities",
+  "ssu": "+US$5 bn net inflow per quarter",
+  "series": null
+ },
+ {
+  "id": "F_DOMESTIC_FLOWS",
+  "type": "FACTOR",
+  "name": "Domestic SIP / DII flows",
+  "ssu": "+10% monthly SIP + DII inflow",
+  "series": null
+ },
+ {
+  "id": "F_EQUITY_ACTIVITY_IN",
+  "type": "FACTOR",
+  "name": "Indian equity market volumes & retail activity",
+  "ssu": "+20% traded value / demat additions",
+  "series": null
+ },
+ {
+  "id": "F_RISK_SENTIMENT",
+  "type": "FACTOR",
+  "name": "Global risk aversion (VIX)",
+  "ssu": "+5 VIX points",
+  "series": "^VIX"
+ },
+ {
+  "id": "F_US_EQUITIES",
+  "type": "FACTOR",
+  "name": "US equity market",
+  "ssu": "+5% S&P 500",
+  "series": "^GSPC"
+ },
+ {
+  "id": "F_GDP_IN",
+  "type": "FACTOR",
+  "name": "India real GDP growth",
+  "ssu": "+1 pp",
+  "series": null
+ },
+ {
+  "id": "F_CPI_IN",
+  "type": "FACTOR",
+  "name": "India CPI inflation",
+  "ssu": "+1 pp",
+  "series": null
+ },
+ {
+  "id": "F_FOOD_INFLATION_IN",
+  "type": "FACTOR",
+  "name": "India food inflation",
+  "ssu": "+2 pp",
+  "series": null
+ },
+ {
+  "id": "F_RURAL_DEMAND",
+  "type": "FACTOR",
+  "name": "Rural consumption growth",
+  "ssu": "+5 pp",
+  "series": null
+ },
+ {
+  "id": "F_URBAN_DEMAND",
+  "type": "FACTOR",
+  "name": "Urban discretionary consumption growth",
+  "ssu": "+5 pp",
+  "series": null
+ },
+ {
+  "id": "F_MONSOON",
+  "type": "FACTOR",
+  "name": "Monsoon rainfall vs normal",
+  "ssu": "+10% above long-period average",
+  "series": null
+ },
+ {
+  "id": "F_GOVT_CAPEX",
+  "type": "FACTOR",
+  "name": "Central + state government capex",
+  "ssu": "+10% capex growth",
+  "series": null
+ },
+ {
+  "id": "F_PRIVATE_CAPEX",
+  "type": "FACTOR",
+  "name": "Private corporate capex",
+  "ssu": "+10% capex growth",
+  "series": null
+ },
+ {
+  "id": "F_HOUSING_DEMAND",
+  "type": "FACTOR",
+  "name": "Residential real-estate sales",
+  "ssu": "+10% sales volume",
+  "series": null
+ },
+ {
+  "id": "F_CREDIT_GROWTH_IN",
+  "type": "FACTOR",
+  "name": "Bank credit growth",
+  "ssu": "+3 pp",
+  "series": null
+ },
+ {
+  "id": "F_DEPOSIT_GROWTH_IN",
+  "type": "FACTOR",
+  "name": "Bank deposit growth / funding ease",
+  "ssu": "+3 pp",
+  "series": null
+ },
+ {
+  "id": "F_ASSET_QUALITY_IN",
+  "type": "FACTOR",
+  "name": "Credit cost / NPA cycle (higher = worse)",
+  "ssu": "+50 bp credit cost",
+  "series": null
+ },
+ {
+  "id": "F_UNSECURED_STRESS",
+  "type": "FACTOR",
+  "name": "Unsecured retail & microfinance stress (higher = worse)",
+  "ssu": "+1 pp delinquencies",
+  "series": null
+ },
+ {
+  "id": "F_WAGES_IN",
+  "type": "FACTOR",
+  "name": "Indian wage / employee-cost inflation",
+  "ssu": "+2 pp",
+  "series": null
+ },
+ {
+  "id": "F_TRAVEL_DEMAND",
+  "type": "FACTOR",
+  "name": "Air/hotel/tourism demand",
+  "ssu": "+10%",
+  "series": null
+ },
+ {
+  "id": "F_GOLD_DEMAND_IN",
+  "type": "FACTOR",
+  "name": "Indian jewellery/gold demand volume",
+  "ssu": "+10%",
+  "series": null
+ },
+ {
+  "id": "F_AUTO_DEMAND_IN",
+  "type": "FACTOR",
+  "name": "Indian vehicle demand",
+  "ssu": "+10% volumes",
+  "series": null
+ },
+ {
+  "id": "F_US_GDP",
+  "type": "FACTOR",
+  "name": "US growth",
+  "ssu": "+1 pp",
+  "series": null
+ },
+ {
+  "id": "F_EU_GDP",
+  "type": "FACTOR",
+  "name": "Europe growth",
+  "ssu": "+1 pp",
+  "series": null
+ },
+ {
+  "id": "F_CHINA_GDP",
+  "type": "FACTOR",
+  "name": "China growth / stimulus",
+  "ssu": "+1 pp",
+  "series": null
+ },
+ {
+  "id": "F_CHINA_STEEL_EXPORTS",
+  "type": "FACTOR",
+  "name": "China steel exports",
+  "ssu": "+15% y/y",
+  "series": null
+ },
+ {
+  "id": "F_CHINA_CHEM_EXPORTS",
+  "type": "FACTOR",
+  "name": "China chemical/API dumping intensity",
+  "ssu": "+15% export volumes / price cuts",
+  "series": null
+ },
+ {
+  "id": "F_US_TECH_SPEND",
+  "type": "FACTOR",
+  "name": "US/EU enterprise IT services spend",
+  "ssu": "+5% growth",
+  "series": null
+ },
+ {
+  "id": "F_AI_CAPEX",
+  "type": "FACTOR",
+  "name": "Global AI / data-centre capex",
+  "ssu": "+10% growth",
+  "series": null
+ },
+ {
+  "id": "F_US_GENERIC_PRICING",
+  "type": "FACTOR",
+  "name": "US generic drug price erosion (higher = worse)",
+  "ssu": "+5 pp erosion",
+  "series": null
+ },
+ {
+  "id": "F_SHIPPING_RATES",
+  "type": "FACTOR",
+  "name": "Global container / freight rates",
+  "ssu": "+25%",
+  "series": null
+ },
+ {
+  "id": "F_GULF_REMITTANCES",
+  "type": "FACTOR",
+  "name": "Gulf economy / remittances",
+  "ssu": "+10%",
+  "series": null
+ },
+ {
+  "id": "F_SEMICONDUCTOR_SUPPLY",
+  "type": "FACTOR",
+  "name": "Chip/electronics component supply tightness (higher = tighter)",
+  "ssu": "+1 = tightening",
+  "series": null
+ },
+ {
+  "id": "P_US_TARIFF_INDIA",
+  "type": "POLICY",
+  "name": "US tariffs on Indian goods",
+  "ssu": "+10 pp average tariff",
+  "series": null
+ },
+ {
+  "id": "P_US_PHARMA_TARIFF",
+  "type": "POLICY",
+  "name": "US tariffs on pharmaceuticals",
+  "ssu": "+10 pp on Indian pharma exports",
+  "series": null
+ },
+ {
+  "id": "P_US_VISA_OUTSOURCING",
+  "type": "POLICY",
+  "name": "US H-1B / outsourcing restrictions",
+  "ssu": "+1 = material tightening",
+  "series": null
+ },
+ {
+  "id": "P_STEEL_DUTY_IN",
+  "type": "POLICY",
+  "name": "Indian safeguard/anti-dumping duty on steel imports",
+  "ssu": "+10 pp effective duty",
+  "series": null
+ },
+ {
+  "id": "P_ANTI_DUMPING_IN",
+  "type": "POLICY",
+  "name": "Indian anti-dumping duties (chemicals, solar, others)",
+  "ssu": "+1 = new broad duties",
+  "series": null
+ },
+ {
+  "id": "P_GST_CONSUMPTION",
+  "type": "POLICY",
+  "name": "GST rate cuts on consumer goods/services",
+  "ssu": "+1 = broad cut (~2-5 pp on affected items)",
+  "series": null
+ },
+ {
+  "id": "P_FUEL_TAX_IN",
+  "type": "POLICY",
+  "name": "Fuel excise / retail price policy (+ = higher taxes/regulated squeeze)",
+  "ssu": "+1 = Rs 2/litre excise rise",
+  "series": null
+ },
+ {
+  "id": "P_WINDFALL_EXPORT_TAX",
+  "type": "POLICY",
+  "name": "Windfall / export taxes on commodities",
+  "ssu": "+1 = imposition",
+  "series": null
+ },
+ {
+  "id": "P_PLI",
+  "type": "POLICY",
+  "name": "Production-linked incentive schemes",
+  "ssu": "+1 = expansion/disbursement",
+  "series": null
+ },
+ {
+  "id": "P_DEFENCE_PROCUREMENT",
+  "type": "POLICY",
+  "name": "Indian defence procurement & indigenisation",
+  "ssu": "+10% domestic orders",
+  "series": null
+ },
+ {
+  "id": "P_RAILWAY_CAPEX",
+  "type": "POLICY",
+  "name": "Railway capex",
+  "ssu": "+10%",
+  "series": null
+ },
+ {
+  "id": "P_RENEWABLE_SUPPORT",
+  "type": "POLICY",
+  "name": "Renewable / transmission policy support",
+  "ssu": "+1 = stronger support",
+  "series": null
+ },
+ {
+  "id": "P_EV_POLICY",
+  "type": "POLICY",
+  "name": "EV incentives / mandates",
+  "ssu": "+1 = stronger EV push",
+  "series": null
+ },
+ {
+  "id": "P_SEBI_DERIVATIVES",
+  "type": "POLICY",
+  "name": "SEBI F&O / market-structure tightening",
+  "ssu": "+1 = tightening step",
+  "series": null
+ },
+ {
+  "id": "P_RBI_PRUDENTIAL",
+  "type": "POLICY",
+  "name": "RBI prudential tightening (risk weights, LCR, provisioning)",
+  "ssu": "+1 = tightening step",
+  "series": null
+ },
+ {
+  "id": "P_TELECOM_TARIFFS",
+  "type": "POLICY",
+  "name": "Mobile tariff hikes",
+  "ssu": "+10% ARPU via tariff hike",
+  "series": null
+ },
+ {
+  "id": "P_USFDA_ENFORCEMENT",
+  "type": "POLICY",
+  "name": "USFDA inspection/enforcement intensity",
+  "ssu": "+1 = stricter",
+  "series": null
+ },
+ {
+  "id": "P_GOLD_IMPORT_DUTY",
+  "type": "POLICY",
+  "name": "Gold import duty",
+  "ssu": "+5 pp",
+  "series": null
+ },
+ {
+  "id": "P_FERT_SUBSIDY",
+  "type": "POLICY",
+  "name": "Fertiliser subsidy generosity",
+  "ssu": "+1 = higher subsidy",
+  "series": null
+ },
+ {
+  "id": "P_SUGAR_ETHANOL",
+  "type": "POLICY",
+  "name": "Sugar export / ethanol blending policy",
+  "ssu": "+1 = more favourable to millers",
+  "series": null
+ },
+ {
+  "id": "P_IRDAI_REG",
+  "type": "POLICY",
+  "name": "Insurance regulation tightening (IRDAI)",
+  "ssu": "+1 = tightening",
+  "series": null
+ },
+ {
+  "id": "P_POWER_REFORM",
+  "type": "POLICY",
+  "name": "Power market / DISCOM reform",
+  "ssu": "+1 = reform progress",
+  "series": null
+ },
+ {
+  "id": "P_MINING_ROYALTY",
+  "type": "POLICY",
+  "name": "Mining royalty / mineral tax burden",
+  "ssu": "+1 = higher",
+  "series": null
+ },
+ {
+  "id": "P_LABOUR_CODES",
+  "type": "POLICY",
+  "name": "Labour code implementation cost",
+  "ssu": "+1 = implementation",
+  "series": null
+ },
+ {
+  "id": "P_INFRA_SPENDING_ROADS",
+  "type": "POLICY",
+  "name": "Road/highway awarding",
+  "ssu": "+10%",
+  "series": null
+ },
+ {
+  "id": "P_HOUSING_POLICY",
+  "type": "POLICY",
+  "name": "Affordable-housing / home-loan support",
+  "ssu": "+1 = stronger support",
+  "series": null
+ },
+ {
+  "id": "P_CAPITAL_GAINS_TAX",
+  "type": "POLICY",
+  "name": "Capital-gains / securities tax burden",
+  "ssu": "+1 = higher",
+  "series": null
+ },
+ {
+  "id": "P_FDI_RULES",
+  "type": "POLICY",
+  "name": "FDI liberalisation",
+  "ssu": "+1 = liberalisation",
+  "series": null
+ },
+ {
+  "id": "C_USA",
+  "type": "COUNTRY",
+  "name": "United States demand / relations",
+  "ssu": "+1 pp US demand growth",
+  "series": null
+ },
+ {
+  "id": "C_CHINA",
+  "type": "COUNTRY",
+  "name": "China (demand and competition)",
+  "ssu": "+1 pp China growth",
+  "series": null
+ },
+ {
+  "id": "C_EU_UK",
+  "type": "COUNTRY",
+  "name": "Europe and UK demand",
+  "ssu": "+1 pp demand growth",
+  "series": null
+ },
+ {
+  "id": "C_GCC",
+  "type": "COUNTRY",
+  "name": "Gulf Cooperation Council economies",
+  "ssu": "+1 pp growth",
+  "series": null
+ },
+ {
+  "id": "C_RUSSIA",
+  "type": "COUNTRY",
+  "name": "Russia (oil discounts, defence, sanctions)",
+  "ssu": "+1 = closer trade access / larger discounts",
+  "series": null
+ },
+ {
+  "id": "C_SOUTH_SE_ASIA",
+  "type": "COUNTRY",
+  "name": "South & South-East Asia demand",
+  "ssu": "+1 pp growth",
+  "series": null
+ },
+ {
+  "id": "C_AFRICA_LATAM",
+  "type": "COUNTRY",
+  "name": "Africa & Latin America demand",
+  "ssu": "+1 pp growth",
+  "series": null
+ },
+ {
+  "id": "C_JAPAN_KOREA",
+  "type": "COUNTRY",
+  "name": "Japan & Korea (supply chains, capital)",
+  "ssu": "+1 pp growth",
+  "series": null
+ },
+ {
+  "id": "C_MIDEAST_CONFLICT",
+  "type": "COUNTRY",
+  "name": "Middle East conflict intensity",
+  "ssu": "+1 = escalation",
+  "series": null
+ },
+ {
+  "id": "C_INDIA_PAKISTAN",
+  "type": "COUNTRY",
+  "name": "India\u2013Pakistan tension",
+  "ssu": "+1 = escalation",
+  "series": null
+ },
+ {
+  "id": "C_RED_SEA",
+  "type": "COUNTRY",
+  "name": "Red Sea / Suez shipping disruption",
+  "ssu": "+1 = disruption",
+  "series": null
+ },
+ {
+  "id": "C_US_CHINA_DECOUPLING",
+  "type": "COUNTRY",
+  "name": "US\u2013China trade decoupling",
+  "ssu": "+1 = more decoupling",
+  "series": null
+ },
+ {
+  "id": "T_GENAI_SERVICES",
+  "type": "THEME",
+  "name": "GenAI substitution of IT/BPO labour (higher = more substitution)",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_CHINA_PLUS_ONE",
+  "type": "THEME",
+  "name": "China+1 manufacturing relocation to India",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_ENERGY_TRANSITION",
+  "type": "THEME",
+  "name": "Energy transition investment",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_PREMIUMISATION",
+  "type": "THEME",
+  "name": "Consumer premiumisation",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_FINANCIALISATION",
+  "type": "THEME",
+  "name": "Household savings shift to financial assets",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_QUICK_COMMERCE",
+  "type": "THEME",
+  "name": "Quick-commerce disruption of retail/FMCG distribution",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_DATA_CENTRES_IN",
+  "type": "THEME",
+  "name": "Indian data-centre build-out",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_GLP1",
+  "type": "THEME",
+  "name": "GLP-1 / obesity drug adoption",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_DEFENCE_EXPORTS",
+  "type": "THEME",
+  "name": "Indian defence exports",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_GRID_ELECTRIFICATION",
+  "type": "THEME",
+  "name": "Grid & electrification capex",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_FORMALISATION",
+  "type": "THEME",
+  "name": "Formalisation of the economy",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "T_DIGITAL_PAYMENTS",
+  "type": "THEME",
+  "name": "Digital payments / UPI disruption of incumbents",
+  "ssu": "+1",
+  "series": null
+ },
+ {
+  "id": "I_PRIVATE_BANKS",
+  "type": "INDUSTRY",
+  "name": "Private banks",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_PSU_BANKS",
+  "type": "INDUSTRY",
+  "name": "Public sector banks",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_NBFC_VEHICLE_CONSUMER",
+  "type": "INDUSTRY",
+  "name": "NBFC \u2013 vehicle/consumer/diversified",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_HOUSING_FINANCE",
+  "type": "INDUSTRY",
+  "name": "Housing finance",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_MICROFINANCE",
+  "type": "INDUSTRY",
+  "name": "Microfinance / small finance",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_GOLD_LOANS",
+  "type": "INDUSTRY",
+  "name": "Gold-loan NBFCs",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_INFRA_POWER_FINANCE",
+  "type": "INDUSTRY",
+  "name": "Infrastructure & power finance (PFC/REC/IRFC)",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_LIFE_INSURANCE",
+  "type": "INDUSTRY",
+  "name": "Life insurance",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_GENERAL_INSURANCE",
+  "type": "INDUSTRY",
+  "name": "General / health insurance",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_AMC_WEALTH_BROKING",
+  "type": "INDUSTRY",
+  "name": "Asset management, wealth, broking",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_MARKET_INFRA",
+  "type": "INDUSTRY",
+  "name": "Exchanges, depositories, RTAs",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_IT_SERVICES",
+  "type": "INDUSTRY",
+  "name": "IT services",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_SOFTWARE_PLATFORMS",
+  "type": "INDUSTRY",
+  "name": "Software products / engineering R&D services",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_PHARMA_US_GENERICS",
+  "type": "INDUSTRY",
+  "name": "Pharma \u2013 US generics exporters",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_PHARMA_DOMESTIC",
+  "type": "INDUSTRY",
+  "name": "Pharma \u2013 domestic branded",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_CDMO_API",
+  "type": "INDUSTRY",
+  "name": "CDMO / API manufacturing",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_HOSPITALS_DIAGNOSTICS",
+  "type": "INDUSTRY",
+  "name": "Hospitals & diagnostics",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_AUTO_PV",
+  "type": "INDUSTRY",
+  "name": "Passenger vehicles",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_AUTO_2W",
+  "type": "INDUSTRY",
+  "name": "Two-wheelers",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_AUTO_CV_TRACTOR",
+  "type": "INDUSTRY",
+  "name": "Commercial vehicles & tractors",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_AUTO_COMPONENTS",
+  "type": "INDUSTRY",
+  "name": "Auto components & tyres",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_STEEL",
+  "type": "INDUSTRY",
+  "name": "Steel",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_NONFERROUS",
+  "type": "INDUSTRY",
+  "name": "Aluminium, zinc, copper",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_MINING",
+  "type": "INDUSTRY",
+  "name": "Mining (coal, iron ore)",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_OIL_UPSTREAM",
+  "type": "INDUSTRY",
+  "name": "Oil & gas upstream",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_REFINING_OMC",
+  "type": "INDUSTRY",
+  "name": "Refining & oil marketing",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_GAS_DISTRIBUTION",
+  "type": "INDUSTRY",
+  "name": "Gas transmission & city gas",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_POWER_THERMAL",
+  "type": "INDUSTRY",
+  "name": "Thermal power generation",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_RENEWABLES",
+  "type": "INDUSTRY",
+  "name": "Renewable power",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_POWER_GRID",
+  "type": "INDUSTRY",
+  "name": "Power transmission & distribution utilities",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_CAPITAL_GOODS",
+  "type": "INDUSTRY",
+  "name": "Capital goods & electrical equipment",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_DEFENCE",
+  "type": "INDUSTRY",
+  "name": "Defence & aerospace",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_RAILWAYS",
+  "type": "INDUSTRY",
+  "name": "Railway equipment & PSUs",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_CONSTRUCTION_EPC",
+  "type": "INDUSTRY",
+  "name": "Construction / EPC",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_CEMENT",
+  "type": "INDUSTRY",
+  "name": "Cement",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_REAL_ESTATE",
+  "type": "INDUSTRY",
+  "name": "Real estate developers",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_BUILDING_MATERIALS",
+  "type": "INDUSTRY",
+  "name": "Building materials (pipes, tiles, wires, paints)",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_CONSUMER_DURABLES",
+  "type": "INDUSTRY",
+  "name": "Consumer durables & electricals",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_FMCG_STAPLES",
+  "type": "INDUSTRY",
+  "name": "FMCG staples & foods",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_ALCOHOL_TOBACCO",
+  "type": "INDUSTRY",
+  "name": "Alcohol & tobacco",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_RETAIL",
+  "type": "INDUSTRY",
+  "name": "Retail (apparel, grocery, department)",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_QSR_FOOD_SERVICES",
+  "type": "INDUSTRY",
+  "name": "QSR / food services",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_JEWELLERY",
+  "type": "INDUSTRY",
+  "name": "Jewellery",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_TEXTILES",
+  "type": "INDUSTRY",
+  "name": "Textiles",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_CHEMICALS_SPECIALTY",
+  "type": "INDUSTRY",
+  "name": "Specialty chemicals",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_CHEMICALS_FERTILISER",
+  "type": "INDUSTRY",
+  "name": "Commodity chemicals & fertilisers",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_AGROCHEMICALS",
+  "type": "INDUSTRY",
+  "name": "Agrochemicals",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_TELECOM",
+  "type": "INDUSTRY",
+  "name": "Telecom operators & towers",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_AVIATION",
+  "type": "INDUSTRY",
+  "name": "Aviation & airports",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_LOGISTICS_PORTS",
+  "type": "INDUSTRY",
+  "name": "Logistics, shipping & ports",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_HOTELS_TRAVEL",
+  "type": "INDUSTRY",
+  "name": "Hotels & travel",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_INTERNET_PLATFORMS",
+  "type": "INDUSTRY",
+  "name": "Internet platforms (food delivery, e-commerce, fintech)",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_ELECTRONICS_EMS",
+  "type": "INDUSTRY",
+  "name": "Electronics manufacturing services",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_CONGLOMERATE",
+  "type": "INDUSTRY",
+  "name": "Diversified conglomerates",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "I_MEDIA_ENTERTAINMENT",
+  "type": "INDUSTRY",
+  "name": "Media & entertainment",
+  "ssu": "+1 = 10% shift in industry profit pool",
+  "series": null
+ },
+ {
+  "id": "360ONE",
+  "type": "COMPANY",
+  "name": "360 ONE WAM Ltd.",
+  "ssu": "% equity value",
+  "series": "360ONE.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE466L01038"
+ },
+ {
+  "id": "ABB",
+  "type": "COMPANY",
+  "name": "ABB India Ltd.",
+  "ssu": "% equity value",
+  "series": "ABB.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE117A01022"
+ },
+ {
+  "id": "APLAPOLLO",
+  "type": "COMPANY",
+  "name": "APL Apollo Tubes Ltd.",
+  "ssu": "% equity value",
+  "series": "APLAPOLLO.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE702C01027"
+ },
+ {
+  "id": "AUBANK",
+  "type": "COMPANY",
+  "name": "AU Small Finance Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "AUBANK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE949L01017"
+ },
+ {
+  "id": "ADANIENSOL",
+  "type": "COMPANY",
+  "name": "Adani Energy Solutions Ltd.",
+  "ssu": "% equity value",
+  "series": "ADANIENSOL.NS",
+  "nse_industry": "Power",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE931S01010"
+ },
+ {
+  "id": "ADANIENT",
+  "type": "COMPANY",
+  "name": "Adani Enterprises Ltd.",
+  "ssu": "% equity value",
+  "series": "ADANIENT.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "NIFTY_50",
+  "isin": "INE423A01024"
+ },
+ {
+  "id": "ADANIGREEN",
+  "type": "COMPANY",
+  "name": "Adani Green Energy Ltd.",
+  "ssu": "% equity value",
+  "series": "ADANIGREEN.NS",
+  "nse_industry": "Power",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE364U01010"
+ },
+ {
+  "id": "ADANIPORTS",
+  "type": "COMPANY",
+  "name": "Adani Ports and Special Economic Zone Ltd.",
+  "ssu": "% equity value",
+  "series": "ADANIPORTS.NS",
+  "nse_industry": "Services",
+  "tier": "NIFTY_50",
+  "isin": "INE742F01042"
+ },
+ {
+  "id": "ADANIPOWER",
+  "type": "COMPANY",
+  "name": "Adani Power Ltd.",
+  "ssu": "% equity value",
+  "series": "ADANIPOWER.NS",
+  "nse_industry": "Power",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE814H01029"
+ },
+ {
+  "id": "ATGL",
+  "type": "COMPANY",
+  "name": "Adani Total Gas Ltd.",
+  "ssu": "% equity value",
+  "series": "ATGL.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "MIDCAP_100",
+  "isin": "INE399L01023"
+ },
+ {
+  "id": "ABCAPITAL",
+  "type": "COMPANY",
+  "name": "Aditya Birla Capital Ltd.",
+  "ssu": "% equity value",
+  "series": "ABCAPITAL.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE674K01013"
+ },
+ {
+  "id": "AMBUJACEM",
+  "type": "COMPANY",
+  "name": "Ambuja Cements Ltd.",
+  "ssu": "% equity value",
+  "series": "AMBUJACEM.NS",
+  "nse_industry": "Construction Materials",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE079A01024"
+ },
+ {
+  "id": "APARINDS",
+  "type": "COMPANY",
+  "name": "Apar Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "APARINDS.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE372A01015"
+ },
+ {
+  "id": "APOLLOHOSP",
+  "type": "COMPANY",
+  "name": "Apollo Hospitals Enterprise Ltd.",
+  "ssu": "% equity value",
+  "series": "APOLLOHOSP.NS",
+  "nse_industry": "Healthcare",
+  "tier": "NIFTY_50",
+  "isin": "INE437A01024"
+ },
+ {
+  "id": "ASHOKLEY",
+  "type": "COMPANY",
+  "name": "Ashok Leyland Ltd.",
+  "ssu": "% equity value",
+  "series": "ASHOKLEY.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE208A01029"
+ },
+ {
+  "id": "ASIANPAINT",
+  "type": "COMPANY",
+  "name": "Asian Paints Ltd.",
+  "ssu": "% equity value",
+  "series": "ASIANPAINT.NS",
+  "nse_industry": "Consumer Durables",
+  "tier": "NIFTY_50",
+  "isin": "INE021A01026"
+ },
+ {
+  "id": "ASTRAL",
+  "type": "COMPANY",
+  "name": "Astral Ltd.",
+  "ssu": "% equity value",
+  "series": "ASTRAL.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE006I01046"
+ },
+ {
+  "id": "AUROPHARMA",
+  "type": "COMPANY",
+  "name": "Aurobindo Pharma Ltd.",
+  "ssu": "% equity value",
+  "series": "AUROPHARMA.NS",
+  "nse_industry": "Healthcare",
+  "tier": "MIDCAP_100",
+  "isin": "INE406A01037"
+ },
+ {
+  "id": "DMART",
+  "type": "COMPANY",
+  "name": "Avenue Supermarts Ltd.",
+  "ssu": "% equity value",
+  "series": "DMART.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE192R01011"
+ },
+ {
+  "id": "AXISBANK",
+  "type": "COMPANY",
+  "name": "Axis Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "AXISBANK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE238A01034"
+ },
+ {
+  "id": "BSE",
+  "type": "COMPANY",
+  "name": "BSE Ltd.",
+  "ssu": "% equity value",
+  "series": "BSE.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE118H01025"
+ },
+ {
+  "id": "BAJAJ-AUTO",
+  "type": "COMPANY",
+  "name": "Bajaj Auto Ltd.",
+  "ssu": "% equity value",
+  "series": "BAJAJ-AUTO.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_50",
+  "isin": "INE917I01010"
+ },
+ {
+  "id": "BAJFINANCE",
+  "type": "COMPANY",
+  "name": "Bajaj Finance Ltd.",
+  "ssu": "% equity value",
+  "series": "BAJFINANCE.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE296A01032"
+ },
+ {
+  "id": "BAJAJFINSV",
+  "type": "COMPANY",
+  "name": "Bajaj Finserv Ltd.",
+  "ssu": "% equity value",
+  "series": "BAJAJFINSV.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE918I01026"
+ },
+ {
+  "id": "BAJAJHLDNG",
+  "type": "COMPANY",
+  "name": "Bajaj Holdings & Investment Ltd.",
+  "ssu": "% equity value",
+  "series": "BAJAJHLDNG.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE118A01012"
+ },
+ {
+  "id": "BANKBARODA",
+  "type": "COMPANY",
+  "name": "Bank of Baroda",
+  "ssu": "% equity value",
+  "series": "BANKBARODA.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE028A01039"
+ },
+ {
+  "id": "BANKINDIA",
+  "type": "COMPANY",
+  "name": "Bank of India",
+  "ssu": "% equity value",
+  "series": "BANKINDIA.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE084A01016"
+ },
+ {
+  "id": "MAHABANK",
+  "type": "COMPANY",
+  "name": "Bank of Maharashtra",
+  "ssu": "% equity value",
+  "series": "MAHABANK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE457A01014"
+ },
+ {
+  "id": "BDL",
+  "type": "COMPANY",
+  "name": "Bharat Dynamics Ltd.",
+  "ssu": "% equity value",
+  "series": "BDL.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE171Z01026"
+ },
+ {
+  "id": "BEL",
+  "type": "COMPANY",
+  "name": "Bharat Electronics Ltd.",
+  "ssu": "% equity value",
+  "series": "BEL.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_50",
+  "isin": "INE263A01024"
+ },
+ {
+  "id": "BHARATFORG",
+  "type": "COMPANY",
+  "name": "Bharat Forge Ltd.",
+  "ssu": "% equity value",
+  "series": "BHARATFORG.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "MIDCAP_100",
+  "isin": "INE465A01025"
+ },
+ {
+  "id": "BHEL",
+  "type": "COMPANY",
+  "name": "Bharat Heavy Electricals Ltd.",
+  "ssu": "% equity value",
+  "series": "BHEL.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE257A01026"
+ },
+ {
+  "id": "BPCL",
+  "type": "COMPANY",
+  "name": "Bharat Petroleum Corporation Ltd.",
+  "ssu": "% equity value",
+  "series": "BPCL.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE029A01011"
+ },
+ {
+  "id": "BHARTIARTL",
+  "type": "COMPANY",
+  "name": "Bharti Airtel Ltd.",
+  "ssu": "% equity value",
+  "series": "BHARTIARTL.NS",
+  "nse_industry": "Telecommunication",
+  "tier": "NIFTY_50",
+  "isin": "INE397D01024"
+ },
+ {
+  "id": "GROWW",
+  "type": "COMPANY",
+  "name": "Billionbrains Garage Ventures Ltd.",
+  "ssu": "% equity value",
+  "series": "GROWW.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE0HOQ01053"
+ },
+ {
+  "id": "BIOCON",
+  "type": "COMPANY",
+  "name": "Biocon Ltd.",
+  "ssu": "% equity value",
+  "series": "BIOCON.NS",
+  "nse_industry": "Healthcare",
+  "tier": "MIDCAP_100",
+  "isin": "INE376G01013"
+ },
+ {
+  "id": "BLUESTARCO",
+  "type": "COMPANY",
+  "name": "Blue Star Ltd.",
+  "ssu": "% equity value",
+  "series": "BLUESTARCO.NS",
+  "nse_industry": "Consumer Durables",
+  "tier": "MIDCAP_100",
+  "isin": "INE472A01039"
+ },
+ {
+  "id": "BOSCHLTD",
+  "type": "COMPANY",
+  "name": "Bosch Ltd.",
+  "ssu": "% equity value",
+  "series": "BOSCHLTD.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE323A01026"
+ },
+ {
+  "id": "BRITANNIA",
+  "type": "COMPANY",
+  "name": "Britannia Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "BRITANNIA.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE216A01030"
+ },
+ {
+  "id": "CGPOWER",
+  "type": "COMPANY",
+  "name": "CG Power and Industrial Solutions Ltd.",
+  "ssu": "% equity value",
+  "series": "CGPOWER.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE067A01029"
+ },
+ {
+  "id": "CANBK",
+  "type": "COMPANY",
+  "name": "Canara Bank",
+  "ssu": "% equity value",
+  "series": "CANBK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE476A01022"
+ },
+ {
+  "id": "CHOLAFIN",
+  "type": "COMPANY",
+  "name": "Cholamandalam Investment and Finance Company Ltd.",
+  "ssu": "% equity value",
+  "series": "CHOLAFIN.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE121A01024"
+ },
+ {
+  "id": "CIPLA",
+  "type": "COMPANY",
+  "name": "Cipla Ltd.",
+  "ssu": "% equity value",
+  "series": "CIPLA.NS",
+  "nse_industry": "Healthcare",
+  "tier": "NIFTY_50",
+  "isin": "INE059A01026"
+ },
+ {
+  "id": "COALINDIA",
+  "type": "COMPANY",
+  "name": "Coal India Ltd.",
+  "ssu": "% equity value",
+  "series": "COALINDIA.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "NIFTY_50",
+  "isin": "INE522F01014"
+ },
+ {
+  "id": "COCHINSHIP",
+  "type": "COMPANY",
+  "name": "Cochin Shipyard Ltd.",
+  "ssu": "% equity value",
+  "series": "COCHINSHIP.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE704P01025"
+ },
+ {
+  "id": "COFORGE",
+  "type": "COMPANY",
+  "name": "Coforge Ltd.",
+  "ssu": "% equity value",
+  "series": "COFORGE.NS",
+  "nse_industry": "Information Technology",
+  "tier": "MIDCAP_100",
+  "isin": "INE591G01025"
+ },
+ {
+  "id": "COLPAL",
+  "type": "COMPANY",
+  "name": "Colgate Palmolive (India) Ltd.",
+  "ssu": "% equity value",
+  "series": "COLPAL.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE259A01022"
+ },
+ {
+  "id": "CONCOR",
+  "type": "COMPANY",
+  "name": "Container Corporation of India Ltd.",
+  "ssu": "% equity value",
+  "series": "CONCOR.NS",
+  "nse_industry": "Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE111A01025"
+ },
+ {
+  "id": "CUMMINSIND",
+  "type": "COMPANY",
+  "name": "Cummins India Ltd.",
+  "ssu": "% equity value",
+  "series": "CUMMINSIND.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE298A01020"
+ },
+ {
+  "id": "DLF",
+  "type": "COMPANY",
+  "name": "DLF Ltd.",
+  "ssu": "% equity value",
+  "series": "DLF.NS",
+  "nse_industry": "Realty",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE271C01023"
+ },
+ {
+  "id": "DABUR",
+  "type": "COMPANY",
+  "name": "Dabur India Ltd.",
+  "ssu": "% equity value",
+  "series": "DABUR.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE016A01026"
+ },
+ {
+  "id": "DIVISLAB",
+  "type": "COMPANY",
+  "name": "Divi's Laboratories Ltd.",
+  "ssu": "% equity value",
+  "series": "DIVISLAB.NS",
+  "nse_industry": "Healthcare",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE361B01024"
+ },
+ {
+  "id": "DIXON",
+  "type": "COMPANY",
+  "name": "Dixon Technologies (India) Ltd.",
+  "ssu": "% equity value",
+  "series": "DIXON.NS",
+  "nse_industry": "Consumer Durables",
+  "tier": "MIDCAP_100",
+  "isin": "INE935N01020"
+ },
+ {
+  "id": "DRREDDY",
+  "type": "COMPANY",
+  "name": "Dr. Reddy's Laboratories Ltd.",
+  "ssu": "% equity value",
+  "series": "DRREDDY.NS",
+  "nse_industry": "Healthcare",
+  "tier": "NIFTY_50",
+  "isin": "INE089A01031"
+ },
+ {
+  "id": "EICHERMOT",
+  "type": "COMPANY",
+  "name": "Eicher Motors Ltd.",
+  "ssu": "% equity value",
+  "series": "EICHERMOT.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_50",
+  "isin": "INE066A01021"
+ },
+ {
+  "id": "ETERNAL",
+  "type": "COMPANY",
+  "name": "Eternal Ltd.",
+  "ssu": "% equity value",
+  "series": "ETERNAL.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "NIFTY_50",
+  "isin": "INE758T01015"
+ },
+ {
+  "id": "EXIDEIND",
+  "type": "COMPANY",
+  "name": "Exide Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "EXIDEIND.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "MIDCAP_100",
+  "isin": "INE302A01020"
+ },
+ {
+  "id": "NYKAA",
+  "type": "COMPANY",
+  "name": "FSN E-Commerce Ventures Ltd.",
+  "ssu": "% equity value",
+  "series": "NYKAA.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE388Y01029"
+ },
+ {
+  "id": "FEDERALBNK",
+  "type": "COMPANY",
+  "name": "Federal Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "FEDERALBNK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE171A01029"
+ },
+ {
+  "id": "FORTIS",
+  "type": "COMPANY",
+  "name": "Fortis Healthcare Ltd.",
+  "ssu": "% equity value",
+  "series": "FORTIS.NS",
+  "nse_industry": "Healthcare",
+  "tier": "MIDCAP_100",
+  "isin": "INE061F01013"
+ },
+ {
+  "id": "GAIL",
+  "type": "COMPANY",
+  "name": "GAIL (India) Ltd.",
+  "ssu": "% equity value",
+  "series": "GAIL.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE129A01019"
+ },
+ {
+  "id": "GVT&D",
+  "type": "COMPANY",
+  "name": "GE Vernova T&D India Ltd.",
+  "ssu": "% equity value",
+  "series": "GVT&D.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE200A01026"
+ },
+ {
+  "id": "GMRAIRPORT",
+  "type": "COMPANY",
+  "name": "GMR Airports Ltd.",
+  "ssu": "% equity value",
+  "series": "GMRAIRPORT.NS",
+  "nse_industry": "Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE776C01039"
+ },
+ {
+  "id": "GLENMARK",
+  "type": "COMPANY",
+  "name": "Glenmark Pharmaceuticals Ltd.",
+  "ssu": "% equity value",
+  "series": "GLENMARK.NS",
+  "nse_industry": "Healthcare",
+  "tier": "MIDCAP_100",
+  "isin": "INE935A01035"
+ },
+ {
+  "id": "GODFRYPHLP",
+  "type": "COMPANY",
+  "name": "Godfrey Phillips India Ltd.",
+  "ssu": "% equity value",
+  "series": "GODFRYPHLP.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE260B01028"
+ },
+ {
+  "id": "GODREJCP",
+  "type": "COMPANY",
+  "name": "Godrej Consumer Products Ltd.",
+  "ssu": "% equity value",
+  "series": "GODREJCP.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE102D01028"
+ },
+ {
+  "id": "GODREJPROP",
+  "type": "COMPANY",
+  "name": "Godrej Properties Ltd.",
+  "ssu": "% equity value",
+  "series": "GODREJPROP.NS",
+  "nse_industry": "Realty",
+  "tier": "MIDCAP_100",
+  "isin": "INE484J01027"
+ },
+ {
+  "id": "GRASIM",
+  "type": "COMPANY",
+  "name": "Grasim Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "GRASIM.NS",
+  "nse_industry": "Construction Materials",
+  "tier": "NIFTY_50",
+  "isin": "INE047A01021"
+ },
+ {
+  "id": "HCLTECH",
+  "type": "COMPANY",
+  "name": "HCL Technologies Ltd.",
+  "ssu": "% equity value",
+  "series": "HCLTECH.NS",
+  "nse_industry": "Information Technology",
+  "tier": "NIFTY_50",
+  "isin": "INE860A01027"
+ },
+ {
+  "id": "HDFCAMC",
+  "type": "COMPANY",
+  "name": "HDFC Asset Management Company Ltd.",
+  "ssu": "% equity value",
+  "series": "HDFCAMC.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE127D01025"
+ },
+ {
+  "id": "HDFCBANK",
+  "type": "COMPANY",
+  "name": "HDFC Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "HDFCBANK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE040A01034"
+ },
+ {
+  "id": "HDFCLIFE",
+  "type": "COMPANY",
+  "name": "HDFC Life Insurance Company Ltd.",
+  "ssu": "% equity value",
+  "series": "HDFCLIFE.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE795G01014"
+ },
+ {
+  "id": "HAVELLS",
+  "type": "COMPANY",
+  "name": "Havells India Ltd.",
+  "ssu": "% equity value",
+  "series": "HAVELLS.NS",
+  "nse_industry": "Consumer Durables",
+  "tier": "MIDCAP_100",
+  "isin": "INE176B01034"
+ },
+ {
+  "id": "HEROMOTOCO",
+  "type": "COMPANY",
+  "name": "Hero MotoCorp Ltd.",
+  "ssu": "% equity value",
+  "series": "HEROMOTOCO.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "MIDCAP_100",
+  "isin": "INE158A01026"
+ },
+ {
+  "id": "HINDALCO",
+  "type": "COMPANY",
+  "name": "Hindalco Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "HINDALCO.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "NIFTY_50",
+  "isin": "INE038A01020"
+ },
+ {
+  "id": "HAL",
+  "type": "COMPANY",
+  "name": "Hindustan Aeronautics Ltd.",
+  "ssu": "% equity value",
+  "series": "HAL.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE066F01020"
+ },
+ {
+  "id": "HINDCOPPER",
+  "type": "COMPANY",
+  "name": "Hindustan Copper Ltd.",
+  "ssu": "% equity value",
+  "series": "HINDCOPPER.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "MIDCAP_100",
+  "isin": "INE531E01026"
+ },
+ {
+  "id": "HINDPETRO",
+  "type": "COMPANY",
+  "name": "Hindustan Petroleum Corporation Ltd.",
+  "ssu": "% equity value",
+  "series": "HINDPETRO.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "MIDCAP_100",
+  "isin": "INE094A01015"
+ },
+ {
+  "id": "HINDUNILVR",
+  "type": "COMPANY",
+  "name": "Hindustan Unilever Ltd.",
+  "ssu": "% equity value",
+  "series": "HINDUNILVR.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "NIFTY_50",
+  "isin": "INE030A01027"
+ },
+ {
+  "id": "HINDZINC",
+  "type": "COMPANY",
+  "name": "Hindustan Zinc Ltd.",
+  "ssu": "% equity value",
+  "series": "HINDZINC.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE267A01025"
+ },
+ {
+  "id": "POWERINDIA",
+  "type": "COMPANY",
+  "name": "Hitachi Energy India Ltd.",
+  "ssu": "% equity value",
+  "series": "POWERINDIA.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE07Y701011"
+ },
+ {
+  "id": "HYUNDAI",
+  "type": "COMPANY",
+  "name": "Hyundai Motor India Ltd.",
+  "ssu": "% equity value",
+  "series": "HYUNDAI.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE0V6F01027"
+ },
+ {
+  "id": "ICICIBANK",
+  "type": "COMPANY",
+  "name": "ICICI Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "ICICIBANK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE090A01021"
+ },
+ {
+  "id": "ICICIGI",
+  "type": "COMPANY",
+  "name": "ICICI Lombard General Insurance Company Ltd.",
+  "ssu": "% equity value",
+  "series": "ICICIGI.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE765G01017"
+ },
+ {
+  "id": "ICICIAMC",
+  "type": "COMPANY",
+  "name": "ICICI Prudential Asset Management Company Ltd.",
+  "ssu": "% equity value",
+  "series": "ICICIAMC.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE346A01027"
+ },
+ {
+  "id": "IDFCFIRSTB",
+  "type": "COMPANY",
+  "name": "IDFC First Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "IDFCFIRSTB.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE092T01019"
+ },
+ {
+  "id": "ITC",
+  "type": "COMPANY",
+  "name": "ITC Ltd.",
+  "ssu": "% equity value",
+  "series": "ITC.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "NIFTY_50",
+  "isin": "INE154A01025"
+ },
+ {
+  "id": "INDIANB",
+  "type": "COMPANY",
+  "name": "Indian Bank",
+  "ssu": "% equity value",
+  "series": "INDIANB.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE562A01011"
+ },
+ {
+  "id": "INDHOTEL",
+  "type": "COMPANY",
+  "name": "Indian Hotels Co. Ltd.",
+  "ssu": "% equity value",
+  "series": "INDHOTEL.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE053A01029"
+ },
+ {
+  "id": "IOC",
+  "type": "COMPANY",
+  "name": "Indian Oil Corporation Ltd.",
+  "ssu": "% equity value",
+  "series": "IOC.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE242A01010"
+ },
+ {
+  "id": "IRCTC",
+  "type": "COMPANY",
+  "name": "Indian Railway Catering And Tourism Corporation Ltd.",
+  "ssu": "% equity value",
+  "series": "IRCTC.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE335Y01020"
+ },
+ {
+  "id": "IRFC",
+  "type": "COMPANY",
+  "name": "Indian Railway Finance Corporation Ltd.",
+  "ssu": "% equity value",
+  "series": "IRFC.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE053F01010"
+ },
+ {
+  "id": "IREDA",
+  "type": "COMPANY",
+  "name": "Indian Renewable Energy Development Agency Ltd.",
+  "ssu": "% equity value",
+  "series": "IREDA.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE202E01016"
+ },
+ {
+  "id": "INDUSTOWER",
+  "type": "COMPANY",
+  "name": "Indus Towers Ltd.",
+  "ssu": "% equity value",
+  "series": "INDUSTOWER.NS",
+  "nse_industry": "Telecommunication",
+  "tier": "MIDCAP_100",
+  "isin": "INE121J01017"
+ },
+ {
+  "id": "INDUSINDBK",
+  "type": "COMPANY",
+  "name": "IndusInd Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "INDUSINDBK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE095A01012"
+ },
+ {
+  "id": "NAUKRI",
+  "type": "COMPANY",
+  "name": "Info Edge (India) Ltd.",
+  "ssu": "% equity value",
+  "series": "NAUKRI.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE663F01032"
+ },
+ {
+  "id": "INFY",
+  "type": "COMPANY",
+  "name": "Infosys Ltd.",
+  "ssu": "% equity value",
+  "series": "INFY.NS",
+  "nse_industry": "Information Technology",
+  "tier": "NIFTY_50",
+  "isin": "INE009A01021"
+ },
+ {
+  "id": "INDIGO",
+  "type": "COMPANY",
+  "name": "InterGlobe Aviation Ltd.",
+  "ssu": "% equity value",
+  "series": "INDIGO.NS",
+  "nse_industry": "Services",
+  "tier": "NIFTY_50",
+  "isin": "INE646L01027"
+ },
+ {
+  "id": "JSWENERGY",
+  "type": "COMPANY",
+  "name": "JSW Energy Ltd.",
+  "ssu": "% equity value",
+  "series": "JSWENERGY.NS",
+  "nse_industry": "Power",
+  "tier": "MIDCAP_100",
+  "isin": "INE121E01018"
+ },
+ {
+  "id": "JSWSTEEL",
+  "type": "COMPANY",
+  "name": "JSW Steel Ltd.",
+  "ssu": "% equity value",
+  "series": "JSWSTEEL.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "NIFTY_50",
+  "isin": "INE019A01038"
+ },
+ {
+  "id": "JINDALSTEL",
+  "type": "COMPANY",
+  "name": "Jindal Steel Ltd.",
+  "ssu": "% equity value",
+  "series": "JINDALSTEL.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE749A01030"
+ },
+ {
+  "id": "JIOFIN",
+  "type": "COMPANY",
+  "name": "Jio Financial Services Ltd.",
+  "ssu": "% equity value",
+  "series": "JIOFIN.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE758E01017"
+ },
+ {
+  "id": "JUBLFOOD",
+  "type": "COMPANY",
+  "name": "Jubilant Foodworks Ltd.",
+  "ssu": "% equity value",
+  "series": "JUBLFOOD.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE797F01020"
+ },
+ {
+  "id": "KEI",
+  "type": "COMPANY",
+  "name": "KEI Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "KEI.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE878B01027"
+ },
+ {
+  "id": "KALYANKJIL",
+  "type": "COMPANY",
+  "name": "Kalyan Jewellers India Ltd.",
+  "ssu": "% equity value",
+  "series": "KALYANKJIL.NS",
+  "nse_industry": "Consumer Durables",
+  "tier": "MIDCAP_100",
+  "isin": "INE303R01014"
+ },
+ {
+  "id": "KOTAKBANK",
+  "type": "COMPANY",
+  "name": "Kotak Mahindra Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "KOTAKBANK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE237A01036"
+ },
+ {
+  "id": "LTF",
+  "type": "COMPANY",
+  "name": "L&T Finance Ltd.",
+  "ssu": "% equity value",
+  "series": "LTF.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE498L01015"
+ },
+ {
+  "id": "LGEINDIA",
+  "type": "COMPANY",
+  "name": "LG Electronics India Ltd.",
+  "ssu": "% equity value",
+  "series": "LGEINDIA.NS",
+  "nse_industry": "Consumer Durables",
+  "tier": "MIDCAP_100",
+  "isin": "INE324D01010"
+ },
+ {
+  "id": "LICHSGFIN",
+  "type": "COMPANY",
+  "name": "LIC Housing Finance Ltd.",
+  "ssu": "% equity value",
+  "series": "LICHSGFIN.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE115A01026"
+ },
+ {
+  "id": "LTM",
+  "type": "COMPANY",
+  "name": "LTM Ltd.",
+  "ssu": "% equity value",
+  "series": "LTM.NS",
+  "nse_industry": "Information Technology",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE214T01019"
+ },
+ {
+  "id": "LT",
+  "type": "COMPANY",
+  "name": "Larsen & Toubro Ltd.",
+  "ssu": "% equity value",
+  "series": "LT.NS",
+  "nse_industry": "Construction",
+  "tier": "NIFTY_50",
+  "isin": "INE018A01030"
+ },
+ {
+  "id": "LAURUSLABS",
+  "type": "COMPANY",
+  "name": "Laurus Labs Ltd.",
+  "ssu": "% equity value",
+  "series": "LAURUSLABS.NS",
+  "nse_industry": "Healthcare",
+  "tier": "MIDCAP_100",
+  "isin": "INE947Q01028"
+ },
+ {
+  "id": "LENSKART",
+  "type": "COMPANY",
+  "name": "Lenskart Solutions Ltd.",
+  "ssu": "% equity value",
+  "series": "LENSKART.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE956O01016"
+ },
+ {
+  "id": "LICI",
+  "type": "COMPANY",
+  "name": "Life Insurance Corporation of India",
+  "ssu": "% equity value",
+  "series": "LICI.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE0J1Y01017"
+ },
+ {
+  "id": "LODHA",
+  "type": "COMPANY",
+  "name": "Lodha Developers Ltd.",
+  "ssu": "% equity value",
+  "series": "LODHA.NS",
+  "nse_industry": "Realty",
+  "tier": "MIDCAP_100",
+  "isin": "INE670K01029"
+ },
+ {
+  "id": "LUPIN",
+  "type": "COMPANY",
+  "name": "Lupin Ltd.",
+  "ssu": "% equity value",
+  "series": "LUPIN.NS",
+  "nse_industry": "Healthcare",
+  "tier": "MIDCAP_100",
+  "isin": "INE326A01037"
+ },
+ {
+  "id": "MRF",
+  "type": "COMPANY",
+  "name": "MRF Ltd.",
+  "ssu": "% equity value",
+  "series": "MRF.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "MIDCAP_100",
+  "isin": "INE883A01011"
+ },
+ {
+  "id": "M&MFIN",
+  "type": "COMPANY",
+  "name": "Mahindra & Mahindra Financial Services Ltd.",
+  "ssu": "% equity value",
+  "series": "M&MFIN.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE774D01024"
+ },
+ {
+  "id": "M&M",
+  "type": "COMPANY",
+  "name": "Mahindra & Mahindra Ltd.",
+  "ssu": "% equity value",
+  "series": "M&M.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_50",
+  "isin": "INE101A01026"
+ },
+ {
+  "id": "MANKIND",
+  "type": "COMPANY",
+  "name": "Mankind Pharma Ltd.",
+  "ssu": "% equity value",
+  "series": "MANKIND.NS",
+  "nse_industry": "Healthcare",
+  "tier": "MIDCAP_100",
+  "isin": "INE634S01028"
+ },
+ {
+  "id": "MARICO",
+  "type": "COMPANY",
+  "name": "Marico Ltd.",
+  "ssu": "% equity value",
+  "series": "MARICO.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE196A01026"
+ },
+ {
+  "id": "MARUTI",
+  "type": "COMPANY",
+  "name": "Maruti Suzuki India Ltd.",
+  "ssu": "% equity value",
+  "series": "MARUTI.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_50",
+  "isin": "INE585B01010"
+ },
+ {
+  "id": "MFSL",
+  "type": "COMPANY",
+  "name": "Max Financial Services Ltd.",
+  "ssu": "% equity value",
+  "series": "MFSL.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE180A01020"
+ },
+ {
+  "id": "MAXHEALTH",
+  "type": "COMPANY",
+  "name": "Max Healthcare Institute Ltd.",
+  "ssu": "% equity value",
+  "series": "MAXHEALTH.NS",
+  "nse_industry": "Healthcare",
+  "tier": "NIFTY_50",
+  "isin": "INE027H01010"
+ },
+ {
+  "id": "MAZDOCK",
+  "type": "COMPANY",
+  "name": "Mazagoan Dock Shipbuilders Ltd.",
+  "ssu": "% equity value",
+  "series": "MAZDOCK.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE249Z01020"
+ },
+ {
+  "id": "MEESHO",
+  "type": "COMPANY",
+  "name": "Meesho Ltd.",
+  "ssu": "% equity value",
+  "series": "MEESHO.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE0VDM01015"
+ },
+ {
+  "id": "MOTILALOFS",
+  "type": "COMPANY",
+  "name": "Motilal Oswal Financial Services Ltd.",
+  "ssu": "% equity value",
+  "series": "MOTILALOFS.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE338I01027"
+ },
+ {
+  "id": "MPHASIS",
+  "type": "COMPANY",
+  "name": "MphasiS Ltd.",
+  "ssu": "% equity value",
+  "series": "MPHASIS.NS",
+  "nse_industry": "Information Technology",
+  "tier": "MIDCAP_100",
+  "isin": "INE356A01018"
+ },
+ {
+  "id": "MCX",
+  "type": "COMPANY",
+  "name": "Multi Commodity Exchange of India Ltd.",
+  "ssu": "% equity value",
+  "series": "MCX.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE745G01043"
+ },
+ {
+  "id": "MUTHOOTFIN",
+  "type": "COMPANY",
+  "name": "Muthoot Finance Ltd.",
+  "ssu": "% equity value",
+  "series": "MUTHOOTFIN.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE414G01012"
+ },
+ {
+  "id": "NHPC",
+  "type": "COMPANY",
+  "name": "NHPC Ltd.",
+  "ssu": "% equity value",
+  "series": "NHPC.NS",
+  "nse_industry": "Power",
+  "tier": "MIDCAP_100",
+  "isin": "INE848E01016"
+ },
+ {
+  "id": "NLCINDIA",
+  "type": "COMPANY",
+  "name": "NLC India Ltd.",
+  "ssu": "% equity value",
+  "series": "NLCINDIA.NS",
+  "nse_industry": "Power",
+  "tier": "MIDCAP_100",
+  "isin": "INE589A01014"
+ },
+ {
+  "id": "NMDC",
+  "type": "COMPANY",
+  "name": "NMDC Ltd.",
+  "ssu": "% equity value",
+  "series": "NMDC.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "MIDCAP_100",
+  "isin": "INE584A01023"
+ },
+ {
+  "id": "NTPC",
+  "type": "COMPANY",
+  "name": "NTPC Ltd.",
+  "ssu": "% equity value",
+  "series": "NTPC.NS",
+  "nse_industry": "Power",
+  "tier": "NIFTY_50",
+  "isin": "INE733E01010"
+ },
+ {
+  "id": "NATIONALUM",
+  "type": "COMPANY",
+  "name": "National Aluminium Co. Ltd.",
+  "ssu": "% equity value",
+  "series": "NATIONALUM.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "MIDCAP_100",
+  "isin": "INE139A01034"
+ },
+ {
+  "id": "NESTLEIND",
+  "type": "COMPANY",
+  "name": "Nestle India Ltd.",
+  "ssu": "% equity value",
+  "series": "NESTLEIND.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "NIFTY_50",
+  "isin": "INE239A01024"
+ },
+ {
+  "id": "OBEROIRLTY",
+  "type": "COMPANY",
+  "name": "Oberoi Realty Ltd.",
+  "ssu": "% equity value",
+  "series": "OBEROIRLTY.NS",
+  "nse_industry": "Realty",
+  "tier": "MIDCAP_100",
+  "isin": "INE093I01010"
+ },
+ {
+  "id": "ONGC",
+  "type": "COMPANY",
+  "name": "Oil & Natural Gas Corporation Ltd.",
+  "ssu": "% equity value",
+  "series": "ONGC.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "NIFTY_50",
+  "isin": "INE213A01029"
+ },
+ {
+  "id": "OIL",
+  "type": "COMPANY",
+  "name": "Oil India Ltd.",
+  "ssu": "% equity value",
+  "series": "OIL.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "MIDCAP_100",
+  "isin": "INE274J01014"
+ },
+ {
+  "id": "PAYTM",
+  "type": "COMPANY",
+  "name": "One 97 Communications Ltd.",
+  "ssu": "% equity value",
+  "series": "PAYTM.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE982J01020"
+ },
+ {
+  "id": "OFSS",
+  "type": "COMPANY",
+  "name": "Oracle Financial Services Software Ltd.",
+  "ssu": "% equity value",
+  "series": "OFSS.NS",
+  "nse_industry": "Information Technology",
+  "tier": "MIDCAP_100",
+  "isin": "INE881D01027"
+ },
+ {
+  "id": "POLICYBZR",
+  "type": "COMPANY",
+  "name": "PB Fintech Ltd.",
+  "ssu": "% equity value",
+  "series": "POLICYBZR.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE417T01026"
+ },
+ {
+  "id": "PIIND",
+  "type": "COMPANY",
+  "name": "PI Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "PIIND.NS",
+  "nse_industry": "Chemicals",
+  "tier": "MIDCAP_100",
+  "isin": "INE603J01030"
+ },
+ {
+  "id": "PAGEIND",
+  "type": "COMPANY",
+  "name": "Page Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "PAGEIND.NS",
+  "nse_industry": "Textiles",
+  "tier": "MIDCAP_100",
+  "isin": "INE761H01022"
+ },
+ {
+  "id": "PATANJALI",
+  "type": "COMPANY",
+  "name": "Patanjali Foods Ltd.",
+  "ssu": "% equity value",
+  "series": "PATANJALI.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE619A01035"
+ },
+ {
+  "id": "PERSISTENT",
+  "type": "COMPANY",
+  "name": "Persistent Systems Ltd.",
+  "ssu": "% equity value",
+  "series": "PERSISTENT.NS",
+  "nse_industry": "Information Technology",
+  "tier": "MIDCAP_100",
+  "isin": "INE262H01021"
+ },
+ {
+  "id": "PHOENIXLTD",
+  "type": "COMPANY",
+  "name": "Phoenix Mills Ltd.",
+  "ssu": "% equity value",
+  "series": "PHOENIXLTD.NS",
+  "nse_industry": "Realty",
+  "tier": "MIDCAP_100",
+  "isin": "INE211B01039"
+ },
+ {
+  "id": "PIDILITIND",
+  "type": "COMPANY",
+  "name": "Pidilite Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "PIDILITIND.NS",
+  "nse_industry": "Chemicals",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE318A01026"
+ },
+ {
+  "id": "POLYCAB",
+  "type": "COMPANY",
+  "name": "Polycab India Ltd.",
+  "ssu": "% equity value",
+  "series": "POLYCAB.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE455K01017"
+ },
+ {
+  "id": "PFC",
+  "type": "COMPANY",
+  "name": "Power Finance Corporation Ltd.",
+  "ssu": "% equity value",
+  "series": "PFC.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE134E01011"
+ },
+ {
+  "id": "POWERGRID",
+  "type": "COMPANY",
+  "name": "Power Grid Corporation of India Ltd.",
+  "ssu": "% equity value",
+  "series": "POWERGRID.NS",
+  "nse_industry": "Power",
+  "tier": "NIFTY_50",
+  "isin": "INE752E01010"
+ },
+ {
+  "id": "PREMIERENE",
+  "type": "COMPANY",
+  "name": "Premier Energies Ltd.",
+  "ssu": "% equity value",
+  "series": "PREMIERENE.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE0BS701011"
+ },
+ {
+  "id": "PRESTIGE",
+  "type": "COMPANY",
+  "name": "Prestige Estates Projects Ltd.",
+  "ssu": "% equity value",
+  "series": "PRESTIGE.NS",
+  "nse_industry": "Realty",
+  "tier": "MIDCAP_100",
+  "isin": "INE811K01011"
+ },
+ {
+  "id": "PNB",
+  "type": "COMPANY",
+  "name": "Punjab National Bank",
+  "ssu": "% equity value",
+  "series": "PNB.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE160A01022"
+ },
+ {
+  "id": "RECLTD",
+  "type": "COMPANY",
+  "name": "REC Ltd.",
+  "ssu": "% equity value",
+  "series": "RECLTD.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE020B01018"
+ },
+ {
+  "id": "RADICO",
+  "type": "COMPANY",
+  "name": "Radico Khaitan Ltd",
+  "ssu": "% equity value",
+  "series": "RADICO.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE944F01028"
+ },
+ {
+  "id": "RVNL",
+  "type": "COMPANY",
+  "name": "Rail Vikas Nigam Ltd.",
+  "ssu": "% equity value",
+  "series": "RVNL.NS",
+  "nse_industry": "Construction",
+  "tier": "MIDCAP_100",
+  "isin": "INE415G01027"
+ },
+ {
+  "id": "RELIANCE",
+  "type": "COMPANY",
+  "name": "Reliance Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "RELIANCE.NS",
+  "nse_industry": "Oil Gas & Consumable Fuels",
+  "tier": "NIFTY_50",
+  "isin": "INE002A01018"
+ },
+ {
+  "id": "SBICARD",
+  "type": "COMPANY",
+  "name": "SBI Cards and Payment Services Ltd.",
+  "ssu": "% equity value",
+  "series": "SBICARD.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE018E01016"
+ },
+ {
+  "id": "SBILIFE",
+  "type": "COMPANY",
+  "name": "SBI Life Insurance Company Ltd.",
+  "ssu": "% equity value",
+  "series": "SBILIFE.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE123W01016"
+ },
+ {
+  "id": "SRF",
+  "type": "COMPANY",
+  "name": "SRF Ltd.",
+  "ssu": "% equity value",
+  "series": "SRF.NS",
+  "nse_industry": "Chemicals",
+  "tier": "MIDCAP_100",
+  "isin": "INE647A01010"
+ },
+ {
+  "id": "MOTHERSON",
+  "type": "COMPANY",
+  "name": "Samvardhana Motherson International Ltd.",
+  "ssu": "% equity value",
+  "series": "MOTHERSON.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE775A01035"
+ },
+ {
+  "id": "SHRIRAMFIN",
+  "type": "COMPANY",
+  "name": "Shriram Finance Ltd.",
+  "ssu": "% equity value",
+  "series": "SHRIRAMFIN.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE721A01047"
+ },
+ {
+  "id": "ENRIN",
+  "type": "COMPANY",
+  "name": "Siemens Energy India Ltd.",
+  "ssu": "% equity value",
+  "series": "ENRIN.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE1NPP01017"
+ },
+ {
+  "id": "SIEMENS",
+  "type": "COMPANY",
+  "name": "Siemens Ltd.",
+  "ssu": "% equity value",
+  "series": "SIEMENS.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE003A01024"
+ },
+ {
+  "id": "SOLARINDS",
+  "type": "COMPANY",
+  "name": "Solar Industries India Ltd.",
+  "ssu": "% equity value",
+  "series": "SOLARINDS.NS",
+  "nse_industry": "Chemicals",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE343H01029"
+ },
+ {
+  "id": "SBIN",
+  "type": "COMPANY",
+  "name": "State Bank of India",
+  "ssu": "% equity value",
+  "series": "SBIN.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_50",
+  "isin": "INE062A01020"
+ },
+ {
+  "id": "SAIL",
+  "type": "COMPANY",
+  "name": "Steel Authority of India Ltd.",
+  "ssu": "% equity value",
+  "series": "SAIL.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "MIDCAP_100",
+  "isin": "INE114A01011"
+ },
+ {
+  "id": "SUNPHARMA",
+  "type": "COMPANY",
+  "name": "Sun Pharmaceutical Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "SUNPHARMA.NS",
+  "nse_industry": "Healthcare",
+  "tier": "NIFTY_50",
+  "isin": "INE044A01036"
+ },
+ {
+  "id": "SUPREMEIND",
+  "type": "COMPANY",
+  "name": "Supreme Industries Ltd.",
+  "ssu": "% equity value",
+  "series": "SUPREMEIND.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE195A01028"
+ },
+ {
+  "id": "SUZLON",
+  "type": "COMPANY",
+  "name": "Suzlon Energy Ltd.",
+  "ssu": "% equity value",
+  "series": "SUZLON.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE040H01021"
+ },
+ {
+  "id": "SWIGGY",
+  "type": "COMPANY",
+  "name": "Swiggy Ltd.",
+  "ssu": "% equity value",
+  "series": "SWIGGY.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE00H001014"
+ },
+ {
+  "id": "TVSMOTOR",
+  "type": "COMPANY",
+  "name": "TVS Motor Company Ltd.",
+  "ssu": "% equity value",
+  "series": "TVSMOTOR.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE494B01023"
+ },
+ {
+  "id": "TATACAP",
+  "type": "COMPANY",
+  "name": "Tata Capital Ltd.",
+  "ssu": "% equity value",
+  "series": "TATACAP.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE976I01016"
+ },
+ {
+  "id": "TATACOMM",
+  "type": "COMPANY",
+  "name": "Tata Communications Ltd.",
+  "ssu": "% equity value",
+  "series": "TATACOMM.NS",
+  "nse_industry": "Telecommunication",
+  "tier": "MIDCAP_100",
+  "isin": "INE151A01013"
+ },
+ {
+  "id": "TCS",
+  "type": "COMPANY",
+  "name": "Tata Consultancy Services Ltd.",
+  "ssu": "% equity value",
+  "series": "TCS.NS",
+  "nse_industry": "Information Technology",
+  "tier": "NIFTY_50",
+  "isin": "INE467B01029"
+ },
+ {
+  "id": "TATACONSUM",
+  "type": "COMPANY",
+  "name": "Tata Consumer Products Ltd.",
+  "ssu": "% equity value",
+  "series": "TATACONSUM.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "NIFTY_50",
+  "isin": "INE192A01025"
+ },
+ {
+  "id": "TMCV",
+  "type": "COMPANY",
+  "name": "Tata Motors Ltd.",
+  "ssu": "% equity value",
+  "series": "TMCV.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE1TAE01010"
+ },
+ {
+  "id": "TMPV",
+  "type": "COMPANY",
+  "name": "Tata Motors Passenger Vehicles Ltd.",
+  "ssu": "% equity value",
+  "series": "TMPV.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "NIFTY_50",
+  "isin": "INE155A01022"
+ },
+ {
+  "id": "TATAPOWER",
+  "type": "COMPANY",
+  "name": "Tata Power Co. Ltd.",
+  "ssu": "% equity value",
+  "series": "TATAPOWER.NS",
+  "nse_industry": "Power",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE245A01021"
+ },
+ {
+  "id": "TATASTEEL",
+  "type": "COMPANY",
+  "name": "Tata Steel Ltd.",
+  "ssu": "% equity value",
+  "series": "TATASTEEL.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "NIFTY_50",
+  "isin": "INE081A01020"
+ },
+ {
+  "id": "TECHM",
+  "type": "COMPANY",
+  "name": "Tech Mahindra Ltd.",
+  "ssu": "% equity value",
+  "series": "TECHM.NS",
+  "nse_industry": "Information Technology",
+  "tier": "NIFTY_50",
+  "isin": "INE669C01036"
+ },
+ {
+  "id": "TITAN",
+  "type": "COMPANY",
+  "name": "Titan Company Ltd.",
+  "ssu": "% equity value",
+  "series": "TITAN.NS",
+  "nse_industry": "Consumer Durables",
+  "tier": "NIFTY_50",
+  "isin": "INE280A01028"
+ },
+ {
+  "id": "TORNTPHARM",
+  "type": "COMPANY",
+  "name": "Torrent Pharmaceuticals Ltd.",
+  "ssu": "% equity value",
+  "series": "TORNTPHARM.NS",
+  "nse_industry": "Healthcare",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE685A01028"
+ },
+ {
+  "id": "TRENT",
+  "type": "COMPANY",
+  "name": "Trent Ltd.",
+  "ssu": "% equity value",
+  "series": "TRENT.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "NIFTY_50",
+  "isin": "INE849A01020"
+ },
+ {
+  "id": "TIINDIA",
+  "type": "COMPANY",
+  "name": "Tube Investments of India Ltd.",
+  "ssu": "% equity value",
+  "series": "TIINDIA.NS",
+  "nse_industry": "Automobile and Auto Components",
+  "tier": "MIDCAP_100",
+  "isin": "INE974X01010"
+ },
+ {
+  "id": "UPL",
+  "type": "COMPANY",
+  "name": "UPL Ltd.",
+  "ssu": "% equity value",
+  "series": "UPL.NS",
+  "nse_industry": "Chemicals",
+  "tier": "MIDCAP_100",
+  "isin": "INE628A01036"
+ },
+ {
+  "id": "ULTRACEMCO",
+  "type": "COMPANY",
+  "name": "UltraTech Cement Ltd.",
+  "ssu": "% equity value",
+  "series": "ULTRACEMCO.NS",
+  "nse_industry": "Construction Materials",
+  "tier": "NIFTY_50",
+  "isin": "INE481G01011"
+ },
+ {
+  "id": "UNIONBANK",
+  "type": "COMPANY",
+  "name": "Union Bank of India",
+  "ssu": "% equity value",
+  "series": "UNIONBANK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE692A01016"
+ },
+ {
+  "id": "UNITDSPR",
+  "type": "COMPANY",
+  "name": "United Spirits Ltd.",
+  "ssu": "% equity value",
+  "series": "UNITDSPR.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE854D01024"
+ },
+ {
+  "id": "VBL",
+  "type": "COMPANY",
+  "name": "Varun Beverages Ltd.",
+  "ssu": "% equity value",
+  "series": "VBL.NS",
+  "nse_industry": "Fast Moving Consumer Goods",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE200M01039"
+ },
+ {
+  "id": "VAML",
+  "type": "COMPANY",
+  "name": "Vedanta Aluminium Metal Ltd.",
+  "ssu": "% equity value",
+  "series": "VAML.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE1CDF01017"
+ },
+ {
+  "id": "VEDL",
+  "type": "COMPANY",
+  "name": "Vedanta Ltd.",
+  "ssu": "% equity value",
+  "series": "VEDL.NS",
+  "nse_industry": "Metals & Mining",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE205A01025"
+ },
+ {
+  "id": "VMM",
+  "type": "COMPANY",
+  "name": "Vishal Mega Mart Ltd.",
+  "ssu": "% equity value",
+  "series": "VMM.NS",
+  "nse_industry": "Consumer Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE01EA01019"
+ },
+ {
+  "id": "IDEA",
+  "type": "COMPANY",
+  "name": "Vodafone Idea Ltd.",
+  "ssu": "% equity value",
+  "series": "IDEA.NS",
+  "nse_industry": "Telecommunication",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE669E01016"
+ },
+ {
+  "id": "VOLTAS",
+  "type": "COMPANY",
+  "name": "Voltas Ltd.",
+  "ssu": "% equity value",
+  "series": "VOLTAS.NS",
+  "nse_industry": "Consumer Durables",
+  "tier": "MIDCAP_100",
+  "isin": "INE226A01021"
+ },
+ {
+  "id": "WAAREEENER",
+  "type": "COMPANY",
+  "name": "Waaree Energies Ltd.",
+  "ssu": "% equity value",
+  "series": "WAAREEENER.NS",
+  "nse_industry": "Capital Goods",
+  "tier": "MIDCAP_100",
+  "isin": "INE377N01017"
+ },
+ {
+  "id": "WIPRO",
+  "type": "COMPANY",
+  "name": "Wipro Ltd.",
+  "ssu": "% equity value",
+  "series": "WIPRO.NS",
+  "nse_industry": "Information Technology",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE075A01022"
+ },
+ {
+  "id": "YESBANK",
+  "type": "COMPANY",
+  "name": "Yes Bank Ltd.",
+  "ssu": "% equity value",
+  "series": "YESBANK.NS",
+  "nse_industry": "Financial Services",
+  "tier": "MIDCAP_100",
+  "isin": "INE528G01035"
+ },
+ {
+  "id": "ZYDUSLIFE",
+  "type": "COMPANY",
+  "name": "Zydus Lifesciences Ltd.",
+  "ssu": "% equity value",
+  "series": "ZYDUSLIFE.NS",
+  "nse_industry": "Healthcare",
+  "tier": "NIFTY_NEXT_50",
+  "isin": "INE010B01027"
+ }
+]

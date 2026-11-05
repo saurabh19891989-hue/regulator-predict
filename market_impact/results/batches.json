@@ -1,0 +1,441 @@
+[
+ {
+  "batch": "B01",
+  "tickers": [
+   "BOSCHLTD",
+   "HYUNDAI",
+   "MOTHERSON",
+   "TVSMOTOR",
+   "BAJAJ-AUTO",
+   "BHARATFORG",
+   "EICHERMOT",
+   "EXIDEIND"
+  ],
+  "industries": [
+   "Automobile and Auto Components"
+  ],
+  "next50": 4
+ },
+ {
+  "batch": "B02",
+  "tickers": [
+   "HEROMOTOCO",
+   "M&M",
+   "MARUTI",
+   "MRF",
+   "TIINDIA",
+   "TMPV",
+   "ABB",
+   "CGPOWER"
+  ],
+  "industries": [
+   "Automobile and Auto Components",
+   "Capital Goods"
+  ],
+  "next50": 2
+ },
+ {
+  "batch": "B03",
+  "tickers": [
+   "CUMMINSIND",
+   "ENRIN",
+   "HAL",
+   "MAZDOCK",
+   "POLYCAB",
+   "POWERINDIA",
+   "SIEMENS",
+   "TMCV"
+  ],
+  "industries": [
+   "Capital Goods"
+  ],
+  "next50": 8
+ },
+ {
+  "batch": "B04",
+  "tickers": [
+   "APARINDS",
+   "APLAPOLLO",
+   "ASHOKLEY",
+   "ASTRAL",
+   "BDL",
+   "BEL",
+   "BHEL",
+   "COCHINSHIP"
+  ],
+  "industries": [
+   "Capital Goods"
+  ],
+  "next50": 0
+ },
+ {
+  "batch": "B05",
+  "tickers": [
+   "GVT&D",
+   "KEI",
+   "PREMIERENE",
+   "SUPREMEIND",
+   "SUZLON",
+   "WAAREEENER",
+   "PIDILITIND",
+   "SOLARINDS"
+  ],
+  "industries": [
+   "Capital Goods",
+   "Chemicals"
+  ],
+  "next50": 2
+ },
+ {
+  "batch": "B06",
+  "tickers": [
+   "PIIND",
+   "SRF",
+   "UPL",
+   "LT",
+   "RVNL",
+   "AMBUJACEM",
+   "GRASIM",
+   "ULTRACEMCO"
+  ],
+  "industries": [
+   "Chemicals",
+   "Construction",
+   "Construction Materials"
+  ],
+  "next50": 1
+ },
+ {
+  "batch": "B07",
+  "tickers": [
+   "ASIANPAINT",
+   "BLUESTARCO",
+   "DIXON",
+   "HAVELLS",
+   "KALYANKJIL",
+   "LGEINDIA",
+   "TITAN",
+   "VOLTAS"
+  ],
+  "industries": [
+   "Consumer Durables"
+  ],
+  "next50": 0
+ },
+ {
+  "batch": "B08",
+  "tickers": [
+   "DMART",
+   "ETERNAL",
+   "INDHOTEL",
+   "IRCTC",
+   "JUBLFOOD",
+   "LENSKART",
+   "MEESHO",
+   "NAUKRI"
+  ],
+  "industries": [
+   "Consumer Services"
+  ],
+  "next50": 1
+ },
+ {
+  "batch": "B09",
+  "tickers": [
+   "NYKAA",
+   "SWIGGY",
+   "TRENT",
+   "VMM",
+   "BRITANNIA",
+   "GODREJCP",
+   "VBL",
+   "COLPAL"
+  ],
+  "industries": [
+   "Consumer Services",
+   "Fast Moving Consumer Goods"
+  ],
+  "next50": 3
+ },
+ {
+  "batch": "B10",
+  "tickers": [
+   "DABUR",
+   "GODFRYPHLP",
+   "HINDUNILVR",
+   "ITC",
+   "MARICO",
+   "NESTLEIND",
+   "PATANJALI",
+   "RADICO"
+  ],
+  "industries": [
+   "Fast Moving Consumer Goods"
+  ],
+  "next50": 0
+ },
+ {
+  "batch": "B11",
+  "tickers": [
+   "TATACONSUM",
+   "UNITDSPR",
+   "BAJAJHLDNG",
+   "BANKBARODA",
+   "CANBK",
+   "CHOLAFIN",
+   "HDFCAMC",
+   "IRFC"
+  ],
+  "industries": [
+   "Fast Moving Consumer Goods",
+   "Financial Services"
+  ],
+  "next50": 6
+ },
+ {
+  "batch": "B12",
+  "tickers": [
+   "MUTHOOTFIN",
+   "PFC",
+   "PNB",
+   "TATACAP",
+   "UNIONBANK",
+   "360ONE",
+   "ABCAPITAL",
+   "AUBANK"
+  ],
+  "industries": [
+   "Financial Services"
+  ],
+  "next50": 5
+ },
+ {
+  "batch": "B13",
+  "tickers": [
+   "AXISBANK",
+   "BAJAJFINSV",
+   "BAJFINANCE",
+   "BANKINDIA",
+   "BSE",
+   "FEDERALBNK",
+   "GROWW",
+   "HDFCBANK"
+  ],
+  "industries": [
+   "Financial Services"
+  ],
+  "next50": 0
+ },
+ {
+  "batch": "B14",
+  "tickers": [
+   "HDFCLIFE",
+   "ICICIAMC",
+   "ICICIBANK",
+   "ICICIGI",
+   "IDFCFIRSTB",
+   "INDIANB",
+   "INDUSINDBK",
+   "IREDA"
+  ],
+  "industries": [
+   "Financial Services"
+  ],
+  "next50": 0
+ },
+ {
+  "batch": "B15",
+  "tickers": [
+   "JIOFIN",
+   "KOTAKBANK",
+   "LICHSGFIN",
+   "LICI",
+   "LTF",
+   "M&MFIN",
+   "MAHABANK",
+   "MCX"
+  ],
+  "industries": [
+   "Financial Services"
+  ],
+  "next50": 0
+ },
+ {
+  "batch": "B16",
+  "tickers": [
+   "MFSL",
+   "MOTILALOFS",
+   "PAYTM",
+   "POLICYBZR",
+   "RECLTD",
+   "SBICARD",
+   "SBILIFE",
+   "SBIN"
+  ],
+  "industries": [
+   "Financial Services"
+  ],
+  "next50": 0
+ },
+ {
+  "batch": "B17",
+  "tickers": [
+   "SHRIRAMFIN",
+   "YESBANK",
+   "DIVISLAB",
+   "TORNTPHARM",
+   "ZYDUSLIFE",
+   "APOLLOHOSP",
+   "AUROPHARMA",
+   "BIOCON"
+  ],
+  "industries": [
+   "Financial Services",
+   "Healthcare"
+  ],
+  "next50": 3
+ },
+ {
+  "batch": "B18",
+  "tickers": [
+   "CIPLA",
+   "DRREDDY",
+   "FORTIS",
+   "GLENMARK",
+   "LAURUSLABS",
+   "LUPIN",
+   "MANKIND",
+   "MAXHEALTH"
+  ],
+  "industries": [
+   "Healthcare"
+  ],
+  "next50": 0
+ },
+ {
+  "batch": "B19",
+  "tickers": [
+   "SUNPHARMA",
+   "LTM",
+   "WIPRO",
+   "COFORGE",
+   "HCLTECH",
+   "INFY",
+   "MPHASIS",
+   "OFSS"
+  ],
+  "industries": [
+   "Healthcare",
+   "Information Technology"
+  ],
+  "next50": 2
+ },
+ {
+  "batch": "B20",
+  "tickers": [
+   "PERSISTENT",
+   "TCS",
+   "TECHM",
+   "HINDZINC",
+   "JINDALSTEL",
+   "VAML",
+   "VEDL",
+   "ADANIENT"
+  ],
+  "industries": [
+   "Information Technology",
+   "Metals & Mining"
+  ],
+  "next50": 4
+ },
+ {
+  "batch": "B21",
+  "tickers": [
+   "HINDALCO",
+   "HINDCOPPER",
+   "JSWSTEEL",
+   "NATIONALUM",
+   "NMDC",
+   "SAIL",
+   "TATASTEEL",
+   "BPCL"
+  ],
+  "industries": [
+   "Metals & Mining",
+   "Oil Gas & Consumable Fuels"
+  ],
+  "next50": 1
+ },
+ {
+  "batch": "B22",
+  "tickers": [
+   "GAIL",
+   "IOC",
+   "ATGL",
+   "COALINDIA",
+   "HINDPETRO",
+   "OIL",
+   "ONGC",
+   "RELIANCE"
+  ],
+  "industries": [
+   "Oil Gas & Consumable Fuels"
+  ],
+  "next50": 2
+ },
+ {
+  "batch": "B23",
+  "tickers": [
+   "ADANIENSOL",
+   "ADANIGREEN",
+   "ADANIPOWER",
+   "TATAPOWER",
+   "JSWENERGY",
+   "NHPC",
+   "NLCINDIA",
+   "NTPC"
+  ],
+  "industries": [
+   "Power"
+  ],
+  "next50": 4
+ },
+ {
+  "batch": "B24",
+  "tickers": [
+   "POWERGRID",
+   "DLF",
+   "GODREJPROP",
+   "LODHA",
+   "OBEROIRLTY",
+   "PHOENIXLTD",
+   "PRESTIGE",
+   "ADANIPORTS"
+  ],
+  "industries": [
+   "Power",
+   "Realty",
+   "Services"
+  ],
+  "next50": 1
+ },
+ {
+  "batch": "B25",
+  "tickers": [
+   "CONCOR",
+   "GMRAIRPORT",
+   "INDIGO",
+   "IDEA",
+   "BHARTIARTL",
+   "INDUSTOWER",
+   "TATACOMM",
+   "PAGEIND"
+  ],
+  "industries": [
+   "Services",
+   "Telecommunication",
+   "Textiles"
+  ],
+  "next50": 1
+ }
+]

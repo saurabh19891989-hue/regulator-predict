@@ -1,0 +1,3576 @@
+{
+ "events": [
+  {
+   "event_id": "EV_RBI_OCT26_HIKE25",
+   "title": "RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026)",
+   "category": "india_macro",
+   "status": "occurred",
+   "date": "2026-10-07",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "First RBI hike since 2023. Repo 5.25% -> 5.50% (held at 5.25% on 5 Aug 2026). Stance moved from neutral to 'calibrated tightening'; Governor Malhotra said near-term rate cuts are 'off the table'. Rate vote reported unanimous (secondary source); minutes (21 Oct) show 2 members opposed the stance change and flag more hikes but wariness of an aggressive cycle. Drivers cited: broadening inflation (oil, onions, monsoon), 7.8% Q1 GDP, global tightening. RBI raised FY27 GDP forecast to 7.1% (from 6.7%). RBI also tightened liquidity (see EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26).",
+   "what_already_moved": "6 Oct: banks in green, autos and realty dipped on hike expectations. 10y G-sec 7.40% on 12 Oct, >7.45% on 21 Oct, 7.44% on 3 Nov. Nifty had an 8-week losing streak before the decision; Nifty50 ~24,460 on 5 Nov (+7.4% in 1 month per factor_state.md). Rupee +1% to 95.76 on 12 Oct after RBI dollar-demand curbs.",
+   "entry_shocks": [
+    {
+     "node": "F_REPO_IN",
+     "ssu": 1.0,
+     "low": 0.9,
+     "high": 1.0,
+     "note": "+25 bp = 1 SSU, already delivered"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "immediate repricing; the larger yield run-up is booked in EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 to avoid double count"
+    },
+    {
+     "node": "F_CREDIT_SPREADS_IN",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "funding-cost repricing for NBFCs"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RBI_OCT26_HIKE25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Higher policy rate slows credit demand/offtake after lag"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_OCT26_HIKE25",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Mortgage costs rise -> housing sales volume softens -> developer pre-sales/valuations hit"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_OCT26_HIKE25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Slower credit trims growth; offset by a higher carry that supports flows via rupee stability (net ambiguous)"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_OCT26_HIKE25",
+      "F_REPO_IN",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Tighter policy narrows the carry gap, supports the rupee, and cuts imported-inflation pass-through (small)"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "NBFC funding cost up, spreads compress"
+    },
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-/0",
+     "why": "deposit repricing lags loans; NIM relief via FCNR(B) funds noted by analysts"
+    },
+    {
+     "ticker": "MARUTI",
+     "direction": "-",
+     "why": "auto-loan rates"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "mortgage rates"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "RBI MPC meeting highlights: Repo rate hiked to 5.5% - The Hindu"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+MPC+minutes+October+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "RBI MPC minutes reveal 2 members opposed shift from neutral stance - Livemint"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+raises+FY27+GDP+growth+forecast+7.1%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "RBI raises FY27 GDP growth forecast to 7.1% - Moneycontrol"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26",
+   "title": "RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high",
+   "category": "india_macro",
+   "status": "occurred",
+   "date": "2026-10-09",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "After the hike RBI raised the daily CRR maintenance requirement to 99% from 16 Oct and scheduled a Rs 25,000 crore bond sale (13 Oct) to drain surplus liquidity; Governor said surplus may not persist beyond FY27. 10y yield crossed 7% on 11 Sep, 7.40% on 12 Oct, >7.45% (multi-year high) on 21 Oct, 7.44% on 3 Nov; India-US 10y spread near a 22-year low. SBI Research sees 6.75-7.0% by March 2027; another report sees 7.25-7.35% in November. Size of the current surplus not retrieved (missing information).",
+   "what_already_moved": "10y: ~7.00% (11 Sep) -> ~7.44% (3 Nov) = about +44 bp (+1.8 SSU), of which ~+0.3 SSU attributed to the hike event. FPI G-sec outflows halved to Rs 5,400 cr in October.",
+   "entry_shocks": [
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 1.4,
+     "low": 1.0,
+     "high": 1.7,
+     "note": "residual of the +44 bp run-up since 11 Sep"
+    },
+    {
+     "node": "F_LIQUIDITY_IN",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": -0.1,
+     "note": "surplus shrinking; size unknown so low confidence"
+    },
+    {
+     "node": "F_CREDIT_SPREADS_IN",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "corporate bond spreads widen with G-sec"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "Benchmark yield feeds corporate bond and bank lending spreads"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "Wider spreads raise NBFC borrowing cost faster than lending repricing"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26",
+      "F_LIQUIDITY_IN",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN"
+     ],
+     "explanation": "Liquidity drain adds to term-premium; tighter credit eventually weighs on growth"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26",
+      "F_GSEC_10Y_IN",
+      "F_HOUSING_DEMAND",
+      "F_URBAN_DEMAND",
+      "TITAN"
+     ],
+     "explanation": "Higher mortgage/consumer-loan rates cut big-ticket urban spend (jewellery, durables)"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SBIN",
+     "direction": "-",
+     "why": "treasury MTM losses on G-sec book"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding cost"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "mortgage rates"
+    },
+    {
+     "ticker": "HDFCAMC",
+     "direction": "-/0",
+     "why": "debt AUM mark-to-market"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+10-year+bond+yield+multi-year+high+October+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "India's 10-year bond yield climbs above 7.45% to multi-year high - Investing.com"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+raises+daily+CRR+maintenance+99%25+October+16+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "title": "RBI raises daily CRR maintenance requirement to 99% from October 16 - Moneycontrol"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+10-year+bond+yield+November+2026+SBI+Research+6.75-7%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "Indian 10-year bond yield may ease to 6.75-7% by March - SBI Research"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_RUPEE_DEFENCE_RESERVES_26",
+   "title": "Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak",
+   "category": "india_macro",
+   "status": "occurred",
+   "date": "2026-09-09",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Rupee fell past 95/USD on 9 Sep, touched ~95.99 on 25 Sep (near record lows) amid oil, weak foreign flows and a narrow India-US yield spread. RBI intervened in spot and forwards: net short forward book reached a record ~US$200bn in August; weekly reserves fell a record US$18.34bn to US$757.46bn (w/e 25 Sep), US$734.60bn (2 Oct), US$726.03bn (9 Oct), US$721bn (16 Oct), US$719.75bn (23 Oct; seventh straight weekly fall). Implied peak ~US$775.8bn (18 Sep; derived: 757.46+18.34). RBI sold ~US$18.2bn in October, the most this year; Reuters (15 Oct) estimates it has spent half of a US$140bn capital-flow haul. On 12 Oct RBI moved to curb dollar demand. Rupee recovered to 94.58 on 5 Nov as crude fell and US midterms weakened the dollar; Reuters (4 Nov) still sees risk of resumed slide on weak inflows.",
+   "what_already_moved": "USD/INR 94.49 on 5 Nov: -1.1% since 1 Jun (i.e. ~95.5 on 1 Jun), -1.9% over 1 month, +6.5% over 12 months (factor_state.md). Reserves -~7% from derived peak.",
+   "entry_shocks": [
+    {
+     "node": "F_USDINR",
+     "ssu": -0.37,
+     "low": -0.6,
+     "high": 0.2,
+     "note": "net move since 1 Jun is -1.1% (=-0.37 SSU) because RBI defended; the peak leg was roughly +0.2 SSU above 1 Jun"
+    },
+    {
+     "node": "NEW_FX_RESERVES_IN",
+     "ssu": -2.2,
+     "low": -2.5,
+     "high": -1.9,
+     "note": "US$775.8bn -> US$719.75bn = about -US$56bn (SSU = US$25bn)"
+    },
+    {
+     "node": "F_LIQUIDITY_IN",
+     "ssu": -0.4,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "spot dollar sales drain rupee liquidity, partly offset by swaps; magnitude uncertain"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RUPEE_DEFENCE_RESERVES_26",
+      "NEW_FX_RESERVES_IN",
+      "F_LIQUIDITY_IN"
+     ],
+     "explanation": "Spot USD sales extinguish rupee liquidity"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RUPEE_DEFENCE_RESERVES_26",
+      "NEW_FX_RESERVES_IN",
+      "F_LIQUIDITY_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Liquidity drain pushes up G-sec yields"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RUPEE_DEFENCE_RESERVES_26",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "Weak rupee adds imported inflation -> more RBI hikes -> higher NBFC funding cost"
+    },
+    {
+     "order": 2,
+     "path": [
+      "EV_RUPEE_DEFENCE_RESERVES_26",
+      "F_USDINR",
+      "TCS"
+     ],
+     "explanation": "Weaker rupee lifts IT-services INR revenue/margins (hedged, lagged)"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TCS",
+     "direction": "+",
+     "why": "INR revenue translation"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "+",
+     "why": "INR revenue translation"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "-",
+     "why": "dollar crude bill vs regulated retail prices"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": "same"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "-",
+     "why": "same"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+forex+reserves+week+ended+October+23+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "India's FX reserves dip for seventh straight week - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Forex+kitty+plunges+record+%2418.34+bn+rupee+pressure+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "title": "Forex kitty plunges record $18.34 bn as rupee pressure mounts - New Indian Express"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+spent+half+of+%24140+billion+FX+capital+haul+rupee+defence+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "title": "India's RBI has spent half of $140 billion FX capital haul - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Rupee+closing+94.58+November+5+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "title": "Indian Rupee closes at 94.58 against US dollar"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_CPI_REACCEL_SEP26",
+   "title": "CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74%",
+   "category": "india_macro",
+   "status": "occurred",
+   "date": "2026-10-12",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Retail inflation (new base 2024=100) rose 4.38% (Jun) -> 4.45% (Jul) -> 4.82% (Aug) -> 5.54% (Sep), above poll estimates and nearing the 6% upper tolerance band; food inflation 7.74% (Jul: 5.52%); price pressures broadening to core. RBI projects FY27 core at 4.4% (vs 4.3%); its August headline FY27 projection was 5.0%; the October headline projection was not retrieved. Drivers: oil (Brent ~US$95), onions/vegetables, weak monsoon, rupee. October CPI is due about 12 Nov.",
+   "what_already_moved": "Rate pricing: Reuters/Bloomberg (7 Oct) back-to-back hike expectations; 10y G-sec +44 bp since 11 Sep.",
+   "entry_shocks": [
+    {
+     "node": "F_CPI_IN",
+     "ssu": 1.15,
+     "low": 1.0,
+     "high": 1.3,
+     "note": "4.38% -> 5.54% since June"
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 1.1,
+     "low": 0.9,
+     "high": 1.3,
+     "note": "+2.2 pp in two months (Jul 5.52% -> Sep 7.74%)"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CPI_REACCEL_SEP26",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Reaction function: inflation toward 6% drives further tightening"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CPI_REACCEL_SEP26",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND"
+     ],
+     "explanation": "Further hikes depress housing demand"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CPI_REACCEL_SEP26",
+      "F_FOOD_INFLATION_IN",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN",
+      "M&M"
+     ],
+     "explanation": "Food-price squeeze on rural real incomes (net food buyers) hits two-wheeler/tractor/SUV demand"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CPI_REACCEL_SEP26",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "Policy-path repricing lifts yields and spreads"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDUNILVR",
+     "direction": "-",
+     "why": "input cost and rural volume squeeze"
+    },
+    {
+     "ticker": "M&M",
+     "direction": "-/+",
+     "why": "rural demand vs tractor strength"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+retail+inflation+September+2026+5.54%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "title": "India's retail inflation jumps to 5.54% in September, above estimates - CNBC"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+inflation+August+2026+4.82%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-14",
+     "title": "India inflation rises to 4.82% in August - Reuters"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_GDP_Q1FY27_7_8",
+   "title": "India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus",
+   "category": "india_macro",
+   "status": "occurred",
+   "date": "2026-08-31",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "April-June 2026 GDP +7.8% y/y per Government/MoSPI, despite the US-Iran war oil shock; driven by consumption and investment (central capex +18% Apr-Aug). Pre-release consensus ~7.3% (Fibre2Fashion report 18 Aug). RBI FY27 forecast raised to 7.1%; IMF 7.0% (13 Oct); Finance Ministry estimates Q2 FY27 at ~7.35% (29 Oct). Manufacturing PMI 55.1 (Sep, 7-month high), 54.7 (Oct); gross GST Rs 2.31 lakh crore in Oct (+22.9% y/y, partly import-driven/low base).",
+   "what_already_moved": "Strong growth enabled RBI to prioritise inflation (hike). Market effect not isolated (Nifty fell ~6% in September on oil, FPI selling).",
+   "entry_shocks": [
+    {
+     "node": "F_GDP_IN",
+     "ssu": 0.5,
+     "low": 0.3,
+     "high": 0.8,
+     "note": "7.8% vs ~7.3% expected"
+    },
+    {
+     "node": "F_GOVT_CAPEX",
+     "ssu": 1.0,
+     "low": 0.6,
+     "high": 1.5,
+     "note": "capex +18% Apr-Aug y/y (BusinessLine 30 Sep)"
+    },
+    {
+     "node": "F_URBAN_DEMAND",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "consumption cited as driver"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_GDP_Q1FY27_7_8",
+      "F_GDP_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Strong output sustains credit demand"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_GDP_Q1FY27_7_8",
+      "F_GDP_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_LIQUIDITY_IN"
+     ],
+     "explanation": "Credit outpacing deposits (CD ratio ~85%) absorbs system liquidity"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_GDP_Q1FY27_7_8",
+      "F_GOVT_CAPEX",
+      "P_RAILWAY_CAPEX",
+      "RVNL"
+     ],
+     "explanation": "Capex momentum feeds order books of infra/rail contractors"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_GDP_Q1FY27_7_8",
+      "F_GDP_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Growth cushion lets RBI hike; higher yields attract debt flows but raise equity discount rates"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "LT",
+     "direction": "+",
+     "why": "order inflow"
+    },
+    {
+     "ticker": "SBIN",
+     "direction": "+",
+     "why": "credit growth"
+    },
+    {
+     "ticker": "ULTRACEMCO",
+     "direction": "+",
+     "why": "construction demand"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+GDP+Q1+FY27+7.8%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-31",
+     "title": "India's GDP grows better-than-expected at 7.8% in April-June - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Finance+ministry+estimates+India+Q2+FY27+GDP+growth+7.35%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "Finance ministry estimates India's Q2 FY27 GDP growth at 7.35% - Economic Times"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+manufacturing+PMI+October+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "India's October manufacturing PMI slips to 54.7 - Financial Express"
+    }
+   ],
+   "confidence": "high"
+  },
+  {
+   "event_id": "EV_FPI_RECORD_OUTFLOW_26",
+   "title": "Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October",
+   "category": "india_macro",
+   "status": "occurred",
+   "date": "2026-10-13",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Net FPI equity selling reached about Rs 3.12 lakh crore by 18 Oct (Rs 2.95 lakh crore by 1 Nov after early-Nov buying); Rs 1 trillion+ in H1 FY27; ~Rs 48,056 cr sold in October to 25 Oct; September ~Rs 36,000 cr. Rupee-equivalent roughly US$32-35bn (assumption: average rate 90-95). August saw 23-month-high foreign buying (Reuters 1 Sep) before a reversal on oil >US$95, yields, rupee. Early-Nov: Reuters (4 Nov) reports longest Indian equity winning streak in ~5 months on inflow hopes; DIIs absorbed ~106% of FPI selling on 1 Oct. Finance Minister (2-3 Nov) says she will consider the call to review LTCG tax and the government sought views on LTCG/STT (27 Oct); SBI proposes zero LTCG for FPIs.",
+   "what_already_moved": "Nifty50 -4.4% over 12 months, +4.6% since 1 Jun (+7.4% in the last month) per factor_state.md; Nifty fell ~6% in Sept; India VIX 15.3. FPI share of Indian stocks still falling (Mint 3 Nov).",
+   "entry_shocks": [
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": -2.2,
+     "low": -3.0,
+     "high": -1.5,
+     "note": "avg ~-US$11bn/quarter vs +US$5bn/quarter SSU, over ~3 quarters"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 0.4,
+     "low": 0.0,
+     "high": 1.0,
+     "note": "India VIX up 26% in 3m"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FPI_RECORD_OUTFLOW_26",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Equity outflows add dollar demand -> rupee weakness"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FPI_RECORD_OUTFLOW_26",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Weaker rupee raises imported inflation"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FPI_RECORD_OUTFLOW_26",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Higher inflation pushes RBI hikes"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FPI_RECORD_OUTFLOW_26",
+      "F_FPI_FLOWS",
+      "F_DOMESTIC_FLOWS",
+      "HDFCAMC"
+     ],
+     "explanation": "DII/SIP flows fill the gap, supporting AMC/broker earnings"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "FPI-heavy ownership, largest foreign-held stock"
+    },
+    {
+     "ticker": "ICICIBANK",
+     "direction": "-",
+     "why": "FPI ownership"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "-/0",
+     "why": "FPI holding vs rupee gain"
+    },
+    {
+     "ticker": "HDFCAMC",
+     "direction": "+",
+     "why": "domestic flows"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=FPI+outflow+2026+record+India+equities+Rs+3+lakh+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-13",
+     "title": "Record FPI outflows top Rs 3 trillion in CY26 - Business Standard"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=FPI+outflows+2.95+lakh+crore+2026+November+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "FPI outflows hit Rs 2.95 lakh crore in 2026 - Moneycontrol"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Sitharaman+LTCG+tax+review+foreign+investors+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "We will consider the call for review of LTCG tax: Finance minister - Economic Times"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_MONSOON_DEFICIT_26",
+   "title": "Monsoon 2026 ends ~15% below normal (El Nino); kharif/rabi and food-price risk",
+   "category": "india_macro",
+   "status": "occurred",
+   "date": "2026-09-30",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Season rainfall reported ~15% below normal, 'driest in 17 years' (Bhaskar, 21 Sep); Financial Express (22 Sep) calls it 'weakest in 10 years' - sources conflict on rank. Kharif acreage nevertheless above the 5-year average (TOI 28 Sep) and the government set a 374 mt foodgrain target; regional hits (Rajasthan) and rabi/drought risk flagged. Stronger El Nino spectre. Contributes to food inflation 7.74% and sugar +27.8% since 1 Jun (factor_state.md; attribution shared with global sugar).",
+   "what_already_moved": "Food CPI +2.2 pp in two months; sugar price +27.8% since 1 Jun; wheat global -14.7% in 1 month (not India-specific).",
+   "entry_shocks": [
+    {
+     "node": "F_MONSOON",
+     "ssu": -1.5,
+     "low": -1.7,
+     "high": -1.0,
+     "note": "~-15% vs long-period average"
+    },
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 1.2,
+     "note": "share of the rise attributable to monsoon; oil/onion also drive it"
+    },
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": -0.6,
+     "low": -1.2,
+     "high": -0.1,
+     "note": "lagged hit to farm incomes, partly cushioned by acreage and MSP"
+    },
+    {
+     "node": "F_SUGAR",
+     "ssu": 2.0,
+     "low": 1.0,
+     "high": 2.8,
+     "note": "sugar +27.8% since 1 Jun; partial attribution"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_MONSOON_DEFICIT_26",
+      "F_MONSOON",
+      "F_FOOD_INFLATION_IN"
+     ],
+     "explanation": "Lower output lifts food prices"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_MONSOON_DEFICIT_26",
+      "F_MONSOON",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN"
+     ],
+     "explanation": "Food weight (~37% in new CPI) feeds headline"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_MONSOON_DEFICIT_26",
+      "F_MONSOON",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN",
+      "M&M"
+     ],
+     "explanation": "Weaker rural incomes cut tractor/two-wheeler demand"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_MONSOON_DEFICIT_26",
+      "F_MONSOON",
+      "F_FOOD_INFLATION_IN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Food-driven CPI strengthens case for further hikes"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDUNILVR",
+     "direction": "-",
+     "why": "rural volumes"
+    },
+    {
+     "ticker": "M&M",
+     "direction": "-",
+     "why": "rural/tractor demand"
+    },
+    {
+     "ticker": "COROMANDEL",
+     "direction": "-",
+     "why": "agri input demand"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+monsoon+2026+rainfall+15%25+below+normal+driest+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "title": "El Nino impact: India monsoon rainfall 15% below normal - Bhaskar English"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India%27s+monsoon+weakest+in+10+years+consumer+stocks+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-22",
+     "title": "India's monsoon weakest in 10 years - Financial Express"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_GST_57TH_COUNCIL_OCT26",
+   "title": "57th GST Council (8 Oct 2026): no rate change; process reforms (refund automation, decriminalisation)",
+   "category": "india_macro",
+   "status": "occurred",
+   "date": "2026-10-08",
+   "window_end": null,
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Council avoided mid-year rate changes and instead approved structural reforms: automated refunds (90% ITC refund automation), no arrests/lower prosecution and general penalty changes, easier registration, litigation reduction. Finance Ministry sources (8 Oct): GST rate changes to take effect only once a year, from 1 April. Backdrop (model knowledge): GST 2.0 slab simplification effective 22 Sep 2025 boosted consumption; gross GST Rs 2.31 lakh crore in Oct 2026 (+22.9% y/y), partly import-driven (CBIC disputes 'apples and oranges' comparisons). Opposition states sought compensation. Possible future items: mobile phones 18% review, flat 5% for renewable EPC.",
+   "what_already_moved": "No rate-driven market move; refund automation is a working-capital positive for exporters/MSME suppliers.",
+   "entry_shocks": [
+    {
+     "node": "P_GST_CONSUMPTION",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "no rate change (explicit non-event)"
+    },
+    {
+     "node": "T_FORMALISATION",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.5,
+     "note": "compliance simplification"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_GST_57TH_COUNCIL_OCT26",
+      "T_FORMALISATION",
+      "F_URBAN_DEMAND"
+     ],
+     "explanation": "Lower compliance friction supports organised-sector share gains"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_GST_57TH_COUNCIL_OCT26",
+      "T_FORMALISATION",
+      "F_URBAN_DEMAND",
+      "DMART"
+     ],
+     "explanation": "Organised retailers gain from formalisation"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_GST_57TH_COUNCIL_OCT26",
+      "P_GST_CONSUMPTION",
+      "F_AUTO_DEMAND_IN",
+      "MARUTI"
+     ],
+     "explanation": "Absence of new cuts keeps FY27 auto demand tied to the 2025 cut's tail"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_GST_57TH_COUNCIL_OCT26",
+      "T_FORMALISATION",
+      "F_LIQUIDITY_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN"
+     ],
+     "explanation": "Faster refunds release working capital (small)"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DMART",
+     "direction": "+",
+     "why": "formalisation"
+    },
+    {
+     "ticker": "TRENT",
+     "direction": "+",
+     "why": "formalisation"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=57th+GST+Council+meeting+key+highlights+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "title": "Recommendations of the 57th Meeting of the GST Council - PIB"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=GST+rate+changes+only+once+a+year+from+April+1+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "title": "GST rate changes to take effect only once a year from April 1: Finance Ministry sources"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=GST+collections+October+2026+22.9%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "GST collections rise 22.9% to Rs 2.31 lakh crore in October - Times of India"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_CPI_BREACH_6PCT",
+   "title": "CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb)",
+   "category": "india_macro",
+   "status": "anticipated",
+   "date": "2026-11-12",
+   "window_end": "2027-02-12",
+   "prob_by_3m": 0.5,
+   "prob_by_12m": 0.6,
+   "description": "Sep CPI 5.54% with food 7.74%; NDTV Profit (21 Oct) says inflation 'heads to 6% ceiling'. Model knowledge (low confidence): late-2025 base prints were extremely low in the old CPI series, implying adverse base effects through Q4 2026 - not verified for the new 2024=100 series. Oil has eased (Brent -5.6% in 1m), rupee stable; offsets. Probability = at least one print >=6.0% in Oct, Nov, Dec or Jan data.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_CPI_IN",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 0.9,
+     "note": "from 5.54% to >=6.0%"
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.4,
+     "low": 0.0,
+     "high": 0.8,
+     "note": "policy-path pressure"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.5,
+     "low": 0.1,
+     "high": 1.0,
+     "note": "term premium"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_CPI_BREACH_6PCT",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Breach of tolerance band forces explicit hikes"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_CPI_BREACH_6PCT",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Hikes cool credit"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CPI_BREACH_6PCT",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Mortgage rates -> housing sales -> developer valuations"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_CPI_BREACH_6PCT",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Real-rate rise helps debt flows, hurts equity multiples"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding cost"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "rates"
+    },
+    {
+     "ticker": "HINDUNILVR",
+     "direction": "-",
+     "why": "cost/volume"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+CPI+inflation+September+2026+6%25+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "Not A One-Off: RBI MPC Minutes Point To A Rate-Hike Cycle As Inflation Heads To 6% Ceiling - NDTV Profit"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+inflation+September+2026+Reuters+poll+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "title": "India Sept inflation nears RBI tolerance ceiling - Reuters"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_Q2_FY27_GDP_STRONG",
+   "title": "Q2 FY27 GDP (MoSPI, ~30 Nov) prints >=7.0%",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2026-11-30",
+   "window_end": "2026-12-01",
+   "prob_by_3m": 0.8,
+   "prob_by_12m": 0.8,
+   "description": "Release date approximate (model knowledge: Q2 data usually end-Nov; not verified). Finance Ministry estimate 7.35% (29 Oct); PMI 54.7-55.1, GST +22.9% y/y, credit growth ~19%, capex +18%; drags: oil shock, rupee, weak monsoon, rate hike. P(>=7.0%) ~0.80; P(<6.8%) ~0.12 (see soft event).",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_GDP_IN",
+     "ssu": 0.2,
+     "low": -0.1,
+     "high": 0.6,
+     "note": "vs ~7.1% RBI full-year path"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "growth supports flows"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_Q2_FY27_GDP_STRONG",
+      "F_GDP_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Growth sustains credit demand"
+    },
+    {
+     "order": 2,
+     "path": [
+      "EV_Q2_FY27_GDP_STRONG",
+      "F_GDP_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Strong growth gives RBI room to keep tightening"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_Q2_FY27_GDP_STRONG",
+      "F_GDP_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_LIQUIDITY_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Credit>deposit growth drains liquidity, lifts yields"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_Q2_FY27_GDP_STRONG",
+      "F_GDP_IN",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Growth-supported inflows stabilise rupee and cut imported inflation"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "LT",
+     "direction": "+",
+     "why": "capex cycle"
+    },
+    {
+     "ticker": "SBIN",
+     "direction": "+",
+     "why": "credit growth"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Finance+ministry+estimates+India+Q2+FY27+GDP+growth+7.35%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "Finance ministry estimates India's Q2 FY27 GDP growth at 7.35% - ET"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+raises+FY27+GDP+growth+forecast+7.1%25+lifts+Q2+Q3+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "RBI raises FY27 GDP growth forecast to 7.1% - Moneycontrol"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_Q2_FY27_GDP_SOFT",
+   "title": "Q2 FY27 GDP prints below 6.8% (downside surprise)",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2026-11-30",
+   "window_end": "2026-12-01",
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.12,
+   "description": "Downside case: oil/rupee shock, high yields and weak rural demand bite faster than high-frequency data suggest. Low probability given PMI, GST and credit data; GDP vs high-frequency divergence has precedent (model knowledge).",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_GDP_IN",
+     "ssu": -0.8,
+     "low": -1.5,
+     "high": -0.4,
+     "note": "vs ~7.35% estimate"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": -0.3,
+     "low": -0.8,
+     "high": 0.0,
+     "note": "growth scare"
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": -0.2,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "lowers odds of Dec hike"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_Q2_FY27_GDP_SOFT",
+      "F_GDP_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Weaker output cuts credit demand"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_Q2_FY27_GDP_SOFT",
+      "F_GDP_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Reduces hike odds, eases yields"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_Q2_FY27_GDP_SOFT",
+      "F_GDP_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_LIQUIDITY_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Slower credit growth frees liquidity"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_Q2_FY27_GDP_SOFT",
+      "F_GDP_IN",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Lower foreign inflows weaken rupee"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "LT",
+     "direction": "-",
+     "why": "order flow"
+    },
+    {
+     "ticker": "ULTRACEMCO",
+     "direction": "-",
+     "why": "construction demand"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+Q2+GDP+FY27+estimate+risks+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "title": "Finance ministry estimates India's Q2 FY27 GDP growth at 7.35%"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RBI_DEC26_HIKE25",
+   "title": "RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75%",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2026-12-04",
+   "window_end": "2026-12-04",
+   "prob_by_3m": 0.4,
+   "prob_by_12m": 0.4,
+   "description": "Meeting date approximate (MPC calendar not retrieved; early Dec by convention). Evidence for: Oct stance change to calibrated tightening; minutes (21 Oct) flag more hikes; Bloomberg 7 Oct 'back-to-back hikes'; ET 29 Sep sees 5.75% soon; CPI rising toward 6%; broadening inflation. Against: 2 MPC members opposed the stance shift; minutes show wariness of an aggressive cycle; Brent -5.6% in 1 month and rupee stable; Nifty fragile; Governor links further hikes to growth-inflation outlook. My odds for Dec: hike 25 bp 0.40, hold 0.57, hike 50 bp 0.02, cut 0.01. The Oct CPI print (12 Nov) is the swing input.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_REPO_IN",
+     "ssu": 1.0,
+     "low": 1.0,
+     "high": 1.0,
+     "note": "+25 bp"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.3,
+     "low": -0.2,
+     "high": 0.8,
+     "note": "partly priced"
+    },
+    {
+     "node": "F_CREDIT_SPREADS_IN",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.4,
+     "note": "NBFC funding"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RBI_DEC26_HIKE25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Credit slows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_DEC26_HIKE25",
+      "F_REPO_IN",
+      "F_AUTO_DEMAND_IN",
+      "MARUTI"
+     ],
+     "explanation": "Vehicle-loan rates -> auto volumes"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_DEC26_HIKE25",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND",
+      "F_URBAN_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Housing -> urban wealth/demand"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_DEC26_HIKE25",
+      "F_REPO_IN",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Carry support for rupee limits imported inflation"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding"
+    },
+    {
+     "ticker": "MARUTI",
+     "direction": "-",
+     "why": "loan rates"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "rates"
+    },
+    {
+     "ticker": "SBIN",
+     "direction": "0/-",
+     "why": "MTM vs NIM"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+rate+hike+December+2026+expected+economists+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "India Set for Back-to-Back Rate Hikes - Bloomberg"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+MPC+minutes+more+hikes+wary+aggressive+cycle+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "India rate panel flags more hikes but wary of aggressive cycle - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+may+face+two+hikes+one+dilemma+repo+5.75%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "title": "RBI may face two hikes, one dilemma - Economic Times"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RBI_DEC26_HOLD",
+   "title": "RBI MPC Dec 2026 (~4 Dec): holds repo at 5.50% (pause; cut very unlikely)",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2026-12-04",
+   "window_end": "2026-12-04",
+   "prob_by_3m": 0.57,
+   "prob_by_12m": 0.57,
+   "description": "Pause scenario: RBI waits to see transmission of the Oct hike and liquidity tightening, with oil easing. Stance likely stays 'calibrated tightening' (cut <=0.01). Hold relative to hike pricing is mildly bond-positive. Odds as in the hike event.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "no change"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": -0.3,
+     "low": -0.8,
+     "high": 0.1,
+     "note": "relief vs hike pricing"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RBI_DEC26_HOLD",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "Lower yields narrow spreads"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_DEC26_HOLD",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "NBFC funding cost relief"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_DEC26_HOLD",
+      "F_GSEC_10Y_IN",
+      "F_HOUSING_DEMAND",
+      "F_URBAN_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Rates stabilisation supports housing"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_DEC26_HOLD",
+      "F_GSEC_10Y_IN",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Narrower carry may weaken rupee at the margin"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "+",
+     "why": "funding"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "+",
+     "why": "rates"
+    },
+    {
+     "ticker": "SBIN",
+     "direction": "+",
+     "why": "bond MTM"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+hold+pause+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Hawkish hike, but measured path ahead - Business Standard"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+Governor+Malhotra+rate+cuts+off+the+table+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Rate cuts off the table - Governor"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RBI_FEB27_HIKE25",
+   "title": "RBI MPC Feb 2027 (~5 Feb, just after Budget): hikes 25 bp",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2027-02-05",
+   "window_end": "2027-02-05",
+   "prob_by_3m": 0.27,
+   "prob_by_12m": 0.27,
+   "description": "Date approximate. Conditional on persistent CPI near/above 6%, rupee pressure and a slippage-heavy Budget. Odds for Feb (unconditional on Dec): hike 0.27, hold 0.66, cut 0.04, hike 50 bp 0.03. Cumulative P(repo >=5.75% by Feb) ~0.55 and P(>=6.00%) ~0.12.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_REPO_IN",
+     "ssu": 1.0,
+     "low": 1.0,
+     "high": 1.0,
+     "note": "+25 bp"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.3,
+     "low": -0.1,
+     "high": 0.8,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RBI_FEB27_HIKE25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Credit slows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_FEB27_HIKE25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN"
+     ],
+     "explanation": "Growth drag"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_FEB27_HIKE25",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Housing"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_FEB27_HIKE25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Growth scare can offset carry benefits for flows"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "rates"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+MPC+February+2027+expectations+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "title": "Not A One-Off: RBI MPC Minutes Point To A Rate-Hike Cycle"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RBI_FEB27_HOLD",
+   "title": "RBI MPC Feb 2027 (~5 Feb): holds repo (at 5.50% or 5.75%)",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2027-02-05",
+   "window_end": "2027-02-05",
+   "prob_by_3m": 0.66,
+   "prob_by_12m": 0.66,
+   "description": "Most likely single outcome if Oct CPI/crude behave. Cuts (0.04) require CPI falling clearly and growth scare.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "no change"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": -0.2,
+     "low": -0.6,
+     "high": 0.1,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RBI_FEB27_HOLD",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "Spreads stable"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_FEB27_HOLD",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "NBFC funding"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_FEB27_HOLD",
+      "F_GSEC_10Y_IN",
+      "F_HOUSING_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Housing"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_FEB27_HOLD",
+      "F_GSEC_10Y_IN",
+      "F_HOUSING_DEMAND",
+      "F_URBAN_DEMAND",
+      "TITAN"
+     ],
+     "explanation": "Urban discretionary"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "+",
+     "why": "funding"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "+",
+     "why": "rates"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+MPC+February+2027+expectations+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Hawkish hike, but measured path ahead - Business Standard"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RBI_APR27_CUT25",
+   "title": "RBI MPC Apr 2027 (~8 Apr): cuts 25 bp (hiking cycle reversed)",
+   "category": "india_macro",
+   "status": "anticipated",
+   "date": "2027-04-08",
+   "window_end": "2027-04-08",
+   "prob_by_3m": 0,
+   "prob_by_12m": 0.1,
+   "description": "Date approximate. Requires CPI falling toward 4-5% as oil/food normalise, rupee stable, and a growth/credit slowdown. Odds for Apr: hold 0.62, cut 0.10, hike 0.28 (hike cumulative with Dec/Feb events). Governor said cuts 'off the table' in near term (7 Oct).",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_REPO_IN",
+     "ssu": -1.0,
+     "low": -1.0,
+     "high": -1.0,
+     "note": "-25 bp"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": -0.1,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RBI_APR27_CUT25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Credit revives"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_APR27_CUT25",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Housing"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_APR27_CUT25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN"
+     ],
+     "explanation": "Growth"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_APR27_CUT25",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Growth supports flows"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "+",
+     "why": "funding"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "+",
+     "why": "rates"
+    },
+    {
+     "ticker": "MARUTI",
+     "direction": "+",
+     "why": "loan rates"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+rate+cuts+off+the+table+Malhotra+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "RBI MPC meeting highlights - The Hindu"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RBI_APR27_HOLD",
+   "title": "RBI MPC Apr 2027 (~8 Apr): holds repo",
+   "category": "india_macro",
+   "status": "anticipated",
+   "date": "2027-04-08",
+   "window_end": "2027-04-08",
+   "prob_by_3m": 0,
+   "prob_by_12m": 0.62,
+   "description": "Base case for April: wait-and-watch after (0-2) hikes, FY28 inflation projections, monsoon 2027 onset (IMD forecast mid-April).",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "no change"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.0,
+     "low": -0.3,
+     "high": 0.3,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RBI_APR27_HOLD",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Neutral"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_APR27_HOLD",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN"
+     ],
+     "explanation": "Neutral"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RBI_APR27_HOLD",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Neutral"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RBI_APR27_HOLD",
+      "F_REPO_IN",
+      "F_HOUSING_DEMAND",
+      "F_URBAN_DEMAND",
+      "TITAN"
+     ],
+     "explanation": "Neutral"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SBIN",
+     "direction": "0",
+     "why": "neutral"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+policy+April+2027+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Hawkish hike, but measured path ahead"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_BUDGET_FY28_CAPEX_PUSH",
+   "title": "Union Budget FY2027-28 (1 Feb 2027): central capex raised >=10% y/y",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2027-02-01",
+   "window_end": "2027-02-01",
+   "prob_by_3m": 0.7,
+   "prob_by_12m": 0.7,
+   "description": "Pre-Budget meetings began 12 Oct 2026. Central capex +18% in Apr-Aug FY27 (BusinessLine); Government 'bullish on capex' despite FY27 fiscal deficit concerns (3 Nov). FY27 budget numbers (model knowledge, unverified): capex ~Rs 12.2 lakh crore, fiscal deficit 4.3% of GDP. Risk: subsidy overrun crowds out capex. Probability that BE FY28 capex growth >=10%: 0.70.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_GOVT_CAPEX",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 1.5,
+     "note": "BE capex growth ~+10-15%"
+    },
+    {
+     "node": "P_RAILWAY_CAPEX",
+     "ssu": 0.6,
+     "low": 0.2,
+     "high": 1.2,
+     "note": "rail share"
+    },
+    {
+     "node": "P_INFRA_SPENDING_ROADS",
+     "ssu": 0.6,
+     "low": 0.2,
+     "high": 1.2,
+     "note": "roads"
+    },
+    {
+     "node": "P_DEFENCE_PROCUREMENT",
+     "ssu": 0.4,
+     "low": 0.0,
+     "high": 0.9,
+     "note": "defence capex"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BUDGET_FY28_CAPEX_PUSH",
+      "F_GOVT_CAPEX",
+      "F_GDP_IN"
+     ],
+     "explanation": "Capex multiplier lifts growth"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET_FY28_CAPEX_PUSH",
+      "F_GOVT_CAPEX",
+      "F_GDP_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Growth lifts credit demand"
+    },
+    {
+     "order": 2,
+     "path": [
+      "EV_BUDGET_FY28_CAPEX_PUSH",
+      "P_RAILWAY_CAPEX",
+      "RVNL"
+     ],
+     "explanation": "Rail order flow to contractors/wagon makers"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET_FY28_CAPEX_PUSH",
+      "P_INFRA_SPENDING_ROADS",
+      "F_STEEL_INDIA",
+      "JSWSTEEL"
+     ],
+     "explanation": "Roads/infra drive domestic steel and cement demand"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "LT",
+     "direction": "+",
+     "why": "order inflow"
+    },
+    {
+     "ticker": "RVNL",
+     "direction": "+",
+     "why": "rail"
+    },
+    {
+     "ticker": "ULTRACEMCO",
+     "direction": "+",
+     "why": "cement"
+    },
+    {
+     "ticker": "BHEL",
+     "direction": "+",
+     "why": "power capex"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Budget+2027-28+preparations+pre-budget+meetings+October+12+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "title": "Budget 2027-28 process begins October 12 - Economic Times"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Centre+bullish+on+capex+despite+FY27+fiscal+deficit+concerns+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Centre bullish on capex to sustain growth pace"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Capital+expenditure+grew+by+18%25+April-August+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "title": "Capital expenditure grew by 18% during Apr-Aug - BusinessLine"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_BUDGET_FY28_FISCAL_SLIPPAGE",
+   "title": "Budget FY2027-28: FY27 deficit overshoot confirmed and consolidation path slowed",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2027-02-01",
+   "window_end": "2027-02-01",
+   "prob_by_3m": 0.5,
+   "prob_by_12m": 0.5,
+   "description": "H1 FY27 fiscal deficit Rs 7.14 lakh crore = 42.1% of full-year BE (CGA, 30 Oct; 41.9% at end-Aug); 'five-year high' for H1. SBI Research / ET (2 Nov): FY27 deficit may exceed target by up to Rs 1.2 lakh crore (~0.3% of GDP) on subsidy (fertiliser/LPG/food, oil shock). The Budget may show revised FY27 deficit above BE and a FY28 target above the previously signalled glide path (event defined as FY28 target >=4.0% of GDP or RE overshoot >=0.25% GDP). LTCG relief would cost ~Rs 50,000 cr in FY28 (SBI Research). Probability 0.50 (government may offset via stronger tax/GST receipts: GST Oct +22.9%).",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.8,
+     "low": 0.2,
+     "high": 1.5,
+     "note": "more G-sec supply/term premium"
+    },
+    {
+     "node": "F_CREDIT_SPREADS_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "crowding out"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.6,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BUDGET_FY28_FISCAL_SLIPPAGE",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "Supply pressure lifts corporate yields"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET_FY28_FISCAL_SLIPPAGE",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "NBFC funding cost"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET_FY28_FISCAL_SLIPPAGE",
+      "F_GSEC_10Y_IN",
+      "F_HOUSING_DEMAND",
+      "DLF"
+     ],
+     "explanation": "Mortgage rates"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET_FY28_FISCAL_SLIPPAGE",
+      "F_GSEC_10Y_IN",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Fiscal credibility concerns hit flows and rupee"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "SBIN",
+     "direction": "-",
+     "why": "bond MTM"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "rates"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Fiscal+deficit+likely+to+exceed+FY27+target+Rs+1.2+lakh+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "Fiscal deficit likely to exceed FY27 target by up to Rs 1.2 lakh crore - ET"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Centre%27s+fiscal+deficit+42.1%25+of+FY27+target+H1+CGA+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "Centre's Fiscal Deficit Touch 42.1% Of Full-Year Target In H1: CGA - ETV Bharat"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=LTCG+tax+relief+may+cost+Centre+50%2C000+crore+FY28+SBI+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "LTCG tax relief may cost Centre Rs 50,000 crore in FY28 - Fortune India"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_BUDGET_FY28_LTCG_RELIEF",
+   "title": "Budget FY2027-28: LTCG/STT relief on listed equities (rate cut, exemption, or FPI-specific relief)",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2027-02-01",
+   "window_end": "2027-02-01",
+   "prob_by_3m": 0.35,
+   "prob_by_12m": 0.35,
+   "description": "FM Sitharaman (2-3 Nov): 'we will consider the call for review of LTCG tax' and sought views on LTCG/STT (27 Oct) amid record FPI exodus; FICCI (4 Nov) asks for LTCG exemption/TDS relief; SBI Research proposes zero LTCG (cost Rs 50,000 cr in FY28). Fiscal slack is thin (H1 deficit 42%), so relief is likelier to be partial/targeted. P(any LTCG or STT reduction announced) 0.35; P(full FPI exemption) ~0.08. Current LTCG on listed equity 12.5% (model knowledge, from Budget 2024).",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "P_CAPITAL_GAINS_TAX",
+     "ssu": -0.5,
+     "low": -1.2,
+     "high": -0.1,
+     "note": "SSU +1=higher; negative = relief"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": 0.5,
+     "low": 0.1,
+     "high": 1.2,
+     "note": "flows respond with lag"
+    },
+    {
+     "node": "F_EQUITY_ACTIVITY_IN",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "traded value"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BUDGET_FY28_LTCG_RELIEF",
+      "P_CAPITAL_GAINS_TAX",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Lower post-tax return hurdle re-attracts foreign equity capital"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET_FY28_LTCG_RELIEF",
+      "P_CAPITAL_GAINS_TAX",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Inflows support rupee"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_BUDGET_FY28_LTCG_RELIEF",
+      "P_CAPITAL_GAINS_TAX",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Stronger rupee trims imported inflation"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BUDGET_FY28_LTCG_RELIEF",
+      "P_CAPITAL_GAINS_TAX",
+      "F_EQUITY_ACTIVITY_IN",
+      "BSE"
+     ],
+     "explanation": "Higher turnover lifts exchange/broker/depository earnings"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BSE",
+     "direction": "+",
+     "why": "turnover"
+    },
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "foreign ownership"
+    },
+    {
+     "ticker": "HDFCAMC",
+     "direction": "+",
+     "why": "flows"
+    },
+    {
+     "ticker": "CDSL",
+     "direction": "+",
+     "why": "activity"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Sitharaman+LTCG+tax+review+FPI+exodus+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "We will consider the call for review of LTCG tax - Economic Times"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Govt+seeks+views+on+LTCG+and+STT+FPI+exodus+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "Govt seeks investor and expert views on LTCG and STT - Economic Times"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=FICCI+recommendations+Budget+2027-28+LTCG+exemption+TDS+relief+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "FICCI makes recommendations to FM ahead of Budget 2027-28 - ET"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_GST_RATE_CHANGE_APR27",
+   "title": "GST rate action effective 1 Apr 2027 (targeted rationalisation, e.g. mobile phones, renewable EPC)",
+   "category": "india_macro",
+   "status": "anticipated",
+   "date": "2027-04-01",
+   "window_end": "2027-04-01",
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.3,
+   "description": "After the 57th Council (8 Oct) ministry sources say rate changes will be made once a year from 1 April; agenda items floated: cutting 18% GST on mobile phones, flat 5% for renewable EPC. Fiscal strain (deficit overshoot) and opposition-state compensation demands argue against broad cuts. P(some notable rate cut effective by 1 Apr 2027) 0.30; broad cut <0.05.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "P_GST_CONSUMPTION",
+     "ssu": 0.2,
+     "low": 0.05,
+     "high": 0.5,
+     "note": "targeted, not broad"
+    },
+    {
+     "node": "P_RENEWABLE_SUPPORT",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.6,
+     "note": "EPC GST at 5%"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_GST_RATE_CHANGE_APR27",
+      "P_GST_CONSUMPTION",
+      "F_URBAN_DEMAND"
+     ],
+     "explanation": "Lower tax on affected items boosts volumes"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_GST_RATE_CHANGE_APR27",
+      "P_GST_CONSUMPTION",
+      "F_URBAN_DEMAND",
+      "DIXON"
+     ],
+     "explanation": "Handset/electronics volumes"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_GST_RATE_CHANGE_APR27",
+      "P_RENEWABLE_SUPPORT",
+      "T_ENERGY_TRANSITION",
+      "SUZLON"
+     ],
+     "explanation": "Renewable EPC cost relief supports installations"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_GST_RATE_CHANGE_APR27",
+      "P_GST_CONSUMPTION",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Small CPI relief marginally lowers rate pressure"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "DIXON",
+     "direction": "+",
+     "why": "phones"
+    },
+    {
+     "ticker": "SUZLON",
+     "direction": "+",
+     "why": "renewable EPC"
+    },
+    {
+     "ticker": "MARUTI",
+     "direction": "0/+",
+     "why": "tail of 2025 cut"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=GST+Council+may+consider+reducing+18%25+GST+on+mobile+phones+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-31",
+     "title": "GST Council May Consider Reducing 18% GST Rate on Mobile Phones"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=GST+Council+flat+5%25+rate+renewable+EPC+contracts+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "title": "GST Council may consider flat 5% rate for renewable EPC contracts - Moneycontrol"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_STATE_POLLS_FEB_MAR27",
+   "title": "Assembly elections in UP, Punjab, Uttarakhand, Goa, Manipur (Feb-Mar 2027); status-quo outcome (NDA retains UP)",
+   "category": "india_macro",
+   "status": "scheduled",
+   "date": "2027-02-20",
+   "window_end": "2027-03-15",
+   "prob_by_3m": 0.05,
+   "prob_by_12m": 0.68,
+   "description": "Five states poll Feb-March 2027 (TOI/ET 7 Sep; EC transferred officers 27 Oct; UP polls likely after board exams in Feb; Census enumeration from 25 Jan). Exact dates not announced (missing). Status-quo outcome (NDA retains UP and does not lose majority-defining ground) is my base case, P=0.68 (model judgement, no polling data fetched). Pre-poll effects: populist transfers/subsidies, fiscal slippage; Budget on 1 Feb falls into the campaign (limited tax giveaways, more rural/welfare).",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": -0.2,
+     "low": -0.6,
+     "high": 0.1,
+     "note": "relief on continuity"
+    },
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "welfare transfers"
+    },
+    {
+     "node": "F_GOVT_CAPEX",
+     "ssu": 0.1,
+     "low": 0.0,
+     "high": 0.3,
+     "note": "state capex pre-poll"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_STATE_POLLS_FEB_MAR27",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN"
+     ],
+     "explanation": "Transfers lift rural spending"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_STATE_POLLS_FEB_MAR27",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN",
+      "M&M"
+     ],
+     "explanation": "Tractor/utility vehicle demand"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_STATE_POLLS_FEB_MAR27",
+      "F_GOVT_CAPEX",
+      "P_INFRA_SPENDING_ROADS",
+      "ULTRACEMCO"
+     ],
+     "explanation": "State infra spending lifts cement/roads"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_STATE_POLLS_FEB_MAR27",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Policy continuity supports flows/rupee"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "M&M",
+     "direction": "+",
+     "why": "rural"
+    },
+    {
+     "ticker": "ULTRACEMCO",
+     "direction": "+",
+     "why": "infra"
+    },
+    {
+     "ticker": "LT",
+     "direction": "+",
+     "why": "state projects"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=5+poll-bound+states+set+to+vote+in+February-March+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "title": "5 poll-bound states set to vote in February-March - Times of India"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=EC+orders+transfer+of+election-related+officers+five+states+2027+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "title": "EC orders transfer of election-related officers in five states - New Indian Express"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=UP+assembly+elections+likely+after+Board+Exams+February+2027+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-13",
+     "title": "UP assembly elections likely after Board Exams in February 2027 - The Statesman"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_BANKING_LIQUIDITY_DEFICIT_MAR27",
+   "title": "Banking system liquidity turns to sustained deficit by end-March 2027",
+   "category": "india_macro",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.3,
+   "prob_by_12m": 0.6,
+   "description": "Governor (7 Oct): surplus 'may not persist beyond FY27', 'surplus seen easing by March'. Drains: FX sales (reserves -~US$56bn from peak), CRR maintenance 99% (16 Oct), bond sales, credit growth ~19.4% outpacing deposits (CD ratio ~85%), March advance-tax outflows. Offsets: RBI may inject via OMO/swaps if yields spike. Current surplus size not retrieved (missing information). P(deficit on average in Mar 2027) 0.60.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_LIQUIDITY_IN",
+     "ssu": -1.5,
+     "low": -3.0,
+     "high": -0.5,
+     "note": "swing from surplus to deficit"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.7,
+     "note": ""
+    },
+    {
+     "node": "F_CREDIT_SPREADS_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.7,
+     "note": ""
+    },
+    {
+     "node": "F_DEPOSIT_GROWTH_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.8,
+     "note": "banks raise deposit rates"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BANKING_LIQUIDITY_DEFICIT_MAR27",
+      "F_LIQUIDITY_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "Liquidity deficit raises short-term and term yields"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BANKING_LIQUIDITY_DEFICIT_MAR27",
+      "F_LIQUIDITY_IN",
+      "F_GSEC_10Y_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "Spreads widen"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BANKING_LIQUIDITY_DEFICIT_MAR27",
+      "F_LIQUIDITY_IN",
+      "F_CREDIT_SPREADS_IN",
+      "BAJFINANCE"
+     ],
+     "explanation": "NBFC funding cost"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BANKING_LIQUIDITY_DEFICIT_MAR27",
+      "F_DEPOSIT_GROWTH_IN",
+      "F_CREDIT_GROWTH_IN",
+      "F_GDP_IN"
+     ],
+     "explanation": "Deposit competition raises cost of funds and slows credit"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "-",
+     "why": "NIM pressure from deposit competition"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding"
+    },
+    {
+     "ticker": "SBIN",
+     "direction": "+/-",
+     "why": "deposit franchise"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Surplus+liquidity+may+not+persist+beyond+FY27+Malhotra+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Surplus liquidity may not persist beyond FY27: RBI Governor - Business Standard"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Bank+credit+growth+19.4%25+outpaces+deposits+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-10",
+     "title": "Bank Credit Growth Hits 19.4%, Outpaces Deposits - BW Businessworld"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_FPI_INFLOW_REBOUND",
+   "title": "FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief",
+   "category": "india_macro",
+   "status": "anticipated",
+   "date": "2027-01-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.5,
+   "description": "Early signs: FPIs buying in early Nov, longest Nifty winning streak in ~5 months (Reuters 4 Nov); crude -4%/-6% on US-Iran talks (2 Nov); India-US trade deal close per Rubio (20 Oct) though midterm result reduces US urgency; possible LTCG relief; investors rethinking AI bets (ET 2 Nov). Against: rupee still weak, 10y 7.4%, FPI share of market still falling, record YTD outflows. P(a calendar quarter with net equity inflow >= US$5bn by end-Q1 CY27): 0.50.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": 2.5,
+     "low": 1.2,
+     "high": 4.0,
+     "note": "swing from ~-US$11bn/qtr run-rate to >=+US$5bn/qtr"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": -0.4,
+     "low": -1.0,
+     "high": 0.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_FPI_INFLOW_REBOUND",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Inflows strengthen rupee"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FPI_INFLOW_REBOUND",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Imported inflation eases"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_FPI_INFLOW_REBOUND",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Lower inflation pressure reduces hike odds"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_FPI_INFLOW_REBOUND",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "TCS"
+     ],
+     "explanation": "Stronger rupee trims IT-exporter INR earnings"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HDFCBANK",
+     "direction": "+",
+     "why": "FPI-heavy"
+    },
+    {
+     "ticker": "ICICIBANK",
+     "direction": "+",
+     "why": "FPI-heavy"
+    },
+    {
+     "ticker": "TCS",
+     "direction": "-",
+     "why": "rupee strength offsets flows"
+    },
+    {
+     "ticker": "BSE",
+     "direction": "+",
+     "why": "turnover"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Indian+stocks+longest+winning+streak+FPI+inflow+hopes+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "Indian stocks post longest winning streak in nearly 5 months on FPI inflow hopes - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=FPI+buying+returns+Dalal+Street+rethink+AI+bets+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "FPI buying returns to Dalal Street as global investors rethink AI bets - ET"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+US+trade+deal+Rubio+close+Mumbai+talks+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-20",
+     "title": "Marco Rubio says we're about as close as you can be to an India trade deal - Fortune"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_UP_UPSET_OPPOSITION_WIN",
+   "title": "Risk: opposition wins UP/major upset in Feb-Mar 2027 state polls",
+   "category": "india_macro",
+   "status": "risk_scenario",
+   "date": "2027-03-10",
+   "window_end": "2027-03-15",
+   "prob_by_3m": 0.03,
+   "prob_by_12m": 0.2,
+   "description": "Probability judgement only (no polling fetched). UP (80 Lok Sabha seats) is the national bellwether; an upset would raise doubts about the 2029 reform/continuity trajectory, fiscal populism and capex priorities.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 0.8,
+     "low": 0.3,
+     "high": 1.5,
+     "note": "+4 VIX points"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": -0.4,
+     "low": -1.0,
+     "high": -0.1,
+     "note": ""
+    },
+    {
+     "node": "F_GOVT_CAPEX",
+     "ssu": -0.2,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "populist reprioritisation"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_UP_UPSET_OPPOSITION_WIN",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "Risk aversion cuts foreign flows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_UP_UPSET_OPPOSITION_WIN",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS",
+      "F_USDINR"
+     ],
+     "explanation": "Rupee pressure"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_UP_UPSET_OPPOSITION_WIN",
+      "F_GOVT_CAPEX",
+      "P_RAILWAY_CAPEX",
+      "RVNL"
+     ],
+     "explanation": "Policy-continuity discount on PSU/capex names"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_UP_UPSET_OPPOSITION_WIN",
+      "F_RISK_SENTIMENT",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Weak rupee adds imported inflation"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "RVNL",
+     "direction": "-",
+     "why": "policy continuity"
+    },
+    {
+     "ticker": "SBIN",
+     "direction": "-",
+     "why": "PSU banks"
+    },
+    {
+     "ticker": "LT",
+     "direction": "-",
+     "why": "capex"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Seven+states+132+Lok+Sabha+seats+why+2027+matters+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Seven states, 132 Lok Sabha seats - WION"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RUPEE_BREAK_98_RESERVE_STRESS",
+   "title": "Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response)",
+   "category": "india_macro",
+   "status": "risk_scenario",
+   "date": "2027-01-15",
+   "window_end": "2027-06-30",
+   "prob_by_3m": 0.08,
+   "prob_by_12m": 0.22,
+   "description": "Triggers: oil back >US$105 (US-Iran war flare-up, Hormuz/Kharg risk), further FPI exits, India-US trade breakdown. RBI has ~US$200bn net short forward book (record, Aug), reserves US$719.75bn and falling seven weeks; Reuters (15 Oct) says half of US$140bn capital haul spent. RBI response could include FCNR(B) schemes, import curbs, an out-of-cycle/50 bp hike, and CRR hikes. P(by 12m) 0.22 is a judgement.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_USDINR",
+     "ssu": 1.3,
+     "low": 0.9,
+     "high": 2.0,
+     "note": "94.5 -> ~98.3 (+4%)"
+    },
+    {
+     "node": "NEW_FX_RESERVES_IN",
+     "ssu": -2.8,
+     "low": -4.0,
+     "high": -2.0,
+     "note": "-US$70bn to ~US$650bn"
+    },
+    {
+     "node": "F_LIQUIDITY_IN",
+     "ssu": -1.5,
+     "low": -3.0,
+     "high": -0.5,
+     "note": ""
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": 1.0,
+     "low": 0.0,
+     "high": 2.0,
+     "note": "emergency tightening"
+    },
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": -1.5,
+     "low": -3.0,
+     "high": -0.5,
+     "note": ""
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 1.0,
+     "low": 0.3,
+     "high": 2.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RUPEE_BREAK_98_RESERVE_STRESS",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Imported inflation"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RUPEE_BREAK_98_RESERVE_STRESS",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Further tightening"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RUPEE_BREAK_98_RESERVE_STRESS",
+      "F_USDINR",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Credit slowdown"
+    },
+    {
+     "order": 2,
+     "path": [
+      "EV_RUPEE_BREAK_98_RESERVE_STRESS",
+      "F_USDINR",
+      "TCS"
+     ],
+     "explanation": "Exporters gain"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TCS",
+     "direction": "+",
+     "why": "rupee"
+    },
+    {
+     "ticker": "INFY",
+     "direction": "+",
+     "why": "rupee"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "-",
+     "why": "oil import bill"
+    },
+    {
+     "ticker": "DLF",
+     "direction": "-",
+     "why": "rates"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=RBI+net+short+dollar+position+record+%24200+billion+forward+book+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "title": "RBI's Net Short Dollar Position Soars to Record $200 Billion in August - Rediff"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Rupee+falls+past+95+as+oil+climbs+RBI+swaps+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-09",
+     "title": "Rupee falls past 95/USD as oil climbs - Reuters"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+central+bank+tries+to+shore+up+rupee+near+record+lows+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-10",
+     "title": "India's central bank tries to shore up rupee as it nears record lows - Financial Times"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_STAGFLATION_SCARE",
+   "title": "Risk: stagflation scare - CPI >=6.5% while GDP growth slips below ~6% (Q3 FY27 data, late Feb 2027)",
+   "category": "india_macro",
+   "status": "risk_scenario",
+   "date": "2027-02-27",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.04,
+   "prob_by_12m": 0.12,
+   "description": "Combination of persistent oil, El Nino food shock, imported inflation and credit tightening. Two MPC members already resisted the stance change (growth worry). Q3 FY27 GDP due ~late Feb 2027 (date approximate). P(by 12m) 0.12 is a judgement.",
+   "what_already_moved": null,
+   "entry_shocks": [
+    {
+     "node": "F_CPI_IN",
+     "ssu": 1.0,
+     "low": 0.6,
+     "high": 1.5,
+     "note": "CPI to ~6.5%"
+    },
+    {
+     "node": "F_GDP_IN",
+     "ssu": -1.5,
+     "low": -2.5,
+     "high": -0.8,
+     "note": "quarterly growth ~6%"
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": 1.0,
+     "low": 0.0,
+     "high": 2.0,
+     "note": "policy dilemma"
+    },
+    {
+     "node": "F_RURAL_DEMAND",
+     "ssu": -0.8,
+     "low": -1.5,
+     "high": -0.2,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_STAGFLATION_SCARE",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "Policy tightens into slowdown"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_STAGFLATION_SCARE",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_CREDIT_GROWTH_IN"
+     ],
+     "explanation": "Credit slows"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_STAGFLATION_SCARE",
+      "F_RURAL_DEMAND",
+      "F_AUTO_DEMAND_IN",
+      "M&M"
+     ],
+     "explanation": "Rural squeeze"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_STAGFLATION_SCARE",
+      "F_GDP_IN",
+      "F_FPI_FLOWS",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "Lower growth hits flows, weak rupee reinforces inflation"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDUNILVR",
+     "direction": "-",
+     "why": "volume/cost"
+    },
+    {
+     "ticker": "M&M",
+     "direction": "-",
+     "why": "rural"
+    },
+    {
+     "ticker": "BAJFINANCE",
+     "direction": "-",
+     "why": "funding/asset quality"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+stagflation+risk+growth+inflation+2026+RBI+Governor+four+horsemen+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "title": "Four horsemen of economic trouble? RBI governor flags the risks - ET"
+    }
+   ],
+   "confidence": "low"
+  }
+ ],
+ "edges": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "Policy rate anchors the curve; term premium absorbs part of a hike",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "10y rose ~44bp around a 25bp hike plus liquidity tightening (Sep-Nov 2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "F_CREDIT_SPREADS_IN",
+   "relation": "macro_transmission",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Corporate bond/lending spreads benchmarked to G-sec",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "macro_transmission",
+   "w": -0.12,
+   "w_low": -0.25,
+   "w_high": -0.04,
+   "lag": "3-12m",
+   "mechanism": "Higher rates slow loan demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.5,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "Mortgage rate pass-through to sales volumes",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "macro_transmission",
+   "w": -0.15,
+   "w_low": -0.4,
+   "w_high": -0.03,
+   "lag": "3-12m",
+   "mechanism": "Vehicle-loan rate effect",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Carry support for rupee",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "RBI hike did not stop rupee nearing record lows (Bloomberg 7 Oct)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_DEPOSIT_GROWTH_IN",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.02,
+   "w_high": 0.25,
+   "lag": "3-12m",
+   "mechanism": "Higher deposit rates attract savings",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.25,
+   "w_low": -0.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Dollar supply/demand from portfolio flows",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "2026 FPI outflows coincided with rupee at 95-96"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.13,
+   "w_low": 0.06,
+   "w_high": 0.25,
+   "lag": "3-12m",
+   "mechanism": "Imported-goods pass-through",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_REPO_IN",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "RBI reaction function toward 4% target / 6% band",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "RBI Oct 2026 pivot after CPI 5.54%"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.75,
+   "w_low": 0.6,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "Food weight ~37% in 2024-base CPI (model knowledge)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "food +2pp => CPI +~0.75pp"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Rainfall shortfall cuts output",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "2026 deficit coincided with food inflation 7.74%"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Farm incomes",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.15,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Two-wheeler/tractor demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.25,
+   "w_high": -0.03,
+   "lag": "0-3m",
+   "mechanism": "Surplus liquidity compresses yields",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "RBI liquidity tightening Oct 2026"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_FPI_FLOWS",
+   "relation": "regulatory_risk",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "After-tax returns on Indian equities",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "FPI outflow/LTCG review debate Oct-Nov 2026"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "regulatory_risk",
+   "w": -0.15,
+   "w_low": -0.4,
+   "w_high": -0.03,
+   "lag": "0-3m",
+   "mechanism": "Turnover",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Risk-off cuts EM flows",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "Capex multiplier",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "demand_driver",
+   "w": 0.35,
+   "w_low": 0.15,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Credit demand tracks nominal growth",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Growth premium attracts equity flows",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "F_LIQUIDITY_IN",
+   "relation": "macro_transmission",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Credit>deposit growth absorbs surplus",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "credit 19.4% vs deposits lower; CD ratio ~85% (Oct 2026)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FX_RESERVES_IN",
+   "dst": "F_LIQUIDITY_IN",
+   "relation": "macro_transmission",
+   "w": 1.4,
+   "w_low": 0.6,
+   "w_high": 2.4,
+   "lag": "0-3m",
+   "mechanism": "Spot dollar sales drain rupee liquidity (US$25bn ~ Rs 2.4 lakh cr, partly sterilised)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "reserves -US$56bn Sep-Oct 2026"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FX_RESERVES_IN",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.12,
+   "w_low": -0.3,
+   "w_high": -0.03,
+   "lag": "0-3m",
+   "mechanism": "Lower buffer raises rupee downside risk",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.08,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "Fuel and transport; retail petrol/diesel partly administered",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "Brent ~US$95; CPI 5.54%"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.15,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Oil import bill widens CAD",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rupee fell past 95 as oil climbed (Reuters 9 Sep)"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Lower tax raises affordability",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "GST 2.0 episode (model knowledge)"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "policy_effect",
+   "w": 0.9,
+   "w_low": 0.4,
+   "w_high": 1.4,
+   "lag": "0-3m",
+   "mechanism": "Car/2W rate cuts",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "GST 2.0 episode (model knowledge)"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_CPI_IN",
+   "relation": "policy_effect",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "Lower indirect tax on CPI items",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge (calibrated to RBI/India macro rules of thumb)",
+     "date": "2026-11-05",
+     "note": "rule of thumb"
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_FX_RESERVES_IN",
+   "type": "FACTOR",
+   "name": "India FX reserves",
+   "ssu": "+US$25bn reserves (RBI buys / net inflows)"
+  }
+ ],
+ "factor_state_notes": [
+  {
+   "metric": "RBI repo rate",
+   "value": "5.50%",
+   "as_of": "2026-10-07",
+   "note": "+25 bp from 5.25% (held 5 Aug); stance neutral -> calibrated tightening; Governor: near-term cuts off the table; minutes: 2 members opposed stance change",
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+when:120d&hl=en-IN&gl=IN&ceid=IN:en (The Hindu/SCC Online/Reuters headlines 7-21 Oct 2026)"
+  },
+  {
+   "metric": "CPI inflation (2024=100)",
+   "value": "5.54% y/y (Sep 2026); food 7.74%",
+   "as_of": "2026-10-12",
+   "note": "Jun 4.38, Jul 4.45, Aug 4.82, Sep 5.54; 9 straight rises; RBI FY27 core projection 4.4%; Aug headline FY27 projection 5.0% (Oct headline projection not retrieved); Oct CPI due ~12 Nov",
+   "source": "https://news.google.com/rss/search?q=India+retail+inflation+September+2026+5.54%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en (CNBC, Reuters 12 Oct 2026)"
+  },
+  {
+   "metric": "GDP growth",
+   "value": "Q1 FY27 +7.8% y/y; RBI FY27 7.1%; IMF 7.0%; FinMin Q2 est 7.35%",
+   "as_of": "2026-08-31 / 2026-10-29",
+   "note": "Q2 release ~30 Nov (date approximate)",
+   "source": "https://news.google.com/rss/search?q=India+GDP+Q1+FY27+7.8%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en (Reuters 31 Aug; ET 29 Oct; Moneycontrol 7 Oct)"
+  },
+  {
+   "metric": "10y G-sec yield",
+   "value": "~7.44%",
+   "as_of": "2026-11-03",
+   "note": "crossed 7% on 11 Sep; >7.45% multi-year high on 21 Oct; SBI Research sees 6.75-7.0% by Mar 2027; another report 7.25-7.35% in Nov; India-US 10y spread near 22-year low (9 Oct)",
+   "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+November+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en (Reuters 29 Oct, Investing.com 21 Oct, Business Standard 1 Nov)"
+  },
+  {
+   "metric": "FX reserves",
+   "value": "US$719.75bn",
+   "as_of": "2026-10-23 (week; reported 2026-10-30)",
+   "note": "seventh straight weekly fall; derived peak ~US$775.8bn on 18 Sep; record weekly fall US$18.34bn (w/e 25 Sep); RBI net short forward book ~US$200bn (Aug); RBI sold ~US$18.2bn in Oct",
+   "source": "https://news.google.com/rss/search?q=India+forex+reserves+week+ended+October+when:120d&hl=en-IN&gl=IN&ceid=IN:en (Reuters 30 Oct; Moneycontrol 2 Oct; Rediff 1 Oct)"
+  },
+  {
+   "metric": "USD/INR",
+   "value": "94.58 (close); factor_state.md 94.49",
+   "as_of": "2026-11-05",
+   "note": "crossed 95 on 9 Sep, ~95.99 on 25 Sep; -1.1% since 1 Jun, +6.5% 12m",
+   "source": "https://news.google.com/rss/search?q=rupee+closes+dollar+November+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en (India News Network 5 Nov; Reuters 4 Nov)"
+  },
+  {
+   "metric": "FPI net equity flow YTD CY2026",
+   "value": "about -Rs 2.95 lakh crore (~-US$32-35bn, conversion assumed)",
+   "as_of": "2026-11-01",
+   "note": "peak -Rs 3.12 lakh cr (18 Oct); Oct selling >= Rs 48,056 cr (to 25 Oct); Sep ~Rs 36,000 cr; early-Nov buying; FPI G-sec outflow Rs 5,400 cr in Oct",
+   "source": "https://news.google.com/rss/search?q=FPI+outflows+2026+India+equities+November+when:120d&hl=en-IN&gl=IN&ceid=IN:en (Moneycontrol 1 Nov; Times of India 18 Oct; The Hindu 25 Oct)"
+  },
+  {
+   "metric": "Central fiscal deficit",
+   "value": "Rs 7.14 lakh crore in H1 FY27 = 42.1% of BE",
+   "as_of": "2026-10-30",
+   "note": "SBI/ET: FY27 may overshoot by up to Rs 1.2 lakh cr; capex +18% Apr-Aug; subsidy bill ballooned; LTCG relief cost ~Rs 50,000 cr in FY28 (SBI)",
+   "source": "https://news.google.com/rss/search?q=Centre+fiscal+deficit+42.1%25+FY27+target+H1+CGA+when:120d&hl=en-IN&gl=IN&ceid=IN:en (Moneycontrol 30 Oct; ET 2 Nov; Fortune India 3 Nov)"
+  },
+  {
+   "metric": "Gross GST collections",
+   "value": "Rs 2.31 lakh crore (+22.9% y/y), Oct 2026",
+   "as_of": "2026-11-01",
+   "note": "fastest growth in 4+ years, import- and low-base-driven",
+   "source": "https://news.google.com/rss/search?q=GST+collections+October+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en (Times of India/Livemint 1 Nov)"
+  },
+  {
+   "metric": "Bank credit growth / CD ratio",
+   "value": "credit +19.4% y/y; CD ratio ~85%",
+   "as_of": "2026-10-10",
+   "note": "credit has outpaced deposits for four quarters; deposit growth figure not retrieved",
+   "source": "https://news.google.com/rss/search?q=bank+credit+growth+deposit+growth+October+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en (BW Businessworld 10 Oct; Fortune India 16 Oct)"
+  },
+  {
+   "metric": "Banking liquidity",
+   "value": "surplus, shrinking; surplus size not retrieved",
+   "as_of": "2026-10-09",
+   "note": "daily CRR maintenance 99% from 16 Oct; Rs 25,000 cr bond sale 13 Oct; Governor: surplus may not persist beyond FY27",
+   "source": "https://news.google.com/rss/search?q=RBI+raises+daily+CRR+maintenance+99%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en (Business Standard, Moneycontrol 9 Oct)"
+  },
+  {
+   "metric": "Monsoon 2026",
+   "value": "~15% below normal",
+   "as_of": "2026-09-21",
+   "note": "'driest in 17 years' (Bhaskar) vs 'weakest in 10 years' (FE) - sources conflict; kharif acreage above 5y avg",
+   "source": "https://news.google.com/rss/search?q=India+monsoon+2026+rainfall+deficit+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "metric": "Manufacturing PMI",
+   "value": "54.7 (Oct); 55.1 (Sep)",
+   "as_of": "2026-11-02",
+   "note": "export orders at 6-month high",
+   "source": "https://news.google.com/rss/search?q=India+manufacturing+PMI+October+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "metric": "Merchandise trade",
+   "value": "Sep deficit US$30.21bn; exports +23% y/y (US$44.4bn); Aug CAD US$5.2bn",
+   "as_of": "2026-10-15",
+   "note": "",
+   "source": "https://news.google.com/rss/search?q=India+trade+deficit+September+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "metric": "Nifty 50 / India VIX",
+   "value": "~24,300-24,460 / 15.3",
+   "as_of": "2026-11-05",
+   "note": "factor_state.md 24,461 (+7.4% 1m, -4.4% 12m); Nifty fell ~6% in Sep",
+   "source": "market_impact/results/factor_state.md; HDFC Sky 5 Nov headline"
+  },
+  {
+   "metric": "Brent / US-Iran war backdrop",
+   "value": "US$94.99",
+   "as_of": "2026-11-05",
+   "note": "crude -6% on US-Iran talk hopes (2 Nov); main swing variable for CPI, rupee, RBI",
+   "source": "market_impact/results/factor_state.md; India Infoline 2 Nov"
+  },
+  {
+   "metric": "State elections",
+   "value": "UP, Punjab, Uttarakhand, Goa, Manipur vote Feb-Mar 2027",
+   "as_of": "2026-10-27",
+   "note": "dates not yet announced",
+   "source": "https://news.google.com/rss/search?q=5+poll-bound+states+Feb-March+2027+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "metric": "MPC calendar (Dec 2026, Feb 2027, Apr 2027)",
+   "value": "approx 4 Dec / 5 Feb / 8 Apr",
+   "as_of": "2026-11-05",
+   "note": "UNVERIFIED approximate dates; official RBI calendar not retrieved",
+   "source": "model knowledge"
+  }
+ ]
+}

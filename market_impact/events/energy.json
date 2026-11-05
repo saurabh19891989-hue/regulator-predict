@@ -1,0 +1,2576 @@
+{
+ "events": [
+  {
+   "event_id": "EV_IRAN_WAR_HORMUZ_OIL",
+   "title": "Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct)",
+   "category": "energy",
+   "status": "occurred",
+   "date": "2026-06-01",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "US/Israel-Iran war with repeated tanker attacks in Hormuz, Houthi attacks on Saudi targets/East-West pipeline, Saudi output reported at lowest since 1990 (Bloomberg headline, 10 Sep). Brent touched $110 on 16 Oct, settled at 6-month highs 30 Oct, then fell ~16% in the week to 5 Nov on US-Iran talk hopes (Islamabad rounds; ceasefire described as 'on life support' on 3 Nov). Indian crude basket traded well above Brent futures (basket $122 vs $106 Brent per Gujarat Samachar headline 14 Oct) as physical premia/freight spiked. India's April-Sept crude import bill +46% to $90.6bn (ThePrint/Moneycontrol, 19-21 Oct).",
+   "what_already_moved": "Brent 94.99 on 2026-11-05: 1m -5.6%, 3m +15.2%, 6m -5.1%, 12m +49.5%, flat since 2026-06-01 (per market_impact/results/factor_state.md (Yahoo closes, 2026-11-05)). Refining-margin proxy +15.4% since 1 Jun, +72.7% y/y. USD/INR 94.49 (+6.5% y/y). Gold -8.4% and silver -30% since 1 Jun.",
+   "entry_shocks": [
+    {
+     "node": "F_BRENT",
+     "ssu": 4.95,
+     "low": 4.0,
+     "high": 5.5,
+     "note": "y/y +49.5% in units of +10%; this is the cumulative change that has happened, much already priced"
+    },
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": 1.5,
+     "low": 1.0,
+     "high": 2.0,
+     "note": "escalation level sustained since mid-2026"
+    },
+    {
+     "node": "C_RED_SEA",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.0,
+     "note": "Houthi blockade/attacks on Saudi pipeline infra"
+    },
+    {
+     "node": "F_REFINING_MARGIN",
+     "ssu": 1.5,
+     "low": 0.8,
+     "high": 2.5,
+     "note": "cracks elevated; IOC Q2 GRM details not verified"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OIL",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "higher oil import bill widens CAD; rupee weaker"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OIL",
+      "F_BRENT",
+      "F_USDINR",
+      "F_CPI_IN"
+     ],
+     "explanation": "rupee and fuel pass-through lift CPI (RBI hiked 7-9 Oct)"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OIL",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "CPI ~6% (Deutsche, 27 Oct) -> repo hike to 5.50% -> yields -> banks/NBFC/real estate"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OIL",
+      "C_MIDEAST_CONFLICT",
+      "F_BRENT",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "supply loss widens product cracks; export-oriented refiners gain"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_WAR_HORMUZ_OIL",
+      "F_BRENT",
+      "NEW_OMC_MARKETING_MARGIN"
+     ],
+     "explanation": "frozen retail prices turn crude into OMC marketing under-recovery"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ONGC",
+     "direction": "+",
+     "why": "upstream realisation"
+    },
+    {
+     "ticker": "OIL",
+     "direction": "+",
+     "why": "upstream realisation"
+    },
+    {
+     "ticker": "RELIANCE",
+     "direction": "+",
+     "why": "GRM/export cracks"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": "frozen retail prices, LPG"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "-",
+     "why": "marketing losses, highest marketing share"
+    },
+    {
+     "ticker": "INDIGO",
+     "direction": "-",
+     "why": "ATF cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Brent+oil+Iran+war+Hormuz+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "title": "Brent oil touches $110 as Iran escalates Hormuz attacks (CNBC) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Oil+prices+Brent+below+$95+Iran+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "title": "Brent Below $95 After 16% Crash This Week (NDTV Profit) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+crude+import+bill+46%+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "title": "India's crude import bill jumps 46% to $90.6bn in Apr-Sep (ThePrint) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_OPEC_HOLD_OCT_NOV",
+   "title": "OPEC+ holds output targets for November (4 Oct) and December (1 Nov); actual output constrained by war",
+   "category": "energy",
+   "status": "occurred",
+   "date": "2026-11-01",
+   "window_end": "2026-11-01",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "OPEC+ eight-country group kept November then December targets steady; reports note members cannot pump up to quota (Saudi output slumped; OPEC+ output nonetheless +0.9 mb/d in Sept per Egypt Oil & Gas 13 Oct). Earlier in 2026 (Jul-Aug headlines) the group was raising output. Decision on 2027 quotas deferred.",
+   "what_already_moved": "Little direct price move; Brent -5.6% over 1m on peace hopes, not OPEC.",
+   "entry_shocks": [
+    {
+     "node": "F_BRENT",
+     "ssu": 0.0,
+     "low": -0.3,
+     "high": 0.3,
+     "note": "no incremental supply signal; price set by war/Hormuz"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_OPEC_HOLD_OCT_NOV",
+      "F_BRENT",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "no change; baseline retained"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ONGC",
+     "direction": "0",
+     "why": "no change"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=OPEC%2B+keeps+December+output+steady+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "OPEC+ agrees in principle to keep December output targets steady (Reuters) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=OPEC%2B+agrees+keep+November+output+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-04",
+     "title": "OPEC+ agrees to keep November oil output targets steady (CNBC) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_RUSSIA_WAIVER_OCT17",
+   "title": "US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct)",
+   "category": "geopolitics_trade",
+   "status": "occurred",
+   "date": "2026-10-17",
+   "window_end": "2026-10-17",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Trump waived the Graham-Act sanctions law mechanism two days before the 100% tariff on Russian-oil buyers (incl. India) was due. India's Russian crude imports stabilised at ~1.8-1.9 mb/d (Swarajya/Telegraph, 17 Oct); Russia retained top-supplier spot (New Indian Express 30 Sep) while UAE overtook US in LPG. India cut US and Russian crude imports in Sept, pivoting to UAE (The Hindu 30 Oct). Record Russian imports in July-Aug (ET, TOI 10-11 Aug). Nayara remains under sanctions pressure (SAP service order litigation, 9 Oct).",
+   "what_already_moved": "Not separable in market data; Brent unchanged since 1 Jun. Removes tail of 100% tariff on India (other agent covers US tariff).",
+   "entry_shocks": [
+    {
+     "node": "C_RUSSIA",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.0,
+     "note": "continued access to discounted barrels"
+    },
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "removal of Russia-linked tariff threat; units are +10pp so -5pp expected-value reduction"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RUSSIA_WAIVER_OCT17",
+      "C_RUSSIA",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "cheaper feedstock widens Indian refiners' realised GRM"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RUSSIA_WAIVER_OCT17",
+      "P_US_TARIFF_INDIA",
+      "F_USDINR",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "lower tariff-risk premium supports rupee and bonds"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RUSSIA_WAIVER_OCT17",
+      "C_RUSSIA",
+      "F_REFINING_MARGIN",
+      "NEW_OMC_MARKETING_MARGIN"
+     ],
+     "explanation": "cheaper crude cushions OMC marketing losses -> OMC capex/dividends"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "RELIANCE",
+     "direction": "+",
+     "why": "Jamnagar crude optionality and EU-product-ban risk reduced"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "+",
+     "why": "cheaper crude"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "cheaper crude"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Trump+waives+sanctions+Russian+oil+India+tariff+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "title": "Trump waives Russia sanctions that threatened 100% tariffs on India (NDTV) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+Russian+crude+imports+stabilise+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "title": "India's Russian oil imports stabilise at 1.8-1.9 million bpd (Swarajya) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_OMC_FUEL_FREEZE_LOSSES",
+   "title": "Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-09-01",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Retail petrol/diesel prices unchanged while crude surged: ICRA/Express/TOI estimated OMC losses of ~Rs530 crore/day (23-24 Sep) and up to Rs30/litre on some sales (TOI 16 Oct); petrol margins briefly turned positive in early Oct (ET 7 Oct) then reversed with Brent $100-110. Private retailers Jio-bp and Nayara raised prices (Jio-bp +Rs5 petrol/+Rs3 diesel, 11 Oct) and capped diesel sales (ET 28 Sep). Q2 FY27 PAT headlines: IOC Rs21,630 cr (swing from Q1 loss; record, helped by LPG compensation and refining margins), HPCL Rs3,625 cr (-6% y/y; another headline says Rs3,483 cr), BPCL Rs4,993 cr (-22.5%, 'fuel price freeze'). Oil PSUs total Rs30,106 cr = 39% of FY26 profit in one quarter (FE 1 Nov). IOC/PSU GRM $/bbl and per-litre marketing margins NOT verified from filings; indicative numbers above are headline-level.",
+   "what_already_moved": "BPCL target cut to Rs385 (Moneycontrol 27 Oct); BPCL Q2 PAT -22.5% y/y; IOC +184% y/y (The Hindu 30 Oct).",
+   "entry_shocks": [
+    {
+     "node": "NEW_OMC_MARKETING_MARGIN",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.5,
+     "note": "change vs normal ~Rs3-4/litre combined petrol-diesel margin; SSU +Rs1/litre. Headline losses Rs0-30/litre depending on date; unverified"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_OMC_FUEL_FREEZE_LOSSES",
+      "NEW_OMC_MARKETING_MARGIN",
+      "BPCL"
+     ],
+     "explanation": "marketing share of EBITDA is highest for BPCL/HPCL"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_OMC_FUEL_FREEZE_LOSSES",
+      "NEW_OMC_MARKETING_MARGIN",
+      "F_GOVT_CAPEX"
+     ],
+     "explanation": "weaker OMC cash flows risk delaying downstream capex and dividends to government"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_OMC_FUEL_FREEZE_LOSSES",
+      "NEW_OMC_MARKETING_MARGIN",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "freeze holds CPI down but defers pass-through; later hike is a CPI/yield risk"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDPETRO",
+     "direction": "-",
+     "why": "marketing-heavy, small refining cushion"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": "Q2 PAT -22.5%"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "+/-",
+     "why": "refining/LPG compensation offset marketing loss"
+    },
+    {
+     "ticker": "ONGC",
+     "direction": "+",
+     "why": "may be asked to share burden (risk)"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=OMCs+losing+Rs+530+crore+daily+ICRA+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "title": "OMCs losing Rs 530 crore daily (ICRA, PSU Watch/NIE) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=OMCs+losing+up+to+Rs+30+per+litre+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "title": "OMCs losing up to Rs 30 per litre (TOI) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=BPCL+Q2+net+profit+falls+22.5%+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "title": "BPCL Q2 profit falls 22.5% (Fortune India) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=IOC+Q2+profit+record+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "IOC Q2 record profit (Reuters/The Hindu) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_EXPORT_LEVY_REVISIONS",
+   "title": "Windfall/export levy re-set: petrol nil, diesel Rs11.5/l, ATF ~Rs11/l (31 Oct); excise reportedly cut (3 Nov, unverified)",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-10-31",
+   "window_end": "2026-10-31",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Windfall export levies reintroduced in August (raised 3 Aug amid Iran war, cut 14 Aug), cut again 1 Sep, 1 Oct, 17 Sep, adjusted 16 Oct (petrol up, diesel down) and on 31 Oct petrol set to nil, diesel raised Rs3/l to Rs11.5/l, ATF ~Rs11/l. Fortnightly resets track diesel/ATF cracks. NDTV Profit headline of 3 Nov says 'Despite elevated Indian crude basket price, excise duty cut on fuel' - magnitude and whether it is the export levy or retail excise NOT verified.",
+   "what_already_moved": "Levy on diesel exports directly trims exporter realisation (Reliance, Nayara) by roughly the levy minus normal; RELIANCE share reaction not measured.",
+   "entry_shocks": [
+    {
+     "node": "P_WINDFALL_EXPORT_TAX",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.0,
+     "note": "levy in force on diesel/ATF; petrol exports free"
+    },
+    {
+     "node": "P_FUEL_TAX_IN",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": 0.0,
+     "note": "possible small excise cut; unverified"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_EXPORT_LEVY_REVISIONS",
+      "P_WINDFALL_EXPORT_TAX",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "levy caps diesel crack capture by exporters"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_EXPORT_LEVY_REVISIONS",
+      "P_WINDFALL_EXPORT_TAX",
+      "F_REFINING_MARGIN",
+      "F_USDINR"
+     ],
+     "explanation": "lower export earnings dollar inflow marginally"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_EXPORT_LEVY_REVISIONS",
+      "P_FUEL_TAX_IN",
+      "NEW_OMC_MARKETING_MARGIN"
+     ],
+     "explanation": "lower excise cushions marketing margin without retail hike"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "RELIANCE",
+     "direction": "-",
+     "why": "export diesel/ATF levy"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "domestic-focused, excise relief"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "+",
+     "why": "excise relief"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=windfall+tax+India+diesel+ATF+export+duty+31+October+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "title": "Govt hikes windfall tax on diesel, ATF exports; petrol levy cut to zero (Moneycontrol) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Despite+Elevated+Indian+Crude+Oil+Basket+Price+Excise+Duty+Cut+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Excise Duty Cut On Fuel (NDTV Profit) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_LPG_UNDERRECOVERY",
+   "title": "Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-08-10",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "OMC domestic-LPG under-recoveries crossed Rs59,000 crore as of July (govt data, 10 Aug); per-cylinder loss fell to Rs188 in Aug (NIE) but accumulated burden persisted. Commercial 19kg cylinder +Rs62.50 on 1 Oct, domestic rate unchanged. LPG supply cost reported >Rs1,600/cylinder (2 Nov). Indian Oil Q2 profit nearly tripled on LPG compensation (Reuters 30 Oct). US share of LPG imports >50% (Sep) then UAE overtook US as top supplier (NIE 30 Sep). Domestic refill gap rule 25 days.",
+   "what_already_moved": "IOC Q2 PAT swung to Rs21,630 cr; compensation size not verified.",
+   "entry_shocks": [
+    {
+     "node": "NEW_OMC_MARKETING_MARGIN",
+     "ssu": -1.0,
+     "low": -2.0,
+     "high": -0.3,
+     "note": "LPG loss drag expressed in equivalent Rs/litre marketing margin; approximate"
+    },
+    {
+     "node": "C_GCC",
+     "ssu": 0.0,
+     "low": -0.3,
+     "high": 0.3,
+     "note": "LPG import dependence on Gulf"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_LPG_UNDERRECOVERY",
+      "NEW_OMC_MARKETING_MARGIN",
+      "IOC"
+     ],
+     "explanation": "compensation books recovery of earlier loss"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_LPG_UNDERRECOVERY",
+      "NEW_OMC_MARKETING_MARGIN",
+      "F_GOVT_CAPEX"
+     ],
+     "explanation": "fiscal subsidy burden crowds out capex"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_LPG_UNDERRECOVERY",
+      "P_FERT_SUBSIDY",
+      "F_GOVT_CAPEX"
+     ],
+     "explanation": "competing subsidy lines (fertiliser, LPG) tighten fiscal room"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "IOC",
+     "direction": "+",
+     "why": "compensation received"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": "LPG-heavy loss"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "-",
+     "why": "LPG loss"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+OMC+LPG+under-recovery+Rs+59000+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "title": "LPG under-recovery crosses Rs 59,000 crore (Moneycontrol) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Indian+Oil+Q2+profit+LPG+compensation+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "Indian Oil's Q2 profit nearly triples on LPG compensation (Reuters) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_COAL_CRUNCH",
+   "title": "India coal crunch: critical plant stocks, e-auction premiums ~94%, captive plants ordered to maximise output; CIL October output +19%",
+   "category": "energy",
+   "status": "occurred",
+   "date": "2026-09-07",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Early Sept 61 thermal plants at critical stocks (PSU Watch 8 Sep); by 21 Sep 74 plants had <=7 days (CEA/Business Standard); over half critical on 21 Oct (TOI). Government invoked emergency powers (captive plants to run full capacity, 26-28 Sep; Sec 11 for imported-coal plants such as Mundra extended to 31 Dec). A mandatory imported-coal blending plan was weighed (Reuters 25 Sep) then shelved (23 Oct). E-auction premiums reached ~94% (domain-b 12 Oct). Coal India October output +19.3% to 67.2 Mt, offtake +~19% (BS/CNBC 1-2 Nov); CIL allocated 118 lakh t in October e-auctions; CIL Q2 PAT -31.6% y/y as costs rose and shares fell ~4% on results, then +5% on October volumes. Rail loading 465 rakes/day (The Hindu 9 Oct).",
+   "what_already_moved": "Seaborne thermal coal flat (96, 0% since 1 Jun). COALINDIA +~5% on 2 Nov.",
+   "entry_shocks": [
+    {
+     "node": "F_COAL_INDIA",
+     "ssu": 1.5,
+     "low": 0.8,
+     "high": 2.5,
+     "note": "e-auction premium to notified price up to ~94%; notified price unchanged"
+    },
+    {
+     "node": "F_POWER_PRICE_IN",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 2.0,
+     "note": "shortage feeds spot"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_COAL_CRUNCH",
+      "F_COAL_INDIA",
+      "F_POWER_PRICE_IN"
+     ],
+     "explanation": "scarcity pushes merchant power prices"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_COAL_CRUNCH",
+      "F_COAL_INDIA",
+      "F_POWER_PRICE_IN",
+      "F_CPI_IN"
+     ],
+     "explanation": "power cost pass-through to discoms/industry adds modestly to CPI"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_COAL_CRUNCH",
+      "F_COAL_INDIA",
+      "F_STEEL_INDIA",
+      "F_GDP_IN"
+     ],
+     "explanation": "energy-intensive industry cost and rationing risk"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "COALINDIA",
+     "direction": "+",
+     "why": "volumes and e-auction realisation"
+    },
+    {
+     "ticker": "NTPC",
+     "direction": "+/-",
+     "why": "fuel supply stress vs merchant upside"
+    },
+    {
+     "ticker": "ADANIPOWER",
+     "direction": "+",
+     "why": "merchant tariff"
+    },
+    {
+     "ticker": "TATAPOWER",
+     "direction": "+/-",
+     "why": "Mundra Sec 11 compensated, coal cost"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+coal+stocks+power+plants+critical+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "title": "Coal stocks at 74 power plants down to 7 days (Business Standard) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Coal+India+October+production+19%+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "Coal India's October coal output rises 19.3% to 67.2 Mt (Business Standard) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+coal+auction+premiums+94%+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "title": "India's coal squeeze raises power concerns as auction premiums reach 94% (domain-b) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_POWER_SPOT_SPIKE",
+   "title": "Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand",
+   "category": "energy",
+   "status": "occurred",
+   "date": "2026-09-19",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "IEX day-ahead prices hit the Rs20/kWh ceiling on 19 Sep (ET); Business Standard (6 Oct) said spot prices doubled amid demand surge and coal crunch; another headline put Q2 price rise at 46%. IEX Q2 volume 39,685 MU (+12.7% y/y), H1 FY27 77.2 BU (+14.2%), RTM share 41%, October volume +16.5% y/y; Q2 PAT Rs139 cr (+13%). Peak demand eased to 234 GW in first half of October (TradingView 26 Oct). El Nino/'super El Nino' flagged for winter and summer 2027 (TOI/ET 14 Oct); discoms turning to spot (The Core 21 Oct).",
+   "what_already_moved": "IEX volumes +12.7% Q2; price series not available in factor_state.",
+   "entry_shocks": [
+    {
+     "node": "F_POWER_PRICE_IN",
+     "ssu": 3.0,
+     "low": 2.0,
+     "high": 6.0,
+     "note": "+46% y/y to ~doubling on peak weeks, in units of +15%"
+    },
+    {
+     "node": "F_POWER_DEMAND_IN",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "demand growth above trend; exact y/y not verified"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_POWER_SPOT_SPIKE",
+      "F_POWER_PRICE_IN",
+      "NTPC"
+     ],
+     "explanation": "merchant exposure of generators"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_POWER_SPOT_SPIKE",
+      "F_POWER_PRICE_IN",
+      "P_POWER_REFORM"
+     ],
+     "explanation": "price shocks add urgency to market reform, cap and discom payment rules"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_POWER_SPOT_SPIKE",
+      "F_POWER_PRICE_IN",
+      "F_COAL_INDIA",
+      "COALINDIA"
+     ],
+     "explanation": "higher spot price raises willingness-to-pay for e-auction coal"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIPOWER",
+     "direction": "+",
+     "why": "merchant sales"
+    },
+    {
+     "ticker": "JSWENERGY",
+     "direction": "+",
+     "why": "merchant share"
+    },
+    {
+     "ticker": "TATAPOWER",
+     "direction": "+",
+     "why": "merchant"
+    },
+    {
+     "ticker": "NTPC",
+     "direction": "+",
+     "why": "limited merchant share"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=IEX+power+prices+hit+Rs+20+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "title": "IEX power prices hit Rs20/unit ceiling (ET) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=IEX+Q2+electricity+traded+volume+12.7%+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "title": "IEX Q2 volume +12.7% (Business Standard) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Peak+power+demand+234+GW+first+half+October+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "title": "Peak power demand eases to 234 GW (TradingView) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_LNG_HORMUZ_DISRUPTION",
+   "title": "LNG supply disruption: ~90 delayed Qatar cargoes to Petronet; India re-sources to US/UAE; Henry Hub proxy only +12% in 3m",
+   "category": "energy",
+   "status": "occurred",
+   "date": "2026-08-13",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Petronet LNG had no clarity on September Qatar cargoes (ET/BS 13 Aug); by 2 Nov about 90 cargoes delayed and the MD asked for early delivery; Petronet eyes US LNG under a renewed long-term Qatar deal (BS 3 Nov). EU storage at record seasonal low, may need to cut winter gas demand 7% (IEEFA 9 Oct). NOTE: F_GAS_GLOBAL series is NG=F (Henry Hub), which understates Asian LNG; Asian spot level not fetched.",
+   "what_already_moved": "F_GAS_GLOBAL (NG=F) 2.956: 1m -5.1%, 3m +12.0%, 12m -30.2% per market_impact/results/factor_state.md (Yahoo closes, 2026-11-05); not representative of JKM/TTF.",
+   "entry_shocks": [
+    {
+     "node": "F_GAS_GLOBAL",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 3.0,
+     "note": "3m +12% on proxy; JKM/TTF spikes likely larger but unverified"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_LNG_HORMUZ_DISRUPTION",
+      "F_GAS_GLOBAL",
+      "F_CHEM_FEEDSTOCK"
+     ],
+     "explanation": "gas is feedstock/fuel for fertiliser, ceramics, glass"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_LNG_HORMUZ_DISRUPTION",
+      "F_GAS_GLOBAL",
+      "F_FERTILISER_INPUTS",
+      "P_FERT_SUBSIDY"
+     ],
+     "explanation": "urea import cost lifts subsidy bill"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_LNG_HORMUZ_DISRUPTION",
+      "F_GAS_GLOBAL",
+      "F_COAL_INDIA",
+      "F_POWER_PRICE_IN"
+     ],
+     "explanation": "gas-to-coal substitution adds to coal crunch"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "GAIL",
+     "direction": "-",
+     "why": "spot LNG for non-APM, volume shortfall"
+    },
+    {
+     "ticker": "ATGL",
+     "direction": "-",
+     "why": "gas cost for CGD"
+    },
+    {
+     "ticker": "COALINDIA",
+     "direction": "+",
+     "why": "substitution"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Petronet+LNG+delayed+cargoes+Qatar+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "About 90 Delayed Cargoes: Petronet plans to recover missing LNG (NDTV Profit) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=EU+winter+gas+storage+record+low+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "title": "EU may need to cut winter gas demand by 7% (IEEFA) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_PNG_APM_INCENTIVE",
+   "title": "Domestic PNG incentive scheme: extra 200 SCM cheaper APM gas to CGD firms from 1 Sep 2026",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-09-01",
+   "window_end": "2026-09-01",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Government (PIB 13 Sep; Hindu/BS 18 Aug) allocated additional 200 SCM (units of gas) of cheaper domestic gas to CGD companies to accelerate household PNG connections, effective 1 Sep. Raises APM allocation share, supporting CGD margins and lowering blended gas cost; reduces gas available elsewhere. Quantum in mmscmd, APM price level and allocation % of CGD demand not verified (APM price follows formula linked to imported crude basket, hence rises with Brent).",
+   "what_already_moved": "Not separable; CGD names not in Nifty 200 except ATGL, GAIL.",
+   "entry_shocks": [
+    {
+     "node": "F_GAS_GLOBAL",
+     "ssu": -0.2,
+     "low": -0.4,
+     "high": 0.0,
+     "note": "marginal blended gas cost relief for CGD (not market price)"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_PNG_APM_INCENTIVE",
+      "F_GAS_GLOBAL",
+      "ATGL"
+     ],
+     "explanation": "lower blended gas cost lifts CGD margin"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_PNG_APM_INCENTIVE",
+      "F_GAS_GLOBAL",
+      "F_CPI_IN"
+     ],
+     "explanation": "PNG vs LPG substitution lowers LPG subsidy burden"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_PNG_APM_INCENTIVE",
+      "F_GAS_GLOBAL",
+      "F_URBAN_DEMAND",
+      "F_CPI_IN"
+     ],
+     "explanation": "household fuel bill relief small"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ATGL",
+     "direction": "+",
+     "why": "APM allocation raises CGD margin"
+    },
+    {
+     "ticker": "GAIL",
+     "direction": "-",
+     "why": "APM diverted from other consumers/petchem"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Government+to+allocate+additional+200+SCM+gas+PNG+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-18",
+     "title": "Government to allocate additional 200 SCM gas for domestic PNG (The Hindu) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Incentive+Scheme+for+Promotion+of+Domestic+PNG+Connections+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-13",
+     "title": "PIB: Incentive Scheme for Promotion of Domestic PNG Connections (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_SOLAR_ALMM2_CELL_MANDATE",
+   "title": "ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20%",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-06-01",
+   "window_end": "2026-11-05",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "ALMM List-II (solar cells) mandate effective 1 June 2026 (model knowledge on date; Wood Mackenzie 13 Aug confirms ALMM-II reshaping supply). India to add a record ~50 GW solar in 2026 (WoodMac). Module manufacturing capacity ~100 GW but cell import dependence high (NITI, 25 Aug); ALMM-approved cell capacity 37.8 GW after MNRE's 12th revision (PV Tech 9 Oct). Financial Express (21 Aug): project costs may rise 20% in 6-8 months. Centre allowed RE developers to cut tariffs post-award (Mint 12 Aug). BESS VGF Rs5,400 cr earlier (Aug).",
+   "what_already_moved": "Chinese TOPCon cell prices rose in Aug (pv magazine); no listed price series.",
+   "entry_shocks": [
+    {
+     "node": "P_RENEWABLE_SUPPORT",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": "domestic-manufacturing support"
+    },
+    {
+     "node": "F_BATTERY_MATERIALS",
+     "ssu": 0.0,
+     "low": -0.3,
+     "high": 0.3,
+     "note": "no change"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_SOLAR_ALMM2_CELL_MANDATE",
+      "P_RENEWABLE_SUPPORT",
+      "WAAREEENER"
+     ],
+     "explanation": "integrated module+cell makers gain pricing power"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SOLAR_ALMM2_CELL_MANDATE",
+      "P_RENEWABLE_SUPPORT",
+      "T_ENERGY_TRANSITION"
+     ],
+     "explanation": "higher capex per MW slows tender pipeline for developers"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_SOLAR_ALMM2_CELL_MANDATE",
+      "T_ENERGY_TRANSITION",
+      "F_POWER_PRICE_IN"
+     ],
+     "explanation": "slower RE adds keep reliance on thermal/spot"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "WAAREEENER",
+     "direction": "+",
+     "why": "captive cells"
+    },
+    {
+     "ticker": "PREMIERENE",
+     "direction": "+",
+     "why": "captive cells"
+    },
+    {
+     "ticker": "ADANIGREEN",
+     "direction": "-",
+     "why": "higher capex/PPA tariffs"
+    },
+    {
+     "ticker": "IREDA",
+     "direction": "-",
+     "why": "pipeline slows"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+ALMM+solar+cell+capacity+37.8+GW+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "title": "MNRE issues 12th solar cell ALMM revision, capacity 37.8GW (PV Tech) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Solar+project+costs+may+rise+20%+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-21",
+     "title": "Solar project costs may rise 20% in 6-8 months (Financial Express) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "medium"
+  },
+  {
+   "event_id": "EV_BESS_VGF_NOV26",
+   "title": "Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov)",
+   "category": "sector_policy",
+   "status": "occurred",
+   "date": "2026-11-04",
+   "window_end": "2026-11-04",
+   "prob_by_3m": 1,
+   "prob_by_12m": 1,
+   "description": "Union Cabinet reportedly approved Rs14,500 crore viability gap funding for 92 GWh of grid-scale energy storage (IndianMandarins/MVA Pulse headlines 4-5 Nov; not confirmed on PIB). Follows Rs5,400 cr VGF + transmission incentives (SolarQuarter 12 Aug). BESS tariffs ~Rs2.98/kWh (Chhattisgarh, 6 Oct).",
+   "what_already_moved": "Not yet reflected.",
+   "entry_shocks": [
+    {
+     "node": "P_RENEWABLE_SUPPORT",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.0,
+     "note": "storage subsidy"
+    },
+    {
+     "node": "T_ENERGY_TRANSITION",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_BESS_VGF_NOV26",
+      "P_RENEWABLE_SUPPORT",
+      "ADANIGREEN"
+     ],
+     "explanation": "firming improves RTC project economics"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_BESS_VGF_NOV26",
+      "P_RENEWABLE_SUPPORT",
+      "T_GRID_ELECTRIFICATION"
+     ],
+     "explanation": "storage pulls transmission/transformers"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_BESS_VGF_NOV26",
+      "T_ENERGY_TRANSITION",
+      "F_BATTERY_MATERIALS",
+      "F_COPPER"
+     ],
+     "explanation": "cell demand and metals"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIGREEN",
+     "direction": "+",
+     "why": "storage-linked RE"
+    },
+    {
+     "ticker": "POWERINDIA",
+     "direction": "+",
+     "why": "grid equipment"
+    },
+    {
+     "ticker": "CGPOWER",
+     "direction": "+",
+     "why": "grid equipment"
+    },
+    {
+     "ticker": "NTPC",
+     "direction": "+",
+     "why": "RE arm"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Cabinet+approves+Rs+14500+crore+viability+gap+funding+energy+storage+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "title": "Cabinet Approves Rs 14,500 Cr VGF For Grid-Scale Energy Storage (IndianMandarins) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_OPEC_NOV29_HOLD",
+   "title": "OPEC+ 29 Nov meeting: 2027 quotas held / rolled over",
+   "category": "energy",
+   "status": "scheduled",
+   "date": "2026-11-29",
+   "window_end": "2026-11-29",
+   "prob_by_3m": 0.72,
+   "prob_by_12m": 0.72,
+   "description": "OPEC+ deferred 2027 quota decision to 29 Nov (Birr Metrics headline). Base case is rollover given members cannot meet current targets. Mutually exclusive with RAISE and CUT variants. Goldman raised Dec Brent forecast to $105 (OilPrice, 2 Nov).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_BRENT",
+     "ssu": 0.0,
+     "low": -0.3,
+     "high": 0.3,
+     "note": "no change"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_OPEC_NOV29_HOLD",
+      "F_BRENT",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "status quo"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ONGC",
+     "direction": "0",
+     "why": "neutral"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=OPEC%2B+2027+quotas+November+29+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "OPEC+ puts 2027 quota decision off to Nov. 29 (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_OPEC_NOV29_RAISE",
+   "title": "OPEC+ 29 Nov meeting: 2027 quotas raised (market-share / post-war normalisation)",
+   "category": "energy",
+   "status": "scheduled",
+   "date": "2026-11-29",
+   "window_end": "2026-11-29",
+   "prob_by_3m": 0.16,
+   "prob_by_12m": 0.16,
+   "description": "If Hormuz reopens/ceasefire holds, producers (Saudi, UAE) may raise quotas to regain share, as they did mid-2026 (Jul-Aug headlines). Brent -5% typical.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_BRENT",
+     "ssu": -0.7,
+     "low": -1.5,
+     "high": -0.2,
+     "note": "~-7% on announcement"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_OPEC_NOV29_RAISE",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "lower oil import bill"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_OPEC_NOV29_RAISE",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "CPI relief eases hike bias"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_OPEC_NOV29_RAISE",
+      "F_BRENT",
+      "NEW_OMC_MARKETING_MARGIN",
+      "BPCL"
+     ],
+     "explanation": "OMC marketing margin recovers"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "margins"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "+",
+     "why": "margins"
+    },
+    {
+     "ticker": "ONGC",
+     "direction": "-",
+     "why": "realisation"
+    },
+    {
+     "ticker": "INDIGO",
+     "direction": "+",
+     "why": "ATF"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=OPEC%2B+meeting+November+29+2027+quotas+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "OPEC+ 2027 quota decision Nov 29 (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_OPEC_NOV29_CUT",
+   "title": "OPEC+ 29 Nov meeting: 2027 quota cut",
+   "category": "energy",
+   "status": "scheduled",
+   "date": "2026-11-29",
+   "window_end": "2026-11-29",
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.12,
+   "description": "A cut is unlikely with Brent ~$95 and members under-producing, but possible if peace deal produces a price slump (Brent <$80).",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_BRENT",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_OPEC_NOV29_CUT",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "import bill up"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_OPEC_NOV29_CUT",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "inflation"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_OPEC_NOV29_CUT",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "yields"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ONGC",
+     "direction": "+",
+     "why": "realisation"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": "margins"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=OPEC%2B+cut+2027+quotas+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "title": "OPEC+ 2027 quota decision (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_IRAN_DEAL_HORMUZ_REOPEN",
+   "title": "US-Iran deal/ceasefire holds and Hormuz traffic normalises",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.38,
+   "prob_by_12m": 0.62,
+   "description": "Talks in Islamabad ran two rounds (second collapsed 2 Nov per ABC); Trump says deal 'could happen' (France24 2 Nov) but also ceasefire 'on life support' (3 Nov). Brent already fell 16% in week to 5 Nov. Further normalisation leaves Brent maybe $75-85; prob partly priced.",
+   "what_already_moved": "Brent -16% in week to 5 Nov (NDTV Profit) is the market's part-pricing.",
+   "entry_shocks": [
+    {
+     "node": "F_BRENT",
+     "ssu": -1.5,
+     "low": -2.5,
+     "high": -0.7,
+     "note": "further -15% from $95"
+    },
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": -1.5,
+     "low": -2.0,
+     "high": -0.5,
+     "note": ""
+    },
+    {
+     "node": "F_REFINING_MARGIN",
+     "ssu": -1.0,
+     "low": -2.0,
+     "high": -0.3,
+     "note": "cracks compress"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_IRAN_DEAL_HORMUZ_REOPEN",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "rupee relief"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_DEAL_HORMUZ_REOPEN",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "inflation relief -> hike cycle ends"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_IRAN_DEAL_HORMUZ_REOPEN",
+      "F_BRENT",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "yields fall -> banks/rate-sensitives"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_DEAL_HORMUZ_REOPEN",
+      "F_BRENT",
+      "NEW_OMC_MARKETING_MARGIN"
+     ],
+     "explanation": "OMC margins repair"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "marketing"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "+",
+     "why": "marketing"
+    },
+    {
+     "ticker": "INDIGO",
+     "direction": "+",
+     "why": "ATF"
+    },
+    {
+     "ticker": "ONGC",
+     "direction": "-",
+     "why": "price"
+    },
+    {
+     "ticker": "RELIANCE",
+     "direction": "-",
+     "why": "cracks"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Trump+Iran+deal+could+happen+talks+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "Trump says deal with Tehran 'could happen' (France 24) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Iran+ceasefire+life+support+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Trump says Iran ceasefire on 'life support' (EnergyNow) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_IRAN_ESCALATION_BRENT130",
+   "title": "Escalation: Hormuz closure/Saudi infrastructure hit pushes Brent to $120-140",
+   "category": "geopolitics_trade",
+   "status": "risk_scenario",
+   "date": "2026-12-01",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.2,
+   "description": "Ceasefire collapse, sustained Hormuz closure or successful Houthi strike on Yanbu/East-West pipeline. Brent touched $110 on 16 Oct; this scenario is +30-45% from $95. Goldman Dec forecast $105 (2 Nov) puts tail above.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_BRENT",
+     "ssu": 3.5,
+     "low": 2.5,
+     "high": 5.0,
+     "note": "$95 -> ~$130"
+    },
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": 2.0,
+     "low": 1.0,
+     "high": 3.0,
+     "note": ""
+    },
+    {
+     "node": "F_REFINING_MARGIN",
+     "ssu": 2.0,
+     "low": 1.0,
+     "high": 3.5,
+     "note": ""
+    },
+    {
+     "node": "F_SHIPPING_RATES",
+     "ssu": 1.5,
+     "low": 0.8,
+     "high": 3.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_IRAN_ESCALATION_BRENT130",
+      "F_BRENT",
+      "F_USDINR"
+     ],
+     "explanation": "rupee falls"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_ESCALATION_BRENT130",
+      "F_BRENT",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "further RBI hikes"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_IRAN_ESCALATION_BRENT130",
+      "F_BRENT",
+      "F_REPO_IN",
+      "F_CREDIT_SPREADS_IN"
+     ],
+     "explanation": "credit spreads widen"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_IRAN_ESCALATION_BRENT130",
+      "F_BRENT",
+      "F_FPI_FLOWS"
+     ],
+     "explanation": "FPI outflows"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDPETRO",
+     "direction": "-",
+     "why": "marketing losses"
+    },
+    {
+     "ticker": "ONGC",
+     "direction": "+",
+     "why": "price"
+    },
+    {
+     "ticker": "INDIGO",
+     "direction": "-",
+     "why": "ATF"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": "marketing"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Brent+oil+touches+$110+Iran+Hormuz+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "title": "Brent touches $110 (CNBC) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=Goldman+Sachs+Brent+forecast+$105+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "title": "Goldman raises Dec Brent forecast to $105 (OilPrice) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_INDIA_RETAIL_FUEL_HIKE",
+   "title": "Government allows OMCs a retail petrol/diesel price hike (Rs3-5/l)",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2027-02-15",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.18,
+   "prob_by_12m": 0.45,
+   "description": "Prices frozen for months; state elections (UP, Punjab, Uttarakhand, Goa, Manipur) due Feb-Mar 2027 argue against a hike before March; a Brent fall would remove the need. Probability is analyst judgement, not sourced. A hike lifts CPI ~0.3-0.4 pp.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "NEW_OMC_MARKETING_MARGIN",
+     "ssu": 2.5,
+     "low": 1.5,
+     "high": 4.0,
+     "note": "Rs2.5/l net after pass-through"
+    },
+    {
+     "node": "F_CPI_IN",
+     "ssu": 0.3,
+     "low": 0.2,
+     "high": 0.5,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_INDIA_RETAIL_FUEL_HIKE",
+      "NEW_OMC_MARKETING_MARGIN",
+      "HINDPETRO"
+     ],
+     "explanation": "marketing EBITDA"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_INDIA_RETAIL_FUEL_HIKE",
+      "F_CPI_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "CPI adds to hike bias"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_INDIA_RETAIL_FUEL_HIKE",
+      "F_CPI_IN",
+      "F_REPO_IN",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "yields up"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "HINDPETRO",
+     "direction": "+",
+     "why": "margin"
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "margin"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "+",
+     "why": "margin"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=petrol+diesel+price+hike+OMC+frozen+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "title": "BPCL Q2 profit falls on fuel price freeze (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_LPG_COMPENSATION_CABINET",
+   "title": "Cabinet approves further LPG under-recovery compensation to OMCs",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2026-12-15",
+   "window_end": "2027-03-31",
+   "prob_by_3m": 0.35,
+   "prob_by_12m": 0.6,
+   "description": "Precedent: compensation boosted IOC Q2 (Reuters 30 Oct). Accumulated burden >Rs59,000 cr (July). Further tranche likely in H2 FY27 but timing and size not sourced.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "NEW_OMC_MARKETING_MARGIN",
+     "ssu": 1.0,
+     "low": 0.4,
+     "high": 2.0,
+     "note": "equivalent Rs/litre"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_LPG_COMPENSATION_CABINET",
+      "NEW_OMC_MARKETING_MARGIN",
+      "BPCL"
+     ],
+     "explanation": "one-off PAT"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_LPG_COMPENSATION_CABINET",
+      "NEW_OMC_MARKETING_MARGIN",
+      "F_GOVT_CAPEX"
+     ],
+     "explanation": "fiscal"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_LPG_COMPENSATION_CABINET",
+      "F_GOVT_CAPEX",
+      "F_GSEC_10Y_IN"
+     ],
+     "explanation": "borrowing"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "BPCL",
+     "direction": "+",
+     "why": "LPG heavy"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "direction": "+",
+     "why": "LPG heavy"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "+",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=LPG+under-recovery+compensation+OMC+cabinet+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "title": "Indian Oil's Q2 profit nearly triples on LPG compensation (Reuters) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_COAL_IMPORT_BLEND_REVIVED",
+   "title": "Imported-coal blending mandate/Sec 11 extension for power plants (winter-summer 2027)",
+   "category": "energy",
+   "status": "anticipated",
+   "date": "2026-12-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.3,
+   "prob_by_12m": 0.5,
+   "description": "Mandate was weighed (Reuters 25 Sep) then shelved (23 Oct); Sec 11 for Mundra and other ICB plants runs to 31 Dec and renewal is likely if stocks stay low. El Nino summer risk raises odds. Prob is judgement.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_COAL_INTL",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.2,
+     "note": "extra import demand"
+    },
+    {
+     "node": "F_POWER_PRICE_IN",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_COAL_IMPORT_BLEND_REVIVED",
+      "F_COAL_INTL",
+      "F_POWER_PRICE_IN"
+     ],
+     "explanation": "higher fuel cost"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_COAL_IMPORT_BLEND_REVIVED",
+      "F_POWER_PRICE_IN",
+      "F_CPI_IN"
+     ],
+     "explanation": "power cost"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_COAL_IMPORT_BLEND_REVIVED",
+      "F_COAL_INTL",
+      "F_SHIPPING_RATES"
+     ],
+     "explanation": "dry-bulk freight"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "TATAPOWER",
+     "direction": "+",
+     "why": "Mundra compensation"
+    },
+    {
+     "ticker": "ADANIPOWER",
+     "direction": "+",
+     "why": "import-based plants"
+    },
+    {
+     "ticker": "COALINDIA",
+     "direction": "-",
+     "why": "volume loss to imports"
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+weighs+mandatory+blending+imported+coal+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-25",
+     "title": "India weighs mandatory blending of imported coal (Reuters) (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+shelves+coal+import+plan+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "title": "India Shelves Coal Import Plan (Construction World) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_SUMMER27_POWER_SHORTFALL",
+   "title": "Summer 2027 peak-demand shortfall / IEX at cap under super El Nino",
+   "category": "energy",
+   "status": "anticipated",
+   "date": "2027-04-15",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.4,
+   "description": "TOI/ET (14 Oct) flagged a strong El Nino for winter and summer 2027. Peak demand record this year and 234 GW in early Oct. Probability that IEX prices again hit the ceiling and visible peak deficits occur: judgement.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_POWER_DEMAND_IN",
+     "ssu": 1.5,
+     "low": 0.5,
+     "high": 2.5,
+     "note": ""
+    },
+    {
+     "node": "F_POWER_PRICE_IN",
+     "ssu": 3.0,
+     "low": 1.5,
+     "high": 6.0,
+     "note": ""
+    },
+    {
+     "node": "F_MONSOON",
+     "ssu": -0.5,
+     "low": -1.5,
+     "high": 0.0,
+     "note": "El Nino implication for 2027 monsoon, outside window"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_SUMMER27_POWER_SHORTFALL",
+      "F_POWER_PRICE_IN",
+      "ADANIPOWER"
+     ],
+     "explanation": "merchant upside"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_SUMMER27_POWER_SHORTFALL",
+      "F_POWER_DEMAND_IN",
+      "F_COAL_INDIA"
+     ],
+     "explanation": "coal draw"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_SUMMER27_POWER_SHORTFALL",
+      "F_MONSOON",
+      "F_FOOD_INFLATION_IN",
+      "F_REPO_IN"
+     ],
+     "explanation": "monsoon risk -> food CPI -> RBI"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "ADANIPOWER",
+     "direction": "+",
+     "why": "merchant"
+    },
+    {
+     "ticker": "JSWENERGY",
+     "direction": "+",
+     "why": ""
+    },
+    {
+     "ticker": "COALINDIA",
+     "direction": "+",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=super+El+Nino+India+summer+2027+power+demand+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "title": "A super El Nino is brewing (TOI) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL",
+   "title": "India cuts Russian crude below ~1 mb/d as part of US trade deal",
+   "category": "geopolitics_trade",
+   "status": "anticipated",
+   "date": "2027-01-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.15,
+   "prob_by_12m": 0.3,
+   "description": "Rubio: 'very close' to finalising India deal (3 Nov); US midterm Democratic House win complicates (Hindu/RuralVoice 4 Nov). Waiver of 17 Oct reduces pressure. Probability judgement.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "C_RUSSIA",
+     "ssu": -1.0,
+     "low": -1.5,
+     "high": -0.5,
+     "note": "less access to discounts"
+    },
+    {
+     "node": "F_REFINING_MARGIN",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": -0.1,
+     "note": "costlier crude basket"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL",
+      "C_RUSSIA",
+      "F_REFINING_MARGIN"
+     ],
+     "explanation": "GRM"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL",
+      "P_US_TARIFF_INDIA",
+      "F_USDINR"
+     ],
+     "explanation": "tariff cut helps rupee"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL",
+      "F_REFINING_MARGIN",
+      "NEW_OMC_MARKETING_MARGIN"
+     ],
+     "explanation": "OMC burden"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "RELIANCE",
+     "direction": "-",
+     "why": "feedstock"
+    },
+    {
+     "ticker": "IOC",
+     "direction": "-",
+     "why": ""
+    },
+    {
+     "ticker": "BPCL",
+     "direction": "-",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=Very+close+to+finalising+trade+deal+with+India+Rubio+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "title": "Rubio: very close to finalising trade deal with India (headline via Google News RSS; article body not read)"
+    },
+    {
+     "url": "https://news.google.com/rss/search?q=India+Russia+oil+US+midterm+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "title": "US midterm outcome offers limited relief to India (report) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_NUCLEAR_SHANTI_RULES_FINAL",
+   "title": "Final SHANTI Act rules / first private-sector nuclear licence process",
+   "category": "sector_policy",
+   "status": "anticipated",
+   "date": "2027-03-31",
+   "window_end": "2027-05-31",
+   "prob_by_3m": 0.3,
+   "prob_by_12m": 0.6,
+   "description": "Draft rules propose a 6-month licensing timeline (Moneycontrol 17 Aug); NPCIL to set up a design unit supporting private players (Indian Express 27 Aug). Private entry consultation (ET 27 Aug). Long-gestation, sentiment-driven for NTPC/NHPC/power capex names. Act name from headlines; details not read.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "P_POWER_REFORM",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 1.0,
+     "note": ""
+    },
+    {
+     "node": "T_ENERGY_TRANSITION",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": ""
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_NUCLEAR_SHANTI_RULES_FINAL",
+      "P_POWER_REFORM",
+      "NTPC"
+     ],
+     "explanation": "nuclear JV"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_NUCLEAR_SHANTI_RULES_FINAL",
+      "T_GRID_ELECTRIFICATION",
+      "POWERINDIA"
+     ],
+     "explanation": "capital goods order pipeline"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_NUCLEAR_SHANTI_RULES_FINAL",
+      "P_POWER_REFORM",
+      "F_PRIVATE_CAPEX"
+     ],
+     "explanation": "private capex"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "NTPC",
+     "direction": "+",
+     "why": "nuclear arm"
+    },
+    {
+     "ticker": "BHEL",
+     "direction": "+",
+     "why": "equipment"
+    },
+    {
+     "ticker": "SIEMENS",
+     "direction": "+",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=India+SHANTI+draft+rules+nuclear+licence+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-17",
+     "title": "India proposes 6-month timeline for nuclear project licences (Moneycontrol) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  },
+  {
+   "event_id": "EV_EU_WINTER_GAS_SPIKE",
+   "title": "Cold winter + low EU storage + Hormuz LNG loss: global gas/LNG spike",
+   "category": "energy",
+   "status": "risk_scenario",
+   "date": "2026-12-15",
+   "window_end": "2027-02-28",
+   "prob_by_3m": 0.2,
+   "prob_by_12m": 0.2,
+   "description": "EU storage at record seasonal low (IEEFA 9 Oct). Spike pushes Asian LNG; India shifts to coal, CGD cost rises.",
+   "what_already_moved": "",
+   "entry_shocks": [
+    {
+     "node": "F_GAS_GLOBAL",
+     "ssu": 2.5,
+     "low": 1.5,
+     "high": 4.0,
+     "note": "+35-60%"
+    }
+   ],
+   "chains": [
+    {
+     "order": 2,
+     "path": [
+      "EV_EU_WINTER_GAS_SPIKE",
+      "F_GAS_GLOBAL",
+      "F_FERTILISER_INPUTS"
+     ],
+     "explanation": "urea"
+    },
+    {
+     "order": 3,
+     "path": [
+      "EV_EU_WINTER_GAS_SPIKE",
+      "F_GAS_GLOBAL",
+      "F_POWER_PRICE_IN"
+     ],
+     "explanation": "gas-to-coal"
+    },
+    {
+     "order": 4,
+     "path": [
+      "EV_EU_WINTER_GAS_SPIKE",
+      "F_FERTILISER_INPUTS",
+      "P_FERT_SUBSIDY",
+      "F_GOVT_CAPEX"
+     ],
+     "explanation": "subsidy burden"
+    }
+   ],
+   "most_affected_hint": [
+    {
+     "ticker": "GAIL",
+     "direction": "-",
+     "why": "spot LNG"
+    },
+    {
+     "ticker": "ATGL",
+     "direction": "-",
+     "why": "gas cost"
+    },
+    {
+     "ticker": "COALINDIA",
+     "direction": "+",
+     "why": ""
+    }
+   ],
+   "sources": [
+    {
+     "url": "https://news.google.com/rss/search?q=EU+winter+gas+storage+record+low+IEEFA+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "title": "EU may need to cut winter gas demand by 7% (IEEFA) (headline via Google News RSS; article body not read)"
+    }
+   ],
+   "confidence": "low"
+  }
+ ],
+ "edges": [
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_BRENT",
+   "relation": "geopolitical_exposure",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "supply-risk premium and physical disruption",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "1 unit escalation ~ +15% Brent in 2026 episode"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_REFINING_MARGIN",
+   "relation": "geopolitical_exposure",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "product cracks widen when Gulf exports disrupted",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_REFINING_MARGIN",
+   "relation": "macro_transmission",
+   "w": 0.15,
+   "w_low": -0.2,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Crack response to crude is weakly positive in disruptions",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "NEW_OMC_MARKETING_MARGIN",
+   "relation": "policy_effect",
+   "w": -0.9,
+   "w_low": -1.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "with frozen retail prices, +10% Brent (~$9.5/bbl = ~Rs5/l) cuts marketing margin Rs/l; govt partly offsets by excise/levy",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "arithmetic: $9.5/bbl at Rs94.5 = ~Rs5.6/l before refinery-gate pass-through"
+    }
+   ]
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "NEW_OMC_MARKETING_MARGIN",
+   "relation": "policy_effect",
+   "w": -1.5,
+   "w_low": -2.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "excise rise absorbed by OMCs when retail frozen (SSU Rs2/l)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.05,
+   "w_low": 0.0,
+   "w_high": 0.15,
+   "lag": "0-3m",
+   "mechanism": "only if passed through",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "NEW_OMC_MARKETING_MARGIN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.08,
+   "w_low": 0.03,
+   "w_high": 0.15,
+   "lag": "0-3m",
+   "mechanism": "margin restoration via retail hike lifts fuel CPI (Rs1/l ~ 1% of petrol; fuel weight ~2-3% of CPI)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "NEW_OMC_MARKETING_MARGIN",
+   "dst": "F_GOVT_CAPEX",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "OMC capex and PSU dividends feed fiscal/capex",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "India imports ~85% of crude; +10% Brent widens CAD ~0.3% GDP",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "fuel, transport, LPG; frozen retail prices dampen",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "input_cost",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "coal is ~70% of marginal power supply",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "F_COAL_INDIA",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "imports plants and e-auction premia",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "F_FERTILISER_INPUTS",
+   "relation": "input_cost",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "gas is the main feedstock for urea/ammonia",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "macro_transmission",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "gas-to-coal substitution at the margin",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "F_COAL_INDIA",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "coal burn rises with demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "tight supply makes spot convex",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "F_REFINING_MARGIN",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "discounted Urals widens GRM for access holders",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "F_REFINING_MARGIN",
+   "relation": "policy_effect",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "export levy capped realised cracks",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "T_ENERGY_TRANSITION",
+   "relation": "macro_transmission",
+   "w": 0.7,
+   "w_low": 0.3,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "policy support accelerates transition",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.4,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "more RE supplies reduce average spot price",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "F_SHIPPING_RATES",
+   "relation": "geopolitical_exposure",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "rerouting",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_GAS_GLOBAL",
+   "relation": "geopolitical_exposure",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Qatar LNG exposure",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": ""
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_OMC_MARKETING_MARGIN",
+   "type": "FACTOR",
+   "name": "OMC petrol+diesel marketing margin",
+   "ssu": "+Rs1/litre average marketing margin (vs normal ~Rs3-4/l)"
+  }
+ ],
+ "factor_state_notes": [
+  {
+   "fact": "RBI repo hiked to 5.50% (from 5.25%) at 7-9 Oct 2026 MPC; stance 'calibrated tightening'; minutes (21 Oct) flag more hikes",
+   "source": "The Hindu / SCC Online / Reuters headlines",
+   "date": "2026-10-09"
+  },
+  {
+   "fact": "CPI inflation expected to stay ~6%; Deutsche Bank sees repo 6.25% by H1 2027",
+   "source": "WION headline",
+   "date": "2026-10-27"
+  },
+  {
+   "fact": "Brent 94.99 (12m +49.5%); touched $110 16 Oct; fell 16% in week to 5 Nov; Goldman Dec forecast $105",
+   "source": "factor_state.md; NDTV Profit; OilPrice",
+   "date": "2026-11-05"
+  },
+  {
+   "fact": "India crude import bill Apr-Sep FY27 $90.6bn, +46% y/y; Indian basket premium over Brent ~$16 in mid-Oct",
+   "source": "ThePrint / Gujarat Samachar headlines",
+   "date": "2026-10-21"
+  },
+  {
+   "fact": "Russian crude to India ~1.8-1.9 mb/d (record in Jul-Aug)",
+   "source": "Swarajya / ET headlines",
+   "date": "2026-10-17"
+  },
+  {
+   "fact": "OMC losses ~Rs530 cr/day (ICRA) in Sept; up to Rs30/l (TOI); Q2 PAT IOC Rs21,630 cr, HPCL Rs3,625 cr, BPCL Rs4,993 cr; oil PSUs total Rs30,106 cr",
+   "source": "headlines listed in event",
+   "date": "2026-10-30"
+  },
+  {
+   "fact": "LPG under-recovery accumulated >Rs59,000 cr by July 2026; commercial LPG +Rs62.50/cyl 1 Oct; domestic unchanged",
+   "source": "Moneycontrol / TOI headlines",
+   "date": "2026-10-01"
+  },
+  {
+   "fact": "Diesel export levy Rs11.5/l, ATF ~Rs11/l, petrol nil from 31 Oct",
+   "source": "The Hindu / Statesman headlines",
+   "date": "2026-10-31"
+  },
+  {
+   "fact": "Coal India Oct output 67.2 Mt (+19.3%); CIL Q2 PAT -31.6% y/y; e-auction premiums peaked ~94%; coal-plant stocks critical at >half of plants on 21 Oct",
+   "source": "Business Standard / domain-b / TOI headlines",
+   "date": "2026-11-01"
+  },
+  {
+   "fact": "IEX Q2 volume 39,685 MU (+12.7%); Oct +16.5% y/y; spot hit Rs20/unit ceiling 19 Sep; peak demand 234 GW first half Oct",
+   "source": "IEX/Business Standard/ET headlines",
+   "date": "2026-10-26"
+  },
+  {
+   "fact": "ALMM approved solar cell capacity 37.8 GW; India ~100 GW module capacity; 2026 solar adds ~50 GW (WoodMac)",
+   "source": "PV Tech / Down To Earth / SolarQuarter",
+   "date": "2026-10-09"
+  },
+  {
+   "fact": "NOT FETCHED: refining GRM $/bbl for IOC/HPCL/BPCL, per-litre marketing margins, APM gas price, JKM/TTF levels, IEX monthly average Rs/kWh. Only headlines were read; no article bodies. Treat all numbers as indicative.",
+   "source": "data gap",
+   "date": "2026-11-05"
+  }
+ ]
+}
