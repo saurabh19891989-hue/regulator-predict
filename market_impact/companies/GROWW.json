@@ -1,0 +1,393 @@
+{
+ "ticker": "GROWW",
+ "name": "Billionbrains Garage Ventures Ltd. (Groww)",
+ "as_of": "2026-11-05",
+ "industry": "I_AMC_WEALTH_BROKING",
+ "tier": "MIDCAP_100",
+ "business_summary": "Groww is India's largest discount broker by active clients (model knowledge: ~26% of NSE active clients) - a digital investing platform for stocks, F&O, mutual funds, bonds, IPOs, US stocks, MTF and wealth. Listed November 2025 (model knowledge: IPO ~Rs100/share); Q2 FY27 PAT Rs725cr (+54% y/y), revenue Rs1,502cr (+47%), OPM 64%. Mcap Rs1.40 lakh cr, P/E 52x. Promoters 27.1%, FIIs 10.9% (from 2.5% in March), DIIs 12.7%. Early investors (Peak XV, Sequoia) are selling via blocks (Rs1,999cr on 2026-09-16, stock -4.5%).",
+ "revenue_mix": [
+  {
+   "segment": "broking (F&O, cash, MTF)",
+   "share_pct": 78,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "MF distribution, bonds, wealth, interest and other",
+   "share_pct": 22,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "GROWW",
+   "relation": "demand_driver",
+   "w": 9.0,
+   "w_low": 4.0,
+   "w_high": 14.0,
+   "lag": "0-3m",
+   "mechanism": "+20% traded value/demat additions: broking ~75% of revenue (F&O heavy; model knowledge); revenue +15% = ~Rs860cr on TTM Rs5,724cr; incremental margin ~85% => EBITDA +Rs730cr = +20% on Rs3,596cr; EV/MCap ~0.98; persistence 0.5 => +9.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Groww+Q2+FY27+results+active+clients+derivatives+SEBI+F&O+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "Q2 PAT +54% y/y to Rs725cr, revenue +47%; F&O pressure 'temporary', MTF and AI in focus (ET/Business Upturn)"
+    }
+   ]
+  },
+  {
+   "src": "P_SEBI_DERIVATIVES",
+   "dst": "GROWW",
+   "relation": "regulatory_risk",
+   "w": -8.0,
+   "w_low": -18.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "F&O is the highest-ARPU product; a tightening step cuts volumes ~10% => revenue -6%, EBITDA -9% x 0.75 persistence, plus de-rating at P/E 52x => -8. MOFSL (2026-10-13) sees regulatory overhang easing.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Groww+Q2+FY27+results+active+clients+derivatives+SEBI+F&O+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-13",
+     "note": "NDTV Profit: MOFSL 25% upside as overhang eases"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=SEBI+CAS+closing+auction+session+expiry+day+options+BSE+NSE+volumes+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "SEBI panel view on CAS; settlement may move to last-30-minute VWAP; BSE +2.8% (NiftyTrader 2026-10-15; Moneycontrol 2026-10-06)"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "GROWW",
+   "relation": "policy_effect",
+   "w": -5.0,
+   "w_low": -10.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "STT/capital-gains tax step lowers trader returns and turnover => -5 (same chain as BSE, slightly lower since MTF and MF distribution diversify).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "NEW_BROKER_PRICING",
+   "dst": "GROWW",
+   "relation": "competition",
+   "w": -5.0,
+   "w_low": -12.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Zerodha, Angel One, Upstox, banks and the freshly listed NSE-linked ecosystem compete on pricing; a broad fee cut hits ARPU (flat brokerage already); +1 step => revenue -6% at ~100% drop-through => EBITDA -10%, persistence 0.5 => -5 (new node proposed).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "GROWW",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "+10% SIP+DII inflows: MF distribution, client growth, cash volumes: +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "GROWW",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Household savings shifting into equities/MF/bonds is the core thesis: Groww added bonds, MTF and derivatives; +1 => revenue CAGR +5pp, persistence 1.0 on valuation => +4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GROWW",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs rose from 2.5% to 10.9% in two quarters post-IPO; flow-sensitive; +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "GROWW",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Long-duration growth stock at P/E 52x; +25bp ~ -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "GROWW",
+   "relation": "funding_cost",
+   "w": 0.5,
+   "w_low": -2.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Interest income on own cash and client float rises with rates (size not disclosed in pack); MTF funding costs also rise (MTF scaling noted on Q2 call; interest expense only Rs5cr/qtr so book mostly equity funded) => net +0.5 offset by de-rating.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "GROWW",
+   "relation": "demand_driver",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "1y vol 48%; risk-off cuts new-client additions; vol spikes raise short-term trading. Net -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "GROWW",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "US-stock investing via platform (not significant); global risk appetite; +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "GROWW",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Employee/tech costs ~20% of costs; +2pp wage inflation on ~20% of costs (~37% of revenue) => EBITDA -1%; with AI-talent hiring premium and persistence 0.75 => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "GROWW",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Groww Credit/NBFC arm and payments entity (model knowledge) sit under RBI/SEBI rules; small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GROWW.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "BSE / NSE",
+   "ticker": "BSE",
+   "role": "supplier",
+   "importance": "high",
+   "note": "exchange transaction charges and platform; BSE derivatives volume rises with Groww activity"
+  },
+  {
+   "counterparty": "Zerodha, Angel One, Upstox",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "price and feature competition"
+  },
+  {
+   "counterparty": "Peak XV, Sequoia, other pre-IPO investors",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "block-sale overhang"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-20",
+   "event": "Q3 FY27 results (inferred; Q2 reported 2026-10-14)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Groww+Q2+FY27+results+active+clients+derivatives+SEBI+F&O+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "SEBI CAS / F&O settlement review outcome",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=SEBI+CAS+closing+auction+session+expiry+day+options+BSE+NSE+volumes+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Additional pre-IPO investor block sales (Sequoia/Peak XV, others)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=Groww+Peak+XV+block+deal+Rs+1,999+crore+shares+crash+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-05",
+   "event": "Promoter / anchor lock-in expiries (18 months from Nov 2025 listing, model knowledge)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 0.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget (STT / capital markets taxes)",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs725cr (+54% y/y) but flat q/q (Rs735cr in June); revenue flat q/q Rs1,502cr; OPM 64-65%; F&O pressure called temporary on call; MTF scaling; AI push.",
+  "valuation": "P/E 51.8x, P/B 11.9x (Rs223 / BV Rs18.4); 52w high Rs227; +18% 3m, +15.5% 1m; 1y vol 48%; MOFSL TP Rs240.",
+  "recent_developments": [
+   "2026-09-16: Rs1,999cr block deal (1.69% equity), stock -4.5%",
+   "2026-09-17: Peak XV sells Rs1,756cr; Groww MF buys 0.6%",
+   "2026-10-13/14: Q2 results; MOFSL TP Rs240",
+   "2026-10-16: stock tipped after SEBI CAS rule review (Livemint)"
+  ]
+ },
+ "key_risks": [
+  "SEBI F&O/CAS regulation and STT",
+  "Revenue stagnation q/q and dependency on F&O",
+  "Investor block-sale overhang",
+  "High valuation (52x P/E), low liquidity history",
+  "Competition and pricing"
+ ],
+ "upside_triggers": [
+  "CAS/F&O review easing",
+  "MTF, bonds and MF revenue diversification",
+  "FII/DII accumulation (FII 2.5% -> 10.9%)",
+  "Client additions with market rally"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_BROKER_PRICING",
+   "type": "FACTOR",
+   "name": "Retail broking fee/pricing pressure",
+   "ssu": "+1 = broad fee cut or free-trade move by a large rival or exchange"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/GROWW.md",
+   "date": "2026-11-05",
+   "what": "fundamentals and headlines (no empirical sensitivities - short price history)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Groww+Q2+FY27+results+active+clients+derivatives+SEBI+F&O+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Groww+Peak+XV+block+deal+Rs+1,999+crore+shares+crash+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-16",
+   "what": "block deal"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=SEBI+CAS+closing+auction+session+expiry+day+options+BSE+NSE+volumes+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "CAS review"
+  }
+ ]
+}

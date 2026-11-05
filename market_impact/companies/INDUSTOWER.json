@@ -1,0 +1,429 @@
+{
+ "ticker": "INDUSTOWER",
+ "name": "Indus Towers Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_TELECOM",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest tower company: 270,480 towers and 440,153 co-locations (sharing factor 1.63) at Sep-2026, serving Airtel (largest tenant and ~50% shareholder, model knowledge), Vodafone Idea and Jio. Q2 FY27: revenue Rs8,516 cr (+4.0%), EBITDA Rs4,633 cr (54.4%, +0.4%), PAT Rs1,793 cr (-2.5%). Contracted, inflation-escalated revenues with energy pass-through make it a defensive dividend stock (yield 3.7%), but growth is slowing and Vi counterparty risk is the main overhang; early Africa rollouts began in 2026.",
+ "revenue_mix": [
+  {
+   "segment": "macro tower rentals and energy pass-through (India)",
+   "share_pct": 98,
+   "geography": "India all 22 circles"
+  },
+  {
+   "segment": "Africa (early stage), lean towers, others",
+   "share_pct": 2,
+   "geography": "India / Africa initial rollouts"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "site rentals/ ground lease",
+   "share_of_costs_pct": 20
+  },
+  {
+   "input": "repairs, manpower, other opex",
+   "share_of_costs_pct": 55
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_TELECOM_TARIFFS",
+   "dst": "INDUSTOWER",
+   "relation": "output_price",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Tower rentals are contracted, so tariff hikes act with a lag through operator health: higher ARPU supports Vi payment capacity, faster 5G loadings and lower credit-loss provisioning. Q2 FY26 had a Rs195 cr provision write-back that flattered the base (company). Roughly +10% ARPU adds ~2% to expected tenancy growth over 12m and removes counterparty-risk discount: +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://nsearchives.nseindia.com/corporate/BHARTIINFRATEL_27102026190204_SEPressRelease27102026.pdf",
+     "date": "2026-10-27",
+     "note": "Indus Q2 FY27 press release: revenue Rs8,516 cr +4.0%, EBITDA Rs4,633 cr +0.4%, 440,153 co-locations, sharing factor 1.63, RPT/ sharing operator -1.6% y/y"
+    },
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_TOWER_TENANCY_EXITS",
+   "dst": "INDUSTOWER",
+   "relation": "competition",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "+1 SSU = 5,000 net tenancy exits (Jio own-fibre/tower consolidation; Motilal assumes ~5,000 in H2 FY27) vs 440,153 co-locations = 1.1% of tenancies at ~100% drop-through on ~54% margin and ~20% of revenue lost carries high margin => EBITDA ~-1.9%; x EV/MCap 1.15 x persistence 0.6 = -1.3. Co-locations were +5.9% y/y but sharing revenue per operator fell 1.6% y/y (company), showing price pressure from lean/ multi-tenancy.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/indus-towers-board-to-meet-on-july-27-for-q1-fy27-results-focus-on-post-q4-pat-of-1-792-9-cr-3959-PE1_COR",
+     "date": "2026-07",
+     "note": "Q1 FY27 review/preview; Motilal Oswal assumed ~5,000 Jio tenancy exits in H2 FY27 and ~30,000 Vi tenancies FY26-29 (via search summary)"
+    },
+    {
+     "source": "https://nsearchives.nseindia.com/corporate/BHARTIINFRATEL_27102026190204_SEPressRelease27102026.pdf",
+     "date": "2026-10-27",
+     "note": "Indus Q2 FY27 press release: revenue Rs8,516 cr +4.0%, EBITDA Rs4,633 cr +0.4%, 440,153 co-locations, sharing factor 1.63, RPT/ sharing operator -1.6% y/y"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AGR_SPECTRUM_RELIEF",
+   "dst": "INDUSTOWER",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Relief to Vi lowers tail risk of Vi payment default or exit (Vi ~30% of revenue, model estimate) and supports Vi's 5G loadings (Motilal: ~50,000 Vi 5G loadings over FY26-29): 1 SSU relief reduces default prob by ~3pp on 30% of revenue => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/indus-towers-board-to-meet-on-july-27-for-q1-fy27-results-focus-on-post-q4-pat-of-1-792-9-cr-3959-PE1_COR",
+     "date": "2026-07",
+     "note": "Q1 FY27 review/preview; Motilal Oswal assumed ~5,000 Jio tenancy exits in H2 FY27 and ~30,000 Vi tenancies FY26-29 (via search summary)"
+    },
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "INDUSTOWER",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -3.5,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Dividend-yield stock (3.7%) with long-dated contractual cash flows: +25bp on cost of equity ~11% => ~-2% value. Net debt low (interest Rs342 cr/qtr) so cash-flow effect small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "INDUSTOWER",
+   "relation": "funding_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Quarterly interest Rs342 cr vs PBT ~Rs2.4k cr: +25bp on mostly floating Rs~Rs 8-9k cr debt/leases = ~Rs20 cr/yr = <1% of PAT.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "INDUSTOWER",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Imported batteries/equipment and Africa investment (initial Africa rollouts under way per company 2026-10-27) are USD-linked; revenues rupee. +3% USD/INR on ~Rs2.5k cr annual imported capex = ~Rs75 cr (0.4% of EBITDA). Pack shows +3.26 (t +1.8): opposite sign, probably a defensive/low-beta proxy effect; model keeps small negative, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://nsearchives.nseindia.com/corporate/BHARTIINFRATEL_27102026190204_SEPressRelease27102026.pdf",
+     "date": "2026-10-27",
+     "note": "Indus Q2 FY27 press release: revenue Rs8,516 cr +4.0%, EBITDA Rs4,633 cr +0.4%, 440,153 co-locations, sharing factor 1.63, RPT/ sharing operator -1.6% y/y"
+    },
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "INDUSTOWER",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Energy ~25% of costs but mostly pass-through under MSAs (cost-plus with a small margin); unrecovered energy/retained component ~10-15% of power cost: +15% power = ~Rs 100-150 cr of unrecovered cost per year => ~-0.7% EBITDA x1.15 x0.7 => -0.5. Battery/solar initiatives (HEG, Cygni MoUs, Sep-Oct 2026) reduce diesel dependence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "INDUSTOWER",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -1.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Diesel gensets for off-grid towers are pass-through; pack +1.14 (t +1.7) positive sign is likely rotation-driven (defensive when oil spikes), not fundamental. Weight near zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "INDUSTOWER",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs cut holding from 25.1% to 21.7% over two quarters (Mar to Sep 2026) while DIIs rose 19.7% to 22.9%; +US$5bn flow reverses part: +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "INDUSTOWER",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "Edge/ fibre-to-tower densification is minor today; 5G small-cell/outdoor sites add tenancies.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "INDUSTOWER",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Data consumption growth drives tenancies with lags; contracted revenue makes sensitivity low.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDUSTOWER.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "IDEA",
+   "dst": "INDUSTOWER",
+   "relation": "dominant_customer",
+   "w": 0.1,
+   "w_low": 0.03,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Vodafone Idea is a major tenant (est. ~30% of Indus revenue; model knowledge, verify in annual report); a -10% move in Vi equity (funding/distress signal) maps to ~-1% Indus (receivable/default and Vi churn). Indus also holds security deposits/ bank guarantees from Vi (model knowledge).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/indus-towers-board-to-meet-on-july-27-for-q1-fy27-results-focus-on-post-q4-pat-of-1-792-9-cr-3959-PE1_COR",
+     "date": "2026-07",
+     "note": "Q1 FY27 review/preview; Motilal Oswal assumed ~5,000 Jio tenancy exits in H2 FY27 and ~30,000 Vi tenancies FY26-29 (via search summary)"
+    },
+    {
+     "source": "market_impact/data/packs/IDEA.md",
+     "date": "2026-11-05",
+     "note": "Vi funding stress"
+    }
+   ]
+  },
+  {
+   "src": "BHARTIARTL",
+   "dst": "INDUSTOWER",
+   "relation": "dominant_customer",
+   "w": 0.1,
+   "w_low": 0.03,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Airtel is the largest tenant (est. ~40-45% of revenue) and holds ~50% of the shares; a -10% Airtel equity move reflects sector/tenant stress, mapping to ~-1% Indus.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARTIARTL.md",
+     "date": "2026-11-05",
+     "note": "Airtel pack"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Bharti Airtel",
+   "ticker": "BHARTIARTL",
+   "role": "customer",
+   "importance": "high",
+   "note": "largest tenant and ~50% shareholder (est.)"
+  },
+  {
+   "counterparty": "Vodafone Idea",
+   "ticker": "IDEA",
+   "role": "customer",
+   "importance": "high",
+   "note": "major tenant; payment risk"
+  },
+  {
+   "counterparty": "Reliance Jio",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "possible ~5,000 tenancy exits H2 FY27 (Motilal)"
+  },
+  {
+   "counterparty": "American Tower (ATC India), Summit Digitel",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "other tower cos"
+  },
+  {
+   "counterparty": "HEG Advanced Materials / Cygni Energy",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "low",
+   "note": "energy-storage MoUs Sep/Oct 2026"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (net tenancy additions, Vi payments, Africa)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge (quarterly cadence; Q2 was 2026-10-27)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Jio tenancy exits (~5,000 by H2 FY27 per Motilal Oswal assumption)",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": -0.5,
+   "source": "https://www.sahi.com/news/indus-towers-board-to-meet-on-july-27-for-q1-fy27-results-focus-on-post-q4-pat-of-1-792-9-cr-3959-PE1_COR"
+  },
+  {
+   "date": "2027-03",
+   "event": "Vodafone Idea funding close / default-risk resolution",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 4.0,
+   "source": "https://www.kotakneo.com/news/stocks/vodafone-idea-3-5-billion-debt-financing-sbi/"
+  },
+  {
+   "date": "2026-11",
+   "event": "Interim/final dividend declarations (dividend yield 3.7%)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "market_impact/data/packs/INDUSTOWER.md"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep-2026): revenue Rs8,516 cr (+4.0%), EBITDA Rs4,633 cr (+0.4%, margin 54.4%), PAT Rs1,793 cr (-2.5%); towers +14,406 y/y, co-locations +24,436 y/y (+7,903 q/q); sharing revenue per operator -1.6% y/y; Q2 FY26 included Rs195 cr provision write-back.",
+  "trend": "Volume growth with falling per-tenancy revenue; margin down ~190bp y/y (CNBC TV18 headline); ROE (post-tax) 18.8% vs 29.0%",
+  "valuation": "P/E 14.1, dividend yield 3.7%, price Rs380 (52w Rs356-482); Nomura raised target to Rs510 (Moneycontrol headline 2026-10-29)",
+  "recent_developments": [
+   "2026-10-27: Q2 FY27 results; tenancy ratio 1.63 (company)",
+   "2026-10-29: Nomura Buy, target Rs510 on strong tenancy additions (Moneycontrol headline)",
+   "2026-10-05 / 09-30: MoUs for telecom battery storage (Cygni Energy, HEG arm)",
+   "2026-10-01: Business Standard: Indus looks to India+Africa expansion",
+   "FII holding falling: 25.1% -> 21.7% (Mar to Sep 2026)"
+  ]
+ },
+ "key_risks": [
+  "Vodafone Idea funding/default and tenancy exits",
+  "Jio tenancy exits and lower sharing revenue per operator",
+  "Energy-cost leakage if pass-through is renegotiated",
+  "Execution risk on Africa expansion",
+  "Operator consolidation / own-tower strategies"
+ ],
+ "upside_triggers": [
+  "Vi funding close and 5G loadings",
+  "Strong net co-location additions (4,500-8,000/qtr)",
+  "Cash returns (dividend/buyback) and AFFO growth",
+  "Africa rollouts monetising"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_TOWER_TENANCY_EXITS",
+   "type": "THEME",
+   "name": "Net tenancy exits from towers (Jio/others)",
+   "ssu": "+1 = 5,000 net tenancy exits"
+  },
+  {
+   "id": "NEW_AGR_SPECTRUM_RELIEF",
+   "type": "POLICY",
+   "name": "Government AGR/spectrum dues relief for stressed telcos",
+   "ssu": "+1 = further material relief worth ~Rs20,000 cr NPV"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/INDUSTOWER.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals and headlines"
+  },
+  {
+   "url": "https://nsearchives.nseindia.com/corporate/BHARTIINFRATEL_27102026190204_SEPressRelease27102026.pdf",
+   "date": "2026-10-27",
+   "what": "Indus Q2 FY27 press release: revenue Rs8,516 cr +4.0%, EBITDA Rs4,633 cr +0.4%, 440,153 co-locations, sharing factor 1.63, RPT/ sharing operator -1.6% y/y"
+  },
+  {
+   "url": "https://www.sahi.com/news/indus-towers-board-to-meet-on-july-27-for-q1-fy27-results-focus-on-post-q4-pat-of-1-792-9-cr-3959-PE1_COR",
+   "date": "2026-07",
+   "what": "Q1 FY27 review/preview; Motilal Oswal assumed ~5,000 Jio tenancy exits in H2 FY27 and ~30,000 Vi tenancies FY26-29 (via search summary)"
+  }
+ ]
+}

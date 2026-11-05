@@ -1,0 +1,418 @@
+{
+ "ticker": "ENRIN",
+ "name": "Siemens Energy India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Demerged from Siemens Ltd in April 2025 and listed since; 75% held by Siemens Energy AG. Supplies grid technologies (power and traction transformers, HVDC, switchgear), gas turbines and services, steam turbines and compressors for power and process industries. Financial year ends September. TTM sales Rs 9,436 cr, OPM ~21%, net cash, ROCE 68%. Order backlog Rs 19,331 cr (30 Jun 2026, +16.4% YoY). Rs 2,060 cr transformer expansion capex was approved in Aug 2025 (Angel One). Segment splits are model estimates.",
+ "revenue_mix": [
+  {
+   "segment": "Grid Technologies (transformers, HVDC, switchgear)",
+   "share_pct": 50,
+   "geography": "India ~85% / export ~15% (estimate)"
+  },
+  {
+   "segment": "Gas Services and power generation (turbines, services)",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "Industrial applications (compressors, steam turbines)",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "ENRIN",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 10.0,
+   "lag": "3-12m",
+   "mechanism": "Grid Technologies (transformers, HVDC, switchgear) is roughly half of revenue (model estimate). +1 theme unit = +20% grid order intake -> backlog (Rs 19,331 cr, ~2x LTM sales) extends; +8% revenue at 30% contribution margin -> EBITDA +11% at 21% OPM; persistence 0.6; EV/MCap ~0.97 -> ~+6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://investywise.com/siemens-energy-india-unaudited-financial-results-for-q3-fy2026/ (via web search)",
+     "date": "2026-08-07",
+     "note": "Jun-2026 qtr: revenue Rs 2,486 cr +39.3%, PAT Rs 441 cr +67.8%, backlog Rs 19,331 cr +16.4%"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "ENRIN",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "PGCIL/state transmission, railways and public power capex are the main buyers. +10% capex growth -> +4% revenue -> EBITDA +6% -> persistence 0.6 -> ~+3.5; rounded to +4 for the high operating leverage visible in the OPM jump to 21-24%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "ENRIN",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "+3 pp demand growth lifts generation capex (gas turbines, services) and T&D; +4% revenue over 12 months, EBITDA +6%, persistence 0.5 -> ~+3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "ENRIN",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 0.8,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Data-centre power (captive gas turbines, transformers, switchgear) demand; Siemens Energy AG CEO says the boom lasts (EnergyNow 2026-11-04). +1 unit = +15% DC-linked orders (~12% of orders) -> +2% revenue -> EBITDA +3%, persistence 0.7 -> ~+3 incl. sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "ENRIN",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "HVDC for renewable evacuation, grid-forming equipment, hydrogen/storage interfaces. +1 unit -> +10% HVDC/transformer pipeline -> ~+3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "ENRIN",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Global AI-capex sentiment moves the whole listed power-equipment basket: AI-related stocks fell up to 5-6% on 2026-10-13, 10-15 and 10-30 (Moneycontrol). Pack beta to S&P +3.17 (t=1.5). +10% AI capex growth -> sentiment/valuation +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "ENRIN",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Copper windings ~10% of costs; price-variation clauses recover ~70% on domestic grid orders. +10% -> costs +1.0%, 30% unrecovered = 0.3% -> EBITDA -1.4% at 21% OPM; persistence 0.25 -> ~-0.35, set to -0.5. Pack -0.68 (t=-0.4) agrees in sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "ENRIN",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "CRGO electrical steel and structural steel ~8% of costs; +7% -> costs +0.56%, 30% unrecovered -> EBITDA -0.8%; persistence 0.3 -> ~-0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ENRIN",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Imports from Siemens Energy group are ~30% of material costs (model estimate) with FX variation clauses on part of the book. +3% -> costs +0.6-0.9% with ~half recovered -> EBITDA -1.5%; persistence 0.25 -> ~-0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ENRIN",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Net cash; effect is valuation duration at P/E 67 and customer capex financing. +25 bp -> ~-1.5%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "ENRIN",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Gas services/turbines: higher LNG makes gas power less competitive and delays gas-turbine orders; pack -1.20 per +15% (t=-1.3). Weak, small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ENRIN.md",
+     "date": "2026-11-05",
+     "note": "t=-1.3"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ENRIN",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "High-beta, richly valued name; +5 VIX points -> ~-1% to -2% relative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "NEW_POWER_EQUIP_CAPACITY",
+   "dst": "ENRIN",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Hitachi Energy, GE Vernova T&D, CG Power, Siemens Ltd peers and new entrants add transformer/switchgear capacity (market discussions 2026-10-11 Livemint). +1 unit = ~100 bp margin pressure -> EBITDA -4.5% at 21% OPM; persistence 0.7; prob-weighted -> ~-3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Siemens Energy AG (Germany)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "75% owner, technology and imported components; global read-across (Siemens Energy stock rose 2026-10-29 on positive sector read-across)"
+  },
+  {
+   "counterparty": "Power Grid Corporation / state utilities",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Transmission and HVDC orders"
+  },
+  {
+   "counterparty": "Hitachi Energy India (POWERINDIA)",
+   "ticker": "POWERINDIA",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Closest listed transformer/HVDC rival"
+  },
+  {
+   "counterparty": "GE Vernova T&D India",
+   "ticker": "GVT&D",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Peer in T&D"
+  },
+  {
+   "counterparty": "CG Power",
+   "ticker": "CGPOWER",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Transformers/switchgear"
+  },
+  {
+   "counterparty": "Independent power producers, data-centre developers, industrial clients",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Gas turbines and services"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "FY26 (Sep-2026) annual and Q4 results; trading window closed from 2026-09-28 (scanx)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 10.0,
+   "source": "https://scanx.trade (trading window closure) 2026-09-28"
+  },
+  {
+   "date": "2026-11",
+   "event": "Siemens Energy AG FY results / outlook (global read-across)",
+   "type": "guidance",
+   "prob": 0.8,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge of parent calendar; unverified"
+  },
+  {
+   "date": "2027-01",
+   "event": "Large HVDC/transmission order awards (PGCIL packages) that could lift backlog",
+   "type": "other",
+   "prob": 0.35,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 8.0,
+   "source": "Trade Brains 2026-08-25 headline on Rs 1.6 lakh cr HVDC opportunity"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q1 FY27 (Dec-2026 quarter) results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Transformer capacity expansion commissioning",
+   "type": "capex",
+   "prob": 0.3,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 4.0,
+   "source": "Angel One 2025-08 (Rs 2,060 cr capex)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Jun-2026 quarter (reported as Q3 FY26, 2026-08-07): sales Rs 2,486 cr (+39.3%), OPM 24%, PAT Rs 441 cr (+67.8%), backlog Rs 19,331 cr.",
+  "trend": "Fast growth and margin expansion; stock reacted +10% on the result day, but has fallen 13.5% in a month with the AI/power-equipment sell-off.",
+  "valuation": "P/E 66.8, P/B 21; mcap Rs 1.02 lakh cr; 12m high Rs 3,968, low Rs 2,105.",
+  "recent_developments": [
+   "2026-08-07 Q3 FY26 results beat, shares +10% (NDTV Profit)",
+   "2026-09-03 Motilal Oswal revised target: up to 28% upside (NDTV Profit headline)",
+   "2026-10-05 Ajay Jain appointed execution head for Grid Technologies Transformers (Sahi)",
+   "2026-10-23 Capital goods index -4%; Hitachi Energy and ABB India -6% (Business Standard)",
+   "2026-10-24 Deven Choksey sees 72% upside after ~20% one-month fall (Livemint)"
+  ]
+ },
+ "key_risks": [
+  "Valuation (P/E 67) vs AI-capex sentiment swings",
+  "Peer capacity additions and price competition",
+  "Execution on large HVDC projects",
+  "Parent-company intercompany pricing and imported content",
+  "Auditor-flag item mentioned in a Whalesbook headline (details not retrieved)"
+ ],
+ "upside_triggers": [
+  "HVDC and gas-turbine order wins; backlog above Rs 25,000 cr",
+  "Margin staying above 22%",
+  "Data-centre captive power demand"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_POWER_EQUIP_CAPACITY",
+   "type": "FACTOR",
+   "name": "Power/T&D equipment capacity additions vs demand (pricing pressure)",
+   "ssu": "+1 = peer capacity additions outpace demand enough to cut order pricing/margins ~100 bp"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/ENRIN.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, headlines"
+  },
+  {
+   "url": "https://www.investywise.com/siemens-energy-india-unaudited-financial-results-for-q3-fy2026/",
+   "date": "2026-08-07",
+   "what": "results and backlog (via web search summary)"
+  },
+  {
+   "url": "https://www.angelone.in/news/stocks/siemens-energy-india-q1-fy26-earnings-results-revenue-up-26-and-2-060-crore-capex-approved-for-transformer-expansion",
+   "date": "2025-08",
+   "what": "capex approval"
+  },
+  {
+   "url": "https://mailcontent.icicidirect.com/mailcontent/idirect_siemensenergy_q3fy26.pdf",
+   "date": "2026-08",
+   "what": "ICICI Direct: FY27-28 inflow Rs 35,000-36,000 cr (summary only)"
+  }
+ ]
+}

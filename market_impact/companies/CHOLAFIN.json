@@ -1,0 +1,444 @@
+{
+ "ticker": "CHOLAFIN",
+ "name": "Cholamandalam Investment and Finance Company Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_NBFC_VEHICLE_CONSUMER",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Murugappa-group NBFC (promoters 48.9%) that is India's largest vehicle financier by profit: commercial and passenger vehicles, tractors, used vehicles, plus home loans/LAP, SME and consumer loans. Q2 FY27: revenue Rs9,271cr, PAT Rs1,630cr (+41% y/y), AUM ~Rs2.68 lakh cr (+25%, per Investywise; sources conflict), management guides 20-23% AUM growth and a Rs5,000cr QIP was approved on 2026-10-28. Q1 FY27 Stage 3 was 3.29% (net 1.81%); credit cost guidance ~1.3-1.6%. ROE 19.4%, P/E 24, 4.1x book, market cap Rs1.52 lakh cr.",
+ "revenue_mix": [
+  {
+   "segment": "Vehicle finance (CV, LCV, car, tractor, 2W, used)",
+   "share_pct": 65,
+   "geography": "India, ~55% semi-urban/rural (model estimate)"
+  },
+  {
+   "segment": "Home loans and loan against property",
+   "share_pct": 25,
+   "geography": "India"
+  },
+  {
+   "segment": "SME, consumer and other",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 15
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "CHOLAFIN",
+   "relation": "funding_cost",
+   "w": -1.3,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Borrowings ~Rs2.3 lakh cr (model estimate: ~85% of AUM Rs2.68 lakh cr per Investywise), ~55% floating (bank loans on repo/T-bill/MCLR) while ~80% of vehicle assets are fixed rate. +25bp on floating Rs1.27 lakh cr = Rs316cr gross; ~40% passed through to new disbursements within 12m => net ~-Rs190cr pre-tax = ~-Rs140cr post-tax = -2.3% of TTM PAT Rs6,222cr; x persistence 0.5 x EV/MCap 1.0 = -1.1; plus P/B 4.1 duration effect => -1.3. Market treats hike cycle as manageable for top NBFCs (JM/UBS/Jefferies picks Sep 2026).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening' (The Hindu, Reuters headlines)"
+    },
+    {
+     "source": "https://plindia.com/ResReport/CIFC-30-10-26-PL.pdf",
+     "date": "2026-10-30",
+     "note": "PL note: AUM growth 24%/23% FY27/28E, credit cost 1.6%/1.5% FY27 (July note)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "CHOLAFIN",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Bond-market funding (NCDs, ~20% of liabilities) prices off G-sec; stock trades at 24x P/E, 4.1x book (long-duration growth asset). +25bp G-sec => ~-2% on multiple at 50% pass-through to CoE; tempered because earnings growth ~25% dominates.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "India 10y G-sec ~7.4-7.5% in Oct 2026, multi-year high (Reuters/ET headlines); Nov outlook 7.25-7.35%"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "CHOLAFIN",
+   "relation": "funding_cost",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.7,
+   "lag": "3-12m",
+   "mechanism": "Wholesale (NCD/CP/securitisation) ~35% of funding, repricing within 3-12m. +50bp x 35% x Rs2.3 lakh cr = Rs400cr gross; 50% passed through => Rs200cr pre-tax = Rs150cr post-tax = 2.4% of PAT; persistence 0.5 => -1.2; add risk-premium effect on the multiple => -2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/CIFC-30-10-26-PL.pdf",
+     "date": "2026-10-30",
+     "note": "PL note: AUM growth 24%/23% FY27/28E, credit cost 1.6%/1.5% FY27 (July note)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "CHOLAFIN",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.6,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus eases CP/CD rates by ~10-15bp and bank MCLR/T-bill benchmarks; on ~Rs0.8 lakh cr of short-term/floating borrowings => Rs100cr = ~1.2% PAT; persistence 0.25-0.5 and cheaper capital => +0.8. Oct 2026 liquidity tightening is a current headwind.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "India 10y G-sec ~7.4-7.5% in Oct 2026, multi-year high (Reuters/ET headlines); Nov outlook 7.25-7.35%"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Vehicle finance (CV, LCV, cars, tractors, 2W) ~65% of AUM and the bulk of disbursements (model knowledge). +10% industry vehicle volumes => vehicle disbursements +8% => AUM growth +~2.5pp/yr; over 2 years AUM +5% => PAT +~5% (ROA stable ~3%) => capitalised at 24x P/E with persistence 0.5-0.7 => +3.5. Q2 disbursements reportedly +47% y/y (Investywise, unverified).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.investywise.com/?p=124396",
+     "date": "2026-10-28",
+     "note": "Q2 FY27 PAT Rs1,630cr +41%, Rs5,000cr QIP approved"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Cholamandalam+Finance+retains+20-23%25+AUM+growth+QIP+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "management retains 20-23% AUM growth outlook; Rs5,000cr fundraise (CNBC TV18 headline)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": -8.0,
+   "w_low": -13.0,
+   "w_high": -4.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost x AUM Rs2.68 lakh cr = Rs1,340cr pre-tax = Rs1,000cr post-tax = ~16% of TTM PAT Rs6,222cr; EV/MCap ~1.0; persistence 0.5 => -8.0. Stage 3 3.29% / net 1.81% (Q1 FY27), credit cost guide 1.3-1.6%; 1.6%/1.5% FY27/28 in PL model.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/CIFC-30-10-26-PL.pdf",
+     "date": "2026-10-30",
+     "note": "PL note: AUM growth 24%/23% FY27/28E, credit cost 1.6%/1.5% FY27 (July note)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Consumer/small-enterprise and personal unsecured ~6% of AUM (Rs16,000cr, model estimate); +1pp delinquency x LGD 70% = Rs113cr pre-tax = ~1.4% PAT x 0.5 => -0.7.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Semi-urban/rural ~55% of vehicle disbursements (tractor, LCV, used CV); +5pp rural growth lifts collections efficiency and disbursements; AUM +~1pp => PAT +~1.5-2% => capitalised => +1.5.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Good monsoon -> tractor/farm vehicle sales and CV freight; lowers Stage-2 rolls in rural book. +10% LPA => credit cost -5bp (Rs130cr pre-tax = ~1.6% PAT) x 0.5 => +0.8-1.0.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.6,
+   "w_high": 3.2,
+   "lag": "3-12m",
+   "mechanism": "Infra/roads/mining drives CV, construction-equipment and LCV demand; +10% capex growth => CV volumes +~5% => same chain as F_AUTO_DEMAND (but half) => +1.5.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Pack: +2.18 per +10% HRC, t +2.8 (market beta 1.54), the strongest co-movement. Fundamental link: steel/mining/construction activity proxies CV and equipment utilisation. We shrink to +1.0 because most co-movement is cyclical beta; overlaps with F_GOVT_CAPEX / F_AUTO_DEMAND_IN (Director should de-duplicate).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CHOLAFIN.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Pack -0.75 (t -1.5). Diesel retail prices are administered, so the direct operator-cost channel is weak; effect via inflation/rates and CV operator margins. Indirect; kept small to avoid double-counting with Brent -> CPI -> repo.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CHOLAFIN.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "CHOLAFIN",
+   "relation": "regulatory_risk",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Tightening step (higher risk weights on bank-to-NBFC lending, ECL norms for NBFCs, scale-based regulation). A 2023-style bank-NBFC risk-weight rise cost NBFCs ~10-15bp funding => ~-2% PAT; probability-weighted => -1.0.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "CHOLAFIN",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.6,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "FII holding 24.9%; market beta 1.54; +US$5bn/qtr ~ +3% Nifty => ~+4.5%, half stock-specific after demeaning.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CHOLAFIN.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "CHOLAFIN",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "GST cuts on vehicles/parts lift unit sales and finance penetration; +1 => vehicle volumes +3% => AUM growth +~1pp => +1.0.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "CHOLAFIN",
+   "relation": "demand_driver",
+   "w": 0.7,
+   "w_low": 0.2,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Home loans/LAP ~25-30% of AUM; +10% housing sales => LAP/home-loan disbursements +4% => AUM +~1pp => +0.7.",
+   "confidence": "low",
+   "evidence": []
+  }
+ ],
+ "company_links": [
+  {
+   "src": "TIINDIA",
+   "dst": "CHOLAFIN",
+   "relation": "group_contagion",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Murugappa group: Tube Investments of India (TIINDIA) is a group sibling and a shareholder in the parent holding structure (model knowledge, verify). Governance/headline event at one group company spills small sentiment to the other; weight low.",
+   "confidence": "low",
+   "evidence": []
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Banks (SBI, HDFC Bank, etc.)",
+   "ticker": "SBIN",
+   "role": "supplier",
+   "importance": "high",
+   "note": "bank term loans ~40% of borrowings (model estimate)"
+  },
+  {
+   "counterparty": "Commercial vehicle OEMs (Tata Motors CV, Ashok Leyland, M&M)",
+   "ticker": "ASHOKLEY",
+   "role": "customer",
+   "importance": "high",
+   "note": "dealer/OEM tie-ups drive vehicle-finance originations"
+  },
+  {
+   "counterparty": "Bajaj Finance",
+   "ticker": "BAJFINANCE",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "overlap in vehicle and LAP"
+  },
+  {
+   "counterparty": "Shriram Finance",
+   "ticker": "SHRIRAMFIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "CV and used-vehicle finance rival"
+  },
+  {
+   "counterparty": "Mahindra Finance",
+   "ticker": "M&MFIN",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "tractor and rural vehicle finance"
+  },
+  {
+   "counterparty": "Tube Investments of India",
+   "ticker": "TIINDIA",
+   "role": "parent",
+   "importance": "low",
+   "note": "Murugappa group affiliate"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 declared 2026-10-28)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "pattern of prior dates; model estimate"
+  },
+  {
+   "date": "2026-12",
+   "event": "Rs5,000cr QIP launch/pricing (board approved 2026-10-28; shareholder approval route and timing unverified); ~3.3% of market cap",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 1.0,
+   "source": "https://www.investywise.com/?p=124396"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC after Oct hike to 5.50%; further hike raises NBFC borrowing cost",
+   "type": "regulatory",
+   "prob": 0.45,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget 2027-28 (1 Feb): GST/ infra capex / NBFC measures",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge of annual schedule"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs9,271cr, PAT Rs1,630cr (+41% y/y), disbursements +~47% y/y (unverified), AUM ~Rs2.68 lakh cr",
+  "trend": "High-20s AUM growth, stable-to-slightly lower NIM, credit cost elevated but guided down; heavy capital need (QIP)",
+  "valuation": "Rs1,770; P/E 24.3, P/B 4.1 (BV Rs403), ROE 19.4%; +9.9% 1m, +1.4% 12m, 1y vol 34%",
+  "recent_developments": [
+   "2026-10-28 Q2 results; board approves Rs5,000cr QIP; stock jumps",
+   "2026-10-29 management retains 20-23% AUM growth outlook",
+   "2026-09-22/24 JM, Jefferies, UBS list NBFC picks 'amid rate hike cycle'",
+   "2026-10-07 RBI repo +25bp to 5.50%"
+  ]
+ },
+ "key_risks": [
+  "Rising funding cost in a hike cycle on a fixed-rate vehicle book",
+  "Credit cost / Stage 3 (3.29%) deterioration in CV and used-vehicle segments",
+  "QIP dilution and pricing",
+  "Vehicle demand reversal (tariffs, fuel, rates)",
+  "Premium valuation (4.1x book)",
+  "Sources conflict on AUM growth (25% vs 33%): data risk"
+ ],
+ "upside_triggers": [
+  "Credit cost falling toward 1.3%",
+  "Vehicle-demand pickup after GST cut and festive season",
+  "Stable NIM via pricing power",
+  "Successful QIP lowering leverage",
+  "Bank-NBFC funding easing as liquidity improves"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.investywise.com/?p=124396",
+   "date": "2026-10-28",
+   "what": "Q2 FY27 PAT +41%, QIP"
+  },
+  {
+   "url": "https://plindia.com/ResReport/CIFC-30-10-26-PL.pdf",
+   "date": "2026-10-30",
+   "what": "PL Q2 FY27 note"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Cholamandalam+Finance+retains+20-23%25+AUM+growth+QIP+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-29",
+   "what": "AUM guidance and QIP headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "https://www.screener.in/company/CHOLAFIN/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals via pack"
+  }
+ ]
+}

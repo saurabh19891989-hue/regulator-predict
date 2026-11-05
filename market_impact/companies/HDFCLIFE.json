@@ -1,0 +1,397 @@
+{
+ "ticker": "HDFCLIFE",
+ "name": "HDFC Life Insurance Company Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_LIFE_INSURANCE",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest private life insurer by value of new business (VNB): savings (non-par, par, ULIP), protection, annuity/pension and group business sold ~half through banks (HDFC Bank is the largest partner and 50.3% shareholder), plus agency, brokers and direct. H1 FY27 profit Rs1,119cr (+13%), VNB +12% (Moneycontrol, 2026-10-15). Stock Rs543, -27% in 12 months, P/B ~6x, P/E 57 on reported PAT (Rs2,048cr TTM); dependent on distribution economics now under IRDAI review.",
+ "revenue_mix": [
+  {
+   "segment": "individual savings (non-par, par, ULIP)",
+   "share_pct": 55,
+   "geography": "India"
+  },
+  {
+   "segment": "protection (individual + group)",
+   "share_pct": 25,
+   "geography": "India"
+  },
+  {
+   "segment": "annuity/pension, others",
+   "share_pct": 20,
+   "geography": "India (model estimate)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "P_IRDAI_REG",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "HDFCLIFE",
+   "relation": "regulatory_risk",
+   "w": -7.0,
+   "w_low": -14.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "IRDAI exposure draft (2026-09-23/24) proposes product-wise commission caps (payout capped at 25%) and a dark-pattern ban. Stock fell ~7% on the day; sector fell up to 26% (PB Fintech). Mechanism: bank/agent distributors earn less -> push less (volumes -5 to -10% in affected savings products) while insurers retain the saved commission (margin +). Net VNB hit: -5% volume x 20% margin... VNB -8% to +3% => PAT/value -8% x persistence 1.0 x EV/MCap 1 => -7 central. Systematix says IRDAI 'may need to revisit proposed cap' (BT 2026-09-25) so final rule may be diluted: wide range.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IRDAI+commission+cap+proposal+insurers+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "note": "IRDAI proposes lower life insurance commissions, capping payout at 25%; HDFC Life/ICICI Pru Life fell ~7% on the day (Moneycontrol/ET)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "HDFCLIFE",
+   "relation": "discount_rate",
+   "w": 0.5,
+   "w_low": -2.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+25bp: positive for new-business pricing (guaranteed non-par yields +10-15bp, VNB margin +25-40bp on ~25% margin = +1.5%) and reinvestment; negative for MTM on debt held in non-par/shareholder funds and for discount rate on a 6x book stock (-1). Net +0.5, low confidence; sector has de-rated in rising-yield spells (model observation).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCLIFE.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,17,993cr, price 543, P/E 57.6, P/B 6.06, Sep-26 qtr PAT Rs522cr; price 12m -26.9%"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HDFCLIFE",
+   "relation": "substitution",
+   "w": -0.6,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "+25bp repo (hiked to 5.50%) -> bank FD rates +20-30bp -> competing savings product becomes more attractive vs non-par savings (not protection/ULIP): savings products ~55% of APE; -2% volume x 55% x margin leverage => -1; partially offset by higher guaranteed rates => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "HDFCLIFE",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "+10% monthly SIP+DII inflow -> sustained equity-market support -> ULIP/linked share of APE (~30%) and fee-based AUM; AUM +1% -> EBITDA +0.5%; ULIP volume +3% => +1.0. DIIs raised stake to 20.5% from 17.3% (screener).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCLIFE.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,17,993cr, price 543, P/E 57.6, P/B 6.06, Sep-26 qtr PAT Rs522cr; price 12m -26.9%"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "HDFCLIFE",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+1 structural shift of household savings from gold/property to financial products raises protection/annuity penetration (India life premium/GDP ~3%): APE growth +2pp pa => VNB +3% x persistence 1.0 => +3 (the value is in the EV growth).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCLIFE.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,17,993cr, price 543, P/E 57.6, P/B 6.06, Sep-26 qtr PAT Rs522cr; price 12m -26.9%"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "HDFCLIFE",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> disposable income +1.2pp -> APE +1.5pp, lower lapse => VNB +2.5% x persistence 0.8 => +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "HDFCLIFE",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -3.5,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts ~ Nifty -3% x beta 0.85-0.9 => -2.6; ULIP exposure; defensive premium => -2.0. Pack empirical +0.35 per SSU (t=1.1, market-adjusted) is not comparable.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCLIFE.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,17,993cr, price 543, P/E 57.6, P/B 6.06, Sep-26 qtr PAT Rs522cr; price 12m -26.9%"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "HDFCLIFE",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "FII share fell from 22.5% to 18.75% (Mar->Sep 2026) while DIIs rose: +US$5bn/qtr flows reverse some of the selling: stock -27% in 12m on flows + IRDAI; +US$5bn ~ Nifty +2% x beta 0.9 + re-rating => +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCLIFE.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,17,993cr, price 543, P/E 57.6, P/B 6.06, Sep-26 qtr PAT Rs522cr; price 12m -26.9%"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "HDFCLIFE",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI -> real returns on savings fall, higher surrenders/lapse (+0.5pp) and RBI hikes (priced elsewhere) => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "HDFCLIFE",
+   "relation": "policy_effect",
+   "w": -1.2,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 (higher tax on equity/ULIP gains or on high-premium policies - Sec 10(10D) Rs5 lakh cap exists, model knowledge): reduces after-tax appeal of ULIPs/savings plans: ULIP+non-par ~65% APE x -3% volume => -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "tax treatment of life insurance; current Budget changes not re-verified"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "HDFCLIFE",
+   "relation": "competition",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "+3pp deposit growth means banks (HDFC Bank, the key distributor) focus on deposit mobilisation over insurance cross-sell -> bancassurance productivity down; 'sales via HDFC Bank recover' (Reuters Oct 15) shows the dependence. -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=HDFC+Life+Q2+VNB+margin+APE+Exide+Life+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q2/H1 FY27: H1 PAT Rs1,119cr +13%, VNB +12% (Moneycontrol), sales via HDFC Bank recover (Reuters)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "HDFCLIFE",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Credit-life/group credit-protect cover tied to HDFC Bank/retail loans (~10-12% of group business, model estimate): lower disbursal growth and higher claims on defaulted retail loans => -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCLIFE.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,17,993cr, price 543, P/E 57.6, P/B 6.06, Sep-26 qtr PAT Rs522cr; price 12m -26.9%"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "HDFCBANK",
+   "dst": "HDFCLIFE",
+   "relation": "holding_stake",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "HDFC Bank holds ~50.3% (promoter 50.53% Sep 2026) and is the largest distributor (~25-30% of individual APE, model estimate): HDFC Bank -1% (distribution priorities, NIM) -> bancassurance productivity and sentiment => HDFC Life -0.15%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCLIFE.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs1,17,993cr, price 543, P/E 57.6, P/B 6.06, Sep-26 qtr PAT Rs522cr; price 12m -26.9%"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "HDFC Bank Ltd.",
+   "ticker": "HDFCBANK",
+   "role": "parent",
+   "importance": "high",
+   "note": "holds ~50.3%; largest bancassurance distribution partner"
+  },
+  {
+   "counterparty": "Exide Life Insurance (acquired by HDFC Life)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "merger status/ integration not verified"
+  },
+  {
+   "counterparty": "SBI Life / ICICI Pru Life / LIC / Max Life",
+   "ticker": "SBILIFE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "private life insurers; LIC competes in savings"
+  },
+  {
+   "counterparty": "Agents/brokers/bank distributors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "commission cap proposal 2026-09-23/24"
+  },
+  {
+   "counterparty": "IRDAI",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "regulator: commissions, EoM, product rules"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-16",
+   "event": "Q3 FY27 results (estimated from Q2 on 2026-10-15): VNB growth and margin",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model estimate from prior cycle"
+  },
+  {
+   "date": "2026-12",
+   "event": "IRDAI final commission/expense framework after consultation (exposure draft 2026-09-23); outcome: diluted cap, deferral or as proposed",
+   "type": "regulatory",
+   "prob": 0.55,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=IRDAI+commission+cap+proposal+insurers+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "HDFC Life GIFT City insurance office shareholder approval (postal ballot, 2026-10-27)",
+   "type": "corporate_action",
+   "prob": 0.9,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 0.5,
+   "source": "https://news.google.com/rss/search?q=HDFC+Life+Q2+VNB+margin+APE+Exide+Life+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget FY28: any change to insurance tax (GST/ITC, 10(10D), capital gains)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs522cr (screener) / Rs447cr (India Infoline headline, +3.3%); H1 PAT Rs1,119cr +13%; VNB +12% (scanx says +15% in another headline - mismatch unresolved)",
+  "trend": "steady H1; sales via HDFC Bank recovering; regulatory overhang from commission-cap proposal; foreign selling (FII 22.5% -> 18.75%)",
+  "valuation": "P/E 57.6, P/B 6.06, ROE 11.3% on reported PAT (screener); value measured on EV/VNB (not fetched)",
+  "recent_developments": [
+   "2026-09-23/24: IRDAI proposes commission caps (25% payout) and dark-pattern ban; HDFC Life -7%",
+   "2026-10-15: Q2/H1 FY27 results; Reuters: sales via HDFC Bank recover",
+   "2026-10-16: shares -3% post results although brokerages upbeat (Motilal Oswal target Rs680)",
+   "2026-10-27: GIFT City insurance office member approval sought",
+   "2026-08-19: IRDAI approved re-appointment of Vibha Padalkar as MD & CEO"
+  ]
+ },
+ "key_risks": [
+  "final IRDAI commission rules cut distribution and VNB",
+  "HDFC Bank cross-sell productivity",
+  "rising bond yields/MTM",
+  "tax change on savings products",
+  "persistent FII selling"
+ ],
+ "upside_triggers": [
+  "IRDAI dilutes or defers cap",
+  "VNB margin expansion",
+  "falling lapse ratios",
+  "re-rating on protection mix"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/HDFCLIFE/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener financials via evidence pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IRDAI+commission+cap+proposal+insurers+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-24",
+   "what": "IRDAI commission proposal"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=HDFC+Life+Q2+VNB+margin+APE+Exide+Life+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  }
+ ]
+}

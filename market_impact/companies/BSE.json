@@ -1,0 +1,358 @@
+{
+ "ticker": "BSE",
+ "name": "BSE Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_MARKET_INFRA",
+ "tier": "NIFTY_50",
+ "business_summary": "Asia's oldest stock exchange and listed exchange operator: equity cash, Sensex/Bankex/Sensex50 index options and futures, currency and commodity-derivatives, mutual-fund distribution platform (StAR MF), listings, data and index licensing. Debt-free, operating margin 67%. Q2 FY27 PAT ~Rs809cr (+45% y/y; screener Rs773cr, -7% q/q), revenue +34%. Mcap Rs1.56 lakh cr, P/E 53x, stock +53% in 12 months and +15.5% in 1 month. Stock moves with SEBI derivatives policy (closing auction session, expiry and settlement rules), NSE competition (NSE listed on 2026-09-21), and retail trading activity.",
+ "revenue_mix": [
+  {
+   "segment": "transaction charges (equity derivatives mainly)",
+   "share_pct": 70,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "cash market, MF platform, listing, data, services",
+   "share_pct": 30,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_EQUITY_ACTIVITY_IN",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "BSE",
+   "relation": "demand_driver",
+   "w": 9.0,
+   "w_low": 4.0,
+   "w_high": 14.0,
+   "lag": "0-3m",
+   "mechanism": "+20% traded value/ demat additions: transaction charges ~70% of revenue (equity derivatives dominate; model knowledge) => revenue +14% = ~Rs800cr on TTM Rs5,444cr; incremental margin ~90% => EBITDA +Rs680cr = +19% on TTM EBITDA Rs3,576cr; EV/MCap ~0.97 (debt-free); persistence 0.5 => +9.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=BSE+Q2+FY27+results+Sensex+options+weekly+expiry+SEBI+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 PAT +45% y/y to Rs809cr, revenue +34%, -7% q/q; derivatives recovery signalled (ET/Reuters/CNBC TV18)"
+    }
+   ]
+  },
+  {
+   "src": "P_SEBI_DERIVATIVES",
+   "dst": "BSE",
+   "relation": "regulatory_risk",
+   "w": -8.0,
+   "w_low": -18.0,
+   "w_high": -2.0,
+   "lag": "0-3m",
+   "mechanism": "One tightening step (e.g., fewer weekly expiries, higher contract size, settlement changes) cuts derivatives volumes ~10% => revenue -7%, EBITDA -10%; persistence 0.75; plus multiple compression at P/E 53x => -8; SEBI is reviewing CAS/ F&O settlement after the chaotic August rollout (Bloomberg 2026-09-03).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SEBI+CAS+closing+auction+session+expiry+day+options+BSE+NSE+volumes+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "SEBI panel view on CAS; settlement may move to last-30-minute VWAP; BSE +2.8% (NiftyTrader 2026-10-15; Moneycontrol 2026-10-06)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=SEBI+F&O+rules+October+2026+weekly+expiry+derivatives+curbs+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-04",
+     "note": "SEBI to review F&O settlement methodology after CAS (NDTV Profit)"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "BSE",
+   "relation": "policy_effect",
+   "w": -6.0,
+   "w_low": -12.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "STT/transaction tax hikes on options raise trader cost and cut turnover: +1 step => volumes -8% => EBITDA -9% x 0.75 persistence => -6 (model knowledge: option STT raised in 2024; later changes unverified).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BSE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "NEW_NSE_BSE_OPTIONS_SHARE",
+   "dst": "BSE",
+   "relation": "competition",
+   "w": 12.0,
+   "w_low": 5.0,
+   "w_high": 20.0,
+   "lag": "3-12m",
+   "mechanism": "BSE's Sensex/Bankex options share of premium turnover (about 15-20%, model knowledge) vs NSE: +5pp share lifts derivatives revenue ~25% => EBITDA +30%, persistence 0.5 => +12 (hypothetical SSU defined for NSE-BSE market share); NSE IPO (listed 2026-09-21 at Rs1,800) strengthens its competitive spending but BSE CEO ruled out NSE self-listing issue (3 Sep) and brokers are the swing factor.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NSE+IPO+listing+September+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "NSE IPO Rs1,800, 1.85% listing gain"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "BSE",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "+10% monthly SIP + DII inflows lifts cash volumes, StAR MF platform order flow (mutual-fund units distribution is a growing BSE revenue line), and listing/index licences; revenue +3% => EBITDA +4% x 0.75 => +3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BSE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BSE",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 17.1% (21.3% in June): FPI flows lift cash and derivatives volumes (BSE beta 1.3-1.6 to Nifty): +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BSE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BSE",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": -4.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Volatility lifts options turnover and premiums (positive) but risk-off cuts retail participation; ambiguous; +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BSE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "BSE",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": -0.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.35 (t=0.9): global risk appetite; +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BSE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "BSE",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical -5.88 (t=-1.9): high-multiple (53x) stock; a +25bp Fed hike compresses; shrunk to -3 as the rate-duration effect is generic.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BSE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BSE",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "P/E 53x: +25bp Indian 10y raises COE ~25bp => -2 to -3%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BSE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "BSE",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Structural shift of household savings into markets raises demat accounts and active traders; +1 => 5% revenue CAGR lift persistent => +4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BSE.md (screener.in)",
+     "date": "2026-11-05",
+     "note": "fundamentals/empirical sensitivity"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Brokers (Groww, Zerodha, Angel One etc.) and HFT/prop firms",
+   "ticker": "GROWW",
+   "role": "customer",
+   "importance": "high",
+   "note": "retail and prop order flow; Groww is a top-3 broker"
+  },
+  {
+   "counterparty": "NSE (listed 2026-09-21)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "~80%+ share of derivatives (model knowledge)"
+  },
+  {
+   "counterparty": "SEBI",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "regulator; sets expiry/settlement rules"
+  },
+  {
+   "counterparty": "MCX / CDSL",
+   "ticker": "MCX",
+   "role": "competitor",
+   "importance": "low",
+   "note": "other market-infrastructure stocks"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "SEBI outcome on CAS review / F&O settlement price methodology (consultation; panel view 2026-10-15)",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=SEBI+CAS+closing+auction+session+expiry+day+options+BSE+NSE+volumes+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-02",
+   "event": "Q3 FY27 results (inferred; Q2 on 2026-11-04)",
+   "type": "results",
+   "prob": 0.85,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=BSE+Q2+FY27+results+Sensex+options+weekly+expiry+SEBI+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget (STT / capital markets tax changes)",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge: annual Budget on 1 Feb"
+  },
+  {
+   "date": "2026-12",
+   "event": "Weekly expiry / contract-size rule changes by SEBI",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -15.0,
+   "impact_pct_high": -3.0,
+   "source": "https://news.google.com/rss/search?q=SEBI+F&O+rules+October+2026+weekly+expiry+derivatives+curbs+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Revenue +34% y/y but -8% q/q on screener (Rs1,349cr vs Rs1,474cr); OPM 68%; PAT ~Rs773-809cr; management signals derivatives recovery; brokerages divided on growth outlook (Kotak initiates Buy; Macquarie TP Rs4,000).",
+  "valuation": "P/E 53.3x, P/B 22x (Rs3,821 / BV Rs170); 52w range Rs2,377-4,447; +15.5% 1m, +53% 12m; 1y vol 38%.",
+  "recent_developments": [
+   "2026-08: SEBI closing auction session (CAS) rollout chaotic; BSE rose as options settlement under review (2026-09-03/04 +5%)",
+   "2026-09-21: NSE IPO lists on BSE/NSE at Rs1,800; 2026-09-24 BSE -1% on muted debut",
+   "2026-10-06/15: SEBI may partly reverse CAS; BSE +2.8% on panel view",
+   "2026-11-04/05: Q2 results; shares +4% on 2026-11-05"
+  ]
+ },
+ "key_risks": [
+  "SEBI derivatives curbs (expiry days, contract size, STT)",
+  "NSE competitive response after its IPO",
+  "Sequential revenue decline; high expectations at 53x P/E",
+  "Market-share concentration in a few products (Sensex options)"
+ ],
+ "upside_triggers": [
+  "Favourable CAS/settlement outcome keeping expiry-day volumes",
+  "BSE market-share gains in index options",
+  "Mutual-fund and listing revenue diversification",
+  "Retail participation revival with rising markets"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_NSE_BSE_OPTIONS_SHARE",
+   "type": "FACTOR",
+   "name": "BSE share of index-options premium turnover vs NSE",
+   "ssu": "+5 pp BSE market share"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BSE.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=BSE+Q2+FY27+results+Sensex+options+weekly+expiry+SEBI+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=SEBI+CAS+closing+auction+session+expiry+day+options+BSE+NSE+volumes+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "CAS review"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=NSE+IPO+listing+September+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-21",
+   "what": "NSE IPO"
+  }
+ ]
+}

@@ -7,7 +7,6 @@
   "B07",
   "B11",
   "B17",
-  "B08",
   "B22",
   "B25",
   "B09",
@@ -16,11 +15,11 @@
   "B02",
   "B03",
   "B05",
-  "B06"
+  "B06",
+  "B12",
+  "B16"
  ],
  "queued": [
-  "B12",
-  "B16",
   "B18",
   "B19",
   "B20",
@@ -34,14 +33,16 @@
   "geopolitics_trade",
   "global_macro",
   "india_macro",
-  "metals_china"
- ],
- "events_running": [
+  "metals_china",
   "agri_rural"
  ],
+ "events_running": [],
  "backbone_running": [
   "global",
   "india"
  ],
- "concurrency_limit": 20
+ "concurrency_limit": 20,
+ "company_done": [
+  "B08"
+ ]
 }
