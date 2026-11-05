@@ -6,7 +6,8 @@ The user authorised a new, separate programme on 2026-11-05: a causal exposure n
 policy/geopolitical drivers and companies, with 2nd–4th-order effects for the Nifty 200. It lives in `market_impact/`
 with its own rules (`market_impact/CLAUDE.md`) and status (`market_impact/STATUS.md`). The regulatory programme
 below stays closed at NO-GO; its out-of-scope rule on stock prediction applies to this regulatory work, not to
-`market_impact/`. First full run frozen 2026-11-05 (`market_impact/ledger/predictions_20261105.csv`).
+`market_impact/`. First full run frozen 2026-11-05 (`market_impact/ledger/predictions_20261105.csv`), documented revision
+`predictions_20261105_v2.csv`; ledger scoring is scheduled for 2027-02-05 (3m) and 2027-11-05 (12m, pass/fail).
 
 ## User pause — 2026-10-05
 

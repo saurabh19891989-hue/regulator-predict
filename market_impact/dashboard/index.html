@@ -34,6 +34,10 @@
   .mi .prose { max-width: 75ch; line-height: 1.55; }
   .mi .prose p { margin: 0 0 var(--cds-gap-sm); }
   .mi .prose li { margin-bottom: var(--cds-gap-xs); }
+  .mi-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-top: var(--cds-gap-sm); }
+  .mi-legend span { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+  .mi-legend .sw { width: .75rem; height: .75rem; border-radius: 2px; display: inline-block; }
+  .mi-legend .sw.muted { background: var(--cds-chart-muted); }
   [data-dash-source-state=empty] { color: transparent; }
   [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
   @media (max-width: 48rem) { .mi .wide-only { display: none; } }
@@ -43,6 +47,7 @@
   <header class="mi-head" id="top">
     <h1>Nifty 200 impact map</h1>
     <p class="tk">Scenario-implied, beta-adjusted 12-month return relative to the Nifty 200. Highest: <b data-draw="top-name" data-source="rankings" data-field="ticker" data-where="rank_12m=1">—</b> at <b data-draw="top-val" data-source="rankings" data-field="exp_12m" data-where="rank_12m=1">—</b>%. Lowest: <b data-draw="bot-name" data-source="rankings" data-field="ticker" data-where="rank_12m=200">—</b> at <b data-draw="bot-val" data-source="rankings" data-field="exp_12m" data-where="rank_12m=200">—</b>%. These are exposure-driven estimates from the causal graph, not validated forecasts.</p>
+    <p>Market-traded macro (rates, currencies, commodities, indices, volatility, flows, growth, inflation) is taken as already priced. What is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure, which is where 2nd–4th-order effects are most likely to be missed.</p>
   </header>
 
   <section class="mi-kpis" aria-label="Model size">
@@ -56,6 +61,7 @@
 
   <nav class="mi-tabs" role="tablist" aria-label="Views">
     <button role="tab" aria-selected="true" data-tab="rank" id="tab-rank">Rankings</button>
+    <button role="tab" aria-selected="false" data-tab="attr" id="tab-attr">Where returns come from</button>
     <button role="tab" aria-selected="false" data-tab="sect" id="tab-sect">Sectors and drivers</button>
     <button role="tab" aria-selected="false" data-tab="evt" id="tab-evt">Events</button>
     <button role="tab" aria-selected="false" data-tab="chain" id="tab-chain">Causal chains</button>
@@ -100,6 +106,61 @@
             <th data-field="downside_scenario_chain" class="wide-only">Largest downside scenario chain</th>
           </tr></thead>
           <tbody data-draw="rank-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="attr" id="attribution" class="mi-grid" hidden>
+    <div class="mi-card">
+      <h2 id="h-attr-sum">What drives the expected returns</h2>
+      <p class="note">Share of the total absolute contribution across all 200 stocks, 12 months. The dark part reaches the company directly (1st order); the light part arrives through one to three intermediate drivers (2nd–4th order). Market-priced macro contributes nothing by construction.</p>
+      <div class="mi-chart short" data-draw="attr-sum" data-source="attribution_summary"></div>
+    </div>
+    <div class="mi-card">
+      <h2 id="h-attr-read">How to read this</h2>
+      <div class="prose note">
+        <p>Each stock's expected relative return is split exactly into its sources: policy (budgets, trade, subsidies, tariffs), regulatory (SEBI, RBI prudential, IRDAI, drug-price and similar rules), sector (industry prices, demand and competition), theme (China+1, energy transition, AI services, defence exports), geopolitics, and company-specific catalysts.</p>
+        <p>The market-and-beta column adds back the market-wide part: each stock's beta times the universe-average effect, and the centring that makes returns relative to the Nifty 200.</p>
+      </div>
+      <div class="mi-legend" aria-label="Legend">
+        <span><i class="sw" data-c="0"></i>Policy</span><span><i class="sw" data-c="1"></i>Regulatory</span><span><i class="sw" data-c="2"></i>Sector</span>
+        <span><i class="sw" data-c="3"></i>Theme</span><span><i class="sw" data-c="4"></i>Geopolitics</span><span><i class="sw" data-c="5"></i>Company catalysts</span>
+        <span><i class="sw muted"></i>Market and beta</span>
+      </div>
+    </div>
+    <div class="mi-card" style="grid-column: 1 / -1;">
+      <h2 id="h-attr-stocks">Sources of return for the 15 highest and 15 lowest</h2>
+      <p class="note">Stacked contributions in percentage points; the black tick is the expected relative return. Hover a bar for the split, including how much arrives at 2nd–4th order.</p>
+      <div class="mi-ctl">
+        <select id="attr-h" aria-label="Horizon">
+          <option value="12m">12 months</option>
+          <option value="3m">3 months</option>
+        </select>
+      </div>
+      <div class="mi-chart" data-draw="attr-stocks" data-source="attribution_12m attribution_3m"></div>
+    </div>
+    <div class="mi-card" style="grid-column: 1 / -1;">
+      <h2 id="h-attr-table">All 200 stocks by source of return, 12 months</h2>
+      <p class="note">Percentage points. 1st order and 2nd–4th order split the same total by how directly each effect reaches the company. Click a header to sort.</p>
+      <div class="mi-ctl"><input type="search" id="attr-q" placeholder="Search ticker, name or industry" aria-label="Search stocks"></div>
+      <div class="mi-table-wrap">
+        <table data-source="attribution_12m" data-row-key="ticker" id="attr-table">
+          <thead><tr>
+            <th data-field="ticker"><button data-asort="ticker">Ticker</button></th>
+            <th data-field="industry" class="wide-only">Industry</th>
+            <th class="num" data-field="expected"><button data-asort="expected">Expected</button></th>
+            <th class="num" data-field="policy"><button data-asort="policy">Policy</button></th>
+            <th class="num" data-field="regulatory"><button data-asort="regulatory">Regulatory</button></th>
+            <th class="num" data-field="sector"><button data-asort="sector">Sector</button></th>
+            <th class="num" data-field="theme"><button data-asort="theme">Theme</button></th>
+            <th class="num" data-field="geopolitics"><button data-asort="geopolitics">Geopolitics</button></th>
+            <th class="num" data-field="company_catalysts"><button data-asort="company_catalysts">Company</button></th>
+            <th class="num" data-field="market_and_beta"><button data-asort="market_and_beta">Market and beta</button></th>
+            <th class="num wide-only" data-field="first_order"><button data-asort="first_order">1st order</button></th>
+            <th class="num wide-only" data-field="higher_order"><button data-asort="higher_order">2nd–4th order</button></th>
+          </tr></thead>
+          <tbody data-draw="attr-rows"></tbody>
         </table>
       </div>
     </div>
@@ -208,12 +269,20 @@
       <p class="note">Correlation across stocks between the graph's implied impact of drivers that moved since June and each stock's realised beta-adjusted move. A useful model would sit right of zero.</p>
       <div class="mi-chart short" data-draw="check-chart" data-source="insample_check"></div>
     </div>
+    <div class="mi-card">
+      <h2 id="h-robust">Robustness: does the ranking survive different assumptions?</h2>
+      <p class="note">Rank correlation of the 12-month ranking with the baseline when one modelling choice changes, or one source of return is removed. Near one means the choice barely matters.</p>
+      <div class="mi-chart" data-draw="robust-chart" data-source="robustness"></div>
+      <p class="note">Stable at the top in at least four of five re-run variants: <b data-draw="stable-top" data-source="robustness_ranks">—</b></p>
+      <p class="note">Stable at the bottom: <b data-draw="stable-bot" data-source="robustness_ranks">—</b></p>
+    </div>
     <div class="mi-card prose">
       <h2>How the numbers are built</h2>
       <p>Events feed macro, commodity, policy, geopolitical and theme drivers, which feed companies. Each link is a weighted elasticity in standard shock units, written by research agents from fundamentals and checked against price co-movement. Effects travel up to four links, damped by order, with controls so the same channel is not counted twice.</p>
       <ul>
         <li>The expected return is half of the probability-weighted forward event exposure plus half of company-specific catalysts, net of beta, centred on the Nifty 200.</li>
-        <li>For market-traded macro drivers (rates, currencies, commodities, equity indices, volatility, flows, growth, inflation), the market's forward path is taken as given. Their scenarios widen the risk bands but add no mean drift.</li>
+        <li>For market-traded macro drivers (rates, currencies, commodities, equity indices, volatility, flows, growth, inflation), the market's forward path is taken as given: the probability-weighted effect of their scenarios is cancelled exactly, along the same chains it travels. Their scenarios still widen the risk bands.</li>
+        <li>What is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure, split exactly in the "Where returns come from" tab.</li>
         <li>What already moved since June is shown as a diagnostic only. It failed the in-sample check, so it does not enter the headline.</li>
         <li>Eight independent reviewers checked event facts, unit and sign errors, double counting and every top, bottom and Nifty Next 50 stock. Their fixes are applied as logged overrides.</li>
         <li>Rankings are frozen in a timestamped, hashed ledger and will be scored at three and twelve months against realised returns and a momentum baseline.</li>
@@ -271,6 +340,12 @@
     if (y + h > b.height) y = Math.max(0, b.height - h);
     tip.style.left = x + 'px'; tip.style.top = y + 'px';
   };
+  // shorten SVG labels that would not fit in maxW (ellipsis); keeps every label inside the drawing
+  const fitLabels = (sel, maxW) => sel.each(function () {
+    let t = this.textContent;
+    while (t.length > 3 && this.getComputedTextLength() > maxW) { t = t.slice(0, -2); this.textContent = t + '…'; }
+  });
+  const textW = (svg, strs) => { const g = svg.append('g').style('font-size', 'var(--cds-font-size-caption)'); let w = 0; strs.forEach((s) => { const t = g.append('text').text(s); w = Math.max(w, t.node().getComputedTextLength()); }); g.remove(); return w; };
   const muteAxis = (g) => g.attr('font-size', null).attr('font-family', null).call((s) => s.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)')).call((s) => s.selectAll('line,path').attr('stroke', 'var(--cds-chart-axis)'));
 
   // diverging extremes chart
@@ -294,7 +369,7 @@
     g.append('line').attr('x1', (r) => x(r.lo)).attr('x2', (r) => x(r.hi)).attr('y1', (r) => y(r.ticker) + y.bandwidth() / 2).attr('y2', (r) => y(r.ticker) + y.bandwidth() / 2).attr('stroke', 'var(--cds-chart-muted)').attr('stroke-width', 1);
     g.append('rect').attr('x', (r) => x(Math.min(0, r.v))).attr('width', (r) => Math.abs(x(r.v) - x(0))).attr('y', (r) => y(r.ticker)).attr('height', y.bandwidth()).attr('rx', 2)
       .attr('fill', (r) => (r.v >= 0 ? dash.colors[0] : dash.colors[1]));
-    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.ticker) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.ticker);
+    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.ticker) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.ticker).call((t) => fitLabels(t, lw - 8));
     const tip = tipIn(el);
     g.append('rect').attr('x', 0).attr('width', W).attr('y', (r) => y(r.ticker) - 2).attr('height', y.bandwidth() + 4).attr('fill', 'transparent')
       .on('pointermove', (ev, r) => {
@@ -359,7 +434,7 @@
     const g = svg.append('g').selectAll('g').data(rows).join('g');
     g.append('rect').attr('x', (r) => x(Math.min(0, r.v))).attr('width', (r) => Math.abs(x(r.v) - x(0))).attr('y', (r) => y(r.industry)).attr('height', y.bandwidth()).attr('rx', 2).attr('fill', (r) => (r.v >= 0 ? dash.colors[0] : dash.colors[1]));
     g.append('circle').attr('cx', (r) => x(r.v3)).attr('cy', (r) => y(r.industry) + y.bandwidth() / 2).attr('r', 3.5).attr('fill', 'var(--color-fg)');
-    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.industry) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.industry);
+    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.industry) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.industry).call((t) => fitLabels(t, lw - 8));
     const tip = tipIn(el);
     g.append('rect').attr('x', 0).attr('width', W).attr('y', (r) => y(r.industry) - 2).attr('height', y.bandwidth() + 4).attr('fill', 'transparent')
       .on('pointermove', (ev, r) => {
@@ -381,7 +456,7 @@
     const rows = d.data.map((r) => ({ order: r.order, v: num(r.share) }));
     const W = el.clientWidth || 400, H = rows.length * 34 + 30, lw = 70;
     const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
-    const x = d3.scaleLinear([0, Math.max(...rows.map((r) => r.v))], [lw, W - 56]).nice();
+    const x = d3.scaleLinear([0, Math.max(...rows.map((r) => r.v))], [lw, W - 48]);
     const y = d3.scaleBand(rows.map((r) => r.order), [4, H - 26]).padding(0.3);
     svg.append('g').attr('transform', `translate(0,${H - 26})`).call(d3.axisBottom(x).ticks(4).tickFormat(d3.format('.0%'))).call(muteAxis);
     const g = svg.append('g').selectAll('g').data(rows).join('g');
@@ -442,6 +517,127 @@
   });
   document.querySelectorAll('#ch-q, #ch-order').forEach((e) => e.addEventListener('input', () => dash.draw('ch-rows')));
 
+  // ---- where returns come from
+  const CATS = [['policy', 'Policy'], ['regulatory', 'Regulatory'], ['sector', 'Sector'], ['theme', 'Theme'], ['geopolitics', 'Geopolitics'], ['company_catalysts', 'Company catalysts']];
+  const catColor = (i) => (i < CATS.length ? dash.colors[i % dash.colors.length] : 'var(--cds-chart-muted)');
+  document.querySelectorAll('.mi-legend .sw[data-c]').forEach((el) => { el.style.background = dash.colors[Number(el.dataset.c) % dash.colors.length]; });
+  window.MI.asort = { key: 'expected', dir: -1 };
+
+  dash.draw('attr-sum', (el) => {
+    const d = val('attribution_summary');
+    el.replaceChildren();
+    if (d.status !== 'ok') { el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const rows = d.data.map((r) => ({ c: r.category, a: num(r.first_order_share), b: num(r.higher_order_share) }));
+    const W = el.clientWidth || 400, bh = 28, H = rows.length * bh + 30;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const probe = svg.append('g').style('font-size', 'var(--cds-font-size-caption)');
+    let lw = 0; rows.forEach((r) => { const t = probe.append('text').text(r.c); lw = Math.max(lw, t.node().getComputedTextLength()); });
+    probe.remove(); lw = Math.min(lw + 10, W * 0.45);
+    const lab = (r) => `${P0(r.a + r.b)} (${P0(r.b / Math.max(r.a + r.b, 1e-9))} via 2nd–4th)`;
+    const rpad = Math.min(textW(svg, rows.map(lab)) + 10, W * 0.4);
+    const x = d3.scaleLinear([0, Math.max(...rows.map((r) => r.a + r.b))], [lw, Math.max(lw + 40, W - rpad)]);
+    const y = d3.scaleBand(rows.map((r) => r.c), [4, H - 26]).padding(0.28);
+    svg.append('g').attr('transform', `translate(0,${H - 26})`).call(d3.axisBottom(x).ticks(4).tickFormat(d3.format('.0%'))).call(muteAxis);
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('rect').attr('x', lw).attr('width', (r) => x(r.a) - lw).attr('y', (r) => y(r.c)).attr('height', y.bandwidth()).attr('rx', 2).attr('fill', (r, i) => catColor(i));
+    g.append('rect').attr('x', (r) => x(r.a)).attr('width', (r) => x(r.a + r.b) - x(r.a)).attr('y', (r) => y(r.c)).attr('height', y.bandwidth()).attr('rx', 2).attr('fill', (r, i) => catColor(i)).attr('opacity', 0.45);
+    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.c) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.c).call((t) => fitLabels(t, lw - 8));
+    g.append('text').attr('x', (r) => x(r.a + r.b) + 6).attr('y', (r) => y(r.c) + y.bandwidth() / 2).attr('dy', '0.32em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)')
+      .text(lab).call((t) => fitLabels(t, rpad - 8));
+  });
+
+  dash.draw('attr-stocks', (el) => {
+    const h = (document.getElementById('attr-h') || {}).value || '12m';
+    const d = val(h === '3m' ? 'attribution_3m' : 'attribution_12m');
+    el.replaceChildren();
+    if (d.status !== 'ok') { el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const rows = d.data.map((r) => ({ ...r, e: num(r.expected) })).sort((a, b) => b.e - a.e);
+    const pick = rows.slice(0, 15).concat(rows.slice(-15));
+    const keys = CATS.map((c) => c[0]).concat(['market_and_beta']);
+    const segs = pick.map((r) => { let pos = 0, neg = 0; return keys.map((k, i) => { const v = num(r[k]) || 0; const s0 = v >= 0 ? pos : neg + v; if (v >= 0) pos += v; else neg += v; return { t: r.ticker, k, i, v, x0: s0, x1: s0 + Math.abs(v) }; }); });
+    const lo = Math.min(0, ...segs.flat().map((s) => s.x0)), hiV = Math.max(0, ...segs.flat().map((s) => s.x1));
+    const W = el.clientWidth || 600, bh = 18, H = pick.length * bh + 36, lw = 92;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const x = d3.scaleLinear([lo, hiV], [lw, W - 16]).nice();
+    const y = d3.scaleBand(pick.map((r) => r.ticker), [6, H - 28]).padding(0.22);
+    svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).ticks(Math.max(3, Math.floor((W - lw) / 90))).tickFormat((t) => F1(t))).call(muteAxis);
+    svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 2).attr('y2', H - 28).attr('stroke', 'var(--cds-chart-reference)');
+    svg.append('g').selectAll('rect').data(segs.flat().filter((s) => Math.abs(s.v) > 1e-6)).join('rect')
+      .attr('x', (s) => x(s.x0)).attr('width', (s) => Math.max(0.5, x(s.x1) - x(s.x0))).attr('y', (s) => y(s.t)).attr('height', y.bandwidth())
+      .attr('fill', (s) => catColor(s.i));
+    svg.append('g').selectAll('line').data(pick).join('line').attr('x1', (r) => x(r.e)).attr('x2', (r) => x(r.e)).attr('y1', (r) => y(r.ticker) - 2).attr('y2', (r) => y(r.ticker) + y.bandwidth() + 2).attr('stroke', 'var(--color-fg)').attr('stroke-width', 2);
+    svg.append('g').selectAll('text').data(pick).join('text').attr('x', lw - 6).attr('y', (r) => y(r.ticker) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.ticker).call((t) => fitLabels(t, lw - 8));
+    const tip = tipIn(el);
+    svg.append('g').selectAll('rect').data(pick).join('rect').attr('x', 0).attr('width', W).attr('y', (r) => y(r.ticker) - 2).attr('height', y.bandwidth() + 4).attr('fill', 'transparent')
+      .on('pointermove', (ev, r) => {
+        tip.replaceChildren();
+        const a = document.createElement('div'); a.className = 't2'; a.textContent = `${r.ticker} · ${r.industry} · expected ${F1(r.e)}%`;
+        tip.appendChild(a);
+        CATS.concat([['market_and_beta', 'Market and beta']]).forEach(([k, lab]) => { const v = num(r[k]); if (Math.abs(v) >= 0.01) { const b = document.createElement('div'); b.textContent = `${lab} ${N2(v)}`; tip.appendChild(b); } });
+        const c = document.createElement('div'); c.className = 't2'; c.textContent = `1st order ${N2(num(r.first_order))}, 2nd–4th order ${N2(num(r.higher_order))}`;
+        tip.appendChild(c); placeTip(el, tip, ev);
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  });
+  document.querySelectorAll('#attr-h').forEach((e) => e.addEventListener('input', () => dash.draw('attr-stocks')));
+
+  dash.draw('attr-rows', (el) => {
+    const d = val('attribution_12m');
+    el.replaceChildren();
+    if (d.status !== 'ok') return;
+    const term = q('attr-q');
+    const { key, dir } = window.MI.asort;
+    const rows = d.data.filter((r) => !term || [r.ticker, r.name, r.industry].join(' ').toLowerCase().includes(term))
+      .sort((a, b) => { const x = num(a[key]), y = num(b[key]); return (isNaN(x) || isNaN(y) ? String(a[key]).localeCompare(String(b[key])) : x - y) * dir; });
+    for (const r of rows) {
+      const tr = document.createElement('tr');
+      cell(tr, r.ticker); cell(tr, r.industry, 'wide-only'); cell(tr, N2(num(r.expected)), sign(num(r.expected)));
+      ['policy', 'regulatory', 'sector', 'theme', 'geopolitics', 'company_catalysts', 'market_and_beta'].forEach((k) => cell(tr, N2(num(r[k])), sign(num(r[k]))));
+      cell(tr, N2(num(r.first_order)), 'num wide-only'); cell(tr, N2(num(r.higher_order)), 'num wide-only');
+      el.appendChild(tr);
+    }
+  });
+  document.querySelectorAll('#attr-table th button[data-asort]').forEach((b) => b.addEventListener('click', () => {
+    const s = window.MI.asort; const k = b.dataset.asort;
+    s.dir = s.key === k ? -s.dir : (k === 'ticker' ? 1 : -1); s.key = k;
+    document.querySelectorAll('#attr-table th').forEach((th) => th.removeAttribute('aria-sort'));
+    b.closest('th').setAttribute('aria-sort', s.dir > 0 ? 'ascending' : 'descending');
+    dash.draw('attr-rows');
+  }));
+  document.querySelectorAll('#attr-q').forEach((e) => e.addEventListener('input', () => dash.draw('attr-rows')));
+
+  // ---- robustness
+  dash.draw('robust-chart', (el) => {
+    const d = val('robustness');
+    el.replaceChildren();
+    if (d.status !== 'ok') { el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const rows = d.data.map((r) => ({ ...r, v: num(r.spearman) }));
+    const W = el.clientWidth || 500, bh = 20, H = rows.length * bh + 30;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const probe = svg.append('g').style('font-size', 'var(--cds-font-size-caption)');
+    let lw = 0; rows.forEach((r) => { const t = probe.append('text').text(r.variant); lw = Math.max(lw, t.node().getComputedTextLength()); });
+    probe.remove(); lw = Math.min(lw + 10, W * 0.6);
+    const x = d3.scaleLinear([Math.min(0.5, ...rows.map((r) => r.v)), 1], [lw, W - 40]);
+    const y = d3.scaleBand(rows.map((r) => r.variant), [4, H - 26]).padding(0.25);
+    svg.append('g').attr('transform', `translate(0,${H - 26})`).call(d3.axisBottom(x).ticks(4).tickFormat(d3.format('.2f'))).call(muteAxis);
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('rect').attr('x', lw).attr('width', (r) => Math.max(0, x(r.v) - lw)).attr('y', (r) => y(r.variant)).attr('height', y.bandwidth()).attr('rx', 2)
+      .attr('fill', (r) => (r.v < 0.85 ? 'var(--cds-chart-status-critical)' : dash.colors[0]));
+    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.variant) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.variant).call((t) => fitLabels(t, lw - 8));
+    g.append('text').attr('x', (r) => x(r.v) + 4).attr('y', (r) => y(r.variant) + y.bandwidth() / 2).attr('dy', '0.32em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text((r) => d3.format('.2f')(r.v));
+  });
+  const stable = (name, test) => dash.draw(name, (el) => {
+    const d = val('robustness_ranks');
+    if (d.status !== 'ok') { el.textContent = '—'; return; }
+    const n = d.data.length;
+    el.textContent = d.data.filter((r) => test(r, n)).map((r) => r.ticker).join(', ') || '—';
+  });
+  stable('stable-top', (r) => num(r.base_rank) <= 20 && num(r.share_in_top20) >= 0.8);
+  stable('stable-bot', (r, n) => num(r.base_rank) > n - 20 && num(r.share_in_bottom20) >= 0.8);
+
   // in-sample check chart
   dash.draw('check-chart', (el) => {
     const d = val('insample_check');
@@ -461,7 +657,7 @@
     const g = svg.append('g').selectAll('g').data(rows).join('g');
     g.append('rect').attr('x', (r) => x(Math.min(0, r.v))).attr('width', (r) => Math.abs(x(r.v) - x(0))).attr('y', (r) => y(r.check)).attr('height', y.bandwidth()).attr('rx', 2)
       .attr('fill', (r) => (r.v < 0 ? 'var(--cds-chart-status-critical)' : dash.colors[0]));
-    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.check) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.check);
-    g.append('text').attr('x', (r) => (r.v < 0 ? x(r.v) - 4 : x(r.v) + 4)).attr('text-anchor', (r) => (r.v < 0 ? 'end' : 'start')).attr('y', (r) => y(r.check) + y.bandwidth() / 2).attr('dy', '0.32em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text((r) => d3.format('+.2f')(r.v));
+    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.check) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.check).call((t) => fitLabels(t, lw - 8));
+    g.append('text').attr('x', (r) => x(Math.max(0, r.v)) + 4).attr('text-anchor', 'start').attr('y', (r) => y(r.check) + y.bandwidth() / 2).attr('dy', '0.32em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text((r) => d3.format('+.2f')(r.v));
   });
 </script>

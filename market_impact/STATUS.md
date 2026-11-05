@@ -3,7 +3,88 @@
 Programme authorised by the user on 2026-11-05. It is separate from the closed regulatory programme (root `CLAUDE.md`, NO-GO 2026-10-05).
 Rules: `market_impact/CLAUDE.md`. Method: `PLAN.md`, `docs/AGENT_SPEC.md`.
 
-## Checkpoint — 2026-11-05 (first full run, frozen)
+## Checkpoint — 2026-11-05 (v2: attribution, robustness, data fixes, scheduled scoring)
+
+**Next steps from the first checkpoint, completed**
+
+1. **Return attribution** (`results/attribution.csv`; per-stock tables in `reports/stocks/*.md`; a summary in `SUMMARY.md`; a dashboard tab).
+   - Every expected return is split exactly into policy, regulatory, sector, theme, geopolitics, company catalysts and market-priced macro, plus beta adjustment and universe centring. The maximum summing error is 1e-14 pp.
+   - Each source is further split into 1st order and 2nd–4th order.
+   - Across all stocks (12m, share of absolute contribution):
+
+     | Source | Total | 1st order | 2nd–4th order |
+     |---|---|---|---|
+     | Sector | 36% | 17% | 19% |
+     | Company catalysts | 27% | — | — |
+     | Policy | 17% | — | — |
+     | Theme | 8% | — | — |
+     | Regulatory | 7% | — | — |
+     | Geopolitics | 4% | 1% | 3% |
+     | Market-priced macro | 0%, by construction | — | — |
+
+2. **Exact market-priced neutralisation.** v1 cancelled the catalogue's mean drift on traded macro drivers only along direct paths. Their 2nd–4th-order echoes through other market-priced nodes (e.g. risk sentiment → FPI flows → INR) leaked about ±2 pp into some stocks.
+   - v2 subtracts the exact probability-weighted contribution of every market-priced entry shock, propagated with each event's own clamping.
+   - Rank correlation with v1 is 0.79 (12m) and 0.87 (3m).
+   - **Ledger:** `ledger/predictions_20261105_v2.csv` (+ sha256), frozen as a documented revision. v1 (`predictions_20261105.csv`) stays the primary pre-registered record, and both are scored.
+3. **Robustness** (`mi/robustness.py`, `reports/ROBUSTNESS.md`, `results/robustness*.csv`). 18 re-run variants plus 6 leave-one-source-out cases. 12-month Spearman against the baseline:
+   - Higher-order damping ×0.8 / ×1.2: 0.99 / 0.99.
+   - Overlap damping 0.25 / 0.75: 0.99 / 1.00.
+   - Edge weights × lognormal(0.3), three seeds: 0.97 / 0.97 / 0.97.
+   - Event probabilities × U(0.7, 1.3): 0.99.
+   - No beta adjustment: 0.99.
+   - **Sensitive to these choices:**
+     - no market-priced neutralisation: 0.68;
+     - no company catalysts: 0.80;
+     - 1st order only: 0.86, and up to 2nd order: 0.93 (2nd–4th-order links reshuffle the ranking);
+     - without sector drivers: 0.89.
+   - **Stable top names** (in the top 20 in ≥80% of variants): IDEA, HINDPETRO, BHARTIARTL, IOC, LAURUSLABS, MAZDOCK, DIXON, JSWENERGY, TATAPOWER, BDL, ADANIPOWER, ENRIN, POWERINDIA, RELIANCE, SOLARINDS, ADANIENSOL, NLCINDIA, NHPC.
+   - **Stable bottom names:** POLICYBZR, HINDCOPPER, GROWW, FORTIS, PERSISTENT, BIOCON, ETERNAL, SWIGGY, MUTHOOTFIN, MPHASIS, TCS, COFORGE, INFY, MFSL, MCX.
+4. **Data fixes and in-sample check** (`mi/insample.py`, `results/insample_check.csv`, `results/insample_by_driver.csv`).
+   - Asian LNG now uses Yahoo `JKM=F` instead of Henry Hub `NG=F`. JKM is +69% since 1 Jun (+4.6 SSU), against a reviewer estimate of +1.0 and Henry Hub at −8%.
+   - Not available on Yahoo: Newcastle coal (MTF=F stale since Dec 2025), India's 10-year G-sec and a Singapore GRM. These keep sourced overrides or reviewed event states.
+   - Final in-sample correlation (198 stocks) of the graph's June–November implied impact with realised beta-adjusted moves:
+     - all drivers −0.15;
+     - market-observed only +0.10 (Spearman 0.00);
+     - event-estimated −0.17;
+     - reviewed overrides −0.15;
+     - within industries 0.00.
+
+     The graph does not explain the recent past, which confirms that the recent component stays out of the headline.
+5. **One-command pipeline** (`mi/pipeline.py`).
+   - `refresh [--prices] [--robustness] [--freeze LABEL NOTE]` runs prices → factor state → merge reviews → engine → in-sample → reports → dashboard data → tests → freeze in 26 s without the price download.
+   - `score --days N` refreshes prices and scores every frozen ledger file into `reports/LEDGER_SCORES.md`.
+6. **Scheduled scoring.** Two one-shot scheduled tasks start a fresh session that runs `pipeline score`, records the result in this file and pushes:
+   - 2027-02-05 17:40 IST, 3 months (`trig_01JzdBSpDfU43cZPwzqs3De9`);
+   - 2027-11-05 17:40 IST, 12 months (`trig_0125jB53eujH9ZJuhsFFwPpL`; it applies the pass/fail rule below).
+
+   Cancel or move them in claude.ai under scheduled tasks.
+7. **Dashboard updated** (https://claude.ai/artifact/EoWJSKzGpqVPDB6SDwnzvm):
+   - a "Where returns come from" tab (summary by source and order, stacked sources for the top and bottom 15, a sortable table of all 200);
+   - a robustness chart and the stable names;
+   - the final in-sample check;
+   - v2 data throughout.
+
+**v2 results** (scenario-implied, beta-adjusted, relative to the Nifty 200; NOT validated forecasts).
+
+- **Dispersion.** 12m standard deviation is 1.4 pp; the range is −4.8% to +7.1%.
+- **Top 12m.** IDEA +7.1, HINDPETRO +5.3, BHARTIARTL +3.4, IOC +3.1, LAURUSLABS +3.1, MAZDOCK +2.9, DIXON +2.7, JSWENERGY +2.7, TATAPOWER +2.4, BDL +2.2.
+- **Bottom 12m.** POLICYBZR −4.8, HINDCOPPER −2.8, GROWW −2.8, FORTIS −2.7, PERSISTENT −2.6, ETERNAL −2.5, BIOCON −2.5, MUTHOOTFIN −2.3, SWIGGY −2.3, MPHASIS −2.1.
+- **Next 50.**
+  - Best: IDEA, IOC, MAZDOCK, TATAPOWER, ADANIPOWER, ENRIN, POWERINDIA, SOLARINDS.
+  - Worst: MUTHOOTFIN, VAML, HINDZINC, VEDL, ZYDUSLIFE, LTM, IRFC, WIPRO.
+- **Sectors (12m).**
+  - Leading: telecom +2.8, power +1.7, oil & gas +1.2, capital goods +0.6.
+  - Lagging: IT −1.8, metals −0.6, healthcare −0.6, financial services −0.4.
+- **JINDALSTEL.** +0.8% 12m, rank 49. The steel-duty policy channel (+0.9) and the steel-price sector channel (+0.7) are offset by beta and centring. Its metals tailwind in v1 partly came from leaked market-priced macro echoes.
+
+**Pass/fail rule for the programme (pre-registered).** At 12 months, the model's 12m rank IC on the v1 ledger must be:
+- positive;
+- distinguishable from zero (about |IC| > 0.14 for 200 stocks);
+- above the momentum baseline.
+
+Otherwise the programme fails, and no larger architecture is built on it.
+
+## Checkpoint — 2026-11-05 (first full run, frozen; historical, superseded by v2 above)
 
 **Delivered**
 
@@ -57,7 +138,7 @@ Rejected items are in `review/rejected.json`; conflicts are in `review/merge_log
    - The MTF=F coal series is stale (last data Dec 2025); coal uses a sourced override.
    - VEDL's demerger breaks its price series, so its realised move is excluded.
 
-## Results (scenario-implied, beta-adjusted, relative to the Nifty 200; NOT validated forecasts)
+## v1 results (historical; see v2 results above)
 
 - **Dispersion.** 12m standard deviation is 1.6 pp; 3m is 0.8 pp. The range is −6.2% to +6.6% over 12m. Model-uncertainty bands are wider: about ±5–10 pp.
 - **Top 12m.** HINDPETRO +6.6, IDEA +6.1, IOC +4.1, MAZDOCK +3.5, BDL +3.4, DIXON +3.3, NMDC +2.8, SOLARINDS +2.7, ENRIN +2.5, BPCL +2.5.
@@ -83,16 +164,27 @@ Rejected items are in `review/rejected.json`; conflicts are in `review/merge_log
 - **No out-of-sample validation.** The only test so far is the in-sample check above, and its result was negative. Rankings are exposure maps with modest tilts; treat them as hypotheses.
 - **Agent-estimated magnitudes.** Edge weights rest on fundamentals rules of thumb. Coverage is 2nd–4th order, but the backbone (329 edges) is the main source of indirect effects, so errors there propagate.
 - **Weak sources.** Fetching news article bodies often failed, so many facts rest on headlines, packs or screener data. These are labelled low or medium confidence in the profiles.
-- **Arbitrary assumptions.** The "half priced" haircut on forward events and the damping constants are arbitrary. A sensitivity run has not been done.
+- **Arbitrary assumptions.** The "half priced" haircut and the damping constants are arbitrary. Robustness (v2) shows the ranking is insensitive to damping, overlap and ±30% edge noise, but sensitive to market-priced neutralisation and company catalysts; see `reports/ROBUSTNESS.md`.
 - **Brent volatility.** Brent fell from $117 to $95 between 30 Oct and 5 Nov on US–Iran talks. The Iran scenarios are re-based to $95; a deal or collapse within days would change the oil, OMC and airline rows materially.
 - **Spend.** Not metered in-session. About 42 subagent runs (25 Sonnet profile batches, 7 event and 2 backbone agents, 8 Opus red-teams, roughly 0.2–0.35M tokens each). Rough estimate: US$200–300.
 
 ## Next actions
 
-1. **Score the ledger.**
-   - At 3 months: `python3 -m market_impact.mi.ledger score ledger/predictions_20261105.csv 91`, around 2027-02-05.
-   - At 12 months: same command with horizon 365.
-   - Compare rank IC against the 12-1 momentum baseline. Do not edit frozen rows.
-2. **Optional robustness check:** re-run with the priced share at 0.3 and 0.7 and DAMP ±20%, then report rank stability.
-3. **Optional data fix:** replace stale or proxy series (coal, LNG, refining margin, Indian G-sec) with proper sources, then re-run the in-sample check on market-observed drivers only.
-4. **Refreshing after big news:** update `events/` via overrides, re-run `mi.graph` → `mi.reports` → `mi.dashboard_data`, and freeze a new dated ledger. Never overwrite a frozen ledger.
+Status of the original list:
+
+1. **Score the ledger.** Done as far as possible today: scheduled for 2027-02-05 (3m) and 2027-11-05 (12m), see v2 item 6. Manual run: `python3 -m market_impact.mi.pipeline score --days 91`, or `--days 365`.
+2. **Robustness.** Done (v2 item 3).
+3. **Data fixes.** Done where a market series exists (JKM LNG), and the in-sample check re-run (v2 item 4). Open: Newcastle coal, India's 10-year G-sec and a Singapore GRM need a non-Yahoo source (e.g. RBI or CCIL for G-sec). Until then they come from sourced overrides.
+4. **Refresh after big news.** Done as tooling:
+   1. add an override (`graph/event_overrides.json`, `graph/company_event_overrides.json`, `graph/edge_overrides.json`, `graph/recent_state_overrides.json`) or a `review/*.json`;
+   2. run `python3 -m market_impact.mi.pipeline refresh --prices --robustness --freeze <label> "<why>"`;
+   3. never overwrite a frozen ledger.
+
+Watch-list for a refresh. Each would move rows materially:
+- a signed US–Iran deal, or talks collapsing (OMCs, aviation, paints, chemicals);
+- the RBI on 4 Dec and the Fed on 9 Dec;
+- the OPEC+ meeting on 29 Nov;
+- India's Q2 GDP release (late Nov);
+- the IRDAI commission rules (POLICYBZR, insurers);
+- the telecom tariff hike (IDEA, BHARTIARTL);
+- the Feb 2027 Union Budget.
