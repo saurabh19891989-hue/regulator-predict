@@ -1,0 +1,345 @@
+{
+ "name": "Cochin Shipyard Ltd.",
+ "industry": "I_DEFENCE",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest public-sector shipbuilder and ship-repair yard (government 63.3% after Sep 2026 change), building commercial vessels (offshore, cruise/ferry, tankers, wind-farm vessels) and defence ships (IAC-1 carrier built; ASW-SWC, NGMV). FY26 consolidated sales Rs5,022 cr (-1%), TTM Rs5,047 cr, EBITDA Rs763 cr (15%), other income Rs423 cr, PAT Rs680 cr. Order book about Rs21,900 cr (Sahi, 2026-09-10); FY27 EBITDA margin guide ~14%. Q1 FY27 sales Rs1,094 cr, PAT Rs151 cr. Market cap Rs32,605 cr at 48x P/E; borrowings Rs1,672 cr for the Rs6,000 cr expansion.",
+ "revenue_mix": [
+  {
+   "segment": "shipbuilding (defence + commercial)",
+   "share_pct": 60,
+   "geography": "India ~60% / Europe-US-other ~40% (model knowledge)"
+  },
+  {
+   "segment": "ship repair and refit",
+   "share_pct": 40,
+   "geography": "India + overseas vessels"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_SHIPBUILDING_POLICY",
+   "dst": "COCHINSHIP",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": ">12m",
+   "mechanism": "Shipbuilding financial assistance, ISRF (Cochin seeks shareholder nod for Rs1,800 cr ISRF transfer, 2026-10-07) and Maritime India infrastructure support underpin a Rs6,000 cr Vallarpadam/Thoothukudi project plan (2026-10-09). +1 SSU (stronger support) => capacity/orders ~+10% over 3 years; EBITDA +12%; EV/MCap ~1.0; persistence 0.7 => ~+4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md",
+     "date": "2026-10-09",
+     "note": "Business Standard: plans Rs6,000 cr projects in Vallarpadam and Thoothukudi; scanx: ISRF Rs1,800 cr transfer"
+    }
+   ]
+  },
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "COCHINSHIP",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": ">12m",
+   "mechanism": "Naval/defence vessels (IAC-2 follow-on, ASW-SWC, NGMV, auxiliaries) give a large share of the order book (model knowledge, ~40%+). +10% domestic defence orders => ~+4% order inflow => EBITDA +5%, persistence 0.6 => ~+3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_SHIPPING_RATES",
+   "dst": "COCHINSHIP",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Freight/charter strength lifts newbuild ordering and repair/refit demand; commercial orders (40 ships from US and other countries, 2026-10-09; European cruise/ferry vessels) are the growth leg. +25% rates => ~+5% order flow, x1.3 op. leverage x0.5 => +2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "COCHINSHIP",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Steel plate/sections ~12% of contract cost; escalation clauses cover part. +7% => 0.84% of sales vs 15% margin = -5.6% EBITDA; ~50% unrecovered => -2.8% x persistence 0.5 => -1.4, rounded to -1.5. FY27 EBITDA margin guided to ~14% vs 15% TTM (Business Standard 2026-09-11).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "COCHINSHIP",
+   "relation": "fx_translation",
+   "w": 1.0,
+   "w_low": -0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "International contracts (Europe, US owners) billed in USD/EUR are ~25-30% of order book (model knowledge); imports (engines, equipment) are hedged. +3% USD/INR => +0.4% margin => +1.5% EBITDA, x0.5 persistence => ~+1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "COCHINSHIP",
+   "relation": "funding_cost",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Borrowings rose to Rs1,672 cr (Mar 2026) for capex; interest Rs111 cr TTM; treasury income Rs423 cr offsets: net +25bp ~ flat for earnings; discount-rate effect on 48x P/E negative. Repo 5.50% since 2026-10-07.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "COCHINSHIP",
+   "relation": "geopolitical_exposure",
+   "w": 0.8,
+   "w_low": -0.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Disruption raises freight rates and newbuild demand, but war risk also delays deliveries/insurance; ambiguous, +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "COCHINSHIP",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Offshore support vessels, tankers and ONGC/oil-linked repair; empirical +1.37 per +10% (t=1.3) mostly beta 2.1. Fundamental effect small positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "COCHINSHIP",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Beta ~2.0-2.2, 1y vol 39%, stock -30% in 12m and -17% in 3m after FY27 margin guidance disappointment (2026-09-11: -9% to -12% over two sessions) and a lower promoter holding (67.91% to 63.33% in Sep 2026 quarter, consistent with a block/OFS; not verified).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "COCHINSHIP",
+   "relation": "policy_effect",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "US-based owners and parts; tariffs could raise vessel cost/competitiveness issues; offset if US-China port-fee measures push owners to Indian yards. Ambiguous; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/COCHINSHIP.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Indian Navy / MoD, Coast Guard",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Defence vessel orders; no single contract >25% disclosed in fetched sources"
+  },
+  {
+   "counterparty": "European/US ship owners (cruise, ferry, offshore wind)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Commercial export orders; 40-ship order (2026-10-09)"
+  },
+  {
+   "counterparty": "Mazagon Dock Shipbuilders",
+   "ticker": "MAZDOCK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Peer defence shipbuilder; co-moves on naval news"
+  },
+  {
+   "counterparty": "Steel mills (SAIL/JSW)",
+   "ticker": "SAIL",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Plates"
+  },
+  {
+   "counterparty": "Dutch shipping firm (23% stake acquired 2026-09-25)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "Strategic investment; details not verified"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-10",
+   "event": "Q2 FY27 results (screener upcoming-date field)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.screener.in/company/COCHINSHIP/consolidated/"
+  },
+  {
+   "date": "2026-12",
+   "event": "EGM / shareholder approval for Rs1,800 cr ISRF transfer and related capex",
+   "type": "corporate_action",
+   "prob": 0.85,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "scanx.trade 2026-10-07 (headline in pack)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Binding contracts converting from the 40-ship order announcement (2026-10-09) and further defence awards",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 8.0,
+   "source": "market_impact/data/packs/COCHINSHIP.md"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results; test of FY27 14% EBITDA margin guidance",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Cochin+Shipyard+Q1+FY27+margin+guidance+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs1,094 cr, EBITDA Rs193 cr (18%), PAT Rs151 cr; Q2 due 2026-11-10",
+  "trend": "Lumpy; Q2 FY26 EBITDA margin 7%, FY27 guide ~14%; stock -30% in 12m, -17% in 3m",
+  "valuation": "P/E 48x, P/B 5.6x, ROCE 16%; falls toward Rs1,101 52w low (Rs1,844 high)",
+  "recent_developments": [
+   "2026-09-10/11: Q1 call lowers EBITDA margin guidance; stock -9% to -12%, ICICI Direct downgrade",
+   "2026-09-15: management says it can meet or exceed conservative margin targets",
+   "2026-09-25: acquires 23% of a Dutch shipping company",
+   "2026-10-07: seeks nod for Rs1,800 cr ISRF transfer",
+   "2026-10-09: order for 40 ships from US and other countries (+5%); Rs6,000 cr projects planned; river cruise vessel order up to Rs250 cr"
+  ]
+ },
+ "key_risks": [
+  "Margin guidance disappointment and lumpy deliveries",
+  "Capex execution (Rs6,000 cr) and rising borrowings",
+  "Government stake sale overhang",
+  "High beta/valuation",
+  "Steel cost under fixed-price contracts"
+ ],
+ "upside_triggers": [
+  "Conversion of the 40-ship order into firm contracts",
+  "Defence vessel awards (P-75, NGMV follow-ons)",
+  "Shipbuilding policy support",
+  "Margin delivery above guide"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_SHIPBUILDING_POLICY",
+   "type": "POLICY",
+   "name": "Shipbuilding & maritime policy support",
+   "ssu": "+1 = stronger support (financial assistance, ISRF, yard infrastructure funding)"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/COCHINSHIP.md",
+   "date": "2026-11-05",
+   "what": "price performance, empirical sensitivities, headlines (financials missing in pack)"
+  },
+  {
+   "url": "https://www.screener.in/company/COCHINSHIP/consolidated/",
+   "date": "2026-11-05",
+   "what": "Consolidated fundamentals fetched directly: quarterly/annual P&L, balance sheet, shareholding"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Cochin+Shipyard+Q1+FY27+margin+guidance+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-17",
+   "what": "Margin guidance, order book Rs21,900 cr headlines (Business Standard, Sahi, Kalkine)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Cochin+Shipyard+40+ships+order+Vallarpadam+Thoothukudi+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "40-ship order and Rs6,000 cr expansion"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+  }
+ ],
+ "ticker": "COCHINSHIP",
+ "as_of": "2026-11-05"
+}

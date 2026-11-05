@@ -1,0 +1,383 @@
+{
+ "name": "Aurobindo Pharma Ltd.",
+ "industry": "I_PHARMA_US_GENERICS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Hyderabad-based vertically integrated generics maker: oral solids, injectables (Eugia), antiretrovirals, APIs and growing biosimilars/CRDMO. US is ~47% of sales, Europe ~28% (model estimates). Q2 FY27: sales Rs 10,263 cr (record, +24% YoY), operating profit Rs 2,153 cr (21%), PAT Rs 1,124 cr (+32.5%). Interim dividend Rs 7. Stock at 52-week high (Rs 1,755; 12m +52.7%).",
+ "revenue_mix": [
+  {
+   "segment": "US formulations",
+   "share_pct": 47,
+   "geography": "US"
+  },
+  {
+   "segment": "Europe formulations",
+   "share_pct": 28,
+   "geography": "Europe"
+  },
+  {
+   "segment": "API and growth markets/ARV",
+   "share_pct": 25,
+   "geography": "RoW and India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "AUROPHARMA",
+   "relation": "fx_translation",
+   "w": 3.2,
+   "w_low": 1.2,
+   "w_high": 5.5,
+   "lag": "0-3m",
+   "mechanism": "Exports (US ~47%, Europe ~28%, ARV/RoW) ~80% of sales (model knowledge). +3% USD/INR: foreign revenue +2.4% of sales; imported RM/KSM from China ~20% of sales -0.6% => +1.8% of sales / OPM 21% = +8.6% EBITDA; hedging, persistence 0.4, EV/MCap 1.03 -> +3.5, trimmed to 3.2. Empirical +1.46 (t=1.0) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Aurobindo+Pharma+Q2+results+revenue+growth+US+Europe+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 FY27 net profit +32.5% to Rs 1,124 cr, record revenue Rs 10,263 cr (Moneycontrol, CNBC TV18); Rs 7 interim dividend"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "AUROPHARMA",
+   "relation": "competition",
+   "w": -5.0,
+   "w_low": -9.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "US ~47% of sales: +5pp extra erosion -> -2.35% of sales / OPM 21% = -11% EBITDA, new launches (Adquey 2026-10-01, perampanel) offset ~half, persistence 0.5 -> -5.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Aurobindo+Pharma+Q2+results+revenue+growth+US+Europe+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 FY27 net profit +32.5% to Rs 1,124 cr, record revenue Rs 10,263 cr (Moneycontrol, CNBC TV18); Rs 7 interim dividend"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "AUROPHARMA",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -10.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "100% US tariff on branded/patented drugs since 2026-09-29, India specialty exempted (Business Standard). Generics outside scope per model knowledge; the tail is Section 232 extension to generics: probability 8% x impact -30% (US half of EBITDA at risk, partial price-sharing) -> -2.4; add biosimilar/injectable exposure -> -3.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "India among 20 jurisdictions exempted"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "AUROPHARMA",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -10.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Large unit count (Eugia, Unit-III etc.); past OAI/warning history at Eugia Pharma and Unit-IV (model knowledge). Probability of new material action ~15% x impact -25% -> -4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "AUROPHARMA",
+   "relation": "input_cost",
+   "w": 0.8,
+   "w_low": -1.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Aurobindo imports penicillin/cephalosporin intermediates and KSMs from China (~20% of sales); Chinese dumping lowers input costs (+) but also hurts its own API segment (~15% of sales); net small positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "AUROPHARMA",
+   "relation": "input_cost",
+   "w": -1.6,
+   "w_low": -3.5,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Raw materials ~45% of sales, feedstock-linked ~20% of sales: +10% -> +2% of sales; half passed through -> 1% / OPM 21% = -4.8% EBITDA x 0.3 persistence x 1.03 -> -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "AUROPHARMA",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": ">12m",
+   "mechanism": "PLI Penicillin-G (Kakinada) and A1 Biochem CRO acquisition (completed ~2026-10-02, US$15.2m) build a CRDMO platform (Dalal Street Journal); +1 SSU = faster API/CRDMO diversification from China -> +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Aurobindo+Pharma+acquisition+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-03",
+     "note": "A1 Biochem acquisition completed for $15.247m via Apitoria"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "AUROPHARMA",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Europe ~28% of sales; +1pp demand growth -> +0.6% revenue -> +1.0% EBITDA.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "AUROPHARMA",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "P/E 25; +25bp G-sec -> -1.7% x rate beta 0.7 -> -1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "AUROPHARMA",
+   "relation": "funding_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "Borrowings Rs 8,630 cr vs EBITDA Rs 7.6k cr annual; interest Rs 102 cr/qtr; +25bp on 50% floating = Rs 11 cr = -0.2% PBT -> -0.3 incl. discount rate.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance calibrated tightening (Reuters/The Hindu headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "AUROPHARMA",
+   "relation": "discount_rate",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding 17.4% (+2.2pp over two quarters); +US$5bn inflow -> +2.0% relative.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "AUROPHARMA",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Solvents, freight and power ~8% of sales; +10% Brent -> +0.4% sales -> -1.9% EBITDA x 0.3 -> -0.4. Empirical +0.44 (t=0.9) opposite and insignificant.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "T_GLP1",
+   "dst": "AUROPHARMA",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Generic GLP-1 (liraglutide, semaglutide) opportunities in ex-US markets; undisclosed pipeline; small +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "US pharmacy chains/wholesalers and Europe tender buyers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "price erosion drives US margin"
+  },
+  {
+   "counterparty": "Chinese KSM/intermediate suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "dependency partially offset by PLI Penicillin-G"
+  },
+  {
+   "counterparty": "Sun Pharma, Lupin, Zydus, Dr Reddy's, Cipla",
+   "ticker": "LUPIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "US generics"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-20",
+   "event": "Interim dividend Rs 7/share paid (by Nov 20)",
+   "type": "corporate_action",
+   "prob": 0.99,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 0.5,
+   "source": "https://news.google.com/rss/search?q=Aurobindo+Pharma+Q2+results+revenue+growth+US+Europe+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: US pricing, launches, margin sustainability",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Aurobindo+Pharma+Q2+results+revenue+growth+US+Europe+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "USFDA inspection outcomes across Eugia/other units",
+   "type": "regulatory",
+   "prob": 0.12,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": -4.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Section 232 tariff scope extended to generics",
+   "type": "regulatory",
+   "prob": 0.08,
+   "impact_pct_low": -20.0,
+   "impact_pct_high": -8.0,
+   "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 10,263 cr, operating profit Rs 2,153 cr (21%), PAT Rs 1,124 cr",
+  "trend": "Accelerating growth and stable margins; launches (Adquey ointment, perampanel); A1 Biochem acquisition; FII ownership rising.",
+  "valuation": "Price Rs 1,760, P/E 25, P/B 2.5, market cap Rs 1.01 lakh cr; ROE 10% (low).",
+  "recent_developments": [
+   "2026-11-04 Q2 profit +32.5%, record revenue; Rs 7 dividend",
+   "2026-10-05 final USFDA approval for perampanel tablets; 52-week high",
+   "2026-10-01 Adquey launched in US (Nuvama: US$300m peak sales)",
+   "2026-10-02/03 A1 Biochem Labs LLC acquired for US$15.2m",
+   "2026-11-04 Russia unit stake shifted for Rs 29 cr",
+   "2026-09-29 US tariff relief for Indian specialty drugs"
+  ]
+ },
+ "key_risks": [
+  "US price erosion",
+  "USFDA action at injectables units",
+  "US tariff scope creep",
+  "Low ROE and capital intensity (fixed assets Rs 21.4k cr)",
+  "China dependence for KSMs"
+ ],
+ "upside_triggers": [
+  "Complex launches (Adquey, perampanel)",
+  "Biosimilar approvals (CuraTeQ)",
+  "Rupee weakness",
+  "Lower capex intensity"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/AUROPHARMA/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Aurobindo+Pharma+Q2+results+revenue+growth+US+Europe+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Aurobindo+Pharma+acquisition+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-03",
+   "what": "A1 Biochem"
+  },
+  {
+   "url": "market_impact/data/packs/AUROPHARMA.md",
+   "date": "2026-11-05",
+   "what": "evidence pack"
+  }
+ ],
+ "ticker": "AUROPHARMA",
+ "as_of": "2026-11-05"
+}

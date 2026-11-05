@@ -1,0 +1,398 @@
+{
+ "name": "Biocon Ltd.",
+ "industry": "I_PHARMA_US_GENERICS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Bengaluru-based biopharma: biosimilars (Biocon Biologics, consolidated; insulins, bevacizumab, trastuzumab, adalimumab, ustekinumab, pertuzumab pipeline), generics/APIs and Syngene (CRDMO stake, not in the Nifty-200 universe per nodes list). TTM revenue Rs 17,414 cr (+6%), EBITDA Rs 3,532 cr (20%) but PAT only Rs 340 cr because of Rs 895 cr interest and high depreciation. Q2 FY27: total income Rs 4,423 cr, EBITDA Rs 865 cr, net profit Rs 41 cr (-51%); biosimilars margin fell to 22% on shipment timing; Generics returned to EBITDA profit in H1.",
+ "revenue_mix": [
+  {
+   "segment": "Biosimilars (Biocon Biologics)",
+   "share_pct": 55,
+   "geography": "US ~45% / Europe ~20% / ROW (model estimate)"
+  },
+  {
+   "segment": "Generics and APIs",
+   "share_pct": 20,
+   "geography": "US/EU/India"
+  },
+  {
+   "segment": "Research services (Syngene)",
+   "share_pct": 25,
+   "geography": "global CRDMO clients (model estimate)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 15
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "BIOCON",
+   "relation": "fx_translation",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 8.0,
+   "lag": "0-3m",
+   "mechanism": "Foreign-currency revenue ~70% of sales (biosimilars US/EU/ROW, generics): +3% USD/INR adds Rs 365 cr annual revenue and ~Rs 290 cr EBITDA after ~15% imported cost (EBITDA Rs 3.5k cr -> +8%); USD debt translation loss on unhedged portion partly offsets (non-cash); EV/MCap 1.24, persistence 0.4 -> +4; the pack's empirical sensitivity (+6.12, t=3.4) is the strongest of the batch, so weight set at +5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "BIOCON",
+   "relation": "competition",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Generics + biosimilar price erosion: generics ~20% of sales; +5pp erosion -> -1% group sales / OPM 20% = -5% EBITDA x persistence 0.5 x EV/MCap 1.24 -> -3.1; offset by launches -> -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Biocon+Q2+results+Biocon+Biologics+EBITDA+Generics+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 FY27 total income Rs 4,423 cr, EBITDA Rs 865 cr, net profit Rs 41 cr (-51%); biosimilars margin 22% on shipment timing; Generics back to EBITDA profit in H1 (Biocon release, NDTV Profit, Multibagg)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "BIOCON",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -12.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "100% tariff on branded/patented drugs since 2026-09-29, Indian specialty relief for 20 jurisdictions; the status of biosimilars vs generics under Section 232 is uncertain (model knowledge) - US biosimilars ~30% of sales; probability 15% x impact -25% -> -3.8; trimmed -3.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "India among 20 jurisdictions exempted (Business Standard, Firstpost)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "BIOCON",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -12.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Biologics drug-substance plants (Bengaluru, Malaysia) and generics sites; an OAI delaying approvals -> -20% x 20% probability -> -4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BIOCON",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Borrowings Rs 15,698 cr at interest ~Rs 960 cr/yr vs PBT ~Rs 700-800 cr TTM: highly levered earnings; +25bp on 40% INR-floating (Rs 6.3k cr) = Rs 16 cr = -2% PBT; EV/MCap 1.24, persistence 0.5 -> -1.2 plus discount rate -> -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance calibrated tightening (Reuters/The Hindu headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BIOCON",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "P/E 87 on depressed EPS; +25bp G-sec -> -1.7% x beta 0.9 -> -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "BIOCON",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "~30% of debt USD floating (SOFR-linked, model assumption = Rs 4.7k cr): +25bp = Rs 12 cr = -1.5% PBT -> -1.0. Empirical +2.15 (t=1.1) has opposite sign and is insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "BIOCON",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Fermentation inputs, solvents and glucose ~30% of sales, feedstock-linked ~8%: +10% -> +0.8% of sales / OPM 20% = -4% EBITDA x 0.3 x 1.24 -> -1.5, trimmed -1.0 for pass-through.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "BIOCON",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "US biosimilar adoption (insulin aspart, bevacizumab, ustekinumab, pertuzumab launches; Pebrilzo launch dates secured 2026-10-14 after Genentech settlement) scales with US healthcare spending; +1pp -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "BIOCON",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.1,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Europe ~20% of biosimilar sales; pertuzumab EU marketing nod advancing (Business Standard 2026-09-21); +1pp growth -> +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "T_GLP1",
+   "dst": "BIOCON",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Biocon's generic liraglutide and semaglutide programmes (UK/Canada/Brazil; model knowledge, unverified for 2026) could add USD 100m+ revenue; Biocon eyes US$1bn biosimilars revenue (Moneycontrol/ET 2026-09-09 headlines). +1 SSU -> +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BIOCON",
+   "relation": "discount_rate",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FII 8.6%; DII 29.2% (+5.9pp in Sep-26 after block deal); beta 1.1 to market; +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_COTTON",
+   "dst": "BIOCON",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Pack shows -2.10 (t=-1.9) with no fundamental link (cotton not an input); noise: weight near zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BIOCON/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Viatris (partner/shareholder in biosimilars)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "historic partnership; current terms not verified here"
+  },
+  {
+   "counterparty": "Syngene International (subsidiary, ~52%)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "model knowledge; Syngene not in the Nifty 200 list"
+  },
+  {
+   "counterparty": "Genentech/Roche",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "patent dispute on pertuzumab settled 2026-10-14 (Equitypandit headline)"
+  },
+  {
+   "counterparty": "Samsung Bioepis, Amgen, Sandoz",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "biosimilar competition"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: H2-weighted biosimilar shipments, margin recovery from 19-20%",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://news.google.com/rss/search?q=Biocon+Q2+results+Biocon+Biologics+EBITDA+Generics+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "EU marketing authorisation for pertuzumab biosimilar; launches (Pebrilzo dates in US after Genentech settlement)",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Biocon+Secures+Pebrilzo+Launch+Dates+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "USFDA inspection outcome at biologics/generics sites",
+   "type": "regulatory",
+   "prob": 0.1,
+   "impact_pct_low": -14.0,
+   "impact_pct_high": -4.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Section 232 clarification on biosimilars/generics",
+   "type": "regulatory",
+   "prob": 0.1,
+   "impact_pct_low": -20.0,
+   "impact_pct_high": -6.0,
+   "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further block deals/stake sales by financial holders (Active Pine sold ~1% on 2026-09-09)",
+   "type": "corporate_action",
+   "prob": 0.4,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Biocon+block+deal+Active+Pine+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 4,389 cr (screener), EBITDA Rs 831 cr (screener; company reports Rs 865 cr), PAT Rs 57 cr screener / Rs 41 cr attributable",
+  "trend": "Flat sales, 19-20% margin, thin profit due to interest and depreciation after Biocon Biologics merger; H2-weighted guidance.",
+  "valuation": "Price Rs 362, market cap Rs 59,019 cr, P/E 87 (depressed EPS), P/B 1.7, ROE 1.4%. 3m -17.1%.",
+  "recent_developments": [
+   "2026-11-04 Q2 net profit -51% to Rs 41 cr (NDTV Profit)",
+   "2026-10-14 patent settlement with Genentech; Pebrilzo launch dates",
+   "2026-09-21 pertuzumab EU marketing nod closer; stock +3%",
+   "2026-09-09 Rs 635-638 cr block deal (Active Pine ~1%), Brazil pertuzumab 10-year partnership (2026-09-08)",
+   "Sep-26 DII holding 29.2% (+5.9pp), public holding 17.2% (-6.6pp)"
+  ]
+ },
+ "key_risks": [
+  "Leverage: Rs 15.7k cr borrowings vs thin PAT",
+  "US biosimilar price erosion",
+  "Tariff and USFDA uncertainty",
+  "Execution of H2-weighted shipments",
+  "Overhang from block sales"
+ ],
+ "upside_triggers": [
+  "Weaker rupee",
+  "Pertuzumab and ustekinumab launches",
+  "Deleveraging",
+  "GLP-1 generic launches"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/BIOCON/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Biocon+Q2+results+Biocon+Biologics+EBITDA+Generics+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Biocon+Secures+Pebrilzo+Launch+Dates+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "Genentech settlement"
+  },
+  {
+   "url": "market_impact/data/packs/BIOCON.md",
+   "date": "2026-11-05",
+   "what": "evidence pack"
+  }
+ ],
+ "ticker": "BIOCON",
+ "as_of": "2026-11-05"
+}
