@@ -2,9 +2,9 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +2.4%** (rank 80 / 63 of 200 for 3m / 12m); beta 1.14
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.9%): 3 months 51%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.3% … P90 +13.5%; plausible 12m relative-return range incl. stock-specific noise: -32.6% … +37.9%
+- Expected relative return: **3 months +0.7%**, **12 months +2.4%** (rank 79 / 61 of 200 for 3m / 12m); beta 1.14
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.9%): 3 months 52%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.7% … P90 +16.1%; plausible 12m relative-return range incl. stock-specific noise: -36.7% … +58.2%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -11.4% beta-adjusted vs realised market-adjusted move -14.0%); forward event exposure +8.6% (3m +3.7%; half assumed priced); company-specific events -1.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,40 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.2 | -0.8 | +0.0 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | -1.6% | -0.9% | +0.0 | -0.8 | -1.2 | +0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_SILVER → HINDZINC | -8.75% | -8.75% |
-| 1 | EV_EXPORT_LEVY_REVISIONS ⇒ P_WINDFALL_EXPORT_TAX → HINDZINC | -4.00% | -4.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → HINDZINC | +3.44% | +3.44% |
 | 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_SILVER → HINDZINC | +5.25% | +2.36% |
 | 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → HINDZINC | -7.00% | -2.10% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_GOLD → F_SILVER → HINDZINC | +1.26% | +1.26% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → HINDZINC | -1.12% | -1.12% |
-| 3 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GOLD → F_SILVER → HINDZINC | -1.07% | -1.07% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_FOOD_INFLATION_IN → P_WINDFALL_EXPORT_TAX → HINDZINC | -1.06% | -1.06% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → HINDZINC | -0.90% | -0.90% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → HINDZINC | +0.89% | +0.89% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → HINDZINC | -0.81% | -0.81% |
-| 1 | EV_INDIA_COAL_CRUNCH ⇒ F_COAL_INDIA → HINDZINC | -0.75% | -0.75% |
-| 3 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_GOLD → F_SILVER → HINDZINC | -0.73% | -0.73% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → P_WINDFALL_EXPORT_TAX → HINDZINC | -0.72% | -0.72% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HINDZINC | +2.86% | +0.63% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HINDZINC | +1.74% | +0.62% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HINDZINC | -1.04% | -0.61% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ZINC_LEAD → HINDZINC | +1.52% | +0.53% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → HINDZINC | -1.01% | -0.51% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_GOLD → F_SILVER → HINDZINC | -0.84% | -0.49% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_GOLD → F_SILVER → HINDZINC | +1.01% | +0.36% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → HINDZINC | -0.90% | -0.36% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → HINDZINC | -0.64% | -0.32% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → HINDZINC | +1.06% | +0.30% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_FOOD_INFLATION_IN → P_WINDFALL_EXPORT_TAX → HINDZINC | -1.15% | -0.29% |
+| 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_CHINA_GDP → F_ZINC_LEAD → HINDZINC | +0.61% | +0.27% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_USDINR → HINDZINC | +4.17% | +0.26% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_SILVER → HINDZINC | -2.50 | observed | -8.74% |
+| 1 | P_WINDFALL_EXPORT_TAX → HINDZINC | +1.00 | events | -4.00% |
+| 1 | F_GSEC_10Y_IN → HINDZINC | +1.70 | events | -1.36% |
+| 1 | F_POWER_PRICE_IN → HINDZINC | +3.00 | events | -0.90% |
+| 1 | F_USDINR → HINDZINC | -0.37 | observed | -0.81% |
+| 1 | F_COAL_INDIA → HINDZINC | +1.50 | events | -0.75% |
+| 2 | F_CHINA_GDP → F_ZINC_LEAD → HINDZINC | +0.30 | events | +0.46% |
+| 2 | F_DXY → F_ZINC_LEAD → HINDZINC | +0.74 | observed | -0.45% |
+| 1 | T_ENERGY_TRANSITION → HINDZINC | +0.50 | events | +0.40% |
+| 2 | F_USDINR → P_GOLD_IMPORT_DUTY → HINDZINC | -0.37 | observed | -0.04% |
 
 ## Analyst profile (agent research, sourced)
 # HINDZINC — Hindustan Zinc Ltd. (Nifty Next 50) — profile as of 2026-11-05

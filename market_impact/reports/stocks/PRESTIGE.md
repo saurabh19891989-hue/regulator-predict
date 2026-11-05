@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -4.3%**, **12 months -9.0%** (rank 185 / 188 of 200 for 3m / 12m); beta 1.56
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.6%): 3 months 36%, 12 months 30%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -15.6% … P90 -6.4%; plausible 12m relative-return range incl. stock-specific noise: -44.5% … +10.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.6%): 3 months 36%, 12 months 32%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -15.7% … P90 -8.4%; plausible 12m relative-return range incl. stock-specific noise: -48.4% … +18.9%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.9 pp (model impact -7.7% beta-adjusted vs realised market-adjusted move +12.6%); forward event exposure -10.6% (3m -5.5%; half assumed priced); company-specific events +2.7%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.5% | -2.5% | -0.2 | -1.4 | -0.7 | -0.2 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -11.2% | -2.5% | -9.5 | -1.8 | +0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → PRESTIGE | -6.60% | -6.60% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → PRESTIGE | -5.30% | -5.30% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → PRESTIGE | -4.00% | -4.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PRESTIGE | +7.50% | +3.75% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → PRESTIGE | -3.54% | -3.54% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → PRESTIGE | -1.78% | -1.78% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PRESTIGE | -4.00% | -1.60% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → PRESTIGE | +1.50% | +1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → PRESTIGE | +1.43% | +1.43% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → PRESTIGE | -1.41% | -1.41% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → PRESTIGE | -1.40% | -1.40% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_HOUSING_DEMAND → PRESTIGE | -1.29% | -1.29% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → PRESTIGE | -1.29% | -1.29% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_REPO_IN → PRESTIGE | -1.28% | -1.28% |
-| 3 | EV_KHARIF26_OUTPUT_HIT ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → PRESTIGE | -1.27% | -1.27% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PRESTIGE | -4.48% | -1.25% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → PRESTIGE | -4.61% | -1.15% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → PRESTIGE | -4.00% | -1.08% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PRESTIGE | -5.60% | -1.01% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → PRESTIGE | -4.50% | -0.99% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → PRESTIGE | -1.60% | -0.96% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → PRESTIGE | -4.00% | -0.88% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → PRESTIGE | -2.88% | -0.81% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → PRESTIGE | -2.88% | -0.72% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → PRESTIGE | -1.02% | -0.66% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → PRESTIGE | -1.79% | -0.64% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → PRESTIGE | +1.07% | +0.62% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_REPO_IN → PRESTIGE | -0.69% | -0.62% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → PRESTIGE | -1.60 | events | -4.80% |
+| 1 | F_REPO_IN → PRESTIGE | +1.00 | events | -4.00% |
+| 1 | F_GSEC_10Y_IN → PRESTIGE | +1.70 | events | -1.70% |
+| 1 | F_STEEL_INDIA → PRESTIGE | +1.65 | events | -1.15% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → PRESTIGE | +1.70 | events | -1.02% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → PRESTIGE | +0.50 | events | +0.60% |
+| 1 | F_CREDIT_SPREADS_IN → PRESTIGE | +0.50 | events | -0.60% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → PRESTIGE | +1.00 | events | -0.52% |
+| 1 | F_US_TECH_SPEND → PRESTIGE | -0.60 | events | -0.48% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → PRESTIGE | +1.00 | events | -0.40% |
+| 1 | F_ALUMINIUM → PRESTIGE | -1.96 | observed | +0.39% |
+| 1 | F_DXY → PRESTIGE | +0.74 | observed | -0.37% |
 
 ## Analyst profile (agent research, sourced)
 # Prestige Estates Projects (PRESTIGE) - profile as of 2026-11-05

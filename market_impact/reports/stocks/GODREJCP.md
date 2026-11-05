@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +1.0%**, **12 months +1.6%** (rank 67 / 75 of 200 for 3m / 12m); beta 0.92
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.5%): 3 months 54%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.3% … P90 +3.6%; plausible 12m relative-return range incl. stock-specific noise: -28.9% … +23.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.5%): 3 months 54%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +4.7%; plausible 12m relative-return range incl. stock-specific noise: -24.8% … +38.7%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.1% beta-adjusted vs realised market-adjusted move -18.2%); forward event exposure +3.6% (3m +1.5%; half assumed priced); company-specific events +2.0%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Windfall/export levy re-set: petrol nil, diesel Rs11.5/l, ATF ~Rs11/l (31 Oct); excise reportedly cut (3 Nov, unverified) (`EV_EXPORT_LEVY_REVISIONS`) | occurred | 1.00 | +0.4% | +0.4% | +0.0 | +0.3 | +0.0 | +0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -1.4% | -0.4% | +0.0 | -1.6 | +0.3 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → GODREJCP | -4.46% | -4.46% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → GODREJCP | -1.76% | -1.76% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → GODREJCP | -1.19% | -1.19% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → GODREJCP | -1.05% | -1.05% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GODREJCP | +2.00% | +1.00% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → GODREJCP | -0.90% | -0.90% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GODREJCP | -2.25% | -0.80% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GODREJCP | +1.35% | +0.78% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → GODREJCP | +0.63% | +0.63% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_EDIBLE_OIL → GODREJCP | -0.50% | -0.50% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → GODREJCP | -0.45% | -0.45% |
-| 2 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → GODREJCP | +0.43% | +0.43% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RURAL_DEMAND → GODREJCP | -0.43% | -0.43% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → GODREJCP | +0.40% | +0.40% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → GODREJCP | +0.40% | +0.40% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GODREJCP | -0.90% | -0.36% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → GODREJCP | -5.40% | -0.34% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GODREJCP | -1.19% | -0.33% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → GODREJCP | +0.56% | +0.32% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → GODREJCP | +0.45% | +0.31% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GODREJCP | -1.49% | -0.27% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GODREJCP | -1.20% | -0.26% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → GODREJCP | -1.04% | -0.26% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → GODREJCP | +0.45% | +0.25% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → GODREJCP | -0.90% | -0.24% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → GODREJCP | +0.34% | +0.23% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → GODREJCP | +1.04% | +0.23% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → GODREJCP | -1.60 | events | -1.28% |
+| 1 | F_REFINING_MARGIN → GODREJCP | +1.54 | observed | -1.08% |
+| 1 | F_REPO_IN → GODREJCP | +1.00 | events | -0.90% |
+| 1 | F_URBAN_DEMAND → GODREJCP | +0.20 | events | +0.40% |
+| 1 | F_RURAL_DEMAND → GODREJCP | -0.25 | events | -0.38% |
+| 1 | F_EDIBLE_OIL → GODREJCP | +0.19 | observed | -0.32% |
+| 1 | F_USDINR → GODREJCP | -0.37 | observed | -0.30% |
+| 2 | F_DXY → C_AFRICA_LATAM → GODREJCP | +0.74 | observed | -0.04% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → GODREJCP | +0.40 | events | -0.01% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → GODREJCP | +0.30 | events | -0.01% |
+| 4 | F_USDCNY → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → GODREJCP | -0.47 | observed | -0.00% |
+| 4 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → GODREJCP | +0.40 | events | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # GODREJCP (Godrej Consumer Products Ltd.) - company profile as of 2026-11-05

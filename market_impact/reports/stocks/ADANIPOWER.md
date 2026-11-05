@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.4%**, **12 months +3.5%** (rank 38 / 49 of 200 for 3m / 12m); beta 1.00
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.3%): 3 months 56%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.3% … P90 +8.5%; plausible 12m relative-return range incl. stock-specific noise: -38.8% … +43.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.4 pp (model impact +6.8% beta-adjusted vs realised market-adjusted move -16.6%); forward event exposure +0.6% (3m +1.7%; half assumed priced); company-specific events +2.0%
+- Expected relative return: **3 months +2.4%**, **12 months +3.3%** (rank 38 / 49 of 200 for 3m / 12m); beta 1.00
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.3%): 3 months 56%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.4% … P90 +6.5%; plausible 12m relative-return range incl. stock-specific noise: -25.8% … +38.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.2 pp (model impact +6.4% beta-adjusted vs realised market-adjusted move -16.6%); forward event exposure +0.6% (3m +1.7%; half assumed priced); company-specific events +2.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -7.6% | -2.1% | +0.0 | -5.8 | -1.4 | -0.4 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -3.0% | -2.0% | -2.0 | -0.8 | -0.2 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → ADANIPOWER | +6.90% | +6.90% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ADANIPOWER | -3.96% | -3.96% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → ADANIPOWER | +6.90% | +2.76% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → ADANIPOWER | +2.52% | +2.52% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ADANIPOWER | -2.52% | -2.52% |
-| 1 | EV_INDIA_COAL_CRUNCH ⇒ F_POWER_PRICE_IN → ADANIPOWER | +2.30% | +2.30% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIPOWER | +4.50% | +2.25% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → ADANIPOWER | +1.60% | +1.60% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ADANIPOWER | -1.59% | -1.59% |
-| 1 | EV_INDIA_COAL_CRUNCH ⇒ F_COAL_INDIA → ADANIPOWER | -1.50% | -1.50% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → ADANIPOWER | -2.00% | -1.36% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ADANIPOWER | -1.20% | -1.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → ADANIPOWER | -1.07% | -1.07% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → ADANIPOWER | -1.06% | -1.06% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → ADANIPOWER | +2.40% | +0.96% |
+| 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → ADANIPOWER | +2.00% | +0.90% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPOWER | -2.69% | -0.75% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIPOWER | -1.44% | -0.72% |
+| 1 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → ADANIPOWER | +2.00% | +0.64% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPOWER | -3.36% | -0.60% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → ADANIPOWER | +1.00% | +0.60% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ADANIPOWER | -2.70% | -0.59% |
+| 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_POWER_PRICE_IN → ADANIPOWER | +1.15% | +0.57% |
+| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → ADANIPOWER | -1.00% | -0.57% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ADANIPOWER | -0.90% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIPOWER | -1.73% | -0.48% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_POWER_PRICE_IN → ADANIPOWER | +3.00 | events | +6.90% |
+| 1 | F_MONSOON → ADANIPOWER | -1.56 | events | +3.12% |
+| 1 | F_GSEC_10Y_IN → ADANIPOWER | +1.70 | events | -3.06% |
+| 1 | F_FPI_FLOWS → ADANIPOWER | -1.60 | events | -2.88% |
+| 1 | F_POWER_DEMAND_IN → ADANIPOWER | +1.20 | events | +1.92% |
+| 1 | F_COAL_INDIA → ADANIPOWER | +1.50 | events | -1.50% |
+| 1 | P_RENEWABLE_SUPPORT → ADANIPOWER | +1.50 | events | -1.20% |
+| 1 | F_REPO_IN → ADANIPOWER | +1.00 | events | -1.20% |
+| 1 | C_MIDEAST_CONFLICT → ADANIPOWER | +1.50 | events | +0.75% |
+| 1 | F_CREDIT_SPREADS_IN → ADANIPOWER | +0.50 | events | -0.60% |
+| 1 | F_COAL_INTL → ADANIPOWER | +0.70 | director_override | -0.35% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → ADANIPOWER | +1.00 | events | +0.24% |
 
 ## Analyst profile (agent research, sourced)
 # ADANIPOWER — Adani Power Ltd. (as of 2026-11-05)

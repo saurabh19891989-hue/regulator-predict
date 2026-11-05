@@ -2,10 +2,10 @@
 *NIFTY_50 · Construction Materials · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.5%**, **12 months +4.1%** (rank 52 / 42 of 200 for 3m / 12m); beta 1.18
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +16.4%): 3 months 57%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.4% … P90 +9.2%; plausible 12m relative-return range incl. stock-specific noise: -20.6% … +24.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +6.6% beta-adjusted vs realised market-adjusted move +3.6%); forward event exposure +5.1% (3m +1.0%; half assumed priced); company-specific events +2.4%
+- Expected relative return: **3 months +1.2%**, **12 months +3.5%** (rank 59 / 46 of 200 for 3m / 12m); beta 1.18
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +16.4%): 3 months 56%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.9% … P90 +9.1%; plausible 12m relative-return range incl. stock-specific noise: -16.6% … +31.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.9 pp (model impact +5.4% beta-adjusted vs realised market-adjusted move +3.6%); forward event exposure +5.1% (3m +1.0%; half assumed priced); company-specific events +2.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2 (`EV_LPG_UNDERRECOVERY`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.7 | +0.0 | +0.0 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -1.5% | -0.6% | -1.0 | -0.5 | +0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ULTRACEMCO | -3.96% | -3.96% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → ULTRACEMCO | +2.80% | +2.80% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ULTRACEMCO | -2.02% | -2.02% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ULTRACEMCO | +2.24% | +2.02% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ULTRACEMCO | -1.32% | -1.32% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ULTRACEMCO | -1.00% | -1.00% |
-| 2 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → ULTRACEMCO | -0.77% | -0.77% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ULTRACEMCO | +1.68% | +0.76% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ULTRACEMCO | -2.00% | -0.71% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ULTRACEMCO | +1.20% | +0.70% |
-| 2 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ULTRACEMCO | -0.67% | -0.67% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → ULTRACEMCO | +0.63% | +0.63% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_HOUSING_DEMAND → ULTRACEMCO | -0.59% | -0.59% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → ULTRACEMCO | -0.44% | -0.44% |
 | 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → ULTRACEMCO | -0.85% | -0.43% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ULTRACEMCO | +0.67% | +0.40% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ULTRACEMCO | -1.00% | -0.40% |
+| 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → ULTRACEMCO | -0.50% | -0.34% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → ULTRACEMCO | -4.80% | -0.30% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → ULTRACEMCO | -1.15% | -0.29% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → ULTRACEMCO | -1.00% | -0.27% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → ULTRACEMCO | -0.40% | -0.24% |
+| 2 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → ULTRACEMCO | -0.44% | -0.22% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → ULTRACEMCO | -1.00% | -0.22% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COAL_INTL → ULTRACEMCO | -0.54% | -0.19% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → ULTRACEMCO | +1.00 | events | +2.80% |
+| 1 | F_COAL_INTL → ULTRACEMCO | +0.70 | director_override | -1.19% |
+| 1 | F_REPO_IN → ULTRACEMCO | +1.00 | events | -1.00% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → ULTRACEMCO | +1.70 | events | -0.94% |
+| 1 | F_MONSOON → ULTRACEMCO | -1.56 | events | +0.78% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → ULTRACEMCO | +0.50 | events | +0.28% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → ULTRACEMCO | +1.00 | events | -0.24% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → ULTRACEMCO | +1.00 | events | -0.18% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → ULTRACEMCO | +1.65 | events | -0.15% |
+| 1 | F_USDINR → ULTRACEMCO | -0.37 | observed | +0.15% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → ULTRACEMCO | +0.50 | events | +0.12% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → ULTRACEMCO | +1.00 | events | +0.10% |
 
 ## Analyst profile (agent research, sourced)
 # ULTRACEMCO — UltraTech Cement Ltd. (as of 2026-11-05)

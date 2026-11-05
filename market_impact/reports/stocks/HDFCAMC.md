@@ -2,9 +2,9 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.5%**, **12 months +0.0%** (rank 88 / 104 of 200 for 3m / 12m); beta 1.30
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.5%): 3 months 52%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.8% … P90 +3.2%; plausible 12m relative-return range incl. stock-specific noise: -35.4% … +22.3%
+- Expected relative return: **3 months +0.5%**, **12 months +0.1%** (rank 88 / 103 of 200 for 3m / 12m); beta 1.30
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.5%): 3 months 52%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.6% … P90 +2.2%; plausible 12m relative-return range incl. stock-specific noise: -26.8% … +32.0%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.2 pp (model impact +0.5% beta-adjusted vs realised market-adjusted move -5.0%); forward event exposure +2.1% (3m +2.2%; half assumed priced); company-specific events -0.1%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -0.8 | -0.4 | -0.1 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.0% | +1.2% | +0.4 | +0.4 | +0.7 | +0.5 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → HDFCAMC | -3.30% | -3.30% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HDFCAMC | +3.75% | +1.88% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → HDFCAMC | -1.68% | -1.68% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → HDFCAMC | -3.20% | -0.90% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → HDFCAMC | -0.89% | -0.89% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → HDFCAMC | +0.75% | +0.75% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → HDFCAMC | -4.00% | -0.72% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → HDFCAMC | -0.70% | -0.70% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → HDFCAMC | -0.70% | -0.70% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → HDFCAMC | -0.63% | -0.63% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → HDFCAMC | -0.53% | -0.53% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → HDFCAMC | -0.51% | -0.51% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → HDFCAMC | -2.25% | -0.49% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → HDFCAMC | -0.48% | -0.48% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → HDFCAMC | -0.96% | -0.48% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ P_CAPITAL_GAINS_TAX → HDFCAMC | +1.25% | +0.44% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCAMC | -1.44% | -0.40% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → HDFCAMC | +0.80% | +0.40% |
+| 1 | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → HDFCAMC | -2.00% | -0.40% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCAMC | -1.44% | -0.36% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → HDFCAMC | -0.60% | -0.36% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → HDFCAMC | -0.96% | -0.34% |
+| 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ F_EQUITY_ACTIVITY_IN → HDFCAMC | +0.40% | +0.34% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HDFCAMC | -1.12% | -0.31% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → HDFCAMC | -1.15% | -0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → HDFCAMC | -1.60 | events | -2.40% |
+| 1 | F_GSEC_10Y_IN → HDFCAMC | +1.70 | events | -2.04% |
+| 2 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → HDFCAMC | -1.60 | events | -0.51% |
+| 1 | F_REPO_IN → HDFCAMC | +1.00 | events | -0.30% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → HDFCAMC | +0.30 | events | +0.19% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → HDFCAMC | +0.30 | events | +0.09% |
+| 1 | F_RISK_SENTIMENT → HDFCAMC | +0.11 | observed | -0.09% |
+| 1 | P_SEBI_DERIVATIVES → HDFCAMC | -0.10 | events | -0.08% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → HDFCAMC | -1.60 | events | +0.07% |
+| 2 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → HDFCAMC | -0.10 | events | +0.06% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_EQUITY_ACTIVITY_IN → HDFCAMC | +0.30 | events | +0.02% |
+| 4 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → F_EQUITY_ACTIVITY_IN → HDFCAMC | +0.30 | events | +0.02% |
 
 ## Analyst profile (agent research, sourced)
 # HDFC Asset Management (HDFCAMC) - Market Impact profile, as of 2026-11-05

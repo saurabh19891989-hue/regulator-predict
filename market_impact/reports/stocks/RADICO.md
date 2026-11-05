@@ -2,9 +2,9 @@
 *MIDCAP_100 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.6%**, **12 months -1.3%** (rank 121 / 122 of 200 for 3m / 12m); beta 0.90
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.5%): 3 months 48%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.3% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -38.9% … +31.3%
+- Expected relative return: **3 months -0.5%**, **12 months -1.3%** (rank 122 / 122 of 200 for 3m / 12m); beta 0.90
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.5%): 3 months 48%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.4% … P90 +2.3%; plausible 12m relative-return range incl. stock-specific noise: -28.1% … +38.5%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +0.3% beta-adjusted vs realised market-adjusted move +24.7%); forward event exposure +0.0% (3m +0.1%; half assumed priced); company-specific events -0.2%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.8 | -0.0 | +0.0 |
 | OMC ethanol tender ESY 2026-27: no cane juice/syrup/B-heavy ethanol; maize price incentive cut; grain-based ethanol takes over (`EV_ETHANOL_ESY27_TENDER`) | occurred | 1.00 | +0.8% | +0.8% | +0.8 | +0.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → RADICO | -2.86% | -2.86% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → RADICO | -2.48% | -2.48% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → RADICO | -1.99% | -1.99% |
-| 1 | EV_KHARIF26_OUTPUT_HIT ⇒ F_RICE → RADICO | -1.80% | -1.80% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → RADICO | +3.25% | +1.62% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → RADICO | -1.50% | -1.50% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RICE → RADICO | -0.91% | -0.91% |
-| 1 | EV_ETHANOL_ESY27_TENDER ⇒ P_SUGAR_ETHANOL → RADICO | +0.80% | +0.80% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → RADICO | -0.66% | -0.66% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → RADICO | +0.65% | +0.65% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → RADICO | +0.60% | +0.60% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → RADICO | -1.50% | -0.60% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → F_PACKAGING → RADICO | -0.57% | -0.57% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → RADICO | -0.55% | -0.55% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → RADICO | -1.94% | -0.54% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RICE → RADICO | +0.72% | +0.49% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → RADICO | -1.25% | -0.45% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → RADICO | -2.43% | -0.44% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → RADICO | +0.75% | +0.44% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → RADICO | -1.73% | -0.43% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → RADICO | -1.95% | -0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → RADICO | -1.50% | -0.41% |
+| 1 | EV_RICE_BROKEN_EXPORT_CURB ⇒ F_RICE → RADICO | +0.90% | +0.40% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → RADICO | -0.60% | -0.36% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → RADICO | -1.25% | -0.35% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → RADICO | -1.50% | -0.33% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → RADICO | -1.25% | -0.31% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → RADICO | -1.60 | events | -2.08% |
+| 1 | F_RICE → RADICO | +0.60 | events | -1.80% |
+| 1 | F_REPO_IN → RADICO | +1.00 | events | -1.50% |
+| 1 | P_SUGAR_ETHANOL → RADICO | -1.50 | events | +1.20% |
+| 1 | F_URBAN_DEMAND → RADICO | +0.20 | events | +0.60% |
+| 1 | F_GAS_GLOBAL → RADICO | -0.47 | observed | +0.19% |
+| 1 | F_USDINR → RADICO | -0.37 | observed | -0.11% |
+| 1 | F_EU_GDP → RADICO | +0.22 | events | +0.09% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → RADICO | +0.40 | events | -0.03% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → RADICO | +0.30 | events | -0.02% |
+| 4 | F_USDCNY → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → RADICO | -0.47 | observed | -0.01% |
+| 4 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → RADICO | +0.40 | events | -0.01% |
 
 ## Analyst profile (agent research, sourced)
 # Radico Khaitan — what moves the stock

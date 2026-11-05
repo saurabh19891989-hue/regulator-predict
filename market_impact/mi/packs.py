@@ -40,7 +40,7 @@ def factor_state():
           "| node | name | last | 1m | 3m | 6m | 12m | since 2026-06-01 |", "|---|---|---|---|---|---|---|---|"]
     f = lambda x: "" if x is None or (isinstance(x, float) and np.isnan(x)) else f"{x:+.1f}"
     for r in rows:
-        md.append(f"| {r['node']} | {r['name']} | {r['last']} | {f(r['chg_1m_pct'])} | {f(r['chg_3m_pct'])} | {f(r['chg_6m_pct'])} | {f(r['chg_12m_pct'])} | {f(r['chg_since_2026_06_01_pct'])} |")
+        md.append(f"| {r['node']}{' (STALE: last ' + r['last_date'] + ')' if r['last_date'] < str((last - pd.Timedelta(days=14)).date()) else ''} | {r['name']} | {r['last']} | {f(r['chg_1m_pct'])} | {f(r['chg_3m_pct'])} | {f(r['chg_6m_pct'])} | {f(r['chg_12m_pct'])} | {f(r['chg_since_2026_06_01_pct'])} |")
     md.append("\nNote: yields (US 10Y, ^IRX) and VIX changes are % changes of the level, not bp/points.")
     open(os.path.join(HERE, "results", "factor_state.md"), "w").write("\n".join(md) + "\n")
 

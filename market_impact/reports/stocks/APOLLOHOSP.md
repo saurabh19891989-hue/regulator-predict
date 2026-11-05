@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.8%**, **12 months -4.0%** (rank 150 / 151 of 200 for 3m / 12m); beta 0.87
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.5%): 3 months 43%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.7% … P90 +1.2%; plausible 12m relative-return range incl. stock-specific noise: -34.3% … +22.8%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.5%): 3 months 43%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.4% … P90 +0.8%; plausible 12m relative-return range incl. stock-specific noise: -27.4% … +16.0%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.0 pp (model impact -2.9% beta-adjusted vs realised market-adjusted move -0.9%); forward event exposure -3.7% (3m -1.7%; half assumed priced); company-specific events -0.0%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,39 @@
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -10.9% | -2.0% | -4.0 | -6.5 | -0.4 | +0.1 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -8.0% | -1.8% | -7.8 | +0.1 | -0.3 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → APOLLOHOSP | -6.60% | -6.60% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → APOLLOHOSP | +7.50% | +3.75% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → APOLLOHOSP | -2.80% | -2.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → APOLLOHOSP | -1.78% | -1.78% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → APOLLOHOSP | +1.50% | +1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → APOLLOHOSP | -1.41% | -1.41% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → APOLLOHOSP | -1.19% | -1.19% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → APOLLOHOSP | -1.02% | -1.02% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → APOLLOHOSP | +1.00% | +1.00% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → APOLLOHOSP | -4.50% | -0.99% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → APOLLOHOSP | -0.96% | -0.96% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_FPI_FLOWS → APOLLOHOSP | -0.92% | -0.92% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_FPI_FLOWS → APOLLOHOSP | -0.90% | -0.90% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → APOLLOHOSP | -3.20% | -0.90% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → APOLLOHOSP | -0.88% | -0.88% |
+| 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → APOLLOHOSP | -1.75% | -0.88% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → APOLLOHOSP | -2.88% | -0.81% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → APOLLOHOSP | -1.60% | -0.80% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → APOLLOHOSP | -2.88% | -0.72% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → APOLLOHOSP | -4.00% | -0.72% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → APOLLOHOSP | -2.24% | -0.63% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → APOLLOHOSP | -1.00% | -0.60% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → APOLLOHOSP | +1.50% | +0.52% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → APOLLOHOSP | +0.58% | +0.52% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → APOLLOHOSP | -2.80% | -0.50% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → APOLLOHOSP | +0.60% | +0.48% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → APOLLOHOSP | -0.48% | -0.46% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → APOLLOHOSP | -1.60 | events | -4.80% |
+| 1 | F_GSEC_10Y_IN → APOLLOHOSP | +1.70 | events | -3.40% |
+| 1 | F_GDP_IN → APOLLOHOSP | +0.50 | events | +1.00% |
+| 1 | F_REPO_IN → APOLLOHOSP | +1.00 | events | -0.60% |
+| 1 | F_CPI_IN → APOLLOHOSP | +1.15 | events | +0.57% |
+| 1 | F_URBAN_DEMAND → APOLLOHOSP | +0.20 | events | +0.50% |
+| 1 | F_USDINR → APOLLOHOSP | -0.37 | observed | +0.18% |
+| 1 | F_GAS_GLOBAL → APOLLOHOSP | -0.47 | observed | +0.14% |
+| 1 | F_RISK_SENTIMENT → APOLLOHOSP | +0.11 | observed | -0.09% |
 
 ## Analyst profile (agent research, sourced)
 # APOLLOHOSP - Apollo Hospitals Enterprise Ltd. (Nifty 50, hospitals)

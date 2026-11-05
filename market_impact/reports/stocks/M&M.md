@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +3.8%**, **12 months +6.3%** (rank 23 / 29 of 200 for 3m / 12m); beta 1.45
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +16.9%): 3 months 67%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.9% … P90 +13.8%; plausible 12m relative-return range incl. stock-specific noise: -16.8% … +26.6%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +16.9%): 3 months 67%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.1% … P90 +16.1%; plausible 12m relative-return range incl. stock-specific noise: -10.3% … +33.3%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.0 pp (model impact +6.1% beta-adjusted vs realised market-adjusted move -2.7%); forward event exposure +6.7% (3m +3.3%; half assumed priced); company-specific events +2.1%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | +0.4% | +0.4% | +0.0 | +0.0 | +0.2 | +0.2 |
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.4% | -0.4% | +0.0 | -0.0 | -0.3 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → M&M | -3.96% | -3.96% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → M&M | +1.20% | +1.20% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → M&M | -1.12% | -1.12% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → M&M | -1.06% | -1.06% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → M&M | -0.80% | -0.80% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → M&M | -2.00% | -0.71% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → M&M | +1.20% | +0.70% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → M&M | +0.49% | +0.49% |
-| 1 | EV_PM_EDRIVE_EXT ⇒ P_EV_POLICY → M&M | +0.45% | +0.45% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → M&M | +1.44% | +0.40% |
-| 2 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → M&M | +0.38% | +0.38% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_AUTO_DEMAND_IN → M&M | -0.37% | -0.37% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → M&M | -0.35% | -0.35% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → M&M | -0.80% | -0.32% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → M&M | -0.32% | -0.32% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → M&M | -4.80% | -0.30% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → M&M | -1.20% | -0.30% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → M&M | +0.40% | +0.26% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → M&M | -0.92% | -0.23% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → M&M | -0.80% | -0.22% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → M&M | -0.32% | -0.19% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → M&M | -0.32% | -0.18% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → M&M | -0.80% | -0.18% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → M&M | +0.24% | +0.17% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → M&M | -1.00% | -0.15% |
+| 1 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ F_SEMICONDUCTOR_SUPPLY → M&M | -0.60% | -0.15% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_EV_POLICY → M&M | +1.10 | events | +1.65% |
+| 1 | F_STEEL_INDIA → M&M | +1.65 | events | -1.32% |
+| 1 | F_REPO_IN → M&M | +1.00 | events | -0.80% |
+| 1 | F_ALUMINIUM → M&M | -1.96 | observed | +0.49% |
+| 1 | F_AUTO_DEMAND_IN → M&M | -0.10 | events | -0.25% |
+| 1 | P_US_TARIFF_INDIA → M&M | -0.60 | events | +0.24% |
+| 1 | F_RURAL_DEMAND → M&M | -0.25 | events | -0.20% |
+| 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → M&M | -0.30 | events | +0.14% |
+| 1 | F_USDINR → M&M | -0.37 | observed | -0.07% |
+| 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → M&M | -0.10 | events | +0.06% |
+| 1 | F_COPPER → M&M | -0.24 | observed | +0.05% |
+| 3 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → F_SEMICONDUCTOR_SUPPLY → M&M | -0.10 | events | +0.02% |
 
 ## Analyst profile (agent research, sourced)
 # M&M - Mahindra & Mahindra Ltd. (as of 2026-11-05)

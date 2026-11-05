@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.2%**, **12 months -1.9%** (rank 60 / 129 of 200 for 3m / 12m); beta 0.88
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +32.5%): 3 months 53%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.5% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -41.6% … +38.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.6 pp (model impact -3.2% beta-adjusted vs realised market-adjusted move +60.0%); forward event exposure -2.1% (3m +1.9%; half assumed priced); company-specific events +3.8%
+- Expected relative return: **3 months +1.3%**, **12 months -1.7%** (rank 54 / 126 of 200 for 3m / 12m); beta 0.88
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +32.5%): 3 months 53%, 12 months 65%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.8% … P90 +4.0%; plausible 12m relative-return range incl. stock-specific noise: -43.9% … +42.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.4 pp (model impact -2.9% beta-adjusted vs realised market-adjusted move +60.0%); forward event exposure -2.0% (3m +2.0%; half assumed priced); company-specific events +3.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +2.5% | +2.5% | +2.5 | +0.0 | -0.0 | -0.0 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -9.5% | -2.4% | -3.0 | -5.6 | -0.3 | -0.6 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → PAYTM | -11.00% | -11.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PAYTM | +12.50% | +6.25% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → PAYTM | -2.97% | -2.97% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → PAYTM | +2.50% | +2.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → PAYTM | -2.35% | -2.35% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → PAYTM | -8.00% | -2.24% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → PAYTM | -3.00% | -1.86% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → PAYTM | -10.00% | -1.80% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → PAYTM | -1.70% | -1.70% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → PAYTM | -7.50% | -1.65% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → PAYTM | -1.61% | -1.61% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_FPI_FLOWS → PAYTM | -1.54% | -1.54% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_FPI_FLOWS → PAYTM | -1.50% | -1.50% |
-| 3 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → F_FPI_FLOWS → PAYTM | +1.30% | +1.30% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → PAYTM | +1.06% | +1.06% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PAYTM | -3.73% | -1.05% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → PAYTM | -3.00% | -0.90% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → PAYTM | +2.50% | +0.88% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → PAYTM | -2.40% | -0.86% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → PAYTM | -3.00% | -0.84% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PAYTM | -4.67% | -0.84% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → PAYTM | +1.00% | +0.80% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → PAYTM | -3.00% | -0.75% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → PAYTM | +1.80% | +0.68% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → PAYTM | -2.40% | -0.67% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → PAYTM | -1.60 | events | -8.00% |
+| 1 | T_GENAI_SERVICES → PAYTM | +1.00 | events | +1.00% |
+| 1 | F_REPO_IN → PAYTM | +1.00 | events | +0.80% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → PAYTM | -1.56 | events | -0.62% |
+| 1 | F_URBAN_DEMAND → PAYTM | +0.20 | events | +0.50% |
+| 1 | F_COAL_INTL → PAYTM | +0.70 | director_override | +0.35% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → PAYTM | +1.15 | events | -0.35% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → PAYTM | +0.50 | events | +0.26% |
+| 2 | F_GDP_IN → P_RBI_PRUDENTIAL → PAYTM | +0.50 | events | -0.24% |
+| 1 | F_US_EQUITIES → PAYTM | +0.23 | observed | +0.23% |
+| 1 | F_RISK_SENTIMENT → PAYTM | +0.11 | observed | -0.22% |
+| 2 | F_GDP_IN → F_UNSECURED_STRESS → PAYTM | +0.50 | events | +0.20% |
 
 ## Analyst profile (agent research, sourced)
 # PAYTM - One 97 Communications (as of 2026-11-05)

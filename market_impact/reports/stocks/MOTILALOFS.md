@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.8%**, **12 months -6.6%** (rank 151 / 175 of 200 for 3m / 12m); beta 1.53
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.9%): 3 months 45%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -28.4% … P90 +9.4%; plausible 12m relative-return range incl. stock-specific noise: -49.6% … +34.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.1 pp (model impact -4.2% beta-adjusted vs realised market-adjusted move +21.0%); forward event exposure -6.2% (3m +0.9%; half assumed priced); company-specific events -0.5%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.9%): 3 months 45%, 12 months 25%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -23.5% … P90 +1.9%; plausible 12m relative-return range incl. stock-specific noise: -50.4% … +14.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.1 pp (model impact -4.2% beta-adjusted vs realised market-adjusted move +21.0%); forward event exposure -6.1% (3m +0.9%; half assumed priced); company-specific events -0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +7.6% | +4.4% | +1.8 | +2.9 | +2.3 | +0.7 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +3.7% | +3.7% | +3.0 | +0.7 | -0.1 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MOTILALOFS | -13.20% | -13.20% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MOTILALOFS | +15.00% | +7.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → MOTILALOFS | -14.00% | -3.92% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → MOTILALOFS | -3.56% | -3.56% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → MOTILALOFS | -17.50% | -3.15% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → MOTILALOFS | +3.00% | +3.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → MOTILALOFS | -2.82% | -2.82% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → MOTILALOFS | -2.46% | -2.46% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → MOTILALOFS | -2.35% | -2.35% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → MOTILALOFS | -2.04% | -2.04% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MOTILALOFS | -9.00% | -1.98% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → MOTILALOFS | -1.93% | -1.93% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_FPI_FLOWS → MOTILALOFS | -1.85% | -1.85% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_FPI_FLOWS → MOTILALOFS | -1.80% | -1.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → MOTILALOFS | -1.68% | -1.68% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → MOTILALOFS | -4.20% | -1.50% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → MOTILALOFS | +2.80% | +1.40% |
+| 1 | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → MOTILALOFS | -7.00% | -1.40% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → MOTILALOFS | -4.50% | -1.26% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MOTILALOFS | -4.48% | -1.25% |
+| 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ F_EQUITY_ACTIVITY_IN → MOTILALOFS | +1.40% | +1.19% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → MOTILALOFS | -4.50% | -1.12% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → MOTILALOFS | +3.00% | +1.05% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → MOTILALOFS | +1.75% | +1.02% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MOTILALOFS | -5.60% | -1.01% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → MOTILALOFS | +1.20% | +0.96% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → MOTILALOFS | -1.60 | events | -9.60% |
+| 2 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → MOTILALOFS | -1.60 | events | -1.79% |
+| 1 | F_REPO_IN → MOTILALOFS | +1.00 | events | -1.00% |
+| 1 | F_GDP_IN → MOTILALOFS | +0.50 | events | +1.00% |
+| 1 | F_CREDIT_SPREADS_IN → MOTILALOFS | +0.50 | events | -0.75% |
+| 1 | F_USDINR → MOTILALOFS | -0.37 | observed | +0.55% |
+| 1 | F_RISK_SENTIMENT → MOTILALOFS | +0.11 | observed | -0.39% |
+| 1 | F_US_EQUITIES → MOTILALOFS | +0.23 | observed | +0.35% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → MOTILALOFS | +0.30 | events | +0.24% |
+| 2 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → MOTILALOFS | -0.10 | events | +0.22% |
+| 1 | P_SEBI_DERIVATIVES → MOTILALOFS | -0.10 | events | +0.20% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → MOTILALOFS | -1.60 | events | +0.13% |
 
 ## Analyst profile (agent research, sourced)
 # MOTILALOFS - Motilal Oswal Financial Services (as of 2026-11-05)

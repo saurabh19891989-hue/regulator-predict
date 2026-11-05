@@ -4,8 +4,8 @@
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -3.1%**, **12 months -6.3%** (rank 175 / 172 of 200 for 3m / 12m); beta 0.67
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.6%): 3 months 39%, 12 months 32%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.2% … P90 -3.7%; plausible 12m relative-return range incl. stock-specific noise: -46.2% … +18.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.7 pp (model impact -7.4% beta-adjusted vs realised market-adjusted move +6.0%); forward event exposure -2.2% (3m -1.1%; half assumed priced); company-specific events -0.7%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.2% … P90 -3.8%; plausible 12m relative-return range incl. stock-specific noise: -34.8% … +20.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.7 pp (model impact -7.4% beta-adjusted vs realised market-adjusted move +6.0%); forward event exposure -2.1% (3m -1.1%; half assumed priced); company-specific events -0.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -2.9% | -1.0% | -1.0 | -0.5 | -0.6 | -0.8 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.9% | -0.9% | -1.0 | +0.0 | +0.1 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → ZYDUSLIFE | -5.00% | -5.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ZYDUSLIFE | +4.38% | +4.38% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ZYDUSLIFE | -4.04% | -4.04% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ZYDUSLIFE | -3.30% | -3.30% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ZYDUSLIFE | +3.75% | +1.88% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ZYDUSLIFE | -1.68% | -1.68% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → ZYDUSLIFE | -1.04% | -1.04% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ZYDUSLIFE | -3.20% | -0.90% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → ZYDUSLIFE | -0.89% | -0.89% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → ZYDUSLIFE | +3.64% | +0.80% |
-| 2 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → ZYDUSLIFE | +0.80% | +0.80% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → ZYDUSLIFE | +2.21% | +0.79% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → ZYDUSLIFE | -1.33% | -0.77% |
-| 1 | EV_US_PHARMA_232_SEP26 ⇒ P_US_PHARMA_TARIFF → ZYDUSLIFE | -0.75% | -0.75% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ZYDUSLIFE | +0.75% | +0.75% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ZYDUSLIFE | -2.04% | -0.73% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ZYDUSLIFE | -4.00% | -0.72% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ZYDUSLIFE | +1.22% | +0.71% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → ZYDUSLIFE | -4.50% | -0.54% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ZYDUSLIFE | -2.25% | -0.49% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ F_US_GENERIC_PRICING → ZYDUSLIFE | -4.00% | -0.48% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ZYDUSLIFE | -0.96% | -0.48% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ZYDUSLIFE | -1.44% | -0.40% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → ZYDUSLIFE | +0.60% | +0.39% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ZYDUSLIFE | -1.44% | -0.36% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_USFDA_ENFORCEMENT → ZYDUSLIFE | +1.00 | events | -5.00% |
+| 1 | F_FPI_FLOWS → ZYDUSLIFE | -1.60 | events | -2.40% |
+| 1 | F_GSEC_10Y_IN → ZYDUSLIFE | +1.70 | events | -2.04% |
+| 1 | F_USDINR → ZYDUSLIFE | -0.37 | observed | -1.03% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → ZYDUSLIFE | +1.00 | events | +0.80% |
+| 1 | P_US_PHARMA_TARIFF → ZYDUSLIFE | +0.50 | events | -0.75% |
+| 1 | F_REPO_IN → ZYDUSLIFE | +1.00 | events | -0.50% |
+| 1 | P_US_TARIFF_INDIA → ZYDUSLIFE | -0.60 | events | +0.36% |
+| 1 | F_URBAN_DEMAND → ZYDUSLIFE | +0.20 | events | +0.30% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → ZYDUSLIFE | +0.50 | events | +0.24% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → ZYDUSLIFE | +0.40 | events | -0.10% |
+| 1 | F_RISK_SENTIMENT → ZYDUSLIFE | +0.11 | observed | -0.09% |
 
 ## Analyst profile (agent research, sourced)
 # ZYDUSLIFE - Zydus Lifesciences Ltd. (Nifty Next 50, diversified pharma)

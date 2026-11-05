@@ -2,9 +2,9 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -3.7%**, **12 months -6.5%** (rank 179 / 173 of 200 for 3m / 12m); beta 1.12
+- Expected relative return: **3 months -3.7%**, **12 months -6.4%** (rank 179 / 173 of 200 for 3m / 12m); beta 1.12
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +51.0%): 3 months 44%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.5% … P90 +1.8%; plausible 12m relative-return range incl. stock-specific noise: -59.8% … +62.9%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.8% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -84.4% … +64.1%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -6.7% beta-adjusted vs realised market-adjusted move -47.0%); forward event exposure -6.3% (3m -1.6%; half assumed priced); company-specific events -4.2%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,40 @@
 | Fed hikes >=50 bp cumulative beyond Oct level by Apr 2027 (`EV_FED_H1_2027_FURTHER_HIKES`) | anticipated | 0.30 | -6.6% | -2.0% | -4.0 | -2.1 | -0.3 | -0.2 |
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -2.2 | +0.2 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → POLICYBZR | -8.80% | -8.80% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → POLICYBZR | +10.00% | +5.00% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → POLICYBZR | -9.80% | -4.90% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → POLICYBZR | -10.00% | -2.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → POLICYBZR | -2.38% | -2.38% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → POLICYBZR | -12.50% | -2.25% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → POLICYBZR | -2.00% | -2.00% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → POLICYBZR | +2.00% | +2.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → POLICYBZR | -1.88% | -1.88% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_GLOBAL → POLICYBZR | -1.65% | -1.65% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → POLICYBZR | +6.00% | +1.50% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → POLICYBZR | -1.36% | -1.36% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → POLICYBZR | -6.00% | -1.32% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → POLICYBZR | -1.28% | -1.28% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → POLICYBZR | +1.25% | +1.25% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → POLICYBZR | -4.00% | -1.20% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → POLICYBZR | -2.00% | -1.16% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → POLICYBZR | -3.84% | -1.08% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → POLICYBZR | -3.00% | -1.07% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → POLICYBZR | -3.84% | -0.96% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → POLICYBZR | -3.60% | -0.90% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → POLICYBZR | -2.99% | -0.84% |
+| 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → POLICYBZR | +3.00% | +0.75% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → POLICYBZR | +1.25% | +0.73% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → POLICYBZR | -1.60 | events | -6.40% |
+| 1 | F_FED_FUNDS → POLICYBZR | +1.62 | observed | -3.24% |
+| 1 | F_STEEL_GLOBAL → POLICYBZR | +2.06 | observed | -1.64% |
+| 1 | F_REFINING_MARGIN → POLICYBZR | +1.54 | observed | +1.23% |
+| 1 | T_GENAI_SERVICES → POLICYBZR | +1.00 | events | -1.00% |
+| 1 | F_GDP_IN → POLICYBZR | +0.50 | events | +1.00% |
+| 1 | F_CPI_IN → POLICYBZR | +1.15 | events | -0.92% |
+| 1 | F_USDINR → POLICYBZR | -0.37 | observed | -0.30% |
+| 1 | F_RISK_SENTIMENT → POLICYBZR | +0.11 | observed | -0.28% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → POLICYBZR | +0.30 | events | +0.19% |
 
 ## Analyst profile (agent research, sourced)
 # POLICYBZR - PB Fintech (Policybazaar) (as of 2026-11-05)

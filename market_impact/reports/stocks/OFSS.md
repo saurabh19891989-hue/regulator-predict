@@ -4,7 +4,7 @@
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.7%**, **12 months -3.2%** (rank 149 / 144 of 200 for 3m / 12m); beta 0.93
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.7%): 3 months 46%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.9% … P90 +0.6%; plausible 12m relative-return range incl. stock-specific noise: -49.8% … +33.0%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.3% … P90 -0.5%; plausible 12m relative-return range incl. stock-specific noise: -48.0% … +25.5%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.7% beta-adjusted vs realised market-adjusted move -4.2%); forward event exposure -2.7% (3m -0.6%; half assumed priced); company-specific events -1.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,41 @@
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -0.9% | -0.9% | -0.9 | -0.1 | +0.0 | +0.0 |
 | Sugar supply shock: 2025-26 output cut to ~306 lakh t, retail sugar at record, first duty-free raw sugar imports in a decade (`EV_SUGAR_SHORTFALL26`) | occurred | 1.00 | +0.8% | +0.8% | +0.8 | +0.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → OFSS | +2.35% | +2.35% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → OFSS | -2.20% | -2.20% |
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → OFSS | -2.00% | -2.00% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → OFSS | +1.80% | +1.80% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → OFSS | -4.50% | -1.26% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → OFSS | -1.26% | -1.26% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → OFSS | +2.50% | +1.25% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → OFSS | -4.50% | -1.12% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → OFSS | -4.50% | -1.12% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → OFSS | -4.00% | -1.12% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → OFSS | -5.00% | -0.90% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → OFSS | -1.00% | -0.85% |
-| 1 | EV_SUGAR_SHORTFALL26 ⇒ F_SUGAR → OFSS | +0.84% | +0.84% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → OFSS | -0.70% | -0.70% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → OFSS | +0.65% | +0.65% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → OFSS | +2.10% | +0.52% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → OFSS | +1.95% | +0.43% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → OFSS | -1.20% | -0.43% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → OFSS | +1.19% | +0.42% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → OFSS | -1.40% | -0.42% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → OFSS | -0.71% | -0.41% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → OFSS | -0.70% | -0.41% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → OFSS | -2.25% | -0.40% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | T_GENAI_SERVICES → OFSS | +1.00 | events | -2.00% |
+| 1 | F_US_GDP → OFSS | +1.20 | events | +1.80% |
+| 1 | F_FPI_FLOWS → OFSS | -1.60 | events | -1.60% |
+| 1 | F_GSEC_10Y_IN → OFSS | +1.70 | events | -1.53% |
+| 1 | F_FED_FUNDS → OFSS | +1.62 | observed | -1.13% |
+| 1 | P_US_VISA_OUTSOURCING → OFSS | +0.90 | events | -0.90% |
+| 1 | F_SUGAR → OFSS | +2.78 | observed | +0.83% |
+| 1 | F_USDINR → OFSS | -0.37 | observed | -0.55% |
+| 1 | F_US_EQUITIES → OFSS | +0.23 | observed | +0.35% |
+| 1 | F_EU_GDP → OFSS | +0.22 | events | +0.22% |
+| 1 | F_RISK_SENTIMENT → OFSS | +0.11 | observed | -0.11% |
 
 ## Analyst profile (agent research, sourced)
 # Oracle Financial Services Software Ltd. (OFSS) - company profile, as of 2026-11-05

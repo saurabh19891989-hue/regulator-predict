@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.0%**, **12 months +2.5%** (rank 68 / 61 of 200 for 3m / 12m); beta 0.94
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.3%): 3 months 53%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.0% … P90 +6.1%; plausible 12m relative-return range incl. stock-specific noise: -26.9% … +32.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.5 pp (model impact +7.1% beta-adjusted vs realised market-adjusted move -31.0%); forward event exposure +1.0% (3m +0.0%; half assumed priced); company-specific events -0.8%
+- Expected relative return: **3 months +0.8%**, **12 months +2.1%** (rank 72 / 66 of 200 for 3m / 12m); beta 0.94
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.3%): 3 months 52%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.6% … P90 +5.8%; plausible 12m relative-return range incl. stock-specific noise: -24.1% … +41.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.2 pp (model impact +6.4% beta-adjusted vs realised market-adjusted move -31.0%); forward event exposure +1.0% (3m +0.1%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | -0.0 | +0.0 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.7% | +1.0% | +0.0 | +0.7 | +0.7 | +0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → CUMMINSIND | +2.50% | +2.50% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → CUMMINSIND | +1.99% | +1.99% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → CUMMINSIND | -6.90% | -1.93% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → CUMMINSIND | -1.80% | -1.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → CUMMINSIND | +2.00% | +1.80% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → CUMMINSIND | -6.90% | -1.72% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → C_GCC → CUMMINSIND | +1.58% | +1.58% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → CUMMINSIND | -1.32% | -1.32% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → C_GCC → CUMMINSIND | -1.20% | -1.20% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → CUMMINSIND | -1.12% | -1.12% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → CUMMINSIND | -1.00% | -1.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → CUMMINSIND | -0.89% | -0.89% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → CUMMINSIND | -2.88% | -0.81% |
-| 1 | EV_AI_SELLOFF_OCT26 ⇒ F_US_EQUITIES → CUMMINSIND | -0.80% | -0.80% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → CUMMINSIND | +1.50% | +0.68% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → CUMMINSIND | -3.45% | -0.62% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → CUMMINSIND | +0.92% | +0.57% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → C_GCC → CUMMINSIND | +0.80% | +0.46% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → CUMMINSIND | +0.70% | +0.45% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_US_EQUITIES → CUMMINSIND | -1.21% | -0.43% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → CUMMINSIND | -1.00% | -0.40% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → CUMMINSIND | +0.60% | +0.36% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → C_GCC → CUMMINSIND | -0.96% | -0.34% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → F_US_EQUITIES → CUMMINSIND | +0.51% | +0.29% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_PRIVATE_CAPEX → CUMMINSIND | +0.32% | +0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → CUMMINSIND | +1.00 | events | +2.50% |
+| 1 | F_STEEL_INDIA → CUMMINSIND | +1.65 | events | -1.32% |
+| 1 | F_REPO_IN → CUMMINSIND | +1.00 | events | -1.00% |
+| 1 | F_COAL_INTL → CUMMINSIND | +0.70 | director_override | -0.70% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → CUMMINSIND | +1.00 | events | +0.64% |
+| 1 | F_ALUMINIUM → CUMMINSIND | -1.96 | observed | +0.59% |
+| 1 | F_US_EQUITIES → CUMMINSIND | +0.23 | observed | +0.54% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → CUMMINSIND | +0.50 | events | +0.50% |
+| 1 | P_US_TARIFF_INDIA → CUMMINSIND | -0.60 | events | +0.42% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → CUMMINSIND | +1.00 | events | +0.40% |
+| 2 | T_ENERGY_TRANSITION → F_PRIVATE_CAPEX → CUMMINSIND | +0.50 | events | +0.30% |
+| 2 | F_CREDIT_SPREADS_IN → F_PRIVATE_CAPEX → CUMMINSIND | +0.50 | events | -0.30% |
 
 ## Analyst profile (agent research, sourced)
 # CUMMINSIND — Cummins India Ltd. (profile as of 2026-11-05)

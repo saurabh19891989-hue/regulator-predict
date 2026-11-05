@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.7%**, **12 months -4.9%** (rank 169 / 160 of 200 for 3m / 12m); beta 1.00
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +14.0%): 3 months 35%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.6% … P90 +2.6%; plausible 12m relative-return range incl. stock-specific noise: -25.5% … +15.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.9 pp (model impact -9.0% beta-adjusted vs realised market-adjusted move -3.2%); forward event exposure -0.5% (3m -0.6%; half assumed priced); company-specific events -1.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +14.0%): 3 months 35%, 12 months 20%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.4% … P90 +2.2%; plausible 12m relative-return range incl. stock-specific noise: -29.3% … +10.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.9 pp (model impact -9.0% beta-adjusted vs realised market-adjusted move -3.2%); forward event exposure -0.4% (3m -0.5%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.8% | -2.8% | +0.0 | -2.8 | -0.0 | +0.0 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +3.6% | +2.4% | +0.0 | +0.9 | +2.0 | +0.6 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → HDFCBANK | -7.70% | -7.70% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HDFCBANK | +8.75% | +4.38% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → HDFCBANK | -3.75% | -3.75% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → HDFCBANK | -2.97% | -2.97% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → HDFCBANK | -2.52% | -2.52% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → HDFCBANK | -3.00% | -1.86% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → HDFCBANK | +1.75% | +1.75% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HDFCBANK | -5.23% | -1.46% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → HDFCBANK | +2.50% | +1.45% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → HDFCBANK | +1.25% | +1.25% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → HDFCBANK | -2.00% | -1.24% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → HDFCBANK | -1.19% | -1.19% |
 | 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HDFCBANK | -6.53% | -1.18% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → HDFCBANK | -5.25% | -1.16% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → HDFCBANK | -1.12% | -1.12% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → HDFCBANK | -3.00% | -1.07% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → HDFCBANK | -1.25% | -0.78% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → HDFCBANK | -1.44% | -0.72% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → HDFCBANK | +0.72% | +0.65% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_DEPOSIT_GROWTH_IN → HDFCBANK | +1.05% | +0.63% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → HDFCBANK | +1.75% | +0.61% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → HDFCBANK | -2.00% | -0.60% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HDFCBANK | -1.57% | -0.56% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → HDFCBANK | -1.60 | events | -5.60% |
+| 1 | C_MIDEAST_CONFLICT → HDFCBANK | +1.50 | events | -3.75% |
+| 1 | F_GSEC_10Y_IN → HDFCBANK | +1.70 | events | -3.06% |
+| 1 | F_GDP_IN → HDFCBANK | +0.50 | events | +1.25% |
+| 1 | F_REPO_IN → HDFCBANK | +1.00 | events | -0.50% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → HDFCBANK | +0.50 | events | +0.48% |
+| 2 | F_LIQUIDITY_IN → F_DEPOSIT_GROWTH_IN → HDFCBANK | -0.90 | events | -0.38% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → HDFCBANK | -1.56 | events | -0.37% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → HDFCBANK | +1.00 | events | -0.29% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → HDFCBANK | -0.25 | events | -0.24% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → HDFCBANK | +1.00 | events | -0.24% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → HDFCBANK | -1.56 | events | -0.22% |
 
 ## Analyst profile (agent research, sourced)
 # HDFCBANK - HDFC Bank Ltd. (Nifty 50, private bank) - as of 2026-11-05

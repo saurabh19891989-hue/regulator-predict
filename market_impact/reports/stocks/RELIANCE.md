@@ -2,10 +2,10 @@
 *NIFTY_50 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.5%**, **12 months +3.6%** (rank 53 / 47 of 200 for 3m / 12m); beta 1.10
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.8%): 3 months 57%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.5% … P90 +9.2%; plausible 12m relative-return range incl. stock-specific noise: -12.1% … +26.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.0% beta-adjusted vs realised market-adjusted move -5.7%); forward event exposure +4.4% (3m +2.6%; half assumed priced); company-specific events +2.1%
+- Expected relative return: **3 months +1.5%**, **12 months +3.6%** (rank 50 / 44 of 200 for 3m / 12m); beta 1.10
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.8%): 3 months 57%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.7% … P90 +7.3%; plausible 12m relative-return range incl. stock-specific noise: -12.9% … +24.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.0% beta-adjusted vs realised market-adjusted move -5.7%); forward event exposure +4.5% (3m +2.6%; half assumed priced); company-specific events +2.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.3% | +1.3% | +1.3 | +0.0 | +0.0 | +0.0 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +1.3% | +1.3% | +4.9 | -1.4 | -1.9 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → RELIANCE | -5.50% | -5.50% |
 | 1 | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → RELIANCE | +4.80% | +3.60% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → RELIANCE | +6.25% | +3.12% |
-| 1 | EV_EXPORT_LEVY_REVISIONS ⇒ P_WINDFALL_EXPORT_TAX → RELIANCE | -3.00% | -3.00% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → RELIANCE | +2.70% | +2.70% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → RELIANCE | +1.49% | +1.49% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → RELIANCE | -1.32% | -1.32% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → RELIANCE | +1.25% | +1.25% |
-| 1 | EV_AIRTEL_POSTPAID_HIKE ⇒ P_TELECOM_TARIFFS → RELIANCE | +1.20% | +1.20% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → RELIANCE | -3.73% | -1.05% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → RELIANCE | -1.00% | -1.00% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → RELIANCE | -0.85% | -0.85% |
 | 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → RELIANCE | -4.67% | -0.84% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → RELIANCE | -1.44% | -0.84% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → RELIANCE | -3.75% | -0.82% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → RELIANCE | -2.40% | -0.67% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → RELIANCE | -2.40% | -0.60% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → RELIANCE | +1.25% | +0.44% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → RELIANCE | -1.12% | -0.40% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → RELIANCE | +0.50% | +0.40% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → RELIANCE | -1.00% | -0.40% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → RELIANCE | +0.50% | +0.33% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ NEW_USDJPY → F_FPI_FLOWS → RELIANCE | -1.80% | -0.32% |
+| 3 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → F_FPI_FLOWS → RELIANCE | -1.26% | -0.32% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → RELIANCE | -1.60 | events | -4.00% |
+| 1 | P_WINDFALL_EXPORT_TAX → RELIANCE | +1.00 | events | -3.00% |
+| 1 | F_REFINING_MARGIN → RELIANCE | +1.54 | observed | +2.78% |
+| 1 | P_TELECOM_TARIFFS → RELIANCE | +0.30 | events | +1.20% |
+| 1 | F_REPO_IN → RELIANCE | +1.00 | events | -1.00% |
+| 1 | C_RUSSIA → RELIANCE | +1.00 | events | +0.80% |
+| 1 | C_MIDEAST_CONFLICT → RELIANCE | +1.50 | events | +0.75% |
+| 1 | P_US_TARIFF_INDIA → RELIANCE | -0.60 | events | +0.30% |
+| 1 | F_USDINR → RELIANCE | -0.37 | observed | +0.18% |
+| 1 | F_URBAN_DEMAND → RELIANCE | +0.20 | events | +0.16% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → RELIANCE | +1.00 | events | +0.13% |
+| 2 | F_CHINA_GDP → F_PETROCHEM_SPREADS → RELIANCE | +0.30 | events | +0.12% |
 
 ## Analyst profile (agent research, sourced)
 # Reliance Industries (RELIANCE) — market impact profile (as of 2026-11-05)

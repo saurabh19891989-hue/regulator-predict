@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -9.1%**, **12 months -17.0%** (rank 199 / 199 of 200 for 3m / 12m); beta 1.10
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 19%, 12 months 28%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -32.7% … P90 -11.5%; plausible 12m relative-return range incl. stock-specific noise: -41.1% … +6.8%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 19%, 12 months 18%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -35.7% … P90 -10.4%; plausible 12m relative-return range incl. stock-specific noise: -42.0% … +9.5%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -5.2 pp (model impact -10.5% beta-adjusted vs realised market-adjusted move +9.7%); forward event exposure -20.0% (3m -10.4%; half assumed priced); company-specific events -1.2%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -3.0% | -3.0% | +0.0 | -2.2 | -0.5 | -0.4 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.8% | -2.8% | +0.0 | -0.5 | -1.3 | -0.9 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → TATACAP | -4.40% | -4.40% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → TATACAP | -3.97% | -3.97% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → TATACAP | -3.50% | -3.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → TATACAP | -3.00% | -3.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → TATACAP | -2.66% | -2.66% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATACAP | +5.00% | +2.50% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → TATACAP | -3.50% | -2.17% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → TATACAP | -3.50% | -2.17% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → TATACAP | -1.31% | -1.31% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → TATACAP | -1.25% | -1.25% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → TATACAP | -3.00% | -1.20% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_CREDIT_SPREADS_IN → TATACAP | -1.20% | -1.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → TATACAP | -1.19% | -1.19% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → TATACAP | +1.12% | +1.12% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → TATACAP | -1.10% | -1.10% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → TATACAP | -3.50% | -1.05% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATACAP | -2.00% | -1.00% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → TATACAP | -3.46% | -0.86% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TATACAP | -2.99% | -0.84% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → TATACAP | -3.00% | -0.81% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → TATACAP | +2.10% | +0.80% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TATACAP | -1.25% | -0.75% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → TATACAP | -1.20% | -0.72% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → TATACAP | -1.20% | -0.72% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → TATACAP | -1.20% | -0.72% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TATACAP | -3.73% | -0.67% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → TATACAP | +1.70 | events | -4.25% |
+| 1 | F_FPI_FLOWS → TATACAP | -1.60 | events | -3.20% |
+| 1 | F_REPO_IN → TATACAP | +1.00 | events | -3.00% |
+| 1 | F_CREDIT_SPREADS_IN → TATACAP | +0.50 | events | -2.00% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → TATACAP | +0.50 | events | +1.12% |
+| 1 | F_LIQUIDITY_IN → TATACAP | -0.90 | events | -0.72% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → TATACAP | -1.56 | events | -0.62% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → TATACAP | +1.15 | events | -0.35% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → TATACAP | +0.50 | events | +0.34% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → TATACAP | +1.70 | events | -0.31% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → TATACAP | -0.25 | events | -0.28% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → TATACAP | +1.00 | events | -0.28% |
 
 ## Analyst profile (agent research, sourced)
 # TATACAP - Tata Capital Ltd. (Nifty Next 50, I_NBFC_VEHICLE_CONSUMER) - as of 2026-11-05

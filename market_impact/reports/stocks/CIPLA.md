@@ -2,10 +2,10 @@
 *NIFTY_50 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.2%**, **12 months +0.0%** (rank 92 / 105 of 200 for 3m / 12m); beta 0.74
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.5%): 3 months 51%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.3% … P90 +2.9%; plausible 12m relative-return range incl. stock-specific noise: -26.9% … +21.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.4% beta-adjusted vs realised market-adjusted move -3.0%); forward event exposure +3.4% (3m +1.6%; half assumed priced); company-specific events -1.1%
+- Expected relative return: **3 months +0.2%**, **12 months +0.0%** (rank 91 / 104 of 200 for 3m / 12m); beta 0.74
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.5%): 3 months 51%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.9% … P90 +3.3%; plausible 12m relative-return range incl. stock-specific noise: -19.3% … +18.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.4% beta-adjusted vs realised market-adjusted move -3.0%); forward event exposure +3.5% (3m +1.6%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.5% | -0.5% | -0.5 | +0.0 | +0.0 | -0.0 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -1.0% | -0.3% | -1.2 | +0.6 | -0.3 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → CIPLA | +2.19% | +2.19% |
-| 1 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → CIPLA | -2.00% | -2.00% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → CIPLA | -1.50% | -1.50% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → CIPLA | -1.32% | -1.32% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → CIPLA | -0.79% | -0.79% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CIPLA | +1.50% | +0.75% |
-| 2 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → CIPLA | +0.70% | +0.70% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → CIPLA | -0.60% | -0.60% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → CIPLA | +1.00% | +0.58% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → CIPLA | -0.53% | -0.53% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → CIPLA | -0.52% | -0.52% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → CIPLA | -0.48% | -0.48% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → CIPLA | -1.20% | -0.43% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ F_US_GENERIC_PRICING → CIPLA | -3.50% | -0.42% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → CIPLA | +1.82% | +0.40% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → CIPLA | +1.11% | +0.39% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → CIPLA | -0.66% | -0.39% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CIPLA | -0.90% | -0.25% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → CIPLA | -0.60% | -0.24% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → CIPLA | +0.23% | +0.21% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CIPLA | -1.12% | -0.20% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → CIPLA | -0.90% | -0.20% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → CIPLA | +0.67% | +0.19% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → CIPLA | -1.50% | -0.18% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → CIPLA | -0.69% | -0.17% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_USFDA_ENFORCEMENT → CIPLA | +1.00 | events | -2.00% |
+| 1 | C_MIDEAST_CONFLICT → CIPLA | +1.50 | events | -1.50% |
+| 1 | F_FPI_FLOWS → CIPLA | -1.60 | events | -0.96% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → CIPLA | +1.00 | events | +0.70% |
+| 1 | F_REPO_IN → CIPLA | +1.00 | events | -0.60% |
+| 1 | F_USDINR → CIPLA | -0.37 | observed | -0.52% |
+| 1 | F_GDP_IN → CIPLA | +0.50 | events | +0.40% |
+| 1 | P_US_PHARMA_TARIFF → CIPLA | +0.50 | events | -0.25% |
+| 1 | F_URBAN_DEMAND → CIPLA | +0.20 | events | +0.24% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → CIPLA | +0.50 | events | +0.21% |
+| 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → CIPLA | -0.47 | observed | -0.09% |
+| 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → CIPLA | +0.30 | events | -0.08% |
 
 ## Analyst profile (agent research, sourced)
 # CIPLA (Cipla Ltd.) — Nifty 50, as of 2026-11-05

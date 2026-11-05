@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.2%**, **12 months -2.4%** (rank 136 / 133 of 200 for 3m / 12m); beta 0.98
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.7%): 3 months 46%, 12 months 30%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.4% … P90 -0.6%; plausible 12m relative-return range incl. stock-specific noise: -41.5% … +23.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.3 pp (model impact -0.7% beta-adjusted vs realised market-adjusted move +2.2%); forward event exposure -2.0% (3m -0.8%; half assumed priced); company-specific events +0.2%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.7%): 3 months 46%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.3% … P90 -0.6%; plausible 12m relative-return range incl. stock-specific noise: -33.1% … +30.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.4 pp (model impact -0.7% beta-adjusted vs realised market-adjusted move +2.2%); forward event exposure -2.0% (3m -0.8%; half assumed priced); company-specific events +0.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,38 @@
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.6 | +0.3 | -0.7 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -5.7% | -1.0% | +0.0 | -4.7 | -0.5 | -0.5 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → JUBLFOOD | -3.30% | -3.30% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → JUBLFOOD | -2.48% | -2.48% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → JUBLFOOD | -2.38% | -2.38% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → JUBLFOOD | +3.75% | +1.88% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → JUBLFOOD | -1.80% | -1.80% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → JUBLFOOD | +0.80% | +0.80% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → JUBLFOOD | -0.80% | -0.80% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → JUBLFOOD | +0.75% | +0.75% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → JUBLFOOD | -0.74% | -0.74% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → JUBLFOOD | -1.80% | -0.72% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_FOOD_INFLATION_IN → JUBLFOOD | -0.66% | -0.66% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → JUBLFOOD | -2.24% | -0.63% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → JUBLFOOD | -0.58% | -0.58% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_REPO_IN → JUBLFOOD | -0.58% | -0.58% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → JUBLFOOD | -2.07% | -0.52% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → JUBLFOOD | -2.80% | -0.50% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → JUBLFOOD | -2.25% | -0.49% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → JUBLFOOD | -1.80% | -0.49% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → JUBLFOOD | -1.25% | -0.45% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → JUBLFOOD | +0.75% | +0.44% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → JUBLFOOD | -0.72% | -0.43% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → JUBLFOOD | -1.44% | -0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → JUBLFOOD | -1.80% | -0.40% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → JUBLFOOD | -1.44% | -0.36% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_REPO_IN → JUBLFOOD | -0.31% | -0.28% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ F_CPI_IN → F_REPO_IN → JUBLFOOD | -0.62% | -0.28% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → JUBLFOOD | -1.60 | events | -2.40% |
+| 1 | F_REPO_IN → JUBLFOOD | +1.00 | events | -1.80% |
+| 1 | F_FOOD_INFLATION_IN → JUBLFOOD | +2.00 | events | -1.20% |
+| 1 | F_URBAN_DEMAND → JUBLFOOD | +0.20 | events | +0.80% |
+| 2 | F_MONSOON → F_DAIRY → JUBLFOOD | -1.56 | events | -0.35% |
+| 1 | F_WHEAT → JUBLFOOD | -0.13 | observed | +0.08% |
+| 1 | F_USDINR → JUBLFOOD | -0.37 | observed | +0.07% |
+| 1 | F_BRENT → JUBLFOOD | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # JUBLFOOD — Jubilant FoodWorks Ltd., as of 2026-11-05

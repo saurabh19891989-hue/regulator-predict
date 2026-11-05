@@ -49,7 +49,7 @@ If Hormuz reopens/ceasefire holds, producers (Saudi, UAE) may raise quotas to re
 | COCHINSHIP | -0.4 | -0.3 | -0.1 | +0.1 | +0.0 |
 | GAIL | -0.4 | -0.8 | +0.4 | +0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 27%, 2: 27%, 3: 29%, 4: 17%
+Share of absolute impact by order: 1: 27%, 2: 27%, 3: 29%, 4: 18%
 
 ## Sources
 - 2026-11-01 OPEC+ 2027 quota decision Nov 29 (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=OPEC%2B+meeting+November+29+2027+quotas+when:120d&hl=en-IN&gl=IN&ceid=IN:en

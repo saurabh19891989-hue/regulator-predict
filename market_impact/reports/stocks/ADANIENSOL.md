@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.9%**, **12 months +3.1%** (rank 33 / 54 of 200 for 3m / 12m); beta 1.43
+- Expected relative return: **3 months +3.0%**, **12 months +3.3%** (rank 31 / 50 of 200 for 3m / 12m); beta 1.43
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +39.7%): 3 months 56%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.4% … P90 +8.9%; plausible 12m relative-return range incl. stock-specific noise: -46.3% … +56.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.1 pp (model impact +6.1% beta-adjusted vs realised market-adjusted move -9.5%); forward event exposure +0.9% (3m +1.5%; half assumed priced); company-specific events +1.5%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.0% … P90 +7.2%; plausible 12m relative-return range incl. stock-specific noise: -61.5% … +42.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.2 pp (model impact +6.5% beta-adjusted vs realised market-adjusted move -9.5%); forward event exposure +1.0% (3m +1.5%; half assumed priced); company-specific events +1.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -8.2% | -2.9% | -0.7 | -2.9 | -2.8 | -1.8 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +4.5% | +2.6% | +0.6 | +1.6 | +1.4 | +1.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ADANIENSOL | -6.16% | -6.16% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → ADANIENSOL | +4.00% | +4.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIENSOL | +7.00% | +3.50% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ADANIENSOL | -2.80% | -2.80% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → ADANIENSOL | +2.00% | +2.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → ADANIENSOL | -1.66% | -1.66% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ADANIENSOL | -1.59% | -1.59% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ADANIENSOL | -1.56% | -1.56% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → ADANIENSOL | +1.50% | +1.50% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ADANIENSOL | +1.40% | +1.40% |
 | 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → ADANIENSOL | +3.00% | +1.35% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → ADANIENSOL | -1.31% | -1.31% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → ADANIENSOL | +1.20% | +1.20% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ADANIENSOL | -1.20% | -1.20% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIENSOL | -4.18% | -1.17% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIENSOL | -5.23% | -0.94% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ADANIENSOL | -4.20% | -0.92% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → ADANIENSOL | +2.25% | +0.90% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → ADANIENSOL | +1.50% | +0.90% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIENSOL | -1.60% | -0.80% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIENSOL | -2.69% | -0.75% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIENSOL | -2.69% | -0.67% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ADANIENSOL | -1.00% | -0.60% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → ADANIENSOL | -0.86% | -0.58% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → ADANIENSOL | +1.40% | +0.49% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → ADANIENSOL | +1.20% | +0.48% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ADANIENSOL | -1.20% | -0.48% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_RENEWABLE_SUPPORT → ADANIENSOL | +1.50 | events | +6.00% |
+| 1 | F_FPI_FLOWS → ADANIENSOL | -1.60 | events | -4.48% |
+| 1 | F_GSEC_10Y_IN → ADANIENSOL | +1.70 | events | -3.40% |
+| 1 | F_POWER_DEMAND_IN → ADANIENSOL | +1.20 | events | +1.80% |
+| 1 | F_STEEL_INDIA → ADANIENSOL | +1.65 | events | -1.32% |
+| 1 | F_POWER_PRICE_IN → ADANIENSOL | +3.00 | events | +1.20% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → ADANIENSOL | +1.50 | events | +1.20% |
+| 1 | F_REPO_IN → ADANIENSOL | +1.00 | events | -1.20% |
+| 1 | F_CREDIT_SPREADS_IN → ADANIENSOL | +0.50 | events | -1.10% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → ADANIENSOL | +0.50 | events | +1.00% |
+| 1 | C_MIDEAST_CONFLICT → ADANIENSOL | +1.50 | events | -0.90% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ADANIENSOL | +1.20 | events | +0.72% |
 
 ## Analyst profile (agent research, sourced)
 # ADANIENSOL — Adani Energy Solutions Ltd. (as of 2026-11-05)

@@ -1,9 +1,9 @@
 {
  "nodes": 459,
  "new_nodes": 81,
- "edges": 2793,
+ "edges": 2808,
  "edges_by_layer": {
-  "company": 2349,
+  "company": 2364,
   "backbone": 329,
   "company_link": 61,
   "event_edges": 48,
@@ -12,7 +12,7 @@
  "edges_dropped_unknown_or_industry": 5,
  "events": 161,
  "occurred_events": 61,
- "profiles": 199,
+ "profiles": 200,
  "empirical_sign_conflicts": 3,
  "assumptions": {
   "damping": {
@@ -36,7 +36,7 @@
   "max_depth": 4,
   "overlap_damp": 0.5
  },
- "overlap_flags": 1225,
+ "overlap_flags": 1234,
  "events_zero_reach": [
   "EV_OPEC_HOLD_OCT_NOV",
   "EV_OPEC_NOV29_HOLD",
@@ -44,7 +44,7 @@
  ],
  "dead_end_drivers": [],
  "recent_state_drivers": {
-  "observed": 21,
+  "observed": 20,
   "from_events": 55
  }
 }

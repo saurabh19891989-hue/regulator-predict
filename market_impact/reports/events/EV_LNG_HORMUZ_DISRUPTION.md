@@ -23,14 +23,14 @@ Petronet LNG had no clarity on September Qatar cargoes (ET/BS 13 Aug); by 2 Nov 
 | JSWENERGY | +0.3 | +0.0 | +0.3 | +0.1 | -0.1 |
 | ADANIPOWER | +0.2 | +0.0 | +0.2 | +0.1 | -0.0 |
 | TATAPOWER | +0.2 | +0.0 | +0.3 | +0.0 | -0.1 |
+| NTPC | +0.2 | +0.0 | +0.2 | +0.0 | -0.1 |
 | PAYTM | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | ADANIENSOL | +0.1 | +0.0 | +0.1 | +0.0 | -0.1 |
 | ADANIENT | +0.1 | +0.0 | +0.2 | +0.0 | -0.1 |
+| NLCINDIA | +0.0 | +0.0 | +0.1 | +0.0 | -0.1 |
 | HDFCLIFE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | NATIONALUM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | MFSL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| SBILIFE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LICI | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -51,7 +51,7 @@ Petronet LNG had no clarity on September Qatar cargoes (ET/BS 13 Aug); by 2 Nov 
 | IDEA | -0.3 | +0.0 | -0.1 | -0.0 | -0.1 |
 | JINDALSTEL | -0.2 | +0.0 | -0.1 | -0.1 | -0.1 |
 
-Share of absolute impact by order: 1: 42%, 2: 19%, 3: 5%, 4: 34%
+Share of absolute impact by order: 1: 41%, 2: 20%, 3: 5%, 4: 34%
 
 ## Sources
 - 2026-11-02 About 90 Delayed Cargoes: Petronet plans to recover missing LNG (NDTV Profit) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=Petronet+LNG+delayed+cargoes+Qatar+when:120d&hl=en-IN&gl=IN&ceid=IN:en

@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -0.8%**, **12 months -2.8%** (rank 129 / 140 of 200 for 3m / 12m); beta 0.90
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.1%): 3 months 46%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.6% … P90 +1.0%; plausible 12m relative-return range incl. stock-specific noise: -27.5% … +26.5%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.1%): 3 months 46%, 12 months 35%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.7% … P90 +2.0%; plausible 12m relative-return range incl. stock-specific noise: -25.4% … +21.0%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.4 pp (model impact +0.7% beta-adjusted vs realised market-adjusted move -11.6%); forward event exposure -3.3% (3m -0.1%; half assumed priced); company-specific events -0.7%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.6% | +1.5% | +1.0 | +1.1 | +0.5 | -0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.4% | -1.4% | -0.9 | -0.4 | -0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → HDFCLIFE | -4.40% | -4.40% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HDFCLIFE | +5.00% | +2.50% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → HDFCLIFE | -4.90% | -2.45% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → HDFCLIFE | -8.00% | -2.24% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → HDFCLIFE | -10.00% | -1.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → HDFCLIFE | -1.19% | -1.19% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → HDFCLIFE | -1.19% | -1.19% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → HDFCLIFE | +1.00% | +1.00% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → HDFCLIFE | +1.00% | +1.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → HDFCLIFE | -0.96% | -0.96% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → HDFCLIFE | -0.94% | -0.94% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → HDFCLIFE | -0.92% | -0.92% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → HDFCLIFE | -2.40% | -0.86% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → HDFCLIFE | -0.80% | -0.80% |
-| 3 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → F_RISK_SENTIMENT → HDFCLIFE | +0.78% | +0.78% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → HDFCLIFE | -2.88% | -0.72% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → HDFCLIFE | -3.00% | -0.66% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → HDFCLIFE | +1.00% | +0.58% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCLIFE | -1.92% | -0.54% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → HDFCLIFE | +0.58% | +0.52% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → HDFCLIFE | +0.80% | +0.50% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCLIFE | -1.92% | -0.48% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HDFCLIFE | -1.49% | -0.42% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → HDFCLIFE | +0.80% | +0.40% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_RISK_SENTIMENT → HDFCLIFE | -6.00% | -0.38% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → HDFCLIFE | -1.60 | events | -3.20% |
+| 1 | F_GDP_IN → HDFCLIFE | +0.50 | events | +1.00% |
+| 1 | F_CPI_IN → HDFCLIFE | +1.15 | events | -0.92% |
+| 1 | F_GSEC_10Y_IN → HDFCLIFE | +1.70 | events | +0.85% |
+| 1 | F_REPO_IN → HDFCLIFE | +1.00 | events | -0.60% |
+| 1 | F_RISK_SENTIMENT → HDFCLIFE | +0.11 | observed | -0.22% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → HDFCLIFE | +0.30 | events | +0.14% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → HDFCLIFE | -1.56 | events | -0.12% |
+| 2 | F_LIQUIDITY_IN → F_DEPOSIT_GROWTH_IN → HDFCLIFE | -0.90 | events | +0.04% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → HDFCLIFE | +0.30 | events | +0.04% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → HDFCLIFE | -1.60 | events | +0.03% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → HDFCLIFE | +1.15 | events | -0.03% |
 
 ## Analyst profile (agent research, sourced)
 # HDFCLIFE - HDFC Life Insurance Company Ltd. (as of 2026-11-05)

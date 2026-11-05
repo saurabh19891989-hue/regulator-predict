@@ -38,6 +38,7 @@ Alternative outcome to on-time ECL start: RBI working group is 'still fine tunin
 | SUPREMEIND | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | BIOCON | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | JINDALSTEL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| NLCINDIA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | PERSISTENT | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | INDUSTOWER | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | LICI | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
@@ -47,9 +48,8 @@ Alternative outcome to on-time ECL start: RBI working group is 'still fine tunin
 | HDFCLIFE | -0.0 | +0.0 | -0.0 | -0.0 | +0.1 |
 | PIIND | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | TECHM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| WIPRO | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 53%, 2: 33%, 3: 9%, 4: 6%
+Share of absolute impact by order: 1: 52%, 2: 33%, 3: 9%, 4: 6%
 
 ## Sources
 - 2026-11-03 RBI to meet bank CEOs to review ECL preparedness (headline) https://www.business-standard.com/

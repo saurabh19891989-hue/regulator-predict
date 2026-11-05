@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.6%**, **12 months -3.3%** (rank 163 / 145 of 200 for 3m / 12m); beta 1.17
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +38.6%): 3 months 45%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.0% … P90 +2.3%; plausible 12m relative-return range incl. stock-specific noise: -39.9% … +33.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -6.7% beta-adjusted vs realised market-adjusted move -30.0%); forward event exposure -3.5% (3m -2.6%; half assumed priced); company-specific events -0.8%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +38.6%): 3 months 45%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.9% … P90 +3.5%; plausible 12m relative-return range incl. stock-specific noise: -34.2% … +54.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -6.7% beta-adjusted vs realised market-adjusted move -30.0%); forward event exposure -3.4% (3m -2.6%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,36 @@
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -5.5% | -2.0% | -1.8 | -1.8 | -1.7 | -0.3 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -9.9% | -1.8% | +0.0 | -9.2 | -0.4 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → SWIGGY | -6.60% | -6.60% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SWIGGY | +7.50% | +3.75% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → SWIGGY | -3.46% | -3.46% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → SWIGGY | -2.50% | -2.50% |
 | 1 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → SWIGGY | -3.00% | -2.40% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SWIGGY | -1.99% | -1.99% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → SWIGGY | +7.50% | +1.88% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → SWIGGY | +1.50% | +1.50% |
 | 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → SWIGGY | -5.00% | -1.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → SWIGGY | -1.50% | -1.50% |
 | 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → SWIGGY | -2.50% | -1.45% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SWIGGY | -4.48% | -1.25% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_FED_FUNDS → SWIGGY | -1.25% | -1.25% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_FOOD_INFLATION_IN → SWIGGY | -1.10% | -1.10% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → SWIGGY | -1.02% | -1.02% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SWIGGY | -5.60% | -1.01% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SWIGGY | -4.50% | -0.99% |
+| 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → SWIGGY | +3.75% | +0.94% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SWIGGY | -2.88% | -0.81% |
+| 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_FED_FUNDS → SWIGGY | -2.50% | -0.75% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → SWIGGY | -2.88% | -0.72% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → SWIGGY | -1.75% | -0.62% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → SWIGGY | +1.05% | +0.61% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SWIGGY | -1.50% | -0.60% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → SWIGGY | -1.60 | events | -4.80% |
+| 1 | F_FED_FUNDS → SWIGGY | +1.62 | observed | -4.05% |
+| 1 | F_FOOD_INFLATION_IN → SWIGGY | +2.00 | events | -2.00% |
+| 1 | F_REPO_IN → SWIGGY | +1.00 | events | -1.50% |
+| 1 | F_URBAN_DEMAND → SWIGGY | +0.20 | events | +0.80% |
+| 1 | F_BRENT → SWIGGY | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # SWIGGY (Swiggy Ltd.) - company profile as of 2026-11-05

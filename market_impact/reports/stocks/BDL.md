@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +4.6%**, **12 months +12.7%** (rank 15 / 3 of 200 for 3m / 12m); beta 1.40
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +40.7%): 3 months 59%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +8.7% … P90 +18.9%; plausible 12m relative-return range incl. stock-specific noise: -21.4% … +65.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.5 pp (model impact +11.0% beta-adjusted vs realised market-adjusted move -17.5%); forward event exposure +12.8% (3m +4.0%; half assumed priced); company-specific events +4.0%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +40.7%): 3 months 59%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +9.4% … P90 +25.8%; plausible 12m relative-return range incl. stock-specific noise: -33.3% … +80.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.5 pp (model impact +11.0% beta-adjusted vs realised market-adjusted move -17.5%); forward event exposure +12.9% (3m +4.0%; half assumed priced); company-specific events +4.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -1.1 | +0.2 | +0.1 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.2% | +0.7% | +0.5 | +0.3 | +0.2 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_DAC_APPROVALS_H2_26 ⇒ P_DEFENCE_PROCUREMENT → BDL | +5.00% | +5.00% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → BDL | +5.00% | +4.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → BDL | +1.50% | +1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → BDL | -1.25% | -1.25% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BDL | -4.00% | -1.12% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → BDL | +1.20% | +1.08% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BDL | -1.08% | -1.08% |
 | 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → BDL | +1.80% | +0.90% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → BDL | -5.00% | -0.90% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → BDL | -0.80% | -0.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BDL | -0.79% | -0.79% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → BDL | -0.60% | -0.60% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → BDL | -0.59% | -0.59% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → BDL | -0.53% | -0.53% |
 | 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ P_DEFENCE_PROCUREMENT → BDL | +1.00% | +0.50% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → BDL | -1.20% | -0.43% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BDL | +0.90% | +0.40% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → BDL | -1.44% | -0.36% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → BDL | +0.36% | +0.32% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → BDL | +0.50% | +0.29% |
+| 1 | EV_INDIA_PAK_CRISIS ⇒ C_INDIA_PAKISTAN → BDL | +3.00% | +0.27% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → BDL | +0.40% | +0.25% |
+| 1 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → BDL | +0.80% | +0.24% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BDL | -0.60% | -0.24% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_DEFENCE_PROCUREMENT → BDL | +1.00 | events | +5.00% |
+| 1 | F_GOVT_CAPEX → BDL | +1.00 | events | +1.50% |
+| 1 | C_RUSSIA → BDL | +1.00 | events | -0.80% |
+| 1 | F_REPO_IN → BDL | +1.00 | events | -0.60% |
+| 1 | F_ALUMINIUM → BDL | -1.96 | observed | -0.59% |
+| 2 | P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → BDL | +1.00 | events | +0.36% |
+| 1 | F_USDINR → BDL | -0.37 | observed | +0.30% |
+| 1 | F_RISK_SENTIMENT → BDL | +0.11 | observed | -0.11% |
+| 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BDL | -0.30 | events | +0.04% |
+| 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → BDL | -0.10 | events | +0.02% |
+| 3 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → F_SEMICONDUCTOR_SUPPLY → BDL | -0.10 | events | +0.01% |
 
 ## Analyst profile (agent research, sourced)
 # BDL - Bharat Dynamics Ltd. (Defence PSU, missiles)

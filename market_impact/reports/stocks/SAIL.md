@@ -2,10 +2,10 @@
 *MIDCAP_100 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +5.5%**, **12 months +11.7%** (rank 9 / 5 of 200 for 3m / 12m); beta 1.29
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.7%): 3 months 64%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.8% … P90 +25.0%; plausible 12m relative-return range incl. stock-specific noise: -24.9% … +50.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.8 pp (model impact +7.6% beta-adjusted vs realised market-adjusted move -23.2%); forward event exposure +19.0% (3m +7.9%; half assumed priced); company-specific events -0.8%
+- Expected relative return: **3 months +5.5%**, **12 months +11.8%** (rank 9 / 7 of 200 for 3m / 12m); beta 1.29
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.7%): 3 months 64%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +5.6% … P90 +26.4%; plausible 12m relative-return range incl. stock-specific noise: -17.4% … +52.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.8 pp (model impact +7.6% beta-adjusted vs realised market-adjusted move -23.2%); forward event exposure +19.0% (3m +8.0%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +4.5% | +1.6% | +0.0 | -3.0 | +4.9 | +2.6 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +1.5% | +1.5% | +0.0 | -0.9 | +1.6 | +0.9 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → SAIL | +21.00% | +21.00% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_COKING_COAL → SAIL | -13.36% | -13.36% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_COKING_COAL → SAIL | -9.60% | -9.60% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → SAIL | +6.00% | +6.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → SAIL | +5.28% | +5.28% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → SAIL | +6.00% | +3.30% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → SAIL | +2.50% | +2.50% |
-| 1 | EV_EU_STEEL_REGIME_CBAM_HITS_INDIA ⇒ F_STEEL_INDIA → SAIL | -2.25% | -2.25% |
 | 1 | EV_UNION_BUDGET_FEB27_METALS ⇒ F_COKING_COAL → SAIL | +2.40% | +2.16% |
 | 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → SAIL | -7.40% | -1.85% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SAIL | -1.80% | -1.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SAIL | +2.00% | +1.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SAIL | -1.59% | -1.59% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → SAIL | +1.56% | +1.56% |
-| 3 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → F_STEEL_INDIA → SAIL | -1.42% | -1.42% |
+| 1 | EV_STEEL_SAFEGUARD_EARLY_RELAXATION ⇒ F_STEEL_INDIA → SAIL | -7.50% | -1.12% |
+| 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → SAIL | -4.50% | -1.12% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COKING_COAL → SAIL | -3.20% | -1.12% |
+| 2 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → SAIL | +2.22% | +1.11% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → SAIL | +2.67% | +0.95% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → SAIL | -1.60% | -0.93% |
+| 2 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → SAIL | +1.80% | +0.90% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ P_STEEL_DUTY_IN → SAIL | +1.60% | +0.88% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → SAIL | +0.96% | +0.86% |
+| 3 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → F_STEEL_INDIA → SAIL | -1.55% | -0.78% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_STEEL_INDIA → SAIL | +0.84% | +0.76% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_STEEL_INDIA → SAIL | +1.65 | events | +24.75% |
+| 1 | F_COKING_COAL → SAIL | +2.87 | events | -22.96% |
+| 1 | F_GOVT_CAPEX → SAIL | +1.00 | events | +2.50% |
+| 1 | F_REPO_IN → SAIL | +1.00 | events | -1.20% |
+| 1 | F_IRON_ORE → SAIL | -0.83 | observed | -0.42% |
+| 1 | F_GDP_IN → SAIL | +0.50 | events | +0.40% |
+| 2 | F_STEEL_INDIA → P_STEEL_DUTY_IN → SAIL | +1.65 | events | -0.40% |
+| 1 | F_USDINR → SAIL | -0.37 | observed | -0.37% |
+| 3 | F_CHINA_GDP → F_CHINA_STEEL_EXPORTS → P_STEEL_DUTY_IN → SAIL | +0.30 | events | -0.05% |
+| 3 | F_USDCNY → F_CHINA_STEEL_EXPORTS → P_STEEL_DUTY_IN → SAIL | -0.47 | observed | -0.03% |
+| 3 | C_US_CHINA_DECOUPLING → F_CHINA_STEEL_EXPORTS → P_STEEL_DUTY_IN → SAIL | -0.10 | events | -0.01% |
 
 ## Analyst profile (agent research, sourced)
 # SAIL — Steel Authority of India Ltd. (Midcap 100, I_STEEL) — as of 2026-11-05

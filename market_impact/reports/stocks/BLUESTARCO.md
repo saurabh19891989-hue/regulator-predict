@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.8%**, **12 months +3.6%** (rank 49 / 48 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.9%): 3 months 55%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.6% … P90 +6.3%; plausible 12m relative-return range incl. stock-specific noise: -38.9% … +25.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.5 pp (model impact +7.0% beta-adjusted vs realised market-adjusted move -3.4%); forward event exposure +2.0% (3m +0.3%; half assumed priced); company-specific events +0.5%
+- Expected relative return: **3 months +1.8%**, **12 months +3.6%** (rank 47 / 45 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.9%): 3 months 55%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.3% … P90 +8.1%; plausible 12m relative-return range incl. stock-specific noise: -22.9% … +46.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.5 pp (model impact +7.0% beta-adjusted vs realised market-adjusted move -3.4%); forward event exposure +2.0% (3m +0.4%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.1% | +1.0% | +0.8 | +0.2 | +0.1 | +0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -4.3% | -1.0% | -3.1 | -0.9 | -0.3 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → BLUESTARCO | -2.82% | -2.82% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → BLUESTARCO | +1.37% | +1.37% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BLUESTARCO | -1.12% | -1.12% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → BLUESTARCO | +1.00% | +1.00% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → BLUESTARCO | -0.73% | -0.73% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → BLUESTARCO | +0.80% | +0.72% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BLUESTARCO | -0.72% | -0.72% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → BLUESTARCO | +0.67% | +0.67% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → BLUESTARCO | -2.16% | -0.60% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → BLUESTARCO | +0.60% | +0.60% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → BLUESTARCO | -0.55% | -0.55% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BLUESTARCO | -2.34% | -0.51% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → BLUESTARCO | -1.42% | -0.51% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → BLUESTARCO | +0.85% | +0.50% |
-| 2 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → T_DATA_CENTRES_IN → BLUESTARCO | +0.48% | +0.48% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → BLUESTARCO | +0.83% | +0.41% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BLUESTARCO | -0.64% | -0.32% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → BLUESTARCO | -0.88% | -0.31% |
+| 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → BLUESTARCO | -0.60% | -0.27% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BLUESTARCO | +0.60% | +0.27% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → BLUESTARCO | -0.86% | -0.24% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BLUESTARCO | -0.40% | -0.24% |
+| 2 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → F_URBAN_DEMAND → BLUESTARCO | +0.29% | +0.23% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_USDINR → BLUESTARCO | -3.41% | -0.21% |
+| 2 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → T_DATA_CENTRES_IN → BLUESTARCO | +0.24% | +0.20% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_ALUMINIUM → BLUESTARCO | -1.96 | observed | +1.37% |
+| 1 | F_GSEC_10Y_IN → BLUESTARCO | +1.70 | events | -1.36% |
+| 1 | F_GOVT_CAPEX → BLUESTARCO | +1.00 | events | +1.00% |
+| 1 | F_USDINR → BLUESTARCO | -0.37 | observed | +0.66% |
+| 1 | F_URBAN_DEMAND → BLUESTARCO | +0.20 | events | +0.60% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → BLUESTARCO | +1.00 | events | +0.48% |
+| 1 | F_COPPER → BLUESTARCO | -0.24 | observed | +0.36% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → BLUESTARCO | +1.00 | events | -0.31% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → BLUESTARCO | +1.70 | events | -0.31% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → BLUESTARCO | +0.50 | events | +0.25% |
+| 2 | F_AI_CAPEX → T_DATA_CENTRES_IN → BLUESTARCO | -0.30 | events | -0.22% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → BLUESTARCO | +1.00 | events | +0.20% |
 
 ## Analyst profile (agent research, sourced)
 # BLUESTARCO - Blue Star Ltd. (midcap, air conditioning / MEP)

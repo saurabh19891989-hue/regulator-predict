@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.5%**, **12 months +0.2%** (rank 87 / 97 of 200 for 3m / 12m); beta 0.95
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 51%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.8% … P90 +2.0%; plausible 12m relative-return range incl. stock-specific noise: -32.2% … +36.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +2.5% beta-adjusted vs realised market-adjusted move +13.4%); forward event exposure +1.3% (3m +0.7%; half assumed priced); company-specific events +1.5%
+- Expected relative return: **3 months +0.5%**, **12 months +0.2%** (rank 87 / 98 of 200 for 3m / 12m); beta 0.95
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 51%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +2.1%; plausible 12m relative-return range incl. stock-specific noise: -29.7% … +40.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +2.5% beta-adjusted vs realised market-adjusted move +13.4%); forward event exposure +1.3% (3m +0.8%; half assumed priced); company-specific events +1.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.5 | -0.3 | -0.1 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.9% | +0.9% | +0.0 | +0.4 | +0.3 | +0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → LGEINDIA | -2.35% | -2.35% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → LGEINDIA | -1.76% | -1.76% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → LGEINDIA | -1.26% | -1.26% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LGEINDIA | +2.00% | +1.00% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → LGEINDIA | +0.90% | +0.72% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → LGEINDIA | +0.60% | +0.60% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → LGEINDIA | +0.55% | +0.55% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → LGEINDIA | -0.55% | -0.55% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → LGEINDIA | -0.48% | -0.48% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → LGEINDIA | -0.47% | -0.47% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → LGEINDIA | -1.95% | -0.43% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → LGEINDIA | -1.19% | -0.42% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → LGEINDIA | +0.71% | +0.41% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → LGEINDIA | +0.40% | +0.40% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → LGEINDIA | -0.40% | -0.40% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → LGEINDIA | +1.30% | +0.36% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → LGEINDIA | -0.72% | -0.36% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LGEINDIA | -1.19% | -0.33% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → LGEINDIA | +0.45% | +0.29% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → LGEINDIA | -0.45% | -0.27% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LGEINDIA | -1.49% | -0.27% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → LGEINDIA | -1.20% | -0.26% |
+| 2 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → F_URBAN_DEMAND → LGEINDIA | +0.29% | +0.23% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → LGEINDIA | -0.77% | -0.22% |
+| 1 | EV_CHINA_FDI_EASING_PN3 ⇒ T_CHINA_PLUS_ONE → LGEINDIA | +0.30% | +0.21% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → LGEINDIA | +1.70 | events | -1.53% |
+| 1 | F_FPI_FLOWS → LGEINDIA | -1.60 | events | -1.28% |
+| 1 | F_URBAN_DEMAND → LGEINDIA | +0.20 | events | +0.60% |
+| 1 | F_USDINR → LGEINDIA | -0.37 | observed | +0.55% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → LGEINDIA | +1.00 | events | -0.25% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → LGEINDIA | +1.70 | events | -0.24% |
+| 1 | F_COPPER → LGEINDIA | -0.24 | observed | +0.24% |
+| 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → LGEINDIA | -0.60 | events | +0.22% |
+| 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → LGEINDIA | +0.50 | events | +0.15% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → LGEINDIA | +0.50 | events | +0.14% |
+| 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → LGEINDIA | -0.30 | events | +0.13% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → LGEINDIA | +1.00 | events | -0.10% |
 
 ## Analyst profile (agent research, sourced)
 # LGEINDIA - LG Electronics India Ltd. (midcap, appliances and consumer electronics)

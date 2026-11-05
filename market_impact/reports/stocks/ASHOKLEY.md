@@ -2,9 +2,9 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.0%**, **12 months +2.8%** (rank 99 / 57 of 200 for 3m / 12m); beta 1.35
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.6%): 3 months 50%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.2% … P90 +8.7%; plausible 12m relative-return range incl. stock-specific noise: -34.5% … +45.8%
+- Expected relative return: **3 months -0.0%**, **12 months +2.8%** (rank 98 / 56 of 200 for 3m / 12m); beta 1.35
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.6%): 3 months 50%, 12 months 65%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +11.1%; plausible 12m relative-return range incl. stock-specific noise: -14.5% … +45.2%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +7.2% beta-adjusted vs realised market-adjusted move +8.0%); forward event exposure +8.8% (3m +2.4%; half assumed priced); company-specific events -0.9%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.2 | -0.0 | -0.3 | -0.0 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.2% | +1.2% | +0.0 | +0.9 | +0.1 | +0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ASHOKLEY | -7.43% | -7.43% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → ASHOKLEY | +3.00% | +3.00% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → ASHOKLEY | -2.52% | -2.52% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ASHOKLEY | +2.40% | +2.16% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ASHOKLEY | -2.16% | -2.16% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → ASHOKLEY | +1.76% | +1.76% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → ASHOKLEY | +1.75% | +1.75% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ASHOKLEY | -1.59% | -1.59% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ASHOKLEY | -3.75% | -1.34% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ASHOKLEY | +2.25% | +1.31% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → ASHOKLEY | -1.20% | -1.20% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ASHOKLEY | -1.20% | -1.20% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → ASHOKLEY | -1.18% | -1.18% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → ASHOKLEY | -1.04% | -1.04% |
-| 3 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → F_GDP_IN → ASHOKLEY | -0.85% | -0.85% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ASHOKLEY | +1.80% | +0.81% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → ASHOKLEY | +0.93% | +0.63% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → ASHOKLEY | -5.25% | -0.63% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → ASHOKLEY | -9.00% | -0.56% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → ASHOKLEY | +0.70% | +0.56% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ASHOKLEY | -1.20% | -0.48% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_GDP_IN → ASHOKLEY | +0.67% | +0.47% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ASHOKLEY | +0.80% | +0.46% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → ASHOKLEY | +0.50% | +0.45% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ASHOKLEY | +0.72% | +0.43% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → ASHOKLEY | -0.72% | -0.40% |
+| 2 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → F_GDP_IN → ASHOKLEY | +0.67% | +0.37% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → ASHOKLEY | +1.00 | events | +3.00% |
+| 1 | F_STEEL_INDIA → ASHOKLEY | +1.65 | events | -2.97% |
+| 1 | F_ALUMINIUM → ASHOKLEY | -1.96 | observed | +1.77% |
+| 1 | F_GDP_IN → ASHOKLEY | +0.50 | events | +1.75% |
+| 1 | C_MIDEAST_CONFLICT → ASHOKLEY | +1.50 | events | -1.20% |
+| 1 | F_REPO_IN → ASHOKLEY | +1.00 | events | -1.20% |
+| 1 | P_EV_POLICY → ASHOKLEY | +1.10 | events | +0.66% |
+| 1 | F_USDINR → ASHOKLEY | -0.37 | observed | -0.11% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → ASHOKLEY | +0.50 | events | +0.06% |
+| 2 | F_CHINA_GDP → F_RUBBER → ASHOKLEY | +0.30 | events | -0.05% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → ASHOKLEY | -0.25 | events | -0.03% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → ASHOKLEY | +1.00 | events | -0.03% |
 
 ## Analyst profile (agent research, sourced)
 # ASHOKLEY - Ashok Leyland (Capital Goods / commercial vehicles)

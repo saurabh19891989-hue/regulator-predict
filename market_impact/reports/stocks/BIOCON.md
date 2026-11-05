@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.0%**, **12 months -2.4%** (rank 131 / 135 of 200 for 3m / 12m); beta 1.01
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.3%): 3 months 47%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.0% … P90 +4.5%; plausible 12m relative-return range incl. stock-specific noise: -37.0% … +38.4%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.3%): 3 months 47%, 12 months 35%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.6% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -42.1% … +22.2%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -8.7% beta-adjusted vs realised market-adjusted move -19.6%); forward event exposure -0.8% (3m -1.0%; half assumed priced); company-specific events -1.7%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.3% | +1.3% | +1.3 | +0.1 | -0.0 | -0.1 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -2.2% | -0.9% | -1.9 | -0.2 | -0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → BIOCON | +7.82% | +7.82% |
-| 1 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → BIOCON | -4.00% | -4.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → BIOCON | -3.37% | -3.37% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → BIOCON | -3.30% | -3.30% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BIOCON | -2.10% | -2.10% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BIOCON | -1.99% | -1.99% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BIOCON | +3.75% | +1.88% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → BIOCON | -1.85% | -1.85% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → BIOCON | +1.80% | +1.80% |
-| 1 | EV_US_PHARMA_232_SEP26 ⇒ P_US_PHARMA_TARIFF → BIOCON | -1.50% | -1.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → BIOCON | -1.50% | -1.50% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BIOCON | +6.50% | +1.43% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → BIOCON | +3.95% | +1.41% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → BIOCON | -2.37% | -1.38% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → BIOCON | -1.33% | -1.33% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → BIOCON | -4.50% | -1.12% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → BIOCON | -9.00% | -1.08% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → BIOCON | +3.00% | +0.75% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → BIOCON | +2.40% | +0.67% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → BIOCON | -2.24% | -0.63% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → BIOCON | -1.70% | -0.61% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BIOCON | -1.50% | -0.60% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BIOCON | -1.20% | -0.60% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → BIOCON | -2.00% | -0.60% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_USDINR → BIOCON | +9.48% | +0.59% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → BIOCON | +1.02% | +0.59% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_USFDA_ENFORCEMENT → BIOCON | +1.00 | events | -4.00% |
+| 1 | F_GSEC_10Y_IN → BIOCON | +1.70 | events | -2.55% |
+| 1 | F_FPI_FLOWS → BIOCON | -1.60 | events | -2.40% |
+| 1 | F_USDINR → BIOCON | -0.37 | observed | -1.85% |
+| 1 | F_US_GDP → BIOCON | +1.20 | events | +1.80% |
+| 1 | F_FED_FUNDS → BIOCON | +1.62 | observed | -1.62% |
+| 1 | P_US_PHARMA_TARIFF → BIOCON | +0.50 | events | -1.50% |
+| 1 | F_REPO_IN → BIOCON | +1.00 | events | -1.50% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → BIOCON | +1.00 | events | +0.50% |
+| 1 | F_EU_GDP → BIOCON | +0.22 | events | +0.18% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → BIOCON | +0.50 | events | +0.15% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → BIOCON | +0.40 | events | -0.08% |
 
 ## Analyst profile (agent research, sourced)
 # BIOCON - Biocon Ltd. (Midcap 100, biosimilars)

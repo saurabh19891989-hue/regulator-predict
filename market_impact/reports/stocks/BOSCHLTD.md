@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.7%**, **12 months -2.3%** (rank 145 / 131 of 200 for 3m / 12m); beta 1.10
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 45%, 12 months 32%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.9% … P90 +3.0%; plausible 12m relative-return range incl. stock-specific noise: -41.7% … +18.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.4 pp (model impact -2.8% beta-adjusted vs realised market-adjusted move +35.7%); forward event exposure -1.0% (3m -1.1%; half assumed priced); company-specific events +1.5%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 45%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.7% … P90 +2.9%; plausible 12m relative-return range incl. stock-specific noise: -33.0% … +32.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.4 pp (model impact -2.8% beta-adjusted vs realised market-adjusted move +35.7%); forward event exposure -0.9% (3m -1.1%; half assumed priced); company-specific events +1.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics (`EV_RARE_EARTH_CONTROLS_REIMPOSED`) | risk_scenario | 0.25 | -4.5% | -1.1% | -1.2 | -3.6 | +0.1 | +0.1 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +1.1% | +1.1% | +1.1 | +0.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BOSCHLTD | -2.80% | -2.80% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → BOSCHLTD | -2.48% | -2.48% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → BOSCHLTD | -2.40% | -2.40% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → BOSCHLTD | -1.26% | -1.26% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → BOSCHLTD | -1.05% | -1.05% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → BOSCHLTD | +0.98% | +0.98% |
-| 1 | EV_PM_EDRIVE_EXT ⇒ P_EV_POLICY → BOSCHLTD | -0.90% | -0.90% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_AUTO_DEMAND_IN → BOSCHLTD | -0.89% | -0.89% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → BOSCHLTD | -0.88% | -0.88% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | +2.88% | +0.81% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BOSCHLTD | -1.60% | -0.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → BOSCHLTD | -0.78% | -0.78% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_GSEC_10Y_IN → BOSCHLTD | -0.78% | -0.78% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → BOSCHLTD | -2.88% | -0.72% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BOSCHLTD | -0.66% | -0.66% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BOSCHLTD | -1.00% | -0.60% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → BOSCHLTD | -0.48% | -0.46% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BOSCHLTD | -1.25% | -0.45% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → BOSCHLTD | -2.00% | -0.44% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → BOSCHLTD | +0.75% | +0.44% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → BOSCHLTD | +0.59% | +0.41% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → BOSCHLTD | -0.40% | -0.36% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → BOSCHLTD | -0.60% | -0.36% |
+| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → BOSCHLTD | +0.60% | +0.34% |
+| 2 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → BOSCHLTD | +0.59% | +0.32% |
+| 1 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | -1.20% | -0.30% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BOSCHLTD | -1.30% | -0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → BOSCHLTD | +1.70 | events | -3.40% |
+| 1 | P_EV_POLICY → BOSCHLTD | +1.10 | events | -3.30% |
+| 1 | F_STEEL_INDIA → BOSCHLTD | +1.65 | events | -1.49% |
+| 1 | F_ALUMINIUM → BOSCHLTD | -1.96 | observed | +0.98% |
+| 1 | F_AUTO_DEMAND_IN → BOSCHLTD | -0.10 | events | -0.60% |
+| 1 | F_REPO_IN → BOSCHLTD | +1.00 | events | -0.50% |
+| 1 | F_USDINR → BOSCHLTD | -0.37 | observed | +0.37% |
+| 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | -0.30 | events | +0.29% |
+| 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | -0.10 | events | +0.13% |
+| 1 | F_COPPER → BOSCHLTD | -0.24 | observed | +0.07% |
+| 3 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | -0.10 | events | +0.04% |
+| 1 | F_BRENT → BOSCHLTD | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Bosch Ltd. (BOSCHLTD) — Market Impact profile, 2026-11-05

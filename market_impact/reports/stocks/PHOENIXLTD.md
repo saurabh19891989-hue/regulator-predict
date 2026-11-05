@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -4.0%**, **12 months -6.8%** (rank 182 / 178 of 200 for 3m / 12m); beta 1.29
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.8%): 3 months 36%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.9% … P90 -2.1%; plausible 12m relative-return range incl. stock-specific noise: -28.8% … +24.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.8%): 3 months 36%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.2% … P90 -3.4%; plausible 12m relative-return range incl. stock-specific noise: -41.7% … +18.6%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.1 pp (model impact -6.2% beta-adjusted vs realised market-adjusted move +14.8%); forward event exposure -6.8% (3m -3.9%; half assumed priced); company-specific events +1.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.3% | -2.3% | +0.0 | -1.7 | -0.4 | -0.2 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -8.2% | -2.3% | +0.0 | -6.4 | -1.4 | -0.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → PHOENIXLTD | -5.50% | -5.50% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → PHOENIXLTD | -3.50% | -3.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PHOENIXLTD | +6.25% | +3.12% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → PHOENIXLTD | -3.00% | -3.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → PHOENIXLTD | -2.66% | -2.66% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → PHOENIXLTD | -1.99% | -1.99% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → PHOENIXLTD | -1.49% | -1.49% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → PHOENIXLTD | +1.25% | +1.25% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PHOENIXLTD | -3.00% | -1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → PHOENIXLTD | -1.17% | -1.17% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → PHOENIXLTD | -1.10% | -1.10% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → PHOENIXLTD | +1.07% | +1.07% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PHOENIXLTD | -3.73% | -1.05% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → PHOENIXLTD | -2.00% | -1.00% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_GSEC_10Y_IN → PHOENIXLTD | -0.97% | -0.97% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PHOENIXLTD | -4.67% | -0.84% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → PHOENIXLTD | -3.75% | -0.82% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → PHOENIXLTD | -3.00% | -0.81% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → PHOENIXLTD | -1.25% | -0.75% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → PHOENIXLTD | -1.20% | -0.72% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → PHOENIXLTD | -2.40% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → PHOENIXLTD | -3.00% | -0.66% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → PHOENIXLTD | -2.40% | -0.60% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → PHOENIXLTD | -0.60% | -0.57% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → PHOENIXLTD | -2.50% | -0.55% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → PHOENIXLTD | -0.76% | -0.49% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → PHOENIXLTD | +1.70 | events | -4.25% |
+| 1 | F_FPI_FLOWS → PHOENIXLTD | -1.60 | events | -4.00% |
+| 1 | F_REPO_IN → PHOENIXLTD | +1.00 | events | -3.00% |
+| 1 | F_GDP_IN → PHOENIXLTD | +0.50 | events | +0.60% |
+| 1 | F_CPI_IN → PHOENIXLTD | +1.15 | events | -0.57% |
+| 1 | F_URBAN_DEMAND → PHOENIXLTD | +0.20 | events | +0.40% |
+| 1 | F_STEEL_INDIA → PHOENIXLTD | +1.65 | events | -0.33% |
+| 1 | F_US_TECH_SPEND → PHOENIXLTD | -0.60 | events | -0.24% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → PHOENIXLTD | +1.70 | events | -0.10% |
+| 2 | C_MIDEAST_CONFLICT → F_TRAVEL_DEMAND → PHOENIXLTD | +1.50 | events | -0.09% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → PHOENIXLTD | +1.00 | events | -0.05% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → PHOENIXLTD | +1.00 | events | -0.04% |
 
 ## Analyst profile (agent research, sourced)
 # Phoenix Mills (PHOENIXLTD) - profile as of 2026-11-05

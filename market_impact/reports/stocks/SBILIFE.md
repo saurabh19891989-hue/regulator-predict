@@ -2,10 +2,10 @@
 *NIFTY_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.4%**, **12 months -1.4%** (rank 112 / 123 of 200 for 3m / 12m); beta 0.92
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.8%): 3 months 48%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.9% … P90 +2.1%; plausible 12m relative-return range incl. stock-specific noise: -29.8% … +13.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.1 pp (model impact +0.2% beta-adjusted vs realised market-adjusted move -8.5%); forward event exposure -0.1% (3m +1.2%; half assumed priced); company-specific events -0.5%
+- Expected relative return: **3 months -0.3%**, **12 months -1.3%** (rank 112 / 123 of 200 for 3m / 12m); beta 0.92
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.8%): 3 months 49%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.8% … P90 +1.5%; plausible 12m relative-return range incl. stock-specific noise: -36.8% … +21.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.1 pp (model impact +0.2% beta-adjusted vs realised market-adjusted move -8.5%); forward event exposure -0.0% (3m +1.2%; half assumed priced); company-specific events -0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.5 | +0.1 | +0.1 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.2% | +1.2% | +1.2 | -0.0 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → SBILIFE | -5.50% | -5.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SBILIFE | +6.25% | +3.12% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → SBILIFE | -6.00% | -1.68% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → SBILIFE | -1.49% | -1.49% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → SBILIFE | -7.50% | -1.35% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → SBILIFE | +1.25% | +1.25% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → SBILIFE | +1.00% | +1.00% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → SBILIFE | -1.75% | -0.88% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → SBILIFE | -0.85% | -0.85% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SBILIFE | -3.75% | -0.82% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → SBILIFE | -0.80% | -0.80% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_FPI_FLOWS → SBILIFE | -0.77% | -0.77% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_FPI_FLOWS → SBILIFE | -0.75% | -0.75% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → SBILIFE | -0.74% | -0.74% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → SBILIFE | -0.72% | -0.72% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBILIFE | -2.40% | -0.67% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → SBILIFE | -1.80% | -0.64% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBILIFE | -2.40% | -0.60% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → SBILIFE | -2.16% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SBILIFE | -1.87% | -0.52% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → SBILIFE | +0.58% | +0.52% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → SBILIFE | +1.25% | +0.44% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → SBILIFE | +0.75% | +0.44% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SBILIFE | -2.33% | -0.42% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → SBILIFE | +0.50% | +0.40% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → SBILIFE | -1.60 | events | -4.00% |
+| 1 | F_GDP_IN → SBILIFE | +0.50 | events | +1.00% |
+| 1 | F_CPI_IN → SBILIFE | +1.15 | events | -0.69% |
+| 1 | F_GSEC_10Y_IN → SBILIFE | +1.70 | events | +0.51% |
+| 1 | F_REPO_IN → SBILIFE | +1.00 | events | -0.50% |
+| 1 | F_RISK_SENTIMENT → SBILIFE | +0.11 | observed | -0.17% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → SBILIFE | +0.30 | events | +0.14% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → SBILIFE | +0.30 | events | +0.03% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → SBILIFE | -1.60 | events | +0.02% |
+| 3 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → SBILIFE | -0.10 | events | -0.01% |
+| 4 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → F_DOMESTIC_FLOWS → SBILIFE | -0.10 | events | -0.00% |
+| 1 | F_BRENT → SBILIFE | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # SBILIFE - SBI Life Insurance (as of 2026-11-05)

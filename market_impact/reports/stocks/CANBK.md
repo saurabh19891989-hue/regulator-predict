@@ -2,9 +2,9 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.6%**, **12 months -4.1%** (rank 120 / 152 of 200 for 3m / 12m); beta 1.27
+- Expected relative return: **3 months -0.5%**, **12 months -4.1%** (rank 121 / 152 of 200 for 3m / 12m); beta 1.27
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.0%): 3 months 48%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.7% … P90 -0.2%; plausible 12m relative-return range incl. stock-specific noise: -25.4% … +16.6%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.3% … P90 +1.3%; plausible 12m relative-return range incl. stock-specific noise: -32.6% … +23.6%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -2.1% beta-adjusted vs realised market-adjusted move -10.3%); forward event exposure -1.9% (3m +0.9%; half assumed priced); company-specific events -4.0%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | RBI tightens gold-loan / unsecured and NBFC-bank lending norms after early stress (`EV_RBI_GOLD_LOAN_TIGHTEN`) | risk_scenario | 0.30 | -6.2% | -1.9% | -4.6 | -1.6 | +0.0 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.3 | -0.4 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → CANBK | -5.28% | -5.28% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CANBK | +6.00% | +3.00% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → CANBK | -4.50% | -2.79% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → CANBK | -2.52% | -2.52% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → CANBK | -3.50% | -2.17% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → CANBK | -1.43% | -1.43% |
 | 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → CANBK | -4.50% | -1.35% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → CANBK | -1.25% | -1.25% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → CANBK | +1.20% | +1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → CANBK | -1.13% | -1.13% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → CANBK | +1.12% | +1.12% |
 | 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → CANBK | +2.70% | +1.03% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CANBK | -3.58% | -1.00% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → CANBK | -0.94% | -0.94% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → CANBK | -0.82% | -0.82% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CANBK | -4.48% | -0.81% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → CANBK | -3.60% | -0.79% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → CANBK | -1.44% | -0.72% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → CANBK | -2.30% | -0.65% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → CANBK | +0.64% | +0.58% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → CANBK | -2.30% | -0.58% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → CANBK | -0.90% | -0.54% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → CANBK | +1.20% | +0.42% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → CANBK | -0.43% | -0.41% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → CANBK | -1.60 | events | -3.84% |
+| 1 | F_GSEC_10Y_IN → CANBK | +1.70 | events | -3.06% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → CANBK | +0.50 | events | +1.12% |
+| 1 | F_GOVT_CAPEX → CANBK | +1.00 | events | +0.80% |
+| 1 | F_MONSOON → CANBK | -1.56 | events | -0.62% |
+| 1 | F_GOLD → CANBK | -1.05 | observed | -0.52% |
+| 1 | F_REPO_IN → CANBK | +1.00 | events | +0.40% |
+| 1 | F_LIQUIDITY_IN → CANBK | -0.90 | events | -0.36% |
+| 2 | F_GDP_IN → P_RBI_PRUDENTIAL → CANBK | +0.50 | events | -0.36% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → CANBK | -0.25 | events | -0.28% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → CANBK | +1.00 | events | -0.28% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → CANBK | +0.50 | events | +0.20% |
 
 ## Analyst profile (agent research, sourced)
 # Canara Bank (CANBK) - Market Impact profile, as of 2026-11-05

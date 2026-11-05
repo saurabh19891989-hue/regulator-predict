@@ -53,7 +53,7 @@ Council avoided mid-year rate changes and instead approved structural reforms: a
 | LICHSGFIN | -0.0 | +0.0 | +0.1 | -0.0 | -0.0 |
 | ADANIENSOL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 30%, 2: 28%, 3: 29%, 4: 12%
+Share of absolute impact by order: 1: 30%, 2: 28%, 3: 30%, 4: 12%
 
 ## Sources
 - 2026-10-08 Recommendations of the 57th Meeting of the GST Council - PIB https://news.google.com/rss/search?q=57th+GST+Council+meeting+key+highlights+when:120d&hl=en-IN&gl=IN&ceid=IN:en

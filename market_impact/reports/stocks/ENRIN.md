@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +6.3%**, **12 months +10.5%** (rank 5 / 12 of 200 for 3m / 12m); beta 0.83
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +41.8%): 3 months 62%, 12 months 75%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +6.5% … P90 +14.5%; plausible 12m relative-return range incl. stock-specific noise: -30.8% … +66.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +7.5 pp (model impact +15.1% beta-adjusted vs realised market-adjusted move -26.9%); forward event exposure +4.5% (3m +1.9%; half assumed priced); company-specific events +3.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +41.8%): 3 months 62%, 12 months 68%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.9% … P90 +19.6%; plausible 12m relative-return range incl. stock-specific noise: -31.2% … +80.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +7.5 pp (model impact +15.1% beta-adjusted vs realised market-adjusted move -26.9%); forward event exposure +4.6% (3m +1.9%; half assumed priced); company-specific events +3.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -2.3% | -1.5% | +0.0 | -1.7 | -0.6 | +0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.0 | +0.0 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → ENRIN | +4.00% | +4.00% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → ENRIN | +3.00% | +3.00% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ENRIN | +3.20% | +2.88% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ENRIN | -2.88% | -2.88% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ENRIN | -7.50% | -2.10% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ENRIN | -1.99% | -1.99% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → ENRIN | +1.92% | +1.92% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → ENRIN | +4.50% | +1.80% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → ENRIN | +1.50% | +1.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ENRIN | -1.50% | -1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → ENRIN | -1.33% | -1.33% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GAS_GLOBAL → ENRIN | -1.27% | -1.27% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → ENRIN | -1.72% | -1.17% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ENRIN | -4.00% | -1.12% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ENRIN | +2.40% | +1.08% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ENRIN | -5.00% | -0.90% |
+| 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → ENRIN | +1.44% | +0.65% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ENRIN | -1.50% | -0.60% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ENRIN | +0.96% | +0.58% |
+| 2 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → ENRIN | +1.72% | +0.55% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → ENRIN | +0.90% | +0.54% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ENRIN | -0.77% | -0.53% |
+| 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → ENRIN | -0.86% | -0.49% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_AI_CAPEX → ENRIN | +0.75% | +0.46% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → ENRIN | +1.00 | events | +4.00% |
+| 1 | F_POWER_DEMAND_IN → ENRIN | +1.20 | events | +3.60% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → ENRIN | +1.50 | events | +2.88% |
+| 1 | T_ENERGY_TRANSITION → ENRIN | +0.50 | events | +1.50% |
+| 1 | F_REPO_IN → ENRIN | +1.00 | events | -1.50% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ENRIN | +1.20 | events | +0.86% |
+| 1 | F_AI_CAPEX → ENRIN | -0.30 | events | -0.75% |
+| 1 | F_STEEL_INDIA → ENRIN | +1.65 | events | -0.66% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → ENRIN | +0.50 | events | +0.60% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → ENRIN | +1.00 | events | +0.48% |
+| 1 | F_GAS_GLOBAL → ENRIN | -0.47 | observed | +0.37% |
+| 1 | F_USDINR → ENRIN | -0.37 | observed | +0.18% |
 
 ## Analyst profile (agent research, sourced)
 # ENRIN — Siemens Energy India Ltd. (profile as of 2026-11-05)

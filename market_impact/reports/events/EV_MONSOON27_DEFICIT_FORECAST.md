@@ -24,12 +24,12 @@ Complement of EV_MONSOON27_FIRST_FORECAST_NORMAL at 32%: a second consecutive we
 | TATAPOWER | +0.7 | +0.0 | +1.1 | +0.0 | -0.4 |
 | SUZLON | +0.6 | +0.0 | +0.9 | -0.5 | +0.2 |
 | POWERINDIA | +0.5 | +0.0 | +0.0 | +0.6 | -0.0 |
+| NLCINDIA | +0.5 | +0.0 | +0.7 | -0.1 | -0.1 |
 | APARINDS | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
 | POWERGRID | +0.4 | +0.0 | +0.9 | -0.1 | -0.4 |
 | SOLARINDS | +0.4 | +0.0 | +0.6 | -0.3 | +0.2 |
 | GVT&D | +0.4 | +0.0 | +0.0 | +0.5 | -0.0 |
 | AMBUJACEM | +0.3 | +0.8 | +0.0 | -0.4 | -0.1 |
-| NATIONALUM | +0.2 | +0.0 | +0.1 | +0.1 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

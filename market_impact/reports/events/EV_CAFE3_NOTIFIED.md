@@ -51,7 +51,7 @@ Power ministry notified CAFE-III, tightening passenger vehicle benchmark 16.7% o
 | LTF | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
 | MRF | -0.1 | -0.2 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 49%, 2: 25%, 3: 19%, 4: 6%
+Share of absolute impact by order: 1: 48%, 2: 27%, 3: 19%, 4: 6%
 
 ## Sources
 - 2026-09-30 CAFE-3 norms notified without carve-out for small cars https://www.business-standard.com/

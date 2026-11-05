@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +2.5%** (rank 74 / 60 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.9%): 3 months 53%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.5% … P90 +8.2%; plausible 12m relative-return range incl. stock-specific noise: -43.0% … +21.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.3% beta-adjusted vs realised market-adjusted move -25.6%); forward event exposure +5.4% (3m +2.0%; half assumed priced); company-specific events +1.9%
+- Expected relative return: **3 months +0.8%**, **12 months +2.5%** (rank 73 / 59 of 200 for 3m / 12m); beta 1.11
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.9%): 3 months 53%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.3% … P90 +7.2%; plausible 12m relative-return range incl. stock-specific noise: -20.7% … +24.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.3% beta-adjusted vs realised market-adjusted move -25.6%); forward event exposure +5.5% (3m +2.0%; half assumed priced); company-specific events +1.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,38 @@
 | Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down (`EV_RURAL_DEMAND_SOFT26`) | occurred | 1.00 | -0.8% | -0.8% | -0.9 | +0.0 | +0.1 | +0.0 |
 | Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -3.0% | -0.7% | -1.8 | -1.3 | +0.2 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → VMM | -4.95% | -4.95% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_FOOD_INFLATION_IN → VMM | -1.65% | -1.65% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → VMM | -1.32% | -1.32% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → VMM | -1.00% | -1.00% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → VMM | -0.90% | -0.90% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → VMM | -0.90% | -0.90% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → VMM | -2.50% | -0.89% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → VMM | +1.50% | +0.87% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RURAL_DEMAND → VMM | -0.86% | -0.86% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → VMM | -0.81% | -0.81% |
-| 1 | EV_KHARIF26_OUTPUT_HIT ⇒ F_FOOD_INFLATION_IN → VMM | -0.75% | -0.75% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_WAGES_IN → VMM | +0.74% | +0.74% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → VMM | +0.70% | +0.70% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → VMM | -0.64% | -0.64% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → VMM | +0.90% | +0.63% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → VMM | +0.90% | +0.49% |
+| 1 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → VMM | +0.60% | +0.48% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → VMM | +0.68% | +0.46% |
+| 1 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_FOOD_INFLATION_IN → VMM | -1.80% | -0.45% |
+| 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → VMM | +0.60% | +0.41% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → VMM | -1.00% | -0.40% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → VMM | -0.60% | -0.39% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → VMM | -0.60% | -0.39% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → VMM | -6.00% | -0.38% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_RURAL_DEMAND → VMM | -2.40% | -0.29% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → VMM | -1.15% | -0.29% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → VMM | +0.48% | +0.28% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FOOD_INFLATION_IN → VMM | +2.00 | events | -3.00% |
+| 1 | F_REPO_IN → VMM | +1.00 | events | -1.00% |
+| 1 | F_REFINING_MARGIN → VMM | +1.54 | observed | -0.93% |
+| 1 | F_RURAL_DEMAND → VMM | -0.25 | events | -0.75% |
+| 1 | F_URBAN_DEMAND → VMM | +0.20 | events | +0.70% |
+| 1 | F_COTTON → VMM | +0.19 | observed | -0.08% |
+| 1 | F_USDINR → VMM | -0.37 | observed | +0.07% |
+| 1 | F_BRENT → VMM | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # VMM (Vishal Mega Mart Ltd.) - company profile as of 2026-11-05

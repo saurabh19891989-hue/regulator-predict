@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -0.1%**, **12 months +0.1%** (rank 102 / 100 of 200 for 3m / 12m); beta 1.31
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +46.0%): 3 months 50%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.6% … P90 +4.2%; plausible 12m relative-return range incl. stock-specific noise: -47.8% … +46.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +7.7% beta-adjusted vs realised market-adjusted move +17.6%); forward event exposure +3.2% (3m +1.6%; half assumed priced); company-specific events -0.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +46.0%): 3 months 50%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.0% … P90 +4.1%; plausible 12m relative-return range incl. stock-specific noise: -58.2% … +51.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +7.7% beta-adjusted vs realised market-adjusted move +17.6%); forward event exposure +3.3% (3m +1.6%; half assumed priced); company-specific events -0.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | -0.0 | -0.0 | +0.0 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -7.3% | -1.3% | -7.8 | +0.3 | +0.3 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → APARINDS | -7.43% | -7.43% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → APARINDS | -1.99% | -1.99% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → APARINDS | -1.96% | -1.96% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → APARINDS | +2.50% | +1.62% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → APARINDS | -1.50% | -1.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → APARINDS | -1.50% | -1.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → APARINDS | +1.50% | +1.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → APARINDS | -4.80% | -1.34% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → APARINDS | -3.75% | -1.34% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → APARINDS | +2.25% | +1.31% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → APARINDS | +1.28% | +1.28% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ P_US_TARIFF_INDIA → APARINDS | +1.25% | +1.25% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → APARINDS | +1.20% | +1.08% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → APARINDS | -1.08% | -1.08% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → APARINDS | -6.00% | -1.08% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → APARINDS | -3.60% | -1.01% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → APARINDS | -6.25% | -0.94% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → APARINDS | -3.60% | -0.90% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → APARINDS | -1.50% | -0.60% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → APARINDS | +1.00% | +0.58% |
+| 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → APARINDS | +1.44% | +0.58% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → APARINDS | -9.00% | -0.56% |
+| 1 | EV_INDIA_US_TALKS_COLLAPSE ⇒ P_US_TARIFF_INDIA → APARINDS | -3.75% | -0.56% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → APARINDS | -1.44% | -0.51% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_ALUMINIUM → APARINDS | -1.96 | observed | -1.96% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → APARINDS | +1.50 | events | +1.92% |
+| 1 | C_MIDEAST_CONFLICT → APARINDS | +1.50 | events | -1.50% |
+| 1 | P_US_TARIFF_INDIA → APARINDS | -0.60 | events | +1.50% |
+| 1 | F_REPO_IN → APARINDS | +1.00 | events | -1.50% |
+| 1 | F_GOVT_CAPEX → APARINDS | +1.00 | events | +1.50% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → APARINDS | +1.20 | events | +1.15% |
+| 1 | T_ENERGY_TRANSITION → APARINDS | +0.50 | events | +1.00% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → APARINDS | +0.50 | events | +0.40% |
+| 1 | F_USDINR → APARINDS | -0.37 | observed | -0.37% |
+| 1 | F_US_EQUITIES → APARINDS | +0.23 | observed | +0.28% |
+| 1 | F_COPPER → APARINDS | -0.24 | observed | -0.14% |
 
 ## Analyst profile (agent research, sourced)
 # APARINDS - Apar Industries (Capital Goods, mid-cap)

@@ -50,7 +50,7 @@ Drought declared in parts of Maharashtra and Karnataka; 282 districts rain-defic
 | TCS | -0.2 | -0.1 | +0.0 | -0.1 | -0.0 |
 | POWERGRID | -0.2 | -0.3 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 25%, 2: 36%, 3: 27%, 4: 11%
+Share of absolute impact by order: 1: 26%, 2: 36%, 3: 27%, 4: 11%
 
 ## Sources
 - 2026-09-30 Chouhan: no major crisis, problem in some areas https://www.downtoearth.org.in/agriculture/india-sets-lower-food-production-target-for-2026-27-as-el-ni%C3%B1o-clouds-rabi-season

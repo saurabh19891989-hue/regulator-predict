@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.3%**, **12 months -5.8%** (rank 138 / 169 of 200 for 3m / 12m); beta 1.62
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.3%): 3 months 45%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -19.7% … P90 +4.0%; plausible 12m relative-return range incl. stock-specific noise: -42.6% … +23.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.0 pp (model impact +12.0% beta-adjusted vs realised market-adjusted move -20.9%); forward event exposure -20.6% (3m -8.4%; half assumed priced); company-specific events -0.8%
+- Expected relative return: **3 months -1.3%**, **12 months -5.8%** (rank 137 / 169 of 200 for 3m / 12m); beta 1.62
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.3%): 3 months 45%, 12 months 32%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -15.9% … P90 +2.3%; plausible 12m relative-return range incl. stock-specific noise: -32.8% … +19.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.0 pp (model impact +12.0% beta-adjusted vs realised market-adjusted move -20.9%); forward event exposure -20.5% (3m -8.3%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -4.3% | -4.3% | -4.0 | -0.3 | +0.1 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +8.0% | +4.0% | +7.0 | +0.5 | +0.2 | +0.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → IREDA | +8.00% | +8.00% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → IREDA | -20.00% | -5.60% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → IREDA | -25.00% | -4.50% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → IREDA | -4.40% | -4.40% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → IREDA | -4.20% | -4.20% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → IREDA | +4.00% | +4.00% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → IREDA | -3.31% | -3.31% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → IREDA | +3.00% | +3.00% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → IREDA | +2.50% | +2.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → IREDA | -2.50% | -2.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → IREDA | +5.00% | +2.50% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → IREDA | -4.00% | -2.48% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → IREDA | -2.40% | -2.40% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → IREDA | -2.21% | -2.21% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → IREDA | -6.00% | -2.14% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → IREDA | -3.00% | -1.86% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → IREDA | -7.20% | -1.80% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → IREDA | +3.75% | +1.50% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → IREDA | +2.50% | +1.45% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → IREDA | +2.00% | +1.24% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → IREDA | -2.40% | -1.20% |
+| 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → IREDA | +2.50% | +1.12% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → IREDA | +1.80% | +1.08% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → IREDA | -2.50% | -1.00% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → IREDA | +2.00% | +1.00% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_RENEWABLE_SUPPORT → IREDA | +1.50 | events | +12.00% |
+| 1 | F_GSEC_10Y_IN → IREDA | +1.70 | events | -5.10% |
+| 1 | F_FPI_FLOWS → IREDA | -1.60 | events | -3.20% |
+| 1 | F_POWER_DEMAND_IN → IREDA | +1.20 | events | +3.00% |
+| 1 | T_ENERGY_TRANSITION → IREDA | +0.50 | events | +3.00% |
+| 1 | F_REPO_IN → IREDA | +1.00 | events | -2.50% |
+| 1 | F_CREDIT_SPREADS_IN → IREDA | +0.50 | events | -1.50% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → IREDA | +0.50 | events | +1.28% |
+| 1 | F_RISK_SENTIMENT → IREDA | +0.11 | observed | -0.56% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → IREDA | -0.25 | events | -0.32% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → IREDA | +1.00 | events | -0.32% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → IREDA | -1.56 | events | -0.30% |
 
 ## Analyst profile (agent research, sourced)
 # IREDA - Indian Renewable Energy Development Agency Ltd. (as of 2026-11-05)

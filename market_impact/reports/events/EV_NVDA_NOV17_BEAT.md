@@ -53,7 +53,7 @@ Nvidia reports 17 Nov (Motley Fool 2 Nov). Last print (26 Aug) revenue $96 bn, +
 | PIIND | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
 | MARUTI | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 42%, 2: 44%, 3: 11%, 4: 3%
+Share of absolute impact by order: 1: 41%, 2: 45%, 3: 11%, 4: 3%
 
 ## Sources
 - 2026-11-02 Nvidia Reports Nov. 17. History Says What Its Stock Usually Does Next - Motley Fool https://news.google.com/rss/search?q=Nvidia%20Reports%20Nov.%2017.%20History%20Says%20What%20Its%20Stock%20Usually%20Does%20Next%20-%20Motley%20Fool&hl=en-IN&gl=IN&ceid=IN:en

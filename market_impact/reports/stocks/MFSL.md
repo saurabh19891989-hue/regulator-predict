@@ -4,8 +4,8 @@
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -0.8%**, **12 months -2.8%** (rank 126 / 139 of 200 for 3m / 12m); beta 0.95
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.2%): 3 months 47%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.8% … P90 +2.4%; plausible 12m relative-return range incl. stock-specific noise: -26.8% … +37.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.2% beta-adjusted vs realised market-adjusted move -25.3%); forward event exposure -2.7% (3m +0.2%; half assumed priced); company-specific events -0.6%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.9% … P90 +1.6%; plausible 12m relative-return range incl. stock-specific noise: -34.9% … +27.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.2% beta-adjusted vs realised market-adjusted move -25.3%); forward event exposure -2.6% (3m +0.3%; half assumed priced); company-specific events -0.6%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -6.5% | -1.6% | +0.0 | -5.8 | -0.4 | -0.3 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -0.7 | -0.6 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MFSL | -6.60% | -6.60% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → MFSL | -3.96% | -3.96% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MFSL | +7.50% | +3.75% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → MFSL | -6.30% | -3.15% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → MFSL | -6.00% | -1.68% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → MFSL | +1.50% | +1.50% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → MFSL | -7.50% | -1.35% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → MFSL | -1.02% | -1.02% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → MFSL | +1.00% | +1.00% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MFSL | -4.50% | -0.99% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → MFSL | -0.96% | -0.96% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_FPI_FLOWS → MFSL | -0.92% | -0.92% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_FPI_FLOWS → MFSL | -0.90% | -0.90% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → MFSL | -0.89% | -0.89% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → MFSL | -2.88% | -0.81% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → MFSL | -2.88% | -0.72% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → MFSL | -2.00% | -0.71% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → MFSL | +1.20% | +0.70% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → MFSL | -1.80% | -0.64% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MFSL | -2.24% | -0.63% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → MFSL | -2.16% | -0.54% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → MFSL | +1.50% | +0.52% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → MFSL | +0.58% | +0.52% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MFSL | -2.80% | -0.50% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → MFSL | -1.60 | events | -4.80% |
+| 1 | F_GDP_IN → MFSL | +0.50 | events | +1.00% |
+| 1 | F_CPI_IN → MFSL | +1.15 | events | -0.69% |
+| 1 | F_GOLD → MFSL | -1.05 | observed | -0.63% |
+| 1 | F_REPO_IN → MFSL | +1.00 | events | -0.60% |
+| 1 | F_GSEC_10Y_IN → MFSL | +1.70 | events | +0.51% |
+| 1 | F_RISK_SENTIMENT → MFSL | +0.11 | observed | -0.17% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → MFSL | +0.30 | events | +0.14% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → MFSL | +0.30 | events | +0.04% |
+| 4 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → F_DOMESTIC_FLOWS → MFSL | -0.10 | events | -0.00% |
+| 1 | F_BRENT → MFSL | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # MFSL - Max Financial Services (as of 2026-11-05)

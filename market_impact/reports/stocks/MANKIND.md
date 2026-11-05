@@ -2,10 +2,10 @@
 *MIDCAP_100 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.6%**, **12 months -1.8%** (rank 143 / 126 of 200 for 3m / 12m); beta 0.65
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.0%): 3 months 45%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.9% … P90 +0.3%; plausible 12m relative-return range incl. stock-specific noise: -27.8% … +26.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +1.7% beta-adjusted vs realised market-adjusted move +4.9%); forward event exposure -0.7% (3m -0.9%; half assumed priced); company-specific events -0.5%
+- Expected relative return: **3 months -1.6%**, **12 months -1.7%** (rank 143 / 127 of 200 for 3m / 12m); beta 0.65
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.0%): 3 months 45%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.3% … P90 +0.6%; plausible 12m relative-return range incl. stock-specific noise: -43.7% … +34.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +1.7% beta-adjusted vs realised market-adjusted move +4.9%); forward event exposure -0.6% (3m -0.9%; half assumed priced); company-specific events -0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,38 @@
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -2.1% | -0.8% | -1.8 | -0.1 | -0.2 | -0.0 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | +0.8% | +0.8% | +1.1 | -0.3 | +0.1 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → MANKIND | -2.69% | -2.69% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → MANKIND | -2.38% | -2.38% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → MANKIND | -1.80% | -1.80% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MANKIND | -1.76% | -1.76% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → MANKIND | -1.59% | -1.59% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → MANKIND | +1.09% | +1.09% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → MANKIND | +1.05% | +1.05% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MANKIND | +2.00% | +1.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → MANKIND | -0.95% | -0.95% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → MANKIND | +0.94% | +0.94% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → MANKIND | +0.80% | +0.80% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → MANKIND | -1.80% | -0.72% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → MANKIND | +0.64% | +0.64% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_DXY → MANKIND | +0.60% | +0.60% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → MANKIND | -0.58% | -0.58% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → MANKIND | -2.07% | -0.52% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → MANKIND | -1.80% | -0.49% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → MANKIND | -1.36% | -0.49% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → MANKIND | +0.82% | +0.47% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → MANKIND | -0.72% | -0.43% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → MANKIND | +0.46% | +0.41% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → MANKIND | -1.80% | -0.40% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_DXY → MANKIND | +1.20% | +0.36% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MANKIND | -1.19% | -0.33% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → MANKIND | -0.46% | -0.30% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → MANKIND | +0.43% | +0.29% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → MANKIND | -2.40% | -0.29% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → MANKIND | -0.81% | -0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_REPO_IN → MANKIND | +1.00 | events | -1.80% |
+| 1 | F_FPI_FLOWS → MANKIND | -1.60 | events | -1.28% |
+| 1 | F_DXY → MANKIND | +0.74 | observed | +1.11% |
+| 1 | F_GDP_IN → MANKIND | +0.50 | events | +0.80% |
+| 1 | F_URBAN_DEMAND → MANKIND | +0.20 | events | +0.40% |
+| 1 | F_USDINR → MANKIND | -0.37 | observed | -0.22% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → MANKIND | +0.40 | events | -0.06% |
+| 2 | F_BRENT → F_CHEM_FEEDSTOCK → MANKIND | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # MANKIND (Mankind Pharma) — Midcap, as of 2026-11-05

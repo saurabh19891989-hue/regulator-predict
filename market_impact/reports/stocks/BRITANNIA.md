@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -0.3%**, **12 months -0.3%** (rank 111 / 110 of 200 for 3m / 12m); beta 0.73
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +14.0%): 3 months 48%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.1% … P90 +2.2%; plausible 12m relative-return range incl. stock-specific noise: -20.3% … +24.0%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +14.0%): 3 months 48%, 12 months 38%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +1.9%; plausible 12m relative-return range incl. stock-specific noise: -17.1% … +20.8%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -2.4% beta-adjusted vs realised market-adjusted move -6.7%); forward event exposure +1.7% (3m +0.7%; half assumed priced); company-specific events +0.1%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.6% | +0.9% | +0.9 | +0.1 | +0.4 | +0.1 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.7 | -0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → BRITANNIA | -2.97% | -2.97% |
-| 1 | EV_SUGAR_SHORTFALL26 ⇒ F_SUGAR → BRITANNIA | -2.24% | -2.24% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → BRITANNIA | -1.76% | -1.76% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BRITANNIA | -1.06% | -1.06% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_GOLD → BRITANNIA | -1.05% | -1.05% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BRITANNIA | +2.00% | +1.00% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → BRITANNIA | -0.80% | -0.80% |
 | 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → BRITANNIA | -1.90% | -0.57% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → BRITANNIA | -0.54% | -0.54% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BRITANNIA | -1.50% | -0.54% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → BRITANNIA | +0.90% | +0.52% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RURAL_DEMAND → BRITANNIA | -0.51% | -0.51% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → BRITANNIA | +0.50% | +0.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_GOLD → BRITANNIA | +0.48% | +0.48% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → BRITANNIA | -0.46% | -0.46% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_GOLD → BRITANNIA | +1.00% | +0.45% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_WHEAT → BRITANNIA | -0.60% | -0.39% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → BRITANNIA | +0.54% | +0.38% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → BRITANNIA | -1.19% | -0.33% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BRITANNIA | -0.80% | -0.32% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → BRITANNIA | +0.54% | +0.30% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → BRITANNIA | +0.41% | +0.28% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → BRITANNIA | -1.49% | -0.27% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → BRITANNIA | -1.20% | -0.26% |
+| 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → BRITANNIA | +0.36% | +0.24% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → BRITANNIA | -0.36% | -0.23% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_SUGAR → BRITANNIA | +2.78 | observed | -2.23% |
+| 1 | F_FPI_FLOWS → BRITANNIA | -1.60 | events | -1.28% |
+| 1 | F_GOLD → BRITANNIA | -1.05 | observed | -1.05% |
+| 1 | F_REPO_IN → BRITANNIA | +1.00 | events | -0.80% |
+| 1 | F_URBAN_DEMAND → BRITANNIA | +0.20 | events | +0.50% |
+| 1 | F_RURAL_DEMAND → BRITANNIA | -0.25 | events | -0.45% |
+| 1 | F_EDIBLE_OIL → BRITANNIA | +0.19 | observed | -0.19% |
+| 2 | F_MONSOON → F_DAIRY → BRITANNIA | -1.56 | events | -0.17% |
+| 1 | F_WHEAT → BRITANNIA | -0.13 | observed | +0.16% |
+| 1 | F_USDINR → BRITANNIA | -0.37 | observed | +0.15% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → BRITANNIA | +0.40 | events | -0.02% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → BRITANNIA | +0.30 | events | -0.01% |
 
 ## Analyst profile (agent research, sourced)
 # BRITANNIA (Britannia Industries Ltd.) - company profile as of 2026-11-05

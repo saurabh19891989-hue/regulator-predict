@@ -25,13 +25,13 @@ RBI's ECL framework replaces incurred-loss provisioning. SBI estimates Rs 19,500
 | JINDALSTEL | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | TECHM | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | TCS | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| NLCINDIA | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
 | INDUSTOWER | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
 | LICI | +0.0 | +0.0 | +0.1 | -0.0 | -0.0 |
 | RVNL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | HDFCLIFE | +0.0 | +0.0 | +0.1 | -0.1 | -0.0 |
 | HDFCAMC | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | PIIND | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| AUROPHARMA | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

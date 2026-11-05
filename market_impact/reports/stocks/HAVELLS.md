@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.1%**, **12 months +2.9%** (rank 62 / 56 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.3%): 3 months 55%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.1% … P90 +7.1%; plausible 12m relative-return range incl. stock-specific noise: -12.7% … +21.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +2.8% beta-adjusted vs realised market-adjusted move -11.7%); forward event exposure +5.0% (3m +1.7%; half assumed priced); company-specific events +0.2%
+- Expected relative return: **3 months +1.1%**, **12 months +2.9%** (rank 61 / 55 of 200 for 3m / 12m); beta 1.15
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.3%): 3 months 55%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.7% … P90 +8.4%; plausible 12m relative-return range incl. stock-specific noise: -18.2% … +28.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +2.8% beta-adjusted vs realised market-adjusted move -11.7%); forward event exposure +5.1% (3m +1.8%; half assumed priced); company-specific events +0.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.9 | -0.1 | -0.0 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -2.2% | -0.8% | +0.0 | -0.6 | -0.7 | -0.9 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → HAVELLS | -1.25% | -1.25% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → HAVELLS | +1.20% | +1.20% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → HAVELLS | -1.12% | -1.12% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_GLOBAL → HAVELLS | -1.03% | -1.03% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → HAVELLS | -0.98% | -0.98% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → HAVELLS | +0.96% | +0.86% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAVELLS | -0.86% | -0.86% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_HOUSING_DEMAND → HAVELLS | -0.65% | -0.65% |
-| 2 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → F_HOUSING_DEMAND → HAVELLS | -0.52% | -0.52% |
-| 1 | EV_GST_57TH_COUNCIL_OCT26 ⇒ T_FORMALISATION → HAVELLS | +0.45% | +0.45% |
-| 4 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → F_HOUSING_DEMAND → HAVELLS | -0.43% | -0.43% |
-| 2 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → HAVELLS | -0.42% | -0.42% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → HAVELLS | -0.42% | -0.42% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → HAVELLS | -0.35% | -0.35% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_HOUSING_DEMAND → HAVELLS | -0.33% | -0.33% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAVELLS | +0.72% | +0.32% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → HAVELLS | -0.64% | -0.32% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → HAVELLS | -1.08% | -0.30% |
+| 2 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → T_FORMALISATION → HAVELLS | +0.36% | +0.29% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → HAVELLS | -0.40% | -0.24% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HAVELLS | -1.04% | -0.23% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HAVELLS | -0.63% | -0.23% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HAVELLS | +0.38% | +0.22% |
+| 2 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → F_HOUSING_DEMAND → HAVELLS | -0.52% | -0.21% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → HAVELLS | +0.37% | +0.18% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → HAVELLS | -0.19% | -0.18% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → HAVELLS | -0.80% | -0.18% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAVELLS | +0.29% | +0.17% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → HAVELLS | +0.47% | +0.16% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → HAVELLS | +1.70 | events | -1.36% |
+| 1 | F_GOVT_CAPEX → HAVELLS | +1.00 | events | +1.20% |
+| 1 | F_STEEL_GLOBAL → HAVELLS | +2.06 | observed | -1.03% |
+| 1 | F_ALUMINIUM → HAVELLS | -1.96 | observed | -0.98% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → HAVELLS | +1.00 | events | -0.52% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → HAVELLS | +1.70 | events | -0.51% |
+| 1 | T_FORMALISATION → HAVELLS | +0.30 | events | +0.45% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → HAVELLS | +0.50 | events | +0.30% |
+| 1 | F_URBAN_DEMAND → HAVELLS | +0.20 | events | +0.30% |
+| 1 | F_USDINR → HAVELLS | -0.37 | observed | +0.30% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → HAVELLS | +1.00 | events | +0.24% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → HAVELLS | +1.00 | events | -0.20% |
 
 ## Analyst profile (agent research, sourced)
 # HAVELLS - Havells India Ltd. (midcap, electricals and consumer durables)

@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.3%**, **12 months +6.2%** (rank 28 / 30 of 200 for 3m / 12m); beta 1.18
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +31.4%): 3 months 58%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.6% … P90 +12.7%; plausible 12m relative-return range incl. stock-specific noise: -41.2% … +47.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.2 pp (model impact +8.4% beta-adjusted vs realised market-adjusted move -10.9%); forward event exposure +7.0% (3m +3.5%; half assumed priced); company-specific events -0.5%
+- Expected relative return: **3 months +3.3%**, **12 months +6.3%** (rank 27 / 31 of 200 for 3m / 12m); beta 1.18
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +31.4%): 3 months 58%, 12 months 72%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.0% … P90 +15.1%; plausible 12m relative-return range incl. stock-specific noise: -20.1% … +48.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.2 pp (model impact +8.3% beta-adjusted vs realised market-adjusted move -10.9%); forward event exposure +7.0% (3m +3.5%; half assumed priced); company-specific events -0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.4 | -0.1 | -0.1 |
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -0.6% | -0.6% | -0.4 | -0.1 | -0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ABB | +2.97% | +2.97% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ABB | -1.59% | -1.59% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → ABB | +1.50% | +1.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ABB | -1.20% | -1.20% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ABB | +1.20% | +1.08% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ABB | -1.08% | -1.08% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ABB | -3.60% | -1.01% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → ABB | +0.80% | +0.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ABB | -0.63% | -0.63% |
-| 2 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ABB | +0.60% | +0.60% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → ABB | -0.56% | -0.56% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ABB | +1.50% | +0.54% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → ABB | -0.53% | -0.53% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ABB | -0.90% | -0.52% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → ABB | +0.50% | +0.50% |
+| 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → ABB | +0.60% | +0.48% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ABB | -1.20% | -0.48% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ABB | +0.90% | +0.40% |
+| 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ABB | +0.90% | +0.36% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → ABB | -1.38% | -0.35% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → ABB | -1.20% | -0.32% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → ABB | -1.08% | -0.30% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → ABB | -0.48% | -0.29% |
+| 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → ABB | +0.60% | +0.27% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → ABB | -1.20% | -0.26% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → ABB | -1.04% | -0.23% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → ABB | +1.00 | events | +1.50% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → ABB | +1.50 | events | +1.20% |
+| 1 | F_REPO_IN → ABB | +1.00 | events | -1.20% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ABB | +1.20 | events | +0.72% |
+| 1 | F_STEEL_INDIA → ABB | +1.65 | events | -0.66% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → ABB | +0.50 | events | +0.50% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → ABB | +1.00 | events | +0.48% |
+| 1 | F_AI_CAPEX → ABB | -0.30 | events | -0.36% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → ABB | +0.50 | events | +0.35% |
+| 1 | F_USDINR → ABB | -0.37 | observed | +0.30% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → ABB | +1.00 | events | +0.28% |
+| 2 | T_ENERGY_TRANSITION → F_PRIVATE_CAPEX → ABB | +0.50 | events | +0.21% |
 
 ## Analyst profile (agent research, sourced)
 # ABB - ABB India Ltd. (as of 2026-11-05)

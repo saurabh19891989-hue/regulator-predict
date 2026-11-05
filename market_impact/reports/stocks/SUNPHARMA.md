@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.0%**, **12 months -0.9%** (rank 130 / 120 of 200 for 3m / 12m); beta 0.69
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.9%): 3 months 46%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.7% … P90 +4.1%; plausible 12m relative-return range incl. stock-specific noise: -28.3% … +17.8%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.9%): 3 months 46%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.5% … P90 +3.9%; plausible 12m relative-return range incl. stock-specific noise: -23.8% … +15.5%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.2 pp (model impact -1.8% beta-adjusted vs realised market-adjusted move -1.3%); forward event exposure +1.4% (3m +0.2%; half assumed priced); company-specific events -0.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Fed hikes >=50 bp cumulative beyond Oct level by Apr 2027 (`EV_FED_H1_2027_FURTHER_HIKES`) | anticipated | 0.30 | -1.5% | -0.5% | -1.6 | +0.0 | +0.1 | -0.0 |
 | FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.58 | -0.8% | -0.4% | -0.8 | +0.0 | +0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → SUNPHARMA | -2.69% | -2.69% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → SUNPHARMA | +2.35% | +2.35% |
-| 1 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → SUNPHARMA | -2.00% | -2.00% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → SUNPHARMA | +1.20% | +1.20% |
-| 1 | EV_US_PHARMA_232_SEP26 ⇒ P_US_PHARMA_TARIFF → SUNPHARMA | -1.00% | -1.00% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → SUNPHARMA | -0.84% | -0.84% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → SUNPHARMA | -0.80% | -0.80% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → SUNPHARMA | -3.00% | -0.75% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → SUNPHARMA | -6.00% | -0.72% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → SUNPHARMA | +0.61% | +0.61% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → SUNPHARMA | +2.40% | +0.60% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → SUNPHARMA | -0.55% | -0.55% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → SUNPHARMA | -1.36% | -0.49% |
 | 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → SUNPHARMA | -1.60% | -0.48% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → SUNPHARMA | +0.82% | +0.47% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → SUNPHARMA | -0.80% | -0.46% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → SUNPHARMA | +1.95% | +0.43% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → SUNPHARMA | +1.19% | +0.42% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → SUNPHARMA | -0.71% | -0.41% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → SUNPHARMA | -0.69% | -0.35% |
+| 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → SUNPHARMA | +1.20% | +0.30% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → SUNPHARMA | -0.48% | -0.24% |
+| 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_FED_FUNDS → SUNPHARMA | -0.80% | -0.24% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → SUNPHARMA | -3.26% | -0.20% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_USFDA_ENFORCEMENT → SUNPHARMA | +1.00 | events | -2.00% |
+| 1 | F_FED_FUNDS → SUNPHARMA | +1.62 | observed | -1.30% |
+| 1 | F_US_GDP → SUNPHARMA | +1.20 | events | +1.20% |
+| 1 | F_GSEC_10Y_IN → SUNPHARMA | +1.70 | events | -1.02% |
+| 1 | P_US_PHARMA_TARIFF → SUNPHARMA | +0.50 | events | -1.00% |
+| 1 | F_USDINR → SUNPHARMA | -0.37 | observed | -0.55% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → SUNPHARMA | +1.00 | events | +0.30% |
+| 1 | F_CREDIT_SPREADS_IN → SUNPHARMA | +0.50 | events | -0.20% |
+| 1 | F_CHINA_GDP → SUNPHARMA | +0.30 | events | -0.12% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → SUNPHARMA | +0.50 | events | +0.09% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → SUNPHARMA | +0.40 | events | -0.06% |
+| 2 | F_BRENT → F_CHEM_FEEDSTOCK → SUNPHARMA | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Sun Pharmaceutical Industries Ltd. (SUNPHARMA) - company profile, as of 2026-11-05

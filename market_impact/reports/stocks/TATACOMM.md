@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.2%**, **12 months -1.6%** (rank 135 / 125 of 200 for 3m / 12m); beta 1.05
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.8%): 3 months 47%, 12 months 32%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.4% … P90 +2.6%; plausible 12m relative-return range incl. stock-specific noise: -49.3% … +24.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -7.0% beta-adjusted vs realised market-adjusted move -15.0%); forward event exposure -3.1% (3m -1.4%; half assumed priced); company-specific events +2.3%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.8%): 3 months 47%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.0% … P90 +2.7%; plausible 12m relative-return range incl. stock-specific noise: -33.1% … +42.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -7.1% beta-adjusted vs realised market-adjusted move -15.0%); forward event exposure -3.0% (3m -1.4%; half assumed priced); company-specific events +2.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -1.1 | -0.3 | -0.2 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -4.3% | -1.5% | -0.6 | -1.2 | -1.3 | -1.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → TATACOMM | -4.40% | -4.40% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → TATACOMM | -2.80% | -2.80% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATACOMM | +5.00% | +2.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → TATACOMM | -7.50% | -2.10% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → TATACOMM | -2.10% | -2.10% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → TATACOMM | -1.32% | -1.32% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → TATACOMM | +1.25% | +1.25% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → TATACOMM | -1.19% | -1.19% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → TATACOMM | -1.05% | -1.05% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → TATACOMM | +1.00% | +1.00% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → TATACOMM | -1.00% | -1.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → TATACOMM | -0.94% | -0.94% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → TATACOMM | -0.89% | -0.89% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → TATACOMM | -0.89% | -0.89% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → TATACOMM | -0.88% | -0.88% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → TATACOMM | -2.10% | -0.84% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATACOMM | -1.60% | -0.80% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → TATACOMM | -3.00% | -0.66% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TATACOMM | -1.00% | -0.60% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → TATACOMM | -2.00% | -0.56% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → TATACOMM | -1.92% | -0.54% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → TATACOMM | -1.92% | -0.48% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_AI_CAPEX → TATACOMM | +0.75% | +0.46% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → TATACOMM | -0.48% | -0.46% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → TATACOMM | -2.50% | -0.45% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → TATACOMM | -2.00% | -0.44% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_TECH_SPEND → TATACOMM | -1.71% | -0.43% |
+| 1 | EV_ANTHROPIC_IPO_LISTING ⇒ F_AI_CAPEX → TATACOMM | +0.50% | +0.42% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → TATACOMM | +1.70 | events | -3.40% |
+| 1 | F_FPI_FLOWS → TATACOMM | -1.60 | events | -3.20% |
+| 1 | F_POWER_PRICE_IN → TATACOMM | +3.00 | events | -2.10% |
+| 1 | F_REPO_IN → TATACOMM | +1.00 | events | -1.00% |
+| 1 | F_US_TECH_SPEND → TATACOMM | -0.60 | events | -0.90% |
+| 1 | C_RED_SEA → TATACOMM | +1.50 | events | -0.75% |
+| 1 | F_AI_CAPEX → TATACOMM | -0.30 | events | -0.75% |
+| 1 | F_GDP_IN → TATACOMM | +0.50 | events | +0.75% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → TATACOMM | +1.00 | events | +0.32% |
+| 1 | F_USDINR → TATACOMM | -0.37 | observed | -0.30% |
+| 2 | F_AI_CAPEX → T_DATA_CENTRES_IN → TATACOMM | -0.30 | events | -0.07% |
+| 1 | F_RISK_SENTIMENT → TATACOMM | +0.11 | observed | -0.06% |
 
 ## Analyst profile (agent research, sourced)
 # TATACOMM — Tata Communications Ltd. (Midcap 100) — profile as of 2026-11-05

@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +8.0%**, **12 months +16.3%** (rank 1 / 1 of 200 for 3m / 12m); beta 1.39
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +31.2%): 3 months 70%, 12 months 72%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +12.4% … P90 +24.1%; plausible 12m relative-return range incl. stock-specific noise: -18.5% … +58.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.5 pp (model impact +12.9% beta-adjusted vs realised market-adjusted move -30.2%); forward event exposure +13.9% (3m +3.6%; half assumed priced); company-specific events +8.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +31.2%): 3 months 70%, 12 months 65%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +14.1% … P90 +23.6%; plausible 12m relative-return range incl. stock-specific noise: -17.8% … +46.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.4 pp (model impact +12.9% beta-adjusted vs realised market-adjusted move -30.2%); forward event exposure +13.9% (3m +3.6%; half assumed priced); company-specific events +8.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,38 @@
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -3.5% | -1.0% | +0.0 | -2.4 | -0.8 | -0.2 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.7 | -0.2 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_DAC_APPROVALS_H2_26 ⇒ P_DEFENCE_PROCUREMENT → MAZDOCK | +6.00% | +6.00% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → MAZDOCK | +6.00% | +5.40% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → MAZDOCK | +2.50% | +2.50% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → MAZDOCK | -1.80% | -1.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → MAZDOCK | +2.00% | +1.80% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MAZDOCK | -1.76% | -1.76% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → MAZDOCK | -1.59% | -1.59% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → MAZDOCK | -1.56% | -1.56% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → MAZDOCK | +1.50% | +1.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → MAZDOCK | -1.20% | -1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → MAZDOCK | -1.06% | -1.06% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MAZDOCK | +2.00% | +1.00% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → MAZDOCK | -0.84% | -0.84% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → MAZDOCK | +1.50% | +0.68% |
-| 2 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → MAZDOCK | -0.60% | -0.60% |
+| 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ P_DEFENCE_PROCUREMENT → MAZDOCK | +1.20% | +0.60% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → MAZDOCK | -1.00% | -0.58% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → MAZDOCK | -1.20% | -0.48% |
+| 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → MAZDOCK | +0.90% | +0.45% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → MAZDOCK | +1.20% | +0.43% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → MAZDOCK | +0.60% | +0.36% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → MAZDOCK | -1.38% | -0.35% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MAZDOCK | -1.19% | -0.33% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → MAZDOCK | -1.20% | -0.32% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → MAZDOCK | -0.48% | -0.29% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → MAZDOCK | -1.30% | -0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_DEFENCE_PROCUREMENT → MAZDOCK | +1.00 | events | +6.00% |
+| 1 | F_GOVT_CAPEX → MAZDOCK | +1.00 | events | +2.50% |
+| 1 | C_MIDEAST_CONFLICT → MAZDOCK | +1.50 | events | +1.50% |
+| 1 | F_FPI_FLOWS → MAZDOCK | -1.60 | events | -1.28% |
+| 1 | F_REPO_IN → MAZDOCK | +1.00 | events | -1.20% |
+| 1 | F_STEEL_INDIA → MAZDOCK | +1.65 | events | -0.99% |
+| 1 | F_USDINR → MAZDOCK | -0.37 | observed | +0.37% |
+| 2 | P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → MAZDOCK | +1.00 | events | +0.18% |
 
 ## Analyst profile (agent research, sourced)
 # MAZDOCK — Mazagon Dock Shipbuilders Ltd. (profile as of 2026-11-05)

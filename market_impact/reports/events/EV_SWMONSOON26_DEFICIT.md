@@ -30,9 +30,9 @@ IMD: June-Sept rainfall 759.4 mm vs 868.6 mm LPA (1971-2020), i.e. 87% of LPA / 
 | TECHM | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
 | NATIONALUM | +0.3 | +0.0 | +0.1 | +0.1 | +0.1 |
 | TCS | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| NLCINDIA | +0.3 | +0.2 | +0.2 | +0.1 | -0.2 |
 | APARINDS | +0.3 | +0.0 | +0.2 | +0.3 | -0.2 |
 | SUZLON | +0.3 | +0.3 | +0.0 | +0.4 | -0.4 |
-| SOLARINDS | +0.3 | +0.2 | +0.0 | +0.4 | -0.3 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

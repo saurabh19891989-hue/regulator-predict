@@ -2,10 +2,10 @@
 *MIDCAP_100 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.8%**, **12 months +5.0%** (rank 50 / 35 of 200 for 3m / 12m); beta 1.05
+- Expected relative return: **3 months +1.8%**, **12 months +5.0%** (rank 48 / 35 of 200 for 3m / 12m); beta 1.05
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 56%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.1% … P90 +14.2%; plausible 12m relative-return range incl. stock-specific noise: -17.4% … +38.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.2 pp (model impact +2.3% beta-adjusted vs realised market-adjusted move -23.4%); forward event exposure +8.1% (3m +3.6%; half assumed priced); company-specific events +2.0%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.6% … P90 +14.4%; plausible 12m relative-return range incl. stock-specific noise: -33.5% … +37.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.2 pp (model impact +2.3% beta-adjusted vs realised market-adjusted move -23.4%); forward event exposure +8.1% (3m +3.7%; half assumed priced); company-specific events +2.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +1.1% | +0.4% | +0.0 | +1.1 | -0.1 | +0.0 |
 | Fed cuts >=25 bp by Apr 2027 (growth scare / AI bust / lower inflation) (`EV_FED_H1_2027_CUTS`) | anticipated | 0.25 | +1.6% | +0.4% | +1.5 | +0.1 | +0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | -4.04% | -4.04% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → UPL | +1.56% | +1.56% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → UPL | -1.01% | -1.01% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → UPL | -1.00% | -1.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_EDIBLE_OIL → UPL | +0.89% | +0.89% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → UPL | +3.00% | +0.75% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | -2.04% | -0.73% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | +1.22% | +0.71% |
 | 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → UPL | -2.00% | -0.60% |
 | 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → UPL | -1.00% | -0.58% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → UPL | +0.80% | +0.54% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_FED_FUNDS → UPL | -0.50% | -0.50% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → UPL | +0.40% | +0.40% |
 | 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → UPL | +1.50% | +0.38% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → UPL | -0.37% | -0.37% |
+| 2 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → UPL | +0.50% | +0.35% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → UPL | +0.96% | +0.34% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | -4.90% | -0.31% |
+| 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_FED_FUNDS → UPL | -1.00% | -0.30% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → UPL | +1.30% | +0.29% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → UPL | +0.79% | +0.28% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → UPL | -0.47% | -0.28% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → UPL | +0.40% | +0.26% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FED_FUNDS → UPL | +1.62 | observed | -1.62% |
+| 1 | F_MONSOON → UPL | -1.56 | events | -1.25% |
+| 1 | F_USDINR → UPL | -0.37 | observed | -0.37% |
+| 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → UPL | -0.47 | observed | +0.34% |
+| 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → UPL | +0.30 | events | +0.29% |
+| 2 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → UPL | +0.40 | events | +0.29% |
+| 1 | F_EDIBLE_OIL → UPL | +0.19 | observed | +0.28% |
+| 2 | F_DXY → C_AFRICA_LATAM → UPL | +0.74 | observed | -0.27% |
+| 1 | P_US_TARIFF_INDIA → UPL | -0.60 | events | +0.24% |
+| 2 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → UPL | -0.10 | events | +0.12% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → UPL | +0.40 | events | -0.10% |
+| 2 | F_BRENT → F_CHEM_FEEDSTOCK → UPL | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # UPL — UPL Ltd. (as of 2026-11-05)

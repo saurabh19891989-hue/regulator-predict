@@ -44,13 +44,13 @@ Strong El Nino typically peaks in Nov-Jan and decays by spring; the next monsoon
 | SUZLON | -1.0 | +0.0 | -0.9 | +0.1 | -0.2 |
 | POWERGRID | -1.0 | +0.0 | -0.9 | -0.2 | +0.1 |
 | POWERINDIA | -0.9 | +0.0 | +0.0 | -1.0 | +0.0 |
+| NLCINDIA | -0.9 | +0.0 | -0.7 | -0.1 | -0.0 |
 | SOLARINDS | -0.8 | +0.0 | -0.6 | -0.0 | -0.2 |
 | ADANIGREEN | -0.7 | +0.0 | -0.9 | +0.0 | +0.1 |
 | GVT&D | -0.7 | +0.0 | +0.0 | -0.7 | +0.0 |
 | APARINDS | -0.7 | +0.0 | +0.0 | -0.6 | -0.1 |
-| AMBUJACEM | -0.6 | -0.8 | +0.0 | +0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 8%, 2: 33%, 3: 45%, 4: 14%
+Share of absolute impact by order: 1: 8%, 2: 34%, 3: 44%, 4: 14%
 
 ## Sources
 - 2026-09-30 IMD forecast record in 2026 (92%, then 90% vs 87% actual) https://www.thehindu.com/sci-tech/energy-and-environment/southwest-monsoon-ends-with-12-deficit/article71529423.ece

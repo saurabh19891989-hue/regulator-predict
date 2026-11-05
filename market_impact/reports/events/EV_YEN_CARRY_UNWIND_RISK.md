@@ -53,7 +53,7 @@ Yen neared 160 in Aug 2026; BoJ at 31-year-high rates; hawkish BoJ/Takaichi plus
 | ETERNAL | -20.4 | -12.5 | -7.6 | -0.1 | -0.2 |
 | GROWW | -20.3 | -11.5 | -4.7 | -5.4 | +1.4 |
 
-Share of absolute impact by order: 1: 40%, 2: 45%, 3: 10%, 4: 5%
+Share of absolute impact by order: 1: 40%, 2: 46%, 3: 10%, 4: 5%
 
 ## Sources
 - 2026-10-05 Japan Has Left the Zero-Rate World. What Happens to the Yen Carry Trade? - IndraStra https://news.google.com/rss/search?q=Japan%20Has%20Left%20the%20Zero-Rate%20World.%20What%20Happens%20to%20the%20Yen%20Carry%20Trade%3F%20-%20IndraStra&hl=en-IN&gl=IN&ceid=IN:en

@@ -4,7 +4,7 @@
 |---|---|---|---|---|---|---|---|
 | F_ALUMINIUM | Aluminium price | 3200.0 | -1.2 | -4.9 | -8.0 | +15.8 | -19.6 |
 | F_BRENT | Brent crude oil price | 94.99 | -5.6 | +15.2 | -5.1 | +49.5 | +0.0 |
-| F_COAL_INTL | International thermal coal price | 96.0 | +0.0 | +0.0 | +0.0 | -1.2 | +0.0 |
+| F_COAL_INTL (STALE: last 2025-12-26) | International thermal coal price | 96.0 | +0.0 | +0.0 | +0.0 | -1.2 | +0.0 |
 | F_COPPER | Copper price | 6.3695 | -3.4 | -4.7 | +3.9 | +28.3 | -2.4 |
 | F_COTTON | Cotton price | 78.11 | +0.8 | -4.7 | -5.9 | +19.7 | +1.9 |
 | F_DXY | US dollar index | 101.399 | -0.4 | +1.4 | +3.2 | +1.2 | +2.2 |

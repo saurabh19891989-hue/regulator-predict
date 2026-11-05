@@ -2,10 +2,10 @@
 *NIFTY_50 · Construction · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.7%**, **12 months +6.0%** (rank 34 / 31 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.9%): 3 months 61%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.7% … P90 +11.6%; plausible 12m relative-return range incl. stock-specific noise: -22.8% … +27.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.1 pp (model impact +6.3% beta-adjusted vs realised market-adjusted move -4.4%); forward event exposure +8.1% (3m +2.1%; half assumed priced); company-specific events -0.1%
+- Expected relative return: **3 months +2.7%**, **12 months +6.0%** (rank 34 / 32 of 200 for 3m / 12m); beta 1.15
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.9%): 3 months 61%, 12 months 75%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.7% … P90 +12.2%; plausible 12m relative-return range incl. stock-specific noise: -5.6% … +28.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.1 pp (model impact +6.3% beta-adjusted vs realised market-adjusted move -4.4%); forward event exposure +8.2% (3m +2.1%; half assumed priced); company-specific events -0.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2 (`EV_LPG_UNDERRECOVERY`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.8 | +0.0 | +0.1 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.6 | +0.3 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → C_GCC → LT | -4.20% | -4.20% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → LT | +3.96% | +3.96% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → LT | +3.50% | +3.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → C_GCC → LT | +2.77% | +2.77% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → LT | -2.65% | -2.65% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → LT | +2.80% | +2.52% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → LT | -2.52% | -2.52% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → LT | -2.00% | -2.00% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → C_GCC → LT | +2.80% | +1.63% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → C_GCC → LT | -3.36% | -1.20% |
-| 1 | EV_DAC_APPROVALS_H2_26 ⇒ P_DEFENCE_PROCUREMENT → LT | +1.20% | +1.20% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → LT | +1.20% | +1.08% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → LT | +2.10% | +0.95% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → LT | -0.89% | -0.89% |
-| 2 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → LT | -0.84% | -0.84% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → LT | -2.00% | -0.80% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → LT | +2.00% | +0.71% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → LT | -1.20% | -0.70% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → LT | -2.30% | -0.58% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → LT | -2.00% | -0.54% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → LT | +0.84% | +0.50% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → C_GCC → LT | +1.40% | +0.50% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → C_GCC → LT | -0.84% | -0.49% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → LT | -0.80% | -0.48% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → LT | -2.00% | -0.44% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → LT | +1.00 | events | +3.50% |
+| 1 | F_REPO_IN → LT | +1.00 | events | -2.00% |
+| 1 | P_DEFENCE_PROCUREMENT → LT | +1.00 | events | +1.20% |
+| 1 | F_STEEL_INDIA → LT | +1.65 | events | -0.99% |
+| 1 | F_US_TECH_SPEND → LT | -0.60 | events | -0.60% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → LT | +0.50 | events | +0.30% |
+| 1 | F_USDINR → LT | -0.37 | observed | -0.30% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → LT | +1.00 | events | +0.24% |
+| 2 | T_ENERGY_TRANSITION → F_PRIVATE_CAPEX → LT | +0.50 | events | +0.18% |
+| 2 | F_CREDIT_SPREADS_IN → F_PRIVATE_CAPEX → LT | +0.50 | events | -0.18% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → LT | +1.00 | events | +0.16% |
+| 2 | F_REPO_IN → F_PRIVATE_CAPEX → LT | +1.00 | events | -0.10% |
 
 ## Analyst profile (agent research, sourced)
 # LT — Larsen & Toubro Ltd. (as of 2026-11-05)

@@ -51,7 +51,7 @@ Release date approximate (model knowledge: Q2 data usually end-Nov; not verified
 | LT | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
 | PREMIERENE | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 60%, 2: 23%, 3: 13%, 4: 5%
+Share of absolute impact by order: 1: 60%, 2: 22%, 3: 13%, 4: 5%
 
 ## Sources
 - 2026-10-29 Finance ministry estimates India's Q2 FY27 GDP growth at 7.35% - ET https://news.google.com/rss/search?q=Finance+ministry+estimates+India+Q2+FY27+GDP+growth+7.35%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en

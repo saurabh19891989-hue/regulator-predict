@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -10.4%**, **12 months -18.8%** (rank 200 / 200 of 200 for 3m / 12m); beta 1.17
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.4%): 3 months 14%, 12 months 22%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -31.4% … P90 -10.8%; plausible 12m relative-return range incl. stock-specific noise: -40.6% … +10.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -5.3 pp (model impact -10.6% beta-adjusted vs realised market-adjusted move +14.3%); forward event exposure -24.1% (3m -12.2%; half assumed priced); company-specific events -0.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.4%): 3 months 14%, 12 months 15%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -32.9% … P90 -11.2%; plausible 12m relative-return range incl. stock-specific noise: -61.6% … +3.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -5.3 pp (model impact -10.6% beta-adjusted vs realised market-adjusted move +14.3%); forward event exposure -24.0% (3m -12.2%; half assumed priced); company-specific events -0.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -12.9% | -3.6% | -8.0 | -3.5 | -0.8 | -0.6 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +7.2% | +3.6% | +5.8 | +0.4 | +0.4 | +0.7 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → BAJFINANCE | -4.40% | -4.40% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BAJFINANCE | -3.97% | -3.97% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BAJFINANCE | -3.50% | -3.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → BAJFINANCE | -3.00% | -3.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → BAJFINANCE | -2.66% | -2.66% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BAJFINANCE | +5.00% | +2.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BAJFINANCE | -8.00% | -2.24% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → BAJFINANCE | -3.00% | -1.86% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → BAJFINANCE | -10.00% | -1.80% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → BAJFINANCE | -2.50% | -1.55% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_CREDIT_SPREADS_IN → BAJFINANCE | -1.50% | -1.50% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → BAJFINANCE | -1.31% | -1.31% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BAJFINANCE | -3.00% | -1.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → BAJFINANCE | -1.19% | -1.19% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → BAJFINANCE | -1.10% | -1.10% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BAJFINANCE | -2.00% | -1.00% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → BAJFINANCE | -1.50% | -0.90% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → BAJFINANCE | -3.00% | -0.90% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → BAJFINANCE | -3.46% | -0.86% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → BAJFINANCE | -2.40% | -0.86% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → BAJFINANCE | -3.00% | -0.81% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BAJFINANCE | -1.25% | -0.75% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_CREDIT_SPREADS_IN → BAJFINANCE | -1.50% | -0.75% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → BAJFINANCE | -1.20% | -0.72% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → BAJFINANCE | +1.70 | events | -4.25% |
+| 1 | F_FPI_FLOWS → BAJFINANCE | -1.60 | events | -3.20% |
+| 1 | F_REPO_IN → BAJFINANCE | +1.00 | events | -3.00% |
+| 1 | F_CREDIT_SPREADS_IN → BAJFINANCE | +0.50 | events | -2.50% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → BAJFINANCE | -1.56 | events | -0.87% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → BAJFINANCE | +0.50 | events | +0.80% |
+| 1 | F_LIQUIDITY_IN → BAJFINANCE | -0.90 | events | -0.72% |
+| 1 | F_URBAN_DEMAND → BAJFINANCE | +0.20 | events | +0.50% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → BAJFINANCE | +1.15 | events | -0.48% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → BAJFINANCE | +0.50 | events | +0.34% |
+| 1 | F_GOLD → BAJFINANCE | -1.05 | observed | -0.31% |
+| 2 | F_GDP_IN → F_UNSECURED_STRESS → BAJFINANCE | +0.50 | events | +0.28% |
 
 ## Analyst profile (agent research, sourced)
 # BAJFINANCE - Bajaj Finance Ltd. (Nifty 50, consumer NBFC) - as of 2026-11-05

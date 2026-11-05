@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.6%**, **12 months -6.8%** (rank 144 / 179 of 200 for 3m / 12m); beta 1.21
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.4%): 3 months 46%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -16.5% … P90 +5.6%; plausible 12m relative-return range incl. stock-specific noise: -39.3% … +56.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.7 pp (model impact -3.4% beta-adjusted vs realised market-adjusted move +14.6%); forward event exposure -4.8% (3m +2.0%; half assumed priced); company-specific events -3.0%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.4%): 3 months 46%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -17.5% … P90 +1.0%; plausible 12m relative-return range incl. stock-specific noise: -47.5% … +42.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.7 pp (model impact -3.4% beta-adjusted vs realised market-adjusted move +14.6%); forward event exposure -4.8% (3m +2.1%; half assumed priced); company-specific events -3.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -8.7% | -3.1% | -2.4 | -1.6 | -2.6 | -2.1 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -3.1% | -3.1% | +0.0 | -1.6 | -1.4 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → GROWW | -5.50% | -5.50% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → GROWW | -3.50% | -3.50% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → GROWW | -3.17% | -3.17% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GROWW | +6.25% | +3.12% |
 | 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ P_SEBI_DERIVATIVES → GROWW | +3.20% | +2.72% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → GROWW | -8.00% | -2.24% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → GROWW | +3.60% | +1.80% |
 | 1 | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → GROWW | -9.00% | -1.80% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → GROWW | -10.00% | -1.80% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → GROWW | -1.60% | -1.60% |
 | 1 | EV_SEBI_FNO_CURBS_RISK ⇒ P_SEBI_DERIVATIVES → GROWW | -8.00% | -1.60% |
 | 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ F_EQUITY_ACTIVITY_IN → GROWW | +1.80% | +1.53% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → GROWW | -1.49% | -1.49% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → GROWW | -1.31% | -1.31% |
-| 4 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → GROWW | -1.27% | -1.27% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → GROWW | -2.00% | -1.00% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → GROWW | -1.50% | -0.93% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ P_CAPITAL_GAINS_TAX → GROWW | +2.50% | +0.88% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → GROWW | -2.40% | -0.86% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → GROWW | -3.00% | -0.84% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GROWW | -3.75% | -0.82% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → GROWW | -3.00% | -0.75% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → GROWW | +1.70 | events | -4.25% |
+| 1 | F_FPI_FLOWS → GROWW | -1.60 | events | -4.00% |
+| 2 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → GROWW | -1.60 | events | -2.30% |
+| 1 | P_SEBI_DERIVATIVES → GROWW | -0.10 | events | +0.80% |
+| 1 | F_REPO_IN → GROWW | +1.00 | events | +0.50% |
+| 2 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → GROWW | -0.10 | events | +0.28% |
+| 1 | F_US_EQUITIES → GROWW | +0.23 | observed | +0.23% |
+| 1 | F_RISK_SENTIMENT → GROWW | +0.11 | observed | -0.22% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → GROWW | +0.30 | events | +0.19% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → GROWW | -1.60 | events | +0.14% |
+| 2 | F_GDP_IN → P_RBI_PRUDENTIAL → GROWW | +0.50 | events | -0.12% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → GROWW | +0.30 | events | +0.11% |
 
 ## Analyst profile (agent research, sourced)
 # GROWW - Billionbrains Garage Ventures Ltd. (midcap, digital broker) - as of 2026-11-05

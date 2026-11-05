@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +4.0%**, **12 months +7.3%** (rank 21 / 24 of 200 for 3m / 12m); beta 0.83
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.7%): 3 months 63%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.7% … P90 +25.9%; plausible 12m relative-return range incl. stock-specific noise: -23.5% … +31.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.9 pp (model impact +9.8% beta-adjusted vs realised market-adjusted move -17.0%); forward event exposure +7.3% (3m +4.2%; half assumed priced); company-specific events -0.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.7%): 3 months 63%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.3% … P90 +26.0%; plausible 12m relative-return range incl. stock-specific noise: -31.0% … +42.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.9 pp (model impact +9.8% beta-adjusted vs realised market-adjusted move -17.0%); forward event exposure +7.4% (3m +4.2%; half assumed priced); company-specific events -0.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,38 @@
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | +3.3% | +0.7% | +3.3 | +0.0 | -0.0 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | -1.4% | -0.7% | +0.0 | -1.5 | +0.0 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ONGC | +17.32% | +17.32% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → ONGC | +5.25% | +5.25% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ONGC | +8.75% | +3.12% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ONGC | -5.25% | -3.05% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ONGC | +2.35% | +2.35% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ONGC | -3.50% | -2.03% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → ONGC | +1.80% | +1.80% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → ONGC | +4.20% | +1.50% |
 | 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → ONGC | +21.00% | +1.31% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → ONGC | +1.21% | +1.21% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → ONGC | -1.11% | -1.11% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_BRENT → ONGC | +1.01% | +1.01% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → ONGC | +1.00% | +1.00% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → ONGC | +3.90% | +0.86% |
-| 2 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → ONGC | -0.84% | -0.84% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → ONGC | -1.38% | -0.69% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_BRENT → ONGC | -2.52% | -0.63% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → ONGC | -0.96% | -0.56% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ C_MIDEAST_CONFLICT → ONGC | +8.75% | +0.55% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → ONGC | +1.19% | +0.42% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ F_BRENT → ONGC | +2.80% | +0.42% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → ONGC | -0.71% | -0.41% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → ONGC | +1.44% | +0.40% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_BRENT → ONGC | +1.12% | +0.39% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | C_MIDEAST_CONFLICT → ONGC | +1.50 | events | +5.25% |
+| 1 | F_REFINING_MARGIN → ONGC | +1.54 | observed | +1.85% |
+| 1 | F_USDINR → ONGC | -0.37 | observed | -1.11% |
+| 1 | C_RUSSIA → ONGC | +1.00 | events | +1.00% |
+| 1 | F_REPO_IN → ONGC | +1.00 | events | -0.60% |
+| 1 | F_GAS_GLOBAL → ONGC | -0.47 | observed | -0.23% |
+| 1 | F_GDP_IN → ONGC | +0.50 | events | +0.15% |
+| 1 | F_BRENT → ONGC | +0.00 | observed | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # ONGC — market impact profile (as of 2026-11-05)

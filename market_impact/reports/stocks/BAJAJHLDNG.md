@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months -0.3%** (rank 89 / 112 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.9%): 3 months 51%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.7% … P90 +1.7%; plausible 12m relative-return range incl. stock-specific noise: -19.0% … +20.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.5 pp (model impact +1.4% beta-adjusted vs realised market-adjusted move +0.5%); forward event exposure -0.3% (3m +0.5%; half assumed priced); company-specific events +1.1%
+- Expected relative return: **3 months +0.3%**, **12 months -0.3%** (rank 89 / 111 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.9%): 3 months 51%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.3% … P90 +1.6%; plausible 12m relative-return range incl. stock-specific noise: -27.8% … +31.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.5 pp (model impact +1.4% beta-adjusted vs realised market-adjusted move +0.5%); forward event exposure -0.3% (3m +0.6%; half assumed priced); company-specific events +1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.0% | +1.2% | +0.3 | +0.9 | +0.5 | +0.3 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → BAJAJHLDNG | -2.20% | -2.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → BAJAJHLDNG | -1.56% | -1.56% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BAJAJHLDNG | +2.50% | +1.25% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BAJAJHLDNG | -1.12% | -1.12% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BAJAJHLDNG | -0.79% | -0.79% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → BAJAJHLDNG | +0.69% | +0.69% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → BAJAJHLDNG | -2.40% | -0.67% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BAJAJHLDNG | -2.40% | -0.67% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → BAJAJHLDNG | -2.40% | -0.60% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → BAJAJHLDNG | -0.60% | -0.60% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → BAJAJHLDNG | -0.59% | -0.59% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → BAJAJHLDNG | -3.00% | -0.54% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → BAJAJHLDNG | -0.53% | -0.53% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → BAJAJHLDNG | +0.50% | +0.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → BAJAJHLDNG | -0.47% | -0.47% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → BAJAJHLDNG | -1.50% | -0.33% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BAJAJHLDNG | -0.64% | -0.32% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BAJAJHLDNG | -1.30% | -0.29% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → BAJAJHLDNG | -0.79% | -0.28% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → BAJAJHLDNG | +0.47% | +0.28% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → BAJAJHLDNG | -0.72% | -0.26% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BAJAJHLDNG | -0.40% | -0.24% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BAJAJHLDNG | -0.60% | -0.24% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → BAJAJHLDNG | -1.20% | -0.22% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → BAJAJHLDNG | -0.75% | -0.21% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → BAJAJHLDNG | -1.60 | events | -1.60% |
+| 1 | F_GSEC_10Y_IN → BAJAJHLDNG | +1.70 | events | -1.36% |
+| 1 | F_REPO_IN → BAJAJHLDNG | +1.00 | events | -0.60% |
+| 1 | F_USDINR → BAJAJHLDNG | -0.37 | observed | +0.37% |
+| 1 | F_US_EQUITIES → BAJAJHLDNG | +0.23 | observed | +0.19% |
+| 1 | F_RISK_SENTIMENT → BAJAJHLDNG | +0.11 | observed | -0.07% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → BAJAJHLDNG | +0.30 | events | +0.05% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → BAJAJHLDNG | +0.30 | events | +0.04% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → BAJAJHLDNG | -1.60 | events | +0.02% |
+| 3 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → BAJAJHLDNG | -0.10 | events | -0.00% |
+| 4 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → F_DOMESTIC_FLOWS → BAJAJHLDNG | -0.10 | events | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Bajaj Holdings & Investment (BAJAJHLDNG) - Market Impact profile, as of 2026-11-05

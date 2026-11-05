@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -5.2%**, **12 months -10.9%** (rank 194 / 196 of 200 for 3m / 12m); beta 1.05
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.8%): 3 months 35%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -20.0% … P90 -5.4%; plausible 12m relative-return range incl. stock-specific noise: -36.8% … +33.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.8%): 3 months 35%, 12 months 32%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -22.1% … P90 -7.2%; plausible 12m relative-return range incl. stock-specific noise: -34.3% … +12.9%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.6 pp (model impact -5.1% beta-adjusted vs realised market-adjusted move +39.0%); forward event exposure -14.3% (3m -6.6%; half assumed priced); company-specific events -0.0%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,38 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.2% | -2.2% | +0.0 | -1.5 | -0.5 | -0.2 |
 | Labour codes: states finalise rules (deadline 31 Oct 2026), wider operational rollout (`EV_LABOUR_CODES_RULES`) | anticipated | 0.80 | -2.7% | -2.1% | -3.0 | +0.6 | -0.2 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ETERNAL | -7.70% | -7.70% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ETERNAL | +8.75% | +4.38% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ETERNAL | -3.96% | -3.96% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ETERNAL | -3.31% | -3.31% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ETERNAL | -10.00% | -2.80% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ETERNAL | -2.50% | -2.50% |
 | 1 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → ETERNAL | -3.00% | -2.40% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ETERNAL | -12.50% | -2.25% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ETERNAL | +1.75% | +1.75% |
 | 1 | EV_CHINA_FDI_EASING_PN3 ⇒ P_FDI_RULES → ETERNAL | -2.10% | -1.47% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → ETERNAL | -1.20% | -1.20% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → ETERNAL | +1.20% | +1.20% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → ETERNAL | -1.19% | -1.19% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ETERNAL | -5.25% | -1.16% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → ETERNAL | -1.12% | -1.12% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → ETERNAL | -3.00% | -1.07% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ETERNAL | -2.50% | -1.00% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ETERNAL | -3.36% | -0.94% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → ETERNAL | -3.60% | -0.90% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ETERNAL | -3.36% | -0.84% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ETERNAL | -2.61% | -0.73% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → ETERNAL | +1.25% | +0.73% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → ETERNAL | -2.88% | -0.72% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ETERNAL | -2.00% | -0.71% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → ETERNAL | -1.60 | events | -5.60% |
+| 1 | F_REPO_IN → ETERNAL | +1.00 | events | -2.50% |
+| 1 | P_FDI_RULES → ETERNAL | +0.50 | events | -1.50% |
+| 1 | F_URBAN_DEMAND → ETERNAL | +0.20 | events | +1.20% |
+| 1 | F_FOOD_INFLATION_IN → ETERNAL | +2.00 | events | -1.00% |
+| 1 | F_RISK_SENTIMENT → ETERNAL | +0.11 | observed | -0.28% |
+| 1 | F_USDINR → ETERNAL | -0.37 | observed | +0.18% |
+| 1 | F_BRENT → ETERNAL | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # ETERNAL — Eternal Ltd. (Zomato, Blinkit, Hyperpure, District), as of 2026-11-05

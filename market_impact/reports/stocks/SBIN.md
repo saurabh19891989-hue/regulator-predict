@@ -2,9 +2,9 @@
 *NIFTY_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.8%**, **12 months -6.6%** (rank 170 / 174 of 200 for 3m / 12m); beta 0.96
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.9%): 3 months 39%, 12 months 30%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -17.4% … P90 +1.1%; plausible 12m relative-return range incl. stock-specific noise: -38.6% … +12.0%
+- Expected relative return: **3 months -2.8%**, **12 months -6.5%** (rank 170 / 174 of 200 for 3m / 12m); beta 0.96
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.9%): 3 months 39%, 12 months 38%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -17.2% … P90 -0.6%; plausible 12m relative-return range incl. stock-specific noise: -32.3% … +20.1%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.9 pp (model impact -5.7% beta-adjusted vs realised market-adjusted move +0.4%); forward event exposure -5.2% (3m -0.9%; half assumed priced); company-specific events +0.2%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.9% | -2.9% | -2.5 | -0.1 | -0.1 | -0.1 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -8.0% | -2.8% | -2.5 | -2.6 | -1.8 | -1.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → SBIN | -8.80% | -8.80% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SBIN | +10.00% | +5.00% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → SBIN | -2.10% | -2.10% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → SBIN | +2.00% | +2.00% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → SBIN | -3.00% | -1.86% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → SBIN | -6.00% | -1.68% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → SBIN | -2.50% | -1.55% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → SBIN | -1.49% | -1.49% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → SBIN | -1.38% | -1.38% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → SBIN | -1.36% | -1.36% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → SBIN | -7.50% | -1.35% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SBIN | -6.00% | -1.32% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → SBIN | -1.28% | -1.28% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → SBIN | +1.25% | +1.25% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_FPI_FLOWS → SBIN | -1.23% | -1.23% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBIN | -3.84% | -1.08% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBIN | -3.84% | -0.96% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SBIN | -2.99% | -0.84% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → SBIN | -2.50% | -0.75% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → SBIN | -1.20% | -0.72% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → SBIN | +2.00% | +0.70% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SBIN | -3.73% | -0.67% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → SBIN | +0.72% | +0.65% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → SBIN | -1.80% | -0.64% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → SBIN | -1.60 | events | -6.40% |
+| 1 | F_GSEC_10Y_IN → SBIN | +1.70 | events | -2.55% |
+| 1 | F_CPI_IN → SBIN | +1.15 | events | -1.38% |
+| 1 | F_GDP_IN → SBIN | +0.50 | events | +1.25% |
+| 1 | F_REPO_IN → SBIN | +1.00 | events | +0.80% |
+| 1 | F_LIQUIDITY_IN → SBIN | -0.90 | events | -0.72% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → SBIN | +0.50 | events | +0.48% |
+| 1 | F_USDINR → SBIN | -0.37 | observed | +0.37% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → SBIN | -1.56 | events | -0.30% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → SBIN | -0.25 | events | -0.24% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → SBIN | +1.00 | events | -0.24% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → SBIN | +1.00 | events | -0.23% |
 
 ## Analyst profile (agent research, sourced)
 # SBIN - State Bank of India (as of 2026-11-05)

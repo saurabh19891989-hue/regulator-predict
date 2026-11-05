@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -6.9%**, **12 months -10.8%** (rank 197 / 195 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +32.3%): 3 months 34%, 12 months 22%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -27.5% … P90 -0.5%; plausible 12m relative-return range incl. stock-specific noise: -59.0% … +11.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -10.7% beta-adjusted vs realised market-adjusted move -35.3%); forward event exposure -18.6% (3m -10.4%; half assumed priced); company-specific events -0.8%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +32.3%): 3 months 34%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -32.1% … P90 +1.4%; plausible 12m relative-return range incl. stock-specific noise: -63.8% … +26.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -10.7% beta-adjusted vs realised market-adjusted move -35.3%); forward event exposure -18.5% (3m -10.3%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +9.4% | +4.7% | +7.5 | +0.4 | +0.5 | +1.0 |
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -3.9% | -3.9% | +0.0 | -3.1 | -0.3 | -0.6 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → YESBANK | -6.60% | -6.60% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → YESBANK | -4.20% | -4.20% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → YESBANK | -3.97% | -3.97% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → YESBANK | +7.50% | +3.75% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → YESBANK | -5.00% | -3.10% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → YESBANK | -3.00% | -3.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → YESBANK | -2.66% | -2.66% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → YESBANK | -2.38% | -2.38% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_LIQUIDITY_IN → YESBANK | -2.35% | -2.35% |
-| 4 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → NEW_FX_RESERVES_IN → F_LIQUIDITY_IN → YESBANK | -2.30% | -2.30% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → YESBANK | +2.00% | +2.00% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → YESBANK | -3.00% | -1.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → YESBANK | -1.78% | -1.78% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → YESBANK | -1.78% | -1.78% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → YESBANK | -1.57% | -1.57% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → YESBANK | -4.48% | -1.25% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → YESBANK | -2.00% | -1.24% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → YESBANK | -2.00% | -1.24% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → YESBANK | -3.00% | -1.20% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → YESBANK | -2.40% | -1.20% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → YESBANK | +1.15% | +1.04% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → YESBANK | -5.60% | -1.01% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → YESBANK | -4.50% | -0.99% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → YESBANK | -1.50% | -0.90% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → YESBANK | -3.46% | -0.86% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → YESBANK | -3.00% | -0.81% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → YESBANK | -2.88% | -0.81% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → YESBANK | +1.70 | events | -5.10% |
+| 1 | F_FPI_FLOWS → YESBANK | -1.60 | events | -4.80% |
+| 1 | F_REPO_IN → YESBANK | +1.00 | events | -3.00% |
+| 1 | F_GDP_IN → YESBANK | +0.50 | events | +2.00% |
+| 1 | F_LIQUIDITY_IN → YESBANK | -0.90 | events | -1.80% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → YESBANK | +0.50 | events | +0.80% |
+| 1 | F_CREDIT_SPREADS_IN → YESBANK | +0.50 | events | -0.75% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → YESBANK | -1.56 | events | -0.50% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → YESBANK | +1.00 | events | -0.47% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → YESBANK | -0.25 | events | -0.40% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → YESBANK | +1.00 | events | -0.40% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → YESBANK | -1.56 | events | -0.37% |
 
 ## Analyst profile (agent research, sourced)
 # YESBANK - Yes Bank Ltd. (Midcap 100, private banks)

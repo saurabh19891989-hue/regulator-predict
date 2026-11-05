@@ -2,10 +2,10 @@
 *MIDCAP_100 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.0%**, **12 months +3.1%** (rank 44 / 53 of 200 for 3m / 12m); beta 1.13
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +37.6%): 3 months 54%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.1% … P90 +16.1%; plausible 12m relative-return range incl. stock-specific noise: -37.2% … +53.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -9.8% beta-adjusted vs realised market-adjusted move -29.5%); forward event exposure +10.4% (3m +5.4%; half assumed priced); company-specific events -1.8%
+- Expected relative return: **3 months +2.0%**, **12 months +3.1%** (rank 43 / 52 of 200 for 3m / 12m); beta 1.13
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +37.6%): 3 months 54%, 12 months 38%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.2% … P90 +16.9%; plausible 12m relative-return range incl. stock-specific noise: -55.2% … +37.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -9.8% beta-adjusted vs realised market-adjusted move -29.5%); forward event exposure +10.5% (3m +5.4%; half assumed priced); company-specific events -1.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,37 @@
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +0.9% | +0.9% | +0.5 | +0.2 | +0.1 | -0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | +3.4% | +0.7% | +3.4 | +0.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → NATIONALUM | -12.74% | -12.74% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → NATIONALUM | -2.48% | -2.48% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → NATIONALUM | +2.35% | +2.35% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → NATIONALUM | +2.34% | +2.34% |
-| 1 | EV_INDIA_COAL_CRUNCH ⇒ F_COAL_INDIA → NATIONALUM | -1.50% | -1.50% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → NATIONALUM | +1.21% | +1.21% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → NATIONALUM | -1.11% | -1.11% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → NATIONALUM | -1.56% | -0.91% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → NATIONALUM | +0.90% | +0.90% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → NATIONALUM | +2.47% | +0.86% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → NATIONALUM | +3.90% | +0.86% |
-| 2 | EV_CHINA_Q3_GDP_AND_MINI_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → NATIONALUM | +0.74% | +0.74% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → NATIONALUM | -1.38% | -0.69% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_USDINR → NATIONALUM | +0.69% | +0.69% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → NATIONALUM | +1.87% | +0.67% |
+| 3 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → F_ALUMINIUM → NATIONALUM | +1.43% | +0.50% |
+| 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → F_ALUMINIUM → NATIONALUM | +1.04% | +0.47% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → NATIONALUM | -1.25% | -0.45% |
+| 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_CHINA_GDP → F_ALUMINIUM → NATIONALUM | +0.99% | +0.44% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → NATIONALUM | +0.75% | +0.44% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → NATIONALUM | +1.19% | +0.42% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → NATIONALUM | -0.71% | -0.41% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → NATIONALUM | +1.44% | +0.40% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → NATIONALUM | +0.90% | +0.36% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → NATIONALUM | +1.80% | +0.32% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_ALUMINIUM → NATIONALUM | -1.96 | observed | -12.75% |
+| 1 | F_COAL_INDIA → NATIONALUM | +1.50 | events | -1.50% |
+| 1 | F_USDINR → NATIONALUM | -0.37 | observed | -1.11% |
+| 1 | F_POWER_PRICE_IN → NATIONALUM | +3.00 | events | +0.90% |
+| 1 | T_ENERGY_TRANSITION → NATIONALUM | +0.50 | events | +0.50% |
+| 1 | F_REPO_IN → NATIONALUM | +1.00 | events | -0.50% |
+| 1 | F_BRENT → NATIONALUM | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # NATIONALUM — National Aluminium Company Ltd. (Midcap 100, I_NONFERROUS) — as of 2026-11-05

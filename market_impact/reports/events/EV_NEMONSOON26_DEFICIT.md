@@ -24,12 +24,12 @@ NE monsoon onset expected Oct 15-21 (IMD, 1 Oct). IMD says El Nino is strengthen
 | ADANIENSOL | +0.3 | +0.0 | +0.5 | +0.0 | -0.3 |
 | SUZLON | +0.2 | +0.0 | +0.4 | -0.3 | +0.1 |
 | POWERINDIA | +0.2 | +0.0 | +0.0 | +0.2 | -0.0 |
+| NLCINDIA | +0.2 | +0.0 | +0.4 | -0.1 | -0.1 |
 | APARINDS | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
 | GVT&D | +0.2 | +0.0 | +0.0 | +0.2 | -0.0 |
 | SOLARINDS | +0.1 | +0.0 | +0.3 | -0.2 | +0.1 |
 | POWERGRID | +0.1 | +0.0 | +0.4 | -0.1 | -0.2 |
 | NATIONALUM | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| AMBUJACEM | +0.1 | +0.4 | +0.0 | -0.2 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -50,7 +50,7 @@ NE monsoon onset expected Oct 15-21 (IMD, 1 Oct). IMD says El Nino is strengthen
 | SBICARD | -2.1 | +0.0 | -0.9 | -1.1 | -0.1 |
 | TATACAP | -2.1 | +0.0 | -0.2 | -1.4 | -0.6 |
 
-Share of absolute impact by order: 1: 7%, 2: 24%, 3: 48%, 4: 22%
+Share of absolute impact by order: 1: 7%, 2: 24%, 3: 47%, 4: 22%
 
 ## Sources
 - 2026-10-01 NE monsoon may begin Oct 15-21 - DT Next https://www.dtnext.in/news/tamilnadu/northeast-monsoon-may-begin-between-october-15-21-imd

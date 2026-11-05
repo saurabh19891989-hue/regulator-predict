@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.1%**, **12 months -1.5%** (rank 134 / 124 of 200 for 3m / 12m); beta 1.02
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 47%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.3% … P90 +2.6%; plausible 12m relative-return range incl. stock-specific noise: -33.4% … +24.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.8 pp (model impact -1.7% beta-adjusted vs realised market-adjusted move +25.3%); forward event exposure +1.1% (3m +0.8%; half assumed priced); company-specific events -0.2%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 47%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.5% … P90 +1.8%; plausible 12m relative-return range incl. stock-specific noise: -39.1% … +22.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.8 pp (model impact -1.7% beta-adjusted vs realised market-adjusted move +25.3%); forward event exposure +1.2% (3m +0.9%; half assumed priced); company-specific events -0.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,35 @@
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -9.4% | -1.7% | +0.0 | -8.3 | -0.9 | -0.2 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.6% | +1.6% | +1.6 | +0.1 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → NYKAA | -5.50% | -5.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → NYKAA | +6.25% | +3.12% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → NYKAA | -2.55% | -2.55% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → NYKAA | -2.25% | -2.25% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → NYKAA | -1.56% | -1.56% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → NYKAA | -1.49% | -1.49% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → NYKAA | -1.32% | -1.32% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → NYKAA | +1.25% | +1.25% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_US_10Y → NYKAA | -1.20% | -1.20% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → NYKAA | +1.20% | +1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → NYKAA | -1.17% | -1.17% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → NYKAA | -1.10% | -1.10% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -3.73% | -1.05% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → NYKAA | -1.00% | -1.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → NYKAA | -0.89% | -0.89% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -4.67% | -0.84% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → NYKAA | -3.75% | -0.82% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_US_10Y → NYKAA | +1.50% | +0.68% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → NYKAA | -2.40% | -0.67% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → NYKAA | -2.40% | -0.60% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_10Y → NYKAA | +1.98% | +0.50% |
+| 2 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → F_URBAN_DEMAND → NYKAA | +0.58% | +0.46% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_US_10Y → NYKAA | -1.50% | -0.45% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → NYKAA | +1.25% | +0.44% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -1.12% | -0.40% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → NYKAA | +0.50% | +0.40% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → NYKAA | -1.00% | -0.40% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → F_US_10Y → NYKAA | +1.53% | +0.38% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → NYKAA | -1.60 | events | -4.00% |
+| 1 | F_US_10Y → NYKAA | +1.68 | observed | -2.51% |
+| 1 | F_URBAN_DEMAND → NYKAA | +0.20 | events | +1.20% |
+| 1 | F_REPO_IN → NYKAA | +1.00 | events | -1.00% |
+| 1 | F_USDINR → NYKAA | -0.37 | observed | +0.37% |
 
 ## Analyst profile (agent research, sourced)
 # NYKAA (FSN E-Commerce Ventures Ltd.) - company profile as of 2026-11-05

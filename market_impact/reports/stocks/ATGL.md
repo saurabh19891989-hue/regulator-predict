@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -0.3%**, **12 months -0.9%** (rank 110 / 119 of 200 for 3m / 12m); beta 1.19
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.5%): 3 months 49%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.1% … P90 +2.1%; plausible 12m relative-return range incl. stock-specific noise: -33.3% … +49.8%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.5%): 3 months 49%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.5% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -32.0% … +43.9%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.8% beta-adjusted vs realised market-adjusted move -26.0%); forward event exposure +0.7% (3m +0.0%; half assumed priced); company-specific events -0.1%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,39 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.1 | -0.1 | +0.0 |
 | Hormuz effectively closed for >2 weeks (Brent > $150) (`EV_HORMUZ_FULL_CLOSURE`) | risk_scenario | 0.06 | -20.0% | -1.2% | -13.4 | -3.6 | -2.4 | -0.6 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ATGL | -3.96% | -3.96% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ATGL | -3.30% | -3.30% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → ATGL | -2.25% | -2.25% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ATGL | -1.99% | -1.99% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ATGL | +3.75% | +1.88% |
-| 1 | EV_LNG_HORMUZ_DISRUPTION ⇒ F_GAS_GLOBAL → ATGL | -1.60% | -1.60% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ATGL | -1.50% | -1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GAS_GLOBAL → ATGL | -1.27% | -1.27% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ATGL | +1.50% | +0.87% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_GAS_GLOBAL → ATGL | -0.86% | -0.86% |
 | 1 | EV_EU_WINTER_GAS_SPIKE ⇒ F_GAS_GLOBAL → ATGL | -4.00% | -0.80% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → ATGL | -0.80% | -0.80% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ATGL | +0.75% | +0.75% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ATGL | -2.00% | -0.71% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ATGL | +1.20% | +0.70% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → ATGL | -1.80% | -0.64% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ATGL | -2.24% | -0.63% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ATGL | -1.50% | -0.60% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_GAS_GLOBAL → ATGL | -1.60% | -0.57% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ATGL | -2.80% | -0.50% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ATGL | -2.25% | -0.49% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → ATGL | -1.73% | -0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → ATGL | -1.50% | -0.41% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ATGL | -1.44% | -0.40% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ATGL | -1.44% | -0.36% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → ATGL | -1.60 | events | -2.40% |
+| 1 | C_MIDEAST_CONFLICT → ATGL | +1.50 | events | -2.25% |
+| 1 | F_REPO_IN → ATGL | +1.00 | events | -1.50% |
+| 1 | P_EV_POLICY → ATGL | +1.10 | events | -1.10% |
+| 1 | F_GAS_GLOBAL → ATGL | -0.47 | observed | +0.75% |
+| 1 | F_GDP_IN → ATGL | +0.50 | events | +0.50% |
+| 1 | F_USDINR → ATGL | -0.37 | observed | +0.30% |
+| 1 | F_AUTO_DEMAND_IN → ATGL | -0.10 | events | -0.12% |
+| 1 | F_BRENT → ATGL | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Adani Total Gas (ATGL) — market impact profile (as of 2026-11-05)

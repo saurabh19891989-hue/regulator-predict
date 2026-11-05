@@ -2,9 +2,9 @@
 *NIFTY_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -4.1%**, **12 months -7.1%** (rank 183 / 180 of 200 for 3m / 12m); beta 0.94
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.8%): 3 months 37%, 12 months 32%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.5% … P90 -3.0%; plausible 12m relative-return range incl. stock-specific noise: -42.9% … +17.5%
+- Expected relative return: **3 months -4.0%**, **12 months -7.1%** (rank 183 / 180 of 200 for 3m / 12m); beta 0.94
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.8%): 3 months 37%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.1% … P90 -3.2%; plausible 12m relative-return range incl. stock-specific noise: -31.5% … +18.0%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -4.0 pp (model impact -8.0% beta-adjusted vs realised market-adjusted move +4.1%); forward event exposure -4.2% (3m -1.5%; half assumed priced); company-specific events +0.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,39 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -0.7 | -0.3 | -0.0 | +0.0 |
 | Appeals court allows $100k H-1B fee (or new rule finalised) and/or OPT fee rule finalised (`EV_H1B_FEE_REINSTATED`) | anticipated | 0.30 | -3.2% | -1.0% | -3.0 | -0.2 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → TCS | -4.00% | -4.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → TCS | +2.35% | +2.35% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_TECH_SPEND → TCS | +1.82% | +1.82% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → TCS | -2.00% | -1.70% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ P_US_VISA_OUTSOURCING → TCS | -1.50% | -1.50% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → TCS | -1.26% | -1.26% |
-| 1 | EV_H1B_100K_FEE_COURT ⇒ P_US_VISA_OUTSOURCING → TCS | -1.20% | -1.20% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ F_US_TECH_SPEND → TCS | -1.20% | -1.20% |
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ F_US_TECH_SPEND → TCS | -1.20% | -1.20% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_TECH_SPEND → TCS | -4.56% | -1.14% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → TCS | +1.04% | +1.04% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → TCS | -3.60% | -1.01% |
 | 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → TCS | -3.00% | -0.90% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → TCS | -3.60% | -0.90% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_US_TECH_SPEND → TCS | -2.88% | -0.81% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → TCS | -2.00% | -0.56% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → TCS | +1.92% | +0.54% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → TCS | +2.10% | +0.52% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → TCS | -2.50% | -0.45% |
+| 1 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → TCS | -0.54% | -0.43% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → TCS | +1.95% | +0.43% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → TCS | +1.19% | +0.42% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → TCS | -1.40% | -0.42% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → TCS | -0.71% | -0.41% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | T_GENAI_SERVICES → TCS | +1.00 | events | -4.00% |
+| 1 | P_US_VISA_OUTSOURCING → TCS | +0.90 | events | -2.70% |
+| 1 | F_US_TECH_SPEND → TCS | -0.60 | events | -2.40% |
+| 1 | F_GSEC_10Y_IN → TCS | +1.70 | events | -1.53% |
+| 1 | F_FED_FUNDS → TCS | +1.62 | observed | -1.13% |
+| 1 | F_USDINR → TCS | -0.37 | observed | -0.55% |
+| 1 | F_US_EQUITIES → TCS | +0.23 | observed | +0.28% |
+| 1 | F_EU_GDP → TCS | +0.22 | events | +0.22% |
+| 1 | F_RISK_SENTIMENT → TCS | +0.11 | observed | -0.06% |
 
 ## Analyst profile (agent research, sourced)
 # TCS — Tata Consultancy Services Ltd. — profile as of 2026-11-05

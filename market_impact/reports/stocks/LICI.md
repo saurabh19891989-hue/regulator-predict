@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.2%**, **12 months -2.4%** (rank 103 / 132 of 200 for 3m / 12m); beta 1.12
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 49%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.7% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -21.3% … +21.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.2 pp (model impact +2.5% beta-adjusted vs realised market-adjusted move -4.3%); forward event exposure -5.1% (3m -0.9%; half assumed priced); company-specific events +0.1%
+- Expected relative return: **3 months -0.2%**, **12 months -2.4%** (rank 104 / 132 of 200 for 3m / 12m); beta 1.12
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 49%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.0% … P90 +2.5%; plausible 12m relative-return range incl. stock-specific noise: -31.3% … +23.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.2 pp (model impact +2.5% beta-adjusted vs realised market-adjusted move -4.3%); forward event exposure -5.0% (3m -0.8%; half assumed priced); company-specific events +0.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.6 | -0.5 | -0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.6 | -0.4 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → LICI | -14.00% | -3.92% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → LICI | -3.30% | -3.30% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → LICI | -17.50% | -3.15% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LICI | +3.75% | +1.88% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → LICI | -1.68% | -1.68% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → LICI | -4.20% | -1.50% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → LICI | -1.40% | -1.40% |
-| 3 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → F_RISK_SENTIMENT → LICI | +1.36% | +1.36% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → LICI | -5.04% | -1.26% |
-| 1 | EV_AI_SELLOFF_OCT26 ⇒ F_RISK_SENTIMENT → LICI | -1.23% | -1.23% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → LICI | +1.75% | +1.02% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_RISK_SENTIMENT → LICI | +1.01% | +1.01% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → LICI | -0.89% | -0.89% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → LICI | -0.89% | -0.89% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → LICI | +1.40% | +0.87% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → LICI | +1.40% | +0.70% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_RISK_SENTIMENT → LICI | -10.50% | -0.66% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_RISK_SENTIMENT → LICI | -2.52% | -0.63% |
+| 1 | EV_UP_UPSET_OPPOSITION_WIN ⇒ F_RISK_SENTIMENT → LICI | -2.80% | -0.56% |
+| 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → LICI | -1.05% | -0.52% |
+| 1 | EV_US_CHINA_TRUCE_EXTENDED ⇒ F_RISK_SENTIMENT → LICI | +0.70% | +0.50% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → LICI | -2.25% | -0.49% |
+| 1 | EV_BOJ_DEC26_HIKE_150 ⇒ F_RISK_SENTIMENT → LICI | -0.70% | -0.49% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → LICI | -1.60 | events | -2.40% |
+| 1 | F_GSEC_10Y_IN → LICI | +1.70 | events | -0.85% |
+| 1 | F_GOLD → LICI | -1.05 | observed | +0.84% |
+| 1 | F_GDP_IN → LICI | +0.50 | events | +0.75% |
+| 1 | F_RISK_SENTIMENT → LICI | +0.11 | observed | -0.39% |
+| 1 | F_REPO_IN → LICI | +1.00 | events | -0.30% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → LICI | +0.30 | events | +0.12% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → LICI | +0.30 | events | +0.09% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → LICI | -1.56 | events | -0.07% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → LICI | -1.60 | events | +0.04% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → LICI | +1.15 | events | -0.04% |
+| 4 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → F_DOMESTIC_FLOWS → LICI | -1.60 | events | +0.01% |
 
 ## Analyst profile (agent research, sourced)
 # LICI - Life Insurance Corporation of India (midcap, life insurance)

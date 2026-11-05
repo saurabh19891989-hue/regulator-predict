@@ -2,10 +2,10 @@
 *NIFTY_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.6%**, **12 months +1.9%** (rank 82 / 71 of 200 for 3m / 12m); beta 1.12
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.0%): 3 months 53%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.6% … P90 +7.6%; plausible 12m relative-return range incl. stock-specific noise: -34.1% … +29.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.7 pp (model impact +1.4% beta-adjusted vs realised market-adjusted move -1.9%); forward event exposure +4.7% (3m +2.0%; half assumed priced); company-specific events +0.0%
+- Expected relative return: **3 months +0.7%**, **12 months +1.9%** (rank 81 / 71 of 200 for 3m / 12m); beta 1.12
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.0%): 3 months 53%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.4% … P90 +8.3%; plausible 12m relative-return range incl. stock-specific noise: -35.2% … +20.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.7 pp (model impact +1.3% beta-adjusted vs realised market-adjusted move -1.9%); forward event exposure +4.8% (3m +2.0%; half assumed priced); company-specific events +0.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -0.8% | -0.5% | -0.6 | -0.1 | -0.2 | +0.1 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.7 | -0.1 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → BAJAJ-AUTO | +3.96% | +3.96% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BAJAJ-AUTO | -1.68% | -1.68% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → BAJAJ-AUTO | +1.56% | +1.56% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → BAJAJ-AUTO | -1.50% | -1.50% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → BAJAJ-AUTO | -0.98% | -0.98% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → BAJAJ-AUTO | +0.81% | +0.81% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → BAJAJ-AUTO | +0.80% | +0.80% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → BAJAJ-AUTO | +0.78% | +0.78% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → BAJAJ-AUTO | -0.74% | -0.74% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BAJAJ-AUTO | +2.00% | +0.71% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → BAJAJ-AUTO | -1.20% | -0.70% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → BAJAJ-AUTO | -0.63% | -0.63% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_AUTO_DEMAND_IN → BAJAJ-AUTO | -0.60% | -0.60% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → BAJAJ-AUTO | +1.00% | +0.58% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BAJAJ-AUTO | +2.60% | +0.57% |
+| 1 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → BAJAJ-AUTO | -2.25% | -0.56% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → BAJAJ-AUTO | +0.80% | +0.52% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BAJAJ-AUTO | -0.96% | -0.48% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → BAJAJ-AUTO | -0.92% | -0.46% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → BAJAJ-AUTO | -1.20% | -0.43% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BAJAJ-AUTO | -0.60% | -0.36% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → BAJAJ-AUTO | +4.80% | +0.30% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → BAJAJ-AUTO | -2.00% | -0.30% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → BAJAJ-AUTO | +0.79% | +0.28% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → BAJAJ-AUTO | +0.39% | +0.28% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → BAJAJ-AUTO | -0.47% | -0.28% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → BAJAJ-AUTO | +1.70 | events | -2.04% |
+| 1 | C_MIDEAST_CONFLICT → BAJAJ-AUTO | +1.50 | events | -1.50% |
+| 1 | F_STEEL_INDIA → BAJAJ-AUTO | +1.65 | events | -1.15% |
+| 1 | P_EV_POLICY → BAJAJ-AUTO | +1.10 | events | +1.10% |
+| 1 | F_ALUMINIUM → BAJAJ-AUTO | -1.96 | observed | +0.78% |
+| 1 | F_USDINR → BAJAJ-AUTO | -0.37 | observed | -0.74% |
+| 1 | P_US_TARIFF_INDIA → BAJAJ-AUTO | -0.60 | events | +0.48% |
+| 1 | F_AUTO_DEMAND_IN → BAJAJ-AUTO | -0.10 | events | -0.40% |
+| 1 | F_EU_GDP → BAJAJ-AUTO | +0.22 | events | +0.18% |
+| 2 | F_DXY → C_AFRICA_LATAM → BAJAJ-AUTO | +0.74 | observed | -0.11% |
+| 2 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → BAJAJ-AUTO | -0.10 | events | +0.07% |
+| 1 | F_BRENT → BAJAJ-AUTO | +0.00 | observed | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Bajaj Auto Ltd. (BAJAJ-AUTO) — Market Impact profile, 2026-11-05

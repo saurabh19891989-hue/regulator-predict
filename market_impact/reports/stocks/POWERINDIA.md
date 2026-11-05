@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +4.6%**, **12 months +9.6%** (rank 14 / 14 of 200 for 3m / 12m); beta 1.14
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +42.7%): 3 months 58%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.7% … P90 +16.2%; plausible 12m relative-return range incl. stock-specific noise: -29.7% … +49.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.8 pp (model impact +13.6% beta-adjusted vs realised market-adjusted move -27.9%); forward event exposure +3.5% (3m +1.6%; half assumed priced); company-specific events +4.3%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +42.7%): 3 months 58%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.5% … P90 +16.0%; plausible 12m relative-return range incl. stock-specific noise: -34.8% … +60.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.8 pp (model impact +13.6% beta-adjusted vs realised market-adjusted move -27.9%); forward event exposure +3.6% (3m +1.7%; half assumed priced); company-specific events +4.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +4.8% | +2.4% | +4.3 | +0.3 | +0.1 | +0.1 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.9% | +2.3% | +1.6 | +0.9 | +1.0 | +0.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → POWERINDIA | +5.00% | +5.00% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POWERINDIA | -3.60% | -3.60% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → POWERINDIA | +4.00% | +3.60% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → POWERINDIA | -3.30% | -3.30% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → POWERINDIA | -10.50% | -2.94% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → POWERINDIA | -2.65% | -2.65% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → POWERINDIA | +2.00% | +2.00% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → POWERINDIA | +2.00% | +2.00% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → POWERINDIA | -2.00% | -2.00% |
-| 2 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POWERINDIA | +1.92% | +1.92% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → POWERINDIA | +3.75% | +1.88% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → POWERINDIA | -1.77% | -1.77% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → POWERINDIA | -6.00% | -1.68% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → POWERINDIA | -1.56% | -1.56% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POWERINDIA | +3.00% | +1.35% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → POWERINDIA | -7.50% | -1.35% |
+| 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POWERINDIA | +2.88% | +1.15% |
+| 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → POWERINDIA | +1.92% | +0.86% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → POWERINDIA | -2.00% | -0.80% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POWERINDIA | +1.20% | +0.72% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → POWERINDIA | +1.20% | +0.72% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POWERINDIA | -1.03% | -0.70% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_AI_CAPEX → POWERINDIA | +1.05% | +0.65% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → POWERINDIA | -1.80% | -0.64% |
+| 1 | EV_ANTHROPIC_IPO_LISTING ⇒ F_AI_CAPEX → POWERINDIA | +0.70% | +0.60% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → POWERINDIA | +1.00 | events | +5.00% |
+| 1 | P_RENEWABLE_SUPPORT → POWERINDIA | +1.50 | events | +3.00% |
+| 1 | F_FPI_FLOWS → POWERINDIA | -1.60 | events | -2.40% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POWERINDIA | +1.20 | events | +2.30% |
+| 1 | T_ENERGY_TRANSITION → POWERINDIA | +0.50 | events | +2.00% |
+| 1 | F_REPO_IN → POWERINDIA | +1.00 | events | -2.00% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → POWERINDIA | +1.50 | events | +1.92% |
+| 1 | C_MIDEAST_CONFLICT → POWERINDIA | +1.50 | events | -1.20% |
+| 1 | F_AI_CAPEX → POWERINDIA | -0.30 | events | -1.05% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POWERINDIA | +0.50 | events | +0.80% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → POWERINDIA | +1.00 | events | +0.80% |
+| 1 | F_STEEL_INDIA → POWERINDIA | +1.65 | events | -0.66% |
 
 ## Analyst profile (agent research, sourced)
 # POWERINDIA — Hitachi Energy India Ltd. (profile as of 2026-11-05)

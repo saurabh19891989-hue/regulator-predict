@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -3.0%**, **12 months -5.3%** (rank 173 / 167 of 200 for 3m / 12m); beta 1.75
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.6%): 3 months 43%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.0% … P90 -2.3%; plausible 12m relative-return range incl. stock-specific noise: -52.1% … +40.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.7 pp (model impact -5.4% beta-adjusted vs realised market-adjusted move +23.0%); forward event exposure -5.6% (3m -3.0%; half assumed priced); company-specific events +2.6%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.6%): 3 months 43%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.5% … P90 -3.7%; plausible 12m relative-return range incl. stock-specific noise: -58.3% … +36.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.7 pp (model impact -5.4% beta-adjusted vs realised market-adjusted move +23.0%); forward event exposure -5.5% (3m -3.0%; half assumed priced); company-specific events +2.6%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -9.7% | -2.1% | -7.2 | -2.6 | +0.1 | -0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.1% | -2.1% | -0.2 | -1.1 | -0.6 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → LODHA | -6.60% | -6.60% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → LODHA | -4.64% | -4.64% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LODHA | +7.50% | +3.75% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → LODHA | -3.50% | -3.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → LODHA | -3.10% | -3.10% |
-| 2 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → LODHA | -2.02% | -2.02% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → LODHA | -1.78% | -1.78% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_HOUSING_DEMAND → LODHA | -1.55% | -1.55% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → LODHA | +1.50% | +1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → LODHA | -1.41% | -1.41% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → LODHA | -3.50% | -1.40% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LODHA | -4.48% | -1.25% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → LODHA | +1.25% | +1.25% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → LODHA | -1.13% | -1.13% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_REPO_IN → LODHA | -1.12% | -1.12% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → LODHA | -4.03% | -1.01% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LODHA | -5.60% | -1.01% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → LODHA | -4.50% | -0.99% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → LODHA | -3.50% | -0.95% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → LODHA | -1.40% | -0.84% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → LODHA | -2.88% | -0.81% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → LODHA | -3.50% | -0.77% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → LODHA | -2.88% | -0.72% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → LODHA | -0.89% | -0.58% |
+| 2 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → LODHA | -1.15% | -0.58% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → LODHA | -1.57% | -0.56% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → LODHA | +0.94% | +0.55% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → LODHA | -1.60 | events | -4.80% |
+| 1 | F_REPO_IN → LODHA | +1.00 | events | -3.50% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → LODHA | +1.70 | events | -2.45% |
+| 1 | F_STEEL_INDIA → LODHA | +1.65 | events | -0.99% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → LODHA | +0.50 | events | +0.72% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → LODHA | +1.00 | events | -0.62% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → LODHA | +1.00 | events | -0.48% |
+| 1 | F_CREDIT_SPREADS_IN → LODHA | +0.50 | events | -0.40% |
+| 1 | F_ALUMINIUM → LODHA | -1.96 | observed | +0.39% |
+| 1 | F_DXY → LODHA | +0.74 | observed | -0.37% |
+| 1 | F_USDINR → LODHA | -0.37 | observed | -0.22% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → LODHA | +1.65 | events | -0.20% |
 
 ## Analyst profile (agent research, sourced)
 # Lodha Developers (LODHA) - profile as of 2026-11-05

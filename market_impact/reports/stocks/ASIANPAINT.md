@@ -2,9 +2,9 @@
 *NIFTY_50 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.4%**, **12 months -0.5%** (rank 117 / 114 of 200 for 3m / 12m); beta 0.93
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.0%): 3 months 48%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.2% … P90 +1.1%; plausible 12m relative-return range incl. stock-specific noise: -19.0% … +22.9%
+- Expected relative return: **3 months -0.4%**, **12 months -0.5%** (rank 116 / 113 of 200 for 3m / 12m); beta 0.93
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.0%): 3 months 48%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.4% … P90 +1.2%; plausible 12m relative-return range incl. stock-specific noise: -20.4% … +26.9%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.1% beta-adjusted vs realised market-adjusted move -8.3%); forward event exposure +0.6% (3m -0.1%; half assumed priced); company-specific events +0.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.6 | -0.3 | -0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.4 | -0.3 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ASIANPAINT | -2.97% | -2.97% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ASIANPAINT | -2.69% | -2.69% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ASIANPAINT | -2.20% | -2.20% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ASIANPAINT | -1.40% | -1.40% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ASIANPAINT | +2.50% | +1.25% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ASIANPAINT | -0.70% | -0.70% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ASIANPAINT | -1.50% | -0.54% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → ASIANPAINT | -0.52% | -0.52% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ASIANPAINT | +0.90% | +0.52% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_HOUSING_DEMAND → ASIANPAINT | -0.52% | -0.52% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ASIANPAINT | +0.50% | +0.50% |
-| 3 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → F_CHEM_FEEDSTOCK → ASIANPAINT | +0.49% | +0.49% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ASIANPAINT | -1.36% | -0.49% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ASIANPAINT | +0.82% | +0.47% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → ASIANPAINT | -0.44% | -0.44% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ASIANPAINT | -1.49% | -0.42% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ASIANPAINT | -0.80% | -0.40% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ASIANPAINT | -1.87% | -0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ASIANPAINT | -1.50% | -0.33% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ASIANPAINT | -0.50% | -0.30% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → ASIANPAINT | +0.42% | +0.29% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ASIANPAINT | -0.96% | -0.27% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → ASIANPAINT | -1.17% | -0.26% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ASIANPAINT | -0.96% | -0.24% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → ASIANPAINT | +0.42% | +0.23% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → ASIANPAINT | +1.70 | events | -1.70% |
+| 1 | F_FPI_FLOWS → ASIANPAINT | -1.60 | events | -1.60% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → ASIANPAINT | +1.00 | events | -0.42% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → ASIANPAINT | +1.70 | events | -0.41% |
+| 1 | F_URBAN_DEMAND → ASIANPAINT | +0.20 | events | +0.36% |
+| 1 | F_RURAL_DEMAND → ASIANPAINT | -0.25 | events | -0.35% |
+| 1 | F_USDINR → ASIANPAINT | -0.37 | observed | +0.33% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → ASIANPAINT | +0.50 | events | +0.24% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → ASIANPAINT | +1.00 | events | -0.16% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → ASIANPAINT | +1.65 | events | -0.13% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → ASIANPAINT | +0.40 | events | -0.13% |
+| 1 | F_BRENT → ASIANPAINT | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # ASIANPAINT - Asian Paints Ltd. (Nifty 50, paints / home decor)

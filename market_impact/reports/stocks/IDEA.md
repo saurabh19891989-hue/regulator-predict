@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Telecommunication · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.1%**, **12 months +6.4%** (rank 30 / 26 of 200 for 3m / 12m); beta 1.30
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +39.9%): 3 months 56%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.0% … P90 +18.4%; plausible 12m relative-return range incl. stock-specific noise: -44.2% … +56.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.2% beta-adjusted vs realised market-adjusted move -14.2%); forward event exposure +5.6% (3m -1.3%; half assumed priced); company-specific events +9.5%
+- Expected relative return: **3 months +3.2%**, **12 months +6.4%** (rank 29 / 26 of 200 for 3m / 12m); beta 1.30
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +39.9%): 3 months 56%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.5% … P90 +16.0%; plausible 12m relative-return range incl. stock-specific noise: -49.1% … +48.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.2% beta-adjusted vs realised market-adjusted move -14.2%); forward event exposure +5.7% (3m -1.3%; half assumed priced); company-specific events +9.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +5.9% | +3.4% | +1.2 | +2.1 | +1.3 | +1.2 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -3.1% | -3.1% | -1.4 | -1.2 | -0.4 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → IDEA | +26.40% | +19.80% |
-| 1 | EV_AIRTEL_POSTPAID_HIKE ⇒ P_TELECOM_TARIFFS → IDEA | +6.60% | +6.60% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → IDEA | -5.50% | -5.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → IDEA | +6.25% | +3.12% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → IDEA | -10.00% | -2.80% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → IDEA | -2.80% | -2.80% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → IDEA | -2.40% | -2.40% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → IDEA | -2.35% | -2.35% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → IDEA | -12.50% | -2.25% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → IDEA | -1.99% | -1.99% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_GOLD → IDEA | +1.58% | +1.58% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → IDEA | -1.50% | -1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → IDEA | -1.49% | -1.49% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → IDEA | -1.36% | -1.36% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → IDEA | -1.33% | -1.33% |
+| 1 | EV_SATCOM_LAUNCH ⇒ P_TELECOM_TARIFFS → IDEA | -2.20% | -1.32% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → IDEA | -3.00% | -1.07% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → IDEA | -2.40% | -0.96% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → IDEA | -3.60% | -0.90% |
+| 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → IDEA | +2.85% | +0.85% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → IDEA | -3.75% | -0.82% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → IDEA | -1.60% | -0.80% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → IDEA | +1.25% | +0.73% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → IDEA | -1.20% | -0.72% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_GOLD → IDEA | -1.50% | -0.68% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → IDEA | -2.40% | -0.67% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_TELECOM_TARIFFS → IDEA | +0.30 | events | +6.60% |
+| 1 | F_FPI_FLOWS → IDEA | -1.60 | events | -4.00% |
+| 1 | F_GSEC_10Y_IN → IDEA | +1.70 | events | -3.40% |
+| 1 | F_POWER_PRICE_IN → IDEA | +3.00 | events | -2.40% |
+| 1 | F_CREDIT_SPREADS_IN → IDEA | +0.50 | events | -2.00% |
+| 1 | F_GOLD → IDEA | -1.05 | observed | +1.57% |
+| 1 | F_REPO_IN → IDEA | +1.00 | events | -1.50% |
+| 1 | F_US_10Y → IDEA | +1.68 | observed | -1.34% |
+| 1 | F_USDINR → IDEA | -0.37 | observed | +0.55% |
+| 1 | F_GDP_IN → IDEA | +0.50 | events | +0.50% |
+| 1 | F_RISK_SENTIMENT → IDEA | +0.11 | observed | -0.28% |
 
 ## Analyst profile (agent research, sourced)
 # IDEA — Vodafone Idea Ltd. (Nifty Next 50) — profile as of 2026-11-05

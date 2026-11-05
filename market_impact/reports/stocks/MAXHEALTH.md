@@ -2,10 +2,10 @@
 *NIFTY_50 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.5%**, **12 months -1.8%** (rank 142 / 128 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.6%): 3 months 45%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.3% … P90 +2.4%; plausible 12m relative-return range incl. stock-specific noise: -45.0% … +14.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -3.2% beta-adjusted vs realised market-adjusted move -6.2%); forward event exposure -0.3% (3m +0.3%; half assumed priced); company-specific events -1.0%
+- Expected relative return: **3 months -1.5%**, **12 months -1.8%** (rank 142 / 129 of 200 for 3m / 12m); beta 1.11
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.6%): 3 months 45%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.3% … P90 +0.7%; plausible 12m relative-return range incl. stock-specific noise: -35.6% … +30.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -3.2% beta-adjusted vs realised market-adjusted move -6.2%); forward event exposure -0.2% (3m +0.3%; half assumed priced); company-specific events -1.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,36 @@
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -10.5% | -1.9% | +0.0 | -10.0 | -0.1 | -0.4 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.8% | +1.8% | +1.8 | +0.0 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MAXHEALTH | -7.70% | -7.70% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MAXHEALTH | +8.75% | +4.38% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → MAXHEALTH | -2.65% | -2.65% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → MAXHEALTH | -2.08% | -2.08% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → MAXHEALTH | -2.00% | -2.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → MAXHEALTH | -1.77% | -1.77% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → MAXHEALTH | +1.75% | +1.75% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → MAXHEALTH | -1.64% | -1.64% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → MAXHEALTH | +1.56% | +1.56% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MAXHEALTH | -5.23% | -1.46% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → MAXHEALTH | -1.19% | -1.19% |
 | 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MAXHEALTH | -6.53% | -1.18% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MAXHEALTH | -5.25% | -1.16% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → MAXHEALTH | -1.09% | -1.09% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_FPI_FLOWS → MAXHEALTH | -1.05% | -1.05% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → MAXHEALTH | -3.36% | -0.94% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → MAXHEALTH | -3.36% | -0.84% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → MAXHEALTH | -2.00% | -0.80% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → MAXHEALTH | +1.75% | +0.61% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → MAXHEALTH | -2.30% | -0.58% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MAXHEALTH | -1.57% | -0.56% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → MAXHEALTH | +0.70% | +0.56% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → MAXHEALTH | -2.00% | -0.54% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → MAXHEALTH | -0.80% | -0.48% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ NEW_USDJPY → F_FPI_FLOWS → MAXHEALTH | -2.52% | -0.45% |
+| 3 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → F_FPI_FLOWS → MAXHEALTH | -1.76% | -0.44% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → MAXHEALTH | -1.60 | events | -5.60% |
+| 1 | F_REPO_IN → MAXHEALTH | +1.00 | events | -2.00% |
+| 1 | F_DXY → MAXHEALTH | +0.74 | observed | -1.11% |
+| 1 | F_GDP_IN → MAXHEALTH | +0.50 | events | +0.80% |
+| 1 | F_URBAN_DEMAND → MAXHEALTH | +0.20 | events | +0.44% |
+| 1 | F_USDINR → MAXHEALTH | -0.37 | observed | -0.37% |
 
 ## Analyst profile (agent research, sourced)
 # MAXHEALTH (Max Healthcare Institute) — Nifty 50, as of 2026-11-05

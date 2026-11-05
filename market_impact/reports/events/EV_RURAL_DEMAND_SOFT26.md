@@ -52,7 +52,7 @@ Tractors Oct 2026: M&M domestic 62,626 (-13% y/y; company attributes to Diwali s
 | FEDERALBNK | -1.4 | +0.0 | -0.5 | -1.1 | +0.3 |
 | TMCV | -1.3 | +0.0 | -1.5 | +0.1 | +0.1 |
 
-Share of absolute impact by order: 1: 15%, 2: 39%, 3: 29%, 4: 18%
+Share of absolute impact by order: 1: 14%, 2: 39%, 3: 29%, 4: 18%
 
 ## Sources
 - 2026-11-02 Mahindra sells 64,846 tractors in Oct 2026 - Global Agriculture https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/

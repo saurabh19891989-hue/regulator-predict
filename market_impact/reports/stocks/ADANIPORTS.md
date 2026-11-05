@@ -2,10 +2,10 @@
 *NIFTY_50 · Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.4%**, **12 months +0.9%** (rank 113 / 84 of 200 for 3m / 12m); beta 1.23
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.3%): 3 months 49%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.9% … P90 +4.1%; plausible 12m relative-return range incl. stock-specific noise: -24.0% … +28.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.3 pp (model impact -2.5% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure +5.2% (3m +2.1%; half assumed priced); company-specific events +1.4%
+- Expected relative return: **3 months -0.4%**, **12 months +0.8%** (rank 117 / 86 of 200 for 3m / 12m); beta 1.23
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.3%): 3 months 48%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.1% … P90 +4.3%; plausible 12m relative-return range incl. stock-specific noise: -28.3% … +24.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.4 pp (model impact -2.7% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure +5.3% (3m +2.1%; half assumed priced); company-specific events +1.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.7% | +1.5% | +1.4 | +0.2 | +0.1 | -0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -5.4% | -1.5% | +0.0 | -4.9 | -0.4 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ADANIPORTS | -4.84% | -4.84% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIPORTS | +5.50% | +2.75% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → ADANIPORTS | -2.25% | -2.25% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ADANIPORTS | -1.68% | -1.68% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ADANIPORTS | -1.49% | -1.49% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → ADANIPORTS | +1.20% | +1.20% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ADANIPORTS | +1.10% | +1.10% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPORTS | -3.29% | -0.92% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ADANIPORTS | +1.50% | +0.87% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ADANIPORTS | +0.96% | +0.86% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ADANIPORTS | -0.86% | -0.86% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → ADANIPORTS | +0.80% | +0.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ADANIPORTS | -0.79% | -0.79% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ADANIPORTS | +0.78% | +0.78% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → ADANIPORTS | -0.75% | -0.75% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPORTS | -4.11% | -0.74% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ADANIPORTS | -3.30% | -0.73% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → ADANIPORTS | -1.80% | -0.64% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIPORTS | -2.11% | -0.59% |
+| 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → ADANIPORTS | +0.72% | +0.58% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIPORTS | -2.11% | -0.53% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → ADANIPORTS | +0.80% | +0.52% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIPORTS | -0.96% | -0.48% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → ADANIPORTS | +0.48% | +0.43% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → ADANIPORTS | +1.10% | +0.39% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ADANIPORTS | -0.60% | -0.36% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → ADANIPORTS | -1.60 | events | -3.52% |
+| 1 | C_MIDEAST_CONFLICT → ADANIPORTS | +1.50 | events | -2.25% |
+| 1 | F_GSEC_10Y_IN → ADANIPORTS | +1.70 | events | -2.04% |
+| 1 | F_GOVT_CAPEX → ADANIPORTS | +1.00 | events | +1.20% |
+| 1 | F_GDP_IN → ADANIPORTS | +0.50 | events | +0.80% |
+| 1 | C_RED_SEA → ADANIPORTS | +1.50 | events | -0.60% |
+| 1 | F_REPO_IN → ADANIPORTS | +1.00 | events | -0.60% |
+| 1 | F_CREDIT_SPREADS_IN → ADANIPORTS | +0.50 | events | -0.60% |
+| 1 | P_US_TARIFF_INDIA → ADANIPORTS | -0.60 | events | +0.48% |
+| 1 | F_IRON_ORE → ADANIPORTS | -0.83 | observed | -0.42% |
+| 1 | F_USDINR → ADANIPORTS | -0.37 | observed | -0.37% |
+| 1 | F_COAL_INTL → ADANIPORTS | +0.70 | director_override | -0.21% |
 
 ## Analyst profile (agent research, sourced)
 # Adani Ports and SEZ (ADANIPORTS) - profile as of 2026-11-05

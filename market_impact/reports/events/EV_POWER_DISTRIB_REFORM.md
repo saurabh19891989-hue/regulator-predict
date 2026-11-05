@@ -21,15 +21,15 @@ MoP proposed parallel-licensing framework to introduce distribution competition 
 | TATAPOWER | +2.6 | +2.5 | +0.1 | +0.0 | +0.0 |
 | IREDA | +2.5 | +2.5 | +0.0 | +0.0 | +0.0 |
 | NHPC | +2.5 | +2.5 | +0.0 | +0.0 | +0.0 |
+| NTPC | +1.9 | +2.0 | -0.1 | +0.0 | +0.0 |
 | POWERINDIA | +1.9 | +0.0 | +1.9 | +0.0 | +0.0 |
+| NLCINDIA | +1.9 | +2.0 | -0.1 | +0.0 | +0.0 |
 | ADANIGREEN | +1.9 | +2.0 | -0.1 | +0.0 | +0.0 |
 | ADANIPOWER | +1.5 | +2.0 | -0.5 | +0.0 | +0.0 |
 | ENRIN | +1.4 | +0.0 | +1.4 | +0.0 | +0.0 |
 | GVT&D | +1.4 | +0.0 | +1.4 | +0.0 | +0.0 |
 | POWERGRID | +1.4 | +1.0 | +0.4 | +0.0 | +0.0 |
 | CGPOWER | +1.2 | +0.0 | +1.2 | +0.0 | +0.0 |
-| BHEL | +1.2 | +1.0 | +0.2 | +0.0 | +0.0 |
-| JSWENERGY | +1.1 | +1.5 | -0.4 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -50,7 +50,7 @@ MoP proposed parallel-licensing framework to introduce distribution competition 
 | BHEL | +1.2 | +1.0 | +0.2 | +0.0 | +0.0 |
 | CGPOWER | +1.2 | +0.0 | +1.2 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 67%, 2: 33%, 3: 0%, 4: 0%
+Share of absolute impact by order: 1: 70%, 2: 30%, 3: 0%, 4: 0%
 
 ## Sources
 - 2026-09-18 Parallel Licensing framework proposed by MoP https://www.powerlinemagazine.in/

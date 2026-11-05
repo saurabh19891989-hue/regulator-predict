@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.2%**, **12 months +3.4%** (rank 41 / 50 of 200 for 3m / 12m); beta 1.22
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.1%): 3 months 57%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.9% … P90 +6.1%; plausible 12m relative-return range incl. stock-specific noise: -16.6% … +38.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.6 pp (model impact +3.2% beta-adjusted vs realised market-adjusted move -7.1%); forward event exposure +5.0% (3m +4.0%; half assumed priced); company-specific events +0.9%
+- Expected relative return: **3 months +2.2%**, **12 months +3.4%** (rank 40 / 47 of 200 for 3m / 12m); beta 1.22
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.1%): 3 months 57%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.5% … P90 +8.3%; plausible 12m relative-return range incl. stock-specific noise: -29.8% … +29.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.6 pp (model impact +3.2% beta-adjusted vs realised market-adjusted move -7.1%); forward event exposure +5.1% (3m +4.0%; half assumed priced); company-specific events +0.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI tightens gold-loan / unsecured and NBFC-bank lending norms after early stress (`EV_RBI_GOLD_LOAN_TIGHTEN`) | risk_scenario | 0.30 | -4.4% | -1.3% | -2.0 | -2.3 | -0.1 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.6% | +1.3% | +2.5 | +0.2 | -0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → LICHSGFIN | +3.97% | +3.97% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → LICHSGFIN | +3.00% | +3.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → LICHSGFIN | +2.66% | +2.66% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → LICHSGFIN | -2.20% | -2.20% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → LICHSGFIN | -3.50% | -2.17% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → LICHSGFIN | -2.10% | -2.10% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LICHSGFIN | +2.50% | +1.25% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → LICHSGFIN | -1.25% | -1.25% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → LICHSGFIN | -2.00% | -1.24% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → LICHSGFIN | +3.00% | +1.20% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → LICHSGFIN | +1.12% | +1.12% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → LICHSGFIN | -1.07% | -1.07% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → LICHSGFIN | +1.00% | +1.00% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → LICHSGFIN | +0.97% | +0.97% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_REPO_IN → LICHSGFIN | +0.96% | +0.96% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → LICHSGFIN | +3.46% | +0.86% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → LICHSGFIN | +3.00% | +0.81% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → LICHSGFIN | -3.00% | -0.75% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → LICHSGFIN | +1.20% | +0.72% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → LICHSGFIN | +3.00% | +0.66% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → LICHSGFIN | -1.20% | -0.60% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → LICHSGFIN | +2.00% | +0.60% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → LICHSGFIN | -2.00% | -0.60% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → LICHSGFIN | +1.00% | +0.58% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_ASSET_QUALITY_IN → LICHSGFIN | +0.60% | +0.54% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → LICHSGFIN | -0.90% | -0.54% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_REPO_IN → LICHSGFIN | +1.00 | events | +3.00% |
+| 1 | F_GSEC_10Y_IN → LICHSGFIN | +1.70 | events | -2.55% |
+| 1 | F_FED_FUNDS → LICHSGFIN | +1.62 | observed | +1.62% |
+| 1 | F_FPI_FLOWS → LICHSGFIN | -1.60 | events | -1.60% |
+| 1 | F_CREDIT_SPREADS_IN → LICHSGFIN | +0.50 | events | -1.50% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → LICHSGFIN | +0.50 | events | +1.12% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → LICHSGFIN | +1.70 | events | -0.41% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → LICHSGFIN | -0.25 | events | -0.28% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → LICHSGFIN | +1.00 | events | -0.28% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → LICHSGFIN | -1.56 | events | -0.26% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → LICHSGFIN | +0.50 | events | +0.26% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → LICHSGFIN | +0.50 | events | +0.24% |
 
 ## Analyst profile (agent research, sourced)
 # LICHSGFIN - LIC Housing Finance (midcap housing finance)

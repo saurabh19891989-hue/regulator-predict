@@ -2,10 +2,10 @@
 *NIFTY_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.9%**, **12 months +0.7%** (rank 70 / 88 of 200 for 3m / 12m); beta 1.28
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.7%): 3 months 53%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.6% … P90 +14.8%; plausible 12m relative-return range incl. stock-specific noise: -36.7% … +41.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -8.7% beta-adjusted vs realised market-adjusted move -12.0%); forward event exposure +4.0% (3m +3.6%; half assumed priced); company-specific events -0.3%
+- Expected relative return: **3 months +0.9%**, **12 months +0.7%** (rank 69 / 89 of 200 for 3m / 12m); beta 1.28
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.7%): 3 months 53%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.5% … P90 +10.6%; plausible 12m relative-return range incl. stock-specific noise: -41.5% … +33.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -8.7% beta-adjusted vs realised market-adjusted move -12.0%); forward event exposure +4.0% (3m +3.7%; half assumed priced); company-specific events -0.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.58 | -4.7% | -2.7% | -3.0 | -1.0 | -0.7 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -0.7 | -1.7 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → BSE | -6.60% | -6.60% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BSE | +7.50% | +3.75% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BSE | -3.50% | -3.50% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → BSE | -3.17% | -3.17% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → BSE | -3.00% | -3.00% |
 | 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ P_SEBI_DERIVATIVES → BSE | +3.20% | +2.72% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → BSE | +9.00% | +2.25% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → BSE | +3.60% | +1.80% |
 | 1 | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → BSE | -9.00% | -1.80% |
 | 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → BSE | -6.00% | -1.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → BSE | -1.78% | -1.78% |
 | 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → BSE | -3.00% | -1.74% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → BSE | -1.60% | -1.60% |
 | 1 | EV_SEBI_FNO_CURBS_RISK ⇒ P_SEBI_DERIVATIVES → BSE | -8.00% | -1.60% |
 | 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ F_EQUITY_ACTIVITY_IN → BSE | +1.80% | +1.53% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → BSE | -4.50% | -1.26% |
+| 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → BSE | +4.50% | +1.12% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → BSE | -4.50% | -1.12% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BSE | +4.00% | +1.12% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ P_CAPITAL_GAINS_TAX → BSE | +3.00% | +1.05% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BSE | -2.00% | -1.00% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FED_FUNDS → BSE | +1.62 | observed | -4.86% |
+| 1 | F_FPI_FLOWS → BSE | -1.60 | events | -4.80% |
+| 1 | F_GSEC_10Y_IN → BSE | +1.70 | events | -4.25% |
+| 2 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → BSE | -1.60 | events | -2.30% |
+| 1 | P_SEBI_DERIVATIVES → BSE | -0.10 | events | +0.80% |
+| 1 | F_US_EQUITIES → BSE | +0.23 | observed | +0.35% |
+| 2 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → BSE | -0.10 | events | +0.28% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → BSE | +0.30 | events | +0.19% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → BSE | -1.60 | events | +0.17% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → BSE | +0.30 | events | +0.13% |
+| 1 | F_RISK_SENTIMENT → BSE | +0.11 | observed | +0.11% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_EQUITY_ACTIVITY_IN → BSE | +0.30 | events | +0.10% |
 
 ## Analyst profile (agent research, sourced)
 # BSE - BSE Ltd. (Nifty 50 per pack, exchange operator) - as of 2026-11-05

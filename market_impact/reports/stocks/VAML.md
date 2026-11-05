@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.2%**, **12 months +0.2%** (rank 104 / 99 of 200 for 3m / 12m); beta 1.00
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol —%): 3 months —, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.1% … P90 +9.4%; plausible 12m relative-return range incl. stock-specific noise: -30.6% … +38.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -21.9% beta-adjusted vs realised market-adjusted move —%); forward event exposure +5.8% (3m +2.9%; half assumed priced); company-specific events -3.2%
+- Expected relative return: **3 months -0.2%**, **12 months +0.2%** (rank 105 / 99 of 200 for 3m / 12m); beta 1.00
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.1%): 3 months 49%, 12 months 68%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.1% … P90 +12.2%; plausible 12m relative-return range incl. stock-specific noise: -12.4% … +43.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -21.9% beta-adjusted vs realised market-adjusted move —%); forward event exposure +5.9% (3m +2.9%; half assumed priced); company-specific events -3.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.7 | -0.4 | -0.1 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.2% | -1.2% | -1.1 | -0.1 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → VAML | -19.60% | -19.60% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → VAML | +4.69% | +4.69% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VAML | -3.70% | -3.70% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML | +3.60% | +3.60% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → VAML | -2.40% | -2.40% |
-| 1 | EV_INDIA_COAL_CRUNCH ⇒ F_COAL_INDIA → VAML | -1.80% | -1.80% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML | -2.40% | -1.39% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | +3.80% | +1.33% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → VAML | +1.21% | +1.21% |
-| 2 | EV_CHINA_Q3_GDP_AND_MINI_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | +1.14% | +1.14% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → VAML | -1.11% | -1.11% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML | +2.88% | +1.03% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → VAML | -0.98% | -0.98% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → VAML | -2.40% | -0.96% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → VAML | -3.20% | -0.90% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → VAML | +3.90% | +0.86% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → VAML | +2.37% | +0.85% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → VAML | -1.42% | -0.83% |
+| 3 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → F_ALUMINIUM → VAML | +2.20% | +0.77% |
+| 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → F_ALUMINIUM → VAML | +1.60% | +0.72% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → VAML | -4.00% | -0.72% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → VAML | -1.38% | -0.69% |
+| 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | +1.52% | +0.68% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VAML | -1.87% | -0.67% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VAML | +1.12% | +0.65% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_ALUMINIUM → VAML | -1.96 | observed | -19.61% |
+| 1 | F_POWER_PRICE_IN → VAML | +3.00 | events | -2.40% |
+| 1 | F_COAL_INDIA → VAML | +1.50 | events | -1.80% |
+| 1 | F_GSEC_10Y_IN → VAML | +1.70 | events | -1.19% |
+| 1 | F_USDINR → VAML | -0.37 | observed | -1.11% |
+| 1 | T_ENERGY_TRANSITION → VAML | +0.50 | events | +0.50% |
+| 1 | F_CREDIT_SPREADS_IN → VAML | +0.50 | events | -0.50% |
+| 1 | P_ANTI_DUMPING_IN → VAML | +0.40 | events | +0.20% |
+| 1 | F_RISK_SENTIMENT → VAML | +0.11 | observed | -0.09% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → VAML | +0.40 | events | -0.04% |
+| 2 | F_BRENT → F_CHEM_FEEDSTOCK → VAML | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # VAML — Vedanta Aluminium Metal Ltd. (Nifty Next 50) — profile as of 2026-11-05

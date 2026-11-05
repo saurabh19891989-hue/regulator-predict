@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.2%**, **12 months -0.3%** (rank 95 / 111 of 200 for 3m / 12m); beta 1.14
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +105.4%): 3 months 50%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.9% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -58.3% … +60.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -3.5% beta-adjusted vs realised market-adjusted move -27.4%); forward event exposure +4.2% (3m +2.5%; half assumed priced); company-specific events -2.5%
+- Expected relative return: **3 months -0.0%**, **12 months -0.7%** (rank 100 / 118 of 200 for 3m / 12m); beta 1.00
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.1%): 3 months 50%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.3% … P90 +3.8%; plausible 12m relative-return range incl. stock-specific noise: -35.4% … +40.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.1% beta-adjusted vs realised market-adjusted move —%); forward event exposure +3.3% (3m +2.0%; half assumed priced); company-specific events -2.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,40 @@
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +0.9% | +0.9% | +0.9 | -0.1 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.6 | -0.2 | -0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → VEDL | -3.30% | -3.30% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → VEDL | +3.13% | +3.13% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → VEDL | +3.75% | +1.88% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → VEDL | -1.36% | -1.36% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → VEDL | -1.20% | -1.20% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → VEDL | -1.12% | -1.12% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → VEDL | -0.98% | -0.98% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → VEDL | -0.89% | -0.89% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → VEDL | -2.80% | -0.78% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → VEDL | +0.75% | +0.75% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → VEDL | -0.74% | -0.74% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → VEDL | -0.70% | -0.70% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_US_10Y → VEDL | -0.64% | -0.64% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → VEDL | -3.50% | -0.63% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_CREDIT_SPREADS_IN → VEDL | -0.60% | -0.60% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → VEDL | +2.60% | +0.57% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → VEDL | +1.58% | +0.56% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → VEDL | -0.95% | -0.55% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → VEDL | -2.25% | -0.49% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → VEDL | -1.44% | -0.40% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → VEDL | -1.44% | -0.36% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_US_10Y → VEDL | +0.80% | +0.36% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → VEDL | -0.60% | -0.36% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → VEDL | -0.64% | -0.32% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → VEDL | -1.12% | -0.31% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → VEDL | +0.88% | +0.31% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → VEDL | -0.84% | -0.30% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → VEDL | -1.60 | events | -2.40% |
+| 1 | F_GSEC_10Y_IN → VEDL | +1.70 | events | -1.36% |
+| 1 | F_US_10Y → VEDL | +1.68 | observed | -1.34% |
+| 1 | F_CREDIT_SPREADS_IN → VEDL | +0.50 | events | -1.00% |
+| 1 | F_ALUMINIUM → VEDL | -1.96 | observed | -0.98% |
+| 1 | F_USDINR → VEDL | -0.37 | observed | -0.74% |
+| 1 | F_COPPER → VEDL | -0.24 | observed | -0.36% |
+| 2 | F_CHINA_GDP → F_ZINC_LEAD → VEDL | +0.30 | events | +0.11% |
+| 2 | F_DXY → F_ZINC_LEAD → VEDL | +0.74 | observed | -0.11% |
+| 1 | F_RISK_SENTIMENT → VEDL | +0.11 | observed | -0.08% |
 
 ## Analyst profile (agent research, sourced)
 # VEDL — Vedanta Ltd. (Nifty Next 50) — profile as of 2026-11-05

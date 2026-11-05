@@ -45,10 +45,10 @@ Budget presented on 1 Feb 2027 (date per convention, not verified). ET (2 Nov): 
 | HINDCOPPER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | HINDZINC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | NATIONALUM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| NLCINDIA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | VAML | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | VEDL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SBIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| ADANIPOWER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 53%, 2: 29%, 3: 16%, 4: 2%
 

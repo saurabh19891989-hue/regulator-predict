@@ -2,9 +2,9 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.6%**, **12 months +6.3%** (rank 25 / 28 of 200 for 3m / 12m); beta 1.37
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.0%): 3 months 58%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.9% … P90 +10.0%; plausible 12m relative-return range incl. stock-specific noise: -53.5% … +41.7%
+- Expected relative return: **3 months +3.6%**, **12 months +6.3%** (rank 26 / 28 of 200 for 3m / 12m); beta 1.37
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.0%): 3 months 58%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.2% … P90 +12.3%; plausible 12m relative-return range incl. stock-specific noise: -28.9% … +48.6%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.4 pp (model impact +10.9% beta-adjusted vs realised market-adjusted move -35.0%); forward event exposure +2.4% (3m +1.4%; half assumed priced); company-specific events +1.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,39 @@
 | Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +2.2% | +0.9% | +2.2 | +0.0 | +0.2 | -0.2 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.7 | -0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → SUZLON | +7.00% | +7.00% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → SUZLON | +3.50% | +3.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → SUZLON | -3.00% | -3.00% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SUZLON | -2.65% | -2.65% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → SUZLON | -2.52% | -2.52% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → SUZLON | -2.00% | -2.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → SUZLON | -1.88% | -1.88% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → SUZLON | -1.77% | -1.77% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → SUZLON | +1.50% | +1.50% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → SUZLON | +2.00% | +1.16% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → SUZLON | +2.25% | +0.90% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → SUZLON | -2.40% | -0.86% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SUZLON | -2.00% | -0.80% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → SUZLON | -0.72% | -0.72% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → SUZLON | +0.71% | +0.71% |
+| 1 | EV_GST_RATE_CHANGE_APR27 ⇒ P_RENEWABLE_SUPPORT → SUZLON | +2.10% | +0.63% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → SUZLON | -0.86% | -0.58% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SUZLON | -2.30% | -0.58% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SUZLON | -2.00% | -0.54% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → SUZLON | -0.80% | -0.48% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → SUZLON | -2.00% | -0.44% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → SUZLON | -0.72% | -0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → SUZLON | -1.56% | -0.34% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → SUZLON | -0.95% | -0.34% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → SUZLON | +0.57% | +0.33% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → SUZLON | -0.51% | -0.33% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_RENEWABLE_SUPPORT → SUZLON | +1.50 | events | +10.50% |
+| 1 | C_MIDEAST_CONFLICT → SUZLON | +1.50 | events | -3.00% |
+| 1 | F_STEEL_INDIA → SUZLON | +1.65 | events | -2.97% |
+| 1 | F_REPO_IN → SUZLON | +1.00 | events | -2.00% |
+| 1 | F_POWER_DEMAND_IN → SUZLON | +1.20 | events | +1.80% |
+| 1 | F_USDINR → SUZLON | -0.37 | observed | +0.44% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → SUZLON | +1.00 | events | +0.24% |
+| 1 | F_COPPER → SUZLON | -0.24 | observed | +0.21% |
+| 2 | F_AI_CAPEX → T_DATA_CENTRES_IN → SUZLON | -0.30 | events | -0.11% |
 
 ## Analyst profile (agent research, sourced)
 # SUZLON — Suzlon Energy (as of 2026-11-05)

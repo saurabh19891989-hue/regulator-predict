@@ -2,10 +2,10 @@
 *MIDCAP_100 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.3%**, **12 months +2.9%** (rank 40 / 55 of 200 for 3m / 12m); beta 0.76
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.2%): 3 months 56%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.0% … P90 +8.7%; plausible 12m relative-return range incl. stock-specific noise: -42.4% … +34.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.0 pp (model impact +2.1% beta-adjusted vs realised market-adjusted move -35.3%); forward event exposure +10.5% (3m +5.5%; half assumed priced); company-specific events -4.5%
+- Expected relative return: **3 months +2.3%**, **12 months +2.9%** (rank 39 / 54 of 200 for 3m / 12m); beta 0.76
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.2%): 3 months 56%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.9% … P90 +10.4%; plausible 12m relative-return range incl. stock-specific noise: -21.7% … +47.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.0 pp (model impact +2.1% beta-adjusted vs realised market-adjusted move -35.3%); forward event exposure +10.6% (3m +5.5%; half assumed priced); company-specific events -4.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | IMD April 2027 forecast says below-normal monsoon (<96% LPA) - second weak year risk (`EV_MONSOON27_DEFICIT_FORECAST`) | risk_scenario | 0.32 | -1.6% | -0.5% | -1.5 | -0.2 | +0.1 | -0.0 |
 | Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | -3.4% | -0.5% | -3.0 | -0.6 | +0.2 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIIND | -3.37% | -3.37% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → PIIND | +3.13% | +3.13% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → PIIND | -1.89% | -1.89% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → PIIND | +1.80% | +1.44% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → PIIND | +1.50% | +1.02% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → PIIND | +0.81% | +0.81% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → PIIND | +1.20% | +0.78% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → PIIND | -0.74% | -0.74% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIIND | -1.70% | -0.61% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ P_US_TARIFF_INDIA → PIIND | +0.60% | +0.60% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIIND | +1.02% | +0.59% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → PIIND | +0.90% | +0.58% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PIIND | +2.60% | +0.57% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → PIIND | +1.58% | +0.56% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → PIIND | -0.95% | -0.55% |
+| 1 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → PIIND | -1.50% | -0.48% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → PIIND | -0.92% | -0.46% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → PIIND | -3.00% | -0.45% |
+| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → PIIND | +0.75% | +0.43% |
+| 1 | EV_CHINA_FDI_EASING_PN3 ⇒ T_CHINA_PLUS_ONE → PIIND | +0.60% | +0.42% |
+| 2 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → PIIND | +0.50% | +0.35% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_MONSOON → PIIND | -1.56 | events | -2.34% |
+| 1 | F_USDINR → PIIND | -0.37 | observed | -0.74% |
+| 1 | P_US_TARIFF_INDIA → PIIND | -0.60 | events | +0.72% |
+| 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → PIIND | -0.47 | observed | +0.34% |
+| 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → PIIND | +0.50 | events | +0.30% |
+| 1 | F_RURAL_DEMAND → PIIND | -0.25 | events | -0.30% |
+| 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → PIIND | +0.30 | events | +0.29% |
+| 2 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → PIIND | +0.40 | events | +0.29% |
+| 1 | F_EU_GDP → PIIND | +0.22 | events | +0.22% |
+| 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → PIIND | -0.60 | events | +0.22% |
+| 2 | C_US_CHINA_DECOUPLING → T_CHINA_PLUS_ONE → PIIND | -0.10 | events | -0.13% |
+| 2 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → PIIND | -0.10 | events | +0.12% |
 
 ## Analyst profile (agent research, sourced)
 # PIIND — PI Industries Ltd. (as of 2026-11-05)

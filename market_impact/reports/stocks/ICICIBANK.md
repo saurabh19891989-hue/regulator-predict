@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.2%**, **12 months -5.1%** (rank 158 / 164 of 200 for 3m / 12m); beta 0.97
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +13.6%): 3 months 37%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.4% … P90 +1.5%; plausible 12m relative-return range incl. stock-specific noise: -24.7% … +17.9%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +13.6%): 3 months 37%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.8% … P90 -0.7%; plausible 12m relative-return range incl. stock-specific noise: -20.2% … +8.0%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.8 pp (model impact -1.6% beta-adjusted vs realised market-adjusted move +15.0%); forward event exposure -7.0% (3m -2.7%; half assumed priced); company-specific events +0.7%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.4% | -2.4% | -2.0 | -0.1 | -0.2 | -0.1 |
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.9 | -0.1 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ICICIBANK | -4.40% | -4.40% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ICICIBANK | +5.00% | +2.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ICICIBANK | -8.00% | -2.24% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ICICIBANK | -10.00% | -1.80% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ICICIBANK | -1.68% | -1.68% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ICICIBANK | -1.49% | -1.49% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → ICICIBANK | -2.10% | -1.30% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → ICICIBANK | +1.25% | +1.25% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ICICIBANK | +1.00% | +1.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → ICICIBANK | -0.96% | -0.96% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ICICIBANK | -0.94% | -0.94% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → ICICIBANK | -1.50% | -0.93% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → ICICIBANK | -2.40% | -0.86% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → ICICIBANK | -0.84% | -0.84% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → ICICIBANK | -0.80% | -0.80% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → ICICIBANK | -2.88% | -0.72% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ICICIBANK | -3.00% | -0.66% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → ICICIBANK | +0.72% | +0.65% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → ICICIBANK | -1.00% | -0.62% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → ICICIBANK | +1.00% | +0.58% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → ICICIBANK | -0.90% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ICICIBANK | -1.92% | -0.54% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → ICICIBANK | +0.80% | +0.50% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ICICIBANK | -1.92% | -0.48% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → ICICIBANK | -1.60 | events | -3.20% |
+| 1 | F_GSEC_10Y_IN → ICICIBANK | +1.70 | events | -2.04% |
+| 1 | F_GDP_IN → ICICIBANK | +0.50 | events | +1.25% |
+| 1 | F_LIQUIDITY_IN → ICICIBANK | -0.90 | events | -0.54% |
+| 1 | F_REPO_IN → ICICIBANK | +1.00 | events | -0.50% |
+| 1 | F_USDINR → ICICIBANK | -0.37 | observed | +0.44% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → ICICIBANK | +0.50 | events | +0.34% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → ICICIBANK | +1.00 | events | -0.23% |
+| 1 | F_RISK_SENTIMENT → ICICIBANK | +0.11 | observed | -0.22% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → ICICIBANK | -1.56 | events | -0.20% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → ICICIBANK | +0.50 | events | +0.17% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → ICICIBANK | -0.25 | events | -0.17% |
 
 ## Analyst profile (agent research, sourced)
 # ICICIBANK - ICICI Bank Ltd. (as of 2026-11-05)

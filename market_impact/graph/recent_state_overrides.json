@@ -4,6 +4,15 @@
    "node": "NEW_OMC_MARKETING_MARGIN",
    "state_ssu": -0.5,
    "reason": "Agents booked the margin LEVEL vs normal (-3). Since 2026-06-01 Brent and USD/INR are flat and retail prices frozen, so the CHANGE in marketing margin is small; -0.5 reflects continuing LPG under-recovery. OMC 6m returns (-1% to +3%) vs 12m (-14% to -21%) confirm the collapse was priced before June."
+  },
+  {
+   "node": "F_COAL_INTL",
+   "state_ssu": 0.7,
+   "reason": "Yahoo MTF=F series stale since 2025-12-26. Sourced levels: Newcastle ~US$132/t on 22 May 2026 (forexsrovnavac, generic coal listing), Asia coal at a 22-month high on 8 Jun 2026 (Bloomberg/The Star), ~US$150/t on 19 Oct 2026 (Kalkine: 'up 40% this year ... Hormuz gas shock revives coal'). Change since 1 Jun \u2248 +9\u201314% \u21d2 ~+0.7 SSU (SSU = +15%). Low confidence; a 20 Oct report of $111.75 likely refers to a lower-CV grade.",
+   "sources": [
+    "https://www.forexsrovnavac.cz/en/commodities/coal",
+    "https://news.google.com/rss/search?q=Newcastle+coal+price+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
   }
  ]
 }

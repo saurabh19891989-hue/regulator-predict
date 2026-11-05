@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +7.6%**, **12 months +11.5%** (rank 3 / 8 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.3%): 3 months 67%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +7.3% … P90 +17.8%; plausible 12m relative-return range incl. stock-specific noise: -25.5% … +58.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +10.0 pp (model impact +23.4% beta-adjusted vs realised market-adjusted move -27.7%); forward event exposure +6.0% (3m +3.3%; half assumed priced); company-specific events -0.7%
+- Expected relative return: **3 months +7.6%**, **12 months +11.5%** (rank 4 / 8 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.3%): 3 months 67%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +7.2% … P90 +20.3%; plausible 12m relative-return range incl. stock-specific noise: -19.7% … +51.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +10.0 pp (model impact +23.4% beta-adjusted vs realised market-adjusted move -27.7%); forward event exposure +6.1% (3m +3.3%; half assumed priced); company-specific events -0.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,40 @@
 | Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +3.0% | +1.2% | +3.0 | +0.0 | +0.1 | -0.1 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.1% | -1.1% | +0.0 | -1.5 | -1.3 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → WAAREEENER | +6.00% | +6.00% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → WAAREEENER | +3.00% | +3.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → WAAREEENER | -2.03% | -2.03% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → WAAREEENER | +2.00% | +2.00% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_SILVER → WAAREEENER | +2.00% | +2.00% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → WAAREEENER | -1.99% | -1.99% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → WAAREEENER | +1.76% | +1.76% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → WAAREEENER | +1.50% | +1.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → WAAREEENER | -1.50% | -1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → WAAREEENER | -1.33% | -1.33% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → WAAREEENER | +2.00% | +1.30% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → WAAREEENER | +3.00% | +1.20% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ P_US_TARIFF_INDIA → WAAREEENER | +1.00% | +1.00% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → WAAREEENER | -1.15% | -0.78% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → WAAREEENER | -5.00% | -0.75% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → WAAREEENER | -1.50% | -0.60% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_SILVER → WAAREEENER | -1.20% | -0.54% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → WAAREEENER | +0.90% | +0.54% |
+| 1 | EV_GST_RATE_CHANGE_APR27 ⇒ P_RENEWABLE_SUPPORT → WAAREEENER | +1.80% | +0.54% |
+| 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → WAAREEENER | +0.70% | +0.49% |
+| 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → WAAREEENER | +1.60% | +0.48% |
+| 1 | EV_INDIA_US_TALKS_COLLAPSE ⇒ P_US_TARIFF_INDIA → WAAREEENER | -3.00% | -0.45% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → WAAREEENER | -1.73% | -0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → WAAREEENER | -1.50% | -0.41% |
+| 2 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → P_US_TARIFF_INDIA → WAAREEENER | +1.28% | +0.38% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → WAAREEENER | -1.69% | -0.37% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_RENEWABLE_SUPPORT → WAAREEENER | +1.50 | events | +9.00% |
+| 1 | F_POWER_DEMAND_IN → WAAREEENER | +1.20 | events | +2.40% |
+| 1 | F_SILVER → WAAREEENER | -2.50 | observed | +2.00% |
+| 1 | F_ALUMINIUM → WAAREEENER | -1.96 | observed | +1.77% |
+| 1 | T_ENERGY_TRANSITION → WAAREEENER | +0.50 | events | +1.50% |
+| 1 | F_REPO_IN → WAAREEENER | +1.00 | events | -1.50% |
+| 1 | P_US_TARIFF_INDIA → WAAREEENER | -0.60 | events | +1.20% |
+| 1 | F_USDINR → WAAREEENER | -0.37 | observed | +0.48% |
+| 1 | F_USDCNY → WAAREEENER | -0.47 | observed | +0.47% |
+| 1 | P_ANTI_DUMPING_IN → WAAREEENER | +0.40 | events | +0.40% |
 
 ## Analyst profile (agent research, sourced)
 # WAAREEENER — Waaree Energies (as of 2026-11-05)

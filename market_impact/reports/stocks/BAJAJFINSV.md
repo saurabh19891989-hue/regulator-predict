@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -7.4%**, **12 months -13.4%** (rank 198 / 198 of 200 for 3m / 12m); beta 1.10
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +16.0%): 3 months 18%, 12 months 30%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -19.7% … P90 -8.7%; plausible 12m relative-return range incl. stock-specific noise: -31.3% … +12.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.0 pp (model impact -6.7% beta-adjusted vs realised market-adjusted move -0.6%); forward event exposure -17.0% (3m -8.3%; half assumed priced); company-specific events -1.4%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +16.0%): 3 months 18%, 12 months 20%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -21.8% … P90 -10.0%; plausible 12m relative-return range incl. stock-specific noise: -36.5% … +4.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.0 pp (model impact -6.7% beta-adjusted vs realised market-adjusted move -0.6%); forward event exposure -16.9% (3m -8.2%; half assumed priced); company-specific events -1.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -13.1% | -2.4% | -10.0 | -2.4 | -0.2 | -0.5 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.3% | -2.3% | +0.0 | -1.4 | -0.6 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → BAJAJFINSV | -3.96% | -3.96% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BAJAJFINSV | -2.80% | -2.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BAJAJFINSV | -2.65% | -2.65% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → BAJAJFINSV | -2.64% | -2.64% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BAJAJFINSV | -8.00% | -2.24% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → BAJAJFINSV | -2.00% | -2.00% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → BAJAJFINSV | -10.00% | -1.80% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → BAJAJFINSV | -2.50% | -1.55% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BAJAJFINSV | +3.00% | +1.50% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → BAJAJFINSV | -2.00% | -1.24% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_CREDIT_SPREADS_IN → BAJAJFINSV | -1.20% | -1.20% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → BAJAJFINSV | -2.10% | -1.05% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → BAJAJFINSV | -1.05% | -1.05% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → BAJAJFINSV | -0.96% | -0.96% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → BAJAJFINSV | -0.89% | -0.89% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → BAJAJFINSV | -2.40% | -0.86% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BAJAJFINSV | -2.00% | -0.80% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BAJAJFINSV | -1.60% | -0.80% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → BAJAJFINSV | -2.50% | -0.75% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → BAJAJFINSV | -2.88% | -0.72% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → BAJAJFINSV | -1.20% | -0.72% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BAJAJFINSV | -2.00% | -0.71% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → BAJAJFINSV | +1.20% | +0.70% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BAJAJFINSV | -1.00% | -0.60% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → BAJAJFINSV | +1.70 | events | -3.40% |
+| 1 | F_REPO_IN → BAJAJFINSV | +1.00 | events | -2.00% |
+| 1 | F_CREDIT_SPREADS_IN → BAJAJFINSV | +0.50 | events | -2.00% |
+| 1 | F_FPI_FLOWS → BAJAJFINSV | -1.60 | events | -1.92% |
+| 1 | F_GOLD → BAJAJFINSV | -1.05 | observed | -0.84% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → BAJAJFINSV | -1.56 | events | -0.70% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → BAJAJFINSV | +0.50 | events | +0.64% |
+| 1 | F_URBAN_DEMAND → BAJAJFINSV | +0.20 | events | +0.40% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → BAJAJFINSV | +1.15 | events | -0.39% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → BAJAJFINSV | +0.50 | events | +0.31% |
+| 1 | F_RISK_SENTIMENT → BAJAJFINSV | +0.11 | observed | -0.22% |
+| 2 | F_GDP_IN → F_UNSECURED_STRESS → BAJAJFINSV | +0.50 | events | +0.22% |
 
 ## Analyst profile (agent research, sourced)
 # BAJAJFINSV - Bajaj Finserv Ltd. (Nifty 50, financial holding company) - as of 2026-11-05

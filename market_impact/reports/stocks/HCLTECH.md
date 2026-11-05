@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.7%**, **12 months -5.2%** (rank 167 / 165 of 200 for 3m / 12m); beta 0.92
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.8%): 3 months 43%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.0% … P90 -1.7%; plausible 12m relative-return range incl. stock-specific noise: -33.2% … +38.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.8%): 3 months 43%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.9% … P90 -0.5%; plausible 12m relative-return range incl. stock-specific noise: -42.2% … +34.4%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.1 pp (model impact -2.2% beta-adjusted vs realised market-adjusted move +15.7%); forward event exposure -5.5% (3m -2.1%; half assumed priced); company-specific events -0.3%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,40 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.2% | -1.2% | -0.7 | -0.5 | -0.0 | +0.0 |
 | Appeals court allows $100k H-1B fee (or new rule finalised) and/or OPT fee rule finalised (`EV_H1B_FEE_REINSTATED`) | anticipated | 0.30 | -3.5% | -1.1% | -3.5 | +0.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → HCLTECH | -4.00% | -4.00% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → HCLTECH | +3.36% | +3.36% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → HCLTECH | +2.50% | +2.50% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → HCLTECH | -8.40% | -2.10% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ P_US_VISA_OUTSOURCING → HCLTECH | -1.75% | -1.75% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → HCLTECH | -2.00% | -1.70% |
-| 1 | EV_H1B_100K_FEE_COURT ⇒ P_US_VISA_OUTSOURCING → HCLTECH | -1.40% | -1.40% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → HCLTECH | -4.50% | -1.26% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → HCLTECH | -1.26% | -1.26% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → HCLTECH | -4.50% | -1.12% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → HCLTECH | -4.00% | -1.12% |
 | 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → HCLTECH | -3.50% | -1.05% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → HCLTECH | -5.00% | -0.90% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → HCLTECH | -0.70% | -0.70% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → HCLTECH | +0.65% | +0.65% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → HCLTECH | +1.92% | +0.54% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → HCLTECH | +2.10% | +0.52% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HCLTECH | +2.08% | +0.46% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HCLTECH | +1.26% | +0.45% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HCLTECH | -0.76% | -0.44% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → HCLTECH | -1.20% | -0.43% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → HCLTECH | -1.40% | -0.42% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → HCLTECH | -0.70% | -0.41% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | T_GENAI_SERVICES → HCLTECH | +1.00 | events | -4.00% |
+| 1 | F_US_GDP → HCLTECH | +1.20 | events | +3.36% |
+| 1 | P_US_VISA_OUTSOURCING → HCLTECH | +0.90 | events | -3.15% |
+| 1 | F_GSEC_10Y_IN → HCLTECH | +1.70 | events | -1.53% |
+| 1 | F_FED_FUNDS → HCLTECH | +1.62 | observed | -1.13% |
+| 1 | F_USDINR → HCLTECH | -0.37 | observed | -0.59% |
+| 1 | F_REFINING_MARGIN → HCLTECH | +1.54 | observed | +0.46% |
+| 1 | F_US_EQUITIES → HCLTECH | +0.23 | observed | +0.35% |
+| 1 | F_EU_GDP → HCLTECH | +0.22 | events | +0.26% |
+| 1 | F_RISK_SENTIMENT → HCLTECH | +0.11 | observed | -0.11% |
 
 ## Analyst profile (agent research, sourced)
 # HCL Technologies Ltd. (HCLTECH) - company profile, as of 2026-11-05

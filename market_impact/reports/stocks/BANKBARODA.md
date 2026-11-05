@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.4%**, **12 months -2.9%** (rank 114 / 141 of 200 for 3m / 12m); beta 1.10
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.6%): 3 months 49%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.6% … P90 +1.4%; plausible 12m relative-return range incl. stock-specific noise: -35.7% … +23.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -2.0% beta-adjusted vs realised market-adjusted move -10.5%); forward event exposure -0.6% (3m +1.2%; half assumed priced); company-specific events -2.9%
+- Expected relative return: **3 months -0.4%**, **12 months -2.9%** (rank 113 / 141 of 200 for 3m / 12m); beta 1.10
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.6%): 3 months 49%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.8% … P90 +2.6%; plausible 12m relative-return range incl. stock-specific noise: -25.7% … +28.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -2.0% beta-adjusted vs realised market-adjusted move -10.5%); forward event exposure -0.6% (3m +1.3%; half assumed priced); company-specific events -2.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -0.1 | -1.4 | -0.2 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -6.2% | -1.7% | +0.0 | -4.9 | -0.9 | -0.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → BANKBARODA | -4.40% | -4.40% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BANKBARODA | +5.00% | +2.50% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → BANKBARODA | -3.50% | -2.17% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → BANKBARODA | -1.96% | -1.96% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → BANKBARODA | -3.00% | -1.86% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → BANKBARODA | -1.20% | -1.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → BANKBARODA | -1.19% | -1.19% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → BANKBARODA | -1.07% | -1.07% |
 | 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → BANKBARODA | -3.50% | -1.05% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → BANKBARODA | +1.00% | +1.00% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → BANKBARODA | +0.96% | +0.96% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → BANKBARODA | -0.94% | -0.94% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → BANKBARODA | -2.99% | -0.84% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → BANKBARODA | +0.80% | +0.80% |
 | 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → BANKBARODA | +2.10% | +0.80% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → BANKBARODA | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → BANKBARODA | -3.00% | -0.66% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → BANKBARODA | +0.64% | +0.58% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BANKBARODA | -1.12% | -0.56% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → BANKBARODA | -1.92% | -0.54% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → BANKBARODA | -1.92% | -0.48% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → BANKBARODA | +0.80% | +0.46% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BANKBARODA | -0.70% | -0.42% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → BANKBARODA | -0.60% | -0.37% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → BANKBARODA | -1.60 | events | -3.20% |
+| 1 | F_GSEC_10Y_IN → BANKBARODA | +1.70 | events | -2.38% |
+| 1 | C_MIDEAST_CONFLICT → BANKBARODA | +1.50 | events | -1.20% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → BANKBARODA | +0.50 | events | +0.96% |
+| 1 | F_GOVT_CAPEX → BANKBARODA | +1.00 | events | +0.80% |
+| 1 | F_REPO_IN → BANKBARODA | +1.00 | events | +0.50% |
+| 1 | F_LIQUIDITY_IN → BANKBARODA | -0.90 | events | -0.36% |
+| 1 | F_IRON_ORE → BANKBARODA | -0.83 | observed | -0.33% |
+| 2 | F_GDP_IN → P_RBI_PRUDENTIAL → BANKBARODA | +0.50 | events | -0.28% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → BANKBARODA | -0.25 | events | -0.24% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → BANKBARODA | +1.00 | events | -0.24% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → BANKBARODA | -1.56 | events | -0.22% |
 
 ## Analyst profile (agent research, sourced)
 # Bank of Baroda (BANKBARODA) - Market Impact profile, as of 2026-11-05

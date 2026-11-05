@@ -50,7 +50,7 @@ Govt extended PM E-DRIVE for electric two-wheelers to March 2028, with higher al
 | EICHERMOT | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | PRESTIGE | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 44%, 2: 28%, 3: 21%, 4: 7%
+Share of absolute impact by order: 1: 43%, 2: 29%, 3: 21%, 4: 7%
 
 ## Sources
 - 2026-08-12 PM E-Drive subsidy for e2Ws extended to March 2028 https://www.autocarindia.com/

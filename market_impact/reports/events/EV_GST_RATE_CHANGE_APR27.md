@@ -51,7 +51,7 @@ After the 57th Council (8 Oct) ministry sources say rate changes will be made on
 | COCHINSHIP | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | PIIND | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 30%, 2: 30%, 3: 24%, 4: 16%
+Share of absolute impact by order: 1: 31%, 2: 29%, 3: 24%, 4: 16%
 
 ## Sources
 - 2026-08-31 GST Council May Consider Reducing 18% GST Rate on Mobile Phones https://news.google.com/rss/search?q=GST+Council+may+consider+reducing+18%25+GST+on+mobile+phones+when:120d&hl=en-IN&gl=IN&ceid=IN:en

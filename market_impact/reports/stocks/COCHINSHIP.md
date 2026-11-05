@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.6%**, **12 months +7.7%** (rank 24 / 23 of 200 for 3m / 12m); beta 1.67
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.9%): 3 months 60%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.3% … P90 +21.4%; plausible 12m relative-return range incl. stock-specific noise: -33.7% … +37.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.3 pp (model impact +8.7% beta-adjusted vs realised market-adjusted move -21.0%); forward event exposure +7.8% (3m +3.6%; half assumed priced); company-specific events +1.2%
+- Expected relative return: **3 months +3.7%**, **12 months +7.7%** (rank 25 / 23 of 200 for 3m / 12m); beta 1.67
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.9%): 3 months 60%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.0% … P90 +25.1%; plausible 12m relative-return range incl. stock-specific noise: -32.2% … +33.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.3 pp (model impact +8.7% beta-adjusted vs realised market-adjusted move -21.0%); forward event exposure +7.9% (3m +3.6%; half assumed priced); company-specific events +1.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,39 @@
 | Container lines broadly return to Suez/Red Sea routing; freight rates fall (`EV_RED_SEA_SUEZ_NORMALISATION`) | anticipated | 0.45 | -2.2% | -1.0% | -2.2 | +0.0 | +0.0 | +0.0 |
 | Red Sea: Houthi attacks on shipping and Saudi targets resume (Jul-Oct 2026) while carriers partially return to Suez (`EV_RED_SEA_HOUTHI_ESCALATION_Q3`) | occurred | 1.00 | +1.0% | +1.0% | +1.0 | +0.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_DAC_APPROVALS_H2_26 ⇒ P_DEFENCE_PROCUREMENT → COCHINSHIP | +3.00% | +3.00% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → COCHINSHIP | +3.00% | +2.70% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → COCHINSHIP | +2.48% | +2.48% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → COCHINSHIP | -2.10% | -2.10% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_RED_SEA → F_SHIPPING_RATES → COCHINSHIP | +1.95% | +1.95% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → COCHINSHIP | -6.00% | -1.68% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → COCHINSHIP | -7.50% | -1.35% |
 | 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → C_RED_SEA → F_SHIPPING_RATES → COCHINSHIP | -1.75% | -1.02% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_SHIPPING_RATES → COCHINSHIP | +0.96% | +0.96% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → COCHINSHIP | -0.93% | -0.93% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_RED_SEA → COCHINSHIP | +0.80% | +0.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → COCHINSHIP | +0.78% | +0.78% |
 | 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → C_RED_SEA → F_SHIPPING_RATES → COCHINSHIP | +2.10% | +0.75% |
 | 1 | EV_RED_SEA_CLOSURE ⇒ F_SHIPPING_RATES → COCHINSHIP | +3.00% | +0.75% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → COCHINSHIP | -0.72% | -0.72% |
+| 1 | EV_RED_SEA_SUEZ_NORMALISATION ⇒ F_SHIPPING_RATES → COCHINSHIP | -1.60% | -0.72% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → COCHINSHIP | +1.00% | +0.65% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → COCHINSHIP | -1.80% | -0.64% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → COCHINSHIP | -2.16% | -0.54% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → COCHINSHIP | +1.25% | +0.45% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → COCHINSHIP | -0.75% | -0.44% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → COCHINSHIP | +0.75% | +0.44% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → COCHINSHIP | -2.50% | -0.38% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → COCHINSHIP | +0.60% | +0.37% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_DEFENCE_PROCUREMENT → COCHINSHIP | +1.00 | events | +3.00% |
+| 1 | F_STEEL_INDIA → COCHINSHIP | +1.65 | events | -2.47% |
+| 1 | C_RED_SEA → COCHINSHIP | +1.50 | events | +1.20% |
+| 1 | F_REPO_IN → COCHINSHIP | +1.00 | events | -0.70% |
+| 1 | P_US_TARIFF_INDIA → COCHINSHIP | -0.60 | events | +0.60% |
+| 1 | F_SHIPPING_RATES → COCHINSHIP | +0.30 | events | +0.60% |
+| 1 | F_USDINR → COCHINSHIP | -0.37 | observed | -0.37% |
+| 1 | F_RISK_SENTIMENT → COCHINSHIP | +0.11 | observed | -0.17% |
+| 1 | F_BRENT → COCHINSHIP | +0.00 | observed | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # COCHINSHIP - Cochin Shipyard Ltd. (Shipbuilding PSU)

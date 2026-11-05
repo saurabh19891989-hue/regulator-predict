@@ -2,9 +2,9 @@
 *NIFTY_50 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.2%**, **12 months -0.1%** (rank 106 / 106 of 200 for 3m / 12m); beta 0.76
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.7%): 3 months 49%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.0% … P90 +1.5%; plausible 12m relative-return range incl. stock-specific noise: -18.1% … +18.9%
+- Expected relative return: **3 months -0.2%**, **12 months -0.1%** (rank 107 / 105 of 200 for 3m / 12m); beta 0.76
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.7%): 3 months 49%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.9% … P90 +1.3%; plausible 12m relative-return range incl. stock-specific noise: -21.4% … +19.0%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.3 pp (model impact +0.6% beta-adjusted vs realised market-adjusted move -8.4%); forward event exposure +0.9% (3m +0.4%; half assumed priced); company-specific events +0.6%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.7 | -0.1 | +0.0 |
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.7 | -0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → HINDUNILVR | -3.96% | -3.96% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → HINDUNILVR | -2.20% | -2.20% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → HINDUNILVR | -1.32% | -1.32% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HINDUNILVR | +2.50% | +1.25% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → HINDUNILVR | -1.00% | -1.00% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → HINDUNILVR | -2.00% | -0.71% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → HINDUNILVR | +1.20% | +0.70% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → HINDUNILVR | +0.50% | +0.50% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → HINDUNILVR | -0.45% | -0.45% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → HINDUNILVR | -0.44% | -0.44% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RURAL_DEMAND → HINDUNILVR | -0.43% | -0.43% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HINDUNILVR | -1.49% | -0.42% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → HINDUNILVR | +0.40% | +0.40% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → HINDUNILVR | -1.00% | -0.40% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → HINDUNILVR | -0.39% | -0.39% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HINDUNILVR | -1.87% | -0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → HINDUNILVR | -1.50% | -0.33% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → HINDUNILVR | +0.45% | +0.31% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → HINDUNILVR | -4.80% | -0.30% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → HINDUNILVR | -1.15% | -0.29% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → HINDUNILVR | -1.00% | -0.27% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → HINDUNILVR | -0.96% | -0.27% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → HINDUNILVR | +0.45% | +0.25% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → HINDUNILVR | -0.96% | -0.24% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → HINDUNILVR | -0.40% | -0.24% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → HINDUNILVR | -1.60 | events | -1.60% |
+| 1 | F_REPO_IN → HINDUNILVR | +1.00 | events | -1.00% |
+| 1 | F_URBAN_DEMAND → HINDUNILVR | +0.20 | events | +0.40% |
+| 1 | F_RURAL_DEMAND → HINDUNILVR | -0.25 | events | -0.38% |
+| 1 | F_USDINR → HINDUNILVR | -0.37 | observed | +0.18% |
+| 1 | F_EDIBLE_OIL → HINDUNILVR | +0.19 | observed | -0.15% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → HINDUNILVR | +0.40 | events | -0.01% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → HINDUNILVR | +0.30 | events | -0.01% |
+| 4 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → HINDUNILVR | +0.30 | events | -0.00% |
+| 1 | F_BRENT → HINDUNILVR | +0.00 | observed | -0.00% |
+| 4 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → HINDUNILVR | -0.10 | events | -0.00% |
+| 3 | F_BRENT → F_CHEM_FEEDSTOCK → F_PACKAGING → HINDUNILVR | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Hindustan Unilever — what moves the stock

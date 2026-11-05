@@ -25,12 +25,12 @@ TOI/ET (14 Oct) flagged a strong El Nino for winter and summer 2027. Peak demand
 | ADANIENSOL | +4.2 | +3.5 | +0.9 | -0.0 | -0.2 |
 | ADANIGREEN | +3.7 | +3.9 | +0.0 | -0.0 | -0.2 |
 | IREDA | +3.1 | +3.8 | +0.0 | -0.4 | -0.3 |
+| NLCINDIA | +3.0 | +3.0 | +0.1 | +0.0 | -0.1 |
 | WAAREEENER | +3.0 | +3.0 | +0.0 | +0.1 | -0.1 |
 | POWERGRID | +2.8 | +2.2 | +0.6 | +0.0 | -0.1 |
 | POWERINDIA | +2.7 | +0.0 | +2.9 | +0.1 | -0.2 |
+| NTPC | +2.6 | +2.7 | +0.0 | -0.0 | -0.1 |
 | RECLTD | +2.5 | +3.0 | +0.0 | -0.4 | -0.1 |
-| SUZLON | +2.2 | +2.2 | +0.0 | +0.2 | -0.2 |
-| GVT&D | +2.1 | +0.0 | +2.2 | +0.1 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -51,7 +51,7 @@ TOI/ET (14 Oct) flagged a strong El Nino for winter and summer 2027. Peak demand
 | HDFCBANK | -1.7 | +0.0 | -0.5 | -0.9 | -0.3 |
 | INDUSTOWER | -1.7 | -1.5 | -0.1 | -0.0 | -0.1 |
 
-Share of absolute impact by order: 1: 42%, 2: 24%, 3: 19%, 4: 16%
+Share of absolute impact by order: 1: 43%, 2: 23%, 3: 18%, 4: 15%
 
 ## Sources
 - 2026-10-14 A super El Nino is brewing (TOI) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=super+El+Nino+India+summer+2027+power+demand+when:120d&hl=en-IN&gl=IN&ceid=IN:en

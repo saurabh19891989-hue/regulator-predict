@@ -2,10 +2,10 @@
 *NIFTY_50 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months +0.2%** (rank 91 / 96 of 200 for 3m / 12m); beta 1.02
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.1%): 3 months 51%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.8% … P90 +2.2%; plausible 12m relative-return range incl. stock-specific noise: -19.2% … +22.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +0.3% beta-adjusted vs realised market-adjusted move +15.5%); forward event exposure +1.9% (3m +1.2%; half assumed priced); company-specific events +0.8%
+- Expected relative return: **3 months +0.3%**, **12 months +0.2%** (rank 90 / 97 of 200 for 3m / 12m); beta 1.02
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.1%): 3 months 51%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.7% … P90 +1.7%; plausible 12m relative-return range incl. stock-specific noise: -20.9% … +22.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +0.3% beta-adjusted vs realised market-adjusted move +15.5%); forward event exposure +2.0% (3m +1.3%; half assumed priced); company-specific events +0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -1.6 | +0.8 | -0.2 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -5.1% | -0.9% | +0.0 | -2.6 | -1.5 | -0.9 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → TITAN | -2.20% | -2.20% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → TITAN | -1.68% | -1.68% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TITAN | +2.50% | +1.25% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → TITAN | -1.20% | -1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_GOLD_DEMAND_IN → TITAN | -1.17% | -1.17% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → C_GCC → TITAN | +0.95% | +0.95% |
-| 1 | EV_GST_57TH_COUNCIL_OCT26 ⇒ T_FORMALISATION → TITAN | +0.90% | +0.90% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_GOLD → F_GOLD_DEMAND_IN → TITAN | +0.84% | +0.84% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_GOLD → TITAN | -0.63% | -0.63% |
-| 3 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GOLD → F_GOLD_DEMAND_IN → TITAN | +0.61% | +0.61% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → TITAN | -0.59% | -0.59% |
 | 2 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → T_FORMALISATION → TITAN | +0.72% | +0.58% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → TITAN | -0.57% | -0.57% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → TITAN | -0.53% | -0.53% |
-| 4 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → P_GOLD_IMPORT_DUTY → F_GOLD_DEMAND_IN → TITAN | -0.52% | -0.52% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TITAN | -0.96% | -0.48% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → TITAN | +0.80% | +0.46% |
+| 2 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → F_GOLD_DEMAND_IN → TITAN | +1.52% | +0.46% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ F_GOLD_DEMAND_IN → TITAN | -1.50% | -0.45% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TITAN | -1.49% | -0.42% |
+| 2 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_GOLD → F_GOLD_DEMAND_IN → TITAN | -0.80% | -0.36% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TITAN | -0.60% | -0.36% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → TITAN | -0.96% | -0.34% |
+| 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → TITAN | -1.14% | -0.34% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_GOLD_DEMAND_IN → TITAN | +0.48% | +0.34% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TITAN | -1.87% | -0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → TITAN | -1.50% | -0.33% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → TITAN | -0.29% | -0.27% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → TITAN | +1.70 | events | -2.04% |
+| 1 | F_FPI_FLOWS → TITAN | -1.60 | events | -1.60% |
+| 1 | C_MIDEAST_CONFLICT → TITAN | +1.50 | events | -1.20% |
+| 1 | T_FORMALISATION → TITAN | +0.30 | events | +0.90% |
+| 2 | F_GOLD → F_GOLD_DEMAND_IN → TITAN | -1.05 | observed | +0.84% |
+| 1 | F_GOLD → TITAN | -1.05 | observed | -0.63% |
+| 1 | F_CPI_IN → TITAN | +1.15 | events | -0.57% |
+| 1 | F_URBAN_DEMAND → TITAN | +0.20 | events | +0.50% |
+| 2 | F_RURAL_DEMAND → F_GOLD_DEMAND_IN → TITAN | -0.25 | events | -0.40% |
+| 2 | F_USDINR → F_GOLD_DEMAND_IN → TITAN | -0.37 | observed | +0.15% |
+| 1 | F_USDINR → TITAN | -0.37 | observed | -0.11% |
+| 2 | F_URBAN_DEMAND → F_GOLD_DEMAND_IN → TITAN | +0.20 | events | +0.08% |
 
 ## Analyst profile (agent research, sourced)
 # TITAN - Titan Company Ltd. (Nifty 50, jewellery and lifestyle)

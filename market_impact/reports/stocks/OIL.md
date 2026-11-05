@@ -2,9 +2,9 @@
 *MIDCAP_100 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +5.3%**, **12 months +8.3%** (rank 11 / 20 of 200 for 3m / 12m); beta 0.81
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.4%): 3 months 62%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.7% … P90 +28.2%; plausible 12m relative-return range incl. stock-specific noise: -24.3% … +75.9%
+- Expected relative return: **3 months +5.3%**, **12 months +8.3%** (rank 11 / 19 of 200 for 3m / 12m); beta 0.81
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.4%): 3 months 62%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.9% … P90 +27.8%; plausible 12m relative-return range incl. stock-specific noise: -46.6% … +54.8%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.4 pp (model impact +10.8% beta-adjusted vs realised market-adjusted move -15.0%); forward event exposure +7.9% (3m +4.8%; half assumed priced); company-specific events +0.2%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,37 @@
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +2.1% | +0.7% | +0.0 | +1.6 | +0.5 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | -1.4% | -0.7% | +0.0 | -1.5 | +0.0 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → OIL | +24.75% | +24.75% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → OIL | +6.75% | +6.75% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → OIL | +12.50% | +4.46% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → OIL | -7.50% | -4.35% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → OIL | -4.50% | -2.61% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → OIL | +2.35% | +2.35% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → OIL | +5.40% | +1.93% |
 | 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → OIL | +30.00% | +1.88% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_BRENT → OIL | +1.44% | +1.44% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → OIL | +1.35% | +1.35% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → OIL | +1.21% | +1.21% |
-| 2 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → OIL | -1.20% | -1.20% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → OIL | -1.11% | -1.11% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → OIL | +1.00% | +1.00% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_BRENT → OIL | -3.60% | -0.90% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → OIL | +3.90% | +0.86% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ C_MIDEAST_CONFLICT → OIL | +11.25% | +0.70% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → OIL | -1.38% | -0.69% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ F_BRENT → OIL | +4.00% | +0.60% |
+| 1 | EV_OPEC_NOV29_RAISE ⇒ F_BRENT → OIL | -3.50% | -0.56% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_BRENT → OIL | +1.60% | +0.56% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → OIL | +1.19% | +0.42% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → OIL | -0.72% | -0.42% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → OIL | -0.71% | -0.41% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | C_MIDEAST_CONFLICT → OIL | +1.50 | events | +6.75% |
+| 1 | F_REFINING_MARGIN → OIL | +1.54 | observed | +1.39% |
+| 1 | F_USDINR → OIL | -0.37 | observed | -1.11% |
+| 1 | C_RUSSIA → OIL | +1.00 | events | +1.00% |
+| 1 | F_REPO_IN → OIL | +1.00 | events | -0.50% |
+| 1 | F_GAS_GLOBAL → OIL | -0.47 | observed | -0.14% |
+| 1 | F_BRENT → OIL | +0.00 | observed | +0.01% |
 
 ## Analyst profile (agent research, sourced)
 # Oil India (OIL) — market impact profile (as of 2026-11-05)

@@ -2,10 +2,10 @@
 *NIFTY_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.4%**, **12 months -0.5%** (rank 116 / 116 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 48%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.1% … P90 +1.7%; plausible 12m relative-return range incl. stock-specific noise: -26.6% … +29.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.5 pp (model impact -1.1% beta-adjusted vs realised market-adjusted move +2.9%); forward event exposure +1.7% (3m +0.7%; half assumed priced); company-specific events +0.6%
+- Expected relative return: **3 months -0.4%**, **12 months -0.5%** (rank 115 / 115 of 200 for 3m / 12m); beta 1.11
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 49%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.6% … P90 +0.8%; plausible 12m relative-return range incl. stock-specific noise: -32.2% … +30.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.5 pp (model impact -1.1% beta-adjusted vs realised market-adjusted move +2.9%); forward event exposure +1.8% (3m +0.7%; half assumed priced); company-specific events +0.6%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,40 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -0.9 | -0.2 | -0.1 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -6.7% | -1.2% | +0.0 | -6.0 | -0.5 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → EICHERMOT | -4.40% | -4.40% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → EICHERMOT | +5.00% | +2.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → EICHERMOT | -1.98% | -1.98% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → EICHERMOT | -1.40% | -1.40% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → EICHERMOT | +1.00% | +1.00% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → EICHERMOT | -0.98% | -0.98% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → EICHERMOT | -2.99% | -0.84% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → EICHERMOT | +0.80% | +0.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → EICHERMOT | -0.79% | -0.79% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → EICHERMOT | -0.68% | -0.68% |
 | 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → EICHERMOT | -3.73% | -0.67% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_AUTO_DEMAND_IN → EICHERMOT | -0.67% | -0.67% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → EICHERMOT | -3.00% | -0.66% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → EICHERMOT | -0.64% | -0.64% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_FPI_FLOWS → EICHERMOT | -0.62% | -0.62% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → EICHERMOT | +0.64% | +0.58% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → EICHERMOT | -2.16% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → EICHERMOT | -1.92% | -0.54% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → EICHERMOT | -1.92% | -0.48% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → EICHERMOT | -0.80% | -0.40% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → EICHERMOT | -1.00% | -0.36% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → EICHERMOT | +1.00% | +0.35% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → EICHERMOT | +0.60% | +0.35% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → EICHERMOT | +0.40% | +0.32% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → EICHERMOT | -0.90% | -0.32% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → EICHERMOT | +0.44% | +0.31% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → EICHERMOT | -1.60 | events | -3.20% |
+| 1 | F_GSEC_10Y_IN → EICHERMOT | +1.70 | events | -1.70% |
+| 1 | F_STEEL_INDIA → EICHERMOT | +1.65 | events | -1.15% |
+| 1 | F_GOVT_CAPEX → EICHERMOT | +1.00 | events | +0.80% |
+| 1 | F_REPO_IN → EICHERMOT | +1.00 | events | -0.60% |
+| 1 | F_ALUMINIUM → EICHERMOT | -1.96 | observed | +0.59% |
+| 1 | F_AUTO_DEMAND_IN → EICHERMOT | -0.10 | events | -0.45% |
+| 1 | F_USDINR → EICHERMOT | -0.37 | observed | -0.11% |
+| 1 | F_EU_GDP → EICHERMOT | +0.22 | events | +0.11% |
+| 1 | F_BRENT → EICHERMOT | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Eicher Motors Ltd. (EICHERMOT) — Market Impact profile, 2026-11-05

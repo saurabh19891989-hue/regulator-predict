@@ -2,10 +2,10 @@
 *NIFTY_50 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.1%**, **12 months +0.1%** (rank 96 / 102 of 200 for 3m / 12m); beta 0.69
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 50%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.2% … P90 +4.8%; plausible 12m relative-return range incl. stock-specific noise: -37.8% … +27.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.8 pp (model impact -3.6% beta-adjusted vs realised market-adjusted move +2.3%); forward event exposure +3.6% (3m +1.7%; half assumed priced); company-specific events +2.4%
+- Expected relative return: **3 months +0.1%**, **12 months +0.1%** (rank 95 / 101 of 200 for 3m / 12m); beta 0.69
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 50%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.5% … P90 +6.1%; plausible 12m relative-return range incl. stock-specific noise: -24.0% … +25.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.8 pp (model impact -3.6% beta-adjusted vs realised market-adjusted move +2.3%); forward event exposure +3.7% (3m +1.7%; half assumed priced); company-specific events +2.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.2 | +0.4 | -0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | +2.4% | +0.5% | +2.5 | -0.0 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → DRREDDY | +5.01% | +5.01% |
-| 1 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → DRREDDY | -3.00% | -3.00% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → DRREDDY | -1.32% | -1.32% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → DRREDDY | -1.18% | -1.18% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → DRREDDY | -1.06% | -1.06% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → DRREDDY | -1.05% | -1.05% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → DRREDDY | +4.16% | +0.92% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → DRREDDY | +2.53% | +0.90% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → DRREDDY | -1.52% | -0.88% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → DRREDDY | -0.80% | -0.80% |
-| 2 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → DRREDDY | +0.80% | +0.80% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DRREDDY | +1.50% | +0.75% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_USDINR → DRREDDY | +0.74% | +0.74% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → DRREDDY | -0.71% | -0.71% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → DRREDDY | +0.65% | +0.65% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ F_US_GENERIC_PRICING → DRREDDY | -4.00% | -0.48% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → DRREDDY | +1.54% | +0.43% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → DRREDDY | +0.70% | +0.41% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_USDINR → DRREDDY | +6.07% | +0.38% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → DRREDDY | -0.74% | -0.37% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → DRREDDY | +1.92% | +0.35% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → DRREDDY | -0.80% | -0.32% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → DRREDDY | -0.84% | -0.30% |
+| 2 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → F_USDINR → DRREDDY | -0.45% | -0.29% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → DRREDDY | -2.40% | -0.29% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DRREDDY | -0.90% | -0.25% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_USFDA_ENFORCEMENT → DRREDDY | +1.00 | events | -3.00% |
+| 1 | F_USDINR → DRREDDY | -0.37 | observed | -1.18% |
+| 1 | C_MIDEAST_CONFLICT → DRREDDY | +1.50 | events | -1.05% |
+| 1 | F_FPI_FLOWS → DRREDDY | -1.60 | events | -0.96% |
+| 1 | F_REPO_IN → DRREDDY | +1.00 | events | -0.80% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → DRREDDY | +1.00 | events | +0.80% |
+| 1 | P_US_PHARMA_TARIFF → DRREDDY | +0.50 | events | -0.40% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → DRREDDY | +0.50 | events | +0.24% |
+| 1 | F_URBAN_DEMAND → DRREDDY | +0.20 | events | +0.14% |
+| 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → DRREDDY | -0.47 | observed | -0.09% |
+| 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → DRREDDY | +0.30 | events | -0.08% |
+| 2 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → DRREDDY | +0.40 | events | -0.08% |
 
 ## Analyst profile (agent research, sourced)
 # DRREDDY (Dr. Reddy's Laboratories) — Nifty 50, as of 2026-11-05

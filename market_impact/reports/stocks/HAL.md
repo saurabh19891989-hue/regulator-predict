@@ -2,9 +2,9 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.9%**, **12 months +6.4%** (rank 46 / 27 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.9%): 3 months 56%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.8% … P90 +12.7%; plausible 12m relative-return range incl. stock-specific noise: -21.1% … +46.7%
+- Expected relative return: **3 months +1.9%**, **12 months +6.4%** (rank 44 / 27 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.9%): 3 months 56%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.7% … P90 +14.2%; plausible 12m relative-return range incl. stock-specific noise: -21.6% … +41.6%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +10.2% beta-adjusted vs realised market-adjusted move +12.6%); forward event exposure +14.4% (3m +4.0%; half assumed priced); company-specific events +0.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,41 @@
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -1.8 | +0.3 | +0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.2% | -1.2% | -1.2 | +0.0 | +0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_DAC_APPROVALS_H2_26 ⇒ P_DEFENCE_PROCUREMENT → HAL | +5.00% | +5.00% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → HAL | +5.00% | +4.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → HAL | +2.50% | +2.50% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → HAL | -2.20% | -2.20% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAL | -1.80% | -1.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → HAL | +2.00% | +1.80% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → HAL | -1.70% | -1.70% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → HAL | -1.59% | -1.59% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → HAL | +1.50% | +1.50% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → HAL | -1.50% | -1.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HAL | +2.50% | +1.25% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → HAL | -1.20% | -1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → HAL | -1.06% | -1.06% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → HAL | -0.94% | -0.94% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_US_10Y → HAL | -0.80% | -0.80% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAL | +1.50% | +0.68% |
+| 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → HAL | +1.20% | +0.60% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → HAL | -1.00% | -0.58% |
+| 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ P_DEFENCE_PROCUREMENT → HAL | +1.00% | +0.50% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → HAL | -1.20% | -0.48% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_US_10Y → HAL | +1.00% | +0.45% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → HAL | +1.20% | +0.43% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HAL | -1.49% | -0.42% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAL | +0.60% | +0.36% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → HAL | -1.38% | -0.35% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HAL | -1.87% | -0.34% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_10Y → HAL | +1.32% | +0.33% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_DEFENCE_PROCUREMENT → HAL | +1.00 | events | +5.00% |
+| 1 | F_GOVT_CAPEX → HAL | +1.00 | events | +2.50% |
+| 1 | F_US_10Y → HAL | +1.68 | observed | -1.68% |
+| 1 | F_FPI_FLOWS → HAL | -1.60 | events | -1.60% |
+| 1 | C_MIDEAST_CONFLICT → HAL | +1.50 | events | +1.50% |
+| 1 | F_REPO_IN → HAL | +1.00 | events | -1.20% |
+| 1 | F_IRON_ORE → HAL | -0.83 | observed | -0.42% |
+| 1 | F_STEEL_INDIA → HAL | +1.65 | events | -0.33% |
+| 1 | P_US_TARIFF_INDIA → HAL | -0.60 | events | +0.30% |
+| 2 | P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → HAL | +1.00 | events | +0.24% |
+| 1 | F_USDINR → HAL | -0.37 | observed | +0.22% |
 
 ## Analyst profile (agent research, sourced)
 # HAL — Hindustan Aeronautics Ltd. (profile as of 2026-11-05)

@@ -50,7 +50,7 @@ Downstream users (auto, pipes, capital goods) lobby against high steel prices; I
 | COFORGE | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | MPHASIS | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 89%, 2: 2%, 3: 6%, 4: 3%
+Share of absolute impact by order: 1: 88%, 2: 2%, 3: 6%, 4: 3%
 
 ## Sources
 - 2026-10-07 Does Indian steel really need so much protection? https://news.google.com/rss/search?q=Does+Indian+steel+really+need+so+much+protection?&hl=en-IN&gl=IN&ceid=IN:en

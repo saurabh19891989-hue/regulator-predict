@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.5%**, **12 months -4.5%** (rank 161 / 154 of 200 for 3m / 12m); beta 0.80
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.0%): 3 months 42%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.4% … P90 +0.7%; plausible 12m relative-return range incl. stock-specific noise: -42.8% … +18.4%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.0%): 3 months 42%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.4% … P90 +0.2%; plausible 12m relative-return range incl. stock-specific noise: -32.5% … +16.6%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.4% beta-adjusted vs realised market-adjusted move -10.9%); forward event exposure -5.5% (3m -2.3%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,38 @@
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -1.7 | -0.2 | +0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -0.7 | -0.8 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ICICIGI | -3.30% | -3.30% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ICICIGI | -2.35% | -2.35% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ICICIGI | -2.10% | -2.10% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ICICIGI | +3.75% | +1.88% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ICICIGI | -6.00% | -1.68% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → ICICIGI | -2.80% | -1.40% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ICICIGI | -7.50% | -1.35% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → ICICIGI | -1.19% | -1.19% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → ICICIGI | -1.15% | -1.15% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → ICICIGI | +1.00% | +1.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → ICICIGI | -0.89% | -0.89% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → ICICIGI | -0.82% | -0.82% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ICICIGI | +0.75% | +0.75% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → ICICIGI | -0.72% | -0.72% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → ICICIGI | -0.70% | -0.70% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → ICICIGI | -1.80% | -0.64% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ICICIGI | -1.20% | -0.60% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → ICICIGI | -2.16% | -0.54% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → ICICIGI | +0.58% | +0.52% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ICICIGI | -2.25% | -0.49% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ICICIGI | -0.75% | -0.45% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → ICICIGI | +0.75% | +0.44% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → ICICIGI | -1.95% | -0.43% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → ICICIGI | -1.19% | -0.42% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → ICICIGI | +0.71% | +0.41% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ICICIGI | -1.44% | -0.40% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → ICICIGI | +1.70 | events | -2.55% |
+| 1 | F_FPI_FLOWS → ICICIGI | -1.60 | events | -2.40% |
+| 1 | F_CPI_IN → ICICIGI | +1.15 | events | -1.15% |
+| 1 | F_GDP_IN → ICICIGI | +0.50 | events | +1.00% |
+| 1 | F_USDINR → ICICIGI | -0.37 | observed | +0.55% |
+| 1 | F_RISK_SENTIMENT → ICICIGI | +0.11 | observed | -0.17% |
+| 1 | F_AUTO_DEMAND_IN → ICICIGI | -0.10 | events | -0.12% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → ICICIGI | +0.30 | events | +0.10% |
 
 ## Analyst profile (agent research, sourced)
 # ICICIGI - ICICI Lombard General Insurance Company Ltd. (as of 2026-11-05)

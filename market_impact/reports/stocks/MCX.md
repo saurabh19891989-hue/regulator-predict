@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +0.9%** (rank 78 / 83 of 200 for 3m / 12m); beta 1.17
+- Expected relative return: **3 months +0.7%**, **12 months +0.9%** (rank 77 / 83 of 200 for 3m / 12m); beta 1.17
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.1%): 3 months 52%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.9% … P90 +12.6%; plausible 12m relative-return range incl. stock-specific noise: -46.9% … +51.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.8 pp (model impact -3.6% beta-adjusted vs realised market-adjusted move +11.5%); forward event exposure +8.3% (3m +6.2%; half assumed priced); company-specific events -0.4%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.3% … P90 +9.2%; plausible 12m relative-return range incl. stock-specific noise: -45.8% … +35.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.8 pp (model impact -3.7% beta-adjusted vs realised market-adjusted move +11.5%); forward event exposure +8.3% (3m +6.2%; half assumed priced); company-specific events -0.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | -2.7% | -1.6% | -1.7 | -1.0 | -0.1 | +0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -5.0% | -1.4% | -2.0 | -2.0 | -1.5 | +0.5 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → MCX | +6.44% | +6.44% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_SILVER → MCX | -3.75% | -3.75% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MCX | -3.30% | -3.30% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MCX | +3.75% | +1.88% |
 | 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ P_SEBI_DERIVATIVES → MCX | +2.00% | +1.70% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_GOLD → MCX | -1.58% | -1.58% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → MCX | +3.25% | +1.16% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → MCX | -1.95% | -1.13% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → MCX | -1.06% | -1.06% |
 | 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_SILVER → MCX | +2.25% | +1.01% |
 | 1 | EV_SEBI_FNO_CURBS_RISK ⇒ P_SEBI_DERIVATIVES → MCX | -5.00% | -1.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → MCX | +0.94% | +0.94% |
 | 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → MCX | -3.00% | -0.90% |
 | 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → MCX | -2.85% | -0.85% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → MCX | +0.75% | +0.75% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_GOLD → MCX | +1.50% | +0.68% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → MCX | +1.20% | +0.60% |
+| 1 | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → MCX | -3.00% | -0.60% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → MCX | -2.00% | -0.56% |
+| 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ F_EQUITY_ACTIVITY_IN → MCX | +0.60% | +0.51% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MCX | -2.25% | -0.49% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → MCX | +7.80% | +0.49% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_SILVER → MCX | -2.50 | observed | -3.74% |
+| 1 | F_FPI_FLOWS → MCX | -1.60 | events | -2.40% |
+| 1 | F_GOLD → MCX | -1.05 | observed | -1.57% |
+| 2 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → MCX | -1.60 | events | -0.77% |
+| 1 | P_SEBI_DERIVATIVES → MCX | -0.10 | events | +0.50% |
+| 1 | F_USDINR → MCX | -0.37 | observed | -0.44% |
+| 1 | F_GAS_GLOBAL → MCX | -0.47 | observed | -0.23% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → MCX | +0.30 | events | +0.10% |
+| 2 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → MCX | -0.10 | events | +0.09% |
+| 1 | F_COPPER → MCX | -0.24 | observed | -0.07% |
+| 1 | F_RISK_SENTIMENT → MCX | +0.11 | observed | -0.06% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_EQUITY_ACTIVITY_IN → MCX | +0.30 | events | +0.03% |
 
 ## Analyst profile (agent research, sourced)
 # MCX - Multi Commodity Exchange of India (midcap, market infrastructure)

@@ -52,7 +52,7 @@ CCEA (30 Sep 2026): wheat MSP +Rs 25 to Rs 2,610/q (about +1.0%); barley +Rs 136
 | LENSKART | -0.3 | +0.0 | +0.0 | -0.3 | -0.0 |
 | DLF | -0.3 | +0.0 | +0.0 | -0.2 | -0.1 |
 
-Share of absolute impact by order: 1: 7%, 2: 16%, 3: 44%, 4: 34%
+Share of absolute impact by order: 1: 6%, 2: 16%, 3: 44%, 4: 34%
 
 ## Sources
 - 2026-09-30 Wheat MSP +Rs 25 to Rs 2,610/q - Deccan Herald https://www.deccanherald.com/india/cabinet-raises-wheat-msp-by-rs-25-to-rs-2610-per-quintal-for-2027-28-4165268

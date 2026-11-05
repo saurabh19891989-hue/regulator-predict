@@ -50,7 +50,7 @@ As of 25 Oct the NBS rates for rabi (Oct 2026-Mar 2027) were still pending, whic
 | IDEA | -0.8 | +0.0 | -0.5 | -0.3 | -0.1 |
 | BAJAJFINSV | -0.8 | +0.0 | -0.5 | -0.3 | -0.1 |
 
-Share of absolute impact by order: 1: 1%, 2: 61%, 3: 29%, 4: 9%
+Share of absolute impact by order: 1: 1%, 2: 61%, 3: 29%, 4: 8%
 
 ## Sources
 - 2026-10-02 Fertiliser subsidy could reach Rs 3 lakh crore https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html

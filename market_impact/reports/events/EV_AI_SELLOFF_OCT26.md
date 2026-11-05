@@ -53,7 +53,7 @@ Nasdaq -5% in October ('AI stocks lost $5 trn', Yahoo 1 Nov); S&P/Nasdaq sharply
 | LENSKART | -1.6 | -1.0 | -0.5 | -0.0 | +0.0 |
 | ETERNAL | -1.5 | -0.9 | -0.6 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 42%, 2: 44%, 3: 11%, 4: 3%
+Share of absolute impact by order: 1: 41%, 2: 45%, 3: 11%, 4: 3%
 
 ## Sources
 - 2026-10-29 AI buildout hits snag as Google and Microsoft put off raising capex forecasts - CNBC https://news.google.com/rss/search?q=AI%20buildout%20hits%20snag%20as%20Google%20and%20Microsoft%20put%20off%20raising%20capex%20forecasts%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en

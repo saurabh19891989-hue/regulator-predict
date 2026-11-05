@@ -2,9 +2,9 @@
 *NIFTY_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.6%**, **12 months +0.6%** (rank 84 / 90 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.4%): 3 months 53%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.4% … P90 +5.7%; plausible 12m relative-return range incl. stock-specific noise: -19.7% … +20.2%
+- Expected relative return: **3 months +0.6%**, **12 months +0.6%** (rank 84 / 91 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.4%): 3 months 53%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.4% … P90 +4.8%; plausible 12m relative-return range incl. stock-specific noise: -18.4% … +18.7%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.1% beta-adjusted vs realised market-adjusted move -7.5%); forward event exposure +1.9% (3m +0.6%; half assumed priced); company-specific events +1.6%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -0.8% | -0.8% | -0.8 | +0.0 | -0.0 | -0.0 |
 | China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics (`EV_RARE_EARTH_CONTROLS_REIMPOSED`) | risk_scenario | 0.25 | -3.2% | -0.8% | -0.9 | -2.8 | +0.3 | +0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → MARUTI | -5.94% | -5.94% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → MARUTI | -2.80% | -2.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → MARUTI | -1.19% | -1.19% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → MARUTI | -3.00% | -1.07% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → MARUTI | +1.80% | +1.04% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → MARUTI | +0.98% | +0.98% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → MARUTI | -0.90% | -0.90% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → MARUTI | -0.90% | -0.90% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_AUTO_DEMAND_IN → MARUTI | -0.82% | -0.82% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → MARUTI | -0.80% | -0.80% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → MARUTI | -2.64% | -0.66% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → MARUTI | -0.64% | -0.64% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MARUTI | +2.16% | +0.60% |
-| 2 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → MARUTI | +0.58% | +0.58% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ F_AUTO_DEMAND_IN → MARUTI | -0.55% | -0.55% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → MARUTI | -7.20% | -0.45% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → MARUTI | -0.80% | -0.44% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → MARUTI | -0.90% | -0.36% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → MARUTI | +0.60% | +0.35% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → MARUTI | +0.39% | +0.27% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → F_AUTO_DEMAND_IN → MARUTI | +0.38% | +0.26% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → MARUTI | -1.04% | -0.26% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → MARUTI | -0.72% | -0.26% |
+| 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → MARUTI | +0.99% | +0.25% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → MARUTI | -0.90% | -0.24% |
+| 1 | EV_GST_RATE_CHANGE_APR27 ⇒ P_GST_CONSUMPTION → MARUTI | +0.80% | +0.24% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_STEEL_INDIA → MARUTI | +1.65 | events | -3.30% |
+| 1 | F_ALUMINIUM → MARUTI | -1.96 | observed | +0.98% |
+| 1 | F_REPO_IN → MARUTI | +1.00 | events | -0.90% |
+| 1 | C_MIDEAST_CONFLICT → MARUTI | +1.50 | events | -0.90% |
+| 1 | P_EV_POLICY → MARUTI | +1.10 | events | -0.88% |
+| 1 | F_AUTO_DEMAND_IN → MARUTI | -0.10 | events | -0.55% |
+| 1 | F_RURAL_DEMAND → MARUTI | -0.25 | events | -0.33% |
+| 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MARUTI | -0.30 | events | +0.22% |
+| 1 | F_USDINR → MARUTI | -0.37 | observed | +0.11% |
+| 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → MARUTI | -0.10 | events | +0.10% |
+| 1 | F_COPPER → MARUTI | -0.24 | observed | +0.07% |
+| 2 | F_CHINA_GDP → F_RUBBER → MARUTI | +0.30 | events | -0.04% |
 
 ## Analyst profile (agent research, sourced)
 # MARUTI - Maruti Suzuki India Ltd. (as of 2026-11-05)

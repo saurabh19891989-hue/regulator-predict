@@ -2,10 +2,10 @@
 *MIDCAP_100 · Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -4.4%**, **12 months -7.7%** (rank 190 / 184 of 200 for 3m / 12m); beta 1.34
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 34%, 12 months 20%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -18.3% … P90 -0.2%; plausible 12m relative-return range incl. stock-specific noise: -39.3% … +11.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.1 pp (model impact -7.9% beta-adjusted vs realised market-adjusted move -3.7%); forward event exposure -11.7% (3m -7.3%; half assumed priced); company-specific events +2.7%
+- Expected relative return: **3 months -4.3%**, **12 months -7.7%** (rank 190 / 184 of 200 for 3m / 12m); beta 1.34
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 34%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -19.1% … P90 -2.7%; plausible 12m relative-return range incl. stock-specific noise: -45.4% … +18.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.1 pp (model impact -7.9% beta-adjusted vs realised market-adjusted move -3.7%); forward event exposure -11.6% (3m -7.3%; half assumed priced); company-specific events +2.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -12.1% | -2.7% | -10.1 | -1.3 | -0.5 | -0.3 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -1.6 | -0.6 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → GMRAIRPORT | -7.43% | -7.43% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → GMRAIRPORT | -4.40% | -4.40% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → GMRAIRPORT | -3.97% | -3.97% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → GMRAIRPORT | -3.75% | -3.75% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → GMRAIRPORT | -3.50% | -3.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → GMRAIRPORT | -3.00% | -3.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GMRAIRPORT | +5.00% | +2.50% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → GMRAIRPORT | +2.50% | +1.45% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GMRAIRPORT | -3.75% | -1.34% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → GMRAIRPORT | -1.33% | -1.33% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → GMRAIRPORT | -1.31% | -1.31% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GMRAIRPORT | +2.25% | +1.31% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GMRAIRPORT | -3.00% | -1.20% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → GMRAIRPORT | -1.10% | -1.10% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → GMRAIRPORT | -3.00% | -1.07% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → GMRAIRPORT | -2.00% | -1.00% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → GMRAIRPORT | -3.46% | -0.86% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GMRAIRPORT | -2.99% | -0.84% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → GMRAIRPORT | -3.00% | -0.81% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → GMRAIRPORT | -1.25% | -0.75% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → GMRAIRPORT | -1.20% | -0.72% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GMRAIRPORT | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → GMRAIRPORT | -3.00% | -0.66% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GMRAIRPORT | -3.00% | -0.66% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → GMRAIRPORT | +1.70 | events | -4.25% |
+| 1 | C_MIDEAST_CONFLICT → GMRAIRPORT | +1.50 | events | -3.75% |
+| 1 | F_FPI_FLOWS → GMRAIRPORT | -1.60 | events | -3.20% |
+| 1 | F_REPO_IN → GMRAIRPORT | +1.00 | events | -3.00% |
+| 1 | F_CREDIT_SPREADS_IN → GMRAIRPORT | +0.50 | events | -1.75% |
+| 1 | F_GDP_IN → GMRAIRPORT | +0.50 | events | +1.00% |
+| 2 | C_MIDEAST_CONFLICT → F_TRAVEL_DEMAND → GMRAIRPORT | +1.50 | events | -0.81% |
+| 1 | F_ALUMINIUM → GMRAIRPORT | -1.96 | observed | +0.78% |
+| 2 | F_URBAN_DEMAND → F_TRAVEL_DEMAND → GMRAIRPORT | +0.20 | events | +0.58% |
+| 1 | F_URBAN_DEMAND → GMRAIRPORT | +0.20 | events | +0.50% |
+| 1 | F_USDINR → GMRAIRPORT | -0.37 | observed | +0.44% |
+| 1 | F_BRENT → GMRAIRPORT | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # GMRAIRPORT — GMR Airports Ltd. (Midcap 100) — profile as of 2026-11-05

@@ -2,10 +2,10 @@
 *MIDCAP_100 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.0%**, **12 months +1.7%** (rank 65 / 73 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.3%): 3 months 54%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.0% … P90 +5.3%; plausible 12m relative-return range incl. stock-specific noise: -14.6% … +28.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +4.3% beta-adjusted vs realised market-adjusted move +8.9%); forward event exposure +3.6% (3m +1.8%; half assumed priced); company-specific events +2.2%
+- Expected relative return: **3 months +1.0%**, **12 months +1.7%** (rank 64 / 73 of 200 for 3m / 12m); beta 1.15
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.3%): 3 months 54%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.7% … P90 +6.2%; plausible 12m relative-return range incl. stock-specific noise: -21.3% … +28.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +4.3% beta-adjusted vs realised market-adjusted move +8.9%); forward event exposure +3.7% (3m +1.8%; half assumed priced); company-specific events +2.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.1 | -0.3 | -0.2 |
 | Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down (`EV_RURAL_DEMAND_SOFT26`) | occurred | 1.00 | -0.6% | -0.6% | -0.4 | -0.2 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → HEROMOTOCO | -2.97% | -2.97% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → HEROMOTOCO | +1.96% | +1.96% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → HEROMOTOCO | -1.68% | -1.68% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → HEROMOTOCO | -1.20% | -1.20% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → HEROMOTOCO | -0.93% | -0.93% |
-| 1 | EV_CHINA_Q3_GDP_AND_MINI_STIMULUS ⇒ F_USDCNY → HEROMOTOCO | +0.90% | +0.90% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → HEROMOTOCO | -0.78% | -0.78% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → HEROMOTOCO | -0.70% | -0.70% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_AUTO_DEMAND_IN → HEROMOTOCO | -0.67% | -0.67% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → HEROMOTOCO | +0.64% | +0.64% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → HEROMOTOCO | -2.16% | -0.54% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → HEROMOTOCO | -1.50% | -0.54% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → HEROMOTOCO | +0.90% | +0.52% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → HEROMOTOCO | -0.48% | -0.48% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → HEROMOTOCO | +0.80% | +0.46% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → HEROMOTOCO | -0.96% | -0.34% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → HEROMOTOCO | +0.45% | +0.31% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HEROMOTOCO | -1.30% | -0.29% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → HEROMOTOCO | -0.70% | -0.28% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → HEROMOTOCO | -0.48% | -0.26% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → HEROMOTOCO | +0.45% | +0.25% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → HEROMOTOCO | +0.34% | +0.23% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → HEROMOTOCO | +0.46% | +0.23% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → HEROMOTOCO | -3.60% | -0.22% |
+| 2 | EV_GST_RATE_CHANGE_APR27 ⇒ P_GST_CONSUMPTION → F_AUTO_DEMAND_IN → HEROMOTOCO | +0.74% | +0.22% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → F_AUTO_DEMAND_IN → HEROMOTOCO | +0.31% | +0.21% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_STEEL_INDIA → HEROMOTOCO | +1.65 | events | -1.98% |
+| 1 | F_ALUMINIUM → HEROMOTOCO | -1.96 | observed | +1.96% |
+| 1 | C_MIDEAST_CONFLICT → HEROMOTOCO | +1.50 | events | -1.20% |
+| 1 | F_USDCNY → HEROMOTOCO | -0.47 | observed | +0.93% |
+| 1 | P_EV_POLICY → HEROMOTOCO | +1.10 | events | +0.88% |
+| 1 | F_REPO_IN → HEROMOTOCO | +1.00 | events | -0.70% |
+| 1 | F_AUTO_DEMAND_IN → HEROMOTOCO | -0.10 | events | -0.45% |
+| 1 | F_RURAL_DEMAND → HEROMOTOCO | -0.25 | events | -0.38% |
+| 1 | F_USDINR → HEROMOTOCO | -0.37 | observed | +0.37% |
+| 1 | F_COPPER → HEROMOTOCO | -0.24 | observed | +0.07% |
+| 2 | F_CHINA_GDP → F_RUBBER → HEROMOTOCO | +0.30 | events | -0.02% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_RUBBER → HEROMOTOCO | +0.40 | events | -0.01% |
 
 ## Analyst profile (agent research, sourced)
 # HEROMOTOCO - Hero MotoCorp Ltd. (as of 2026-11-05)

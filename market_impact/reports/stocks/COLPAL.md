@@ -2,9 +2,9 @@
 *MIDCAP_100 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +1.4%** (rank 81 / 79 of 200 for 3m / 12m); beta 0.91
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.5%): 3 months 52%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +4.0%; plausible 12m relative-return range incl. stock-specific noise: -17.0% … +28.9%
+- Expected relative return: **3 months +0.7%**, **12 months +1.4%** (rank 80 / 78 of 200 for 3m / 12m); beta 0.91
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.5%): 3 months 52%, 12 months 38%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.1% … P90 +4.0%; plausible 12m relative-return range incl. stock-specific noise: -23.7% … +29.0%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.6 pp (model impact +1.3% beta-adjusted vs realised market-adjusted move -19.3%); forward event exposure +2.9% (3m +1.4%; half assumed priced); company-specific events +0.9%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.3 | +0.1 | +0.2 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -2.6% | -0.6% | -2.5 | -0.1 | -0.1 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → COLPAL | -1.98% | -1.98% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → COLPAL | -1.76% | -1.76% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → COLPAL | -1.32% | -1.32% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → COLPAL | -1.00% | -1.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → COLPAL | +2.00% | +1.00% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → COLPAL | -0.60% | -0.60% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RURAL_DEMAND → COLPAL | -0.57% | -0.57% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → COLPAL | -0.44% | -0.44% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → COLPAL | +0.60% | +0.42% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → COLPAL | +0.40% | +0.40% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → COLPAL | -1.00% | -0.40% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → COLPAL | -1.00% | -0.36% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → COLPAL | +0.60% | +0.35% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → COLPAL | -1.19% | -0.33% |
 | 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → COLPAL | +0.60% | +0.33% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → COLPAL | +0.45% | +0.31% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → COLPAL | -1.15% | -0.29% |
+| 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → COLPAL | +0.40% | +0.27% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → COLPAL | -1.00% | -0.27% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → COLPAL | -1.49% | -0.27% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → COLPAL | -1.20% | -0.26% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → COLPAL | -0.40% | -0.26% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → COLPAL | -0.40% | -0.24% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → COLPAL | -1.60 | events | -1.28% |
+| 1 | F_REPO_IN → COLPAL | +1.00 | events | -1.00% |
+| 1 | F_RURAL_DEMAND → COLPAL | -0.25 | events | -0.50% |
+| 1 | F_URBAN_DEMAND → COLPAL | +0.20 | events | +0.30% |
+| 1 | F_EDIBLE_OIL → COLPAL | +0.19 | observed | -0.11% |
+| 1 | F_USDINR → COLPAL | -0.37 | observed | +0.09% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → COLPAL | +0.40 | events | -0.01% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → COLPAL | +0.30 | events | -0.01% |
+| 4 | F_USDCNY → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → COLPAL | -0.47 | observed | -0.00% |
+| 4 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → COLPAL | +0.40 | events | -0.00% |
+| 4 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → COLPAL | +0.30 | events | -0.00% |
+| 4 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → COLPAL | -0.10 | events | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # COLPAL (Colgate-Palmolive (India) Ltd.) - company profile as of 2026-11-05

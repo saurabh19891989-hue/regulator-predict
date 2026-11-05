@@ -28,10 +28,10 @@ Union Cabinet reportedly approved Rs14,500 crore viability gap funding for 92 GW
 | JSWENERGY | +4.8 | +5.0 | -0.1 | +0.0 | -0.0 |
 | GVT&D | +4.1 | +2.0 | +2.1 | +0.0 | -0.0 |
 | ENRIN | +4.0 | +1.5 | +2.5 | +0.0 | -0.0 |
+| NLCINDIA | +4.0 | +4.0 | -0.0 | +0.0 | +0.0 |
 | POLYCAB | +3.8 | +2.0 | +1.8 | +0.0 | -0.0 |
 | NHPC | +3.3 | +3.2 | +0.0 | +0.0 | +0.0 |
 | CGPOWER | +2.9 | +1.0 | +1.9 | -0.0 | -0.0 |
-| POWERGRID | +2.9 | +2.0 | +0.9 | -0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -52,7 +52,7 @@ Union Cabinet reportedly approved Rs14,500 crore viability gap funding for 92 GW
 | M&M | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
 | PRESTIGE | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 69%, 2: 22%, 3: 5%, 4: 4%
+Share of absolute impact by order: 1: 71%, 2: 21%, 3: 5%, 4: 4%
 
 ## Sources
 - 2026-11-05 Cabinet Approves Rs 14,500 Cr VGF For Grid-Scale Energy Storage (IndianMandarins) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=Cabinet+approves+Rs+14500+crore+viability+gap+funding+energy+storage+when:120d&hl=en-IN&gl=IN&ceid=IN:en

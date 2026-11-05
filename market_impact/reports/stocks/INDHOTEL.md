@@ -2,9 +2,9 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.6%**, **12 months -0.6%** (rank 123 / 118 of 200 for 3m / 12m); beta 1.17
+- Expected relative return: **3 months -0.6%**, **12 months -0.6%** (rank 124 / 116 of 200 for 3m / 12m); beta 1.17
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.2%): 3 months 47%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.6% … P90 +3.4%; plausible 12m relative-return range incl. stock-specific noise: -12.6% … +26.0%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.4% … P90 +3.7%; plausible 12m relative-return range incl. stock-specific noise: -21.3% … +29.8%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.3 pp (model impact -2.5% beta-adjusted vs realised market-adjusted move +28.8%); forward event exposure +2.4% (3m +0.6%; half assumed priced); company-specific events +1.2%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,39 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -1.5 | +0.1 | +0.0 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -7.2% | -1.3% | +0.0 | -7.2 | +0.1 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → INDHOTEL | -5.50% | -5.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → INDHOTEL | -3.96% | -3.96% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → INDHOTEL | -3.75% | -3.75% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → INDHOTEL | +6.25% | +3.12% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → INDHOTEL | -1.99% | -1.99% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → INDHOTEL | +1.75% | +1.75% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → INDHOTEL | -1.50% | -1.50% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → INDHOTEL | +2.50% | +1.45% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → INDHOTEL | +1.25% | +1.25% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → INDHOTEL | -1.18% | -1.18% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → INDHOTEL | -3.00% | -1.07% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → INDHOTEL | -3.73% | -1.05% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → INDHOTEL | -1.04% | -1.04% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → INDHOTEL | +1.01% | +0.91% |
-| 3 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → F_GDP_IN → INDHOTEL | -0.85% | -0.85% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → INDHOTEL | -4.67% | -0.84% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → INDHOTEL | -3.75% | -0.82% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → INDHOTEL | -2.00% | -0.71% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → INDHOTEL | +1.20% | +0.70% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → INDHOTEL | -2.40% | -0.67% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → INDHOTEL | +0.93% | +0.63% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → INDHOTEL | -5.25% | -0.63% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → INDHOTEL | -2.40% | -0.60% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → INDHOTEL | -1.50% | -0.60% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → INDHOTEL | +0.70% | +0.56% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → INDHOTEL | -1.60 | events | -4.00% |
+| 1 | C_MIDEAST_CONFLICT → INDHOTEL | +1.50 | events | -3.75% |
+| 1 | F_GDP_IN → INDHOTEL | +0.50 | events | +1.75% |
+| 1 | F_REPO_IN → INDHOTEL | +1.00 | events | -1.50% |
+| 1 | F_URBAN_DEMAND → INDHOTEL | +0.20 | events | +0.50% |
+| 2 | C_MIDEAST_CONFLICT → F_TRAVEL_DEMAND → INDHOTEL | +1.50 | events | -0.45% |
+| 2 | F_URBAN_DEMAND → F_TRAVEL_DEMAND → INDHOTEL | +0.20 | events | +0.32% |
+| 1 | F_USDINR → INDHOTEL | -0.37 | observed | -0.30% |
+| 1 | F_BRENT → INDHOTEL | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # INDHOTEL — Indian Hotels Co. Ltd. (Taj), as of 2026-11-05

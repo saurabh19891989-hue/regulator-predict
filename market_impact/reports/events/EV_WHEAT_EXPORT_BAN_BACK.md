@@ -50,7 +50,7 @@ Export ban was lifted only on 24 Aug 2026; weak sowing and rising atta prices co
 | MPHASIS | +0.1 | +0.0 | +0.0 | -0.0 | +0.1 |
 | HCLTECH | +0.1 | +0.0 | +0.0 | -0.0 | +0.1 |
 
-Share of absolute impact by order: 1: 4%, 2: 4%, 3: 55%, 4: 37%
+Share of absolute impact by order: 1: 4%, 2: 4%, 3: 55%, 4: 38%
 
 ## Sources
 - 2026-08-24 Wheat export ban lifted 24 Aug 2026 https://www.deccanchronicle.com/business/economics/govt-lifts-export-ban-on-wheat-and-its-products-1981807

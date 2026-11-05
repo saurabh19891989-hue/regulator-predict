@@ -2,10 +2,10 @@
 *MIDCAP_100 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +5.4%**, **12 months +13.4%** (rank 10 / 2 of 200 for 3m / 12m); beta 1.46
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.1%): 3 months 68%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +4.4% … P90 +25.0%; plausible 12m relative-return range incl. stock-specific noise: -25.1% … +53.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.7% beta-adjusted vs realised market-adjusted move -8.5%); forward event exposure +23.4% (3m +10.8%; half assumed priced); company-specific events +2.1%
+- Expected relative return: **3 months +5.5%**, **12 months +13.5%** (rank 10 / 2 of 200 for 3m / 12m); beta 1.46
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.1%): 3 months 68%, 12 months 72%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.6% … P90 +26.6%; plausible 12m relative-return range incl. stock-specific noise: -11.6% … +42.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.7% beta-adjusted vs realised market-adjusted move -8.5%); forward event exposure +23.5% (3m +10.8%; half assumed priced); company-specific events +2.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | India cuts Russian crude below ~1 mb/d as part of US trade deal (`EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL`) | anticipated | 0.30 | -4.7% | -1.4% | -4.0 | -0.7 | +0.0 | -0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -1.0 | -0.0 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → HINDPETRO | -36.00% | -36.00% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → HINDPETRO | -14.85% | -14.85% |
 | 1 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → HINDPETRO | +30.00% | +13.50% |
-| 1 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → HINDPETRO | -12.00% | -12.00% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → HINDPETRO | +7.50% | +7.50% |
 | 1 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → HINDPETRO | +12.00% | +7.20% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → HINDPETRO | -6.75% | -6.75% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → HINDPETRO | -7.50% | -2.68% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → HINDPETRO | +4.50% | +2.61% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → HINDPETRO | +4.50% | +2.61% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → HINDPETRO | -4.00% | -2.32% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → HINDPETRO | -5.40% | -1.93% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → HINDPETRO | -1.72% | -1.72% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → P_FUEL_TAX_IN → HINDPETRO | +1.58% | +1.58% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → HINDPETRO | +1.50% | +1.50% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → HINDPETRO | -18.00% | -1.12% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_REFINING_MARGIN → HINDPETRO | +2.24% | +0.80% |
+| 1 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ F_REFINING_MARGIN → HINDPETRO | -2.50% | -0.75% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ C_MIDEAST_CONFLICT → HINDPETRO | -11.25% | -0.70% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HINDPETRO | -2.86% | -0.63% |
+| 2 | EV_RED_SEA_CLOSURE ⇒ C_RED_SEA → F_REFINING_MARGIN → HINDPETRO | +2.40% | +0.60% |
+| 2 | EV_RED_SEA_SUEZ_NORMALISATION ⇒ C_RED_SEA → F_REFINING_MARGIN → HINDPETRO | -1.28% | -0.58% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_BRENT → HINDPETRO | +2.16% | +0.54% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_REFINING_MARGIN → HINDPETRO | +1.54 | observed | +7.71% |
+| 1 | C_MIDEAST_CONFLICT → HINDPETRO | +1.50 | events | -6.75% |
+| 1 | NEW_OMC_MARKETING_MARGIN → HINDPETRO | -0.50 | director_override | -6.00% |
+| 1 | C_RUSSIA → HINDPETRO | +1.00 | events | +1.50% |
+| 1 | F_USDINR → HINDPETRO | -0.37 | observed | +0.81% |
+| 1 | F_REPO_IN → HINDPETRO | +1.00 | events | -0.80% |
+| 1 | P_FUEL_TAX_IN → HINDPETRO | -0.50 | events | +0.75% |
+| 1 | F_GDP_IN → HINDPETRO | +0.50 | events | +0.50% |
+| 1 | P_WINDFALL_EXPORT_TAX → HINDPETRO | +1.00 | events | -0.40% |
+| 1 | F_GAS_GLOBAL → HINDPETRO | -0.47 | observed | +0.23% |
+| 1 | F_BRENT → HINDPETRO | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Hindustan Petroleum (HINDPETRO) — market impact profile (as of 2026-11-05)

@@ -2,9 +2,9 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.3%**, **12 months +2.1%** (rank 55 / 67 of 200 for 3m / 12m); beta 1.30
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 53%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.2% … P90 +5.7%; plausible 12m relative-return range incl. stock-specific noise: -33.3% … +32.9%
+- Expected relative return: **3 months +1.3%**, **12 months +2.1%** (rank 53 / 65 of 200 for 3m / 12m); beta 1.30
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 53%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.4% … P90 +6.7%; plausible 12m relative-return range incl. stock-specific noise: -55.2% … +28.7%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +6.2% beta-adjusted vs realised market-adjusted move +3.4%); forward event exposure +2.4% (3m +3.3%; half assumed priced); company-specific events +1.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.4% | -1.4% | -0.6 | -0.6 | +0.0 | -0.2 |
 | India-China thaw: Xi visit around BRICS summit in India (mid-Sep 2026), flights resume, Chinese-investment curbs eased (`EV_INDIA_CHINA_THAW_SEP26`) | occurred | 1.00 | +1.2% | +1.2% | +1.0 | +0.1 | +0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_CHINA_FDI_EASING_PN3 ⇒ P_FDI_RULES → DIXON | +2.80% | +1.96% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → DIXON | +2.40% | +1.92% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → DIXON | +1.73% | +1.73% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → DIXON | -6.00% | -1.68% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → DIXON | -6.00% | -1.68% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → DIXON | -1.68% | -1.68% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → DIXON | -6.00% | -1.50% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → DIXON | -7.50% | -1.35% |
-| 1 | EV_INDIA_CHINA_THAW_SEP26 ⇒ P_FDI_RULES → DIXON | +1.20% | +1.20% |
-| 1 | EV_CHINA_Q3_GDP_AND_MINI_STIMULUS ⇒ F_USDCNY → DIXON | -1.12% | -1.12% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ P_PLI → DIXON | +1.20% | +0.96% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → DIXON | +3.24% | +0.91% |
-| 1 | EV_ECOM_FDI_EXPORT_INVENTORY ⇒ P_FDI_RULES → DIXON | +0.80% | +0.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → DIXON | -0.78% | -0.78% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → DIXON | +1.20% | +0.78% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → DIXON | -1.80% | -0.64% |
+| 1 | EV_CHINA_FDI_EASING_PN3 ⇒ T_CHINA_PLUS_ONE → DIXON | +0.80% | +0.56% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → DIXON | -3.00% | -0.54% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → DIXON | +0.80% | +0.50% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → DIXON | -0.96% | -0.48% |
+| 1 | EV_QCOMM_FDI_CRACKDOWN ⇒ P_FDI_RULES → DIXON | -4.00% | -0.48% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → DIXON | +1.70 | events | -2.04% |
+| 1 | P_FDI_RULES → DIXON | +0.50 | events | +2.00% |
+| 1 | F_USDCNY → DIXON | -0.47 | observed | -1.17% |
+| 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → DIXON | -0.60 | events | +0.58% |
+| 1 | F_URBAN_DEMAND → DIXON | +0.20 | events | +0.50% |
+| 1 | F_US_EQUITIES → DIXON | +0.23 | observed | +0.47% |
+| 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → DIXON | -0.30 | events | +0.32% |
+| 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → DIXON | +0.50 | events | +0.20% |
+| 1 | F_USDINR → DIXON | -0.37 | observed | +0.18% |
+| 1 | F_RISK_SENTIMENT → DIXON | +0.11 | observed | -0.17% |
+| 1 | C_US_CHINA_DECOUPLING → DIXON | -0.10 | events | -0.15% |
+| 2 | C_US_CHINA_DECOUPLING → T_CHINA_PLUS_ONE → DIXON | -0.10 | events | -0.09% |
 
 ## Analyst profile (agent research, sourced)
 # DIXON - Dixon Technologies (India) Ltd. (midcap, EMS)

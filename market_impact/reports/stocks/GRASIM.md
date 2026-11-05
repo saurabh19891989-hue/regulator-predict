@@ -2,10 +2,10 @@
 *NIFTY_50 · Construction Materials · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.8%**, **12 months +1.6%** (rank 71 / 76 of 200 for 3m / 12m); beta 1.09
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 54%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.7% … P90 +5.9%; plausible 12m relative-return range incl. stock-specific noise: -20.8% … +25.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.7 pp (model impact +3.4% beta-adjusted vs realised market-adjusted move -1.6%); forward event exposure +0.4% (3m -0.1%; half assumed priced); company-specific events +1.7%
+- Expected relative return: **3 months +0.6%**, **12 months +1.2%** (rank 82 / 79 of 200 for 3m / 12m); beta 1.09
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 53%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +7.1%; plausible 12m relative-return range incl. stock-specific noise: -14.9% … +20.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.3 pp (model impact +2.6% beta-adjusted vs realised market-adjusted move -1.6%); forward event exposure +0.5% (3m -0.1%; half assumed priced); company-specific events +1.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.0 | +0.4 | +0.2 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.3 | +0.1 | +0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → GRASIM | -2.97% | -2.97% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → GRASIM | -2.38% | -2.38% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → GRASIM | -1.80% | -1.80% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → GRASIM | -0.80% | -0.80% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GRASIM | -1.80% | -0.72% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → GRASIM | -0.58% | -0.58% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_REPO_IN → GRASIM | -0.58% | -0.58% |
-| 3 | EV_KHARIF26_OUTPUT_HIT ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → GRASIM | -0.57% | -0.57% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → GRASIM | -0.55% | -0.55% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GRASIM | -1.50% | -0.54% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GRASIM | +0.90% | +0.52% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → GRASIM | -2.07% | -0.52% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → GRASIM | -1.80% | -0.49% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → GRASIM | -0.72% | -0.43% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → GRASIM | -1.80% | -0.40% |
+| 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → GRASIM | +0.56% | +0.39% |
+| 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → GRASIM | -0.60% | -0.30% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → GRASIM | -0.46% | -0.30% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_REPO_IN → GRASIM | -0.31% | -0.28% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ F_CPI_IN → F_REPO_IN → GRASIM | -0.62% | -0.28% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → GRASIM | -3.60% | -0.22% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_REPO_IN → GRASIM | -1.80% | -0.22% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → GRASIM | -0.91% | -0.20% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_REPO_IN → GRASIM | +1.00 | events | -1.80% |
+| 1 | F_COAL_INTL → GRASIM | +0.70 | director_override | -0.84% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → GRASIM | +1.70 | events | -0.41% |
+| 1 | P_ANTI_DUMPING_IN → GRASIM | +0.40 | events | +0.32% |
+| 1 | F_URBAN_DEMAND → GRASIM | +0.20 | events | +0.30% |
+| 1 | F_USDINR → GRASIM | -0.37 | observed | +0.26% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → GRASIM | +0.50 | events | +0.12% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → GRASIM | +1.00 | events | -0.10% |
+| 1 | F_COTTON → GRASIM | +0.19 | observed | +0.10% |
+| 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → GRASIM | -0.47 | observed | +0.09% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → GRASIM | +1.00 | events | -0.08% |
+| 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → GRASIM | +0.30 | events | +0.08% |
 
 ## Analyst profile (agent research, sourced)
 # GRASIM — Grasim Industries Ltd. (as of 2026-11-05)

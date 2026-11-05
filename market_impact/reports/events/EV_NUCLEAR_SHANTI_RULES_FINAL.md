@@ -24,12 +24,12 @@ Draft rules propose a 6-month licensing timeline (Moneycontrol 17 Aug); NPCIL to
 | PFC | +2.0 | +2.0 | +0.0 | +0.0 | -0.0 |
 | ENRIN | +2.0 | +0.9 | +1.1 | +0.0 | -0.0 |
 | NHPC | +1.7 | +1.7 | +0.0 | +0.0 | +0.0 |
+| NTPC | +1.6 | +1.6 | -0.0 | +0.0 | +0.0 |
+| NLCINDIA | +1.5 | +1.6 | -0.1 | +0.0 | +0.0 |
 | JSWENERGY | +1.4 | +1.6 | -0.2 | +0.0 | -0.0 |
 | GVT&D | +1.4 | +0.0 | +1.4 | +0.0 | -0.0 |
 | APARINDS | +1.4 | +0.6 | +0.8 | +0.0 | -0.0 |
 | CGPOWER | +1.3 | +0.0 | +1.3 | -0.0 | -0.0 |
-| POWERGRID | +1.2 | +0.8 | +0.4 | -0.0 | +0.0 |
-| POLYCAB | +1.2 | +0.0 | +1.2 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -50,7 +50,7 @@ Draft rules propose a 6-month licensing timeline (Moneycontrol 17 Aug); NPCIL to
 | PRESTIGE | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
 | BAJAJ-AUTO | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 54%, 2: 32%, 3: 7%, 4: 6%
+Share of absolute impact by order: 1: 57%, 2: 30%, 3: 7%, 4: 6%
 
 ## Sources
 - 2026-08-17 India proposes 6-month timeline for nuclear project licences (Moneycontrol) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=India+SHANTI+draft+rules+nuclear+licence+when:120d&hl=en-IN&gl=IN&ceid=IN:en

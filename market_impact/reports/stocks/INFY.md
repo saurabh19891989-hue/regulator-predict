@@ -2,10 +2,10 @@
 *NIFTY_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.6%**, **12 months -4.5%** (rank 164 / 155 of 200 for 3m / 12m); beta 0.87
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.9%): 3 months 43%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.0% … P90 -0.5%; plausible 12m relative-return range incl. stock-specific noise: -35.0% … +35.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.2% beta-adjusted vs realised market-adjusted move -7.4%); forward event exposure -6.0% (3m -2.6%; half assumed priced); company-specific events -0.7%
+- Expected relative return: **3 months -2.6%**, **12 months -4.5%** (rank 164 / 156 of 200 for 3m / 12m); beta 0.87
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.9%): 3 months 43%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.3% … P90 -1.9%; plausible 12m relative-return range incl. stock-specific noise: -49.2% … +31.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.3% beta-adjusted vs realised market-adjusted move -7.4%); forward event exposure -6.0% (3m -2.6%; half assumed priced); company-specific events -0.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | Appeals court allows $100k H-1B fee (or new rule finalised) and/or OPT fee rule finalised (`EV_H1B_FEE_REINSTATED`) | anticipated | 0.30 | -4.0% | -1.2% | -4.0 | +0.0 | +0.0 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.2% | -1.2% | -0.7 | -0.5 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → INFY | -5.00% | -5.00% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → INFY | +3.00% | +3.00% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → INFY | -2.50% | -2.12% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ P_US_VISA_OUTSOURCING → INFY | -2.00% | -2.00% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → INFY | -7.50% | -1.88% |
-| 1 | EV_H1B_100K_FEE_COURT ⇒ P_US_VISA_OUTSOURCING → INFY | -1.60% | -1.60% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → INFY | +1.49% | +1.49% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → INFY | -4.50% | -1.26% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → INFY | -1.26% | -1.26% |
 | 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → INFY | -4.00% | -1.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → INFY | +1.17% | +1.17% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → INFY | -4.50% | -1.12% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → INFY | -4.00% | -1.12% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → INFY | -5.00% | -0.90% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_FED_FUNDS → INFY | -0.70% | -0.70% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → INFY | +2.40% | +0.67% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → INFY | +2.10% | +0.52% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → INFY | +1.95% | +0.43% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → INFY | -1.20% | -0.43% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → INFY | -1.40% | -0.42% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → INFY | -0.70% | -0.41% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → INFY | -2.25% | -0.40% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → INFY | +0.60% | +0.37% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | T_GENAI_SERVICES → INFY | +1.00 | events | -5.00% |
+| 1 | P_US_VISA_OUTSOURCING → INFY | +0.90 | events | -3.60% |
+| 1 | F_US_GDP → INFY | +1.20 | events | +3.00% |
+| 1 | F_GSEC_10Y_IN → INFY | +1.70 | events | -1.53% |
+| 1 | F_FED_FUNDS → INFY | +1.62 | observed | -1.13% |
+| 1 | F_USDINR → INFY | -0.37 | observed | -0.55% |
+| 1 | F_REFINING_MARGIN → INFY | +1.54 | observed | +0.46% |
+| 1 | F_US_EQUITIES → INFY | +0.23 | observed | +0.35% |
+| 1 | F_EU_GDP → INFY | +0.22 | events | +0.22% |
+| 1 | F_RISK_SENTIMENT → INFY | +0.11 | observed | -0.11% |
+| 1 | F_BRENT → INFY | +0.00 | observed | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Infosys Ltd. (INFY) - company profile, as of 2026-11-05

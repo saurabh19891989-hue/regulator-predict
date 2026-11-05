@@ -50,7 +50,7 @@ Sept food CPI 7.74% and rising; rabi pulses (gram -59%, lentil -49% sown area at
 | JIOFIN | -5.9 | +0.0 | -2.6 | -3.0 | -0.4 |
 | LTF | -5.9 | +0.0 | -3.5 | -2.4 | -0.0 |
 
-Share of absolute impact by order: 1: 3%, 2: 53%, 3: 38%, 4: 6%
+Share of absolute impact by order: 1: 3%, 2: 53%, 3: 38%, 4: 5%
 
 ## Sources
 - 2026-11-03 Gram -59%, lentil -49% https://www.businesstoday.in/latest/economy/story/indias-rabi-sowing-falls-46-to-37-56-lakh-hectares-wheat-acreage-plunges-94-565374-2026-11-03

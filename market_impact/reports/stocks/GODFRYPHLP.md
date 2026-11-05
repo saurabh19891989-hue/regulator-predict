@@ -2,10 +2,10 @@
 *MIDCAP_100 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.9%**, **12 months +2.3%** (rank 47 / 65 of 200 for 3m / 12m); beta 1.29
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +42.1%): 3 months 54%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.0% … P90 +6.5%; plausible 12m relative-return range incl. stock-specific noise: -64.6% … +58.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.7 pp (model impact +3.5% beta-adjusted vs realised market-adjusted move -26.0%); forward event exposure +2.6% (3m +2.3%; half assumed priced); company-specific events +0.9%
+- Expected relative return: **3 months +1.9%**, **12 months +2.3%** (rank 45 / 63 of 200 for 3m / 12m); beta 1.29
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +42.1%): 3 months 54%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.6% … P90 +7.0%; plausible 12m relative-return range incl. stock-specific noise: -32.7% … +51.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.7 pp (model impact +3.5% beta-adjusted vs realised market-adjusted move -26.0%); forward event exposure +2.7% (3m +2.3%; half assumed priced); company-specific events +0.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.9 | +0.0 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.5 | -0.2 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → GODFRYPHLP | -2.64% | -2.64% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → GODFRYPHLP | -1.98% | -1.98% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GODFRYPHLP | +3.00% | +1.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → GODFRYPHLP | -5.20% | -1.46% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → GODFRYPHLP | -6.50% | -1.17% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → GODFRYPHLP | -0.66% | -0.66% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → GODFRYPHLP | -0.62% | -0.62% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → GODFRYPHLP | +0.60% | +0.60% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → GODFRYPHLP | -1.56% | -0.56% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → GODFRYPHLP | -0.52% | -0.52% |
-| 3 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → F_RISK_SENTIMENT → GODFRYPHLP | +0.51% | +0.51% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → GODFRYPHLP | -0.50% | -0.50% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → GODFRYPHLP | -1.87% | -0.47% |
-| 1 | EV_AI_SELLOFF_OCT26 ⇒ F_RISK_SENTIMENT → GODFRYPHLP | -0.45% | -0.45% |
-| 1 | EV_GST_57TH_COUNCIL_OCT26 ⇒ T_FORMALISATION → GODFRYPHLP | +0.45% | +0.45% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GODFRYPHLP | -1.80% | -0.40% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → GODFRYPHLP | +0.65% | +0.38% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GODFRYPHLP | -1.00% | -0.36% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GODFRYPHLP | +0.60% | +0.35% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → GODFRYPHLP | -1.15% | -0.32% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → GODFRYPHLP | +0.52% | +0.32% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → GODFRYPHLP | -1.15% | -0.29% |
+| 2 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → T_FORMALISATION → GODFRYPHLP | +0.36% | +0.29% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → GODFRYPHLP | +0.52% | +0.26% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GODFRYPHLP | -0.90% | -0.25% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → GODFRYPHLP | -1.60 | events | -1.92% |
+| 1 | F_REPO_IN → GODFRYPHLP | +1.00 | events | -0.50% |
+| 1 | T_FORMALISATION → GODFRYPHLP | +0.30 | events | +0.45% |
+| 1 | F_URBAN_DEMAND → GODFRYPHLP | +0.20 | events | +0.24% |
+| 1 | F_USDINR → GODFRYPHLP | -0.37 | observed | +0.18% |
+| 1 | F_RURAL_DEMAND → GODFRYPHLP | -0.25 | events | -0.17% |
+| 1 | F_RISK_SENTIMENT → GODFRYPHLP | +0.11 | observed | -0.15% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → GODFRYPHLP | +0.40 | events | -0.01% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → GODFRYPHLP | +0.30 | events | -0.01% |
+| 1 | F_BRENT → GODFRYPHLP | +0.00 | observed | -0.00% |
+| 3 | F_BRENT → F_CHEM_FEEDSTOCK → F_PACKAGING → GODFRYPHLP | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Godfrey Phillips India — what moves the stock

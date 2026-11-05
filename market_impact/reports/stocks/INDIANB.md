@@ -4,7 +4,7 @@
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.1%**, **12 months -4.8%** (rank 154 / 159 of 200 for 3m / 12m); beta 1.17
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.2%): 3 months 44%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.2% … P90 +3.4%; plausible 12m relative-return range incl. stock-specific noise: -38.5% … +36.3%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.6% … P90 +0.4%; plausible 12m relative-return range incl. stock-specific noise: -44.8% … +22.9%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +0.8% beta-adjusted vs realised market-adjusted move +4.7%); forward event exposure -8.0% (3m -3.3%; half assumed priced); company-specific events +0.7%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +5.3% | +3.1% | +1.5 | +1.4 | +1.3 | +1.2 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.7% | +2.8% | +5.0 | +0.4 | +0.1 | +0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → INDIANB | -12.00% | -3.36% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → INDIANB | -3.30% | -3.30% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → INDIANB | -15.00% | -2.70% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → INDIANB | -2.52% | -2.52% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → INDIANB | -4.00% | -2.48% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → INDIANB | +3.75% | +1.88% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → INDIANB | -1.78% | -1.78% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → INDIANB | +1.50% | +1.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → INDIANB | +1.50% | +1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → INDIANB | -1.44% | -1.44% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → INDIANB | -1.43% | -1.43% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → INDIANB | -3.60% | -1.29% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → INDIANB | -1.25% | -1.25% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → INDIANB | -1.20% | -1.20% |
-| 3 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → F_RISK_SENTIMENT → INDIANB | +1.17% | +1.17% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → INDIANB | +1.20% | +1.08% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → INDIANB | -4.32% | -1.08% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → INDIANB | -1.50% | -0.93% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → INDIANB | +1.50% | +0.87% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → INDIANB | +1.20% | +0.74% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → INDIANB | -1.44% | -0.72% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → INDIANB | -1.20% | -0.72% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → INDIANB | -1.00% | -0.62% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → INDIANB | +1.20% | +0.60% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_RISK_SENTIMENT → INDIANB | -9.00% | -0.56% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → INDIANB | +1.70 | events | -3.06% |
+| 1 | F_FPI_FLOWS → INDIANB | -1.60 | events | -2.40% |
+| 1 | F_GDP_IN → INDIANB | +0.50 | events | +1.50% |
+| 1 | F_GOVT_CAPEX → INDIANB | +1.00 | events | +1.50% |
+| 1 | F_LIQUIDITY_IN → INDIANB | -0.90 | events | -0.72% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → INDIANB | +0.50 | events | +0.64% |
+| 1 | F_RISK_SENTIMENT → INDIANB | +0.11 | observed | -0.34% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → INDIANB | -0.25 | events | -0.32% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → INDIANB | +1.00 | events | -0.32% |
+| 1 | F_REPO_IN → INDIANB | +1.00 | events | +0.30% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → INDIANB | -1.56 | events | -0.30% |
+| 1 | F_USDINR → INDIANB | -0.37 | observed | +0.30% |
 
 ## Analyst profile (agent research, sourced)
 # INDIANB - Indian Bank (as of 2026-11-05)

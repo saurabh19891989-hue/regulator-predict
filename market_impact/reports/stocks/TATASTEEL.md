@@ -2,10 +2,10 @@
 *NIFTY_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +5.8%**, **12 months +11.7%** (rank 6 / 6 of 200 for 3m / 12m); beta 1.17
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.4%): 3 months 72%, 12 months 88%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +6.4% … P90 +23.3%; plausible 12m relative-return range incl. stock-specific noise: -8.5% … +43.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.9 pp (model impact +11.9% beta-adjusted vs realised market-adjusted move -19.3%); forward event exposure +12.7% (3m +6.0%; half assumed priced); company-specific events +1.1%
+- Expected relative return: **3 months +6.1%**, **12 months +12.2%** (rank 6 / 4 of 200 for 3m / 12m); beta 1.17
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.4%): 3 months 73%, 12 months 72%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +6.9% … P90 +25.1%; plausible 12m relative-return range incl. stock-specific noise: -8.9% … +47.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.4 pp (model impact +12.8% beta-adjusted vs realised market-adjusted move -19.3%); forward event exposure +12.8% (3m +6.0%; half assumed priced); company-specific events +1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +1.3% | +1.3% | +0.0 | +0.7 | +0.7 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.2% | -1.2% | -1.0 | -0.1 | -0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → TATASTEEL | +11.20% | +11.20% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_COKING_COAL → TATASTEEL | -6.68% | -6.68% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_COKING_COAL → TATASTEEL | -4.80% | -4.80% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_GLOBAL → TATASTEEL | +4.12% | +4.12% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → TATASTEEL | +3.20% | +3.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → TATASTEEL | +2.82% | +2.82% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → TATASTEEL | +2.35% | +2.35% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → TATASTEEL | +3.20% | +1.76% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → TATASTEEL | +1.50% | +1.50% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → TATASTEEL | -1.32% | -1.32% |
-| 1 | EV_EU_STEEL_REGIME_CBAM_HITS_INDIA ⇒ F_STEEL_INDIA → TATASTEEL | -1.20% | -1.20% |
-| 1 | EV_CHINA_Q3_GDP_AND_MINI_STIMULUS ⇒ F_USDCNY → TATASTEEL | +1.12% | +1.12% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → TATASTEEL | +1.20% | +1.08% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → TATASTEEL | -1.08% | -1.08% |
 | 1 | EV_UNION_BUDGET_FEB27_METALS ⇒ F_COKING_COAL → TATASTEEL | +1.20% | +1.08% |
+| 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → TATASTEEL | -2.40% | -0.60% |
+| 1 | EV_STEEL_SAFEGUARD_EARLY_RELAXATION ⇒ F_STEEL_INDIA → TATASTEEL | -4.00% | -0.60% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COKING_COAL → TATASTEEL | -1.60% | -0.56% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → TATASTEEL | +1.42% | +0.51% |
+| 1 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → TATASTEEL | -2.00% | -0.50% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → TATASTEEL | -0.85% | -0.50% |
+| 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → TATASTEEL | -1.97% | -0.49% |
+| 2 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → TATASTEEL | +0.96% | +0.48% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → TATASTEEL | +1.95% | +0.43% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → TATASTEEL | +1.19% | +0.42% |
+| 3 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → F_STEEL_INDIA → TATASTEEL | -0.83% | -0.41% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → TATASTEEL | -0.71% | -0.41% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_STEEL_INDIA → TATASTEEL | +1.65 | events | +13.20% |
+| 1 | F_COKING_COAL → TATASTEEL | +2.87 | events | -11.48% |
+| 1 | F_STEEL_GLOBAL → TATASTEEL | +2.06 | observed | +4.11% |
+| 1 | F_GOVT_CAPEX → TATASTEEL | +1.00 | events | +1.50% |
+| 1 | F_USDCNY → TATASTEEL | -0.47 | observed | +1.17% |
+| 1 | F_REPO_IN → TATASTEEL | +1.00 | events | -1.00% |
+| 1 | NEW_EU_STEEL_ACCESS → TATASTEEL | +1.00 | events | +1.00% |
+| 1 | F_USDINR → TATASTEEL | -0.37 | observed | -0.55% |
+| 1 | F_IRON_ORE → TATASTEEL | -0.83 | observed | -0.42% |
+| 1 | F_GAS_GLOBAL → TATASTEEL | -0.47 | observed | +0.28% |
+| 1 | F_EU_GDP → TATASTEEL | +0.22 | events | +0.26% |
+| 1 | F_AUTO_DEMAND_IN → TATASTEEL | -0.10 | events | -0.10% |
 
 ## Analyst profile (agent research, sourced)
 # TATASTEEL — Tata Steel Ltd. (Nifty 50, I_STEEL) — as of 2026-11-05

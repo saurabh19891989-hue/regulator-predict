@@ -2,10 +2,10 @@
 *MIDCAP_100 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.2%**, **12 months +0.1%** (rank 107 / 101 of 200 for 3m / 12m); beta 0.96
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 49%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.1% … P90 +6.2%; plausible 12m relative-return range incl. stock-specific noise: -45.9% … +29.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.0 pp (model impact +6.0% beta-adjusted vs realised market-adjusted move -15.2%); forward event exposure -6.7% (3m -3.7%; half assumed priced); company-specific events +3.2%
+- Expected relative return: **3 months -0.1%**, **12 months +0.3%** (rank 103 / 96 of 200 for 3m / 12m); beta 0.96
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 50%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.9% … P90 +2.5%; plausible 12m relative-return range incl. stock-specific noise: -33.6% … +41.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.2 pp (model impact +6.3% beta-adjusted vs realised market-adjusted move -15.2%); forward event exposure -6.7% (3m -3.7%; half assumed priced); company-specific events +3.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -2.2 | -0.2 | -0.2 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.3% | -2.3% | +0.0 | -1.6 | -0.5 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → JSWENERGY | +5.40% | +5.40% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → JSWENERGY | -3.97% | -3.97% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → JSWENERGY | -3.96% | -3.96% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → JSWENERGY | +3.50% | +3.50% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → JSWENERGY | -3.50% | -3.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → JSWENERGY | -3.00% | -3.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → JSWENERGY | -2.66% | -2.66% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → JSWENERGY | +4.50% | +2.25% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → JSWENERGY | +5.40% | +2.16% |
-| 1 | EV_INDIA_COAL_CRUNCH ⇒ F_POWER_PRICE_IN → JSWENERGY | +1.80% | +1.80% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → JSWENERGY | +1.75% | +1.75% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → JSWENERGY | +1.50% | +1.50% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → JSWENERGY | -1.31% | -1.31% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → JSWENERGY | -1.25% | -1.25% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → JSWENERGY | -3.00% | -1.20% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → JSWENERGY | -2.00% | -1.00% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → JSWENERGY | -3.46% | -0.86% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → JSWENERGY | -3.00% | -0.81% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → JSWENERGY | -2.69% | -0.75% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → JSWENERGY | -1.25% | -0.75% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → JSWENERGY | -1.20% | -0.72% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → JSWENERGY | +1.80% | +0.72% |
+| 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → JSWENERGY | +1.50% | +0.68% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → JSWENERGY | -3.00% | -0.66% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → JSWENERGY | -3.36% | -0.60% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → JSWENERGY | -2.70% | -0.59% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → JSWENERGY | -0.60% | -0.57% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_POWER_PRICE_IN → JSWENERGY | +3.00 | events | +5.40% |
+| 1 | P_RENEWABLE_SUPPORT → JSWENERGY | +1.50 | events | +5.25% |
+| 1 | F_GSEC_10Y_IN → JSWENERGY | +1.70 | events | -4.25% |
+| 1 | F_REPO_IN → JSWENERGY | +1.00 | events | -3.00% |
+| 1 | F_FPI_FLOWS → JSWENERGY | -1.60 | events | -2.88% |
+| 1 | T_ENERGY_TRANSITION → JSWENERGY | +0.50 | events | +1.50% |
+| 1 | F_POWER_DEMAND_IN → JSWENERGY | +1.20 | events | +1.44% |
+| 1 | F_CREDIT_SPREADS_IN → JSWENERGY | +0.50 | events | -1.25% |
+| 1 | C_MIDEAST_CONFLICT → JSWENERGY | +1.50 | events | +0.90% |
+| 1 | F_COAL_INDIA → JSWENERGY | +1.50 | events | -0.90% |
+| 1 | F_MONSOON → JSWENERGY | -1.56 | events | -0.47% |
+| 1 | F_USDINR → JSWENERGY | -0.37 | observed | +0.30% |
 
 ## Analyst profile (agent research, sourced)
 # JSWENERGY — JSW Energy Ltd. (as of 2026-11-05)

@@ -54,7 +54,7 @@ Tail risk: full interdiction of Hormuz/Gulf export infrastructure after talks fa
 | IDEA | -26.2 | -7.5 | -8.7 | -5.2 | -4.7 |
 | MEESHO | -26.0 | -18.0 | -3.2 | -4.0 | -0.8 |
 
-Share of absolute impact by order: 1: 36%, 2: 26%, 3: 24%, 4: 14%
+Share of absolute impact by order: 1: 35%, 2: 26%, 3: 24%, 4: 14%
 
 ## Sources
 - 2026-10-05 Is Iran charging a toll to allow oil traffic through Hormuz? - Al Jazeera https://news.google.com/rss/search?q=Is+Iran+charging+a+toll+to+allow+oil+traffic+through+Hormuz+when:120d&hl=en-IN&gl=IN&ceid=IN:en

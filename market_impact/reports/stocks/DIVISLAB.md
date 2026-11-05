@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.4%**, **12 months -3.4%** (rank 139 / 146 of 200 for 3m / 12m); beta 0.88
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.3%): 3 months 45%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.0% … P90 +1.1%; plausible 12m relative-return range incl. stock-specific noise: -24.2% … +14.9%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.3%): 3 months 45%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.5% … P90 +0.5%; plausible 12m relative-return range incl. stock-specific noise: -15.5% … +32.7%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -4.3 pp (model impact -8.6% beta-adjusted vs realised market-adjusted move +49.8%); forward event exposure +1.8% (3m +2.6%; half assumed priced); company-specific events +2.3%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +2.1% | +1.7% | +2.1 | -0.1 | +0.0 | +0.0 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.6% | +1.6% | +1.6 | +0.0 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → DIVISLAB | -6.60% | -6.60% |
-| 1 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → DIVISLAB | -6.00% | -6.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DIVISLAB | +7.50% | +3.75% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → DIVISLAB | -2.48% | -2.48% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → DIVISLAB | +1.72% | +1.72% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → DIVISLAB | +2.10% | +1.68% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → DIVISLAB | -6.00% | -1.68% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → DIVISLAB | -1.68% | -1.68% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → DIVISLAB | +1.50% | +1.50% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → DIVISLAB | -7.50% | -1.35% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → DIVISLAB | -1.35% | -1.35% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → DIVISLAB | -1.02% | -1.02% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → DIVISLAB | -4.50% | -0.99% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → DIVISLAB | -0.96% | -0.96% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_FPI_FLOWS → DIVISLAB | -0.92% | -0.92% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → DIVISLAB | -2.88% | -0.81% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → DIVISLAB | -2.88% | -0.72% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → DIVISLAB | +1.05% | +0.68% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → DIVISLAB | -1.80% | -0.64% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → DIVISLAB | +2.86% | +0.63% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DIVISLAB | -2.24% | -0.63% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → DIVISLAB | -4.50% | -0.54% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → DIVISLAB | -2.16% | -0.54% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → DIVISLAB | +1.50% | +0.52% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → DIVISLAB | +0.80% | +0.52% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_USFDA_ENFORCEMENT → DIVISLAB | +1.00 | events | -6.00% |
+| 1 | F_FPI_FLOWS → DIVISLAB | -1.60 | events | -4.80% |
+| 1 | F_GSEC_10Y_IN → DIVISLAB | +1.70 | events | -2.04% |
+| 1 | F_USDINR → DIVISLAB | -0.37 | observed | -0.81% |
+| 1 | P_US_PHARMA_TARIFF → DIVISLAB | +0.50 | events | -0.75% |
+| 1 | P_US_TARIFF_INDIA → DIVISLAB | -0.60 | events | +0.48% |
+| 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → DIVISLAB | +0.50 | events | +0.35% |
+| 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → DIVISLAB | -0.47 | observed | +0.34% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → DIVISLAB | +1.00 | events | +0.30% |
+| 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → DIVISLAB | +0.30 | events | +0.29% |
+| 2 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → DIVISLAB | +0.40 | events | +0.29% |
+| 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → DIVISLAB | -0.60 | events | +0.25% |
 
 ## Analyst profile (agent research, sourced)
 # DIVISLAB - Divi's Laboratories Ltd. (Nifty Next 50, CDMO/API)

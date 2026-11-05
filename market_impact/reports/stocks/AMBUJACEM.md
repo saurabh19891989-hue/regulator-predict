@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Construction Materials · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.9%**, **12 months +3.8%** (rank 45 / 46 of 200 for 3m / 12m); beta 1.13
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.5%): 3 months 60%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.1% … P90 +8.8%; plausible 12m relative-return range incl. stock-specific noise: -19.0% … +19.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +2.4 pp (model impact +4.8% beta-adjusted vs realised market-adjusted move -16.7%); forward event exposure +2.9% (3m +0.1%; half assumed priced); company-specific events +2.3%
+- Expected relative return: **3 months +1.4%**, **12 months +3.0%** (rank 51 / 53 of 200 for 3m / 12m); beta 1.13
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.5%): 3 months 57%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.1% … P90 +7.9%; plausible 12m relative-return range incl. stock-specific noise: -15.4% … +24.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.1% beta-adjusted vs realised market-adjusted move -16.7%); forward event exposure +2.9% (3m +0.1%; half assumed priced); company-specific events +2.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -0.6 | -0.2 | -0.2 | -0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | +0.9% | +0.9% | +1.0 | +0.0 | +0.0 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → AMBUJACEM | -4.95% | -4.95% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → AMBUJACEM | +2.20% | +2.20% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → AMBUJACEM | -1.59% | -1.59% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → AMBUJACEM | +1.76% | +1.58% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → AMBUJACEM | -1.58% | -1.58% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -1.20% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → AMBUJACEM | -1.09% | -1.09% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → AMBUJACEM | -1.05% | -1.05% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → AMBUJACEM | +1.01% | +1.01% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → AMBUJACEM | -2.50% | -0.89% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → AMBUJACEM | +1.50% | +0.87% |
-| 2 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → AMBUJACEM | -0.84% | -0.84% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_HOUSING_DEMAND → AMBUJACEM | -0.65% | -0.65% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_DXY → AMBUJACEM | -0.60% | -0.60% |
 | 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → AMBUJACEM | -1.20% | -0.60% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → AMBUJACEM | +1.32% | +0.59% |
+| 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → AMBUJACEM | -0.80% | -0.54% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.48% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → AMBUJACEM | -6.00% | -0.38% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_DXY → AMBUJACEM | -1.20% | -0.36% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → AMBUJACEM | -1.38% | -0.35% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.32% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → AMBUJACEM | +0.53% | +0.32% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → AMBUJACEM | -0.48% | -0.29% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COAL_INTL → AMBUJACEM | -0.77% | -0.27% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.26% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → AMBUJACEM | +1.00 | events | +2.20% |
+| 1 | F_COAL_INTL → AMBUJACEM | +0.70 | director_override | -1.68% |
+| 1 | F_MONSOON → AMBUJACEM | -1.56 | events | +1.25% |
+| 1 | F_REPO_IN → AMBUJACEM | +1.00 | events | -1.20% |
+| 1 | F_DXY → AMBUJACEM | +0.74 | observed | -1.11% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → AMBUJACEM | +1.70 | events | -1.02% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → AMBUJACEM | +0.50 | events | +0.30% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → AMBUJACEM | +1.00 | events | -0.26% |
+| 1 | F_USDINR → AMBUJACEM | -0.37 | observed | +0.22% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → AMBUJACEM | +1.00 | events | -0.20% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → AMBUJACEM | +1.65 | events | -0.17% |
+| 1 | F_BRENT → AMBUJACEM | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # AMBUJACEM — Ambuja Cements Ltd. (as of 2026-11-05)

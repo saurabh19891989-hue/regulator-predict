@@ -2,9 +2,9 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.1%**, **12 months +1.9%** (rank 61 / 70 of 200 for 3m / 12m); beta 1.20
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.8%): 3 months 54%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.6% … P90 +5.6%; plausible 12m relative-return range incl. stock-specific noise: -20.1% … +22.5%
+- Expected relative return: **3 months +1.1%**, **12 months +1.9%** (rank 60 / 70 of 200 for 3m / 12m); beta 1.20
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.8%): 3 months 55%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.6% … P90 +5.8%; plausible 12m relative-return range incl. stock-specific noise: -19.1% … +28.6%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.9 pp (model impact +1.8% beta-adjusted vs realised market-adjusted move -15.8%); forward event exposure +5.5% (3m +2.0%; half assumed priced); company-specific events -1.2%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,40 @@
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.1% | +0.8% | +0.2 | +0.7 | +0.3 | -0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -2.7% | -0.7% | +0.0 | -2.5 | -0.3 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → IRCTC | -2.20% | -2.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → IRCTC | -1.49% | -1.49% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → IRCTC | -1.32% | -1.32% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → IRCTC | +1.25% | +1.25% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → IRCTC | +2.50% | +1.25% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → IRCTC | -1.00% | -1.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → IRCTC | -0.89% | -0.89% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_FOOD_INFLATION_IN → IRCTC | -0.88% | -0.88% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → IRCTC | +0.96% | +0.86% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → IRCTC | -0.84% | -0.84% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_TRAVEL_DEMAND → IRCTC | -0.72% | -0.72% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → IRCTC | +0.72% | +0.65% |
-| 3 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → F_GDP_IN → IRCTC | -0.61% | -0.61% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → IRCTC | -0.59% | -0.59% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → F_TRAVEL_DEMAND → IRCTC | +0.51% | +0.51% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → IRCTC | +0.67% | +0.45% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → IRCTC | -3.75% | -0.45% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → IRCTC | -1.49% | -0.42% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → IRCTC | +0.50% | +0.40% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → IRCTC | -1.00% | -0.40% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_GDP_IN → IRCTC | +0.48% | +0.34% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → IRCTC | -1.87% | -0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → IRCTC | -1.50% | -0.33% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → IRCTC | -1.15% | -0.29% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_TRAVEL_DEMAND → IRCTC | +0.48% | +0.28% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → IRCTC | -1.00% | -0.27% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → IRCTC | -0.96% | -0.27% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FOOD_INFLATION_IN → IRCTC | +2.00 | events | -1.60% |
+| 1 | F_FPI_FLOWS → IRCTC | -1.60 | events | -1.60% |
+| 1 | F_GDP_IN → IRCTC | +0.50 | events | +1.25% |
+| 1 | F_REPO_IN → IRCTC | +1.00 | events | -1.00% |
+| 2 | C_MIDEAST_CONFLICT → F_TRAVEL_DEMAND → IRCTC | +1.50 | events | -0.72% |
+| 2 | F_URBAN_DEMAND → F_TRAVEL_DEMAND → IRCTC | +0.20 | events | +0.51% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → IRCTC | +0.40 | events | -0.00% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → IRCTC | +0.30 | events | -0.00% |
+| 3 | F_BRENT → F_CHEM_FEEDSTOCK → F_PACKAGING → IRCTC | +0.00 | observed | -0.00% |
+| 4 | F_BRENT → F_CHEM_FEEDSTOCK → F_PETROCHEM_SPREADS → F_PACKAGING → IRCTC | +0.00 | observed | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # IRCTC — Indian Railway Catering and Tourism Corp., as of 2026-11-05

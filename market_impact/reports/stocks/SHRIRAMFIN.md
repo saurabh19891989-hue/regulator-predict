@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -5.1%**, **12 months -7.3%** (rank 193 / 181 of 200 for 3m / 12m); beta 1.42
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.0%): 3 months 35%, 12 months 32%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -16.5% … P90 -2.6%; plausible 12m relative-return range incl. stock-specific noise: -38.7% … +22.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.5 pp (model impact -8.9% beta-adjusted vs realised market-adjusted move -1.8%); forward event exposure -6.6% (3m -4.4%; half assumed priced); company-specific events +1.4%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.0%): 3 months 35%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.3% … P90 -0.5%; plausible 12m relative-return range incl. stock-specific noise: -44.0% … +42.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.5 pp (model impact -8.9% beta-adjusted vs realised market-adjusted move -1.8%); forward event exposure -6.5% (3m -4.4%; half assumed priced); company-specific events +1.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.9% | -2.9% | -1.0 | -1.1 | -0.5 | -0.3 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -7.8% | -2.8% | -2.5 | -2.1 | -1.8 | -1.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → SHRIRAMFIN | -5.50% | -5.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → SHRIRAMFIN | -4.95% | -4.95% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SHRIRAMFIN | -3.31% | -3.31% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SHRIRAMFIN | +6.25% | +3.12% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → SHRIRAMFIN | -2.52% | -2.52% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → SHRIRAMFIN | -2.50% | -2.50% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → SHRIRAMFIN | -2.10% | -2.10% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → SHRIRAMFIN | -2.04% | -2.04% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → SHRIRAMFIN | -1.80% | -1.80% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → SHRIRAMFIN | +1.50% | +1.50% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → SHRIRAMFIN | -2.25% | -1.40% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → SHRIRAMFIN | +2.00% | +1.36% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → SHRIRAMFIN | +1.25% | +1.25% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → SHRIRAMFIN | -2.00% | -1.24% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → SHRIRAMFIN | -1.11% | -1.11% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SHRIRAMFIN | -3.73% | -1.05% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SHRIRAMFIN | -2.50% | -1.00% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → SHRIRAMFIN | -2.50% | -0.89% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → SHRIRAMFIN | +1.50% | +0.87% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SHRIRAMFIN | -4.67% | -0.84% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SHRIRAMFIN | -3.75% | -0.82% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → SHRIRAMFIN | +0.86% | +0.78% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → SHRIRAMFIN | -1.25% | -0.78% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SHRIRAMFIN | -2.88% | -0.72% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SHRIRAMFIN | -2.50% | -0.68% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SHRIRAMFIN | -2.40% | -0.67% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → SHRIRAMFIN | -1.60 | events | -4.00% |
+| 1 | F_MONSOON → SHRIRAMFIN | -1.56 | events | -3.12% |
+| 1 | F_GSEC_10Y_IN → SHRIRAMFIN | +1.70 | events | -2.55% |
+| 1 | F_REPO_IN → SHRIRAMFIN | +1.00 | events | -2.50% |
+| 1 | F_US_10Y → SHRIRAMFIN | +1.68 | observed | -2.01% |
+| 1 | F_GDP_IN → SHRIRAMFIN | +0.50 | events | +1.50% |
+| 1 | F_CREDIT_SPREADS_IN → SHRIRAMFIN | +0.50 | events | -1.25% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → SHRIRAMFIN | +0.50 | events | +0.36% |
+| 1 | F_AUTO_DEMAND_IN → SHRIRAMFIN | -0.10 | events | -0.35% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → SHRIRAMFIN | +1.00 | events | -0.29% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → SHRIRAMFIN | +0.50 | events | +0.21% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → SHRIRAMFIN | -0.25 | events | -0.18% |
 
 ## Analyst profile (agent research, sourced)
 # SHRIRAMFIN - Shriram Finance Ltd. (Nifty 50, NBFC vehicle/consumer)

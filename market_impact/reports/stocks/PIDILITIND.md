@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.4%**, **12 months -1.8%** (rank 140 / 127 of 200 for 3m / 12m); beta 0.89
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +13.2%): 3 months 42%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.1% … P90 +1.5%; plausible 12m relative-return range incl. stock-specific noise: -21.0% … +19.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.3 pp (model impact -0.6% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure -0.8% (3m -1.1%; half assumed priced); company-specific events +0.1%
+- Expected relative return: **3 months -1.4%**, **12 months -1.8%** (rank 140 / 128 of 200 for 3m / 12m); beta 0.89
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +13.2%): 3 months 42%, 12 months 38%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.8% … P90 +0.8%; plausible 12m relative-return range incl. stock-specific noise: -28.7% … +19.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.3 pp (model impact -0.6% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure -0.7% (3m -1.1%; half assumed priced); company-specific events +0.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -3.5% | -0.8% | -2.8 | -0.6 | -0.1 | +0.0 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -1.9% | -0.8% | -1.5 | -0.3 | -0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → PIDILITIND | -4.95% | -4.95% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → PIDILITIND | -2.25% | -2.25% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIDILITIND | -2.02% | -2.02% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → PIDILITIND | -1.99% | -1.99% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → PIDILITIND | -1.50% | -1.50% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → PIDILITIND | -2.50% | -0.89% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → PIDILITIND | +1.50% | +0.87% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → PIDILITIND | +1.50% | +0.87% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → PIDILITIND | -0.78% | -0.78% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → PIDILITIND | -0.66% | -0.66% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → PIDILITIND | -1.80% | -0.64% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PIDILITIND | -1.50% | -0.60% |
-| 2 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → PIDILITIND | -0.50% | -0.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → PIDILITIND | +0.50% | +0.50% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → PIDILITIND | -0.48% | -0.48% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → PIDILITIND | -1.73% | -0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → PIDILITIND | -1.50% | -0.41% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → PIDILITIND | -6.00% | -0.38% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIDILITIND | -1.02% | -0.36% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → PIDILITIND | -0.60% | -0.36% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIDILITIND | +0.61% | +0.36% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → PIDILITIND | -1.50% | -0.33% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PIDILITIND | -1.30% | -0.29% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → PIDILITIND | +0.36% | +0.25% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → PIDILITIND | -0.38% | -0.25% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | C_MIDEAST_CONFLICT → PIDILITIND | +1.50 | events | -2.25% |
+| 1 | F_REPO_IN → PIDILITIND | +1.00 | events | -1.50% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → PIDILITIND | +1.70 | events | -0.61% |
+| 1 | F_URBAN_DEMAND → PIDILITIND | +0.20 | events | +0.50% |
+| 1 | F_USDINR → PIDILITIND | -0.37 | observed | +0.37% |
+| 1 | F_RURAL_DEMAND → PIDILITIND | -0.25 | events | -0.30% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → PIDILITIND | +0.50 | events | +0.18% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → PIDILITIND | +1.00 | events | -0.16% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → PIDILITIND | +1.00 | events | -0.12% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → PIDILITIND | +1.65 | events | -0.10% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → PIDILITIND | +0.40 | events | -0.10% |
+| 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → PIDILITIND | -0.47 | observed | -0.07% |
 
 ## Analyst profile (agent research, sourced)
 # PIDILITIND — Pidilite Industries (Nifty Next 50, as of 2026-11-05)

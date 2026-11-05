@@ -2,9 +2,9 @@
 *NIFTY_50 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.2%**, **12 months +0.6%** (rank 93 / 91 of 200 for 3m / 12m); beta 0.70
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.3%): 3 months 51%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.0% … P90 +2.2%; plausible 12m relative-return range incl. stock-specific noise: -16.2% … +16.9%
+- Expected relative return: **3 months +0.2%**, **12 months +0.6%** (rank 93 / 92 of 200 for 3m / 12m); beta 0.70
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.3%): 3 months 51%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.9% … P90 +3.3%; plausible 12m relative-return range incl. stock-specific noise: -15.3% … +22.1%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.1 pp (model impact +0.1% beta-adjusted vs realised market-adjusted move -3.5%); forward event exposure +3.2% (3m +1.7%; half assumed priced); company-specific events +0.1%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -2.9% | -0.5% | +0.0 | -3.1 | +0.3 | -0.1 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.6 | +0.1 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ITC | -2.64% | -2.64% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → ITC | -2.48% | -2.48% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ITC | +3.00% | +1.50% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ITC | -0.79% | -0.79% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ITC | +0.78% | +0.78% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ITC | +0.60% | +0.60% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ITC | -0.60% | -0.60% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ITC | -1.79% | -0.50% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ITC | -1.25% | -0.45% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ITC | +0.75% | +0.44% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → ITC | -0.42% | -0.42% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → ITC | -0.41% | -0.41% |
 | 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ITC | -2.24% | -0.40% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RURAL_DEMAND → ITC | -0.40% | -0.40% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ITC | -1.80% | -0.40% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ITC | -1.15% | -0.32% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → ITC | +0.42% | +0.29% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ITC | -1.15% | -0.29% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → ITC | +1.30% | +0.29% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ITC | -0.60% | -0.24% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → ITC | +0.42% | +0.23% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → ITC | +0.32% | +0.22% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → ITC | +0.60% | +0.21% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ITC | -0.54% | -0.19% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → ITC | -1.60 | events | -1.92% |
+| 1 | F_REPO_IN → ITC | +1.00 | events | -0.60% |
+| 1 | F_USDINR → ITC | -0.37 | observed | -0.37% |
+| 1 | F_RURAL_DEMAND → ITC | -0.25 | events | -0.35% |
+| 1 | T_FORMALISATION → ITC | +0.30 | events | +0.24% |
+| 1 | F_URBAN_DEMAND → ITC | +0.20 | events | +0.20% |
+| 1 | F_EDIBLE_OIL → ITC | +0.19 | observed | -0.06% |
+| 1 | F_WHEAT → ITC | -0.13 | observed | +0.05% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → ITC | +0.40 | events | -0.01% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → ITC | +0.30 | events | -0.01% |
+| 1 | F_BRENT → ITC | +0.00 | observed | -0.00% |
+| 3 | F_BRENT → F_CHEM_FEEDSTOCK → F_PACKAGING → ITC | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # ITC — what moves the stock

@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.6%**, **12 months -5.0%** (rank 166 / 163 of 200 for 3m / 12m); beta 1.23
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +39.0%): 3 months 45%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.2% … P90 -0.6%; plausible 12m relative-return range incl. stock-specific noise: -49.5% … +42.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.9 pp (model impact -3.7% beta-adjusted vs realised market-adjusted move +37.0%); forward event exposure -2.9% (3m -0.4%; half assumed priced); company-specific events -1.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +39.0%): 3 months 45%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.8% … P90 -0.2%; plausible 12m relative-return range incl. stock-specific noise: -54.0% … +39.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.9 pp (model impact -3.7% beta-adjusted vs realised market-adjusted move +37.0%); forward event exposure -2.8% (3m -0.4%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.6 | +0.2 | +0.1 |
 | US $100,000 H-1B fee (new ~$103k proposal Aug 2026) blocked by court; administration appeals; DHS proposes $70k/$30k OPT fees (`EV_H1B_100K_FEE_COURT`) | occurred | 1.00 | -1.2% | -1.2% | -1.2 | +0.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → COFORGE | -3.96% | -3.96% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → COFORGE | +3.13% | +3.13% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → COFORGE | +3.12% | +3.12% |
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → COFORGE | -3.00% | -3.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → COFORGE | +4.50% | +2.25% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → COFORGE | -7.80% | -1.95% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ P_US_VISA_OUTSOURCING → COFORGE | -1.50% | -1.50% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → COFORGE | -1.50% | -1.27% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → COFORGE | -4.50% | -1.26% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → COFORGE | -1.26% | -1.26% |
-| 1 | EV_H1B_100K_FEE_COURT ⇒ P_US_VISA_OUTSOURCING → COFORGE | -1.20% | -1.20% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → COFORGE | -4.50% | -1.12% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → COFORGE | -4.00% | -1.12% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → COFORGE | -1.07% | -1.07% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → COFORGE | +0.90% | +0.90% |
+| 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → COFORGE | -3.00% | -0.90% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → COFORGE | -5.00% | -0.90% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → COFORGE | -2.70% | -0.59% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → COFORGE | +2.60% | +0.57% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → COFORGE | +1.58% | +0.56% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → COFORGE | -0.95% | -0.55% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → COFORGE | +2.10% | +0.52% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → COFORGE | -1.20% | -0.43% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → COFORGE | -1.40% | -0.42% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_US_GDP → COFORGE | +1.20 | events | +3.12% |
+| 1 | T_GENAI_SERVICES → COFORGE | +1.00 | events | -3.00% |
+| 1 | F_FPI_FLOWS → COFORGE | -1.60 | events | -2.88% |
+| 1 | P_US_VISA_OUTSOURCING → COFORGE | +0.90 | events | -2.70% |
+| 1 | F_GSEC_10Y_IN → COFORGE | +1.70 | events | -1.53% |
+| 1 | F_FED_FUNDS → COFORGE | +1.62 | observed | -1.13% |
+| 1 | F_USDINR → COFORGE | -0.37 | observed | -0.74% |
+| 1 | F_US_EQUITIES → COFORGE | +0.23 | observed | +0.35% |
+| 1 | F_CREDIT_SPREADS_IN → COFORGE | +0.50 | events | -0.25% |
+| 1 | F_USDCNY → COFORGE | -0.47 | observed | -0.23% |
+| 1 | F_EU_GDP → COFORGE | +0.22 | events | +0.22% |
+| 1 | F_RISK_SENTIMENT → COFORGE | +0.11 | observed | -0.11% |
 
 ## Analyst profile (agent research, sourced)
 # Coforge Ltd. (COFORGE) - company profile, as of 2026-11-05

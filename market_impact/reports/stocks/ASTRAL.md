@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.5%**, **12 months +0.8%** (rank 119 / 87 of 200 for 3m / 12m); beta 0.89
+- Expected relative return: **3 months -0.5%**, **12 months +0.8%** (rank 119 / 88 of 200 for 3m / 12m); beta 0.89
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.3%): 3 months 48%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.7% … P90 +6.0%; plausible 12m relative-return range incl. stock-specific noise: -33.3% … +36.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.8% beta-adjusted vs realised market-adjusted move -13.4%); forward event exposure +4.0% (3m +0.2%; half assumed priced); company-specific events -0.2%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.1% … P90 +9.3%; plausible 12m relative-return range incl. stock-specific noise: -25.7% … +37.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.8% beta-adjusted vs realised market-adjusted move -13.4%); forward event exposure +4.1% (3m +0.2%; half assumed priced); company-specific events -0.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.1% | +1.0% | +1.2 | +0.0 | -0.1 | -0.1 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.9% | +0.9% | +1.5 | -0.2 | -0.3 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ASTRAL | -2.69% | -2.69% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ASTRAL | -1.99% | -1.99% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ASTRAL | -1.50% | -1.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → ASTRAL | +1.50% | +1.50% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → ASTRAL | -1.36% | -1.36% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → ASTRAL | -1.33% | -1.33% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → ASTRAL | -1.26% | -1.26% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ASTRAL | -1.25% | -1.25% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → ASTRAL | -1.20% | -1.20% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ASTRAL | +1.20% | +1.08% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ASTRAL | -1.08% | -1.08% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ASTRAL | +3.20% | +0.90% |
-| 2 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → ASTRAL | -0.84% | -0.84% |
 | 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → ASTRAL | -1.05% | -0.73% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ASTRAL | +4.00% | +0.72% |
+| 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → ASTRAL | +1.00% | +0.68% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ASTRAL | -1.50% | -0.60% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ASTRAL | -1.36% | -0.49% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ASTRAL | +0.82% | +0.47% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → ASTRAL | -1.73% | -0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → ASTRAL | -1.50% | -0.41% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ASTRAL | +0.90% | +0.40% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → ASTRAL | -0.60% | -0.36% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_US_10Y → ASTRAL | +0.80% | +0.36% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → ASTRAL | +0.96% | +0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → ASTRAL | -1.50% | -0.33% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_MONSOON → ASTRAL | -1.56 | events | -1.56% |
+| 1 | F_REPO_IN → ASTRAL | +1.00 | events | -1.50% |
+| 1 | F_GOVT_CAPEX → ASTRAL | +1.00 | events | +1.50% |
+| 1 | F_US_10Y → ASTRAL | +1.68 | observed | -1.34% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → ASTRAL | +1.70 | events | -1.02% |
+| 1 | P_ANTI_DUMPING_IN → ASTRAL | +0.40 | events | -0.60% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → ASTRAL | +0.50 | events | +0.30% |
+| 1 | F_USDINR → ASTRAL | -0.37 | observed | +0.30% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → ASTRAL | +1.00 | events | -0.26% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → ASTRAL | +1.00 | events | -0.20% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → ASTRAL | +1.65 | events | -0.17% |
+| 1 | F_RISK_SENTIMENT → ASTRAL | +0.11 | observed | +0.09% |
 
 ## Analyst profile (agent research, sourced)
 # ASTRAL - Astral Ltd. (Capital Goods / plastic pipes)

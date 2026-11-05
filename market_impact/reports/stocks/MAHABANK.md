@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.1%**, **12 months -4.0%** (rank 132 / 150 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.7%): 3 months 47%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.0% … P90 +6.1%; plausible 12m relative-return range incl. stock-specific noise: -45.5% … +20.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +1.0% beta-adjusted vs realised market-adjusted move +3.3%); forward event exposure -5.5% (3m -1.1%; half assumed priced); company-specific events -0.2%
+- Expected relative return: **3 months -1.1%**, **12 months -4.0%** (rank 132 / 149 of 200 for 3m / 12m); beta 1.11
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.7%): 3 months 47%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.1% … P90 +3.6%; plausible 12m relative-return range incl. stock-specific noise: -40.9% … +31.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +1.0% beta-adjusted vs realised market-adjusted move +3.3%); forward event exposure -5.4% (3m -1.1%; half assumed priced); company-specific events -0.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -12.1% | -3.0% | +0.0 | -11.2 | -0.2 | -0.7 |
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -3.0% | -3.0% | +0.0 | -1.1 | -0.9 | -1.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MAHABANK | -5.50% | -5.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → MAHABANK | -14.00% | -3.92% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → MAHABANK | -17.50% | -3.15% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MAHABANK | +6.25% | +3.12% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → MAHABANK | -3.50% | -2.17% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → MAHABANK | -2.10% | -2.10% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → MAHABANK | +1.99% | +1.99% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → MAHABANK | -1.68% | -1.68% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → MAHABANK | -1.66% | -1.66% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → MAHABANK | -4.20% | -1.50% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → MAHABANK | +1.50% | +1.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → MAHABANK | +1.50% | +1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → MAHABANK | -1.49% | -1.49% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → MAHABANK | -1.40% | -1.40% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → MAHABANK | +1.40% | +1.40% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → MAHABANK | -5.04% | -1.26% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → MAHABANK | -2.00% | -1.24% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → MAHABANK | -1.75% | -1.09% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → MAHABANK | +1.20% | +1.08% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → MAHABANK | +1.75% | +1.02% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → MAHABANK | +1.40% | +0.87% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MAHABANK | -3.75% | -0.82% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → MAHABANK | +1.40% | +0.70% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → MAHABANK | -2.40% | -0.67% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_RISK_SENTIMENT → MAHABANK | -10.50% | -0.66% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → MAHABANK | -1.60 | events | -4.00% |
+| 1 | F_GSEC_10Y_IN → MAHABANK | +1.70 | events | -2.55% |
+| 1 | F_REPO_IN → MAHABANK | +1.00 | events | +1.50% |
+| 1 | F_GOVT_CAPEX → MAHABANK | +1.00 | events | +1.50% |
+| 1 | F_GDP_IN → MAHABANK | +0.50 | events | +1.40% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → MAHABANK | +0.50 | events | +0.56% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → MAHABANK | +1.00 | events | -0.41% |
+| 1 | F_RISK_SENTIMENT → MAHABANK | +0.11 | observed | -0.39% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → MAHABANK | +0.50 | events | +0.30% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → MAHABANK | -0.25 | events | -0.28% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → MAHABANK | +1.00 | events | -0.28% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → MAHABANK | -1.56 | events | -0.26% |
 
 ## Analyst profile (agent research, sourced)
 # MAHABANK - Bank of Maharashtra (midcap PSU bank)

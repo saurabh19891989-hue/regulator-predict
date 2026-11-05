@@ -2,9 +2,9 @@
 *NIFTY_50 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.8%**, **12 months +2.2%** (rank 73 / 66 of 200 for 3m / 12m); beta 0.87
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 54%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.1% … P90 +7.8%; plausible 12m relative-return range incl. stock-specific noise: -15.4% … +22.3%
+- Expected relative return: **3 months +0.8%**, **12 months +2.2%** (rank 71 / 64 of 200 for 3m / 12m); beta 0.87
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 54%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.2% … P90 +8.6%; plausible 12m relative-return range incl. stock-specific noise: -11.6% … +18.1%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.3 pp (model impact +0.6% beta-adjusted vs realised market-adjusted move -9.7%); forward event exposure +5.3% (3m +2.0%; half assumed priced); company-specific events +0.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.6% | -0.6% | -0.4 | -0.0 | -0.1 | -0.0 |
 | Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -2.2% | -0.6% | -1.0 | -0.8 | -0.3 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → TATACONSUM | -2.48% | -2.48% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → TATACONSUM | -1.40% | -1.40% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → TATACONSUM | +3.20% | +0.90% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_FOOD_INFLATION_IN → TATACONSUM | -0.88% | -0.88% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → TATACONSUM | +4.00% | +0.72% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → TATACONSUM | -0.52% | -0.52% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → TATACONSUM | -0.51% | -0.51% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RURAL_DEMAND → TATACONSUM | -0.49% | -0.49% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → TATACONSUM | +0.46% | +0.46% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → TATACONSUM | -1.25% | -0.45% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → TATACONSUM | -0.44% | -0.44% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → TATACONSUM | +0.75% | +0.44% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → TATACONSUM | -0.43% | -0.43% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → TATACONSUM | -0.42% | -0.42% |
-| 1 | EV_KHARIF26_OUTPUT_HIT ⇒ F_FOOD_INFLATION_IN → TATACONSUM | -0.40% | -0.40% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATACONSUM | -0.80% | -0.40% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → TATACONSUM | +0.51% | +0.36% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → TATACONSUM | +0.96% | +0.34% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TATACONSUM | -0.50% | -0.30% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → TATACONSUM | +1.15% | +0.29% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → TATACONSUM | +0.51% | +0.28% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → TATACONSUM | +0.39% | +0.26% |
+| 1 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_FOOD_INFLATION_IN → TATACONSUM | -0.96% | -0.24% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → TATACONSUM | -0.40% | -0.23% |
+| 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → TATACONSUM | +0.34% | +0.23% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → TATACONSUM | -0.24% | -0.23% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → TATACONSUM | +1.70 | events | -1.70% |
+| 1 | F_FOOD_INFLATION_IN → TATACONSUM | +2.00 | events | -1.60% |
+| 1 | F_URBAN_DEMAND → TATACONSUM | +0.20 | events | +0.46% |
+| 1 | F_RURAL_DEMAND → TATACONSUM | -0.25 | events | -0.43% |
+| 1 | F_USDINR → TATACONSUM | -0.37 | observed | +0.18% |
+| 1 | F_RISK_SENTIMENT → TATACONSUM | +0.11 | observed | +0.09% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → TATACONSUM | +0.40 | events | -0.01% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → TATACONSUM | +0.30 | events | -0.01% |
+| 4 | F_USDCNY → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → TATACONSUM | -0.47 | observed | -0.00% |
+| 4 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → TATACONSUM | +0.40 | events | -0.00% |
+| 4 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → TATACONSUM | +0.30 | events | -0.00% |
+| 4 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → TATACONSUM | -0.10 | events | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Tata Consumer Products (TATACONSUM) - Market Impact profile, as of 2026-11-05

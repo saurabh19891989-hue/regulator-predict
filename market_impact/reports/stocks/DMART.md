@@ -2,9 +2,9 @@
 *NIFTY_NEXT_50 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.3%**, **12 months -2.6%** (rank 137 / 138 of 200 for 3m / 12m); beta 0.80
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.8%): 3 months 46%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.3% … P90 +1.3%; plausible 12m relative-return range incl. stock-specific noise: -32.6% … +28.4%
+- Expected relative return: **3 months -1.3%**, **12 months -2.6%** (rank 138 / 138 of 200 for 3m / 12m); beta 0.80
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.8%): 3 months 46%, 12 months 35%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.1% … P90 +0.7%; plausible 12m relative-return range incl. stock-specific noise: -36.5% … +14.1%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -2.1% beta-adjusted vs realised market-adjusted move -19.8%); forward event exposure -4.0% (3m -2.3%; half assumed priced); company-specific events +1.2%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,39 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.4 | -0.4 | -0.1 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -9.6% | -1.7% | +0.0 | -8.0 | -1.2 | -0.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → DMART | -5.50% | -5.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → DMART | -3.96% | -3.96% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DMART | +6.25% | +3.12% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → DMART | -3.08% | -3.08% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → DMART | +1.25% | +1.25% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → DMART | -1.15% | -1.15% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DMART | -3.73% | -1.05% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → DMART | -0.97% | -0.97% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_FOOD_INFLATION_IN → DMART | +0.88% | +0.88% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → DMART | -1.76% | -0.88% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_GSEC_10Y_IN → DMART | -0.86% | -0.86% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → DMART | -0.85% | -0.85% |
 | 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DMART | -4.67% | -0.84% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → DMART | -3.75% | -0.82% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_FPI_FLOWS → DMART | -0.80% | -0.80% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → DMART | -2.00% | -0.71% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → DMART | +1.20% | +0.70% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → DMART | -2.40% | -0.67% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → DMART | -1.10% | -0.66% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → DMART | -2.40% | -0.60% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → DMART | -0.53% | -0.50% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → DMART | -2.20% | -0.48% |
+| 1 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → DMART | -0.60% | -0.48% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → DMART | +1.25% | +0.44% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DMART | -1.12% | -0.40% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → DMART | -1.60 | events | -4.00% |
+| 1 | F_GSEC_10Y_IN → DMART | +1.70 | events | -3.74% |
+| 1 | F_FOOD_INFLATION_IN → DMART | +2.00 | events | +1.60% |
+| 1 | F_URBAN_DEMAND → DMART | +0.20 | events | +0.80% |
+| 1 | T_FORMALISATION → DMART | +0.30 | events | +0.60% |
+| 1 | F_STEEL_INDIA → DMART | +1.65 | events | -0.49% |
+| 1 | F_REPO_IN → DMART | +1.00 | events | -0.40% |
+| 1 | F_USDINR → DMART | -0.37 | observed | +0.22% |
+| 1 | F_BRENT → DMART | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # DMART — Avenue Supermarts Ltd. (as of 2026-11-05)

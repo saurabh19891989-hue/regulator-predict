@@ -2,9 +2,9 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.5%**, **12 months +0.9%** (rank 118 / 85 of 200 for 3m / 12m); beta 0.88
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.4%): 3 months 48%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.7% … P90 +4.2%; plausible 12m relative-return range incl. stock-specific noise: -27.2% … +33.8%
+- Expected relative return: **3 months -0.5%**, **12 months +0.9%** (rank 118 / 84 of 200 for 3m / 12m); beta 0.88
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.4%): 3 months 48%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.4% … P90 +5.0%; plausible 12m relative-return range incl. stock-specific noise: -17.4% … +21.7%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -2.2% beta-adjusted vs realised market-adjusted move -9.8%); forward event exposure +3.7% (3m +0.7%; half assumed priced); company-specific events +0.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.3% | +0.8% | +1.1 | +0.2 | -0.0 | +0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.7 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → SUPREMEIND | -2.25% | -2.25% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → SUPREMEIND | -1.51% | -1.51% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → SUPREMEIND | +1.50% | +1.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → SUPREMEIND | +1.49% | +1.49% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SUPREMEIND | +1.20% | +1.08% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SUPREMEIND | -1.08% | -1.08% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SUPREMEIND | -1.06% | -1.06% |
 | 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → SUPREMEIND | -1.40% | -0.98% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → SUPREMEIND | +1.50% | +0.87% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → SUPREMEIND | +1.20% | +0.82% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → SUPREMEIND | -0.80% | -0.80% |
-| 1 | EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26 ⇒ P_ANTI_DUMPING_IN → SUPREMEIND | -0.80% | -0.80% |
-| 2 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → SUPREMEIND | -0.67% | -0.67% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → F_PETROCHEM_SPREADS → SUPREMEIND | +0.66% | +0.66% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → SUPREMEIND | -1.80% | -0.64% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → SUPREMEIND | +0.60% | +0.42% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SUPREMEIND | +0.90% | +0.40% |
+| 1 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → SUPREMEIND | -1.20% | -0.38% |
+| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → SUPREMEIND | +0.60% | +0.34% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → SUPREMEIND | +0.60% | +0.33% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SUPREMEIND | -0.80% | -0.32% |
+| 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → SUPREMEIND | +0.40% | +0.27% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → SUPREMEIND | +0.75% | +0.27% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → SUPREMEIND | -0.45% | -0.26% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → SUPREMEIND | -0.40% | -0.26% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | C_MIDEAST_CONFLICT → SUPREMEIND | +1.50 | events | -2.25% |
+| 1 | F_MONSOON → SUPREMEIND | -1.56 | events | -1.87% |
+| 1 | F_GOVT_CAPEX → SUPREMEIND | +1.00 | events | +1.50% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → SUPREMEIND | +1.70 | events | -0.82% |
+| 1 | F_REPO_IN → SUPREMEIND | +1.00 | events | -0.80% |
+| 1 | P_ANTI_DUMPING_IN → SUPREMEIND | +0.40 | events | -0.80% |
+| 1 | F_RURAL_DEMAND → SUPREMEIND | -0.25 | events | -0.50% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → SUPREMEIND | +0.50 | events | +0.24% |
+| 1 | F_USDINR → SUPREMEIND | -0.37 | observed | +0.22% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → SUPREMEIND | +1.00 | events | -0.21% |
+| 2 | F_CHINA_GDP → F_PETROCHEM_SPREADS → SUPREMEIND | +0.30 | events | -0.18% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → SUPREMEIND | +1.00 | events | -0.16% |
 
 ## Analyst profile (agent research, sourced)
 # SUPREMEIND — Supreme Industries (as of 2026-11-05)

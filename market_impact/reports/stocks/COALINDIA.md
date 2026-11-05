@@ -2,10 +2,10 @@
 *NIFTY_50 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +7.3%**, **12 months +11.6%** (rank 4 / 7 of 200 for 3m / 12m); beta 0.74
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.5%): 3 months 74%, 12 months 75%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +5.3% … P90 +18.5%; plausible 12m relative-return range incl. stock-specific noise: -19.6% … +41.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +8.0 pp (model impact +16.1% beta-adjusted vs realised market-adjusted move -20.1%); forward event exposure +6.6% (3m +4.5%; half assumed priced); company-specific events +2.8%
+- Expected relative return: **3 months +7.7%**, **12 months +12.2%** (rank 3 / 5 of 200 for 3m / 12m); beta 0.74
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.5%): 3 months 75%, 12 months 68%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +7.3% … P90 +20.3%; plausible 12m relative-return range incl. stock-specific noise: -22.7% … +39.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +8.7 pp (model impact +17.4% beta-adjusted vs realised market-adjusted move -20.1%); forward event exposure +6.7% (3m +4.5%; half assumed priced); company-specific events +2.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,38 @@
 | Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | +0.9% | +0.9% | +1.0 | +0.0 | -0.0 | +0.0 |
 | IMD April 2027 forecast says below-normal monsoon (<96% LPA) - second weak year risk (`EV_MONSOON27_DEFICIT_FORECAST`) | risk_scenario | 0.32 | +2.4% | +0.8% | +0.0 | +1.6 | +0.8 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_INDIA_COAL_CRUNCH ⇒ F_COAL_INDIA → COALINDIA | +9.00% | +9.00% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → COALINDIA | +4.95% | +4.95% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → COALINDIA | +2.80% | +2.80% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → COALINDIA | +4.20% | +1.68% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_COKING_COAL → COALINDIA | +1.34% | +1.34% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → COALINDIA | -1.60% | -1.09% |
-| 2 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | +0.96% | +0.96% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_COKING_COAL → COALINDIA | +0.96% | +0.96% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → COALINDIA | +0.94% | +0.94% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → COALINDIA | -0.93% | -0.93% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → COALINDIA | +2.50% | +0.89% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → COALINDIA | -1.50% | -0.87% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | -1.03% | -0.70% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → COALINDIA | -0.70% | -0.70% |
 | 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | +1.44% | +0.58% |
+| 2 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → COALINDIA | +1.60% | +0.51% |
+| 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → COALINDIA | -0.80% | -0.46% |
+| 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → COALINDIA | +0.90% | +0.45% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → COALINDIA | +6.00% | +0.38% |
+| 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → COALINDIA | +0.80% | +0.36% |
+| 2 | EV_NEMONSOON26_DEFICIT ⇒ F_MONSOON → F_POWER_DEMAND_IN → COALINDIA | +0.80% | +0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → COALINDIA | +1.56% | +0.34% |
+| 3 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | +1.03% | +0.33% |
+| 3 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | -0.52% | -0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_COAL_INDIA → COALINDIA | +1.50 | events | +9.00% |
+| 1 | F_POWER_DEMAND_IN → COALINDIA | +1.20 | events | +3.36% |
+| 1 | F_COKING_COAL → COALINDIA | +2.87 | events | +2.30% |
+| 1 | F_COAL_INTL → COALINDIA | +0.70 | director_override | +1.26% |
+| 1 | F_REPO_IN → COALINDIA | +1.00 | events | -0.70% |
+| 1 | T_ENERGY_TRANSITION → COALINDIA | +0.50 | events | -0.50% |
+| 1 | F_USDINR → COALINDIA | -0.37 | observed | -0.44% |
+| 1 | F_BRENT → COALINDIA | +0.00 | observed | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Coal India (COALINDIA) — market impact profile (as of 2026-11-05)

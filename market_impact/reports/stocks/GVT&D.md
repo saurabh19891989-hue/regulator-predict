@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +4.2%**, **12 months +8.0%** (rank 19 / 21 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +43.6%): 3 months 58%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +5.8% … P90 +12.0%; plausible 12m relative-return range incl. stock-specific noise: -31.0% … +65.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.2 pp (model impact +8.3% beta-adjusted vs realised market-adjusted move -18.8%); forward event exposure +7.1% (3m +3.1%; half assumed priced); company-specific events +2.9%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +43.6%): 3 months 58%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +4.0% … P90 +12.1%; plausible 12m relative-return range incl. stock-specific noise: -76.6% … +70.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.1 pp (model impact +8.3% beta-adjusted vs realised market-adjusted move -18.8%); forward event exposure +7.1% (3m +3.1%; half assumed priced); company-specific events +2.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | -0.0 | +0.0 | -0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.4% | +1.4% | +0.0 | +1.4 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → GVT&D | -3.30% | -3.30% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → GVT&D | +2.50% | +2.50% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → GVT&D | +2.00% | +2.00% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → GVT&D | -1.99% | -1.99% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GVT&D | +3.75% | +1.88% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_GLOBAL → GVT&D | -1.85% | -1.85% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → GVT&D | -1.80% | -1.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → GVT&D | +2.00% | +1.80% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → GVT&D | -1.50% | -1.50% |
-| 2 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → GVT&D | +1.44% | +1.44% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → GVT&D | -1.33% | -1.33% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → GVT&D | +1.20% | +1.20% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → GVT&D | +1.00% | +1.00% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → GVT&D | +0.96% | +0.96% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → GVT&D | -0.90% | -0.90% |
+| 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → GVT&D | +2.16% | +0.86% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → GVT&D | +1.50% | +0.68% |
+| 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → GVT&D | +1.44% | +0.65% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GVT&D | -2.24% | -0.63% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GVT&D | -1.50% | -0.60% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → GVT&D | -0.77% | -0.53% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GVT&D | -2.80% | -0.50% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GVT&D | -2.25% | -0.49% |
+| 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → GVT&D | +0.72% | +0.43% |
+| 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → GVT&D | +0.72% | +0.43% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → GVT&D | -1.73% | -0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → GVT&D | -1.50% | -0.41% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → GVT&D | -1.44% | -0.40% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_RENEWABLE_SUPPORT → GVT&D | +1.50 | events | +3.00% |
+| 1 | F_GOVT_CAPEX → GVT&D | +1.00 | events | +2.50% |
+| 1 | F_FPI_FLOWS → GVT&D | -1.60 | events | -2.40% |
+| 1 | F_STEEL_GLOBAL → GVT&D | +2.06 | observed | -1.85% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → GVT&D | +1.20 | events | +1.73% |
+| 1 | F_REPO_IN → GVT&D | +1.00 | events | -1.50% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → GVT&D | +1.50 | events | +1.44% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → GVT&D | +0.50 | events | +1.20% |
+| 1 | C_MIDEAST_CONFLICT → GVT&D | +1.50 | events | -0.90% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → GVT&D | +1.00 | events | +0.32% |
+| 1 | P_US_TARIFF_INDIA → GVT&D | -0.60 | events | +0.18% |
+| 1 | F_USDINR → GVT&D | -0.37 | observed | -0.15% |
 
 ## Analyst profile (agent research, sourced)
 # GVT&D — GE Vernova T&D India (as of 2026-11-05)

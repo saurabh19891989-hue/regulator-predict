@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.4%**, **12 months +5.6%** (rank 26 / 32 of 200 for 3m / 12m); beta 1.23
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 63%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.5% … P90 +9.5%; plausible 12m relative-return range incl. stock-specific noise: -13.6% … +26.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.5 pp (model impact +9.0% beta-adjusted vs realised market-adjusted move -18.9%); forward event exposure +2.4% (3m +1.5%; half assumed priced); company-specific events +2.1%
+- Expected relative return: **3 months +3.7%**, **12 months +6.0%** (rank 24 / 33 of 200 for 3m / 12m); beta 1.23
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 63%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.0% … P90 +9.1%; plausible 12m relative-return range incl. stock-specific noise: -18.8% … +27.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.8 pp (model impact +9.7% beta-adjusted vs realised market-adjusted move -18.9%); forward event exposure +2.4% (3m +1.5%; half assumed priced); company-specific events +2.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | -0.0 | +0.0 | -0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -6.6% | -1.9% | +0.0 | -4.8 | -1.3 | -0.5 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → TATAPOWER | -4.40% | -4.40% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → TATAPOWER | +4.00% | +4.00% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → TATAPOWER | -3.50% | -3.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATAPOWER | +5.00% | +2.50% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → TATAPOWER | +2.10% | +2.10% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → TATAPOWER | +2.00% | +2.00% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → TATAPOWER | +1.50% | +1.50% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → TATAPOWER | +1.50% | +1.50% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → TATAPOWER | -1.32% | -1.32% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → TATAPOWER | -1.31% | -1.31% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → TATAPOWER | -1.19% | -1.19% |
 | 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → TATAPOWER | +2.50% | +1.12% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → TATAPOWER | -1.10% | -1.10% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → TATAPOWER | +1.00% | +1.00% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → TATAPOWER | -1.00% | -1.00% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATAPOWER | -2.00% | -1.00% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → TATAPOWER | +2.25% | +0.90% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → TATAPOWER | +2.10% | +0.84% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TATAPOWER | -2.99% | -0.84% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → TATAPOWER | +1.25% | +0.75% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TATAPOWER | -1.25% | -0.75% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TATAPOWER | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → TATAPOWER | -3.00% | -0.66% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → TATAPOWER | -0.86% | -0.58% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → TATAPOWER | -0.60% | -0.57% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → TATAPOWER | -2.50% | -0.55% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → TATAPOWER | +0.90% | +0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → TATAPOWER | -1.92% | -0.54% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_RENEWABLE_SUPPORT → TATAPOWER | +1.50 | events | +6.00% |
+| 1 | F_GSEC_10Y_IN → TATAPOWER | +1.70 | events | -4.25% |
+| 1 | F_FPI_FLOWS → TATAPOWER | -1.60 | events | -3.20% |
+| 1 | F_POWER_PRICE_IN → TATAPOWER | +3.00 | events | +2.10% |
+| 1 | F_POWER_DEMAND_IN → TATAPOWER | +1.20 | events | +1.80% |
+| 1 | T_ENERGY_TRANSITION → TATAPOWER | +0.50 | events | +1.50% |
+| 1 | F_REPO_IN → TATAPOWER | +1.00 | events | -1.00% |
+| 1 | F_CREDIT_SPREADS_IN → TATAPOWER | +0.50 | events | -0.90% |
+| 1 | F_COAL_INTL → TATAPOWER | +0.70 | director_override | +0.70% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → TATAPOWER | +1.50 | events | +0.48% |
+| 1 | C_MIDEAST_CONFLICT → TATAPOWER | +1.50 | events | +0.45% |
+| 1 | P_ANTI_DUMPING_IN → TATAPOWER | +0.40 | events | +0.40% |
 
 ## Analyst profile (agent research, sourced)
 # TATAPOWER — Tata Power Co. Ltd. (as of 2026-11-05)

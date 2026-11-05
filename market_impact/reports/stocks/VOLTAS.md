@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.8%**, **12 months +1.8%** (rank 72 / 72 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.5%): 3 months 52%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +5.3%; plausible 12m relative-return range incl. stock-specific noise: -30.0% … +30.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +2.5 pp (model impact +5.0% beta-adjusted vs realised market-adjusted move -16.1%); forward event exposure +0.3% (3m -0.4%; half assumed priced); company-specific events +0.5%
+- Expected relative return: **3 months +0.8%**, **12 months +1.8%** (rank 70 / 72 of 200 for 3m / 12m); beta 1.11
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.5%): 3 months 52%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.4% … P90 +4.9%; plausible 12m relative-return range incl. stock-specific noise: -27.8% … +27.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +2.5 pp (model impact +5.0% beta-adjusted vs realised market-adjusted move -16.1%); forward event exposure +0.4% (3m -0.3%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | +1.1% | +1.1% | +1.1 | -0.1 | +0.0 | +0.0 |
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | -3.1% | -1.1% | -1.1 | -1.4 | -0.6 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → VOLTAS | -4.69% | -4.69% |
-| 1 | EV_CHINA_Q3_GDP_AND_MINI_STIMULUS ⇒ F_USDCNY → VOLTAS | -1.58% | -1.58% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → VOLTAS | -1.40% | -1.40% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → VOLTAS | +1.37% | +1.37% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → VOLTAS | -1.21% | -1.21% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → VOLTAS | +1.11% | +1.11% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → VOLTAS | -3.90% | -0.86% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → VOLTAS | -2.37% | -0.85% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → VOLTAS | +1.42% | +0.83% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → VOLTAS | +1.38% | +0.69% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_USDINR → VOLTAS | -0.69% | -0.69% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_USDCNY → VOLTAS | +0.61% | +0.61% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → VOLTAS | +0.60% | +0.60% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → VOLTAS | +0.60% | +0.60% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_DXY → F_USDCNY → VOLTAS | +0.59% | +0.59% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → VOLTAS | +0.48% | +0.43% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → VOLTAS | -1.17% | -0.41% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → VOLTAS | -1.44% | -0.40% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → VOLTAS | -0.80% | -0.40% |
+| 1 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_USDCNY → VOLTAS | -1.05% | -0.37% |
+| 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → VOLTAS | -0.80% | -0.36% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_USDINR → VOLTAS | -5.69% | -0.36% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → VOLTAS | -1.80% | -0.32% |
+| 2 | EV_US_CHINA_TRUCE_EXTENDED ⇒ C_US_CHINA_DECOUPLING → F_USDCNY → VOLTAS | -0.42% | -0.30% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → VOLTAS | -0.50% | -0.30% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ C_US_CHINA_DECOUPLING → F_USDCNY → VOLTAS | +1.12% | +0.28% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → VOLTAS | +1.70 | events | -1.70% |
+| 1 | F_USDCNY → VOLTAS | -0.47 | observed | -1.63% |
+| 1 | F_ALUMINIUM → VOLTAS | -1.96 | observed | +1.37% |
+| 1 | F_USDINR → VOLTAS | -0.37 | observed | +1.11% |
+| 1 | F_URBAN_DEMAND → VOLTAS | +0.20 | events | +0.60% |
+| 1 | F_GOVT_CAPEX → VOLTAS | +1.00 | events | +0.60% |
+| 1 | F_COPPER → VOLTAS | -0.24 | observed | +0.47% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → VOLTAS | +1.00 | events | -0.21% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → VOLTAS | +1.70 | events | -0.20% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → VOLTAS | +0.50 | events | +0.12% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → VOLTAS | +1.00 | events | -0.08% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → VOLTAS | +1.65 | events | -0.07% |
 
 ## Analyst profile (agent research, sourced)
 # VOLTAS - Voltas Ltd. (midcap, room ACs and projects)

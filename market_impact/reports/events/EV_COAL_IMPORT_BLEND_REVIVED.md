@@ -19,17 +19,17 @@ Mandate was weighed (Reuters 25 Sep) then shelved (23 Oct); Sec 11 for Mundra an
 | JSWENERGY | +1.1 | +1.1 | -0.0 | +0.0 | +0.0 |
 | TATAPOWER | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
 | ADANIPOWER | +0.8 | +0.9 | -0.1 | +0.0 | +0.0 |
+| NTPC | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
 | ADANIENT | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
 | ADANIENSOL | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
 | ADANIGREEN | +0.3 | +0.3 | +0.0 | +0.0 | +0.0 |
+| NLCINDIA | +0.3 | +0.2 | +0.0 | +0.0 | +0.0 |
 | PAYTM | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |
 | NATIONALUM | +0.0 | +0.1 | -0.1 | +0.0 | +0.0 |
 | HINDALCO | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | ADANIPORTS | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | HINDZINC | -0.2 | -0.1 | -0.1 | +0.0 | +0.0 |
 | WIPRO | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
-| INDUSTOWER | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
-| TATACOMM | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -50,7 +50,7 @@ Mandate was weighed (Reuters 25 Sep) then shelved (23 Oct); Sec 11 for Mundra an
 | HINDALCO | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | NATIONALUM | +0.0 | +0.1 | -0.1 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 91%, 2: 9%, 3: 0%, 4: 0%
+Share of absolute impact by order: 1: 92%, 2: 8%, 3: 0%, 4: 0%
 
 ## Sources
 - 2026-09-25 India weighs mandatory blending of imported coal (Reuters) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=India+weighs+mandatory+blending+imported+coal+when:120d&hl=en-IN&gl=IN&ceid=IN:en

@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.7%**, **12 months -2.3%** (rank 146 / 130 of 200 for 3m / 12m); beta 0.84
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.2%): 3 months 44%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.2% … P90 +0.4%; plausible 12m relative-return range incl. stock-specific noise: -23.2% … +20.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.2%): 3 months 44%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.0% … P90 -0.6%; plausible 12m relative-return range incl. stock-specific noise: -28.6% … +14.9%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.9% beta-adjusted vs realised market-adjusted move -7.8%); forward event exposure -2.7% (3m -1.7%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,38 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -1.1 | -0.3 | -0.1 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.4% | +1.4% | +0.6 | +0.7 | +0.6 | +0.5 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → PAGEIND | -4.40% | -4.40% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → PAGEIND | -2.80% | -2.80% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PAGEIND | +5.00% | +2.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → PAGEIND | -1.98% | -1.98% |
-| 1 | EV_CPI_REACCEL_SEP26 ⇒ F_FOOD_INFLATION_IN → PAGEIND | -1.10% | -1.10% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → PAGEIND | -1.05% | -1.05% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → PAGEIND | +1.00% | +1.00% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → PAGEIND | -0.88% | -0.88% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PAGEIND | -2.99% | -0.84% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → PAGEIND | -1.60% | -0.80% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_GSEC_10Y_IN → PAGEIND | -0.78% | -0.78% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → PAGEIND | +0.70% | +0.70% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → PAGEIND | -0.68% | -0.68% |
 | 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PAGEIND | -3.73% | -0.67% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → PAGEIND | -3.00% | -0.66% |
+| 1 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → PAGEIND | -0.80% | -0.64% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → PAGEIND | -1.00% | -0.60% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → PAGEIND | -1.92% | -0.54% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → PAGEIND | -1.92% | -0.48% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → PAGEIND | -0.48% | -0.46% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → PAGEIND | -2.00% | -0.44% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → PAGEIND | +0.54% | +0.38% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → PAGEIND | -0.40% | -0.36% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → PAGEIND | -0.60% | -0.36% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → PAGEIND | -1.00% | -0.36% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → PAGEIND | +1.70 | events | -3.40% |
+| 1 | F_FPI_FLOWS → PAGEIND | -1.60 | events | -3.20% |
+| 1 | F_FOOD_INFLATION_IN → PAGEIND | +2.00 | events | -2.00% |
+| 1 | F_URBAN_DEMAND → PAGEIND | +0.20 | events | +0.70% |
+| 1 | F_RURAL_DEMAND → PAGEIND | -0.25 | events | -0.45% |
+| 1 | F_COTTON → PAGEIND | +0.19 | observed | -0.23% |
+| 1 | F_USDINR → PAGEIND | -0.37 | observed | +0.18% |
+| 1 | F_BRENT → PAGEIND | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # PAGEIND — Page Industries Ltd. (Midcap 100) — profile as of 2026-11-05

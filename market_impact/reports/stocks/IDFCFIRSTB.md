@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -5.5%**, **12 months -10.6%** (rank 196 / 194 of 200 for 3m / 12m); beta 1.09
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.1%): 3 months 30%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -26.5% … P90 +2.3%; plausible 12m relative-return range incl. stock-specific noise: -39.2% … +10.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.1%): 3 months 30%, 12 months 35%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -28.5% … P90 +3.5%; plausible 12m relative-return range incl. stock-specific noise: -34.7% … +15.8%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.9 pp (model impact -5.8% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure -13.5% (3m -6.0%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -22.6% | -4.1% | -15.0 | -6.5 | -0.5 | -0.5 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -3.3% | -3.3% | -2.7 | -0.2 | -0.2 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → IDFCFIRSTB | -6.60% | -6.60% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → IDFCFIRSTB | -7.00% | -4.34% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → IDFCFIRSTB | +7.50% | +3.75% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → IDFCFIRSTB | -12.00% | -3.36% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → IDFCFIRSTB | -15.00% | -2.70% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → IDFCFIRSTB | -2.49% | -2.49% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → IDFCFIRSTB | -2.10% | -2.10% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → IDFCFIRSTB | -2.08% | -2.08% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → IDFCFIRSTB | -1.78% | -1.78% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → IDFCFIRSTB | +1.75% | +1.75% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → IDFCFIRSTB | -2.50% | -1.55% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → IDFCFIRSTB | +1.50% | +1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → IDFCFIRSTB | -1.44% | -1.44% |
-| 3 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → F_ASSET_QUALITY_IN → IDFCFIRSTB | -1.41% | -1.41% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → IDFCFIRSTB | -1.41% | -1.41% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → IDFCFIRSTB | -3.60% | -1.29% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_ASSET_QUALITY_IN → IDFCFIRSTB | +1.21% | +1.09% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → IDFCFIRSTB | -4.32% | -1.08% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → IDFCFIRSTB | -1.80% | -1.08% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → IDFCFIRSTB | -4.50% | -0.99% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → IDFCFIRSTB | +1.01% | +0.91% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → IDFCFIRSTB | +1.50% | +0.87% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → IDFCFIRSTB | -2.88% | -0.81% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → IDFCFIRSTB | -1.25% | -0.78% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → F_ASSET_QUALITY_IN → IDFCFIRSTB | +1.12% | +0.76% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → IDFCFIRSTB | -1.60 | events | -4.80% |
+| 1 | F_GSEC_10Y_IN → IDFCFIRSTB | +1.70 | events | -2.55% |
+| 1 | F_GDP_IN → IDFCFIRSTB | +0.50 | events | +1.75% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → IDFCFIRSTB | -1.56 | events | -1.25% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → IDFCFIRSTB | +0.50 | events | +1.12% |
+| 1 | F_LIQUIDITY_IN → IDFCFIRSTB | -0.90 | events | -1.08% |
+| 1 | F_REPO_IN → IDFCFIRSTB | +1.00 | events | -1.00% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → IDFCFIRSTB | +1.15 | events | -0.69% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → IDFCFIRSTB | -0.25 | events | -0.56% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → IDFCFIRSTB | +1.00 | events | -0.56% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → IDFCFIRSTB | -1.56 | events | -0.52% |
+| 1 | T_FORMALISATION → IDFCFIRSTB | +0.30 | events | +0.45% |
 
 ## Analyst profile (agent research, sourced)
 # IDFCFIRSTB - IDFC FIRST Bank Ltd. (as of 2026-11-05)

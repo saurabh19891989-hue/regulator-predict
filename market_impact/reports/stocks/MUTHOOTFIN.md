@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.2%**, **12 months -5.0%** (rank 157 / 162 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.6%): 3 months 44%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.0% … P90 +0.3%; plausible 12m relative-return range incl. stock-specific noise: -31.5% … +19.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -6.6% beta-adjusted vs realised market-adjusted move -17.2%); forward event exposure -5.8% (3m -2.2%; half assumed priced); company-specific events -1.9%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.6%): 3 months 44%, 12 months 32%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.4% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -40.8% … +41.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -6.6% beta-adjusted vs realised market-adjusted move -17.2%); forward event exposure -5.8% (3m -2.1%; half assumed priced); company-specific events -1.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.0% | -2.0% | -2.1 | +0.0 | +0.1 | +0.1 |
 | Gold/silver rebound as Fed hike fears fade or Iran war ends (`EV_PRECIOUS_METALS_REBOUND_H1_2027`) | anticipated | 0.45 | +4.4% | +2.0% | +3.5 | +0.7 | +0.2 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MUTHOOTFIN | -4.40% | -4.40% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_GOLD → MUTHOOTFIN | -3.68% | -3.68% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MUTHOOTFIN | +5.00% | +2.50% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → MUTHOOTFIN | -4.00% | -2.48% |
 | 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → MUTHOOTFIN | -6.65% | -2.00% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → MUTHOOTFIN | -1.99% | -1.99% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_GOLD → MUTHOOTFIN | +1.68% | +1.68% |
 | 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_GOLD → MUTHOOTFIN | +3.50% | +1.58% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → MUTHOOTFIN | -1.50% | -1.50% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GOLD → MUTHOOTFIN | -1.43% | -1.43% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → MUTHOOTFIN | -1.40% | -1.40% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → MUTHOOTFIN | -1.33% | -1.33% |
 | 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → MUTHOOTFIN | -4.00% | -1.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → MUTHOOTFIN | -1.19% | -1.19% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → MUTHOOTFIN | -1.75% | -1.09% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → MUTHOOTFIN | +2.40% | +0.91% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MUTHOOTFIN | -2.99% | -0.84% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MUTHOOTFIN | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MUTHOOTFIN | -3.00% | -0.66% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_GOLD → MUTHOOTFIN | -1.12% | -0.65% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → MUTHOOTFIN | -1.50% | -0.60% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → MUTHOOTFIN | -1.92% | -0.54% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_GOLD → MUTHOOTFIN | +1.34% | +0.48% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → MUTHOOTFIN | -1.92% | -0.48% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOLD → MUTHOOTFIN | -1.05 | observed | -3.67% |
+| 1 | F_FPI_FLOWS → MUTHOOTFIN | -1.60 | events | -3.20% |
+| 1 | F_GSEC_10Y_IN → MUTHOOTFIN | +1.70 | events | -1.70% |
+| 1 | F_REPO_IN → MUTHOOTFIN | +1.00 | events | -1.50% |
+| 1 | F_CREDIT_SPREADS_IN → MUTHOOTFIN | +0.50 | events | -1.25% |
+| 1 | T_FORMALISATION → MUTHOOTFIN | +0.30 | events | +0.60% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → MUTHOOTFIN | +0.50 | events | +0.56% |
+| 2 | F_GDP_IN → P_RBI_PRUDENTIAL → MUTHOOTFIN | +0.50 | events | -0.32% |
+| 3 | F_GDP_IN → F_CREDIT_GROWTH_IN → P_RBI_PRUDENTIAL → MUTHOOTFIN | +0.50 | events | -0.15% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → MUTHOOTFIN | -0.25 | events | -0.14% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → MUTHOOTFIN | +1.00 | events | -0.14% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → MUTHOOTFIN | -1.56 | events | -0.13% |
 
 ## Analyst profile (agent research, sourced)
 # MUTHOOTFIN - Muthoot Finance Ltd. (Nifty Next 50, I_GOLD_LOANS) - as of 2026-11-05

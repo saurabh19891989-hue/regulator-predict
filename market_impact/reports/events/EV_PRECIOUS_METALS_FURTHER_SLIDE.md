@@ -51,7 +51,7 @@ Markets price a December Fed hike (NY Post 28 Oct) after US inflation hit a 3-ye
 | NAUKRI | -1.6 | +0.0 | -0.5 | -0.8 | -0.3 |
 | CANBK | -1.5 | -0.9 | +0.0 | -0.6 | -0.0 |
 
-Share of absolute impact by order: 1: 39%, 2: 21%, 3: 29%, 4: 11%
+Share of absolute impact by order: 1: 38%, 2: 21%, 3: 30%, 4: 11%
 
 ## Sources
 - 2026-10-28 Fed holds interest rates steady - investors bet on December rate hike https://news.google.com/rss/search?q=Fed+holds+interest+rates+steady+-+investors+bet+on+December+rate+hike&hl=en-IN&gl=IN&ceid=IN:en

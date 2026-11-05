@@ -2,9 +2,9 @@
 *MIDCAP_100 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.2%**, **12 months +2.4%** (rank 59 / 62 of 200 for 3m / 12m); beta 1.02
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.6%): 3 months 55%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.2% … P90 +5.9%; plausible 12m relative-return range incl. stock-specific noise: -11.3% … +23.5%
+- Expected relative return: **3 months +1.2%**, **12 months +2.4%** (rank 58 / 60 of 200 for 3m / 12m); beta 1.02
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.6%): 3 months 56%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.5% … P90 +5.9%; plausible 12m relative-return range incl. stock-specific noise: -15.4% … +25.1%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +2.9% beta-adjusted vs realised market-adjusted move -4.3%); forward event exposure +3.6% (3m +1.5%; half assumed priced); company-specific events +0.7%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | -1.8% | -0.6% | +0.0 | -1.1 | -0.4 | -0.3 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -2.4% | -0.5% | -2.2 | -0.1 | -0.1 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → MRF | -4.70% | -4.70% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → F_RUBBER → MRF | -1.25% | -1.25% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → MRF | -0.94% | -0.94% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → MRF | -2.38% | -0.85% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → MRF | +1.42% | +0.83% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → MRF | -0.79% | -0.79% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → MRF | -0.70% | -0.70% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → MRF | -0.60% | -0.60% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → MRF | -0.60% | -0.60% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_RED_SEA → F_SHIPPING_RATES → MRF | -0.58% | -0.58% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → MRF | +0.50% | +0.50% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → MRF | -0.49% | -0.49% |
-| 2 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → MRF | +0.46% | +0.46% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → MRF | +0.44% | +0.44% |
 | 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → MRF | -5.70% | -0.36% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → MRF | -1.56% | -0.34% |
+| 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → MRF | +0.42% | +0.29% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_RUBBER → MRF | -0.79% | -0.28% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → MRF | +0.55% | +0.28% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → MRF | +0.29% | +0.26% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → MRF | -0.60% | -0.24% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → F_RUBBER → MRF | -0.63% | -0.23% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → F_RUBBER → MRF | +0.38% | +0.22% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → MRF | +0.32% | +0.19% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → MRF | +0.27% | +0.18% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → MRF | -0.72% | -0.18% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → MRF | -1.50% | -0.18% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_STEEL_INDIA → MRF | +1.65 | events | -0.82% |
+| 1 | F_REFINING_MARGIN → MRF | +1.54 | observed | -0.62% |
+| 1 | F_REPO_IN → MRF | +1.00 | events | -0.60% |
+| 1 | F_GDP_IN → MRF | +0.50 | events | +0.50% |
+| 1 | F_USDINR → MRF | -0.37 | observed | +0.44% |
+| 1 | P_ANTI_DUMPING_IN → MRF | +0.40 | events | +0.24% |
+| 2 | F_CHINA_GDP → F_RUBBER → MRF | +0.30 | events | -0.24% |
+| 1 | F_AUTO_DEMAND_IN → MRF | -0.10 | events | -0.15% |
+| 1 | F_SHIPPING_RATES → MRF | +0.30 | events | -0.09% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_RUBBER → MRF | +0.40 | events | -0.03% |
+| 1 | F_BRENT → MRF | +0.00 | observed | -0.00% |
+| 3 | F_BRENT → F_CHEM_FEEDSTOCK → F_RUBBER → MRF | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # MRF - MRF Ltd. (as of 2026-11-05)

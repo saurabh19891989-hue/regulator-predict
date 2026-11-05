@@ -36,12 +36,12 @@ EU CBAM definitive period began 1 Jan 2026 (certificate purchases from 2027, mod
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | -2.4 | -2.4 | +0.0 | +0.0 | +0.0 |
+| JINDALSTEL | -2.9 | -2.9 | +0.0 | +0.0 | +0.0 |
 | SAIL | -2.2 | -2.2 | +0.0 | +0.0 | +0.0 |
-| JSWSTEEL | -1.3 | -1.3 | +0.0 | +0.0 | +0.0 |
-| TATASTEEL | -1.2 | -1.2 | +0.0 | +0.0 | +0.0 |
+| JSWSTEEL | -2.1 | -2.1 | +0.0 | +0.0 | +0.0 |
 | NMDC | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
 | APLAPOLLO | -0.2 | -0.2 | -0.0 | +0.0 | +0.0 |
+| TATASTEEL | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
 | PIIND | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | MCX | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | HINDZINC | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
@@ -52,7 +52,7 @@ EU CBAM definitive period began 1 Jan 2026 (certificate purchases from 2027, mod
 | COFORGE | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | MPHASIS | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 87%, 2: 3%, 3: 7%, 4: 3%
+Share of absolute impact by order: 1: 87%, 2: 3%, 3: 6%, 4: 3%
 
 ## Sources
 - 2026-11-02 India's steel exports to EU fall 20% amid CBAM, quotas; Americas surge 262%, Africa 96% https://news.google.com/rss/search?q=India's+steel+exports+to+EU+fall+20%+amid+CBAM,+quotas;+Americas+surge+262%,+Africa+96%&hl=en-IN&gl=IN&ceid=IN:en

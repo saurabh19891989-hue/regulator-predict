@@ -2,9 +2,9 @@
 *MIDCAP_100 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.9%**, **12 months +4.0%** (rank 48 / 43 of 200 for 3m / 12m); beta 0.84
+- Expected relative return: **3 months +1.9%**, **12 months +4.0%** (rank 46 / 42 of 200 for 3m / 12m); beta 0.84
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.7%): 3 months 57%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.1% … P90 +8.4%; plausible 12m relative-return range incl. stock-specific noise: -14.2% … +25.0%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.8% … P90 +9.8%; plausible 12m relative-return range incl. stock-specific noise: -13.7% … +27.9%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.6% beta-adjusted vs realised market-adjusted move -11.8%); forward event exposure +6.2% (3m +3.1%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Finance ministry notifies anti-dumping duties on a meaningful batch of Chinese chemicals/APIs/others (`EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027`) | anticipated | 0.70 | +0.9% | +0.7% | +0.8 | +0.1 | +0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.6% | -0.6% | -0.7 | +0.0 | +0.1 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → SRF | -5.94% | -5.94% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → SRF | -3.03% | -3.03% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SRF | -1.59% | -1.59% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → SRF | +1.56% | +1.56% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → SRF | +1.50% | +1.20% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → SRF | -1.20% | -1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → F_PETROCHEM_SPREADS → SRF | -1.10% | -1.10% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → SRF | -3.00% | -1.07% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → SRF | +1.80% | +1.04% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → SRF | +0.81% | +0.81% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → SRF | -0.74% | -0.74% |
 | 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → SRF | +0.84% | +0.59% |
-| 2 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → SRF | +0.58% | +0.58% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → SRF | +2.60% | +0.57% |
-| 3 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → F_CHEM_FEEDSTOCK → SRF | +0.55% | +0.55% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → SRF | -1.53% | -0.55% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → SRF | +0.92% | +0.53% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → SRF | +0.75% | +0.49% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SRF | -1.20% | -0.48% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → SRF | -0.92% | -0.46% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → SRF | -7.20% | -0.45% |
+| 1 | EV_CHINA_FDI_EASING_PN3 ⇒ T_CHINA_PLUS_ONE → SRF | +0.50% | +0.35% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_PETROCHEM_SPREADS → SRF | +1.00% | +0.35% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SRF | -1.38% | -0.35% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SRF | -1.20% | -0.32% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_REPO_IN → SRF | +1.00 | events | -1.20% |
+| 1 | F_USDINR → SRF | -0.37 | observed | -0.74% |
+| 1 | P_ANTI_DUMPING_IN → SRF | +0.40 | events | +0.48% |
+| 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → SRF | -0.60 | events | +0.36% |
+| 2 | F_CHINA_GDP → F_PETROCHEM_SPREADS → SRF | +0.30 | events | +0.30% |
+| 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → SRF | -0.47 | observed | +0.28% |
+| 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → SRF | +0.50 | events | +0.25% |
+| 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → SRF | +0.30 | events | +0.24% |
+| 2 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → SRF | +0.40 | events | +0.12% |
+| 1 | F_AUTO_DEMAND_IN → SRF | -0.10 | events | -0.12% |
+| 2 | C_US_CHINA_DECOUPLING → T_CHINA_PLUS_ONE → SRF | -0.10 | events | -0.11% |
+| 2 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → SRF | -0.10 | events | +0.10% |
 
 ## Analyst profile (agent research, sourced)
 # SRF — SRF Ltd. (as of 2026-11-05)

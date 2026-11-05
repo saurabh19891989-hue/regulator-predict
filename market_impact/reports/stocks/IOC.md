@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +5.6%**, **12 months +11.2%** (rank 8 / 9 of 200 for 3m / 12m); beta 1.27
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.5%): 3 months 71%, 12 months 72%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +4.9% … P90 +19.5%; plausible 12m relative-return range incl. stock-specific noise: -9.8% … +40.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.2 pp (model impact +6.5% beta-adjusted vs realised market-adjusted move -1.2%); forward event exposure +14.0% (3m +6.5%; half assumed priced); company-specific events +4.2%
+- Expected relative return: **3 months +5.6%**, **12 months +11.2%** (rank 7 / 9 of 200 for 3m / 12m); beta 1.27
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.5%): 3 months 71%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +5.2% … P90 +22.2%; plausible 12m relative-return range incl. stock-specific noise: -13.2% … +41.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.2 pp (model impact +6.5% beta-adjusted vs realised market-adjusted move -1.2%); forward event exposure +14.1% (3m +6.5%; half assumed priced); company-specific events +4.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Hormuz effectively closed for >2 weeks (Brent > $150) (`EV_HORMUZ_FULL_CLOSURE`) | risk_scenario | 0.06 | -21.7% | -1.4% | -24.1 | +3.7 | -1.1 | -0.3 |
 | Windfall/export levy re-set: petrol nil, diesel Rs11.5/l, ATF ~Rs11/l (31 Oct); excise reportedly cut (3 Nov, unverified) (`EV_EXPORT_LEVY_REVISIONS`) | occurred | 1.00 | -1.2% | -1.2% | -0.3 | -1.0 | +0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → IOC | -19.50% | -19.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → IOC | -10.89% | -10.89% |
 | 1 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → IOC | +16.25% | +7.31% |
-| 1 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → IOC | -6.50% | -6.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → IOC | +6.00% | +6.00% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → IOC | -5.25% | -5.25% |
 | 1 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → IOC | +6.50% | +3.90% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → IOC | +2.50% | +2.50% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → IOC | +3.50% | +2.03% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → IOC | -5.50% | -1.96% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → IOC | +3.30% | +1.92% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → IOC | -3.20% | -1.86% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → IOC | -4.20% | -1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → IOC | -1.41% | -1.41% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → P_FUEL_TAX_IN → IOC | +1.06% | +1.06% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → IOC | -13.20% | -0.83% |
+| 1 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → IOC | -2.50% | -0.75% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_REFINING_MARGIN → IOC | +1.79% | +0.64% |
+| 1 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ F_REFINING_MARGIN → IOC | -2.00% | -0.60% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ C_MIDEAST_CONFLICT → IOC | -8.75% | -0.55% |
+| 1 | EV_RUSSIA_WAIVER_EXTENDED ⇒ C_RUSSIA → IOC | +0.75% | +0.52% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → IOC | -2.34% | -0.51% |
+| 2 | EV_RED_SEA_CLOSURE ⇒ C_RED_SEA → F_REFINING_MARGIN → IOC | +1.92% | +0.48% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_REFINING_MARGIN → IOC | +1.54 | observed | +6.17% |
+| 1 | C_MIDEAST_CONFLICT → IOC | +1.50 | events | -5.25% |
+| 1 | NEW_OMC_MARKETING_MARGIN → IOC | -0.50 | director_override | -3.25% |
+| 1 | C_RUSSIA → IOC | +1.00 | events | +2.50% |
+| 1 | P_WINDFALL_EXPORT_TAX → IOC | +1.00 | events | -0.80% |
+| 1 | F_USDINR → IOC | -0.37 | observed | +0.66% |
+| 1 | F_REPO_IN → IOC | +1.00 | events | -0.60% |
+| 1 | F_GDP_IN → IOC | +0.50 | events | +0.60% |
+| 1 | P_FUEL_TAX_IN → IOC | -0.50 | events | +0.50% |
+| 1 | F_GAS_GLOBAL → IOC | -0.47 | observed | +0.33% |
+| 2 | F_CHINA_GDP → F_PETROCHEM_SPREADS → IOC | +0.30 | events | +0.18% |
+| 3 | F_USDCNY → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → IOC | -0.47 | observed | +0.04% |
 
 ## Analyst profile (agent research, sourced)
 # Indian Oil Corporation (IOC) — market impact profile (as of 2026-11-05)

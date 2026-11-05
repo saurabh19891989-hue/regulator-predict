@@ -2,10 +2,10 @@
 *MIDCAP_100 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.6%**, **12 months +5.4%** (rank 35 / 33 of 200 for 3m / 12m); beta 1.16
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.0%): 3 months 59%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.9% … P90 +17.8%; plausible 12m relative-return range incl. stock-specific noise: -28.0% … +40.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +0.1% beta-adjusted vs realised market-adjusted move -29.2%); forward event exposure +10.8% (3m +5.2%; half assumed priced); company-specific events +2.2%
+- Expected relative return: **3 months +2.6%**, **12 months +5.4%** (rank 35 / 34 of 200 for 3m / 12m); beta 1.16
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.0%): 3 months 59%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.7% … P90 +15.1%; plausible 12m relative-return range incl. stock-specific noise: -19.9% … +30.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +0.1% beta-adjusted vs realised market-adjusted move -29.2%); forward event exposure +10.9% (3m +5.2%; half assumed priced); company-specific events +2.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,40 @@
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.8% | +0.8% | +1.0 | -0.1 | -0.1 | -0.1 |
 | Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | +0.7% | +0.7% | +0.8 | -0.0 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRON_ORE_TWO_YEAR_LOW ⇒ F_IRON_ORE → NMDC | -7.47% | -7.47% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → NMDC | +2.80% | +2.80% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → NMDC | -2.48% | -2.48% |
 | 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_IRON_ORE → NMDC | +5.40% | +2.43% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → NMDC | +1.56% | +1.56% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_IRON_ORE → NMDC | +4.20% | +1.47% |
 | 1 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_IRON_ORE → NMDC | -2.70% | -1.35% |
-| 2 | EV_CHINA_Q3_GDP_AND_MINI_STIMULUS ⇒ F_CHINA_GDP → F_IRON_ORE → NMDC | +1.26% | +1.26% |
 | 1 | EV_CHINA_PROPERTY_RELAPSE ⇒ F_IRON_ORE → NMDC | -11.70% | -1.17% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → NMDC | +1.00% | +1.00% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → NMDC | +0.81% | +0.81% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → NMDC | +0.80% | +0.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → NMDC | -0.79% | -0.79% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → NMDC | -0.74% | -0.74% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → NMDC | +0.80% | +0.72% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → NMDC | +2.60% | +0.57% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → NMDC | -0.92% | -0.46% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → NMDC | -1.25% | -0.45% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ P_STEEL_DUTY_IN → NMDC | +0.80% | +0.44% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → NMDC | +0.80% | +0.44% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → NMDC | +0.75% | +0.44% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → NMDC | +0.79% | +0.28% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → NMDC | -0.47% | -0.28% |
+| 3 | EV_US_CHINA_TRUCE_EXTENDED ⇒ C_US_CHINA_DECOUPLING → F_CHINA_GDP → F_IRON_ORE → NMDC | +0.38% | +0.27% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → NMDC | +0.60% | +0.27% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_IRON_ORE → NMDC | -0.83 | observed | -7.47% |
+| 1 | F_STEEL_INDIA → NMDC | +1.65 | events | +3.30% |
+| 1 | F_GOVT_CAPEX → NMDC | +1.00 | events | +1.00% |
+| 1 | F_USDINR → NMDC | -0.37 | observed | -0.74% |
+| 1 | F_REPO_IN → NMDC | +1.00 | events | -0.60% |
+| 2 | F_STEEL_INDIA → P_STEEL_DUTY_IN → NMDC | +1.65 | events | -0.20% |
+| 3 | F_CHINA_GDP → F_CHINA_STEEL_EXPORTS → P_STEEL_DUTY_IN → NMDC | +0.30 | events | -0.03% |
+| 3 | F_USDCNY → F_CHINA_STEEL_EXPORTS → P_STEEL_DUTY_IN → NMDC | -0.47 | observed | -0.02% |
+| 3 | C_US_CHINA_DECOUPLING → F_CHINA_STEEL_EXPORTS → P_STEEL_DUTY_IN → NMDC | -0.10 | events | -0.00% |
+| 1 | F_BRENT → NMDC | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # NMDC — NMDC Ltd. (Midcap 100, I_MINING) — as of 2026-11-05

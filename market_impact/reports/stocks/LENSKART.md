@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -5.0%**, **12 months -9.9%** (rank 192 / 192 of 200 for 3m / 12m); beta 0.84
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.6%): 3 months 39%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -21.5% … P90 -1.8%; plausible 12m relative-return range incl. stock-specific noise: -53.2% … +22.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.6%): 3 months 39%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -19.9% … P90 -4.7%; plausible 12m relative-return range incl. stock-specific noise: -64.9% … +25.8%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.5 pp (model impact -3.1% beta-adjusted vs realised market-adjusted move +35.8%); forward event exposure -13.8% (3m -5.6%; half assumed priced); company-specific events -0.6%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,37 @@
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -9.3% | -2.3% | +0.0 | -8.5 | -0.1 | -0.7 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.3 | -0.4 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → LENSKART | -6.60% | -6.60% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LENSKART | +7.50% | +3.75% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → LENSKART | -12.00% | -3.36% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → LENSKART | -3.31% | -3.31% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → LENSKART | -15.00% | -2.70% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → LENSKART | -2.50% | -2.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → LENSKART | -2.21% | -2.21% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → LENSKART | -1.78% | -1.78% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → LENSKART | -1.68% | -1.68% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → LENSKART | +1.50% | +1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → LENSKART | -1.44% | -1.44% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → LENSKART | -1.41% | -1.41% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → LENSKART | -3.60% | -1.29% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → LENSKART | -1.20% | -1.20% |
-| 3 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → F_RISK_SENTIMENT → LENSKART | +1.17% | +1.17% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → LENSKART | -4.32% | -1.08% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → LENSKART | -2.50% | -1.00% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → LENSKART | -4.50% | -0.99% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → LENSKART | +1.50% | +0.87% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → LENSKART | -2.88% | -0.81% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → LENSKART | +1.20% | +0.74% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → LENSKART | -2.88% | -0.72% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → LENSKART | -2.88% | -0.72% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → LENSKART | -2.50% | -0.68% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LENSKART | -2.24% | -0.63% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → LENSKART | +1.20% | +0.60% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → LENSKART | -1.60 | events | -4.80% |
+| 1 | F_REPO_IN → LENSKART | +1.00 | events | -2.50% |
+| 1 | F_URBAN_DEMAND → LENSKART | +0.20 | events | +1.00% |
+| 1 | F_RISK_SENTIMENT → LENSKART | +0.11 | observed | -0.34% |
+| 1 | F_USDINR → LENSKART | -0.37 | observed | +0.11% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → LENSKART | +0.40 | events | -0.04% |
+| 2 | F_BRENT → F_CHEM_FEEDSTOCK → LENSKART | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # LENSKART — Lenskart Solutions Ltd., as of 2026-11-05

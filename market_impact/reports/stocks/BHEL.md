@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +5.0%**, **12 months +9.0%** (rank 12 / 17 of 200 for 3m / 12m); beta 1.51
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.0%): 3 months 62%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +4.5% … P90 +14.6%; plausible 12m relative-return range incl. stock-specific noise: -21.7% … +47.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.3 pp (model impact +10.6% beta-adjusted vs realised market-adjusted move -3.3%); forward event exposure +9.1% (3m +3.8%; half assumed priced); company-specific events +0.6%
+- Expected relative return: **3 months +5.1%**, **12 months +9.0%** (rank 12 / 17 of 200 for 3m / 12m); beta 1.51
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.0%): 3 months 62%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.8% … P90 +19.6%; plausible 12m relative-return range incl. stock-specific noise: -33.6% … +59.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.3 pp (model impact +10.6% beta-adjusted vs realised market-adjusted move -3.3%); forward event exposure +9.2% (3m +3.9%; half assumed priced); company-specific events +0.6%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.4% | -1.2% | -1.2 | -0.4 | -1.3 | -0.4 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -1.6% | -1.1% | +0.0 | -1.7 | +0.1 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → BHEL | +3.00% | +3.00% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → BHEL | +3.00% | +3.00% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → BHEL | -2.80% | -2.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → BHEL | +2.40% | +2.16% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BHEL | -2.16% | -2.16% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → BHEL | +4.50% | +1.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BHEL | -1.72% | -1.72% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → BHEL | -1.30% | -1.30% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → BHEL | -1.72% | -1.17% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → BHEL | -1.15% | -1.15% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BHEL | -4.00% | -1.12% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → BHEL | -5.00% | -0.90% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BHEL | +1.80% | +0.81% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → BHEL | -0.80% | -0.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → BHEL | -0.78% | -0.78% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → BHEL | +0.80% | +0.72% |
+| 2 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → BHEL | +1.72% | +0.55% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BHEL | -1.30% | -0.52% |
+| 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → BHEL | -0.86% | -0.49% |
+| 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → BHEL | +1.00% | +0.45% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → BHEL | -0.80% | -0.44% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BHEL | +0.72% | +0.43% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → BHEL | -1.20% | -0.43% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → BHEL | -1.50% | -0.37% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_POWER_DEMAND_IN → BHEL | +1.20 | events | +3.60% |
+| 1 | F_STEEL_INDIA → BHEL | +1.65 | events | -3.30% |
+| 1 | F_GOVT_CAPEX → BHEL | +1.00 | events | +3.00% |
+| 1 | F_REPO_IN → BHEL | +1.00 | events | -1.30% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → BHEL | +1.50 | events | +0.72% |
+| 1 | P_DEFENCE_PROCUREMENT → BHEL | +1.00 | events | +0.40% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → BHEL | +0.50 | events | +0.30% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → BHEL | +1.20 | events | +0.22% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → BHEL | +0.50 | events | +0.20% |
+| 1 | F_USDINR → BHEL | -0.37 | observed | +0.18% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → BHEL | +1.00 | events | +0.16% |
+| 1 | F_COPPER → BHEL | -0.24 | observed | +0.14% |
 
 ## Analyst profile (agent research, sourced)
 # BHEL - Bharat Heavy Electricals Ltd. (Power equipment PSU)

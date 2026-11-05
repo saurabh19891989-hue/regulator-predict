@@ -18,8 +18,10 @@ Early Sept 61 thermal plants at critical stocks (PSU Watch 8 Sep); by 21 Sep 74 
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | COALINDIA | +9.0 | +9.0 | +0.0 | +0.0 | +0.0 |
+| NLCINDIA | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
 | JSWENERGY | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
 | ADANIPOWER | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
+| NTPC | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
 | ADANIGREEN | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
 | TATAPOWER | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
 | ADANIENSOL | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
@@ -30,7 +32,6 @@ Early Sept 61 thermal plants at critical stocks (PSU Watch 8 Sep); by 21 Sep 74 
 | NATIONALUM | -1.2 | -1.2 | +0.0 | +0.0 | +0.0 |
 | HINDALCO | -1.5 | -1.5 | +0.0 | +0.0 | +0.0 |
 | JINDALSTEL | -2.6 | -2.6 | +0.0 | +0.0 | +0.0 |
-| VAML | -2.6 | -2.6 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -46,9 +47,10 @@ Early Sept 61 thermal plants at critical stocks (PSU Watch 8 Sep); by 21 Sep 74 
 | ADANIENSOL | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | ADANIGREEN | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
 | TATAPOWER | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
+| NTPC | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
 | ADANIPOWER | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
 | JSWENERGY | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
-| COALINDIA | +9.0 | +9.0 | +0.0 | +0.0 | +0.0 |
+| NLCINDIA | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 100%, 2: 0%, 3: 0%, 4: 0%
 

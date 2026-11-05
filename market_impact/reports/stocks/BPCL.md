@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +4.5%**, **12 months +10.4%** (rank 16 / 13 of 200 for 3m / 12m); beta 1.24
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 68%, 12 months 85%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.4% … P90 +18.7%; plausible 12m relative-return range incl. stock-specific noise: -11.9% … +34.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.7 pp (model impact +10.6% beta-adjusted vs realised market-adjusted move +1.3%); forward event exposure +11.0% (3m +4.8%; half assumed priced); company-specific events +2.8%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 68%, 12 months 65%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.0% … P90 +18.6%; plausible 12m relative-return range incl. stock-specific noise: -9.5% … +40.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.7 pp (model impact +10.6% beta-adjusted vs realised market-adjusted move +1.3%); forward event exposure +11.0% (3m +4.9%; half assumed priced); company-specific events +2.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Hormuz effectively closed for >2 weeks (Brent > $150) (`EV_HORMUZ_FULL_CLOSURE`) | risk_scenario | 0.06 | -28.6% | -1.8% | -36.8 | +9.2 | -0.7 | -0.4 |
 | Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | -8.8% | -1.3% | -7.4 | -1.2 | -0.1 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → BPCL | -27.23% | -27.23% |
-| 1 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → BPCL | -18.00% | -18.00% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → BPCL | +7.50% | +7.50% |
 | 1 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → BPCL | +15.00% | +6.75% |
-| 1 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → BPCL | -6.00% | -6.00% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BPCL | -13.75% | -4.91% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → BPCL | +8.25% | +4.79% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → P_FUEL_TAX_IN → BPCL | +4.22% | +4.22% |
 | 1 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → BPCL | +6.00% | +3.60% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → BPCL | +3.00% | +3.00% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → BPCL | -4.00% | -2.32% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → BPCL | -2.25% | -2.25% |
 | 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → BPCL | -33.00% | -2.06% |
-| 1 | EV_EXPORT_LEVY_REVISIONS ⇒ P_FUEL_TAX_IN → BPCL | +2.00% | +2.00% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_BRENT → BPCL | -1.58% | -1.58% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_BRENT → BPCL | +3.96% | +0.99% |
+| 1 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → BPCL | -3.00% | -0.90% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → BPCL | +1.50% | +0.87% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_REFINING_MARGIN → BPCL | +2.24% | +0.80% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → P_FUEL_TAX_IN → BPCL | +2.13% | +0.76% |
+| 1 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ F_REFINING_MARGIN → BPCL | -2.50% | -0.75% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → P_FUEL_TAX_IN → BPCL | -1.28% | -0.74% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ F_BRENT → BPCL | -4.40% | -0.66% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → BPCL | -1.80% | -0.64% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_REFINING_MARGIN → BPCL | +1.54 | observed | +7.71% |
+| 1 | C_RUSSIA → BPCL | +1.00 | events | +3.00% |
+| 1 | NEW_OMC_MARKETING_MARGIN → BPCL | -0.50 | director_override | -3.00% |
+| 1 | C_MIDEAST_CONFLICT → BPCL | +1.50 | events | -2.25% |
+| 1 | P_FUEL_TAX_IN → BPCL | -0.50 | events | +2.00% |
+| 1 | P_WINDFALL_EXPORT_TAX → BPCL | +1.00 | events | -1.50% |
+| 1 | F_REPO_IN → BPCL | +1.00 | events | -0.80% |
+| 1 | F_USDINR → BPCL | -0.37 | observed | +0.55% |
+| 1 | P_EV_POLICY → BPCL | +1.10 | events | -0.44% |
+| 1 | F_GDP_IN → BPCL | +0.50 | events | +0.30% |
+| 1 | F_SHIPPING_RATES → BPCL | +0.30 | events | -0.12% |
+| 1 | F_BRENT → BPCL | +0.00 | observed | -0.01% |
 
 ## Analyst profile (agent research, sourced)
 # BPCL — Bharat Petroleum Corporation Ltd. (Nifty Next 50, I_REFINING_OMC) — as of 2026-11-05

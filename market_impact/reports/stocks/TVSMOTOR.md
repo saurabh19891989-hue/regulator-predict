@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.6%**, **12 months +1.5%** (rank 83 / 78 of 200 for 3m / 12m); beta 1.44
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.0%): 3 months 52%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.9% … P90 +6.7%; plausible 12m relative-return range incl. stock-specific noise: -32.1% … +18.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +0.8% beta-adjusted vs realised market-adjusted move +27.0%); forward event exposure +4.4% (3m +2.3%; half assumed priced); company-specific events +0.9%
+- Expected relative return: **3 months +0.6%**, **12 months +1.5%** (rank 83 / 77 of 200 for 3m / 12m); beta 1.44
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.0%): 3 months 52%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.3% … P90 +8.0%; plausible 12m relative-return range incl. stock-specific noise: -18.4% … +37.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +0.8% beta-adjusted vs realised market-adjusted move +27.0%); forward event exposure +4.5% (3m +2.3%; half assumed priced); company-specific events +0.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | CAFE-III fuel-efficiency norms notified (30 Sep 2026); no small-car carve-out; 3x credit for BEVs (`EV_CAFE3_NOTIFIED`) | occurred | 1.00 | +1.7% | +1.7% | +1.7 | +0.0 | -0.0 | -0.0 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -4.6% | -1.6% | -2.0 | -1.0 | -1.2 | -0.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → TVSMOTOR | -5.50% | -5.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → TVSMOTOR | -3.96% | -3.96% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TVSMOTOR | +6.25% | +3.12% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → TVSMOTOR | -2.55% | -2.55% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → TVSMOTOR | +2.40% | +2.40% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → TVSMOTOR | +2.35% | +2.35% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → TVSMOTOR | -2.25% | -2.25% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → TVSMOTOR | -1.82% | -1.82% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → TVSMOTOR | -1.32% | -1.32% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → TVSMOTOR | +1.25% | +1.25% |
-| 1 | EV_FED_SEP26_HIKE ⇒ F_US_10Y → TVSMOTOR | -1.20% | -1.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → TVSMOTOR | +1.17% | +1.17% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TVSMOTOR | -3.73% | -1.05% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_AUTO_DEMAND_IN → TVSMOTOR | -1.04% | -1.04% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → TVSMOTOR | -1.00% | -1.00% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TVSMOTOR | -4.67% | -0.84% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → TVSMOTOR | -3.75% | -0.82% |
+| 1 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → TVSMOTOR | -3.00% | -0.75% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → TVSMOTOR | -2.00% | -0.71% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → TVSMOTOR | +1.20% | +0.70% |
+| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_US_10Y → TVSMOTOR | +1.50% | +0.68% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → TVSMOTOR | -2.40% | -0.67% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → TVSMOTOR | -2.40% | -0.60% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_10Y → TVSMOTOR | +1.98% | +0.50% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → TVSMOTOR | +0.69% | +0.48% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_US_10Y → TVSMOTOR | -1.50% | -0.45% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → TVSMOTOR | +1.25% | +0.44% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → TVSMOTOR | +1.95% | +0.43% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → TVSMOTOR | -1.60 | events | -4.00% |
+| 1 | P_EV_POLICY → TVSMOTOR | +1.10 | events | +3.30% |
+| 1 | F_US_10Y → TVSMOTOR | +1.68 | observed | -2.51% |
+| 1 | F_ALUMINIUM → TVSMOTOR | -1.96 | observed | +2.35% |
+| 1 | F_STEEL_INDIA → TVSMOTOR | +1.65 | events | -2.15% |
+| 1 | F_REPO_IN → TVSMOTOR | +1.00 | events | -1.00% |
+| 1 | F_AUTO_DEMAND_IN → TVSMOTOR | -0.10 | events | -0.70% |
+| 1 | F_USDINR → TVSMOTOR | -0.37 | observed | -0.55% |
+| 2 | F_DXY → C_AFRICA_LATAM → TVSMOTOR | +0.74 | observed | -0.18% |
+| 1 | F_COPPER → TVSMOTOR | -0.24 | observed | +0.12% |
+| 2 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → TVSMOTOR | -0.10 | events | +0.10% |
+| 2 | F_CHINA_GDP → F_RUBBER → TVSMOTOR | +0.30 | events | -0.02% |
 
 ## Analyst profile (agent research, sourced)
 # TVS Motor Company Ltd. (TVSMOTOR) — Market Impact profile, 2026-11-05

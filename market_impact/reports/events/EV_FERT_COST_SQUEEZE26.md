@@ -52,7 +52,7 @@ Industry estimates (RuralVoice, 2 Oct): subsidy could reach Rs 3 lakh crore in F
 | TATAPOWER | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
 | IDEA | -0.4 | +0.0 | -0.2 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 3%, 2: 60%, 3: 28%, 4: 8%
+Share of absolute impact by order: 1: 3%, 2: 61%, 3: 28%, 4: 8%
 
 ## Sources
 - 2026-10-02 High gas and sulphur prices could push fertiliser subsidy to Rs 3 lakh crore - RuralVoice https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html

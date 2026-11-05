@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -3.8%**, **12 months -7.8%** (rank 180 / 185 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.8%): 3 months 40%, 12 months 28%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -18.6% … P90 -0.3%; plausible 12m relative-return range incl. stock-specific noise: -49.0% … +30.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.6 pp (model impact -5.1% beta-adjusted vs realised market-adjusted move +15.1%); forward event exposure -8.2% (3m -3.2%; half assumed priced); company-specific events +0.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.8%): 3 months 40%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -16.6% … P90 -1.6%; plausible 12m relative-return range incl. stock-specific noise: -44.3% … +27.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.6 pp (model impact -5.1% beta-adjusted vs realised market-adjusted move +15.1%); forward event exposure -8.2% (3m -3.1%; half assumed priced); company-specific events +0.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.7% | -2.7% | +0.0 | -1.3 | -1.0 | -0.4 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.7% | -2.7% | +0.0 | -2.7 | -0.2 | +0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → NAUKRI | -6.60% | -6.60% |
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → NAUKRI | -4.00% | -4.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → NAUKRI | +7.50% | +3.75% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → NAUKRI | -10.00% | -2.80% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → NAUKRI | -12.50% | -2.25% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → NAUKRI | +2.16% | +2.16% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → NAUKRI | -7.50% | -2.10% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → NAUKRI | -7.50% | -1.88% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → NAUKRI | -1.78% | -1.78% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → NAUKRI | -1.78% | -1.78% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → NAUKRI | -2.00% | -1.70% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → NAUKRI | +1.50% | +1.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → NAUKRI | +1.50% | +1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → NAUKRI | -1.41% | -1.41% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → NAUKRI | -1.32% | -1.32% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → NAUKRI | -3.00% | -1.07% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → NAUKRI | -4.50% | -0.99% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → NAUKRI | +0.86% | +0.78% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → NAUKRI | +1.25% | +0.73% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → NAUKRI | -3.75% | -0.67% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NAUKRI | -2.24% | -0.63% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → NAUKRI | +1.00% | +0.62% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → NAUKRI | +1.00% | +0.62% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → NAUKRI | +0.80% | +0.54% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → NAUKRI | -1.60 | events | -4.80% |
+| 1 | T_GENAI_SERVICES → NAUKRI | +1.00 | events | -4.00% |
+| 1 | F_GDP_IN → NAUKRI | +0.50 | events | +1.50% |
+| 1 | F_REPO_IN → NAUKRI | +1.00 | events | -1.00% |
+| 1 | F_US_TECH_SPEND → NAUKRI | -0.60 | events | -0.90% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → NAUKRI | +1.70 | events | -0.61% |
+| 1 | F_US_EQUITIES → NAUKRI | +0.23 | observed | +0.58% |
+| 1 | F_RISK_SENTIMENT → NAUKRI | +0.11 | observed | -0.28% |
+| 2 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → NAUKRI | -1.60 | events | -0.26% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → NAUKRI | +1.00 | events | -0.16% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → NAUKRI | +1.65 | events | -0.10% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → NAUKRI | +0.50 | events | +0.09% |
 
 ## Analyst profile (agent research, sourced)
 # NAUKRI — Info Edge (India) Ltd., as of 2026-11-05

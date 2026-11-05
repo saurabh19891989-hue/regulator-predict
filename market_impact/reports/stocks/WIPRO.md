@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.2%**, **12 months -4.5%** (rank 156 / 156 of 200 for 3m / 12m); beta 0.93
+- Expected relative return: **3 months -2.2%**, **12 months -4.5%** (rank 156 / 155 of 200 for 3m / 12m); beta 0.93
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.2%): 3 months 43%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.4% … P90 -0.8%; plausible 12m relative-return range incl. stock-specific noise: -42.3% … +27.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -5.8% beta-adjusted vs realised market-adjusted move -8.4%); forward event exposure -6.4% (3m -2.7%; half assumed priced); company-specific events -0.3%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.9% … P90 -0.8%; plausible 12m relative-return range incl. stock-specific noise: -45.4% … +24.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -6.1% beta-adjusted vs realised market-adjusted move -8.4%); forward event exposure -6.4% (3m -2.7%; half assumed priced); company-specific events -0.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US $100,000 H-1B fee (new ~$103k proposal Aug 2026) blocked by court; administration appeals; DHS proposes $70k/$30k OPT fees (`EV_H1B_100K_FEE_COURT`) | occurred | 1.00 | -1.2% | -1.2% | -1.2 | +0.0 | +0.0 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.1% | -1.1% | -0.5 | -0.5 | -0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → WIPRO | -6.00% | -6.00% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → WIPRO | +3.00% | +3.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → WIPRO | +2.82% | +2.82% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → WIPRO | -3.00% | -2.55% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → WIPRO | -2.20% | -2.20% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → WIPRO | -7.50% | -1.88% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ P_US_VISA_OUTSOURCING → WIPRO | -1.50% | -1.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → WIPRO | -5.10% | -1.43% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → WIPRO | -1.40% | -1.40% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → WIPRO | -5.10% | -1.28% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → WIPRO | +2.50% | +1.25% |
-| 1 | EV_H1B_100K_FEE_COURT ⇒ P_US_VISA_OUTSOURCING → WIPRO | -1.20% | -1.20% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → WIPRO | -4.00% | -1.12% |
 | 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → WIPRO | -3.00% | -0.90% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → WIPRO | -5.00% | -0.90% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → WIPRO | +2.88% | +0.81% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → WIPRO | +2.10% | +0.52% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → WIPRO | +2.34% | +0.51% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → WIPRO | +1.42% | +0.51% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → WIPRO | -0.85% | -0.50% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → WIPRO | -2.55% | -0.46% |
+| 1 | EV_INDIA_EU_FTA_SIGNED ⇒ F_EU_GDP → WIPRO | +0.48% | +0.44% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | T_GENAI_SERVICES → WIPRO | +1.00 | events | -6.00% |
+| 1 | F_US_GDP → WIPRO | +1.20 | events | +3.00% |
+| 1 | P_US_VISA_OUTSOURCING → WIPRO | +0.90 | events | -2.70% |
+| 1 | F_GSEC_10Y_IN → WIPRO | +1.70 | events | -1.70% |
+| 1 | F_FPI_FLOWS → WIPRO | -1.60 | events | -1.60% |
+| 1 | F_FED_FUNDS → WIPRO | +1.62 | observed | -1.13% |
+| 1 | F_USDINR → WIPRO | -0.37 | observed | -0.66% |
+| 1 | F_US_10Y → WIPRO | +1.68 | observed | +0.50% |
+| 1 | F_US_EQUITIES → WIPRO | +0.23 | observed | +0.40% |
+| 1 | F_EU_GDP → WIPRO | +0.22 | events | +0.35% |
+| 1 | F_COAL_INTL → WIPRO | +0.70 | director_override | -0.35% |
+| 1 | F_RISK_SENTIMENT → WIPRO | +0.11 | observed | -0.11% |
 
 ## Analyst profile (agent research, sourced)
 # Wipro Ltd. (WIPRO) - company profile, as of 2026-11-05

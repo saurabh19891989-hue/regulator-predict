@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -3.9%**, **12 months -7.8%** (rank 181 / 186 of 200 for 3m / 12m); beta 1.31
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.6%): 3 months 35%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -15.8% … P90 -5.5%; plausible 12m relative-return range incl. stock-specific noise: -32.5% … +12.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.0 pp (model impact -4.0% beta-adjusted vs realised market-adjusted move +7.7%); forward event exposure -9.1% (3m -3.9%; half assumed priced); company-specific events -0.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.6%): 3 months 35%, 12 months 20%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -15.2% … P90 -3.2%; plausible 12m relative-return range incl. stock-specific noise: -30.2% … +9.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.0 pp (model impact -4.0% beta-adjusted vs realised market-adjusted move +7.7%); forward event exposure -9.1% (3m -3.8%; half assumed priced); company-specific events -0.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.5 | -0.4 | -0.1 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.4% | +2.0% | +0.0 | +0.7 | +1.6 | +1.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ABCAPITAL | -4.40% | -4.40% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ABCAPITAL | +5.00% | +2.50% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → ABCAPITAL | -1.99% | -1.99% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → ABCAPITAL | -3.00% | -1.86% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → ABCAPITAL | -3.00% | -1.86% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → ABCAPITAL | -1.50% | -1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → ABCAPITAL | -1.33% | -1.33% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_CREDIT_SPREADS_IN → ABCAPITAL | -1.20% | -1.20% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → ABCAPITAL | -1.19% | -1.19% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ABCAPITAL | -1.12% | -1.12% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → ABCAPITAL | -1.07% | -1.07% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → ABCAPITAL | -2.10% | -1.05% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ABCAPITAL | +1.00% | +1.00% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → ABCAPITAL | +0.96% | +0.96% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → ABCAPITAL | -0.94% | -0.94% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → ABCAPITAL | -3.00% | -0.90% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ABCAPITAL | -2.99% | -0.84% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → ABCAPITAL | -1.25% | -0.78% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → ABCAPITAL | -1.20% | -0.72% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → ABCAPITAL | +1.80% | +0.68% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ABCAPITAL | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ABCAPITAL | -3.00% | -0.66% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ABCAPITAL | -1.50% | -0.60% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_CREDIT_SPREADS_IN → ABCAPITAL | -1.20% | -0.60% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ABCAPITAL | -1.92% | -0.54% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ABCAPITAL | -1.92% | -0.48% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → ABCAPITAL | -1.60 | events | -3.20% |
+| 1 | F_CREDIT_SPREADS_IN → ABCAPITAL | +0.50 | events | -2.00% |
+| 1 | F_REPO_IN → ABCAPITAL | +1.00 | events | -1.50% |
+| 1 | F_GSEC_10Y_IN → ABCAPITAL | +1.70 | events | -1.36% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → ABCAPITAL | +0.50 | events | +0.96% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → ABCAPITAL | -1.56 | events | -0.50% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → ABCAPITAL | +0.50 | events | +0.43% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → ABCAPITAL | +1.70 | events | -0.31% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → ABCAPITAL | +1.00 | events | -0.29% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → ABCAPITAL | +1.15 | events | -0.28% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → ABCAPITAL | -0.25 | events | -0.24% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → ABCAPITAL | +1.00 | events | -0.24% |
 
 ## Analyst profile (agent research, sourced)
 # ABCAPITAL - Aditya Birla Capital Ltd. (Nifty 200, I_NBFC_VEHICLE_CONSUMER) - as of 2026-11-05

@@ -19,6 +19,7 @@ Reuters (21 Oct 2026): top NBFCs flag early stress in gold loans; RBI governor (
 |---|---|---|---|---|---|
 | POWERGRID | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
 | BSE | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
+| NLCINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
 | INDUSTOWER | +0.1 | +0.0 | +0.0 | -0.0 | +0.1 |
 | SUZLON | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | POWERINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
@@ -31,7 +32,6 @@ Reuters (21 Oct 2026): top NBFCs flag early stress in gold loans; RBI governor (
 | PERSISTENT | +0.0 | +0.0 | -0.0 | +0.0 | +0.1 |
 | HAL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ASTRAL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| ENRIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

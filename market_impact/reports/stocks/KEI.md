@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +4.2%**, **12 months +9.5%** (rank 18 / 15 of 200 for 3m / 12m); beta 1.42
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.6%): 3 months 60%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +6.5% … P90 +16.5%; plausible 12m relative-return range incl. stock-specific noise: -23.0% … +55.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.0 pp (model impact +12.0% beta-adjusted vs realised market-adjusted move -27.9%); forward event exposure +9.1% (3m +3.7%; half assumed priced); company-specific events +0.2%
+- Expected relative return: **3 months +4.3%**, **12 months +9.5%** (rank 18 / 15 of 200 for 3m / 12m); beta 1.42
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.6%): 3 months 60%, 12 months 65%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +6.0% … P90 +17.6%; plausible 12m relative-return range incl. stock-specific noise: -18.7% … +59.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.0 pp (model impact +11.9% beta-adjusted vs realised market-adjusted move -27.9%); forward event exposure +9.1% (3m +3.7%; half assumed priced); company-specific events +0.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2 (`EV_LPG_UNDERRECOVERY`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.7 | -0.0 | +0.0 |
 | Final SHANTI Act rules / first private-sector nuclear licence process (`EV_NUCLEAR_SHANTI_RULES_FINAL`) | anticipated | 0.60 | +1.1% | +0.7% | +0.0 | +1.1 | +0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → KEI | +3.00% | +3.00% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → KEI | +2.40% | +2.16% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → KEI | -2.16% | -2.16% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → KEI | -1.59% | -1.59% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → KEI | +1.28% | +1.28% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → KEI | -1.20% | -1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → KEI | -1.06% | -1.06% |
-| 2 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → KEI | +0.96% | +0.96% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → KEI | +0.94% | +0.94% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → KEI | +0.86% | +0.86% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → KEI | -3.00% | -0.84% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → KEI | +1.80% | +0.81% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → KEI | +0.80% | +0.80% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → KEI | -3.00% | -0.75% |
-| 2 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → KEI | -0.72% | -0.72% |
+| 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → KEI | +1.44% | +0.58% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → KEI | +0.80% | +0.52% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → KEI | -1.20% | -0.48% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → KEI | +0.72% | +0.43% |
+| 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → KEI | +0.96% | +0.43% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → KEI | -1.44% | -0.40% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → KEI | -0.52% | -0.35% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → KEI | -1.38% | -0.35% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → KEI | -1.20% | -0.32% |
+| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → KEI | -2.00% | -0.30% |
+| 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → KEI | +0.48% | +0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → KEI | +1.00 | events | +3.00% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → KEI | +1.50 | events | +1.92% |
+| 1 | F_REPO_IN → KEI | +1.00 | events | -1.20% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → KEI | +1.20 | events | +1.15% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → KEI | +0.50 | events | +0.80% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → KEI | +1.70 | events | -0.49% |
+| 1 | P_US_TARIFF_INDIA → KEI | -0.60 | events | +0.48% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → KEI | +1.00 | events | +0.32% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → KEI | +0.50 | events | +0.25% |
+| 1 | F_US_EQUITIES → KEI | +0.23 | observed | +0.23% |
+| 1 | F_USDINR → KEI | -0.37 | observed | -0.22% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → KEI | +1.00 | events | +0.20% |
 
 ## Analyst profile (agent research, sourced)
 # KEI — KEI Industries (as of 2026-11-05)

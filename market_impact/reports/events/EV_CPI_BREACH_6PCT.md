@@ -52,7 +52,7 @@ Sep CPI 5.54% with food 7.74%; NDTV Profit (21 Oct) says inflation 'heads to 6% 
 | LODHA | -2.6 | -1.4 | -1.0 | -0.1 | -0.1 |
 | ADANIGREEN | -2.6 | -2.2 | -0.2 | -0.1 | -0.1 |
 
-Share of absolute impact by order: 1: 64%, 2: 21%, 3: 11%, 4: 4%
+Share of absolute impact by order: 1: 65%, 2: 21%, 3: 11%, 4: 4%
 
 ## Sources
 - 2026-10-21 Not A One-Off: RBI MPC Minutes Point To A Rate-Hike Cycle As Inflation Heads To 6% Ceiling - NDTV Profit https://news.google.com/rss/search?q=India+CPI+inflation+September+2026+6%25+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en

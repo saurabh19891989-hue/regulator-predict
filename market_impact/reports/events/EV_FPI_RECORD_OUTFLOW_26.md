@@ -53,7 +53,7 @@ Net FPI equity selling reached about Rs 3.12 lakh crore by 18 Oct (Rs 2.95 lakh 
 | IDFCFIRSTB | -8.6 | -7.8 | -0.2 | -0.2 | -0.4 |
 | YESBANK | -8.3 | -6.6 | -0.4 | -0.4 | -0.9 |
 
-Share of absolute impact by order: 1: 82%, 2: 11%, 3: 3%, 4: 4%
+Share of absolute impact by order: 1: 83%, 2: 11%, 3: 3%, 4: 4%
 
 ## Sources
 - 2026-10-13 Record FPI outflows top Rs 3 trillion in CY26 - Business Standard https://news.google.com/rss/search?q=FPI+outflow+2026+record+India+equities+Rs+3+lakh+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en

@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.7%**, **12 months -4.0%** (rank 147 / 149 of 200 for 3m / 12m); beta 0.95
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.8%): 3 months 43%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.2% … P90 +0.7%; plausible 12m relative-return range incl. stock-specific noise: -33.6% … +20.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.8% beta-adjusted vs realised market-adjusted move -10.1%); forward event exposure -6.0% (3m -2.2%; half assumed priced); company-specific events +0.3%
+- Expected relative return: **3 months -1.7%**, **12 months -4.0%** (rank 148 / 150 of 200 for 3m / 12m); beta 0.95
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.8%): 3 months 43%, 12 months 35%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.8% … P90 +2.1%; plausible 12m relative-return range incl. stock-specific noise: -37.6% … +15.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.8% beta-adjusted vs realised market-adjusted move -10.1%); forward event exposure -5.9% (3m -2.2%; half assumed priced); company-specific events +0.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.4% | -2.4% | -2.0 | -0.3 | +0.1 | -0.1 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.2% | -2.2% | +0.0 | -2.2 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → SBICARD | -6.60% | -6.60% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SBICARD | +7.50% | +3.75% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → SBICARD | -3.00% | -1.86% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → SBICARD | -1.80% | -1.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → SBICARD | -1.78% | -1.78% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → SBICARD | -6.00% | -1.68% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → SBICARD | -1.59% | -1.59% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → SBICARD | +1.50% | +1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → SBICARD | -1.41% | -1.41% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → SBICARD | -7.50% | -1.35% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_UNSECURED_STRESS → SBICARD | -1.21% | -1.21% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SBICARD | -1.19% | -1.19% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → SBICARD | -1.19% | -1.19% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → SBICARD | -1.75% | -1.09% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → SBICARD | -1.02% | -1.02% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SBICARD | -4.50% | -0.99% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → SBICARD | -3.00% | -0.90% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBICARD | -2.88% | -0.81% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBICARD | -2.88% | -0.72% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SBICARD | -1.80% | -0.72% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → SBICARD | +1.80% | +0.68% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_UNSECURED_STRESS → SBICARD | +0.96% | +0.65% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → SBICARD | -1.80% | -0.64% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SBICARD | -2.24% | -0.63% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → SBICARD | -2.16% | -0.54% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → SBICARD | -1.60 | events | -4.80% |
+| 1 | F_REPO_IN → SBICARD | +1.00 | events | -1.80% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → SBICARD | -1.56 | events | -1.50% |
+| 1 | F_GDP_IN → SBICARD | +0.50 | events | +1.00% |
+| 1 | F_CPI_IN → SBICARD | +1.15 | events | -0.92% |
+| 1 | F_URBAN_DEMAND → SBICARD | +0.20 | events | +0.70% |
+| 1 | F_CREDIT_SPREADS_IN → SBICARD | +0.50 | events | -0.60% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → SBICARD | +1.15 | events | -0.41% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → SBICARD | +0.50 | events | +0.28% |
+| 2 | F_RURAL_DEMAND → F_UNSECURED_STRESS → SBICARD | -0.25 | events | -0.24% |
+| 2 | F_GDP_IN → F_UNSECURED_STRESS → SBICARD | +0.50 | events | +0.24% |
+| 1 | F_COPPER → SBICARD | -0.24 | observed | -0.24% |
 
 ## Analyst profile (agent research, sourced)
 # SBICARD - SBI Cards & Payment Services (as of 2026-11-05)

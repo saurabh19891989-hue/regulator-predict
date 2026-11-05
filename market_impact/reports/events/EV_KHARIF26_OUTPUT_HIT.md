@@ -52,7 +52,7 @@ Agriculture Ministry (29 Sep) set a 2026-27 foodgrain target of 373.93 MT vs 376
 | LTF | -1.7 | +0.0 | -0.1 | -0.9 | -0.6 |
 | LODHA | -1.7 | +0.0 | +0.0 | -1.1 | -0.6 |
 
-Share of absolute impact by order: 1: 4%, 2: 4%, 3: 55%, 4: 37%
+Share of absolute impact by order: 1: 4%, 2: 4%, 3: 55%, 4: 38%
 
 ## Sources
 - 2026-09-29 Foodgrain output estimate for 2026-27 reduced marginally - Financial Express https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/

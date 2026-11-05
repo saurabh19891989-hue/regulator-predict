@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.0%**, **12 months +0.0%** (rank 66 / 103 of 200 for 3m / 12m); beta 1.22
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.0%): 3 months 53%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.8% … P90 +5.3%; plausible 12m relative-return range incl. stock-specific noise: -29.3% … +20.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +3.8% beta-adjusted vs realised market-adjusted move +15.5%); forward event exposure +3.5% (3m +2.4%; half assumed priced); company-specific events -1.1%
+- Expected relative return: **3 months +1.0%**, **12 months +0.1%** (rank 65 / 102 of 200 for 3m / 12m); beta 1.22
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.0%): 3 months 54%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.3% … P90 +5.4%; plausible 12m relative-return range incl. stock-specific noise: -26.1% … +36.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +3.8% beta-adjusted vs realised market-adjusted move +15.5%); forward event exposure +3.5% (3m +2.5%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -2.1 | -0.2 | -0.2 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.7% | +2.4% | +1.6 | +0.4 | +0.7 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → PNB | -4.40% | -4.40% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PNB | +5.00% | +2.50% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → PNB | -2.10% | -2.10% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → PNB | +2.00% | +2.00% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → PNB | -3.00% | -1.86% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → PNB | -3.00% | -1.86% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → PNB | -1.78% | -1.78% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → PNB | +1.50% | +1.50% |
 | 1 | EV_CHINA_FDI_EASING_PN3 ⇒ P_FDI_RULES → PNB | +2.10% | +1.47% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → PNB | +1.60% | +1.44% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → PNB | -1.44% | -1.44% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → PNB | +1.32% | +1.32% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → PNB | -1.19% | -1.19% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → PNB | -1.07% | -1.07% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → PNB | -1.01% | -1.01% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → PNB | -3.00% | -0.90% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PNB | -2.99% | -0.84% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → PNB | -1.25% | -0.78% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → PNB | -1.20% | -0.72% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → PNB | +1.80% | +0.68% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PNB | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → PNB | -3.00% | -0.66% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → PNB | -1.20% | -0.60% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → PNB | +0.80% | +0.54% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → PNB | +1.20% | +0.54% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → PNB | -1.60 | events | -3.20% |
+| 1 | F_GSEC_10Y_IN → PNB | +1.70 | events | -2.55% |
+| 1 | F_GOVT_CAPEX → PNB | +1.00 | events | +2.00% |
+| 1 | P_FDI_RULES → PNB | +0.50 | events | +1.50% |
+| 1 | F_GDP_IN → PNB | +0.50 | events | +1.50% |
+| 1 | F_REPO_IN → PNB | +1.00 | events | +1.00% |
+| 1 | F_LIQUIDITY_IN → PNB | -0.90 | events | -0.72% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → PNB | +0.50 | events | +0.48% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → PNB | +1.00 | events | -0.29% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → PNB | -0.25 | events | -0.24% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → PNB | +1.00 | events | -0.24% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → PNB | -1.56 | events | -0.22% |
 
 ## Analyst profile (agent research, sourced)
 # PNB - Punjab National Bank (Nifty Next 50, I_PSU_BANKS) - as of 2026-11-05

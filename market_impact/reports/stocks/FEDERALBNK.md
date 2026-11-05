@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -4.3%**, **12 months -9.9%** (rank 188 / 191 of 200 for 3m / 12m); beta 0.98
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.9%): 3 months 33%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -22.0% … P90 -2.2%; plausible 12m relative-return range incl. stock-specific noise: -38.1% … +17.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -5.7 pp (model impact -11.4% beta-adjusted vs realised market-adjusted move +12.6%); forward event exposure -5.1% (3m -0.6%; half assumed priced); company-specific events -1.0%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.9%): 3 months 33%, 12 months 25%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -21.3% … P90 -1.7%; plausible 12m relative-return range incl. stock-specific noise: -44.2% … +5.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -5.7 pp (model impact -11.4% beta-adjusted vs realised market-adjusted move +12.6%); forward event exposure -5.0% (3m -0.6%; half assumed priced); company-specific events -1.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -8.5% | -3.0% | -4.8 | -1.2 | -1.8 | -0.8 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -15.8% | -2.8% | -7.5 | -8.3 | +0.0 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → FEDERALBNK | -8.80% | -8.80% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → FEDERALBNK | -5.25% | -5.25% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → FEDERALBNK | +10.00% | +5.00% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → FEDERALBNK | -4.50% | -2.79% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → FEDERALBNK | -2.52% | -2.52% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → FEDERALBNK | +2.48% | +2.48% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → FEDERALBNK | +3.50% | +2.03% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → FEDERALBNK | +2.00% | +2.00% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → FEDERALBNK | -6.00% | -1.68% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → FEDERALBNK | -2.50% | -1.55% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → FEDERALBNK | -4.20% | -1.50% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → FEDERALBNK | +1.44% | +1.44% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → FEDERALBNK | -1.36% | -1.36% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → FEDERALBNK | -7.50% | -1.35% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → FEDERALBNK | -6.00% | -1.32% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → FEDERALBNK | -3.84% | -1.08% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → FEDERALBNK | -3.84% | -0.96% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → FEDERALBNK | -1.50% | -0.93% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → FEDERALBNK | -2.99% | -0.84% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → FEDERALBNK | -2.50% | -0.75% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → FEDERALBNK | -1.44% | -0.72% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → FEDERALBNK | +2.00% | +0.70% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → FEDERALBNK | -1.60 | events | -6.40% |
+| 1 | C_MIDEAST_CONFLICT → FEDERALBNK | +1.50 | events | -5.25% |
+| 1 | F_GSEC_10Y_IN → FEDERALBNK | +1.70 | events | -3.06% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → FEDERALBNK | +0.50 | events | +1.44% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → FEDERALBNK | +0.50 | events | +0.51% |
+| 1 | F_REPO_IN → FEDERALBNK | +1.00 | events | +0.50% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → FEDERALBNK | -1.56 | events | -0.37% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → FEDERALBNK | -0.25 | events | -0.36% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → FEDERALBNK | +1.00 | events | -0.36% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → FEDERALBNK | +1.00 | events | -0.35% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → FEDERALBNK | -1.56 | events | -0.34% |
+| 2 | F_GDP_IN → F_DEPOSIT_GROWTH_IN → FEDERALBNK | +0.50 | events | +0.30% |
 
 ## Analyst profile (agent research, sourced)
 # FEDERALBNK - Federal Bank Ltd. (midcap, private bank) - as of 2026-11-05

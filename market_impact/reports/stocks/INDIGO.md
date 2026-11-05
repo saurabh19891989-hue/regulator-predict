@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -3.0%**, **12 months -5.5%** (rank 172 / 168 of 200 for 3m / 12m); beta 1.26
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 41%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.6% … P90 +1.6%; plausible 12m relative-return range incl. stock-specific noise: -36.8% … +27.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.4 pp (model impact -6.8% beta-adjusted vs realised market-adjusted move +16.0%); forward event exposure -3.0% (3m -1.5%; half assumed priced); company-specific events +1.1%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 41%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -16.4% … P90 +1.0%; plausible 12m relative-return range incl. stock-specific noise: -38.4% … +15.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.4 pp (model impact -6.8% beta-adjusted vs realised market-adjusted move +16.0%); forward event exposure -2.9% (3m -1.5%; half assumed priced); company-specific events +1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.2% | -2.2% | -2.1 | +0.0 | -0.0 | -0.1 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.2% | -2.2% | -0.6 | -1.1 | -0.4 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → INDIGO | -12.38% | -12.38% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → INDIGO | -5.50% | -5.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → INDIGO | -3.75% | -3.75% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → INDIGO | +6.25% | +3.12% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → INDIGO | -6.25% | -2.23% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → INDIGO | +3.75% | +2.18% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → INDIGO | -2.10% | -2.10% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → INDIGO | -1.56% | -1.56% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → INDIGO | +2.50% | +1.45% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → INDIGO | -1.35% | -1.35% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → INDIGO | +1.25% | +1.25% |
-| 2 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → F_BRENT → INDIGO | +1.20% | +1.20% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → INDIGO | -1.19% | -1.19% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → INDIGO | -3.00% | -1.07% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → INDIGO | -1.06% | -1.06% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → INDIGO | -3.73% | -1.05% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → INDIGO | -15.00% | -0.94% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → INDIGO | -4.67% | -0.84% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → INDIGO | -3.75% | -0.82% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → INDIGO | -2.40% | -0.67% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → INDIGO | -2.40% | -0.60% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → INDIGO | -1.20% | -0.60% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → INDIGO | -2.60% | -0.57% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_BRENT → INDIGO | +1.80% | +0.45% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → INDIGO | -0.75% | -0.45% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → INDIGO | -1.60 | events | -4.00% |
+| 1 | C_MIDEAST_CONFLICT → INDIGO | +1.50 | events | -3.75% |
+| 1 | F_GSEC_10Y_IN → INDIGO | +1.70 | events | -2.55% |
+| 1 | F_REFINING_MARGIN → INDIGO | +1.54 | observed | -1.39% |
+| 1 | F_US_10Y → INDIGO | +1.68 | observed | -1.17% |
+| 2 | C_MIDEAST_CONFLICT → F_TRAVEL_DEMAND → INDIGO | +1.50 | events | -0.81% |
+| 1 | F_REPO_IN → INDIGO | +1.00 | events | -0.80% |
+| 1 | F_USDINR → INDIGO | -0.37 | observed | +0.74% |
+| 1 | F_URBAN_DEMAND → INDIGO | +0.20 | events | +0.70% |
+| 2 | F_URBAN_DEMAND → F_TRAVEL_DEMAND → INDIGO | +0.20 | events | +0.58% |
+| 1 | P_FUEL_TAX_IN → INDIGO | -0.50 | events | +0.40% |
+| 1 | F_BRENT → INDIGO | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # INDIGO — InterGlobe Aviation Ltd. (Nifty 50) — profile as of 2026-11-05

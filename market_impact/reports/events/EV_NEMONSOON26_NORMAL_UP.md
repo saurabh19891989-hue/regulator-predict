@@ -44,11 +44,11 @@ Complement of EV_NEMONSOON26_DEFICIT: normal-or-above NEM (probability 0.60). El
 | SUZLON | -0.4 | +0.0 | -0.4 | +0.2 | -0.1 |
 | POWERINDIA | -0.3 | +0.0 | +0.0 | -0.3 | +0.0 |
 | POWERGRID | -0.3 | +0.0 | -0.4 | -0.0 | +0.1 |
+| NLCINDIA | -0.3 | +0.0 | -0.4 | +0.0 | +0.0 |
 | SOLARINDS | -0.3 | +0.0 | -0.3 | +0.1 | -0.1 |
 | APARINDS | -0.3 | +0.0 | +0.0 | -0.2 | -0.1 |
 | GVT&D | -0.3 | +0.0 | +0.0 | -0.3 | +0.0 |
 | AMBUJACEM | -0.2 | -0.4 | +0.0 | +0.2 | +0.0 |
-| CGPOWER | -0.1 | +0.0 | +0.0 | -0.2 | +0.0 |
 
 Share of absolute impact by order: 1: 7%, 2: 28%, 3: 46%, 4: 18%
 

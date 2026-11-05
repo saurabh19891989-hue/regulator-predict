@@ -2,10 +2,10 @@
 *NIFTY_50 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.4%**, **12 months -0.1%** (rank 115 / 107 of 200 for 3m / 12m); beta 0.85
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.8%): 3 months 48%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.9% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -21.4% … +25.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.7 pp (model impact +1.3% beta-adjusted vs realised market-adjusted move -13.7%); forward event exposure +1.3% (3m +0.5%; half assumed priced); company-specific events -0.6%
+- Expected relative return: **3 months -0.4%**, **12 months -0.1%** (rank 114 / 106 of 200 for 3m / 12m); beta 0.85
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.8%): 3 months 48%, 12 months 38%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.8% … P90 +4.0%; plausible 12m relative-return range incl. stock-specific noise: -24.8% … +24.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.7 pp (model impact +1.3% beta-adjusted vs realised market-adjusted move -13.7%); forward event exposure +1.4% (3m +0.5%; half assumed priced); company-specific events -0.6%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.0 | +0.3 | +0.2 |
 | Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -2.0% | -0.5% | +0.0 | -2.0 | +0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → NESTLEIND | -1.72% | -1.72% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → NESTLEIND | -1.30% | -1.30% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → NESTLEIND | -1.15% | -1.15% |
-| 1 | EV_SUGAR_SHORTFALL26 ⇒ F_SUGAR → NESTLEIND | -0.84% | -0.84% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → NESTLEIND | -0.63% | -0.63% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → F_PACKAGING → NESTLEIND | -0.57% | -0.57% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → NESTLEIND | -1.30% | -0.52% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → NESTLEIND | +0.46% | +0.46% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_URBAN_DEMAND → NESTLEIND | +0.44% | +0.44% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → NESTLEIND | -0.42% | -0.42% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_REPO_IN → NESTLEIND | -0.42% | -0.42% |
-| 3 | EV_KHARIF26_OUTPUT_HIT ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → NESTLEIND | -0.41% | -0.41% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_URBAN_DEMAND → NESTLEIND | -0.40% | -0.40% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → NESTLEIND | -1.50% | -0.37% |
-| 4 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_CPI_IN → F_REPO_IN → NESTLEIND | -0.36% | -0.36% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → NESTLEIND | -1.30% | -0.35% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → NESTLEIND | -0.52% | -0.31% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → NESTLEIND | -1.30% | -0.29% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → NESTLEIND | -0.33% | -0.21% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → NESTLEIND | -0.58% | -0.21% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → NESTLEIND | +0.35% | +0.20% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_REPO_IN → NESTLEIND | -0.22% | -0.20% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ F_CPI_IN → F_REPO_IN → NESTLEIND | -0.45% | -0.20% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_WHEAT → NESTLEIND | -0.30% | -0.20% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → NESTLEIND | +0.27% | +0.19% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_DAIRY → NESTLEIND | +0.26% | +0.17% |
+| 2 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → F_URBAN_DEMAND → NESTLEIND | +0.21% | +0.17% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_REPO_IN → NESTLEIND | -1.30% | -0.16% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_REPO_IN → NESTLEIND | +1.00 | events | -1.30% |
+| 1 | F_SUGAR → NESTLEIND | +2.78 | observed | -0.83% |
+| 1 | F_URBAN_DEMAND → NESTLEIND | +0.20 | events | +0.44% |
+| 2 | F_MONSOON → F_DAIRY → NESTLEIND | -1.56 | events | -0.40% |
+| 1 | F_RURAL_DEMAND → NESTLEIND | -0.25 | events | -0.23% |
+| 1 | F_USDINR → NESTLEIND | -0.37 | observed | +0.15% |
+| 1 | F_EDIBLE_OIL → NESTLEIND | +0.19 | observed | -0.10% |
+| 1 | F_WHEAT → NESTLEIND | -0.13 | observed | +0.08% |
+| 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → NESTLEIND | +0.40 | events | -0.01% |
+| 3 | F_CHINA_GDP → F_PETROCHEM_SPREADS → F_PACKAGING → NESTLEIND | +0.30 | events | -0.01% |
+| 4 | F_USDCNY → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → NESTLEIND | -0.47 | observed | -0.00% |
+| 4 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → NESTLEIND | +0.40 | events | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Nestle India — what moves the stock

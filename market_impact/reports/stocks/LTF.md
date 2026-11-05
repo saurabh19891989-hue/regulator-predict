@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.3%**, **12 months -3.8%** (rank 159 / 147 of 200 for 3m / 12m); beta 1.55
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.6%): 3 months 43%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.7% … P90 +0.3%; plausible 12m relative-return range incl. stock-specific noise: -26.4% … +24.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.1% beta-adjusted vs realised market-adjusted move -4.3%); forward event exposure -5.6% (3m -3.1%; half assumed priced); company-specific events +0.3%
+- Expected relative return: **3 months -2.2%**, **12 months -3.8%** (rank 159 / 147 of 200 for 3m / 12m); beta 1.55
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.6%): 3 months 43%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.6% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -43.6% … +25.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.1% beta-adjusted vs realised market-adjusted move -4.3%); forward event exposure -5.5% (3m -3.1%; half assumed priced); company-specific events +0.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.6 | -0.3 | -0.1 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.6% | +2.1% | +1.4 | +0.7 | +0.9 | +0.7 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → LTF | -4.46% | -4.46% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → LTF | -3.30% | -3.30% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → LTF | -2.65% | -2.65% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → LTF | -2.10% | -2.10% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → LTF | -2.00% | -2.00% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LTF | +3.75% | +1.88% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → LTF | -2.75% | -1.71% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → LTF | -2.50% | -1.55% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → LTF | -1.26% | -1.26% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_CREDIT_SPREADS_IN → LTF | -1.20% | -1.20% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_GLOBAL → LTF | +1.03% | +1.03% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → LTF | -0.90% | -0.90% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → LTF | -0.89% | -0.89% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → LTF | +0.88% | +0.88% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → LTF | -2.25% | -0.80% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → LTF | -2.00% | -0.80% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → LTF | +1.35% | +0.78% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → LTF | -2.50% | -0.75% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → LTF | -1.20% | -0.72% |
+| 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → LTF | +1.00% | +0.68% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → LTF | +0.90% | +0.63% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LTF | -2.24% | -0.63% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → LTF | -1.20% | -0.60% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_CREDIT_SPREADS_IN → LTF | -1.20% | -0.60% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → LTF | -2.30% | -0.58% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → LTF | +1.50% | +0.57% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → LTF | +1.70 | events | -2.55% |
+| 1 | F_FPI_FLOWS → LTF | -1.60 | events | -2.40% |
+| 1 | F_REPO_IN → LTF | +1.00 | events | -2.00% |
+| 1 | F_CREDIT_SPREADS_IN → LTF | +0.50 | events | -2.00% |
+| 1 | F_MONSOON → LTF | -1.56 | events | -1.56% |
+| 1 | F_STEEL_GLOBAL → LTF | +2.06 | observed | +1.03% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → LTF | +0.50 | events | +0.88% |
+| 1 | F_RURAL_DEMAND → LTF | -0.25 | events | -0.75% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → LTF | +1.15 | events | -0.41% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → LTF | -1.56 | events | -0.37% |
+| 1 | F_USDINR → LTF | -0.37 | observed | +0.30% |
+| 2 | F_GDP_IN → F_UNSECURED_STRESS → LTF | +0.50 | events | +0.24% |
 
 ## Analyst profile (agent research, sourced)
 # LTF - L&T Finance (midcap, retail NBFC)

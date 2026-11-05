@@ -2,9 +2,9 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.0%**, **12 months +1.1%** (rank 64 / 81 of 200 for 3m / 12m); beta 1.38
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +47.8%): 3 months 52%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.1% … P90 +5.3%; plausible 12m relative-return range incl. stock-specific noise: -43.9% … +55.8%
+- Expected relative return: **3 months +1.0%**, **12 months +1.1%** (rank 63 / 81 of 200 for 3m / 12m); beta 1.38
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +47.8%): 3 months 52%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.2% … P90 +3.6%; plausible 12m relative-return range incl. stock-specific noise: -67.0% … +46.9%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +1.8% beta-adjusted vs realised market-adjusted move +54.0%); forward event exposure +3.2% (3m +2.2%; half assumed priced); company-specific events +1.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -7.9% | -1.4% | +0.0 | -4.4 | -2.2 | -1.2 |
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.4% | -1.4% | -0.5 | -0.3 | -0.3 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → KALYANKJIL | -3.30% | -3.30% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → KALYANKJIL | -2.10% | -2.10% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → KALYANKJIL | +3.75% | +1.88% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_GOLD_DEMAND_IN → KALYANKJIL | -1.64% | -1.64% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → C_GCC → KALYANKJIL | +1.58% | +1.58% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → KALYANKJIL | -1.50% | -1.50% |
-| 1 | EV_GST_57TH_COUNCIL_OCT26 ⇒ T_FORMALISATION → KALYANKJIL | +1.20% | +1.20% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_GOLD → F_GOLD_DEMAND_IN → KALYANKJIL | +1.18% | +1.18% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → KALYANKJIL | -0.89% | -0.89% |
-| 3 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GOLD → F_GOLD_DEMAND_IN → KALYANKJIL | +0.86% | +0.86% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → KALYANKJIL | -0.79% | -0.79% |
 | 2 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → T_FORMALISATION → KALYANKJIL | +0.96% | +0.77% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → KALYANKJIL | +0.75% | +0.75% |
-| 4 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → P_GOLD_IMPORT_DUTY → F_GOLD_DEMAND_IN → KALYANKJIL | -0.73% | -0.73% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → KALYANKJIL | -0.70% | -0.70% |
+| 2 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → F_GOLD_DEMAND_IN → KALYANKJIL | +2.13% | +0.64% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ F_GOLD_DEMAND_IN → KALYANKJIL | -2.10% | -0.63% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → KALYANKJIL | -2.24% | -0.63% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → KALYANKJIL | -1.20% | -0.60% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → KALYANKJIL | +1.00% | +0.58% |
+| 2 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_GOLD → F_GOLD_DEMAND_IN → KALYANKJIL | -1.12% | -0.50% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → KALYANKJIL | -2.80% | -0.50% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → KALYANKJIL | -2.25% | -0.49% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → KALYANKJIL | -0.75% | -0.45% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → KALYANKJIL | -1.20% | -0.43% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → KALYANKJIL | -1.44% | -0.40% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → KALYANKJIL | -1.44% | -0.36% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → KALYANKJIL | -0.36% | -0.34% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → KALYANKJIL | +1.70 | events | -2.55% |
+| 1 | F_FPI_FLOWS → KALYANKJIL | -1.60 | events | -2.40% |
+| 1 | C_MIDEAST_CONFLICT → KALYANKJIL | +1.50 | events | -1.50% |
+| 1 | T_FORMALISATION → KALYANKJIL | +0.30 | events | +1.20% |
+| 2 | F_GOLD → F_GOLD_DEMAND_IN → KALYANKJIL | -1.05 | observed | +1.17% |
+| 1 | F_GOLD → KALYANKJIL | -1.05 | observed | -0.52% |
+| 2 | F_USDINR → F_GOLD_DEMAND_IN → KALYANKJIL | -0.37 | observed | +0.41% |
+| 1 | F_RURAL_DEMAND → KALYANKJIL | -0.25 | events | -0.38% |
+| 1 | F_URBAN_DEMAND → KALYANKJIL | +0.20 | events | +0.30% |
+| 2 | F_RURAL_DEMAND → F_GOLD_DEMAND_IN → KALYANKJIL | -0.25 | events | -0.28% |
+| 1 | F_ALUMINIUM → KALYANKJIL | -1.96 | observed | +0.20% |
+| 3 | F_USDINR → P_GOLD_IMPORT_DUTY → F_GOLD_DEMAND_IN → KALYANKJIL | -0.37 | observed | +0.18% |
 
 ## Analyst profile (agent research, sourced)
 # KALYANKJIL - Kalyan Jewellers India Ltd. (midcap, jewellery retail)

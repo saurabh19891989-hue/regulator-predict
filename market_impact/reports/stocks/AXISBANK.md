@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -3.6%**, **12 months -7.6%** (rank 178 / 183 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 36%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -17.4% … P90 +1.3%; plausible 12m relative-return range incl. stock-specific noise: -39.2% … +16.4%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 36%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -19.6% … P90 +1.8%; plausible 12m relative-return range incl. stock-specific noise: -26.3% … +17.3%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.6 pp (model impact -8.6% beta-adjusted vs realised market-adjusted move -5.4%); forward event exposure -8.0% (3m -3.7%; half assumed priced); company-specific events -1.5%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.9% | -2.9% | +0.0 | -2.7 | -0.1 | -0.1 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +3.9% | +2.6% | +0.0 | +1.0 | +2.3 | +0.6 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → AXISBANK | -5.50% | -5.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → AXISBANK | -4.50% | -4.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → AXISBANK | +6.25% | +3.12% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → AXISBANK | -2.80% | -2.80% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → AXISBANK | -4.25% | -2.63% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → AXISBANK | +3.00% | +1.74% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → AXISBANK | -6.00% | -1.68% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → AXISBANK | -2.50% | -1.55% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → AXISBANK | -1.51% | -1.51% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → AXISBANK | -1.49% | -1.49% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → AXISBANK | -1.49% | -1.49% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → AXISBANK | -7.50% | -1.35% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → AXISBANK | -1.32% | -1.32% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → AXISBANK | -3.60% | -1.29% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → AXISBANK | -1.25% | -1.25% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → AXISBANK | -1.50% | -0.93% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → AXISBANK | -3.75% | -0.82% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → AXISBANK | -1.60% | -0.80% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → AXISBANK | -2.50% | -0.75% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → AXISBANK | -2.40% | -0.67% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_ASSET_QUALITY_IN → AXISBANK | +0.73% | +0.66% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → AXISBANK | +0.72% | +0.65% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → AXISBANK | -1.80% | -0.64% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | C_MIDEAST_CONFLICT → AXISBANK | +1.50 | events | -4.50% |
+| 1 | F_FPI_FLOWS → AXISBANK | -1.60 | events | -4.00% |
+| 1 | F_GSEC_10Y_IN → AXISBANK | +1.70 | events | -3.40% |
+| 1 | F_GDP_IN → AXISBANK | +0.50 | events | +1.25% |
+| 1 | F_REPO_IN → AXISBANK | +1.00 | events | -1.00% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → AXISBANK | +0.50 | events | +0.68% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → AXISBANK | -1.56 | events | -0.50% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → AXISBANK | +1.00 | events | -0.35% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → AXISBANK | -0.25 | events | -0.34% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → AXISBANK | +1.00 | events | -0.34% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → AXISBANK | -1.56 | events | -0.32% |
+| 1 | F_USDINR → AXISBANK | -0.37 | observed | +0.30% |
 
 ## Analyst profile (agent research, sourced)
 # AXISBANK - Axis Bank Ltd. (Nifty 50, private bank) - as of 2026-11-05

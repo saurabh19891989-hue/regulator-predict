@@ -49,7 +49,7 @@ A cut is unlikely with Brent ~$95 and members under-producing, but possible if p
 | IREDA | -1.2 | +0.0 | -0.2 | -0.6 | -0.4 |
 | INDIANB | -1.1 | +0.0 | -0.4 | -0.4 | -0.3 |
 
-Share of absolute impact by order: 1: 27%, 2: 27%, 3: 29%, 4: 17%
+Share of absolute impact by order: 1: 27%, 2: 27%, 3: 29%, 4: 18%
 
 ## Sources
 - 2026-11-01 OPEC+ 2027 quota decision (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=OPEC%2B+cut+2027+quotas+when:120d&hl=en-IN&gl=IN&ceid=IN:en

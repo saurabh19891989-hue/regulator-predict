@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +0.5%**, **12 months +1.7%** (rank 85 / 74 of 200 for 3m / 12m); beta 1.08
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.3%): 3 months 52%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.5% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -19.9% … +36.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.3%): 3 months 52%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.7% … P90 +5.8%; plausible 12m relative-return range incl. stock-specific noise: -19.7% … +34.0%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.2 pp (model impact +0.3% beta-adjusted vs realised market-adjusted move -22.2%); forward event exposure +4.3% (3m +2.3%; half assumed priced); company-specific events +1.1%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,41 @@
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.3 | +0.3 | +0.1 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.7 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_SUGAR_SHORTFALL26 ⇒ F_SUGAR → VBL | -2.24% | -2.24% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → VBL | -2.20% | -2.20% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → VBL | -1.98% | -1.98% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → VBL | +2.50% | +1.25% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VBL | -1.01% | -1.01% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → VBL | -0.93% | -0.93% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → VBL | -0.70% | -0.70% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → VBL | +0.50% | +0.50% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → VBL | -1.49% | -0.42% |
-| 1 | EV_ETHANOL_ESY27_TENDER ⇒ F_SUGAR → VBL | +0.40% | +0.40% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → VBL | +0.39% | +0.39% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → VBL | -0.36% | -0.36% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → VBL | -1.00% | -0.36% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → VBL | +0.60% | +0.35% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_RURAL_DEMAND → VBL | -0.34% | -0.34% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → VBL | -1.87% | -0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → VBL | -1.50% | -0.33% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → VBL | -0.70% | -0.28% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → VBL | -0.96% | -0.27% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → VBL | +0.36% | +0.25% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → VBL | -0.96% | -0.24% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → VBL | -0.81% | -0.20% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → VBL | +0.36% | +0.20% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → VBL | -0.70% | -0.19% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → VBL | +0.27% | +0.18% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VBL | -0.51% | -0.18% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_SUGAR → VBL | +2.78 | observed | -2.23% |
+| 1 | F_FPI_FLOWS → VBL | -1.60 | events | -1.60% |
+| 1 | F_REPO_IN → VBL | +1.00 | events | -0.70% |
+| 1 | F_ALUMINIUM → VBL | -1.96 | observed | +0.39% |
+| 1 | F_URBAN_DEMAND → VBL | +0.20 | events | +0.30% |
+| 1 | F_RURAL_DEMAND → VBL | -0.25 | events | -0.30% |
+| 1 | F_USDINR → VBL | -0.37 | observed | +0.07% |
+| 2 | F_DXY → C_AFRICA_LATAM → VBL | +0.74 | observed | -0.07% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → VBL | +0.40 | events | -0.05% |
+| 1 | F_BRENT → VBL | +0.00 | observed | -0.00% |
+| 2 | F_BRENT → F_CHEM_FEEDSTOCK → VBL | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # VBL (Varun Beverages Ltd.) - company profile as of 2026-11-05

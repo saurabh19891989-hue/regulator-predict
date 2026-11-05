@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +4.0%**, **12 months +9.4%** (rank 22 / 16 of 200 for 3m / 12m); beta 0.89
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +37.3%): 3 months 58%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +5.2% … P90 +15.2%; plausible 12m relative-return range incl. stock-specific noise: -31.2% … +68.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +37.3%): 3 months 58%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +6.8% … P90 +16.6%; plausible 12m relative-return range incl. stock-specific noise: -47.2% … +43.4%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.9 pp (model impact +9.7% beta-adjusted vs realised market-adjusted move -2.0%); forward event exposure +8.7% (3m +2.0%; half assumed priced); company-specific events +2.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,41 @@
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.7% | +0.7% | +1.5 | -0.5 | -0.2 | -0.1 |
 | Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +1.5% | +0.6% | +1.5 | +0.0 | +0.2 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_DAC_APPROVALS_H2_26 ⇒ P_DEFENCE_PROCUREMENT → SOLARINDS | +3.00% | +3.00% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → SOLARINDS | +3.00% | +2.70% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SOLARINDS | -2.65% | -2.65% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → SOLARINDS | +2.48% | +2.48% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → SOLARINDS | +2.25% | +2.25% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → SOLARINDS | -2.00% | -2.00% |
 | 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → SOLARINDS | +3.00% | +1.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → SOLARINDS | +1.50% | +1.50% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SOLARINDS | +1.20% | +1.08% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SOLARINDS | -1.08% | -1.08% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → SOLARINDS | +1.00% | +1.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → SOLARINDS | -0.89% | -0.89% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → SOLARINDS | -1.50% | -0.87% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SOLARINDS | -2.00% | -0.80% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → SOLARINDS | -0.64% | -0.64% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → SOLARINDS | +1.80% | +0.64% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → SOLARINDS | +1.50% | +0.60% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SOLARINDS | -2.30% | -0.58% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → SOLARINDS | +0.60% | +0.54% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SOLARINDS | -2.00% | -0.54% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → SOLARINDS | -0.80% | -0.48% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → SOLARINDS | +1.25% | +0.45% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → SOLARINDS | -2.00% | -0.44% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → SOLARINDS | -0.75% | -0.44% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SOLARINDS | +0.90% | +0.40% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_DEFENCE_PROCUREMENT → SOLARINDS | +1.00 | events | +3.00% |
+| 1 | C_MIDEAST_CONFLICT → SOLARINDS | +1.50 | events | +2.25% |
+| 1 | F_REPO_IN → SOLARINDS | +1.00 | events | -2.00% |
+| 1 | F_GOVT_CAPEX → SOLARINDS | +1.00 | events | +1.50% |
+| 1 | F_POWER_DEMAND_IN → SOLARINDS | +1.20 | events | +1.20% |
+| 2 | P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → SOLARINDS | +1.00 | events | +0.60% |
+| 1 | F_FERTILISER_INPUTS → SOLARINDS | +1.00 | events | -0.50% |
+| 1 | C_RUSSIA → SOLARINDS | +1.00 | events | +0.50% |
+| 2 | F_DXY → C_AFRICA_LATAM → SOLARINDS | +0.74 | observed | -0.35% |
+| 1 | F_USDINR → SOLARINDS | -0.37 | observed | -0.18% |
+| 1 | F_BRENT → SOLARINDS | +0.00 | observed | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # SOLARINDS — Solar Industries India (Nifty Next 50, as of 2026-11-05)

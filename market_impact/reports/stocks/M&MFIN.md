@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.5%**, **12 months -2.4%** (rank 141 / 134 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.4%): 3 months 47%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.5% … P90 +1.7%; plausible 12m relative-return range incl. stock-specific noise: -53.4% … +41.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -5.2% beta-adjusted vs realised market-adjusted move -8.7%); forward event exposure -3.6% (3m -2.5%; half assumed priced); company-specific events +1.1%
+- Expected relative return: **3 months -1.4%**, **12 months -2.4%** (rank 141 / 134 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.4%): 3 months 47%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.3% … P90 +3.0%; plausible 12m relative-return range incl. stock-specific noise: -39.2% … +54.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -5.2% beta-adjusted vs realised market-adjusted move -8.7%); forward event exposure -3.5% (3m -2.5%; half assumed priced); company-specific events +1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -1.3 | -0.4 | -0.1 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.0% | +1.7% | +1.5 | +0.2 | +0.8 | +0.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → M&MFIN | -4.95% | -4.95% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → M&MFIN | -3.31% | -3.31% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → M&MFIN | -3.30% | -3.30% |
-| 1 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → M&MFIN | -3.15% | -3.15% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → M&MFIN | -2.50% | -2.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → M&MFIN | +3.75% | +1.88% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → M&MFIN | -3.00% | -1.86% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → M&MFIN | +2.50% | +1.70% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_GLOBAL → M&MFIN | +1.65% | +1.65% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → M&MFIN | -2.00% | -1.24% |
-| 1 | EV_RURAL_DEMAND_SOFT26 ⇒ F_RURAL_DEMAND → M&MFIN | -1.20% | -1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → M&MFIN | -1.11% | -1.11% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_CREDIT_SPREADS_IN → M&MFIN | -1.05% | -1.05% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → M&MFIN | -2.50% | -1.00% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → M&MFIN | +0.96% | +0.96% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → M&MFIN | -2.50% | -0.89% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → M&MFIN | +1.50% | +0.87% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → M&MFIN | +1.20% | +0.84% |
+| 1 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → M&MFIN | -2.50% | -0.80% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → M&MFIN | -2.88% | -0.72% |
+| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → M&MFIN | +1.25% | +0.71% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → M&MFIN | -2.50% | -0.68% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → M&MFIN | +1.20% | +0.66% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → M&MFIN | -1.05% | -0.63% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → M&MFIN | -2.24% | -0.63% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_MONSOON → M&MFIN | -1.56 | events | -3.90% |
+| 1 | F_REPO_IN → M&MFIN | +1.00 | events | -2.50% |
+| 1 | F_FPI_FLOWS → M&MFIN | -1.60 | events | -2.40% |
+| 1 | F_CREDIT_SPREADS_IN → M&MFIN | +0.50 | events | -1.75% |
+| 1 | F_STEEL_GLOBAL → M&MFIN | +2.06 | observed | +1.64% |
+| 1 | F_RURAL_DEMAND → M&MFIN | -0.25 | events | -1.00% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → M&MFIN | +0.50 | events | +0.96% |
+| 1 | F_GOLD → M&MFIN | -1.05 | observed | -0.52% |
+| 1 | F_AUTO_DEMAND_IN → M&MFIN | -0.10 | events | -0.35% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → M&MFIN | +1.00 | events | -0.24% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → M&MFIN | +1.15 | events | -0.21% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → M&MFIN | -1.56 | events | -0.19% |
 
 ## Analyst profile (agent research, sourced)
 # M&MFIN - Mahindra & Mahindra Financial Services (midcap, vehicle/rural NBFC)

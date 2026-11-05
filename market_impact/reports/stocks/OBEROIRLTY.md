@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -3.2%**, **12 months -5.2%** (rank 176 / 166 of 200 for 3m / 12m); beta 1.22
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.7%): 3 months 39%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.0% … P90 -2.9%; plausible 12m relative-return range incl. stock-specific noise: -41.4% … +21.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.7%): 3 months 39%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.0% … P90 -2.5%; plausible 12m relative-return range incl. stock-specific noise: -42.4% … +24.6%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.2 pp (model impact -4.4% beta-adjusted vs realised market-adjusted move +0.2%); forward event exposure -5.6% (3m -3.2%; half assumed priced); company-specific events +1.9%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.1% | +1.8% | +0.0 | +0.6 | +1.5 | +0.9 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -6.2% | -1.7% | +0.0 | -5.1 | -0.7 | -0.5 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → OBEROIRLTY | -4.40% | -4.40% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → OBEROIRLTY | -3.31% | -3.31% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → OBEROIRLTY | -2.50% | -2.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → OBEROIRLTY | +5.00% | +2.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → OBEROIRLTY | -2.21% | -2.21% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → OBEROIRLTY | -1.68% | -1.68% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → OBEROIRLTY | -1.19% | -1.19% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → OBEROIRLTY | +1.00% | +1.00% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → OBEROIRLTY | -2.50% | -1.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → OBEROIRLTY | -0.94% | -0.94% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_HOUSING_DEMAND → OBEROIRLTY | -0.90% | -0.90% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → OBEROIRLTY | +0.89% | +0.89% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → OBEROIRLTY | -2.99% | -0.84% |
-| 4 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → OBEROIRLTY | -0.81% | -0.81% |
-| 2 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → F_REPO_IN → OBEROIRLTY | -0.80% | -0.80% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → OBEROIRLTY | -2.88% | -0.72% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → OBEROIRLTY | -2.50% | -0.68% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → OBEROIRLTY | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → OBEROIRLTY | -3.00% | -0.66% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → OBEROIRLTY | -1.00% | -0.60% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → OBEROIRLTY | -2.50% | -0.55% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → OBEROIRLTY | -1.92% | -0.54% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → OBEROIRLTY | -1.92% | -0.48% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → OBEROIRLTY | -0.96% | -0.48% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → OBEROIRLTY | -0.63% | -0.41% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → OBEROIRLTY | -1.12% | -0.40% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → OBEROIRLTY | +0.67% | +0.39% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → OBEROIRLTY | -1.60 | events | -3.20% |
+| 1 | F_REPO_IN → OBEROIRLTY | +1.00 | events | -2.50% |
+| 1 | F_GSEC_10Y_IN → OBEROIRLTY | +1.70 | events | -2.04% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → OBEROIRLTY | +1.70 | events | -0.71% |
+| 1 | F_STEEL_INDIA → OBEROIRLTY | +1.65 | events | -0.66% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → OBEROIRLTY | +0.50 | events | +0.42% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → OBEROIRLTY | +1.00 | events | -0.36% |
+| 1 | F_URBAN_DEMAND → OBEROIRLTY | +0.20 | events | +0.30% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → OBEROIRLTY | +1.00 | events | -0.28% |
+| 1 | F_US_TECH_SPEND → OBEROIRLTY | -0.60 | events | -0.24% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → OBEROIRLTY | +1.65 | events | -0.12% |
+| 1 | F_USDINR → OBEROIRLTY | -0.37 | observed | -0.11% |
 
 ## Analyst profile (agent research, sourced)
 # Oberoi Realty (OBEROIRLTY) - profile as of 2026-11-05

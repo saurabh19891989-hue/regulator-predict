@@ -54,7 +54,7 @@ First RBI hike since 2023. Repo 5.25% -> 5.50% (held at 5.25% on 5 Aug 2026). St
 | AUBANK | -3.6 | -3.0 | -0.7 | +0.2 | -0.1 |
 | OBEROIRLTY | -3.5 | -2.9 | -0.6 | -0.0 | -0.1 |
 
-Share of absolute impact by order: 1: 78%, 2: 14%, 3: 4%, 4: 3%
+Share of absolute impact by order: 1: 79%, 2: 14%, 3: 4%, 4: 3%
 
 ## Sources
 - 2026-10-07 RBI MPC meeting highlights: Repo rate hiked to 5.5% - The Hindu https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en

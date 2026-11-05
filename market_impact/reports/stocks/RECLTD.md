@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months +0.2%** (rank 90 / 98 of 200 for 3m / 12m); beta 1.35
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.0%): 3 months 51%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.9% … P90 +4.9%; plausible 12m relative-return range incl. stock-specific noise: -31.4% … +21.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +2.2 pp (model impact +4.4% beta-adjusted vs realised market-adjusted move -16.7%); forward event exposure -2.8% (3m -0.3%; half assumed priced); company-specific events +1.1%
+- Expected relative return: **3 months +0.1%**, **12 months -0.1%** (rank 94 / 107 of 200 for 3m / 12m); beta 1.35
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.0%): 3 months 50%, 12 months 38%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.6% … P90 +5.9%; plausible 12m relative-return range incl. stock-specific noise: -29.8% … +18.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.7% beta-adjusted vs realised market-adjusted move -16.7%); forward event exposure -2.7% (3m -0.3%; half assumed priced); company-specific events +1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +2.5% | +2.5% | +2.5 | +0.0 | +0.0 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.5% | +2.5% | +2.5 | +0.8 | -0.6 | -0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → RECLTD | -5.50% | -5.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → RECLTD | +6.25% | +3.12% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → RECLTD | +2.50% | +2.50% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → RECLTD | +2.50% | +2.50% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → RECLTD | -8.00% | -2.24% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → RECLTD | -2.10% | -2.10% |
-| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → RECLTD | +2.00% | +2.00% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → RECLTD | -3.00% | -1.86% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → RECLTD | -1.80% | -1.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → RECLTD | +2.00% | +1.80% |
 | 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → RECLTD | +4.00% | +1.80% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → RECLTD | -10.00% | -1.80% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → RECLTD | -2.50% | -1.55% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → RECLTD | -1.49% | -1.49% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → RECLTD | +1.25% | +1.25% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → RECLTD | +3.00% | +1.20% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → RECLTD | +2.00% | +1.20% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → RECLTD | -3.00% | -0.90% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → RECLTD | -2.40% | -0.86% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → RECLTD | -3.75% | -0.82% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → RECLTD | -1.15% | -0.78% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → RECLTD | -2.88% | -0.72% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → RECLTD | +1.80% | +0.68% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → RECLTD | -1.60 | events | -4.00% |
+| 1 | P_RENEWABLE_SUPPORT → RECLTD | +1.50 | events | +3.75% |
+| 1 | F_GSEC_10Y_IN → RECLTD | +1.70 | events | -2.55% |
+| 1 | F_GOVT_CAPEX → RECLTD | +1.00 | events | +2.50% |
+| 1 | F_POWER_DEMAND_IN → RECLTD | +1.20 | events | +2.40% |
+| 1 | F_CREDIT_SPREADS_IN → RECLTD | +0.50 | events | -1.25% |
+| 1 | F_CPI_IN → RECLTD | +1.15 | events | -0.92% |
+| 1 | F_REPO_IN → RECLTD | +1.00 | events | -0.80% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → RECLTD | +0.50 | events | +0.80% |
+| 1 | F_COAL_INTL → RECLTD | +0.70 | director_override | -0.70% |
+| 2 | F_GDP_IN → P_RBI_PRUDENTIAL → RECLTD | +0.50 | events | -0.24% |
+| 1 | F_RISK_SENTIMENT → RECLTD | +0.11 | observed | -0.22% |
 
 ## Analyst profile (agent research, sourced)
 # RECLTD - REC Ltd (as of 2026-11-05)

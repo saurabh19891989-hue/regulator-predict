@@ -2,10 +2,10 @@
 *MIDCAP_100 · Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.6%**, **12 months +4.1%** (rank 36 / 41 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 60%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.9% … P90 +8.3%; plausible 12m relative-return range incl. stock-specific noise: -13.8% … +29.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.5% beta-adjusted vs realised market-adjusted move -11.2%); forward event exposure +9.3% (3m +4.4%; half assumed priced); company-specific events -2.3%
+- Expected relative return: **3 months +2.6%**, **12 months +4.1%** (rank 36 / 40 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 60%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.4% … P90 +9.4%; plausible 12m relative-return range incl. stock-specific noise: -19.0% … +27.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.5% beta-adjusted vs realised market-adjusted move -11.2%); forward event exposure +9.4% (3m +4.4%; half assumed priced); company-specific events -2.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,41 @@
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.1% | +1.1% | +0.8 | +0.1 | +0.3 | +0.0 |
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -1.0 | -0.1 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → CONCOR | -2.20% | -2.20% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → CONCOR | +1.49% | +1.49% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → CONCOR | +1.25% | +1.25% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CONCOR | +2.50% | +1.25% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → CONCOR | -1.12% | -1.12% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_RED_SEA → CONCOR | -1.00% | -1.00% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → CONCOR | +1.50% | +0.98% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → CONCOR | -0.84% | -0.84% |
-| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ P_US_TARIFF_INDIA → CONCOR | +0.75% | +0.75% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → CONCOR | -0.74% | -0.74% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → CONCOR | +0.90% | +0.72% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → CONCOR | +0.72% | +0.65% |
-| 3 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → F_GDP_IN → CONCOR | -0.61% | -0.61% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_RED_SEA → F_SHIPPING_RATES → CONCOR | -0.58% | -0.58% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → CONCOR | -3.75% | -0.56% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → CONCOR | +0.56% | +0.50% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → CONCOR | +0.67% | +0.45% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → CONCOR | -3.75% | -0.45% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CONCOR | -1.49% | -0.42% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → CONCOR | +0.50% | +0.40% |
+| 1 | EV_RED_SEA_CLOSURE ⇒ C_RED_SEA → CONCOR | -1.50% | -0.38% |
+| 1 | EV_RED_SEA_SUEZ_NORMALISATION ⇒ C_RED_SEA → CONCOR | +0.80% | +0.36% |
+| 1 | EV_INDIA_US_TALKS_COLLAPSE ⇒ P_US_TARIFF_INDIA → CONCOR | -2.25% | -0.34% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_GDP_IN → CONCOR | +0.48% | +0.34% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CONCOR | -1.87% | -0.34% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → CONCOR | -1.60 | events | -1.60% |
+| 1 | C_RED_SEA → CONCOR | +1.50 | events | -1.50% |
+| 1 | F_GSEC_10Y_IN → CONCOR | +1.70 | events | -1.36% |
+| 1 | F_GDP_IN → CONCOR | +0.50 | events | +1.25% |
+| 1 | P_US_TARIFF_INDIA → CONCOR | -0.60 | events | +0.90% |
+| 1 | F_SHIPPING_RATES → CONCOR | +0.30 | events | -0.18% |
+| 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → CONCOR | +0.50 | events | +0.15% |
+| 1 | F_USDINR → CONCOR | -0.37 | observed | +0.15% |
+| 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → CONCOR | -0.60 | events | +0.11% |
+| 2 | C_US_CHINA_DECOUPLING → T_CHINA_PLUS_ONE → CONCOR | -0.10 | events | -0.07% |
+| 1 | F_BRENT → CONCOR | +0.00 | observed | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # CONCOR — Container Corporation of India Ltd. (Midcap 100) — profile as of 2026-11-05

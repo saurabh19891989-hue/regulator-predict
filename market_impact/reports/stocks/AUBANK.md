@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -4.8%**, **12 months -9.5%** (rank 191 / 189 of 200 for 3m / 12m); beta 0.95
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.5%): 3 months 33%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -24.8% … P90 -2.5%; plausible 12m relative-return range incl. stock-specific noise: -27.9% … +24.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.6 pp (model impact -8.3% beta-adjusted vs realised market-adjusted move -7.1%); forward event exposure -13.2% (3m -6.1%; half assumed priced); company-specific events -2.3%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.5%): 3 months 33%, 12 months 22%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -24.7% … P90 -2.0%; plausible 12m relative-return range incl. stock-specific noise: -32.0% … +11.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.6 pp (model impact -8.3% beta-adjusted vs realised market-adjusted move -7.1%); forward event exposure -13.1% (3m -6.0%; half assumed priced); company-specific events -2.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.9% | -2.9% | -2.6 | -0.2 | -0.0 | -0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -10.2% | -2.9% | +0.0 | -7.4 | -1.6 | -1.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → AUBANK | -6.60% | -6.60% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → AUBANK | +7.50% | +3.75% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → AUBANK | -3.31% | -3.31% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → AUBANK | -2.50% | -2.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → AUBANK | -2.21% | -2.21% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → AUBANK | -3.50% | -2.17% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → AUBANK | -2.10% | -2.10% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → AUBANK | -3.00% | -1.86% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → AUBANK | -1.78% | -1.78% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → AUBANK | +1.50% | +1.50% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → AUBANK | -1.41% | -1.41% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → AUBANK | -4.48% | -1.25% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → AUBANK | -1.25% | -1.25% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_LIQUIDITY_IN → AUBANK | -1.17% | -1.17% |
-| 4 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → NEW_FX_RESERVES_IN → F_LIQUIDITY_IN → AUBANK | -1.15% | -1.15% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → AUBANK | -5.60% | -1.01% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → AUBANK | -2.50% | -1.00% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → AUBANK | -4.50% | -0.99% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → AUBANK | -1.50% | -0.90% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → AUBANK | -3.00% | -0.90% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → AUBANK | -2.88% | -0.81% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → AUBANK | -1.25% | -0.78% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → AUBANK | -2.88% | -0.72% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → AUBANK | -2.88% | -0.72% |
+| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → AUBANK | +1.80% | +0.68% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → AUBANK | -2.50% | -0.68% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → AUBANK | -1.60 | events | -4.80% |
+| 1 | F_GSEC_10Y_IN → AUBANK | +1.70 | events | -2.55% |
+| 1 | F_REPO_IN → AUBANK | +1.00 | events | -2.50% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → AUBANK | +0.50 | events | +1.12% |
+| 1 | F_LIQUIDITY_IN → AUBANK | -0.90 | events | -0.90% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → AUBANK | -1.56 | events | -0.62% |
+| 1 | F_RURAL_DEMAND → AUBANK | -0.25 | events | -0.50% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → AUBANK | +0.50 | events | +0.43% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → AUBANK | +1.15 | events | -0.35% |
+| 1 | F_AUTO_DEMAND_IN → AUBANK | -0.10 | events | -0.30% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → AUBANK | +1.00 | events | -0.29% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → AUBANK | +1.00 | events | -0.28% |
 
 ## Analyst profile (agent research, sourced)
 # AUBANK - AU Small Finance Bank Ltd. (Nifty 200, I_PRIVATE_BANKS) - as of 2026-11-05

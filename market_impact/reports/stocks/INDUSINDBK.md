@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -4.2%**, **12 months -8.0%** (rank 184 / 187 of 200 for 3m / 12m); beta 1.23
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 33%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -18.1% … P90 +3.9%; plausible 12m relative-return range incl. stock-specific noise: -33.0% … +16.9%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 34%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -23.8% … P90 +6.7%; plausible 12m relative-return range incl. stock-specific noise: -33.9% … +23.2%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.6 pp (model impact -7.7% beta-adjusted vs realised market-adjusted move -4.5%); forward event exposure -9.4% (3m -3.9%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -3.9% | -3.9% | -1.4 | -2.5 | -0.0 | -0.0 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +6.6% | +3.8% | +1.8 | +1.8 | +2.3 | +0.7 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → INDUSINDBK | -8.80% | -8.80% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → INDUSINDBK | +10.00% | +5.00% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → INDUSINDBK | -8.00% | -4.96% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → INDUSINDBK | -14.00% | -3.92% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → INDUSINDBK | -17.50% | -3.15% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → INDUSINDBK | -2.85% | -2.85% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → INDUSINDBK | -2.38% | -2.38% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → INDUSINDBK | -2.38% | -2.38% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → INDUSINDBK | -2.10% | -2.10% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → INDUSINDBK | +2.00% | +2.00% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → INDUSINDBK | +2.00% | +2.00% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → INDUSINDBK | -1.88% | -1.88% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → INDUSINDBK | -3.00% | -1.86% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → INDUSINDBK | -1.68% | -1.68% |
-| 3 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → F_ASSET_QUALITY_IN → INDUSINDBK | -1.61% | -1.61% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → INDUSINDBK | -4.20% | -1.50% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → INDUSINDBK | -6.00% | -1.32% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → INDUSINDBK | -5.04% | -1.26% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_ASSET_QUALITY_IN → INDUSINDBK | +1.38% | +1.24% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → INDUSINDBK | -3.84% | -1.08% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → INDUSINDBK | +1.15% | +1.04% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → INDUSINDBK | +1.75% | +1.02% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → INDUSINDBK | -3.84% | -0.96% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → INDUSINDBK | -3.00% | -0.90% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → F_ASSET_QUALITY_IN → INDUSINDBK | +1.28% | +0.87% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → INDUSINDBK | -1.60 | events | -6.40% |
+| 1 | F_GSEC_10Y_IN → INDUSINDBK | +1.70 | events | -2.55% |
+| 1 | F_GDP_IN → INDUSINDBK | +0.50 | events | +2.00% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → INDUSINDBK | -1.56 | events | -1.50% |
+| 1 | F_US_10Y → INDUSINDBK | +1.68 | observed | -1.34% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → INDUSINDBK | +0.50 | events | +1.28% |
+| 2 | F_CPI_IN → F_UNSECURED_STRESS → INDUSINDBK | +1.15 | events | -0.83% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → INDUSINDBK | -0.25 | events | -0.64% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → INDUSINDBK | +1.00 | events | -0.64% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → INDUSINDBK | -1.56 | events | -0.60% |
+| 1 | F_GOLD → INDUSINDBK | -1.05 | observed | -0.42% |
+| 1 | F_RISK_SENTIMENT → INDUSINDBK | +0.11 | observed | -0.39% |
 
 ## Analyst profile (agent research, sourced)
 # INDUSINDBK - IndusInd Bank Ltd. (as of 2026-11-05)

@@ -56,7 +56,7 @@ Gold peaked at ~$5,419/oz in Jan 2026 and is ~$4,128 (-8.4% since 1 Jun, -12.4% 
 | JIOFIN | -3.1 | +0.0 | -2.7 | -0.3 | -0.2 |
 | ADANIENSOL | -3.1 | +0.0 | -2.6 | -0.4 | -0.1 |
 
-Share of absolute impact by order: 1: 16%, 2: 67%, 3: 13%, 4: 5%
+Share of absolute impact by order: 1: 16%, 2: 67%, 3: 12%, 4: 5%
 
 ## Sources
 - 2026-10-26 Silver prices fall 53% from peak: Should buyers wait or buy now? https://news.google.com/rss/search?q=Silver+prices+fall+53%+from+peak:+Should+buyers+wait+or+buy+now?&hl=en-IN&gl=IN&ceid=IN:en

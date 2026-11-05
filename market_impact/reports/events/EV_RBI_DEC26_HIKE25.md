@@ -52,7 +52,7 @@ Meeting date approximate (MPC calendar not retrieved; early Dec by convention). 
 | AUBANK | -3.6 | -3.0 | -0.7 | +0.2 | -0.1 |
 | OBEROIRLTY | -3.5 | -2.9 | -0.6 | -0.0 | -0.1 |
 
-Share of absolute impact by order: 1: 78%, 2: 14%, 3: 4%, 4: 3%
+Share of absolute impact by order: 1: 79%, 2: 14%, 3: 4%, 4: 3%
 
 ## Sources
 - 2026-10-07 India Set for Back-to-Back Rate Hikes - Bloomberg https://news.google.com/rss/search?q=RBI+rate+hike+December+2026+expected+economists+when:120d&hl=en-IN&gl=IN&ceid=IN:en

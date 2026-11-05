@@ -52,7 +52,7 @@ H1 FY27 fiscal deficit Rs 7.14 lakh crore = 42.1% of full-year BE (CGA, 30 Oct; 
 | ADANIENT | -2.8 | -2.5 | -0.2 | -0.1 | -0.0 |
 | GROWW | -2.7 | -2.4 | -0.1 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 77%, 2: 14%, 3: 7%, 4: 3%
+Share of absolute impact by order: 1: 77%, 2: 13%, 3: 7%, 4: 2%
 
 ## Sources
 - 2026-11-02 Fiscal deficit likely to exceed FY27 target by up to Rs 1.2 lakh crore - ET https://news.google.com/rss/search?q=Fiscal+deficit+likely+to+exceed+FY27+target+Rs+1.2+lakh+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en

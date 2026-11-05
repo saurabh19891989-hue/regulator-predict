@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +4.4%**, **12 months +8.6%** (rank 17 / 18 of 200 for 3m / 12m); beta 1.07
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.4%): 3 months 62%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +7.1% … P90 +12.5%; plausible 12m relative-return range incl. stock-specific noise: -13.2% … +45.3%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.4%): 3 months 62%, 12 months 78%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +5.0% … P90 +15.6%; plausible 12m relative-return range incl. stock-specific noise: -14.6% … +54.5%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.0 pp (model impact +12.1% beta-adjusted vs realised market-adjusted move -14.8%); forward event exposure +7.1% (3m +2.6%; half assumed priced); company-specific events +0.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.2% | +1.2% | +0.5 | +0.4 | +0.3 | -0.0 |
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.0% | -1.0% | -0.8 | -0.1 | -0.1 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → CGPOWER | +3.50% | +3.50% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → CGPOWER | +2.80% | +2.52% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → CGPOWER | -2.52% | -2.52% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_GLOBAL → CGPOWER | -1.85% | -1.85% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → CGPOWER | -1.72% | -1.72% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → CGPOWER | -1.30% | -1.30% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → CGPOWER | -4.50% | -1.26% |
-| 2 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → CGPOWER | +1.20% | +1.20% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → CGPOWER | -1.15% | -1.15% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → CGPOWER | +1.00% | +1.00% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → CGPOWER | +1.00% | +1.00% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → CGPOWER | +2.10% | +0.95% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → CGPOWER | +0.86% | +0.86% |
-| 2 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → CGPOWER | -0.84% | -0.84% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → CGPOWER | -3.00% | -0.84% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → CGPOWER | -3.00% | -0.75% |
+| 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → CGPOWER | +1.80% | +0.72% |
+| 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → CGPOWER | +1.20% | +0.54% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → CGPOWER | -1.30% | -0.52% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → CGPOWER | +0.84% | +0.50% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → CGPOWER | -0.64% | -0.44% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → CGPOWER | +0.48% | +0.43% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → CGPOWER | -1.50% | -0.37% |
+| 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → CGPOWER | +0.60% | +0.36% |
+| 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → CGPOWER | +0.60% | +0.36% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → CGPOWER | -1.30% | -0.35% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → CGPOWER | +1.00 | events | +3.50% |
+| 1 | F_STEEL_GLOBAL → CGPOWER | +2.06 | observed | -1.85% |
+| 1 | P_RENEWABLE_SUPPORT → CGPOWER | +1.50 | events | +1.50% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → CGPOWER | +1.20 | events | +1.44% |
+| 1 | F_REPO_IN → CGPOWER | +1.00 | events | -1.30% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → CGPOWER | +1.50 | events | +1.20% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → CGPOWER | +0.50 | events | +1.00% |
+| 1 | F_ALUMINIUM → CGPOWER | -1.96 | observed | +0.59% |
+| 1 | F_USDCNY → CGPOWER | -0.47 | observed | +0.47% |
+| 1 | F_AI_CAPEX → CGPOWER | -0.30 | events | -0.45% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → CGPOWER | +0.50 | events | +0.35% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → CGPOWER | +1.00 | events | +0.32% |
 
 ## Analyst profile (agent research, sourced)
 # CGPOWER - CG Power and Industrial Solutions Ltd. (as of 2026-11-05)

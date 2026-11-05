@@ -2,9 +2,9 @@
 *MIDCAP_100 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.8%**, **12 months +3.2%** (rank 51 / 52 of 200 for 3m / 12m); beta 1.06
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.7%): 3 months 55%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.0% … P90 +8.1%; plausible 12m relative-return range incl. stock-specific noise: -29.5% … +45.4%
+- Expected relative return: **3 months +1.8%**, **12 months +3.2%** (rank 49 / 51 of 200 for 3m / 12m); beta 1.06
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.7%): 3 months 55%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.0% … P90 +9.6%; plausible 12m relative-return range incl. stock-specific noise: -25.7% … +37.7%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.6% beta-adjusted vs realised market-adjusted move -31.1%); forward event exposure +4.6% (3m +2.3%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | +0.3% | +0.3% | +0.0 | +0.0 | +0.2 | +0.1 |
 | Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -1.3% | -0.3% | +0.0 | -0.9 | -0.5 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → TIINDIA | -1.96% | -1.96% |
-| 1 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → TIINDIA | +1.20% | +1.20% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → TIINDIA | -1.06% | -1.06% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → TIINDIA | -0.80% | -0.80% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → TIINDIA | -0.71% | -0.71% |
-| 1 | EV_CHINA_Q3_GDP_AND_MINI_STIMULUS ⇒ F_USDCNY → TIINDIA | +0.68% | +0.68% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → TIINDIA | -0.56% | -0.56% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → TIINDIA | -0.49% | -0.49% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → TIINDIA | +0.47% | +0.47% |
-| 1 | EV_PM_EDRIVE_EXT ⇒ P_EV_POLICY → TIINDIA | +0.45% | +0.45% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → TIINDIA | -0.80% | -0.32% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → TIINDIA | -0.56% | -0.31% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → TIINDIA | +0.32% | +0.29% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_REPO_IN → TIINDIA | +0.29% | +0.29% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_DXY → F_USDCNY → TIINDIA | -0.26% | -0.26% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → TIINDIA | -0.92% | -0.23% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → TIINDIA | -0.80% | -0.22% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → TIINDIA | -0.32% | -0.19% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → TIINDIA | -0.80% | -0.18% |
+| 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → TIINDIA | +0.69% | +0.17% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → TIINDIA | -0.67% | -0.17% |
+| 1 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_USDCNY → TIINDIA | +0.45% | +0.16% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_STEEL_INDIA → TIINDIA | -0.16% | -0.14% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → TIINDIA | -0.20% | -0.13% |
+| 2 | EV_US_CHINA_TRUCE_EXTENDED ⇒ C_US_CHINA_DECOUPLING → F_USDCNY → TIINDIA | +0.18% | +0.13% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → TIINDIA | -0.36% | -0.13% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → TIINDIA | +0.21% | +0.12% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_STEEL_INDIA → TIINDIA | +1.65 | events | -2.31% |
+| 1 | P_EV_POLICY → TIINDIA | +1.10 | events | +1.65% |
+| 1 | F_REPO_IN → TIINDIA | +1.00 | events | -0.80% |
+| 1 | F_USDCNY → TIINDIA | -0.47 | observed | +0.70% |
+| 1 | F_AUTO_DEMAND_IN → TIINDIA | -0.10 | events | -0.14% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → TIINDIA | +1.00 | events | +0.13% |
+| 1 | F_USDINR → TIINDIA | -0.37 | observed | -0.11% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → TIINDIA | +0.50 | events | +0.08% |
+| 2 | T_ENERGY_TRANSITION → F_PRIVATE_CAPEX → TIINDIA | +0.50 | events | +0.05% |
+| 2 | F_CREDIT_SPREADS_IN → F_PRIVATE_CAPEX → TIINDIA | +0.50 | events | -0.05% |
+| 2 | F_REPO_IN → F_PRIVATE_CAPEX → TIINDIA | +1.00 | events | -0.03% |
+| 2 | P_FDI_RULES → F_PRIVATE_CAPEX → TIINDIA | +0.50 | events | +0.02% |
 
 ## Analyst profile (agent research, sourced)
 # TIINDIA - Tube Investments of India Ltd. (as of 2026-11-05)

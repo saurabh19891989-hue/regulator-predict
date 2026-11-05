@@ -2,10 +2,10 @@
 *MIDCAP_100 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -3.1%**, **12 months -6.1%** (rank 174 / 171 of 200 for 3m / 12m); beta 1.26
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.7%): 3 months 40%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.5% … P90 -1.4%; plausible 12m relative-return range incl. stock-specific noise: -34.0% … +26.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.9 pp (model impact -5.8% beta-adjusted vs realised market-adjusted move +3.4%); forward event exposure -3.1% (3m -0.8%; half assumed priced); company-specific events -1.1%
+- Expected relative return: **3 months -3.0%**, **12 months -6.1%** (rank 174 / 171 of 200 for 3m / 12m); beta 1.26
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.7%): 3 months 40%, 12 months 25%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.0% … P90 -1.6%; plausible 12m relative-return range incl. stock-specific noise: -40.3% … +15.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.9 pp (model impact -5.8% beta-adjusted vs realised market-adjusted move +3.4%); forward event exposure -3.0% (3m -0.7%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +3.1% | +1.6% | +3.4 | -0.3 | +0.0 | +0.0 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -8.7% | -1.6% | -7.2 | -1.9 | +0.5 | -0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → MPHASIS | -5.00% | -5.00% |
-| 1 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → MPHASIS | +3.96% | +3.96% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → MPHASIS | +3.13% | +3.13% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → MPHASIS | -2.64% | -2.64% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → MPHASIS | -9.90% | -2.47% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → MPHASIS | -2.50% | -2.12% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ P_US_VISA_OUTSOURCING → MPHASIS | -1.75% | -1.75% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MPHASIS | +3.00% | +1.50% |
-| 1 | EV_H1B_100K_FEE_COURT ⇒ P_US_VISA_OUTSOURCING → MPHASIS | -1.40% | -1.40% |
-| 1 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → MPHASIS | -1.36% | -1.36% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → MPHASIS | -4.50% | -1.26% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → MPHASIS | -1.26% | -1.26% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → MPHASIS | -1.20% | -1.20% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → MPHASIS | -4.50% | -1.12% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → MPHASIS | -4.00% | -1.12% |
+| 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → MPHASIS | -3.50% | -1.05% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → MPHASIS | -5.00% | -0.90% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → MPHASIS | +2.40% | +0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → MPHASIS | +2.60% | +0.57% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → MPHASIS | +1.58% | +0.56% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → MPHASIS | -0.95% | -0.55% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → MPHASIS | +2.10% | +0.52% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → MPHASIS | -1.20% | -0.43% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → MPHASIS | -1.40% | -0.42% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | T_GENAI_SERVICES → MPHASIS | +1.00 | events | -5.00% |
+| 1 | F_US_GDP → MPHASIS | +1.20 | events | +3.96% |
+| 1 | P_US_VISA_OUTSOURCING → MPHASIS | +0.90 | events | -3.15% |
+| 1 | F_FPI_FLOWS → MPHASIS | -1.60 | events | -1.92% |
+| 1 | F_GSEC_10Y_IN → MPHASIS | +1.70 | events | -1.53% |
+| 1 | F_US_10Y → MPHASIS | +1.68 | observed | -1.34% |
+| 1 | F_FED_FUNDS → MPHASIS | +1.62 | observed | -1.13% |
+| 1 | F_USDINR → MPHASIS | -0.37 | observed | -0.74% |
+| 1 | F_ALUMINIUM → MPHASIS | -1.96 | observed | -0.59% |
+| 1 | F_US_EQUITIES → MPHASIS | +0.23 | observed | +0.35% |
+| 1 | F_EU_GDP → MPHASIS | +0.22 | events | +0.18% |
+| 1 | F_RISK_SENTIMENT → MPHASIS | +0.11 | observed | -0.11% |
 
 ## Analyst profile (agent research, sourced)
 # Mphasis Ltd. (MPHASIS) - company profile, as of 2026-11-05

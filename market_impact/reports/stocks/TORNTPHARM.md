@@ -4,7 +4,7 @@
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -4.3%**, **12 months -7.4%** (rank 186 / 182 of 200 for 3m / 12m); beta 0.64
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.9%): 3 months 33%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.4% … P90 -4.0%; plausible 12m relative-return range incl. stock-specific noise: -26.8% … +13.0%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.4% … P90 -6.1%; plausible 12m relative-return range incl. stock-specific noise: -33.6% … +25.6%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.7 pp (model impact -7.3% beta-adjusted vs realised market-adjusted move +4.9%); forward event exposure -4.7% (3m -2.5%; half assumed priced); company-specific events -0.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.8% | +1.6% | +0.0 | +1.1 | +0.9 | +0.7 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.2 | -0.2 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → TORNTPHARM | -4.40% | -4.40% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → TORNTPHARM | -2.69% | -2.69% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → TORNTPHARM | -2.52% | -2.52% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TORNTPHARM | +5.00% | +2.50% |
-| 1 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → TORNTPHARM | -2.50% | -2.50% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → TORNTPHARM | -1.32% | -1.32% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → TORNTPHARM | +1.25% | +1.25% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → TORNTPHARM | -1.19% | -1.19% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → TORNTPHARM | +1.00% | +1.00% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → TORNTPHARM | -1.00% | -1.00% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → TORNTPHARM | -0.94% | -0.94% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → TORNTPHARM | -0.94% | -0.94% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → TORNTPHARM | -0.89% | -0.89% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TORNTPHARM | -2.99% | -0.84% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → TORNTPHARM | -0.80% | -0.80% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TORNTPHARM | -1.44% | -0.72% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → TORNTPHARM | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → TORNTPHARM | -3.00% | -0.66% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TORNTPHARM | -0.90% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → TORNTPHARM | -1.92% | -0.54% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → TORNTPHARM | -1.36% | -0.49% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → TORNTPHARM | -1.92% | -0.48% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → TORNTPHARM | +0.82% | +0.47% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → TORNTPHARM | -0.43% | -0.41% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → TORNTPHARM | -1.00% | -0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → TORNTPHARM | -1.80% | -0.40% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → TORNTPHARM | +1.00% | +0.35% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → TORNTPHARM | -0.36% | -0.32% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → TORNTPHARM | -1.60 | events | -3.20% |
+| 1 | F_GSEC_10Y_IN → TORNTPHARM | +1.70 | events | -3.06% |
+| 1 | P_USFDA_ENFORCEMENT → TORNTPHARM | +1.00 | events | -2.50% |
+| 1 | F_REPO_IN → TORNTPHARM | +1.00 | events | -1.00% |
+| 1 | F_URBAN_DEMAND → TORNTPHARM | +0.20 | events | +0.30% |
+| 1 | F_USDINR → TORNTPHARM | -0.37 | observed | -0.30% |
+| 1 | P_US_PHARMA_TARIFF → TORNTPHARM | +0.50 | events | -0.25% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → TORNTPHARM | +1.00 | events | +0.20% |
+| 2 | F_DXY → C_AFRICA_LATAM → TORNTPHARM | +0.74 | observed | -0.18% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → TORNTPHARM | +0.40 | events | -0.06% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → TORNTPHARM | +0.50 | events | +0.06% |
+| 2 | F_BRENT → F_CHEM_FEEDSTOCK → TORNTPHARM | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # TORNTPHARM - Torrent Pharmaceuticals Ltd. (Nifty Next 50, domestic pharma)

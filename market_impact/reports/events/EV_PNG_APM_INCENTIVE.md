@@ -42,16 +42,16 @@ Government (PIB 13 Sep; Hindu/BS 18 Aug) allocated additional 200 SCM (units of 
 | JSWENERGY | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
 | ADANIPOWER | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | TATAPOWER | -0.0 | +0.0 | -0.1 | -0.0 | +0.0 |
+| NTPC | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | PAYTM | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 | ADANIENSOL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | ADANIENT | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| NLCINDIA | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | HDFCLIFE | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | NATIONALUM | -0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
 | MFSL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| SBILIFE | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| LICI | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 42%, 2: 19%, 3: 5%, 4: 34%
+Share of absolute impact by order: 1: 41%, 2: 20%, 3: 5%, 4: 34%
 
 ## Sources
 - 2026-08-18 Government to allocate additional 200 SCM gas for domestic PNG (The Hindu) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=Government+to+allocate+additional+200+SCM+gas+PNG+when:120d&hl=en-IN&gl=IN&ceid=IN:en

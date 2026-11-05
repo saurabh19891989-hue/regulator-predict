@@ -2,10 +2,10 @@
 *NIFTY_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.3%**, **12 months +8.5%** (rank 27 / 19 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.0%): 3 months 65%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.1% … P90 +21.4%; plausible 12m relative-return range incl. stock-specific noise: -16.2% … +34.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +2.3 pp (model impact +4.6% beta-adjusted vs realised market-adjusted move -0.4%); forward event exposure +13.4% (3m +5.4%; half assumed priced); company-specific events +1.4%
+- Expected relative return: **3 months +3.1%**, **12 months +8.1%** (rank 30 / 20 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.0%): 3 months 64%, 12 months 72%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.4% … P90 +19.9%; plausible 12m relative-return range incl. stock-specific noise: -8.3% … +38.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.9 pp (model impact +3.8% beta-adjusted vs realised market-adjusted move -0.4%); forward event exposure +13.4% (3m +5.4%; half assumed priced); company-specific events +1.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -22,9 +22,9 @@
 | China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.65 | +0.00 | -2.90 | +3.05 | +1.50 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.55 | -1.20 | -0.15 | -0.16 | -0.04 | — |
 | US dollar index (`F_DXY`) | +3% DXY | +1.35 | +0.00 | +0.59 | +0.70 | +0.06 | +2.2% |
+| EU steel safeguard / CBAM burden on imports (`NEW_EU_STEEL_ACCESS`) | +1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost) | -1.32 | -0.80 | -0.54 | +0.02 | +0.00 | — |
 | Brent crude oil price (`F_BRENT`) | +10% Brent | +1.22 | +0.00 | +0.69 | +0.61 | -0.08 | +0.0% |
 | India CPI inflation (`F_CPI_IN`) | +1 pp | -1.15 | +0.00 | -0.88 | -0.04 | -0.22 | — |
-| Iron ore price (`F_IRON_ORE`) | +15% iron ore | -1.06 | -1.50 | +0.00 | +0.46 | -0.02 | -12.5% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -35,31 +35,49 @@
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.7% | +2.7% | +2.4 | +0.5 | -0.1 | -0.1 |
 | DGTR recommends/imposes anti-dumping duty on hot-rolled flat steel from China, Japan, Russia (`EV_INDIA_HR_STEEL_AD_PROVISIONAL`) | anticipated | 0.55 | +4.8% | +2.6% | +4.8 | +0.0 | -0.0 | +0.0 |
 | Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -2.2% | -2.2% | +0.0 | -1.4 | -0.9 | +0.1 |
+| EU quota-halving steel regime and CBAM cut Indian steel exports to EU (`EV_EU_STEEL_REGIME_CBAM_HITS_INDIA`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | +0.0 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +1.9% | +1.9% | +0.0 | +1.1 | +0.9 | -0.2 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.0% | +1.8% | +1.6 | +0.6 | -0.1 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.6% | -1.6% | -1.2 | -0.1 | -0.2 | -0.0 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | +4.2% | +1.5% | +0.0 | +2.1 | +2.0 | +0.0 |
 | Chinese steel/aluminium export surge floods Asia as China demand stays weak (`EV_CHINA_STEEL_EXPORT_FLOOD`) | risk_scenario | 0.25 | -5.7% | -1.4% | +0.0 | -6.8 | +1.1 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.0 | -0.1 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_STEEL_INDIA → JSWSTEEL | +12.60% | +12.60% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_COKING_COAL → JSWSTEEL | -9.18% | -9.18% |
-| 1 | EV_STEEL_RALLY_2026 ⇒ F_COKING_COAL → JSWSTEEL | -6.60% | -6.60% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → JSWSTEEL | +3.91% | +3.91% |
-| 1 | EV_COKING_COAL_SURGE_AUG26 ⇒ F_STEEL_INDIA → JSWSTEEL | +3.60% | +3.60% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → JSWSTEEL | +3.17% | +3.17% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → JSWSTEEL | +2.00% | +2.00% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → JSWSTEEL | +3.60% | +1.98% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → JSWSTEEL | -1.59% | -1.59% |
 | 1 | EV_UNION_BUDGET_FEB27_METALS ⇒ F_COKING_COAL → JSWSTEEL | +1.65% | +1.48% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → JSWSTEEL | +1.60% | +1.44% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → JSWSTEEL | -1.44% | -1.44% |
-| 1 | EV_EU_STEEL_REGIME_CBAM_HITS_INDIA ⇒ F_STEEL_INDIA → JSWSTEEL | -1.35% | -1.35% |
-| 1 | EV_IRON_ORE_TWO_YEAR_LOW ⇒ F_IRON_ORE → JSWSTEEL | +1.24% | +1.24% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → JSWSTEEL | -1.20% | -1.20% |
+| 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → JSWSTEEL | -4.44% | -1.11% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COKING_COAL → JSWSTEEL | -2.20% | -0.77% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → JSWSTEEL | +3.25% | +0.71% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → JSWSTEEL | +1.98% | +0.71% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → JSWSTEEL | -1.19% | -0.69% |
+| 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → JSWSTEEL | -2.70% | -0.68% |
+| 1 | EV_STEEL_SAFEGUARD_EARLY_RELAXATION ⇒ F_STEEL_INDIA → JSWSTEEL | -4.50% | -0.67% |
+| 2 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → JSWSTEEL | +1.33% | +0.67% |
+| 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ P_STEEL_DUTY_IN → JSWSTEEL | +1.20% | +0.66% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → JSWSTEEL | -1.15% | -0.58% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → JSWSTEEL | +1.60% | +0.57% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → JSWSTEEL | -0.96% | -0.56% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_COKING_COAL → JSWSTEEL | +2.87 | events | -15.79% |
+| 1 | F_STEEL_INDIA → JSWSTEEL | +1.65 | events | +14.85% |
+| 1 | F_GOVT_CAPEX → JSWSTEEL | +1.00 | events | +2.00% |
+| 1 | F_IRON_ORE → JSWSTEEL | -0.83 | observed | +1.25% |
+| 1 | F_REPO_IN → JSWSTEEL | +1.00 | events | -1.20% |
+| 1 | F_USDINR → JSWSTEEL | -0.37 | observed | -0.92% |
+| 1 | NEW_EU_STEEL_ACCESS → JSWSTEEL | +1.00 | events | -0.80% |
+| 1 | F_GDP_IN → JSWSTEEL | +0.50 | events | +0.40% |
+| 2 | F_STEEL_INDIA → P_STEEL_DUTY_IN → JSWSTEEL | +1.65 | events | -0.30% |
+| 1 | F_EU_GDP → JSWSTEEL | +0.22 | events | +0.09% |
+| 1 | F_AUTO_DEMAND_IN → JSWSTEEL | -0.10 | events | -0.08% |
+| 3 | F_CHINA_GDP → F_CHINA_STEEL_EXPORTS → P_STEEL_DUTY_IN → JSWSTEEL | +0.30 | events | -0.04% |
 
 ## Analyst profile (agent research, sourced)
 # JSWSTEEL — JSW Steel Ltd. (Nifty 50, I_STEEL) — as of 2026-11-05

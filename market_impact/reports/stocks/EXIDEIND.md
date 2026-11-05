@@ -2,10 +2,10 @@
 *MIDCAP_100 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +2.0%** (rank 77 / 69 of 200 for 3m / 12m); beta 1.14
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.6%): 3 months 52%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.8% … P90 +6.7%; plausible 12m relative-return range incl. stock-specific noise: -18.7% … +43.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.0% beta-adjusted vs realised market-adjusted move -11.1%); forward event exposure +2.4% (3m +0.8%; half assumed priced); company-specific events +1.0%
+- Expected relative return: **3 months +0.7%**, **12 months +2.0%** (rank 76 / 69 of 200 for 3m / 12m); beta 1.14
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.6%): 3 months 52%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.5% … P90 +7.3%; plausible 12m relative-return range incl. stock-specific noise: -30.8% … +50.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.0% beta-adjusted vs realised market-adjusted move -11.1%); forward event exposure +2.4% (3m +0.9%; half assumed priced); company-specific events +1.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,38 @@
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | +0.0 | -0.4 | -0.4 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -3.5% | -0.8% | -3.1 | -0.2 | -0.1 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → EXIDEIND | -2.97% | -2.97% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → EXIDEIND | -2.10% | -2.10% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → EXIDEIND | +1.50% | +1.50% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ P_PLI → EXIDEIND | +1.20% | +0.96% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → EXIDEIND | -0.79% | -0.79% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → EXIDEIND | -0.79% | -0.79% |
-| 2 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → T_ENERGY_TRANSITION → EXIDEIND | +0.78% | +0.78% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → EXIDEIND | -0.66% | -0.66% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → EXIDEIND | -0.63% | -0.63% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → EXIDEIND | -1.20% | -0.60% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → EXIDEIND | -0.60% | -0.60% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_AUTO_DEMAND_IN → EXIDEIND | -0.60% | -0.60% |
-| 2 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_US_10Y → F_GSEC_10Y_IN → EXIDEIND | -0.58% | -0.58% |
-| 2 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → T_ENERGY_TRANSITION → EXIDEIND | +0.58% | +0.58% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → EXIDEIND | +0.90% | +0.54% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → EXIDEIND | -1.50% | -0.54% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → EXIDEIND | +0.90% | +0.52% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → EXIDEIND | -1.92% | -0.48% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → EXIDEIND | -0.75% | -0.45% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → EXIDEIND | -0.36% | -0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → EXIDEIND | -1.50% | -0.33% |
+| 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → EXIDEIND | +0.39% | +0.28% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → EXIDEIND | -0.30% | -0.27% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → EXIDEIND | -0.45% | -0.27% |
+| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → EXIDEIND | +0.45% | +0.26% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → EXIDEIND | -0.60% | -0.24% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → EXIDEIND | -1.04% | -0.23% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → EXIDEIND | +1.70 | events | -2.55% |
+| 1 | T_ENERGY_TRANSITION → EXIDEIND | +0.50 | events | +1.50% |
+| 1 | F_REPO_IN → EXIDEIND | +1.00 | events | -0.60% |
+| 1 | F_AUTO_DEMAND_IN → EXIDEIND | -0.10 | events | -0.40% |
+| 1 | F_USDINR → EXIDEIND | -0.37 | observed | +0.30% |
+| 2 | F_CHINA_GDP → F_ZINC_LEAD → EXIDEIND | +0.30 | events | -0.18% |
+| 2 | F_DXY → F_ZINC_LEAD → EXIDEIND | +0.74 | observed | +0.18% |
+| 1 | F_BRENT → EXIDEIND | +0.00 | observed | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Exide Industries Ltd. (EXIDEIND) — Market Impact profile, 2026-11-05

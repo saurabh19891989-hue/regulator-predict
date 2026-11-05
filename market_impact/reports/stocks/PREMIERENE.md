@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +7.7%**, **12 months +11.9%** (rank 2 / 4 of 200 for 3m / 12m); beta 1.26
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.2%): 3 months 67%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +7.4% … P90 +16.8%; plausible 12m relative-return range incl. stock-specific noise: -34.5% … +60.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +10.0 pp (model impact +21.0% beta-adjusted vs realised market-adjusted move -22.7%); forward event exposure +5.3% (3m +2.5%; half assumed priced); company-specific events +0.8%
+- Expected relative return: **3 months +7.7%**, **12 months +11.9%** (rank 2 / 6 of 200 for 3m / 12m); beta 1.26
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.2%): 3 months 67%, 12 months 68%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +8.1% … P90 +18.4%; plausible 12m relative-return range incl. stock-specific noise: -28.2% … +39.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +10.0 pp (model impact +21.0% beta-adjusted vs realised market-adjusted move -22.7%); forward event exposure +5.4% (3m +2.5%; half assumed priced); company-specific events +0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,38 @@
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -2.7% | -1.0% | +0.0 | -1.1 | -1.3 | -0.3 |
 | Gold/silver rebound as Fed hike fears fade or Iran war ends (`EV_PRECIOUS_METALS_REBOUND_H1_2027`) | anticipated | 0.45 | -2.1% | -0.9% | -2.1 | +0.0 | -0.0 | +0.0 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → PREMIERENE | +6.00% | +6.00% |
-| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_SILVER → PREMIERENE | +3.50% | +3.50% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → PREMIERENE | +3.00% | +3.00% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → PREMIERENE | +2.00% | +2.00% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → PREMIERENE | -1.99% | -1.99% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → PREMIERENE | -1.56% | -1.56% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → PREMIERENE | -1.50% | -1.50% |
 | 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → PREMIERENE | +2.10% | +1.47% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → PREMIERENE | -1.33% | -1.33% |
-| 1 | EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26 ⇒ P_ANTI_DUMPING_IN → PREMIERENE | +1.20% | +1.20% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → PREMIERENE | +0.98% | +0.98% |
 | 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_SILVER → PREMIERENE | -2.10% | -0.94% |
 | 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → PREMIERENE | +2.80% | +0.84% |
-| 2 | EV_CAFE3_NOTIFIED ⇒ P_EV_POLICY → T_ENERGY_TRANSITION → PREMIERENE | +0.77% | +0.77% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → PREMIERENE | +1.20% | +0.72% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PREMIERENE | -1.50% | -0.60% |
+| 1 | EV_GST_RATE_CHANGE_APR27 ⇒ P_RENEWABLE_SUPPORT → PREMIERENE | +1.80% | +0.54% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → PREMIERENE | -1.73% | -0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → PREMIERENE | -1.50% | -0.41% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → PREMIERENE | -0.60% | -0.36% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → PREMIERENE | -1.50% | -0.33% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PREMIERENE | -1.30% | -0.29% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → PREMIERENE | -0.79% | -0.28% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → PREMIERENE | +0.47% | +0.28% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → PREMIERENE | -0.38% | -0.25% |
+| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → PREMIERENE | -0.67% | -0.24% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_RENEWABLE_SUPPORT → PREMIERENE | +1.50 | events | +9.00% |
+| 1 | F_SILVER → PREMIERENE | -2.50 | observed | +3.49% |
+| 1 | T_ENERGY_TRANSITION → PREMIERENE | +0.50 | events | +2.00% |
+| 1 | F_REPO_IN → PREMIERENE | +1.00 | events | -1.50% |
+| 1 | P_ANTI_DUMPING_IN → PREMIERENE | +0.40 | events | +1.20% |
+| 1 | F_ALUMINIUM → PREMIERENE | -1.96 | observed | +0.98% |
+| 1 | F_USDINR → PREMIERENE | -0.37 | observed | +0.37% |
+| 1 | P_US_TARIFF_INDIA → PREMIERENE | -0.60 | events | +0.18% |
 
 ## Analyst profile (agent research, sourced)
 # PREMIERENE — Premier Energies (as of 2026-11-05)

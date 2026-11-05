@@ -2,9 +2,9 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.0%**, **12 months +8.0%** (rank 31 / 22 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 58%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +4.0% … P90 +13.3%; plausible 12m relative-return range incl. stock-specific noise: -24.1% … +30.0%
+- Expected relative return: **3 months +3.0%**, **12 months +8.0%** (rank 32 / 22 of 200 for 3m / 12m); beta 1.15
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 58%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +4.4% … P90 +13.0%; plausible 12m relative-return range incl. stock-specific noise: -25.9% … +43.7%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.5 pp (model impact +11.1% beta-adjusted vs realised market-adjusted move -22.4%); forward event exposure +7.6% (3m +1.9%; half assumed priced); company-specific events -0.4%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +1.0 | +0.0 | +0.0 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -2.4% | -0.9% | -1.5 | -0.8 | -0.0 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → POLYCAB | +3.50% | +3.50% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → POLYCAB | +2.80% | +2.52% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POLYCAB | -2.52% | -2.52% |
-| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → POLYCAB | +2.00% | +2.00% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → POLYCAB | -1.99% | -1.99% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → POLYCAB | -1.50% | -1.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → POLYCAB | -1.35% | -1.35% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → POLYCAB | -1.33% | -1.33% |
-| 2 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → POLYCAB | -1.01% | -1.01% |
-| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → POLYCAB | +1.00% | +1.00% |
-| 2 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | +0.96% | +0.96% |
 | 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POLYCAB | +2.10% | +0.95% |
-| 2 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POLYCAB | -0.84% | -0.84% |
-| 2 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POLYCAB | +0.80% | +0.80% |
-| 1 | EV_BASE_METALS_ALUMINIUM_SLIDE ⇒ F_ALUMINIUM → POLYCAB | -0.78% | -0.78% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → POLYCAB | -1.50% | -0.60% |
+| 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | +1.44% | +0.58% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → POLYCAB | -1.80% | -0.50% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POLYCAB | +0.84% | +0.50% |
+| 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → POLYCAB | +0.96% | +0.43% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → POLYCAB | -1.73% | -0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → POLYCAB | -1.50% | -0.41% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → POLYCAB | -0.60% | -0.36% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | -0.52% | -0.35% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → POLYCAB | -1.50% | -0.33% |
+| 2 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → POLYCAB | -0.58% | -0.29% |
+| 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → POLYCAB | +0.48% | +0.29% |
+| 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POLYCAB | +0.48% | +0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → POLYCAB | +1.00 | events | +3.50% |
+| 1 | P_RENEWABLE_SUPPORT → POLYCAB | +1.50 | events | +3.00% |
+| 1 | F_REPO_IN → POLYCAB | +1.00 | events | -1.50% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → POLYCAB | +1.70 | events | -1.22% |
+| 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | +1.20 | events | +1.15% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → POLYCAB | +1.50 | events | +0.96% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POLYCAB | +0.50 | events | +0.80% |
+| 1 | F_ALUMINIUM → POLYCAB | -1.96 | observed | -0.78% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → POLYCAB | +1.00 | events | +0.40% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → POLYCAB | +0.50 | events | +0.36% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → POLYCAB | +0.50 | events | +0.35% |
+| 2 | F_REPO_IN → F_HOUSING_DEMAND → POLYCAB | +1.00 | events | -0.31% |
 
 ## Analyst profile (agent research, sourced)
 # POLYCAB — Polycab India Ltd. (profile as of 2026-11-05)

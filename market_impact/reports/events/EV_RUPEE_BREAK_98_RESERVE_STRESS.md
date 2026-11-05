@@ -55,7 +55,7 @@ Triggers: oil back >US$105 (US-Iran war flare-up, Hormuz/Kharg risk), further FP
 | GODREJPROP | -10.2 | -7.6 | -2.6 | +0.0 | -0.0 |
 | JSWENERGY | -10.1 | -9.2 | -1.0 | +0.0 | +0.1 |
 
-Share of absolute impact by order: 1: 84%, 2: 11%, 3: 3%, 4: 1%
+Share of absolute impact by order: 1: 85%, 2: 11%, 3: 3%, 4: 1%
 
 ## Sources
 - 2026-10-01 RBI's Net Short Dollar Position Soars to Record $200 Billion in August - Rediff https://news.google.com/rss/search?q=RBI+net+short+dollar+position+record+%24200+billion+forward+book+when:120d&hl=en-IN&gl=IN&ceid=IN:en

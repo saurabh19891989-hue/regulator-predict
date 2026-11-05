@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months +0.5%**, **12 months +2.1%** (rank 86 / 68 of 200 for 3m / 12m); beta 1.40
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.9%): 3 months 52%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.2% … P90 +5.1%; plausible 12m relative-return range incl. stock-specific noise: -32.5% … +35.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.1% beta-adjusted vs realised market-adjusted move -23.1%); forward event exposure +4.4% (3m +1.7%; half assumed priced); company-specific events -0.9%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.9%): 3 months 52%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.6% … P90 +8.8%; plausible 12m relative-return range incl. stock-specific noise: -35.2% … +36.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.0% beta-adjusted vs realised market-adjusted move -23.1%); forward event exposure +4.4% (3m +1.7%; half assumed priced); company-specific events -0.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,40 @@
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.0% | +1.2% | +0.3 | +0.5 | +0.6 | +0.6 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -5.4% | -1.0% | -3.0 | -1.9 | -0.4 | -0.2 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → IRFC | -1.76% | -1.76% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → IRFC | -1.40% | -1.40% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → IRFC | +1.20% | +1.20% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → IRFC | +1.20% | +1.08% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → IRFC | +2.00% | +1.00% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → IRFC | +0.96% | +0.86% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → IRFC | -0.86% | -0.86% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → IRFC | -0.78% | -0.78% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → IRFC | -2.40% | -0.67% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → IRFC | -3.00% | -0.54% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → IRFC | -0.53% | -0.53% |
-| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → IRFC | -0.52% | -0.52% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → IRFC | -0.48% | -0.48% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_LIQUIDITY_IN → IRFC | -0.47% | -0.47% |
-| 4 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → NEW_FX_RESERVES_IN → F_LIQUIDITY_IN → IRFC | -0.46% | -0.46% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → IRFC | -0.80% | -0.40% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → IRFC | -0.60% | -0.36% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → IRFC | +0.72% | +0.32% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → IRFC | -0.50% | -0.30% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → IRFC | -1.20% | -0.26% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → IRFC | -0.72% | -0.26% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → IRFC | -0.24% | -0.23% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → IRFC | -1.00% | -0.22% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → IRFC | -0.86% | -0.22% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → IRFC | -0.77% | -0.22% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GSEC_10Y_IN → IRFC | +1.70 | events | -1.70% |
+| 1 | F_FPI_FLOWS → IRFC | -1.60 | events | -1.28% |
+| 1 | F_GOVT_CAPEX → IRFC | +1.00 | events | +1.20% |
+| 1 | F_REPO_IN → IRFC | +1.00 | events | -0.40% |
+| 1 | F_CREDIT_SPREADS_IN → IRFC | +0.50 | events | -0.40% |
+| 1 | F_LIQUIDITY_IN → IRFC | -0.90 | events | -0.36% |
+| 1 | F_USDINR → IRFC | -0.37 | observed | +0.18% |
+| 1 | F_RISK_SENTIMENT → IRFC | +0.11 | observed | -0.07% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → IRFC | +0.30 | events | +0.04% |
+| 4 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → F_DOMESTIC_FLOWS → IRFC | -0.10 | events | -0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Indian Railway Finance Corporation (IRFC) - Market Impact profile, as of 2026-11-05

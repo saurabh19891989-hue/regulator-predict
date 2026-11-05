@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -2.7%**, **12 months -6.1%** (rank 168 / 170 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 43%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -21.7% … P90 +3.1%; plausible 12m relative-return range incl. stock-specific noise: -29.6% … +36.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -3.6% beta-adjusted vs realised market-adjusted move -16.4%); forward event exposure -7.5% (3m -1.5%; half assumed priced); company-specific events -2.4%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 43%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -22.8% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -63.1% … +24.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -3.6% beta-adjusted vs realised market-adjusted move -16.4%); forward event exposure -7.4% (3m -1.5%; half assumed priced); company-specific events -2.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -3.3% | -3.3% | +0.0 | -2.1 | -0.9 | -0.3 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -11.8% | -3.0% | -3.0 | -8.4 | +0.3 | -0.8 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ICICIAMC | -9.90% | -9.90% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ICICIAMC | +11.25% | +5.62% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ICICIAMC | -16.00% | -4.48% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ICICIAMC | -20.00% | -3.60% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → ICICIAMC | -2.67% | -2.67% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ICICIAMC | +2.25% | +2.25% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → ICICIAMC | -2.11% | -2.11% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → ICICIAMC | -1.92% | -1.92% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → ICICIAMC | -1.78% | -1.78% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → ICICIAMC | -4.80% | -1.71% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → ICICIAMC | -1.60% | -1.60% |
-| 3 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → F_RISK_SENTIMENT → ICICIAMC | +1.56% | +1.56% |
-| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_FPI_FLOWS → ICICIAMC | -1.53% | -1.53% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → ICICIAMC | +1.50% | +1.50% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ICICIAMC | -6.75% | -1.49% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → ICICIAMC | +2.00% | +1.16% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → ICICIAMC | +1.60% | +0.99% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ICICIAMC | -3.36% | -0.94% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ P_CAPITAL_GAINS_TAX → ICICIAMC | +2.50% | +0.88% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → ICICIAMC | -3.00% | -0.84% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → ICICIAMC | +1.60% | +0.80% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → ICICIAMC | +2.25% | +0.79% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → ICICIAMC | +0.86% | +0.78% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ICICIAMC | -4.20% | -0.76% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_RISK_SENTIMENT → ICICIAMC | -12.00% | -0.75% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → ICICIAMC | -1.60 | events | -7.20% |
+| 1 | F_GSEC_10Y_IN → ICICIAMC | +1.70 | events | -1.70% |
+| 1 | F_GDP_IN → ICICIAMC | +0.50 | events | +1.50% |
+| 1 | F_REPO_IN → ICICIAMC | +1.00 | events | -0.80% |
+| 2 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → ICICIAMC | -1.60 | events | -0.77% |
+| 1 | F_RISK_SENTIMENT → ICICIAMC | +0.11 | observed | -0.45% |
+| 2 | T_FORMALISATION → T_FINANCIALISATION → ICICIAMC | +0.30 | events | +0.29% |
+| 1 | F_US_EQUITIES → ICICIAMC | +0.23 | observed | +0.23% |
+| 2 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → ICICIAMC | -0.10 | events | +0.19% |
+| 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → ICICIAMC | -1.60 | events | +0.14% |
+| 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → ICICIAMC | +0.30 | events | +0.09% |
+| 3 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → ICICIAMC | -0.10 | events | -0.03% |
 
 ## Analyst profile (agent research, sourced)
 # ICICIAMC - ICICI Prudential Asset Management Company Ltd. (as of 2026-11-05)

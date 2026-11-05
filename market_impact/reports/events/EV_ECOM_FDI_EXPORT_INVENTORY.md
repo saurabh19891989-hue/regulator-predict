@@ -49,7 +49,7 @@ DPIIT relaxed FDI norms for export-oriented inventory-based e-commerce (Bar and 
 | GLENMARK | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | NMDC | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 23%, 2: 33%, 3: 25%, 4: 20%
+Share of absolute impact by order: 1: 23%, 2: 32%, 3: 25%, 4: 20%
 
 ## Sources
 - 2026-08-24 DPIIT relaxes FDI norms for export-oriented inventory-based e-commerce https://www.barandbench.com/

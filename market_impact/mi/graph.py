@@ -288,7 +288,7 @@ def run(draws=400):
             for path, cval, c in paths:
                 pw = float(np.prod(W_central[list(path)]))
                 mc_rows.append((path, cval / pw if pw else 0.0, m, c))
-                comp_paths[c].append({"event": ev["event_id"], "path": ev["event_id"] + " ⇒ " + path_str(net, n, path),
+                comp_paths[c].append({"event": ev["event_id"], "status": ev.get("status"), "path": ev["event_id"] + " ⇒ " + path_str(net, n, path),
                                       "order": len(path), "impact_if_event": m * cval,
                                       "expected_3m": m * cval * float(ev.get("prob_by_3m", 0)),
                                       "expected_12m": m * cval * float(ev.get("prob_by_12m", 0))})
@@ -302,7 +302,9 @@ def run(draws=400):
     evdf.to_csv(R("results", "event_impacts.csv"), index=False)
     with open(R("results", "company_paths.jsonl"), "w") as f:
         for c, lst in comp_paths.items():
-            lst = sorted(lst, key=lambda x: -abs(x["expected_12m"]))[:40]
+            fw = sorted([x for x in lst if x["status"] != "occurred"], key=lambda x: -abs(x["expected_12m"]))[:40]
+            oc = sorted([x for x in lst if x["status"] == "occurred"], key=lambda x: -abs(x["impact_if_event"]))[:15]
+            lst = fw + oc
             f.write(json.dumps({"company": c, "top_paths": lst}, ensure_ascii=False) + "\n")
 
     # 3) company-specific events from profiles (conditional impact midpoint × prob)
@@ -455,7 +457,7 @@ def recent_state(nodes, occurred):
         if f not in df.columns:
             continue
         s = df[f].dropna()
-        if len(s) < 30 or s.tail(30).nunique() <= 1:      # stale series (e.g. coal) → not observable
+        if len(s) < 30 or s.tail(30).nunique() <= 1 or s.index.max() < df.index.max() - pd.Timedelta(days=14):   # stale → not observable
             stale.add(f)
             continue
         b, l = s[s.index <= base].iloc[-1], s.iloc[-1]

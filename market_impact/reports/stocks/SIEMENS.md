@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.0%**, **12 months +4.8%** (rank 43 / 36 of 200 for 3m / 12m); beta 1.24
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.0%): 3 months 56%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.4% … P90 +9.7%; plausible 12m relative-return range incl. stock-specific noise: -13.4% … +39.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.1 pp (model impact +8.3% beta-adjusted vs realised market-adjusted move -13.1%); forward event exposure +3.1% (3m +0.8%; half assumed priced); company-specific events +0.5%
+- Expected relative return: **3 months +2.0%**, **12 months +4.8%** (rank 42 / 36 of 200 for 3m / 12m); beta 1.24
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.0%): 3 months 56%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.5% … P90 +9.5%; plausible 12m relative-return range incl. stock-specific noise: -24.4% … +33.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.1 pp (model impact +8.3% beta-adjusted vs realised market-adjusted move -13.1%); forward event exposure +3.2% (3m +0.9%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,42 @@
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.4% | -1.4% | -0.3 | -0.8 | -0.1 | -0.2 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.4% | +1.4% | +0.4 | +0.9 | +0.8 | +0.3 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → SIEMENS | -2.65% | -2.65% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → SIEMENS | +2.50% | +2.50% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → SIEMENS | -2.35% | -2.35% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → SIEMENS | -2.00% | -2.00% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SIEMENS | -1.80% | -1.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SIEMENS | +2.00% | +1.80% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → SIEMENS | -1.77% | -1.77% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → SIEMENS | +1.60% | +1.44% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → SIEMENS | +1.30% | +1.30% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → SIEMENS | -4.50% | -1.26% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → SIEMENS | +1.50% | +1.20% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → SIEMENS | -4.50% | -1.12% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → SIEMENS | -3.20% | -0.90% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SIEMENS | -2.00% | -0.80% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → SIEMENS | -4.00% | -0.72% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SIEMENS | +1.50% | +0.68% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SIEMENS | -2.30% | -0.58% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SIEMENS | -2.00% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → SIEMENS | -1.80% | -0.50% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → SIEMENS | +0.75% | +0.49% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → SIEMENS | -0.80% | -0.48% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → SIEMENS | -2.00% | -0.44% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_GOVT_CAPEX → SIEMENS | +1.00 | events | +2.50% |
+| 1 | F_REPO_IN → SIEMENS | +1.00 | events | -2.00% |
+| 1 | F_USDINR → SIEMENS | -0.37 | observed | +0.55% |
+| 2 | F_GDP_IN → F_PRIVATE_CAPEX → SIEMENS | +0.50 | events | +0.45% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → SIEMENS | +1.00 | events | +0.40% |
+| 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → SIEMENS | -0.60 | events | +0.36% |
+| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → SIEMENS | +1.00 | events | +0.36% |
+| 1 | F_US_EQUITIES → SIEMENS | +0.23 | observed | +0.35% |
+| 2 | T_ENERGY_TRANSITION → F_PRIVATE_CAPEX → SIEMENS | +0.50 | events | +0.27% |
+| 2 | F_CREDIT_SPREADS_IN → F_PRIVATE_CAPEX → SIEMENS | +0.50 | events | -0.27% |
+| 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → SIEMENS | +0.50 | events | +0.25% |
+| 2 | F_AI_CAPEX → T_DATA_CENTRES_IN → SIEMENS | -0.30 | events | -0.18% |
 
 ## Analyst profile (agent research, sourced)
 # SIEMENS — Siemens Ltd. (profile as of 2026-11-05)

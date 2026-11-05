@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -1.8%**, **12 months -4.3%** (rank 152 / 153 of 200 for 3m / 12m); beta 0.82
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 43%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.0% … P90 -1.8%; plausible 12m relative-return range incl. stock-specific noise: -38.4% … +21.7%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 43%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.3% … P90 +0.2%; plausible 12m relative-return range incl. stock-specific noise: -29.3% … +22.4%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.6 pp (model impact -7.2% beta-adjusted vs realised market-adjusted move +18.6%); forward event exposure +2.8% (3m +1.9%; half assumed priced); company-specific events -1.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -1.3 | +0.4 | -0.0 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -2.6% | -0.9% | -1.0 | -0.8 | -0.5 | -0.4 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → AUROPHARMA | -4.40% | -4.40% |
-| 1 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → AUROPHARMA | -4.00% | -4.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → AUROPHARMA | -2.69% | -2.69% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → AUROPHARMA | +2.50% | +2.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → AUROPHARMA | +5.00% | +2.50% |
-| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → AUROPHARMA | -1.98% | -1.98% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → AUROPHARMA | -1.68% | -1.68% |
-| 1 | EV_US_PHARMA_232_SEP26 ⇒ P_US_PHARMA_TARIFF → AUROPHARMA | -1.50% | -1.50% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → AUROPHARMA | +1.50% | +1.20% |
-| 1 | EV_RUPEE_DEFENCE_RESERVES_26 ⇒ F_USDINR → AUROPHARMA | -1.18% | -1.18% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → AUROPHARMA | -9.00% | -1.08% |
-| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → AUROPHARMA | +1.00% | +1.00% |
-| 2 | EV_USFDA_WARNING_WAVE_26 ⇒ P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → AUROPHARMA | +1.00% | +1.00% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → AUROPHARMA | +4.16% | +0.92% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → AUROPHARMA | -2.99% | -0.84% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → AUROPHARMA | -3.73% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → AUROPHARMA | -3.00% | -0.66% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ F_US_GENERIC_PRICING → AUROPHARMA | -5.00% | -0.60% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → AUROPHARMA | -1.92% | -0.54% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → AUROPHARMA | +0.75% | +0.49% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → AUROPHARMA | -1.36% | -0.49% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → AUROPHARMA | -1.92% | -0.48% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → AUROPHARMA | -0.96% | -0.48% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → AUROPHARMA | +0.82% | +0.47% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → AUROPHARMA | +1.26% | +0.45% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_USFDA_ENFORCEMENT → AUROPHARMA | +1.00 | events | -4.00% |
+| 1 | F_FPI_FLOWS → AUROPHARMA | -1.60 | events | -3.20% |
+| 1 | F_GSEC_10Y_IN → AUROPHARMA | +1.70 | events | -2.04% |
+| 1 | P_US_PHARMA_TARIFF → AUROPHARMA | +0.50 | events | -1.50% |
+| 1 | F_USDINR → AUROPHARMA | -0.37 | observed | -1.18% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → AUROPHARMA | +1.00 | events | +1.00% |
+| 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → AUROPHARMA | -0.60 | events | +0.36% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → AUROPHARMA | +0.50 | events | +0.30% |
+| 1 | F_REPO_IN → AUROPHARMA | +1.00 | events | -0.30% |
+| 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → AUROPHARMA | +0.50 | events | +0.25% |
+| 1 | F_EU_GDP → AUROPHARMA | +0.22 | events | +0.22% |
+| 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → AUROPHARMA | +0.40 | events | -0.13% |
 
 ## Analyst profile (agent research, sourced)
 # AUROPHARMA - Aurobindo Pharma Ltd. (Midcap 100, US generics)

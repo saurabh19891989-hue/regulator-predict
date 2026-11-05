@@ -3,9 +3,9 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -3.3%**, **12 months -6.6%** (rank 177 / 176 of 200 for 3m / 12m); beta 0.92
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.3%): 3 months 41%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.7% … P90 -3.0%; plausible 12m relative-return range incl. stock-specific noise: -37.6% … +30.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.5 pp (model impact -7.0% beta-adjusted vs realised market-adjusted move +14.0%); forward event exposure -4.9% (3m -1.9%; half assumed priced); company-specific events +0.9%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.3%): 3 months 41%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.5% … P90 -3.2%; plausible 12m relative-return range incl. stock-specific noise: -37.1% … +29.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.5 pp (model impact -7.0% beta-adjusted vs realised market-adjusted move +14.0%); forward event exposure -4.8% (3m -1.8%; half assumed priced); company-specific events +0.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -42,24 +42,39 @@
 | US $100,000 H-1B fee (new ~$103k proposal Aug 2026) blocked by court; administration appeals; DHS proposes $70k/$30k OPT fees (`EV_H1B_100K_FEE_COURT`) | occurred | 1.00 | -0.9% | -0.9% | -0.8 | -0.1 | +0.0 | +0.0 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -4.5% | -0.8% | -5.2 | +0.5 | +0.3 | -0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ T_GENAI_SERVICES → TECHM | -4.00% | -4.00% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → TECHM | +2.82% | +2.82% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → TECHM | -2.00% | -1.70% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_TECH_SPEND → TECHM | +1.60% | +1.60% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → TECHM | -1.40% | -1.40% |
-| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → TECHM | +1.30% | +1.30% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → TECHM | -4.50% | -1.26% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → TECHM | -4.50% | -1.12% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ F_US_TECH_SPEND → TECHM | -1.05% | -1.05% |
-| 1 | EV_IT_AI_DEFLATION_Q2FY27 ⇒ F_US_TECH_SPEND → TECHM | -1.05% | -1.05% |
-| 1 | EV_INDIAN_IT_Q2_VISA_SHOCK ⇒ P_US_VISA_OUTSOURCING → TECHM | -1.00% | -1.00% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_TECH_SPEND → TECHM | -3.99% | -1.00% |
-| 1 | EV_H1B_100K_FEE_COURT ⇒ P_US_VISA_OUTSOURCING → TECHM | -0.80% | -0.80% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_WAGES_IN → TECHM | -0.74% | -0.74% |
-| 2 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → F_USDINR → TECHM | +0.73% | +0.73% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_US_TECH_SPEND → TECHM | -2.52% | -0.71% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → TECHM | -2.40% | -0.67% |
+| 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → TECHM | -2.00% | -0.60% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → TECHM | -3.00% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → TECHM | +1.92% | +0.54% |
+| 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → TECHM | +2.10% | +0.52% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → TECHM | +2.34% | +0.51% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → TECHM | +1.42% | +0.51% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → TECHM | -0.85% | -0.50% |
+| 1 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → TECHM | -0.60% | -0.48% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → TECHM | -1.40% | -0.42% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | T_GENAI_SERVICES → TECHM | +1.00 | events | -4.00% |
+| 1 | F_US_TECH_SPEND → TECHM | -0.60 | events | -2.10% |
+| 1 | P_US_VISA_OUTSOURCING → TECHM | +0.90 | events | -1.80% |
+| 1 | F_GSEC_10Y_IN → TECHM | +1.70 | events | -1.70% |
+| 1 | F_FED_FUNDS → TECHM | +1.62 | observed | -1.13% |
+| 1 | F_USDINR → TECHM | -0.37 | observed | -0.66% |
+| 1 | F_US_EQUITIES → TECHM | +0.23 | observed | +0.35% |
+| 1 | F_EU_GDP → TECHM | +0.22 | events | +0.26% |
+| 1 | F_RISK_SENTIMENT → TECHM | +0.11 | observed | -0.07% |
 
 ## Analyst profile (agent research, sourced)
 # TECHM — Tech Mahindra Ltd. — profile as of 2026-11-05

@@ -27,11 +27,11 @@ CWC bulletin of 15 Oct 2026: 178 major reservoirs hold 126.717 BCM = 68.58% of l
 | POWERGRID | +0.3 | +0.0 | +0.3 | +0.1 | -0.1 |
 | WAAREEENER | +0.3 | +0.0 | +0.3 | +0.0 | -0.1 |
 | ADANIGREEN | +0.3 | +0.2 | +0.2 | -0.0 | -0.1 |
+| NLCINDIA | +0.3 | +0.1 | +0.2 | +0.0 | -0.1 |
+| NTPC | +0.2 | +0.1 | +0.2 | -0.0 | -0.1 |
 | SUZLON | +0.2 | +0.0 | +0.3 | +0.1 | -0.1 |
 | AMBUJACEM | +0.2 | +0.2 | +0.0 | +0.0 | -0.0 |
 | POWERINDIA | +0.2 | +0.0 | +0.0 | +0.4 | -0.2 |
-| SOLARINDS | +0.2 | +0.0 | +0.2 | +0.1 | -0.1 |
-| GVT&D | +0.2 | +0.0 | +0.0 | +0.3 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

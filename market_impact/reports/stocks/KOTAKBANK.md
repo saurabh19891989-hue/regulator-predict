@@ -3,8 +3,8 @@
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
 - Expected relative return: **3 months -0.8%**, **12 months -2.6%** (rank 127 / 136 of 200 for 3m / 12m); beta 0.83
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.6%): 3 months 47%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.8% … P90 +4.2%; plausible 12m relative-return range incl. stock-specific noise: -23.0% … +28.0%
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.6%): 3 months 47%, 12 months 38%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.6% … P90 +3.5%; plausible 12m relative-return range incl. stock-specific noise: -22.9% … +21.8%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.2 pp (model impact -0.5% beta-adjusted vs realised market-adjusted move +19.8%); forward event exposure -3.1% (3m -0.6%; half assumed priced); company-specific events +0.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,42 @@
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +2.4% | +2.4% | -0.1 | +1.0 | +1.4 | +0.3 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.5% | +2.3% | +0.0 | +0.9 | +1.5 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → KOTAKBANK | -3.96% | -3.96% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → KOTAKBANK | -8.80% | -2.46% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → KOTAKBANK | +4.50% | +2.25% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → KOTAKBANK | -3.50% | -2.17% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → KOTAKBANK | -11.00% | -1.98% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → KOTAKBANK | -1.78% | -1.78% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → KOTAKBANK | +1.50% | +1.50% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → KOTAKBANK | +1.32% | +1.32% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → KOTAKBANK | -1.25% | -1.25% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → KOTAKBANK | -2.00% | -1.24% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → KOTAKBANK | -1.07% | -1.07% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → KOTAKBANK | -1.06% | -1.06% |
-| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → KOTAKBANK | -1.01% | -1.01% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → KOTAKBANK | +1.00% | +1.00% |
-| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → KOTAKBANK | -0.98% | -0.98% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → KOTAKBANK | -2.64% | -0.94% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → KOTAKBANK | -1.50% | -0.93% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → KOTAKBANK | -3.17% | -0.79% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → KOTAKBANK | +0.86% | +0.78% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → KOTAKBANK | +1.10% | +0.64% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → KOTAKBANK | -2.00% | -0.60% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → KOTAKBANK | -2.70% | -0.59% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → KOTAKBANK | +0.88% | +0.55% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_ASSET_QUALITY_IN → KOTAKBANK | +0.60% | +0.54% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → KOTAKBANK | +0.80% | +0.54% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | F_FPI_FLOWS → KOTAKBANK | -1.60 | events | -2.88% |
+| 1 | F_GDP_IN → KOTAKBANK | +0.50 | events | +1.50% |
+| 1 | F_GSEC_10Y_IN → KOTAKBANK | +1.70 | events | -1.19% |
+| 1 | F_REPO_IN → KOTAKBANK | +1.00 | events | +1.00% |
+| 2 | F_GDP_IN → F_ASSET_QUALITY_IN → KOTAKBANK | +0.50 | events | +0.56% |
+| 1 | F_FED_FUNDS → KOTAKBANK | +1.62 | observed | -0.49% |
+| 2 | F_MONSOON → F_UNSECURED_STRESS → KOTAKBANK | -1.56 | events | -0.37% |
+| 2 | F_REPO_IN → F_CREDIT_GROWTH_IN → KOTAKBANK | +1.00 | events | -0.35% |
+| 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → KOTAKBANK | -0.25 | events | -0.28% |
+| 2 | F_REPO_IN → F_ASSET_QUALITY_IN → KOTAKBANK | +1.00 | events | -0.28% |
+| 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → KOTAKBANK | -1.56 | events | -0.26% |
+| 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → KOTAKBANK | +0.50 | events | +0.26% |
 
 ## Analyst profile (agent research, sourced)
 # KOTAKBANK - Kotak Mahindra Bank (Nifty 50, private bank)

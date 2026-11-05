@@ -2,9 +2,9 @@
 *NIFTY_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +4.8%**, **12 months +10.5%** (rank 13 / 11 of 200 for 3m / 12m); beta 1.24
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.9%): 3 months 67%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +7.7% … P90 +15.1%; plausible 12m relative-return range incl. stock-specific noise: -14.0% … +40.0%
+- Expected relative return: **3 months +4.8%**, **12 months +10.6%** (rank 13 / 11 of 200 for 3m / 12m); beta 1.24
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.9%): 3 months 67%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +7.5% … P90 +16.5%; plausible 12m relative-return range incl. stock-specific noise: -29.5% … +32.4%
 - Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.0 pp (model impact +10.0% beta-adjusted vs realised market-adjusted move -8.5%); forward event exposure +11.7% (3m +3.3%; half assumed priced); company-specific events +1.8%
 
 ## What moves this stock (company → drivers)
@@ -42,24 +42,40 @@
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.1% | -1.1% | -1.0 | -1.1 | -0.9 | -0.2 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.6% | +0.9% | +0.4 | +0.6 | +0.5 | +0.1 |
 
-## Strongest causal chains (1st–4th order)
+## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
+Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_DAC_APPROVALS_H2_26 ⇒ P_DEFENCE_PROCUREMENT → BEL | +5.50% | +5.50% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → BEL | +5.50% | +4.95% |
-| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → BEL | -2.64% | -2.64% |
-| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → BEL | +1.50% | +1.50% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BEL | +3.00% | +1.50% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → BEL | +1.20% | +1.08% |
-| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BEL | -1.08% | -1.08% |
-| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → BEL | -1.06% | -1.06% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BEL | -3.20% | -0.90% |
-| 1 | EV_RBI_OCT26_HIKE25 ⇒ F_REPO_IN → BEL | -0.80% | -0.80% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → BEL | -0.78% | -0.78% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → BEL | -4.00% | -0.72% |
-| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → BEL | -0.71% | -0.71% |
-| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_CPI_IN → F_REPO_IN → BEL | -0.71% | -0.71% |
 | 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → BEL | +1.20% | +0.60% |
+| 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ P_DEFENCE_PROCUREMENT → BEL | +1.10% | +0.55% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BEL | +0.90% | +0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → BEL | -1.80% | -0.40% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → BEL | -0.96% | -0.34% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → BEL | -1.15% | -0.32% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BEL | -0.80% | -0.32% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BEL | +1.08% | +0.30% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → BEL | -1.15% | -0.29% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → BEL | -1.15% | -0.29% |
+
+## What has already moved since 1 June 2026 (driver change × path)
+Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
+| order | chain | driver change (SSU) | source | impact |
+|---|---|---|---|---|
+| 1 | P_DEFENCE_PROCUREMENT → BEL | +1.00 | events | +5.50% |
+| 1 | F_FPI_FLOWS → BEL | -1.60 | events | -1.92% |
+| 1 | F_GOVT_CAPEX → BEL | +1.00 | events | +1.50% |
+| 1 | F_REPO_IN → BEL | +1.00 | events | -0.80% |
+| 2 | P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → BEL | +1.00 | events | +0.24% |
+| 1 | F_USDINR → BEL | -0.37 | observed | +0.18% |
+| 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BEL | -0.30 | events | +0.11% |
+| 1 | F_RISK_SENTIMENT → BEL | +0.11 | observed | -0.09% |
+| 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → BEL | -0.10 | events | +0.05% |
+| 3 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → F_SEMICONDUCTOR_SUPPLY → BEL | -0.10 | events | +0.02% |
 
 ## Analyst profile (agent research, sourced)
 # BEL - Bharat Electronics Ltd. (Defence electronics PSU, Nifty 50)

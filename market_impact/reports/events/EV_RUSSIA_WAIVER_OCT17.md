@@ -52,7 +52,7 @@ Trump waived the Graham-Act sanctions law mechanism two days before the 100% tar
 | NATIONALUM | -0.5 | +0.0 | +0.0 | -0.5 | -0.0 |
 | BIOCON | -0.5 | +0.0 | -0.2 | -0.4 | +0.1 |
 
-Share of absolute impact by order: 1: 11%, 2: 35%, 3: 29%, 4: 25%
+Share of absolute impact by order: 1: 11%, 2: 35%, 3: 30%, 4: 25%
 
 ## Sources
 - 2026-10-17 Trump waives Russia sanctions that threatened 100% tariffs on India (NDTV) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=Trump+waives+sanctions+Russian+oil+India+tariff+when:120d&hl=en-IN&gl=IN&ceid=IN:en

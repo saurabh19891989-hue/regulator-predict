@@ -2039,6 +2039,21 @@ NMDC,F_GDP_IN,India real GDP growth,-0.6233774999999999,+1 pp
 NMDC,F_COKING_COAL,Coking coal price,0.5848625,+15% coking coal
 NMDC,F_RISK_SENTIMENT,Global risk aversion (VIX),0.51631195,+5 VIX points
 NMDC,P_US_TARIFF_INDIA,US tariffs on Indian goods,0.47762649999999995,+10 pp average tariff
+NTPC,F_CPI_IN,India CPI inflation,-2.5338100902597396,+1 pp
+NTPC,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.168684387954546,+US$5 bn net inflow per quarter
+NTPC,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.0629700000000004,+25 bp yield
+NTPC,T_ENERGY_TRANSITION,Energy transition investment,1.9820399999999998,+1
+NTPC,P_POWER_REFORM,Power market / DISCOM reform,1.92,+1 = reform progress
+NTPC,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,1.4884,+1 = stronger support
+NTPC,F_FOOD_INFLATION_IN,India food inflation,-1.372478224431818,+2 pp
+NTPC,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.3684142053030304,+5 VIX points
+NTPC,F_DXY,US dollar index,-1.3247628110795455,+3% DXY
+NTPC,F_POWER_DEMAND_IN,Indian electricity demand,1.2278666666666669,+3 pp demand growth
+NTPC,F_USDINR,USD/INR exchange rate,-1.173255697727273,+3% USD/INR (rupee weaker)
+NTPC,F_US_10Y,US 10-year Treasury yield,-1.1344125499999997,+25 bp yield
+NTPC,F_US_EQUITIES,US equity market,1.1230734999999998,+5% S&P 500
+NTPC,F_BRENT,Brent crude oil price,-1.0723349330194805,+10% Brent
+NTPC,T_DATA_CENTRES_IN,Indian data-centre build-out,1.055572,+1
 NYKAA,F_URBAN_DEMAND,Urban discretionary consumption growth,5.99128125,+5 pp
 NYKAA,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,4.149890625,+1 = broad cut (~2-5 pp on affected items)
 NYKAA,NEW_BEAUTY_RETAIL_COMPETITION,"Beauty retail competition intensity (Tira, Sephora, Purplle, quick commerce)",-3.0,+1 = materially sharper discounting/expansion by rival beauty retailers and q-commerce
