@@ -21,7 +21,7 @@ China Q3 2026 GDP grew 4.5% y/y, beating forecasts, driven by AI-boom exports (R
 | TATASTEEL | +1.6 | +1.1 | -0.4 | +0.7 | +0.2 |
 | NMDC | +1.4 | +0.0 | +1.1 | +0.2 | +0.1 |
 | VAML | +0.9 | +0.0 | +1.0 | -0.1 | +0.0 |
-| SAIL | +0.9 | +0.0 | -0.9 | +1.1 | +0.8 |
+| SAIL | +0.9 | +0.0 | -0.9 | +1.1 | +0.7 |
 | HINDALCO | +0.7 | +0.0 | +0.7 | -0.0 | +0.0 |
 | HINDCOPPER | +0.7 | +0.3 | +0.4 | +0.0 | +0.0 |
 | SRF | +0.6 | +0.0 | +0.6 | +0.0 | -0.0 |
@@ -32,7 +32,7 @@ China Q3 2026 GDP grew 4.5% y/y, beating forecasts, driven by AI-boom exports (R
 | MOTHERSON | +0.5 | +0.7 | -0.2 | +0.0 | +0.0 |
 | TIINDIA | +0.5 | +0.7 | -0.0 | -0.1 | -0.1 |
 | OIL | +0.4 | +0.0 | +0.4 | +0.1 | +0.0 |
-| COALINDIA | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
+| HINDZINC | +0.4 | +0.0 | +0.4 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -53,7 +53,7 @@ China Q3 2026 GDP grew 4.5% y/y, beating forecasts, driven by AI-boom exports (R
 | GVT&D | -0.4 | +0.0 | -0.2 | -0.1 | -0.0 |
 | INDUSINDBK | -0.4 | +0.0 | -0.2 | -0.1 | -0.1 |
 
-Share of absolute impact by order: 1: 12%, 2: 58%, 3: 20%, 4: 10%
+Share of absolute impact by order: 1: 12%, 2: 58%, 3: 19%, 4: 11%
 
 ## Sources
 - 2026-10-19 China's economy grows 4.5 percent in Q3, beating forecasts https://news.google.com/rss/search?q=China's+economy+grows+4.5+percent+in+Q3,+beating+forecasts&hl=en-IN&gl=IN&ceid=IN:en

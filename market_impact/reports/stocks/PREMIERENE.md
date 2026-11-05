@@ -2,11 +2,11 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.3%**, **12 months +1.7%** (rank 28 / 34 of 200 for 3m / 12m); beta 1.26
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.2%): 3 months 53%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +6.5%; plausible 12m relative-return range incl. stock-specific noise: -52.5% … +37.8%
-- Decomposition (12m): 0.5 × forward event exposure +3.6% (3m +1.3%; half assumed priced) + 0.5 × company-specific catalysts +0.8%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +14.8% (beta-adjusted) vs a realised market-adjusted move of -22.7% — gap +37.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +1.3%**, **12 months +1.7%** (rank 11 / 28 of 200 for 3m / 12m); beta 1.26
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.2%): 3 months 53%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.5% … P90 +5.9%; plausible 12m relative-return range incl. stock-specific noise: -46.0% … +43.4%
+- Decomposition (12m): 0.5 × forward event exposure +3.1% (3m +1.0%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.8%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +14.4% (beta-adjusted) vs a realised market-adjusted move of -22.7% — gap +37.0 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,18 +14,18 @@
 |---|---|---|---|---|---|---|---|
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +6.94 | +6.00 | +1.04 | -0.10 | +0.00 | — |
 | Indian solar module / cell realisations (`NEW_SOLAR_CELL_MODULE_PRICE`) | +10% Indian module/cell realisations | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +3.76 | +4.00 | -0.21 | +0.00 | -0.03 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +3.78 | +4.00 | -0.21 | +0.00 | -0.01 | — |
 | Indian anti-dumping duties (chemicals, solar, others) (`P_ANTI_DUMPING_IN`) | +1 = new broad duties | +3.00 | +3.00 | +0.00 | +0.00 | +0.00 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.45 | -1.50 | +0.04 | +0.01 | +0.00 | — |
 | Silver price (`F_SILVER`) | +12% silver | -1.40 | -1.40 | +0.00 | +0.00 | +0.00 | -30.0% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.25 | -1.00 | -0.12 | -0.12 | -0.01 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.22 | -1.00 | -0.12 | -0.09 | -0.01 | -1.1% |
 | Gold price (`F_GOLD`) | +8% gold (USD) | -1.16 | +0.00 | -1.12 | -0.04 | +0.00 | -8.4% |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.10 | +0.00 | -0.96 | -0.09 | -0.05 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.02 | +0.00 | -1.06 | -0.00 | +0.04 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.04 | +0.00 | -1.06 | -0.00 | +0.02 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.98 | +0.00 | -0.12 | -0.60 | -0.25 | — |
 | China chemical/API dumping intensity (`F_CHINA_CHEM_EXPORTS`) | +15% export volumes / price cuts | +0.96 | +0.00 | +0.96 | +0.00 | +0.00 | — |
 | EV incentives / mandates (`P_EV_POLICY`) | +1 = stronger EV push | +0.91 | +0.00 | +0.96 | -0.05 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.90 | +0.00 | -0.12 | -0.60 | -0.18 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | -0.65 | +0.00 | +0.00 | -0.60 | -0.05 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -0.65 | +0.00 | -0.19 | -0.37 | -0.09 | — |
+| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | +0.61 | +0.00 | +0.00 | +0.39 | +0.22 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -36,7 +36,7 @@
 | Finance ministry notifies anti-dumping duties on a meaningful batch of Chinese chemicals/APIs/others (`EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027`) | anticipated | 0.70 | +2.1% | +1.5% | +2.1 | +0.0 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.0 | +0.0 | +0.0 |
 | DGTR opens wave of anti-dumping probes on Chinese chemicals, APIs and steel (`EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26`) | occurred | 1.00 | +1.2% | +1.2% | +1.2 | +0.0 | +0.0 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -1.2 | -0.0 | +0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.2 | -0.0 | +0.0 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +1.0% | +1.0% | +1.0 | +0.0 | +0.0 | +0.0 |
 | Gold/silver rebound as Fed hike fears fade or Iran war ends (`EV_PRECIOUS_METALS_REBOUND_H1_2027`) | anticipated | 0.45 | -2.1% | -1.0% | -2.1 | +0.0 | -0.0 | +0.0 |
 | Gold falls to ~$3,500 / silver to ~$40 on Fed hike(s) and strong dollar (`EV_PRECIOUS_METALS_FURTHER_SLIDE`) | risk_scenario | 0.30 | +2.9% | +0.9% | +2.8 | +0.0 | +0.1 | +0.0 |
@@ -54,14 +54,14 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PREMIERENE | -1.50% | -0.63% |
 | 1 | EV_GST_RATE_CHANGE_APR27 ⇒ P_RENEWABLE_SUPPORT → PREMIERENE | +1.80% | +0.54% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → PREMIERENE | -1.50% | -0.41% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → PREMIERENE | -0.60% | -0.36% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → PREMIERENE | -1.50% | -0.27% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PREMIERENE | -1.30% | -0.23% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → PREMIERENE | +0.46% | +0.23% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → PREMIERENE | -0.86% | -0.22% |
 | 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_GOLD → F_SILVER → PREMIERENE | +0.34% | +0.18% |
 | 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_REPO_IN → PREMIERENE | -1.50% | -0.18% |
-| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → F_REPO_IN → PREMIERENE | -0.24% | -0.16% |
+| 1 | EV_RBI_APR27_CUT25 ⇒ F_REPO_IN → PREMIERENE | +1.50% | +0.15% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → PREMIERENE | +0.27% | +0.15% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → F_REPO_IN → PREMIERENE | +0.54% | +0.14% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -74,7 +74,6 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | T_ENERGY_TRANSITION → PREMIERENE | +0.30 | director_override | +1.20% |
 | 1 | F_ALUMINIUM → PREMIERENE | -1.96 | observed | +0.98% |
 | 1 | F_USDINR → PREMIERENE | -0.37 | observed | +0.37% |
-| 1 | P_US_TARIFF_INDIA → PREMIERENE | -0.60 | events | +0.18% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |

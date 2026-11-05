@@ -2,11 +2,11 @@
 *NIFTY_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.3%**, **12 months -2.6%** (rank 176 / 177 of 200 for 3m / 12m); beta 0.94
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.8%): 3 months 46%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.0% … P90 +0.3%; plausible 12m relative-return range incl. stock-specific noise: -32.5% … +18.4%
-- Decomposition (12m): 0.5 × forward event exposure -4.6% (3m -1.6%; half assumed priced) + 0.5 × company-specific catalysts +0.4%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -5.8% (beta-adjusted) vs a realised market-adjusted move of +4.1% — gap -9.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -1.1%**, **12 months -1.5%** (rank 186 / 172 of 200 for 3m / 12m); beta 0.94
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.8%): 3 months 46%, 12 months 49%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.1% … P90 +1.7%; plausible 12m relative-return range incl. stock-specific noise: -33.3% … +29.2%
+- Decomposition (12m): 0.5 × forward event exposure -2.4% (3m -1.1%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -4.4% (beta-adjusted) vs a realised market-adjusted move of +4.1% — gap -8.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -15,23 +15,23 @@
 | US/EU enterprise IT services spend (`F_US_TECH_SPEND`) | +5% growth | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
 | GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -3.53 | -4.00 | +0.45 | +0.00 | +0.02 | — |
 | US H-1B / outsourcing restrictions (`P_US_VISA_OUTSOURCING`) | +1 = material tightening | -3.17 | -3.00 | -0.17 | +0.00 | +0.00 | — |
-| US growth (`F_US_GDP`) | +1 pp | +2.13 | +0.00 | +2.26 | -0.06 | -0.07 | — |
+| US growth (`F_US_GDP`) | +1 pp | +2.14 | +0.00 | +2.26 | -0.06 | -0.05 | — |
 | Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | -1.81 | -1.80 | +0.00 | +0.01 | -0.02 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.26 | +1.50 | +0.00 | -0.17 | -0.07 | -1.1% |
-| Europe growth (`F_EU_GDP`) | +1 pp | +1.22 | +1.00 | +0.24 | -0.02 | -0.01 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.27 | +1.50 | +0.00 | -0.17 | -0.06 | -1.1% |
+| Europe growth (`F_EU_GDP`) | +1 pp | +1.22 | +1.00 | +0.24 | -0.02 | +0.00 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.22 | +1.20 | +0.00 | +0.02 | +0.00 | +1.2% |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.14 | +0.00 | -0.72 | -0.36 | -0.06 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | -0.97 | +0.00 | -0.72 | -0.18 | -0.07 | — |
 | US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -0.97 | -0.70 | -0.10 | -0.19 | +0.02 | +11.2% |
 | Global AI / data-centre capex (`F_AI_CAPEX`) | +10% growth | +0.94 | +0.00 | +0.66 | +0.27 | +0.01 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -0.90 | -0.90 | +0.00 | +0.00 | +0.00 | — |
 | India CPI inflation (`F_CPI_IN`) | +1 pp | -0.79 | +0.00 | -0.49 | -0.31 | +0.02 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | -0.66 | +0.00 | +0.00 | -0.43 | -0.23 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -0.63 | -0.50 | -0.17 | +0.04 | -0.00 | +3.5% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -5.1% | -5.1% | -5.2 | +0.1 | +0.0 | +0.0 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +2.8% | +2.8% | -0.3 | +3.2 | -0.1 | -0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +2.8% | +2.8% | -0.3 | +3.2 | -0.1 | +0.0 |
 | Indian IT: weakest Q2 in 3 years, Infosys guidance cut, US green card freeze (`EV_INDIAN_IT_Q2_VISA_SHOCK`) | occurred | 1.00 | -2.8% | -2.8% | -2.7 | -0.1 | +0.0 | +0.0 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -6.8% | -1.7% | -1.5 | -5.5 | +0.3 | -0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.1% | -1.5% | -4.8 | -0.7 | -0.5 | -0.0 |
@@ -67,11 +67,11 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | P_US_VISA_OUTSOURCING → TCS | +0.90 | events | -2.70% |
 | 1 | F_US_TECH_SPEND → TCS | -0.60 | events | -2.40% |
 | 1 | T_GENAI_SERVICES → TCS | +0.50 | director_override | -2.00% |
 | 1 | F_GSEC_10Y_IN → TCS | +1.55 | director_override | -1.40% |
 | 1 | F_FED_FUNDS → TCS | +1.62 | observed | -1.13% |
+| 1 | P_US_VISA_OUTSOURCING → TCS | +0.35 | director_override | -1.05% |
 | 1 | F_USDINR → TCS | -0.37 | observed | -0.55% |
 | 1 | F_US_EQUITIES → TCS | +0.23 | observed | +0.28% |
 | 1 | F_EU_GDP → TCS | +0.22 | events | +0.22% |
@@ -80,7 +80,6 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |
 |---|---|---|---|---|---|
-| 2026-11-17 | Nvidia FQ3 results: AI-trade read-across to IT services (anti-AI rotation vs AI-capex confidence) | other | 0.95 | +0.5% | +0.47% |
 | 2026-12 | Company wage-hike cycle announcement (Q3-Q4 FY27) | guidance | 0.50 | -0.8% | -0.38% |
 | 2027-01-09 | Q3 FY27 results (TCS reports ~9-12 Jan; date unconfirmed): cc growth, AI revenue, margin, variable pay | results | 0.95 | +0.0% | +0.00% |
 | 2027-02 | H-1B $100,000 fee appeal / green-card freeze litigation outcomes | regulatory | 0.40 | -1.0% | -0.40% |

@@ -2,11 +2,11 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.2%**, **12 months -1.1%** (rank 91 / 147 of 200 for 3m / 12m); beta 1.12
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 51%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.5% … P90 +2.9%; plausible 12m relative-return range incl. stock-specific noise: -30.2% … +26.5%
-- Decomposition (12m): 0.5 × forward event exposure -1.5% (3m +0.4%; half assumed priced) + 0.5 × company-specific catalysts +0.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.4% (beta-adjusted) vs a realised market-adjusted move of -4.3% — gap +6.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.0%**, **12 months -0.7%** (rank 103 / 141 of 200 for 3m / 12m); beta 1.12
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 50%, 12 months 49%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.2% … P90 +3.4%; plausible 12m relative-return range incl. stock-specific noise: -26.3% … +25.2%
+- Decomposition (12m): 0.5 × forward event exposure -1.1% (3m -0.1%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.2% (beta-adjusted) vs a realised market-adjusted move of -4.3% — gap +6.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -16,16 +16,16 @@
 | Household savings shift to financial assets (`T_FINANCIALISATION`) | +1 | +3.45 | +2.50 | +1.00 | -0.02 | -0.03 | — |
 | Domestic SIP / DII flows (`F_DOMESTIC_FLOWS`) | +10% monthly SIP + DII inflow | +2.47 | +2.50 | +0.00 | -0.02 | -0.01 | — |
 | US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -2.29 | +0.00 | -1.40 | -0.77 | -0.11 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.06 | +0.00 | -1.38 | -0.50 | -0.19 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.08 | +0.00 | -1.38 | -0.50 | -0.20 | — |
 | Capital-gains / securities tax burden (`P_CAPITAL_GAINS_TAX`) | +1 = higher | -2.05 | -1.50 | -0.55 | -0.01 | +0.00 | — |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +1.90 | +0.00 | +1.76 | +0.10 | +0.04 | — |
 | Insurance regulation tightening (IRDAI) (`P_IRDAI_REG`) | +1 = tightening | -1.76 | -1.50 | -0.15 | -0.11 | +0.00 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.56 | +1.50 | +0.14 | -0.06 | -0.02 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.64 | +1.50 | +0.20 | -0.02 | -0.03 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.47 | +1.50 | +0.02 | -0.04 | -0.01 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.23 | +1.00 | +0.00 | +0.18 | +0.05 | — |
-| US growth (`F_US_GDP`) | +1 pp | +1.23 | +0.00 | +0.96 | +0.26 | +0.01 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.05 | +0.00 | +1.01 | +0.08 | -0.04 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.01 | +0.00 | +0.96 | +0.07 | -0.03 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.25 | +1.00 | +0.00 | +0.18 | +0.07 | — |
+| US growth (`F_US_GDP`) | +1 pp | +1.23 | +0.00 | +0.96 | +0.27 | +0.01 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.10 | +0.00 | +1.01 | +0.12 | -0.02 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.06 | +0.00 | +0.96 | +0.11 | -0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -37,11 +37,11 @@
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.6% | +1.6% | +0.0 | +1.1 | +0.3 | +0.2 |
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.5% | -1.5% | -1.2 | -0.3 | -0.0 | +0.0 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.4 | -0.1 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.5% | +1.4% | +1.4 | +0.8 | +0.2 | +0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.4% | -1.4% | -3.5 | -1.4 | -0.4 | -0.1 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -4.6% | -1.1% | +0.0 | -4.2 | +0.4 | -0.8 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.6% | +1.4% | +1.4 | +0.8 | +0.2 | +0.1 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.5% | -1.4% | -3.5 | -1.4 | -0.4 | -0.1 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -4.6% | -1.2% | +0.0 | -4.2 | +0.4 | -0.8 |
 | Nvidia FQ3 results (reported 17 Nov): beat-and-raise, AI demand intact (`EV_NVDA_NOV17_BEAT`) | scheduled | 0.62 | +1.7% | +1.1% | +1.4 | +0.3 | +0.0 | -0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.6 | -0.3 | -0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.6 | -0.3 | -0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

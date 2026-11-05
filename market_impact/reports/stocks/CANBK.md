@@ -2,11 +2,11 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months -0.5%** (rank 84 / 132 of 200 for 3m / 12m); beta 1.27
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.0%): 3 months 51%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.3% … P90 +2.3%; plausible 12m relative-return range incl. stock-specific noise: -16.8% … +37.0%
-- Decomposition (12m): 0.5 × forward event exposure -0.2% (3m +1.1%; half assumed priced) + 0.5 × company-specific catalysts +0.0%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.2% (beta-adjusted) vs a realised market-adjusted move of -10.3% — gap +8.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.5%**, **12 months -1.9%** (rank 150 / 182 of 200 for 3m / 12m); beta 1.27
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.0%): 3 months 48%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.4% … P90 +0.3%; plausible 12m relative-return range incl. stock-specific noise: -28.4% … +25.3%
+- Decomposition (12m): 0.5 × forward event exposure -3.3% (3m -0.6%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.5% (beta-adjusted) vs a realised market-adjusted move of -10.3% — gap +7.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,18 +14,18 @@
 |---|---|---|---|---|---|---|---|
 | Credit cost / NPA cycle (higher = worse) (`F_ASSET_QUALITY_IN`) | +50 bp credit cost | -7.00 | -7.00 | +0.00 | -0.02 | +0.01 | — |
 | RBI prudential tightening (risk weights, LCR, provisioning) (`P_RBI_PRUDENTIAL`) | +1 = tightening step | -5.67 | -4.50 | -1.41 | +0.15 | +0.09 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +2.79 | +0.00 | +1.18 | +1.92 | -0.32 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +2.86 | +0.00 | +1.18 | +1.83 | -0.16 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +2.54 | +0.00 | +2.89 | -0.22 | -0.12 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.51 | +2.40 | +0.07 | -0.01 | +0.05 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +2.50 | +0.00 | +3.04 | -0.50 | -0.04 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.82 | -1.80 | +0.00 | -0.02 | -0.00 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.53 | +0.00 | +0.19 | +1.72 | -0.38 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.60 | +0.00 | +0.19 | +1.63 | -0.22 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.40 | +0.00 | -0.86 | -0.49 | -0.06 | +3.5% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.32 | +0.00 | -0.70 | -0.32 | -0.29 | -1.1% |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.23 | +0.80 | +0.00 | +0.53 | -0.09 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.21 | +0.00 | -0.98 | -0.06 | -0.18 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.18 | +0.00 | +0.16 | -0.58 | -0.76 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.30 | +0.00 | -0.70 | -0.34 | -0.26 | -1.1% |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.29 | +0.80 | +0.00 | +0.50 | -0.01 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.20 | +0.00 | -0.98 | -0.06 | -0.17 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.17 | +0.40 | +0.03 | +0.59 | +0.15 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.16 | +0.00 | +0.16 | -0.58 | -0.74 | — |
 | US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -1.14 | +0.00 | -1.07 | -0.12 | +0.04 | +9.4% |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.13 | +0.40 | +0.03 | +0.60 | +0.10 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -34,10 +34,10 @@
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +6.3% | +3.1% | +6.0 | +0.2 | -0.0 | +0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.8% | -2.8% | -2.7 | -0.1 | +0.0 | -0.0 |
 | RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.90 | -2.5% | -2.3% | -2.6 | +0.0 | +0.0 | -0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.0% | +2.0% | +0.8 | +1.5 | -0.3 | -0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -0.5 | -0.9 | -0.2 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.0% | +2.0% | +0.8 | +1.4 | -0.1 | -0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -0.5 | -0.9 | -0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.5% | -1.5% | -0.5 | -0.0 | -0.7 | -0.2 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.6 | +0.0 | +0.1 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.4% | -1.4% | -0.5 | -0.0 | -0.8 | -0.1 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.4% | +1.4% | +1.2 | +0.2 | +0.0 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -1.2 | -0.2 | +0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -5.0% | -1.2% | +0.0 | -4.4 | -0.5 | -0.0 |
@@ -55,13 +55,13 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → CANBK | -2.30% | -0.58% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → CANBK | -2.30% | -0.58% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CANBK | -2.24% | -0.56% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → CANBK | -0.90% | -0.54% |
 | 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → CANBK | -1.80% | -0.54% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → CANBK | +1.20% | +0.42% |
 | 2 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → CANBK | -3.36% | -0.40% |
 | 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → CANBK | +0.48% | +0.38% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → CANBK | -0.60% | -0.36% |
 | 2 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → CANBK | +0.45% | +0.36% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CANBK | -2.24% | -0.34% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

@@ -2,11 +2,11 @@
 *MIDCAP_100 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.9%**, **12 months +3.1%** (rank 43 / 13 of 200 for 3m / 12m); beta 1.05
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 53%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.3% … P90 +7.6%; plausible 12m relative-return range incl. stock-specific noise: -17.2% … +36.6%
-- Decomposition (12m): 0.5 × forward event exposure +5.1% (3m +2.4%; half assumed priced) + 0.5 × company-specific catalysts +2.0%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.4% (beta-adjusted) vs a realised market-adjusted move of -23.4% — gap +25.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.3%**, **12 months +1.7%** (rank 76 / 26 of 200 for 3m / 12m); beta 1.05
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 51%, 12 months 53%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +7.4%; plausible 12m relative-return range incl. stock-specific noise: -29.5% … +35.9%
+- Decomposition (12m): 0.5 × forward event exposure +1.9% (3m +0.8%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +2.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.1% (beta-adjusted) vs a realised market-adjusted move of -23.4% — gap +25.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.

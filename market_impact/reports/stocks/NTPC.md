@@ -2,11 +2,11 @@
 *NIFTY_50 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.2%**, **12 months +0.7%** (rank 118 / 80 of 200 for 3m / 12m); beta 1.01
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.3%): 3 months 49%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.3% … P90 +3.0%; plausible 12m relative-return range incl. stock-specific noise: -23.6% … +20.3%
-- Decomposition (12m): 0.5 × forward event exposure +1.7% (3m +0.6%; half assumed priced) + 0.5 × company-specific catalysts +0.6%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.2% (beta-adjusted) vs a realised market-adjusted move of -20.8% — gap +23.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.1%**, **12 months +0.3%** (rank 120 / 83 of 200 for 3m / 12m); beta 1.01
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.3%): 3 months 50%, 12 months 49%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.6% … P90 +3.0%; plausible 12m relative-return range incl. stock-specific noise: -24.0% … +27.0%
+- Decomposition (12m): 0.5 × forward event exposure +0.5% (3m +0.6%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.6%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.0% (beta-adjusted) vs a realised market-adjusted move of -20.8% — gap +22.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,18 +14,18 @@
 |---|---|---|---|---|---|---|---|
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.14 | +2.00 | +0.10 | +0.01 | +0.03 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -2.06 | -2.00 | -0.06 | +0.00 | +0.00 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +1.98 | +2.00 | -0.03 | +0.00 | +0.01 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +1.99 | +2.00 | -0.03 | +0.00 | +0.02 | — |
 | Power market / DISCOM reform (`P_POWER_REFORM`) | +1 = reform progress | +1.92 | +2.00 | -0.08 | +0.00 | +0.00 | — |
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +1.49 | +1.00 | +0.50 | -0.02 | +0.00 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.36 | +0.00 | -0.87 | -0.46 | -0.03 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.37 | +0.00 | -0.87 | -0.46 | -0.04 | — |
 | Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +1.22 | +1.00 | +0.20 | +0.01 | +0.00 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.18 | +0.00 | -0.77 | -0.38 | -0.02 | +3.5% |
-| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +1.06 | +1.00 | +0.04 | +0.01 | +0.00 | — |
+| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +1.06 | +1.00 | +0.04 | +0.01 | +0.01 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.01 | -0.60 | -0.44 | +0.03 | -0.01 | — |
 | International thermal coal price (`F_COAL_INTL`) | +15% seaborne thermal coal | +1.00 | +0.90 | +0.09 | +0.01 | +0.00 | +0.0% |
 | Domestic SIP / DII flows (`F_DOMESTIC_FLOWS`) | +10% monthly SIP + DII inflow | +0.99 | +1.00 | +0.00 | +0.00 | -0.01 | — |
 | Capital-gains / securities tax burden (`P_CAPITAL_GAINS_TAX`) | +1 = higher | -0.97 | +0.00 | -0.94 | -0.03 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.96 | -0.20 | -0.37 | -0.20 | -0.19 | -1.1% |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.96 | +0.00 | -0.80 | -0.09 | -0.07 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -52,7 +52,6 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → NTPC | -1.60% | -0.80% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → NTPC | +1.50% | +0.60% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → NTPC | +1.00% | +0.60% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → NTPC | -1.00% | -0.60% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → NTPC | -1.00% | -0.55% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → NTPC | -3.00% | -0.54% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → NTPC | +1.20% | +0.48% |
@@ -62,6 +61,7 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → NTPC | -0.57% | -0.39% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → NTPC | -0.40% | -0.36% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → NTPC | +0.60% | +0.36% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → NTPC | -0.60% | -0.36% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

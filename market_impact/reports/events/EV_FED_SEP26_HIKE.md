@@ -29,7 +29,7 @@ FOMC (unanimous, per WSJ headline) raised the target range 25 bp to 3.75-4.00% (
 | PREMIERENE | +0.1 | +0.0 | -0.2 | +0.3 | +0.0 |
 | SAIL | +0.1 | +0.0 | -0.1 | +0.2 | +0.0 |
 | TMPV | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
-| SRF | +0.0 | +0.0 | -0.0 | +0.1 | +0.0 |
+| SRF | +0.1 | +0.0 | -0.0 | +0.1 | +0.0 |
 | COALINDIA | +0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 | DRREDDY | +0.0 | +0.0 | -0.1 | +0.1 | -0.0 |
 | NATIONALUM | -0.0 | +0.0 | -0.2 | +0.2 | -0.0 |
@@ -42,18 +42,18 @@ FOMC (unanimous, per WSJ headline) raised the target range 25 bp to 3.75-4.00% (
 | POLICYBZR | -2.8 | -2.0 | -1.0 | +0.2 | +0.0 |
 | MOTILALOFS | -2.4 | +0.0 | -2.3 | -0.2 | +0.1 |
 | MUTHOOTFIN | -2.4 | +0.0 | -2.2 | -0.2 | -0.0 |
-| YESBANK | -2.2 | +0.0 | -1.8 | -0.4 | +0.0 |
 | NYKAA | -2.1 | -1.2 | -0.7 | -0.2 | -0.0 |
 | ADANIGREEN | -2.0 | +0.0 | -1.7 | -0.3 | +0.0 |
 | INDUSINDBK | -2.0 | -0.6 | -1.1 | -0.2 | -0.0 |
 | MPHASIS | -1.9 | -1.3 | -0.5 | -0.0 | +0.0 |
-| BAJFINANCE | -1.9 | +0.0 | -1.6 | -0.2 | -0.1 |
-| TATACAP | -1.9 | +0.0 | -1.4 | -0.4 | -0.0 |
-| PRESTIGE | -1.8 | -0.2 | -1.3 | -0.3 | +0.0 |
-| AUBANK | -1.7 | +0.0 | -1.4 | -0.3 | -0.0 |
+| JIOFIN | -1.9 | +0.0 | -1.5 | -0.3 | -0.0 |
 | ICICIAMC | -1.7 | +0.0 | -1.8 | +0.1 | +0.0 |
+| NAUKRI | -1.7 | +0.0 | -1.7 | -0.1 | +0.1 |
+| PFC | -1.7 | +0.0 | -1.5 | -0.3 | +0.1 |
+| VEDL | -1.7 | -0.6 | -0.5 | -0.2 | -0.4 |
+| INDIGO | -1.7 | -0.6 | -0.9 | -0.2 | -0.0 |
 
-Share of absolute impact by order: 1: 14%, 2: 70%, 3: 13%, 4: 2%
+Share of absolute impact by order: 1: 15%, 2: 70%, 3: 13%, 4: 2%
 
 ## Sources
 - 2026-09-16 Fed approves interest rate hike, signals one more to come this year - CNBC https://news.google.com/rss/search?q=Fed%20approves%20interest%20rate%20hike%2C%20signals%20one%20more%20to%20come%20this%20year&hl=en-IN&gl=IN&ceid=IN:en

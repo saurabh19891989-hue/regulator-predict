@@ -23,9 +23,9 @@ BoJ raised its policy rate to a 31-year high (BBC 18 Sep); a Reuters poll (23 Oc
 | TATASTEEL | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | ONGC | +0.1 | +0.0 | +0.1 | +0.1 | -0.0 |
 | OIL | +0.1 | +0.0 | +0.1 | +0.1 | -0.0 |
+| ASTRAL | +0.1 | +0.2 | -0.0 | -0.0 | -0.0 |
 | HINDALCO | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | TATACONSUM | +0.1 | +0.2 | -0.0 | -0.0 | -0.0 |
-| ASTRAL | +0.1 | +0.2 | -0.0 | -0.0 | -0.0 |
 | SAIL | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | NMDC | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | PIIND | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
@@ -38,21 +38,21 @@ BoJ raised its policy rate to a 31-year high (BBC 18 Sep); a Reuters poll (23 Oc
 |---|---|---|---|---|---|
 | MOTILALOFS | -1.9 | -0.7 | -1.0 | -0.2 | +0.0 |
 | ICICIAMC | -1.6 | -0.8 | -0.8 | -0.1 | +0.0 |
-| JIOFIN | -1.5 | -1.0 | -0.4 | -0.1 | -0.0 |
 | 360ONE | -1.4 | -0.7 | -0.5 | -0.1 | +0.0 |
 | IREDA | -1.4 | -1.0 | -0.3 | -0.0 | -0.0 |
-| MEESHO | -1.3 | -0.8 | -0.6 | +0.0 | +0.0 |
 | INDUSINDBK | -1.3 | -0.7 | -0.6 | +0.0 | +0.0 |
 | PAYTM | -1.2 | -0.4 | -0.8 | +0.0 | +0.0 |
 | NAUKRI | -1.1 | -0.5 | -0.6 | -0.0 | +0.0 |
 | POLICYBZR | -1.1 | -0.5 | -0.6 | +0.0 | +0.0 |
 | IDFCFIRSTB | -1.1 | -0.6 | -0.5 | -0.0 | -0.0 |
-| LENSKART | -1.1 | -0.6 | -0.5 | +0.0 | -0.0 |
 | MAHABANK | -1.1 | -0.7 | -0.4 | +0.0 | +0.0 |
-| ETERNAL | -1.1 | -0.5 | -0.6 | +0.0 | -0.0 |
 | IDEA | -1.0 | -0.5 | -0.4 | -0.1 | -0.0 |
+| LICI | -0.9 | -0.7 | -0.2 | -0.0 | +0.0 |
+| SBIN | -0.9 | -0.3 | -0.6 | -0.0 | -0.0 |
+| MEESHO | -0.9 | -0.4 | -0.6 | +0.0 | +0.0 |
+| INDIANB | -0.9 | -0.6 | -0.2 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 29%, 2: 60%, 3: 9%, 4: 2%
+Share of absolute impact by order: 1: 27%, 2: 62%, 3: 9%, 4: 2%
 
 ## Sources
 - 2026-09-18 Japan raises interest rate to new 31-year high to curb rising prices - BBC https://news.google.com/rss/search?q=Japan%20raises%20interest%20rate%20to%20new%2031-year%20high%20to%20curb%20rising%20prices%20-%20BBC&hl=en-IN&gl=IN&ceid=IN:en

@@ -17,21 +17,21 @@ Notification of 23 Sep, effective 24 Sep: basic customs duty on crude palm and s
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| TATACAP | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| BAJFINANCE | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| AUBANK | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| YESBANK | +0.2 | +0.0 | +0.0 | +0.2 | +0.1 |
 | IDFCFIRSTB | +0.2 | +0.0 | +0.0 | +0.2 | +0.1 |
 | IREDA | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
-| PRESTIGE | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| TATACAP | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| BAJFINANCE | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
 | INDUSINDBK | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
-| BAJAJFINSV | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| AUBANK | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
 | LTF | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
 | SHRIRAMFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
 | M&MFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
 | JSWENERGY | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
 | AXISBANK | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
 | VMM | +0.2 | +0.2 | +0.0 | +0.0 | -0.0 |
+| GODREJPROP | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| JIOFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -41,9 +41,9 @@ Notification of 23 Sep, effective 24 Sep: basic customs duty on crude palm and s
 | OIL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | HINDCOPPER | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | PIIND | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| ONGC | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | UPL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| LUPIN | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| ONGC | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| LUPIN | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | MCX | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | NMDC | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | DRREDDY | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
@@ -52,7 +52,7 @@ Notification of 23 Sep, effective 24 Sep: basic customs duty on crude palm and s
 | SUNPHARMA | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | LTM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 4%, 2: 6%, 3: 62%, 4: 28%
+Share of absolute impact by order: 1: 4%, 2: 6%, 3: 60%, 4: 29%
 
 ## Sources
 - 2026-09-23 Govt cuts import duties on palm, soya and sunflower oils - Business Standard https://www.business-standard.com/economy/news/govt-cuts-import-duty-on-refined-palm-oil-and-soybean-oil-to-27-5-126092301504_1.html

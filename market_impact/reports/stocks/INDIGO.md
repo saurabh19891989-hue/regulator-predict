@@ -2,41 +2,41 @@
 *NIFTY_50 · Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.1%**, **12 months -0.2%** (rank 111 / 113 of 200 for 3m / 12m); beta 1.26
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 50%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.7% … P90 +6.5%; plausible 12m relative-return range incl. stock-specific noise: -25.2% … +40.2%
-- Decomposition (12m): 0.5 × forward event exposure -0.5% (3m -0.6%; half assumed priced) + 0.5 × company-specific catalysts +1.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -4.2% (beta-adjusted) vs a realised market-adjusted move of +16.0% — gap -20.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.0%**, **12 months -0.7%** (rank 109 / 138 of 200 for 3m / 12m); beta 1.26
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 50%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.8% … P90 +5.5%; plausible 12m relative-return range incl. stock-specific noise: -32.5% … +31.6%
+- Decomposition (12m): 0.5 × forward event exposure -1.9% (3m -0.8%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -4.4% (beta-adjusted) vs a realised market-adjusted move of +16.0% — gap -20.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Air/hotel/tourism demand (`F_TRAVEL_DEMAND`) | +10% | +9.00 | +9.00 | +0.00 | +0.00 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +6.37 | +3.50 | +2.88 | +0.03 | -0.04 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +6.46 | +3.50 | +2.88 | +0.08 | -0.00 | — |
 | Airfare caps / government fare intervention (`NEW_AIRFARE_REGULATION`) | +1 = binding fare caps in stress periods | -6.00 | -6.00 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -5.79 | -2.50 | -2.38 | -0.51 | -0.41 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.30 | +0.00 | +2.06 | +1.11 | +0.13 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -3.17 | -2.50 | -0.24 | -0.27 | -0.16 | +0.0% |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -5.81 | -2.50 | -2.38 | -0.51 | -0.43 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.35 | +0.00 | +2.06 | +1.11 | +0.18 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -3.19 | -2.50 | -0.24 | -0.28 | -0.17 | +0.0% |
 | Domestic airline industry capacity additions by competitors (`NEW_DOMESTIC_AIRLINE_CAPACITY`) | +1 = +5% industry capacity | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -2.90 | -2.00 | -0.46 | -0.24 | -0.20 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -2.86 | -2.00 | -0.46 | -0.22 | -0.18 | -1.1% |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.79 | +2.50 | +0.24 | +0.01 | +0.04 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.14 | +0.00 | -1.78 | -0.46 | +0.10 | — |
-| Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +1.94 | +0.00 | +1.72 | +0.22 | +0.00 | — |
-| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | +1.92 | +0.00 | +1.60 | +0.14 | +0.18 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.15 | +0.00 | -1.78 | -0.46 | +0.09 | — |
+| Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +1.95 | +0.00 | +1.72 | +0.22 | +0.01 | — |
+| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | +1.93 | +0.00 | +1.60 | +0.14 | +0.19 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.74 | +0.00 | -1.17 | -0.54 | -0.02 | +3.5% |
-| Russia-Ukraine war / Western sanctions intensity on Russia (`NEW_RUSSIA_UKRAINE_WAR`) | +1 = escalation (new sanctions round, strikes on energy/port infrastructure); -1 = ceasefire/sanctions relief | -1.68 | +0.00 | -1.58 | -0.10 | -0.00 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +1.70 | +0.00 | +1.12 | +0.60 | -0.02 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -6.1% | -6.1% | -5.5 | -0.5 | -0.0 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +8.3% | +4.6% | +6.3 | +1.3 | +0.6 | +0.2 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +8.4% | +4.6% | +6.3 | +1.3 | +0.6 | +0.3 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -3.9% | -3.9% | -3.0 | -0.5 | -0.2 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +7.1% | +3.5% | +6.2 | +0.7 | +0.0 | +0.1 |
 | Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -12.9% | -3.2% | -8.5 | -2.8 | -1.2 | -0.4 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -2.0 | -0.5 | +0.1 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.2% | -2.2% | -2.1 | +0.0 | -0.0 | -0.0 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.2% | -2.2% | -2.1 | +0.0 | -0.0 | -0.1 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.7% | -1.7% | -0.8 | -0.9 | -0.1 | +0.1 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -9.4% | -1.7% | -8.7 | -0.1 | -0.4 | -0.2 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.7% | -1.7% | -1.2 | -0.1 | -0.2 | -0.1 |
@@ -60,8 +60,8 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → INDIGO | -11.25% | -0.56% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → INDIGO | -2.60% | -0.47% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_BRENT → INDIGO | +1.80% | +0.45% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → INDIGO | -0.75% | -0.45% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → INDIGO | +1.25% | +0.44% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → INDIGO | +0.50% | +0.40% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

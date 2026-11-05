@@ -2,46 +2,46 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.1%**, **12 months +2.4%** (rank 34 / 21 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.9%): 3 months 54%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.3% … P90 +7.1%; plausible 12m relative-return range incl. stock-specific noise: -23.2% … +24.1%
-- Decomposition (12m): 0.5 × forward event exposure +3.8% (3m +1.8%; half assumed priced) + 0.5 × company-specific catalysts +1.9%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +0.3% (beta-adjusted) vs a realised market-adjusted move of -25.6% — gap +25.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.7%**, **12 months +2.2%** (rank 27 / 14 of 200 for 3m / 12m); beta 1.11
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.9%): 3 months 53%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.4% … P90 +6.2%; plausible 12m relative-return range incl. stock-specific noise: -26.2% … +32.1%
+- Decomposition (12m): 0.5 × forward event exposure +3.0% (3m +0.8%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.9%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +0.0% (beta-adjusted) vs a realised market-adjusted move of -25.6% — gap +25.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +3.59 | +3.50 | +0.00 | +0.03 | +0.06 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.27 | +2.50 | +0.73 | +0.07 | -0.03 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +3.16 | +3.00 | +0.00 | +0.05 | +0.11 | — |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +2.78 | +2.00 | +0.92 | -0.06 | -0.08 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +3.66 | +3.50 | +0.00 | +0.10 | +0.06 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +3.31 | +3.00 | +0.00 | +0.16 | +0.14 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.30 | +2.50 | +0.73 | +0.07 | +0.00 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +2.83 | +2.00 | +0.92 | -0.06 | -0.04 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +2.03 | +0.00 | +1.42 | +0.38 | +0.23 | — |
 | Value-fashion and mass-retail competition intensity (`NEW_VALUE_FASHION_COMPETITION`) | +1 = materially sharper expansion/discounting by Reliance Trends/Yousta, Max, Style Union, Myntra, V-Mart | -2.00 | -2.00 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.90 | +0.00 | -1.65 | -0.16 | -0.10 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.90 | +0.00 | +1.42 | +0.28 | +0.19 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.68 | -1.50 | -0.12 | -0.15 | +0.09 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.93 | +0.00 | -1.65 | -0.16 | -0.12 | — |
+| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.69 | -1.50 | -0.12 | -0.15 | +0.08 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.23 | -1.00 | -0.13 | -0.06 | -0.03 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.16 | -1.00 | -0.06 | -0.08 | -0.02 | +0.0% |
-| Russia-Ukraine war / Western sanctions intensity on Russia (`NEW_RUSSIA_UKRAINE_WAR`) | +1 = escalation (new sanctions round, strikes on energy/port infrastructure); -1 = ceasefire/sanctions relief | -1.04 | +0.00 | -0.78 | -0.23 | -0.02 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.18 | -1.00 | -0.06 | -0.10 | -0.02 | +0.0% |
+| Russia-Ukraine war / Western sanctions intensity on Russia (`NEW_RUSSIA_UKRAINE_WAR`) | +1 = escalation (new sanctions round, strikes on energy/port infrastructure); -1 = ceasefire/sanctions relief | -1.04 | +0.00 | -0.78 | -0.23 | -0.03 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.03 | +0.00 | +0.54 | +0.47 | +0.01 | — |
 | Quick-commerce disruption of retail/FMCG distribution (`T_QUICK_COMMERCE`) | +1 | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
-| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | -0.89 | +0.00 | +0.00 | -0.77 | -0.11 | — |
-| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | +0.72 | +0.00 | +0.64 | +0.03 | +0.05 | — |
+| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | -0.93 | +0.00 | +0.00 | -0.77 | -0.16 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.4% | -2.4% | +0.0 | -1.8 | -0.4 | -0.2 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -1.8 | -0.5 | -0.3 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | -1.7 | -0.7 | +0.2 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.3% | -1.3% | -1.0 | -0.1 | -0.1 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.8% | +1.0% | +1.7 | +0.0 | +0.1 | +0.0 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.3% | +0.9% | +0.3 | +0.8 | +0.1 | +0.1 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.9% | +0.9% | +0.7 | +0.1 | +0.1 | -0.0 |
-| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.8% | -0.8% | -0.8 | -0.1 | -0.1 | +0.0 |
-| Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down (`EV_RURAL_DEMAND_SOFT26`) | occurred | 1.00 | -0.8% | -0.8% | -0.9 | +0.0 | +0.1 | +0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.1% | +1.1% | +0.7 | +0.3 | +0.1 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.9% | +1.0% | +1.7 | +0.0 | +0.1 | +0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.5% | +1.0% | +0.3 | +0.8 | +0.2 | +0.1 |
+| Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down (`EV_RURAL_DEMAND_SOFT26`) | occurred | 1.00 | -0.9% | -0.9% | -0.9 | +0.0 | +0.0 | +0.0 |
 | India 2027 wheat crop (harvest Mar-Apr 2027) below 2026's record ~120 MT (`EV_WHEAT27_CROP_BELOW`) | anticipated | 0.65 | -1.3% | -0.8% | -1.2 | +0.0 | -0.1 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.2% | -0.8% | -2.2 | -0.7 | -0.3 | -0.1 |
-| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +0.8% | +0.7% | +0.3 | +0.4 | +0.1 | +0.0 |
-| Labour codes: states finalise rules (deadline 31 Oct 2026), wider operational rollout (`EV_LABOUR_CODES_RULES`) | anticipated | 0.80 | +0.8% | +0.7% | +0.6 | +0.3 | -0.0 | -0.0 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.8% | -0.8% | -0.8 | -0.1 | -0.1 | +0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.3% | -0.8% | -2.2 | -0.7 | -0.3 | -0.1 |
+| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +0.9% | +0.8% | +0.3 | +0.4 | +0.1 | +0.1 |
+| Union Budget FY28 (1 Feb 2027) raises agri/rural spending and fertiliser subsidy; PM-Kisan/rural jobs top-up (`EV_BUDGET27_AGRI_RURAL`) | scheduled | 0.70 | +1.0% | +0.7% | +0.9 | +0.0 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

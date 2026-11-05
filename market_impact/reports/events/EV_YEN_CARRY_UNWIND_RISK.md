@@ -23,8 +23,8 @@ Yen neared 160 in Aug 2026; BoJ at 31-year-high rates; hawkish BoJ/Takaichi plus
 | HINDZINC | +2.2 | +0.0 | +0.7 | +1.3 | +0.2 |
 | JSWSTEEL | +2.1 | +0.0 | +0.8 | +1.1 | +0.2 |
 | NATIONALUM | +2.0 | +0.0 | +0.9 | +1.2 | -0.1 |
-| TATACONSUM | +1.7 | +2.0 | -0.1 | -0.2 | +0.0 |
 | ASTRAL | +1.7 | +2.0 | -0.1 | -0.2 | +0.0 |
+| TATACONSUM | +1.7 | +2.0 | -0.1 | -0.2 | +0.0 |
 | ONGC | +1.7 | +0.0 | +0.9 | +0.9 | -0.1 |
 | OIL | +1.7 | +0.0 | +0.9 | +0.8 | -0.1 |
 | SAIL | +1.6 | +0.0 | +0.3 | +0.8 | +0.5 |
@@ -41,21 +41,21 @@ Yen neared 160 in Aug 2026; BoJ at 31-year-high rates; hawkish BoJ/Takaichi plus
 |---|---|---|---|---|---|
 | MOTILALOFS | -21.5 | -11.0 | -8.8 | -2.1 | +0.4 |
 | ICICIAMC | -18.4 | -11.5 | -6.4 | -0.8 | +0.3 |
-| JIOFIN | -17.4 | -12.5 | -4.2 | -0.7 | -0.0 |
-| IREDA | -16.4 | -12.5 | -3.5 | -0.3 | -0.2 |
-| 360ONE | -15.8 | -8.8 | -5.8 | -1.4 | +0.1 |
-| MEESHO | -15.7 | -10.0 | -5.8 | +0.2 | +0.0 |
+| IREDA | -16.4 | -12.5 | -3.5 | -0.3 | -0.1 |
+| 360ONE | -15.8 | -8.8 | -5.8 | -1.4 | +0.2 |
 | INDUSINDBK | -15.1 | -8.8 | -6.7 | +0.2 | +0.2 |
 | NAUKRI | -14.4 | -10.0 | -4.3 | -0.2 | +0.1 |
 | PAYTM | -13.2 | -6.5 | -7.1 | +0.3 | +0.1 |
-| MAHABANK | -12.7 | -8.8 | -4.2 | +0.1 | +0.2 |
+| MAHABANK | -12.7 | -8.8 | -4.2 | +0.1 | +0.1 |
 | IDFCFIRSTB | -12.6 | -7.5 | -5.1 | -0.0 | -0.0 |
-| LENSKART | -12.5 | -7.5 | -5.0 | +0.1 | -0.1 |
 | POLICYBZR | -12.3 | -6.2 | -6.5 | +0.4 | +0.1 |
-| ETERNAL | -12.1 | -6.2 | -5.9 | +0.1 | -0.1 |
+| LICI | -11.3 | -8.8 | -2.6 | -0.0 | +0.1 |
 | IDEA | -11.3 | -6.2 | -4.5 | -0.4 | -0.1 |
+| MEESHO | -10.6 | -5.0 | -5.8 | +0.2 | +0.0 |
+| SBIN | -10.6 | -3.8 | -6.8 | -0.0 | -0.0 |
+| INDIANB | -10.3 | -7.5 | -2.6 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 37%, 2: 55%, 3: 7%, 4: 2%
+Share of absolute impact by order: 1: 35%, 2: 56%, 3: 7%, 4: 2%
 
 ## Sources
 - 2026-10-05 Japan Has Left the Zero-Rate World. What Happens to the Yen Carry Trade? - IndraStra https://news.google.com/rss/search?q=Japan%20Has%20Left%20the%20Zero-Rate%20World.%20What%20Happens%20to%20the%20Yen%20Carry%20Trade%3F%20-%20IndraStra&hl=en-IN&gl=IN&ceid=IN:en

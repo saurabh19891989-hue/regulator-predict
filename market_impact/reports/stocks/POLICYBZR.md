@@ -2,11 +2,11 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -3.3%**, **12 months -4.6%** (rank 196 / 192 of 200 for 3m / 12m); beta 1.12
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +51.0%): 3 months 45%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.9% … P90 +2.9%; plausible 12m relative-return range incl. stock-specific noise: -68.1% … +73.3%
-- Decomposition (12m): 0.5 × forward event exposure -4.1% (3m -1.7%; half assumed priced) + 0.5 × company-specific catalysts -4.2%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -5.8% (beta-adjusted) vs a realised market-adjusted move of -47.0% — gap +41.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -3.6%**, **12 months -6.2%** (rank 200 / 200 of 200 for 3m / 12m); beta 1.12
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +51.0%): 3 months 44%, 12 months 43%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -14.3% … P90 -0.3%; plausible 12m relative-return range incl. stock-specific noise: -72.3% … +55.4%
+- Decomposition (12m): 0.5 × forward event exposure -7.6% (3m -2.6%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -4.2%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -6.0% (beta-adjusted) vs a realised market-adjusted move of -47.0% — gap +41.0 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -16,13 +16,13 @@
 | Household savings shift to financial assets (`T_FINANCIALISATION`) | +1 | +3.98 | +4.00 | +0.00 | +0.00 | -0.02 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +3.92 | +4.00 | -0.07 | -0.01 | +0.00 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -3.51 | -2.50 | -0.70 | -0.35 | +0.03 | +3.5% |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +2.46 | +2.00 | +0.50 | -0.04 | +0.01 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +2.45 | +2.00 | +0.50 | -0.04 | -0.01 | — |
 | US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -2.25 | -2.00 | +0.00 | -0.25 | -0.00 | +11.2% |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +2.17 | +0.00 | +1.96 | +0.10 | +0.12 | — |
 | Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.05 | +0.00 | -0.80 | -1.00 | -0.25 | — |
 | US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.98 | +0.00 | -1.00 | -0.70 | -0.28 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.57 | +0.00 | +1.28 | +0.30 | -0.01 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.55 | +0.00 | +1.28 | +0.31 | -0.04 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.58 | +0.00 | +1.28 | +0.30 | -0.00 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.56 | +0.00 | +1.28 | +0.31 | -0.03 | — |
 | Capital-gains / securities tax burden (`P_CAPITAL_GAINS_TAX`) | +1 = higher | -1.41 | +0.00 | -1.44 | +0.02 | +0.01 | — |
 | Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.26 | +0.00 | +0.53 | +0.59 | +0.14 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.20 | +0.00 | +1.28 | -0.06 | -0.02 | +1.2% |

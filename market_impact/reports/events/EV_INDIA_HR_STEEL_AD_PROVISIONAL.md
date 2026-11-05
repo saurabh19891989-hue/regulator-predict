@@ -16,7 +16,7 @@ DGTR initiated the HR flat-steel AD probe on 26 Jun 2026 (Livemint; GMK 29 Jun);
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | SAIL | +7.6 | +7.6 | +0.0 | -0.0 | +0.0 |
-| JINDALSTEL | +6.4 | +6.4 | -0.0 | +0.0 | +0.0 |
+| JINDALSTEL | +5.6 | +5.6 | -0.0 | +0.0 | +0.0 |
 | JSWSTEEL | +4.8 | +4.8 | +0.0 | -0.0 | +0.0 |
 | TATASTEEL | +3.2 | +3.2 | +0.0 | -0.0 | +0.0 |
 | NMDC | +1.6 | +1.6 | +0.0 | +0.0 | +0.0 |
@@ -46,7 +46,7 @@ DGTR initiated the HR flat-steel AD probe on 26 Jun 2026 (Livemint; GMK 29 Jun);
 | TVSMOTOR | -0.5 | -0.5 | +0.0 | -0.0 | -0.0 |
 | HEROMOTOCO | -0.5 | -0.5 | +0.0 | +0.0 | +0.0 |
 | BOSCHLTD | -0.4 | -0.4 | +0.0 | -0.0 | -0.0 |
-| PRESTIGE | -0.3 | -0.3 | -0.0 | -0.0 | +0.0 |
+| PRESTIGE | -0.3 | -0.3 | -0.0 | -0.0 | -0.0 |
 | ADANIENSOL | -0.3 | -0.3 | +0.0 | -0.0 | -0.0 |
 | CUMMINSIND | -0.3 | -0.3 | +0.0 | -0.0 | +0.0 |
 

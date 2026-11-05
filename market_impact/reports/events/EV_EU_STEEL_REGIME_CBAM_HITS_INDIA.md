@@ -29,14 +29,14 @@ EU CBAM definitive period began 1 Jan 2026 (certificate purchases from 2027, mod
 | TVSMOTOR | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |
 | HEROMOTOCO | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |
 | BOSCHLTD | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
-| PRESTIGE | +0.1 | +0.1 | +0.0 | +0.0 | -0.0 |
+| PRESTIGE | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | ADANIENSOL | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | CUMMINSIND | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | -2.9 | -2.9 | +0.0 | +0.0 | +0.0 |
+| JINDALSTEL | -2.6 | -2.6 | +0.0 | +0.0 | +0.0 |
 | SAIL | -2.2 | -2.2 | +0.0 | +0.0 | +0.0 |
 | JSWSTEEL | -2.1 | -2.1 | +0.0 | +0.0 | +0.0 |
 | NMDC | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |

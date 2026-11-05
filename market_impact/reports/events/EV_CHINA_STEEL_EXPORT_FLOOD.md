@@ -34,8 +34,8 @@ If property stays weak and the Fed-driven dollar rise persists, mills export mor
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | -10.8 | -1.2 | -10.3 | +0.7 | +0.0 |
 | SAIL | -10.6 | +0.0 | -11.4 | +0.9 | +0.0 |
+| JINDALSTEL | -9.5 | -1.2 | -9.0 | +0.6 | +0.0 |
 | JSWSTEEL | -6.2 | +0.0 | -6.8 | +0.5 | +0.0 |
 | TATASTEEL | -5.7 | -2.0 | -4.4 | +0.7 | +0.0 |
 | APLAPOLLO | -1.3 | +0.0 | -1.3 | +0.1 | +0.0 |
@@ -50,7 +50,7 @@ If property stays weak and the Fed-driven dollar rise persists, mills export mor
 | NATIONALUM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | OIL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 11%, 2: 78%, 3: 9%, 4: 2%
+Share of absolute impact by order: 1: 11%, 2: 78%, 3: 9%, 4: 1%
 
 ## Sources
 - 2026-10-29 Asia Braces for Europe's Turn on Chinese Overcapacity https://news.google.com/rss/search?q=Asia+Braces+for+Europe's+Turn+on+Chinese+Overcapacity&hl=en-IN&gl=IN&ceid=IN:en

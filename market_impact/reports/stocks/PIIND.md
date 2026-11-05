@@ -2,11 +2,11 @@
 *MIDCAP_100 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.6%**, **12 months +1.1%** (rank 17 / 60 of 200 for 3m / 12m); beta 0.76
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.2%): 3 months 54%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +5.9%; plausible 12m relative-return range incl. stock-specific noise: -30.8% … +37.3%
-- Decomposition (12m): 0.5 × forward event exposure +7.6% (3m +4.4%; half assumed priced) + 0.5 × company-specific catalysts -4.5%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.1% (beta-adjusted) vs a realised market-adjusted move of -35.3% — gap +37.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.7%**, **12 months -0.2%** (rank 32 / 114 of 200 for 3m / 12m); beta 0.76
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.2%): 3 months 52%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.1% … P90 +4.8%; plausible 12m relative-return range incl. stock-specific noise: -36.2% … +38.0%
+- Decomposition (12m): 0.5 × forward event exposure +4.5% (3m +2.4%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -4.5%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.9% (beta-adjusted) vs a realised market-adjusted move of -35.3% — gap +37.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -16,9 +16,9 @@
 | China chemical/API dumping intensity (`F_CHINA_CHEM_EXPORTS`) | +15% export volumes / price cuts | -3.03 | -3.00 | +0.00 | -0.03 | +0.00 | — |
 | China+1 manufacturing relocation to India (`T_CHINA_PLUS_ONE`) | +1 | +2.92 | +3.00 | -0.08 | +0.00 | +0.00 | — |
 | USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.01 | +2.00 | +0.00 | +0.00 | +0.01 | -1.1% |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.62 | +1.50 | +0.14 | +0.03 | -0.05 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.63 | +1.50 | +0.14 | +0.03 | -0.04 | — |
 | US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.38 | -1.20 | -0.22 | +0.05 | -0.01 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.18 | +1.20 | +0.00 | +0.02 | -0.04 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.20 | +1.20 | +0.00 | +0.02 | -0.02 | — |
 | China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.09 | +0.00 | +0.96 | +0.09 | +0.04 | — |
 | Chemical feedstock (benzene, propylene, etc.) (`F_CHEM_FEEDSTOCK`) | +10% feedstock | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
 | Europe growth (`F_EU_GDP`) | +1 pp | +1.00 | +1.00 | +0.00 | +0.00 | +0.00 | — |
@@ -30,9 +30,9 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.0% | -2.0% | -1.9 | -0.2 | -0.0 | +0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.1% | -2.1% | -1.9 | -0.2 | -0.0 | +0.0 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.8% | +1.4% | +1.8 | -0.0 | +0.0 | +0.0 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.6% | +1.1% | +1.5 | +0.2 | -0.0 | -0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.6% | +1.1% | +1.5 | +0.2 | -0.0 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.8 | +0.0 | +0.0 |
 | India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.55 | +1.4% | +0.8% | +1.5 | -0.1 | -0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.7% | -0.7% | -0.7 | +0.0 | +0.0 | -0.0 |
@@ -41,7 +41,7 @@
 | India-EU FTA signed at ceremony (planned 16 Dec 2026) (`EV_INDIA_EU_FTA_SIGNED`) | scheduled | 0.92 | +0.6% | +0.5% | +0.6 | -0.0 | +0.0 | +0.0 |
 | Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | -3.6% | -0.5% | -3.0 | -0.8 | +0.2 | -0.0 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.5 | -0.0 | +0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | -1.0% | -0.5% | +0.0 | -1.0 | -0.0 | +0.0 |
+| IMD April 2027 forecast says below-normal monsoon (<96% LPA) - second weak year risk (`EV_MONSOON27_DEFICIT_FORECAST`) | risk_scenario | 0.32 | -1.6% | -0.5% | -1.5 | -0.2 | +0.1 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

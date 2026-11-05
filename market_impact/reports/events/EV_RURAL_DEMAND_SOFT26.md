@@ -17,42 +17,42 @@ Tractors Oct 2026: M&M domestic 62,626 (-13% y/y; company attributes to Diwali s
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PRESTIGE | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
-| JSWENERGY | +0.2 | +0.0 | +0.0 | +0.2 | +0.1 |
-| RVNL | +0.2 | +0.0 | +0.0 | +0.3 | -0.0 |
-| GRASIM | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| SOLARINDS | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| SUZLON | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| PREMIERENE | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| LENSKART | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
-| JUBLFOOD | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
-| ETERNAL | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
-| APARINDS | +0.1 | +0.0 | +0.0 | +0.2 | -0.0 |
-| GODREJPROP | +0.1 | +0.0 | +0.0 | -0.0 | +0.1 |
-| BIOCON | +0.1 | +0.0 | +0.0 | +0.1 | +0.1 |
-| OBEROIRLTY | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
-| RADICO | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| RVNL | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
+| PREMIERENE | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| GRASIM | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SUZLON | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SOLARINDS | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| VAML | +0.0 | +0.0 | +0.0 | -0.0 | +0.1 |
+| COCHINSHIP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| NATIONALUM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| APARINDS | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
+| OIL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HINDZINC | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| NMDC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| JUBLFOOD | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| BDL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| LENSKART | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | -2.4 | +0.0 | -1.8 | -0.8 | +0.2 |
-| IDFCFIRSTB | -2.0 | +0.0 | -1.6 | -0.6 | +0.2 |
-| BANKINDIA | -1.6 | +0.0 | -1.1 | -0.6 | +0.1 |
-| M&MFIN | -1.5 | -1.2 | -0.4 | -0.1 | +0.1 |
-| YESBANK | -1.5 | +0.0 | -1.3 | -0.4 | +0.2 |
+| INDUSINDBK | -2.5 | +0.0 | -1.8 | -0.8 | +0.1 |
+| IDFCFIRSTB | -2.1 | +0.0 | -1.6 | -0.7 | +0.1 |
+| YESBANK | -1.8 | +0.0 | -1.3 | -0.5 | +0.1 |
+| M&MFIN | -1.7 | -1.2 | -0.4 | -0.2 | +0.1 |
+| BANKINDIA | -1.6 | +0.0 | -1.1 | -0.5 | +0.1 |
+| TMCV | -1.4 | +0.0 | -1.5 | +0.0 | -0.0 |
 | FEDERALBNK | -1.4 | +0.0 | -0.5 | -1.0 | +0.1 |
-| TMCV | -1.4 | +0.0 | -1.5 | +0.1 | +0.0 |
-| KOTAKBANK | -1.3 | +0.0 | -1.0 | -0.4 | +0.1 |
-| MAHABANK | -1.3 | +0.0 | -0.9 | -0.5 | +0.1 |
-| LICHSGFIN | -1.3 | +0.0 | -0.3 | -1.0 | +0.1 |
+| KOTAKBANK | -1.4 | +0.0 | -1.0 | -0.4 | +0.0 |
+| AXISBANK | -1.4 | +0.0 | -1.0 | -0.4 | +0.1 |
+| SHRIRAMFIN | -1.3 | +0.0 | -1.1 | -0.3 | +0.1 |
 | INDIANB | -1.3 | +0.0 | -1.0 | -0.4 | +0.1 |
-| AXISBANK | -1.3 | +0.0 | -1.0 | -0.4 | +0.1 |
-| SHRIRAMFIN | -1.2 | +0.0 | -1.1 | -0.2 | +0.1 |
+| MAHABANK | -1.3 | +0.0 | -0.9 | -0.5 | +0.0 |
+| LTF | -1.3 | -0.9 | -0.3 | -0.2 | +0.1 |
 | UNIONBANK | -1.2 | +0.0 | -0.9 | -0.4 | +0.1 |
-| PNB | -1.2 | +0.0 | -0.9 | -0.4 | +0.1 |
+| MEESHO | -1.2 | -1.2 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 17%, 2: 46%, 3: 25%, 4: 11%
+Share of absolute impact by order: 1: 18%, 2: 49%, 3: 27%, 4: 6%
 
 ## Sources
 - 2026-11-02 Mahindra sells 64,846 tractors in Oct 2026 - Global Agriculture https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/

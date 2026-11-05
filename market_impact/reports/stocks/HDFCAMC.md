@@ -2,11 +2,11 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.4%**, **12 months +0.4%** (rank 78 / 92 of 200 for 3m / 12m); beta 1.30
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.5%): 3 months 51%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.2% … P90 +2.6%; plausible 12m relative-return range incl. stock-specific noise: -32.6% … +25.4%
-- Decomposition (12m): 0.5 × forward event exposure +1.6% (3m +1.3%; half assumed priced) + 0.5 × company-specific catalysts +0.0%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.0% (beta-adjusted) vs a realised market-adjusted move of -5.0% — gap +6.0 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.1%**, **12 months -0.7%** (rank 122 / 137 of 200 for 3m / 12m); beta 1.30
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.5%): 3 months 49%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.4% … P90 +1.4%; plausible 12m relative-return range incl. stock-specific noise: -29.8% … +26.0%
+- Decomposition (12m): 0.5 × forward event exposure -0.9% (3m -0.0%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +0.7% (beta-adjusted) vs a realised market-adjusted move of -5.0% — gap +5.7 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -22,8 +22,8 @@
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.41 | -0.80 | -0.28 | -0.27 | -0.06 | +3.5% |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | — |
 | Digital payments / UPI disruption of incumbents (`T_DIGITAL_PAYMENTS`) | +1 | +1.04 | +0.00 | +0.64 | +0.33 | +0.07 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.94 | +0.00 | -0.53 | -0.28 | -0.14 | -1.1% |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.89 | +0.00 | -0.26 | -0.29 | -0.35 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.92 | +0.00 | -0.53 | -0.27 | -0.13 | -1.1% |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.91 | +0.00 | -0.26 | -0.29 | -0.37 | — |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +0.88 | +0.00 | +0.68 | +0.12 | +0.07 | — |
 | Formalisation of the economy (`T_FORMALISATION`) | +1 | +0.87 | +0.00 | +0.64 | +0.22 | +0.01 | — |
 
@@ -35,7 +35,7 @@
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | +0.0 | -0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -4.8% | -1.2% | -2.0 | -2.1 | -0.8 | +0.1 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.0% | +1.0% | +0.8 | +0.2 | -0.0 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.5 | -0.3 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.5 | -0.3 | -0.1 |
 | Budget FY2027-28: LTCG/STT relief on listed equities (rate cut, exemption, or FPI-specific relief) (`EV_BUDGET_FY28_LTCG_RELIEF`) | scheduled | 0.35 | +2.6% | +0.9% | +2.4 | +0.2 | +0.0 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.7 | -0.1 | -0.0 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.9 | +0.0 | +0.0 |
@@ -56,11 +56,11 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → HDFCAMC | -2.00% | -0.40% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCAMC | -1.44% | -0.36% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCAMC | -1.44% | -0.36% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → HDFCAMC | -0.60% | -0.36% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → HDFCAMC | -2.00% | -0.30% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → HDFCAMC | +0.75% | +0.26% |
 | 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → HDFCAMC | +0.30% | +0.24% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → HDFCAMC | -0.24% | -0.22% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → HDFCAMC | -0.36% | -0.22% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → HDFCAMC | -0.36% | -0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)

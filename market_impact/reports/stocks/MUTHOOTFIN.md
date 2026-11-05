@@ -2,11 +2,11 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.6%**, **12 months -3.0%** (rank 186 / 184 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.6%): 3 months 46%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.4% … P90 +0.7%; plausible 12m relative-return range incl. stock-specific noise: -35.6% … +20.7%
-- Decomposition (12m): 0.5 × forward event exposure -3.5% (3m -2.4%; half assumed priced) + 0.5 × company-specific catalysts -1.6%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -6.3% (beta-adjusted) vs a realised market-adjusted move of -17.2% — gap +10.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.8%**, **12 months -2.8%** (rank 174 / 193 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.6%): 3 months 48%, 12 months 46%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.2% … P90 +1.4%; plausible 12m relative-return range incl. stock-specific noise: -36.5% … +30.7%
+- Decomposition (12m): 0.5 × forward event exposure -3.5% (3m -1.1%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -1.6%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -6.6% (beta-adjusted) vs a realised market-adjusted move of -17.2% — gap +10.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -16,28 +16,28 @@
 | RBI prudential tightening (risk weights, LCR, provisioning) (`P_RBI_PRUDENTIAL`) | +1 = tightening step | -4.78 | -4.00 | -0.88 | +0.01 | +0.09 | — |
 | Credit cost / NPA cycle (higher = worse) (`F_ASSET_QUALITY_IN`) | +50 bp credit cost | -3.79 | -3.50 | -0.30 | +0.00 | +0.01 | — |
 | Gold price (`F_GOLD`) | +8% gold (USD) | +3.47 | +3.50 | +0.00 | -0.03 | -0.00 | -8.4% |
-| Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -2.42 | -2.50 | +0.00 | +0.05 | +0.03 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.11 | +2.00 | +0.07 | +0.01 | +0.03 | — |
-| US dollar index (`F_DXY`) | +3% DXY | -2.01 | +0.00 | -1.94 | -0.07 | -0.01 | +2.2% |
+| Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -2.44 | -2.50 | +0.00 | +0.05 | +0.01 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.10 | +2.00 | +0.07 | +0.01 | +0.02 | — |
+| US dollar index (`F_DXY`) | +3% DXY | -2.00 | +0.00 | -1.94 | -0.07 | +0.00 | +2.2% |
 | US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -1.91 | +0.00 | -1.50 | -0.38 | -0.04 | +9.4% |
 | Formalisation of the economy (`T_FORMALISATION`) | +1 | +1.91 | +2.00 | +0.00 | -0.06 | -0.04 | — |
-| Bank credit growth (`F_CREDIT_GROWTH_IN`) | +3 pp | -1.91 | +0.00 | -1.26 | -0.58 | -0.06 | — |
+| Bank credit growth (`F_CREDIT_GROWTH_IN`) | +3 pp | -1.87 | +0.00 | -1.26 | -0.58 | -0.03 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.85 | -1.50 | -0.44 | +0.05 | +0.04 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.68 | +0.00 | -1.16 | -0.61 | +0.10 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.70 | +0.00 | -1.16 | -0.61 | +0.07 | — |
 | Gold import duty (`P_GOLD_IMPORT_DUTY`) | +5 pp | +1.51 | +1.50 | +0.00 | +0.00 | +0.01 | — |
-| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.24 | -1.00 | -0.25 | +0.00 | +0.01 | — |
+| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.25 | -1.00 | -0.25 | +0.00 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.6% | -4.6% | -4.4 | -0.1 | -0.0 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.6% | -4.6% | -4.4 | -0.1 | -0.0 | -0.0 |
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -3.6% | -3.6% | -3.7 | +0.0 | +0.0 | +0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.2% | +2.6% | +5.0 | +0.1 | +0.1 | +0.1 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.2% | +2.6% | +5.0 | +0.1 | +0.1 | +0.0 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.4% | -2.4% | +0.0 | -2.4 | -0.1 | +0.1 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.4% | -2.4% | +0.0 | -2.2 | -0.2 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.3% | -2.3% | -2.3 | -0.1 | +0.1 | -0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | +0.1 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.3 | -0.7 | +0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.3 | -0.7 | +0.0 |
 | Gold falls to ~$3,500 / silver to ~$40 on Fed hike(s) and strong dollar (`EV_PRECIOUS_METALS_FURTHER_SLIDE`) | risk_scenario | 0.30 | -6.6% | -2.0% | -6.7 | +0.0 | +0.1 | +0.0 |
 | RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.90 | -1.8% | -1.6% | -1.7 | -0.1 | +0.0 | +0.0 |
 | Gold/silver rebound as Fed hike fears fade or Iran war ends (`EV_PRECIOUS_METALS_REBOUND_H1_2027`) | anticipated | 0.45 | +3.5% | +1.6% | +3.5 | +0.0 | -0.0 | -0.0 |

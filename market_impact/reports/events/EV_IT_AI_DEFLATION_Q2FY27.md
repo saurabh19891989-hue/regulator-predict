@@ -16,21 +16,21 @@ Q2 FY27 previews (28 Sep, 4 Oct) called for subdued growth with AI-driven price 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| POWERINDIA | +0.9 | +0.0 | +0.7 | +0.1 | +0.1 |
-| PAYTM | +0.7 | +1.0 | -0.2 | -0.1 | -0.1 |
-| CUMMINSIND | +0.7 | +0.0 | +0.7 | +0.0 | -0.0 |
-| ENRIN | +0.5 | +0.0 | +0.4 | +0.1 | +0.0 |
-| ABB | +0.5 | +0.0 | +0.4 | +0.0 | +0.0 |
+| POWERINDIA | +0.8 | +0.0 | +0.7 | +0.1 | +0.0 |
+| PAYTM | +0.7 | +1.0 | -0.2 | -0.1 | -0.0 |
+| CUMMINSIND | +0.6 | +0.0 | +0.7 | +0.0 | -0.0 |
+| ENRIN | +0.5 | +0.0 | +0.4 | +0.1 | -0.0 |
+| ABB | +0.4 | +0.0 | +0.4 | +0.0 | -0.0 |
 | GVT&D | +0.4 | +0.0 | +0.4 | +0.0 | +0.0 |
-| BIOCON | +0.4 | +0.0 | +0.4 | -0.0 | +0.0 |
-| CGPOWER | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
-| KEI | +0.3 | +0.0 | +0.3 | +0.1 | +0.0 |
-| SIEMENS | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
-| ADANIGREEN | +0.3 | +0.0 | +0.4 | -0.0 | -0.0 |
-| LAURUSLABS | +0.3 | +0.0 | +0.3 | -0.0 | +0.0 |
-| COALINDIA | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
-| NATIONALUM | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| OIL | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
+| BIOCON | +0.4 | +0.0 | +0.4 | -0.0 | -0.0 |
+| CGPOWER | +0.4 | +0.0 | +0.3 | +0.1 | -0.0 |
+| KEI | +0.3 | +0.0 | +0.3 | +0.1 | -0.0 |
+| ADANIGREEN | +0.3 | +0.0 | +0.4 | -0.0 | -0.1 |
+| SIEMENS | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
+| LAURUSLABS | +0.2 | +0.0 | +0.3 | -0.0 | -0.0 |
+| NATIONALUM | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
+| OIL | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
+| COALINDIA | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -48,10 +48,10 @@ Q2 FY27 previews (28 Sep, 4 Oct) called for subdued growth with AI-driven price 
 | COFORGE | -1.5 | -1.5 | +0.1 | -0.0 | -0.0 |
 | POLICYBZR | -1.1 | -1.0 | +0.0 | -0.1 | -0.0 |
 | INDIGO | -1.1 | +0.0 | -0.6 | -0.4 | -0.1 |
-| NYKAA | -1.0 | +0.0 | -0.8 | -0.2 | +0.0 |
-| ETERNAL | -0.9 | +0.0 | -0.8 | -0.2 | +0.0 |
+| NYKAA | -1.0 | +0.0 | -0.8 | -0.2 | -0.0 |
+| GMRAIRPORT | -0.9 | +0.0 | -0.4 | -0.5 | -0.1 |
 
-Share of absolute impact by order: 1: 43%, 2: 30%, 3: 19%, 4: 8%
+Share of absolute impact by order: 1: 42%, 2: 30%, 3: 19%, 4: 9%
 
 ## Sources
 - 2026-10-23 TCS vs Infosys vs HCLTech vs Wipro: Q2 AI, deal wins https://www.ndtvprofit.com/

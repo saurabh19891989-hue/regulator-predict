@@ -2,11 +2,11 @@
 *MIDCAP_100 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.6%**, **12 months +1.4%** (rank 16 / 44 of 200 for 3m / 12m); beta 1.40
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +48.4%): 3 months 53%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.8% … P90 +6.1%; plausible 12m relative-return range incl. stock-specific noise: -46.0% … +62.6%
-- Decomposition (12m): 0.5 × forward event exposure +8.2% (3m +4.3%; half assumed priced) + 0.5 × company-specific catalysts -4.4%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.5% (beta-adjusted) vs a realised market-adjusted move of -27.0% — gap +29.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.0%**, **12 months -1.4%** (rank 106 / 167 of 200 for 3m / 12m); beta 1.40
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +48.4%): 3 months 50%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.3% … P90 +4.9%; plausible 12m relative-return range incl. stock-specific noise: -62.2% … +65.9%
+- Decomposition (12m): 0.5 × forward event exposure +2.1% (3m +0.9%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -4.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.2% (beta-adjusted) vs a realised market-adjusted move of -27.0% — gap +29.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,9 +14,9 @@
 |---|---|---|---|---|---|---|---|
 | Copper price (`F_COPPER`) | +10% copper | +6.00 | +6.00 | +0.00 | +0.00 | +0.00 | -2.4% |
 | Mining royalty / mineral tax burden (`P_MINING_ROYALTY`) | +1 = higher | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.80 | +3.00 | -0.17 | -0.03 | +0.00 | -1.1% |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +2.72 | +1.00 | +1.60 | +0.10 | +0.01 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.72 | +2.00 | +0.72 | +0.00 | -0.00 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.81 | +3.00 | -0.17 | -0.02 | +0.00 | -1.1% |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.73 | +2.00 | +0.72 | +0.00 | +0.01 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +2.71 | +1.00 | +1.60 | +0.10 | +0.01 | — |
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +1.39 | +0.00 | +1.04 | +0.35 | +0.00 | — |
 | US dollar index (`F_DXY`) | +3% DXY | -1.30 | +0.00 | -1.42 | +0.11 | +0.01 | +2.2% |
 | US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -0.80 | +0.00 | -0.32 | -0.46 | -0.03 | — |
@@ -25,13 +25,13 @@
 | Foreign portfolio flows into Indian government/corporate bonds (FAR, index-linked) (`NEW_FPI_DEBT_FLOWS`) | +US$5 bn net debt inflow per quarter | -0.57 | +0.00 | -0.60 | +0.03 | +0.00 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.53 | +0.80 | -0.28 | +0.01 | +0.00 | — |
 | US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -0.39 | +0.00 | -0.16 | -0.18 | -0.05 | +9.4% |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | +0.37 | +0.00 | +0.28 | +0.09 | +0.01 | — |
+| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | +0.34 | +0.00 | +0.28 | +0.07 | -0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -1.4% | -1.4% | -1.4 | +0.0 | +0.0 | +0.0 |
-| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +1.4% | +1.4% | +1.0 | +0.4 | +0.0 | -0.0 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +1.4% | +1.4% | +1.0 | +0.4 | +0.0 | +0.0 |
 | China Central Economic Work Conference / NPC (Dec 2026-Mar 2027): larger-than-expected fiscal or property stimulus (`EV_CHINA_CEWC_STIMULUS_DEC26`) | anticipated | 0.45 | +2.8% | +1.3% | +2.8 | -0.1 | +0.0 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.2% | -1.2% | -1.8 | +0.6 | -0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.0% | -1.0% | -1.1 | +0.1 | +0.0 | +0.0 |

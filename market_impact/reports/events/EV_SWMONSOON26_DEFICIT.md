@@ -18,42 +18,42 @@ IMD: June-Sept rainfall 759.4 mm vs 868.6 mm LPA (1971-2020), i.e. 87% of LPA / 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| ADANIPOWER | +1.5 | +1.0 | +0.6 | +0.1 | -0.1 |
-| COALINDIA | +1.1 | +0.6 | +0.2 | +0.3 | +0.0 |
-| ENRIN | +0.9 | +0.6 | +0.1 | +0.3 | -0.2 |
-| WAAREEENER | +0.6 | +0.4 | +0.0 | +0.3 | -0.1 |
-| BHEL | +0.6 | +0.6 | +0.0 | +0.1 | -0.2 |
-| SUZLON | +0.6 | +0.3 | +0.0 | +0.4 | -0.1 |
-| SOLARINDS | +0.5 | +0.2 | +0.0 | +0.4 | -0.1 |
-| ULTRACEMCO | +0.5 | +0.6 | +0.0 | -0.0 | -0.1 |
-| APARINDS | +0.5 | +0.0 | +0.2 | +0.3 | -0.0 |
-| TATAPOWER | +0.5 | +0.3 | +0.4 | +0.0 | -0.2 |
-| JSWENERGY | +0.5 | -0.1 | +0.5 | +0.2 | -0.1 |
-| PERSISTENT | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| NATIONALUM | +0.4 | +0.0 | +0.1 | +0.1 | +0.2 |
-| TECHM | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| NLCINDIA | +0.3 | +0.2 | +0.2 | +0.1 | -0.2 |
+| ADANIPOWER | +1.4 | +1.0 | +0.6 | -0.0 | -0.1 |
+| COALINDIA | +0.9 | +0.6 | +0.1 | +0.2 | -0.0 |
+| ENRIN | +0.6 | +0.6 | +0.1 | +0.1 | -0.3 |
+| ULTRACEMCO | +0.4 | +0.6 | +0.0 | -0.1 | -0.1 |
+| BHEL | +0.3 | +0.6 | +0.0 | -0.0 | -0.3 |
+| PERSISTENT | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
+| WAAREEENER | +0.3 | +0.4 | +0.0 | +0.1 | -0.2 |
+| TECHM | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
+| NATIONALUM | +0.3 | +0.0 | +0.1 | +0.0 | +0.1 |
+| TCS | +0.3 | +0.0 | +0.0 | +0.2 | +0.0 |
+| TATAPOWER | +0.2 | +0.3 | +0.4 | -0.1 | -0.4 |
+| SUZLON | +0.2 | +0.3 | +0.0 | +0.2 | -0.3 |
+| APARINDS | +0.2 | +0.0 | +0.2 | +0.1 | -0.1 |
+| OIL | +0.2 | +0.0 | +0.0 | +0.0 | +0.1 |
+| SOLARINDS | +0.2 | +0.2 | +0.0 | +0.2 | -0.2 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | -6.7 | +0.0 | -2.6 | -3.1 | -1.0 |
-| IDFCFIRSTB | -5.9 | +0.0 | -2.2 | -2.6 | -1.1 |
-| YESBANK | -4.9 | +0.0 | -1.7 | -2.0 | -1.2 |
-| M&MFIN | -4.8 | -3.1 | -0.7 | -0.6 | -0.3 |
-| SHRIRAMFIN | -4.2 | -2.5 | -0.5 | -0.9 | -0.2 |
-| BANKINDIA | -3.8 | +0.0 | -1.3 | -2.2 | -0.3 |
-| AXISBANK | -3.7 | +0.0 | -1.2 | -1.7 | -0.7 |
-| SBICARD | -3.6 | +0.0 | -1.9 | -1.2 | -0.5 |
-| KOTAKBANK | -3.4 | +0.0 | -1.3 | -1.8 | -0.4 |
-| INDIANB | -3.4 | +0.0 | -1.2 | -1.7 | -0.5 |
-| FEDERALBNK | -3.4 | +0.0 | -0.3 | -2.3 | -0.8 |
-| SBIN | -3.4 | +0.0 | -1.1 | -1.8 | -0.4 |
-| HDFCBANK | -3.2 | +0.0 | -1.1 | -1.5 | -0.6 |
-| AUBANK | -3.2 | +0.0 | -1.1 | -1.4 | -0.8 |
-| UNIONBANK | -3.2 | +0.0 | -1.2 | -1.6 | -0.4 |
+| INDUSINDBK | -6.9 | +0.0 | -2.6 | -3.1 | -1.2 |
+| IDFCFIRSTB | -6.1 | +0.0 | -2.2 | -2.7 | -1.2 |
+| YESBANK | -5.1 | +0.0 | -1.7 | -2.3 | -1.1 |
+| M&MFIN | -5.1 | -3.1 | -0.7 | -0.8 | -0.4 |
+| SHRIRAMFIN | -4.4 | -2.5 | -0.5 | -1.0 | -0.4 |
+| AXISBANK | -3.9 | +0.0 | -1.2 | -1.8 | -0.8 |
+| SBICARD | -3.8 | +0.0 | -1.9 | -1.3 | -0.6 |
+| BANKINDIA | -3.7 | +0.0 | -1.3 | -2.1 | -0.4 |
+| AUBANK | -3.7 | +0.0 | -1.1 | -1.8 | -0.8 |
+| INDIANB | -3.5 | +0.0 | -1.2 | -1.7 | -0.6 |
+| KOTAKBANK | -3.4 | +0.0 | -1.3 | -1.7 | -0.4 |
+| FEDERALBNK | -3.4 | +0.0 | -0.3 | -2.2 | -0.9 |
+| HDFCBANK | -3.4 | +0.0 | -1.1 | -1.6 | -0.7 |
+| SBIN | -3.4 | +0.0 | -1.1 | -1.8 | -0.5 |
+| BAJFINANCE | -3.4 | +0.0 | -0.7 | -1.4 | -1.3 |
 
-Share of absolute impact by order: 1: 10%, 2: 32%, 3: 34%, 4: 24%
+Share of absolute impact by order: 1: 9%, 2: 30%, 3: 34%, 4: 27%
 
 ## Sources
 - 2026-09-30 Southwest monsoon ends with 12% deficit - The Hindu https://www.thehindu.com/sci-tech/energy-and-environment/southwest-monsoon-ends-with-12-deficit/article71529423.ece

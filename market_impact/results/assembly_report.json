@@ -37,6 +37,47 @@
    "F_REFINING_MARGIN": "HO=F is a NY Harbor heating-oil price; its crack vs Brent swung +$24/bbl since June (US distillate squeeze), far from Singapore/Indian GRM moves (RT_BACKBONE)",
    "F_GAS_GLOBAL": "NG=F is Henry Hub; the node is Asian LNG (JKM), which rose to 2022 highs (RT_BACKBONE)"
   },
+  "market_priced_drift_removed": [
+   "F_ALUMINIUM",
+   "F_BRENT",
+   "F_CHINA_GDP",
+   "F_COAL_INTL",
+   "F_COKING_COAL",
+   "F_COPPER",
+   "F_COTTON",
+   "F_CPI_IN",
+   "F_CREDIT_SPREADS_IN",
+   "F_DOMESTIC_FLOWS",
+   "F_DXY",
+   "F_EDIBLE_OIL",
+   "F_EU_GDP",
+   "F_FED_FUNDS",
+   "F_FOOD_INFLATION_IN",
+   "F_FPI_FLOWS",
+   "F_GAS_GLOBAL",
+   "F_GDP_IN",
+   "F_GOLD",
+   "F_GSEC_10Y_IN",
+   "F_IRON_ORE",
+   "F_LIQUIDITY_IN",
+   "F_REFINING_MARGIN",
+   "F_REPO_IN",
+   "F_RICE",
+   "F_RISK_SENTIMENT",
+   "F_SILVER",
+   "F_STEEL_GLOBAL",
+   "F_SUGAR",
+   "F_USDCNY",
+   "F_USDINR",
+   "F_US_10Y",
+   "F_US_EQUITIES",
+   "F_US_GDP",
+   "F_WHEAT",
+   "F_ZINC_LEAD",
+   "NEW_FPI_DEBT_FLOWS",
+   "NEW_FX_RESERVES_IN",
+   "NEW_USDJPY"
+  ],
   "max_depth": 4,
   "overlap_damp": 0.5
  },
@@ -49,6 +90,6 @@
  "dead_end_drivers": [],
  "recent_state_drivers": {
   "observed": 17,
-  "from_events": 49
+  "from_events": 48
  }
 }

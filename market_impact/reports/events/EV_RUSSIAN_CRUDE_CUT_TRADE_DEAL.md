@@ -16,20 +16,20 @@ Rubio: 'very close' to finalising India deal (3 Nov); US midterm Democratic Hous
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | BHARATFORG | +2.0 | +0.0 | +2.0 | +0.0 | +0.0 |
-| WAAREEENER | +1.3 | +0.0 | +1.3 | +0.0 | -0.0 |
 | APARINDS | +1.3 | +0.0 | +1.3 | -0.0 | -0.0 |
 | CONCOR | +1.2 | +0.0 | +1.0 | +0.2 | +0.0 |
 | LAURUSLABS | +0.9 | +0.0 | +0.0 | +0.9 | -0.0 |
 | PIIND | +0.8 | +0.0 | +0.8 | +0.1 | -0.0 |
 | MOTILALOFS | +0.8 | +0.0 | +0.0 | +0.7 | +0.2 |
-| BDL | +0.8 | +0.8 | +0.0 | +0.0 | -0.0 |
+| BDL | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
 | DIVISLAB | +0.7 | +0.0 | +0.4 | +0.3 | +0.0 |
 | COCHINSHIP | +0.7 | +0.0 | +0.7 | -0.0 | -0.0 |
-| INDUSINDBK | +0.7 | +0.0 | +0.0 | +0.5 | +0.1 |
-| ADANIPORTS | +0.6 | +0.0 | +0.5 | +0.2 | -0.0 |
+| INDUSINDBK | +0.7 | +0.0 | +0.0 | +0.5 | +0.2 |
+| ADANIPORTS | +0.7 | +0.0 | +0.5 | +0.2 | +0.0 |
 | SBIN | +0.6 | +0.0 | -0.1 | +0.6 | +0.1 |
 | ICICIAMC | +0.6 | +0.0 | +0.0 | +0.5 | +0.1 |
 | BAJAJ-AUTO | +0.6 | +0.0 | +0.7 | -0.0 | -0.0 |
+| DIXON | +0.6 | +0.0 | +0.0 | +0.6 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -37,20 +37,20 @@ Rubio: 'very close' to finalising India deal (3 Nov); US midterm Democratic Hous
 | BPCL | -5.8 | -5.5 | -0.5 | +0.2 | +0.0 |
 | IOC | -4.6 | -4.5 | -0.2 | +0.1 | -0.0 |
 | HINDPETRO | -4.1 | -4.0 | -0.3 | +0.1 | +0.0 |
-| ONGC | -1.4 | -1.6 | +0.3 | -0.0 | -0.0 |
+| ONGC | -1.3 | -1.6 | +0.3 | -0.0 | -0.0 |
 | RELIANCE | -1.3 | -1.7 | +0.3 | +0.1 | +0.0 |
 | OIL | -1.1 | -1.5 | +0.5 | -0.1 | -0.0 |
 | SOLARINDS | -0.5 | -0.5 | +0.0 | -0.0 | -0.0 |
 | NATIONALUM | -0.4 | +0.0 | -0.1 | -0.2 | -0.1 |
 | VAML | -0.3 | +0.0 | +0.0 | -0.3 | -0.1 |
-| BIOCON | -0.3 | +0.0 | +0.0 | -0.2 | -0.1 |
 | NMDC | -0.3 | +0.0 | -0.1 | -0.1 | -0.1 |
-| HINDCOPPER | -0.3 | +0.0 | -0.1 | -0.1 | -0.0 |
-| TMPV | -0.2 | +0.0 | -0.0 | -0.1 | -0.1 |
-| SRF | -0.2 | +0.0 | -0.2 | +0.1 | -0.1 |
+| BIOCON | -0.3 | +0.0 | +0.0 | -0.2 | -0.1 |
+| HINDCOPPER | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
 | MOTHERSON | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
+| TMPV | -0.2 | +0.0 | -0.0 | -0.1 | -0.1 |
+| MARUTI | -0.2 | +0.0 | -0.2 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 24%, 2: 26%, 3: 39%, 4: 11%
+Share of absolute impact by order: 1: 24%, 2: 25%, 3: 40%, 4: 11%
 
 ## Sources
 - 2026-11-03 Rubio: very close to finalising trade deal with India (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=Very+close+to+finalising+trade+deal+with+India+Rubio+when:120d&hl=en-IN&gl=IN&ceid=IN:en

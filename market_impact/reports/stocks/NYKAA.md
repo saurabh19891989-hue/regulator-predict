@@ -2,46 +2,46 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.5%**, **12 months +0.1%** (rank 138 / 101 of 200 for 3m / 12m); beta 1.02
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 48%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.3% … P90 +2.2%; plausible 12m relative-return range incl. stock-specific noise: -31.2% … +32.5%
-- Decomposition (12m): 0.5 × forward event exposure +1.3% (3m +0.1%; half assumed priced) + 0.5 × company-specific catalysts -0.2%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.7% (beta-adjusted) vs a realised market-adjusted move of +25.3% — gap -26.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.7%**, **12 months -1.0%** (rank 169 / 150 of 200 for 3m / 12m); beta 1.02
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 48%, 12 months 47%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.8% … P90 +1.5%; plausible 12m relative-return range incl. stock-specific noise: -33.1% … +31.7%
+- Decomposition (12m): 0.5 × forward event exposure -1.2% (3m -0.6%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.2%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.9% (beta-adjusted) vs a realised market-adjusted move of +25.3% — gap -27.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +6.01 | +6.00 | +0.00 | +0.01 | -0.00 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +4.05 | +3.00 | +0.84 | +0.23 | -0.02 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +6.07 | +6.00 | +0.00 | +0.08 | -0.01 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +4.08 | +3.00 | +0.84 | +0.23 | +0.01 | — |
 | Beauty retail competition intensity (Tira, Sephora, Purplle, quick commerce) (`NEW_BEAUTY_RETAIL_COMPETITION`) | +1 = materially sharper discounting/expansion by rival beauty retailers and q-commerce | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.64 | +2.50 | +0.09 | +0.01 | +0.03 | — |
-| Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +2.24 | +2.00 | +0.24 | +0.00 | +0.00 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.63 | +2.50 | +0.09 | +0.01 | +0.03 | — |
+| Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +2.25 | +2.00 | +0.24 | +0.00 | +0.01 | — |
 | US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -1.77 | -1.50 | -0.25 | -0.07 | +0.05 | +9.4% |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +1.66 | +0.00 | +1.92 | -0.26 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.60 | -1.00 | -0.48 | -0.16 | +0.04 | -1.1% |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +1.74 | +0.00 | +1.92 | -0.26 | +0.08 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.57 | -1.00 | -0.48 | -0.14 | +0.05 | -1.1% |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.55 | +0.00 | -1.05 | -0.48 | -0.01 | +3.5% |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.48 | +0.00 | +0.00 | -0.89 | -0.60 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.45 | +0.00 | -1.74 | +0.38 | -0.09 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.53 | +0.00 | +0.00 | -0.89 | -0.65 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.45 | +0.00 | -1.74 | +0.38 | -0.10 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.28 | -1.00 | -0.20 | -0.05 | -0.03 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.19 | +0.00 | +0.44 | +0.74 | +0.01 | — |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +1.05 | +0.00 | +0.60 | +0.29 | +0.16 | — |
-| Quick-commerce disruption of retail/FMCG distribution (`T_QUICK_COMMERCE`) | +1 | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.8% | -5.8% | -5.5 | -0.2 | -0.0 | -0.1 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +6.7% | +3.3% | +6.2 | +0.3 | +0.0 | +0.1 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +6.6% | +3.3% | +6.2 | +0.3 | +0.0 | +0.1 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | -1.8 | -0.6 | -0.0 | +0.1 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.1% | -2.1% | -1.2 | -0.7 | -0.2 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -2.0 | +0.4 | -0.1 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.6% | +1.6% | +1.6 | +0.1 | +0.0 | +0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.4% | +1.4% | +1.2 | +0.2 | -0.0 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.3% | -1.3% | -1.0 | -0.2 | -0.1 | -0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -6.6% | -1.2% | -6.0 | -0.2 | -0.3 | +0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.2% | +1.2% | +1.2 | +0.0 | -0.0 | -0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -4.7% | -1.2% | +0.0 | -5.0 | +0.1 | +0.3 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.8% | +1.0% | +0.0 | +1.1 | +0.7 | +0.1 |
-| IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.8 | -0.2 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.9% | +1.0% | +0.0 | +1.1 | +0.7 | +0.1 |
+| IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.8 | -0.2 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

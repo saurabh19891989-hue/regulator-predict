@@ -2,11 +2,11 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.1%**, **12 months +1.2%** (rank 100 / 58 of 200 for 3m / 12m); beta 1.14
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.9%): 3 months 50%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.7% … P90 +8.4%; plausible 12m relative-return range incl. stock-specific noise: -53.6% … +57.9%
-- Decomposition (12m): 0.5 × forward event exposure +4.9% (3m +2.0%; half assumed priced) + 0.5 × company-specific catalysts -1.6%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -7.1% (beta-adjusted) vs a realised market-adjusted move of -14.0% — gap +6.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.4%**, **12 months +0.1%** (rank 146 / 99 of 200 for 3m / 12m); beta 1.14
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.9%): 3 months 49%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.2% … P90 +8.7%; plausible 12m relative-return range incl. stock-specific noise: -49.0% … +49.4%
+- Decomposition (12m): 0.5 × forward event exposure +2.3% (3m +0.7%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -1.6%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -7.4% (beta-adjusted) vs a realised market-adjusted move of -14.0% — gap +6.7 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -15,7 +15,7 @@
 | Zinc / lead price (`F_ZINC_LEAD`) | +10% zinc | +3.80 | +3.80 | +0.00 | +0.00 | +0.00 | — |
 | Silver price (`F_SILVER`) | +12% silver | +3.50 | +3.50 | +0.00 | +0.00 | +0.00 | -30.0% |
 | Gold price (`F_GOLD`) | +8% gold (USD) | +2.76 | +0.00 | +2.80 | -0.03 | -0.02 | -8.4% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.16 | +2.20 | +0.10 | -0.08 | -0.06 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.17 | +2.20 | +0.10 | -0.08 | -0.05 | -1.1% |
 | China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.63 | +0.00 | +1.52 | +0.09 | +0.03 | — |
 | Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +1.59 | +0.00 | +0.00 | +1.40 | +0.18 | — |
 | Mining royalty / mineral tax burden (`P_MINING_ROYALTY`) | +1 = higher | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | — |
@@ -39,7 +39,7 @@
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | -1.1% | -1.1% | -0.9 | -0.2 | +0.0 | +0.0 |
 | India coal crunch: critical plant stocks, e-auction premiums ~94%, captive plants ordered to maximise output; CIL October output +19% (`EV_INDIA_COAL_CRUNCH`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | +0.0 | +0.0 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +0.0 | +0.9 | +0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -1.7% | -0.9% | +0.0 | -0.7 | -1.1 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -1.6% | -0.9% | +0.0 | -0.7 | -1.1 | +0.1 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.9% | -0.9% | -0.8 | -0.1 | +0.0 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.7 | +0.0 | +0.0 |
 
@@ -59,9 +59,9 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_CHINA_GDP → F_ZINC_LEAD → HINDZINC | +0.61% | +0.27% |
 | 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_GOLD → F_SILVER → HINDZINC | +1.01% | +0.25% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HINDZINC | +1.00% | +0.25% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → HINDZINC | -0.40% | -0.24% |
 | 3 | EV_FED_DEC26_HIKE25 ⇒ F_DXY → F_GOLD → F_SILVER → HINDZINC | -0.30% | -0.22% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → HINDZINC | +0.66% | +0.17% |
+| 3 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_DXY → F_GOLD → F_SILVER → HINDZINC | -0.40% | -0.16% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

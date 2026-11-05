@@ -2,25 +2,25 @@
 *MIDCAP_100 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.5%**, **12 months -2.6%** (rank 183 / 176 of 200 for 3m / 12m); beta 0.93
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.7%): 3 months 47%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.4% … P90 +1.4%; plausible 12m relative-return range incl. stock-specific noise: -52.4% … +51.6%
-- Decomposition (12m): 0.5 × forward event exposure -2.8% (3m -0.9%; half assumed priced) + 0.5 × company-specific catalysts -1.4%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.4% (beta-adjusted) vs a realised market-adjusted move of -4.2% — gap +3.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -1.2%**, **12 months -1.5%** (rank 191 / 171 of 200 for 3m / 12m); beta 0.93
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.7%): 3 months 47%, 12 months 46%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.5% … P90 +1.2%; plausible 12m relative-return range incl. stock-specific noise: -46.3% … +41.4%
+- Decomposition (12m): 0.5 × forward event exposure -1.0% (3m -0.8%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -1.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.1% (beta-adjusted) vs a realised market-adjusted move of -4.2% — gap +4.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Oracle Corp credit / AI-capex stress (`NEW_ORACLE_PARENT_STRESS`) | +1 = one stress episode (force majeure, debt negotiation headlines), roughly -5% for OFSS | -5.00 | -5.00 | +0.00 | +0.00 | +0.00 | — |
-| US growth (`F_US_GDP`) | +1 pp | +2.02 | +1.50 | +0.54 | +0.08 | -0.10 | — |
+| US growth (`F_US_GDP`) | +1 pp | +2.03 | +1.50 | +0.54 | +0.08 | -0.09 | — |
 | GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -1.96 | -2.00 | +0.06 | -0.01 | -0.01 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.69 | +1.50 | +0.22 | -0.03 | +0.00 | +1.2% |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.48 | -1.00 | -0.43 | -0.07 | +0.02 | +3.5% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.20 | +1.50 | -0.16 | -0.07 | -0.07 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.21 | +1.50 | -0.16 | -0.07 | -0.06 | -1.1% |
 | US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.10 | +0.00 | -0.70 | -0.34 | -0.06 | — |
 | US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.09 | -0.70 | -0.18 | -0.23 | +0.02 | +11.2% |
-| Europe growth (`F_EU_GDP`) | +1 pp | +1.00 | +1.00 | +0.00 | +0.01 | -0.01 | — |
+| Europe growth (`F_EU_GDP`) | +1 pp | +1.01 | +1.00 | +0.00 | +0.01 | +0.00 | — |
 | US H-1B / outsourcing restrictions (`P_US_VISA_OUTSOURCING`) | +1 = material tightening | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -0.90 | -0.90 | +0.00 | +0.00 | +0.00 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.90 | +1.00 | -0.10 | +0.00 | +0.00 | — |
@@ -33,7 +33,7 @@
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +2.4% | +2.4% | +1.4 | +0.9 | +0.1 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.0% | -2.0% | -2.2 | +0.2 | +0.0 | +0.0 |
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -2.0% | -2.0% | -2.0 | +0.1 | -0.0 | -0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -7.8% | -1.9% | -6.9 | -1.1 | +0.4 | -0.1 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -7.8% | -2.0% | -6.9 | -1.1 | +0.4 | -0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -7.2% | -1.8% | -7.0 | -0.4 | +0.2 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.7% | +1.4% | +2.9 | -0.2 | +0.0 | -0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.4% | -1.4% | -0.7 | -0.7 | +0.0 | +0.0 |
@@ -72,8 +72,8 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_GSEC_10Y_IN → OFSS | +1.55 | director_override | -1.40% |
 | 1 | F_FED_FUNDS → OFSS | +1.62 | observed | -1.13% |
 | 1 | T_GENAI_SERVICES → OFSS | +0.50 | director_override | -1.00% |
-| 1 | P_US_VISA_OUTSOURCING → OFSS | +0.90 | events | -0.90% |
 | 1 | F_USDINR → OFSS | -0.37 | observed | -0.55% |
+| 1 | P_US_VISA_OUTSOURCING → OFSS | +0.35 | director_override | -0.35% |
 | 1 | F_US_EQUITIES → OFSS | +0.23 | observed | +0.35% |
 | 1 | F_EU_GDP → OFSS | +0.22 | events | +0.22% |
 | 1 | F_RISK_SENTIMENT → OFSS | +0.11 | observed | -0.11% |

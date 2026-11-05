@@ -24,16 +24,16 @@ Anthropic S-1 reported (WSJ 20 Oct; Reuters 29 Sep); public filing expected as e
 | ENRIN | +0.7 | +0.5 | +0.2 | +0.0 | +0.0 |
 | CUMMINSIND | +0.5 | +0.0 | +0.5 | +0.0 | -0.0 |
 | CGPOWER | +0.5 | +0.3 | +0.1 | +0.0 | +0.0 |
-| ABB | +0.4 | +0.2 | +0.2 | +0.0 | +0.0 |
-| SIEMENS | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
+| ABB | +0.4 | +0.2 | +0.2 | +0.0 | -0.0 |
+| SIEMENS | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
 | PAYTM | +0.3 | +0.2 | +0.0 | +0.0 | -0.0 |
 | ADANIGREEN | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
-| KEI | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
+| KEI | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
 | GVT&D | +0.2 | +0.0 | +0.2 | +0.1 | +0.0 |
 | ADANIENSOL | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| LT | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
+| LT | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
 | POLYCAB | +0.2 | +0.0 | +0.1 | +0.0 | -0.0 |
-| APARINDS | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| APARINDS | +0.1 | +0.0 | +0.1 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -43,7 +43,7 @@ Anthropic S-1 reported (WSJ 20 Oct; Reuters 29 Sep); public filing expected as e
 | HCLTECH | -0.6 | -0.8 | +0.2 | +0.0 | -0.0 |
 | LTM | -0.6 | -0.8 | +0.2 | +0.0 | -0.0 |
 | MPHASIS | -0.5 | -0.7 | +0.2 | +0.0 | -0.0 |
-| NAUKRI | -0.5 | -0.8 | +0.2 | +0.1 | +0.0 |
+| NAUKRI | -0.5 | -0.8 | +0.2 | +0.1 | -0.0 |
 | TECHM | -0.4 | -0.8 | +0.3 | +0.0 | +0.0 |
 | TCS | -0.4 | -0.8 | +0.3 | +0.0 | +0.0 |
 | BOSCHLTD | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
@@ -54,7 +54,7 @@ Anthropic S-1 reported (WSJ 20 Oct; Reuters 29 Sep); public filing expected as e
 | INDIGO | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
 | GMRAIRPORT | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 37%, 2: 42%, 3: 15%, 4: 6%
+Share of absolute impact by order: 1: 37%, 2: 42%, 3: 15%, 4: 5%
 
 ## Sources
 - 2026-10-20 Anthropic S-1 Shows Red-Hot Growth, Risks and Massive Computing Costs - WSJ https://news.google.com/rss/search?q=Anthropic%20S-1%20Shows%20Red-Hot%20Growth%2C%20Risks%20and%20Massive%20Computing%20Costs%20-%20WSJ&hl=en-IN&gl=IN&ceid=IN:en

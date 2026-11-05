@@ -17,42 +17,42 @@ Complement of EV_NEMONSOON26_DEFICIT: normal-or-above NEM (probability 0.60). El
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | +2.8 | +0.0 | +1.0 | +1.5 | +0.3 |
-| IDFCFIRSTB | +2.5 | +0.0 | +0.9 | +1.4 | +0.2 |
-| YESBANK | +2.1 | +0.0 | +0.7 | +1.3 | +0.2 |
-| M&MFIN | +2.1 | +1.2 | +0.4 | +0.4 | +0.1 |
-| SHRIRAMFIN | +1.9 | +1.0 | +0.2 | +0.5 | +0.2 |
-| BANKINDIA | +1.7 | +0.0 | +0.5 | +0.9 | +0.3 |
-| AXISBANK | +1.6 | +0.0 | +0.5 | +0.9 | +0.2 |
-| FEDERALBNK | +1.5 | +0.0 | +0.1 | +0.9 | +0.4 |
-| KOTAKBANK | +1.5 | +0.0 | +0.5 | +0.7 | +0.2 |
+| INDUSINDBK | +2.9 | +0.0 | +1.0 | +1.5 | +0.4 |
+| IDFCFIRSTB | +2.5 | +0.0 | +0.9 | +1.4 | +0.3 |
+| M&MFIN | +2.2 | +1.2 | +0.4 | +0.5 | +0.1 |
+| YESBANK | +2.2 | +0.0 | +0.7 | +1.2 | +0.3 |
+| SHRIRAMFIN | +2.0 | +1.0 | +0.2 | +0.6 | +0.2 |
+| AXISBANK | +1.7 | +0.0 | +0.5 | +0.9 | +0.3 |
+| BANKINDIA | +1.6 | +0.0 | +0.5 | +0.8 | +0.3 |
+| AUBANK | +1.6 | +0.0 | +0.5 | +0.9 | +0.2 |
+| SBICARD | +1.5 | +0.0 | +0.8 | +0.6 | +0.1 |
+| FEDERALBNK | +1.5 | +0.0 | +0.1 | +0.9 | +0.5 |
 | INDIANB | +1.5 | +0.0 | +0.5 | +0.8 | +0.2 |
-| SBICARD | +1.4 | +0.0 | +0.8 | +0.6 | +0.0 |
-| HDFCBANK | +1.4 | +0.0 | +0.5 | +0.8 | +0.2 |
-| SBIN | +1.4 | +0.0 | +0.6 | +0.7 | +0.2 |
-| AUBANK | +1.4 | +0.0 | +0.5 | +0.8 | +0.1 |
-| MAHABANK | +1.4 | +0.0 | +0.4 | +0.7 | +0.3 |
+| HDFCBANK | +1.5 | +0.0 | +0.5 | +0.8 | +0.3 |
+| KOTAKBANK | +1.5 | +0.0 | +0.5 | +0.7 | +0.2 |
+| TATACAP | +1.5 | +0.0 | +0.2 | +0.9 | +0.3 |
+| LTF | +1.5 | +0.5 | +0.3 | +0.5 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| COALINDIA | -1.0 | +0.0 | -0.8 | -0.2 | -0.0 |
-| ENRIN | -0.9 | +0.0 | -0.9 | -0.1 | +0.0 |
-| BHEL | -0.7 | +0.0 | -0.9 | +0.1 | +0.1 |
-| ADANIPOWER | -0.7 | -0.2 | -0.4 | -0.1 | +0.0 |
-| WAAREEENER | -0.6 | +0.0 | -0.6 | +0.1 | -0.0 |
-| SUZLON | -0.5 | +0.0 | -0.4 | +0.0 | -0.1 |
-| TATAPOWER | -0.4 | +0.0 | -0.5 | +0.0 | +0.1 |
-| POWERINDIA | -0.4 | +0.0 | +0.0 | -0.5 | +0.0 |
-| ADANIENSOL | -0.4 | +0.0 | -0.5 | -0.0 | +0.1 |
-| SOLARINDS | -0.4 | +0.0 | -0.3 | -0.0 | -0.1 |
-| GVT&D | -0.3 | +0.0 | +0.0 | -0.4 | +0.0 |
-| APARINDS | -0.3 | +0.0 | +0.0 | -0.3 | -0.0 |
-| POWERGRID | -0.3 | +0.0 | -0.4 | +0.0 | +0.1 |
-| NLCINDIA | -0.3 | +0.0 | -0.4 | +0.0 | +0.0 |
-| CGPOWER | -0.2 | +0.0 | +0.0 | -0.2 | +0.0 |
+| COALINDIA | -0.9 | +0.0 | -0.8 | -0.1 | +0.0 |
+| ENRIN | -0.8 | +0.0 | -0.9 | -0.0 | +0.1 |
+| ADANIPOWER | -0.6 | -0.2 | -0.4 | -0.0 | +0.1 |
+| BHEL | -0.6 | +0.0 | -0.9 | +0.1 | +0.1 |
+| WAAREEENER | -0.4 | +0.0 | -0.6 | +0.1 | -0.0 |
+| TATAPOWER | -0.3 | +0.0 | -0.5 | +0.1 | +0.1 |
+| SUZLON | -0.3 | +0.0 | -0.4 | +0.1 | -0.0 |
+| ADANIENSOL | -0.3 | +0.0 | -0.5 | +0.0 | +0.1 |
+| POWERINDIA | -0.3 | +0.0 | +0.0 | -0.4 | +0.1 |
+| NLCINDIA | -0.2 | +0.0 | -0.4 | +0.1 | +0.0 |
+| POWERGRID | -0.2 | +0.0 | -0.4 | +0.1 | +0.1 |
+| GVT&D | -0.2 | +0.0 | +0.0 | -0.3 | +0.1 |
+| APARINDS | -0.2 | +0.0 | +0.0 | -0.2 | +0.0 |
+| SOLARINDS | -0.2 | +0.0 | -0.3 | +0.1 | -0.0 |
+| NTPC | -0.1 | +0.0 | -0.3 | +0.1 | +0.1 |
 
-Share of absolute impact by order: 1: 8%, 2: 35%, 3: 44%, 4: 13%
+Share of absolute impact by order: 1: 7%, 2: 32%, 3: 44%, 4: 16%
 
 ## Sources
 - 2026-10-01 NE monsoon may begin Oct 15-21 - DT Next https://www.dtnext.in/news/tamilnadu/northeast-monsoon-may-begin-between-october-15-21-imd

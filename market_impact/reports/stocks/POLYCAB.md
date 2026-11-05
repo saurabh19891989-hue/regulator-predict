@@ -2,11 +2,11 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.1%**, **12 months +1.1%** (rank 103 / 62 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 50%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.5% … P90 +4.9%; plausible 12m relative-return range incl. stock-specific noise: -32.9% … +41.4%
-- Decomposition (12m): 0.5 × forward event exposure +3.6% (3m +1.8%; half assumed priced) + 0.5 × company-specific catalysts -0.4%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +0.0% (beta-adjusted) vs a realised market-adjusted move of -22.4% — gap +22.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.0%**, **12 months +1.5%** (rank 102 / 33 of 200 for 3m / 12m); beta 1.15
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 50%, 12 months 54%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.4% … P90 +4.9%; plausible 12m relative-return range incl. stock-specific noise: -36.8% … +40.5%
+- Decomposition (12m): 0.5 × forward event exposure +3.9% (3m +1.5%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.2% (beta-adjusted) vs a realised market-adjusted move of -22.4% — gap +22.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,34 +14,34 @@
 |---|---|---|---|---|---|---|---|
 | Competitive intensity in Indian wires & cables (`NEW_WC_COMPETITIVE_INTENSITY`) | +1 = new entrants/capacity cause ~100 bp sustained W&C margin erosion | -6.00 | -6.00 | +0.00 | +0.00 | +0.00 | — |
 | Grid & electrification capex (`T_GRID_ELECTRIFICATION`) | +1 | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.79 | +3.50 | +0.28 | +0.07 | -0.06 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +3.47 | +3.50 | +0.00 | -0.06 | +0.03 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.97 | +3.50 | +0.28 | +0.17 | +0.02 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +3.72 | +3.50 | +0.00 | +0.11 | +0.11 | — |
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +3.21 | +2.00 | +0.64 | +0.57 | +0.00 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +3.02 | +3.00 | +0.00 | -0.01 | +0.03 | — |
-| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +2.95 | +2.50 | +0.42 | +0.04 | -0.00 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.32 | +0.00 | +2.32 | +0.00 | -0.01 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +3.07 | +3.00 | +0.00 | +0.03 | +0.04 | — |
+| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +2.96 | +2.50 | +0.42 | +0.04 | +0.01 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.34 | +0.00 | +2.32 | +0.00 | +0.01 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -2.11 | -1.50 | -0.48 | -0.08 | -0.05 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.35 | +0.00 | -1.12 | -0.17 | -0.06 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.31 | +0.00 | -0.96 | -0.24 | -0.11 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.06 | +1.00 | +0.00 | +0.09 | -0.02 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.39 | +0.00 | +1.04 | +0.41 | -0.06 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.38 | +0.00 | -1.12 | -0.17 | -0.09 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.32 | +0.00 | -0.96 | -0.24 | -0.12 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.23 | +1.00 | +0.00 | +0.19 | +0.03 | — |
 | Copper price (`F_COPPER`) | +10% copper | +1.00 | +1.00 | +0.00 | +0.00 | +0.00 | -2.4% |
-| Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +0.96 | +0.00 | +0.96 | +0.00 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +4.1% | +4.1% | +3.7 | +0.5 | -0.1 | -0.1 |
-| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +3.8% | +3.8% | +2.0 | +1.8 | +0.0 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +4.4% | +4.4% | +3.7 | +0.8 | -0.0 | -0.0 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +3.8% | +3.8% | +2.0 | +1.8 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.2% | -2.2% | -1.5 | -0.6 | -0.0 | -0.0 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.6% | +1.6% | +1.0 | +0.3 | +0.3 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.1 | -0.3 | -0.2 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -1.1 | -0.3 | -0.2 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | +0.0 | +0.0 | +0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +1.0 | +0.0 | +0.0 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -2.2% | -0.9% | -1.5 | -0.6 | -0.0 | -0.0 |
-| Final SHANTI Act rules / first private-sector nuclear licence process (`EV_NUCLEAR_SHANTI_RULES_FINAL`) | anticipated | 0.60 | +1.2% | +0.7% | +0.0 | +1.2 | +0.0 | -0.0 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +0.8% | +0.7% | +0.7 | +0.1 | +0.0 | -0.0 |
+| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +0.8% | +0.7% | +0.7 | +0.1 | +0.0 | +0.0 |
+| Final SHANTI Act rules / first private-sector nuclear licence process (`EV_NUCLEAR_SHANTI_RULES_FINAL`) | anticipated | 0.60 | +1.2% | +0.7% | +0.0 | +1.2 | +0.0 | +0.0 |
 | Risk: stagflation scare - CPI >=6.5% while GDP growth slips below ~6% (Q3 FY27 data, late Feb 2027) (`EV_INDIA_STAGFLATION_SCARE`) | risk_scenario | 0.12 | -5.4% | -0.6% | -1.5 | -2.7 | -1.0 | -0.1 |
-| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.0% | -0.6% | -0.6 | -0.4 | -0.0 | -0.0 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | +0.2 | -0.3 | -0.5 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -53,15 +53,15 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → POLYCAB | -1.80% | -0.45% |
 | 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → POLYCAB | +0.96% | +0.43% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → POLYCAB | -1.50% | -0.41% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → POLYCAB | -0.60% | -0.36% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | -0.52% | -0.35% |
 | 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → POLYCAB | +0.48% | +0.29% |
 | 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POLYCAB | +0.48% | +0.29% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → POLYCAB | -1.50% | -0.27% |
 | 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_GOVT_CAPEX → POLYCAB | +0.35% | +0.24% |
 | 3 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | -0.26% | -0.22% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → POLYCAB | -0.86% | -0.22% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → POLYCAB | +0.59% | +0.21% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → POLYCAB | +0.35% | +0.19% |
+| 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → POLYCAB | +0.40% | +0.18% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

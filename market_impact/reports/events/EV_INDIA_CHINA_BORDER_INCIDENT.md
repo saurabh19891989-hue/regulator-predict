@@ -37,22 +37,22 @@ Face-offs reported (Al Jazeera 27 Oct), Arunachal remarks (BBC 28 Oct); no agree
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | MOTILALOFS | -4.8 | -2.8 | -1.2 | -0.7 | -0.1 |
-| JIOFIN | -4.7 | -4.0 | -0.4 | -0.3 | -0.1 |
 | IREDA | -4.6 | -4.0 | -0.3 | -0.2 | -0.0 |
 | ICICIAMC | -4.4 | -3.2 | -0.8 | -0.4 | +0.0 |
-| MEESHO | -3.9 | -3.2 | -0.5 | -0.2 | -0.0 |
 | 360ONE | -3.8 | -2.8 | -0.5 | -0.4 | -0.1 |
 | INDUSINDBK | -3.6 | -2.8 | -0.6 | -0.2 | +0.1 |
 | MAHABANK | -3.3 | -2.8 | -0.4 | -0.1 | +0.1 |
 | LICI | -3.1 | -2.8 | -0.2 | -0.1 | +0.0 |
 | NAUKRI | -3.1 | -2.0 | -0.9 | -0.2 | +0.0 |
-| LENSKART | -3.1 | -2.4 | -0.5 | -0.2 | -0.0 |
 | IDFCFIRSTB | -3.1 | -2.4 | -0.5 | -0.2 | -0.0 |
 | PAYTM | -2.8 | -1.6 | -0.9 | -0.3 | +0.0 |
-| ETERNAL | -2.8 | -2.0 | -0.5 | -0.2 | -0.0 |
 | INDIANB | -2.8 | -2.4 | -0.3 | -0.1 | +0.0 |
+| IDEA | -2.7 | -2.0 | -0.5 | -0.2 | -0.0 |
+| POLICYBZR | -2.7 | -2.0 | -0.6 | -0.2 | +0.1 |
+| GROWW | -2.5 | -1.6 | -0.3 | -0.5 | -0.1 |
+| MEESHO | -2.3 | -1.6 | -0.5 | -0.2 | -0.0 |
 
-Share of absolute impact by order: 1: 45%, 2: 35%, 3: 17%, 4: 3%
+Share of absolute impact by order: 1: 43%, 2: 36%, 3: 18%, 4: 3%
 
 ## Sources
 - 2026-10-27 India-China border face-offs test Modi six years after deadly clash - Al Jazeera https://news.google.com/rss/search?q=India-China+border+face-offs+when:120d&hl=en-IN&gl=IN&ceid=IN:en

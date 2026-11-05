@@ -16,42 +16,42 @@ Release date approximate (model knowledge: Q2 data usually end-Nov; not verified
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | +2.1 | +1.6 | +0.7 | -0.2 | -0.0 |
-| MOTILALOFS | +1.7 | +1.6 | +0.2 | -0.0 | -0.0 |
-| IDFCFIRSTB | +1.7 | +1.3 | +0.6 | -0.2 | +0.0 |
+| INDUSINDBK | +2.2 | +1.6 | +0.7 | -0.1 | -0.0 |
+| MOTILALOFS | +1.8 | +1.6 | +0.2 | -0.0 | -0.0 |
+| IDFCFIRSTB | +1.8 | +1.3 | +0.6 | -0.1 | -0.0 |
+| YESBANK | +1.7 | +1.4 | +0.5 | -0.1 | -0.0 |
 | ICICIAMC | +1.5 | +1.5 | +0.1 | -0.0 | -0.0 |
-| SBIN | +1.5 | +1.3 | +0.3 | -0.1 | +0.0 |
-| YESBANK | +1.5 | +1.4 | +0.3 | -0.2 | -0.0 |
-| BANKINDIA | +1.4 | +1.0 | +0.6 | -0.2 | -0.0 |
-| HDFCBANK | +1.4 | +1.2 | +0.3 | -0.1 | -0.0 |
-| MAHABANK | +1.4 | +1.1 | +0.5 | -0.1 | -0.0 |
-| KOTAKBANK | +1.3 | +1.0 | +0.4 | -0.1 | -0.0 |
-| PAYTM | +1.3 | +1.0 | +0.2 | +0.1 | +0.0 |
-| UNIONBANK | +1.3 | +1.0 | +0.4 | -0.1 | -0.0 |
-| PNB | +1.2 | +1.0 | +0.4 | -0.1 | -0.0 |
-| AXISBANK | +1.2 | +1.0 | +0.4 | -0.1 | -0.0 |
-| FEDERALBNK | +1.2 | +0.4 | +0.9 | -0.1 | -0.0 |
+| SBIN | +1.5 | +1.3 | +0.3 | -0.1 | -0.0 |
+| HDFCBANK | +1.5 | +1.2 | +0.4 | -0.1 | -0.0 |
+| MAHABANK | +1.4 | +1.1 | +0.4 | -0.0 | -0.0 |
+| BANKINDIA | +1.4 | +1.0 | +0.5 | -0.1 | -0.0 |
+| AXISBANK | +1.3 | +1.0 | +0.4 | -0.1 | -0.0 |
+| KOTAKBANK | +1.3 | +1.0 | +0.4 | -0.0 | -0.0 |
+| UNIONBANK | +1.3 | +1.0 | +0.3 | -0.1 | -0.0 |
+| PNB | +1.2 | +1.0 | +0.3 | -0.1 | -0.0 |
+| FEDERALBNK | +1.2 | +0.4 | +0.9 | -0.0 | -0.0 |
+| NAUKRI | +1.2 | +1.2 | +0.0 | -0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PERSISTENT | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
-| TECHM | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
-| RVNL | -0.3 | +0.0 | -0.3 | +0.0 | -0.0 |
-| TCS | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
-| SOLARINDS | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
-| SRF | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
+| PERSISTENT | -0.3 | +0.0 | -0.2 | -0.0 | -0.0 |
+| TECHM | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
+| TCS | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
 | VAML | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
-| TATASTEEL | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
-| APARINDS | -0.2 | +0.0 | -0.2 | +0.0 | -0.0 |
-| NATIONALUM | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
-| PREMIERENE | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
-| OIL | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
-| SUZLON | -0.2 | +0.0 | -0.1 | -0.0 | -0.0 |
-| GRASIM | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
-| NMDC | -0.2 | +0.0 | -0.2 | +0.0 | -0.0 |
+| NATIONALUM | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
+| OIL | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
+| SRF | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
+| HINDZINC | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| TATASTEEL | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
+| NMDC | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| RVNL | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
+| SOLARINDS | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| COCHINSHIP | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
+| PREMIERENE | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
+| ONGC | -0.1 | +0.1 | -0.1 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 63%, 2: 24%, 3: 9%, 4: 3%
+Share of absolute impact by order: 1: 68%, 2: 22%, 3: 7%, 4: 3%
 
 ## Sources
 - 2026-10-29 Finance ministry estimates India's Q2 FY27 GDP growth at 7.35% - ET https://news.google.com/rss/search?q=Finance+ministry+estimates+India+Q2+FY27+GDP+growth+7.35%25+when:120d&hl=en-IN&gl=IN&ceid=IN:en

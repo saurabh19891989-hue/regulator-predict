@@ -2,30 +2,30 @@
 *NIFTY_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.8%**, **12 months +0.3%** (rank 51 / 96 of 200 for 3m / 12m); beta 0.97
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.5%): 3 months 53%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.8% … P90 +5.2%; plausible 12m relative-return range incl. stock-specific noise: -33.2% … +19.0%
-- Decomposition (12m): 0.5 × forward event exposure +3.7% (3m +2.2%; half assumed priced) + 0.5 × company-specific catalysts -2.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -8.3% (beta-adjusted) vs a realised market-adjusted move of -22.1% — gap +13.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.4%**, **12 months +0.1%** (rank 55 / 98 of 200 for 3m / 12m); beta 0.97
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.5%): 3 months 52%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.8% … P90 +5.7%; plausible 12m relative-return range incl. stock-specific noise: -28.5% … +30.9%
+- Decomposition (12m): 0.5 × forward event exposure +2.8% (3m +1.2%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -2.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -8.5% (beta-adjusted) vs a realised market-adjusted move of -22.1% — gap +13.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Aluminium price (`F_ALUMINIUM`) | +10% aluminium | +6.00 | +6.00 | +0.00 | +0.00 | +0.00 | -19.6% |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +2.73 | +0.00 | +2.75 | -0.02 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.76 | +1.80 | +0.02 | -0.05 | -0.01 | -1.1% |
-| US growth (`F_US_GDP`) | +1 pp | +1.48 | +1.50 | +0.05 | -0.03 | -0.04 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +2.72 | +0.00 | +2.75 | -0.02 | -0.01 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.77 | +1.80 | +0.02 | -0.04 | -0.01 | -1.1% |
+| US growth (`F_US_GDP`) | +1 pp | +1.49 | +1.50 | +0.05 | -0.02 | -0.04 | — |
 | Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +1.23 | +0.00 | +1.15 | +0.09 | -0.01 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.02 | +1.20 | -0.08 | -0.10 | -0.01 | — |
 | Indian domestic coal price & availability cost (`F_COAL_INDIA`) | +10% domestic coal cost (notified/e-auction) | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +0.87 | +1.20 | -0.19 | -0.12 | -0.02 | — |
 | Copper price (`F_COPPER`) | +10% copper | +0.80 | +0.80 | +0.00 | +0.00 | +0.00 | -2.4% |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.76 | -0.60 | -0.07 | -0.08 | -0.01 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.70 | +0.00 | +0.77 | -0.01 | -0.06 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +0.68 | +0.00 | +0.77 | -0.05 | -0.05 | — |
 | US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -0.66 | +0.00 | +0.00 | -0.71 | +0.05 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.61 | +0.00 | +0.77 | -0.08 | -0.07 | — |
-| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -0.61 | +0.00 | -0.46 | +0.09 | -0.24 | — |
-| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +0.60 | +0.00 | +0.00 | +0.56 | +0.04 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +0.59 | +0.00 | +0.32 | +0.29 | -0.01 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +0.65 | +0.00 | +0.32 | +0.32 | +0.01 | — |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -0.62 | +0.00 | -0.46 | +0.09 | -0.25 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -38,10 +38,10 @@
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.6 | -0.1 | -0.1 | -0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.7 | +0.0 | +0.0 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.7 | -0.0 | +0.0 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.5 | -0.2 | -0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.7% | -0.7% | -0.7 | -0.0 | +0.0 | -0.0 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.6 | +0.0 | -0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.5 | -0.1 | +0.0 |
-| China Central Economic Work Conference / NPC (Dec 2026-Mar 2027): larger-than-expected fiscal or property stimulus (`EV_CHINA_CEWC_STIMULUS_DEC26`) | anticipated | 0.45 | +1.2% | +0.6% | +0.3 | +0.9 | -0.0 | +0.0 |
+| China Central Economic Work Conference / NPC (Dec 2026-Mar 2027): larger-than-expected fiscal or property stimulus (`EV_CHINA_CEWC_STIMULUS_DEC26`) | anticipated | 0.45 | +1.2% | +0.5% | +0.3 | +0.9 | -0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

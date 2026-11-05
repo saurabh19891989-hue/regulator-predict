@@ -2,10 +2,10 @@
 *MIDCAP_100 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +0.7%** (rank 61 / 82 of 200 for 3m / 12m); beta 1.23
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.9%): 3 months 52%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.6% … P90 +4.4%; plausible 12m relative-return range incl. stock-specific noise: -33.2% … +24.7%
-- Decomposition (12m): 0.5 × forward event exposure +0.6% (3m +0.2%; half assumed priced) + 0.5 × company-specific catalysts +1.6%, centred on the universe
+- Expected relative return: **3 months +0.3%**, **12 months +0.5%** (rank 79 / 69 of 200 for 3m / 12m); beta 1.23
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.9%): 3 months 51%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.5% … P90 +5.0%; plausible 12m relative-return range incl. stock-specific noise: -31.4% … +32.1%
+- Decomposition (12m): 0.5 × forward event exposure -0.1% (3m -1.0%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.6%, centred on the universe
 - Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +4.5% (beta-adjusted) vs a realised market-adjusted move of -11.3% — gap +15.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
@@ -16,16 +16,16 @@
 | GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.25 | +0.00 | +2.46 | +0.40 | +0.39 | — |
 | Indian defence procurement & indigenisation (`P_DEFENCE_PROCUREMENT`) | +10% domestic orders | +3.25 | +3.00 | +0.24 | +0.00 | +0.01 | — |
 | Indian vehicle demand (`F_AUTO_DEMAND_IN`) | +10% volumes | +3.00 | +3.00 | +0.00 | +0.00 | +0.00 | — |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -2.96 | -3.00 | +0.04 | -0.02 | +0.02 | — |
+| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -2.99 | -3.00 | +0.04 | -0.02 | -0.02 | — |
 | Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | -2.02 | +0.00 | -2.02 | -0.01 | -0.00 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -2.00 | -2.00 | +0.00 | +0.00 | +0.00 | — |
 | Indian defence exports (`T_DEFENCE_EXPORTS`) | +1 | +2.00 | +2.00 | +0.00 | +0.00 | +0.00 | — |
+| US growth (`F_US_GDP`) | +1 pp | +1.95 | +1.80 | +0.16 | +0.15 | -0.16 | — |
 | US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.94 | +0.00 | -1.56 | -0.11 | -0.27 | — |
-| US growth (`F_US_GDP`) | +1 pp | +1.93 | +1.80 | +0.16 | +0.15 | -0.18 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.77 | +2.50 | -0.32 | -0.20 | -0.21 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.79 | +2.50 | -0.32 | -0.20 | -0.19 | -1.1% |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.54 | +0.00 | +1.44 | +0.18 | -0.08 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.53 | +0.00 | -1.40 | -0.08 | -0.05 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.39 | +1.50 | -0.15 | +0.01 | +0.03 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.35 | +0.00 | +1.44 | +0.18 | -0.27 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -37,10 +37,10 @@
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +3.4% | +1.7% | +3.8 | -0.5 | +0.1 | +0.1 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -6.0% | -1.5% | -5.4 | -1.9 | +1.4 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.4% | -1.4% | -0.6 | -0.6 | -0.1 | -0.1 |
-| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.4% | +1.4% | +1.5 | -0.1 | -0.0 | -0.0 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.4% | +1.4% | +1.5 | -0.1 | -0.0 | +0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | +0.0 | -1.4 | +0.1 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.1% | +1.1% | +1.1 | +0.0 | -0.0 | +0.0 |
-| Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | -7.0% | -1.1% | -7.1 | +0.2 | -0.1 | -0.0 |
+| Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | -7.1% | -1.1% | -7.1 | +0.2 | -0.1 | -0.2 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.8 | -0.2 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
@@ -55,13 +55,13 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → BHARATFORG | +0.90% | +0.81% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BHARATFORG | -1.60% | -0.80% |
 | 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → BHARATFORG | +1.20% | +0.60% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BHARATFORG | -1.00% | -0.60% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BHARATFORG | +3.25% | +0.58% |
 | 2 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → P_US_TARIFF_INDIA → BHARATFORG | +1.92% | +0.58% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → BHARATFORG | -2.25% | -0.40% |
 | 2 | EV_RUSSIA_WAIVER_EXTENDED ⇒ C_RUSSIA → P_US_TARIFF_INDIA → BHARATFORG | -0.58% | -0.40% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → BHARATFORG | -1.44% | -0.36% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → BHARATFORG | -1.44% | -0.36% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → BHARATFORG | -1.44% | -0.36% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -72,12 +72,12 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_US_GDP → BHARATFORG | +1.20 | events | +2.16% |
 | 1 | P_US_TARIFF_INDIA → BHARATFORG | -0.60 | events | +1.80% |
 | 1 | F_AUTO_DEMAND_IN → BHARATFORG | +0.50 | director_override | +1.50% |
-| 1 | P_DEFENCE_PROCUREMENT → BHARATFORG | +0.40 | director_override | +1.20% |
+| 1 | P_DEFENCE_PROCUREMENT → BHARATFORG | +0.50 | director_override | +1.50% |
 | 1 | F_STEEL_INDIA → BHARATFORG | +1.35 | events | -0.94% |
 | 1 | F_USDINR → BHARATFORG | -0.37 | observed | -0.92% |
 | 1 | T_ENERGY_TRANSITION → BHARATFORG | +0.30 | director_override | -0.30% |
 | 1 | F_EU_GDP → BHARATFORG | +0.22 | events | +0.22% |
-| 2 | P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → BHARATFORG | +0.40 | director_override | +0.10% |
+| 2 | P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → BHARATFORG | +0.50 | director_override | +0.12% |
 | 1 | F_BRENT → BHARATFORG | +0.00 | observed | +0.00% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)

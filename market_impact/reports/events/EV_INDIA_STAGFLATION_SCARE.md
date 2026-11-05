@@ -37,23 +37,23 @@ Combination of persistent oil, El Nino food shock, imported inflation and credit
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -17.8 | -9.0 | -9.1 | -0.2 | +0.5 |
 | INDUSINDBK | -16.6 | -6.3 | -11.0 | +0.1 | +0.6 |
 | IDFCFIRSTB | -15.6 | -6.3 | -10.2 | +0.3 | +0.5 |
-| AUBANK | -13.8 | -4.1 | -9.2 | -0.5 | +0.1 |
-| TATACAP | -13.4 | -3.0 | -9.7 | -1.0 | +0.3 |
-| BAJFINANCE | -13.0 | -3.0 | -9.0 | -1.3 | +0.3 |
+| YESBANK | -15.5 | -7.5 | -8.4 | -0.0 | +0.4 |
+| AUBANK | -12.8 | -3.1 | -9.2 | -0.5 | +0.1 |
 | SHRIRAMFIN | -11.6 | -5.8 | -5.0 | -1.1 | +0.2 |
 | AXISBANK | -11.6 | -4.8 | -6.9 | -0.3 | +0.3 |
+| TATACAP | -11.4 | -1.2 | -9.6 | -0.8 | +0.1 |
 | TMCV | -11.0 | -7.5 | -2.4 | -0.9 | -0.2 |
 | M&MFIN | -11.0 | -5.7 | -5.1 | -0.4 | +0.2 |
+| BAJFINANCE | -10.9 | -1.2 | -8.9 | -1.0 | +0.2 |
 | IREDA | -10.2 | -2.5 | -7.8 | -0.7 | +0.8 |
 | HDFCBANK | -10.2 | -4.2 | -5.7 | -0.5 | +0.3 |
 | CHOLAFIN | -10.0 | -2.5 | -7.1 | -0.5 | +0.1 |
 | LTF | -10.0 | -4.4 | -5.8 | -0.3 | +0.5 |
 | INDIANB | -9.9 | -4.2 | -5.8 | -0.1 | +0.3 |
 
-Share of absolute impact by order: 1: 42%, 2: 45%, 3: 10%, 4: 3%
+Share of absolute impact by order: 1: 42%, 2: 46%, 3: 10%, 4: 3%
 
 ## Sources
 - 2026-10-07 Four horsemen of economic trouble? RBI governor flags the risks - ET https://news.google.com/rss/search?q=India+stagflation+risk+growth+inflation+2026+RBI+Governor+four+horsemen+when:120d&hl=en-IN&gl=IN&ceid=IN:en

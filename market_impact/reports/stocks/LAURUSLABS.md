@@ -2,46 +2,46 @@
 *MIDCAP_100 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.5%**, **12 months +4.3%** (rank 18 / 6 of 200 for 3m / 12m); beta 0.96
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.0%): 3 months 53%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.7% … P90 +8.1%; plausible 12m relative-return range incl. stock-specific noise: -37.7% … +55.6%
-- Decomposition (12m): 0.5 × forward event exposure +5.9% (3m +2.9%; half assumed priced) + 0.5 × company-specific catalysts +3.6%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -3.6% (beta-adjusted) vs a realised market-adjusted move of +62.5% — gap -66.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +1.1%**, **12 months +2.3%** (rank 15 / 12 of 200 for 3m / 12m); beta 0.96
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.0%): 3 months 53%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.6% … P90 +6.1%; plausible 12m relative-return range incl. stock-specific noise: -42.1% … +45.1%
+- Decomposition (12m): 0.5 × forward event exposure +1.5% (3m +1.9%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +3.6%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -3.8% (beta-adjusted) vs a realised market-adjusted move of +62.5% — gap -66.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| China+1 manufacturing relocation to India (`T_CHINA_PLUS_ONE`) | +1 | +5.89 | +6.00 | -0.16 | +0.05 | -0.00 | — |
+| China+1 manufacturing relocation to India (`T_CHINA_PLUS_ONE`) | +1 | +5.90 | +6.00 | -0.16 | +0.05 | +0.01 | — |
 | USFDA inspection/enforcement intensity (`P_USFDA_ENFORCEMENT`) | +1 = stricter | -3.80 | -4.00 | +0.20 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +3.27 | +4.00 | -0.62 | -0.10 | -0.01 | -1.1% |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.68 | +3.00 | -0.37 | +0.02 | +0.02 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +3.30 | +4.00 | -0.62 | -0.07 | -0.01 | -1.1% |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.67 | +3.00 | -0.37 | +0.02 | +0.01 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -2.00 | -1.80 | -0.16 | -0.01 | -0.03 | — |
-| Production-linked incentive schemes (`P_PLI`) | +1 = expansion/disbursement | +1.87 | +0.00 | +1.92 | -0.05 | -0.00 | — |
+| Production-linked incentive schemes (`P_PLI`) | +1 = expansion/disbursement | +1.90 | +0.00 | +1.92 | -0.05 | +0.03 | — |
 | China chemical/API dumping intensity (`F_CHINA_CHEM_EXPORTS`) | +15% export volumes / price cuts | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | — |
 | GLP-1 / obesity drug adoption (`T_GLP1`) | +1 | +1.50 | +1.50 | +0.00 | +0.00 | +0.00 | — |
+| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.44 | +0.00 | -1.42 | -0.02 | -0.00 | — |
 | US tariffs on pharmaceuticals (`P_US_PHARMA_TARIFF`) | +10 pp on Indian pharma exports | -1.38 | -1.50 | +0.12 | +0.00 | +0.00 | — |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.37 | +0.00 | -1.42 | +0.05 | +0.00 | — |
 | US generic drug price erosion (higher = worse) (`F_US_GENERIC_PRICING`) | +5 pp erosion | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +0.99 | +0.00 | +0.72 | +0.13 | +0.14 | — |
-| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -0.98 | +0.00 | -0.64 | -0.35 | +0.02 | +3.5% |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -0.97 | +0.00 | -0.64 | -0.35 | +0.02 | +3.5% |
 | Capital-gains / securities tax burden (`P_CAPITAL_GAINS_TAX`) | +1 = higher | -0.96 | +0.00 | -1.08 | +0.12 | -0.01 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.9% | -5.9% | -6.6 | +0.8 | -0.1 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.9% | -5.9% | -6.6 | +0.8 | -0.1 | -0.0 |
 | USFDA warning letters: Alembic, Aurobindo-Eugia, Dabur (Jul-Aug 2026) (`EV_USFDA_WARNING_WAVE_26`) | occurred | 1.00 | -3.8% | -3.8% | -4.0 | +0.2 | +0.0 | +0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +6.5% | +3.3% | +7.5 | -1.1 | +0.0 | +0.1 |
-| China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +3.5% | +2.8% | +3.6 | -0.1 | +0.0 | -0.0 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +6.5% | +3.2% | +7.5 | -1.1 | +0.0 | +0.0 |
+| China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +3.5% | +2.8% | +3.6 | -0.1 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.0% | -2.0% | -1.8 | -0.2 | -0.0 | -0.0 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.4% | +1.4% | +1.5 | -0.1 | -0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.2% | -1.2% | -1.5 | +0.2 | +0.0 | +0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -4.2% | -1.0% | +0.0 | -4.5 | +0.3 | +0.0 |
-| India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.55 | +1.7% | +1.0% | +1.8 | -0.1 | +0.0 | -0.0 |
+| India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.55 | +1.8% | +1.0% | +1.8 | -0.1 | +0.0 | +0.0 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -2.0% | -0.8% | -1.8 | -0.2 | -0.0 | -0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.8 | -0.1 | +0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -4.7% | -0.7% | +0.0 | -5.2 | +0.6 | -0.1 |
+| India further eases Press Note 3 rules for China/border-country FDI (approval timelines, minority stakes) (`EV_CHINA_FDI_EASING_PN3`) | anticipated | 0.70 | +1.0% | +0.7% | +1.2 | -0.3 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

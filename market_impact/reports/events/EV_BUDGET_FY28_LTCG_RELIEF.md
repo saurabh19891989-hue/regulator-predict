@@ -24,7 +24,7 @@ FM Sitharaman (2-3 Nov): 'we will consider the call for review of LTCG tax' and 
 | GROWW | +4.8 | +4.8 | +0.0 | -0.0 | +0.0 |
 | HDFCAMC | +2.6 | +2.4 | +0.2 | +0.0 | +0.0 |
 | PAYTM | +2.5 | +2.5 | +0.0 | -0.0 | -0.0 |
-| PRESTIGE | +2.3 | +2.1 | +0.1 | +0.0 | +0.0 |
+| PRESTIGE | +2.2 | +2.1 | +0.1 | +0.0 | +0.0 |
 | GODREJPROP | +2.2 | +2.1 | +0.0 | +0.0 | +0.0 |
 | LODHA | +2.2 | +2.1 | +0.0 | +0.0 | +0.0 |
 | SBIN | +2.1 | +2.0 | +0.1 | -0.0 | +0.0 |
@@ -44,12 +44,12 @@ FM Sitharaman (2-3 Nov): 'we will consider the call for review of LTCG tax' and 
 | SAIL | -0.2 | +0.0 | -0.1 | -0.2 | +0.0 |
 | TATASTEEL | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
 | NMDC | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
-| JINDALSTEL | -0.2 | +0.0 | -0.0 | -0.2 | +0.0 |
 | PIIND | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | TMPV | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | HINDZINC | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
 | SRF | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | HINDALCO | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
+| JINDALSTEL | -0.2 | +0.0 | -0.0 | -0.1 | +0.0 |
 | PERSISTENT | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 88%, 2: 9%, 3: 1%, 4: 1%

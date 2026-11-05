@@ -2,17 +2,17 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.5%**, **12 months -0.3%** (rank 132 / 122 of 200 for 3m / 12m); beta 1.00
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.1%): 3 months 49%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.0% … P90 +3.9%; plausible 12m relative-return range incl. stock-specific noise: -41.0% … +53.2%
-- Decomposition (12m): 0.5 × forward event exposure +2.1% (3m +0.4%; half assumed priced) + 0.5 × company-specific catalysts -1.8%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -10.5% (beta-adjusted) vs a realised market-adjusted move of —% — gap — pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.6%**, **12 months -1.2%** (rank 161 / 161 of 200 for 3m / 12m); beta 1.00
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.1%): 3 months 49%, 12 months 51%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.9% … P90 +3.2%; plausible 12m relative-return range incl. stock-specific noise: -44.3% … +45.6%
+- Decomposition (12m): 0.5 × forward event exposure -0.0% (3m -0.1%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -1.8%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -10.7% (beta-adjusted) vs a realised market-adjusted move of —% — gap — pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.14 | +2.00 | +0.42 | -0.01 | -0.27 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.15 | +2.00 | +0.42 | -0.01 | -0.26 | -1.1% |
 | Silver price (`F_SILVER`) | +12% silver | +2.10 | +0.00 | +2.10 | +0.00 | +0.00 | -30.0% |
 | Zinc / lead price (`F_ZINC_LEAD`) | +10% zinc | +2.04 | +0.90 | +1.14 | +0.00 | +0.00 | — |
 | Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -2.01 | -2.00 | +0.00 | +0.00 | -0.01 | — |

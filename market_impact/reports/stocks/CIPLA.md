@@ -2,30 +2,30 @@
 *NIFTY_50 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months -0.1%** (rank 83 / 110 of 200 for 3m / 12m); beta 0.74
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.5%): 3 months 51%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.5% … P90 +1.8%; plausible 12m relative-return range incl. stock-specific noise: -19.5% … +15.9%
-- Decomposition (12m): 0.5 × forward event exposure +1.7% (3m +0.8%; half assumed priced) + 0.5 × company-specific catalysts -1.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.1% (beta-adjusted) vs a realised market-adjusted move of -3.0% — gap +2.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.0%**, **12 months -0.8%** (rank 105 / 142 of 200 for 3m / 12m); beta 0.74
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.5%): 3 months 50%, 12 months 51%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.3% … P90 +1.3%; plausible 12m relative-return range incl. stock-specific noise: -22.5% … +21.8%
+- Decomposition (12m): 0.5 × forward event exposure +0.1% (3m -0.0%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -1.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.3% (beta-adjusted) vs a realised market-adjusted move of -3.0% — gap +2.7 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | US generic drug price erosion (higher = worse) (`F_US_GENERIC_PRICING`) | +5 pp erosion | -3.50 | -3.50 | +0.00 | +0.00 | +0.00 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.35 | +1.20 | +0.16 | +0.01 | -0.02 | — |
 | USFDA inspection/enforcement intensity (`P_USFDA_ENFORCEMENT`) | +1 = stricter | -1.30 | -2.00 | +0.70 | +0.00 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.30 | +1.20 | +0.16 | -0.03 | -0.03 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.25 | +1.40 | -0.10 | -0.06 | +0.02 | -1.1% |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.94 | -1.00 | +0.00 | +0.06 | -0.00 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.26 | +1.40 | -0.10 | -0.05 | +0.02 | -1.1% |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.96 | -1.00 | +0.00 | +0.06 | -0.02 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +0.83 | +0.80 | +0.01 | +0.02 | -0.00 | — |
 | China chemical/API dumping intensity (`F_CHINA_CHEM_EXPORTS`) | +15% export volumes / price cuts | +0.80 | +0.80 | +0.00 | +0.00 | +0.00 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.77 | -0.60 | -0.10 | -0.06 | -0.01 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +0.66 | +0.80 | -0.11 | -0.01 | -0.02 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +0.56 | +0.00 | +0.51 | +0.03 | +0.01 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.56 | +0.00 | +0.51 | +0.03 | +0.01 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +0.53 | +0.00 | +0.38 | +0.12 | +0.02 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +0.51 | +0.00 | +0.34 | +0.20 | -0.02 | — |
 | US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | +0.50 | +0.00 | +0.32 | +0.18 | +0.01 | — |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +0.50 | +0.00 | +0.38 | +0.12 | -0.01 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +0.49 | +0.00 | +0.34 | +0.20 | -0.04 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.47 | +0.60 | -0.13 | +0.00 | +0.00 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +0.47 | +0.00 | +0.51 | -0.04 | -0.01 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.47 | +0.00 | +0.51 | -0.04 | -0.01 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -34,14 +34,14 @@
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.0% | -1.0% | -1.3 | +0.3 | -0.0 | +0.0 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | +0.0 | -0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.6 | -0.1 | -0.1 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.6% | +0.6% | +0.6 | +0.0 | -0.0 | -0.0 |
 | US imposes tariffs on generic drugs (200% threat) or removes India's speciality exemption (`EV_PHARMA_GENERICS_TARIFF`) | risk_scenario | 0.12 | -5.0% | -0.6% | -5.0 | +0.0 | +0.0 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +1.1% | +0.6% | +1.5 | -0.4 | -0.0 | +0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.5% | +0.5% | +0.6 | -0.1 | -0.0 | -0.0 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.3 | -0.1 | -0.1 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +0.9% | +0.5% | +1.0 | -0.1 | +0.1 | -0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.5% | -0.5% | -0.5 | +0.0 | +0.0 | -0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.3 | -0.1 | -0.1 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -0.8% | -0.3% | -0.6 | -0.1 | -0.1 | -0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.3% | -0.3% | +0.0 | -0.3 | -0.0 | +0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.3% | -0.3% | +0.0 | -0.3 | -0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

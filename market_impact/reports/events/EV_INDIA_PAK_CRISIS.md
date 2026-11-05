@@ -37,22 +37,22 @@ Border shooting in Punjab (12 Oct) and continued rhetoric; Pakistan is also figh
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | MOTILALOFS | -7.6 | -3.5 | -2.7 | -1.3 | -0.1 |
-| JIOFIN | -6.6 | -5.0 | -0.9 | -0.6 | -0.2 |
 | ICICIAMC | -6.6 | -4.0 | -1.8 | -0.8 | +0.0 |
 | IREDA | -6.3 | -5.0 | -0.8 | -0.4 | -0.1 |
-| MEESHO | -5.8 | -4.0 | -1.2 | -0.5 | -0.1 |
 | 360ONE | -5.6 | -3.5 | -1.2 | -0.8 | -0.2 |
 | INDUSINDBK | -5.2 | -3.5 | -1.4 | -0.4 | +0.1 |
-| LENSKART | -4.6 | -3.0 | -1.1 | -0.4 | -0.1 |
 | PAYTM | -4.6 | -2.0 | -2.0 | -0.6 | +0.0 |
 | IDFCFIRSTB | -4.5 | -3.0 | -1.1 | -0.4 | -0.0 |
 | NAUKRI | -4.5 | -2.5 | -1.6 | -0.4 | +0.0 |
-| MAHABANK | -4.4 | -3.5 | -0.9 | -0.2 | +0.1 |
-| ETERNAL | -4.3 | -2.5 | -1.3 | -0.5 | -0.1 |
+| MAHABANK | -4.5 | -3.5 | -0.9 | -0.2 | +0.1 |
 | LICI | -4.2 | -3.5 | -0.6 | -0.2 | +0.0 |
 | IDEA | -4.2 | -2.5 | -1.2 | -0.4 | -0.1 |
+| POLICYBZR | -4.1 | -2.5 | -1.2 | -0.4 | +0.1 |
+| INDIANB | -3.8 | -3.0 | -0.7 | -0.1 | -0.0 |
+| MEESHO | -3.8 | -2.0 | -1.2 | -0.5 | -0.0 |
+| GROWW | -3.7 | -2.0 | -0.6 | -0.9 | -0.2 |
 
-Share of absolute impact by order: 1: 36%, 2: 44%, 3: 16%, 4: 3%
+Share of absolute impact by order: 1: 35%, 2: 46%, 3: 17%, 4: 3%
 
 ## Sources
 - 2026-10-12 A Punjab Border Shooting Puts India-Pakistan Tensions Back in Focus - IR Insider https://news.google.com/rss/search?q=India+Pakistan+tension+when:120d&hl=en-IN&gl=IN&ceid=IN:en

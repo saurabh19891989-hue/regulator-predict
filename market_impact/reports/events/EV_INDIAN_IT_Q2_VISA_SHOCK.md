@@ -31,7 +31,7 @@ Q2 FY27: TCS profit +15% YoY, revenue +11% YoY, TCV $9.6 bn (8 Oct); Infosys CC 
 | BANKINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
 | NYKAA | +0.1 | +0.0 | +0.0 | +0.2 | -0.0 |
 | ETERNAL | +0.1 | +0.0 | +0.0 | +0.2 | -0.0 |
-| KOTAKBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
+| YESBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

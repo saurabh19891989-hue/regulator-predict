@@ -20,18 +20,18 @@ Windfall export levies reintroduced in August (raised 3 Aug amid Iran war, cut 1
 | INDIGO | +0.8 | +0.4 | +0.4 | -0.0 | +0.0 |
 | VMM | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
 | MRF | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
-| LENSKART | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| ETERNAL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | JUBLFOOD | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | GODREJPROP | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| MEESHO | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| LENSKART | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | SUZLON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | MARUTI | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| PRESTIGE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SWIGGY | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | GRASIM | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| ETERNAL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | HEROMOTOCO | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | TVSMOTOR | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| NYKAA | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| WAAREEENER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

@@ -26,9 +26,9 @@ Q3 GDP 4.5% reduces urgency; IMF and Economist (1 Oct) note a 'stimulus pivot' m
 | SAIL | +2.1 | +0.0 | -3.0 | +3.1 | +2.0 |
 | OIL | +1.8 | +0.0 | +1.6 | +0.2 | +0.0 |
 | HINDZINC | +1.6 | +0.0 | +1.5 | +0.1 | +0.0 |
-| COALINDIA | +1.6 | +0.0 | +1.2 | +0.4 | +0.0 |
 | VEDL | +1.6 | +0.0 | +1.1 | +0.5 | +0.0 |
 | SRF | +1.5 | +0.0 | +1.5 | +0.0 | -0.0 |
+| COALINDIA | +1.5 | +0.0 | +1.2 | +0.3 | +0.0 |
 | ONGC | +1.4 | +0.0 | +1.2 | +0.2 | +0.0 |
 | PIIND | +1.1 | +0.0 | +1.1 | -0.0 | +0.0 |
 | UPL | +1.1 | +0.0 | +1.1 | -0.1 | +0.0 |
@@ -41,18 +41,18 @@ Q3 GDP 4.5% reduces urgency; IMF and Economist (1 Oct) note a 'stimulus pivot' m
 | MOTILALOFS | -1.9 | +0.0 | -1.2 | -0.6 | -0.1 |
 | ASHOKLEY | -1.8 | +0.0 | -1.0 | -0.5 | -0.3 |
 | TMCV | -1.8 | +0.0 | -0.8 | -0.6 | -0.4 |
-| MARUTI | -1.7 | +0.0 | -0.9 | -0.5 | -0.3 |
+| MARUTI | -1.7 | +0.0 | -0.9 | -0.5 | -0.4 |
 | HYUNDAI | -1.7 | +0.0 | -1.0 | -0.4 | -0.3 |
 | MRF | -1.5 | +0.0 | -1.1 | -0.3 | -0.2 |
 | BPCL | -1.5 | +0.0 | -1.7 | +0.2 | -0.0 |
+| SUZLON | -1.4 | +0.0 | -0.5 | -0.6 | -0.4 |
 | INDIGO | -1.4 | +0.0 | -1.2 | -0.1 | -0.1 |
-| SUZLON | -1.4 | +0.0 | -0.5 | -0.6 | -0.3 |
 | BLUESTARCO | -1.4 | +0.0 | -1.1 | -0.2 | -0.1 |
 | ICICIAMC | -1.3 | +0.0 | -0.9 | -0.3 | -0.1 |
 | INDUSINDBK | -1.3 | +0.0 | -0.8 | -0.3 | -0.2 |
-| AMBUJACEM | -1.3 | +0.0 | -1.1 | -0.1 | -0.1 |
+| BHEL | -1.3 | +0.0 | -0.3 | -0.6 | -0.4 |
 
-Share of absolute impact by order: 1: 4%, 2: 64%, 3: 21%, 4: 11%
+Share of absolute impact by order: 1: 4%, 2: 63%, 3: 21%, 4: 12%
 
 ## Sources
 - 2026-10-05 China's Stimulus Pivot Is Real in Tense, Not Yet in Substance - IndraStra https://news.google.com/rss/search?q=China%27s%20Stimulus%20Pivot%20Is%20Real%20in%20Tense%2C%20Not%20Yet%20in%20Substance%20-%20IndraStra&hl=en-IN&gl=IN&ceid=IN:en

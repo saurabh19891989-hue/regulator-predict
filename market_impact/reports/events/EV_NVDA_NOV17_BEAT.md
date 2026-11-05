@@ -20,19 +20,19 @@ Nvidia reports 17 Nov (Motley Fool 2 Nov). Last print (26 Aug) revenue $96 bn, +
 |---|---|---|---|---|---|
 | MOTILALOFS | +3.2 | +2.0 | +0.9 | +0.4 | -0.0 |
 | ICICIAMC | +2.8 | +2.0 | +0.6 | +0.2 | -0.0 |
-| JIOFIN | +2.6 | +2.0 | +0.5 | +0.1 | +0.0 |
 | IREDA | +2.5 | +2.0 | +0.4 | +0.1 | +0.0 |
 | NAUKRI | +2.4 | +2.0 | +0.3 | +0.1 | -0.0 |
 | 360ONE | +2.3 | +1.4 | +0.7 | +0.2 | -0.0 |
-| MEESHO | +2.3 | +1.6 | +0.7 | +0.0 | -0.0 |
 | POWERINDIA | +2.3 | +1.7 | +0.5 | +0.1 | +0.0 |
 | INDUSINDBK | +2.2 | +1.4 | +0.8 | +0.1 | -0.0 |
 | PAYTM | +2.0 | +1.2 | +0.7 | +0.0 | -0.0 |
 | MAHABANK | +1.9 | +1.4 | +0.5 | +0.0 | -0.0 |
 | IDFCFIRSTB | +1.9 | +1.2 | +0.6 | +0.1 | -0.0 |
-| LENSKART | +1.8 | +1.2 | +0.6 | +0.0 | -0.0 |
-| ETERNAL | +1.7 | +1.0 | +0.7 | +0.0 | -0.0 |
 | LICI | +1.7 | +1.4 | +0.3 | +0.0 | -0.0 |
+| GROWW | +1.7 | +1.2 | +0.1 | +0.4 | -0.1 |
+| POLICYBZR | +1.7 | +1.0 | +0.7 | -0.0 | -0.0 |
+| IDEA | +1.6 | +1.0 | +0.6 | +0.1 | -0.0 |
+| INDIANB | +1.6 | +1.2 | +0.3 | +0.1 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -53,7 +53,7 @@ Nvidia reports 17 Nov (Motley Fool 2 Nov). Last print (26 Aug) revenue $96 bn, +
 | MARUTI | -0.2 | +0.0 | -0.2 | +0.0 | -0.0 |
 | PIIND | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 44%, 2: 47%, 3: 8%, 4: 1%
+Share of absolute impact by order: 1: 42%, 2: 48%, 3: 8%, 4: 2%
 
 ## Sources
 - 2026-11-02 Nvidia Reports Nov. 17. History Says What Its Stock Usually Does Next - Motley Fool https://news.google.com/rss/search?q=Nvidia%20Reports%20Nov.%2017.%20History%20Says%20What%20Its%20Stock%20Usually%20Does%20Next%20-%20Motley%20Fool&hl=en-IN&gl=IN&ceid=IN:en

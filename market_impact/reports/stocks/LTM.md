@@ -2,25 +2,25 @@
 *NIFTY_NEXT_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.1%**, **12 months -3.0%** (rank 166 / 183 of 200 for 3m / 12m); beta 1.16
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.3%): 3 months 47%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.5% … P90 +1.7%; plausible 12m relative-return range incl. stock-specific noise: -29.2% … +27.7%
-- Decomposition (12m): 0.5 × forward event exposure -5.1% (3m -1.5%; half assumed priced) + 0.5 × company-specific catalysts +0.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.3% (beta-adjusted) vs a realised market-adjusted move of -1.9% — gap +1.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.8%**, **12 months -1.2%** (rank 172 / 160 of 200 for 3m / 12m); beta 1.16
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.3%): 3 months 48%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.1% … P90 +3.1%; plausible 12m relative-return range incl. stock-specific noise: -33.7% … +31.8%
+- Decomposition (12m): 0.5 × forward event exposure -1.9% (3m -1.3%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.4% (beta-adjusted) vs a realised market-adjusted move of -1.9% — gap +3.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -3.93 | -4.00 | +0.09 | -0.01 | -0.01 | — |
-| US growth (`F_US_GDP`) | +1 pp | +3.75 | +3.00 | +0.74 | +0.11 | -0.11 | — |
+| US growth (`F_US_GDP`) | +1 pp | +3.76 | +3.00 | +0.74 | +0.11 | -0.10 | — |
 | US H-1B / outsourcing restrictions (`P_US_VISA_OUTSOURCING`) | +1 = material tightening | -3.49 | -3.50 | +0.00 | +0.00 | +0.01 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +2.02 | +1.80 | +0.26 | -0.05 | +0.00 | +1.2% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.91 | +2.20 | -0.14 | -0.07 | -0.07 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.92 | +2.20 | -0.14 | -0.07 | -0.06 | -1.1% |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.86 | -1.40 | -0.43 | -0.06 | +0.03 | +3.5% |
 | US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.58 | +0.00 | -1.16 | -0.37 | -0.05 | — |
 | US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.12 | -0.70 | -0.20 | -0.25 | +0.03 | +11.2% |
-| Europe growth (`F_EU_GDP`) | +1 pp | +1.00 | +1.00 | +0.00 | +0.01 | -0.01 | — |
+| Europe growth (`F_EU_GDP`) | +1 pp | +1.01 | +1.00 | +0.00 | +0.01 | +0.00 | — |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +0.95 | +0.00 | +0.78 | +0.14 | +0.04 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -0.90 | -0.90 | +0.00 | +0.00 | +0.00 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.73 | +0.90 | -0.17 | +0.00 | +0.00 | — |
@@ -68,10 +68,10 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_US_GDP → LTM | +1.20 | events | +3.60% |
-| 1 | P_US_VISA_OUTSOURCING → LTM | +0.90 | events | -3.15% |
 | 1 | T_GENAI_SERVICES → LTM | +0.50 | director_override | -2.00% |
 | 1 | F_FPI_FLOWS → LTM | -1.60 | events | -1.44% |
 | 1 | F_GSEC_10Y_IN → LTM | +1.55 | director_override | -1.40% |
+| 1 | P_US_VISA_OUTSOURCING → LTM | +0.35 | director_override | -1.23% |
 | 1 | F_FED_FUNDS → LTM | +1.62 | observed | -1.13% |
 | 1 | F_USDINR → LTM | -0.37 | observed | -0.81% |
 | 1 | F_US_10Y → LTM | +1.68 | observed | +0.67% |

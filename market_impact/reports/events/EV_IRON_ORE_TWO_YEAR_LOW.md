@@ -16,7 +16,7 @@ Iron ore (TIO=F) is $91.95/t: -12.5% since 1 Jun, -17% in 6m, -12% y/y. Mining.c
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | +1.4 | +2.1 | +0.0 | -0.7 | +0.0 |
+| JINDALSTEL | +1.5 | +2.1 | +0.0 | -0.6 | +0.0 |
 | JSWSTEEL | +0.9 | +1.2 | +0.0 | -0.4 | +0.0 |
 | TMPV | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
 | TMCV | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |

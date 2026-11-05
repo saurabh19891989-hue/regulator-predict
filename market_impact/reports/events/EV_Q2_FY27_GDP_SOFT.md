@@ -38,7 +38,7 @@ Downside case: oil/rupee shock, high yields and weak rural demand bite faster th
 |---|---|---|---|---|---|
 | INDUSINDBK | -6.7 | -4.3 | -2.6 | +0.2 | +0.0 |
 | IDFCFIRSTB | -5.5 | -3.5 | -2.2 | +0.2 | +0.0 |
-| YESBANK | -4.9 | -3.5 | -1.7 | +0.2 | +0.1 |
+| YESBANK | -5.2 | -3.8 | -1.8 | +0.2 | +0.1 |
 | BANKINDIA | -4.8 | -3.5 | -1.4 | +0.0 | +0.1 |
 | MAHABANK | -4.5 | -3.3 | -1.2 | -0.0 | +0.1 |
 | KOTAKBANK | -4.4 | -3.1 | -1.3 | +0.0 | +0.0 |

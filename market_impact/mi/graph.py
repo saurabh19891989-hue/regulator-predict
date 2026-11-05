@@ -38,6 +38,17 @@ CORP_ACTION_BREAKS = {"VEDL": ("June 2026 demerger: Vedanta Aluminium (VAML) and
 NOT_OBSERVABLE_STATE = {"F_REFINING_MARGIN": "HO=F is a NY Harbor heating-oil price; its crack vs Brent swung +$24/bbl since June "
                         "(US distillate squeeze), far from Singapore/Indian GRM moves (RT_BACKBONE)",
                         "F_GAS_GLOBAL": "NG=F is Henry Hub; the node is Asian LNG (JKM), which rose to 2022 highs (RT_BACKBONE)"}
+# Market-priced macro drivers: their forward path is taken from market pricing, so the event catalogue's
+# probability-weighted mean drift on them is removed from expected returns (an offsetting deterministic anchor), while the
+# scenarios themselves still drive the Monte Carlo bands and the per-event reports. Reason (2026-11-05 red-team): the
+# catalogue implied S&P -7%, VIX +6 pts, 10y G-sec +30 bp and repo +23 bp over 12 months, out of line with market pricing,
+# which mechanically penalised rate-sensitive and US-exposed stocks. Policy, sector, theme and country drivers keep drift.
+MARKET_PRICED = {"F_BRENT", "F_GAS_GLOBAL", "F_COAL_INTL", "F_REFINING_MARGIN", "F_DXY", "F_USDCNY", "NEW_USDJPY", "F_US_10Y",
+                 "F_FED_FUNDS", "F_US_EQUITIES", "F_RISK_SENTIMENT", "F_US_GDP", "F_EU_GDP", "F_CHINA_GDP", "F_GOLD", "F_SILVER",
+                 "F_COPPER", "F_ALUMINIUM", "F_ZINC_LEAD", "F_IRON_ORE", "F_STEEL_GLOBAL", "F_COKING_COAL", "F_WHEAT",
+                 "F_SUGAR", "F_COTTON", "F_EDIBLE_OIL", "F_RICE", "F_USDINR", "F_REPO_IN", "F_GSEC_10Y_IN", "F_CPI_IN",
+                 "F_GDP_IN", "F_LIQUIDITY_IN", "F_CREDIT_SPREADS_IN", "F_FPI_FLOWS", "F_DOMESTIC_FLOWS", "NEW_FX_RESERVES_IN",
+                 "NEW_FPI_DEBT_FLOWS", "F_FOOD_INFLATION_IN"}
 IVOL_CAP = 60.0               # cap on 12m idiosyncratic vol used for noise (corporate-action price breaks inflate it)
 # Unpriced part of an occurred-event impact: same sign as the model impact and never larger than it. A stock that moved
 # further than the events explain is treated as having idiosyncratic news, not as a mean-reversion candidate.
@@ -403,6 +414,28 @@ def run(draws=400):
     # by removing beta x (universe-average impact). Rankings therefore measure exposure beyond what beta implies.
     f3_raw = {c: sum(float(e.get("prob_by_3m", 0)) * ev_imp[e["event_id"]].get(c, 0.0) for e in forward) for c in comps}
     f12_raw = {c: sum(float(e.get("prob_by_12m", 0)) * ev_imp[e["event_id"]].get(c, 0.0) for e in forward) for c in comps}
+    # anchor: remove the catalogue's mean drift on market-priced drivers (see MARKET_PRICED)
+    drift = {"3m": defaultdict(float), "12m": defaultdict(float)}
+    for e in forward:
+        for sh in e.get("entry_shocks", []):
+            if sh["node"] in MARKET_PRICED and sh["node"] in nodes:
+                drift["3m"][sh["node"]] += float(e.get("prob_by_3m", 0)) * float(sh.get("ssu", 0))
+                drift["12m"][sh["node"]] += float(e.get("prob_by_12m", 0)) * float(sh.get("ssu", 0))
+    mp = frozenset(n for n in MARKET_PRICED if n in nodes)
+    anchor = {"3m": defaultdict(float), "12m": defaultdict(float)}
+    for n in mp:
+        if abs(drift["12m"][n]) < 1e-9 and abs(drift["3m"][n]) < 1e-9:
+            continue
+        tot, _, _ = net.unit_response(n, clamped=mp - {n})
+        for c, v in tot.items():
+            anchor["3m"][c] -= drift["3m"][n] * v
+            anchor["12m"][c] -= drift["12m"][n] * v
+    pd.DataFrame([{"driver": n, "drift_3m_ssu": drift["3m"][n], "drift_12m_ssu": drift["12m"][n],
+                   "ssu": nodes[n].get("ssu"), "name": nodes[n].get("name")} for n in sorted(mp, key=lambda k: -abs(drift["12m"][k]))
+                  if abs(drift["12m"][n]) > 1e-9]).to_csv(R("results", "neutralised_drift.csv"), index=False)
+    for c in comps:
+        f3_raw[c] += anchor["3m"].get(c, 0.0)
+        f12_raw[c] += anchor["12m"].get(c, 0.0)
     m_rec, m3, m12 = (float(np.mean([d.get(c, 0.0) for c in comps])) for d in (rec_imp, f3_raw, f12_raw))
     for c in comps:
         b = beta.get(c, 1.0)
@@ -427,7 +460,7 @@ def run(draws=400):
     # 5) Monte Carlo over edge-weight uncertainty and event occurrence → P10/P90 of 12m relative return
     base12 = dict(zip(rk.company, rk.residual_contribution + (1 - PRICED_SHARE_FWD) * rk.company_events_12m))
     ivol = idio_vol(net.companies)
-    rk = rk.merge(monte_carlo(net, events, ev_mc, base12, draws, ivol, beta), on="company", how="left")
+    rk = rk.merge(monte_carlo(net, events, ev_mc, base12, draws, ivol, beta, anchor["12m"]), on="company", how="left")
     rk["idio_vol_12m"] = rk.company.map(ivol)
     from scipy.stats import norm as _norm
     rk["prob_outperform_3m"] = [float(_norm.cdf(e / (v / 2))) if v and v == v else np.nan
@@ -463,7 +496,8 @@ def run(draws=400):
            "edges_dropped_unknown_or_industry": dropped, "events": len(events), "occurred_events": len(occurred),
            "profiles": len(profiles), "empirical_sign_conflicts": len(flags),
            "assumptions": {"damping": DAMP, "priced_share_forward": PRICED_SHARE_FWD,
-                           "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "corp_action_breaks": CORP_ACTION_BREAKS, "not_observable_state": NOT_OBSERVABLE_STATE, "max_depth": MAX_DEPTH,
+                           "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "corp_action_breaks": CORP_ACTION_BREAKS, "not_observable_state": NOT_OBSERVABLE_STATE,
+                           "market_priced_drift_removed": sorted(MARKET_PRICED), "max_depth": MAX_DEPTH,
                            "overlap_damp": OVERLAP_DAMP}}
     # overlap diagnostic: company has direct edges from A and B while a driver edge A→B exists (possible double count)
     direct = defaultdict(dict)
@@ -572,7 +606,7 @@ def realised_moves(comps):
     return out, betas
 
 
-def monte_carlo(net, events, ev_mc, base12, draws, ivol=None, beta=None):
+def monte_carlo(net, events, ev_mc, base12, draws, ivol=None, beta=None, anchor12=None):
     """Forward events only: sample occurrence (12m, exclusive groups respected) and edge weights (Beta(2,2) in
     [low, high]); add the deterministic base (unrealised residual + company events); demean per draw.
     mc_p*: uncertainty of the model's expectation. ret_p* and mc_prob_outperform additionally add idiosyncratic
@@ -585,6 +619,7 @@ def monte_carlo(net, events, ev_mc, base12, draws, ivol=None, beta=None):
     comps = net.companies
     cidx = {c: i for i, c in enumerate(comps)}
     base = np.array([base12.get(c, 0.0) for c in comps])
+    anc = np.array([(anchor12 or {}).get(c, 0.0) for c in comps]) * (1 - PRICED_SHARE_FWD)
     ev_paths = []
     for ev in events:
         if ev.get("status") == "occurred":
@@ -629,6 +664,7 @@ def monte_carlo(net, events, ev_mc, base12, draws, ivol=None, beta=None):
                 continue
             vals = Wd[P].prod(axis=1) * dmp * mult * (1 - PRICED_SHARE_FWD)
             np.add.at(tot, ci, vals)
+        tot = tot + anc                      # deterministic offset of market-priced macro drift
         tot = tot - bv * tot.mean() + base
         out[k] = tot - tot.mean()
         tn = tot + rng.normal(0.0, iv)

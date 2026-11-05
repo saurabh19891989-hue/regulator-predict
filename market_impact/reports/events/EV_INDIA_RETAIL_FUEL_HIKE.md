@@ -20,39 +20,39 @@ Prices frozen for months; state elections (UP, Punjab, Uttarakhand, Goa, Manipur
 | HINDPETRO | +29.8 | +30.0 | -0.3 | +0.0 | +0.0 |
 | IOC | +16.1 | +16.2 | -0.2 | +0.0 | +0.0 |
 | BPCL | +14.8 | +15.0 | -0.2 | -0.0 | +0.0 |
-| SAIL | +0.3 | +0.0 | +0.2 | +0.2 | -0.0 |
-| JSWSTEEL | +0.3 | +0.0 | +0.2 | +0.1 | -0.0 |
-| BANKINDIA | +0.3 | +0.0 | +0.4 | -0.3 | +0.2 |
-| LICHSGFIN | +0.2 | +0.0 | +0.4 | -0.3 | +0.1 |
+| SAIL | +0.4 | +0.0 | +0.2 | +0.2 | -0.0 |
+| JSWSTEEL | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
+| BANKINDIA | +0.2 | +0.0 | +0.4 | -0.3 | +0.2 |
 | ASHOKLEY | +0.2 | +0.0 | +0.2 | -0.0 | +0.1 |
-| MAHABANK | +0.2 | +0.0 | +0.3 | -0.3 | +0.1 |
-| JINDALSTEL | +0.2 | +0.0 | +0.1 | +0.1 | -0.0 |
-| ENRIN | +0.2 | +0.0 | +0.2 | -0.0 | -0.0 |
-| TATASTEEL | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| ENRIN | +0.2 | +0.0 | +0.2 | -0.0 | +0.0 |
+| LICHSGFIN | +0.2 | +0.0 | +0.4 | -0.3 | +0.1 |
 | CGPOWER | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
-| POWERINDIA | +0.2 | +0.0 | +0.2 | -0.0 | -0.0 |
+| POWERINDIA | +0.2 | +0.0 | +0.2 | -0.0 | +0.0 |
+| MAHABANK | +0.2 | +0.0 | +0.3 | -0.3 | +0.1 |
+| TATASTEEL | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 | TMCV | +0.2 | +0.0 | +0.2 | -0.2 | +0.2 |
+| JINDALSTEL | +0.2 | +0.0 | +0.1 | +0.1 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BAJFINANCE | -1.3 | +0.0 | -1.1 | -0.3 | +0.0 |
-| TATACAP | -1.2 | +0.0 | -0.9 | -0.4 | +0.1 |
-| YESBANK | -1.2 | +0.0 | -1.1 | -0.3 | +0.2 |
-| PRESTIGE | -1.1 | +0.0 | -0.8 | -0.3 | -0.0 |
-| JSWENERGY | -1.0 | +0.0 | -0.7 | -0.2 | -0.1 |
+| JSWENERGY | -1.0 | +0.0 | -0.7 | -0.2 | -0.0 |
 | IREDA | -1.0 | +0.0 | -0.7 | -0.4 | +0.1 |
-| AUBANK | -0.9 | +0.0 | -0.8 | -0.3 | +0.1 |
-| BAJAJFINSV | -0.9 | +0.0 | -0.7 | -0.3 | +0.0 |
-| GODREJPROP | -0.9 | +0.0 | -0.7 | -0.2 | -0.0 |
 | JIOFIN | -0.9 | +0.0 | -0.5 | -0.4 | -0.0 |
-| LENSKART | -0.8 | +0.0 | -0.8 | +0.0 | -0.1 |
+| GODREJPROP | -0.9 | +0.0 | -0.7 | -0.2 | +0.0 |
+| BAJFINANCE | -0.8 | +0.0 | -0.8 | -0.2 | +0.1 |
+| TATACAP | -0.8 | +0.0 | -0.6 | -0.4 | +0.1 |
+| PRESTIGE | -0.8 | +0.0 | -0.5 | -0.3 | +0.0 |
 | ADANIGREEN | -0.8 | +0.0 | -0.5 | -0.3 | -0.0 |
-| OBEROIRLTY | -0.8 | +0.0 | -0.6 | -0.2 | -0.0 |
-| LTF | -0.8 | +0.0 | -0.6 | -0.2 | +0.1 |
+| OBEROIRLTY | -0.7 | +0.0 | -0.6 | -0.2 | +0.0 |
+| LTF | -0.7 | +0.0 | -0.6 | -0.2 | +0.1 |
 | IDEA | -0.7 | +0.0 | -0.5 | -0.2 | -0.0 |
+| AUBANK | -0.7 | +0.0 | -0.6 | -0.3 | +0.1 |
+| YESBANK | -0.7 | +0.0 | -0.7 | -0.2 | +0.2 |
+| GMRAIRPORT | -0.7 | +0.0 | -0.5 | -0.2 | +0.0 |
+| DLF | -0.7 | +0.0 | -0.5 | -0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 45%, 2: 34%, 3: 15%, 4: 5%
+Share of absolute impact by order: 1: 46%, 2: 33%, 3: 15%, 4: 5%
 
 ## Sources
 - 2026-10-24 BPCL Q2 profit falls on fuel price freeze (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=petrol+diesel+price+hike+OMC+frozen+when:120d&hl=en-IN&gl=IN&ceid=IN:en

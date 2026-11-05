@@ -2,23 +2,23 @@
 *NIFTY_NEXT_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.1%**, **12 months -2.9%** (rank 169 / 182 of 200 for 3m / 12m); beta 0.93
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.2%): 3 months 47%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.8% … P90 +0.5%; plausible 12m relative-return range incl. stock-specific noise: -37.8% … +19.5%
-- Decomposition (12m): 0.5 × forward event exposure -5.0% (3m -1.9%; half assumed priced) + 0.5 × company-specific catalysts +0.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.6% (beta-adjusted) vs a realised market-adjusted move of -8.4% — gap +5.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.8%**, **12 months -1.3%** (rank 173 / 162 of 200 for 3m / 12m); beta 0.93
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.2%): 3 months 47%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.9% … P90 +2.0%; plausible 12m relative-return range incl. stock-specific noise: -31.5% … +28.6%
+- Decomposition (12m): 0.5 × forward event exposure -2.2% (3m -1.6%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.1% (beta-adjusted) vs a realised market-adjusted move of -8.4% — gap +7.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -5.95 | -6.00 | +0.07 | -0.01 | -0.01 | — |
-| US growth (`F_US_GDP`) | +1 pp | +3.21 | +2.50 | +0.71 | +0.11 | -0.11 | — |
+| US growth (`F_US_GDP`) | +1 pp | +3.22 | +2.50 | +0.71 | +0.11 | -0.10 | — |
 | US H-1B / outsourcing restrictions (`P_US_VISA_OUTSOURCING`) | +1 = material tightening | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.93 | +1.70 | +0.26 | -0.03 | +0.00 | +1.2% |
-| Europe growth (`F_EU_GDP`) | +1 pp | +1.60 | +1.60 | +0.00 | +0.01 | -0.01 | — |
+| Europe growth (`F_EU_GDP`) | +1 pp | +1.61 | +1.60 | +0.00 | +0.01 | +0.00 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.51 | -1.00 | -0.45 | -0.08 | +0.03 | +3.5% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.48 | +1.80 | -0.16 | -0.08 | -0.08 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.49 | +1.80 | -0.16 | -0.08 | -0.07 | -1.1% |
 | US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.34 | +0.00 | -0.90 | -0.36 | -0.07 | — |
 | US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.12 | -0.70 | -0.19 | -0.26 | +0.02 | +11.2% |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
@@ -32,7 +32,7 @@
 |---|---|---|---|---|---|---|---|---|
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -5.9% | -5.9% | -6.0 | +0.1 | -0.0 | -0.0 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.8% | +3.8% | +2.6 | +1.1 | +0.1 | +0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -11.8% | -3.0% | -10.5 | -1.6 | +0.4 | -0.1 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -11.8% | -3.0% | -10.5 | -1.6 | +0.4 | -0.2 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.9% | -1.9% | -2.2 | +0.3 | +0.0 | -0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.2% | -1.6% | -7.6 | +1.2 | +0.2 | +0.0 |
 | Indian IT: weakest Q2 in 3 years, Infosys guidance cut, US green card freeze (`EV_INDIAN_IT_Q2_VISA_SHOCK`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.0 | +0.0 | +0.0 |
@@ -69,10 +69,10 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | T_GENAI_SERVICES → WIPRO | +0.50 | director_override | -3.00% |
 | 1 | F_US_GDP → WIPRO | +1.20 | events | +3.00% |
-| 1 | P_US_VISA_OUTSOURCING → WIPRO | +0.90 | events | -2.70% |
 | 1 | F_FPI_FLOWS → WIPRO | -1.60 | events | -1.60% |
 | 1 | F_GSEC_10Y_IN → WIPRO | +1.55 | director_override | -1.55% |
 | 1 | F_FED_FUNDS → WIPRO | +1.62 | observed | -1.13% |
+| 1 | P_US_VISA_OUTSOURCING → WIPRO | +0.35 | director_override | -1.05% |
 | 1 | F_USDINR → WIPRO | -0.37 | observed | -0.66% |
 | 1 | F_US_10Y → WIPRO | +1.68 | observed | +0.50% |
 | 1 | F_US_EQUITIES → WIPRO | +0.23 | observed | +0.40% |

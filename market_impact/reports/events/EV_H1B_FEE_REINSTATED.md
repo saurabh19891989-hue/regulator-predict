@@ -29,8 +29,8 @@ Administration appealed (12 Oct); courts have so far ruled against; DHS OPT fee 
 | INDIGO | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
 | BANKINDIA | +0.3 | +0.0 | +0.0 | +0.0 | +0.3 |
 | NYKAA | +0.3 | +0.0 | +0.0 | +0.3 | -0.0 |
-| ETERNAL | +0.3 | +0.0 | +0.0 | +0.3 | -0.1 |
-| KOTAKBANK | +0.3 | +0.0 | +0.0 | +0.0 | +0.2 |
+| ETERNAL | +0.3 | +0.0 | +0.0 | +0.3 | -0.0 |
+| YESBANK | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

@@ -2,11 +2,11 @@
 *MIDCAP_100 · Telecommunication · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.7%**, **12 months -0.6%** (rank 146 / 135 of 200 for 3m / 12m); beta 1.05
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.8%): 3 months 48%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.6% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -40.0% … +31.4%
-- Decomposition (12m): 0.5 × forward event exposure -2.6% (3m -1.4%; half assumed priced) + 0.5 × company-specific catalysts +2.3%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -5.9% (beta-adjusted) vs a realised market-adjusted move of -15.0% — gap +9.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.3%**, **12 months -0.4%** (rank 142 / 117 of 200 for 3m / 12m); beta 1.05
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.8%): 3 months 49%, 12 months 46%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.8% … P90 +3.0%; plausible 12m relative-return range incl. stock-specific noise: -38.3% … +34.6%
+- Decomposition (12m): 0.5 × forward event exposure -2.5% (3m -0.8%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +2.3%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -6.1% (beta-adjusted) vs a realised market-adjusted move of -15.0% — gap +8.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,18 +14,18 @@
 |---|---|---|---|---|---|---|---|
 | Enterprise connectivity pricing pressure (`NEW_ENTERPRISE_CONNECTIVITY_PRICING`) | +1 = 5% decline in MPLS/SD-WAN/IZO prices | -5.00 | -5.00 | +0.00 | +0.00 | +0.00 | — |
 | Global AI / data-centre capex (`F_AI_CAPEX`) | +10% growth | +3.11 | +2.50 | +0.42 | +0.16 | +0.02 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.05 | +2.00 | +0.01 | -0.00 | +0.04 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.04 | +2.00 | +0.01 | -0.00 | +0.04 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -2.02 | -2.00 | +0.00 | -0.01 | -0.01 | — |
-| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +2.00 | +2.00 | +0.00 | +0.00 | -0.00 | — |
+| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +2.01 | +2.00 | +0.00 | +0.00 | +0.01 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.51 | -1.00 | -0.45 | -0.03 | -0.02 | — |
 | US/EU enterprise IT services spend (`F_US_TECH_SPEND`) | +5% growth | +1.50 | +1.50 | +0.00 | +0.00 | +0.00 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.32 | +0.00 | -0.90 | -0.49 | +0.07 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.31 | +0.00 | +0.61 | +0.51 | +0.19 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.19 | +0.00 | -0.40 | -0.44 | -0.34 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.06 | +1.50 | -0.04 | -0.33 | -0.07 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.05 | +0.00 | -0.80 | -0.21 | -0.05 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.42 | +0.00 | +0.61 | +0.56 | +0.25 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.40 | +1.50 | +0.15 | -0.17 | -0.09 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.33 | +0.00 | -0.90 | -0.49 | +0.06 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.21 | +0.00 | -0.40 | -0.44 | -0.37 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.07 | +0.00 | -0.80 | -0.21 | -0.07 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.05 | -0.50 | -0.33 | -0.19 | -0.03 | +3.5% |
-| US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -0.87 | +0.00 | -0.92 | +0.03 | +0.02 | +9.4% |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.97 | +0.00 | +0.96 | +0.11 | -0.10 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -33,12 +33,12 @@
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.5% | -4.5% | -4.4 | -0.0 | +0.0 | -0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -13.2% | -3.3% | -8.8 | -4.0 | -0.5 | +0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.9% | -2.9% | -2.8 | +0.0 | -0.0 | -0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.3% | +2.7% | +5.2 | -0.0 | -0.0 | +0.1 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.3% | +2.6% | +5.2 | -0.0 | -0.0 | +0.1 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.8% | -1.8% | -1.6 | -0.0 | -0.1 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -1.0 | -0.6 | +0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -0.9 | -0.3 | -0.3 |
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.4% | -1.4% | -0.9 | -0.5 | -0.1 | +0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -0.9 | -0.3 | -0.2 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.0 | -0.1 | -0.0 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.1% | +1.1% | +1.0 | +0.1 | -0.0 | +0.0 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -1.2 | +0.1 | +0.1 |
@@ -51,7 +51,6 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → TATACOMM | -7.50% | -1.88% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → TATACOMM | -2.10% | -0.84% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATACOMM | -1.60% | -0.80% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TATACOMM | -1.00% | -0.60% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → TATACOMM | -3.00% | -0.54% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → TATACOMM | -1.92% | -0.48% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → TATACOMM | -1.92% | -0.48% |
@@ -60,6 +59,7 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ F_AI_CAPEX → TATACOMM | +0.50% | +0.42% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → TATACOMM | -1.00% | -0.42% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → TATACOMM | -0.40% | -0.36% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TATACOMM | -0.60% | -0.36% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → TATACOMM | -0.60% | -0.36% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → TATACOMM | -2.00% | -0.36% |
 

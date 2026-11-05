@@ -39,21 +39,21 @@ Reuters poll 23 Oct: BoJ to raise to 1.50% in December, keeping a quarterly pace
 |---|---|---|---|---|---|
 | MOTILALOFS | -1.5 | -1.3 | -0.2 | +0.0 | -0.0 |
 | ICICIAMC | -1.3 | -1.2 | -0.1 | +0.0 | -0.0 |
-| JIOFIN | -1.3 | -1.2 | -0.0 | -0.0 | -0.0 |
 | IREDA | -1.2 | -1.2 | -0.0 | -0.0 | -0.0 |
-| MEESHO | -1.2 | -1.2 | +0.0 | -0.0 | -0.0 |
 | 360ONE | -1.1 | -1.1 | -0.1 | -0.0 | -0.0 |
 | INDUSINDBK | -1.1 | -1.1 | -0.0 | +0.0 | +0.0 |
 | MAHABANK | -0.9 | -1.0 | -0.0 | +0.0 | -0.0 |
 | PAYTM | -0.9 | -0.9 | -0.0 | +0.0 | +0.0 |
 | NAUKRI | -0.9 | -0.8 | -0.1 | +0.0 | -0.0 |
 | IDFCFIRSTB | -0.9 | -0.9 | -0.0 | +0.0 | -0.0 |
-| LENSKART | -0.9 | -0.9 | -0.0 | -0.0 | -0.0 |
 | POLICYBZR | -0.9 | -0.9 | +0.0 | -0.0 | +0.0 |
-| ETERNAL | -0.9 | -0.9 | -0.0 | -0.0 | -0.0 |
 | LICI | -0.9 | -0.9 | -0.0 | -0.0 | +0.0 |
+| IDEA | -0.8 | -0.8 | -0.1 | -0.0 | -0.0 |
+| INDIANB | -0.8 | -0.8 | -0.0 | +0.0 | -0.0 |
+| MEESHO | -0.8 | -0.8 | +0.0 | -0.0 | -0.0 |
+| SBIN | -0.7 | -0.7 | -0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 80%, 2: 13%, 3: 5%, 4: 2%
+Share of absolute impact by order: 1: 79%, 2: 14%, 3: 5%, 4: 2%
 
 ## Sources
 - 2026-10-23 BOJ to raise rates to 1.50% in December, sticking to quarterly pace: Reuters poll https://news.google.com/rss/search?q=BOJ%20to%20raise%20rates%20to%201.50%25%20in%20December%2C%20sticking%20to%20quarterly%20pace%3A%20Reuters%20poll&hl=en-IN&gl=IN&ceid=IN:en

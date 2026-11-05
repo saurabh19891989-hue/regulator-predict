@@ -19,39 +19,39 @@ Domestic retailer lobby pressing; foreign-owned operating models under lens (Bus
 | JUBLFOOD | +1.5 | +1.5 | -0.0 | -0.0 | +0.0 |
 | DMART | +1.3 | +1.5 | -0.1 | -0.0 | -0.0 |
 | VMM | +0.5 | +0.5 | -0.0 | -0.0 | -0.0 |
-| BIOCON | +0.5 | +0.0 | +0.4 | +0.0 | +0.0 |
+| BIOCON | +0.4 | +0.0 | +0.4 | +0.0 | -0.0 |
 | NYKAA | +0.3 | +0.5 | -0.1 | -0.1 | -0.0 |
 | DRREDDY | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
 | JSWSTEEL | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
 | NATIONALUM | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
 | OIL | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
 | VAML | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
-| GLENMARK | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
 | ONGC | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
-| HINDCOPPER | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
-| LUPIN | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
-| JINDALSTEL | +0.3 | +0.0 | +0.1 | +0.2 | +0.0 |
+| HINDCOPPER | +0.3 | +0.0 | +0.2 | +0.0 | -0.0 |
+| LUPIN | +0.3 | +0.0 | +0.2 | +0.0 | -0.0 |
+| GLENMARK | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
+| ZYDUSLIFE | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | DIXON | -4.4 | -4.0 | -0.4 | +0.0 | +0.0 |
 | SWIGGY | -1.6 | -1.5 | +0.0 | -0.1 | -0.0 |
-| ETERNAL | -1.1 | -1.0 | -0.0 | -0.1 | -0.0 |
+| ETERNAL | -1.1 | -1.0 | -0.0 | -0.0 | -0.0 |
 | SIEMENS | -0.9 | +0.0 | -0.9 | -0.1 | +0.0 |
 | LAURUSLABS | -0.9 | +0.0 | -0.9 | -0.0 | -0.0 |
 | MAHABANK | -0.7 | -0.5 | +0.0 | -0.1 | -0.1 |
 | DIVISLAB | -0.6 | +0.0 | -0.5 | -0.0 | -0.0 |
 | NESTLEIND | -0.5 | -0.5 | -0.0 | -0.0 | +0.0 |
 | ABB | -0.5 | +0.0 | -0.5 | -0.0 | +0.0 |
-| YESBANK | -0.5 | +0.0 | -0.0 | -0.2 | -0.2 |
-| LGEINDIA | -0.5 | +0.0 | -0.4 | -0.0 | -0.0 |
 | IDFCFIRSTB | -0.5 | +0.0 | -0.1 | -0.2 | -0.2 |
+| LGEINDIA | -0.5 | +0.0 | -0.4 | -0.0 | -0.0 |
 | TATACONSUM | -0.4 | -0.4 | -0.0 | -0.0 | +0.0 |
+| YESBANK | -0.4 | +0.0 | -0.0 | -0.2 | -0.2 |
 | CONCOR | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
 | PIIND | -0.4 | +0.0 | -0.4 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 25%, 2: 40%, 3: 23%, 4: 12%
+Share of absolute impact by order: 1: 25%, 2: 40%, 3: 23%, 4: 13%
 
 ## Sources
 - 2026-07-12 Why foreign-owned ecom firms' operating models are under the lens https://www.business-standard.com/

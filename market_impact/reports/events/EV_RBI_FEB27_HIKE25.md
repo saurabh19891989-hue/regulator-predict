@@ -35,23 +35,23 @@ Date approximate. Conditional on persistent CPI near/above 6%, rupee pressure an
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PRESTIGE | -5.0 | -4.3 | -0.7 | +0.1 | -0.1 |
-| YESBANK | -4.8 | -3.9 | -0.8 | +0.0 | -0.1 |
-| TATACAP | -4.7 | -3.8 | -1.1 | +0.2 | -0.0 |
-| BAJFINANCE | -4.6 | -3.8 | -1.0 | +0.2 | -0.0 |
 | GODREJPROP | -4.4 | -3.5 | -0.9 | +0.0 | -0.1 |
 | JSWENERGY | -3.8 | -3.8 | -0.1 | +0.0 | +0.0 |
 | IREDA | -3.8 | -3.4 | -0.5 | +0.1 | -0.0 |
-| AUBANK | -3.6 | -3.0 | -0.7 | +0.1 | -0.1 |
 | OBEROIRLTY | -3.4 | -2.9 | -0.5 | -0.0 | -0.1 |
+| PRESTIGE | -3.4 | -2.7 | -0.7 | +0.1 | -0.1 |
 | LODHA | -3.4 | -2.4 | -0.9 | +0.1 | -0.1 |
 | M&MFIN | -3.2 | -2.5 | -0.8 | +0.1 | -0.0 |
-| BAJAJFINSV | -3.2 | -2.6 | -0.7 | +0.1 | -0.0 |
-| MEESHO | -3.1 | -3.0 | -0.1 | +0.0 | -0.0 |
 | DLF | -3.1 | -2.5 | -0.5 | -0.0 | -0.1 |
+| YESBANK | -2.9 | -1.9 | -0.8 | +0.0 | -0.1 |
 | LTF | -2.9 | -2.5 | -0.6 | +0.2 | -0.0 |
+| JIOFIN | -2.8 | -2.4 | -0.5 | +0.1 | -0.0 |
+| SHRIRAMFIN | -2.8 | -1.7 | -0.8 | -0.2 | -0.1 |
+| PFC | -2.8 | -2.8 | -0.2 | +0.1 | -0.0 |
+| TATACAP | -2.8 | -2.0 | -0.9 | +0.2 | -0.1 |
+| BAJFINANCE | -2.7 | -2.0 | -0.8 | +0.2 | -0.1 |
 
-Share of absolute impact by order: 1: 78%, 2: 15%, 3: 4%, 4: 2%
+Share of absolute impact by order: 1: 77%, 2: 16%, 3: 4%, 4: 3%
 
 ## Sources
 - 2026-10-21 Not A One-Off: RBI MPC Minutes Point To A Rate-Hike Cycle https://news.google.com/rss/search?q=RBI+MPC+February+2027+expectations+when:120d&hl=en-IN&gl=IN&ceid=IN:en

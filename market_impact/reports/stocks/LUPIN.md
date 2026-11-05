@@ -2,30 +2,30 @@
 *MIDCAP_100 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.2%**, **12 months +2.2%** (rank 32 / 27 of 200 for 3m / 12m); beta 0.72
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.6%): 3 months 56%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.6% … P90 +4.1%; plausible 12m relative-return range incl. stock-specific noise: -21.1% … +19.1%
-- Decomposition (12m): 0.5 × forward event exposure +1.9% (3m +0.8%; half assumed priced) + 0.5 × company-specific catalysts +3.4%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.4% (beta-adjusted) vs a realised market-adjusted move of -16.1% — gap +14.7 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.8%**, **12 months +1.2%** (rank 25 / 41 of 200 for 3m / 12m); beta 0.72
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.6%): 3 months 54%, 12 months 54%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.7% … P90 +4.1%; plausible 12m relative-return range incl. stock-specific noise: -19.4% … +19.8%
+- Decomposition (12m): 0.5 × forward event exposure -0.5% (3m -0.2%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +3.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.6% (beta-adjusted) vs a realised market-adjusted move of -16.1% — gap +14.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | US generic drug price erosion (higher = worse) (`F_US_GENERIC_PRICING`) | +5 pp erosion | -5.00 | -5.00 | +0.00 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.80 | +3.00 | -0.17 | -0.05 | +0.02 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.81 | +3.00 | -0.17 | -0.04 | +0.02 | -1.1% |
 | USFDA inspection/enforcement intensity (`P_USFDA_ENFORCEMENT`) | +1 = stricter | -2.00 | -3.00 | +1.00 | +0.00 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.15 | +1.20 | +0.00 | -0.00 | -0.05 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.20 | +1.20 | +0.00 | +0.03 | -0.03 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.71 | -0.50 | -0.17 | -0.04 | +0.00 | — |
 | China chemical/API dumping intensity (`F_CHINA_CHEM_EXPORTS`) | +15% export volumes / price cuts | +0.70 | +0.70 | +0.00 | +0.00 | +0.00 | — |
 | Foreign portfolio flows into Indian government/corporate bonds (FAR, index-linked) (`NEW_FPI_DEBT_FLOWS`) | +US$5 bn net debt inflow per quarter | -0.57 | +0.00 | -0.60 | +0.03 | +0.00 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.53 | +0.80 | -0.28 | +0.01 | +0.00 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | +0.52 | +0.00 | +0.52 | +0.03 | -0.03 | +0.0% |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | +0.49 | +0.00 | +0.52 | +0.01 | -0.04 | +0.0% |
 | US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | +0.45 | +0.00 | +0.28 | +0.20 | -0.03 | — |
 | USD/CNY (`F_USDCNY`) | +3% USD/CNY (yuan weaker) | +0.44 | +0.00 | +0.46 | -0.01 | +0.00 | -1.4% |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +0.42 | +0.00 | +0.38 | +0.02 | +0.02 | — |
 | US dollar index (`F_DXY`) | +3% DXY | +0.42 | +0.00 | +0.26 | +0.15 | +0.01 | +2.2% |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +0.39 | +0.00 | +0.38 | +0.02 | -0.02 | — |
-| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | -0.36 | +0.00 | +0.00 | -0.31 | -0.05 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.36 | -0.70 | +0.00 | +0.30 | +0.04 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -39,9 +39,9 @@
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +1.2% | +0.6% | +2.0 | -0.8 | +0.0 | +0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | +2.1% | +0.4% | +2.2 | -0.0 | -0.1 | +0.0 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -0.7% | -0.3% | -0.5 | -0.2 | -0.0 | -0.0 |
-| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | -0.3% | -0.3% | +0.0 | -0.1 | -0.1 | -0.0 |
-| China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | -0.2% | -0.2% | +0.0 | -0.3 | +0.1 | +0.0 |
-| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +0.2% | +0.2% | +0.4 | -0.2 | -0.0 | +0.0 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | -0.3% | -0.3% | +0.0 | -0.1 | -0.1 | +0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.3% | +0.3% | +0.2 | +0.0 | -0.0 | -0.0 |
+| China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | -0.3% | -0.3% | +0.0 | -0.3 | +0.1 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

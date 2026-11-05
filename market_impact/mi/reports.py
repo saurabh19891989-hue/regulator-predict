@@ -57,7 +57,8 @@ def stock_report(r, ev, so, nodes, fs, paths, events, rpaths=None):
           f"P90 {f1(r.get('mc_p90_12m'))}%; plausible 12m relative-return range incl. stock-specific noise: "
           f"{f1(r.get('ret_p10_12m'))}% … {f1(r.get('ret_p90_12m'))}%",
           f"- Decomposition (12m): 0.5 × forward event exposure {f1(r.forward_exposure_12m)}% (3m {f1(r.forward_exposure_3m)}%; "
-          f"half assumed priced) + 0.5 × company-specific catalysts {f1(r.company_events_12m)}%, centred on the universe",
+          f"half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts {f1(r.company_events_12m)}%, "
+          f"centred on the universe",
           f"- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply {f1(r.recent_events_model_impact)}% "
           f"(beta-adjusted) vs a realised market-adjusted move of {f1(r.realised_mkt_adj_since_jun)}% — gap "
           f"{f1(r.get('graph_vs_market_gap'))} pp. Across the universe this gap does not predict anything we can verify "
@@ -158,8 +159,11 @@ def summary(rk, ev, so, nodes, paths, events, rpaths=None):
          "four hops, damped by order, with double-count controls (clamping, overlap damping, link semantics).", "",
          "**How to read the numbers.** Expected returns are *scenario-implied*, beta-adjusted and relative to the Nifty 200 "
          "average: probability-weighted impacts of upcoming and risk events through the graph (half assumed already priced) plus "
-         "company-specific catalysts. They are not validated forecasts; the rankings are frozen in `ledger/` and will be scored "
-         "against realised returns and a momentum baseline.", "",
+         "company-specific catalysts. For market-traded macro drivers (rates, FX, commodities, equity indices, volatility, flows, "
+         "growth, inflation) the market's own forward path is taken as given: the catalogue's mean drift on them is removed, and "
+         "their scenarios only widen the risk bands. What remains in the expected return is policy, regulatory, sector, theme and "
+         "company-specific exposure, which is where 2nd–4th-order effects are most plausibly under-priced. They are not validated "
+         "forecasts; the rankings are frozen in `ledger/` and will be scored against realised returns and a momentum baseline.", "",
          "**What the in-sample check showed.** We first also credited the part of June–November driver moves the graph said was "
          "not yet in prices. Across 198 stocks the graph's June–November impact correlated **−0.34** with realised "
          "market-adjusted moves (agent-estimated event shocks −0.41; market-observed drivers +0.10; within industries −0.16), "
@@ -167,7 +171,12 @@ def summary(rk, ev, so, nodes, paths, events, rpaths=None):
          "misses, regulation, competition). That component is therefore excluded from the headline and kept only as a "
          "diagnostic. The graph's value is the exposure map — which drivers and events hit which company, by causal order — "
          "not a proven return forecast.", ""]
-    cols = "| # | ticker | name | industry | exp 3m | exp 12m | P(beat 12m) | strongest positive chain | strongest negative chain |"
+    nd = R("results", "neutralised_drift.csv")
+    if os.path.exists(nd):
+        d = pd.read_csv(nd).head(12)
+        L += ["**Catalogue drift removed as already priced (probability-weighted, 12 months):** " +
+              "; ".join(f"{x['name']} {x.drift_12m_ssu:+.2f} × ({x.ssu})" for _, x in d.iterrows()), ""]
+    cols = "| # | ticker | name | industry | exp 3m | exp 12m | P(beat 12m) | largest upside scenario chain | largest downside scenario chain |"
     top = defaultdict(lambda: ("—", "—"))
     for c, lst in paths.items():
         pos = [p for p in lst if p["expected_12m"] > 0 and p.get("status") != "occurred"]
@@ -257,7 +266,7 @@ def main():
          "Expected relative returns are exposure-driven estimates from the Market Impact Graph, not validated forecasts.", "",
          "Beta-adjusted: each stock's impacts are net of beta × the universe-average impact. P(beat 12m) includes "
          "idiosyncratic noise. Model band = P10…P90 of the 12m expectation over event and edge-weight draws.", "",
-         "| rank 12m | ticker | name | tier | industry | exp 3m % | exp 12m % | model band 12m | P(beat 3m) | P(beat 12m) | strongest positive chain | strongest negative chain |",
+         "| rank 12m | ticker | name | tier | industry | exp 3m % | exp 12m % | model band 12m | P(beat 3m) | P(beat 12m) | largest upside scenario chain | largest downside scenario chain |",
          "|---|---|---|---|---|---|---|---|---|---|---|---|"]
     for _, r in rk.sort_values("rank_12m").iterrows():
         p, n = top[r.company]

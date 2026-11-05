@@ -2,11 +2,11 @@
 *MIDCAP_100 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.7%**, **12 months -0.8%** (rank 147 / 138 of 200 for 3m / 12m); beta 0.86
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.1%): 3 months 47%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.7% … P90 +1.9%; plausible 12m relative-return range incl. stock-specific noise: -22.9% … +24.5%
-- Decomposition (12m): 0.5 × forward event exposure +0.3% (3m +0.0%; half assumed priced) + 0.5 × company-specific catalysts -0.9%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.8% (beta-adjusted) vs a realised market-adjusted move of +8.4% — gap -9.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.5%**, **12 months -0.3%** (rank 152 / 116 of 200 for 3m / 12m); beta 0.86
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.1%): 3 months 48%, 12 months 53%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.1% … P90 +2.4%; plausible 12m relative-return range incl. stock-specific noise: -28.1% … +28.4%
+- Decomposition (12m): 0.5 × forward event exposure +0.8% (3m +0.3%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.9%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.0% (beta-adjusted) vs a realised market-adjusted move of +8.4% — gap -9.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,16 +14,16 @@
 |---|---|---|---|---|---|---|---|
 | Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +2.08 | +2.00 | +0.08 | +0.00 | +0.00 | — |
 | State excise / pricing policy for alcohol (`NEW_STATE_EXCISE_ALCOHOL`) | +1 = adverse change of Maharashtra/Karnataka scale (Popular NSV about -20%) | -2.00 | -2.00 | +0.00 | +0.00 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.95 | +2.00 | +0.00 | +0.00 | -0.05 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.99 | +2.00 | +0.00 | +0.00 | -0.01 | — |
 | Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.34 | +0.00 | -0.96 | -0.23 | -0.16 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.30 | -1.30 | +0.00 | +0.00 | +0.00 | — |
 | Sugar price (`F_SUGAR`) | +10% sugar | -1.30 | -1.20 | -0.10 | +0.00 | +0.00 | +27.8% |
 | India CPI inflation (`F_CPI_IN`) | +1 pp | -1.00 | +0.00 | -0.71 | -0.24 | -0.05 | — |
 | Sugar export / ethanol blending policy (`P_SUGAR_ETHANOL`) | +1 = more favourable to millers | -0.93 | -0.80 | -0.13 | +0.00 | +0.00 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -0.85 | -0.50 | -0.19 | -0.11 | -0.05 | +0.0% |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -0.86 | -0.50 | -0.19 | -0.11 | -0.07 | +0.0% |
 | GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +0.73 | +0.00 | +0.56 | +0.11 | +0.06 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.68 | +0.00 | -0.68 | -0.02 | +0.01 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.64 | -0.40 | +0.00 | -0.16 | -0.08 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.63 | -0.40 | +0.00 | -0.16 | -0.07 | -1.1% |
 | Packaging cost (paper, plastics) (`F_PACKAGING`) | +10% packaging cost | -0.60 | -0.60 | +0.00 | +0.00 | +0.00 | — |
 | ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | -0.58 | +0.00 | -0.50 | -0.10 | +0.03 | — |
 
@@ -34,26 +34,26 @@
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.8% | -1.8% | -1.8 | +0.0 | -0.0 | -0.0 |
 | OMC ethanol tender ESY 2026-27: no cane juice/syrup/B-heavy ethanol; maize price incentive cut; grain-based ethanol takes over (`EV_ETHANOL_ESY27_TENDER`) | occurred | 1.00 | +1.4% | +1.4% | +1.4 | +0.0 | +0.0 | +0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.7 | -0.2 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.5% | +0.8% | +0.7 | +0.6 | +0.2 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.6% | +0.9% | +0.7 | +0.6 | +0.2 | +0.1 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -2.4% | -0.6% | -1.6 | -0.3 | -0.3 | -0.2 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.6% | -0.6% | -0.4 | -0.1 | -0.1 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -2.3% | -0.6% | -1.6 | -0.3 | -0.3 | -0.2 |
 | Budget FY2027-28: FY27 deficit overshoot confirmed and consolidation path slowed (`EV_BUDGET_FY28_FISCAL_SLIPPAGE`) | scheduled | 0.50 | -1.1% | -0.5% | -1.0 | -0.0 | -0.0 | -0.0 |
-| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -0.8% | -0.5% | -0.7 | -0.3 | +0.1 | -0.0 |
 | LNG supply disruption: ~90 delayed Qatar cargoes to Petronet; India re-sources to US/UAE; Henry Hub proxy only +12% in 3m (`EV_LNG_HORMUZ_DISRUPTION`) | occurred | 1.00 | -0.5% | -0.5% | -0.5 | +0.0 | +0.0 | +0.0 |
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.5% | -0.5% | -0.3 | +0.1 | -0.2 | -0.1 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.4 | -0.1 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.4% | -0.4% | +0.0 | -0.4 | +0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → UNITDSPR | -1.04% | -0.52% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.65% | -0.39% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → UNITDSPR | +0.65% | +0.36% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → UNITDSPR | -1.10% | -0.28% |
 | 1 | EV_SUGAR_MSP_HIKE ⇒ P_SUGAR_ETHANOL → UNITDSPR | -0.64% | -0.26% |
 | 1 | EV_EU_WINTER_GAS_SPIKE ⇒ F_GAS_GLOBAL → UNITDSPR | -1.25% | -0.25% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.26% | -0.23% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.39% | -0.23% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.39% | -0.23% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → UNITDSPR | -1.30% | -0.23% |
 | 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → UNITDSPR | +0.39% | +0.20% |

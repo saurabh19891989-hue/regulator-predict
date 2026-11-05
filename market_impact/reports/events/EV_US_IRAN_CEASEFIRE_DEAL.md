@@ -22,42 +22,42 @@ Talks in Doha/Washington (draft circulated 2 Nov; Trump 'progress', Tehran says 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDIGO | +8.3 | +6.3 | +1.3 | +0.6 | +0.2 |
-| GMRAIRPORT | +6.4 | +4.5 | +1.2 | +0.3 | +0.3 |
-| HINDPETRO | +6.0 | +5.4 | +0.4 | +0.2 | +0.0 |
-| AXISBANK | +5.8 | +3.6 | +1.2 | +0.8 | +0.2 |
+| INDIGO | +8.4 | +6.3 | +1.3 | +0.6 | +0.3 |
+| GMRAIRPORT | +6.4 | +4.5 | +1.2 | +0.4 | +0.4 |
+| AXISBANK | +5.9 | +3.6 | +1.2 | +0.9 | +0.2 |
 | BPCL | +5.3 | +5.7 | -0.7 | +0.3 | +0.0 |
-| HDFCBANK | +5.0 | +3.3 | +0.9 | +0.7 | +0.1 |
+| HDFCBANK | +5.1 | +3.3 | +0.9 | +0.7 | +0.1 |
 | MOTILALOFS | +5.0 | +1.4 | +2.3 | +1.1 | +0.3 |
-| INDHOTEL | +5.0 | +3.5 | +1.0 | +0.3 | +0.1 |
-| IOC | +4.9 | +4.0 | +0.6 | +0.3 | +0.0 |
-| ATGL | +4.3 | +2.5 | +1.5 | +0.3 | +0.1 |
-| ICICIAMC | +4.2 | +1.6 | +1.6 | +0.8 | +0.2 |
+| INDHOTEL | +5.0 | +3.5 | +1.0 | +0.4 | +0.1 |
+| ATGL | +4.4 | +2.5 | +1.5 | +0.3 | +0.0 |
+| ICICIAMC | +4.3 | +1.6 | +1.6 | +0.8 | +0.2 |
+| IREDA | +4.2 | +2.0 | +0.7 | +1.1 | +0.3 |
 | INDUSINDBK | +4.1 | +1.4 | +1.5 | +1.1 | +0.1 |
-| MEESHO | +4.0 | +2.9 | +0.5 | +0.5 | +0.1 |
-| IREDA | +4.0 | +2.0 | +0.7 | +1.0 | +0.3 |
-| JIOFIN | +3.9 | +2.0 | +0.6 | +0.9 | +0.5 |
+| IDFCFIRSTB | +4.0 | +1.2 | +1.4 | +1.1 | +0.3 |
+| IDEA | +3.7 | +1.0 | +1.7 | +0.7 | +0.3 |
+| ADANIENT | +3.7 | +2.3 | +0.8 | +0.3 | +0.3 |
+| HYUNDAI | +3.5 | +2.5 | +0.3 | +0.4 | +0.3 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| OIL | -12.5 | -11.5 | -0.7 | -0.2 | -0.0 |
+| OIL | -12.4 | -11.5 | -0.7 | -0.2 | -0.0 |
 | ONGC | -9.8 | -8.8 | -0.8 | -0.2 | -0.0 |
 | MCX | -2.3 | -1.5 | -0.9 | +0.0 | +0.0 |
-| COCHINSHIP | -2.1 | -0.0 | -1.2 | -0.8 | +0.0 |
-| VAML | -1.9 | +0.3 | -2.3 | -0.1 | +0.1 |
+| COCHINSHIP | -2.0 | -0.0 | -1.2 | -0.8 | +0.0 |
+| VAML | -1.9 | +0.3 | -2.3 | -0.1 | +0.2 |
 | COALINDIA | -1.9 | -1.3 | -0.2 | -0.3 | -0.1 |
-| SOLARINDS | -1.9 | -2.1 | +0.0 | +0.2 | +0.1 |
-| NATIONALUM | -1.7 | +0.7 | -2.1 | -0.2 | -0.0 |
-| HINDZINC | -1.7 | +0.0 | -0.7 | -1.1 | +0.1 |
-| JSWSTEEL | -1.2 | +0.0 | -0.7 | -0.5 | -0.0 |
+| SOLARINDS | -1.8 | -2.1 | +0.0 | +0.2 | +0.0 |
+| NATIONALUM | -1.6 | +0.7 | -2.1 | -0.2 | -0.0 |
+| HINDZINC | -1.6 | +0.0 | -0.7 | -1.1 | +0.1 |
+| JSWSTEEL | -1.1 | +0.0 | -0.7 | -0.4 | -0.0 |
 | SAIL | -0.8 | +0.0 | -0.2 | -0.5 | -0.1 |
-| RELIANCE | -0.7 | -2.0 | +0.8 | +0.5 | +0.0 |
+| RELIANCE | -0.6 | -2.0 | +0.8 | +0.5 | +0.0 |
 | HINDALCO | -0.6 | +0.5 | -1.1 | -0.1 | +0.0 |
 | VEDL | -0.6 | +0.3 | -0.4 | -0.1 | -0.4 |
-| GLENMARK | -0.6 | +0.0 | -0.6 | +0.0 | +0.0 |
+| GLENMARK | -0.5 | +0.0 | -0.6 | +0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 46%, 2: 30%, 3: 19%, 4: 6%
+Share of absolute impact by order: 1: 44%, 2: 30%, 3: 20%, 4: 7%
 
 ## Sources
 - 2026-11-03 Trump signals progress on Iran deal as Tehran pushes faster ceasefire - Al Jazeera https://news.google.com/rss/search?q=Iran+ceasefire+talks+oil+when:120d&hl=en-IN&gl=IN&ceid=IN:en

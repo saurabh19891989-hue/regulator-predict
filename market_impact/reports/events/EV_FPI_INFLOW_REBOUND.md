@@ -18,42 +18,42 @@ Early signs: FPIs buying in early Nov, longest Nifty winning streak in ~5 months
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| MOTILALOFS | +19.4 | +16.4 | +3.3 | -0.4 | +0.0 |
+| MOTILALOFS | +19.3 | +16.4 | +3.3 | -0.4 | -0.0 |
 | ICICIAMC | +14.0 | +12.8 | +1.4 | -0.3 | +0.0 |
 | PAYTM | +13.4 | +13.3 | +0.1 | -0.0 | -0.0 |
 | 360ONE | +12.0 | +10.2 | +1.9 | -0.1 | +0.0 |
 | INDUSINDBK | +11.5 | +11.4 | +0.2 | -0.1 | -0.0 |
 | SBIN | +11.1 | +10.6 | +0.4 | -0.0 | +0.2 |
 | POLICYBZR | +10.8 | +11.0 | -0.2 | -0.0 | -0.0 |
-| MEESHO | +10.6 | +10.4 | +0.0 | +0.1 | +0.1 |
 | BSE | +10.1 | +7.1 | +4.0 | -1.0 | +0.1 |
-| ETERNAL | +10.1 | +9.8 | +0.1 | +0.1 | +0.1 |
-| JIOFIN | +9.5 | +8.2 | +1.0 | +0.1 | +0.2 |
-| IDFCFIRSTB | +9.2 | +8.7 | +0.3 | -0.1 | +0.3 |
+| MEESHO | +9.7 | +9.6 | +0.0 | +0.1 | +0.0 |
+| IDFCFIRSTB | +9.2 | +8.7 | +0.3 | -0.1 | +0.2 |
 | NAUKRI | +9.1 | +8.5 | +0.6 | -0.0 | +0.0 |
-| LENSKART | +9.0 | +8.7 | +0.1 | +0.1 | +0.1 |
 | HDFCBANK | +8.9 | +8.8 | +0.1 | -0.0 | +0.0 |
+| MAXHEALTH | +8.6 | +8.8 | -0.3 | +0.0 | +0.1 |
+| ADANIGREEN | +8.4 | +7.5 | +0.6 | +0.1 | +0.2 |
+| SBICARD | +8.2 | +8.1 | +0.0 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | -1.7 | +0.0 | -1.3 | -0.5 | +0.1 |
+| JSWSTEEL | -1.7 | +0.0 | -1.3 | -0.5 | +0.0 |
 | OIL | -1.5 | +0.0 | -1.5 | +0.0 | +0.0 |
 | ONGC | -1.5 | +0.0 | -1.5 | +0.0 | +0.0 |
 | NATIONALUM | -1.5 | +0.0 | -1.5 | +0.0 | +0.0 |
-| SAIL | -1.3 | +0.0 | -0.5 | -0.8 | +0.1 |
+| SAIL | -1.3 | +0.0 | -0.5 | -0.8 | +0.0 |
 | TATASTEEL | -1.1 | +0.0 | -0.8 | -0.4 | +0.0 |
 | NMDC | -1.1 | +0.0 | -1.0 | -0.1 | +0.0 |
 | HINDZINC | -1.1 | +0.0 | -1.0 | -0.1 | +0.0 |
 | PIIND | -1.0 | +0.0 | -1.0 | -0.0 | +0.0 |
 | TMPV | -1.0 | +0.0 | -1.0 | +0.0 | +0.0 |
 | VAML | -1.0 | +0.3 | -1.3 | +0.0 | +0.0 |
-| SRF | -0.9 | +0.0 | -1.0 | +0.0 | +0.0 |
+| SRF | -1.0 | +0.0 | -1.0 | +0.0 | +0.0 |
 | HINDALCO | -0.9 | +0.0 | -0.9 | +0.0 | +0.0 |
-| JINDALSTEL | -0.8 | +0.3 | -0.2 | -0.9 | +0.0 |
 | BAJAJ-AUTO | -0.7 | +0.0 | -0.8 | +0.0 | +0.1 |
+| JINDALSTEL | -0.7 | +0.3 | -0.2 | -0.8 | +0.1 |
 
-Share of absolute impact by order: 1: 85%, 2: 11%, 3: 2%, 4: 2%
+Share of absolute impact by order: 1: 85%, 2: 11%, 3: 2%, 4: 1%
 
 ## Sources
 - 2026-11-04 Indian stocks post longest winning streak in nearly 5 months on FPI inflow hopes - Reuters https://news.google.com/rss/search?q=Indian+stocks+longest+winning+streak+FPI+inflow+hopes+when:120d&hl=en-IN&gl=IN&ceid=IN:en

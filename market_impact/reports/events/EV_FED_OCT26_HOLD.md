@@ -20,14 +20,14 @@ FOMC held the range at 3-3/4 to 4 percent by a 10-2 vote; Cook and Hammack wante
 | BSE | +0.5 | +0.0 | +0.5 | +0.1 | -0.0 |
 | NYKAA | +0.5 | +0.4 | +0.1 | +0.0 | -0.0 |
 | ADANIGREEN | +0.5 | +0.0 | +0.5 | +0.1 | -0.0 |
-| YESBANK | +0.4 | +0.0 | +0.4 | +0.1 | -0.0 |
+| JIOFIN | +0.4 | +0.0 | +0.4 | +0.0 | +0.0 |
 | MOTILALOFS | +0.4 | +0.0 | +0.4 | -0.0 | -0.0 |
 | VEDL | +0.4 | +0.2 | +0.1 | +0.0 | +0.0 |
 | INDUSINDBK | +0.4 | +0.2 | +0.2 | -0.0 | -0.0 |
 | INDIGO | +0.4 | +0.2 | +0.1 | +0.0 | -0.0 |
+| BAJFINANCE | +0.4 | +0.0 | +0.3 | +0.0 | -0.0 |
 | PFC | +0.4 | +0.0 | +0.3 | +0.0 | -0.0 |
 | ADANIENT | +0.4 | +0.0 | +0.3 | +0.1 | -0.0 |
-| TATACAP | +0.4 | +0.0 | +0.3 | +0.1 | -0.0 |
 | PHOENIXLTD | +0.4 | +0.0 | +0.3 | +0.0 | -0.0 |
 | ADANIENSOL | +0.4 | +0.0 | +0.3 | +0.1 | -0.0 |
 | SBIN | +0.3 | +0.0 | +0.4 | -0.0 | -0.0 |
@@ -51,7 +51,7 @@ FOMC held the range at 3-3/4 to 4 percent by a 10-2 vote; Cook and Hammack wante
 | SRF | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | BHEL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 7%, 2: 71%, 3: 17%, 4: 6%
+Share of absolute impact by order: 1: 7%, 2: 71%, 3: 16%, 4: 6%
 
 ## Sources
 - 2026-10-28 Federal Reserve issues FOMC statement, 28 Oct 2026 https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm

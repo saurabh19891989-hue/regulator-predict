@@ -2,11 +2,11 @@
 *NIFTY_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.3%**, **12 months -1.6%** (rank 177 / 155 of 200 for 3m / 12m); beta 1.28
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.7%): 3 months 46%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.6% … P90 +4.8%; plausible 12m relative-return range incl. stock-specific noise: -46.9% … +26.0%
-- Decomposition (12m): 0.5 × forward event exposure -1.9% (3m -1.7%; half assumed priced) + 0.5 × company-specific catalysts -0.3%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.7% (beta-adjusted) vs a realised market-adjusted move of -12.0% — gap +10.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.9%**, **12 months -2.8%** (rank 180 / 192 of 200 for 3m / 12m); beta 1.28
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.7%): 3 months 47%, 12 months 44%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.2% … P90 +4.1%; plausible 12m relative-return range incl. stock-specific noise: -43.4% … +33.3%
+- Decomposition (12m): 0.5 × forward event exposure -4.7% (3m -1.2%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.3%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.0% (beta-adjusted) vs a realised market-adjusted move of -12.0% — gap +10.0 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -22,7 +22,7 @@
 | US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -3.74 | -3.00 | -0.12 | -0.40 | -0.22 | +11.2% |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -2.50 | -2.50 | +0.00 | +0.00 | +0.00 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +2.24 | +1.50 | +0.48 | +0.38 | -0.12 | +1.2% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -2.00 | +0.00 | -0.96 | -0.79 | -0.25 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.96 | +0.00 | -0.96 | -0.79 | -0.21 | -1.1% |
 | US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -1.82 | +0.00 | -1.50 | -0.42 | +0.10 | +9.4% |
 | India CPI inflation (`F_CPI_IN`) | +1 pp | -1.58 | +0.00 | -0.60 | -0.87 | -0.11 | — |
 | US dollar index (`F_DXY`) | +3% DXY | -1.41 | +0.00 | -0.84 | -0.55 | -0.02 | +2.2% |
@@ -59,9 +59,9 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ P_CAPITAL_GAINS_TAX → BSE | +3.00% | +1.05% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BSE | -2.00% | -1.00% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → BSE | -4.50% | -0.81% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BSE | -1.25% | -0.75% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_EQUITY_ACTIVITY_IN → BSE | +1.80% | +0.63% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BSE | +2.50% | +0.62% |
+| 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → BSE | +4.50% | +0.54% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

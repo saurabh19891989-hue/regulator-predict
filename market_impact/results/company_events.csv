@@ -83,14 +83,13 @@ AXISBANK,2027-03,Quarter-end FCNR(B) swap-window maturities and deposit-repricin
 BAJAJ-AUTO,2026-12-01,November sales print (exports and domestic),other,1.0,0.0,0.0,
 BAJAJ-AUTO,2027-01,Q3 FY27 results,results,0.95,0.0,0.0,
 BAJAJ-AUTO,2027-03,India-US trade deal or further tariff changes affecting KTM/Triumph exports,regulatory,0.3,0.0,0.0,
-BAJAJFINSV,2026-11,"Bajaj Finance QIP Rs11,700cr and warrants Rs5,800cr to Bajaj Finserv (cash outflow Rs5,800cr over 18m)",corporate_action,0.7,-0.75,-0.5249999999999999,
 BAJAJFINSV,2027-01,Deepak Reddy takes over as BAGIC CEO; Tapan Singhel exits,other,0.95,0.0,0.0,
 BAJAJFINSV,2027-01-28,Q3 FY27 results (date inferred; Q2 reported 2026-11-03),results,0.9,0.0,0.0,
 BAJAJFINSV,2026-12,IRDAI regulations/consultations on commissions or expenses; plus Bajaj's reinsurance licence application,regulatory,0.3,-1.5,-0.44999999999999996,
 BAJAJHLDNG,2027-01/02,Q3 FY27 results (Q2 declared 2026-11-03),results,0.95,0.0,0.0,
 BAJAJHLDNG,2026-12,Further block purchases of Bajaj Finserv shares via subsidiary/intra-group (April 2026 precedent raised stake to 38.41%),corporate_action,0.25,0.5,0.125,
 BAJAJHLDNG,2027,Corporate restructuring / holdco simplification that narrows the ~49% NAV discount (speculative; none announced),corporate_action,0.02,25.0,0.5,[RT_N50_B] RT_N50_B: The profile itself calls it 'speculative; none announced'. At p 0.05 x +25 mid it was the largest company-event item (+1.25).
-BAJFINANCE,2026-11,"QIP launch/closing for Rs11,700cr (approvals pending: shareholder postal ballot/ SEBI QIP floor price)",corporate_action,0.7,-1.5,-1.0499999999999998,
+BAJFINANCE,2026-11,"QIP launch/closing for Rs11,700cr (approvals pending: shareholder postal ballot/ SEBI QIP floor price)",corporate_action,0.7,-0.5,-0.35,"[RT_BOT_A] The 1.8% dilution was announced on 1 Oct and the stock fell 5-6% then. The EGM approved it on 2 Nov, and the price has since risen to 1,064. Only the pricing discount remains."
 BAJFINANCE,2027-01-26,Q3 FY27 results (date inferred from cadence: Q2 on 2026-10-19),results,0.9,0.0,0.0,
 BAJFINANCE,2027-01,"Quarterly business update (Q3 FY27 AUM, deposits) around 2027-01-03/04",guidance,0.9,0.5,0.45,
 BANKBARODA,2027-01,Q3 FY27 results (Q2 was 2026-10-30; typical late-Jan/early-Feb timing),results,0.95,0.0,0.0,
@@ -357,7 +356,6 @@ JINDALSTEL,2026-12,Angul BF-II hot metal 12 ktpd by Dec-26; H2 production 6 Mt (
 JINDALSTEL,2026-12,Barbil-Angul 192 km slurry pipeline enters commercial operation (saves ~Rs700/t freight),capex,0.75,0.0,0.0,[RT_TOP_A] guided; symmetric
 JINDALSTEL,2027-01,Roida iron ore mine resumes after forest/road clearances (mgmt: Dec-26 to Jan-27),regulatory,0.5,0.25,0.125,[RT_TOP_A] guided; clearance slippage risk
 JINDALSTEL,2027-06,2 Mtpa DRI plant and new pellet plant commissioning (imported equipment/shipping could delay),capex,0.5,-0.25,-0.125,[RT_TOP_A] guided; profile itself flags equipment/shipping delays
-JIOFIN,2026-11,Jio Platforms listing / price discovery after Rs ~36k cr (US$3.8bn) IPO; group sentiment spillover,other,0.85,0.5,0.425,
 JIOFIN,2027-01,Q3 FY27 results (mid-Jan 2027 est.; Q2 was 15 Oct 2026),results,0.95,0.0,0.0,
 JIOFIN,2027-03,Closing of BofA investment into Jio Credit after regulatory approvals,corporate_action,0.55,2.25,1.2375,
 JIOFIN,2027-03,Launch of stock broking with BlackRock and Allianz insurance venture,other,0.45,1.5,0.675,
@@ -389,7 +387,6 @@ LAURUSLABS,2027-03,"Commissioning of FY27 capex tranche (Rs 3,000 cr program)",c
 LAURUSLABS,2027-06,Possible BIOSECURE-style US legislation changes,regulatory,0.3,6.0,1.7999999999999998,
 LAURUSLABS,2027-02,Inclusion/weight changes in Nifty Next 50 or MSCI after market-cap growth (low confidence),other,0.2,1.0,0.2,
 LENSKART,2027-02-05,Q3 FY27 results (festive/winter quarter),results,0.85,0.5,0.425,
-LENSKART,2026-11-10,Anniversary of IPO listing (10 Nov 2025): lock-in expiries of promoter/pre-IPO holders possible; block-deal supply risk (verify RHP),corporate_action,0.5,-3.0,-1.5,
 LENSKART,2027-03,"Store roll-out update toward 10,000 stores (Investing.com Q2 slides)",capex,0.5,1.0,0.5,
 LGEINDIA,2026-11-05,"Q2 FY27 results declared: profit +26% YoY, revenue beat (per headlines); board approved foray into a new business (details not read). Stock +3.5% intraday",results,1.0,1.0,1.0,
 LGEINDIA,2026-11,"Citi '90-day positive catalyst watch' (opened 2026-10-01) runs to ~end Dec; MOFSL target Rs2,080, BOB Capital +20%, UBS Buy",other,0.5,1.5,0.75,
@@ -450,7 +447,7 @@ MCX,2027-01,Q3 FY27 results (Q2 declared 3 Nov 2026),results,0.95,0.0,0.0,
 MCX,2027-03,Launch of coal and minerals trading platforms after Rs 200 cr investment,capex,0.4,1.5,0.6000000000000001,
 MCX,2026-12,"SEBI board meeting on derivatives (options structure, expiry rules)",regulatory,0.3,-3.5,-1.05,
 MEESHO,2027-01-28,Q3 FY27 results (festive quarter) - first full festive period post-IPO,results,0.85,1.0,0.85,
-MEESHO,2026-11,MSCI index review / inclusion decision,corporate_action,0.4,5.0,2.0,
+MEESHO,2026-11,MSCI index review / inclusion decision,corporate_action,0.8,1.5,1.2000000000000002,"[RT_BOT_A] Inclusion is now the base case (Livemint 29 Oct; Business Standard/JM 23 Oct), and the stock already rose 6% on inclusion hopes on 6 Oct. Higher probability, smaller residual impact."
 MEESHO,2026-11,Kirana Club acquisition tranche update (Reg 30 filing 3 Nov),corporate_action,0.7,0.0,0.0,
 MFSL,2026-12,IRDAI final commission/EoM regulations (plan reported to start January; comments closed 2026-10-25),regulatory,0.5,-1.0,-0.5,
 MFSL,2027-02,Q3 FY27 results; VNB margin vs 27.0%,results,0.9,0.0,0.0,
@@ -540,7 +537,6 @@ PAYTM,2027,Policy change on UPI MDR/incentives for merchant payments,regulatory,
 PERSISTENT,2027-01,"Q3 FY27 results (Q2 was 2026-10-15): Nagarro costs, margin recovery, deal conversion from slipped Q2 deals",results,0.95,0.0,0.0,
 PERSISTENT,2026-12,Nagarro regulatory approvals and squeeze-out completion; consolidation begins,corporate_action,0.7,0.5,0.35,
 PERSISTENT,2027-03,Integration milestones; further US$25-30 mn transaction costs hit Q3-Q4 FY27,other,0.9,-1.5,-1.35,
-PERSISTENT,2026-11-17,Nvidia results and AI-capex read-across (mid-cap IT beta to AI trade),other,0.95,0.5,0.475,
 PFC,2026-12,"PFC-REC merger: shareholder, creditor and (probably) NCLT steps; government considering preference shares to retain 51% control",corporate_action,0.7,0.5,0.35,
 PFC,2027-09,Merger effective date (any approvals chain slipping is plausible; timing not announced),corporate_action,0.5,2.0,1.0,
 PFC,2027-02,"Q3 FY27 results (inferred cadence; Q2 on 2026-11-04): loan-growth, NIM and merger commentary",results,0.92,-0.5,-0.46,
@@ -582,7 +578,6 @@ PREMIERENE,2027-01,Q3 FY27 results,results,0.95,0.0,0.0,
 PREMIERENE,2027-07,First phase 6 GWh BESS commissioning,capex,0.5,1.75,0.875,
 PREMIERENE,2027-12,Ingot-wafer 10 GW phase 1 commissioning (target Dec 2027),capex,0.3,3.0,0.8999999999999999,
 PREMIERENE,2027-03,Further cell/module price compression as Indian cell capacity scales (JM: 60-70 GW),other,0.4,-7.0,-2.8000000000000003,
-PRESTIGE,2026-11,Q2 FY27 financial results/ call follow-through (Sep column already in screener) and sell-side revisions,results,0.7,0.5,0.35,
 PRESTIGE,2026-11/2027-03,"H2 launches of ~Rs 40,000 cr GDV: sell-through vs Rs 7,225 cr quarterly bookings",capex,0.8,1.5,1.2000000000000002,
 PRESTIGE,2026-12/2027-03,"Closing of CPP Investments' 27% hospitality stake purchase (Rs 3,000 cr) - deleveraging",corporate_action,0.7,1.5,1.0499999999999998,
 PRESTIGE,2027-02,Q3 FY27 results (model-estimated),results,0.95,0.5,0.475,
@@ -668,13 +663,11 @@ TATASTEEL,2026-11,Q2 FY27 results (date not confirmed; analysts expected EBITDA 
 TATASTEEL,2027-03,Dutch government joint letter of intent deadline (extended five months to March 2027): binding support for IJmuiden decarbonisation,regulatory,0.55,0.5,0.275,
 TATASTEEL,2027-02,Q3 FY27 results,results,0.95,0.0,0.0,
 TCS,2027-01-09,"Q3 FY27 results (TCS reports ~9-12 Jan; date unconfirmed): cc growth, AI revenue, margin, variable pay",results,0.95,0.0,0.0,
-TCS,2026-11-17,Nvidia FQ3 results: AI-trade read-across to IT services (anti-AI rotation vs AI-capex confidence),other,0.95,0.5,0.475,
 TCS,2027-02,"H-1B $100,000 fee appeal / green-card freeze litigation outcomes",regulatory,0.4,-1.0,-0.4,
 TCS,2026-12,Company wage-hike cycle announcement (Q3-Q4 FY27),guidance,0.5,-0.75,-0.375,
 TCS,2027-03-31,India-US interim trade deal concluded (services/visa side-letter odds uncertain),regulatory,0.45,1.5,0.675,
 TECHM,2026-11,Bonus 1:1 and Rs15 dividend record/payment dates (board recommended 15 Oct; bonus subject to shareholder approval),corporate_action,0.9,0.5,0.45,
 TECHM,2027-01,"Q3 FY27 results (date unconfirmed, ~mid-Jan): margin vs FY27 target, TCV, cash conversion",results,0.95,0.0,0.0,
-TECHM,2026-11-17,Nvidia results: AI trade read-across,other,0.95,0.5,0.475,
 TECHM,2027-01,Telecom client capex/spend commentary and large-deal conversions,other,0.5,0.0,0.0,
 TIINDIA,2026-11,Q2 FY27 results (date unverified): CG Power Q2 PAT +44% already public; standalone margin recovery and EV/semiconductor losses are the watch items,results,0.97,0.0,0.0,
 TIINDIA,2026-12,Further capital infusions into TI Clean Mobility / semiconductor ventures,capex,0.4,-1.0,-0.4,
@@ -756,3 +749,8 @@ ZYDUSLIFE,2027-06,Section 232 pharma tariff scope extended to generics/specialty
 PNB,2027-03,Cabinet raises FDI cap in PSU banks from 20% to 49% (draft cabinet note with RBI backing; reports 21 Oct 2026),regulatory,0.5,1.5,0.75,[DIRECTOR_CE] RT_N50_A: replaces conflated P_FDI_RULES edge
 UNIONBANK,2027-03,Cabinet raises FDI cap in PSU banks from 20% to 49% (draft cabinet note with RBI backing; reports 21 Oct 2026),regulatory,0.5,1.5,0.75,[DIRECTOR_CE] RT_N50_A: replaces conflated P_FDI_RULES edge
 HINDZINC,2027-02-01,Windfall levy/export duty on zinc-silver earnings (tail; replaces conflated P_WINDFALL_EXPORT_TAX edge),regulatory,0.05,-6.0,-0.30000000000000004,[DIRECTOR_CE] RT_N50_A
+YESBANK,2027-02,"Equity raise of up to Rs7,500 cr (QIP/preferential) approved at 4 Nov 2026 AGM: pricing discount and ~15% dilution",corporate_action,0.7,-2.5,-1.75,[RT_BOT_A] Missing stock-specific channel; the AT1 hit itself is priced (-26% in Oct).
+BAJFINANCE,2027-04,Offset to catalogue event EV_ECL_ROLLOUT_APR27 (bank provisioning-norm transition from Apr 2027): NBFCs are outside its scope (Ind AS 109 impairment since FY2018); cancels the generic-node impact,regulatory,0.9,1.98,1.782,"[RT_BOT_A] EV_ECL_ROLLOUT_APR27 reaches this NBFC through generic nodes (P_RBI_PRUDENTIAL/F_ASSET_QUALITY_IN/F_CREDIT_GROWTH_IN). The impacts at the 08:44 run, conditional at p 0.9, are BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67; the BAJAJFINSV offset is net of the BAJFINANCE offset passed through the 0.75 x 0.8 link. Offset ranges are ±20%. Wording avoids the MARKET_WIDE regex on purpose. A bank-only node is the cleaner fix and would remove the need for these offsets."
+TATACAP,2027-04,Offset to catalogue event EV_ECL_ROLLOUT_APR27 (bank provisioning-norm transition from Apr 2027): NBFCs are outside its scope (Ind AS 109 impairment since FY2018); cancels the generic-node impact,regulatory,0.9,2.41,2.169,"[RT_BOT_A] EV_ECL_ROLLOUT_APR27 reaches this NBFC through generic nodes (P_RBI_PRUDENTIAL/F_ASSET_QUALITY_IN/F_CREDIT_GROWTH_IN). The impacts at the 08:44 run, conditional at p 0.9, are BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67; the BAJAJFINSV offset is net of the BAJFINANCE offset passed through the 0.75 x 0.8 link. Offset ranges are ±20%. Wording avoids the MARKET_WIDE regex on purpose. A bank-only node is the cleaner fix and would remove the need for these offsets."
+JIOFIN,2027-04,Offset to catalogue event EV_ECL_ROLLOUT_APR27 (bank provisioning-norm transition from Apr 2027): NBFCs are outside its scope (Ind AS 109 impairment since FY2018); cancels the generic-node impact,regulatory,0.9,1.08,0.9720000000000001,"[RT_BOT_A] EV_ECL_ROLLOUT_APR27 reaches this NBFC through generic nodes (P_RBI_PRUDENTIAL/F_ASSET_QUALITY_IN/F_CREDIT_GROWTH_IN). The impacts at the 08:44 run, conditional at p 0.9, are BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67; the BAJAJFINSV offset is net of the BAJFINANCE offset passed through the 0.75 x 0.8 link. Offset ranges are ±20%. Wording avoids the MARKET_WIDE regex on purpose. A bank-only node is the cleaner fix and would remove the need for these offsets."
+BAJAJFINSV,2027-04,Offset to catalogue event EV_ECL_ROLLOUT_APR27 (bank provisioning-norm transition from Apr 2027): NBFCs are outside its scope (Ind AS 109 impairment since FY2018); cancels the generic-node impact,regulatory,0.9,0.48,0.432,"[RT_BOT_A] EV_ECL_ROLLOUT_APR27 reaches this NBFC through generic nodes (P_RBI_PRUDENTIAL/F_ASSET_QUALITY_IN/F_CREDIT_GROWTH_IN). The impacts at the 08:44 run, conditional at p 0.9, are BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67; the BAJAJFINSV offset is net of the BAJFINANCE offset passed through the 0.75 x 0.8 link. Offset ranges are ±20%. Wording avoids the MARKET_WIDE regex on purpose. A bank-only node is the cleaner fix and would remove the need for these offsets."

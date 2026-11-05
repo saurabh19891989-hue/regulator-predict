@@ -22,7 +22,7 @@ Mini-stimulus (29 Sep) and Q3 4.5% growth reduce urgency; Reuters (25 Oct) says 
 | VAML | +1.4 | +0.0 | +1.5 | -0.1 | +0.0 |
 | SAIL | +1.3 | +0.3 | -1.3 | +1.6 | +0.6 |
 | TATASTEEL | +1.2 | +0.3 | -0.3 | +1.0 | +0.2 |
-| HINDALCO | +1.2 | +0.3 | +0.9 | -0.0 | +0.0 |
+| HINDALCO | +1.2 | +0.3 | +0.9 | -0.0 | -0.0 |
 | NATIONALUM | +1.0 | +0.0 | +0.9 | +0.0 | +0.0 |
 | VEDL | +0.9 | +0.6 | +0.1 | +0.2 | -0.0 |
 | OIL | +0.7 | +0.0 | +0.7 | +0.1 | +0.0 |
@@ -38,7 +38,6 @@ Mini-stimulus (29 Sep) and Q3 4.5% growth reduce urgency; Reuters (25 Oct) says 
 |---|---|---|---|---|---|
 | VOLTAS | -1.3 | -0.8 | -0.4 | -0.1 | -0.0 |
 | TVSMOTOR | -1.0 | -0.2 | -0.5 | -0.2 | -0.1 |
-| JINDALSTEL | -0.8 | -1.5 | -1.0 | +1.3 | +0.4 |
 | MARUTI | -0.8 | -0.1 | -0.3 | -0.3 | -0.1 |
 | BLUESTARCO | -0.8 | -0.6 | -0.1 | -0.1 | -0.0 |
 | SUZLON | -0.8 | -0.4 | +0.0 | -0.3 | -0.1 |
@@ -47,12 +46,13 @@ Mini-stimulus (29 Sep) and Q3 4.5% growth reduce urgency; Reuters (25 Oct) says 
 | HYUNDAI | -0.8 | -0.1 | -0.3 | -0.2 | -0.1 |
 | MOTILALOFS | -0.8 | +0.0 | -0.5 | -0.2 | -0.0 |
 | BHEL | -0.7 | -0.2 | +0.0 | -0.3 | -0.1 |
-| TMPV | -0.7 | -0.2 | -0.4 | -0.1 | +0.0 |
+| TMPV | -0.7 | -0.2 | -0.4 | -0.1 | -0.0 |
 | GVT&D | -0.7 | -0.2 | -0.3 | -0.1 | -0.0 |
+| JINDALSTEL | -0.7 | -1.5 | -0.6 | +1.1 | +0.3 |
 | MRF | -0.6 | +0.0 | -0.4 | -0.1 | -0.1 |
 | BPCL | -0.6 | +0.0 | -0.7 | +0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 23%, 2: 47%, 3: 22%, 4: 9%
+Share of absolute impact by order: 1: 23%, 2: 46%, 3: 21%, 4: 9%
 
 ## Sources
 - 2026-10-19 China's growth dilemma: More stimulus, but where is the demand? https://news.google.com/rss/search?q=China's+growth+dilemma:+More+stimulus,+but+where+is+the+demand?&hl=en-IN&gl=IN&ceid=IN:en

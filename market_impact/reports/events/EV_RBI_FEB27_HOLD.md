@@ -19,11 +19,10 @@ Most likely single outcome if Oct CPI/crude behave. Cuts (0.04) require CPI fall
 | ADANIGREEN | +0.8 | +0.7 | +0.1 | +0.0 | +0.0 |
 | JIOFIN | +0.7 | +0.6 | +0.1 | +0.0 | -0.0 |
 | IREDA | +0.7 | +0.6 | +0.1 | +0.0 | +0.0 |
-| YESBANK | +0.7 | +0.6 | +0.0 | +0.0 | +0.0 |
 | BANKINDIA | +0.6 | +0.6 | +0.0 | +0.0 | +0.0 |
-| BAJFINANCE | +0.6 | +0.5 | +0.1 | +0.0 | -0.0 |
 | POWERGRID | +0.6 | +0.6 | +0.0 | +0.0 | +0.0 |
 | TATACAP | +0.6 | +0.5 | +0.1 | +0.0 | -0.0 |
+| BAJFINANCE | +0.6 | +0.5 | +0.0 | +0.0 | -0.0 |
 | JSWENERGY | +0.6 | +0.5 | +0.1 | +0.0 | +0.0 |
 | TATAPOWER | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
 | GMRAIRPORT | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
@@ -31,6 +30,7 @@ Most likely single outcome if Oct CPI/crude behave. Cuts (0.04) require CPI fall
 | PFC | +0.5 | +0.5 | +0.0 | +0.0 | -0.0 |
 | PHOENIXLTD | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
 | GROWW | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
+| BSE | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -51,7 +51,7 @@ Most likely single outcome if Oct CPI/crude behave. Cuts (0.04) require CPI fall
 | HINDCOPPER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ITC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 90%, 2: 7%, 3: 2%, 4: 1%
+Share of absolute impact by order: 1: 91%, 2: 7%, 3: 2%, 4: 1%
 
 ## Sources
 - 2026-10-07 Hawkish hike, but measured path ahead - Business Standard https://news.google.com/rss/search?q=RBI+MPC+February+2027+expectations+when:120d&hl=en-IN&gl=IN&ceid=IN:en

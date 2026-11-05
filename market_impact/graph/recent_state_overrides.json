@@ -79,6 +79,12 @@
    "by": "RT_TOP_B"
   },
   {
+   "node": "P_US_VISA_OUTSOURCING",
+   "state_ssu": 0.35,
+   "reason": "[RT_BOT_A] Event sum 0.9 (EV_INDIAN_IT_Q2_VISA_SHOCK 0.5 + EV_H1B_100K_FEE_COURT 0.4). Both include the H-1B fee, so it is double counted. Since 1 Jun the $100k fee was blocked by a second US judge (ET 1 Oct), and USCIS is clearing H-1B petitions without the fee (NDTV Profit 26 Oct). Analysts see little risk from the green-card (PERM) suspension because PERM filings were already falling (Reuters 11 Oct; ET 10 Oct). The Democratic midterm win (4-5 Nov) lowers odds of a statutory tightening. Net change since June: green-card freeze plus the OPT fee proposal, about 0.35 of a '+1 = material tightening'. Forward EV_H1B_FEE_REINSTATED (p 0.3) still carries the re-tightening risk.",
+   "by": "RT_BOT_A"
+  },
+  {
    "node": "T_GENAI_SERVICES",
    "state_ssu": 0.5,
    "reason": "[RT_BOT_B] The state of 1.0 comes entirely from EV_IT_AI_DEFLATION_Q2FY27, whose what_already_moved is 'Not quantified'. The catalogue's own EV_INDIAN_IT_Q2_VISA_SHOCK records that TCS was down ~35% in 2026 BEFORE June-Oct and that Nifty IT rose +16% in a month to 22 Oct on a 'reverse-AI trade'. IndiaIPO (29 Oct): 'AI fears ease, hiring picks up'. IT realised market-adjusted moves since 1 Jun: median +4.1% (TCS +4.1, HCLTECH +15.7, TECHM +14.0, PERSISTENT +8.9, MPHASIS +3.4, COFORGE +37.0, INFY -7.4, WIPRO -8.4). The AI-deflation step is mostly a pre-June level, and Q2 added at most half a step (Infosys guide cut, TCS beat). Cuts the -5.0/-4.1/-3.0 'unpriced' hits on MPHASIS/NAUKRI/COFORGE (and peers) roughly in half.",

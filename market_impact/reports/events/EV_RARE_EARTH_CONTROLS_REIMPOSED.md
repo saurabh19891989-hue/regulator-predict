@@ -52,7 +52,7 @@ Risk that Beijing lets the suspension lapse (10 Nov legal date or 10 Jan truce e
 | EXIDEIND | -1.8 | +0.0 | -2.1 | +0.3 | +0.0 |
 | SHRIRAMFIN | -1.7 | +0.0 | -1.7 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 9%, 2: 62%, 3: 19%, 4: 10%
+Share of absolute impact by order: 1: 10%, 2: 61%, 3: 19%, 4: 10%
 
 ## Sources
 - 2026-09-02 India's EV ambitions hit China's rare earth roadblock; supply chain risks extend to batteries: ACMA https://news.google.com/rss/search?q=India's+EV+ambitions+hit+China's+rare+earth+roadblock;+supply+chain+risks+extend+to+batteries:+ACMA&hl=en-IN&gl=IN&ceid=IN:en

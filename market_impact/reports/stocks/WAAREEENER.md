@@ -2,11 +2,11 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.1%**, **12 months +0.7%** (rank 110 / 84 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.3%): 3 months 50%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.4% … P90 +5.0%; plausible 12m relative-return range incl. stock-specific noise: -23.0% … +48.1%
-- Decomposition (12m): 0.5 × forward event exposure +2.9% (3m +1.1%; half assumed priced) + 0.5 × company-specific catalysts -0.7%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +17.4% (beta-adjusted) vs a realised market-adjusted move of -27.7% — gap +45.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.4%**, **12 months +1.1%** (rank 54 / 45 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.3%): 3 months 51%, 12 months 53%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.4% … P90 +5.6%; plausible 12m relative-return range incl. stock-specific noise: -41.5% … +46.7%
+- Decomposition (12m): 0.5 × forward event exposure +2.5% (3m +1.0%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.2%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +15.9% (beta-adjusted) vs a realised market-adjusted move of -27.7% — gap +43.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,34 +14,34 @@
 |---|---|---|---|---|---|---|---|
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +6.70 | +6.00 | +0.78 | -0.08 | +0.00 | — |
 | Indian solar module / cell realisations (`NEW_SOLAR_CELL_MODULE_PRICE`) | +10% Indian module/cell realisations | +5.00 | +5.00 | +0.00 | +0.00 | +0.00 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.82 | +3.00 | -0.17 | +0.00 | -0.02 | — |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -2.12 | -2.00 | -0.09 | -0.02 | -0.01 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.84 | +3.00 | -0.17 | +0.00 | +0.00 | — |
 | Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +2.00 | +2.00 | +0.00 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.52 | -1.30 | -0.12 | -0.10 | -0.01 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.49 | -1.30 | -0.12 | -0.07 | -0.01 | -1.1% |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.46 | -1.50 | +0.05 | +0.01 | -0.02 | — |
-| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | -1.28 | +0.00 | -1.28 | -0.01 | +0.01 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -1.10 | +0.00 | -1.15 | -0.12 | +0.16 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.10 | +0.00 | -1.12 | +0.01 | +0.02 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.12 | +0.00 | -1.12 | +0.01 | -0.00 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.09 | +0.00 | -0.22 | -0.54 | -0.33 | — |
 | USD/CNY (`F_USDCNY`) | +3% USD/CNY (yuan weaker) | -1.04 | -1.00 | -0.06 | +0.03 | -0.01 | -1.4% |
-| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.03 | +0.00 | -0.80 | -0.24 | +0.02 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.02 | +0.00 | -0.22 | -0.54 | -0.26 | — |
 | Indian anti-dumping duties (chemicals, solar, others) (`P_ANTI_DUMPING_IN`) | +1 = new broad duties | +1.00 | +1.00 | +0.00 | +0.00 | +0.00 | — |
+| Aluminium price (`F_ALUMINIUM`) | +10% aluminium | -0.90 | -0.90 | +0.00 | +0.00 | +0.00 | -19.6% |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -0.89 | +0.00 | -1.15 | +0.02 | +0.23 | — |
+| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | +0.82 | +0.00 | +0.32 | +0.52 | -0.01 | — |
+| Silver price (`F_SILVER`) | +12% silver | -0.80 | -0.80 | +0.00 | +0.00 | +0.00 | -30.0% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +7.4% | +7.4% | +7.5 | -0.1 | +0.0 | -0.0 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +7.4% | +7.4% | +7.5 | -0.1 | +0.0 | +0.0 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +3.3% | +3.3% | +3.0 | +0.4 | -0.0 | +0.0 |
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | +2.0% | +2.0% | +2.0 | +0.0 | +0.0 | +0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +2.0% | +2.0% | +2.0 | +0.0 | +0.0 | +0.0 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +1.8% | +1.8% | +1.8 | +0.0 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.1 | +0.0 | -0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.3 | +0.0 | +0.1 |
-| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +3.1% | +1.2% | +3.0 | +0.0 | +0.1 | -0.1 |
-| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.1% | +1.1% | +1.0 | +0.0 | +0.1 | +0.0 |
-| Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | -5.7% | -0.8% | -5.0 | -0.4 | -0.2 | -0.0 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -1.2% | -0.8% | +0.0 | -1.1 | +0.0 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.1% | +0.6% | +0.0 | +0.6 | +0.5 | +0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.3 | +0.0 | -0.0 |
+| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +3.0% | +1.2% | +3.0 | +0.0 | +0.0 | -0.1 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -1.0% | -0.7% | +0.0 | -1.1 | +0.1 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.2% | +0.7% | +0.0 | +0.6 | +0.6 | +0.0 |
+| GST rate action effective 1 Apr 2027 (targeted rationalisation, e.g. mobile phones, renewable EPC) (`EV_GST_RATE_CHANGE_APR27`) | anticipated | 0.30 | +2.1% | +0.6% | +1.8 | +0.2 | +0.0 | +0.0 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.5% | -0.6% | -1.5 | +0.1 | +0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -49,19 +49,19 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → WAAREEENER | +3.00% | +1.20% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → WAAREEENER | -1.15% | -0.78% |
-| 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → WAAREEENER | -5.00% | -0.75% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → WAAREEENER | -1.50% | -0.63% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → WAAREEENER | +1.00% | +0.55% |
 | 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_SILVER → WAAREEENER | -1.20% | -0.54% |
-| 1 | EV_INDIA_US_TALKS_COLLAPSE ⇒ P_US_TARIFF_INDIA → WAAREEENER | -3.00% | -0.54% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → WAAREEENER | +0.90% | +0.54% |
 | 1 | EV_GST_RATE_CHANGE_APR27 ⇒ P_RENEWABLE_SUPPORT → WAAREEENER | +1.80% | +0.54% |
 | 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → WAAREEENER | +0.70% | +0.49% |
 | 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → WAAREEENER | -0.57% | -0.49% |
 | 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → WAAREEENER | +1.60% | +0.48% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → WAAREEENER | -1.50% | -0.41% |
-| 2 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → P_US_TARIFF_INDIA → WAAREEENER | +1.28% | +0.38% |
 | 2 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → WAAREEENER | +1.15% | +0.37% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → WAAREEENER | -1.69% | -0.30% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → WAAREEENER | +0.60% | +0.30% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → WAAREEENER | -1.50% | -0.27% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → WAAREEENER | +0.35% | +0.19% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -72,7 +72,6 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_SILVER → WAAREEENER | -2.50 | observed | +2.00% |
 | 1 | F_ALUMINIUM → WAAREEENER | -1.96 | observed | +1.77% |
 | 1 | F_REPO_IN → WAAREEENER | +1.00 | events | -1.50% |
-| 1 | P_US_TARIFF_INDIA → WAAREEENER | -0.60 | events | +1.20% |
 | 1 | T_ENERGY_TRANSITION → WAAREEENER | +0.30 | director_override | +0.90% |
 | 1 | F_USDINR → WAAREEENER | -0.37 | observed | +0.48% |
 | 1 | F_USDCNY → WAAREEENER | -0.47 | observed | +0.47% |
@@ -81,7 +80,6 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |
 |---|---|---|---|---|---|
-| 2026-11 | US ITC / Commerce follow-through on AD/CVD orders on Indian cells | regulatory | 0.60 | -1.5% | -0.90% |
 | 2026-12-04 | Section 232 minimum import prices and 15% duty on polysilicon derivatives take effect (US) | regulatory | 0.85 | +0.0% | +0.00% |
 | 2027-01 | Q3 FY27 results (Dec quarter); test of FY27 EBITDA guidance Rs 7,000-7,700 cr | results | 0.95 | +0.0% | +0.00% |
 | 2027-02 | Reversal or confirmation of cancelled ~3 GW US export orders | other | 0.40 | +0.5% | +0.20% |

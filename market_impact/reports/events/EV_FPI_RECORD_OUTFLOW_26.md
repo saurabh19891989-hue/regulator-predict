@@ -19,26 +19,26 @@ Net FPI equity selling reached about Rs 3.12 lakh crore by 18 Oct (Rs 2.95 lakh 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | +1.3 | +0.0 | +1.0 | +0.4 | -0.1 |
+| JSWSTEEL | +1.4 | +0.0 | +1.0 | +0.4 | -0.0 |
 | NATIONALUM | +1.2 | +0.0 | +1.2 | -0.0 | +0.0 |
 | OIL | +1.2 | +0.0 | +1.2 | -0.0 | +0.0 |
 | ONGC | +1.2 | +0.0 | +1.2 | -0.0 | +0.0 |
 | VAML | +1.1 | +0.0 | +1.1 | -0.0 | +0.0 |
-| SAIL | +1.0 | +0.0 | +0.4 | +0.7 | -0.1 |
+| SAIL | +1.0 | +0.0 | +0.4 | +0.7 | -0.0 |
 | TATASTEEL | +0.9 | +0.0 | +0.6 | +0.3 | -0.0 |
 | NMDC | +0.9 | +0.0 | +0.8 | +0.1 | +0.0 |
-| JINDALSTEL | +0.8 | +0.0 | +0.1 | +0.7 | -0.0 |
 | PIIND | +0.8 | +0.0 | +0.8 | +0.0 | +0.0 |
 | TMPV | +0.8 | +0.0 | +0.8 | -0.0 | +0.0 |
 | HINDZINC | +0.8 | +0.0 | +0.7 | +0.0 | +0.0 |
-| SRF | +0.7 | +0.0 | +0.8 | -0.0 | -0.0 |
+| SRF | +0.8 | +0.0 | +0.8 | -0.0 | -0.0 |
 | HINDALCO | +0.7 | +0.0 | +0.7 | +0.0 | +0.0 |
+| JINDALSTEL | +0.7 | +0.0 | +0.1 | +0.6 | -0.0 |
 | PERSISTENT | +0.5 | +0.0 | +0.6 | +0.0 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| MOTILALOFS | -15.7 | -13.2 | -2.8 | +0.3 | -0.0 |
+| MOTILALOFS | -15.6 | -13.2 | -2.8 | +0.3 | +0.0 |
 | PAYTM | -11.0 | -11.0 | +0.0 | +0.0 | +0.0 |
 | ICICIAMC | -10.8 | -9.9 | -1.1 | +0.2 | -0.0 |
 | 360ONE | -9.3 | -7.7 | -1.7 | +0.1 | -0.0 |
@@ -46,15 +46,15 @@ Net FPI equity selling reached about Rs 3.12 lakh crore by 18 Oct (Rs 2.95 lakh 
 | BSE | -9.2 | -6.6 | -3.4 | +0.9 | -0.1 |
 | INDUSINDBK | -8.9 | -8.8 | -0.2 | +0.1 | +0.0 |
 | POLICYBZR | -8.6 | -8.8 | +0.2 | +0.0 | +0.0 |
-| ETERNAL | -8.0 | -7.7 | -0.1 | -0.1 | -0.1 |
-| MEESHO | -7.9 | -7.7 | +0.0 | -0.1 | -0.1 |
 | HDFCBANK | -7.8 | -7.7 | -0.2 | +0.0 | -0.0 |
-| MAXHEALTH | -7.6 | -7.7 | +0.2 | -0.0 | -0.1 |
-| YESBANK | -7.5 | -6.6 | -0.4 | -0.0 | -0.5 |
+| MEESHO | -7.8 | -7.7 | +0.0 | -0.1 | -0.0 |
+| MAXHEALTH | -7.6 | -7.7 | +0.2 | -0.0 | -0.0 |
 | ADANIGREEN | -7.3 | -6.6 | -0.5 | -0.1 | -0.1 |
-| AUBANK | -7.1 | -6.6 | -0.1 | -0.1 | -0.3 |
+| YESBANK | -7.2 | -6.6 | -0.2 | +0.0 | -0.3 |
+| IDFCFIRSTB | -7.0 | -6.6 | -0.2 | +0.0 | -0.2 |
+| AUBANK | -7.0 | -6.6 | -0.1 | -0.0 | -0.2 |
 
-Share of absolute impact by order: 1: 85%, 2: 11%, 3: 2%, 4: 2%
+Share of absolute impact by order: 1: 85%, 2: 11%, 3: 2%, 4: 1%
 
 ## Sources
 - 2026-10-13 Record FPI outflows top Rs 3 trillion in CY26 - Business Standard https://news.google.com/rss/search?q=FPI+outflow+2026+record+India+equities+Rs+3+lakh+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en

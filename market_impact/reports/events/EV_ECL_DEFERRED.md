@@ -19,18 +19,18 @@ Alternative outcome to on-time ECL start: RBI working group is 'still fine tunin
 | BANKINDIA | +3.6 | +2.4 | +1.3 | -0.1 | -0.0 |
 | CANBK | +3.4 | +2.7 | +0.8 | -0.1 | -0.1 |
 | INDUSINDBK | +3.0 | +1.8 | +1.6 | -0.3 | -0.1 |
-| TATACAP | +3.0 | +2.1 | +1.1 | -0.1 | -0.1 |
 | UNIONBANK | +2.9 | +2.1 | +1.0 | -0.1 | -0.0 |
+| TATACAP | +2.9 | +2.1 | +1.0 | -0.2 | -0.1 |
 | MUTHOOTFIN | +2.9 | +2.4 | +0.5 | -0.0 | -0.1 |
 | BANKBARODA | +2.7 | +2.1 | +0.7 | -0.1 | -0.0 |
 | ABCAPITAL | +2.7 | +1.8 | +1.0 | -0.1 | -0.1 |
 | IREDA | +2.7 | +1.8 | +1.0 | -0.0 | -0.1 |
 | IDFCFIRSTB | +2.6 | +1.5 | +1.5 | -0.3 | -0.1 |
-| BAJFINANCE | +2.6 | +1.8 | +1.0 | -0.1 | -0.1 |
 | FEDERALBNK | +2.6 | +1.5 | +1.2 | -0.1 | -0.1 |
 | PNB | +2.6 | +1.8 | +0.9 | -0.1 | -0.0 |
 | AXISBANK | +2.5 | +1.5 | +1.2 | -0.1 | -0.0 |
 | AUBANK | +2.5 | +1.8 | +0.9 | -0.2 | -0.0 |
+| YESBANK | +2.5 | +1.2 | +1.6 | -0.3 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -51,7 +51,7 @@ Alternative outcome to on-time ECL start: RBI working group is 'still fine tunin
 | TECHM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | WIPRO | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 52%, 2: 33%, 3: 9%, 4: 5%
+Share of absolute impact by order: 1: 53%, 2: 33%, 3: 9%, 4: 5%
 
 ## Sources
 - 2026-11-03 RBI to meet bank CEOs to review ECL preparedness (headline) https://www.business-standard.com/

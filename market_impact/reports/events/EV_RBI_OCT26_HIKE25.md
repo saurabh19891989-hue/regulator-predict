@@ -38,23 +38,23 @@ First RBI hike since 2023. Repo 5.25% -> 5.50% (held at 5.25% on 5 Aug 2026). St
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BAJFINANCE | -5.4 | -4.8 | -0.7 | +0.2 | -0.1 |
-| TATACAP | -5.3 | -4.5 | -0.8 | +0.2 | -0.1 |
-| PRESTIGE | -5.2 | -4.5 | -0.6 | +0.1 | -0.1 |
-| YESBANK | -5.1 | -4.2 | -0.8 | +0.0 | -0.1 |
 | GODREJPROP | -4.5 | -3.7 | -0.8 | +0.0 | -0.1 |
 | IREDA | -4.3 | -4.0 | -0.3 | +0.1 | -0.1 |
 | JSWENERGY | -4.2 | -4.2 | +0.0 | +0.0 | -0.0 |
-| BAJAJFINSV | -3.8 | -3.4 | -0.5 | +0.1 | -0.1 |
 | M&MFIN | -3.7 | -3.2 | -0.5 | +0.0 | -0.1 |
-| AUBANK | -3.7 | -3.0 | -0.7 | +0.2 | -0.2 |
+| PRESTIGE | -3.6 | -2.9 | -0.6 | +0.1 | -0.1 |
 | LTF | -3.5 | -3.2 | -0.3 | +0.1 | -0.1 |
 | LODHA | -3.5 | -2.6 | -0.8 | +0.1 | -0.1 |
 | OBEROIRLTY | -3.4 | -2.9 | -0.5 | -0.0 | -0.1 |
 | JIOFIN | -3.3 | -3.0 | -0.3 | +0.1 | -0.1 |
 | SHRIRAMFIN | -3.2 | -2.2 | -0.7 | -0.2 | -0.1 |
+| YESBANK | -3.1 | -2.2 | -0.8 | +0.0 | -0.1 |
+| TATACAP | -3.1 | -2.4 | -0.8 | +0.2 | -0.1 |
+| DLF | -3.1 | -2.5 | -0.5 | -0.1 | -0.1 |
+| PFC | -3.0 | -3.0 | -0.0 | +0.1 | -0.0 |
+| BAJFINANCE | -3.0 | -2.4 | -0.7 | +0.2 | -0.1 |
 
-Share of absolute impact by order: 1: 79%, 2: 14%, 3: 4%, 4: 3%
+Share of absolute impact by order: 1: 78%, 2: 14%, 3: 5%, 4: 3%
 
 ## Sources
 - 2026-10-07 RBI MPC meeting highlights: Repo rate hiked to 5.5% - The Hindu https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en

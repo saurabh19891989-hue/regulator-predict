@@ -27,7 +27,7 @@ Downstream users (auto, pipes, capital goods) lobby against high steel prices; I
 | TVSMOTOR | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
 | HEROMOTOCO | +0.6 | +0.6 | +0.0 | +0.0 | +0.0 |
 | BOSCHLTD | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
-| PRESTIGE | +0.4 | +0.3 | +0.1 | +0.0 | -0.0 |
+| PRESTIGE | +0.4 | +0.3 | +0.1 | +0.0 | +0.0 |
 | ADANIENSOL | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | CUMMINSIND | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 
@@ -35,7 +35,7 @@ Downstream users (auto, pipes, capital goods) lobby against high steel prices; I
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | SAIL | -9.1 | -9.1 | +0.0 | +0.0 | +0.0 |
-| JINDALSTEL | -8.0 | -8.0 | +0.0 | +0.0 | +0.0 |
+| JINDALSTEL | -7.0 | -7.0 | +0.0 | +0.0 | +0.0 |
 | JSWSTEEL | -5.7 | -5.7 | +0.0 | +0.0 | +0.0 |
 | TATASTEEL | -4.0 | -4.0 | +0.0 | +0.0 | +0.0 |
 | NMDC | -1.8 | -1.8 | +0.0 | +0.0 | +0.0 |

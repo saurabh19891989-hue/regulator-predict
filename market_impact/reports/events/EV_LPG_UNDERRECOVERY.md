@@ -17,21 +17,21 @@ OMC domestic-LPG under-recoveries crossed Rs59,000 crore as of July (govt data, 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BAJFINANCE | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| TATACAP | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| PRESTIGE | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| JSWENERGY | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| JSWENERGY | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
 | IREDA | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
 | GODREJPROP | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
-| LENSKART | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| YESBANK | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| BAJAJFINSV | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
-| JIOFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
-| AUBANK | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
-| OBEROIRLTY | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| JIOFIN | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | ADANIGREEN | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
-| ETERNAL | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
+| OBEROIRLTY | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | HYUNDAI | +0.1 | +0.0 | +0.0 | +0.1 | +0.1 |
+| LTF | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| IDEA | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| BOSCHLTD | +0.1 | +0.0 | +0.0 | +0.1 | +0.1 |
+| JUBLFOOD | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| LENSKART | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
+| PRESTIGE | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| BAJFINANCE | +0.1 | +0.0 | +0.0 | +0.2 | -0.0 |
+| INDIGO | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -40,19 +40,19 @@ OMC domestic-LPG under-recoveries crossed Rs59,000 crore as of July (govt data, 
 | IOC | -6.5 | -6.5 | +0.0 | +0.0 | +0.0 |
 | BPCL | -6.0 | -6.0 | +0.0 | +0.0 | +0.0 |
 | SAIL | -0.2 | +0.0 | -0.1 | -0.0 | -0.0 |
-| POWERINDIA | -0.1 | +0.0 | -0.2 | +0.1 | +0.0 |
-| CGPOWER | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
-| ENRIN | -0.1 | +0.0 | -0.2 | +0.1 | +0.0 |
+| POWERINDIA | -0.2 | +0.0 | -0.2 | +0.1 | +0.0 |
+| CGPOWER | -0.1 | +0.0 | -0.2 | +0.0 | -0.0 |
+| ENRIN | -0.1 | +0.0 | -0.2 | +0.1 | -0.0 |
 | JSWSTEEL | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
-| POLYCAB | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
-| LICHSGFIN | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| POLYCAB | -0.1 | +0.0 | -0.2 | +0.0 | -0.0 |
 | ASHOKLEY | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
-| JINDALSTEL | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
-| BANKINDIA | -0.1 | +0.0 | -0.1 | -0.1 | +0.0 |
+| LT | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
 | KEI | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
-| MAHABANK | -0.1 | +0.0 | -0.1 | -0.1 | +0.0 |
+| TMCV | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
+| CUMMINSIND | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
+| JINDALSTEL | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 58%, 2: 12%, 3: 23%, 4: 7%
+Share of absolute impact by order: 1: 59%, 2: 13%, 3: 22%, 4: 7%
 
 ## Sources
 - 2026-08-10 LPG under-recovery crosses Rs 59,000 crore (Moneycontrol) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=India+OMC+LPG+under-recovery+Rs+59000+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en

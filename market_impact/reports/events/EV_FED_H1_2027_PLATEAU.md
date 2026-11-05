@@ -23,14 +23,14 @@ Base path: after at most one more hike the Fed holds at ~3.75-4.25% through the 
 | BSE | +0.4 | +0.0 | +0.3 | +0.1 | -0.0 |
 | NYKAA | +0.4 | +0.3 | +0.1 | +0.0 | -0.0 |
 | ADANIGREEN | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
-| YESBANK | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
+| JIOFIN | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
 | MOTILALOFS | +0.3 | +0.0 | +0.3 | -0.0 | -0.0 |
 | VEDL | +0.3 | +0.2 | +0.1 | +0.0 | +0.0 |
 | INDUSINDBK | +0.3 | +0.2 | +0.1 | -0.0 | -0.0 |
 | INDIGO | +0.2 | +0.1 | +0.1 | +0.0 | -0.0 |
+| BAJFINANCE | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
 | PFC | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
 | ADANIENT | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
-| TATACAP | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
 | PHOENIXLTD | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
 | ADANIENSOL | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
 | SBIN | +0.2 | +0.0 | +0.2 | -0.0 | -0.0 |
@@ -54,7 +54,7 @@ Base path: after at most one more hike the Fed holds at ~3.75-4.25% through the 
 | SRF | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | BHEL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 7%, 2: 71%, 3: 17%, 4: 6%
+Share of absolute impact by order: 1: 7%, 2: 71%, 3: 16%, 4: 6%
 
 ## Sources
 - 2026-10-28 FOMC calendar https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm

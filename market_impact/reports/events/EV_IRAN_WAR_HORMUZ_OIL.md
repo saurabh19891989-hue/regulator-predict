@@ -26,18 +26,18 @@ US/Israel-Iran war with repeated tanker attacks in Hormuz, Houthi attacks on Sau
 | OIL | +5.3 | +5.0 | +0.1 | +0.1 | +0.1 |
 | ONGC | +4.5 | +4.2 | +0.2 | +0.1 | +0.1 |
 | VAML | +2.1 | +0.0 | +2.1 | -0.0 | -0.0 |
+| HINDPETRO | +1.8 | +2.1 | -0.2 | -0.0 | -0.0 |
 | NATIONALUM | +1.8 | +0.0 | +1.6 | +0.1 | +0.1 |
 | COCHINSHIP | +1.6 | +0.4 | +1.1 | +0.0 | +0.0 |
 | SOLARINDS | +1.3 | +1.5 | -0.1 | -0.1 | -0.0 |
 | RELIANCE | +1.2 | +1.6 | -0.1 | -0.1 | -0.1 |
+| IOC | +1.2 | +1.5 | -0.3 | -0.0 | -0.0 |
 | HINDZINC | +1.0 | +0.0 | +0.0 | +0.9 | +0.1 |
 | BPCL | +0.9 | +1.5 | -0.5 | -0.0 | -0.0 |
 | NTPC | +0.9 | +1.0 | +0.0 | -0.0 | -0.1 |
 | MAZDOCK | +0.9 | +1.0 | +0.0 | -0.1 | -0.0 |
 | HAL | +0.9 | +1.0 | +0.0 | -0.1 | -0.0 |
 | MUTHOOTFIN | +0.8 | +0.0 | +1.1 | -0.2 | -0.1 |
-| MCX | +0.8 | +0.0 | +0.7 | +0.1 | -0.1 |
-| JSWENERGY | +0.5 | +0.6 | +0.0 | -0.0 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -53,12 +53,12 @@ US/Israel-Iran war with repeated tanker attacks in Hormuz, Houthi attacks on Sau
 | SUZLON | -2.1 | -2.0 | +0.0 | -0.0 | -0.0 |
 | KALYANKJIL | -2.0 | -1.0 | -0.3 | -0.6 | -0.1 |
 | MOTILALOFS | -1.9 | +0.0 | -1.1 | -0.5 | -0.3 |
-| JIOFIN | -1.9 | +0.0 | -1.6 | -0.1 | -0.1 |
 | IREDA | -1.9 | +0.0 | -1.6 | -0.1 | -0.1 |
 | ADANIENT | -1.8 | -1.5 | -0.2 | -0.1 | -0.1 |
 | JINDALSTEL | -1.8 | -0.8 | -1.0 | -0.0 | +0.0 |
+| ICICIAMC | -1.8 | +0.0 | -1.3 | -0.3 | -0.2 |
 
-Share of absolute impact by order: 1: 38%, 2: 36%, 3: 17%, 4: 9%
+Share of absolute impact by order: 1: 39%, 2: 35%, 3: 17%, 4: 9%
 
 ## Sources
 - 2026-10-16 Brent oil touches $110 as Iran escalates Hormuz attacks (CNBC) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=Brent+oil+Iran+war+Hormuz+when:120d&hl=en-IN&gl=IN&ceid=IN:en

@@ -2,46 +2,46 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.0%**, **12 months -3.0%** (rank 164 / 185 of 200 for 3m / 12m); beta 1.09
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.1%): 3 months 46%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.0% … P90 +5.8%; plausible 12m relative-return range incl. stock-specific noise: -27.3% … +18.5%
-- Decomposition (12m): 0.5 × forward event exposure -5.6% (3m -1.5%; half assumed priced) + 0.5 × company-specific catalysts +0.5%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -5.2% (beta-adjusted) vs a realised market-adjusted move of +2.7% — gap -7.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.0%**, **12 months -0.8%** (rank 111 / 143 of 200 for 3m / 12m); beta 1.09
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.1%): 3 months 50%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.8% … P90 +7.2%; plausible 12m relative-return range incl. stock-specific noise: -28.4% … +26.5%
+- Decomposition (12m): 0.5 × forward event exposure -1.5% (3m +0.2%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.5%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -5.4% (beta-adjusted) vs a realised market-adjusted move of +2.7% — gap -8.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Credit cost / NPA cycle (higher = worse) (`F_ASSET_QUALITY_IN`) | +50 bp credit cost | -14.04 | -14.00 | +0.00 | -0.03 | -0.00 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +6.73 | +0.00 | +5.28 | +2.06 | -0.61 | — |
-| Unsecured retail & microfinance stress (higher = worse) (`F_UNSECURED_STRESS`) | +1 pp delinquencies | -6.58 | -5.00 | -1.32 | -0.16 | -0.11 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +5.54 | +3.50 | +3.12 | -0.99 | -0.09 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +4.67 | +0.00 | +1.73 | +2.10 | +0.84 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +7.07 | +0.00 | +5.28 | +2.18 | -0.38 | — |
+| Unsecured retail & microfinance stress (higher = worse) (`F_UNSECURED_STRESS`) | +1 pp delinquencies | -6.60 | -5.00 | -1.32 | -0.16 | -0.12 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +6.00 | +3.50 | +3.31 | -0.62 | -0.20 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +4.84 | +0.00 | +1.73 | +2.15 | +0.96 | — |
 | RBI prudential tightening (risk weights, LCR, provisioning) (`P_RBI_PRUDENTIAL`) | +1 = tightening step | -4.37 | -2.50 | -2.51 | +0.52 | +0.11 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +3.97 | +0.00 | +2.64 | +1.82 | -0.49 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -3.96 | -3.00 | -0.59 | -0.31 | -0.07 | +3.5% |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +3.63 | +0.00 | +2.64 | +1.70 | -0.71 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +3.18 | +3.00 | +0.11 | -0.02 | +0.10 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -3.12 | +0.00 | -0.96 | -1.17 | -0.99 | — |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +2.96 | +0.00 | +0.80 | +1.49 | +0.68 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +3.18 | +3.00 | +0.11 | -0.02 | +0.09 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -3.14 | +0.00 | -0.96 | -1.17 | -1.01 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +3.01 | +0.00 | +0.80 | +1.49 | +0.72 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +2.84 | +0.00 | +1.26 | +1.51 | +0.06 | — |
 | India CPI inflation (`F_CPI_IN`) | +1 pp | -2.68 | +0.00 | -2.12 | -0.89 | +0.32 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +2.63 | +0.00 | +1.26 | +1.45 | -0.08 | — |
-| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -2.59 | +0.00 | -1.20 | -1.05 | -0.34 | — |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -2.60 | +0.00 | -1.20 | -1.05 | -0.35 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -7.0% | -7.0% | -6.6 | -0.2 | +0.0 | -0.2 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -5.9% | -5.9% | +0.0 | -2.2 | -2.6 | -1.1 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +9.2% | +4.6% | +8.7 | +0.3 | -0.1 | +0.3 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -6.1% | -6.1% | +0.0 | -2.2 | -2.7 | -1.2 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +9.2% | +4.6% | +8.7 | +0.3 | -0.1 | +0.2 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.7% | -3.7% | +0.0 | -2.4 | -1.5 | +0.2 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -12.2% | -3.1% | -7.5 | -4.4 | -0.5 | +0.1 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +4.7% | +3.2% | +0.0 | +1.7 | +2.5 | +0.5 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -3.1% | -3.1% | -2.7 | -0.2 | -0.1 | -0.0 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +4.5% | +3.0% | +0.0 | +1.7 | +2.4 | +0.3 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.8% | +2.8% | +1.8 | +1.6 | -0.4 | -0.1 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -12.2% | -3.1% | -7.5 | -4.4 | -0.5 | +0.1 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +3.0% | +3.0% | +1.8 | +1.7 | -0.2 | -0.1 |
 | RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.90 | -3.0% | -2.7% | -3.2 | +0.2 | +0.0 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.4% | -2.4% | -1.4 | -0.8 | +0.1 | -0.2 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.9% | +2.2% | +1.2 | +1.4 | +1.1 | +0.2 |
-| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +2.5% | +2.1% | +0.0 | +0.9 | +1.4 | +0.2 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +4.0% | +2.2% | +1.2 | +1.4 | +1.1 | +0.3 |
+| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +2.5% | +2.2% | +0.0 | +0.9 | +1.4 | +0.3 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

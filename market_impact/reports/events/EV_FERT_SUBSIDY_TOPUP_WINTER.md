@@ -22,35 +22,35 @@ Fertiliser subsidy running above budget: industry sees up to Rs 3 lakh crore for
 | SUZLON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | MARUTI | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | LAURUSLABS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| GLENMARK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | DRREDDY | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| SRF | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| GLENMARK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | HINDCOPPER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | NATIONALUM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | OIL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ONGC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| COCHINSHIP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | ADANIGREEN | -0.8 | -0.7 | -0.1 | +0.0 | +0.0 |
-| YESBANK | -0.7 | -0.6 | -0.0 | -0.0 | -0.0 |
 | JIOFIN | -0.7 | -0.6 | -0.1 | -0.0 | +0.0 |
-| IREDA | -0.7 | -0.6 | -0.1 | +0.0 | +0.0 |
+| IREDA | -0.7 | -0.6 | -0.1 | +0.0 | -0.0 |
 | BANKINDIA | -0.7 | -0.6 | +0.0 | -0.0 | -0.0 |
 | POWERGRID | -0.6 | -0.6 | +0.0 | -0.0 | +0.0 |
-| BAJFINANCE | -0.6 | -0.5 | -0.1 | -0.0 | +0.0 |
-| TATACAP | -0.6 | -0.5 | -0.1 | -0.0 | +0.0 |
 | PFC | -0.6 | -0.5 | -0.0 | -0.0 | +0.0 |
+| TATACAP | -0.6 | -0.5 | -0.1 | -0.0 | +0.0 |
+| BAJFINANCE | -0.6 | -0.5 | -0.0 | -0.0 | +0.0 |
 | ADANIENT | -0.6 | -0.5 | -0.0 | -0.0 | +0.0 |
-| JSWENERGY | -0.5 | -0.5 | -0.1 | +0.0 | +0.0 |
+| JSWENERGY | -0.6 | -0.5 | -0.1 | +0.0 | +0.0 |
 | GMRAIRPORT | -0.5 | -0.5 | -0.0 | -0.0 | -0.0 |
 | TATAPOWER | -0.5 | -0.5 | -0.0 | +0.0 | +0.0 |
 | PHOENIXLTD | -0.5 | -0.5 | -0.0 | -0.0 | -0.0 |
 | BSE | -0.5 | -0.5 | +0.0 | +0.0 | +0.0 |
+| GROWW | -0.5 | -0.5 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 84%, 2: 7%, 3: 6%, 4: 3%
+Share of absolute impact by order: 1: 84%, 2: 6%, 3: 6%, 4: 3%
 
 ## Sources
 - 2026-10-02 Subsidy to Rs 3 lakh crore https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html

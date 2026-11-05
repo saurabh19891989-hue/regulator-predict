@@ -35,23 +35,23 @@ Livemint (7 Oct 2026) and CNBC TV18 (13 Aug) cite brokerages expecting 12-15% ta
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -0.3 | +0.0 | +0.0 | -0.2 | -0.1 |
-| BAJFINANCE | -0.3 | +0.0 | +0.0 | -0.2 | -0.0 |
-| TATACAP | -0.2 | +0.0 | +0.0 | -0.2 | -0.1 |
-| PRESTIGE | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
 | IREDA | -0.2 | +0.0 | +0.0 | -0.1 | -0.1 |
-| AUBANK | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| YESBANK | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | JSWENERGY | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
 | IDFCFIRSTB | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | GODREJPROP | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | JIOFIN | -0.2 | +0.0 | +0.0 | -0.1 | -0.1 |
-| BAJAJFINSV | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
-| LENSKART | -0.2 | +0.0 | +0.0 | -0.2 | +0.0 |
+| BAJFINANCE | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| AUBANK | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
+| TATACAP | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | GMRAIRPORT | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | OBEROIRLTY | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | ADANIGREEN | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| LTF | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| PRESTIGE | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| PFC | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 70%, 2: 1%, 3: 22%, 4: 7%
+Share of absolute impact by order: 1: 71%, 2: 1%, 3: 21%, 4: 7%
 
 ## Sources
 - 2026-10-07 Mobile bills may rise again: 12-15% hike likely in 4-5 months https://www.livemint.com/

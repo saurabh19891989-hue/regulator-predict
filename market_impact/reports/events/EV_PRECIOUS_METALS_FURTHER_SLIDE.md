@@ -22,16 +22,16 @@ Markets price a December Fed hike (NY Post 28 Oct) after US inflation hit a 3-ye
 | WAAREEENER | +1.7 | +1.6 | +0.0 | +0.1 | +0.0 |
 | LICI | +1.5 | +1.5 | +0.0 | +0.0 | +0.0 |
 | KALYANKJIL | +1.3 | -0.9 | +2.1 | +0.0 | +0.0 |
-| YESBANK | +0.5 | +0.0 | +0.0 | +0.4 | +0.1 |
 | TITAN | +0.5 | -1.1 | +1.6 | +0.0 | +0.0 |
-| TATACAP | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| YESBANK | +0.3 | +0.0 | +0.0 | +0.3 | +0.1 |
 | IREDA | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| PRESTIGE | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
-| AUBANK | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
 | GODREJPROP | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
 | JSWENERGY | +0.3 | +0.0 | +0.0 | +0.3 | +0.1 |
 | IDFCFIRSTB | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| TATACAP | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
 | JIOFIN | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| OBEROIRLTY | +0.3 | +0.0 | +0.0 | +0.2 | +0.0 |
+| AUBANK | +0.3 | +0.0 | +0.0 | +0.2 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -40,13 +40,13 @@ Markets price a December Fed hike (NY Post 28 Oct) after US inflation hit a 3-ye
 | MUTHOOTFIN | -6.6 | -6.7 | +0.0 | +0.1 | +0.0 |
 | MCX | -5.8 | -5.8 | +0.0 | +0.0 | +0.0 |
 | VEDL | -4.1 | +0.0 | -4.2 | +0.0 | +0.1 |
-| BAJAJFINSV | -1.3 | -1.5 | +0.0 | +0.1 | +0.1 |
+| BAJAJFINSV | -1.4 | -1.5 | +0.0 | +0.1 | +0.0 |
 | MFSL | -1.1 | -1.1 | +0.0 | +0.0 | -0.0 |
 | CANBK | -0.9 | -0.9 | +0.0 | +0.0 | +0.0 |
 | M&MFIN | -0.8 | -0.9 | +0.0 | +0.1 | +0.0 |
 | INDUSINDBK | -0.6 | -0.8 | +0.0 | +0.1 | +0.1 |
-| BAJAJHLDNG | -0.4 | +0.0 | -0.5 | +0.0 | +0.1 |
-| BAJFINANCE | -0.3 | -0.6 | +0.0 | +0.2 | +0.1 |
+| BAJFINANCE | -0.4 | -0.6 | +0.0 | +0.1 | +0.0 |
+| BAJAJHLDNG | -0.4 | +0.0 | -0.5 | +0.0 | +0.0 |
 | LICHSGFIN | -0.1 | +0.0 | +0.0 | -0.2 | +0.1 |
 | PAYTM | -0.0 | +0.0 | +0.0 | +0.0 | -0.1 |
 | UPL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |

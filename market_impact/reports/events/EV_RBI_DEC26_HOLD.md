@@ -21,11 +21,10 @@ Pause scenario: RBI waits to see transmission of the Oct hike and liquidity tigh
 | ADANIGREEN | +1.1 | +1.1 | +0.1 | +0.0 | +0.0 |
 | JIOFIN | +1.0 | +0.9 | +0.1 | +0.0 | -0.0 |
 | IREDA | +1.0 | +0.9 | +0.1 | +0.0 | +0.0 |
-| YESBANK | +1.0 | +0.9 | +0.0 | +0.0 | +0.0 |
 | BANKINDIA | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
-| BAJFINANCE | +0.9 | +0.8 | +0.2 | +0.0 | -0.0 |
 | POWERGRID | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
-| TATACAP | +0.9 | +0.8 | +0.1 | +0.0 | -0.0 |
+| TATACAP | +0.8 | +0.8 | +0.1 | +0.0 | -0.0 |
+| BAJFINANCE | +0.8 | +0.8 | +0.1 | +0.0 | -0.0 |
 | JSWENERGY | +0.8 | +0.8 | +0.1 | +0.0 | +0.0 |
 | TATAPOWER | +0.8 | +0.8 | +0.1 | +0.0 | +0.0 |
 | GMRAIRPORT | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
@@ -33,6 +32,7 @@ Pause scenario: RBI waits to see transmission of the Oct hike and liquidity tigh
 | PFC | +0.8 | +0.8 | +0.0 | +0.0 | -0.0 |
 | PHOENIXLTD | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
 | GROWW | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
+| BSE | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -53,7 +53,7 @@ Pause scenario: RBI waits to see transmission of the Oct hike and liquidity tigh
 | HINDCOPPER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ITC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 90%, 2: 7%, 3: 2%, 4: 1%
+Share of absolute impact by order: 1: 91%, 2: 7%, 3: 2%, 4: 1%
 
 ## Sources
 - 2026-10-07 Hawkish hike, but measured path ahead - Business Standard https://news.google.com/rss/search?q=RBI+MPC+December+2026+hold+pause+when:120d&hl=en-IN&gl=IN&ceid=IN:en

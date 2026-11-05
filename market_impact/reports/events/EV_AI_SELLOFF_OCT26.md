@@ -39,21 +39,21 @@ Nasdaq -5% in October ('AI stocks lost $5 trn', Yahoo 1 Nov); S&P/Nasdaq sharply
 |---|---|---|---|---|---|
 | MOTILALOFS | -2.8 | -1.8 | -0.8 | -0.3 | +0.0 |
 | ICICIAMC | -2.4 | -1.8 | -0.5 | -0.2 | +0.0 |
-| JIOFIN | -2.3 | -1.8 | -0.4 | -0.1 | +0.0 |
 | IREDA | -2.2 | -1.8 | -0.4 | -0.1 | -0.0 |
 | POWERINDIA | -2.2 | -1.6 | -0.5 | -0.1 | -0.0 |
 | NAUKRI | -2.1 | -1.8 | -0.3 | -0.1 | +0.0 |
 | 360ONE | -2.0 | -1.2 | -0.6 | -0.2 | +0.0 |
-| MEESHO | -2.0 | -1.4 | -0.6 | -0.0 | +0.0 |
 | INDUSINDBK | -2.0 | -1.2 | -0.7 | -0.1 | +0.0 |
 | PAYTM | -1.7 | -1.0 | -0.7 | -0.0 | +0.0 |
 | MAHABANK | -1.7 | -1.2 | -0.4 | -0.0 | +0.0 |
 | IDFCFIRSTB | -1.6 | -1.0 | -0.5 | -0.1 | +0.0 |
-| LENSKART | -1.6 | -1.0 | -0.5 | -0.0 | +0.0 |
 | LICI | -1.5 | -1.2 | -0.3 | -0.0 | +0.0 |
-| ETERNAL | -1.5 | -0.9 | -0.6 | -0.0 | +0.0 |
+| GROWW | -1.5 | -1.0 | -0.1 | -0.4 | +0.1 |
+| POLICYBZR | -1.5 | -0.9 | -0.6 | +0.0 | +0.0 |
+| TATACOMM | -1.4 | -0.9 | -0.5 | -0.1 | +0.0 |
+| IDEA | -1.4 | -0.9 | -0.5 | -0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 44%, 2: 47%, 3: 8%, 4: 2%
+Share of absolute impact by order: 1: 42%, 2: 48%, 3: 8%, 4: 2%
 
 ## Sources
 - 2026-10-29 AI buildout hits snag as Google and Microsoft put off raising capex forecasts - CNBC https://news.google.com/rss/search?q=AI%20buildout%20hits%20snag%20as%20Google%20and%20Microsoft%20put%20off%20raising%20capex%20forecasts%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en

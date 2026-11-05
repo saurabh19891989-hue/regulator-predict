@@ -2,46 +2,46 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.0%**, **12 months -2.8%** (rank 159 / 179 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.8%): 3 months 47%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.8% … P90 +3.5%; plausible 12m relative-return range incl. stock-specific noise: -43.8% … +27.7%
-- Decomposition (12m): 0.5 × forward event exposure -4.7% (3m -1.6%; half assumed priced) + 0.5 × company-specific catalysts +0.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.2% (beta-adjusted) vs a realised market-adjusted move of +15.1% — gap -17.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.9%**, **12 months -1.3%** (rank 181 / 165 of 200 for 3m / 12m); beta 1.15
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.8%): 3 months 47%, 12 months 46%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.5% … P90 +4.4%; plausible 12m relative-return range incl. stock-specific noise: -38.5% … +36.6%
+- Decomposition (12m): 0.5 × forward event exposure -2.3% (3m -1.7%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.5% (beta-adjusted) vs a realised market-adjusted move of +15.1% — gap -17.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -4.09 | -4.00 | +0.06 | -0.12 | -0.03 | — |
+| GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -4.10 | -4.00 | +0.06 | -0.12 | -0.04 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -3.98 | -2.50 | -1.11 | -0.33 | -0.04 | +3.5% |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +3.16 | +3.00 | +0.16 | -0.01 | +0.01 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +3.16 | +3.00 | +0.28 | -0.09 | -0.03 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +3.40 | +3.00 | +0.47 | -0.04 | -0.03 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +3.15 | +3.00 | +0.16 | -0.01 | +0.01 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +3.08 | +2.50 | +0.48 | +0.10 | -0.00 | +1.2% |
-| US growth (`F_US_GDP`) | +1 pp | +3.00 | +0.00 | +3.21 | -0.06 | -0.15 | — |
-| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -2.77 | +0.00 | -1.00 | -1.57 | -0.20 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.38 | +0.00 | -0.80 | -1.14 | -0.44 | — |
+| US growth (`F_US_GDP`) | +1 pp | +3.02 | +0.00 | +3.21 | -0.04 | -0.15 | — |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -2.78 | +0.00 | -1.00 | -1.57 | -0.21 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.40 | +0.00 | -0.80 | -1.14 | -0.46 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +2.21 | +0.00 | +1.92 | +0.28 | +0.00 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +2.17 | +0.00 | +1.92 | +0.28 | -0.03 | — |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +2.14 | +0.00 | +1.72 | +0.33 | +0.09 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +2.06 | +0.00 | +1.92 | +0.17 | -0.03 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +2.02 | +0.00 | +1.92 | +0.17 | -0.07 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.76 | +1.50 | +0.24 | +0.01 | +0.01 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.51 | +0.00 | +0.80 | +0.48 | +0.23 | — |
-| US/EU enterprise IT services spend (`F_US_TECH_SPEND`) | +5% growth | +1.50 | +1.50 | +0.00 | +0.00 | +0.00 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.79 | +1.50 | +0.24 | +0.04 | +0.01 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.59 | +0.00 | +0.80 | +0.53 | +0.27 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.55 | +0.00 | +1.08 | +0.44 | +0.03 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -7.0% | -7.0% | -6.6 | -0.4 | +0.0 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -6.9% | -6.9% | -6.6 | -0.4 | +0.0 | -0.0 |
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -4.7% | -4.7% | -4.5 | -0.1 | -0.1 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +9.1% | +4.6% | +8.5 | +0.6 | -0.0 | +0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -16.5% | -4.1% | -13.8 | -2.0 | -0.8 | +0.1 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.8% | +3.8% | +0.0 | +3.6 | +0.1 | +0.1 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -12.4% | -3.1% | -7.5 | -5.3 | +0.8 | -0.3 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.9% | +3.9% | +0.0 | +3.6 | +0.1 | +0.1 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -12.4% | -3.1% | -7.5 | -5.3 | +0.7 | -0.3 |
 | Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -14.4% | -2.2% | -10.0 | -4.3 | -0.2 | +0.1 |
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -1.8 | -0.3 | -0.1 | +0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.0 | -0.6 | -0.3 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.0 | -0.7 | -0.3 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -1.7 | -0.1 | +0.1 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.7% | +1.7% | +1.5 | +0.2 | -0.0 | -0.0 |
 | US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.0% | +1.7% | +1.0 | +1.4 | +0.5 | +0.1 |
-| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.6% | +1.6% | +1.5 | +0.2 | -0.1 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

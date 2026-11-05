@@ -18,7 +18,7 @@ OfficeChai (11 Sep) says ~50% of US smartphone imports now come from India; Appl
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | DIXON | +3.6 | +3.6 | +0.0 | +0.0 | +0.0 |
-| LAURUSLABS | +3.5 | +3.6 | -0.1 | +0.0 | -0.0 |
+| LAURUSLABS | +3.5 | +3.6 | -0.1 | +0.0 | +0.0 |
 | DIVISLAB | +2.1 | +2.1 | -0.1 | +0.0 | +0.0 |
 | SIEMENS | +2.0 | +1.8 | +0.2 | +0.0 | -0.0 |
 | PIIND | +1.8 | +1.8 | -0.0 | +0.0 | +0.0 |
@@ -36,21 +36,21 @@ OfficeChai (11 Sep) says ~50% of US smartphone imports now come from India; Appl
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BIOCON | -0.2 | +0.0 | -0.2 | +0.0 | -0.0 |
+| BIOCON | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | DRREDDY | -0.2 | +0.0 | -0.2 | +0.0 | -0.0 |
-| NATIONALUM | -0.2 | +0.0 | -0.1 | +0.0 | -0.0 |
-| OIL | -0.2 | +0.0 | -0.1 | +0.0 | -0.0 |
-| GLENMARK | -0.2 | +0.0 | -0.1 | +0.0 | -0.0 |
-| JSWSTEEL | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| NATIONALUM | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
+| OIL | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
 | VAML | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
-| HINDCOPPER | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
-| LUPIN | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
 | PERSISTENT | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
-| ONGC | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
+| JSWSTEEL | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| HINDCOPPER | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| LUPIN | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| GLENMARK | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
+| ONGC | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| ZYDUSLIFE | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | TATASTEEL | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| TECHM | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
 | JINDALSTEL | -0.1 | +0.0 | -0.0 | -0.1 | +0.0 |
-| ZYDUSLIFE | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
-| NMDC | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
 
 Share of absolute impact by order: 1: 47%, 2: 23%, 3: 18%, 4: 12%
 

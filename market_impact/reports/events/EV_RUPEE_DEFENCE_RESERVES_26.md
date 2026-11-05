@@ -23,38 +23,38 @@ Rupee fell past 95/USD on 9 Sep, touched ~95.99 on 25 Sep (near record lows) ami
 | INDIGO | +0.9 | +0.7 | +0.1 | +0.1 | +0.0 |
 | MOTILALOFS | +0.9 | +0.6 | +0.2 | +0.1 | -0.0 |
 | KALYANKJIL | +0.9 | +0.0 | +0.7 | +0.2 | +0.0 |
-| PRESTIGE | +0.9 | +0.0 | +0.5 | +0.3 | +0.1 |
 | HINDPETRO | +0.8 | +0.8 | +0.0 | +0.0 | -0.0 |
-| MEESHO | +0.7 | +0.0 | +0.6 | +0.2 | -0.0 |
 | IOC | +0.7 | +0.7 | -0.0 | +0.0 | -0.0 |
-| BLUESTARCO | +0.6 | +0.7 | -0.0 | +0.0 | +0.0 |
-| SUZLON | +0.6 | +0.4 | +0.1 | +0.1 | +0.0 |
-| SIEMENS | +0.6 | +0.6 | +0.1 | +0.0 | -0.0 |
+| BLUESTARCO | +0.6 | +0.7 | -0.0 | +0.0 | -0.0 |
+| SUZLON | +0.6 | +0.4 | +0.1 | +0.0 | +0.0 |
 | ICICIGI | +0.6 | +0.6 | +0.0 | +0.1 | +0.0 |
+| PRESTIGE | +0.6 | +0.0 | +0.4 | +0.1 | +0.1 |
+| SIEMENS | +0.6 | +0.6 | +0.1 | +0.0 | -0.0 |
 | LGEINDIA | +0.6 | +0.6 | -0.0 | +0.0 | -0.0 |
 | BPCL | +0.6 | +0.6 | +0.0 | +0.0 | -0.0 |
-| POWERINDIA | +0.6 | +0.4 | +0.2 | +0.1 | -0.0 |
+| POWERINDIA | +0.6 | +0.4 | +0.2 | +0.0 | -0.0 |
+| WAAREEENER | +0.6 | +0.5 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | BIOCON | -1.7 | -1.9 | +0.1 | +0.1 | +0.0 |
-| JSWSTEEL | -1.3 | -0.9 | -0.4 | +0.1 | -0.0 |
+| JSWSTEEL | -1.3 | -0.9 | -0.4 | +0.0 | -0.0 |
 | LAURUSLABS | -1.2 | -1.5 | +0.2 | +0.0 | +0.0 |
 | VAML | -1.2 | -1.1 | -0.1 | +0.0 | +0.0 |
 | DRREDDY | -1.1 | -1.2 | +0.1 | +0.0 | -0.0 |
 | ONGC | -1.1 | -1.1 | +0.0 | +0.0 | +0.0 |
 | NATIONALUM | -1.1 | -1.1 | +0.0 | +0.0 | +0.0 |
 | OIL | -1.1 | -1.1 | +0.0 | +0.0 | +0.0 |
-| JINDALSTEL | -1.1 | -0.4 | -0.8 | +0.1 | +0.0 |
 | AUROPHARMA | -1.1 | -1.2 | +0.1 | +0.0 | +0.0 |
 | VEDL | -1.0 | -0.7 | -0.3 | -0.0 | +0.0 |
 | LUPIN | -1.0 | -1.1 | +0.1 | +0.0 | -0.0 |
 | HINDCOPPER | -1.0 | -1.1 | +0.1 | +0.0 | +0.0 |
 | GLENMARK | -1.0 | -1.1 | +0.1 | +0.0 | -0.0 |
-| ZYDUSLIFE | -1.0 | -1.0 | +0.0 | +0.1 | +0.0 |
+| JINDALSTEL | -1.0 | -0.4 | -0.7 | +0.1 | +0.0 |
+| ZYDUSLIFE | -1.0 | -1.0 | +0.0 | +0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 63%, 2: 22%, 3: 10%, 4: 5%
+Share of absolute impact by order: 1: 65%, 2: 22%, 3: 9%, 4: 4%
 
 ## Sources
 - 2026-10-30 India's FX reserves dip for seventh straight week - Reuters https://news.google.com/rss/search?q=India+forex+reserves+week+ended+October+23+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en

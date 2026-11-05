@@ -2,46 +2,46 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.9%**, **12 months +2.0%** (rank 11 / 33 of 200 for 3m / 12m); beta 0.83
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +41.8%): 3 months 54%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.8% … P90 +5.2%; plausible 12m relative-return range incl. stock-specific noise: -60.2% … +53.3%
-- Decomposition (12m): 0.5 × forward event exposure +1.1% (3m +1.4%; half assumed priced) + 0.5 × company-specific catalysts +3.7%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +7.9% (beta-adjusted) vs a realised market-adjusted move of -26.9% — gap +34.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +1.7%**, **12 months +2.5%** (rank 1 / 9 of 200 for 3m / 12m); beta 0.83
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +41.8%): 3 months 53%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.3% … P90 +6.4%; plausible 12m relative-return range incl. stock-specific noise: -53.4% … +58.7%
+- Decomposition (12m): 0.5 × forward event exposure +3.2% (3m +1.9%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +2.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +6.2% (beta-adjusted) vs a realised market-adjusted move of -26.9% — gap +33.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Grid & electrification capex (`T_GRID_ELECTRIFICATION`) | +1 | +6.00 | +6.00 | +0.00 | +0.00 | +0.00 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +4.13 | +3.00 | +1.14 | +0.00 | -0.01 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +4.15 | +3.00 | +1.14 | +0.00 | +0.01 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +4.08 | +4.00 | -0.03 | +0.06 | +0.05 | — |
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +4.04 | +0.00 | +3.48 | +0.56 | +0.00 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.95 | +4.00 | -0.03 | -0.04 | +0.02 | — |
 | Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +3.72 | +3.00 | +0.72 | +0.00 | +0.00 | — |
-| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +3.65 | +3.00 | +0.60 | +0.05 | -0.00 | — |
+| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +3.66 | +3.00 | +0.60 | +0.05 | +0.01 | — |
 | Global AI / data-centre capex (`F_AI_CAPEX`) | +10% growth | +3.06 | +2.50 | +0.36 | +0.18 | +0.02 | — |
 | Power/T&D equipment capacity additions vs demand (pricing pressure) (`NEW_POWER_EQUIP_CAPACITY`) | +1 = peer capacity additions outpace demand enough to cut order pricing/margins ~100 bp | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -1.88 | +0.00 | -1.72 | -0.45 | +0.28 | — |
-| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | +1.56 | +0.00 | +0.48 | +0.88 | +0.20 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.52 | +0.00 | -0.90 | -0.41 | -0.21 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -1.67 | +0.00 | -1.72 | -0.30 | +0.36 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.59 | +0.00 | -0.90 | -0.41 | -0.28 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.51 | -1.50 | +0.02 | +0.00 | -0.03 | — |
+| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | +1.50 | +0.00 | +0.48 | +0.88 | +0.14 | — |
 | Power market / DISCOM reform (`P_POWER_REFORM`) | +1 = reform progress | +1.44 | +0.00 | +1.44 | +0.00 | +0.00 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.27 | +0.00 | -1.28 | -0.00 | +0.01 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.30 | +0.00 | -1.28 | -0.00 | -0.02 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +4.0% | +4.0% | +1.5 | +2.5 | +0.0 | -0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +3.9% | +3.9% | +4.0 | -0.1 | +0.0 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +4.1% | +4.1% | +4.0 | +0.1 | +0.0 | -0.0 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +4.0% | +4.0% | +1.5 | +2.5 | +0.0 | +0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +3.7% | +3.7% | +3.0 | +0.7 | +0.0 | +0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -11.9% | -3.0% | -10.0 | -1.2 | -0.7 | -0.1 |
-| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +5.6% | +2.3% | +4.5 | +1.1 | +0.1 | -0.1 |
+| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +5.5% | +2.2% | +4.5 | +1.1 | +0.0 | -0.1 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +2.0% | +2.0% | +0.0 | +1.7 | +0.3 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.0 | +0.0 | -0.0 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -2.0% | -1.4% | +0.0 | -1.7 | -0.3 | +0.1 |
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.1 | -0.1 | -0.1 | -0.0 |
-| Final SHANTI Act rules / first private-sector nuclear licence process (`EV_NUCLEAR_SHANTI_RULES_FINAL`) | anticipated | 0.60 | +2.0% | +1.2% | +0.9 | +1.1 | +0.0 | -0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -1.1 | -0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.9% | +1.0% | +0.4 | +1.1 | +0.2 | +0.2 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -1.8% | -1.2% | +0.0 | -1.7 | -0.2 | +0.1 |
+| Final SHANTI Act rules / first private-sector nuclear licence process (`EV_NUCLEAR_SHANTI_RULES_FINAL`) | anticipated | 0.60 | +2.0% | +1.2% | +0.9 | +1.1 | +0.0 | +0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.1 | -0.0 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.9% | +1.1% | +0.4 | +1.1 | +0.3 | +0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -69,6 +69,7 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_POWER_DEMAND_IN → ENRIN | +1.20 | events | +3.60% |
 | 1 | F_REPO_IN → ENRIN | +1.00 | events | -1.50% |
+| 1 | NEW_POWER_EQUIP_CAPACITY → ENRIN | +0.50 | director_override | -1.50% |
 | 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → ENRIN | +0.60 | director_override | +1.15% |
 | 1 | T_ENERGY_TRANSITION → ENRIN | +0.30 | director_override | +0.90% |
 | 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ENRIN | +1.20 | events | +0.86% |
@@ -78,15 +79,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_STEEL_INDIA → ENRIN | +1.35 | events | -0.54% |
 | 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → ENRIN | +0.30 | director_override | +0.36% |
 | 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → ENRIN | +0.50 | director_override | +0.24% |
-| 1 | F_USDINR → ENRIN | -0.37 | observed | +0.18% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |
 |---|---|---|---|---|---|
-| 2026-11 | FY26 (Sep-2026) annual and Q4 results; trading window closed from 2026-09-28 (scanx) | results | 0.95 | +0.5% | +0.47% |
-| 2026-11 | Siemens Energy AG FY results / outlook (global read-across) | guidance | 0.80 | +0.5% | +0.40% |
+| 2026-11 | FY26 (Sep-2026) annual and Q4 results; trading window closed from 2026-09-28 (scanx) *(review: [RT_TOP_A] symmetric)* | results | 0.95 | +0.0% | +0.00% |
+| 2026-11 | Siemens Energy AG FY results / outlook (global read-across) *(review: [RT_TOP_A] symmetric)* | guidance | 0.80 | +0.0% | +0.00% |
 | 2027-01 | Large HVDC/transmission order awards (PGCIL packages) that could lift backlog | other | 0.35 | +5.0% | +1.75% |
-| 2027-02 | Q1 FY27 (Dec-2026 quarter) results | results | 0.95 | +0.5% | +0.47% |
+| 2027-02 | Q1 FY27 (Dec-2026 quarter) results *(review: [RT_TOP_A] symmetric)* | results | 0.95 | +0.0% | +0.00% |
 | 2027-06 | Transformer capacity expansion commissioning | capex | 0.30 | +2.0% | +0.60% |
 
 ## Analyst profile (agent research, sourced)

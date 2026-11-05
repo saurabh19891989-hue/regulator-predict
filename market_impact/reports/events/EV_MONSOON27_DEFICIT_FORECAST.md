@@ -15,42 +15,42 @@ Complement of EV_MONSOON27_FIRST_FORECAST_NORMAL at 32%: a second consecutive we
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| COALINDIA | +2.0 | +0.0 | +1.6 | +0.4 | +0.0 |
-| ENRIN | +1.8 | +0.0 | +1.7 | +0.2 | -0.1 |
-| BHEL | +1.4 | +0.0 | +1.7 | -0.2 | -0.1 |
-| ADANIPOWER | +1.3 | +0.5 | +0.8 | +0.1 | -0.1 |
-| WAAREEENER | +1.1 | +0.0 | +1.1 | -0.2 | +0.1 |
-| SUZLON | +0.9 | +0.0 | +0.9 | -0.2 | +0.2 |
-| POWERINDIA | +0.8 | +0.0 | +0.0 | +0.9 | -0.1 |
-| TATAPOWER | +0.8 | +0.0 | +1.1 | -0.1 | -0.2 |
-| SOLARINDS | +0.7 | +0.0 | +0.6 | -0.0 | +0.2 |
-| ADANIENSOL | +0.7 | +0.0 | +1.0 | -0.1 | -0.2 |
-| APARINDS | +0.7 | +0.0 | +0.0 | +0.6 | +0.1 |
-| GVT&D | +0.7 | +0.0 | +0.0 | +0.7 | -0.0 |
-| NLCINDIA | +0.6 | +0.0 | +0.7 | -0.1 | -0.0 |
-| POWERGRID | +0.6 | +0.0 | +0.9 | -0.2 | -0.1 |
-| CGPOWER | +0.4 | +0.0 | +0.0 | +0.5 | -0.1 |
+| COALINDIA | +1.7 | +0.0 | +1.6 | +0.1 | -0.0 |
+| ENRIN | +1.6 | +0.0 | +1.7 | +0.0 | -0.2 |
+| BHEL | +1.2 | +0.0 | +1.7 | -0.3 | -0.2 |
+| ADANIPOWER | +1.2 | +0.5 | +0.8 | +0.0 | -0.2 |
+| WAAREEENER | +0.8 | +0.0 | +1.1 | -0.3 | +0.0 |
+| TATAPOWER | +0.6 | +0.0 | +1.1 | -0.2 | -0.3 |
+| SUZLON | +0.6 | +0.0 | +0.9 | -0.3 | +0.0 |
+| POWERINDIA | +0.5 | +0.0 | +0.0 | +0.7 | -0.2 |
+| ADANIENSOL | +0.5 | +0.0 | +1.0 | -0.2 | -0.3 |
+| APARINDS | +0.4 | +0.0 | +0.0 | +0.4 | -0.0 |
+| GVT&D | +0.4 | +0.0 | +0.0 | +0.5 | -0.1 |
+| NLCINDIA | +0.4 | +0.0 | +0.7 | -0.2 | -0.1 |
+| SOLARINDS | +0.4 | +0.0 | +0.6 | -0.2 | +0.0 |
+| POWERGRID | +0.4 | +0.0 | +0.9 | -0.2 | -0.3 |
+| NATIONALUM | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | -5.8 | +0.0 | -2.0 | -3.1 | -0.7 |
-| IDFCFIRSTB | -5.1 | +0.0 | -1.7 | -2.9 | -0.5 |
-| YESBANK | -4.6 | +0.0 | -1.4 | -2.8 | -0.4 |
-| M&MFIN | -4.4 | -2.5 | -0.7 | -0.9 | -0.2 |
-| SHRIRAMFIN | -4.0 | -2.0 | -0.4 | -1.2 | -0.5 |
-| BANKINDIA | -3.4 | +0.0 | -1.0 | -1.7 | -0.7 |
-| AXISBANK | -3.3 | +0.0 | -1.0 | -1.9 | -0.5 |
-| FEDERALBNK | -3.1 | +0.0 | -0.2 | -1.9 | -0.9 |
-| INDIANB | -3.1 | +0.0 | -1.0 | -1.7 | -0.4 |
-| KOTAKBANK | -3.0 | +0.0 | -1.0 | -1.5 | -0.5 |
-| SBICARD | -3.0 | +0.0 | -1.7 | -1.2 | -0.1 |
-| AUBANK | -3.0 | +0.0 | -0.9 | -1.8 | -0.3 |
-| HDFCBANK | -3.0 | +0.0 | -0.9 | -1.6 | -0.5 |
-| SBIN | -2.9 | +0.0 | -1.2 | -1.4 | -0.4 |
-| LTF | -2.9 | -1.0 | -0.7 | -1.0 | -0.2 |
+| INDUSINDBK | -6.0 | +0.0 | -2.0 | -3.1 | -0.8 |
+| IDFCFIRSTB | -5.3 | +0.0 | -1.7 | -2.9 | -0.7 |
+| M&MFIN | -4.6 | -2.5 | -0.7 | -1.1 | -0.3 |
+| YESBANK | -4.6 | +0.0 | -1.4 | -2.6 | -0.6 |
+| SHRIRAMFIN | -4.2 | -2.0 | -0.4 | -1.2 | -0.6 |
+| AXISBANK | -3.5 | +0.0 | -1.0 | -1.9 | -0.6 |
+| BANKINDIA | -3.4 | +0.0 | -1.0 | -1.6 | -0.7 |
+| AUBANK | -3.3 | +0.0 | -0.9 | -1.9 | -0.5 |
+| SBICARD | -3.2 | +0.0 | -1.7 | -1.3 | -0.2 |
+| TATACAP | -3.1 | +0.0 | -0.4 | -2.0 | -0.8 |
+| LTF | -3.1 | -1.0 | -0.7 | -1.1 | -0.3 |
+| FEDERALBNK | -3.1 | +0.0 | -0.2 | -1.9 | -1.0 |
+| INDIANB | -3.1 | +0.0 | -1.0 | -1.7 | -0.5 |
+| HDFCBANK | -3.1 | +0.0 | -0.9 | -1.6 | -0.6 |
+| BAJFINANCE | -3.0 | +0.0 | -0.6 | -1.9 | -0.6 |
 
-Share of absolute impact by order: 1: 8%, 2: 34%, 3: 45%, 4: 14%
+Share of absolute impact by order: 1: 7%, 2: 31%, 3: 45%, 4: 17%
 
 ## Sources
 - 2026-10-01 El Nino strengthening through end-2026 https://www.indiatoday.in/science/story/el-nino-neutral-iod-india-rainfall-post-monsoon-3007171-2026-10-01

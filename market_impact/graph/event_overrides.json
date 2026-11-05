@@ -618,6 +618,60 @@
    "reason": "+0.3 SSU (= +3% industry ARPU) overstates a postpaid-only hike by one operator. Airtel's postpaid base is a low single-digit percentage of India's ~1.15 bn mobile subscribers (model knowledge), so a 3-11% postpaid hike moves industry ARPU by well under 0.5%. Jio said it would stay affordable. The 0.3 shock books +6.6% recent impact to IDEA, which has no postpaid hike of its own. Small signalling value retained.",
    "by": "RT_TOP_B"
   },
+  "EV_CPI_BREACH_6PCT": {
+   "entry_shocks": [
+    {
+     "node": "F_CPI_IN",
+     "ssu": 0.5,
+     "low": 0.2,
+     "high": 0.9,
+     "note": "Oct CPI >6% (unchanged)"
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.0,
+     "low": 0.0,
+     "high": 0.0,
+     "note": "CLAMPED at 0: the RBI response is carried by EV_RBI_DEC26_HIKE25/EV_RBI_FEB27_HIKE25 odds, which RT_EVENTS set with the 12 Nov CPI print as the swing factor"
+    },
+    {
+     "node": "F_GSEC_10Y_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.7,
+     "note": "inflation-risk premium only; hike-expectation part (~0.2) moved to the MPC events"
+    }
+   ],
+   "reason": "Double count of the RBI reaction. RT_EVENTS set EV_RBI_DEC26_HIKE25 (0.42) / FEB27 (0.27) with 'the 12 Nov Oct CPI print is the swing factor'. The breach event's own F_REPO_IN +0.4 SSU (p 0.6) books the same hike a second time. Keeping F_REPO_IN in entry_shocks at 0 clamps it, so CPI->REPO no longer propagates inside this event. GSEC 0.5 -> 0.3 removes the hike-expectation part. Prob unchanged.",
+   "by": "RT_BOT_A"
+  },
+  "EV_PULSES_VEG_SPIKE_WINTER": {
+   "entry_shocks": [
+    {
+     "node": "F_FOOD_INFLATION_IN",
+     "ssu": 1.2,
+     "low": 0.8,
+     "high": 1.8,
+     "note": "unchanged"
+    },
+    {
+     "node": "F_CPI_IN",
+     "ssu": 1.0,
+     "low": 0.7,
+     "high": 1.4,
+     "note": "unchanged"
+    },
+    {
+     "node": "F_REPO_IN",
+     "ssu": 0.3,
+     "low": 0.0,
+     "high": 0.8,
+     "note": "clamped: RBI looks through supply-led food spikes (2026: CPI 2.8%->5.5% met by one 25bp hike); Feb/Apr MPC odds already carry part of this risk"
+    }
+   ],
+   "reason": "Unclamped, the CPI +1pp entry propagates through CPI->REPO (0.72 SSU after RT_BACKBONE's x0.5) and GDP->REPO into an implied hike of ~18-20bp. The result is -4.7% conditional for BAJFINANCE and -5.4% for YESBANK. A supply-led winter vegetable/pulse spike is the case the RBI looks through, and the 2026 episode (CPI 2.8% -> 5.5%) drew one 25bp hike. The Feb/Apr MPC odds already carry part of this risk. Clamp F_REPO_IN at +0.3 SSU (~7bp). Prob unchanged.",
+   "by": "RT_BOT_A"
+  },
   "EV_SEBI_CAS_DERIV_REVERSAL": {
    "status": "occurred",
    "date": "2026-10-16",

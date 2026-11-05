@@ -2,11 +2,11 @@
 *NIFTY_50 · Telecommunication · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.3%**, **12 months +2.6%** (rank 27 / 18 of 200 for 3m / 12m); beta 0.88
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +16.8%): 3 months 56%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.7% … P90 +6.4%; plausible 12m relative-return range incl. stock-specific noise: -22.6% … +22.8%
-- Decomposition (12m): 0.5 × forward event exposure +3.1% (3m -0.0%; half assumed priced) + 0.5 × company-specific catalysts +3.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.6% (beta-adjusted) vs a realised market-adjusted move of +9.6% — gap -11.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +1.6%**, **12 months +2.5%** (rank 2 / 11 of 200 for 3m / 12m); beta 0.88
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +16.8%): 3 months 58%, 12 months 54%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.4% … P90 +5.3%; plausible 12m relative-return range incl. stock-specific noise: -20.1% … +23.6%
+- Decomposition (12m): 0.5 × forward event exposure +2.4% (3m +0.3%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +3.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.8% (beta-adjusted) vs a realised market-adjusted move of +9.6% — gap -11.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,18 +14,18 @@
 |---|---|---|---|---|---|---|---|
 | Mobile tariff hikes (`P_TELECOM_TARIFFS`) | +10% ARPU via tariff hike | +5.46 | +5.50 | +0.00 | -0.03 | -0.01 | — |
 | Jio/Airtel price and share competition vs Vi (`NEW_TELECOM_SHARE_COMPETITION`) | +1 = intensification costing the incumbent ~1pp revenue share / 3% ARPU | -5.00 | -5.00 | +0.00 | +0.00 | +0.00 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.15 | +2.00 | +0.11 | +0.01 | +0.04 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.14 | +2.00 | +0.11 | +0.01 | +0.03 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.52 | -1.20 | -0.30 | -0.00 | -0.02 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.51 | -1.50 | +0.00 | -0.01 | -0.01 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.46 | +0.00 | -1.15 | -0.36 | +0.05 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.30 | +0.00 | -0.48 | -0.50 | -0.31 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.47 | +0.00 | -1.15 | -0.36 | +0.05 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.33 | +0.00 | -0.48 | -0.50 | -0.34 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.24 | +0.00 | -0.81 | -0.40 | -0.04 | +3.5% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.20 | -0.50 | -0.36 | -0.21 | -0.12 | -1.1% |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -0.88 | +0.00 | +0.00 | -0.68 | -0.20 | — |
-| US dollar index (`F_DXY`) | +3% DXY | -0.87 | +0.00 | -0.76 | -0.09 | -0.01 | +2.2% |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -0.86 | -0.40 | -0.23 | -0.16 | -0.07 | +0.0% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.16 | -0.50 | -0.36 | -0.19 | -0.11 | -1.1% |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +0.97 | +1.00 | +0.13 | -0.08 | -0.07 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -0.89 | -0.40 | -0.23 | -0.19 | -0.08 | +0.0% |
+| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -0.89 | +0.00 | +0.00 | -0.68 | -0.21 | — |
+| US dollar index (`F_DXY`) | +3% DXY | -0.86 | +0.00 | -0.76 | -0.09 | -0.01 | +2.2% |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +0.83 | +0.00 | +0.48 | +0.21 | +0.13 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.79 | +0.00 | -0.60 | -0.17 | -0.03 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -33,15 +33,15 @@
 | Broad mobile tariff hike by Jio/Airtel (12-15%) (`EV_TELECOM_TARIFF_HIKE_2027`) | anticipated | 0.75 | +6.6% | +4.9% | +6.6 | +0.0 | -0.0 | -0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.7% | -4.7% | -4.4 | -0.2 | -0.0 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.4% | +2.7% | +5.0 | +0.3 | +0.0 | +0.1 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | -0.0 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -1.3 | -0.5 | +0.1 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | -0.0 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -1.3 | -0.5 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.7% | -1.7% | -1.6 | +0.0 | -0.0 | -0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -4.7% | -1.2% | +0.0 | -4.2 | -0.5 | -0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -6.4% | -1.1% | -6.3 | +0.1 | -0.1 | -0.0 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.1% | +1.1% | +0.9 | +0.1 | +0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.6% | +0.9% | +0.5 | +0.6 | +0.4 | +0.1 |
-| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.3% | -0.8% | -1.2 | -0.0 | -0.1 | +0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.2% | -0.8% | -0.9 | -1.3 | -0.7 | -0.2 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.7% | +0.9% | +0.5 | +0.6 | +0.4 | +0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.3 | -0.2 | -0.3 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.2% | -0.8% | -0.9 | -1.3 | -0.8 | -0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -55,13 +55,13 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → BHARTIARTL | -1.92% | -0.48% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → BHARTIARTL | -1.92% | -0.48% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → BHARTIARTL | -1.87% | -0.47% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BHARTIARTL | -0.75% | -0.45% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → BHARTIARTL | +1.00% | +0.35% |
 | 1 | EV_SATCOM_LAUNCH ⇒ P_TELECOM_TARIFFS → BHARTIARTL | -0.55% | -0.33% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → BHARTIARTL | -1.20% | -0.32% |
 | 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → BHARTIARTL | +0.40% | +0.32% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → BHARTIARTL | -0.48% | -0.29% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → BHARTIARTL | +0.52% | +0.29% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → BHARTIARTL | -1.87% | -0.28% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → BHARTIARTL | -0.30% | -0.27% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

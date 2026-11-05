@@ -22,9 +22,9 @@ Agriculture Ministry (29 Sep) set a 2026-27 foodgrain target of 373.93 MT vs 376
 | OIL | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
 | HINDCOPPER | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
 | PIIND | +0.1 | +0.0 | -0.0 | +0.1 | -0.0 |
-| ONGC | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
 | UPL | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
-| LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| ONGC | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
+| LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | MCX | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
 | NMDC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | DRREDDY | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
@@ -36,23 +36,23 @@ Agriculture Ministry (29 Sep) set a 2026-27 foodgrain target of 373.93 MT vs 376
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| RADICO | -2.0 | -1.8 | +0.1 | -0.4 | +0.1 |
-| YESBANK | -1.6 | +0.0 | +0.0 | -1.2 | -0.4 |
-| TATACAP | -1.3 | +0.0 | +0.0 | -0.9 | -0.4 |
-| BAJFINANCE | -1.3 | +0.0 | +0.0 | -1.0 | -0.3 |
-| AUBANK | -1.1 | +0.0 | -0.1 | -0.7 | -0.3 |
+| RADICO | -2.0 | -1.8 | +0.1 | -0.4 | +0.0 |
+| YESBANK | -1.2 | +0.0 | +0.0 | -0.8 | -0.4 |
 | IDFCFIRSTB | -1.1 | +0.0 | +0.0 | -0.8 | -0.3 |
 | IREDA | -1.1 | +0.0 | +0.0 | -0.7 | -0.4 |
-| PRESTIGE | -1.0 | +0.0 | +0.0 | -0.7 | -0.3 |
+| TATACAP | -1.0 | +0.0 | +0.0 | -0.6 | -0.4 |
+| BAJFINANCE | -1.0 | +0.0 | +0.0 | -0.8 | -0.2 |
 | INDUSINDBK | -1.0 | +0.0 | +0.0 | -0.6 | -0.4 |
-| BAJAJFINSV | -0.9 | +0.0 | +0.0 | -0.7 | -0.3 |
+| AUBANK | -1.0 | +0.0 | -0.1 | -0.6 | -0.3 |
 | LTF | -0.9 | +0.0 | -0.1 | -0.6 | -0.2 |
 | SHRIRAMFIN | -0.9 | +0.0 | +0.0 | -0.5 | -0.5 |
 | M&MFIN | -0.9 | +0.0 | -0.2 | -0.5 | -0.2 |
 | JSWENERGY | -0.9 | +0.0 | +0.0 | -0.7 | -0.2 |
 | AXISBANK | -0.9 | +0.0 | +0.0 | -0.5 | -0.3 |
+| VMM | -0.8 | -0.8 | -0.1 | -0.1 | +0.0 |
+| GODREJPROP | -0.8 | +0.0 | +0.0 | -0.6 | -0.2 |
 
-Share of absolute impact by order: 1: 7%, 2: 5%, 3: 60%, 4: 28%
+Share of absolute impact by order: 1: 7%, 2: 6%, 3: 59%, 4: 29%
 
 ## Sources
 - 2026-09-29 Foodgrain output estimate for 2026-27 reduced marginally - Financial Express https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/

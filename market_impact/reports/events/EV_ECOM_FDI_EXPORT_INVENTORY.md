@@ -19,37 +19,37 @@ DPIIT relaxed FDI norms for export-oriented inventory-based e-commerce (Bar and 
 | LAURUSLABS | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
 | MAHABANK | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | DIVISLAB | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
-| ABB | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
+| ABB | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | LGEINDIA | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | YESBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | CONCOR | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | PIIND | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
 | IDFCFIRSTB | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | INDUSINDBK | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| BLUESTARCO | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
-| SBIN | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | MOTILALOFS | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| BLUESTARCO | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| CUMMINSIND | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | ETERNAL | -0.6 | -0.6 | +0.0 | +0.0 | +0.0 |
-| BIOCON | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| BIOCON | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
 | DRREDDY | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
 | JSWSTEEL | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| NATIONALUM | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| OIL | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
+| NATIONALUM | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
+| OIL | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
 | VAML | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
+| ONGC | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
+| HINDCOPPER | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
+| LUPIN | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
 | GLENMARK | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| ONGC | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| HINDCOPPER | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| LUPIN | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| JINDALSTEL | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| ZYDUSLIFE | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| TATASTEEL | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
+| ZYDUSLIFE | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| JINDALSTEL | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
 | PERSISTENT | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
+| TATASTEEL | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 17%, 2: 44%, 3: 25%, 4: 13%
+Share of absolute impact by order: 1: 17%, 2: 44%, 3: 25%, 4: 14%
 
 ## Sources
 - 2026-08-24 DPIIT relaxes FDI norms for export-oriented inventory-based e-commerce https://www.barandbench.com/

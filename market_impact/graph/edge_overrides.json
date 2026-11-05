@@ -442,6 +442,182 @@
   },
   {
    "src": "F_REPO_IN",
+   "dst": "BAJFINANCE",
+   "origin": "BAJFINANCE",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] Profile's own arithmetic gives -1.2 (Rs376cr floating-funding cost + rollover = -2.5% EBT x persistence 0.5). The mechanism then adds 'P/E de-rating at 34x' to reach -3. That multiple channel is already the F_GSEC_10Y_IN edge (-2.5, 'cost of equity at P/E 34x') and the REPO -> GSEC (0.53) -> BAJFINANCE path. Keep the fundamental -1.2. Evidence: on 7-8 Oct (hike to 5.50%) BAJFINANCE fell -0.7% against Nifty -2.4%.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "BAJFINANCE",
+   "origin": "BAJFINANCE",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] Mechanism computes -0.8 (Rs860cr = -3.2% PBT, 50% pass-through, persistence 0.5). It then lifts this to -5 for a 'multiple effect', which is the same discount-rate channel as the GSEC edge. 0.4 gives -2.0, still 2.5x the arithmetic.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BAJFINANCE",
+   "origin": "BAJFINANCE",
+   "factor": 0.3,
+   "reason": "[RT_BOT_A] Empirical market-adjusted elasticity +0.01 per +5 VIX (t 0.04, 156 weeks, results/empirical_sensitivities.csv). The -2 is market beta, which the beta adjustment already removes. Forward catalogue VIX expectation is +1.5 SSU, so this edge alone books about -2.8 pp of forward exposure.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TATACAP",
+   "origin": "TATACAP",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] Own arithmetic is -0.8 (Rs330cr = -3.3% PBT, half re-priced through floating LAP/corporate/EBLR assets, persistence 0.5). The 'P/E 24.5x multiple effect' that lifts it to -3 duplicates the GSEC edge (-2.5) and the REPO->GSEC path. Q2 FY27 PAT rose 51% to Rs1,660cr and the stock gained 5% (ET 27-28 Oct).",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "TATACAP",
+   "origin": "TATACAP",
+   "factor": 0.5,
+   "reason": "[RT_BOT_A] +50bp on Rs0.96 lakh cr = Rs480cr = 4.8% PBT, 50% passed through, persistence 0.5 gives -1.2. The -4 includes a multiple add-on already carried by the GSEC edge. 0.5 gives -2.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BAJAJFINSV",
+   "origin": "BAJAJFINSV",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] Look-through of BAJFINANCE's inflated -3 (x0.75). It is scaled with the BAJFINANCE fix; insurance float gains from higher yields offset further.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "BAJAJFINSV",
+   "origin": "BAJAJFINSV",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] Look-through of BAJFINANCE -5 (x0.8). It inherits the same multiple double count, so it gets the same scale as BAJFINANCE (0.4).",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BAJAJFINSV",
+   "origin": "BAJAJFINSV",
+   "factor": 0.3,
+   "reason": "[RT_BOT_A] Empirical market-adjusted elasticity -0.18 per +5 VIX (t -0.58). The -2 restates beta 1.06-1.14.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "JIOFIN",
+   "origin": "JIOFIN",
+   "factor": 0.2,
+   "reason": "[RT_BOT_A] Mechanism: '+5 VIX ~ Nifty -3.5%; beta 1.47-1.57 ... -> -5'. This is market beta and is double counted with the beta adjustment. Empirical market-adjusted elasticity is +0.11 (t 0.26). The edge was the largest single forward channel (EV_AI_CAPEX_RESET_RISK -16.9% conditional for JIOFIN). -1 keeps a small growth-duration premium.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "YESBANK",
+   "origin": "YESBANK",
+   "factor": 0.5,
+   "reason": "[RT_BOT_A] Own arithmetic -1.5 (NIM -6bp on Rs2.9 lakh cr, persistence 0.5). The mechanism 'doubled for discount-rate effect', which is the GSEC edge plus the REPO->GSEC path.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "YESBANK",
+   "origin": "YESBANK",
+   "factor": 0.5,
+   "reason": "[RT_BOT_A] The mechanism books AFS MTM (Rs250cr) as a P&L hit. Under RBI's 2023 investment-portfolio directions (effective Apr 2024; model knowledge), AFS unrealised losses go to the AFS reserve in equity, not P&L. The remaining channels are a small CET1 effect and discount rate.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "AUBANK",
+   "origin": "AUBANK",
+   "factor": 0.6,
+   "reason": "[RT_BOT_A] Own arithmetic -0.9 (net -Rs77cr = -1.8% PBT, persistence 0.5), plus a 'P/E 22x multiple effect' that duplicates the GSEC edge and path. Kept at -1.5 because the Q2 call (24 Oct) flagged margin pressure. The stock fell 8-10% on 26 Oct, and that move is in the realised return.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PRESTIGE",
+   "origin": "PRESTIGE",
+   "factor": 0.6,
+   "reason": "[RT_BOT_A] Mechanism splits -4 into PAT -2.0, demand -0.6 and multiple -1.4. Demand is the separate REPO -> F_HOUSING_DEMAND (-0.26) -> PRESTIGE (+5) path. The multiple is the GSEC edge (-1.0, cap rates and resi discounting) plus the REPO->GSEC path. Keep about -2.4.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ETERNAL",
+   "origin": "ETERNAL",
+   "factor": 0.6,
+   "reason": "[RT_BOT_A] Discount-rate channel (P/E ~700, Gordon 0.25/(r-g)) applies the full 25bp to a 25-year duration. Long yields move about 0.53x repo (backbone REPO->GSEC edge), so the duration effect belongs to the long rate. The forward catalogue's +62bp repo path (see findings) makes this edge -6 pp of forward exposure.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ETERNAL",
+   "origin": "ETERNAL",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] Empirical market-adjusted elasticity +0.67 per +5 VIX (t 1.15, wrong sign). The profile's -2.5 is mostly beta (1.1-1.3).",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ETERNAL",
+   "origin": "ETERNAL",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] Contradicted by the profile's own data: FII holding rose 29.1% -> 33.0% (Jun-Sep 2026) during the record FPI outflow, and the stock is +39% market-adjusted since June. A broad-flow beta of +3.5 books -5.6% of 'unpriced' recent impact that did not happen.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LENSKART",
+   "origin": "LENSKART",
+   "factor": 0.6,
+   "reason": "[RT_BOT_A] Same as ETERNAL: Gordon duration on a 25bp short-rate move. Long-rate beta to repo is about 0.53.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "LENSKART",
+   "origin": "LENSKART",
+   "factor": 0.5,
+   "reason": "[RT_BOT_A] No empirical history (listed Nov 2025). -3 'after market component' is not supported; peer ETERNAL's empirical value is +0.67. Halved.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LENSKART",
+   "origin": "LENSKART",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] FII holding rose 4.3% -> 18.3% in two quarters while aggregate FPI flows were at a record outflow. Stock-level flows are block supply from pre-IPO holders, not the macro FPI node. The stock is at an all-time high (+11% on 5 Nov after Q2).",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MEESHO",
+   "origin": "MEESHO",
+   "factor": 0.6,
+   "reason": "[RT_BOT_A] Same duration logic as ETERNAL/LENSKART. Long-rate beta to repo is about 0.53.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "MEESHO",
+   "origin": "MEESHO",
+   "factor": 0.5,
+   "reason": "[RT_BOT_A] -4 'after market component' has no empirical support (listed Dec 2025). Peer ETERNAL's empirical value is +0.67. Halved.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_REPO_IN",
+   "origin": "backbone_india.json",
+   "factor": 0.4,
+   "reason": "[RT_BOT_A] Output-gap reaction edge (0.8 SSU = 20bp per 1pp GDP). Summed over about 90 independent forward events, it turns good-growth news hawkish. EV_MONSOON27_FIRST_FORECAST_NORMAL adds +0.26 SSU expected repo, although a normal monsoon lowers food inflation. EV_BUDGET27_CAPEX_RAILWAY adds +0.31 SSU. Propagated repo moves total +1.35 SSU of the catalogue's +2.46 SSU (+62bp) 12m expectation, against +0.59 SSU from the explicit MPC events. The explicit Dec/Feb/Apr MPC odds (RT_EVENTS) already condition on growth and inflation. This is the same treatment RT_BACKBONE gave CPI->REPO (x0.5): RT_BACKBONE did not cover this edge, so there is no duplicate.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "src": "F_REPO_IN",
    "dst": "PHOENIXLTD",
    "origin": "PHOENIXLTD",
    "factor": 0.33,

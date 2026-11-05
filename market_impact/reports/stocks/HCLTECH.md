@@ -2,11 +2,11 @@
 *NIFTY_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.4%**, **12 months -3.3%** (rank 182 / 187 of 200 for 3m / 12m); beta 0.92
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.8%): 3 months 46%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.7% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -33.2% … +43.1%
-- Decomposition (12m): 0.5 × forward event exposure -5.4% (3m -1.8%; half assumed priced) + 0.5 × company-specific catalysts -0.3%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.5% (beta-adjusted) vs a realised market-adjusted move of +15.7% — gap -16.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.9%**, **12 months -1.2%** (rank 177 / 156 of 200 for 3m / 12m); beta 0.92
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.8%): 3 months 48%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.3% … P90 +2.7%; plausible 12m relative-return range incl. stock-specific noise: -39.9% … +42.1%
+- Decomposition (12m): 0.5 × forward event exposure -1.5% (3m -1.1%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.3%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.2% (beta-adjusted) vs a realised market-adjusted move of +15.7% — gap -14.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,25 +14,25 @@
 |---|---|---|---|---|---|---|---|
 | GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -3.94 | -4.00 | +0.06 | +0.00 | +0.00 | — |
 | US H-1B / outsourcing restrictions (`P_US_VISA_OUTSOURCING`) | +1 = material tightening | -3.50 | -3.50 | +0.00 | +0.00 | +0.00 | — |
-| US growth (`F_US_GDP`) | +1 pp | +3.25 | +2.80 | +0.56 | -0.04 | -0.07 | — |
+| US growth (`F_US_GDP`) | +1 pp | +3.26 | +2.80 | +0.56 | -0.04 | -0.06 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.58 | +1.50 | +0.11 | -0.03 | +0.00 | +1.2% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.44 | +1.60 | +0.00 | -0.09 | -0.07 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.45 | +1.60 | +0.00 | -0.09 | -0.06 | -1.1% |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.21 | -1.00 | -0.23 | +0.00 | +0.03 | +3.5% |
-| Europe growth (`F_EU_GDP`) | +1 pp | +1.19 | +1.20 | +0.00 | +0.00 | -0.01 | — |
+| Europe growth (`F_EU_GDP`) | +1 pp | +1.20 | +1.20 | +0.00 | +0.00 | +0.00 | — |
 | US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.14 | +0.00 | -0.96 | -0.20 | +0.02 | — |
 | US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.08 | -0.70 | -0.23 | -0.18 | +0.03 | +11.2% |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -0.90 | -0.90 | +0.00 | +0.00 | +0.00 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.50 | +0.00 | -0.51 | -0.01 | +0.01 | — |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +0.49 | +0.00 | +0.40 | +0.08 | +0.01 | — |
 | US dollar index (`F_DXY`) | +3% DXY | +0.35 | +0.00 | +0.26 | +0.09 | +0.00 | +2.2% |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -0.35 | +0.00 | +0.00 | -0.28 | -0.07 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.35 | +0.00 | -0.36 | +0.01 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -3.9% | -3.9% | -4.0 | +0.1 | +0.0 | +0.0 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.9% | +3.9% | +3.0 | +0.9 | -0.0 | +0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -11.3% | -2.8% | -10.8 | -0.7 | +0.3 | -0.1 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -11.4% | -2.8% | -10.8 | -0.7 | +0.3 | -0.2 |
 | Indian IT: weakest Q2 in 3 years, Infosys guidance cut, US green card freeze (`EV_INDIAN_IT_Q2_VISA_SHOCK`) | occurred | 1.00 | -1.8% | -1.8% | -1.8 | +0.0 | +0.0 | +0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -5.7% | -1.4% | -7.0 | +1.0 | +0.2 | +0.0 |
 | US $100,000 H-1B fee (new ~$103k proposal Aug 2026) blocked by court; administration appeals; DHS proposes $70k/$30k OPT fees (`EV_H1B_100K_FEE_COURT`) | occurred | 1.00 | -1.4% | -1.4% | -1.4 | +0.0 | +0.0 | +0.0 |
@@ -68,9 +68,9 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_US_GDP → HCLTECH | +1.20 | events | +3.36% |
-| 1 | P_US_VISA_OUTSOURCING → HCLTECH | +0.90 | events | -3.15% |
 | 1 | T_GENAI_SERVICES → HCLTECH | +0.50 | director_override | -2.00% |
 | 1 | F_GSEC_10Y_IN → HCLTECH | +1.55 | director_override | -1.40% |
+| 1 | P_US_VISA_OUTSOURCING → HCLTECH | +0.35 | director_override | -1.23% |
 | 1 | F_FED_FUNDS → HCLTECH | +1.62 | observed | -1.13% |
 | 1 | F_USDINR → HCLTECH | -0.37 | observed | -0.59% |
 | 1 | F_US_EQUITIES → HCLTECH | +0.23 | observed | +0.35% |

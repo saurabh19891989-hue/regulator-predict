@@ -14,21 +14,21 @@ DCC approved satcom spectrum framework (8-9 Sep 2026); players await cabinet nod
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| BAJFINANCE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| TATACAP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| PRESTIGE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | IREDA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| AUBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| YESBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | JSWENERGY | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | IDFCFIRSTB | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | GODREJPROP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | JIOFIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| BAJAJFINSV | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LENSKART | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| BAJFINANCE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| AUBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| TATACAP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | GMRAIRPORT | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | OBEROIRLTY | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ADANIGREEN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| LTF | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| PRESTIGE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| PFC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -49,7 +49,7 @@ DCC approved satcom spectrum framework (8-9 Sep 2026); players await cabinet nod
 | VAML | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | DRREDDY | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 70%, 2: 1%, 3: 22%, 4: 7%
+Share of absolute impact by order: 1: 71%, 2: 1%, 3: 21%, 4: 7%
 
 ## Sources
 - 2026-10-08 Starlink's India entry: why launch is stalled https://www.business-standard.com/

@@ -2,38 +2,38 @@
 *NIFTY_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.9%**, **12 months +1.0%** (rank 48 / 67 of 200 for 3m / 12m); beta 1.19
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.8%): 3 months 53%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.8% … P90 +4.9%; plausible 12m relative-return range incl. stock-specific noise: -33.6% … +29.7%
-- Decomposition (12m): 0.5 × forward event exposure +2.3% (3m +1.9%; half assumed priced) + 0.5 × company-specific catalysts +0.5%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +12.5% (beta-adjusted) vs a realised market-adjusted move of -28.9% — gap +41.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.3%**, **12 months +0.6%** (rank 72 / 63 of 200 for 3m / 12m); beta 1.19
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.8%): 3 months 51%, 12 months 51%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.2% … P90 +6.2%; plausible 12m relative-return range incl. stock-specific noise: -29.8% … +33.1%
+- Decomposition (12m): 0.5 × forward event exposure +1.3% (3m +0.5%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.5%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +14.6% (beta-adjusted) vs a realised market-adjusted move of -28.9% — gap +43.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | US tariff on UK/EU-built passenger vehicles (`NEW_US_TARIFF_UK_EU_AUTOS`) | +10pp tariff on UK/EU autos entering the US | -8.00 | -8.00 | +0.00 | +0.00 | +0.00 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.01 | +1.50 | +1.23 | +0.25 | +0.04 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.03 | +1.50 | +1.23 | +0.25 | +0.05 | — |
 | Indian vehicle demand (`F_AUTO_DEMAND_IN`) | +10% volumes | +3.00 | +3.00 | +0.00 | +0.00 | +0.00 | — |
 | Chip/electronics component supply tightness (higher = tighter) (`F_SEMICONDUCTOR_SUPPLY`) | +1 = tightening | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| US growth (`F_US_GDP`) | +1 pp | +2.61 | +2.50 | +0.18 | -0.01 | -0.05 | — |
+| US growth (`F_US_GDP`) | +1 pp | +2.63 | +2.50 | +0.18 | +0.00 | -0.05 | — |
 | EV incentives / mandates (`P_EV_POLICY`) | +1 = stronger EV push | +2.36 | +2.50 | -0.07 | -0.06 | +0.00 | — |
-| Europe growth (`F_EU_GDP`) | +1 pp | +1.99 | +2.00 | +0.00 | -0.01 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.84 | +2.00 | -0.04 | -0.07 | -0.05 | -1.1% |
+| Europe growth (`F_EU_GDP`) | +1 pp | +2.00 | +2.00 | +0.00 | +0.00 | +0.00 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.86 | +2.00 | -0.04 | -0.06 | -0.04 | -1.1% |
 | Aluminium price (`F_ALUMINIUM`) | +10% aluminium | -1.70 | -1.70 | +0.00 | +0.00 | +0.00 | -19.6% |
 | Critical-mineral supply tightness (China export controls on rare earths, magnets, graphite, Ga/Ge) (`NEW_RARE_EARTH_SUPPLY`) | +1 = new/tighter export-control round | -1.51 | +0.00 | -1.50 | -0.01 | +0.00 | — |
 | Global HRC steel price (`F_STEEL_GLOBAL`) | +10% global HRC | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | +20.6% |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.36 | +0.00 | +1.44 | -0.03 | -0.05 | — |
 | US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -1.28 | +0.00 | -1.15 | -0.26 | +0.13 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.25 | +0.00 | +1.44 | -0.10 | -0.09 | — |
 | Copper price (`F_COPPER`) | +10% copper | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | -2.4% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +3.6% | +3.6% | +3.6 | +0.0 | +0.0 | +0.0 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.2% | +3.2% | +3.0 | +0.2 | -0.0 | -0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.2% | +3.2% | +3.0 | +0.2 | +0.0 | +0.0 |
 | Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -3.1% | -3.1% | -3.1 | +0.0 | +0.0 | +0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -7.6% | -1.9% | -7.5 | -0.3 | +0.4 | -0.2 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -7.7% | -1.9% | -7.5 | -0.3 | +0.4 | -0.2 |
 | CAFE-III fuel-efficiency norms notified (30 Sep 2026); no small-car carve-out; 3x credit for BEVs (`EV_CAFE3_NOTIFIED`) | occurred | 1.00 | +1.6% | +1.6% | +1.7 | -0.1 | -0.1 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.9% | -0.9% | -0.5 | -0.3 | -0.1 | -0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.8 | -0.0 | +0.0 |
@@ -41,7 +41,7 @@
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.7% | -0.7% | -0.7 | +0.0 | +0.0 | +0.0 |
 | Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.5 | +0.0 | +0.0 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | +2.2% | +0.5% | +0.0 | +1.4 | +0.6 | +0.1 |
-| India-EU FTA signed at ceremony (planned 16 Dec 2026) (`EV_INDIA_EU_FTA_SIGNED`) | scheduled | 0.92 | +0.6% | +0.5% | +0.6 | -0.0 | -0.0 | -0.0 |
+| India-EU FTA signed at ceremony (planned 16 Dec 2026) (`EV_INDIA_EU_FTA_SIGNED`) | scheduled | 0.92 | +0.6% | +0.5% | +0.6 | -0.0 | +0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -68,10 +68,10 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_ALUMINIUM → TMPV | -1.96 | observed | +3.33% |
-| 1 | F_STEEL_GLOBAL → TMPV | +2.06 | observed | -3.08% |
 | 1 | F_US_GDP → TMPV | +1.20 | events | +3.00% |
 | 1 | P_EV_POLICY → TMPV | +1.10 | events | +2.75% |
 | 1 | F_AUTO_DEMAND_IN → TMPV | +0.50 | director_override | +1.50% |
+| 1 | F_STEEL_GLOBAL → TMPV | +0.50 | director_override | -0.75% |
 | 1 | F_USDINR → TMPV | -0.37 | observed | -0.74% |
 | 1 | F_REPO_IN → TMPV | +1.00 | events | -0.50% |
 | 1 | F_EU_GDP → TMPV | +0.22 | events | +0.44% |

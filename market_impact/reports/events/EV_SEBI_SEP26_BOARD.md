@@ -27,9 +27,9 @@ Board approved PMS revamp, easier settlements, new ad code and FPI commodity-tra
 | INDUSINDBK | +0.4 | +0.4 | +0.0 | -0.0 | -0.0 |
 | POLICYBZR | +0.4 | +0.4 | -0.0 | -0.0 | +0.0 |
 | NAUKRI | +0.4 | +0.3 | +0.1 | -0.0 | +0.0 |
-| ETERNAL | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
-| MEESHO | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | HDFCBANK | +0.4 | +0.4 | +0.0 | -0.0 | +0.0 |
+| MEESHO | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
+| MAXHEALTH | +0.3 | +0.4 | -0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -42,12 +42,12 @@ Board approved PMS revamp, easier settlements, new ad code and FPI commodity-tra
 | SAIL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | TATASTEEL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | NMDC | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
-| JINDALSTEL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | PIIND | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 | TMPV | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 | HINDZINC | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | SRF | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 | HINDALCO | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| JINDALSTEL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | PERSISTENT | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 82%, 2: 15%, 3: 2%, 4: 1%

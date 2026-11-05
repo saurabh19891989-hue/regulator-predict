@@ -22,13 +22,13 @@ Peace talks between Iran and the US/Qatar (Guardian 2 Nov; Reuters 2 Nov: no bre
 | MCX | +3.7 | +3.8 | +0.0 | -0.0 | +0.0 |
 | MUTHOOTFIN | +3.5 | +3.5 | +0.0 | -0.0 | -0.0 |
 | VEDL | +3.1 | +0.0 | +3.2 | -0.0 | -0.0 |
-| BAJAJFINSV | +0.7 | +0.8 | +0.0 | -0.1 | -0.0 |
+| BAJAJFINSV | +0.7 | +0.8 | +0.0 | -0.0 | -0.0 |
 | MFSL | +0.6 | +0.6 | -0.0 | -0.0 | +0.0 |
 | CANBK | +0.5 | +0.5 | +0.0 | -0.0 | -0.0 |
 | M&MFIN | +0.4 | +0.5 | +0.0 | -0.0 | -0.0 |
 | INDUSINDBK | +0.3 | +0.4 | +0.0 | -0.0 | -0.0 |
-| BAJAJHLDNG | +0.2 | +0.0 | +0.2 | -0.0 | -0.0 |
 | BAJFINANCE | +0.2 | +0.3 | +0.0 | -0.1 | -0.0 |
+| BAJAJHLDNG | +0.2 | +0.0 | +0.2 | -0.0 | -0.0 |
 | LICHSGFIN | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
 | PAYTM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | UPL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
@@ -42,18 +42,18 @@ Peace talks between Iran and the US/Qatar (Guardian 2 Nov; Reuters 2 Nov: no bre
 | WAAREEENER | -1.2 | -1.2 | +0.0 | -0.0 | +0.0 |
 | LICI | -0.8 | -0.8 | +0.0 | -0.0 | +0.0 |
 | KALYANKJIL | -0.7 | +0.5 | -1.1 | -0.0 | -0.0 |
-| YESBANK | -0.3 | +0.0 | +0.0 | -0.2 | -0.1 |
 | TITAN | -0.2 | +0.6 | -0.8 | -0.0 | -0.0 |
-| TATACAP | -0.2 | +0.0 | +0.0 | -0.2 | -0.1 |
+| YESBANK | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | IREDA | -0.2 | +0.0 | +0.0 | -0.1 | -0.1 |
-| PRESTIGE | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
-| AUBANK | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | GODREJPROP | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | JSWENERGY | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | IDFCFIRSTB | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
+| TATACAP | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
 | JIOFIN | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| OBEROIRLTY | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| AUBANK | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 53%, 2: 14%, 3: 25%, 4: 8%
+Share of absolute impact by order: 1: 54%, 2: 14%, 3: 24%, 4: 8%
 
 ## Sources
 - 2026-11-02 Oil price falls amid hope of a breakthrough to end Iran war https://news.google.com/rss/search?q=Oil+price+falls+amid+hope+of+a+breakthrough+to+end+Iran+war&hl=en-IN&gl=IN&ceid=IN:en

@@ -2,11 +2,11 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.3%**, **12 months -0.3%** (rank 121 / 120 of 200 for 3m / 12m); beta 1.35
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.0%): 3 months 49%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.6% … P90 +3.8%; plausible 12m relative-return range incl. stock-specific noise: -26.8% … +19.4%
-- Decomposition (12m): 0.5 × forward event exposure -0.7% (3m +0.2%; half assumed priced) + 0.5 × company-specific catalysts +1.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.2% (beta-adjusted) vs a realised market-adjusted move of -16.7% — gap +16.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.2%**, **12 months +0.4%** (rank 89 / 70 of 200 for 3m / 12m); beta 1.35
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.0%): 3 months 51%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.9% … P90 +4.3%; plausible 12m relative-return range incl. stock-specific noise: -26.3% … +28.3%
+- Decomposition (12m): 0.5 × forward event exposure +0.4% (3m +0.8%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.5% (beta-adjusted) vs a realised market-adjusted move of -16.7% — gap +16.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -15,33 +15,33 @@
 | Credit cost / NPA cycle (higher = worse) (`F_ASSET_QUALITY_IN`) | +50 bp credit cost | -5.29 | -5.00 | -0.30 | +0.00 | +0.01 | — |
 | Power market / DISCOM reform (`P_POWER_REFORM`) | +1 = reform progress | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
 | RBI prudential tightening (risk weights, LCR, provisioning) (`P_RBI_PRUDENTIAL`) | +1 = tightening step | -3.99 | -3.00 | -1.13 | +0.03 | +0.11 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +2.79 | +2.50 | +0.00 | +0.33 | -0.04 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -2.75 | -2.00 | -0.47 | -0.27 | -0.02 | +3.5% |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +2.65 | +2.50 | +0.00 | +0.28 | -0.13 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.62 | +2.50 | +0.06 | +0.04 | +0.02 | — |
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +2.50 | +2.50 | +0.00 | +0.00 | +0.00 | — |
-| Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -2.48 | -2.50 | +0.00 | +0.04 | -0.02 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.07 | +0.00 | -0.64 | -0.78 | -0.65 | — |
+| Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -2.49 | -2.50 | +0.00 | +0.04 | -0.03 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.11 | +0.00 | -0.64 | -0.78 | -0.69 | — |
 | Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +2.00 | +2.00 | +0.00 | +0.00 | +0.00 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.84 | -0.80 | -0.41 | -0.63 | +0.01 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.76 | +0.00 | -1.07 | -0.10 | -0.58 | -1.1% |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.98 | +0.00 | +0.80 | +1.35 | -0.17 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.85 | -0.80 | -0.41 | -0.63 | -0.00 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.75 | -1.50 | -0.25 | +0.00 | -0.00 | — |
-| Bank credit growth (`F_CREDIT_GROWTH_IN`) | +3 pp | -1.71 | +0.00 | -1.02 | -0.72 | +0.03 | — |
+| Bank credit growth (`F_CREDIT_GROWTH_IN`) | +3 pp | -1.70 | +0.00 | -1.02 | -0.72 | +0.04 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.8% | -5.8% | -5.5 | -0.1 | -0.1 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +7.4% | +3.7% | +7.0 | +0.2 | +0.1 | +0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.9% | +2.9% | +2.5 | +0.8 | -0.3 | -0.2 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +3.1% | +3.1% | +2.5 | +1.0 | -0.2 | -0.2 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.8% | -2.8% | -2.8 | +0.0 | +0.0 | +0.0 |
-| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +2.5% | +2.5% | +2.5 | +0.0 | +0.0 | +0.0 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +2.6% | +2.6% | +2.5 | +0.0 | +0.0 | +0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | -0.9 | -0.5 | -0.8 | -0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -8.9% | -2.2% | -5.0 | -3.6 | -0.4 | +0.1 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +2.0% | +2.0% | +2.0 | +0.0 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.9% | -1.9% | -1.8 | -0.2 | +0.1 | -0.1 |
 | Electricity (Amendment) Bill / distribution parallel licensing and DISCOM privatisation steps (`EV_POWER_DISTRIB_REFORM`) | anticipated | 0.45 | +4.0% | +1.8% | +4.0 | +0.0 | +0.0 | +0.0 |
-| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.90 | -1.7% | -1.5% | -1.6 | -0.1 | +0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.7% | +1.5% | +0.8 | +0.7 | +0.9 | +0.2 |
+| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.90 | -1.7% | -1.5% | -1.6 | -0.1 | +0.0 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.7% | +1.5% | +0.8 | +0.7 | +1.0 | +0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

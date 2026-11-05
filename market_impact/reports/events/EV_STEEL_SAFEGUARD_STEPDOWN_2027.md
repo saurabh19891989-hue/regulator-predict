@@ -50,7 +50,7 @@ Safeguard duty on flat steel imports: provisional 12% from 21 Apr 2025; final 3-
 | VAML | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | BIOCON | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 15%, 2: 81%, 3: 2%, 4: 2%
+Share of absolute impact by order: 1: 15%, 2: 80%, 3: 2%, 4: 2%
 
 ## Sources
 - 2025-12-31 Centre imposes steel safeguard duty for 3 years; up to 12% on imports https://news.google.com/rss/search?q=Centre+imposes+steel+safeguard+duty+for+3+years;+up+to+12%+on+imports&hl=en-IN&gl=IN&ceid=IN:en

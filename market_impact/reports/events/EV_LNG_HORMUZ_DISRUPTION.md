@@ -18,7 +18,7 @@ Petronet LNG had no clarity on September Qatar cargoes (ET/BS 13 Aug); by 2 Nov 
 |---|---|---|---|---|---|
 | MCX | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
 | ONGC | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
-| COALINDIA | +0.5 | +0.0 | +0.4 | +0.1 | +0.0 |
+| COALINDIA | +0.4 | +0.0 | +0.4 | +0.1 | +0.0 |
 | JSWENERGY | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
 | TATAPOWER | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
 | OIL | +0.3 | +0.3 | +0.0 | +0.0 | +0.0 |

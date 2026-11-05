@@ -20,8 +20,8 @@ Global HRC futures are +60% y/y, +26% in 6m and +20.6% since 1 Jun 2026 (factor_
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | +17.6 | +17.6 | -0.0 | +0.0 | +0.0 |
 | SAIL | +16.2 | +16.5 | -0.3 | -0.0 | +0.0 |
+| JINDALSTEL | +15.3 | +15.3 | -0.0 | +0.0 | +0.0 |
 | TATASTEEL | +12.9 | +12.9 | +0.0 | -0.0 | +0.0 |
 | JSWSTEEL | +9.7 | +9.9 | -0.2 | -0.0 | +0.0 |
 | NMDC | +2.1 | +2.2 | -0.1 | +0.0 | +0.0 |
@@ -45,8 +45,8 @@ Global HRC futures are +60% y/y, +26% in 6m and +20.6% since 1 Jun 2026 (factor_
 | MARUTI | -2.2 | -2.2 | +0.0 | -0.0 | +0.0 |
 | ASHOKLEY | -2.0 | -2.0 | +0.0 | -0.0 | +0.0 |
 | SUZLON | -2.0 | -2.0 | +0.0 | -0.0 | +0.0 |
-| CGPOWER | -1.9 | -1.9 | +0.0 | -0.0 | +0.0 |
 | GVT&D | -1.9 | -1.9 | +0.0 | -0.0 | +0.0 |
+| CGPOWER | -1.9 | -1.9 | +0.0 | -0.0 | +0.0 |
 | HYUNDAI | -1.7 | -1.7 | +0.0 | -0.0 | -0.0 |
 | RVNL | -1.7 | -1.7 | +0.0 | -0.0 | +0.0 |
 | COCHINSHIP | -1.7 | -1.7 | +0.0 | +0.0 | +0.0 |

@@ -2,11 +2,11 @@
 *MIDCAP_100 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.2%**, **12 months +1.5%** (rank 33 / 41 of 200 for 3m / 12m); beta 1.13
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +37.6%): 3 months 53%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.3% … P90 +7.7%; plausible 12m relative-return range incl. stock-specific noise: -65.8% … +43.6%
-- Decomposition (12m): 0.5 × forward event exposure +5.8% (3m +3.0%; half assumed priced) + 0.5 × company-specific catalysts -1.8%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -10.3% (beta-adjusted) vs a realised market-adjusted move of -29.5% — gap +19.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.5%**, **12 months +0.3%** (rank 44 / 84 of 200 for 3m / 12m); beta 1.13
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +37.6%): 3 months 51%, 12 months 51%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.3% … P90 +8.2%; plausible 12m relative-return range incl. stock-specific noise: -46.1% … +51.0%
+- Decomposition (12m): 0.5 × forward event exposure +2.9% (3m +1.3%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -1.8%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -10.5% (beta-adjusted) vs a realised market-adjusted move of -29.5% — gap +18.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,17 +14,17 @@
 |---|---|---|---|---|---|---|---|
 | Aluminium price (`F_ALUMINIUM`) | +10% aluminium | +6.50 | +6.50 | +0.00 | +0.00 | +0.00 | -19.6% |
 | Mining royalty / mineral tax burden (`P_MINING_ROYALTY`) | +1 = higher | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.92 | +3.00 | -0.04 | -0.04 | +0.00 | -1.1% |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +2.43 | +0.00 | +2.31 | +0.11 | +0.01 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.93 | +3.00 | -0.04 | -0.03 | +0.00 | -1.1% |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +2.42 | +0.00 | +2.31 | +0.11 | +0.01 | — |
 | Alumina price (FOB Australia) (`NEW_ALUMINA_PRICE`) | +15% alumina | +2.00 | +2.00 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +1.58 | +0.00 | +0.96 | +0.48 | +0.14 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +1.49 | +1.00 | +0.50 | +0.00 | -0.01 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +1.57 | +0.00 | +0.96 | +0.48 | +0.13 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +1.50 | +1.00 | +0.50 | +0.00 | +0.00 | — |
 | Indian domestic coal price & availability cost (`F_COAL_INDIA`) | +10% domestic coal cost (notified/e-auction) | -0.97 | -1.00 | +0.03 | +0.00 | +0.00 | — |
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +0.74 | +0.00 | +0.50 | +0.24 | +0.00 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.65 | -0.50 | -0.12 | -0.03 | +0.00 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | +0.61 | +0.00 | +0.36 | +0.17 | +0.08 | +3.5% |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | +0.61 | +0.00 | +0.42 | +0.17 | +0.01 | — |
 | Foreign portfolio flows into Indian government/corporate bonds (FAR, index-linked) (`NEW_FPI_DEBT_FLOWS`) | +US$5 bn net debt inflow per quarter | -0.59 | +0.00 | -0.60 | +0.01 | +0.00 | — |
+| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | +0.58 | +0.00 | +0.42 | +0.15 | +0.01 | — |
 | US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -0.58 | +0.00 | +0.00 | -0.60 | +0.02 | — |
 
 ## Events affecting this stock (event → company)
@@ -35,10 +35,10 @@
 | India coal crunch: critical plant stocks, e-auction premiums ~94%, captive plants ordered to maximise output; CIL October output +19% (`EV_INDIA_COAL_CRUNCH`) | occurred | 1.00 | -1.2% | -1.2% | -1.2 | +0.0 | +0.0 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +1.2% | +1.2% | +0.0 | +1.2 | -0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | +0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -1.7% | -0.9% | +0.7 | -2.1 | -0.2 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -1.6% | -0.9% | +0.7 | -2.1 | -0.2 | -0.0 |
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +2.4% | +0.8% | +0.0 | +2.2 | +0.2 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | -1.5% | -0.7% | +0.0 | -1.5 | +0.0 | +0.0 |
-| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +0.7% | +0.7% | +0.5 | +0.2 | +0.0 | -0.0 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +0.7% | +0.7% | +0.5 | +0.2 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.7% | -0.7% | -0.5 | -0.1 | -0.0 | +0.0 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.6 | +0.0 | +0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | +3.4% | +0.6% | +3.4 | +0.0 | +0.0 | +0.0 |

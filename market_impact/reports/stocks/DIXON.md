@@ -2,11 +2,11 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.8%**, **12 months +1.2%** (rank 55 / 53 of 200 for 3m / 12m); beta 1.30
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 52%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.9% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -34.0% … +34.7%
-- Decomposition (12m): 0.5 × forward event exposure +2.0% (3m +3.0%; half assumed priced) + 0.5 × company-specific catalysts +1.4%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +6.4% (beta-adjusted) vs a realised market-adjusted move of +3.4% — gap +3.0 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +1.2%**, **12 months +3.3%** (rank 13 / 6 of 200 for 3m / 12m); beta 1.30
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 53%, 12 months 54%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.2% … P90 +7.5%; plausible 12m relative-return range incl. stock-specific noise: -31.6% … +45.5%
+- Decomposition (12m): 0.5 × forward event exposure +5.8% (3m +3.5%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +6.1% (beta-adjusted) vs a realised market-adjusted move of +3.4% — gap +2.7 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -16,15 +16,15 @@
 | Chip/electronics component supply tightness (higher = tighter) (`F_SEMICONDUCTOR_SUPPLY`) | +1 = tightening | -4.50 | -4.50 | +0.00 | +0.00 | +0.00 | — |
 | FDI liberalisation (`P_FDI_RULES`) | +1 = liberalisation | +4.42 | +4.00 | +0.42 | +0.00 | +0.00 | — |
 | China+1 manufacturing relocation to India (`T_CHINA_PLUS_ONE`) | +1 | +4.02 | +4.00 | +0.02 | +0.00 | +0.00 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +2.49 | +2.50 | +0.00 | +0.00 | -0.01 | — |
 | USD/CNY (`F_USDCNY`) | +3% USD/CNY (yuan weaker) | +2.48 | +2.50 | -0.02 | +0.00 | +0.00 | -1.4% |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +2.45 | +2.50 | +0.00 | +0.00 | -0.05 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +2.04 | +2.00 | +0.00 | +0.04 | +0.00 | +1.2% |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.99 | -1.50 | -0.47 | -0.01 | -0.01 | +3.5% |
 | US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | +1.71 | +1.50 | +0.48 | -0.27 | +0.01 | — |
-| US growth (`F_US_GDP`) | +1 pp | +1.43 | +0.00 | +1.80 | -0.26 | -0.11 | — |
+| US growth (`F_US_GDP`) | +1 pp | +1.46 | +0.00 | +1.80 | -0.26 | -0.08 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | — |
+| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.10 | +0.00 | -1.03 | -0.03 | -0.04 | — |
 | Critical-mineral supply tightness (China export controls on rare earths, magnets, graphite, Ga/Ge) (`NEW_RARE_EARTH_SUPPLY`) | +1 = new/tighter export-control round | -1.08 | +0.00 | -1.08 | +0.00 | +0.00 | — |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.07 | +0.00 | -1.03 | -0.03 | -0.01 | — |
 | India CPI inflation (`F_CPI_IN`) | +1 pp | -1.03 | +0.00 | -0.79 | -0.18 | -0.07 | — |
 
 ## Events affecting this stock (event → company)
@@ -34,7 +34,7 @@
 | India further eases Press Note 3 rules for China/border-country FDI (approval timelines, minority stakes) (`EV_CHINA_FDI_EASING_PN3`) | anticipated | 0.70 | +3.6% | +2.5% | +3.6 | +0.0 | +0.0 | +0.0 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.9% | +1.9% | +0.0 | +2.0 | -0.2 | +0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | -0.0 | -0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -6.7% | -1.7% | -6.0 | -1.1 | +0.7 | -0.4 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -6.8% | -1.7% | -6.0 | -1.1 | +0.7 | -0.4 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.5% | -1.6% | -9.8 | +3.2 | +0.0 | +0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.9 | -0.2 | -0.1 |
 | India-China thaw: Xi visit around BRICS summit in India (mid-Sep 2026), flights resume, Chinese-investment curbs eased (`EV_INDIA_CHINA_THAW_SEP26`) | occurred | 1.00 | +1.2% | +1.2% | +1.0 | +0.1 | +0.0 | -0.0 |

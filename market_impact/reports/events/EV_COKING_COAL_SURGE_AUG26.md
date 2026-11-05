@@ -40,11 +40,11 @@ Global coking coal prices rose ~25% in August 2026 (Reuters/OilPrice, 19-20 Aug;
 |---|---|---|---|---|---|
 | SAIL | -4.5 | -4.4 | -0.1 | -0.0 | +0.0 |
 | JSWSTEEL | -3.6 | -3.6 | -0.1 | -0.0 | +0.0 |
-| JINDALSTEL | -3.4 | -3.3 | -0.0 | +0.0 | +0.0 |
 | TATASTEEL | -1.6 | -2.0 | +0.4 | -0.0 | +0.0 |
 | TMCV | -0.9 | -0.9 | +0.0 | -0.0 | -0.0 |
 | BHEL | -0.8 | -0.8 | +0.0 | -0.0 | +0.0 |
 | MARUTI | -0.8 | -0.8 | +0.0 | -0.0 | +0.0 |
+| JINDALSTEL | -0.8 | -0.8 | -0.0 | +0.0 | +0.0 |
 | ASHOKLEY | -0.7 | -0.7 | +0.0 | -0.0 | +0.0 |
 | SUZLON | -0.7 | -0.7 | +0.0 | -0.0 | +0.0 |
 | HYUNDAI | -0.6 | -0.6 | +0.0 | -0.0 | -0.0 |
@@ -54,7 +54,7 @@ Global coking coal prices rose ~25% in August 2026 (Reuters/OilPrice, 19-20 Aug;
 | TMPV | -0.5 | +0.0 | -0.5 | +0.0 | +0.0 |
 | TVSMOTOR | -0.5 | -0.5 | +0.0 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 84%, 2: 10%, 3: 5%, 4: 1%
+Share of absolute impact by order: 1: 83%, 2: 11%, 3: 5%, 4: 1%
 
 ## Sources
 - 2026-08-19 Indian steel mills face margin squeeze as global coking coal prices rise https://news.google.com/rss/search?q=Indian+steel+mills+face+margin+squeeze+as+global+coking+coal+prices+rise&hl=en-IN&gl=IN&ceid=IN:en

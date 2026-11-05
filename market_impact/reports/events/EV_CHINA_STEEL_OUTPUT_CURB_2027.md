@@ -17,7 +17,7 @@ Fastmarkets (17 Sep) reported an anti-price-war policy and industry self-discipl
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | +4.3 | +1.2 | +3.3 | -0.3 | +0.0 |
+| JINDALSTEL | +3.9 | +1.2 | +2.9 | -0.3 | +0.0 |
 | SAIL | +3.3 | -0.1 | +3.8 | -0.3 | +0.0 |
 | JSWSTEEL | +2.5 | +0.4 | +2.3 | -0.2 | +0.0 |
 | TATASTEEL | +1.7 | +0.4 | +1.6 | -0.3 | +0.0 |

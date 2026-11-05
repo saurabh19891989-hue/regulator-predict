@@ -2,24 +2,24 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.9%**, **12 months +0.8%** (rank 44 / 74 of 200 for 3m / 12m); beta 0.95
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 52%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.3% … P90 +2.6%; plausible 12m relative-return range incl. stock-specific noise: -31.6% … +40.2%
-- Decomposition (12m): 0.5 × forward event exposure +1.1% (3m +0.6%; half assumed priced) + 0.5 × company-specific catalysts +1.5%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.8% (beta-adjusted) vs a realised market-adjusted move of +13.4% — gap -10.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.9%**, **12 months +0.8%** (rank 20 / 55 of 200 for 3m / 12m); beta 0.95
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 52%, 12 months 51%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.9% … P90 +2.7%; plausible 12m relative-return range incl. stock-specific noise: -37.1% … +38.5%
+- Decomposition (12m): 0.5 × forward event exposure +0.6% (3m +0.4%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.5%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.6% (beta-adjusted) vs a realised market-adjusted move of +13.4% — gap -10.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +3.12 | +3.00 | +0.12 | +0.00 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +3.04 | +3.00 | +0.00 | +0.09 | -0.05 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +3.08 | +3.00 | +0.00 | +0.09 | -0.01 | — |
 | Consumer durables category promotional / discount intensity (`NEW_CONSUMER_DURABLES_PRICE_WAR`) | +1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.84 | -1.50 | -0.13 | -0.14 | -0.07 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.81 | -1.50 | -0.13 | -0.14 | -0.04 | -1.1% |
 | Chip/electronics component supply tightness (higher = tighter) (`F_SEMICONDUCTOR_SUPPLY`) | +1 = tightening | -1.80 | -1.80 | +0.00 | +0.00 | +0.00 | — |
 | China+1 manufacturing relocation to India (`T_CHINA_PLUS_ONE`) | +1 | +1.58 | +1.50 | +0.06 | +0.01 | +0.01 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.28 | +1.20 | +0.00 | +0.04 | +0.04 | — |
 | India CPI inflation (`F_CPI_IN`) | +1 pp | -1.28 | +0.00 | -1.00 | -0.20 | -0.09 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.27 | +1.20 | +0.00 | +0.04 | +0.02 | — |
 | GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.26 | +0.00 | +0.94 | +0.21 | +0.11 | — |
 | Copper price (`F_COPPER`) | +10% copper | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | -2.4% |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.98 | +0.80 | +0.17 | +0.00 | +0.01 | — |
@@ -35,13 +35,13 @@
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.4% | -1.4% | -1.3 | -0.1 | -0.0 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.5% | +1.3% | +2.0 | +0.5 | -0.0 | +0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -4.8% | -0.9% | -4.1 | -0.5 | -0.2 | +0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.8% | +0.8% | +0.6 | +0.3 | -0.1 | -0.0 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.0% | +0.8% | +0.9 | +0.0 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.7% | -0.7% | -0.3 | -0.4 | -0.1 | -0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.7% | +0.7% | +0.6 | +0.3 | -0.1 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.2% | +0.7% | +0.0 | +0.7 | +0.4 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.3% | +0.7% | +0.0 | +0.7 | +0.4 | +0.1 |
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.6 | -0.1 | -0.0 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | +0.0 | -0.2 | -0.5 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +0.6% | +0.6% | +0.4 | +0.2 | +0.0 | +0.0 |
-| Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | +0.6% | +0.6% | +0.6 | -0.0 | +0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -52,7 +52,6 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → LGEINDIA | -0.72% | -0.36% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → LGEINDIA | -1.95% | -0.35% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → LGEINDIA | +1.30% | +0.32% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → LGEINDIA | -0.45% | -0.27% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → LGEINDIA | +0.45% | +0.25% |
 | 2 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → F_URBAN_DEMAND → LGEINDIA | +0.29% | +0.23% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → LGEINDIA | +0.40% | +0.22% |
@@ -62,6 +61,7 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → LGEINDIA | -0.77% | -0.19% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → LGEINDIA | -0.77% | -0.19% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LGEINDIA | -0.75% | -0.19% |
+| 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → LGEINDIA | -0.40% | -0.18% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

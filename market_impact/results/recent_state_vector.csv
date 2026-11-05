@@ -42,7 +42,7 @@ P_RENEWABLE_SUPPORT,0.6,director_override
 F_BATTERY_MATERIALS,0.0,events
 T_ENERGY_TRANSITION,0.3,director_override
 P_US_PHARMA_TARIFF,0.2,events
-P_US_VISA_OUTSOURCING,0.9,events
+P_US_VISA_OUTSOURCING,0.35,director_override
 T_GENAI_SERVICES,0.5,director_override
 P_FDI_RULES,0.5,events
 C_US_CHINA_DECOUPLING,-0.1,events

@@ -30,7 +30,7 @@ A $100k H-1B fee policy (first announced Sep 2025) was blocked in court; White H
 | BANKINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
 | NYKAA | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
 | ETERNAL | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
-| KOTAKBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
+| YESBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |

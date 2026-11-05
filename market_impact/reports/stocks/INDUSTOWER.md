@@ -2,11 +2,11 @@
 *MIDCAP_100 · Telecommunication · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.5%**, **12 months +0.1%** (rank 136 / 103 of 200 for 3m / 12m); beta 0.88
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.0%): 3 months 48%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.7% … P90 +1.9%; plausible 12m relative-return range incl. stock-specific noise: -41.4% … +24.5%
-- Decomposition (12m): 0.5 × forward event exposure +0.2% (3m -0.8%; half assumed priced) + 0.5 × company-specific catalysts +0.8%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.6% (beta-adjusted) vs a realised market-adjusted move of -15.9% — gap +13.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.2%**, **12 months +0.1%** (rank 132 / 96 of 200 for 3m / 12m); beta 0.88
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.0%): 3 months 49%, 12 months 49%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.4% … P90 +2.4%; plausible 12m relative-return range incl. stock-specific noise: -28.7% … +26.9%
+- Decomposition (12m): 0.5 × forward event exposure -0.1% (3m -0.5%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.8%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.8% (beta-adjusted) vs a realised market-adjusted move of -15.9% — gap +13.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -16,16 +16,16 @@
 | Mobile tariff hikes (`P_TELECOM_TARIFFS`) | +10% ARPU via tariff hike | +1.97 | +2.00 | +0.00 | -0.02 | -0.01 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.69 | +1.50 | +0.15 | +0.01 | +0.03 | — |
 | Government AGR/spectrum dues relief for stressed telcos (`NEW_AGR_SPECTRUM_RELIEF`) | +1 = further material relief worth ~Rs20,000 cr NPV | +1.50 | +1.50 | +0.00 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.42 | -0.80 | -0.25 | -0.21 | -0.16 | -1.1% |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.29 | +0.00 | -0.93 | -0.39 | +0.03 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.40 | -0.80 | -0.25 | -0.20 | -0.14 | -1.1% |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.30 | +0.00 | -0.93 | -0.39 | +0.02 | — |
 | Net tenancy exits from towers (Jio/others) (`NEW_TOWER_TENANCY_EXITS`) | +1 = 5,000 net tenancy exits | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.13 | +0.00 | -0.36 | -0.47 | -0.31 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.15 | +0.00 | -0.36 | -0.47 | -0.32 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.01 | +0.00 | -0.66 | -0.32 | -0.03 | +3.5% |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.96 | +0.00 | -0.80 | -0.14 | -0.02 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.97 | +0.00 | -0.80 | -0.14 | -0.03 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.87 | -0.50 | -0.39 | +0.03 | -0.00 | — |
 | US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -0.86 | +0.00 | -0.82 | -0.09 | +0.05 | +9.4% |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +0.85 | +0.00 | +0.28 | +0.33 | +0.23 | — |
 | Foreign portfolio flows into Indian government/corporate bonds (FAR, index-linked) (`NEW_FPI_DEBT_FLOWS`) | +US$5 bn net debt inflow per quarter | +0.79 | +0.00 | +0.72 | +0.05 | +0.02 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +0.77 | +0.00 | +0.28 | +0.31 | +0.18 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -51,11 +51,11 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → INDUSTOWER | +2.40% | +1.80% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → INDUSTOWER | -1.60% | -0.80% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → INDUSTOWER | -1.50% | -0.60% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → INDUSTOWER | -1.00% | -0.60% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → INDUSTOWER | -2.25% | -0.40% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → INDUSTOWER | -1.44% | -0.36% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → INDUSTOWER | -1.44% | -0.36% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → INDUSTOWER | -0.40% | -0.36% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → INDUSTOWER | -0.60% | -0.36% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → INDUSTOWER | -0.60% | -0.36% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → INDUSTOWER | -2.00% | -0.36% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → INDUSTOWER | -1.40% | -0.35% |

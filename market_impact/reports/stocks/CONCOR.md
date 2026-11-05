@@ -2,11 +2,11 @@
 *MIDCAP_100 · Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.3%**, **12 months +0.9%** (rank 26 / 70 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 55%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -24.2% … +38.4%
-- Decomposition (12m): 0.5 × forward event exposure +5.0% (3m +3.0%; half assumed priced) + 0.5 × company-specific catalysts -2.3%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +4.2% (beta-adjusted) vs a realised market-adjusted move of -11.2% — gap +15.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.2%**, **12 months -0.5%** (rank 85 / 126 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 51%, 12 months 49%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.8% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -27.5% … +26.4%
+- Decomposition (12m): 0.5 × forward event exposure +1.8% (3m +0.6%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -2.3%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +3.9% (beta-adjusted) vs a realised market-adjusted move of -11.2% — gap +15.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,18 +14,18 @@
 |---|---|---|---|---|---|---|---|
 | Indian Railways freight/haulage tariff changes (`NEW_RAIL_FREIGHT_TARIFF`) | +1 = +5% haulage/terminal access charges | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
 | Private container train operators and road competition (`NEW_CONTAINER_LOGISTICS_COMPETITION`) | +1 = 2pp rail container market share loss for CONCOR | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +2.56 | +2.50 | +0.14 | -0.06 | -0.02 | — |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.97 | -1.50 | -0.43 | -0.03 | -0.00 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.66 | +0.00 | +1.60 | +0.08 | -0.02 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.64 | +0.00 | +1.60 | +0.08 | -0.03 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +2.60 | +2.50 | +0.14 | -0.01 | -0.03 | — |
+| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.98 | -1.50 | -0.43 | -0.03 | -0.01 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.69 | +0.00 | +1.60 | +0.08 | +0.01 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.67 | +0.00 | +1.60 | +0.08 | -0.00 | — |
 | China+1 manufacturing relocation to India (`T_CHINA_PLUS_ONE`) | +1 | +1.58 | +1.50 | +0.02 | +0.06 | +0.01 | — |
 | Red Sea / Suez shipping disruption (`C_RED_SEA`) | +1 = disruption | -1.58 | -1.00 | -0.58 | +0.00 | +0.00 | — |
 | Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | -1.24 | +0.00 | -1.02 | -0.21 | -0.00 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.18 | +0.00 | +0.67 | +0.37 | +0.14 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.18 | +0.00 | +0.90 | +0.29 | -0.01 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.20 | +0.00 | +0.90 | +0.29 | +0.01 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.20 | +0.00 | +0.67 | +0.37 | +0.15 | — |
 | Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.09 | +0.00 | -0.31 | -0.67 | -0.10 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.05 | +0.00 | +1.00 | +0.05 | -0.00 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.05 | +1.00 | +0.07 | -0.02 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.02 | +0.00 | +1.00 | +0.05 | -0.03 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -40,8 +40,8 @@
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.3 | -0.5 | +0.0 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.2% | +0.8% | +0.0 | +0.7 | +0.4 | +0.1 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.0% | +0.8% | +0.9 | +0.0 | +0.1 | +0.0 |
-| India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.55 | +1.4% | +0.7% | +1.2 | +0.1 | +0.0 | -0.0 |
-| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +0.7% | +0.7% | +0.7 | +0.1 | -0.0 | -0.0 |
+| India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.55 | +1.4% | +0.8% | +1.2 | +0.1 | +0.0 | +0.0 |
+| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +0.7% | +0.7% | +0.7 | +0.1 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).

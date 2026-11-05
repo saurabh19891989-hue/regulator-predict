@@ -20,10 +20,10 @@ IEX day-ahead prices hit the Rs20/kWh ceiling on 19 Sep (ET); Business Standard 
 | ADANIPOWER | +8.3 | +8.5 | -0.2 | +0.0 | +0.0 |
 | JSWENERGY | +6.5 | +6.6 | -0.1 | +0.0 | +0.0 |
 | TATAPOWER | +3.8 | +3.6 | +0.2 | +0.0 | +0.0 |
-| COALINDIA | +3.8 | +2.8 | +1.0 | +0.0 | +0.0 |
 | ENRIN | +3.7 | +3.0 | +0.7 | +0.0 | +0.0 |
 | ADANIENSOL | +3.3 | +2.7 | +0.6 | +0.0 | +0.0 |
 | ADANIGREEN | +3.3 | +3.3 | +0.0 | +0.0 | +0.0 |
+| COALINDIA | +3.3 | +2.8 | +0.5 | +0.0 | +0.0 |
 | BHEL | +3.2 | +3.0 | +0.2 | +0.0 | +0.0 |
 | NLCINDIA | +2.5 | +2.5 | +0.0 | +0.0 | +0.0 |
 | IREDA | +2.5 | +2.5 | +0.0 | +0.0 | +0.0 |
@@ -52,7 +52,7 @@ IEX day-ahead prices hit the Rs20/kWh ceiling on 19 Sep (ET); Business Standard 
 | KEI | +1.0 | +0.0 | +1.0 | +0.0 | +0.0 |
 | POLYCAB | +1.0 | +0.0 | +1.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 82%, 2: 18%, 3: 0%, 4: 0%
+Share of absolute impact by order: 1: 83%, 2: 17%, 3: 0%, 4: 0%
 
 ## Sources
 - 2026-09-19 IEX power prices hit Rs20/unit ceiling (ET) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=IEX+power+prices+hit+Rs+20+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en

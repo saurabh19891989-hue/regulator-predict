@@ -2,29 +2,29 @@
 *MIDCAP_100 · Textiles · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.2%**, **12 months -1.2%** (rank 174 / 150 of 200 for 3m / 12m); beta 0.84
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.2%): 3 months 46%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.3% … P90 +1.3%; plausible 12m relative-return range incl. stock-specific noise: -28.5% … +21.3%
-- Decomposition (12m): 0.5 × forward event exposure -2.1% (3m -1.6%; half assumed priced) + 0.5 × company-specific catalysts +0.5%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -4.6% (beta-adjusted) vs a realised market-adjusted move of -7.8% — gap +3.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.9%**, **12 months -1.1%** (rank 182 / 154 of 200 for 3m / 12m); beta 0.84
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.2%): 3 months 47%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.7% … P90 +1.2%; plausible 12m relative-return range incl. stock-specific noise: -31.3% … +26.5%
+- Decomposition (12m): 0.5 × forward event exposure -2.2% (3m -1.3%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.5%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -4.7% (beta-adjusted) vs a realised market-adjusted move of -7.8% — gap +3.0 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Innerwear share competition (mass and D2C) (`NEW_INNERWEAR_COMPETITION`) | +1 = 2pp share loss to rivals | -4.00 | -4.00 | +0.00 | +0.00 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +3.54 | +3.50 | +0.00 | +0.07 | -0.04 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +3.60 | +3.50 | +0.00 | +0.07 | +0.02 | — |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.16 | +2.00 | +0.13 | +0.00 | +0.04 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +2.03 | +1.80 | +0.00 | +0.12 | +0.11 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -2.01 | -2.00 | +0.00 | +0.00 | -0.01 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.92 | +1.80 | +0.00 | +0.12 | -0.00 | — |
 | India CPI inflation (`F_CPI_IN`) | +1 pp | -1.89 | +0.00 | -1.27 | -0.54 | -0.09 | — |
 | GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.83 | +1.00 | +0.63 | +0.11 | +0.09 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.62 | +0.00 | +1.13 | +0.25 | +0.24 | — |
 | India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.53 | -1.00 | -0.07 | -0.35 | -0.11 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.53 | +0.00 | +1.13 | +0.25 | +0.15 | — |
 | Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.28 | +0.00 | -0.48 | -0.43 | -0.37 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.23 | +0.00 | -0.81 | -0.39 | -0.04 | +3.5% |
 | Cotton price (`F_COTTON`) | +10% cotton | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | +1.9% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.18 | -0.50 | -0.32 | -0.25 | -0.11 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.16 | -0.50 | -0.32 | -0.25 | -0.09 | -1.1% |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.11 | +0.00 | -1.08 | -0.02 | -0.01 | — |
 
 ## Events affecting this stock (event → company)
@@ -34,7 +34,7 @@
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.4% | -3.4% | -1.1 | -1.5 | -0.6 | -0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.9% | -2.9% | -2.8 | +0.0 | -0.0 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.4% | +2.7% | +5.0 | +0.3 | +0.0 | +0.1 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.4 | -0.3 | -0.2 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.4 | -0.3 | -0.3 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.0 | -0.2 | +0.0 |
 | US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.3 | -0.0 | +0.1 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.2% | +1.2% | +1.0 | +0.2 | +0.0 | +0.0 |
@@ -50,13 +50,13 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PAGEIND | +5.00% | +2.50% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → PAGEIND | -1.60% | -0.80% |
 | 1 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → PAGEIND | -0.80% | -0.64% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → PAGEIND | -1.00% | -0.60% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → PAGEIND | -3.00% | -0.54% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → PAGEIND | -1.92% | -0.48% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → PAGEIND | -1.92% | -0.48% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → PAGEIND | -1.87% | -0.47% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → PAGEIND | +0.54% | +0.38% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → PAGEIND | -0.40% | -0.36% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → PAGEIND | -0.60% | -0.36% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → PAGEIND | -0.60% | -0.36% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → PAGEIND | -2.00% | -0.36% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → PAGEIND | +1.00% | +0.35% |

@@ -2,11 +2,11 @@
 *NIFTY_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.1%**, **12 months +0.4%** (rank 109 / 94 of 200 for 3m / 12m); beta 1.12
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.0%): 3 months 50%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.9% … P90 +5.2%; plausible 12m relative-return range incl. stock-specific noise: -18.1% … +24.0%
-- Decomposition (12m): 0.5 × forward event exposure +1.6% (3m +0.5%; half assumed priced) + 0.5 × company-specific catalysts +0.0%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +4.7% (beta-adjusted) vs a realised market-adjusted move of -1.9% — gap +6.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.1%**, **12 months +0.1%** (rank 117 / 94 of 200 for 3m / 12m); beta 1.12
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.0%): 3 months 50%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.6% … P90 +4.7%; plausible 12m relative-return range incl. stock-specific noise: -24.1% … +26.2%
+- Decomposition (12m): 0.5 × forward event exposure +0.8% (3m +0.1%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +4.4% (beta-adjusted) vs a realised market-adjusted move of -1.9% — gap +6.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -16,16 +16,16 @@
 | Indian vehicle demand (`F_AUTO_DEMAND_IN`) | +10% volumes | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
 | Critical-mineral supply tightness (China export controls on rare earths, magnets, graphite, Ga/Ge) (`NEW_RARE_EARTH_SUPPLY`) | +1 = new/tighter export-control round | -2.06 | -1.50 | -0.56 | +0.00 | +0.00 | — |
 | Competitive intensity in Indian two-wheelers/EV two-wheelers (`NEW_2W_COMPETITIVE_INTENSITY`) | +1 = price/share war episode | -2.00 | -2.00 | +0.00 | +0.00 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.69 | +0.00 | +1.92 | +0.02 | -0.24 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.60 | +2.00 | -0.08 | -0.15 | -0.16 | -1.1% |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.85 | +0.00 | +1.92 | +0.02 | -0.09 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.62 | +2.00 | -0.08 | -0.15 | -0.14 | -1.1% |
 | Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +1.57 | +1.50 | +0.00 | +0.07 | +0.00 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.33 | +0.00 | -1.15 | -0.15 | -0.04 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.21 | +0.00 | +1.31 | +0.04 | -0.14 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | — |
 | EV incentives / mandates (`P_EV_POLICY`) | +1 = stronger EV push | +0.99 | +1.00 | +0.00 | -0.01 | +0.00 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.96 | +0.00 | +1.31 | +0.04 | -0.39 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | +0.94 | +0.80 | +0.21 | +0.01 | -0.07 | +0.0% |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | +0.92 | +0.80 | +0.21 | +0.01 | -0.10 | +0.0% |
 | US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -0.83 | +0.00 | -0.72 | -0.19 | +0.08 | — |
-| Europe growth (`F_EU_GDP`) | +1 pp | +0.79 | +0.80 | +0.00 | +0.00 | -0.01 | — |
+| Europe growth (`F_EU_GDP`) | +1 pp | +0.80 | +0.80 | +0.00 | +0.00 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -40,8 +40,8 @@
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.7% | -0.7% | -0.7 | -0.0 | +0.1 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.6 | -0.0 | -0.0 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.2% | -0.5% | -0.4 | -0.6 | -0.2 | -0.1 |
-| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -0.8% | -0.5% | -0.6 | -0.1 | -0.2 | +0.1 |
 | Budget FY2027-28: FY27 deficit overshoot confirmed and consolidation path slowed (`EV_BUDGET_FY28_FISCAL_SLIPPAGE`) | scheduled | 0.50 | -0.9% | -0.4% | -1.0 | +0.0 | +0.0 | -0.0 |
+| CAFE-III fuel-efficiency norms notified (30 Sep 2026); no small-car carve-out; 3x credit for BEVs (`EV_CAFE3_NOTIFIED`) | occurred | 1.00 | +0.4% | +0.4% | +0.4 | +0.0 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -54,7 +54,6 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BAJAJ-AUTO | +2.60% | +0.47% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → BAJAJ-AUTO | -0.92% | -0.46% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BAJAJ-AUTO | +1.76% | +0.44% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BAJAJ-AUTO | -0.60% | -0.36% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → BAJAJ-AUTO | -1.20% | -0.30% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → BAJAJ-AUTO | -2.00% | -0.30% |
 | 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → BAJAJ-AUTO | +0.39% | +0.28% |
@@ -62,6 +61,7 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_INDIA_EU_FTA_SIGNED ⇒ F_EU_GDP → BAJAJ-AUTO | +0.24% | +0.22% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → BAJAJ-AUTO | +0.40% | +0.22% |
 | 2 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → BAJAJ-AUTO | +0.39% | +0.22% |
+| 1 | EV_INDIA_US_TALKS_COLLAPSE ⇒ P_US_TARIFF_INDIA → BAJAJ-AUTO | -1.20% | -0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

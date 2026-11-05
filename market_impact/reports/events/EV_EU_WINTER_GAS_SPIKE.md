@@ -16,7 +16,7 @@ EU storage at record seasonal low (IEEFA 9 Oct). Spike pushes Asian LNG; India s
 |---|---|---|---|---|---|
 | MCX | +1.2 | +1.2 | +0.0 | +0.0 | +0.0 |
 | ONGC | +1.2 | +1.2 | +0.0 | +0.0 | +0.0 |
-| COALINDIA | +1.2 | +0.0 | +0.9 | +0.3 | +0.0 |
+| COALINDIA | +1.1 | +0.0 | +0.9 | +0.2 | +0.0 |
 | JSWENERGY | +0.9 | +0.0 | +0.7 | +0.1 | +0.0 |
 | TATAPOWER | +0.8 | +0.0 | +0.7 | +0.1 | +0.0 |
 | OIL | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |

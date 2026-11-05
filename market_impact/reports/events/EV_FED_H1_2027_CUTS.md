@@ -25,16 +25,16 @@ Labour weakness (+29k payrolls), AI capex retrenchment or oil collapse on an Ira
 | POLICYBZR | +4.2 | +3.0 | +1.4 | -0.2 | -0.0 |
 | MOTILALOFS | +3.5 | +0.0 | +3.1 | +0.4 | -0.0 |
 | MUTHOOTFIN | +3.2 | +0.0 | +2.9 | +0.3 | +0.0 |
-| YESBANK | +3.1 | +0.0 | +2.5 | +0.6 | +0.0 |
 | ADANIGREEN | +2.8 | +0.0 | +2.3 | +0.5 | -0.0 |
 | NYKAA | +2.8 | +1.5 | +0.9 | +0.3 | +0.0 |
 | INDUSINDBK | +2.7 | +0.8 | +1.5 | +0.4 | +0.0 |
 | MPHASIS | +2.7 | +1.8 | +0.8 | +0.1 | -0.0 |
-| BAJFINANCE | +2.6 | +0.0 | +2.1 | +0.4 | +0.1 |
-| PRESTIGE | +2.6 | +0.3 | +1.8 | +0.5 | -0.0 |
-| TATACAP | +2.6 | +0.0 | +1.9 | +0.6 | +0.1 |
+| JIOFIN | +2.6 | +0.0 | +2.0 | +0.5 | +0.1 |
 | NAUKRI | +2.5 | +0.0 | +2.3 | +0.2 | -0.1 |
 | ICICIAMC | +2.4 | +0.0 | +2.5 | +0.0 | -0.0 |
+| PFC | +2.4 | +0.0 | +2.0 | +0.4 | -0.1 |
+| COFORGE | +2.3 | +1.0 | +1.3 | +0.0 | -0.0 |
+| YESBANK | +2.3 | +0.0 | +1.8 | +0.5 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -55,7 +55,7 @@ Labour weakness (+29k payrolls), AI capex retrenchment or oil collapse on an Ira
 | DRREDDY | -0.0 | +0.0 | +0.1 | -0.1 | +0.0 |
 | VOLTAS | -0.0 | +0.0 | -0.3 | +0.4 | -0.0 |
 
-Share of absolute impact by order: 1: 15%, 2: 69%, 3: 14%, 4: 2%
+Share of absolute impact by order: 1: 15%, 2: 68%, 3: 14%, 4: 2%
 
 ## Sources
 - 2026-09-07 White House ups pressure on Kevin Warsh's Fed as Wall Street expects hike - Fortune https://news.google.com/rss/search?q=White%20House%20ups%20pressure%20on%20Kevin%20Warsh%27s%20Fed%20as%20Wall%20Street%20expects%20hike%20-%20Fortune&hl=en-IN&gl=IN&ceid=IN:en

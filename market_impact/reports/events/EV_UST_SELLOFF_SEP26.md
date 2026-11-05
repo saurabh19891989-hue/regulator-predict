@@ -27,13 +27,13 @@
 | LTM | +0.3 | +0.5 | -0.4 | +0.2 | +0.1 |
 | ONGC | +0.3 | +0.0 | +0.2 | +0.2 | -0.1 |
 | OIL | +0.3 | +0.0 | +0.2 | +0.2 | -0.1 |
-| SAIL | +0.3 | +0.0 | +0.1 | +0.2 | +0.1 |
 | RVNL | +0.3 | +0.0 | +0.0 | +0.3 | -0.0 |
+| SAIL | +0.3 | +0.0 | +0.1 | +0.2 | +0.1 |
 | LICI | +0.2 | +0.0 | -0.3 | +0.5 | +0.0 |
 | NMDC | +0.2 | +0.0 | +0.1 | +0.1 | -0.0 |
 | SRF | +0.2 | +0.0 | +0.1 | +0.1 | -0.0 |
-| PIIND | +0.1 | +0.0 | +0.1 | +0.1 | -0.0 |
 | ENRIN | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| PIIND | +0.1 | +0.0 | +0.1 | +0.1 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -43,18 +43,18 @@
 | BSE | -2.3 | +0.0 | -2.1 | -0.5 | +0.3 |
 | ADANIGREEN | -2.1 | +0.0 | -2.1 | -0.1 | +0.2 |
 | VEDL | -1.9 | -1.0 | -0.5 | -0.0 | -0.3 |
-| YESBANK | -1.8 | +0.0 | -2.0 | -0.0 | +0.2 |
 | INDUSINDBK | -1.8 | -1.0 | -1.2 | +0.3 | +0.1 |
 | MOTILALOFS | -1.8 | +0.0 | -2.4 | +0.3 | +0.3 |
+| JIOFIN | -1.8 | +0.0 | -1.8 | -0.1 | +0.1 |
 | INDIGO | -1.7 | -0.8 | -0.9 | -0.1 | +0.1 |
+| BAJFINANCE | -1.6 | +0.0 | -1.6 | -0.0 | +0.0 |
 | PFC | -1.6 | +0.0 | -1.7 | -0.1 | +0.2 |
 | ADANIENT | -1.6 | +0.0 | -1.6 | -0.1 | +0.1 |
-| TATACAP | -1.5 | +0.0 | -1.4 | -0.2 | +0.1 |
 | SHRIRAMFIN | -1.5 | -0.7 | -0.8 | -0.1 | +0.1 |
 | ADANIENSOL | -1.5 | +0.0 | -1.6 | -0.1 | +0.2 |
 | PHOENIXLTD | -1.5 | +0.0 | -1.6 | -0.0 | +0.1 |
 
-Share of absolute impact by order: 1: 6%, 2: 73%, 3: 14%, 4: 7%
+Share of absolute impact by order: 1: 7%, 2: 73%, 3: 14%, 4: 7%
 
 ## Sources
 - 2026-09-23 10-year Treasury yield rockets to 19-year high - CNBC https://news.google.com/rss/search?q=10-year%20Treasury%20yield%20rockets%20to%2019-year%20high&hl=en-IN&gl=IN&ceid=IN:en

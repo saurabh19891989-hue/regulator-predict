@@ -2,11 +2,11 @@
 *NIFTY_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.9%**, **12 months -3.6%** (rank 188 / 188 of 200 for 3m / 12m); beta 0.87
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.9%): 3 months 45%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.3% … P90 -0.3%; plausible 12m relative-return range incl. stock-specific noise: -47.5% … +33.7%
-- Decomposition (12m): 0.5 × forward event exposure -5.6% (3m -2.1%; half assumed priced) + 0.5 × company-specific catalysts -0.7%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.1% (beta-adjusted) vs a realised market-adjusted move of -7.4% — gap +5.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -1.3%**, **12 months -1.5%** (rank 193 / 169 of 200 for 3m / 12m); beta 0.87
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.9%): 3 months 47%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.2% … P90 +2.1%; plausible 12m relative-return range incl. stock-specific noise: -41.4% … +37.2%
+- Decomposition (12m): 0.5 × forward event exposure -1.7% (3m -1.2%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.7%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.0% (beta-adjusted) vs a realised market-adjusted move of -7.4% — gap +7.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,17 +14,17 @@
 |---|---|---|---|---|---|---|---|
 | GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -4.94 | -5.00 | +0.06 | +0.00 | +0.00 | — |
 | US H-1B / outsourcing restrictions (`P_US_VISA_OUTSOURCING`) | +1 = material tightening | -4.00 | -4.00 | +0.00 | +0.00 | +0.00 | — |
-| US growth (`F_US_GDP`) | +1 pp | +2.96 | +2.50 | +0.57 | -0.04 | -0.07 | — |
+| US growth (`F_US_GDP`) | +1 pp | +2.97 | +2.50 | +0.57 | -0.04 | -0.07 | — |
 | US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.57 | +1.50 | +0.10 | -0.03 | +0.00 | +1.2% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.34 | +1.50 | +0.00 | -0.09 | -0.07 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.35 | +1.50 | +0.00 | -0.09 | -0.06 | -1.1% |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.21 | -1.00 | -0.24 | +0.00 | +0.02 | +3.5% |
 | US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.10 | +0.00 | -0.90 | -0.21 | +0.00 | — |
 | US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.07 | -0.70 | -0.22 | -0.18 | +0.03 | +11.2% |
-| Europe growth (`F_EU_GDP`) | +1 pp | +0.99 | +1.00 | +0.00 | +0.00 | -0.01 | — |
+| Europe growth (`F_EU_GDP`) | +1 pp | +1.00 | +1.00 | +0.00 | +0.00 | +0.00 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -0.90 | -0.90 | +0.00 | +0.00 | +0.00 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.49 | +0.00 | -0.50 | -0.01 | +0.01 | — |
 | USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +0.49 | +0.00 | +0.40 | +0.08 | +0.01 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | +0.44 | +0.30 | +0.15 | +0.02 | -0.03 | +0.0% |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | +0.44 | +0.30 | +0.15 | +0.02 | -0.04 | +0.0% |
 | General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.35 | +0.00 | -0.36 | +0.01 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
@@ -67,9 +67,9 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | P_US_VISA_OUTSOURCING → INFY | +0.90 | events | -3.60% |
 | 1 | F_US_GDP → INFY | +1.20 | events | +3.00% |
 | 1 | T_GENAI_SERVICES → INFY | +0.50 | director_override | -2.50% |
+| 1 | P_US_VISA_OUTSOURCING → INFY | +0.35 | director_override | -1.40% |
 | 1 | F_GSEC_10Y_IN → INFY | +1.55 | director_override | -1.40% |
 | 1 | F_FED_FUNDS → INFY | +1.62 | observed | -1.13% |
 | 1 | F_USDINR → INFY | -0.37 | observed | -0.55% |

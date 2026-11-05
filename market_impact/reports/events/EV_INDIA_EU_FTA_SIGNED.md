@@ -17,42 +17,42 @@ The Hindu (24 Sep) and trade press report signing on 16 Dec; Goyal-Sefcovic talk
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
+| LAURUSLABS | +0.6 | +0.6 | -0.0 | +0.0 | +0.0 |
 | PIIND | +0.6 | +0.6 | -0.0 | +0.0 | +0.0 |
-| LAURUSLABS | +0.6 | +0.6 | -0.0 | +0.0 | -0.0 |
-| TMPV | +0.6 | +0.6 | -0.0 | -0.0 | -0.0 |
-| AUROPHARMA | +0.5 | +0.6 | -0.0 | +0.0 | -0.0 |
+| TMPV | +0.6 | +0.6 | -0.0 | +0.0 | -0.0 |
+| AUROPHARMA | +0.5 | +0.6 | -0.0 | +0.0 | +0.0 |
 | PERSISTENT | +0.5 | +0.4 | +0.1 | -0.0 | -0.0 |
-| TMCV | +0.5 | +0.4 | +0.0 | +0.0 | -0.0 |
-| WIPRO | +0.5 | +0.5 | -0.0 | +0.0 | -0.0 |
-| MOTHERSON | +0.4 | +0.4 | -0.0 | +0.0 | -0.0 |
-| SIEMENS | +0.4 | +0.4 | +0.0 | -0.0 | -0.0 |
+| TMCV | +0.5 | +0.4 | +0.0 | +0.0 | +0.0 |
+| WIPRO | +0.5 | +0.5 | -0.0 | +0.0 | +0.0 |
+| MOTHERSON | +0.4 | +0.4 | -0.0 | +0.0 | +0.0 |
+| SIEMENS | +0.4 | +0.4 | +0.0 | +0.0 | -0.0 |
 | DIXON | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | TECHM | +0.4 | +0.4 | +0.0 | -0.0 | -0.0 |
-| DIVISLAB | +0.4 | +0.4 | -0.0 | +0.0 | -0.0 |
+| DIVISLAB | +0.4 | +0.4 | -0.0 | +0.0 | +0.0 |
 | TCS | +0.4 | +0.3 | +0.1 | -0.0 | -0.0 |
-| HCLTECH | +0.3 | +0.4 | -0.0 | +0.0 | -0.0 |
+| HCLTECH | +0.3 | +0.4 | -0.0 | +0.0 | +0.0 |
 | TATASTEEL | +0.3 | +0.4 | -0.0 | -0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| VAML | -0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
 | NATIONALUM | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
 | OIL | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| DRREDDY | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| HINDCOPPER | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
+| VAML | -0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
+| DRREDDY | -0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
+| HINDCOPPER | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 | NMDC | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| LUPIN | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
-| JINDALSTEL | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| ONGC | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| SOLARINDS | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| HINDZINC | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| APARINDS | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
+| LUPIN | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| HINDZINC | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| ONGC | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 | ZYDUSLIFE | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
-| RVNL | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| TORNTPHARM | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
+| JINDALSTEL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| SUNPHARMA | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| APARINDS | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| COCHINSHIP | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
+| VEDL | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 62%, 2: 20%, 3: 14%, 4: 4%
+Share of absolute impact by order: 1: 60%, 2: 19%, 3: 16%, 4: 5%
 
 ## Sources
 - 2026-09-24 India-EU FTA to be signed on December 16 - The Hindu https://news.google.com/rss/search?q=India+EU+FTA+signing+December+16+when:120d&hl=en-IN&gl=IN&ceid=IN:en

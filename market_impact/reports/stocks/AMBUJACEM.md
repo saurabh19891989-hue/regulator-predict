@@ -2,46 +2,46 @@
 *NIFTY_NEXT_50 · Construction Materials · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +0.7%** (rank 65 / 83 of 200 for 3m / 12m); beta 1.13
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.5%): 3 months 53%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.4% … P90 +5.0%; plausible 12m relative-return range incl. stock-specific noise: -16.2% … +21.3%
-- Decomposition (12m): 0.5 × forward event exposure +0.4% (3m -0.2%; half assumed priced) + 0.5 × company-specific catalysts +1.9%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.7% (beta-adjusted) vs a realised market-adjusted move of -16.7% — gap +18.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.7%**, **12 months +1.0%** (rank 33 / 47 of 200 for 3m / 12m); beta 1.13
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.5%): 3 months 54%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +4.5%; plausible 12m relative-return range incl. stock-specific noise: -18.8% … +21.5%
+- Decomposition (12m): 0.5 × forward event exposure +0.7% (3m -0.4%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.9%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.4% (beta-adjusted) vs a realised market-adjusted move of -16.7% — gap +18.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Indian cement trade price (realisation) (`NEW_CEMENT_PRICE_IN`) | +Rs10/bag (~+2.5%) | +6.50 | +6.50 | +0.00 | +0.00 | +0.00 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +2.45 | +2.50 | +0.00 | -0.06 | +0.01 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +2.48 | +2.50 | +0.00 | -0.02 | +0.01 | — |
 | International thermal coal price (`F_COAL_INTL`) | +15% seaborne thermal coal | -2.40 | -2.40 | +0.00 | +0.00 | +0.00 | +0.0% |
-| Affordable-housing / home-loan support (`P_HOUSING_POLICY`) | +1 = stronger support | +2.38 | +2.00 | +0.40 | +0.00 | -0.02 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +2.09 | +2.20 | +0.00 | -0.03 | -0.08 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.83 | +0.00 | -1.20 | -0.43 | -0.20 | — |
+| Affordable-housing / home-loan support (`P_HOUSING_POLICY`) | +1 = stronger support | +2.39 | +2.00 | +0.40 | +0.00 | -0.01 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +2.22 | +2.20 | +0.00 | +0.04 | -0.03 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.86 | +0.00 | -1.20 | -0.43 | -0.23 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.49 | -1.20 | -0.24 | -0.04 | -0.02 | — |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -1.29 | +0.00 | -1.09 | -0.14 | -0.06 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.25 | -1.00 | -0.06 | -0.15 | -0.04 | +0.0% |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.03 | +0.00 | -0.81 | -0.19 | -0.03 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.86 | -0.60 | -0.10 | -0.12 | -0.05 | -1.1% |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -1.30 | +0.00 | -1.09 | -0.14 | -0.07 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.28 | -1.00 | -0.06 | -0.18 | -0.04 | +0.0% |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.05 | +0.00 | -0.81 | -0.19 | -0.05 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.83 | -0.60 | -0.10 | -0.09 | -0.04 | -1.1% |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.81 | +0.00 | -0.70 | -0.09 | -0.02 | — |
 | Mining royalty / mineral tax burden (`P_MINING_ROYALTY`) | +1 = higher | -0.80 | -0.80 | +0.00 | +0.00 | +0.00 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.79 | +0.00 | -0.70 | -0.09 | +0.00 | — |
-| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | +0.77 | +0.00 | +0.64 | +0.04 | +0.09 | — |
+| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | +0.79 | +0.00 | +0.64 | +0.04 | +0.11 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.9% | +1.9% | +2.2 | -0.1 | -0.1 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.2% | +2.2% | +2.2 | +0.1 | -0.1 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.2 | -0.3 | +0.0 | -0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.9 | -0.2 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.0% | +1.1% | +1.3 | +0.1 | +0.5 | +0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.3% | -0.8% | -2.2 | -0.7 | -0.2 | -0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.9 | -0.2 | -0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.1% | +1.1% | +1.3 | +0.1 | +0.6 | +0.1 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.4% | -0.8% | -2.2 | -0.7 | -0.3 | -0.2 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.5% | -0.6% | -1.2 | -0.3 | +0.0 | -0.0 |
 | Imported-coal blending mandate/Sec 11 extension for power plants (winter-summer 2027) (`EV_COAL_IMPORT_BLEND_REVIVED`) | anticipated | 0.50 | -1.2% | -0.6% | -1.2 | +0.0 | +0.0 | +0.0 |
 | LNG supply disruption: ~90 delayed Qatar cargoes to Petronet; India re-sources to US/UAE; Henry Hub proxy only +12% in 3m (`EV_LNG_HORMUZ_DISRUPTION`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.5 | +0.0 | +0.0 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.4 | -0.1 | -0.0 |
-| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -0.8% | -0.5% | -0.5 | -0.3 | +0.0 | -0.0 |
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | -1.3% | -0.4% | +0.0 | -1.1 | -0.1 | -0.1 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -2.4% | -0.4% | -2.0 | -0.5 | +0.0 | -0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.4% | -0.4% | -0.2 | -0.2 | -0.1 | +0.0 |
+| RBI MPC Feb 2027 (~5 Feb, just after Budget): hikes 25 bp (`EV_RBI_FEB27_HIKE25`) | scheduled | 0.27 | -1.5% | -0.4% | -1.2 | -0.3 | +0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -53,15 +53,15 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.50% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → AMBUJACEM | +0.44% | +0.40% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.32% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → AMBUJACEM | -0.48% | -0.29% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COAL_INTL → AMBUJACEM | -0.77% | -0.27% |
 | 2 | EV_EU_WINTER_GAS_SPIKE ⇒ F_GAS_GLOBAL → F_COAL_INTL → AMBUJACEM | -1.20% | -0.24% |
 | 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → AMBUJACEM | -4.50% | -0.23% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.22% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_BRENT → AMBUJACEM | +0.72% | +0.18% |
 | 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_GAS_GLOBAL → F_COAL_INTL → AMBUJACEM | +0.32% | +0.18% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → AMBUJACEM | -0.69% | -0.17% |
 | 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_GOVT_CAPEX → AMBUJACEM | +0.22% | +0.15% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.14% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → AMBUJACEM | -0.78% | -0.14% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

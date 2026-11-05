@@ -2,11 +2,11 @@
 *NIFTY_NEXT_50 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months +1.1%** (rank 80 / 61 of 200 for 3m / 12m); beta 1.00
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.3%): 3 months 51%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.1% … P90 +4.2%; plausible 12m relative-return range incl. stock-specific noise: -23.1% … +42.3%
-- Decomposition (12m): 0.5 × forward event exposure +1.2% (3m +0.6%; half assumed priced) + 0.5 × company-specific catalysts +2.0%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.2% (beta-adjusted) vs a realised market-adjusted move of -16.6% — gap +18.7 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.9%**, **12 months +1.4%** (rank 24 / 37 of 200 for 3m / 12m); beta 1.00
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.3%): 3 months 52%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.1% … P90 +5.7%; plausible 12m relative-return range incl. stock-specific noise: -37.5% … +39.9%
+- Decomposition (12m): 0.5 × forward event exposure +1.3% (3m +1.4%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +2.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.0% (beta-adjusted) vs a realised market-adjusted move of -16.6% — gap +18.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,16 +14,16 @@
 |---|---|---|---|---|---|---|---|
 | Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +2.50 | +1.60 | +0.82 | +0.08 | +0.00 | — |
 | Indian power exchange (IEX) prices (`F_POWER_PRICE_IN`) | +15% average spot power price | +2.30 | +2.30 | +0.00 | +0.00 | +0.00 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.00 | +1.80 | +0.13 | +0.03 | +0.04 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.99 | +1.80 | +0.13 | +0.03 | +0.04 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.92 | -1.80 | -0.12 | +0.00 | +0.00 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.77 | +0.00 | -1.24 | -0.48 | -0.05 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -1.65 | -0.50 | -0.80 | -0.43 | +0.08 | — |
-| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +1.63 | +1.50 | +0.06 | +0.06 | +0.01 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.79 | +0.00 | -1.24 | -0.48 | -0.07 | — |
+| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +1.65 | +1.50 | +0.06 | +0.06 | +0.02 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.60 | -1.20 | -0.40 | +0.01 | -0.01 | — |
 | Power market / DISCOM reform (`P_POWER_REFORM`) | +1 = reform progress | +1.54 | +2.00 | -0.46 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.43 | -0.60 | -0.38 | -0.23 | -0.22 | -1.1% |
-| Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | — |
-| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | +1.18 | +0.00 | +0.50 | +0.48 | +0.20 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -1.53 | -0.50 | -0.80 | -0.37 | +0.15 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.39 | -0.60 | -0.38 | -0.21 | -0.20 | -1.1% |
+| Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -1.21 | -1.20 | +0.00 | +0.00 | -0.01 | — |
+| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | +1.16 | +0.00 | +0.50 | +0.48 | +0.18 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.16 | +0.00 | -0.74 | -0.37 | -0.04 | +3.5% |
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | -0.98 | -0.80 | -0.09 | -0.09 | +0.00 | — |
 
@@ -32,12 +32,12 @@
 |---|---|---|---|---|---|---|---|---|
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +8.3% | +8.3% | +8.5 | -0.2 | +0.0 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.4% | -4.4% | -4.0 | -0.3 | -0.1 | -0.1 |
-| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +9.3% | +3.7% | +9.6 | -0.2 | +0.0 | -0.0 |
+| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +9.2% | +3.7% | +9.6 | -0.2 | -0.0 | -0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.9% | -2.9% | -2.9 | +0.0 | +0.0 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.0% | +2.5% | +4.5 | +0.3 | +0.1 | +0.1 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.4 | -0.6 | -0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.4 | -0.6 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.0% | -2.0% | -2.0 | +0.0 | +0.0 | -0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | +1.5% | +1.5% | +1.0 | +0.6 | +0.1 | -0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | +1.4% | +1.4% | +1.0 | +0.6 | -0.0 | -0.1 |
 | AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -5.2% | -1.3% | +0.0 | -4.7 | -0.6 | +0.0 |
 | Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -6.9% | -1.2% | -6.5 | -0.5 | +0.0 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.0 | -0.2 | +0.0 |
@@ -54,7 +54,6 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIPOWER | -1.44% | -0.72% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → ADANIPOWER | +1.00% | +0.60% |
 | 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_POWER_PRICE_IN → ADANIPOWER | +1.15% | +0.57% |
-| 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ADANIPOWER | -0.90% | -0.54% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ADANIPOWER | -1.20% | -0.50% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ADANIPOWER | -2.70% | -0.49% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIPOWER | -1.73% | -0.43% |
@@ -62,6 +61,7 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPOWER | -1.68% | -0.42% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → F_POWER_PRICE_IN → ADANIPOWER | -0.53% | -0.36% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → ADANIPOWER | -0.50% | -0.34% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → ADANIPOWER | -0.36% | -0.32% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

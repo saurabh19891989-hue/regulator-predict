@@ -384,6 +384,72 @@
    "by": "RT_TOP_B"
   },
   {
+   "ticker": "BAJAJFINSV",
+   "match": "Bajaj Finance QIP",
+   "drop": true,
+   "reason": "[RT_BOT_A] BAJFINANCE's own QIP event (p 0.7) already reaches BAJAJFINSV through the 0.75 holding link (company-event propagation in mi/graph.py). Subscribing to warrants at market price is not value-destructive for the parent.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "JIOFIN",
+   "match": "Jio Platforms listing",
+   "drop": true,
+   "reason": "[RT_BOT_A] Occurred: Jio Platforms listed on 28 Oct 2026 after the 21-23 Oct IPO (Livemint/Moneycontrol 27 Oct). The reaction is in the realised price.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "PERSISTENT",
+   "match": "Nvidia results",
+   "drop": true,
+   "reason": "[RT_BOT_A] Duplicates catalogue EV_NVDA_NOV17_BEAT (p 0.62), which already reaches the stock via F_US_EQUITIES/F_RISK_SENTIMENT. The MARKET_WIDE regex does not catch it.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "TCS",
+   "match": "Nvidia FQ3 results",
+   "drop": true,
+   "reason": "[RT_BOT_A] Duplicates catalogue EV_NVDA_NOV17_BEAT.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "TECHM",
+   "match": "Nvidia results",
+   "drop": true,
+   "reason": "[RT_BOT_A] Duplicates catalogue EV_NVDA_NOV17_BEAT.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "LENSKART",
+   "match": "Anniversary of IPO listing",
+   "drop": true,
+   "reason": "[RT_BOT_A] No standard lock-in expires at 12 months. Under SEBI ICDR (model knowledge), pre-IPO non-promoter shares are locked 6 months and promoter minimum contribution 18 months. Pre-IPO holders have already sold (ADIA Rs2,390cr 21 Sep, Alpha Wave Rs1,985cr 12 Oct; profile).",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "PRESTIGE",
+   "match": "call follow-through",
+   "drop": true,
+   "reason": "[RT_BOT_A] Q2 FY27 is already reported and in the realised price; the profile says 'Sep column already in screener'.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "MEESHO",
+   "match": "MSCI index review",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "reason": "[RT_BOT_A] Inclusion is now the base case (Livemint 29 Oct; Business Standard/JM 23 Oct), and the stock already rose 6% on inclusion hopes on 6 Oct. Higher probability, smaller residual impact.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "BAJFINANCE",
+   "match": "QIP launch/closing",
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 1.0,
+   "reason": "[RT_BOT_A] The 1.8% dilution was announced on 1 Oct and the stock fell 5-6% then. The EGM approved it on 2 Nov, and the price has since risen to 1,064. Only the pricing discount remains.",
+   "by": "RT_BOT_A"
+  },
+  {
    "ticker": "FEDERALBNK",
    "match": "ECL framework",
    "drop": true,
@@ -648,6 +714,66 @@
    "source": "model judgement; 2022 fuel-levy precedent",
    "reason": "[DIRECTOR_CE] RT_N50_A",
    "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "YESBANK",
+   "date": "2027-02",
+   "event": "Equity raise of up to Rs7,500 cr (QIP/preferential) approved at 4 Nov 2026 AGM: pricing discount and ~15% dilution",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Yes+Bank+seeks+7500+cr+equity+raise+AGM&hl=en-IN&gl=IN&ceid=IN:en (scanx 4 Nov 2026)",
+   "reason": "[RT_BOT_A] Missing stock-specific channel; the AT1 hit itself is priced (-26% in Oct).",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "BAJFINANCE",
+   "date": "2027-04",
+   "event": "Offset to catalogue event EV_ECL_ROLLOUT_APR27 (bank provisioning-norm transition from Apr 2027): NBFCs are outside its scope (Ind AS 109 impairment since FY2018); cancels the generic-node impact",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": 1.58,
+   "impact_pct_high": 2.38,
+   "source": "https://bfsi.economictimes.indiatimes.com/articles/shriram-finance-and-bajaj-finance-poised-for-ecl-compliance-amid-rbi-regulations/130685102",
+   "reason": "[RT_BOT_A] EV_ECL_ROLLOUT_APR27 reaches this NBFC through generic nodes (P_RBI_PRUDENTIAL/F_ASSET_QUALITY_IN/F_CREDIT_GROWTH_IN). The impacts at the 08:44 run, conditional at p 0.9, are BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67; the BAJAJFINSV offset is net of the BAJFINANCE offset passed through the 0.75 x 0.8 link. Offset ranges are \u00b120%. Wording avoids the MARKET_WIDE regex on purpose. A bank-only node is the cleaner fix and would remove the need for these offsets.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "TATACAP",
+   "date": "2027-04",
+   "event": "Offset to catalogue event EV_ECL_ROLLOUT_APR27 (bank provisioning-norm transition from Apr 2027): NBFCs are outside its scope (Ind AS 109 impairment since FY2018); cancels the generic-node impact",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": 1.93,
+   "impact_pct_high": 2.89,
+   "source": "https://bfsi.economictimes.indiatimes.com/articles/shriram-finance-and-bajaj-finance-poised-for-ecl-compliance-amid-rbi-regulations/130685102",
+   "reason": "[RT_BOT_A] EV_ECL_ROLLOUT_APR27 reaches this NBFC through generic nodes (P_RBI_PRUDENTIAL/F_ASSET_QUALITY_IN/F_CREDIT_GROWTH_IN). The impacts at the 08:44 run, conditional at p 0.9, are BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67; the BAJAJFINSV offset is net of the BAJFINANCE offset passed through the 0.75 x 0.8 link. Offset ranges are \u00b120%. Wording avoids the MARKET_WIDE regex on purpose. A bank-only node is the cleaner fix and would remove the need for these offsets.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "JIOFIN",
+   "date": "2027-04",
+   "event": "Offset to catalogue event EV_ECL_ROLLOUT_APR27 (bank provisioning-norm transition from Apr 2027): NBFCs are outside its scope (Ind AS 109 impairment since FY2018); cancels the generic-node impact",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": 0.86,
+   "impact_pct_high": 1.3,
+   "source": "https://bfsi.economictimes.indiatimes.com/articles/shriram-finance-and-bajaj-finance-poised-for-ecl-compliance-amid-rbi-regulations/130685102",
+   "reason": "[RT_BOT_A] EV_ECL_ROLLOUT_APR27 reaches this NBFC through generic nodes (P_RBI_PRUDENTIAL/F_ASSET_QUALITY_IN/F_CREDIT_GROWTH_IN). The impacts at the 08:44 run, conditional at p 0.9, are BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67; the BAJAJFINSV offset is net of the BAJFINANCE offset passed through the 0.75 x 0.8 link. Offset ranges are \u00b120%. Wording avoids the MARKET_WIDE regex on purpose. A bank-only node is the cleaner fix and would remove the need for these offsets.",
+   "by": "RT_BOT_A"
+  },
+  {
+   "ticker": "BAJAJFINSV",
+   "date": "2027-04",
+   "event": "Offset to catalogue event EV_ECL_ROLLOUT_APR27 (bank provisioning-norm transition from Apr 2027): NBFCs are outside its scope (Ind AS 109 impairment since FY2018); cancels the generic-node impact",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": 0.38,
+   "impact_pct_high": 0.58,
+   "source": "https://bfsi.economictimes.indiatimes.com/articles/shriram-finance-and-bajaj-finance-poised-for-ecl-compliance-amid-rbi-regulations/130685102",
+   "reason": "[RT_BOT_A] EV_ECL_ROLLOUT_APR27 reaches this NBFC through generic nodes (P_RBI_PRUDENTIAL/F_ASSET_QUALITY_IN/F_CREDIT_GROWTH_IN). The impacts at the 08:44 run, conditional at p 0.9, are BAJFINANCE -1.98, TATACAP -2.41, JIOFIN -1.08 and BAJAJFINSV -1.67; the BAJAJFINSV offset is net of the BAJFINANCE offset passed through the 0.75 x 0.8 link. Offset ranges are \u00b120%. Wording avoids the MARKET_WIDE regex on purpose. A bank-only node is the cleaner fix and would remove the need for these offsets.",
+   "by": "RT_BOT_A"
   }
  ]
 }

@@ -28,8 +28,8 @@ Commentary (12 Oct 2026) says IRDAI wants to reset commission rules as penetrati
 | INDIANB | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ICICIBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SBIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SHRIRAMFIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | BAJFINANCE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| TATACAP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
