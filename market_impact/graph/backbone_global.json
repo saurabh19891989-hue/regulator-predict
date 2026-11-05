@@ -1,0 +1,3866 @@
+{
+ "edges": [
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_BRENT",
+   "relation": "geopolitical_exposure",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "One escalation step (e.g. renewed Hormuz tanker attacks / blockade re-imposed) moved Brent +10-20% within weeks in 2026 (Brent >$100 on 2026-09-08/10 tanker attacks, $110 on 2026-10-16 vs ~$90 late Aug); +15% = 1.5 SSU. High end = full Hormuz closure with ~10 mb/d Gulf output offline (IEA via RBI MPR). De-escalation (-1, Hormuz reopening) is the symmetric downside.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOT2lpZ1dfaGpSckplSzdGU19iZVY0cTJUd01MN1dpd29hcUtKZkpWbWZFZy1jTWxNME1oRWt6dGV2aU5tbzZ5UVpRVzI3amt6VzlXQXlfVkRNU2o3LXNpcUJZV2pPOXczV0k5SENNdGU4UWcyaEN4bUZUejNtOThUbGVYbGQtN2tYQ1g1M1RKQQ?oc=5",
+     "date": "2026-10-16",
+     "note": "Brent touches $110 as Iran escalates Hormuz attacks"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "Brent peaked $105 late Jul 2026, eased to ~$90 end-Aug, averaged $114 in Sep 2026; ~10 mb/d Gulf output unavailable (IEA, Aug 2026)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_GAS_GLOBAL",
+   "relation": "geopolitical_exposure",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Qatar/UAE ship ~20% of world LNG through Hormuz; India's Qatar LNG imports fell 93% after the 2026 Iran war began and Asian spot LNG spiked. Escalation step -> Asian LNG +~18% = 1.2 SSU (SSU 15%). NB node series NG=F is Henry Hub, which barely reacts.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbWtXY0FubDVaeG1qY2ZIbExsTkdjckRva1pHX19GdXBzSnByS2JZYktmbmk2dldLSkdITmNUSjloU1I5U2x3d0ItMDhkZFdZVmR5N0ZxNGhsNkc1aUlibEFvZ0VXY1lOZUxRcWdPOTYwQ3d2OHRzZk5LZTV6UHRZVlp5YUk0c0tZTXVKbDNUWDljNGVXUDFiaWUtTW9CQ09QaDZLVWQ0WnE0WFNOOS1wVDZTNW5nVzFMOHlvMFprWG10SV9RUmd3?oc=5",
+     "date": "2026-04-02",
+     "note": "India's Qatar LNG imports crash 93%, price spike (Apr 2026)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_REFINING_MARGIN",
+   "relation": "geopolitical_exposure",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Gulf export refineries (Ruwais, Jubail, Kuwait Al-Zour) and product tanker routes disrupted -> diesel/jet cracks widen more than crude; escalation step ~ +$2/bbl GRM = 1.0 SSU (SSU $2/bbl).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Middle-distillate cracks rose ~$4-6/bbl on Jun-2025 Israel-Iran war; 2026 Gulf disruption larger"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "maritime disruptions, Gulf supply outages"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_FERTILISER_INPUTS",
+   "relation": "geopolitical_exposure",
+   "w": 0.6,
+   "w_low": 0.1,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Gulf (Qatar, Saudi, Oman, Iran) supplies ~30-35% of seaborne urea and much ammonia/sulphur; Hormuz disruption -> urea/ammonia +~9% per step = 0.6 SSU (SSU 15%), over and above the gas-cost channel. 2026: spike then >50% crash by June shows reversibility.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQlV1M2JVZzR1WnQwWkNxVjltVkFyclo3eHp1TjQ0VDVLOEdVMlhwXzJmZFJadmJ6aFJkWGtxN3B6ZkZ0dUF4aXU0QXFub2Q5V2k3U3pPLXVQM1QycnVzTmtpdUVneC1fTkE0WnpybWtQdVkxMC1lNm1iNmRlMjVxVUYyZnpGRUVGbEJBWlNhc2kwb0dmbXh3dVdIVXlLdktKaHVyalM2QnBOYXExVFlVRUk1MUNGdGx0cFlGSV9n?oc=5",
+     "date": "2026-06-09",
+     "note": "fertiliser ministry seeks to double subsidy fund as Iran war cost mounts"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMiqwJBVV95cUxPWXFyY25IM2puOU9MODR2VkZxWTQ5cmxJcjV2Q2t2UV96Y1Vra0ZLWkxmZGJFa0ZpMFN6REs0NF9PZVB2TnFRaWMxWTE3bmZJSXZzUnJyUGdPTkNXUXdCcnBFVy0ydGVhQWVqMEhRaDN5X1hPVFkwaFBhLU9ScHByeGVaWG9tVmNCYVJBdHVzTW9TcmttUzg3dkx5T0tRZlc2TVFTWFFtU3YtQ1BXVFNkR3FpUktWdGdzTzdfczltQ2IwbEJmS2VmZjcwaGhPUWUwb3pjaWJEN21Da3ZEdnFHMWpPOUw2emUyaFJsWDg5MHFmd05hYzViOXJPalJLMGoyeHgwbEtXUTRZZVVaTmpVSmcxam4zYWhUR19fd0hpdWxhaGV3LXY5ekNtWQ?oc=5",
+     "date": "2026-10-20",
+     "note": "urea import prices hit 15-month low by Oct 2026"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "C_RED_SEA",
+   "relation": "geopolitical_exposure",
+   "w": 0.6,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Houthi Red Sea attacks have tracked wider Gaza/Iran escalation (2023-25 pattern); one Middle East escalation step raises the probability/intensity of Red Sea disruption by ~0.6 of a disruption step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Houthi campaign Nov-2023 to 2025 paused after Gaza ceasefire; re-escalated with Iran conflict"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_SHIPPING_RATES",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Direct (non-Red-Sea) channel: Gulf port congestion (Jebel Ali), Hormuz war-risk insurance and tanker/container rerouting -> freight +~10% per step = 0.4 SSU (SSU 25%). Red Sea channel is carried separately via C_RED_SEA.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "war-risk premia for Gulf calls rose several-fold in 2024 and 2026"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_RISK_SENTIMENT",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Escalation step lifts VIX ~+2 pts = 0.4 SSU (SSU 5 pts); larger only if oil shock threatens global recession.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "VIX rose ~3-5 pts on Oct-2023, Apr-2024, Jun-2025 Middle East escalations and faded within weeks"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_GOLD",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Safe-haven bid: +~3% gold per escalation step = 0.4 SSU (SSU 8%). Weak in 2026 (gold -8% since Jun-2026 despite war, as real yields rose) -> low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "gold -8.4% since 2026-06-01 while Brent flat and war ongoing"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_ALUMINIUM",
+   "relation": "geopolitical_exposure",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "GCC smelters (EGA, Alba, Ma'aden, Qatalum; ~9% of world output) export through Hormuz -> supply risk premium ~+3% per step = 0.3 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "GCC ~6 Mt/yr primary aluminium, mostly inside the Gulf"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "C_GCC",
+   "relation": "geopolitical_exposure",
+   "w": -1.0,
+   "w_low": -4.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Escalation hits GCC activity directly (export volumes stranded behind Hormuz, aviation/tourism, investment). With ~10 mb/d Gulf output offline in Aug 2026, a further step plausibly costs ~-1 pp GCC growth (SSU +1 pp), tail -4 pp. Price windfall runs separately via F_BRENT->C_GCC.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "IEA: ~10 mb/d Gulf output unavailable as of Aug 2026"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_TRAVEL_DEMAND",
+   "relation": "geopolitical_exposure",
+   "w": -0.15,
+   "w_low": -0.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Gulf hubs/airspace closures cut India-Gulf/Europe international traffic (Gulf ~40% of Indian international seats): ~-1.5% total Indian air/hotel demand per step = -0.15 SSU (SSU 10%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Jun-2025 and 2026 Gulf airspace closures disrupted Indian carriers' international operations"
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "F_SHIPPING_RATES",
+   "relation": "geopolitical_exposure",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.5,
+   "lag": "0-3m",
+   "mechanism": "Suez diversion via the Cape adds ~10-14 days Asia-Europe: Drewry WCI went ~$1,400 (Nov-2023) -> ~$4,000/FEU (mid-Jan 2024), +~190% = 7.5 SSU (SSU 25%). Today's large vessel orderbook absorbs part of it, so central +100% = 4.0 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Drewry WCI composite late Nov 2023 ~$1,380 -> 18 Jan 2024 ~$3,960/FEU; SCFI similar"
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "F_REFINING_MARGIN",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Longer product-tanker voyages East-of-Suez -> Europe tighten Atlantic-basin diesel, +~$0.8/bbl cracks = 0.4 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Jan-Feb 2024 European diesel cracks rose ~$5-8/bbl partly on Red Sea rerouting"
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "F_BRENT",
+   "relation": "geopolitical_exposure",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Crude flows mostly rerouted rather than lost; Brent +~1.5% per disruption step = 0.15 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Brent rose only ~3-5% in Dec-2023/Jan-2024 Red Sea escalation"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_BRENT",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation (tighter sanctions/price-cap enforcement, Ukrainian strikes on Russian ports/refineries) removes Russian barrels: +~5% Brent = 0.5 SSU; Feb-Mar 2022 was +30% (3 SSU), peace deal is the downside.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOT2lpZ1dfaGpSckplSzdGU19iZVY0cTJUd01MN1dpd29hcUtKZkpWbWZFZy1jTWxNME1oRWt6dGV2aU5tbzZ5UVpRVzI3amt6VzlXQXlfVkRNU2o3LXNpcUJZV2pPOXczV0k5SENNdGU4UWcyaEN4bUZUejNtOThUbGVYbGQtN2tYQ1g1M1RKQQ?oc=5",
+     "date": "2026-10-16",
+     "note": "Oct-2026: Ukraine vows to hit Russian refineries"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Brent $97 -> $128 between 24 Feb and 8 Mar 2022"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_REFINING_MARGIN",
+   "relation": "geopolitical_exposure",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Russia is the largest seaborne diesel exporter; refinery drone strikes and the EU ban on products refined from Russian crude (from Jan-2026) tighten diesel -> +~$1.6/bbl cracks per step = 0.8 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOT2lpZ1dfaGpSckplSzdGU19iZVY0cTJUd01MN1dpd29hcUtKZkpWbWZFZy1jTWxNME1oRWt6dGV2aU5tbzZ5UVpRVzI3amt6VzlXQXlfVkRNU2o3LXNpcUJZV2pPOXczV0k5SENNdGU4UWcyaEN4bUZUejNtOThUbGVYbGQtN2tYQ1g1M1RKQQ?oc=5",
+     "date": "2026-10-16",
+     "note": "Ukraine vows to hit Russian refineries (Oct 2026)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 drone strikes cut Russian runs ~10-15% and lifted diesel cracks"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_GAS_GLOBAL",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Europe now imports little Russian pipeline gas, so escalation mainly hits residual LNG/TurkStream flows: +~6% = 0.4 SSU (2022 was +100%+).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "TTF peaked ~EUR340/MWh Aug-2022; EU Russian gas share fell from ~40% to <15%"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_WHEAT",
+   "relation": "geopolitical_exposure",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Black Sea = ~25-30% of world wheat exports; escalation against ports/shipping lifts wheat +~8% = 0.8 SSU (2022: +40-60%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CBOT wheat +~50% Feb-Mar 2022"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_EDIBLE_OIL",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Russia+Ukraine ~55-60% of sunflower-oil exports (India's 2nd largest edible-oil import); escalation +~4% veg-oil complex = 0.4 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Sunflower oil shortage Mar-2022 drove palm/soy oil to records"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_FERTILISER_INPUTS",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Russia/Belarus supply ~15-20% of world urea/ammonia and ~40% of potash; sanctions/escalation +~7.5% = 0.5 SSU (SSU 15%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "urea and potash doubled in H1 2022"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_ALUMINIUM",
+   "relation": "geopolitical_exposure",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Rusal ~6% of world aluminium; sanctions escalation adds ~+2% = 0.2 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "LME aluminium +~30% in Feb-Mar 2022 (also energy costs)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "C_RUSSIA",
+   "relation": "geopolitical_exposure",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Tighter Western sanctions (e.g. Oct-2025 Rosneft/Lukoil SDN listing) curtail Indian refiners' Russian intake even if discounts widen: net -0.3 of an access step. Sign ambiguous (wider discounts are +).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Indian Russian-crude imports fell sharply after Oct-2025 US sanctions on Rosneft/Lukoil"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_RISK_SENTIMENT",
+   "relation": "geopolitical_exposure",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation step +~1 VIX pt = 0.2 SSU; only extreme events (NATO involvement) move it more.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "VIX +~10 pts in Feb-Mar 2022 at onset"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RUSSIA_UKRAINE_WAR",
+   "dst": "F_EU_GDP",
+   "relation": "geopolitical_exposure",
+   "w": -0.15,
+   "w_low": -0.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Confidence/energy channel net of higher defence spending: -0.15 pp EU growth per step.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ECB estimated 2022 war cost ~0.5-1 pp euro-area growth"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "P_US_TARIFF_INDIA",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "US links tariffs on India to Russian-oil purchases: +25 pp penalty tariff Aug-2025 (=2.5 SSU), removed in the Feb-2026 interim deal (18%), then a 100% tariff threat over Russian crude in Sep-2026, eased Oct-2026. Closer India-Russia trade step -> +8 pp expected tariff = 0.8 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOb0JDSi1wNEdVMVloUlNCSzE3UUtvbXJVVkowR2djWlZoZFUxWmRyR19jNWswUVpwWVBFYjBSMnBIWC1QZkdzalFCaEM4Vl9tb0xCd0UyeXg3WDJ0MkNXdHdWTHpuREhia29oNUV1c0Z5d0JtT3A3Y3pDcDFjaDBUM0RnN2d0M1lXMHVMNEZGSXpjOTNYa0UtS3UzT3hGTTdZc09IRWY5OFZkbGRNWjZ0NWkxRTZ1bnVDRnJPS0FQZGF6bUprNm1SZXBzWU9qT1BLZXhSRGZWaw?oc=5",
+     "date": "2026-10-18",
+     "note": "Trump eases 100% tariff threat over Russia (Oct 2026)"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQlFtcV8yRHRRRThNMWtpRWF0QUVlM0lOY0d2RFZxUy1sTk5fOTNhX0JFRF80OF9JalNSdkNjWXR3YktCYzN5VFJQYXRvV1ljeEFZNVpOSkFOSllPckh4TzNLR3dmcm9Ic1VpQmFIMUlxZi15ZUpZOXlsQVdIMFNFZ1hQYnM2QThGcVJQMklVVWlpeXlmemRaczg2N0FldHc?oc=5",
+     "date": "2026-02-11",
+     "note": "US-India interim deal cut tariff to 18% (Feb 2026)"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.07,
+   "w_low": -0.2,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Russian crude ~35% of Indian imports (~1.7 mb/d); +$5/bbl wider discount saves ~$3 bn/yr (~0.07% GDP) -> INR ~0.2% stronger = -0.07 SSU (SSU 3%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "India imported ~1.6-1.9 mb/d Russian crude in 2024-25"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "P_DEFENCE_PROCUREMENT",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Escalation triggers emergency procurement and larger AoNs: after Op Sindoor (May-2025) DAC cleared ~Rs1.05 lakh cr (Jul-2025) and emergency buys -> +~10% domestic orders per step = 1.0 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "DAC AoNs Rs1.05 lakh cr on 2025-07-03; emergency procurement powers after Op Sindoor"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "T_DEFENCE_EXPORTS",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.8,
+   "lag": ">12m",
+   "mechanism": "Combat validation (BrahMos, Akash, drones) raises export enquiries; +0.3 theme step with >12m lag.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "post-Sindoor export interest in BrahMos/Akash from SE Asia, Gulf"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "F_FPI_FLOWS",
+   "relation": "geopolitical_exposure",
+   "w": -0.2,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Short-lived risk premium: ~-$1 bn FPI equity flow per escalation step = -0.2 SSU; May-2025 flows stayed positive, so small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "FPIs net bought Indian equities in May-2025 despite Op Sindoor"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "F_USDINR",
+   "relation": "geopolitical_exposure",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "INR weakened ~1% (84.5 -> 85.7) around 7-9 May 2025 and recovered within weeks: +0.45% per step = 0.15 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "USD/INR intraday high ~85.9 on 2025-05-09"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "T_CHINA_PLUS_ONE",
+   "relation": "geopolitical_exposure",
+   "w": 0.6,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": ">12m",
+   "mechanism": "More US-China decoupling (tariffs, export controls) accelerates supply-chain relocation; India captures a share (Apple iPhone assembly ~20% India by 2025) -> +0.6 theme step, slow (>12m).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Apple/Foxconn India shift; electronics PLI exports"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "F_CHINA_GDP",
+   "relation": "geopolitical_exposure",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Tariff escalation step cuts China growth ~0.4 pp (IMF/consensus estimates for the 2025 round were -0.5 to -1 pp before trade diversion).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IMF Apr-2025 WEO cut China 2025 growth by 0.6 pp on tariffs"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "F_USDCNY",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "PBoC lets CNY absorb part of tariff shocks: 2018-19 trade war took USD/CNY 6.3 -> 7.1 (+12%) over ~4 escalation steps -> +1.5% per step = 0.5 SSU (SSU 3%). PBoC held CNY firm in 2025, hence wide range.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "USD/CNY 6.28 (Mar-2018) -> 7.18 (Sep-2019)"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "F_CHINA_STEEL_EXPORTS",
+   "relation": "competition",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "Trade diversion: Chinese goods shut out of the US are pushed to third markets; steel exports +~4.5% per step = 0.3 SSU (SSU 15%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "China steel exports +23% in 2024 to ~111 Mt amid weak domestic demand and tariff diversion"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "F_CHINA_CHEM_EXPORTS",
+   "relation": "competition",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Chemicals/APIs/solar diverted from the US to India and other markets: +~7.5% export push per step = 0.5 SSU (SSU 15%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "DGTR anti-dumping initiations against China at record levels 2024-25"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "F_SEMICONDUCTOR_SUPPLY",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Export controls (chips, Nexperia-type disputes) tighten component supply: +0.4 of a tightening step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Oct-2025 Nexperia chip halt disrupted global auto production"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "NEW_CRITICAL_MINERALS_SUPPLY",
+   "relation": "geopolitical_exposure",
+   "w": 0.7,
+   "w_low": 0.3,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "China retaliates with export controls on rare earths/magnets, graphite, gallium/germanium (Apr-2025, Oct-2025 rounds): +0.7 tightening step per decoupling step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Apr-2025 rare-earth magnet licensing halted Indian EV/auto motor supplies for months"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "F_RISK_SENTIMENT",
+   "relation": "geopolitical_exposure",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation step +~1.5 VIX pts = 0.3 SSU; Oct-2025 100% tariff threat produced a one-day +~6 pt VIX spike.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "VIX 16 -> 22 on 2025-10-10 after China tariff threat"
+    }
+   ]
+  },
+  {
+   "src": "NEW_US_TARIFF_GLOBAL",
+   "dst": "F_US_GDP",
+   "relation": "policy_effect",
+   "w": -0.25,
+   "w_low": -0.5,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "US effective tariff rate rose ~+14 pp in 2025; consensus/Yale Budget Lab put the growth cost at ~-0.6 to -0.9 pp -> per +5 pp ~ -0.25 pp.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Yale Budget Lab 2025 estimates of tariff drag on US real GDP"
+    }
+   ]
+  },
+  {
+   "src": "NEW_US_TARIFF_GLOBAL",
+   "dst": "F_RISK_SENTIMENT",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Broad tariff shocks hit risk appetite: Apr-2025 'Liberation Day' (~+15-20 pp) took VIX ~20 -> 52 (non-linear). Per +5 pp, central +2.5 pts = 0.5 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "VIX close 52.3 on 2025-04-08"
+    }
+   ]
+  },
+  {
+   "src": "NEW_US_TARIFF_GLOBAL",
+   "dst": "C_US_CHINA_DECOUPLING",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Broad US tariff escalations have always included a larger China component; +5 pp global ~ +0.5 decoupling step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 tariff rounds"
+    }
+   ]
+  },
+  {
+   "src": "NEW_US_TARIFF_GLOBAL",
+   "dst": "P_US_TARIFF_INDIA",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "India is subject to the broad measures (reciprocal, S122, S301 forced-labour tier of 10% from 2026-07-24): +5 pp global -> ~+5 pp on India = 0.5 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "US S301 additional tariffs 10-12.5% on 60 economies from 2026-07-24; India in the 10% tier"
+    }
+   ]
+  },
+  {
+   "src": "NEW_US_TARIFF_GLOBAL",
+   "dst": "F_EU_GDP",
+   "relation": "policy_effect",
+   "w": -0.1,
+   "w_low": -0.3,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "EU exports to US ~3% of EU GDP; +5 pp tariff -> -0.1 pp EU growth.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ECB 2025 tariff scenario analysis"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "F_GDP_IN",
+   "relation": "policy_effect",
+   "w": -0.12,
+   "w_low": -0.3,
+   "w_high": -0.04,
+   "lag": "3-12m",
+   "mechanism": "Goods exports to the US ~$87 bn (~2.2% GDP). +10 pp tariff with export price elasticity ~-1.2 and partial rerouting -> exports -8 to -12% -> ~-0.2% GDP level, ~-0.12 pp growth over a year. Aug-2025 50% tariff estimates were -0.3 to -0.6 pp for +25 pp.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "FY25 India->US goods exports ~$86.5 bn; 2025 broker/RBI estimates of the 50% tariff drag"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQQlFtcV8yRHRRRThNMWtpRWF0QUVlM0lOY0d2RFZxUy1sTk5fOTNhX0JFRF80OF9JalNSdkNjWXR3YktCYzN5VFJQYXRvV1ljeEFZNVpOSkFOSllPckh4TzNLR3dmcm9Ic1VpQmFIMUlxZi15ZUpZOXlsQVdIMFNFZ1hQYnM2QThGcVJQMklVVWlpeXlmemRaczg2N0FldHc?oc=5",
+     "date": "2026-02-11",
+     "note": "interim deal tariff 18% (Feb 2026)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.45,
+   "lag": "0-3m",
+   "mechanism": "Aug-Sep 2025: +25 pp penalty tariff coincided with INR 87.5 -> 88.8 (+1.5%) -> +0.6% per +10 pp = 0.2 SSU (SSU 3%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "USD/INR record lows ~88.8 in Sep-2025 after 50% tariff"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Tariff escalation lowers India earnings/growth premium: ~-$1 bn/quarter FPI equity flows per +10 pp = -0.2 SSU (2025 record ~$18 bn outflow had many causes).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 FPI net equity outflow ~US$18 bn"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "T_CHINA_PLUS_ONE",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "Relocation to India depends on India's tariff relative to China/Vietnam; +10 pp on India erodes the advantage -> -0.3 theme step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 debate on Apple/electronics shift when India faced 50% vs Vietnam 20%"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "F_US_GENERIC_PRICING",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "~40% of US generic volume is Indian-made at thin margins; a tariff on generics would be partly passed into US prices/shortages -> price erosion ~1.5 pp lower per +10 pp = -0.3 SSU (SSU +5 pp erosion). Generics so far exempt (Sec 232 Oct-2025 targeted branded).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Oct-2025 US 100% Sec-232 tariff on branded/patented drugs, generics exempt"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_STEEL_EXPORTS",
+   "dst": "P_STEEL_DUTY_IN",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Import surges trigger DGTR safeguard/AD action (12% provisional safeguard Apr-2025 after 2024 import surge): +15% China exports -> +~2 pp effective duty = 0.2 SSU (volume trigger, separate from the domestic-price channel).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "DGTR 12% provisional safeguard on flat steel, Apr-2025; 3-yr final safeguard recommended 2025"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "P_STEEL_DUTY_IN",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Policy reaction (reversed sign): falling domestic prices bring mill lobbying for protection; -7% domestic HRC -> ~+3 pp duty, i.e. w = -0.3. Loop with P_STEEL_DUTY_IN->F_STEEL_INDIA has product 0.18 (<1).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ISA lobbying 2024-25"
+    }
+   ]
+  },
+  {
+   "src": "P_STEEL_DUTY_IN",
+   "dst": "F_STEEL_INDIA",
+   "relation": "policy_effect",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Duty raises the import-parity ceiling: +10 pp duty, ~60% realised -> domestic HRC +~4% = 0.6 SSU (SSU 7%). Apr-2025 12% safeguard lifted HRC ~Rs2-3k/t (+5-6%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Indian HRC ~Rs47-48k/t (Mar-2025) -> ~Rs51k/t (May-2025)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "P_ANTI_DUMPING_IN",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "Chinese chemical/solar/API dumping drives DGTR initiations; +15% export push -> +0.4 of a 'new broad duties' step within 3-12m.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "DGTR initiated 40+ anti-dumping cases in FY25, majority against China"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "NEW_AGRI_IMPORT_DUTY_IN",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -0.7,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Government cuts edible-oil import duty when world prices spike and raises it when they slump (Sep-2024 crude-oil duty 0 -> 20%; May-2025 cut to 10%): +10% world price -> -3 pp duty = -0.3 SSU (SSU +10 pp).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CBIC notifications Sep-2024 and May-2025 on crude palm/soy/sunflower oil duty"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "NEW_AGRI_IMPORT_DUTY_IN",
+   "relation": "policy_effect",
+   "w": -0.2,
+   "w_low": -0.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Policy reaction to domestic food inflation: +2 pp food inflation -> ~-2 pp agri import duties (edible oils, pulses) = -0.2 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "duty-free pulses imports extended through 2025-26"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AGRI_IMPORT_DUTY_IN",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.15,
+   "w_high": 0.45,
+   "lag": "3-12m",
+   "mechanism": "+10 pp duty -> domestic edible-oil price +~7%; oils & fats ~8% of the CPI food basket -> food inflation +0.56 pp (+pulses) ~ +0.6 pp = 0.3 SSU (SSU 2 pp).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "edible-oil CPI jumped to ~17% y/y within months of the Sep-2024 duty hike"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "P_WINDFALL_EXPORT_TAX",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "High food inflation triggers export curbs (wheat ban May-2022, rice ban Jul-2023, sugar restrictions, onion duty): +2 pp food inflation -> +0.3 probability-weighted imposition step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2022-23 export restrictions on wheat, rice, sugar, onions"
+    }
+   ]
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "policy_effect",
+   "w": -0.1,
+   "w_low": -0.3,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Export curbs divert supply home: imposition lowers food inflation ~0.2 pp = -0.1 SSU (loop product with the reaction edge 0.03).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "rice/wheat export curbs 2022-23"
+    }
+   ]
+  },
+  {
+   "src": "F_SUGAR",
+   "dst": "P_SUGAR_ETHANOL",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Higher world sugar prices make the government more willing to allow export quotas (more favourable to millers): +10% world price -> +0.3 step.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "export quotas allowed in SS2021-22/22-23 when world prices high; 1 Mt allowed Jan-2025"
+    }
+   ]
+  },
+  {
+   "src": "F_FERTILISER_INPUTS",
+   "dst": "P_FERT_SUBSIDY",
+   "relation": "policy_effect",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "MRPs are fixed, so input-price spikes are absorbed by higher NBS rates/urea subsidy: +15% inputs -> +0.6 step. 2026: non-urea subsidy +10-21% (Apr) and ministry sought to double the subsidy fund (Jun).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOV1hsc3JmZkd6R21STnpvdWljRmYxRk5zT0VRY0VVYXhNeE5aRjV3Q3VkelhNZGZHT1dXNGFJOHJNdXQwNWp6VXZ5NmlPbXVVZmtlZmJOOVJvSU1NQVVFWmpJa1dUM0syZHpaejNSdnJwRVRNSGc1MW9XZlBjN1JKQ1RfMl9IbHNXOU84Zlk0LXFHcVRFRkp6aFVGT1JLa3RoXy1aZzFLNGhPSVhQS05weTI3Ykt2Ni11WUs3NXZ2cURhUFM2QzhrTTFjd3lGbjA?oc=5",
+     "date": "2026-04-08",
+     "note": "Centre hikes non-urea subsidy 10-21% amid West Asia crisis"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQlV1M2JVZzR1WnQwWkNxVjltVkFyclo3eHp1TjQ0VDVLOEdVMlhwXzJmZFJadmJ6aFJkWGtxN3B6ZkZ0dUF4aXU0QXFub2Q5V2k3U3pPLXVQM1QycnVzTmtpdUVneC1fTkE0WnpybWtQdVkxMC1lNm1iNmRlMjVxVUYyZnpGRUVGbEJBWlNhc2kwb0dmbXh3dVdIVXlLdktKaHVyalM2QnBOYXExVFlVRUk1MUNGdGx0cFlGSV9n?oc=5",
+     "date": "2026-06-09",
+     "note": "seeks to double subsidy fund"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "P_FUEL_TAX_IN",
+   "relation": "policy_effect",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Excise is the shock absorber: cut Rs5/10 (Nov-2021) and Rs8/6 (May-2022) when crude spiked; raised Rs2 (Apr-2025) when it fell. +10% Brent -> ~Rs0.8/l expected excise relief = -0.4 SSU. CAVEAT: node also counts 'regulated squeeze' as +, which moves the other way (retail frozen since May-2026 hike) - Director may split the node.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQN1Vpck9GV3BPb1A5LW5aM0xsWGJ4OV9udnZDMTEzbTJZOXR1RFhTay1tVXRpV1FDZDd0U2cxU2hCd1BXVEFJOTFZVjYyR293UXVEUGJ1dWt6TEhTYmwwblF6YXZsOVJWMk9WQl9nempVaEdBYWtnN0thaWgwazQ3N2U0MjVDVHZVYWlwdDNKQlRrajMwazEwMEpGRGxNOS1kalBvSXZkVUhOeWZaQXRscEsySXdTQQ?oc=5",
+     "date": "2026-05-14",
+     "note": "first retail hike since Iran war (~Rs5/l in May 2026)"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMXZGZmhEUDBnOWxReGR3cEdmNUtleXNUWWtDc01yNWdLckdBT09XQ2dVa3V6ZDFBa0xLLTBnTENlal94NHhJMlJMd3Y4YllscHNUVk9DT1VqVmJVS0NyandHdjlkTi03Z2RRRTZ0bDJWdm1Ob0w0RFJTUUVmc3F4dVdLc0lGX0pVZnphejRlTndCQ2J4Qmw1Q0ZtdTEtb0tFNUgtVUtONE42YlZiMlhYSkwtU1AtZjk5aXRkemRnbnhPNFRBb0F2VXJn0gHPAUFVX3lxTFBJcldtTHd6ZjVCMkVLZi1JUmVYM1RJaFN5Nnd4UEVPYXJrOGcwZW9xVmhhS1FBcThwbFZ4LU9VQTJOaGctc21kVWszS3plbldFOW5KNVpSRHRFeDVKTVhacEp1SGtSdXRzSms2akZYNFRFNWZTWGt6MHF3aUtfNzBSYVl3MG9BTm5wWEJMa29pQnNyN1NjazlVa1l1ZV9HdVNvaldsdWpSUnpRLUxhT2NOdWk2clNWZmdaOXFWUW91NWFnUGZGM0Rra3BFa1pxUQ?oc=5",
+     "date": "2026-09-23",
+     "note": "no hike despite high crude (Sep 2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "P_WINDFALL_EXPORT_TAX",
+   "relation": "policy_effect",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "SAED on diesel/ATF exports imposed Jul-2022 when cracks spiked, scrapped Dec-2024: +$2/bbl GRM -> +0.15 imposition probability.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "SAED/windfall tax Jul-2022 to Dec-2024"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "P_WINDFALL_EXPORT_TAX",
+   "relation": "policy_effect",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Windfall levy on domestic crude producers when Brent > ~$75-80 (2022 precedent): +10% Brent -> +0.1 imposition probability.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "SAED on domestic crude Rs23,250/t Jul-2022"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "P_GOLD_IMPORT_DUTY",
+   "relation": "policy_effect",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Rupee stress has historically brought gold import curbs (duty 2% -> 10% in 2012-13): +3% INR -> +0.75 pp expected duty = 0.15 SSU (SSU 5 pp).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2013 gold duty hikes and 80:20 rule during taper tantrum"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "F_US_10Y",
+   "relation": "discount_rate",
+   "w": 0.45,
+   "w_low": 0.25,
+   "w_high": 0.7,
+   "lag": "0-3m",
+   "mechanism": "Front-end pass-through to 10y: +25 bp policy -> +~11 bp 10y = 0.45 SSU. Empirical (^IRX vs ^TNX): 0.43 weekly 5y, 0.67 weekly 3y, 0.33 monthly.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "US10Y ~ FEDFUNDS: +0.43 (t4.0) wk5y; +0.67 (t3.2) wk3y; +0.33 (t1.9) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "F_DXY",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Short-rate differential channel beyond the 10y: +25 bp -> DXY +0.3% = 0.1 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "rate-differential models of DXY"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "F_US_GDP",
+   "relation": "macro_transmission",
+   "w": -0.12,
+   "w_low": -0.25,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "FRB/US-type multipliers: +100 bp -> GDP -0.5 to -1% over 2 years -> +25 bp ~ -0.12 pp growth.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Fed FRB/US model simulations"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "F_REPO_IN",
+   "relation": "macro_transmission",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "RBI weighs the rate differential for INR/flows; direct (non-CPI) reaction ~ +4 bp per +25 bp Fed = 0.15 SSU. 2026 hike to 5.50% cited global tightening wave.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNVm9jYnZWU1hUbjRuVXRvMEt1aFV4dkZERy0weWhTYUhtS2NibTU1YkZRSGozZzdZNjBGVXk4SE5CbV85NE1ZbGJuVXhOZDBOSlVXOFBWenMzTlFoSFNFcHF3VTZ6N3daMkJUaEZkLU8tcHhicmlqZnBvMElaZGs0U3RzemN3a2RGVkc0bThKS0t2YU45a0hjek1aZ0k0WmFnX3liLUVMVzVtMG50MjVoX3VibnhwZlFMbkZ3cGJkeHdqazJ3ZXJKbFEwMHhNaXY1OTdrNHBLN2lLbktEeW9rXzY5WGJVbmpRaFhzYTh3aw?oc=5",
+     "date": "2026-10-07",
+     "note": "rupee near record low despite RBI hike, Oct 2026"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Reuters 2026-10-07: India joins global rate-tightening wave"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_FED_FUNDS",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.6,
+   "lag": "3-12m",
+   "mechanism": "Taylor-rule reaction: +1 pp growth (output gap) -> +~20-50 bp within 12m = 0.8-2 SSU; central 0.8. Loop with FED->US_GDP product 0.1.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Taylor (1993) output-gap coefficient 0.5"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_US_10Y",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Growth surprise +1 pp -> 10y +~12 bp (term premium + expected path) = 0.5 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "US macro-surprise yield betas"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_US_EQUITIES",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.5,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "+1 pp growth -> S&P EPS +~4-8% -> index +6% = 1.2 SSU (SSU 5%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "S&P 500 EPS-GDP sensitivity"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_US_TECH_SPEND",
+   "relation": "demand_driver",
+   "w": 0.35,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Enterprise IT services spend elasticity to GDP ~1.5-2: +1 pp US growth -> +1.75 pp IT services spend growth = 0.35 SSU (SSU 5%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Gartner IT services spend vs GDP 2009, 2020, 2023 cycles"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_EU_GDP",
+   "relation": "demand_driver",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "Trade + financial spillover: +1 pp US -> +0.25 pp euro area.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IMF/ECB spillover estimates 0.2-0.4"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_GDP_IN",
+   "relation": "demand_driver",
+   "w": 0.1,
+   "w_low": 0.05,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "RBI: global growth -100 bps -> India -30 bps. US ~25% of world GDP plus the dominant financial channel -> +1 pp US ~ +0.1 pp India.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "MPR Oct 2026 Ch.V: global growth -100 bps -> India growth -~30 bps, CPI -~15 bps"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_RISK_SENTIMENT",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Stronger US growth compresses implied vol: +1 pp -> VIX -1.5 pts = -0.3 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "VIX-growth-surprise relationship"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_BRENT",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "US ~20% of oil demand; +1 pp growth -> +0.2 mb/d demand (~0.2%) -> Brent +~3% at short-run price elasticity ~-0.07 = 0.3 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IEA demand-GDP elasticity ~0.5"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "C_USA",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.8,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "ALIAS: identical SSU (+1 pp US demand growth). Edge only so shocks to F_US_GDP reach companies attached to C_USA; Director should merge the two nodes and drop this edge.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "node definitions in nodes_seed.json"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_DXY",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "+25 bp 10y -> DXY +0.6% = 0.2 SSU. Empirical 0.14 (wk3y), 0.17 (wk5y), 0.33 (mo5y).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "DXY ~ US10Y + VIX: US10Y +0.14 (t3.0) wk3y, +0.17 (t5.2) wk5y, +0.33 (t5.0) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_US_EQUITIES",
+   "relation": "discount_rate",
+   "w": -0.12,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25 bp -> S&P -0.6% = -0.12 SSU (empirical -0.06 to -0.21, controlling for VIX); sign flips when yields rise on growth.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "SPX ~ VIX + US10Y: US10Y -0.06 (t-1.5) wk3y, -0.13 (t-3.9) wk5y, -0.21 (t-3.4) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_GOLD",
+   "relation": "discount_rate",
+   "w": -0.06,
+   "w_low": -0.15,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Real-yield link largely broke after 2022 central-bank buying: +25 bp -> gold -0.5% = -0.06 SSU (empirical -0.03 to -0.07).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "GOLD ~ DXY + US10Y + VIX: US10Y -0.05 (t-1.0) wk3y, -0.07 (t-1.9) wk5y"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_FPI_FLOWS",
+   "relation": "funding_cost",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Higher US yields raise EM hurdle rates: +25 bp -> ~-$1 bn/quarter FPI equity flows into India = -0.2 SSU (SSU $5 bn/q).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "Fed hawkishness + oil -> risk-off and portfolio outflows from EMEs (Q3 2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Spillover to Indian G-secs rose after JPM GBI-EM (Jun-2024), Bloomberg EM (Jan-2025) and FTSE inclusion: +25 bp UST -> +~7-8 bp G-sec = 0.3 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "G-sec yields hardened with global yields in H1 2026-27"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "BIS/RBI spillover estimates 0.2-0.4"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "F_US_EQUITIES",
+   "relation": "macro_transmission",
+   "w": -0.55,
+   "w_low": -0.75,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts -> S&P -2.75% = -0.55 SSU (empirical -0.46 wk3y, -0.53 wk5y, -0.71 mo5y; R2 0.6-0.7).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "SPX ~ VIX: -0.46 (t-16.5) wk3y, -0.53 (t-19.1) wk5y, -0.71 (t-8.4) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.15,
+   "lag": "0-3m",
+   "mechanism": "Global risk aversion is the main push factor for EM portfolio flows: +5 VIX pts -> ~-$2 bn/quarter FPI equity flows = -0.4 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IMF/RBI push-pull studies on EM portfolio flows; 2020, 2022 episodes"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "F_DXY",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Dollar safe-haven bid: +5 VIX -> DXY +0.3% = 0.1 SSU (empirical 0.05-0.17). Failed in Apr-2025 when the shock was US-made.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "DXY ~ VIX: +0.05 (t1.6) wk3y, +0.11 (t4.1) wk5y, +0.17 (t2.0) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "F_GOLD",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "Haven demand: +5 VIX -> gold +0.8% = 0.1 SSU (empirical ~0 weekly, +0.14 monthly).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "GOLD ~ VIX: -0.03 wk3y, -0.01 wk5y, +0.14 (t1.5) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "F_CREDIT_SPREADS_IN",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Indian corporate bonds are domestically held, so spillover is small: +5 VIX -> +5 bp spreads = 0.1 SSU (SSU 50 bp).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2020 and 2022 episodes: AAA spreads widened ~20-40 bp only in extreme stress"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "F_US_GDP",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.03,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Wealth effect: +5% equities ~ +$2.5 tn wealth x MPC 0.02-0.03 -> +0.15-0.2% consumption -> +0.1 pp growth. Loop with US_GDP->US_EQ product 0.12.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Fed wealth-effect estimates (MPC out of stock wealth ~2-3 cents)"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "F_US_EQUITIES",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "AI capex growth drives mega-cap/semis earnings (~35-40% of S&P weight): +10% capex growth -> S&P +2% = 0.4 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "AE equities gained in Q3 2026 driven by technology stocks; AI valuations flagged as risk"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "F_US_GDP",
+   "relation": "demand_driver",
+   "w": 0.12,
+   "w_low": 0.05,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "AI/data-centre investment ~1.2-1.5% of US GDP; +10% growth -> +0.13 pp GDP growth.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 BEA data: info-processing equipment + software drove ~1 pp of H1 growth"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "F_COPPER",
+   "relation": "demand_driver",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": "3-12m",
+   "mechanism": "Data centres + grid ~2-3% of copper demand; +10% AI capex -> copper +1% = 0.1 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "BHP/Wood Mackenzie data-centre copper demand estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "F_SEMICONDUCTOR_SUPPLY",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "HBM/AI demand crowds out conventional DRAM/NAND and power components (2025-26 memory price spike): +10% AI capex -> +0.3 tightening step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "DRAM contract prices surged H2-2025 on HBM reallocation"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "T_DATA_CENTRES_IN",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": ">12m",
+   "mechanism": "Hyperscaler capex spills into India data-centre build-out (Google Vizag, Microsoft, AWS commitments): +0.3 theme step.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 hyperscaler India DC announcements"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "T_GENAI_SERVICES",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": ">12m",
+   "mechanism": "Faster AI build-out raises capability and enterprise adoption -> more substitution of IT/BPO labour (+0.2 theme step).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Indian IT deal repricing/AI productivity pass-through 2025-26"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.3,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "AI trade pulls EM allocations to Korea/Taiwan; India viewed as AI-light: +10% AI capex growth -> ~-$0.5 bn/quarter = -0.1 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 FPI rotation out of India into North Asian AI beneficiaries"
+    }
+   ]
+  },
+  {
+   "src": "F_EU_GDP",
+   "dst": "F_US_TECH_SPEND",
+   "relation": "demand_driver",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Europe ~30% of Indian IT revenue and part of this node: +1 pp EU growth -> +0.75 pp spend growth = 0.15 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Indian IT revenue mix: Europe ~25-30%"
+    }
+   ]
+  },
+  {
+   "src": "F_EU_GDP",
+   "dst": "F_GDP_IN",
+   "relation": "demand_driver",
+   "w": 0.06,
+   "w_low": 0.02,
+   "w_high": 0.12,
+   "lag": "3-12m",
+   "mechanism": "RBI global-growth elasticity 0.3 x EU share of world GDP ~17% plus trade ties -> +0.06 pp.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "MPR Oct 2026 Ch.V: global growth -100 bps -> India growth -~30 bps, CPI -~15 bps"
+    }
+   ]
+  },
+  {
+   "src": "F_EU_GDP",
+   "dst": "F_BRENT",
+   "relation": "demand_driver",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Europe ~13% of oil demand: +1 pp growth -> Brent +1% = 0.1 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IEA demand shares"
+    }
+   ]
+  },
+  {
+   "src": "F_EU_GDP",
+   "dst": "C_EU_UK",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.8,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "ALIAS: identical SSU (+1 pp demand growth). Director should merge the nodes and drop this edge.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "node definitions"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "F_EU_GDP",
+   "relation": "input_cost",
+   "w": -0.08,
+   "w_low": -0.2,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Energy-intensive EU industry: +15% gas -> -0.08 pp EU growth (2022 shock of +300% cost ~1.5 pp).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ECB 2022 energy-shock estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.08,
+   "w_low": -0.15,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Software/BPO exports ~$190 bn underpin the current account: +5% growth -> +$9 bn/yr -> INR ~0.25% stronger = -0.08 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "INR supported by resilience of services exports"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.22,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "+3% DXY -> INR -0.66% = 0.22 SSU. Empirical 0.21-0.23 (5y monthly/weekly); only 0.04-0.10 in 3y weekly as RBI smoothed heavily.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "USDINR ~ DXY: +0.23 (t5.9) wk5y, +0.22 (t4.0) mo5y, +0.10 (t1.8) wk3y; with Brent/VIX: +0.20-0.21"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_USDCNY",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.45,
+   "lag": "0-3m",
+   "mechanism": "PBoC-managed CNY moves ~1/3 of DXY: empirical 0.11 (wk3y), 0.22 (wk5y), 0.44 (mo5y).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "USDCNY ~ DXY: +0.11 (t2.8) wk3y, +0.22 (t6.2) wk5y, +0.44 (t5.9) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.12,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "Asian FX co-movement/competitiveness: +3% CNY weakness -> INR -0.36% = 0.12 SSU (empirical 0.14 wk with DXY control; 0.03 monthly). Aug-2015 CNY deval took INR -2%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "USDINR ~ DXY+Brent+VIX+CNY: CNY +0.14 (t1.3 wk3y; t2.0 wk5y), +0.03 mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_GOLD",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.6,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Dollar pricing: +3% DXY -> gold -3.2% = -0.4 SSU (SSU 8%); empirical -0.33 to -0.50.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "GOLD ~ DXY+US10Y+VIX: DXY -0.38 (t-4.0) wk3y, -0.33 (t-5.4) wk5y, -0.50 (t-3.7) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_COPPER",
+   "relation": "macro_transmission",
+   "w": -0.35,
+   "w_low": -0.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "+3% DXY -> copper -3.5% = -0.35 SSU; empirical -0.35 to -0.42.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "COPPER ~ DXY: -0.35 (t-3.4) wk3y, -0.42 (t-6.0) wk5y, -0.40 (t-4.0) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_ALUMINIUM",
+   "relation": "macro_transmission",
+   "w": -0.15,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+3% DXY -> aluminium -1.5% = -0.15 SSU; empirical -0.09 to -0.23.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "ALUMINIUM ~ DXY: -0.09 wk3y, -0.19 (t-2.7) wk5y, -0.23 mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_ZINC_LEAD",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "LME base metals share the dollar beta; assumed between copper and aluminium (-2%) = -0.2 SSU (no zinc series in repo).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "LME metals dollar beta ~-0.5 to -1"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_COTTON",
+   "relation": "macro_transmission",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+3% DXY -> cotton -1.5% = -0.15 SSU; empirical -0.12 to -0.25.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "COTTON ~ DXY: -0.24 (t-2.8) wk3y, -0.12 wk5y, -0.25 mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -0.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Strong dollar tightens global financial conditions and EM flows: +3% DXY -> ~-$1.5 bn/quarter FPI = -0.3 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "robust US dollar listed as INR/flow headwind"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "C_AFRICA_LATAM",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Dollar strength squeezes frontier FX/import capacity (Nigeria, Egypt, Argentina 2022-23): +3% DXY -> -0.3 pp demand growth.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Bajaj Auto Africa volumes fell sharply in 2023 Nigerian naira crisis"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.17,
+   "w_low": -0.35,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "+$5 bn/quarter inflow -> INR +~0.5% (RBI absorbs most via reserve accumulation) = -0.17 SSU. Consistent with tiny empirical VIX->INR beta (~0.03).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "USDINR ~ VIX (controls DXY, Brent): +0.02-0.03 wk, -0.04 mo -> flow channel small"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNanVEVURXZ3NxQkR6RlB6cFJKazZwMlFaSkg2Y0dNa1JoM3BJUlpJNXNyci1OQkNCZUwyZUh3RU5HNWJra1FCQzYtc1hZcmdLcE5ZNFd6cmdrejlCQlp6bmxIQW5YR2lSYUo2MUtqaFdRanR2ZjlHVS05dmJsOWlaZFNrdjRiRDlTWVM1Vl9SSTN6alhISk15VmdibU5UdldHRUJqb2swWmlEbUpUMGRLaWo4TXBYeXMyZXh5d0lRb1VoQQ?oc=5",
+     "date": "2026-07-30",
+     "note": "RBI sold ~$7 bn in one day defending INR (Jul 2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Feedback: depreciation cuts USD returns and triggers stop-losses: +3% USD/INR -> ~-$1.5 bn/quarter = -0.3 SSU. Loop product with FPI->INR 0.05.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNVm9jYnZWU1hUbjRuVXRvMEt1aFV4dkZERy0weWhTYUhtS2NibTU1YkZRSGozZzdZNjBGVXk4SE5CbV85NE1ZbGJuVXhOZDBOSlVXOFBWenMzTlFoSFNFcHF3VTZ6N3daMkJUaEZkLU8tcHhicmlqZnBvMElaZGs0U3RzemN3a2RGVkc0bThKS0t2YU45a0hjek1aZ0k0WmFnX3liLUVMVzVtMG50MjVoX3VibnhwZlFMbkZ3cGJkeHdqazJ3ZXJKbFEwMHhNaXY1OTdrNHBLN2lLbktEeW9rXzY5WGJVbmpRaFhzYTh3aw?oc=5",
+     "date": "2026-10-07",
+     "note": "capital outflows blunt RBI support near record lows (Oct 2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.24,
+   "w_low": 0.12,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "RBI: 5% depreciation -> CPI +~40 bps; per 3% (1 SSU) = +0.24 pp.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "MPR Oct 2026 Ch.V: INR depreciation 5% -> CPI +~40 bps, GDP +~25 bps short term (turns contractionary in year 2, Box V.1)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.12,
+   "w_low": -0.05,
+   "w_high": 0.18,
+   "lag": "3-12m",
+   "mechanism": "RBI: 5% depreciation -> GDP +~25 bps short term via exports (= +0.15 per 3%), turning contractionary in year 2 (Box V.1); central 0.12.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "MPR Oct 2026 Ch.V: INR depreciation 5% -> CPI +~40 bps, GDP +~25 bps short term (turns contractionary in year 2, Box V.1)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_REPO_IN",
+   "relation": "policy_effect",
+   "w": 0.25,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "FX-defence motive beyond the CPI channel: Oct-2026 hike to 5.50% came with INR near record low ~95; +3% depreciation -> +~6 bp = 0.25 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNVm9jYnZWU1hUbjRuVXRvMEt1aFV4dkZERy0weWhTYUhtS2NibTU1YkZRSGozZzdZNjBGVXk4SE5CbV85NE1ZbGJuVXhOZDBOSlVXOFBWenMzTlFoSFNFcHF3VTZ6N3daMkJUaEZkLU8tcHhicmlqZnBvMElaZGs0U3RzemN3a2RGVkc0bThKS0t2YU45a0hjek1aZ0k0WmFnX3liLUVMVzVtMG50MjVoX3VibnhwZlFMbkZ3cGJkeHdqazJ3ZXJKbFEwMHhNaXY1OTdrNHBLN2lLbktEeW9rXzY5WGJVbmpRaFhzYTh3aw?oc=5",
+     "date": "2026-10-07",
+     "note": "rupee nears record low despite RBI hike"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_LIQUIDITY_IN",
+   "relation": "macro_transmission",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Depreciation pressure is met by RBI dollar sales that drain rupee liquidity: a 3% move typically comes with ~$15-25 bn sold (~Rs1.4-2.4 lakh cr) partly offset by OMOs/swaps -> net ~-Rs1 lakh cr = -1.0 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNanVEVURXZ3NxQkR6RlB6cFJKazZwMlFaSkg2Y0dNa1JoM3BJUlpJNXNyci1OQkNCZUwyZUh3RU5HNWJra1FCQzYtc1hZcmdLcE5ZNFd6cmdrejlCQlp6bmxIQW5YR2lSYUo2MUtqaFdRanR2ZjlHVS05dmJsOWlaZFNrdjRiRDlTWVM1Vl9SSTN6alhISk15VmdibU5UdldHRUJqb2swWmlEbUpUMGRLaWo4TXBYeXMyZXh5d0lRb1VoQQ?oc=5",
+     "date": "2026-07-30",
+     "note": "~$7 bn sold on a single day, Jul 2026"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "USD/INR forex swap facility introduced 2026-06-08"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Oct-2024 to Jan-2025: INR -4%, liquidity deficit ~Rs3 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_STEEL_INDIA",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.43,
+   "lag": "0-3m",
+   "mechanism": "Domestic HRC tracks landed import parity in INR: +3% USD/INR -> +~2.1% domestic = 0.3 SSU (SSU 7%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "import-parity pricing of Indian flat steel"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_GOLD_DEMAND_IN",
+   "relation": "fx_translation",
+   "w": -0.2,
+   "w_low": -0.35,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Rupee gold price +3% -> jewellery volume -~2% (price elasticity ~-0.6) = -0.2 SSU (SSU 10%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "WGC India demand price elasticity estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_IRON_ORE",
+   "relation": "demand_driver",
+   "w": 0.7,
+   "w_low": 0.3,
+   "w_high": 1.4,
+   "lag": "0-3m",
+   "mechanism": "China ~70% of seaborne ore; +1 pp growth/stimulus -> ore +~10% = 0.7 SSU (SSU 15%). Sep-2024 stimulus: +~20% in 2 weeks.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "SGX iron ore $90 -> $110 after Sep-2024 PBoC stimulus"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_COKING_COAL",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "China hot-metal output drives seaborne coking coal: +1 pp -> +7.5% = 0.5 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "seaborne coking coal-China steel output correlation"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_STEEL_GLOBAL",
+   "relation": "demand_driver",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Direct domestic-demand/arbitrage effect only (+1.5%); the export and raw-material channels run via F_CHINA_STEEL_EXPORTS, F_IRON_ORE and F_COKING_COAL.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Asian HRC export price vs China demand"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_CHINA_STEEL_EXPORTS",
+   "relation": "competition",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Weak Chinese property demand pushes surplus abroad: exports +23% in 2024 (to ~111 Mt) as growth slowed; +1 pp growth -> exports -~10% = -0.7 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQN3V5N0JxQ3FhdGdpbFZqQ09WZEQ2dzJ0bE9oa3dJM2tXY2R3dlE3bTA2Q1JCV0hicTRFc1llOUJfOFFGU0s0aXpWUUpXNldXc0dLeFlYTktiRlc1ejJaSTJyTUlGYjNweUREelRoNlMtX213RVpBUC1HeTZNcnVKR2xuWUVleTZzTkRaM21tTzhPXzZNV3lhVlNZWU94TDZvX2dwYy1WSWg0VWExbHdxbVVLWEdZU0U5dXpSNi0yLTFwaDgzWVJ3UDRHbDdlbjdUaFpjeQ?oc=5",
+     "date": "2026-07-20",
+     "note": "China steel exports hit record (Jul 2026) but rally may be short-lived"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_CHINA_CHEM_EXPORTS",
+   "relation": "competition",
+   "w": -0.4,
+   "w_low": -0.9,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Domestic overcapacity in chemicals/APIs/solar is exported when demand is weak: +1 pp growth -> export push -6% = -0.4 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2023-25 Chinese chemical price deflation and export surge"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_COPPER",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "China ~55% of refined copper demand: +1 pp -> copper +6% = 0.6 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ICSG demand shares"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_ALUMINIUM",
+   "relation": "demand_driver",
+   "w": 0.45,
+   "w_low": 0.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "China ~58% of aluminium demand (but also the marginal supplier, capped at 45 Mt): +1 pp -> +4.5% = 0.45 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "China 45 Mt capacity cap"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_ZINC_LEAD",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "China ~50% of zinc demand (galvanising for construction/infra): +1 pp -> +5% = 0.5 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ILZSG demand shares"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_COAL_INTL",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "China is the swing seaborne thermal coal importer (~500 Mt/yr): +1 pp -> +6% = 0.4 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "China coal imports 2023-25 ~470-540 Mt"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_BRENT",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "China ~16% of oil demand and most of non-OECD growth: +1 pp -> +0.25 mb/d -> Brent +4% = 0.4 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IEA China demand elasticity"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_GAS_GLOBAL",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "China is the largest LNG buyer; +1 pp -> JKM +4.5% = 0.3 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "China LNG imports ~75 Mt"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_PETROCHEM_SPREADS",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "China ~40% of polymer demand and the source of the 2022-25 capacity glut: +1 pp growth -> polymer-naphtha spreads +5% = 0.5 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Asian PE/PP spreads at decade lows 2023-25"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_RUBBER",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "China ~40% of natural rubber demand (tyres): +1 pp -> +3% = 0.3 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ANRPC demand shares"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_COTTON",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "China the largest cotton consumer/importer: +1 pp -> +3% = 0.3 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ICAC"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_EDIBLE_OIL",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "China soy-crush/veg-oil import demand: +1 pp -> +2% = 0.2 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "USDA China oilseed imports"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_USDCNY",
+   "relation": "macro_transmission",
+   "w": -0.25,
+   "w_low": -0.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Better growth/stimulus supports CNY: +1 pp -> CNY +0.75% stronger = -0.25 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CNY rallied ~2% after Sep-2024 stimulus"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.25,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "'Sell India, buy China' rotation on Chinese stimulus: Oct-2024 record ~$11 bn FPI outflow after the Sep-2024 package -> +1 pp -> -$1.25 bn/q = -0.25 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "NSDL: FPI equity outflow Rs94,000 cr in Oct-2024"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "C_CHINA",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.8,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "ALIAS: identical SSU (+1 pp China growth). Director should merge the nodes and drop this edge.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "node definitions"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "C_SOUTH_SE_ASIA",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Regional supply-chain/tourism spillover: +1 pp China -> +0.3 pp South/SE Asia.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ADB spillover estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "F_CHINA_STEEL_EXPORTS",
+   "relation": "competition",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Weaker yuan improves Chinese mills' export margins: +3% -> exports +4.5% = 0.3 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "export elasticity to RMB REER"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "F_CHINA_CHEM_EXPORTS",
+   "relation": "competition",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Weaker yuan lowers Chinese chemical/API export prices: +3% -> +0.3 SSU export intensity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "export elasticity to RMB REER"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "F_COPPER",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": ">12m",
+   "mechanism": "EVs, grids, renewables ~25% of incremental copper demand: +1 theme step -> +3% = 0.3 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IEA Critical Minerals Outlook"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "F_ALUMINIUM",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": ">12m",
+   "mechanism": "Solar frames, EV bodies, transmission conductors: +2% = 0.2 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IAI demand outlook"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "F_SILVER",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.6,
+   "lag": ">12m",
+   "mechanism": "PV now ~17-20% of silver demand: +1 theme step -> silver +3.6% = 0.3 SSU (SSU 12%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Silver Institute World Silver Survey 2025"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "F_BATTERY_MATERIALS",
+   "relation": "demand_driver",
+   "w": 0.15,
+   "w_low": -0.2,
+   "w_high": 0.4,
+   "lag": ">12m",
+   "mechanism": "Demand pull raises lithium/cell prices short term, scale lowers them long term: net +0.15 SSU, sign uncertain.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2021-22 lithium spike vs 2023-25 cell-price collapse"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CRITICAL_MINERALS_SUPPLY",
+   "dst": "F_BATTERY_MATERIALS",
+   "relation": "geopolitical_exposure",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.7,
+   "lag": "0-3m",
+   "mechanism": "Chinese controls on graphite anode, LFP cathode tech and lithium processing: +1 tightening step -> cell cost +4.5% = 0.3 SSU (SSU 15%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Oct-2025 China export controls on battery cathode/anode technology"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CRITICAL_MINERALS_SUPPLY",
+   "dst": "F_SEMICONDUCTOR_SUPPLY",
+   "relation": "geopolitical_exposure",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Gallium/germanium/rare-earth magnet controls tighten component supply: +0.3 of a tightening step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2023-25 Chinese gallium/germanium export bans"
+    }
+   ]
+  },
+  {
+   "src": "NEW_OPEC_PLUS_SUPPLY",
+   "dst": "F_BRENT",
+   "relation": "output_price",
+   "w": -0.8,
+   "w_low": -1.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "+1 mb/d (~1% of supply) with short-run demand elasticity ~-0.1 -> Brent -~8% = -0.8 SSU; less if spare capacity was already priced.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 OPEC+ unwinding of 2.2 mb/d cuts coincided with Brent $75 -> $60s"
+    }
+   ]
+  },
+  {
+   "src": "NEW_OPEC_PLUS_SUPPLY",
+   "dst": "C_GCC",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "GCC carries ~60% of an OPEC+ increase: +0.6 mb/d on ~17 mb/d (+3.5%) x oil share of GDP ~30-35% -> +~1 pp GCC growth; central 0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IMF REO Middle East: GCC oil-GDP shares"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "C_GCC",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "Price windfall funds GCC fiscal spending: +10% oil -> non-oil growth +~0.4 pp with a lag. Weak while Gulf volumes are stranded (2026).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IMF: GCC non-oil growth follows government spending, which follows oil revenue"
+    }
+   ]
+  },
+  {
+   "src": "C_GCC",
+   "dst": "F_GULF_REMITTANCES",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.15,
+   "w_high": 0.7,
+   "lag": "3-12m",
+   "mechanism": "Indian migrant employment in construction/services tracks GCC activity: +1 pp growth -> remittances +4% = 0.4 SSU (SSU 10%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "RBI remittance survey (Mar-2025): GCC ~38% of US$135 bn inflows"
+    }
+   ]
+  },
+  {
+   "src": "F_GULF_REMITTANCES",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.07,
+   "w_low": -0.15,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "GCC remittances ~$51 bn; +10% = +$5 bn/yr (~0.13% GDP) -> INR ~0.2% stronger = -0.07 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "RBI remittance survey 2025"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_CPI_IN",
+   "relation": "input_cost",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.45,
+   "lag": "0-3m",
+   "mechanism": "RBI: +10% crude -> CPI +~50 bps WITH full pass-through (incl. INR channel modelled in QPM). Retail petrol/diesel are administered: one ~Rs5/l (~5%) hike in May-2026, frozen since -> realised pass-through ~half (LPG, ATF, industrial fuels, freight) -> +0.25 pp. INR channel carried separately by F_BRENT->F_USDINR->F_CPI_IN.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "MPR Oct 2026 Ch.V: crude +10% vs baseline (full pass-through) -> CPI +~50 bps, GDP growth -~15 bps"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQN1Vpck9GV3BPb1A5LW5aM0xsWGJ4OV9udnZDMTEzbTJZOXR1RFhTay1tVXRpV1FDZDd0U2cxU2hCd1BXVEFJOTFZVjYyR293UXVEUGJ1dWt6TEhTYmwwblF6YXZsOVJWMk9WQl9nempVaEdBYWtnN0thaWgwazQ3N2U0MjVDVHZVYWlwdDNKQlRrajMwazEwMEpGRGxNOS1kalBvSXZkVUhOeWZaQXRscEsySXdTQQ?oc=5",
+     "date": "2026-05-14",
+     "note": "first retail hike since Iran war"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMXZGZmhEUDBnOWxReGR3cEdmNUtleXNUWWtDc01yNWdLckdBT09XQ2dVa3V6ZDFBa0xLLTBnTENlal94NHhJMlJMd3Y4YllscHNUVk9DT1VqVmJVS0NyandHdjlkTi03Z2RRRTZ0bDJWdm1Ob0w0RFJTUUVmc3F4dVdLc0lGX0pVZnphejRlTndCQ2J4Qmw1Q0ZtdTEtb0tFNUgtVUtONE42YlZiMlhYSkwtU1AtZjk5aXRkemRnbnhPNFRBb0F2VXJn0gHPAUFVX3lxTFBJcldtTHd6ZjVCMkVLZi1JUmVYM1RJaFN5Nnd4UEVPYXJrOGcwZW9xVmhhS1FBcThwbFZ4LU9VQTJOaGctc21kVWszS3plbldFOW5KNVpSRHRFeDVKTVhacEp1SGtSdXRzSms2akZYNFRFNWZTWGt6MHF3aUtfNzBSYVl3MG9BTm5wWEJMa29pQnNyN1NjazlVa1l1ZV9HdVNvaldsdWpSUnpRLUxhT2NOdWk2clNWZmdaOXFWUW91NWFnUGZGM0Rra3BFa1pxUQ?oc=5",
+     "date": "2026-09-23",
+     "note": "no hike despite high crude, Sep-2026"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_GDP_IN",
+   "relation": "input_cost",
+   "w": -0.15,
+   "w_low": -0.25,
+   "w_high": -0.08,
+   "lag": "3-12m",
+   "mechanism": "RBI: +10% crude -> GDP growth -~15 bps (terms of trade, margins, demand).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "MPR Oct 2026 Ch.V: crude +10% vs baseline (full pass-through) -> CPI +~50 bps, GDP growth -~15 bps"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.18,
+   "w_low": 0.06,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "Net oil imports ~$100-130 bn: +10% Brent widens CAD ~0.3% GDP -> INR -0.55% = 0.18 SSU. Empirical weekly beta 0.06-0.12 (RBI smoothing); 2026 episode (Brent +50% y/y, INR 89 -> 94.5) implies ~0.3 over longer horizons.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "USDINR ~ DXY+Brent+VIX: Brent +0.12 (t4.2) wk3y, +0.06 (t2.7) wk5y, +0.09 (t2.8) mo5y"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent +49.5% and USD/INR +6.5% over 12m"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.15,
+   "w_low": -0.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "India is the archetypal oil-importer short: +10% Brent -> ~-$0.75 bn/quarter FPI = -0.15 SSU (beyond the INR channel).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "rising crude contributed to risk-off and EME portfolio outflows in Q3 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_CHEM_FEEDSTOCK",
+   "relation": "input_cost",
+   "w": 0.85,
+   "w_low": 0.6,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Naphtha, benzene, propylene price off crude: +10% Brent -> feedstock +8.5% = 0.85 SSU.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "naphtha/Brent ratio stable ~0.85-0.95"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_GAS_GLOBAL",
+   "relation": "input_cost",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.65,
+   "lag": "0-3m",
+   "mechanism": "~2/3 of India's LNG is oil-indexed (slope ~12-13% of Brent): +10% Brent -> blended LNG +6-7% = 0.4-0.45 SSU (SSU 15%). Henry Hub (node series NG=F) shows ~0 empirical beta.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "NG=F ~ Brent: +0.01 wk3y, +0.10 wk5y (series is Henry Hub, not LNG)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Petronet-QatarEnergy contract slope ~12.7%"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_EDIBLE_OIL",
+   "relation": "substitution",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "Biodiesel mandates (Indonesia B40, Brazil, US RD) tie veg oils to diesel: +10% Brent -> +1.5% = 0.15 SSU (soy series 0.07-0.12; palm link stronger).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "ZS=F ~ Brent: +0.07 (t2.1) wk3y, +0.12 (t3.7) wk5y"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_SUGAR",
+   "relation": "substitution",
+   "w": 0.14,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Brazilian mills switch cane to ethanol when gasoline is dear: +10% Brent -> sugar +1.4% = 0.14 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "SB=F ~ Brent: +0.14 (t2.5) wk3y, +0.14 (t3.4) wk5y"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_SHIPPING_RATES",
+   "relation": "input_cost",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Bunker ~20-30% of liner cost, passed through BAF: +10% Brent -> freight +2.5% = 0.1 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "carrier BAF formulas"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "C_AFRICA_LATAM",
+   "relation": "demand_driver",
+   "w": 0.1,
+   "w_low": -0.1,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Mixed region: oil exporters (Nigeria, Angola, Brazil, Colombia) gain, importers lose; small net +0.1 pp per +10% Brent.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Nigeria FX availability tracks oil revenue"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "F_FERTILISER_INPUTS",
+   "relation": "input_cost",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "Gas is ~70-85% of ammonia/urea cash cost: +15% gas -> urea/ammonia +9% = 0.6 SSU (SSU 15%).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CRU/IFA urea cost curves"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "F_COAL_INTL",
+   "relation": "substitution",
+   "w": 0.25,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Gas-to-coal switching in Asian/European power: +15% gas -> coal +3.75% = 0.25 SSU. Empirical mo5y 0.29 (weekly ~0; coal series stale since Dec-2025).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "MTF=F ~ NG=F: +0.29 (t2.9) mo5y; weekly ~0"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "input_cost",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "Gas plants set evening-peak/HP-DAM prices but are ~2% of generation: +15% LNG -> IEX average +1.5% = 0.1 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Grid-India generation mix"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "F_COAL_INDIA",
+   "relation": "input_cost",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Notified CIL prices are sticky but e-auction premiums and imported/blended coal (~20% of thermal use) track seaborne: +15% intl -> blended domestic cost +3% = 0.3 SSU (SSU 10%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CIL e-auction premiums 2022 spiked >300% with Newcastle"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "input_cost",
+   "w": 0.4,
+   "w_low": 0.15,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Imported-coal plants (Mundra etc., Sec-11 directions) are often marginal: +15% coal -> their variable cost +~Rs0.45/kWh -> IEX average +6% = 0.4 SSU (SSU 15%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2022 imported-coal spike pushed IEX DAM to the Rs12 cap"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "F_ALUMINIUM",
+   "relation": "input_cost",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "Chinese smelters run on coal power (~35-40% of cost): +15% coal -> aluminium +1% = 0.1 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CRU smelter cost curve"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "input_cost",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Domestic coal ~70% of generation; +10% coal cost -> variable cost +~Rs0.2/kWh -> IEX +3.75% = 0.25 SSU. (Commodity-price formation edge; drop if the India part duplicates.)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Grid-India/CEA merit order"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.4,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "Tight reserve margins make spot prices convex in demand: +3 pp demand growth -> IEX +15% = 1.0 SSU (2023-24 heatwaves; 2025 wet year saw prices fall ~20%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IEX DAM averages FY24 ~Rs5.2 vs FY26 ~Rs4/kWh"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "F_COAL_INDIA",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Higher demand tightens coal availability, lifting e-auction premiums and imports: +3 pp -> +3% domestic coal cost = 0.3 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2022 coal shortage"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_POWER_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Rain cuts pumping and cooling load: +10% rainfall -> -1.5 pp demand growth = -0.5 SSU (2025 excess monsoon gave negative y/y demand months).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CEA 2025 monthly demand vs IMD rainfall"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "output_price",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Supply channel: reservoirs lift hydro output (~10-12% of generation): +10% rainfall -> IEX -4.5% = -0.3 SSU beyond the demand channel.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CEA hydro generation vs monsoon"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_POWER_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.2,
+   "w_high": 0.45,
+   "lag": "3-12m",
+   "mechanism": "Power-GDP elasticity ~0.9-1.0: +1 pp GDP -> +0.9-1 pp demand = 0.3 SSU (SSU 3 pp). (Energy edge; drop if India part duplicates.)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CEA electricity-GDP elasticity"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "F_PETROCHEM_SPREADS",
+   "relation": "input_cost",
+   "w": -0.35,
+   "w_low": -0.7,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Polymer prices lag naphtha in an oversupplied market: +10% feedstock -> polymer-naphtha spread -3.5% = -0.35 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2022 spread compression"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "F_PETROCHEM_SPREADS",
+   "relation": "competition",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Chinese PE/PP/PVC exports set Asian prices: +15% export push -> spreads -4% = -0.4 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2023-25 Chinese polymer export surge"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "F_PACKAGING",
+   "relation": "input_cost",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Plastics ~40% of packaging cost; naphtha ~60% of polymer price: +10% -> packaging +2.4% = 0.25 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "FMCG packaging cost mix"
+    }
+   ]
+  },
+  {
+   "src": "F_PETROCHEM_SPREADS",
+   "dst": "F_PACKAGING",
+   "relation": "input_cost",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Wider spreads raise polymer prices: +10% spread -> polymer +4% -> packaging +1.6% = 0.15 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "polymer price build-up"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "F_RUBBER",
+   "relation": "input_cost",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Synthetic rubber (butadiene/styrene) ~45% of tyre rubber and substitutes for NR: +10% feedstock -> rubber +3% = 0.3 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IRSG"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "F_STEEL_INDIA",
+   "relation": "output_price",
+   "w": 0.8,
+   "w_low": 0.4,
+   "w_high": 1.1,
+   "lag": "0-3m",
+   "mechanism": "Import parity: +10% Asian/global HRC -> Indian HRC +5.6% = 0.8 SSU (SSU 7%). NB node series HRC=F is US Midwest HRC (behind 50% Sec-232) - use Asian/China export HRC for calibration.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNakN6b1dteDhQOUhlTUNOTHVnZVVoVzZTREhQRHhCNFRybWZFaUI5bVp1UFh2NDZOYTY4Tms5dWJGRFd4RWlBejBrTEdoWkthd3FVWkdVNW9pNGdpQzVpdHFkME1JMC1nUWdMRUdVY2drdjZVdWt2ZEl5dXRoWHlPQ21LLXVzbFdJbmoxSmNLcThueGw2aXJJSHlLdzlrT053YmlzX2VjRjF4N0piMy00LWdUUnUxdWNxd1lwdVJ6WHpJdw?oc=5",
+     "date": "2026-07-21",
+     "note": "Indian steelmakers pivot home as Europe tightens imports, China squeezes margins (Jul 2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_STEEL_EXPORTS",
+   "dst": "F_STEEL_GLOBAL",
+   "relation": "competition",
+   "w": -0.5,
+   "w_low": -0.9,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Chinese exports (~110-120 Mt) set Asian HRC: +15% exports -> Asian HRC -5% = -0.5 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQN3V5N0JxQ3FhdGdpbFZqQ09WZEQ2dzJ0bE9oa3dJM2tXY2R3dlE3bTA2Q1JCV0hicTRFc1llOUJfOFFGU0s0aXpWUUpXNldXc0dLeFlYTktiRlc1ejJaSTJyTUlGYjNweUREelRoNlMtX213RVpBUC1HeTZNcnVKR2xuWUVleTZzTkRaM21tTzhPXzZNV3lhVlNZWU94TDZvX2dwYy1WSWg0VWExbHdxbVVLWEdZU0U5dXpSNi0yLTFwaDgzWVJ3UDRHbDdlbjdUaFpjeQ?oc=5",
+     "date": "2026-07-20",
+     "note": "China steel exports at record mid-2026"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_STEEL_EXPORTS",
+   "dst": "F_STEEL_INDIA",
+   "relation": "competition",
+   "w": -0.25,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "India-specific channel beyond the global price: diverted Chinese (and Korean/Japanese) volumes land in India; 2024 import surge took Indian HRC -15-19%. +15% exports -> -1.75% = -0.25 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Indian HRC ~Rs58k/t (Jan-2024) -> ~Rs47k/t (late 2024)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EU_STEEL_PROTECTION",
+   "dst": "F_STEEL_INDIA",
+   "relation": "competition",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "EU is ~60% of Indian finished-steel exports (~5 Mt); tighter safeguard quotas/CBAM divert ~2-3 Mt home (~2% of consumption) -> domestic -1% = -0.15 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNakN6b1dteDhQOUhlTUNOTHVnZVVoVzZTREhQRHhCNFRybWZFaUI5bVp1UFh2NDZOYTY4Tms5dWJGRFd4RWlBejBrTEdoWkthd3FVWkdVNW9pNGdpQzVpdHFkME1JMC1nUWdMRUdVY2drdjZVdWt2ZEl5dXRoWHlPQ21LLXVzbFdJbmoxSmNLcThueGw2aXJJSHlLdzlrT053YmlzX2VjRjF4N0piMy00LWdUUnUxdWNxd1lwdVJ6WHpJdw?oc=5",
+     "date": "2026-07-21",
+     "note": "Europe tightens imports; Indian mills pivot home (Jul 2026)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "EU proposed ~47% quota cut and 50% out-of-quota tariff (Oct-2025); CBAM definitive from 2026-01-01"
+    }
+   ]
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "F_STEEL_GLOBAL",
+   "relation": "input_cost",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "1.6 t ore/t BF steel: +15% ore (~$14/t) -> +$22/t on ~$500 HRC = +4.5%; empirical 0.38-0.61 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "HRC=F ~ TIO=F: +0.38 (t2.7) wk3y, +0.40 (t3.0) wk5y, +0.61 mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "F_STEEL_GLOBAL",
+   "relation": "input_cost",
+   "w": 0.35,
+   "w_low": 0.15,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "0.75-0.8 t coking coal/t BF steel: +15% (~$30/t) -> +$23/t on ~$500 HRC = +4.6%, ~75% passed -> 0.35 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "BF-BOF cost structure"
+    }
+   ]
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "F_STEEL_INDIA",
+   "relation": "input_cost",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "India imports ~85-90% of coking coal; mills push cost-led hikes (2021-22): direct +1.4% = 0.2 SSU on top of the global-price channel.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Indian mills' Q-o-Q price hikes after coking-coal spikes 2021-22"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "F_STEEL_INDIA",
+   "relation": "demand_driver",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Infrastructure is ~35-40% of steel demand: +10% govt capex -> demand +3-4% -> price +1% = 0.15 SSU. (Commodity-price formation edge; drop if India part duplicates.)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "JPC consumption by segment"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "F_SILVER",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.8,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Precious-metal complex: +8% gold -> silver +12.6% = 1.05 SSU (SSU 12%); empirical 1.04-1.05, R2 ~0.6.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "market_impact/data/prices/close.csv (own OLS, log changes, weekly 3y/5y and monthly 5y to 2026-11-05; coefficients in SSU per SSU)",
+     "date": "2026-11-05",
+     "note": "SILVER ~ GOLD: +1.04 (t14.6) wk3y, +1.05 (t19.1) wk5y, +1.05 (t10.5) mo5y"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "F_GOLD_DEMAND_IN",
+   "relation": "output_price",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Jewellery volume elasticity ~-0.6 partly offset by momentum-driven bar/coin/ETF buying: +8% gold -> volume -4% = -0.4 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "WGC: India 2025 jewellery tonnage fell as prices hit records while investment demand rose"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.08,
+   "w_low": 0.04,
+   "w_high": 0.11,
+   "lag": "0-3m",
+   "mechanism": "Gold ~1% of CPI (old series 1.08%; new 2024-base weight to verify): +8% price -> CPI +0.08 pp. Gold added ~50 bps to headline CPI in 2025.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CPI 2012 item weight gold 1.08%"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUXB6dGxzTzNNYndKX05IYVNVRTJzejNVcFkxVjJyeGxLSmhIWGZyMkNIVFNIRnVQa0tXcnM0SmYxLWVYQjlKZkVtcFpUdmM5MktaT3dsM3Y2TVQ4ek1DdVpyVUNSclV1WlhNUGNHYVdUUGFnTmQzb3lGZDA1aENCdFlzSTZXZksxOWo2TWJ3TTdZSEFudGh4NnA1U1FHeHJFdTdzZFZWOVRlZEptX1U1cVZpWjhQdTluQWpoOUxhd0xYZ0UzQUHSAcsBQVVfeXFMTWlKM3E4VnhzNlhGVUFvZnQtUG5zODVlbElQMF9MSmctR3NhcW16Ry1yaktqU0ViZjFSaTNJaXlmMXJMcVR3OGswQjZfMTZhTDhvZjZHMjhRTExpbGxqdHdCX183Z2hiUThkakt6cTcxdUZ0c3Eydkh2c01BREZ2cHNqSGR6YmxReWxXckpoWG1VUnFDbURXNmx1Z3dsU0l1V3AwWXVQN25YWG1IX0IxN2lmSThwemlGZUt1S3FNZkNHTkd6eEM5clVXelU?oc=5",
+     "date": "2026-01-29",
+     "note": "new CPI series weights (Jan 2026)"
+    }
+   ]
+  },
+  {
+   "src": "P_GOLD_IMPORT_DUTY",
+   "dst": "F_GOLD_DEMAND_IN",
+   "relation": "policy_effect",
+   "w": -0.35,
+   "w_low": -0.7,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "+5 pp duty -> landed price +5% -> legal volume -3.5% (incl. shift to smuggling) = -0.35 SSU. Jul-2024 cut 15% -> 6% lifted Q3-2024 demand +18% y/y.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "WGC Gold Demand Trends Q3 2024: India 248 t, +18% y/y after duty cut"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD_DEMAND_IN",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.08,
+   "w_low": 0.0,
+   "w_high": 0.15,
+   "lag": "0-3m",
+   "mechanism": "Gold imports ~$60-70 bn: +10% volume -> +$6-7 bn/yr -> INR -0.25% = 0.08 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "FY25 gold imports ~$58 bn"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EL_NINO",
+   "dst": "F_MONSOON",
+   "relation": "geopolitical_exposure",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "El Nino years average ~-6% vs LPA, strong events -10 to -14% (2002, 2009, 2015, 2023): one El Nino step -> -6% rainfall = -0.6 SSU (SSU +10%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "El Nino and deficient, erratic 2026 monsoon flagged as food-price risks"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "IMD monsoon vs ENSO history"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EL_NINO",
+   "dst": "F_SUGAR",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Hits India/Thailand cane: +5% world sugar = 0.5 SSU (2023 El Nino took ICE #11 to 12-year highs).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ICE raw sugar ~28c/lb Nov-2023"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EL_NINO",
+   "dst": "F_EDIBLE_OIL",
+   "relation": "geopolitical_exposure",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.7,
+   "lag": "3-12m",
+   "mechanism": "SE Asian palm yields fall 6-12 months after El Nino dryness: +3% = 0.3 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "MPOB yield lags"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EL_NINO",
+   "dst": "F_RICE",
+   "relation": "geopolitical_exposure",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Asian rice output risk plus Indian export curbs: +4% = 0.4 SSU (2023: Thai 5% broken +~40% after India's ban).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "FAO rice price index 2023"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EL_NINO",
+   "dst": "F_COCOA_COFFEE_TEA",
+   "relation": "geopolitical_exposure",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "West African cocoa, Vietnamese/Indonesian robusta and Indian tea yields fall: +4.5% = 0.3 SSU (SSU 15%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2023-24 cocoa/robusta spikes"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EL_NINO",
+   "dst": "F_WHEAT",
+   "relation": "geopolitical_exposure",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "Australian/Indian wheat yield risk: +1.5% = 0.15 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ABARES El Nino crop impacts"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EL_NINO",
+   "dst": "F_POWER_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Hotter pre-monsoon (Apr-Jun) cooling load beyond the rainfall channel: +0.6 pp demand growth = 0.2 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2024 heatwave peak demand 250 GW"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.15,
+   "lag": "3-12m",
+   "mechanism": "+10% rainfall vs LPA -> food inflation -~1 pp over the next 2-3 quarters (vegetables, pulses, cereals) = -0.5 SSU (SSU 2 pp).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "deficient/erratic 2026 monsoon; food inflation upside risk of +40 bps to headline"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "RBI studies on rainfall and food prices"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_RICE",
+   "relation": "output_price",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "India ~40% of world rice exports; deficits trigger export curbs (Jul-2023 ban): +10% rainfall -> world rice -3% = -0.3 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2023 non-basmati export ban"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_SUGAR",
+   "relation": "output_price",
+   "w": -0.25,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "India is the #2 producer/major exporter: +10% rainfall -> cane/sugar output up -> world sugar -2.5% = -0.25 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ISMA output vs monsoon"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_DAIRY",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -0.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Deficient rain raises fodder costs and milk procurement prices: +10% rainfall -> procurement price -1.6% = -0.2 SSU (SSU 8%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2022-23 fodder inflation and milk price hikes"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "input_cost",
+   "w": 0.28,
+   "w_low": 0.12,
+   "w_high": 0.45,
+   "lag": "0-3m",
+   "mechanism": "India imports ~55-60% of edible oil; +10% world -> domestic +7% (duty buffer); oils ~8% of the CPI food basket (36.75% food weight) -> food +0.56 pp = 0.28 SSU.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUXB6dGxzTzNNYndKX05IYVNVRTJzejNVcFkxVjJyeGxLSmhIWGZyMkNIVFNIRnVQa0tXcnM0SmYxLWVYQjlKZkVtcFpUdmM5MktaT3dsM3Y2TVQ4ek1DdVpyVUNSclV1WlhNUGNHYVdUUGFnTmQzb3lGZDA1aENCdFlzSTZXZksxOWo2TWJ3TTdZSEFudGh4NnA1U1FHeHJFdTdzZFZWOVRlZEptX1U1cVZpWjhQdTluQWpoOUxhd0xYZ0UzQUHSAcsBQVVfeXFMTWlKM3E4VnhzNlhGVUFvZnQtUG5zODVlbElQMF9MSmctR3NhcW16Ry1yaktqU0ViZjFSaTNJaXlmMXJMcVR3OGswQjZfMTZhTDhvZjZHMjhRTExpbGxqdHdCX183Z2hiUThkakt6cTcxdUZ0c3Eydkh2c01BREZ2cHNqSGR6YmxReWxXckpoWG1VUnFDbURXNmx1Z3dsU0l1V3AwWXVQN25YWG1IX0IxN2lmSThwemlGZUt1S3FNZkNHTkd6eEM5clVXelU?oc=5",
+     "date": "2026-01-29",
+     "note": "food & beverages weight 36.75% in 2024-base CPI"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "edible-oil import dependence"
+    }
+   ]
+  },
+  {
+   "src": "F_DAIRY",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "input_cost",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Milk & products ~14-16% of the CPI food basket; +8% procurement -> retail +6% -> food +0.85 pp = 0.4 SSU. (Agri-price edge; drop if India part duplicates.)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "CPI milk weight 6.61% of 45.86% (2012 series)"
+    },
+    {
+     "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUXB6dGxzTzNNYndKX05IYVNVRTJzejNVcFkxVjJyeGxLSmhIWGZyMkNIVFNIRnVQa0tXcnM0SmYxLWVYQjlKZkVtcFpUdmM5MktaT3dsM3Y2TVQ4ek1DdVpyVUNSclV1WlhNUGNHYVdUUGFnTmQzb3lGZDA1aENCdFlzSTZXZksxOWo2TWJ3TTdZSEFudGh4NnA1U1FHeHJFdTdzZFZWOVRlZEptX1U1cVZpWjhQdTluQWpoOUxhd0xYZ0UzQUHSAcsBQVVfeXFMTWlKM3E4VnhzNlhGVUFvZnQtUG5zODVlbElQMF9MSmctR3NhcW16Ry1yaktqU0ViZjFSaTNJaXlmMXJMcVR3OGswQjZfMTZhTDhvZjZHMjhRTExpbGxqdHdCX183Z2hiUThkakt6cTcxdUZ0c3Eydkh2c01BREZ2cHNqSGR6YmxReWxXckpoWG1VUnFDbURXNmx1Z3dsU0l1V3AwWXVQN25YWG1IX0IxN2lmSThwemlGZUt1S3FNZkNHTkd6eEM5clVXelU?oc=5",
+     "date": "2026-01-29",
+     "note": "2024-base weights"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.73,
+   "w_low": 0.68,
+   "w_high": 0.78,
+   "lag": "0-3m",
+   "mechanism": "Accounting identity: food & beverages weight 36.75% in the 2024-base CPI -> +2 pp food inflation = +0.735 pp headline. Bridge edge so global agri shocks reach CPI; Director should de-duplicate with the India part.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPUXB6dGxzTzNNYndKX05IYVNVRTJzejNVcFkxVjJyeGxLSmhIWGZyMkNIVFNIRnVQa0tXcnM0SmYxLWVYQjlKZkVtcFpUdmM5MktaT3dsM3Y2TVQ4ek1DdVpyVUNSclV1WlhNUGNHYVdUUGFnTmQzb3lGZDA1aENCdFlzSTZXZksxOWo2TWJ3TTdZSEFudGh4NnA1U1FHeHJFdTdzZFZWOVRlZEptX1U1cVZpWjhQdTluQWpoOUxhd0xYZ0UzQUHSAcsBQVVfeXFMTWlKM3E4VnhzNlhGVUFvZnQtUG5zODVlbElQMF9MSmctR3NhcW16Ry1yaktqU0ViZjFSaTNJaXlmMXJMcVR3OGswQjZfMTZhTDhvZjZHMjhRTExpbGxqdHdCX183Z2hiUThkakt6cTcxdUZ0c3Eydkh2c01BREZ2cHNqSGR6YmxReWxXckpoWG1VUnFDbURXNmx1Z3dsU0l1V3AwWXVQN25YWG1IX0IxN2lmSThwemlGZUt1S3FNZkNHTkd6eEM5clVXelU?oc=5",
+     "date": "2026-01-29",
+     "note": "Food weight to decline to 36.75% in new CPI series"
+    }
+   ]
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_COPPER",
+   "relation": "demand_driver",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "US ~8% of copper demand plus sentiment: +1 pp -> +1.5% = 0.15 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "ICSG demand shares"
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_RUSSIA_UKRAINE_WAR",
+   "type": "COUNTRY",
+   "name": "Russia-Ukraine war / Western sanctions intensity on Russia",
+   "ssu": "+1 = escalation (new sanctions round, strikes on energy/port infrastructure); -1 = ceasefire/sanctions relief",
+   "why": "C_RUSSIA only captures India's bilateral access; the war itself drives Brent, diesel cracks, wheat, sunflower oil, fertiliser and aluminium."
+  },
+  {
+   "id": "NEW_OPEC_PLUS_SUPPLY",
+   "type": "FACTOR",
+   "name": "OPEC+ crude supply decisions",
+   "ssu": "+1 mb/d OPEC+ production (quota/actual)",
+   "why": "Entry node for OPEC+ meeting events; supply shock distinct from conflict and demand."
+  },
+  {
+   "id": "NEW_EL_NINO",
+   "type": "FACTOR",
+   "name": "ENSO state (El Nino strength)",
+   "ssu": "+1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina",
+   "why": "Common driver of Indian monsoon, Asian sugar/rice/palm and beverage crops; RBI MPR Oct-2026 flags it."
+  },
+  {
+   "id": "NEW_US_TARIFF_GLOBAL",
+   "type": "POLICY",
+   "name": "US average effective tariff rate (all partners)",
+   "ssu": "+5 pp effective tariff rate",
+   "why": "P_US_TARIFF_INDIA is India-specific; global US tariff shocks move US growth, risk, China and India's own tariff."
+  },
+  {
+   "id": "NEW_CRITICAL_MINERALS_SUPPLY",
+   "type": "FACTOR",
+   "name": "Critical-mineral supply tightness (China export controls on rare earths, magnets, graphite, Ga/Ge)",
+   "ssu": "+1 = new/tighter export-control round",
+   "why": "Hits Indian autos/EV (magnets), electronics and battery supply chains; distinct from chip supply."
+  },
+  {
+   "id": "NEW_EU_STEEL_PROTECTION",
+   "type": "POLICY",
+   "name": "EU steel safeguard / CBAM burden on imports",
+   "ssu": "+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost)",
+   "why": "Diverts Indian steel exports home (domestic price) and helps Tata Steel Europe; live in 2026."
+  },
+  {
+   "id": "NEW_AGRI_IMPORT_DUTY_IN",
+   "type": "POLICY",
+   "name": "Indian import duties on edible oils / pulses",
+   "ssu": "+10 pp effective import duty",
+   "why": "Main policy buffer between world veg-oil prices and Indian food inflation; affects edible-oil refiners and FMCG input costs."
+  }
+ ],
+ "notes": "PART=global (backbone_global.json), built 2026-11-05. Weights = change in target SSU per +1 source SSU (nodes_seed.json); arithmetic in each mechanism.\n\nGROUNDING. (1) RBI Monetary Policy Report Oct-2026 (fetched, rbi.org.in PublicationsView id=24085): crude +10% -> CPI +~50 bps (full pass-through), GDP -15 bps; INR -5% -> CPI +40 bps, GDP +25 bps short term; global growth -100 bps -> India GDP -30 bps. (2) Own OLS on market_impact/data/prices/close.csv (weekly 3y/5y, monthly 5y) for every market-observable pair (DXY->INR/CNY/gold/copper/aluminium/cotton, Brent->INR/sugar/soy, gold->silver, VIX/US10Y->S&P/DXY/gold, Fed->10Y, ore->HRC, gas->coal). (3) 2024-base CPI food weight 36.75% (ET 2026-01-29). (4) Dated 2026 news via Google News RSS for regime facts. Everything else is labelled model knowledge with lower confidence.\n\nREGIME CONTEXT (affects which edges are 'live'): US-Iran war since ~Mar-2026 with Strait of Hormuz disruption (IEA: ~10 mb/d Gulf output offline Aug-2026; Brent avg $114 Sep-2026, $95 on 2026-11-05; Iran-Qatar 2-day reopening proposal 2026-11-02). Indian retail fuel hiked ~Rs5/l in May-2026 then frozen. RBI hiked to 5.50% on 2026-10-07; INR ~94.5 near record low with heavy RBI intervention and a USD/INR swap facility; CPI 5.54% (Sep-2026), food 7.74%; deficient monsoon + El Nino risk. US-India: interim deal (18%) Feb-2026, SCOTUS IEEPA ruling, S301 forced-labour tier 10% from 2026-07-24, 100% tariff threat over Russian crude (Sep-2026) eased Oct-2026; US midterms 2026-11-03.\n\nSCOPE CHOICES. Global->Indian bridge edges only for macro/finance (Brent/INR/DXY/US10Y/Fed/VIX/flows -> CPI, GDP, repo, G-sec, liquidity, FPI). I DID include India-side commodity-price formation edges that no other part is likely to own and that the global chains need to land on the named Indian price drivers: F_COAL_INDIA->F_POWER_PRICE_IN, F_POWER_DEMAND_IN->F_POWER_PRICE_IN/F_COAL_INDIA, F_GDP_IN->F_POWER_DEMAND_IN, F_MONSOON->F_POWER_*/F_FOOD_INFLATION_IN/F_DAIRY, F_GOVT_CAPEX->F_STEEL_INDIA, F_DAIRY->F_FOOD_INFLATION_IN and F_FOOD_INFLATION_IN->F_CPI_IN (identity). Director: if the India part has the same pairs, keep one (prefer the better-sourced). NOT included (India part): CPI->repo, repo->G-sec/credit/housing, fiscal edges, P_FUEL_TAX_IN->CPI.\n\nALIASES. F_US_GDP~C_USA, F_EU_GDP~C_EU_UK, F_CHINA_GDP~C_CHINA have identical SSUs; I added one-way alias edges (w=1) so shocks reach companies attached to C_*. Recommended: merge the pairs and delete the 3 alias edges, otherwise companies attached to both will be double counted.\n\nSERIES PROXY PROBLEMS for the empirical stage: F_GAS_GLOBAL=NG=F is Henry Hub (India-relevant is JKM/oil-indexed LNG; Brent beta ~0 empirically); F_STEEL_GLOBAL=HRC=F is US Midwest HRC behind 50% Sec-232 tariffs (India-relevant is China/Asia export HRC); F_REFINING_MARGIN=HO=F is the heating-oil PRICE, not a crack (use HO-Brent or Singapore GRM); F_EDIBLE_OIL=ZS=F is soybeans (use palm oil FCPO / soy oil ZL=F); F_COAL_INTL=MTF=F stopped updating 2025-12-26; F_FED_FUNDS=^IRX is the 13-week bill. Empirical company betas on these nodes should be read with that in mind.\n\nNODE-DEFINITION ISSUE. P_FUEL_TAX_IN mixes 'higher excise' and 'regulated squeeze on OMCs' in the same + direction, which respond oppositely to crude. I modelled Brent->P_FUEL_TAX_IN as the excise-relief reaction (w=-0.4, low). Suggest splitting into excise vs OMC under-recovery.\n\nDESIGN. Policy-reaction/feedback edges included: F_STEEL_INDIA->P_STEEL_DUTY_IN (-0.3), F_USDINR->F_FPI_FLOWS (-0.3), F_USDINR->F_REPO_IN, F_USDINR->F_LIQUIDITY_IN, F_USDINR->P_GOLD_IMPORT_DUTY, F_EDIBLE_OIL/F_FOOD_INFLATION_IN->NEW_AGRI_IMPORT_DUTY_IN, F_FOOD_INFLATION_IN->P_WINDFALL_EXPORT_TAX, F_FERTILISER_INPUTS->P_FERT_SUBSIDY, F_SUGAR->P_SUGAR_ETHANOL, F_BRENT->P_FUEL_TAX_IN, F_US_GDP->F_FED_FUNDS. All 2-node loops have |w| product <= 0.18; spectral radius of the full weight matrix is reported below. To avoid A->C duplication I kept direct edges only for channels not carried by an intermediate (e.g. China growth->global HRC direct is only +0.15 because the export and ore/coking-coal channels carry the rest; Brent->CPI excludes the INR channel; VIX->INR has no direct edge because the empirical beta is ~0 and the FPI path carries it). Geopolitical 'step' SSUs are vague; weights are calibrated to observed 2022-2026 episodes and ranges are deliberately wide. Biggest uncertainties: C_MIDEAST_CONFLICT->F_BRENT (regime-dependent, tail +35%), C_RED_SEA->F_SHIPPING_RATES, policy-reaction magnitudes, and US tariff->India GDP.\n\nSTATS: 205 edges, 92 nodes touched, 7 proposed nodes; spectral radius of W = 0.424; 2-node loops (product): [('F_STEEL_INDIA', 'P_STEEL_DUTY_IN', -0.18), ('F_FOOD_INFLATION_IN', 'NEW_AGRI_IMPORT_DUTY_IN', -0.06), ('F_FOOD_INFLATION_IN', 'P_WINDFALL_EXPORT_TAX', -0.03), ('F_FED_FUNDS', 'F_US_GDP', -0.096), ('F_US_EQUITIES', 'F_US_GDP', 0.12), ('F_FPI_FLOWS', 'F_USDINR', 0.051), ('F_GOLD_DEMAND_IN', 'F_USDINR', -0.016)]."
+}
