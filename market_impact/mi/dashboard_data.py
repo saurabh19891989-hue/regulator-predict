@@ -32,10 +32,10 @@ def main():
         "industry": rk.nse_industry, "exp_3m": rk.exp_rel_return_3m.round(2), "exp_12m": rk.exp_rel_return_12m.round(2),
         "p_beat_3m": rk.prob_outperform_3m.round(3), "p_beat_12m": rk.mc_prob_outperform.round(3),
         "band_p10": rk.mc_p10_12m.round(2), "band_p90": rk.mc_p90_12m.round(2),
-        "recent_unpriced": rk.residual_contribution.round(2), "forward_events": (0.5 * rk.forward_exposure_12m).round(2),
+        "forward_events": (0.5 * rk.forward_exposure_12m).round(2),
         "company_events": (0.5 * rk.company_events_12m).round(2), "beta": rk.beta.round(2),
-        "realised_since_jun": rk.realised_mkt_adj_since_jun.round(1),
-        "top_positive_chain": rk.company.map(lambda c: top[c][0]), "top_negative_chain": rk.company.map(lambda c: top[c][1]),
+        "realised_since_jun": rk.realised_mkt_adj_since_jun.round(1), "graph_gap_since_jun": rk.graph_vs_market_gap.round(1),
+        "upside_scenario_chain": rk.company.map(lambda c: top[c][0]), "downside_scenario_chain": rk.company.map(lambda c: top[c][1]),
         "confidence": rk.profile_confidence})
     r.sort_values("rank_12m").to_csv(os.path.join(OUT, "rankings.csv"), index=False)
 

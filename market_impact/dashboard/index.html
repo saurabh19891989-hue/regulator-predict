@@ -1,0 +1,467 @@
+<meta name="dash-one-writer">
+<style>
+  .mi { font-family: var(--font-anthropic-sans); color: var(--color-fg); display: grid; gap: var(--cds-gap-lg); }
+  .mi-head h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .mi-head p { margin: var(--cds-gap-xs) 0 0; color: var(--color-fg-muted); max-width: 70ch; }
+  .mi .tk b { font-weight: 600; }
+  .mi-kpis { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr)); }
+  .mi-kpi { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); }
+  .mi-kpi .lbl { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .mi-kpi .val { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; }
+  .mi-tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); }
+  .mi-tabs button { font: inherit; background: none; border: 0; border-bottom: 2px solid transparent; padding: var(--cds-pad-xs) var(--cds-pad-sm); color: var(--color-fg-muted); cursor: pointer; }
+  .mi-tabs button[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); }
+  .mi-tabs button:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+  .mi-grid { display: grid; gap: var(--cds-gap-md); grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+  .mi-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+  .mi-card h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .mi-card .note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: var(--cds-gap-xs) 0 var(--cds-gap-sm); max-width: 80ch; }
+  .mi-chart { position: relative; min-height: 22rem; }
+  .mi-chart.short { min-height: 12rem; }
+  .mi-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); max-width: 22rem; z-index: 2; }
+  .mi-tip .t2 { color: var(--cds-text-secondary); }
+  .mi-ctl { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; margin-bottom: var(--cds-gap-sm); }
+  .mi-ctl input, .mi-ctl select { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); }
+  .mi-table-wrap { max-height: 36rem; overflow: auto; }
+  .mi table { border-collapse: collapse; width: 100%; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .mi th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); padding: var(--cds-pad-xs); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+  .mi th button { font: inherit; background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
+  .mi td { padding: var(--cds-pad-xs); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+  .mi td.num, .mi th.num { text-align: right; white-space: nowrap; }
+  .mi td.chain { min-width: 16rem; color: var(--color-fg-muted); }
+  .mi .pos { color: var(--color-ok); }
+  .mi .neg { color: var(--color-bad); }
+  .mi .prose { max-width: 75ch; line-height: 1.55; }
+  .mi .prose p { margin: 0 0 var(--cds-gap-sm); }
+  .mi .prose li { margin-bottom: var(--cds-gap-xs); }
+  [data-dash-source-state=empty] { color: transparent; }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  @media (max-width: 48rem) { .mi .wide-only { display: none; } }
+</style>
+
+<div class="mi">
+  <header class="mi-head" id="top">
+    <h1>Nifty 200 impact map</h1>
+    <p class="tk">Scenario-implied, beta-adjusted 12-month return relative to the Nifty 200. Highest: <b data-draw="top-name" data-source="rankings" data-field="ticker" data-where="rank_12m=1">—</b> at <b data-draw="top-val" data-source="rankings" data-field="exp_12m" data-where="rank_12m=1">—</b>%. Lowest: <b data-draw="bot-name" data-source="rankings" data-field="ticker" data-where="rank_12m=200">—</b> at <b data-draw="bot-val" data-source="rankings" data-field="exp_12m" data-where="rank_12m=200">—</b>%. These are exposure-driven estimates from the causal graph, not validated forecasts.</p>
+  </header>
+
+  <section class="mi-kpis" aria-label="Model size">
+    <div class="mi-kpi"><div class="lbl">Companies profiled</div><div class="val" data-draw="k-profiles" data-source="model_size" data-field="profiles" data-row="0">—</div></div>
+    <div class="mi-kpi"><div class="lbl">Weighted causal links</div><div class="val" data-draw="k-edges" data-source="model_size" data-field="edges" data-row="0">—</div></div>
+    <div class="mi-kpi"><div class="lbl">Graph nodes</div><div class="val" data-draw="k-nodes" data-source="model_size" data-field="nodes" data-row="0">—</div></div>
+    <div class="mi-kpi"><div class="lbl">Events modelled</div><div class="val" data-draw="k-events" data-source="model_size" data-field="events" data-row="0">—</div></div>
+    <div class="mi-kpi"><div class="lbl">Already happened since June</div><div class="val" data-draw="k-occ" data-source="model_size" data-field="occurred_events" data-row="0">—</div></div>
+    <div class="mi-kpi"><div class="lbl">Effect via 2nd–4th order</div><div class="val" data-draw="k-indirect" data-source="indirect_share" data-field="share" data-row="0">—</div></div>
+  </section>
+
+  <nav class="mi-tabs" role="tablist" aria-label="Views">
+    <button role="tab" aria-selected="true" data-tab="rank" id="tab-rank">Rankings</button>
+    <button role="tab" aria-selected="false" data-tab="sect" id="tab-sect">Sectors and drivers</button>
+    <button role="tab" aria-selected="false" data-tab="evt" id="tab-evt">Events</button>
+    <button role="tab" aria-selected="false" data-tab="chain" id="tab-chain">Causal chains</button>
+    <button role="tab" aria-selected="false" data-tab="method" id="tab-method">Method and checks</button>
+  </nav>
+
+  <section data-page="rank" id="rankings" class="mi-grid" style="grid-template-columns: 1fr;">
+    <div class="mi-card">
+      <h2 id="h-extremes">Highest and lowest expected relative returns, 12 months</h2>
+      <p class="note">The 15 highest and 15 lowest of the Nifty 200. Bars are the expected return; the thin line is the model-uncertainty band (P10 to P90 over event and edge-weight draws). Hover for the main upside and downside scenario chains.</p>
+      <div class="mi-chart" data-draw="extremes" data-source="rankings"></div>
+    </div>
+    <div class="mi-card">
+      <h2 id="h-all">All 200 stocks</h2>
+      <p class="note">Click a header to sort. Forward events and company catalysts are the two components (half of each assumed already priced). P(beat) includes stock-specific volatility.</p>
+      <div class="mi-ctl">
+        <input type="search" id="rank-q" placeholder="Search ticker, name, industry or chain" aria-label="Search stocks">
+        <select id="rank-tier" aria-label="Index tier">
+          <option value="">All tiers</option>
+          <option value="Next 50">Nifty Next 50</option>
+          <option value="Nifty 50">Nifty 50</option>
+          <option value="Midcap">Midcap 100 members</option>
+        </select>
+      </div>
+      <div class="mi-table-wrap">
+        <table data-source="rankings" data-row-key="ticker" id="rank-table">
+          <thead><tr>
+            <th class="num" data-field="rank_12m"><button data-sort="rank_12m">Rank</button></th>
+            <th data-field="ticker"><button data-sort="ticker">Ticker</button></th>
+            <th data-field="name" class="wide-only">Name</th>
+            <th data-field="tier" class="wide-only">Tier</th>
+            <th data-field="industry" class="wide-only"><button data-sort="industry">Industry</button></th>
+            <th class="num" data-field="exp_3m"><button data-sort="exp_3m">3m %</button></th>
+            <th class="num" data-field="exp_12m"><button data-sort="exp_12m">12m %</button></th>
+            <th class="num" data-field="p_beat_12m"><button data-sort="p_beat_12m">P(beat) 12m</button></th>
+            <th class="num wide-only" data-field="band_p10">Band P10</th>
+            <th class="num wide-only" data-field="band_p90">Band P90</th>
+            <th class="num wide-only" data-field="forward_events"><button data-sort="forward_events">Events</button></th>
+            <th class="num wide-only" data-field="company_events"><button data-sort="company_events">Catalysts</button></th>
+            <th class="num wide-only" data-field="beta">Beta</th>
+            <th data-field="upside_scenario_chain" class="wide-only">Largest upside scenario chain</th>
+            <th data-field="downside_scenario_chain" class="wide-only">Largest downside scenario chain</th>
+          </tr></thead>
+          <tbody data-draw="rank-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="sect" id="sectors" class="mi-grid" hidden>
+    <div class="mi-card">
+      <h2 id="h-sectors">Sector averages</h2>
+      <p class="note">Average expected relative return of member stocks: bars for 12 months, dots for 3 months.</p>
+      <div class="mi-chart" data-draw="sectors-chart" data-source="sectors"></div>
+    </div>
+    <div class="mi-card">
+      <h2 id="h-orders">Where the effects travel</h2>
+      <p class="note">Share of all company sensitivities by causal order: 1st order is a direct driver-to-company link, 4th order passes through three intermediate drivers.</p>
+      <div class="mi-chart short" data-draw="orders-chart" data-source="order_shares"></div>
+    </div>
+    <div class="mi-card" style="grid-column: 1 / -1;">
+      <h2 id="h-drivers">Which effect hits which company</h2>
+      <p class="note">Drivers ranked by total footprint across the Nifty 200: % equity value per one standard shock, all orders, before beta adjustment. Since-June change is in standard shocks.</p>
+      <div class="mi-ctl"><input type="search" id="drv-q" placeholder="Search driver or company" aria-label="Search drivers"></div>
+      <div class="mi-table-wrap">
+        <table data-source="drivers" data-row-key="driver">
+          <thead><tr>
+            <th data-field="name">Driver</th>
+            <th data-field="standard_shock" class="wide-only">Standard shock</th>
+            <th class="num" data-field="since_june_ssu">Since June</th>
+            <th class="num" data-field="companies_moved">Stocks moved</th>
+            <th class="num" data-field="indirect_share">Via 2nd–4th</th>
+            <th data-field="gains">Biggest gainers</th>
+            <th data-field="losses">Biggest losers</th>
+            <th data-field="driver" class="wide-only">Node</th>
+          </tr></thead>
+          <tbody data-draw="drv-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="evt" id="events" class="mi-grid" style="grid-template-columns: 1fr;" hidden>
+    <div class="mi-card">
+      <h2 id="h-events">Events and who they hit</h2>
+      <p class="note">Impact if the event happens, % equity value, raw. Footprint is the sum of absolute impacts across all stocks. Order shares show how much of the footprint arrives at 1st, 2nd, 3rd and 4th order.</p>
+      <div class="mi-ctl">
+        <input type="search" id="evt-q" placeholder="Search event or company" aria-label="Search events">
+        <select id="evt-status" aria-label="Event status">
+          <option value="">All statuses</option>
+          <option value="occurred">Already happened</option>
+          <option value="scheduled">Scheduled</option>
+          <option value="anticipated">Anticipated</option>
+          <option value="risk_scenario">Risk scenario</option>
+        </select>
+      </div>
+      <div class="mi-table-wrap">
+        <table data-source="events" data-row-key="event_id">
+          <thead><tr>
+            <th data-field="title">Event</th>
+            <th data-field="status">Status</th>
+            <th data-field="date" class="wide-only">Date</th>
+            <th class="num" data-field="p_12m">P(12m)</th>
+            <th class="num" data-field="footprint">Footprint</th>
+            <th class="num wide-only" data-field="share_1st">1st</th>
+            <th class="num wide-only" data-field="share_2nd">2nd</th>
+            <th class="num wide-only" data-field="share_3rd">3rd</th>
+            <th class="num wide-only" data-field="share_4th">4th</th>
+            <th data-field="winners">Winners</th>
+            <th data-field="losers">Losers</th>
+            <th data-field="event_id" class="wide-only">Id</th>
+          </tr></thead>
+          <tbody data-draw="evt-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="chain" id="chains" class="mi-grid" style="grid-template-columns: 1fr;" hidden>
+    <div class="mi-card">
+      <h2 id="h-chains">Strongest multi-order chains from upcoming and risk events</h2>
+      <p class="note">Event ⇒ entry driver → … → company. Expected 12m is probability × impact before the half-priced haircut. Only 2nd order and deeper are listed.</p>
+      <div class="mi-ctl">
+        <input type="search" id="ch-q" placeholder="Search ticker, event or driver" aria-label="Search chains">
+        <select id="ch-order" aria-label="Causal order">
+          <option value="">All orders</option>
+          <option value="2">2nd order</option>
+          <option value="3">3rd order</option>
+          <option value="4">4th order</option>
+        </select>
+      </div>
+      <div class="mi-table-wrap">
+        <table data-source="chains" data-row-key="ticker,chain">
+          <thead><tr>
+            <th data-field="ticker">Ticker</th>
+            <th class="num" data-field="order">Order</th>
+            <th data-field="chain">Chain</th>
+            <th class="num" data-field="impact_if_event">If event %</th>
+            <th class="num" data-field="expected_12m">Expected 12m %</th>
+          </tr></thead>
+          <tbody data-draw="ch-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section data-page="method" id="method" class="mi-grid" hidden>
+    <div class="mi-card">
+      <h2 id="h-check">In-sample check: does the graph explain June to November?</h2>
+      <p class="note">Correlation across stocks between the graph's implied impact of drivers that moved since June and each stock's realised beta-adjusted move. A useful model would sit right of zero.</p>
+      <div class="mi-chart short" data-draw="check-chart" data-source="insample_check"></div>
+    </div>
+    <div class="mi-card prose">
+      <h2>How the numbers are built</h2>
+      <p>Events feed macro, commodity, policy, geopolitical and theme drivers, which feed companies. Each link is a weighted elasticity in standard shock units, written by research agents from fundamentals and checked against price co-movement. Effects travel up to four links, damped by order, with controls so the same channel is not counted twice.</p>
+      <ul>
+        <li>The expected return is half of the probability-weighted forward event exposure plus half of company-specific catalysts, net of beta, centred on the Nifty 200.</li>
+        <li>For market-traded macro drivers (rates, currencies, commodities, equity indices, volatility, flows, growth, inflation), the market's forward path is taken as given. Their scenarios widen the risk bands but add no mean drift.</li>
+        <li>What already moved since June is shown as a diagnostic only. It failed the in-sample check, so it does not enter the headline.</li>
+        <li>Eight independent reviewers checked event facts, unit and sign errors, double counting and every top, bottom and Nifty Next 50 stock. Their fixes are applied as logged overrides.</li>
+        <li>Rankings are frozen in a timestamped, hashed ledger and will be scored at three and twelve months against realised returns and a momentum baseline.</li>
+      </ul>
+      <p>Treat the rankings as an exposure map with modest tilts, not a trading signal.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+  const F1 = d3.format('+.1f'), P0 = d3.format('.0%'), C0 = d3.format(','), N2 = d3.format('+.2f');
+  window.MI = { sort: { key: 'rank_12m', dir: 1 } };
+  const num = (v) => (v === '' || v == null ? NaN : Number(v));
+  const val = (id) => dash.data(id);
+
+  dash.calc('indirect_share', {
+    title: 'Share of effect via 2nd–4th order',
+    description: 'Sum of the 2nd, 3rd and 4th order shares of all company sensitivities.',
+    inputs: ['order_shares'],
+    fn: (order_shares) => [{ share: order_shares.filter((r) => r.order !== '1st').reduce((a, r) => a + Number(r.share), 0) }]
+  });
+
+  // tabs: only hidden / aria are set
+  document.querySelectorAll('.mi-tabs button').forEach((b) => b.addEventListener('click', () => {
+    document.querySelectorAll('.mi-tabs button').forEach((x) => x.setAttribute('aria-selected', String(x === b)));
+    document.querySelectorAll('[data-page]').forEach((s) => { s.hidden = s.dataset.page !== b.dataset.tab; });
+    dash.setLink(b.id);
+  }));
+  const named = document.getElementById(location.hash.slice(1));
+  if (named && named.matches('.mi-tabs button')) named.click();
+
+  // headline text drawings
+  const textDraw = (name, id, pick, fmt) => dash.draw(name, (el) => {
+    const d = val(id);
+    if (d.status !== 'ok') { el.textContent = '—'; el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const r = pick(d.data);
+    el.textContent = r == null ? '—' : fmt(r);
+  });
+  const byRank = (n) => (rows) => rows.find((r) => Number(r.rank_12m) === n);
+  textDraw('top-name', 'rankings', byRank(1), (r) => r.ticker);
+  textDraw('top-val', 'rankings', byRank(1), (r) => F1(num(r.exp_12m)));
+  textDraw('bot-name', 'rankings', byRank(200), (r) => r.ticker);
+  textDraw('bot-val', 'rankings', byRank(200), (r) => F1(num(r.exp_12m)));
+  [['k-profiles', 'profiles'], ['k-edges', 'edges'], ['k-nodes', 'nodes'], ['k-events', 'events'], ['k-occ', 'occurred_events']]
+    .forEach(([n, f]) => textDraw(n, 'model_size', (rows) => rows[0], (r) => C0(num(r[f]))));
+  textDraw('k-indirect', 'indirect_share', (rows) => rows[0], (r) => P0(r.share));
+
+  // tooltip helper (inside a drawing)
+  const tipIn = (el) => { let t = el.querySelector('.mi-tip'); if (!t) { t = document.createElement('div'); t.className = 'mi-tip'; t.hidden = true; el.appendChild(t); } return t; };
+  const placeTip = (el, tip, ev) => {
+    const b = el.getBoundingClientRect(); let x = ev.clientX - b.left + 12, y = ev.clientY - b.top + 12;
+    tip.hidden = false; const w = tip.offsetWidth, h = tip.offsetHeight;
+    if (x + w > b.width) x = Math.max(0, ev.clientX - b.left - w - 12);
+    if (y + h > b.height) y = Math.max(0, b.height - h);
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  };
+  const muteAxis = (g) => g.attr('font-size', null).attr('font-family', null).call((s) => s.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)')).call((s) => s.selectAll('line,path').attr('stroke', 'var(--cds-chart-axis)'));
+
+  // diverging extremes chart
+  dash.draw('extremes', (el) => {
+    const d = val('rankings');
+    el.replaceChildren();
+    if (d.status !== 'ok') { el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const rows = d.data.map((r) => ({ ...r, v: num(r.exp_12m), lo: num(r.band_p10), hi: num(r.band_p90) })).sort((a, b) => b.v - a.v);
+    const pick = rows.slice(0, 15).concat(rows.slice(-15));
+    const W = el.clientWidth || 600, bh = 18, H = pick.length * bh + 36;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const probe = svg.append('text').style('font-size', 'var(--cds-font-size-caption)').text('WWWWWWWWWW');
+    const lw = Math.min(probe.node().getComputedTextLength() + 8, W * 0.3); probe.remove();
+    const ext = d3.extent(pick.flatMap((r) => [r.lo, r.hi, r.v]));
+    const x = d3.scaleLinear([Math.min(0, ext[0]), Math.max(0, ext[1])], [lw, W - 40]).nice();
+    const y = d3.scaleBand(pick.map((r) => r.ticker), [8, H - 28]).padding(0.25);
+    svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).ticks(Math.max(3, Math.floor(W / 110))).tickFormat((t) => F1(t) + '%')).call(muteAxis);
+    svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 4).attr('y2', H - 28).attr('stroke', 'var(--cds-chart-reference)');
+    const g = svg.append('g').selectAll('g').data(pick).join('g');
+    g.append('line').attr('x1', (r) => x(r.lo)).attr('x2', (r) => x(r.hi)).attr('y1', (r) => y(r.ticker) + y.bandwidth() / 2).attr('y2', (r) => y(r.ticker) + y.bandwidth() / 2).attr('stroke', 'var(--cds-chart-muted)').attr('stroke-width', 1);
+    g.append('rect').attr('x', (r) => x(Math.min(0, r.v))).attr('width', (r) => Math.abs(x(r.v) - x(0))).attr('y', (r) => y(r.ticker)).attr('height', y.bandwidth()).attr('rx', 2)
+      .attr('fill', (r) => (r.v >= 0 ? dash.colors[0] : dash.colors[1]));
+    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.ticker) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.ticker);
+    const tip = tipIn(el);
+    g.append('rect').attr('x', 0).attr('width', W).attr('y', (r) => y(r.ticker) - 2).attr('height', y.bandwidth() + 4).attr('fill', 'transparent')
+      .on('pointermove', (ev, r) => {
+        tip.replaceChildren();
+        const a = document.createElement('div'); a.className = 't2'; a.textContent = `${r.ticker} · ${r.industry}`;
+        const b = document.createElement('div'); b.textContent = `12m ${F1(r.v)}% (band ${F1(r.lo)} to ${F1(r.hi)}), 3m ${F1(num(r.exp_3m))}%, P(beat) ${P0(num(r.p_beat_12m))}`;
+        const c = document.createElement('div'); c.textContent = r.upside_scenario_chain ? `Upside: ${r.upside_scenario_chain}` : '';
+        const e = document.createElement('div'); e.textContent = r.downside_scenario_chain ? `Downside: ${r.downside_scenario_chain}` : '';
+        tip.append(a, b, c, e); placeTip(el, tip, ev);
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  });
+
+  // rankings table
+  const cell = (tr, text, cls) => { const td = document.createElement('td'); if (cls) td.className = cls; td.textContent = text; tr.appendChild(td); return td; };
+  const sign = (v) => (v > 0.05 ? 'num pos' : v < -0.05 ? 'num neg' : 'num');
+  const q = (id) => { const e = document.getElementById(id); return e ? e.value.trim().toLowerCase() : ''; };
+  dash.draw('rank-rows', (el) => {
+    const d = val('rankings');
+    el.replaceChildren();
+    if (d.status !== 'ok') return;
+    const term = q('rank-q'), tier = (document.getElementById('rank-tier') || {}).value || '';
+    const { key, dir } = window.MI.sort;
+    const rows = d.data.filter((r) => (!tier || r.tier === tier) && (!term || [r.ticker, r.name, r.industry, r.upside_scenario_chain, r.downside_scenario_chain].join(' ').toLowerCase().includes(term)))
+      .sort((a, b) => { const x = num(a[key]), y = num(b[key]); return (isNaN(x) || isNaN(y) ? String(a[key]).localeCompare(String(b[key])) : x - y) * dir; });
+    for (const r of rows) {
+      const tr = document.createElement('tr');
+      cell(tr, r.rank_12m, 'num'); cell(tr, r.ticker); cell(tr, r.name, 'wide-only'); cell(tr, r.tier, 'wide-only'); cell(tr, r.industry, 'wide-only');
+      cell(tr, F1(num(r.exp_3m)), sign(num(r.exp_3m))); cell(tr, F1(num(r.exp_12m)), sign(num(r.exp_12m))); cell(tr, P0(num(r.p_beat_12m)), 'num');
+      cell(tr, F1(num(r.band_p10)), 'num wide-only'); cell(tr, F1(num(r.band_p90)), 'num wide-only');
+      cell(tr, F1(num(r.forward_events)), 'num wide-only'); cell(tr, F1(num(r.company_events)), 'num wide-only'); cell(tr, d3.format('.2f')(num(r.beta)), 'num wide-only');
+      cell(tr, r.upside_scenario_chain || '', 'chain wide-only'); cell(tr, r.downside_scenario_chain || '', 'chain wide-only');
+      el.appendChild(tr);
+    }
+  });
+  document.querySelectorAll('#rank-table th button[data-sort]').forEach((b) => b.addEventListener('click', () => {
+    const s = window.MI.sort; const k = b.dataset.sort;
+    s.dir = s.key === k ? -s.dir : (k === 'rank_12m' || k === 'ticker' || k === 'industry' ? 1 : -1); s.key = k;
+    document.querySelectorAll('#rank-table th').forEach((th) => th.removeAttribute('aria-sort'));
+    b.closest('th').setAttribute('aria-sort', s.dir > 0 ? 'ascending' : 'descending');
+    dash.draw('rank-rows');
+  }));
+  document.querySelectorAll('#rank-q, #rank-tier').forEach((e) => e.addEventListener('input', () => dash.draw('rank-rows')));
+
+  // sectors chart
+  dash.draw('sectors-chart', (el) => {
+    const d = val('sectors');
+    el.replaceChildren();
+    if (d.status !== 'ok') { el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const rows = d.data.map((r) => ({ ...r, v: num(r.exp_12m), v3: num(r.exp_3m) })).sort((a, b) => b.v - a.v);
+    const W = el.clientWidth || 500, bh = 20, H = rows.length * bh + 36;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const probe = svg.append('g').style('font-size', 'var(--cds-font-size-caption)');
+    let lw = 0; rows.forEach((r) => { const t = probe.append('text').text(r.industry); lw = Math.max(lw, t.node().getComputedTextLength()); });
+    probe.remove(); lw = Math.min(lw + 10, W * 0.45);
+    const ext = d3.extent(rows.flatMap((r) => [r.v, r.v3, 0]));
+    const x = d3.scaleLinear(ext, [lw, W - 16]).nice();
+    const y = d3.scaleBand(rows.map((r) => r.industry), [6, H - 28]).padding(0.25);
+    svg.append('g').attr('transform', `translate(0,${H - 28})`).call(d3.axisBottom(x).ticks(Math.max(3, Math.floor((W - lw) / 80))).tickFormat((t) => F1(t) + '%')).call(muteAxis);
+    svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 2).attr('y2', H - 28).attr('stroke', 'var(--cds-chart-reference)');
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('rect').attr('x', (r) => x(Math.min(0, r.v))).attr('width', (r) => Math.abs(x(r.v) - x(0))).attr('y', (r) => y(r.industry)).attr('height', y.bandwidth()).attr('rx', 2).attr('fill', (r) => (r.v >= 0 ? dash.colors[0] : dash.colors[1]));
+    g.append('circle').attr('cx', (r) => x(r.v3)).attr('cy', (r) => y(r.industry) + y.bandwidth() / 2).attr('r', 3.5).attr('fill', 'var(--color-fg)');
+    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.industry) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.industry);
+    const tip = tipIn(el);
+    g.append('rect').attr('x', 0).attr('width', W).attr('y', (r) => y(r.industry) - 2).attr('height', y.bandwidth() + 4).attr('fill', 'transparent')
+      .on('pointermove', (ev, r) => {
+        tip.replaceChildren();
+        const a = document.createElement('div'); a.className = 't2'; a.textContent = `${r.industry} · ${r.stocks} stocks`;
+        const b = document.createElement('div'); b.textContent = `12m ${F1(r.v)}%, 3m ${F1(r.v3)}%`;
+        const c = document.createElement('div'); c.textContent = `Best ${r.best}, worst ${r.worst}`;
+        tip.append(a, b, c); placeTip(el, tip, ev);
+      })
+      .on('pointerleave', () => { tip.hidden = true; });
+  });
+
+  // order shares chart
+  dash.draw('orders-chart', (el) => {
+    const d = val('order_shares');
+    el.replaceChildren();
+    if (d.status !== 'ok') { el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const rows = d.data.map((r) => ({ order: r.order, v: num(r.share) }));
+    const W = el.clientWidth || 400, H = rows.length * 34 + 30, lw = 70;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const x = d3.scaleLinear([0, Math.max(...rows.map((r) => r.v))], [lw, W - 56]).nice();
+    const y = d3.scaleBand(rows.map((r) => r.order), [4, H - 26]).padding(0.3);
+    svg.append('g').attr('transform', `translate(0,${H - 26})`).call(d3.axisBottom(x).ticks(4).tickFormat(d3.format('.0%'))).call(muteAxis);
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('rect').attr('x', lw).attr('width', (r) => x(r.v) - lw).attr('y', (r) => y(r.order)).attr('height', y.bandwidth()).attr('rx', 2).attr('fill', (r, i) => (i === 0 ? 'var(--cds-chart-muted)' : dash.colors[0]));
+    g.append('text').attr('x', lw - 8).attr('y', (r) => y(r.order) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.order + ' order');
+    g.append('text').attr('x', (r) => x(r.v) + 6).attr('y', (r) => y(r.order) + y.bandwidth() / 2).attr('dy', '0.32em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text((r) => P0(r.v));
+  });
+
+  // drivers table
+  dash.draw('drv-rows', (el) => {
+    const d = val('drivers');
+    el.replaceChildren();
+    if (d.status !== 'ok') return;
+    const term = q('drv-q');
+    for (const r of d.data.filter((r) => !term || [r.name, r.driver, r.gains, r.losses].join(' ').toLowerCase().includes(term))) {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.driver;
+      cell(tr, r.name); cell(tr, r.standard_shock, 'wide-only');
+      cell(tr, r.since_june_ssu === '' ? '' : N2(num(r.since_june_ssu)), 'num'); cell(tr, r.companies_moved, 'num'); cell(tr, P0(num(r.indirect_share)), 'num');
+      cell(tr, r.gains || '', 'chain'); cell(tr, r.losses || '', 'chain'); cell(tr, r.driver, 'wide-only');
+      el.appendChild(tr);
+    }
+  });
+  document.querySelectorAll('#drv-q').forEach((e) => e.addEventListener('input', () => dash.draw('drv-rows')));
+
+  // events table
+  const STATUS = { occurred: 'Already happened', scheduled: 'Scheduled', anticipated: 'Anticipated', risk_scenario: 'Risk scenario' };
+  dash.draw('evt-rows', (el) => {
+    const d = val('events');
+    el.replaceChildren();
+    if (d.status !== 'ok') return;
+    const term = q('evt-q'), st = (document.getElementById('evt-status') || {}).value || '';
+    for (const r of d.data.filter((r) => (!st || r.status === st) && (!term || [r.title, r.event_id, r.winners, r.losers].join(' ').toLowerCase().includes(term)))) {
+      const tr = document.createElement('tr');
+      tr.dataset.key = r.event_id;
+      cell(tr, r.title); cell(tr, STATUS[r.status] || r.status); cell(tr, r.date, 'wide-only');
+      cell(tr, P0(num(r.p_12m)), 'num'); cell(tr, C0(Math.round(num(r.footprint))), 'num');
+      ['share_1st', 'share_2nd', 'share_3rd', 'share_4th'].forEach((k) => cell(tr, P0(num(r[k])), 'num wide-only'));
+      cell(tr, r.winners || '', 'chain'); cell(tr, r.losers || '', 'chain'); cell(tr, r.event_id, 'wide-only');
+      el.appendChild(tr);
+    }
+  });
+  document.querySelectorAll('#evt-q, #evt-status').forEach((e) => e.addEventListener('input', () => dash.draw('evt-rows')));
+
+  // chains table
+  dash.draw('ch-rows', (el) => {
+    const d = val('chains');
+    el.replaceChildren();
+    if (d.status !== 'ok') return;
+    const term = q('ch-q'), o = (document.getElementById('ch-order') || {}).value || '';
+    for (const r of d.data.filter((r) => (!o || String(r.order) === o) && (!term || [r.ticker, r.chain].join(' ').toLowerCase().includes(term))).slice(0, 300)) {
+      const tr = document.createElement('tr');
+      tr.dataset.key = encodeURIComponent(r.ticker) + ',' + encodeURIComponent(r.chain);
+      cell(tr, r.ticker); cell(tr, r.order, 'num'); cell(tr, r.chain, 'chain');
+      cell(tr, N2(num(r.impact_if_event)), sign(num(r.impact_if_event))); cell(tr, N2(num(r.expected_12m)), sign(num(r.expected_12m)));
+      el.appendChild(tr);
+    }
+  });
+  document.querySelectorAll('#ch-q, #ch-order').forEach((e) => e.addEventListener('input', () => dash.draw('ch-rows')));
+
+  // in-sample check chart
+  dash.draw('check-chart', (el) => {
+    const d = val('insample_check');
+    el.replaceChildren();
+    if (d.status !== 'ok') { el.classList.toggle('dash-skeleton', d.status === 'loading'); return; }
+    el.classList.remove('dash-skeleton');
+    const rows = d.data.map((r) => ({ ...r, v: num(r.correlation) }));
+    const W = el.clientWidth || 400, bh = 30, H = rows.length * bh + 30;
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`);
+    const probe = svg.append('g').style('font-size', 'var(--cds-font-size-caption)');
+    let lw = 0; rows.forEach((r) => { const t = probe.append('text').text(r.check); lw = Math.max(lw, t.node().getComputedTextLength()); });
+    probe.remove(); lw = Math.min(lw + 10, W * 0.5);
+    const x = d3.scaleLinear([-0.5, 0.5], [lw, W - 40]);
+    const y = d3.scaleBand(rows.map((r) => r.check), [4, H - 26]).padding(0.3);
+    svg.append('g').attr('transform', `translate(0,${H - 26})`).call(d3.axisBottom(x).ticks(5).tickFormat(d3.format('+.1f'))).call(muteAxis);
+    svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', 2).attr('y2', H - 26).attr('stroke', 'var(--cds-chart-reference)');
+    const g = svg.append('g').selectAll('g').data(rows).join('g');
+    g.append('rect').attr('x', (r) => x(Math.min(0, r.v))).attr('width', (r) => Math.abs(x(r.v) - x(0))).attr('y', (r) => y(r.check)).attr('height', y.bandwidth()).attr('rx', 2)
+      .attr('fill', (r) => (r.v < 0 ? 'var(--cds-chart-status-critical)' : dash.colors[0]));
+    g.append('text').attr('x', lw - 6).attr('y', (r) => y(r.check) + y.bandwidth() / 2).attr('dy', '0.32em').attr('text-anchor', 'end').attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text((r) => r.check);
+    g.append('text').attr('x', (r) => (r.v < 0 ? x(r.v) - 4 : x(r.v) + 4)).attr('text-anchor', (r) => (r.v < 0 ? 'end' : 'start')).attr('y', (r) => y(r.check) + y.bandwidth() / 2).attr('dy', '0.32em').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text((r) => d3.format('+.2f')(r.v));
+  });
+</script>
