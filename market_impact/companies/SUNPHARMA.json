@@ -1,0 +1,389 @@
+{
+ "ticker": "SUNPHARMA",
+ "name": "Sun Pharmaceutical Industries Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PHARMA_US_GENERICS",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest pharma company and a global specialty/generics player. Q2 FY27 sales Rs16,199 cr (+11.9% YoY), OPM ~29%, but PAT Rs1,995 cr (-36% YoY) after one-time charges linked to the ~$12bn acquisition of Organon (shareholders approved 2026-07-24; closing guided for Q4 FY27). Mix: India branded formulations ~32%, US ~26% ($455m in Q2, falling), emerging markets ~20%, rest of world and API ~22% (model knowledge/approx). Global specialty (Ilumya, Winlevi, Cequa, Leqselvi) is the growth engine though Ilumya slowed. Near debt-free before the deal; P/E 35.6; promoter holding 52.68% after the Valia family was reclassified as public.",
+ "revenue_mix": [
+  {
+   "segment": "India formulations",
+   "share_pct": 32,
+   "geography": "India"
+  },
+  {
+   "segment": "US formulations (generics + specialty)",
+   "share_pct": 26,
+   "geography": "US"
+  },
+  {
+   "segment": "Emerging markets",
+   "share_pct": 20,
+   "geography": "Russia/CIS, Brazil, SE Asia, Africa"
+  },
+  {
+   "segment": "Rest of world, API and other",
+   "share_pct": 22,
+   "geography": "Europe, Canada, Japan, Israel"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK (APIs, intermediates, solvents)",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "raw & packing material (all)",
+   "share_of_costs_pct": 35
+  },
+  {
+   "input": "employee costs",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "R&D, selling, other",
+   "share_of_costs_pct": 43
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "SUNPHARMA",
+   "relation": "fx_translation",
+   "w": 1.5,
+   "w_low": 0.2,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "US ~26% of sales ($455m/qtr x Rs94.5 = Rs4,300 cr of Rs16,199 cr), emerging markets ~20%, RoW ~10%; exports ~ 55% of revenue, USD costs ~ 15% => net USD long ~40% of revenue. +3% => +1.2% of revenue / 29% margin = +4.1% EBITDA; hedging + Organon USD liabilities after close (natural hedge) => persistence 0.4, EV/MCap 1.03 => +1.7, shaded +1.5. Pack has no significant USD/INR link.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/SUNPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 16,199 cr, OPM 29%, PAT 1,995 cr; P/E 35.6; mcap Rs4.39 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "SUNPHARMA",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+10pp tariff on Indian pharma exports. US 100% tariff effective 2026-09-29 with exemption for select specialty drugs/ingredients (29 Sep). Sun US sales ~26% of revenue; assume 40% of that is exposed (generics + non-exempt), 50% absorbed: 10pp x 0.4 x 0.5 x 26% = 0.5% of revenue => -1.8% EBITDA at 29% margin, persistence 0.6 => -1.1; adjust for tail of broader (200% generics noted by TOI 2026-07-22) => -2.0. Coverage of Sun's specific SKUs not verified.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=US+exempts+select+Indian+speciality+drugs+100%+pharmaceutical+tariff+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "100% US pharma tariff effective 2026-09-29; select Indian specialty drugs/ingredients exempt (Hindu, Mint, BS)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "SUNPHARMA",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = stricter enforcement (warning letters/import alerts). Sun's Halol and other sites have a history of OAI status (model knowledge; current status not verified). A new import alert on a site producing ~8% of US sales => revenue -2% at 50% margin => EBITDA -3.4%, persistence 0.6 => ~-2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/SUNPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 16,199 cr, OPM 29%, PAT 1,995 cr; P/E 35.6; mcap Rs4.39 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "NEW_US_GENERIC_PRICING",
+   "dst": "SUNPHARMA",
+   "relation": "output_price",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "+5pp faster annual price erosion in US generics. US generics ~ 45% of US sales (~12% of group revenue); 5% revenue loss on that = -0.6% of group revenue at ~100% flow-through => -2.1% EBITDA at 29%; persistence 0.7 => -1.5. Q2 US formulation sales fell to $455m (Upstox 2026-10-30).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Sun+Pharma+Q2+Concall+Ilumya+slowdown+FY27+guidance+Organon+deal+Q4+close+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Management admits Ilumya US slowdown, keeps FY27 guidance, Organon on track for Q4 FY27 close (Business Upturn)"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "SUNPHARMA",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Specialty (Ilumya, Winlevi, Cequa, Leqselvi) and generics sales depend on US health spending and payer behaviour, little cyclicality: +1pp US growth => ~+0.3% revenue; mostly a valuation sentiment link. Ilumya slowdown acknowledged by management (2026-10-30).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Sun+Pharma+Q2+Concall+Ilumya+slowdown+FY27+guidance+Organon+deal+Q4+close+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Management admits Ilumya US slowdown, keeps FY27 guidance, Organon on track for Q4 FY27 close (Business Upturn)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "SUNPHARMA",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Raw & packing material ~ 25% of sales (model knowledge), of which APIs/intermediates/solvents ~ 40% track chemical feedstock; +10% => costs +1.0% of sales => EBITDA -3.4%; 70% passed via mix/price lag, persistence 0.3 => -0.8. Pack Brent +0.37 (t +1.0) is of opposite sign: ignore (insignificant).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/SUNPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 16,199 cr, OPM 29%, PAT 1,995 cr; P/E 35.6; mcap Rs4.39 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "SUNPHARMA",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Organon deal funding: Sun is raising ~Rs10,000 cr rupee debt to refinance an acquisition loan; Organon carries ~$8-9bn of existing USD debt (model knowledge; not verified), part floating. +25bp on ~$4bn floating = $10m = Rs95 cr/yr = 0.9% of TTM profit; persistence 0.9 => -0.8. Applies after the Q4 FY27 closing; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Sun+Pharma+to+raise+Rs+10,000+crore+bond+Organon+acquisition+loan+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "ET: Rs10,000 cr to part-finance/refinance Organon acquisition loan; board earlier considered Rs15,000 cr NCD (2026-10-07)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "SUNPHARMA",
+   "relation": "funding_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp India 10y: coupon on the Rs10,000-15,000 cr NCD programme (Rs25-38 cr/yr) and multiple compression on a 35.6 P/E defensive; combined ~-0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Sun+Pharma+to+raise+Rs+10,000+crore+bond+Organon+acquisition+loan+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "ET: Rs10,000 cr to part-finance/refinance Organon acquisition loan; board earlier considered Rs15,000 cr NCD (2026-10-07)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "SUNPHARMA",
+   "relation": "funding_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp spreads on Rs10,000-15,000 cr new bonds = Rs50-75 cr/yr = 0.5% of profit; persistence 0.8 => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Sun+Pharma+to+raise+Rs+10,000+crore+bond+Organon+acquisition+loan+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "ET: Rs10,000 cr to part-finance/refinance Organon acquisition loan; board earlier considered Rs15,000 cr NCD (2026-10-07)"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "SUNPHARMA",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "India branded generics (~32% of sales; India growth ~ 10%) benefit from chronic/premium mix; +1 = stronger premiumisation => +1% revenue growth in India => EBITDA +0.9%, persistence 1.0, multiple 35.6x => ~+1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/SUNPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 16,199 cr, OPM 29%, PAT 1,995 cr; P/E 35.6; mcap Rs4.39 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "C_CHINA",
+   "dst": "SUNPHARMA",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "China supplies intermediates/APIs; +1pp China growth lifts input prices ~1% => EBITDA -0.7%, persistence 0.5, => ~-0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/SUNPHARMA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 16,199 cr, OPM 29%, PAT 1,995 cr; P/E 35.6; mcap Rs4.39 lakh cr"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Organon & Co (target)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~$12bn acquisition, closing guided Q4 FY27; adds women's health, biosimilars and established brands, plus debt"
+  },
+  {
+   "counterparty": "US PBMs/wholesalers (McKesson, Cardinal, AmerisourceBergen)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "concentrated US buyers; pricing pressure"
+  },
+  {
+   "counterparty": "Chinese API/intermediate suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "input cost and supply risk"
+  },
+  {
+   "counterparty": "Cipla, Dr. Reddy's, Lupin, Zydus, Aurobindo",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "US generics and India branded"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-03",
+   "event": "Organon acquisition closes (Q4 FY27 per mgmt); regulatory approvals and financing done",
+   "type": "corporate_action",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Sun+Pharma+Q2+Concall+Ilumya+slowdown+FY27+guidance+Organon+deal+Q4+close+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Rs10,000 cr NCD issue to refinance Organon acquisition loan",
+   "type": "corporate_action",
+   "prob": 0.8,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 0.3,
+   "source": "https://news.google.com/rss/search?q=Sun+Pharma+to+raise+Rs+10,000+crore+bond+Organon+acquisition+loan+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (late Jan/early Feb)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://www.screener.in/company/SUNPHARMA/consolidated/"
+  },
+  {
+   "date": "2026-12",
+   "event": "US tariff implementation details / carve-outs for generics and Sun's specialty products",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=US+exempts+select+Indian+speciality+drugs+100%+pharmaceutical+tariff+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Closing of Innovcare Lifesciences acquisition (Rs271.2 cr, announced 2026-11-02)",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -0.1,
+   "impact_pct_high": 0.2,
+   "source": "https://news.google.com/rss/search?q=Sun+Pharma+acquire+Innovcare+Lifesciences+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Sep-2026 (Q2 FY27, reported 2026-10-30)",
+  "trend": "Sales +11.9% YoY, OPM 29% (flat YoY), PAT -36% on Organon one-time charges; US formulation sales fell to $455m; India strong; mgmt reiterated FY27 guidance and admitted an Ilumya slowdown. Stock hit 5-month low 2026-10-14 then recovered.",
+  "valuation": "P/E 35.6 (TTM profit depressed by one-time charge), yield 0.9%, price Rs1,830 vs 52w 1,584-2,048",
+  "recent_developments": [
+   "2026-10-30: Q2 FY27 (Reuters, Business Standard, Moneycontrol)",
+   "2026-11-02: shares -3% then analysts keep Buy; target Rs2,150 (Prabhudas Lilladher)",
+   "2026-11-02: Innovcare acquisition Rs271.2 cr",
+   "2026-11-04: NSE/BSE nod to reclassify Valia family as public; promoter 52.68%",
+   "2026-10-21: Rs10,000 cr bond for Organon refinancing (ET)",
+   "2026-09-29: US 100% pharma tariff effective, select Indian specialty exempt"
+  ]
+ },
+ "key_risks": [
+  "Organon integration and leverage",
+  "US generic price erosion",
+  "Ilumya slowdown",
+  "US tariffs",
+  "USFDA site actions",
+  "High P/E"
+ ],
+ "upside_triggers": [
+  "Smooth Organon close and synergy",
+  "Leqselvi/Winlevi ramp",
+  "Tariff exemption for specialty",
+  "Weaker INR"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_US_GENERIC_PRICING",
+   "type": "FACTOR",
+   "name": "US generic drug price erosion",
+   "ssu": "+5 pp faster annual price erosion in US generics"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/SUNPHARMA/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Sun+Pharma+Organon+deal+charge+Q2+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Q2 and Organon charge"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Sun+Pharma+Q2+Concall+Ilumya+slowdown+FY27+guidance+Organon+deal+Q4+close+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "concall"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=US+exempts+select+Indian+speciality+drugs+100%+pharmaceutical+tariff+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "US pharma tariff"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Sun+Pharma+to+raise+Rs+10,000+crore+bond+Organon+acquisition+loan+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "bond financing"
+  }
+ ]
+}

@@ -1,0 +1,354 @@
+{
+ "ticker": "OFSS",
+ "name": "Oracle Financial Services Software Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_SOFTWARE_PLATFORMS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Banking-software company (FLEXCUBE, OBP, Financial Crime and Compliance, analytics) majority owned (~72-73% by model knowledge) by Oracle Corp. Revenue lumpy because of upfront product licence recognition: Jun-26 quarter Rs3,125 cr / PAT Rs1,416 cr vs Sep-26 Rs1,907 cr / PAT Rs702 cr (+29% YoY per press). EBITDA margin 42-60%, ROE 32.6%, yield 3.9%, debt-free. Q2 FY27 reported 2026-10-23 with new leadership appointments formalised. Stock hit by Oracle parent concerns in Sept 2026.",
+ "revenue_mix": [
+  {
+   "segment": "Product licences",
+   "share_pct": 25,
+   "geography": "global banks"
+  },
+  {
+   "segment": "Maintenance & cloud/subscription",
+   "share_pct": 35,
+   "geography": "global banks"
+  },
+  {
+   "segment": "Services",
+   "share_pct": 40,
+   "geography": "Americas 40% / EMEA 30% / APAC 25% / India 5%"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "employee costs",
+   "share_of_costs_pct": 65
+  },
+  {
+   "input": "royalty/support to Oracle, other",
+   "share_of_costs_pct": 35
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "OFSS",
+   "relation": "fx_translation",
+   "w": 1.5,
+   "w_low": -0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "~75% of revenue from outside India (model knowledge), INR costs ~ 55%. +3% => revenue +2.2%, cost +0.7% on costs ~ 50% of revenue... net +1.3% of revenue / 49% margin = +2.7% EBITDA, persistence 0.5, EV/MCap 0.95 => +1.3, shaded to +1.5. Pack +2.65 (t +1.1) agrees in sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "OFSS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Americas ~ 40% of revenue, Asia-Pacific ~ 25%, EMEA ~ 30% (model knowledge). Product licences depend on bank IT budgets; +1pp US growth => revenue +0.5%; high incremental margin (70%) vs 49% => EBITDA +0.7%; plus multiple effect => ~+1.5. Pack S&P +2.96 (t +2.4) shows a high US-sentiment beta for the stock.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "OFSS",
+   "relation": "substitution",
+   "w": -2.0,
+   "w_low": -7.0,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "Product firm with banking-platform moat (FLEXCUBE); GenAI affects services (~20-25% of revenue) more than licences/cloud. 3% repricing of services x 80% / 49% => -1% EBITDA... plus perception effect on product pricing; persistence 0.5 => ~-2, wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "OFSS",
+   "relation": "regulatory_risk",
+   "w": -1.0,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Low H-1B reliance; mostly India-based delivery; -1.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US suspended PERM green-card labour programme for named firms; Reuters 2026-10-11: little risk to Indian IT (<2% of green-card filings)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "Forbes 2026-10-01: judge struck down latest version of $100,000 H-1B fee; Indian Express 2026-09-19: fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "OFSS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.2,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+5% S&P 500: client sentiment and global risk appetite; shrunk toward 1.5 from the pack elasticity (+2.96, t +2.4).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "OFSS",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: FPI de-risking of a sector that is a prime funding source; judgement, shrunk from pack -0.7 per SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "OFSS",
+   "relation": "discount_rate",
+   "w": -0.9,
+   "w_low": -2.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp India 10y: duration effect on a high-payout, mostly net-cash stock.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "OFSS",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "+25bp Fed funds: BFSI and consumer client budgets; offset by stronger USD. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "OFSS",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "EMEA ~ 30% of revenue; bank IT budgets; ~+1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_ORACLE_PARENT_STRESS",
+   "dst": "OFSS",
+   "relation": "group_contagion",
+   "w": -5.0,
+   "w_low": -10.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "SSU +1 = an Oracle Corp credit/AI-capex stress episode (e.g. force-majeure on data-centre project, $18bn debt talks). OFSS fell 4-6.5% on 2026-09-21 and 2026-09-25 (Livemint, ET, CNBC TV18) and had its worst week in 20 months despite stating no knowledge of Oracle's debt negotiations (Sahi 2026-09-22). Oracle Corp holds ~72-73% (model knowledge); real fundamental link small (royalty/support fees) but sentiment link large. Central -5 per episode.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=OFSS+shares+fall+Oracle+force+majeure+data+centre+project+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-25",
+     "note": "OFSS -4 to -6% as parent Oracle issued force-majeure notice on New Mexico data-centre project; worst week in 20 months"
+    }
+   ]
+  },
+  {
+   "src": "F_SUGAR",
+   "dst": "OFSS",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Pack +3.08 per +10% sugar (t +2.8), USD/CNY +7.4 (t +2.4): significant but with no causal channel; likely data-mined or macro proxies. Token weight; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "OFSS",
+   "relation": "discount_rate",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.2,
+   "lag": "0-3m",
+   "mechanism": "+$5bn quarterly FPI inflow; mid-cap, momentum stock (6m +7%, 12m +22.5%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OFSS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 1,907 cr, OPM 49%, PAT 702 cr; Jun-26 qtr sales 3,125 cr, PAT 1,416 cr (licence spike)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Oracle Corporation",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "~72-73% holder; technology stack and sales channel"
+  },
+  {
+   "counterparty": "Global banks (Tier 1-3)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "core-banking replacement cycles, multi-year"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results; licence timing risk",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge of calendar; Q2 reported 2026-10-23"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further Oracle Corp credit/AI-capex headlines",
+   "type": "other",
+   "prob": 0.35,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=OFSS+shares+fall+Oracle+force+majeure+data+centre+project+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Dividend declaration (yield 3.9%) with Q3/Q4 results",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Sep-2026 (Q2 FY27, reported 2026-10-23)",
+  "trend": "Revenue Rs1,907 cr (flat vs Mar-26, +6.6% YoY), OPM 49%, PAT Rs702 cr (+29% YoY); Jun-26 had a licence spike (PAT Rs1,416 cr, +121% YoY).",
+  "valuation": "P/E 24.9, yield 3.94%, price Rs10,193 vs 52w 6,232-12,540",
+  "recent_developments": [
+   "2026-10-23: Q2 results; new leadership appointments (CNBC TV18, Whalesbook)",
+   "2026-09-25: -4 to -5% on Oracle 'force majeure' notice (ET, Moneycontrol)",
+   "2026-09-22: OFSS says no knowledge of Oracle's USD18bn debt negotiations (Sahi)",
+   "2026-09-21: -6.5% intraday (Livemint)"
+  ]
+ },
+ "key_risks": [
+  "Oracle parent credit/AI-capex stress contagion",
+  "Licence-lumpiness",
+  "Concentration in bank customers",
+  "Governance (leadership change)",
+  "Open-source/cloud-native core banking competition"
+ ],
+ "upside_triggers": [
+  "Core-banking migrations",
+  "Cloud subscription growth",
+  "Weaker INR",
+  "High dividend"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_ORACLE_PARENT_STRESS",
+   "type": "THEME",
+   "name": "Oracle Corp credit / AI-capex stress",
+   "ssu": "+1 = one stress episode (force majeure, debt negotiation headlines), roughly -5% for OFSS"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/OFSS/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=OFSS+shares+fall+Oracle+force+majeure+data+centre+project+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-25",
+   "what": "Oracle force majeure impact on OFSS"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Oracle+Financial+Services+Q2+net+profit+rises+29%+to+702+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 FY27"
+  }
+ ]
+}

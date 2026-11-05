@@ -1,0 +1,3678 @@
+{
+ "edges": [
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.75,
+   "w_low": 0.65,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "Food+beverages weight 36.5% in 2024-base CPI: +2 pp food inflation (1 SSU) x 0.365 = +0.73 pp headline, plus small second-round effect => +0.75 CPI SSU (old 45.9% weight would give 0.92)",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=new+CPI+series+food+weight+34.77+beverages&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-01-30",
+     "note": "CNBC TV18 / Indian Express: new CPI (2024=100) food 34.77% + beverages 1.77% = 36.5% (old series 45.86%)"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: global growth -100 bp -> India growth -30 bp, CPI -15 bp; food shocks move headline +/-40 bp"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.24,
+   "w_low": 0.15,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "RBI MPR: 5% INR depreciation -> CPI +40 bp => per +3% (1 SSU) +0.24 pp; imported inputs, edible oils, electronics, gold; (Brent channel handled by global backbone)",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Ch.V: INR 5% depreciation vs baseline -> CPI +~40 bp, GDP +~25 bp (exports channel, short term); turns contractionary in year 2 (Box V.1)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Studies of INR exchange-rate pass-through to CPI: 0.06-0.10 within a year"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "Second-round/core channel: +2 pp wage inflation lifts services and core CPI ~+0.4 pp; core ~55% of basket => headline +0.2 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: global growth -100 bp -> India growth -30 bp, CPI -15 bp; food shocks move headline +/-40 bp"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2023-02",
+     "note": "RBI QPM 2.0 (John et al., RBI Bulletin Feb-2023) and RBI transmission studies: 100 bp policy tightening lowers CPI ~0.3-0.5 pp and growth ~0.5-0.7 pp over 4-6 quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "Phillips-curve/output-gap channel: +1 pp growth above potential raises CPI ~0.2 pp within a year (QPM output-gap coefficient); MPR: global-growth shock -30 bp GDP -> -15 bp CPI implies ~0.5 ratio incl. imported prices",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2023-02",
+     "note": "RBI QPM 2.0 (John et al., RBI Bulletin Feb-2023) and RBI transmission studies: 100 bp policy tightening lowers CPI ~0.3-0.5 pp and growth ~0.5-0.7 pp over 4-6 quarters"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: global growth -100 bp -> India growth -30 bp, CPI -15 bp; food shocks move headline +/-40 bp"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_CPI_IN",
+   "relation": "macro_transmission",
+   "w": -0.04,
+   "w_low": -0.08,
+   "w_high": -0.01,
+   "lag": "3-12m",
+   "mechanism": "Direct expectations channel only: QPM total effect of +100 bp ~ -0.3..-0.5 pp CPI; the demand (repo->demand->GDP->CPI) and FX (repo->INR->CPI) channels are separate edges, so the direct residual is ~ -0.15 pp per 100 bp => -0.04 per 25 bp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2023-02",
+     "note": "RBI QPM 2.0 (John et al., RBI Bulletin Feb-2023) and RBI transmission studies: 100 bp policy tightening lowers CPI ~0.3-0.5 pp and growth ~0.5-0.7 pp over 4-6 quarters"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_CPI_IN",
+   "relation": "policy_effect",
+   "w": -0.55,
+   "w_low": -0.85,
+   "w_high": -0.25,
+   "lag": "0-3m",
+   "mechanism": "GST 2.0 (Sep-2025, ~1.5 'broad cut' units) cut Oct-2025 CPI by ~85 bp => ~-0.55 pp per unit; one-off level effect that drops out of y/y after 12 months",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=GST+rate+cut+CPI+inflation+impact+basis+points+SBI+Research&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-11-13",
+     "note": "Business Standard: new GST rates helped cut Oct-2025 CPI by ~85 bp to a record-low 0.25%"
+    }
+   ]
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "F_CPI_IN",
+   "relation": "policy_effect",
+   "w": 0.05,
+   "w_low": 0.0,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "Rs2/l excise ~2.2% of petrol/diesel pump price x ~2.5% direct fuel weight + diesel freight pass-through ~ +0.05 pp; zero when absorbed by OMC margins (Apr-2025 hike, Mar-2026 cut)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-04-07",
+     "note": "Excise reaction episodes: +Rs11.8/13.5 per l (2014-16, crude -70%); +Rs3 (Mar-2020); cuts Rs5/10 (Nov-2021) and Rs8/6 (May-2022) when crude doubled; +Rs2 (Apr-2025, crude ~$65, ~Rs32,000 cr/yr, absorbed by OMCs)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=excise+duty+cut+petrol+diesel+Rs+per+litre+March+27+2026+revenue+loss&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-03-27",
+     "note": "Reuters / Indian Express / New Indian Express: excise cut Rs10/l on petrol & diesel as crude surged; ~Rs1 lakh cr fiscal cost; pump prices not cut (OMC relief)"
+    }
+   ]
+  },
+  {
+   "src": "P_TELECOM_TARIFFS",
+   "dst": "F_CPI_IN",
+   "relation": "policy_effect",
+   "w": 0.1,
+   "w_low": 0.05,
+   "w_high": 0.15,
+   "lag": "0-3m",
+   "mechanism": "+10% mobile ARPU via tariffs x communication weight ~1-1.5% of CPI => +0.1-0.15 pp (Jul-2024 hikes visible in CPI)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2024-07",
+     "note": "Jul-2024 mobile tariff hikes 11-25%; communication services ~1-1.5% of CPI basket"
+    }
+   ]
+  },
+  {
+   "src": "P_GOLD_IMPORT_DUTY",
+   "dst": "F_CPI_IN",
+   "relation": "policy_effect",
+   "w": 0.04,
+   "w_low": 0.02,
+   "w_high": 0.08,
+   "lag": "0-3m",
+   "mechanism": "+5 pp duty raises domestic gold ~2.5-3.5% (WGC: +9 pp -> +4-6%) x gold+silver CPI weight ~1.2% => +0.04 pp; precious metals were ~1/3 of core inflation in 2025",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.gold.org/goldhub/gold-focus/2026/05/india-gold-market-update-import-tightening",
+     "date": "2026-05-22",
+     "note": "WGC: gold duty raised 6%->15% (largest hike on record) amid INR -7% YTD to conserve FX; domestic price +4-6%; 2026 jewellery+bar/coin demand seen -50-60 t (~10% y/y); unofficial inflows rise"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: global growth -100 bp -> India growth -30 bp, CPI -15 bp; food shocks move headline +/-40 bp"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Rain +10% vs LPA (1 SSU) => better kharif/rabi output, lower cereal/pulse/vegetable prices: ~-1 pp food inflation => -0.5 SSU; asymmetric (deficits bite more; MPR: food shock risk +/-40 bp headline)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box III.1: agri & allied growth coefficient -0.40 (p<0.01) per 1 pp rainfall shortfall vs LPA (1994-95..2025-26); excess-rain term -0.12, insignificant; non-agri rural GVA insensitive. 2026 monsoon -12.6% of LPA, reservoirs 71.8% vs normal 81.8%"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: global growth -100 bp -> India growth -30 bp, CPI -15 bp; food shocks move headline +/-40 bp"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AGRI_TRADE_CURBS_IN",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "policy_effect",
+   "w": -0.2,
+   "w_low": -0.5,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "Export bans/stock limits/import-duty cuts redirect supply to the domestic market: ~-0.4 pp food inflation per measure => -0.2 SSU; MPR credits supply measures with ~-40 bp headline",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Food-price reaction measures: wheat stock limits & export ban (2022-23), rice export ban (2023), onion duties, sugar export curbs, edible-oil duty cut (May-2025); MPR Oct-2026 credits 'supply side measures' with -40 bp CPI risk"
+    }
+   ]
+  },
+  {
+   "src": "NEW_MSP_HIKE_IN",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "+5 pp MSP above normal raises floor prices of procured cereals/pulses (~20% of food basket, partial) => food +0.4 pp => +0.2 SSU",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "MSP sets a floor for paddy/wheat/pulses; procurement covers ~25-30% of output of procured crops; cereals+pulses ~20% of 2024-base CPI food"
+    }
+   ]
+  },
+  {
+   "src": "P_SUGAR_ETHANOL",
+   "dst": "F_FOOD_INFLATION_IN",
+   "relation": "policy_effect",
+   "w": 0.05,
+   "w_low": 0.0,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "Miller-friendly policy (exports/ethanol diversion) tightens domestic sugar: +4% sugar x ~3% of food basket => +0.1 pp food => +0.05 SSU",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-01",
+     "note": "Sugar export quota allowed after good cane crops (e.g. 1 MT Jan-2025), curbed after weak ones (2023); ethanol diversion ~3.5-4.5 MT"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_REPO_IN",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "RBI reaction under 4% +/-2% target: +1 pp persistent CPI -> ~+37 bp repo (1.5 SSU) after smoothing; supply shocks partly looked through (2026: CPI ~2.8%->5.5% met by one 25 bp hike to 5.50% on 7 Oct), demand-led 2022 episode much stronger",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Estimated RBI reaction functions under flexible inflation targeting: long-run inflation-gap coefficient ~1.2-1.8 with heavy smoothing; output-gap coefficient ~0.3-0.6; supply shocks partly looked through"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+retail+inflation+September+2026+5.54%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "CPI 5.54% y/y (Sep-2026), food 7.74%; repo raised 25 bp to 5.50% on 7 Oct 2026 (india_macro notes)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_REPO_IN",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Output-gap term: 1 pp weaker growth -> ~20 bp lower repo (0.8 SSU); 2025 slowdown (Q2 FY25 5.4%) plus low CPI -> 125 bp cuts",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Estimated RBI reaction functions under flexible inflation targeting: long-run inflation-gap coefficient ~1.2-1.8 with heavy smoothing; output-gap coefficient ~0.3-0.6; supply shocks partly looked through"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table II.7: tightening May-22..Jan-25 repo +250 bp -> EBLR +250, WALR fresh +182; easing Feb-25..Sep-26 repo -125 bp -> EBLR -125, WALR fresh -72 bp"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_REPO_IN",
+   "relation": "policy_effect",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Direct FX-defence response beyond the CPI channel is small and episodic (2013 MSF hike; Oct-2026 hike amid INR ~95-96): +3% INR -> ~+4 bp expected repo",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Estimated RBI reaction functions under flexible inflation targeting: long-run inflation-gap coefficient ~1.2-1.8 with heavy smoothing; output-gap coefficient ~0.3-0.6; supply shocks partly looked through"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+forex+reserves+week+ended+October+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "FX reserves US$719.75 bn (23 Oct), 7th weekly fall; RBI sold ~US$18 bn in Oct (india_macro factor_state_notes)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "NEW_FX_RESERVES_IN",
+   "relation": "policy_effect",
+   "w": -0.9,
+   "w_low": -1.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "RBI leans against depreciation: a +3% INR episode is met with ~US$20-30 bn spot/forward sales (Sep-Oct 2026 ~US$18-20 bn near 96/USD) => -0.9 x US$25 bn; symmetric buying on appreciation",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+sold+dollars+rupee+liquidity+drain+September+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "Reuters: RBI's FX intervention 'blitz' drained nearly US$20 bn of surplus rupee liquidity as INR approached 96/USD"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+forex+reserves+week+ended+October+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "FX reserves US$719.75 bn (23 Oct), 7th weekly fall; RBI sold ~US$18 bn in Oct (india_macro factor_state_notes)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FX_RESERVES_IN",
+   "dst": "F_LIQUIDITY_IN",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.6,
+   "w_high": 2.4,
+   "lag": "0-3m",
+   "mechanism": "US$25 bn spot purchase(+)/sale(-) adds/drains ~Rs2.35 lakh cr rupee liquidity at 94 INR/USD, ~35% offset by OMO/VRR/swaps => +1.5 lakh cr (same edge as india_macro events file, 1.4)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-10",
+     "note": "India-macro agent defined NEW_FX_RESERVES_IN (+US$25 bn) with NEW_FX_RESERVES_IN->F_LIQUIDITY_IN +1.4; spot dollar sales drain rupee liquidity ~1:1 (US$25 bn ~ Rs2.35 lakh cr at 94) before sterilisation"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+sold+dollars+rupee+liquidity+drain+September+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "Reuters: RBI's FX intervention 'blitz' drained nearly US$20 bn of surplus rupee liquidity as INR approached 96/USD"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_LIQUIDITY_IN",
+   "relation": "policy_effect",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Liquidity stance follows inflation: Oct-2026 RBI raised daily CRR maintenance to 99% and sold Rs25,000 cr bonds as CPI rose to 5.5%; +1 pp CPI -> ~Rs0.5 lakh cr tighter surplus",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+raises+daily+CRR+maintenance+99%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "RBI raised daily CRR maintenance to 99% from 16 Oct and sold Rs25,000 cr bonds (13 Oct) to drain liquidity as inflation rose"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Estimated RBI reaction functions under flexible inflation targeting: long-run inflation-gap coefficient ~1.2-1.8 with heavy smoothing; output-gap coefficient ~0.3-0.6; supply shocks partly looked through"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_LIQUIDITY_IN",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Growth support via liquidity: 2025 slowdown met with CRR cut (Rs2.5 lakh cr) and large OMO purchases; -1 pp growth -> ~Rs0.3 lakh cr more surplus",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Estimated RBI reaction functions under flexible inflation targeting: long-run inflation-gap coefficient ~1.2-1.8 with heavy smoothing; output-gap coefficient ~0.3-0.6; supply shocks partly looked through"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "NEW_AGRI_TRADE_CURBS_IN",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Government food-price reaction: +2 pp food inflation raises odds of a new export curb/stock limit/duty cut by ~50% of one measure (2022-23 wheat, 2023 rice/sugar/onion, 2025 edible oil)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Food-price reaction measures: wheat stock limits & export ban (2022-23), rice export ban (2023), onion duties, sugar export curbs, edible-oil duty cut (May-2025); MPR Oct-2026 credits 'supply side measures' with -40 bp CPI risk"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "P_SUGAR_ETHANOL",
+   "relation": "policy_effect",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "High food inflation -> sugar export curbs / ethanol-diversion caps (Oct-2023) => less miller-friendly",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-01",
+     "note": "Sugar export quota allowed after good cane crops (e.g. 1 MT Jan-2025), curbed after weak ones (2023); ethanol diversion ~3.5-4.5 MT"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "P_SUGAR_ETHANOL",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Good monsoon -> larger cane crop -> export quotas and higher ethanol diversion allowed (Jan-2025 1 MT quota)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-01",
+     "note": "Sugar export quota allowed after good cane crops (e.g. 1 MT Jan-2025), curbed after weak ones (2023); ethanol diversion ~3.5-4.5 MT"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "P_FUEL_TAX_IN",
+   "relation": "policy_effect",
+   "w": -0.6,
+   "w_low": -1.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Fiscal shock absorber: Mar-2026 Rs10/l cut (-5 SSU) when Indian basket rose ~90% to ~$125 => ~-0.55 per +10%; 2014-16 and 2021-22 episodes -0.65..-0.85; lumpy and asymmetric",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=excise+duty+cut+petrol+diesel+Rs+per+litre+March+27+2026+revenue+loss&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-03-27",
+     "note": "Reuters / Indian Express / New Indian Express: excise cut Rs10/l on petrol & diesel as crude surged; ~Rs1 lakh cr fiscal cost; pump prices not cut (OMC relief)"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: Government cut special additional excise duty on petrol and diesel by Rs10/l each in March 2026 to absorb part of the crude shock (Indian basket ~US$125/bbl in Mar-2026)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2025-04-07",
+     "note": "Excise reaction episodes: +Rs11.8/13.5 per l (2014-16, crude -70%); +Rs3 (Mar-2020); cuts Rs5/10 (Nov-2021) and Rs8/6 (May-2022) when crude doubled; +Rs2 (Apr-2025, crude ~$65, ~Rs32,000 cr/yr, absorbed by OMCs)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FISCAL_SLIPPAGE_IN",
+   "dst": "P_FUEL_TAX_IN",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Revenue pressure raises odds of excise hikes when crude allows (Apr-2025 +Rs2, Mar-2020 +Rs3): +0.5% GDP slippage -> ~+Rs0.4/l expected",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-04-07",
+     "note": "Excise reaction episodes: +Rs11.8/13.5 per l (2014-16, crude -70%); +Rs3 (Mar-2020); cuts Rs5/10 (Nov-2021) and Rs8/6 (May-2022) when crude doubled; +Rs2 (Apr-2025, crude ~$65, ~Rs32,000 cr/yr, absorbed by OMCs)"
+    }
+   ]
+  },
+  {
+   "src": "F_FERTILISER_INPUTS",
+   "dst": "P_FERT_SUBSIDY",
+   "relation": "policy_effect",
+   "w": 0.7,
+   "w_low": 0.4,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Urea MRP fixed and NBS rates reset each season: +15% gas/ammonia/phosphate (1 SSU) raises subsidy outlay ~Rs20-25k cr; SSU of P_FERT_SUBSIDY read as ~Rs30k cr (~15%) higher support => +0.7",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-03",
+     "note": "Fertiliser subsidy ~Rs1.7-1.9 lakh cr/yr; urea MRP fixed so subsidy absorbs gas/ammonia cost; NBS rates for P&K revised each season with input prices"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "P_GOLD_IMPORT_DUTY",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.05,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Gold duty is an INR/CAD defence tool: 2012-13 (2->10%), Jul-2022 (7.5->12.5%), May-2026 (6->15% with INR -7% YTD) => +3% INR -> ~+1.5 pp expected duty (0.3 SSU); nonlinear, only in stress",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.gold.org/goldhub/gold-focus/2026/05/india-gold-market-update-import-tightening",
+     "date": "2026-05-22",
+     "note": "WGC: gold duty raised 6%->15% (largest hike on record) amid INR -7% YTD to conserve FX; domestic price +4-6%; 2026 jewellery+bar/coin demand seen -50-60 t (~10% y/y); unofficial inflows rise"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=gold+import+duty+raised+15%25+2026+India&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-05-12",
+     "note": "Reuters: India raises gold and silver tariffs to 15% to curb imports, support rupee (earlier hikes 2012-13 and Jul-2022 during INR stress)"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "P_DEFENCE_PROCUREMENT",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Escalation -> emergency and accelerated procurement: after Op Sindoor DAC approvals ~Rs1.7 lakh cr in 3 months and FY27 capital outlay +~20% to Rs2.19 lakh cr => ~+15% domestic orders per escalation unit",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Budget+2026+defence+budget+7.85+lakh+crore+modernisation+2.19&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "TOI/IE: defence budget Rs7.85 lakh cr, Rs2.19 lakh cr capital (modernisation), up ~20% after Op Sindoor (May-2025)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2025-08",
+     "note": "After Op Sindoor (May-2025) DAC approved ~Rs1.05 lakh cr (Jul-2025) and ~Rs67,000 cr (Aug-2025) of procurement; emergency procurement tranche"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "P_GST_CONSUMPTION",
+   "relation": "policy_effect",
+   "w": -0.25,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Fiscal stimulus reaction: a 1 pp growth shortfall raises odds of consumption-tax relief (GST 2.0 Sep-2025 amid tariff shock and soft urban demand) by ~25%",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=GST+rationalisation+net+revenue+implication+48%2C000+crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-09-03",
+     "note": "NDTV: official net revenue implication of GST 2.0 ~Rs48,000 cr/yr"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "P_RBI_PRUDENTIAL",
+   "relation": "regulatory_risk",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Macroprudential reaction to credit booms: Nov-2023 risk-weight hike followed ~30% unsecured growth; 2026 credit +19.4%, CD ratio ~85% => +3 pp credit growth -> ~30% odds of a tightening step",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: personal-loan growth 27.4% (Q1 FY25) -> 11.6-11.8% (FY26) and credit-card growth 23.3% -> 2-4% after Nov-2023 risk-weight increase; bank credit growth 19.3% (Aug-2026)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=bank+credit+growth+deposit+growth+October+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-10",
+     "note": "Bank credit +19.4% y/y, CD ratio ~85%; credit has outpaced deposits for four quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "P_RBI_PRUDENTIAL",
+   "relation": "regulatory_risk",
+   "w": 0.2,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "Growth-supportive regulation when growth slows: Feb-2025 rollback of NBFC/MFI risk weights, softer LCR and ECL glide path => weaker growth -> easing (negative steps)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+lowers+risk+weight+on+bank+finance+to+NBFC+microfinance+loans+February+2025&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-02-25",
+     "note": "ET: RBI rolled back the Nov-2023 +25 pp risk weights on bank loans to NBFCs and MFI loans (growth-supportive easing)"
+    }
+   ]
+  },
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "P_SEBI_DERIVATIVES",
+   "relation": "regulatory_risk",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "SEBI tightens after retail F&O frenzies (Sep-2024 loss study -> Nov-2024 curbs): +20% activity -> ~30% odds of another tightening step",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SEBI+study+F%26O+individual+traders+losses+FY26+participation+fell+18%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-20",
+     "note": "SEBI FY26 study: individual F&O traders down ~18% (to ~87.5 lakh) after Nov-2024 curbs and Feb-2026 STT hike; losses Rs91,685 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "P_CAPITAL_GAINS_TAX",
+   "relation": "policy_effect",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": ">12m",
+   "mechanism": "Budget STT/CGT hikes target speculative turnover (Jul-2024 STT and CGT hikes; Feb-2026 F&O STT hike)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=STT+futures+options+hike+Budget+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Budget 2026 raised STT on F&O to curb speculation; Sensex/Nifty fell sharply during the speech"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "discount_rate",
+   "w": 0.5,
+   "w_low": 0.3,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "10y G-sec beta to policy rate ~0.5: +25 bp repo -> ~+12 bp 10y (term premium absorbs part)",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table II.7: tightening May-22..Jan-25 repo +250 bp -> EBLR +250, WALR fresh +182; easing Feb-25..Sep-26 repo -125 bp -> EBLR -125, WALR fresh -72 bp"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2023-02",
+     "note": "RBI QPM 2.0 (John et al., RBI Bulletin Feb-2023) and RBI transmission studies: 100 bp policy tightening lowers CPI ~0.3-0.5 pp and growth ~0.5-0.7 pp over 4-6 quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "discount_rate",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Inflation-risk premium beyond the repo path: +1 pp CPI surprise lifts 10y ~7-8 bp (2026: CPI 5.5% with 10y ~7.44%, multi-year high)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+November+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "10y G-sec ~7.44%, multi-year high >7.45% on 21 Oct; FPI G-sec outflow Rs5,400 cr in Oct (india_macro notes)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+retail+inflation+September+2026+5.54%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "CPI 5.54% y/y (Sep-2026), food 7.74%; repo raised 25 bp to 5.50% on 7 Oct 2026 (india_macro notes)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "discount_rate",
+   "w": -0.2,
+   "w_low": -0.35,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus pulls overnight/T-bill rates toward SDF and carries ~5 bp into 10y => -0.2 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: FCNR(B) swap facility (5 Jun 2026) drew US$133 bn gross inflows; surplus liquidity rose, WACR fell toward SDF; FPIs net sellers in H1 FY27, DIIs/MFs counterbalanced"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FISCAL_SLIPPAGE_IN",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "discount_rate",
+   "w": 0.5,
+   "w_low": 0.2,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "+0.5% of GDP extra borrowing (~Rs2 lakh cr) -> +10-17 bp 10y (EM panel: +1 pp GDP deficit = +20-35 bp) => +0.5 SSU; FY27 overshoot risk ~Rs1.2 lakh cr coincides with 7.44% 10y",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "IMF/BIS panel estimates: +1 pp of GDP deficit raises EM 10y yields ~20-35 bp; India G-sec supply shocks visible in 2020 and 2026"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Centre+fiscal+deficit+42.1%25+FY27+target+H1+CGA&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "H1 FY27 deficit Rs7.14 lakh cr = 42.1% of BE; SBI/ET: FY27 may overshoot by up to Rs1.2 lakh cr (~0.3% of GDP); subsidy bill ballooned"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+November+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "10y G-sec ~7.44%, multi-year high >7.45% on 21 Oct; FPI G-sec outflow Rs5,400 cr in Oct (india_macro notes)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FPI_DEBT_FLOWS",
+   "dst": "F_GSEC_10Y_IN",
+   "relation": "discount_rate",
+   "w": -0.35,
+   "w_low": -0.6,
+   "w_high": -0.15,
+   "lag": "0-3m",
+   "mechanism": "+US$5 bn/quarter debt inflow ~Rs47k cr (~12% of quarterly central gross issuance) -> ~-9 bp 10y => -0.35 SSU (index-inclusion experience 2024-25)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-09",
+     "note": "India G-secs added to JPM GBI-EM (Jun-2024), Bloomberg EM (Jan-2025), FTSE EMGBI (Sep-2025); FAR bonds held by FPIs ~Rs3 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_CREDIT_SPREADS_IN",
+   "relation": "funding_cost",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Tightening cycles widen corporate/NBFC spreads modestly (+25 bp repo -> ~+5 bp spread)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.1 / II.2.1: CD and CP spreads over repo widened to 135/155 bp in H1 FY27 (from 116/136) as credit growth outpaced deposits (funding pressure)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "F_CREDIT_SPREADS_IN",
+   "relation": "funding_cost",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "Surplus liquidity compresses CP/CD and short corporate spreads (MPR: CP issuance surged with surplus) => +Rs1 lakh cr -> ~-10 bp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: FCNR(B) swap facility (5 Jun 2026) drew US$133 bn gross inflows; surplus liquidity rose, WACR fell toward SDF; FPIs net sellers in H1 FY27, DIIs/MFs counterbalanced"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.1 / II.2.1: CD and CP spreads over repo widened to 135/155 bp in H1 FY27 (from 116/136) as credit growth outpaced deposits (funding pressure)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "F_CREDIT_SPREADS_IN",
+   "relation": "funding_cost",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Higher system credit cost (+50 bp) raises default risk premia ~+15 bp on lower-rated paper",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "System credit cost moves ~15-25 bp per 1 pp change in real GDP growth (bank credit-cost cycles FY12-FY26); unsecured retail + MFI ~12% of bank credit"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "F_CREDIT_SPREADS_IN",
+   "relation": "funding_cost",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Higher risk weights on bank loans to NBFCs (Nov-2023) raised NBFC funding spreads ~20-30 bp => ~+15 bp broad spread index",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+lowers+risk+weight+on+bank+finance+to+NBFC+microfinance+loans+February+2025&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-02-25",
+     "note": "ET: RBI rolled back the Nov-2023 +25 pp risk weights on bank loans to NBFCs and MFI loans (growth-supportive easing)"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: personal-loan growth 27.4% (Q1 FY25) -> 11.6-11.8% (FY26) and credit-card growth 23.3% -> 2-4% after Nov-2023 risk-weight increase; bank credit growth 19.3% (Aug-2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "F_CREDIT_SPREADS_IN",
+   "relation": "funding_cost",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "MPR: funding pressure from credit outpacing deposits widened CD spreads; +3 pp deposit growth -> ~-7 bp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.1 / II.2.1: CD and CP spreads over repo widened to 135/155 bp in H1 FY27 (from 116/136) as credit growth outpaced deposits (funding pressure)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "F_CREDIT_SPREADS_IN",
+   "relation": "funding_cost",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Loan demand ahead of deposits forces CD/bulk borrowing (CD spread 116->135 bp H1 FY27); +3 pp credit growth -> ~+7 bp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.1 / II.2.1: CD and CP spreads over repo widened to 135/155 bp in H1 FY27 (from 116/136) as credit growth outpaced deposits (funding pressure)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=bank+credit+growth+deposit+growth+October+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-10",
+     "note": "Bank credit +19.4% y/y, CD ratio ~85%; credit has outpaced deposits for four quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.25,
+   "w_low": -0.4,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "+US$5 bn/quarter equity inflow, about half absorbed by RBI, -> INR ~0.75% stronger => -0.25 SSU (2026: ~US$33 bn YTD outflow with INR at record lows)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=FPI+outflows+reach+Rs+2.25+lakh+crore+in+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-05-31",
+     "note": "FPI equity outflows Rs2.25 lakh cr by May-2026 (~Rs2.95 lakh cr by 1 Nov) while INR hit record lows (Mar-2026)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+forex+reserves+week+ended+October+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "FX reserves US$719.75 bn (23 Oct), 7th weekly fall; RBI sold ~US$18 bn in Oct (india_macro factor_state_notes)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FPI_DEBT_FLOWS",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.25,
+   "w_low": -0.4,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Same dollar-supply effect per US$ as equity flows: +US$5 bn/quarter -> INR ~0.75% stronger",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-09",
+     "note": "India G-secs added to JPM GBI-EM (Jun-2024), Bloomberg EM (Jan-2025), FTSE EMGBI (Sep-2025); FAR bonds held by FPIs ~Rs3 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD_DEMAND_IN",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.08,
+   "w_low": 0.03,
+   "w_high": 0.15,
+   "lag": "3-12m",
+   "mechanism": "+10% gold volume = +US$5-6 bn imports (~0.13% GDP CAD) -> INR ~0.25% weaker after RBI smoothing => +0.08",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-12",
+     "note": "India gold imports ~US$55-60 bn/yr (~8% of merchandise imports); rural ~55-60% of jewellery demand (WGC); price elasticity of volume ~-0.6 to -0.9"
+    },
+    {
+     "source": "https://www.gold.org/goldhub/gold-focus/2026/05/india-gold-market-update-import-tightening",
+     "date": "2026-05-22",
+     "note": "WGC: gold duty raised 6%->15% (largest hike on record) amid INR -7% YTD to conserve FX; domestic price +4-6%; 2026 jewellery+bar/coin demand seen -50-60 t (~10% y/y); unofficial inflows rise"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Carry: +25 bp widens rate differential, small INR support (~0.3%)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Estimated RBI reaction functions under flexible inflation targeting: long-run inflation-gap coefficient ~1.2-1.8 with heavy smoothing; output-gap coefficient ~0.3-0.6; supply shocks partly looked through"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.25,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": ">12m",
+   "mechanism": "Relative-PPP drift: +1 pp inflation differential sustained -> ~0.75% faster depreciation over 1-2 years",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Studies of INR exchange-rate pass-through to CPI: 0.06-0.10 within a year"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "Liberalisation step adds ~US$5-10 bn/yr FDI -> INR ~0.3% stronger",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "FDI liberalisation (insurance 100%, space, defence) and Press Note 3 easing for China-linked JVs raise FDI inflows and capex; gross FDI ~US$80 bn/yr"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "Manufacturing relocation lifts goods exports and FDI, narrowing the CAD",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Electronics exports (iPhone etc.) >US$40 bn FY26; China+1 FDI and capex in electronics, auto components, specialty chemicals"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "F_USDINR",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": ">12m",
+   "mechanism": "More GenAI substitution slows IT-services export growth (~-3 pp of ~US$190 bn net services) -> CAD +~0.1% GDP -> INR weaker ~0.3%",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "IT/BPO employs ~5.8 m direct, concentrated in Bengaluru/Hyderabad/Pune/NCR/Chennai; net services exports ~US$190 bn are the main CAD offset"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -0.9,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Depreciation erodes USD returns and triggers stop-loss selling: +3% INR -> ~-US$2.5 bn/quarter (2026 outflows coincided with record-low INR)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=FPI+outflows+reach+Rs+2.25+lakh+crore+in+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-05-31",
+     "note": "FPI equity outflows Rs2.25 lakh cr by May-2026 (~Rs2.95 lakh cr by 1 Nov) while INR hit record lows (Mar-2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_FPI_FLOWS",
+   "relation": "macro_transmission",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.7,
+   "lag": "3-12m",
+   "mechanism": "Growth premium/earnings upgrades: +1 pp GDP -> ~+US$2 bn/quarter",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=FPI+outflows+reach+Rs+2.25+lakh+crore+in+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-05-31",
+     "note": "FPI equity outflows Rs2.25 lakh cr by May-2026 (~Rs2.95 lakh cr by 1 Nov) while INR hit record lows (Mar-2026)"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_FPI_FLOWS",
+   "relation": "policy_effect",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.15,
+   "lag": "3-12m",
+   "mechanism": "After-tax return channel: SEBI (Nov-2026) proposal to scrap 12.5% LTCG for FPIs lifted Nifty ~1.6% on expectations; one CGT step ~US$1.5-3 bn/quarter",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Sebi+recommends+removal+LTCG+tax+foreign+investors+Budget+2027&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "SEBI recommends scrapping 12.5% LTCG for FPIs ahead of Budget 2027; Nifty +1.6% on relief expectations (Reuters/Mint 2-3 Nov)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "NEW_FPI_DEBT_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Unhedged bond investors exit on depreciation (Oct-2026 FPI G-sec outflow Rs5,400 cr): +3% INR -> ~-US$1.5 bn/quarter",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+November+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "10y G-sec ~7.44%, multi-year high >7.45% on 21 Oct; FPI G-sec outflow Rs5,400 cr in Oct (india_macro notes)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2025-09",
+     "note": "India G-secs added to JPM GBI-EM (Jun-2024), Bloomberg EM (Jan-2025), FTSE EMGBI (Sep-2025); FAR bonds held by FPIs ~Rs3 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "NEW_FPI_DEBT_FLOWS",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "Carry: +25 bp higher yield differential attracts ~US$0.5 bn/quarter",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-09",
+     "note": "India G-secs added to JPM GBI-EM (Jun-2024), Bloomberg EM (Jan-2025), FTSE EMGBI (Sep-2025); FAR bonds held by FPIs ~Rs3 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FISCAL_SLIPPAGE_IN",
+   "dst": "NEW_FPI_DEBT_FLOWS",
+   "relation": "macro_transmission",
+   "w": -0.15,
+   "w_low": -0.35,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Fiscal slippage raises duration/rating risk for index investors: ~-US$0.75 bn/quarter per 0.5% GDP",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "IMF/BIS panel estimates: +1 pp of GDP deficit raises EM 10y yields ~20-35 bp; India G-sec supply shocks visible in 2020 and 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_GOLD_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": -0.2,
+   "w_low": -0.35,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "+3% INR raises rupee gold price 3% x volume elasticity ~-0.7 => -2% volume => -0.2 SSU (global gold price edge is in the global backbone)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-12",
+     "note": "India gold imports ~US$55-60 bn/yr (~8% of merchandise imports); rural ~55-60% of jewellery demand (WGC); price elasticity of volume ~-0.6 to -0.9"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "RBI MPR: 5% depreciation -> GDP +~25 bp via exports in the short term => +0.15 pp per +3%; Box V.1: turns contractionary in year 2",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Ch.V: INR 5% depreciation vs baseline -> CPI +~40 bp, GDP +~25 bp (exports channel, short term); turns contractionary in year 2 (Box V.1)"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "F_DOMESTIC_FLOWS",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "One notch faster shift of household savings into MFs/insurance/pension ~ +10% SIP + DII inflow",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Monthly SIP inflows ~Rs28-30k cr (2025-26); demat accounts >20 crore; household financial savings shifting from deposits to MFs/insurance"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "New retail investors trade directly (demat additions, cash volumes), beyond MF flows: ~+6% activity",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Monthly SIP inflows ~Rs28-30k cr (2025-26); demat accounts >20 crore; household financial savings shifting from deposits to MFs/insurance"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "F_DEPOSIT_GROWTH_IN",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Savings diverted from bank term deposits to market products: ~-1 pp deposit growth (CASA/TD share loss 2023-26)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Monthly SIP inflows ~Rs28-30k cr (2025-26); demat accounts >20 crore; household financial savings shifting from deposits to MFs/insurance"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.1 / II.2.1: CD and CP spreads over repo widened to 135/155 bp in H1 FY27 (from 116/136) as credit growth outpaced deposits (funding pressure)"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_DOMESTIC_FLOWS",
+   "relation": "policy_effect",
+   "w": -0.15,
+   "w_low": -0.4,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Higher LTCG/STCG (Jul-2024) lowers after-tax equity returns; SIP flows proved sticky, so small: ~-1.5%",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=STT+futures+options+hike+Budget+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Budget 2026 raised STT on F&O to curb speculation; Sensex/Nifty fell sharply during the speech"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+10% MF/DII inflows support prices and cash turnover, lifting AMC/broker/exchange activity ~6%",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: FCNR(B) swap facility (5 Jun 2026) drew US$133 bn gross inflows; surplus liquidity rose, WACR fell toward SDF; FPIs net sellers in H1 FY27, DIIs/MFs counterbalanced"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Monthly SIP inflows ~Rs28-30k cr (2025-26); demat accounts >20 crore; household financial savings shifting from deposits to MFs/insurance"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Foreign inflows lift prices and momentum, drawing retail turnover (+US$5 bn/q -> ~+6% activity)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=FPI+outflows+reach+Rs+2.25+lakh+crore+in+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-05-31",
+     "note": "FPI equity outflows Rs2.25 lakh cr by May-2026 (~Rs2.95 lakh cr by 1 Nov) while INR hit record lows (Mar-2026)"
+    }
+   ]
+  },
+  {
+   "src": "P_SEBI_DERIVATIVES",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "regulatory_risk",
+   "w": -0.8,
+   "w_low": -1.3,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Nov-2024 F&O curbs (+ Feb-2026 STT) cut individual F&O traders ~18-20% and index-option volumes ~25-35% => one step ~-16% activity = -0.8 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SEBI+study+F%26O+individual+traders+losses+FY26+participation+fell+18%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-20",
+     "note": "SEBI FY26 study: individual F&O traders down ~18% (to ~87.5 lakh) after Nov-2024 curbs and Feb-2026 STT hike; losses Rs91,685 cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=STT+futures+options+hike+Budget+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Budget 2026 raised STT on F&O to curb speculation; Sensex/Nifty fell sharply during the speech"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Higher STT/CGT raises trading cost (Feb-2026 STT hike: market sell-off, lower F&O turnover) => ~-6% activity",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=STT+futures+options+hike+Budget+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Budget 2026 raised STT on F&O to curb speculation; Sensex/Nifty fell sharply during the speech"
+    }
+   ]
+  },
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "T_FINANCIALISATION",
+   "relation": "regulatory_risk",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Surrender-value/commission rules (Oct-2024) slowed insurance savings products, a financialisation channel",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2024-10",
+     "note": "IRDAI Oct-2024 surrender-value norms and commission/product rules slowed non-par savings products"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "T_FINANCIALISATION",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": ">12m",
+   "mechanism": "Formal employment brings PF/NPS/insurance enrolment and bank accounts",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "UPI >20 bn transactions/month; digital invoicing/GST data feed account-aggregator/OCEN MSME lending; app-based brokers drove demat additions"
+    }
+   ]
+  },
+  {
+   "src": "T_DIGITAL_PAYMENTS",
+   "dst": "T_FINANCIALISATION",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": ">12m",
+   "mechanism": "UPI-linked SIP mandates and app-based brokers lowered entry cost for retail investors",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "UPI >20 bn transactions/month; digital invoicing/GST data feed account-aggregator/OCEN MSME lending; app-based brokers drove demat additions"
+    }
+   ]
+  },
+  {
+   "src": "T_DIGITAL_PAYMENTS",
+   "dst": "T_FORMALISATION",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": ">12m",
+   "mechanism": "Digital transaction trails formalise small merchants (GST/UPI data)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "UPI >20 bn transactions/month; digital invoicing/GST data feed account-aggregator/OCEN MSME lending; app-based brokers drove demat additions"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "demand_driver",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": ">12m",
+   "mechanism": "Cash-flow-based MSME lending (account aggregator, GST data) widens the bankable base: ~+0.5 pp credit growth",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "UPI >20 bn transactions/month; digital invoicing/GST data feed account-aggregator/OCEN MSME lending; app-based brokers drove demat additions"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: personal-loan growth 27.4% (Q1 FY25) -> 11.6-11.8% (FY26) and credit-card growth 23.3% -> 2-4% after Nov-2023 risk-weight increase; bank credit growth 19.3% (Aug-2026)"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "NEW_FISCAL_SLIPPAGE_IN",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.2,
+   "w_high": 0.0,
+   "lag": ">12m",
+   "mechanism": "Higher tax buoyancy from a wider GST/income-tax base: ~0.05% GDP revenue",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "UPI >20 bn transactions/month; digital invoicing/GST data feed account-aggregator/OCEN MSME lending; app-based brokers drove demat additions"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "T_FORMALISATION",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.2,
+   "lag": ">12m",
+   "mechanism": "Shift from unorganised kiranas to invoiced platforms and gig work registered under labour codes",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Quick commerce GMV ~US$7-10 bn growing >50%; share shift from kiranas to organised platforms; incremental impulse demand small"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.05,
+   "w_low": 0.0,
+   "w_high": 0.15,
+   "lag": "3-12m",
+   "mechanism": "Convenience-led impulse purchases add marginally to urban discretionary spend; mostly a share shift (company-level)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Quick commerce GMV ~US$7-10 bn growing >50%; share shift from kiranas to organised platforms; incremental impulse demand small"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.7,
+   "w_low": 0.4,
+   "w_high": 1.1,
+   "lag": "3-12m",
+   "mechanism": "General-govt capex ~5.8% of GDP (FY27 central Rs12.2 lakh cr + states): +10% = +0.58% GDP x impact multiplier ~1.2 => +0.7 pp (peak multiplier 2.5-3 over 2-3 yrs)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Indian fiscal multipliers: capital outlay ~1.2 on impact rising to ~2.5-3 over 2-3 years (NIPFP Bose-Bhanumurthy 2015; RBI Bulletin studies); revenue spending <1"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Fiscal+Deficit+4.3%25+Of+GDP+In+FY27+Capex+Rs+12.2+Lakh+Crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Union Budget FY27: fiscal deficit 4.3% of GDP; central capex Rs12.2 lakh cr; states' GFD 3.2% of GDP (MPR)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.5,
+   "w_high": 1.1,
+   "lag": "3-12m",
+   "mechanism": "Private corporate GFCF ~11-12% of GDP: +10% = +1.15% GDP less ~30% import leakage => +0.8 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: GFCF/GDP 34.3% in Q1 FY27; public spending on transport/power/logistics 'expected to crowd in private capex'; Rs2 lakh cr SASCI capex loans to states"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.3,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Urban discretionary consumption ~14% of GDP: +5 pp growth = +0.7% GDP less imports => +0.5 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.5,
+   "w_high": 1.1,
+   "lag": "0-3m",
+   "mechanism": "Rural consumption ~26% of GDP (43-45% of PFCE): +5 pp growth = +1.3% GDP less imports/measurement => +0.8 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "Residential construction ~6% of GDP responds to sales with a lag: +10% sales -> ~+3% dwelling investment -> +0.2 pp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+Q3+2026+ANAROCK+top+seven+cities&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "ANAROCK: Q3-2026 sales +3% y/y (~1 lakh units), launches +18%"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_GDP_IN",
+   "relation": "macro_transmission",
+   "w": 0.35,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "RBI: agri growth -0.40 pp per 1 pp rain shortfall; agri ~16% of GVA => 10% shortfall -0.64 pp; excess rain ~no gain (asymmetric) and the rural-consumption leg is a separate edge => +0.35 central, apply mostly to deficits",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box III.1: agri & allied growth coefficient -0.40 (p<0.01) per 1 pp rainfall shortfall vs LPA (1994-95..2025-26); excess-rain term -0.12, insignificant; non-agri rural GVA insensitive. 2026 monsoon -12.6% of LPA, reservoirs 71.8% vs normal 81.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "demand_driver",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "Accelerator: +1 pp growth lifts capacity utilisation (76.3% Q1 FY27) and capex growth ~2.5 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: GFCF/GDP 34.3% in Q1 FY27; public spending on transport/power/logistics 'expected to crowd in private capex'; Rs2 lakh cr SASCI capex loans to states"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "Crowding-in (MPR): +10% public capex (~Rs2.2 lakh cr) draws ~Rs0.8 lakh cr private investment in suppliers/logistics => +~2%",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: GFCF/GDP 34.3% in Q1 FY27; public spending on transport/power/logistics 'expected to crowd in private capex'; Rs2 lakh cr SASCI capex loans to states"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Indian fiscal multipliers: capital outlay ~1.2 on impact rising to ~2.5-3 over 2-3 years (NIPFP Bose-Bhanumurthy 2015; RBI Bulletin studies); revenue spending <1"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "funding_cost",
+   "w": -0.08,
+   "w_low": -0.2,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Cost of capital: +25 bp -> capex growth ~-0.8 pp; large corporates cash-rich so weak",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2023-02",
+     "note": "RBI QPM 2.0 (John et al., RBI Bulletin Feb-2023) and RBI transmission studies: 100 bp policy tightening lowers CPI ~0.3-0.5 pp and growth ~0.5-0.7 pp over 4-6 quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "funding_cost",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "+50 bp spreads raise mid-corporate borrowing cost -> capex growth ~-1.5 pp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.1 / II.2.1: CD and CP spreads over repo widened to 135/155 bp in H1 FY27 (from 116/136) as credit growth outpaced deposits (funding pressure)"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "policy_effect",
+   "w": 0.1,
+   "w_low": 0.03,
+   "w_high": 0.2,
+   "lag": ">12m",
+   "mechanism": "PLI drew Rs2.16 lakh cr cumulative (~Rs45k cr/yr); an expansion step adds ~Rs20-30k cr/yr vs ~Rs45 lakh cr private GFCF => +~0.6% capex growth, plus ancillaries",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PLI+scheme+attracts+investments+worth+2.16+lakh+crore+14+sectors&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-20",
+     "note": "Fortune India: PLI investment Rs2.16 lakh cr across 14 sectors (cumulative)"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "demand_driver",
+   "w": 0.1,
+   "w_low": 0.03,
+   "w_high": 0.25,
+   "lag": ">12m",
+   "mechanism": "Relocation capex (electronics, components, chemicals) ~Rs30-50k cr/yr per notch => +~1% private capex",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Electronics exports (iPhone etc.) >US$40 bn FY26; China+1 FDI and capex in electronics, auto components, specialty chemicals"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "policy_effect",
+   "w": 0.07,
+   "w_low": 0.0,
+   "w_high": 0.15,
+   "lag": ">12m",
+   "mechanism": "Liberalisation adds greenfield FDI (~Rs20-30k cr/yr)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "FDI liberalisation (insurance 100%, space, defence) and Press Note 3 easing for China-linked JVs raise FDI inflows and capex; gross FDI ~US$80 bn/yr"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "demand_driver",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "RE/storage capex ~Rs2.5-3 lakh cr/yr; a notch (~+25%) adds ~Rs70k cr => +~1.5% private capex",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "demand_driver",
+   "w": 0.07,
+   "w_low": 0.02,
+   "w_high": 0.15,
+   "lag": "3-12m",
+   "mechanism": "CRISIL: ~Rs3 trillion DC investment by FY30 (~Rs70k cr/yr); a notch (~+50%) adds ~Rs35k cr => +0.7%",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+data+centre+capacity+7.5+GW+2030+Crisil&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "CRISIL: India DC capacity ~5x to 7.5 GW by 2030; ~Rs3 trillion investment by FY30"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "F_PRIVATE_CAPEX",
+   "relation": "policy_effect",
+   "w": 0.05,
+   "w_low": 0.0,
+   "w_high": 0.15,
+   "lag": ">12m",
+   "mechanism": "Higher layoff threshold (100->300 workers) and fixed-term employment ease large-plant investment; offset by higher wage costs",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=labour+codes+come+into+effect+November+21+2025&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-11-21",
+     "note": "Four labour codes in force from 21 Nov 2025 (wage definition >=50% of CTC, gratuity, gig social security)"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "F_GOVT_CAPEX",
+   "relation": "policy_effect",
+   "w": 0.12,
+   "w_low": 0.08,
+   "w_high": 0.15,
+   "lag": "0-3m",
+   "mechanism": "Railway capex ~Rs2.6 lakh cr ~12% of general-govt capex: +10% -> +1.2% total => +0.12 SSU",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fiscal+Deficit+4.3%25+Of+GDP+In+FY27+Capex+Rs+12.2+Lakh+Crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Union Budget FY27: fiscal deficit 4.3% of GDP; central capex Rs12.2 lakh cr; states' GFD 3.2% of GDP (MPR)"
+    }
+   ]
+  },
+  {
+   "src": "P_INFRA_SPENDING_ROADS",
+   "dst": "F_GOVT_CAPEX",
+   "relation": "policy_effect",
+   "w": 0.12,
+   "w_low": 0.06,
+   "w_high": 0.15,
+   "lag": "3-12m",
+   "mechanism": "Road capex (MoRTH/NHAI ~Rs2.8 lakh cr) ~12-13% of govt capex; awards convert to spend over 6-24 months",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fiscal+Deficit+4.3%25+Of+GDP+In+FY27+Capex+Rs+12.2+Lakh+Crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Union Budget FY27: fiscal deficit 4.3% of GDP; central capex Rs12.2 lakh cr; states' GFD 3.2% of GDP (MPR)"
+    }
+   ]
+  },
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "F_GOVT_CAPEX",
+   "relation": "policy_effect",
+   "w": 0.1,
+   "w_low": 0.05,
+   "w_high": 0.12,
+   "lag": "3-12m",
+   "mechanism": "Defence capital outlay Rs2.19 lakh cr ~10% of general-govt capex: +10% orders -> +~1%",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Budget+2026+defence+budget+7.85+lakh+crore+modernisation+2.19&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "TOI/IE: defence budget Rs7.85 lakh cr, Rs2.19 lakh cr capital (modernisation), up ~20% after Op Sindoor (May-2025)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_FISCAL_SLIPPAGE_IN",
+   "dst": "F_GOVT_CAPEX",
+   "relation": "policy_effect",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Expenditure compression: revenue shortfalls/subsidy overruns are met by capex underspend (FY25 central capex Rs10.2 vs Rs11.1 lakh cr BE): +0.5% GDP pressure -> ~-4% capex",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Centre+fiscal+deficit+42.1%25+FY27+target+H1+CGA&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "H1 FY27 deficit Rs7.14 lakh cr = 42.1% of BE; SBI/ET: FY27 may overshoot by up to Rs1.2 lakh cr (~0.3% of GDP); subsidy bill ballooned"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Fiscal+Deficit+4.3%25+Of+GDP+In+FY27+Capex+Rs+12.2+Lakh+Crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Union Budget FY27: fiscal deficit 4.3% of GDP; central capex Rs12.2 lakh cr; states' GFD 3.2% of GDP (MPR)"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "F_STEEL_INDIA",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "Construction/infra ~60% of steel demand: +10% public capex -> steel demand +2.5% -> domestic price ~+1.4% => +0.2 SSU (global/China steel edges in metals backbone)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Construction/infrastructure ~60% of Indian steel demand; public capex drives rebar/structural demand"
+    }
+   ]
+  },
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "T_DEFENCE_EXPORTS",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": ">12m",
+   "mechanism": "Domestic scale and indigenisation build export capability (exports ~Rs24k cr FY25)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Budget+2026+defence+budget+7.85+lakh+crore+modernisation+2.19&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "TOI/IE: defence budget Rs7.85 lakh cr, Rs2.19 lakh cr capital (modernisation), up ~20% after Op Sindoor (May-2025)"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "T_CHINA_PLUS_ONE",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "PLI is the main instrument attracting relocated electronics/component supply chains",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PLI+scheme+attracts+investments+worth+2.16+lakh+crore+14+sectors&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-20",
+     "note": "Fortune India: PLI investment Rs2.16 lakh cr across 14 sectors (cumulative)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Electronics exports (iPhone etc.) >US$40 bn FY26; China+1 FDI and capex in electronics, auto components, specialty chemicals"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "T_CHINA_PLUS_ONE",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "Easier FDI incl. China-linked component JVs speeds supply-chain relocation",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "FDI liberalisation (insurance 100%, space, defence) and Press Note 3 easing for China-linked JVs raise FDI inflows and capex; gross FDI ~US$80 bn/yr"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_WAGES_IN",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": 0.25,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "Okun/employment channel: +1 pp growth -> nominal wage growth +~1 pp => +0.5 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Rural and economy-wide nominal wages index partially to CPI (DA, minimum wages, MGNREGA notified wages)"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_WAGES_IN",
+   "relation": "macro_transmission",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Indexation (DA on CPI-IW, minimum and rural-employment wages): +1 pp CPI -> +0.8 pp wages",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Rural and economy-wide nominal wages index partially to CPI (DA, minimum wages, MGNREGA notified wages)"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "F_WAGES_IN",
+   "relation": "policy_effect",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Wage definition >=50% of CTC raises gratuity/PF base: IT majors booked ~Rs4-5.4k cr one-off; recurring employee cost +~0.5 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=labour+codes+come+into+effect+November+21+2025&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-11-21",
+     "note": "Four labour codes in force from 21 Nov 2025 (wage definition >=50% of CTC, gratuity, gig social security)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=labour+codes+one-time+gratuity+charge+TCS+Infosys&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-01-21",
+     "note": "ETHRWorld/People Matters: IT majors booked ~Rs4,000-5,400 cr one-time Q3 FY26 cost from labour codes; recurring employee-cost uplift"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "F_WAGES_IN",
+   "relation": "macro_transmission",
+   "w": -0.1,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Slower IT/BPO hiring and fresher wage growth; small at economy level",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "IT/BPO employs ~5.8 m direct, concentrated in Bengaluru/Hyderabad/Pune/NCR/Chennai; net services exports ~US$190 bn are the main CAD offset"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "T_FORMALISATION",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": ">12m",
+   "mechanism": "Universal social security incl. gig/platform workers and single registration formalise employment",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=labour+codes+come+into+effect+November+21+2025&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-11-21",
+     "note": "Four labour codes in force from 21 Nov 2025 (wage definition >=50% of CTC, gratuity, gig social security)"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "+2 pp nominal wage growth -> urban discretionary +2 pp (income elasticity ~1) => +0.4 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.15,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Wages are >55% of small-landholder household income (MPR Box III.1): +2 pp wages -> rural consumption +1.5 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box III.1: agri & allied growth coefficient -0.40 (p<0.01) per 1 pp rainfall shortfall vs LPA (1994-95..2025-26); excess-rain term -0.12, insignificant; non-agri rural GVA insensitive. 2026 monsoon -12.6% of LPA, reservoirs 71.8% vs normal 81.8%"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Rural and economy-wide nominal wages index partially to CPI (DA, minimum wages, MGNREGA notified wages)"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "demand_driver",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "Real-income squeeze: +1 pp CPI -> real urban discretionary growth ~-1 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2023-02",
+     "note": "RBI QPM 2.0 (John et al., RBI Bulletin Feb-2023) and RBI transmission studies: 100 bp policy tightening lowers CPI ~0.3-0.5 pp and growth ~0.5-0.7 pp over 4-6 quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "demand_driver",
+   "w": -0.1,
+   "w_low": -0.4,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Net of better farm terms of trade, high food inflation squeezes landless/wage households (FMCG volume slowdown 2023-24): ~-0.5 pp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: weak monsoon raised VB-G RAM G (ex-MGNREGA) work demand in Aug-Sep 2026; tractor sales flat in Aug after strong Apr-Jul"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "Consumer credit funds durables/discretionary: +3 pp credit growth -> +1 pp urban discretionary",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: personal-loan growth 27.4% (Q1 FY25) -> 11.6-11.8% (FY26) and credit-card growth 23.3% -> 2-4% after Nov-2023 risk-weight increase; bank credit growth 19.3% (Aug-2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "demand_driver",
+   "w": -0.1,
+   "w_low": -0.2,
+   "w_high": -0.03,
+   "lag": "3-12m",
+   "mechanism": "EMI/cash-flow channel on floating-rate borrowers: +25 bp -> ~-0.5 pp discretionary growth",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table II.7: tightening May-22..Jan-25 repo +250 bp -> EBLR +250, WALR fresh +182; easing Feb-25..Sep-26 repo -125 bp -> EBLR -125, WALR fresh -72 bp"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2023-02",
+     "note": "RBI QPM 2.0 (John et al., RBI Bulletin Feb-2023) and RBI transmission studies: 100 bp policy tightening lowers CPI ~0.3-0.5 pp and growth ~0.5-0.7 pp over 4-6 quarters"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.7,
+   "lag": "0-3m",
+   "mechanism": "Relative-price effect on durables/FMCG (ex-autos): GST 2.0 lifted consumer-durables IIP from ~3% to 8-12% y/y => ~+2 pp per unit",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: PV retail sales +20.9/+23.7/+22.3% y/y in Q3 FY26-Q1 FY27 vs +3-5% before the Sep-2025 GST cut; 2W retail +15-28%; text: vehicle-loan growth nearly doubled 'following the GST cut'"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=GST+rate+cut+CPI+inflation+impact+basis+points+SBI+Research&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-11-13",
+     "note": "Business Standard: new GST rates helped cut Oct-2025 CPI by ~85 bp to a record-low 0.25%"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Lower GST on FMCG, tractors, 2W, agri inputs (5%) raises rural volumes ~+1 pp per unit",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: PV retail sales +20.9/+23.7/+22.3% y/y in Q3 FY26-Q1 FY27 vs +3-5% before the Sep-2025 GST cut; 2W retail +15-28%; text: vehicle-loan growth nearly doubled 'following the GST cut'"
+    }
+   ]
+  },
+  {
+   "src": "NEW_INCOME_TAX_RELIEF_IN",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "Rs1 lakh cr relief (Budget FY26) x MPC ~0.6 = Rs60k cr on ~Rs55 lakh cr urban discretionary => +1.1 pp => +0.2 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NO+INCOME+TAX+ON+ANNUAL+INCOME+UPTO+Rs+12+LAKH+UNDER+NEW+TAX+REGIME+PIB&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-02-01",
+     "note": "Budget FY26: no income tax up to Rs12 lakh, ~Rs1 lakh cr revenue forgone"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "demand_driver",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "IT-hub white-collar incomes are concentrated in discretionary spend; hiring/wage slowdown -> ~-0.75 pp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "IT/BPO employs ~5.8 m direct, concentrated in Bengaluru/Hyderabad/Pune/NCR/Chennai; net services exports ~US$190 bn are the main CAD offset"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "F_URBAN_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Mix shift raises value growth of discretionary spend more than volume",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.45,
+   "lag": "3-12m",
+   "mechanism": "Farm income channel: +10% rain -> rural consumption +1.25 pp; cushioned since non-farm income dominates (MPR Box III.1); 2026 deficit raised rural-employment work demand",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box III.1: agri & allied growth coefficient -0.40 (p<0.01) per 1 pp rainfall shortfall vs LPA (1994-95..2025-26); excess-rain term -0.12, insignificant; non-agri rural GVA insensitive. 2026 monsoon -12.6% of LPA, reservoirs 71.8% vs normal 81.8%"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: weak monsoon raised VB-G RAM G (ex-MGNREGA) work demand in Aug-Sep 2026; tractor sales flat in Aug after strong Apr-Jul"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RURAL_TRANSFERS_IN",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "+0.25% GDP (~Rs1 lakh cr) transfers x MPC ~0.7 on ~Rs100 lakh cr rural consumption => +0.7 pp => +0.15 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cash-transfer+promises+rise+can+states+afford+welfare+bill&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-05-13",
+     "note": "Business Standard / BW (SBI): state cash-transfer schemes for women expanding (e.g. Bihar Mahila Rozgar Rs10,000 transfers Sep-Oct 2025); fiscal strain"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "NEW_MSP_HIKE_IN",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.1,
+   "w_low": 0.03,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Higher procurement prices for ~25-30% of cereal output raise farm incomes ~+0.5 pp consumption",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "MSP sets a floor for paddy/wheat/pulses; procurement covers ~25-30% of output of procured crops; cereals+pulses ~20% of 2024-base CPI food"
+    }
+   ]
+  },
+  {
+   "src": "P_FERT_SUBSIDY",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.05,
+   "w_low": 0.0,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "Cheaper inputs protect farm margins; small relative to rural spending",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-03",
+     "note": "Fertiliser subsidy ~Rs1.7-1.9 lakh cr/yr; urea MRP fixed so subsidy absorbs gas/ammonia cost; NBS rates for P&K revised each season with input prices"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "demand_driver",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "MFI retrenchment (FY25 portfolio shrinkage) removes a rural consumption-credit channel: +1 pp delinquency -> -0.75 pp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MFIs+SFBs+step+up+microfinance+lending+improving+asset+quality&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Financial Express: MFIs/SFBs step up lending as asset quality improves after FY25 stress and guardrails"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AGRI_TRADE_CURBS_IN",
+   "dst": "F_RURAL_DEMAND",
+   "relation": "policy_effect",
+   "w": -0.05,
+   "w_low": -0.15,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Export curbs lower farm-gate realisations",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Food-price reaction measures: wheat stock limits & export ban (2022-23), rice export ban (2023), onion duties, sugar export curbs, edible-oil duty cut (May-2025); MPR Oct-2026 credits 'supply side measures' with -40 bp CPI risk"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "PV/premium 2W volumes: elasticity ~1.2 to urban discretionary => +5 pp -> +6% volumes",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "~75-80% of cars and ~50-60% of two-wheelers are financed; rural share ~55% of 2W, ~40% of PV volumes"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "2W/tractor/entry-car volumes track rural income (rural ~55% of 2W): +5 pp -> +6%",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "~75-80% of cars and ~50-60% of two-wheelers are financed; rural share ~55% of 2W, ~40% of PV volumes"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: weak monsoon raised VB-G RAM G (ex-MGNREGA) work demand in Aug-Sep 2026; tractor sales flat in Aug after strong Apr-Jul"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "funding_cost",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "~75-80% of cars financed: +25 bp -> EMI +~1.2% on a 5-yr loan -> volumes ~-1.5%",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "~75-80% of cars and ~50-60% of two-wheelers are financed; rural share ~55% of 2W, ~40% of PV volumes"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table II.7: tightening May-22..Jan-25 repo +250 bp -> EBLR +250, WALR fresh +182; easing Feb-25..Sep-26 repo -125 bp -> EBLR -125, WALR fresh -72 bp"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_AUTO_DEMAND_IN",
+   "relation": "policy_effect",
+   "w": 1.1,
+   "w_low": 0.6,
+   "w_high": 1.6,
+   "lag": "0-3m",
+   "mechanism": "GST 2.0 cut small cars/2W 28%->18% (~8% price cut): PV retail growth rose from ~3-5% to 20-24% and 2W to 15-28% for 4 quarters => ~+16 pp per 1.5 units => +1.1 SSU",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: PV retail sales +20.9/+23.7/+22.3% y/y in Q3 FY26-Q1 FY27 vs +3-5% before the Sep-2025 GST cut; 2W retail +15-28%; text: vehicle-loan growth nearly doubled 'following the GST cut'"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "F_TRAVEL_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.4,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Air/hotel demand income-elastic (~1.6): +5 pp urban discretionary -> +8%",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_TRAVEL_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Hotel rooms <=Rs7,500 cut to 5% (Sep-2025): ~+1.5% room demand",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=GST+rationalisation+net+revenue+implication+48%2C000+crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-09-03",
+     "note": "NDTV: official net revenue implication of GST 2.0 ~Rs48,000 cr/yr"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "F_TRAVEL_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": ">12m",
+   "mechanism": "Shift of affluent spending toward experiences/travel",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Expenditure shares: PFCE ~60% of GDP, rural ~43-45% of PFCE (HCES 2023-24); urban discretionary ~14% of GDP; general-govt capex ~5.8% of GDP; private corporate GFCF ~11-12% of GDP; nominal GDP FY27 ~Rs390 lakh cr"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "funding_cost",
+   "w": -0.25,
+   "w_low": -0.5,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "+25 bp -> EMI +1.9% on EBLR mortgages -> sales ~-2.5%; 2025 showed weak sensitivity (sales -14% despite 125 bp cuts as prices rose)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Home loans ~14% of bank credit; EBLR-linked mortgages reprice fully with repo; 25 bp = ~1.9% EMI change on a 20-yr loan at 8.5%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=ANAROCK+housing+sales+2025+top+7+cities+fall+14%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-12-28",
+     "note": "ANAROCK: top-7 city housing sales -14% in volume in 2025 despite 125 bp repo cuts (prices up, value +6%)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Income/employment: +1 pp growth -> housing sales +3%",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+Q3+2026+ANAROCK+top+seven+cities&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "ANAROCK: Q3-2026 sales +3% y/y (~1 lakh units), launches +18%"
+    }
+   ]
+  },
+  {
+   "src": "P_HOUSING_POLICY",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.15,
+   "w_high": 0.7,
+   "lag": "3-12m",
+   "mechanism": "PMAY-U 2.0 / interest subsidy step lifts affordable segment ~10-15% (~1/3 of volumes) => +4% total",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Home loans ~14% of bank credit; EBLR-linked mortgages reprice fully with repo; 25 bp = ~1.9% EMI change on a 20-yr loan at 8.5%"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "policy_effect",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Cement GST 28%->18% lowers construction cost ~1-1.5%",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=GST+rationalisation+net+revenue+implication+48%2C000+crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-09-03",
+     "note": "NDTV: official net revenue implication of GST 2.0 ~Rs48,000 cr/yr"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "F_HOUSING_DEMAND",
+   "relation": "demand_driver",
+   "w": -0.1,
+   "w_low": -0.25,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "IT-hub housing (Bengaluru, Hyderabad, Pune) depends on tech hiring/wage growth",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "IT/BPO employs ~5.8 m direct, concentrated in Bengaluru/Hyderabad/Pune/NCR/Chennai; net services exports ~US$190 bn are the main CAD offset"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+Q3+2026+ANAROCK+top+seven+cities&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "ANAROCK: Q3-2026 sales +3% y/y (~1 lakh units), launches +18%"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "F_GOLD_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Rural ~55-60% of jewellery volume: +5 pp rural spending -> +4% gold volume",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-12",
+     "note": "India gold imports ~US$55-60 bn/yr (~8% of merchandise imports); rural ~55-60% of jewellery demand (WGC); price elasticity of volume ~-0.6 to -0.9"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "F_GOLD_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "Urban wedding/discretionary jewellery: +5 pp -> +2%",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-12",
+     "note": "India gold imports ~US$55-60 bn/yr (~8% of merchandise imports); rural ~55-60% of jewellery demand (WGC); price elasticity of volume ~-0.6 to -0.9"
+    }
+   ]
+  },
+  {
+   "src": "P_GOLD_IMPORT_DUTY",
+   "dst": "F_GOLD_DEMAND_IN",
+   "relation": "policy_effect",
+   "w": -0.55,
+   "w_low": -0.8,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "WGC: +9 pp duty (May-2026) -> demand -50-60 t (~-10%) => -5.5% per +5 pp = -0.55 SSU; part diverted to unofficial channels",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.gold.org/goldhub/gold-focus/2026/05/india-gold-market-update-import-tightening",
+     "date": "2026-05-22",
+     "note": "WGC: gold duty raised 6%->15% (largest hike on record) amid INR -7% YTD to conserve FX; domestic price +4-6%; 2026 jewellery+bar/coin demand seen -50-60 t (~10% y/y); unofficial inflows rise"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_POWER_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.2,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Electricity-GDP elasticity ~0.9: +1 pp growth -> +0.9 pp demand",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+jumps+11%25+September+2026+record+peak+deficit+monsoon&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "ET: power demand +11% y/y in Sep-2026, record 269 GW peak amid deficient monsoon; BS: Sep power deficit at decade high; IEX volumes +16.5% y/y in Oct"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_POWER_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -1.6,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Weather: 2026 rain -12.6% -> Sep demand +11% y/y and record 269 GW peak; 2025 excess rain -> flat/negative demand => ~-3 pp per +10% rain",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+jumps+11%25+September+2026+record+peak+deficit+monsoon&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "ET: power demand +11% y/y in Sep-2026, record 269 GW peak amid deficient monsoon; BS: Sep power deficit at decade high; IEX volumes +16.5% y/y in Oct"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2025-09",
+     "note": "Above-normal 2025 monsoon (~108% of LPA) and early rains cut cooling/irrigation load: all-India demand roughly flat to negative y/y in May-Sep 2025; IEX spot prices fell"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "F_POWER_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.1,
+   "w_low": 0.05,
+   "w_high": 0.2,
+   "lag": ">12m",
+   "mechanism": "+1 GW extra DC load ~7-8 TWh ~0.4% of ~1,800 TWh demand => +0.13 SSU per notch (~1 GW/yr acceleration)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+data+centre+capacity+7.5+GW+2030+Crisil&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "CRISIL: India DC capacity ~5x to 7.5 GW by 2030; ~Rs3 trillion investment by FY30"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "F_POWER_DEMAND_IN",
+   "relation": "demand_driver",
+   "w": 0.08,
+   "w_low": 0.0,
+   "w_high": 0.15,
+   "lag": ">12m",
+   "mechanism": "Electrification of cooking/transport/industry enabled by grid build-out",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.5,
+   "w_high": 1.6,
+   "lag": "0-3m",
+   "mechanism": "Tight evening-peak supply makes IEX prices convex: +3 pp demand -> ~+15% spot (Sep-2026 deficit at decade high; IEX volume +16.5%)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+jumps+11%25+September+2026+record+peak+deficit+monsoon&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "ET: power demand +11% y/y in Sep-2026, record 269 GW peak amid deficient monsoon; BS: Sep power deficit at decade high; IEX volumes +16.5% y/y in Oct"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Hydro/reservoir supply channel beyond demand: reservoirs 71.8% vs 81.8% normal (Oct-2026) cut hydro and raise spot prices",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box III.1: agri & allied growth coefficient -0.40 (p<0.01) per 1 pp rainfall shortfall vs LPA (1994-95..2025-26); excess-rain term -0.12, insignificant; non-agri rural GVA insensitive. 2026 monsoon -12.6% of LPA, reservoirs 71.8% vs normal 81.8%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+jumps+11%25+September+2026+record+peak+deficit+monsoon&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "ET: power demand +11% y/y in Sep-2026, record 269 GW peak amid deficient monsoon; BS: Sep power deficit at decade high; IEX volumes +16.5% y/y in Oct"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "F_POWER_PRICE_IN",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "More solar depresses daytime clearing prices (duck curve) though evening peaks persist",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "T_GRID_ELECTRIFICATION",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": ">12m",
+   "mechanism": "Peak-demand growth drives transmission/distribution planning (CEA/ISTS plans)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+jumps+11%25+September+2026+record+peak+deficit+monsoon&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "ET: power demand +11% y/y in Sep-2026, record 269 GW peak amid deficient monsoon; BS: Sep power deficit at decade high; IEX volumes +16.5% y/y in Oct"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "T_ENERGY_TRANSITION",
+   "relation": "policy_effect",
+   "w": 0.6,
+   "w_low": 0.3,
+   "w_high": 0.9,
+   "lag": "3-12m",
+   "mechanism": "Auctions, ISTS waiver, storage VGF and RPO mandates set the pace of RE build-out",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "T_GRID_ELECTRIFICATION",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Transmission component of policy (Green Energy Corridor, ISTS planning) directly funds grid capex",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "T_ENERGY_TRANSITION",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "EV incentives/mandates (PM E-DRIVE, battery PLI) extend the transition to transport",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "T_GRID_ELECTRIFICATION",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.3,
+   "w_high": 0.7,
+   "lag": "3-12m",
+   "mechanism": "RE additions require proportional evacuation and storage-linked grid investment",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "T_GRID_ELECTRIFICATION",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": ">12m",
+   "mechanism": "Hyperscale DC clusters need dedicated substations/transmission (7.5 GW by 2030)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+data+centre+capacity+7.5+GW+2030+Crisil&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "CRISIL: India DC capacity ~5x to 7.5 GW by 2030; ~Rs3 trillion investment by FY30"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "T_DATA_CENTRES_IN",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": ">12m",
+   "mechanism": "AI adoption raises in-country inference/storage demand (data-localisation)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+data+centre+capacity+7.5+GW+2030+Crisil&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "CRISIL: India DC capacity ~5x to 7.5 GW by 2030; ~Rs3 trillion investment by FY30"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "T_GRID_ELECTRIFICATION",
+   "relation": "policy_effect",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "DISCOM reform/RDSS (smart meters, feeder separation) unlocks distribution capex",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "RE + storage + transmission investment ~Rs2.5-3 lakh cr/yr; Green Energy Corridor, ISTS waiver, RDSS; solar depresses daytime IEX prices"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.3,
+   "w_high": 0.7,
+   "lag": "3-12m",
+   "mechanism": "Credit-to-nominal-GDP elasticity ~1.3-1.5: +1 pp real growth -> +1.5 pp credit growth",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.2: 1 s.d. expansionary policy surprise raises non-food credit growth ~0.5 pp within 6 m, peak ~0.8 pp at ~13 m (bank panel local projections 2014-2026)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=bank+credit+growth+deposit+growth+October+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-10",
+     "note": "Bank credit +19.4% y/y, CD ratio ~85%; credit has outpaced deposits for four quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "funding_cost",
+   "w": -0.25,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "MPR Box II.2: 1 s.d. policy surprise -> credit +0.5 pp at 6 m, +0.8 pp peak at 13 m; a 25 bp move ~ -0.75 pp => -0.25 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.2: 1 s.d. expansionary policy surprise raises non-food credit growth ~0.5 pp within 6 m, peak ~0.8 pp at ~13 m (bank panel local projections 2014-2026)"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table II.7: tightening May-22..Jan-25 repo +250 bp -> EBLR +250, WALR fresh +182; easing Feb-25..Sep-26 repo -125 bp -> EBLR -125, WALR fresh -72 bp"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "funding_cost",
+   "w": 0.4,
+   "w_low": 0.2,
+   "w_high": 0.7,
+   "lag": "3-12m",
+   "mechanism": "With CD ratio ~85%, deposit mobilisation constrains lending: +3 pp deposits -> +1.2 pp credit",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=bank+credit+growth+deposit+growth+October+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-10",
+     "note": "Bank credit +19.4% y/y, CD ratio ~85%; credit has outpaced deposits for four quarters"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.1 / II.2.1: CD and CP spreads over repo widened to 135/155 bp in H1 FY27 (from 116/136) as credit growth outpaced deposits (funding pressure)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "funding_cost",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Easier funding/lower CD rates: +Rs1 lakh cr -> +0.3 pp credit growth",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: FCNR(B) swap facility (5 Jun 2026) drew US$133 bn gross inflows; surplus liquidity rose, WACR fell toward SDF; FPIs net sellers in H1 FY27, DIIs/MFs counterbalanced"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "regulatory_risk",
+   "w": -0.5,
+   "w_low": -0.8,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Nov-2023 +25 pp risk weights: personal-loan growth 27%->12%, cards 23%->~3%, bank-to-NBFC slowed => ~-1.5 pp system credit growth",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: personal-loan growth 27.4% (Q1 FY25) -> 11.6-11.8% (FY26) and credit-card growth 23.3% -> 2-4% after Nov-2023 risk-weight increase; bank credit growth 19.3% (Aug-2026)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+lowers+risk+weight+on+bank+finance+to+NBFC+microfinance+loans+February+2025&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-02-25",
+     "note": "ET: RBI rolled back the Nov-2023 +25 pp risk weights on bank loans to NBFCs and MFI loans (growth-supportive easing)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "demand_driver",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "Lenders cut unsecured/MFI disbursements when delinquencies rise (FY25 MFI book contraction): -0.6 pp system",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MFIs+SFBs+step+up+microfinance+lending+improving+asset+quality&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Financial Express: MFIs/SFBs step up lending as asset quality improves after FY25 stress and guardrails"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: personal-loan growth 27.4% (Q1 FY25) -> 11.6-11.8% (FY26) and credit-card growth 23.3% -> 2-4% after Nov-2023 risk-weight increase; bank credit growth 19.3% (Aug-2026)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "funding_cost",
+   "w": -0.15,
+   "w_low": -0.3,
+   "w_high": -0.05,
+   "lag": "0-3m",
+   "mechanism": "Wider NBFC funding spreads slow non-bank on-lending: +50 bp -> -0.5 pp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Box II.1 / II.2.1: CD and CP spreads over repo widened to 135/155 bp in H1 FY27 (from 116/136) as credit growth outpaced deposits (funding pressure)"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "demand_driver",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.25,
+   "lag": "3-12m",
+   "mechanism": "Home loans ~14% of bank credit: +10% sales -> mortgage growth +3 pp -> +0.45 pp system",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "Home loans ~14% of bank credit; EBLR-linked mortgages reprice fully with repo; 25 bp = ~1.9% EMI change on a 20-yr loan at 8.5%"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "F_CREDIT_GROWTH_IN",
+   "relation": "demand_driver",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "3-12m",
+   "mechanism": "Project/term loans: industry credit growth rose to 18-20% with the 2026 capex upturn => +10% capex -> +0.6 pp",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: personal-loan growth 27.4% (Q1 FY25) -> 11.6-11.8% (FY26) and credit-card growth 23.3% -> 2-4% after Nov-2023 risk-weight increase; bank credit growth 19.3% (Aug-2026)"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: GFCF/GDP 34.3% in Q1 FY27; public spending on transport/power/logistics 'expected to crowd in private capex'; Rs2 lakh cr SASCI capex loans to states"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "F_DEPOSIT_GROWTH_IN",
+   "relation": "macro_transmission",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "Reserve-money injection (FX purchases/OMOs) creates deposits: +Rs1 lakh cr ~ +0.4 pp deposit growth",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: FCNR(B) swap facility (5 Jun 2026) drew US$133 bn gross inflows; surplus liquidity rose, WACR fell toward SDF; FPIs net sellers in H1 FY27, DIIs/MFs counterbalanced"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_DEPOSIT_GROWTH_IN",
+   "relation": "funding_cost",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Higher term-deposit rates (tightening cycle: WADTDR fresh +259 bp) attract savings",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table II.7: tightening May-22..Jan-25 repo +250 bp -> EBLR +250, WALR fresh +182; easing Feb-25..Sep-26 repo -125 bp -> EBLR -125, WALR fresh -72 bp"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_DEPOSIT_GROWTH_IN",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Nominal income growth -> deposit growth ~1:1",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=bank+credit+growth+deposit+growth+October+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-10",
+     "note": "Bank credit +19.4% y/y, CD ratio ~85%; credit has outpaced deposits for four quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_ASSET_QUALITY_IN",
+   "relation": "macro_transmission",
+   "w": -0.4,
+   "w_low": -0.6,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "+1 pp growth -> system credit cost ~-20 bp => -0.4 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "System credit cost moves ~15-25 bp per 1 pp change in real GDP growth (bank credit-cost cycles FY12-FY26); unsecured retail + MFI ~12% of bank credit"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "F_ASSET_QUALITY_IN",
+   "relation": "macro_transmission",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Higher EMIs on floating-rate borrowers -> slightly higher slippages (+5 bp per 25 bp)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "System credit cost moves ~15-25 bp per 1 pp change in real GDP growth (bank credit-cost cycles FY12-FY26); unsecured retail + MFI ~12% of bank credit"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "F_ASSET_QUALITY_IN",
+   "relation": "macro_transmission",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "+1 pp delinquency on ~12% of book x LGD ~0.75 => +~9 bp system credit cost => +0.2 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "System credit cost moves ~15-25 bp per 1 pp change in real GDP growth (bank credit-cost cycles FY12-FY26); unsecured retail + MFI ~12% of bank credit"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=MFIs+SFBs+step+up+microfinance+lending+improving+asset+quality&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Financial Express: MFIs/SFBs step up lending as asset quality improves after FY25 stress and guardrails"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "F_ASSET_QUALITY_IN",
+   "relation": "regulatory_risk",
+   "w": 0.25,
+   "w_low": 0.05,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Provisioning tightening (ECL transition, project-finance norms) raises reported credit cost ~+10-25 bp",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+lowers+risk+weight+on+bank+finance+to+NBFC+microfinance+loans+February+2025&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-02-25",
+     "note": "ET: RBI rolled back the Nov-2023 +25 pp risk weights on bank loans to NBFCs and MFI loans (growth-supportive easing)"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_UNSECURED_STRESS",
+   "relation": "macro_transmission",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Real-income squeeze on low-income, highly leveraged borrowers",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MFIs+SFBs+step+up+microfinance+lending+improving+asset+quality&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Financial Express: MFIs/SFBs step up lending as asset quality improves after FY25 stress and guardrails"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "F_UNSECURED_STRESS",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "Higher wage growth improves repayment capacity: +2 pp -> -0.2 pp delinquencies",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MFIs+SFBs+step+up+microfinance+lending+improving+asset+quality&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Financial Express: MFIs/SFBs step up lending as asset quality improves after FY25 stress and guardrails"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "F_UNSECURED_STRESS",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "Employment/self-employment income channel beyond wages",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "System credit cost moves ~15-25 bp per 1 pp change in real GDP growth (bank credit-cost cycles FY12-FY26); unsecured retail + MFI ~12% of bank credit"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "F_UNSECURED_STRESS",
+   "relation": "regulatory_risk",
+   "w": -0.2,
+   "w_low": -0.5,
+   "w_high": 0.2,
+   "lag": ">12m",
+   "mechanism": "Curbing over-leverage lowers future delinquencies (MFI guardrails -> asset quality improving by Oct-2026); near-term refinancing squeeze can raise stress",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MFIs+SFBs+step+up+microfinance+lending+improving+asset+quality&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Financial Express: MFIs/SFBs step up lending as asset quality improves after FY25 stress and guardrails"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+lowers+risk+weight+on+bank+finance+to+NBFC+microfinance+loans+February+2025&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-02-25",
+     "note": "ET: RBI rolled back the Nov-2023 +25 pp risk weights on bank loans to NBFCs and MFI loans (growth-supportive easing)"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "F_UNSECURED_STRESS",
+   "relation": "macro_transmission",
+   "w": -0.2,
+   "w_low": -0.4,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "MFI borrowers are rural: good rains improve repayments (and vice versa in 2026)",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MFIs+SFBs+step+up+microfinance+lending+improving+asset+quality&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Financial Express: MFIs/SFBs step up lending as asset quality improves after FY25 stress and guardrails"
+    },
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026: weak monsoon raised VB-G RAM G (ex-MGNREGA) work demand in Aug-Sep 2026; tractor sales flat in Aug after strong Apr-Jul"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "F_UNSECURED_STRESS",
+   "relation": "macro_transmission",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": ">12m",
+   "mechanism": "Seasoning: credit booms (2022-23 unsecured ~25-30% growth) precede delinquency peaks 12-24 months later (FY25)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24085",
+     "date": "2026-10-07",
+     "note": "RBI MPR Oct-2026 Table III.2: personal-loan growth 27.4% (Q1 FY25) -> 11.6-11.8% (FY26) and credit-card growth 23.3% -> 2-4% after Nov-2023 risk-weight increase; bank credit growth 19.3% (Aug-2026)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=MFIs+SFBs+step+up+microfinance+lending+improving+asset+quality&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Financial Express: MFIs/SFBs step up lending as asset quality improves after FY25 stress and guardrails"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "NEW_FISCAL_SLIPPAGE_IN",
+   "relation": "policy_effect",
+   "w": 0.2,
+   "w_low": 0.1,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "GST 2.0 net revenue implication ~Rs48k cr (~0.13% GDP) for ~1.5 units => ~0.09% GDP per unit => +0.2 SSU (partly offset by buoyancy)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=GST+rationalisation+net+revenue+implication+48%2C000+crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-09-03",
+     "note": "NDTV: official net revenue implication of GST 2.0 ~Rs48,000 cr/yr"
+    }
+   ]
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "NEW_FISCAL_SLIPPAGE_IN",
+   "relation": "policy_effect",
+   "w": -0.16,
+   "w_low": -0.2,
+   "w_high": -0.08,
+   "lag": "0-3m",
+   "mechanism": "Rs2/l on ~160 bn l petrol+diesel ~Rs32k cr/yr ~0.08% GDP => -0.16 SSU (Mar-2026 Rs10/l cut ~Rs1 lakh cr cost)",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=excise+duty+cut+petrol+diesel+Rs+per+litre+March+27+2026+revenue+loss&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-03-27",
+     "note": "Reuters / Indian Express / New Indian Express: excise cut Rs10/l on petrol & diesel as crude surged; ~Rs1 lakh cr fiscal cost; pump prices not cut (OMC relief)"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2025-04-07",
+     "note": "Excise reaction episodes: +Rs11.8/13.5 per l (2014-16, crude -70%); +Rs3 (Mar-2020); cuts Rs5/10 (Nov-2021) and Rs8/6 (May-2022) when crude doubled; +Rs2 (Apr-2025, crude ~$65, ~Rs32,000 cr/yr, absorbed by OMCs)"
+    }
+   ]
+  },
+  {
+   "src": "P_FERT_SUBSIDY",
+   "dst": "NEW_FISCAL_SLIPPAGE_IN",
+   "relation": "policy_effect",
+   "w": 0.15,
+   "w_low": 0.1,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "+Rs30k cr subsidy ~0.077% GDP => +0.15 SSU",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-03",
+     "note": "Fertiliser subsidy ~Rs1.7-1.9 lakh cr/yr; urea MRP fixed so subsidy absorbs gas/ammonia cost; NBS rates for P&K revised each season with input prices"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Centre+fiscal+deficit+42.1%25+FY27+target+H1+CGA&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "H1 FY27 deficit Rs7.14 lakh cr = 42.1% of BE; SBI/ET: FY27 may overshoot by up to Rs1.2 lakh cr (~0.3% of GDP); subsidy bill ballooned"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "NEW_FISCAL_SLIPPAGE_IN",
+   "relation": "macro_transmission",
+   "w": -0.35,
+   "w_low": -0.5,
+   "w_high": -0.15,
+   "lag": "3-12m",
+   "mechanism": "Tax buoyancy ~1.1 on general-govt revenue ~18% of GDP: +1 pp growth -> +~0.18% GDP revenue => -0.35 SSU",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Centre+fiscal+deficit+42.1%25+FY27+target+H1+CGA&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "H1 FY27 deficit Rs7.14 lakh cr = 42.1% of BE; SBI/ET: FY27 may overshoot by up to Rs1.2 lakh cr (~0.3% of GDP); subsidy bill ballooned"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RURAL_TRANSFERS_IN",
+   "dst": "NEW_FISCAL_SLIPPAGE_IN",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.25,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+0.25% GDP transfers, ~80% unfunded => +0.4 SSU (states' GFD 3.2% of GDP budgeted)",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cash-transfer+promises+rise+can+states+afford+welfare+bill&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-05-13",
+     "note": "Business Standard / BW (SBI): state cash-transfer schemes for women expanding (e.g. Bihar Mahila Rozgar Rs10,000 transfers Sep-Oct 2025); fiscal strain"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Fiscal+Deficit+4.3%25+Of+GDP+In+FY27+Capex+Rs+12.2+Lakh+Crore&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-02-01",
+     "note": "Union Budget FY27: fiscal deficit 4.3% of GDP; central capex Rs12.2 lakh cr; states' GFD 3.2% of GDP (MPR)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_INCOME_TAX_RELIEF_IN",
+   "dst": "NEW_FISCAL_SLIPPAGE_IN",
+   "relation": "policy_effect",
+   "w": 0.45,
+   "w_low": 0.25,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Rs1 lakh cr ~0.26% GDP forgone, little offset => +0.45-0.5 SSU",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NO+INCOME+TAX+ON+ANNUAL+INCOME+UPTO+Rs+12+LAKH+UNDER+NEW+TAX+REGIME+PIB&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2025-02-01",
+     "note": "Budget FY26: no income tax up to Rs12 lakh, ~Rs1 lakh cr revenue forgone"
+    }
+   ]
+  },
+  {
+   "src": "NEW_MSP_HIKE_IN",
+   "dst": "NEW_FISCAL_SLIPPAGE_IN",
+   "relation": "policy_effect",
+   "w": 0.06,
+   "w_low": 0.02,
+   "w_high": 0.12,
+   "lag": "3-12m",
+   "mechanism": "Higher procurement cost raises food subsidy ~Rs10-15k cr",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "MSP sets a floor for paddy/wheat/pulses; procurement covers ~25-30% of output of procured crops; cereals+pulses ~20% of 2024-base CPI food"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AGRI_TRADE_CURBS_IN",
+   "dst": "F_RICE",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "India ~40% of world rice trade: a rice export ban lifted Asian prices 15-25% (Jul-2023); averaged over curb types (wheat, sugar, onion, oils) ~+4% => +0.4 SSU",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2023-07",
+     "note": "India's Jul-2023 non-basmati white rice export ban lifted Asian export prices ~15-25%; India ~40% of world rice exports; sugar export curbs Oct-2023"
+    }
+   ]
+  },
+  {
+   "src": "P_SUGAR_ETHANOL",
+   "dst": "F_SUGAR",
+   "relation": "policy_effect",
+   "w": -0.2,
+   "w_low": -0.6,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Export quotas add 1-2 MT to world supply (bearish world sugar) while higher ethanol diversion is bullish; net sign uncertain",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-01",
+     "note": "Sugar export quota allowed after good cane crops (e.g. 1 MT Jan-2025), curbed after weak ones (2023); ethanol diversion ~3.5-4.5 MT"
+    }
+   ]
+  }
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_FISCAL_SLIPPAGE_IN",
+   "type": "FACTOR",
+   "name": "General-government fiscal slippage / extra borrowing vs budget (Centre + states)",
+   "ssu": "+0.5 pp of GDP deficit above budget (~Rs2 lakh cr)",
+   "note": "FY27 BE 4.3% central; H1 42.1% of BE; SBI/ET see up to Rs1.2 lakh cr overshoot (~0.3% GDP) as of 2026-10-30"
+  },
+  {
+   "id": "NEW_FPI_DEBT_FLOWS",
+   "type": "FACTOR",
+   "name": "Foreign portfolio flows into Indian government/corporate bonds (FAR, index-linked)",
+   "ssu": "+US$5 bn net debt inflow per quarter",
+   "note": "separates bond flows from F_FPI_FLOWS (equity); Oct-2026 FPI G-sec outflow Rs5,400 cr"
+  },
+  {
+   "id": "NEW_AGRI_TRADE_CURBS_IN",
+   "type": "POLICY",
+   "name": "Food-price supply measures (export bans/duties, stock limits, import-duty cuts on food)",
+   "ssu": "+1 = one new measure on a major food item"
+  },
+  {
+   "id": "NEW_RURAL_TRANSFERS_IN",
+   "type": "POLICY",
+   "name": "Rural/household cash transfers (PM-KISAN, state women's DBT, rural employment guarantee spending)",
+   "ssu": "+0.25% of GDP additional transfers (~Rs1 lakh cr/yr)",
+   "note": "state elections UP/Punjab/Uttarakhand/Goa/Manipur Feb-Mar 2027"
+  },
+  {
+   "id": "NEW_INCOME_TAX_RELIEF_IN",
+   "type": "POLICY",
+   "name": "Personal income-tax relief",
+   "ssu": "+Rs1 lakh cr annual relief (~0.26% of GDP)",
+   "note": "Budget FY26 precedent; Budget FY28 due 1 Feb 2027"
+  },
+  {
+   "id": "NEW_MSP_HIKE_IN",
+   "type": "POLICY",
+   "name": "Minimum support price increase above normal",
+   "ssu": "+5 pp weighted MSP increase above the usual ~6%"
+  },
+  {
+   "id": "NEW_FX_RESERVES_IN",
+   "type": "FACTOR",
+   "name": "India FX reserves (RBI intervention)",
+   "ssu": "+US$25bn reserves (RBI buys / net inflows)",
+   "note": "same id/SSU as proposed by the india_macro event agent; used here as the RBI FX-intervention node"
+  }
+ ],
+ "notes": "India domestic backbone, 183 driver->driver edges. Design: (1) F_GDP_IN is an output aggregate fed by expenditure components (govt/private capex, urban/rural consumption, housing, monsoon agri output, INR net exports); income feedback runs GDP->wages/credit->consumption so there is no direct GDP->consumption edge (avoids double counting). (2) Monetary transmission split into price-of-credit edges (repo->housing/auto/urban/capex/credit) plus a small direct repo->CPI expectations edge, calibrated so the summed paths give ~-0.4 pp CPI and ~-0.8 pp GDP per 100 bp (RBI QPM 2.0 range). (3) Policy reaction functions: CPI/GDP/INR->repo, CPI/GDP->liquidity, INR->FX reserves->liquidity (reuses india_macro's NEW_FX_RESERVES_IN), food inflation->agri trade curbs and sugar policy, Brent and fiscal slippage->fuel excise, fertiliser inputs->subsidy, INR->gold duty (May-2026 6->15%), India-Pakistan->defence procurement, GDP->GST relief, credit boom/GDP->RBI prudential, equity activity->SEBI derivatives/STT. All 2-node cycles have |w product| <= 0.24. (4) Left to the global backbone: Brent/gas/coal/gold/DXY/US-yield/VIX/China->Indian prices, rupee, FPI and power cost edges (only the policy reaction F_BRENT->P_FUEL_TAX_IN and F_FERTILISER_INPUTS->P_FERT_SUBSIDY are included here), coal->power price, steel duty and China steel. Two Indian-policy->world-price edges included (agri curbs->rice, sugar policy->sugar). Calibration anchors: RBI MPR Oct-2026 scenario elasticities (INR 5% -> CPI +40 bp, GDP +25 bp; rain-shortfall agri coefficient -0.40; bank-lending-channel IRF; transmission table), 2024-base CPI food+beverage weight 36.5%, GST 2.0 (-85 bp CPI; PV sales +16-20 pp), WGC gold-duty response (-10% demand for +9 pp), SEBI FY26 F&O study (-18% traders), Mar-2026 Rs10/l excise cut. Caveats: monsoon edges are asymmetric (use mainly for deficits; 2026 monsoon -12.6% of LPA = -1.26 SSU); policy reactions are lumpy and state-dependent (supply vs demand shocks) - treat as expected values; theme SSUs (+1) are undefined notches, interpreted here as a clearly visible acceleration; P_FERT_SUBSIDY +1 interpreted as ~Rs30k cr more support. Director merge flags: events/sector_policy.json edges appear to use % rather than SSU (e.g. P_SEBI_DERIVATIVES->F_EQUITY_ACTIVITY_IN -15, F_GSEC_10Y_IN->F_HOUSING_DEMAND -3.0, P_CAPITAL_GAINS_TAX->F_DOMESTIC_FLOWS -4.0; in SSU these are ~-0.75, ~-0.15, ~-0.4); events/india_macro F_CREDIT_GROWTH_IN->F_LIQUIDITY_IN -0.7 conflicts with this file's channel (liquidity is drained by FX intervention and CRR on deposits, not by credit per se). Suggest company agents attach cement to F_GOVT_CAPEX/F_HOUSING_DEMAND (no cement-demand node). State as of 2026-11-05 (from india_macro notes/MPR): repo 5.50% (hiked 7 Oct), CPI 5.54% (Sep), 10y 7.44%, USD/INR ~94.5, FX reserves US$720 bn and falling, credit +19.4%, CD ratio ~85%, FPI equity -US$33 bn YTD."
+}

@@ -1,0 +1,369 @@
+{
+ "ticker": "MPHASIS",
+ "name": "Mphasis Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Mid-cap IT services company (Blackstone-controlled, ~40% stake per model knowledge) focused on BFSI (mortgage, banking, insurance), technology and logistics clients, ~80% North America. TTM sales ~Rs16,500 cr, EBITDA 18%, ROE 18.5%, yield 2.5%. Latest quarter in pack is Jun-2026 (Rs4,384 cr, PAT Rs490 cr); Q2 FY27 results not yet captured as of 2026-11-05. Dividends paid to Blackstone have outpaced profit growth (Moneycontrol 2026-11-02), a cash-flow caution.",
+ "revenue_mix": [
+  {
+   "segment": "BFSI",
+   "share_pct": 58,
+   "geography": "US-heavy"
+  },
+  {
+   "segment": "Technology, media, telecom, logistics",
+   "share_pct": 32,
+   "geography": "US/Europe"
+  },
+  {
+   "segment": "Other",
+   "share_pct": 10,
+   "geography": "mixed"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "employee costs",
+   "share_of_costs_pct": 64
+  },
+  {
+   "input": "subcontractors, other",
+   "share_of_costs_pct": 36
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "MPHASIS",
+   "relation": "fx_translation",
+   "w": 2.0,
+   "w_low": -1.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "~96% foreign-currency revenue, INR ~ 40% of costs (model knowledge). +3% => ~+90bp on 18% margin = +5% EBITDA, persistence 0.4, EV/MCap 1.0 => +2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "MPHASIS",
+   "relation": "demand_driver",
+   "w": 3.3,
+   "w_low": 1.2,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "North America ~ 80% of revenue (model knowledge), BFSI ~ 55-60%. +1pp US growth => revenue +1.2%; incremental margin 30% vs 18% => EBITDA +2.0%; persistence 1.0 and no re-rating adjustment => ~+3.3 incl. multiple. Pack S&P +1.89 (t +2.3) agrees on high US beta.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "MPHASIS",
+   "relation": "substitution",
+   "w": -5.0,
+   "w_low": -12.0,
+   "w_high": 2.0,
+   "lag": ">12m",
+   "mechanism": "+1 = ~3% base repricing. Mphasis has large legacy application maintenance and BFSI (mortgage) volumes; 3% x 65% / 18% = -10.8% EBITDA, persistence 0.5 => -5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "MPHASIS",
+   "relation": "regulatory_risk",
+   "w": -3.5,
+   "w_low": -9.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "+1 = tightening; Mphasis is more offshore-weighted but sells 80% to US clients; cost +1.3pp => -7% EBITDA, half passed on, persistence 0.6 => ~-3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US suspended PERM green-card labour programme for named firms; Reuters 2026-10-11: little risk to Indian IT (<2% of green-card filings)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "Forbes 2026-10-01: judge struck down latest version of $100,000 H-1B fee; Indian Express 2026-09-19: fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "MPHASIS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.2,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+5% S&P 500: client sentiment and global risk appetite; shrunk toward 1.5 from the pack elasticity (+1.89, t +2.3).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "MPHASIS",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: FPI de-risking of a sector that is a prime funding source; judgement, shrunk from pack -0.7 per SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "MPHASIS",
+   "relation": "discount_rate",
+   "w": -0.9,
+   "w_low": -2.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp India 10y: duration effect on a high-payout, mostly net-cash stock.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "MPHASIS",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "+25bp Fed funds: BFSI and consumer client budgets; offset by stronger USD. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "MPHASIS",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.1,
+   "w_high": 1.6,
+   "lag": "3-12m",
+   "mechanism": "UK/Europe ~ 15% of revenue (Social Security Scotland deal GBP35.4m on 2026-10-06); +1pp EU growth => ~+0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "MPHASIS",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "+25bp US 10y: Mphasis Direct/US mortgage and BFSI exposure (model knowledge) - higher yields slow refinancing and servicing volumes, hurting spend; offset by risk-on co-movement (pack S&P). Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "MPHASIS",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Pack +1.98 per +10% (t +2.1, beta 1.41): statistically significant but no causal channel (cyclical-risk proxy). Token weight; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MPHASIS",
+   "relation": "discount_rate",
+   "w": 1.2,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "+$5bn quarterly FPI inflow; mid-cap, high beta (1.25-1.47).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/MPHASIS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Jun-26 qtr sales 4,384 cr (Sep-26 not yet in pack), P/E 24.9, 12m -8.8%"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Blackstone",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "controlling shareholder; stake-sale overhang and dividend policy"
+  },
+  {
+   "counterparty": "Large US mortgage/banking and UK public-sector clients",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "customer concentration; Social Security Scotland GBP35.4m deal 2026-10-06"
+  },
+  {
+   "counterparty": "Coforge, Persistent, LTM",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "mid-cap IT"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (date not captured; pack shows only Jun-26 quarter)",
+   "type": "results",
+   "prob": 0.6,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://www.screener.in/company/MPHASIS/consolidated/"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge of calendar"
+  },
+  {
+   "date": "2027-03",
+   "event": "Blackstone block deal/stake sale (overhang)",
+   "type": "corporate_action",
+   "prob": 0.15,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": -2.0,
+   "source": "https://news.google.com/rss/search?q=Blackstone+Mphasis+dividend+haul+Rs+3,270+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "US H-1B/outsourcing action",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": -0.5,
+   "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Jun-2026 per screener pack (Q2 FY27 results not found)",
+  "trend": "Sales Rs4,384 cr (+17.5% YoY), OPM 18%, PAT Rs490 cr (+10.9% YoY); sequential growth slowing (+3.3%).",
+  "valuation": "P/E 24.9, yield 2.51%, price Rs2,524 vs 52w 2,013-2,978",
+  "recent_developments": [
+   "2026-11-02: Blackstone dividend haul Rs3,270 cr (Moneycontrol)",
+   "2026-10-06: GBP35.4m Social Security Scotland deal (Upstox)",
+   "2026-10-07: Kotak MF sold 123,216 shares (scanx)",
+   "2026-10-01: Mphasis rose up to 5% on a falling market (Moneycontrol)",
+   "2026-09-22: quantum-computing challenge with Copa Airlines"
+  ]
+ },
+ "key_risks": [
+  "Blackstone stake sale/dividend drain",
+  "Customer concentration",
+  "GenAI deflation of legacy BFSI",
+  "US mortgage cycle",
+  "Lack of Q2 data in pack"
+ ],
+ "upside_triggers": [
+  "Deal wins",
+  "US rate cuts boosting mortgage tech",
+  "Margin expansion",
+  "Weaker INR"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/MPHASIS/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener fundamentals (Jun-26 quarter)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Blackstone+Mphasis+dividend+haul+Rs+3,270+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-02",
+   "what": "Blackstone dividends"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Mphasis+signs+35.4+million+deal+Social+Security+Scotland+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-06",
+   "what": "deal win"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "PERM"
+  }
+ ]
+}

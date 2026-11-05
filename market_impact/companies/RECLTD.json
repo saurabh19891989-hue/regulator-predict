@@ -1,0 +1,412 @@
+{
+ "industry": "I_INFRA_POWER_FINANCE",
+ "business_summary": "REC Ltd (Maharatna CPSU, Ministry of Power) lends across power generation, transmission, distribution and increasingly renewables, roads and other infrastructure; loan book Rs6.17 lakh cr (+Rs26,537cr in Q2 FY27). Funded mainly by AAA bonds. PFC holds ~52.6% (model knowledge) and the boards agreed a merger of REC into PFC at 88 PFC shares per 100 REC (RBI conditional NoC 2026-10-15). Q2 FY27 PAT Rs3,478cr (-21% YoY, higher expenses/provisions: Rs1,090cr vs Rs476cr); stock Rs297 hit a 52-week low on 2026-09-29; P/E 5.2, P/B 0.82, dividend yield 6.2%.",
+ "revenue_mix": [
+  {
+   "segment": "interest income: power generation/T&D/discom loans",
+   "share_pct": 80,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "interest on renewable, infra and other loans",
+   "share_pct": 18,
+   "geography": "India"
+  },
+  {
+   "segment": "fees and other",
+   "share_pct": 2,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 63
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "RECLTD",
+   "relation": "demand_driver",
+   "w": -5.0,
+   "w_low": -9.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost on Rs6.17 lakh cr book = Rs3.1k cr pre-tax = Rs2.3k cr post-tax vs run-rate PAT Rs15.5k cr (TTM) => -15%; cycle persistence 0.4 and P/B 0.82 => -5. Starting NPAs are low and borrowers are mostly state-owned utilities (model), so tail only.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=REC+Q2+results+net+profit+falls+21%+3,478+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "REC Q2 FY27: PAT Rs3,478cr (-21% YoY), second interim dividend Rs3.50, loan book +Rs26,537cr in Q2 to Rs6.17 lakh cr (CNBC TV18/Upstox/Sarkaritel)"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "RECLTD",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.0,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = reform progress (discom losses, privatisation, tariff true-ups, RDSS): state discoms' repayment improves, lowering stage-3 risk and widening addressable lending; credit cost -10bp => PAT +4% x persistence 1.0 => +4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/RECLTD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "RECLTD",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp power demand growth -> generation/T&D capex pipeline and loan disbursements +4% (book grew Rs26.5k cr in Q2, ~4.5% QoQ) -> NII +3% x persistence 0.7 => +2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=REC+Q2+results+net+profit+falls+21%+3,478+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "REC Q2 FY27: PAT Rs3,478cr (-21% YoY), second interim dividend Rs3.50, loan book +Rs26,537cr in Q2 to Rs6.17 lakh cr (CNBC TV18/Upstox/Sarkaritel)"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "RECLTD",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+10% government capex growth -> public power/infra project lending +; REC's book is ~Rs6.17 lakh cr, loan growth +2pp => NII +2% => ~+2.5 at 0.8x P/B.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/RECLTD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "RECLTD",
+   "relation": "funding_cost",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "+50bp spreads: ~Rs5.2 lakh cr borrowings (model; mostly bonds), ~20-25% repricing per year => avg cost +10-12bp = ~Rs550cr pre-tax = Rs410cr post-tax vs PAT Rs15.5k cr => -2.7%, partly passed through to borrowers => -2.5. REC hit 52-week low on 2026-09-29.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/RECLTD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "RECLTD",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "+25bp 10y: benchmark for AAA PSU bond issuance (spread ~40-60bp, model) -> funding cost +6bp on 1-year refinancing + P/B 0.82 discount-rate effect: PAT -1% and multiple -0.5 => -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/RECLTD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "RECLTD",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "+25bp repo: ~25% of REC's liabilities are floating/bank-linked vs ~60% of assets floating (state utility loans reset) => NIM neutral-to-slightly positive short-run (+2bp) but market spreads widen; net -0.8 for demand/spread effects.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "RECLTD",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 tightening step: new RBI NBFC scale-based rules (concentration, upper-layer) triggered scrutiny of the PFC-REC merger (Whalesbook) and could raise provisioning/capital; ROE -1.5pp => value -3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.corplawupdates.in/updates/rbi-noc-rec-pfc-merger-october-2026",
+     "date": "2026-10-15",
+     "note": "RBI issued conditional NoC on 2026-10-15 for REC's merger into PFC (BusinessLine 2026-10-17); swap ratio 88 PFC shares per 100 REC; NSE/BSE no-objection received; shareholder, creditor, NCLT approvals pending; one report targeted completion by April 2027 (search summaries)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "RECLTD",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "+$5bn/qtr: pack market beta ~1.5; PSU financials benefit from rotation; FII holdings are low (model); => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/RECLTD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "RECLTD",
+   "relation": "macro_transmission",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: high-beta PSU NBFC (1.46-1.75 market beta, pack) => -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/RECLTD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "RECLTD",
+   "relation": "macro_transmission",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Pack -3.61 per SSU (t -1.9): thermal coal up -> generation costs and discom working-capital stress -> asset-quality risk at power borrowers; plausible mechanism, shrunk 70% => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/RECLTD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "RECLTD",
+   "relation": "policy_effect",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": ">12m",
+   "mechanism": "+1 stronger renewable/transmission support (PLI, VGF, ISTS waivers): REC finances generation/transmission (new Bikaner and Mirzapur transmission SPVs incorporated 2026-10-06) => disbursements +5% => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/RECLTD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "RECLTD",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI -> RBI tightening and yields up; PSU bond demand weaker: -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "PFC",
+   "dst": "RECLTD",
+   "relation": "group_contagion",
+   "w": 0.7,
+   "w_low": 0.4,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "w = % change in RECLTD equity per +1% in PFC equity. Boards agreed swap ratio 88 PFC per 100 REC, so after approvals REC should trade at ~0.88x PFC (PFC price not retrieved); completion probability ~0.8 but NCLT/shareholder timing to ~April 2027 and RBI conditions leave a discount: ~0.7 pass-through. PFC also holds ~52.6% of REC (model).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.corplawupdates.in/updates/rbi-noc-rec-pfc-merger-october-2026",
+     "date": "2026-10-15",
+     "note": "88:100 swap ratio; RBI NoC conditional; approvals pending"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Power Finance Corporation",
+   "ticker": "PFC",
+   "role": "parent",
+   "importance": "high",
+   "note": "~52.6% shareholder (model); merger acquirer"
+  },
+  {
+   "counterparty": "State discoms and generation utilities",
+   "ticker": "NTPC",
+   "role": "customer",
+   "importance": "high",
+   "note": "large borrowers (state power entities, NTPC/NHPC group)"
+  },
+  {
+   "counterparty": "IRFC / IREDA / PFC",
+   "ticker": "IREDA",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "infrastructure and renewable financiers"
+  },
+  {
+   "counterparty": "Bond investors (insurers, provident funds)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "AAA bond funding"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "Shareholder/creditor meetings and filings for PFC-REC merger scheme",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 5.0,
+   "source": "https://www.corplawupdates.in/updates/rbi-noc-rec-pfc-merger-october-2026"
+  },
+  {
+   "date": "2027-04",
+   "event": "NCLT sanction / completion of PFC-REC merger (reported target April 2027)",
+   "type": "corporate_action",
+   "prob": 0.45,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.corplawupdates.in/updates/rbi-noc-rec-pfc-merger-october-2026"
+  },
+  {
+   "date": "2027-01-30",
+   "event": "Q3 FY27 results (date approximate; Q2 on 2026-10-26)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=REC+Q2+results+net+profit+falls+21%+3,478+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Record date/payment of second interim dividend Rs3.50 (declared 2026-10-26)",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": -1.2,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=REC+Q2+results+net+profit+falls+21%+3,478+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12-04",
+   "event": "RBI MPC December review",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "revenue Rs15,000cr; interest cost Rs9,522cr; expenses Rs1,090cr (vs Rs476cr); PAT Rs3,478cr (-21% YoY, -17% QoQ); loan book Rs6.17 lakh cr",
+  "valuation": "price Rs297; mcap Rs78,128cr; P/E 5.2; BV Rs362 (P/B 0.82); ROE 20.1%; DY 6.2%; 12m -19.9%",
+  "recent_developments": [
+   "2026-09-29 52-week low",
+   "2026-10-06 three transmission subsidiaries incorporated",
+   "2026-10-15/17 RBI NoC for PFC-REC merger",
+   "2026-10-26 Q2 results; second interim dividend Rs3.50"
+  ]
+ },
+ "key_risks": [
+  "Merger terms/timing (dilution vs PFC), RBI conditions, NCLT delay",
+  "Profit decline from higher provisions and margin",
+  "Discom stress and credit-cost cycle",
+  "AAA spread widening",
+  "Regulatory tightening on NBFC scale rules"
+ ],
+ "upside_triggers": [
+  "Merger approvals converting REC to PFC at 88:100 with PFC re-rating",
+  "Power reform and discom improvement",
+  "Loan growth ~20%",
+  "High dividend yield support"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=REC+Q2+results+net+profit+falls+21%+3,478+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "Q2 FY27 results headlines"
+  },
+  {
+   "url": "https://www.corplawupdates.in/updates/rbi-noc-rec-pfc-merger-october-2026",
+   "date": "2026-10-15",
+   "what": "RBI NoC and swap ratio"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  },
+  {
+   "url": "market_impact/data/packs/RECLTD.md",
+   "date": "2026-11-05",
+   "what": "pack"
+  }
+ ],
+ "ticker": "RECLTD",
+ "name": "REC Ltd.",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

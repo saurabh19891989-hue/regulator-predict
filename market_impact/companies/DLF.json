@@ -1,0 +1,540 @@
+{
+ "name": "DLF Ltd.",
+ "industry": "I_REAL_ESTATE",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest listed real-estate developer by market value (Rs 1.83 lakh cr; promoter family 74.08%). Two engines: (1) residential development, concentrated in Gurugram/NCR luxury and super-luxury (Privana, Camellias/Magnolias-type, senior living) with a Rs 58,000 cr launch plan; (2) annuity rental via DLF Cyber City Developers (offices, ~96% leased) plus retail malls and some hospitality. Reported revenue is lumpy under completion-based recognition: Q2 FY27 sales Rs 1,261 cr, operating profit only Rs 23 cr, but PAT Rs 1,301 cr (JV share, other income, Rs 738 cr non-cash gain). Sales bookings Rs 3,800 cr in Q2. Net-cash balance sheet.",
+ "revenue_mix": [
+  {
+   "segment": "Residential development (reported revenue)",
+   "share_pct": 75,
+   "geography": "Gurugram/NCR ~80%, Mumbai/Goa/Chandigarh/Panchkula remainder (model estimate)"
+  },
+  {
+   "segment": "Rental, retail, hospitality, other (line-consolidated)",
+   "share_pct": 25,
+   "geography": "NCR, Mumbai, Chennai; DCCDL offices equity-accounted (screener interest only Rs 93 cr TTM)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "NEW_CEMENT_PRICE",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "DLF",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Residential development ~55-60% of DLF value, rental ~35-40% (model estimate; no segment NAV fetched). +10% market sales volume sustained -> DLF bookings +8% (luxury skew, supply-constrained Gurugram) -> development NAV +5% -> group value +3% (x0.55-0.6 weight), EV/MCap ~0.97 (net cash), persistence ~0.8 => ~+3.5. Context: Anarock top-7 city sales only +3% y/y in Jul-Sep 2026, so the cycle is flat not rising.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=DLF+Q2+FY27+results+net+profit+sales+bookings+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Q2 FY27: PAT Rs 1,301 cr (+11%), revenue -23% y/y, sales bookings Rs 3,800 cr (Moneycontrol/Business Standard 2026-10-16); Rs 738 cr non-cash gain supported profit (Moneycontrol 2026-10-19)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "DLF",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "RBI hiked to 5.50% on 2026-10-07 (first hike in ~4 yrs). +25 bp: home-loan EMI +~2% -> luxury-skewed buyers low elasticity, presales -0.6% -> development NAV -0.4%; multiple/sentiment compression of a P/E-40 long-duration stock ~ -1.4%; net-cash balance sheet means no funding-cost hit (interest only Rs 93 cr TTM), small gain on treasury float (other income Rs 2,069 cr FY; +25 bp on ~Rs 10k cr = Rs 25 cr, <0.6% of PAT). Total ~ -2.0. Stock +11% in the month after the hike, so market is not yet pricing a hit.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "India Today 2026-09-21: analysts see up to 50 bp more by December; The Hindu 2026-09-18: two hikes possible in CY2026 (pre-decision views)"
+    },
+    {
+     "source": "https://www.screener.in/company/DLF/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,83,458 cr, P/E 40, P/B 4.0, promoters 74.08%, FII 11.43% (falling from 13.54%), DII 9.06%; other income Rs 2,069 cr FY; interest Rs 93 cr TTM (net-cash profile)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "DLF",
+   "relation": "discount_rate",
+   "w": -1.6,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Cap-rate channel for annuity assets (DCCDL Cyber City/Cyber Hub offices + malls, ~35-40% of value): +25 bp G-sec -> required yield +12 bp (50% pass-through; rent yields ~7.5%) -> asset value -1.6% x 0.375 weight = -0.6; plus -1.0 on development NAV discount rate. Kept separate from repo (demand/funding) but flagged as a parallel path.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=DLF+earnings+call+highlights+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 call (Yahoo/Investing 2026-10-17): record luxury sales, ~96% rental (occupancy per headline), Rs 42,460 cr surplus-cash potential from launched projects, revenue growth from FY28 as Rs 75,000 cr projects near completion"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "DLF",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "DLF is the pure luxury play: Q2 'record luxury sales' and a Rs 1,985 cr senior-living tower sold out in days; Rs 58,000 cr launch pipeline is luxury-heavy. +1 SSU (faster premium mix shift) -> pricing power +3% on launches -> margin on new launches +2pp -> development NAV +5% x 0.575 = ~+3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=DLF+senior+living+Gurugram+sells+out+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Gurugram luxury senior-living project sold out for Rs 1,985 cr (Fortune India/Business Today 2026-10-05)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=DLF+growth+plan+58000+crore+launches+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Business Standard 2026-10-19: Rs 58,000 cr launch plan, luxury homes, rental income; Jefferies/CLSA see up to 41% upside (CNBC TV18 2026-10-19)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "DLF",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+5pp urban consumption/wealth effect -> HNI/upper-middle affluent demand +2% for luxury homes, retail footfall in DLF malls (Mall of India, Emporio, Promenade) +3% -> value +1.5. Partly duplicates T_PREMIUMISATION and F_HOUSING_DEMAND.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=DLF+earnings+call+highlights+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 call (Yahoo/Investing 2026-10-17): record luxury sales, ~96% rental (occupancy per headline), Rs 42,460 cr surplus-cash potential from launched projects, revenue growth from FY28 as Rs 75,000 cr projects near completion"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "DLF",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> office leasing (GCC/IT/BFSI) absorption +2pp -> DCCDL occupancy/rental reversion; + residential income effect. Rental ~96% leased already (Q2 call), so upside is rent escalation not occupancy => ~+1.2 after 0.8 persistence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=DLF+earnings+call+highlights+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 call (Yahoo/Investing 2026-10-17): record luxury sales, ~96% rental (occupancy per headline), Rs 42,460 cr surplus-cash potential from launched projects, revenue growth from FY28 as Rs 75,000 cr projects near completion"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "DLF",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Cyber City tenants skew to IT/GCC/consulting (~half of leased area; model knowledge). +5% US tech spend -> GCC headcount +2% -> office absorption; rental is ~96% leased so effect on rent growth ~+1% of rental value x 0.375 = +0.4, plus renewal spreads => ~+0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=DLF+earnings+call+highlights+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Q2 call (Yahoo/Investing 2026-10-17): record luxury sales, ~96% rental (occupancy per headline), Rs 42,460 cr surplus-cash potential from launched projects, revenue growth from FY28 as Rs 75,000 cr projects near completion"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "DLF",
+   "relation": "macro_transmission",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "Market beta 1.74-1.94 (pack). FII holding fell 13.54% -> 11.43% Mar->Sep 2026 while DIIs rose 6.94% -> 9.06%: foreign flow is a swing factor for a P/E-40 large cap. +US$5bn/quarter inflow ~ +1.5% index -> x1.8 beta ~ +2.7; haircut for market-wide overlap => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DLF/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,83,458 cr, P/E 40, P/B 4.0, promoters 74.08%, FII 11.43% (falling from 13.54%), DII 9.06%; other income Rs 2,069 cr FY; interest Rs 93 cr TTM (net-cash profile)"
+    },
+    {
+     "source": "market_impact/data/packs/DLF.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "DLF",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "DII ownership rising (Parag Parikh Flexi Cap buying in Sept per Livemint 2026-10-08); +10% SIP/DII flows -> +0.6% large-cap bid, x1.7 beta ~ +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DLF/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,83,458 cr, P/E 40, P/B 4.0, promoters 74.08%, FII 11.43% (falling from 13.54%), DII 9.06%; other income Rs 2,069 cr FY; interest Rs 93 cr TTM (net-cash profile)"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "DLF",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Construction ~40% of development revenue, steel ~12% of construction => ~4.8% of revenue; +7% steel -> +0.34% of revenue in costs; most booked units are fixed-price so only unsold/new launches (~35% of cost base) exposed; at ~35% development margin, EBITDA -0.3%, persistence 0.4, weight 0.575 => ~-0.4 (rounded generously).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DLF/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,83,458 cr, P/E 40, P/B 4.0, promoters 74.08%, FII 11.43% (falling from 13.54%), DII 9.06%; other income Rs 2,069 cr FY; interest Rs 93 cr TTM (net-cash profile)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CEMENT_PRICE",
+   "dst": "DLF",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Cement ~10% of construction cost => ~4% of revenue; +5% cement -> +0.2% of revenue; unsold/new launch exposure 35%; margin 35% -> EBITDA -0.2%; persistence 0.4 => ~-0.3 incl. weighting. Node proposed (no cement node in seed vocabulary).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DLF/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,83,458 cr, P/E 40, P/B 4.0, promoters 74.08%, FII 11.43% (falling from 13.54%), DII 9.06%; other income Rs 2,069 cr FY; interest Rs 93 cr TTM (net-cash profile)"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "DLF",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Labour ~25% of construction cost; +2pp wage inflation on site labour -> +0.5% construction cost -> EBITDA -0.4% on exposed share => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DLF/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,83,458 cr, P/E 40, P/B 4.0, promoters 74.08%, FII 11.43% (falling from 13.54%), DII 9.06%; other income Rs 2,069 cr FY; interest Rs 93 cr TTM (net-cash profile)"
+    }
+   ]
+  },
+  {
+   "src": "P_HOUSING_POLICY",
+   "dst": "DLF",
+   "relation": "policy_effect",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+1 = stronger support (stamp duty cuts, affordable/mid-income incentives, Haryana FAR/licence easing for Gurugram). Luxury segment less targeted than affordable, so ~+1.2; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "DLF",
+   "relation": "policy_effect",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "+1 = higher property/equity capital gains tax: reduces HNI/NRI investor-buyer demand in luxury and dampens equity-market wealth effect that funds luxury purchases. Model judgement; no live proposal found Aug-Nov 2026.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DLF/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,83,458 cr, P/E 40, P/B 4.0, promoters 74.08%, FII 11.43% (falling from 13.54%), DII 9.06%; other income Rs 2,069 cr FY; interest Rs 93 cr TTM (net-cash profile)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "DLF",
+   "relation": "regulatory_risk",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Tighter bank real-estate/construction-finance risk weights would slow buyer financing and developer funding; DLF is net cash so limited => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "DLF",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -0.3,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "DLF is domestic; weaker rupee (USD/INR 94.5, +6.5% 12m) marginally raises NRI purchasing power (NRI share of presales small in NCR luxury, model estimate ~5%) and has no debt-side FX effect (net cash). Pack: no significant FX sensitivity (not listed |t|>=0.6).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "GIC (33% of DCCDL JV)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "co-owner of rental platform; DLF ~67% of DCCDL (model knowledge, verify)"
+  },
+  {
+   "counterparty": "Large EPC/contractors (L&T and mid-size)",
+   "ticker": "LT",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "construction outsourced; fixed-price contracts cushion input costs"
+  },
+  {
+   "counterparty": "Steel and cement producers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "cement 10% and steel 12% of construction cost (model estimate)"
+  },
+  {
+   "counterparty": "Godrej Properties / Lodha / Prestige / Oberoi / Brigade",
+   "ticker": "GODREJPROP",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "listed developers compete for launches and capital; DLF is NCR-luxury concentrated"
+  },
+  {
+   "counterparty": "IT/GCC/BFSI office tenants",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "drive Cyber City rental stream"
+  },
+  {
+   "counterparty": "HNI/UHNI and NRI homebuyers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "luxury buyers less debt-dependent than mass market"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 follow-through: sell-side initiations/target changes after Rs 58,000 cr launch plan (Motilal TP Rs 780; Jefferies/CLSA bull cases)",
+   "type": "other",
+   "prob": 0.8,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=DLF+Share+Price+Target+Motilal+Oswal+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI December MPC: second consecutive hike would weigh on realty sentiment (macro event; shown only as DLF sensitivity)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12/2027-03",
+   "event": "Launch of luxury projects from Rs 58,000 cr pipeline (Gurugram/Goa/Mumbai); sell-through speed is the key datapoint",
+   "type": "capex",
+   "prob": 0.75,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=DLF+growth+plan+58000+crore+launches+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date model-estimated from Q2 on 2026-10-16): bookings run-rate vs Rs 3,800 cr in Q2, margin recovery",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=DLF+Q2+FY27+results+net+profit+sales+bookings+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "NSE semi-annual index review (effective March): DLF possible Nifty 50 candidate on market cap; weakly sourced model judgement",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4/FY27 results and FY28 guidance: management says revenue growth resumes in FY28 as Rs 75,000 cr projects near completion",
+   "type": "guidance",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=DLF+earnings+call+highlights+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12/2027-06",
+   "event": "Further DCCDL/GIC stake or monetisation, or office/retail asset acquisitions, using surplus cash",
+   "type": "corporate_action",
+   "prob": 0.2,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 1,261 cr (-23% y/y), operating profit Rs 23 cr (1.8%), PAT Rs 1,301 cr (+11%); bookings Rs 3,800 cr",
+  "trend": "Reported revenue/EBITDA troughing (TTM sales -29%) while bookings and launch pipeline are record; management guides revenue growth from FY28. PAT quality diluted by JV share and a Rs 738 cr non-cash gain.",
+  "valuation": "Price ~Rs 741-742, P/E 40, P/B 4.0, ROE 9.5%, ROCE 6.3%, div yield 1.1%; 52w range 489-774, i.e. near the high; +11.4% 1m, +15.6% 3m, -4.2% 12m; 1y vol 31%.",
+  "recent_developments": [
+   "2026-10-30 Equitypandit outlook for the week",
+   "2026-10-19 Business Standard: Rs 58,000 cr launches, luxury homes, rental income; CNBC TV18: Jefferies/CLSA see up to 41% upside",
+   "2026-10-19 Moneycontrol: Rs 738 cr non-cash gain supported Q2 profit",
+   "2026-10-17 Q2 call: record luxury sales, ~96% rental, Rs 42,460 cr surplus cash potential from launched projects",
+   "2026-10-16 Q2 FY27 results",
+   "2026-10-08 Livemint: Parag Parikh Flexi Cap adds DLF in Sept",
+   "2026-10-07 RBI repo hike to 5.50%",
+   "2026-10-05 Gurugram senior-living project sells out (Rs 1,985 cr)"
+  ]
+ },
+ "key_risks": [
+  "Further RBI tightening and higher G-sec yields compress a P/E-40 multiple",
+  "Luxury demand concentrated in Gurugram; any regulatory/approval/infrastructure shock (HRERA, Gurugram flooding/civic issues) hits bookings",
+  "Reported earnings quality: PAT driven by JV share, other income (Rs 2,069 cr) and non-cash gains while operating profit collapsed",
+  "FII selling (11.4% from 13.5%) if risk-off with Brent ~$95 and USD/INR 94.5",
+  "Execution on Rs 58,000 cr launches; approvals/timing slippage",
+  "Office leasing slowdown if US tech/GCC spending weakens"
+ ],
+ "upside_triggers": [
+  "Strong sell-through of the launch pipeline (Rs 58,000 cr) beating Rs 3,800 cr quarterly run-rate",
+  "Deployment of Rs 42,460 cr surplus cash into land/dividends/buybacks",
+  "Rental growth and DCCDL monetisation/REIT listing",
+  "Index inclusion (Nifty 50) flows",
+  "RBI pause / yields falling"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CEMENT_PRICE",
+   "type": "FACTOR",
+   "name": "Cement price (India)",
+   "ssu": "+5% cement price"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=DLF+Q2+FY27+results+net+profit+sales+bookings+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "DLF Q2 FY27 results coverage (ET, Business Standard, Moneycontrol, NDTV Profit, Upstox)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=DLF+earnings+call+highlights+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-17",
+   "what": "Q2 earnings call highlights (Yahoo Finance, Investing.com): luxury sales, rental, surplus cash"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=DLF+growth+plan+58000+crore+launches+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-19",
+   "what": "Business Standard/CNBC TV18: Rs 58,000 cr launch plan; broker views"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=DLF+senior+living+Gurugram+sells+out+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-05",
+   "what": "Senior-living project sold out Rs 1,985 cr"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike to 5.50%"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-28",
+   "what": "Anarock Q3 CY26 housing sales"
+  },
+  {
+   "url": "https://www.screener.in/company/DLF/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals (via evidence pack)"
+  }
+ ],
+ "ticker": "DLF",
+ "as_of": "2026-11-05"
+}

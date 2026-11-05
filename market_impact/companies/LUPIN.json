@@ -1,0 +1,330 @@
+{
+ "ticker": "LUPIN",
+ "name": "Lupin Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PHARMA_US_GENERICS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Mumbai-based global generics and speciality pharma company: US ~38%, India ~32% (branded, strong in respiratory, cardio, anti-diabetic), Rest of World/EM and South Africa ~15%, Europe/Canada ~8%, API ~5% (model knowledge, verify). Q2 FY27 (2026-11-03): revenue Rs 7,827 cr (+11% to +14% YoY), net profit Rs 1,155 cr (-22%) after an exceptional antitrust (US generic-pricing litigation) charge; margins compressed on US competition and portfolio investment; management expects lower operating margins in FY28 (Sahi 2026-11-05). Data caution: the screener pack's quarterly sales/OPM (e.g. Jun-26 sales Rs 7,172 cr at 52% OPM, Sep-26 Rs 3,567 cr) are internally inconsistent with press-reported revenue and are not used for margins. Mcap Rs 90,258 cr, stock -17% in 3m.",
+ "revenue_mix": [
+  {
+   "segment": "United States",
+   "share_pct": 38,
+   "geography": "US generics, inhalers, injectables"
+  },
+  {
+   "segment": "India",
+   "share_pct": 32,
+   "geography": "India branded formulations"
+  },
+  {
+   "segment": "Rest of World and emerging markets",
+   "share_pct": 15,
+   "geography": "South Africa, LatAm, APAC"
+  },
+  {
+   "segment": "Europe, Canada, API",
+   "share_pct": 15,
+   "geography": "EU/Canada ~8%, API ~5%, other"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 16
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "LUPIN",
+   "relation": "competition",
+   "w": -5.0,
+   "w_low": -10.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "US ~38% of sales (Rs ~3,000 cr/qtr at Q2 revenue Rs 7,827 cr). Management/analysts cite US competition as the margin driver (Jefferies cut TP 15%, NDTV Profit 2026-11-05). +5pp erosion on ~70% of base = -3.5% US = -1.3% group sales; ~100% drop-through at assumed ~25% OPM = -5.3% EBITDA; EV/MCap 1.03; persistence 0.5 -> -2.7; plus competition on key limited-competition products (inhalers, injectables) and guided FY28 margin decline -> -5.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+US+sales+India+EBITDA+margin+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Lupin Q2: US competition pressured margins (TradingView 2026-11-04); Jefferies cuts target 15% (NDTV Profit 2026-11-05)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "LUPIN",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -9.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Large US exposure from Pithampur, Goa, Nagpur, Somerset and Coral Springs plants (model knowledge, Pithampur/ Somerset had earlier warning letters). New launches (Oct: Vitamin K injection approval; inhalers) depend on clean inspections. OAI probability 20% x -14% equity + delay noise -> -3.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+US+sales+India+EBITDA+margin+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "US FDA nod for Vitamin K injection (Equitypandit 2026-10-09)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "LUPIN",
+   "relation": "regulatory_risk",
+   "w": -0.9,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "US tariffs of 100% on branded drugs began 2026-09-29, India and 19 others exempt for speciality; generics outside. Lupin also manufactures at Coral Springs (Florida), Somerset (NJ) - partial US footprint reduces risk (~25% of US sales US-made, model knowledge). 10% probability of generic tariff: -9% equity if imposed -> -0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "US exempts India's speciality drugs from 100% tariff (Business Standard, Firstpost 2026-09-29)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "LUPIN",
+   "relation": "fx_translation",
+   "w": 3.0,
+   "w_low": 1.2,
+   "w_high": 4.8,
+   "lag": "0-3m",
+   "mechanism": "USD-linked sales ~60% (US 38% + EM/others 22% USD-ish), imports ~10% of sales: net 50% x 3% = +1.5% of sales; at ~25% OPM +6% EBITDA; 40% hedged -> +3.6%; EV/MCap 1.03, persistence 0.5 -> +1.9; plus EM dollarised sales -> +3.0. Empirical +1.83 (t=1.4) lower.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+antitrust+charge+exceptional+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 FY27 revenue +11-14% (Whalesbook, eHealth Magazine 2026-11-04)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "LUPIN",
+   "relation": "input_cost",
+   "w": 0.7,
+   "w_low": -0.5,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "China-origin APIs/KSMs a material share of inputs (model: ~20% of RM, RM ~30% of costs). +15% price cuts -> RM -3% -> costs -0.9% -> EBITDA +4% at 25% OPM, half competed away -> +2% x 1.03 x 0.3 persistence = +0.6; rounded +0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+US+sales+India+EBITDA+margin+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Margin pressure from costs and competition in Q2 (Investing.com 2026-11-04)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "LUPIN",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "India branded business ~32% of sales growing faster than market (management, CNBC TV18 2026-08-07). +5pp urban consumption lifts India growth ~1.2pp = +0.4% group sales; ~60% flow-through at ~25% OPM = +1.0% EBITDA; persistence 0.5-1.0 with multiple effect -> +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+US+sales+India+EBITDA+margin+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "Lupin sees stronger FY27 US sales, India growth to outpace market (CNBC TV18 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LUPIN",
+   "relation": "funding_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Almost debt free (interest Rs 33 cr/qtr); discount-rate effect on a 16x TTM P/E (value stock) -> -0.5 per +25bp.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+antitrust+charge+exceptional+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Interest Rs 32.6 cr in Sep-26 quarter (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "LUPIN",
+   "relation": "geopolitical_exposure",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Freight/solvent cost and South Africa/Middle East supply lanes (RoW ~15%); +10% logistics = +0.4% costs -> EBITDA -1.5%; persistence 0.25, EV/MCap 1.03 -> -0.4; rounded -0.7 with EM demand risk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+US+sales+India+EBITDA+margin+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Brent +15% in 3m, INR 94.5"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LUPIN",
+   "relation": "discount_rate",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "FII holding rising: 21.7% -> 23.3% over two quarters; beta 0.55-0.67 (low). +US$5bn -> +0.8 beyond beta.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+antitrust+charge+exceptional+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Shareholding Sep 2026 (screener.in)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "US wholesaler groups (McKesson, Cardinal, Cencora)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "US ~38% of sales"
+  },
+  {
+   "counterparty": "Indian generics peers (Cipla, DRL, Sun, Zydus, Aurobindo)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "inhalers, injectables, tablets"
+  },
+  {
+   "counterparty": "Chinese API suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "KSMs"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "US launch of generic HIV drug with 180-day exclusivity eligibility (announced 2026-11-03)",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Lupin+launches+HIV+drug+US+180-day+exclusivity+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: US competition, margin trajectory vs FY28 guidance of lower margins",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+US+sales+India+EBITDA+margin+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Quantification/resolution of antitrust settlement and cash outflow",
+   "type": "litigation",
+   "prob": 0.4,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+antitrust+charge+exceptional+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Inhaler (Spiriva/ Advair generic) approvals and US limited-competition launches",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+US+sales+India+EBITDA+margin+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs 7,827 cr (+11-14% YoY), net profit Rs 1,155 cr (-22%) after exceptional antitrust charge; standalone loss on Rs 76.9 cr investment impairment.",
+  "trend": "Growth intact (India and developed markets) but margins compress on US competition and portfolio investment; guided lower FY28 operating margins.",
+  "valuation": "Rs 1,974; 16x TTM on screener EPS (basis uncertain); stock -17% 3m, -20% 6m; HSBC says shares 'overemphasize' a risk (2026-09-22); Nomura Buy, Rs 2,675 TP (2026-09-17).",
+  "recent_developments": [
+   "2026-11-05 Jefferies cuts target 15%, flags US competition; Kotak Add (NDTV Profit)",
+   "2026-11-05 Lupin expects reduced operating margins in FY28 (Sahi)",
+   "2026-11-04 Q2 PAT -22% on exceptional antitrust charge (HDFC Sky)",
+   "2026-11-03 launches HIV drug in US with 180-day generic exclusivity eligibility (CNBC TV18)",
+   "2026-10-09 USFDA nod for Vitamin K injection",
+   "2026-09-22 HSBC: stock overemphasizing a risk"
+  ]
+ },
+ "key_risks": [
+  "US competition and price erosion",
+  "FY28 margin decline guidance",
+  "Antitrust litigation payouts",
+  "USFDA inspections",
+  "Data/earnings volatility (exceptionals)"
+ ],
+ "upside_triggers": [
+  "HIV 180-day exclusivity launch",
+  "India growth above market",
+  "US inhaler/injectable approvals",
+  "INR weakness"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/LUPIN.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack (quarterly data inconsistent)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+antitrust+charge+exceptional+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 result coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Lupin+Q2+FY27+US+sales+India+EBITDA+margin+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-05",
+   "what": "Q2 margins/guidance"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Lupin+launches+HIV+drug+US+180-day+exclusivity+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "HIV launch"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Lupin+expects+reduced+operating+margins+FY28+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-05",
+   "what": "FY28 margin guidance"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "US pharma tariff"
+  }
+ ]
+}

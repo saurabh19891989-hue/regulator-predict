@@ -107,7 +107,7 @@ def assemble():
     # dedupe (src,dst): confidence-weighted mean, union range, provenance
     groups = defaultdict(list)
     for e in raw_edges:
-        if e["src"] not in nodes or e["dst"] not in nodes:
+        if e["src"] not in nodes or e["dst"] not in nodes or e["src"] == e["dst"]:
             continue
         if nodes[e["src"]]["type"] == "INDUSTRY" or nodes[e["dst"]]["type"] == "INDUSTRY":
             continue

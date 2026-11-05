@@ -1,0 +1,285 @@
+{
+ "name": "Hindustan Copper Ltd.",
+ "industry": "I_NONFERROUS",
+ "business_summary": "Government-owned (60.1% after the Aug 2026 OFS) copper-ore miner and concentrator: Khetri, Malanjkhand, Indian Copper Complex and Rakha, with a small cathode/rod tail. Sells concentrate (e.g. to Hindalco) and cathode linked to LME copper. Q1 FY27 sales Rs936 cr, EBITDA Rs508 cr (54%), PAT Rs352 cr (+162%). TTM sales Rs3,498 cr, PAT Rs1,137 cr; market cap Rs41,485 cr; capex plan Rs7,000 cr over 5-6 years; QIP of ~9.69 crore shares and Rs500 cr NCD approved at the Sep 2026 AGM.",
+ "revenue_mix": [
+  {
+   "segment": "copper concentrate and cathode",
+   "share_pct": 97,
+   "geography": "India ~100%"
+  },
+  {
+   "segment": "by-products",
+   "share_pct": 3,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 15
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COPPER",
+   "dst": "HINDCOPPER",
+   "relation": "output_price",
+   "w": 6.0,
+   "w_low": 3.0,
+   "w_high": 10.0,
+   "lag": "0-3m",
+   "mechanism": "Sells concentrate/cathode priced off LME (record >$14,000/t) with mostly fixed mining cost. TTM sales Rs3,498 cr, EBITDA Rs1,758 cr (50%). +10% copper = +Rs350 cr revenue ~ +20% EBITDA at constant cost; EV/MCap ~1.0, persistence 0.5 => ~+10, cut to 6 because the price already discounts record copper (P/E 34x) and for provisional-pricing lags. Pack empirical +4.16 (t=+3.5).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hindustan+Copper+copper+prices+above+%2414%2C000+cost+discipline+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "The Hindu: copper seen above $14,000; HCL banks on cost discipline"
+    },
+    {
+     "source": "market_impact/data/packs/HINDCOPPER.md",
+     "date": "2026-11-05",
+     "note": "empirical +4.16 per +10% copper, t=+3.5; Q1 FY27 OPM 54%"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HINDCOPPER",
+   "relation": "fx_translation",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Realisation = LME x USD/INR; costs INR. +3% => +Rs105 cr revenue (~6% EBITDA); x0.5 persistence => ~+3. Empirical +2.9 (t=+1.2).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDCOPPER.md",
+     "date": "2026-11-05",
+     "note": "empirical +2.92 per +3% USDINR, t=+1.2"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "HINDCOPPER",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Diesel, explosives and power ~15% of cost (model estimate); +10% Brent lifts those ~4% => costs +0.6% => EBITDA -1.2% x0.5 => ~-0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDCOPPER.md",
+     "date": "2026-11-05",
+     "note": "cost split not disclosed in pack; model estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "HINDCOPPER",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Royalty on copper is ~4% of LME-linked metal value (model knowledge); a hike or new levy cuts a 50% margin: +1 unit ~ -1pp realisation => ~-2% EBITDA, widened for reform uncertainty.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hindustan+Copper+shareholders+QIP+NCD+AGM+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-13",
+     "note": "Upstox: AGM to consider QIP and Rs500 cr NCD"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "HINDCOPPER",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Scarcity theme: the only integrated Indian copper-ore miner; Rs7,000 cr capex over 5-6 years (2026-09-22) is valued on structural copper demand from EVs, grids, data centres. Re-rating channel not in spot copper.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hindustan+Copper+capital+investment+Rs+7000+crore+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-22",
+     "note": "Economic Times: Rs7,000 cr capex in next 5 years"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "HINDCOPPER",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "China consumes ~55% of copper; +1pp growth supports LME (price effect in F_COPPER); residual is rerating/beta.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDCOPPER.md",
+     "date": "2026-11-05",
+     "note": "market beta 1.44"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HINDCOPPER",
+   "relation": "discount_rate",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Near debt-free (interest Rs6 cr TTM); only the discount-rate effect on a high-multiple small cap.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDCOPPER.md",
+     "date": "2026-11-05",
+     "note": "Interest Rs0-3 cr/qtr"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "HINDCOPPER",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "High-beta PSU mid cap (1y vol 53%); FII holding 7.1% rose after the OFS; flows drive liquidity/valuation (govt sold 6% at a 10% discount in Aug).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hindustan+Copper+government+stake+sale+OFS+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-26",
+     "note": "New Indian Express: Rs3,000 cr raised via OFS"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Hindalco / Birla Copper",
+   "ticker": "HINDALCO",
+   "role": "customer",
+   "importance": "high",
+   "note": "major concentrate buyer (model knowledge, share unverified)"
+  },
+  {
+   "counterparty": "Government of India (60.1%)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "OFS of up to 6% completed Aug 2026"
+  },
+  {
+   "counterparty": "Vedanta (copper)",
+   "ticker": "VEDL",
+   "role": "competitor",
+   "importance": "low",
+   "note": "cathode/rod peer"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (Q1 was ~2026-08-10; date not confirmed)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Hindustan+Copper+Q1+FY27+results+expansion+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "QIP of up to ~9.69 crore shares / Rs500 cr NCD executed",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -2.0,
+   "source": "https://news.google.com/rss/search?q=Hindustan+Copper+Shareholders+to+Review+9.69+Crore+Share+QIP+and+Rs+500+Crore+NCD+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Arbitration award case: commercial court conditionally stayed the 50% deposit requirement (2026-09-22); further ruling pending",
+   "type": "litigation",
+   "prob": 0.3,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Hindustan+Copper+Commercial+Court+conditional+stay+arbitration+award+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Further government stake sale",
+   "type": "corporate_action",
+   "prob": 0.15,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -3.0,
+   "source": "https://news.google.com/rss/search?q=Hindustan+Copper+government+stake+sale+OFS+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs936 cr, EBITDA Rs508 cr (54%), PAT Rs352 cr; Q2 pending",
+  "trend": "Record margins (OPM 50% TTM vs 28% in FY22) on copper >$14,000; stock -21% over 3m after OFS discount and copper pullback",
+  "valuation": "P/E ~34x TTM, P/B ~12x, ROCE 42%",
+  "recent_developments": [
+   "2026-08-24/25: govt OFS up to 6% at floor Rs514 (10% discount); stock -7.45%; ~Rs3,000 cr raised (Moneycontrol, New Indian Express)",
+   "2026-09-22: Rs7,000 cr capex plan over 5-6 years (ET)",
+   "2026-09-22: commercial court conditional stay on arbitration award (Sahi)",
+   "2026-09-24: AGM approves Rs1.86 dividend and QIP (scanx.trade)",
+   "2026-10-08: copper seen staying above $14,000 (The Hindu)"
+  ]
+ },
+ "key_risks": [
+  "Copper correction from record levels (high operating leverage)",
+  "Further OFS and QIP dilution",
+  "Underground-mine expansion slippage",
+  "Arbitration liability"
+ ],
+ "upside_triggers": [
+  "Copper holds >$14,000",
+  "Ore-production ramp and capex milestones",
+  "Critical-mineral policy support"
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/HINDCOPPER.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Jun 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Hindustan+Copper+Q1+FY27+results+expansion+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-11",
+   "what": "Q1 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Hindustan+Copper+government+stake+sale+OFS+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-26",
+   "what": "OFS"
+  }
+ ],
+ "ticker": "HINDCOPPER",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100",
+ "company_links": [],
+ "new_nodes_proposed": []
+}

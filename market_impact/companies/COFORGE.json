@@ -1,0 +1,360 @@
+{
+ "ticker": "COFORGE",
+ "name": "Coforge Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Mid-cap digital-engineering IT services firm focused on travel/transport, BFSI and insurance, with North America ~50% and EMEA ~30%. Revenue stepped up ~50% YoY after a large acquisition completed in Q1 FY27 (Encora per model knowledge; not re-verified). Q2 FY27 (2026-10-23): PAT Rs588 cr, order book +45%, EBIT margin guide raised to 16%. Stock +62% in six months, P/E 42.5. Governance event on 2026-09-09: chairman O.P. Bhatt resigned after a board-evaluation dispute; Akhil Gupta appointed chair 2026-09-29.",
+ "revenue_mix": [
+  {
+   "segment": "Travel, transport & hospitality",
+   "share_pct": 22,
+   "geography": "North America/Europe"
+  },
+  {
+   "segment": "BFSI and insurance",
+   "share_pct": 38,
+   "geography": "US/UK/EU"
+  },
+  {
+   "segment": "Other (public, healthcare, hi-tech)",
+   "share_pct": 40,
+   "geography": "mixed"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "employee costs",
+   "share_of_costs_pct": 62
+  },
+  {
+   "input": "subcontractors, travel, other",
+   "share_of_costs_pct": 38
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "COFORGE",
+   "relation": "fx_translation",
+   "w": 2.0,
+   "w_low": -1.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "~92% foreign-currency revenue; INR ~ 38% of costs after the large acquisition (model knowledge). +3% USD/INR => ~+1.2pp EBITDA margin on 20% = +6% EBITDA pre-hedge; persistence 0.35; EV/MCap 1.1 (acquisition debt) => +2.3, shaded to +2.0. Pack USDINR sensitivity not in its top-12 list.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "COFORGE",
+   "relation": "demand_driver",
+   "w": 2.6,
+   "w_low": 0.8,
+   "w_high": 4.8,
+   "lag": "3-12m",
+   "mechanism": "North America ~ 50% of revenue pre-acquisition, higher now (model knowledge). +1pp US growth => revenue +0.8%; incremental margin 30% vs 20% => EBITDA +1.2%; mid-cap growth multiple (P/E 42.5) amplifies: persistence 1.0, EV/MCap 1.1 => ~+2.6. Pack S&P elasticity +2.93 (t +2.6) supports high US-sentiment beta.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "COFORGE",
+   "relation": "substitution",
+   "w": -3.0,
+   "w_low": -9.0,
+   "w_high": 4.0,
+   "lag": ">12m",
+   "mechanism": "+1 = ~3% repricing. Coforge is a digital-engineering/travel/BFSI specialist, more insulated (3% x 50% / 20% = -7.5% EBITDA, persistence 0.45 => -3.4, shaded -3.0); P/E 42.5 means de-rating risk is larger than the EBITDA effect, so range is wide.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "COFORGE",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "+1 = material tightening; Coforge is relatively onsite-light but acquired Encora (model knowledge) with US onsite talent; cost +1.2pp of revenue => -6% EBITDA, half passed on, persistence 0.6 => ~-3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US suspended PERM green-card labour programme for named firms; Reuters 2026-10-11: little risk to Indian IT (<2% of green-card filings)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "Forbes 2026-10-01: judge struck down latest version of $100,000 H-1B fee; Indian Express 2026-09-19: fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "COFORGE",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.2,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+5% S&P 500: client sentiment and global risk appetite; shrunk toward 1.5 from the pack elasticity (+2.93, t +2.6).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "COFORGE",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: FPI de-risking of a sector that is a prime funding source; judgement, shrunk from pack -0.7 per SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "COFORGE",
+   "relation": "discount_rate",
+   "w": -0.9,
+   "w_low": -2.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp India 10y: duration effect on a high-payout, mostly net-cash stock.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "COFORGE",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "+25bp Fed funds: BFSI and consumer client budgets; offset by stronger USD. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "COFORGE",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Europe/UK ~ 30% of revenue; +1pp EU growth => revenue +0.3%, EBITDA +0.45% with growth multiple => ~+1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "COFORGE",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": -1.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Pack +3.20 per +3% USD/CNY (t +1.1); no causal channel; included as noise token. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "COFORGE",
+   "relation": "discount_rate",
+   "w": 1.8,
+   "w_low": 0.2,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "+$5bn quarterly FPI inflow: stock had 6m +62% on FPI/MF momentum; high-multiple mid-cap, flow-sensitive. Judgement.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "COFORGE",
+   "relation": "funding_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp spreads: refinancing of acquisition debt (interest rose 40->108 cr/qtr); ~Rs3,000 cr debt x 0.5% = Rs15 cr = ~0.6% of annual profit; persistence 0.8 => -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/COFORGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 6,171 cr, OPM 20%, PAT 605 cr, P/E 42.5, 6m +62%"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Large airline/travel and insurance clients",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "travel vertical sensitive to fares and airline capex"
+  },
+  {
+   "counterparty": "Encora (acquired; model knowledge)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "drove +50% revenue step-up"
+  },
+  {
+   "counterparty": "Persistent, Mphasis, LTM, TechM",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "mid-cap IT peers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results; margin vs 16% EBIT guide, integration",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://news.google.com/rss/search?q=Coforge+Q2+results+EBIT+margin+guidance+16%+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Board/governance follow-up: further director changes or regulatory queries after chairman exit",
+   "type": "corporate_action",
+   "prob": 0.25,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Coforge+chairman+OP+Bhatt+resigns+board+evaluation+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "US H-1B/outsourcing action",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Sep-2026 (Q2 FY27, reported 2026-10-23)",
+  "trend": "Screener: sales Rs6,171 cr (+53.7% YoY, +11.6% QoQ), OPM 20%, PAT Rs605 cr; company PAT Rs588 cr (+56.5% YoY). Interest up to Rs108 cr from Rs41 cr. Order book +45%; guide EBIT margin 16%; missed street estimates.",
+  "valuation": "P/E 42.5 (highest in large IT), yield 0.57%, price Rs2,084 vs 52w 1,008-2,126",
+  "recent_developments": [
+   "2026-10-23: Q2 results (NDTV Profit, CNBC TV18, Business Standard)",
+   "2026-09-29: Akhil Gupta appointed chair; JPMorgan overweight (Moneycontrol)",
+   "2026-09-13: NRC chair D.K. Singh quit citing differences (Upstox)",
+   "2026-09-09: Chairman Bhatt resigned; stock -7 to -9% (ET, BS)",
+   "2026-09-11: company says Bhatt did not share complete findings (BusinessLine)"
+  ]
+ },
+ "key_risks": [
+  "Governance questions",
+  "Acquisition integration/debt",
+  "P/E 42.5 de-rating",
+  "Travel vertical cyclicality",
+  "GenAI"
+ ],
+ "upside_triggers": [
+  "Order book conversion",
+  "Margin delivery at 16%+",
+  "FPI/MF flows",
+  "Weaker INR"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/COFORGE/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Coforge+Q2+results+EBIT+margin+guidance+16%+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 FY27"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Coforge+chairman+OP+Bhatt+resigns+board+evaluation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-09",
+   "what": "chair resignation"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "PERM"
+  }
+ ]
+}

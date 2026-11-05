@@ -1,0 +1,385 @@
+{
+ "ticker": "ABCAPITAL",
+ "name": "Aditya Birla Capital Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_NBFC_VEHICLE_CONSUMER",
+ "tier": "NIFTY_200",
+ "business_summary": "Holding company for the Aditya Birla Group's financial services: NBFC and housing-finance lending (~58% of value, model est.), life insurance (JV with Sun Life), asset management (ABSLAMC), health insurance and wealth/broking. Q2 FY27 consolidated PAT Rs1,288cr (+38%) on lending growth and cost control; revenue Rs5,493cr in the quarter. Entered the gold-loan business on 2026-08-19. Promoters 68.8%, FIIs 8.3%. Stock Rs399, P/E 29.8x, P/B 3.1x, +20% in 12 months; Jefferies sees ~25% upside while noting rising rates.",
+ "revenue_mix": [
+  {
+   "segment": "lending (NBFC and housing finance)",
+   "share_pct": 55,
+   "geography": "India (model est.)"
+  },
+  {
+   "segment": "life and health insurance",
+   "share_pct": 28,
+   "geography": "India"
+  },
+  {
+   "segment": "asset management and wealth/broking",
+   "share_pct": 17,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 40
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "ABCAPITAL",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Borrowings ~Rs1.3 lakh cr (Q2 interest Rs2,736cr x4 / ~8.3%; model est.), ~45% floating: 25bp = Rs150cr/yr; half re-prices via floating SME/LAP/corporate assets => ~-75cr = -1.5% of lending-business PBT; lending is ~55-60% of group value; persistence 0.5; insurance/AMC unaffected => ~-1.5 incl. multiple (P/E 29.8x).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    },
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "ABCAPITAL",
+   "relation": "funding_cost",
+   "w": -4.0,
+   "w_low": -8.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+50bp on market borrowings (~50% of Rs1.3 lakh cr = Rs650cr); half passed through => Rs325cr = ~7% of group financing profit (TTM Rs4,911cr); persistence 0.5 => -3.5; lending is ~58% of value => ~-2; NBFC multiple stress => -4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ABCAPITAL",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Mixed: higher yields lift NBFC funding and cost of equity (-1.5) but raise guaranteed-product returns and new-business margins at the life insurer (+0.7; model knowledge).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "10y G-sec closed 7.19% on 2026-11-04 after 7.48% on 2026-10-23 (Moneycontrol 2026-11-04; BusinessLine 2026-10-23)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "ABCAPITAL",
+   "relation": "demand_driver",
+   "w": -6.0,
+   "w_low": -10.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost; beta 0.7: +35bp on ~Rs1.65 lakh cr book (model est.) = Rs580cr = 12% of group financing profit; persistence 0.5; lending ~58% of value => -3.5, sentiment => -6 for a consumer/SME-heavy book.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+Q2+Profit+Rises+38%25+to+Rs+1%2C288-Cr+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 consolidated PAT Rs1,288cr (+38%) (ET BFSI/BusinessLine/HDFC Sky 2026-10-30); brokerages back the beat (BusinessLine 2026-11-02)"
+    },
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "ABCAPITAL",
+   "relation": "demand_driver",
+   "w": -2.0,
+   "w_low": -4.5,
+   "w_high": -0.6,
+   "lag": "3-12m",
+   "mechanism": "Unsecured/personal and small-ticket SME ~20% of lending (model est.); +1pp delinquency => credit cost +0.8pp on Rs0.33 lakh cr = Rs260cr = 5% of PBT x 0.5 => -2.5 x 0.58 lending weight => -1.5, sentiment => -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "ABCAPITAL",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth adds ~1.5pp to lending AUM growth (already ~25%) => lending PAT +2.5% x 0.58 value share + AMC/insurance leverage to financialisation => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+Q2+Profit+Rises+38%25+to+Rs+1%2C288-Cr+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27 consolidated PAT Rs1,288cr (+38%) (ET BFSI/BusinessLine/HDFC Sky 2026-10-30); brokerages back the beat (BusinessLine 2026-11-02)"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "ABCAPITAL",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+10% SIP/DII flows lifts AMC AUM (ABSLAMC), ULIP/unit-linked premiums and health-insurance distribution: AMC+life ~30% of value; revenue +3% => value +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "ABCAPITAL",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Tighter IRDAI rules (surrender values, commission/expense caps, solvency) hit life and health insurance (~25-30% of group value; model est.): new-business margin -150bp => life value -8% => group -2.5; -3 with sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "ABCAPITAL",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "NBFC rules: revolving-credit curbs (Aug 2026 draft), unsecured and gold-loan norms (ABCAPITAL entered gold loans 2026-08-19): lending growth -3pp and yield -30bp => lending PAT -6% x 0.58 x 0.7 persistence + sentiment => -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+shares+soar+as+it+enters+gold+loan+business+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-19",
+     "note": "ABCAPITAL enters gold loans (Upstox 2026-08-19)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ABCAPITAL",
+   "relation": "discount_rate",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 8.3% (rising from 7.0%); beta 1.4: +US$5bn quarterly inflow => ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "ABCAPITAL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Housing finance (ABHFL) ~12% of the lending book: +10% sales lifts disbursement ~5% => +1.5 incl. sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "GRASIM",
+   "dst": "ABCAPITAL",
+   "relation": "holding_stake",
+   "w": 0.05,
+   "w_low": 0.0,
+   "w_high": 0.15,
+   "lag": "0-3m",
+   "mechanism": "w = % change in ABCAPITAL equity per +1% in GRASIM equity. Grasim is the Aditya Birla Group holding vehicle for its ~52% stake (model knowledge); the link is weak because ABCAPITAL's value is driven by financial-sector variables and is much smaller than Grasim's cement/chemicals base, but group financing decisions pass through Grasim.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABCAPITAL.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Grasim Industries / Aditya Birla Group",
+   "ticker": "GRASIM",
+   "role": "parent",
+   "importance": "medium",
+   "note": "promoter vehicle"
+  },
+  {
+   "counterparty": "Sun Life Financial (insurance and AMC partner)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "JV partner in life insurance and AMC"
+  },
+  {
+   "counterparty": "Banks, NCD investors",
+   "ticker": "SBIN",
+   "role": "supplier",
+   "importance": "high",
+   "note": "fund the lending book"
+  },
+  {
+   "counterparty": "Bajaj Finance, Tata Capital, HDFC Bank",
+   "ticker": "BAJFINANCE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "lending peers"
+  },
+  {
+   "counterparty": "HDFC AMC, ICICI Prudential AMC, SBI Life",
+   "ticker": "HDFCAMC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "AMC and insurance peers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (inferred; Q2 on 2026-10-30): lending margin, credit cost and insurance new-business margin",
+   "type": "results",
+   "prob": 0.92,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+Q2+Profit+Rises+38%25+to+Rs+1%2C288-Cr+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Gold-loan business ramp-up and any RBI gold-loan rule changes",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+shares+soar+as+it+enters+gold+loan+business+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC (early Dec; date unverified): second hike lifts funding cost",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT +38% to Rs1,288cr (screener: net profit Rs1,237cr); revenue Rs5,493cr (Jun Rs4,990cr); financing profit Rs1,653cr vs Rs1,247cr a year ago.",
+  "valuation": "P/E 29.8x, P/B 3.1x (Rs398 / BV Rs128); 52w Rs288-431; 1m +5.2%, 3m -5.4%, 12m +20.3%; 1y vol 32%.",
+  "recent_developments": [
+   "2026-08-19: enters gold-loan business; stock +3%",
+   "2026-10-14: Jefferies ~25% upside",
+   "2026-10-30: Q2 results, PAT +38%",
+   "2026-11-02: brokerages back the beat with Buy calls",
+   "2026-11-04: earnings call transcript published"
+  ]
+ },
+ "key_risks": [
+  "Funding cost and spreads with RBI hiking",
+  "Credit cost in unsecured/SME book",
+  "IRDAI regulation on insurance",
+  "Valuation (29.8x P/E) with ROE 11.6%",
+  "Execution in new gold-loan segment"
+ ],
+ "upside_triggers": [
+  "Sustained lending growth with falling credit cost",
+  "Insurance new-business margin gains",
+  "Operating leverage from AI and cost programmes",
+  "Rate peak"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/ABCAPITAL.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+Q2+Profit+Rises+38%25+to+Rs+1%2C288-Cr+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+shares+soar+as+it+enters+gold+loan+business+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-19",
+   "what": "gold-loan entry"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+shares+Jefferies+sees+25%25+more+upside+rising+rates+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "Jefferies"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}

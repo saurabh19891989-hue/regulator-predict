@@ -1,0 +1,330 @@
+{
+ "ticker": "360ONE",
+ "name": "360 ONE WAM Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AMC_WEALTH_BROKING",
+ "tier": "NIFTY_200",
+ "business_summary": "India's largest listed wealth and asset manager for HNI/UHNI clients (promoters 5.9%, FIIs ~56%); AUM Rs8.99 lakh cr (+31% y/y at Q2 FY27). Q2 FY27 revenue +4.8% y/y (total income +14%), PAT Rs300cr (screener, down from Rs315cr a year ago), interim dividend Rs7.5/share. UBS acquired 4.8% via a Rs2,112cr warrant exercise (2026-10-21/22). New CEO Aashish Agarwal (ex-Jefferies India) appointed 2026-09-23. Stock Rs1,137, P/E 39x, P/B 4.5x. Earnings depend on market levels, HNI flows, transactional revenue and a margin-lending/borrowing book (interest cost Rs361cr in Q2).",
+ "revenue_mix": [
+  {
+   "segment": "wealth management ARR (advisory and product fees)",
+   "share_pct": 50,
+   "geography": "India HNI/UHNI, some NRI (model est.)"
+  },
+  {
+   "segment": "asset management (alternates, PMS, AIF, MF)",
+   "share_pct": 25,
+   "geography": "India"
+  },
+  {
+   "segment": "transactional, capital markets, lending/other",
+   "share_pct": 25,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 40
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "360ONE",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "0-3m",
+   "mechanism": "Transactional/capital-markets and brokerage-linked revenue ~25% of total (model est.): +20% traded value => +5% revenue at 1.3x operating leverage => PAT +6.5% x persistence 0.5, plus sentiment on a 39x-P/E stock => +5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=360+ONE+WAM+Q2+Results+AUM+grows+31%25+nearly+9+lakh+crore+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 AUM Rs8,99,481cr (+31%), revenue +4.8% y/y (TradingView), total income +14% (NDTV Profit), dividend Rs7.5/share; ARR growth accelerates despite profit slip (Investing.com 2026-10-15)"
+    },
+    {
+     "source": "market_impact/data/packs/360ONE.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "360ONE",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+10% SIP/DII flows lifts market levels and mutual-fund/alternates AUM; ARR revenue is ~60% asset-linked: AUM +3% => revenue +2% => +2.5 incl. sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=360+ONE+WAM+Q2+Results+AUM+grows+31%25+nearly+9+lakh+crore+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 AUM Rs8,99,481cr (+31%), revenue +4.8% y/y (TradingView), total income +14% (NDTV Profit), dividend Rs7.5/share; ARR growth accelerates despite profit slip (Investing.com 2026-10-15)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "360ONE",
+   "relation": "discount_rate",
+   "w": 3.5,
+   "w_low": 1.0,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold ~56% (58.6% in Jun, 54.0% Sep, 56.0% Oct); market beta 1.57: +US$5bn quarterly inflow => ~+3.5 incl. mark-to-market on AUM.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/360ONE.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "360ONE",
+   "relation": "demand_driver",
+   "w": -3.5,
+   "w_low": -7.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points => equities -3 to -5%; ~50% of AUM is equity-linked, wealth ARR +, transactional revenue falls: revenue -2.5% x leverage 1.3 => PAT -3%, plus multiple compression => -3.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/360ONE.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "360ONE",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Borrowings ~Rs15,500cr (TTM interest Rs1,323cr / ~8.5%; model est.), ~70% floating: 25bp = Rs27cr = 1.6% of PBT (~Rs1,650cr); lending-book pass-through 50% => -0.8%; persistence 0.5 => -0.4; P/E 39x multiple effect => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    },
+    {
+     "source": "market_impact/data/packs/360ONE.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "360ONE",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+50bp on Rs15,500cr = Rs78cr = 4.7% of PBT; half passed through to margin-lending yields => 2.4%; persistence 0.5 => -1.2 plus multiple => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/360ONE.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "360ONE",
+   "relation": "policy_effect",
+   "w": -4.0,
+   "w_low": -10.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Higher capital-gains/STT-type taxes cut HNI trading and rebalancing and push flows to debt/gold; revenue -4% and AUM growth -2pp => PAT -6% x persistence 0.75 => -4. The Union Budget (1 Feb 2027) is the likely venue; no proposal found.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/360ONE.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "360ONE",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.0,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Rising share of household savings in market products and alternates: ARR AUM growth +31% y/y; +1 theme unit adds ~3pp AUM growth sustained => +4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=360+ONE+WAM+Q2+Results+AUM+grows+31%25+nearly+9+lakh+crore+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 AUM Rs8,99,481cr (+31%), revenue +4.8% y/y (TradingView), total income +14% (NDTV Profit), dividend Rs7.5/share; ARR growth accelerates despite profit slip (Investing.com 2026-10-15)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "360ONE",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -0.5,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "NRI and offshore-linked client flows and a UBS tie-up; +3% USD/INR has a marginally positive effect on USD-denominated AUM and fees, offset by NRI capital outflow risk; negligible.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=UBS+acquires+4.8%25+stake+in+360+ONE+WAM+warrant+exercise+Rs+2%2C112+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "UBS acquires 4.8% of 360 ONE via Rs2,112cr warrant exercise (Reuters 2026-10-21; FE/BusinessLine 2026-10-22)"
+    },
+    {
+     "source": "market_impact/data/packs/360ONE.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "UBS",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "4.8% shareholder from Oct 2026; cross-border referral potential"
+  },
+  {
+   "counterparty": "Banks and NCD investors",
+   "ticker": "SBIN",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "fund the borrowing book"
+  },
+  {
+   "counterparty": "ICICI Prudential, HDFC AMC, Nuvama, Kotak Wealth",
+   "ticker": "HDFCAMC",
+   "role": "competitor",
+   "importance": "high",
+   "note": "wealth and asset-management rivals"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (inferred; Q2 on 2026-10-15): net flows and ARR growth versus profit slip",
+   "type": "results",
+   "prob": 0.92,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=360+ONE+WAM+Q2+Results+AUM+grows+31%25+nearly+9+lakh+crore+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "CEO transition: Aashish Agarwal takes over; strategy and cost signals",
+   "type": "guidance",
+   "prob": 0.6,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=360+ONE+WAM+appoints+Aashish+Agarwal+Jefferies+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget: capital-gains/STT changes affect HNI flows",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Union+Budget+2027+capital+gains+tax+expectations+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Interim dividend Rs7.5/share record date (declared 2026-10-15)",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 0.5,
+   "source": "https://news.google.com/rss/search?q=360+ONE+WAM+Q2+Results+AUM+grows+31%25+nearly+9+lakh+crore+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "AUM +31% but profit flat-to-down: PAT Rs300cr vs Rs315cr (Sep 2025) and Rs331cr in June; opex/interest rising (interest Rs361cr); OPM 59%.",
+  "valuation": "P/E 39x, P/B ~4.5x (Rs1,139 / BV Rs254); 52w Rs906-1,236; 1m +6.3%, 3m -4.2%, 12m +5.3%; 1y vol 30%.",
+  "recent_developments": [
+   "2026-09-23: Aashish Agarwal appointed CEO; stock +2-4%",
+   "2026-10-15: Q2 results, dividend Rs7.5",
+   "2026-10-16: Motilal Oswal Buy, TP Rs1,400",
+   "2026-10-21/22: UBS 4.8% via warrants (Rs2,112cr), stock +2%",
+   "2026-10-21: ICICI Securities TP Rs1,240"
+  ]
+ },
+ "key_risks": [
+  "Equity market drawdown (AUM and transactional revenue)",
+  "Profit not tracking AUM (cost/interest growth)",
+  "CEO transition and key-person risk",
+  "Tax or SEBI regulation on HNI products/PMS/AIF",
+  "High multiple (39x)"
+ ],
+ "upside_triggers": [
+  "Sustained net inflows",
+  "UBS partnership",
+  "Operating leverage returning",
+  "FPI inflows"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/360ONE.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=360+ONE+WAM+Q2+Results+AUM+grows+31%25+nearly+9+lakh+crore+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=UBS+acquires+4.8%25+stake+in+360+ONE+WAM+warrant+exercise+Rs+2%2C112+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-22",
+   "what": "UBS stake"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=360+ONE+WAM+appoints+Aashish+Agarwal+Jefferies+CEO+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "CEO appointment"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}

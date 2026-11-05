@@ -377,11 +377,16 @@ WAAREEENER,COMPANY,Waaree Energies Ltd.,% equity value,WAAREEENER.NS,Capital Goo
 WIPRO,COMPANY,Wipro Ltd.,% equity value,WIPRO.NS,Information Technology,NIFTY_NEXT_50,,
 YESBANK,COMPANY,Yes Bank Ltd.,% equity value,YESBANK.NS,Financial Services,MIDCAP_100,,
 ZYDUSLIFE,COMPANY,Zydus Lifesciences Ltd.,% equity value,ZYDUSLIFE.NS,Healthcare,NIFTY_NEXT_50,,
+NEW_RUSSIA_UKRAINE_WAR,NEW,Russia-Ukraine war / Western sanctions intensity on Russia,"+1 = escalation (new sanctions round, strikes on energy/port infrastructure); -1 = ceasefire/sanctions relief",,,,COUNTRY,backbone_global.json
+NEW_OPEC_PLUS_SUPPLY,NEW,OPEC+ crude supply decisions,+1 mb/d OPEC+ production (quota/actual),,,,FACTOR,backbone_global.json
+NEW_EL_NINO,NEW,ENSO state (El Nino strength),+1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina,,,,FACTOR,backbone_global.json
+NEW_US_TARIFF_GLOBAL,NEW,US average effective tariff rate (all partners),+5 pp effective tariff rate,,,,POLICY,backbone_global.json
+NEW_RARE_EARTH_SUPPLY,NEW,"Critical-mineral supply tightness (China export controls on rare earths, magnets, graphite, Ga/Ge)",+1 = new/tighter export-control round,,,,FACTOR,backbone_global.json
+NEW_EU_STEEL_ACCESS,NEW,EU steel safeguard / CBAM burden on imports,+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost),,,,POLICY,backbone_global.json
+NEW_AGRI_IMPORT_DUTY_IN,NEW,Indian import duties on edible oils / pulses,+10 pp effective import duty,,,,POLICY,backbone_global.json
 NEW_OMC_MARKETING_MARGIN,NEW,OMC petrol+diesel marketing margin,+Rs1/litre average marketing margin (vs normal ~Rs3-4/l),,,,FACTOR,energy.json
 NEW_USDJPY,NEW,USD/JPY exchange rate,+3% USD/JPY (yen weaker),,,,FACTOR,global_macro.json
 NEW_FX_RESERVES_IN,NEW,India FX reserves,+US$25bn reserves (RBI buys / net inflows),,,,FACTOR,india_macro.json
-NEW_EU_STEEL_ACCESS,NEW,EU import access for steel/aluminium (quota cut + CBAM),"+1 = materially tighter access (quota roughly halved, 50% out-of-quota tariff, carbon cost)",,,,POLICY,metals_china.json
-NEW_RARE_EARTH_SUPPLY,NEW,Rare-earth magnet / critical-mineral availability to Indian manufacturers,"+1 = materially tighter supply (licence delays, controls reimposed)",,,,FACTOR,metals_china.json
 NEW_CEMENT_PRICE_IN,NEW,Indian cement trade price (realisation),+Rs10/bag (~+2.5%),,,,FACTOR,AMBUJACEM
 NEW_NPPA_DRUG_PRICE_CONTROL,NEW,India NPPA/NLEM drug price control and trade-margin regulation,+1 = one tightening step (NLEM expansion or trade-margin cap),,,,POLICY,APOLLOHOSP
 NEW_CONSUMER_DURABLES_PRICE_WAR,NEW,Consumer durables category promotional / discount intensity,"+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances",,,,FACTOR,ASIANPAINT
@@ -397,6 +402,7 @@ NEW_ORAL_CARE_COMPETITION,NEW,"Oral-care competition intensity (HUL, Dabur, Pata
 NEW_RAIL_FREIGHT_TARIFF,NEW,Indian Railways freight/haulage tariff changes,+1 = +5% haulage/terminal access charges,,,,POLICY,CONCOR
 NEW_CONTAINER_LOGISTICS_COMPETITION,NEW,Private container train operators and road competition,+1 = 2pp rail container market share loss for CONCOR,,,,THEME,CONCOR
 NEW_GENSET_PRICE_COMPETITION,NEW,Genset / engine price competition in India,+5 pp realised-price erosion in the domestic genset/engine market,,,,FACTOR,CUMMINSIND
+NEW_CEMENT_PRICE,NEW,Cement price (India),+5% cement price,,,,FACTOR,DLF
 NEW_POWER_EQUIP_CAPACITY,NEW,Power/T&D equipment capacity additions vs demand (pricing pressure),+1 = peer capacity additions outpace demand enough to cut order pricing/margins ~100 bp,,,,FACTOR,ENRIN
 NEW_P_DRUG_PRICE_CONTROL,NEW,"India drug/medical-product price control and trade-margin caps (NPPA, MRP caps)",+1 = one tightening step (e.g. 30% cancer-drug price cut or broad 16% MRP-over-cost cap),,,,POLICY,FORTIS
 NEW_PNGRB_TARIFF,NEW,PNGRB gas pipeline tariff regulation,+1 = tariff cut / unified-tariff reduction of ~10%,,,,POLICY,GAIL
@@ -407,6 +413,7 @@ NEW_BROKER_PRICING,NEW,Retail broking fee/pricing pressure,+1 = broad fee cut or
 NEW_DEFENCE_PRIVATE_COMPETITION,NEW,Private/foreign competition for large Indian military aircraft programmes,+1 = a major aircraft/helicopter programme awarded to a non-HAL player,,,,FACTOR,HAL
 NEW_SEBI_MF_FEE_REG,NEW,SEBI mutual fund fee / TER / brokerage regulation,-5bp on active-equity gross fee yield,,,,POLICY,HDFCAMC
 NEW_AMC_COMPETITION,NEW,"AMC competition intensity (passives, new entrants)",+1 = 0.5pp loss of active-equity AUM market share,,,,THEME,HDFCAMC
+NEW_ALUMINA_PRICE,NEW,Alumina price (FOB Australia),+15% alumina,,,,FACTOR,HINDALCO
 NEW_OMC_COMPENSATION,NEW,Government compensation to OMCs for fuel/LPG under-recoveries,"+1 = Rs25,000 cr compensation to oil marketing companies",,,,POLICY,HINDPETRO
 NEW_PGM_PRICES,NEW,Platinum-group metal prices (Pt/Pd/Rh) for catalytic converters,+10% basket price,,,,FACTOR,HYUNDAI
 NEW_PV_SUV_COMPETITION,NEW,Intensity of new-model competition in India passenger vehicles,+1 = major new-model wave by rivals (about -1pp share for incumbent),,,,FACTOR,HYUNDAI
@@ -417,25 +424,30 @@ NEW_AIRCRAFT_ENGINE_SUPPLY,NEW,Aircraft/engine supply disruption,+1 = further en
 NEW_TOWER_TENANCY_EXITS,NEW,Net tenancy exits from towers (Jio/others),"+1 = 5,000 net tenancy exits",,,,THEME,INDUSTOWER
 NEW_RAIL_TICKET_FEE_POLICY,NEW,Railway convenience-fee / ticketing / catering policy,"+1 = tightening (cuts convenience fees, opens ticketing to agents, or changes catering contracts)",,,,POLICY,IRCTC
 NEW_CABLE_NEW_ENTRANT_PRICING,NEW,New-entrant pricing pressure in wires & cables,+1 = incumbent W&C gross margin -100 bp industry-wide,,,,THEME,KEI
+NEW_P_PHARMA_MARKETING_PRICE_REG,NEW,"India pharma marketing-practice and trade-margin/MRP regulation (UCPMP, NPPA)","+1 = one tightening step (binding marketing code, trade-margin or MRP cap)",,,,POLICY,MANKIND
 NEW_COPRA_COCONUT_OIL,NEW,Copra / coconut oil price,+15% copra price,,,,FACTOR,MARICO
 NEW_DEFENCE_SHIPYARD_COMPETITION,NEW,Competition among Indian shipyards for major naval programmes,+1 = a major naval programme awarded to a competing yard,,,,FACTOR,MAZDOCK
 NEW_COMMODITY_EXCHANGE_COMPETITION,NEW,Competition in commodity derivatives,+1 = credible entrant/launch capturing ~10% of bullion/energy options volume,,,,FACTOR,MCX
 NEW_US_AUTO_PARTS_TARIFFS,NEW,US tariffs on imported autos and auto parts (incl. Mexico/USMCA),+10pp average tariff,,,,POLICY,MOTHERSON
 NEW_GOLD_LOAN_COMPETITION,NEW,"Gold-loan competitive intensity (bank/NBFC entry, yield compression)",+1 = ~100bp industry gold-loan yield compression or ~3pp share shift to banks/new entrants,,,,FACTOR,MUTHOOTFIN
 NEW_BEAUTY_RETAIL_COMPETITION,NEW,"Beauty retail competition intensity (Tira, Sephora, Purplle, quick commerce)",+1 = materially sharper discounting/expansion by rival beauty retailers and q-commerce,,,,FACTOR,NYKAA
+NEW_ORACLE_PARENT_STRESS,NEW,Oracle Corp credit / AI-capex stress,"+1 = one stress episode (force majeure, debt negotiation headlines), roughly -5% for OFSS",,,,THEME,OFSS
 NEW_CRUDE_WINDFALL_TAX_IN,NEW,Windfall (SAED) tax on domestic crude,"+1 = SAED reimposed at ~Rs10,000/tonne",,,,POLICY,OIL
 NEW_INNERWEAR_COMPETITION,NEW,Innerwear share competition (mass and D2C),+1 = 2pp share loss to rivals,,,,THEME,PAGEIND
 NEW_EDIBLE_OIL_IMPORT_DUTY,NEW,India effective import duty on crude edible oils,+5 pp effective import duty on crude palm/soy/sunflower oil,,,,POLICY,PATANJALI
+NEW_UPI_MDR,NEW,UPI merchant discount rate / incentive policy,+1 = MDR or take-rate introduced on UPI merchant payments (~+5bp),,,,POLICY,PAYTM
 NEW_BANK_INFRA_LENDING_COMPETITION,NEW,Bank competition in power/infrastructure lending,+1 = banks take ~5pp of power/infra lending share or compress spreads ~25bp,,,,FACTOR,PFC
 NEW_AGROCHEM_PRICES_GLOBAL,NEW,Global agrochemical prices and channel destocking,+10% global agchem active prices / volumes,,,,FACTOR,PIIND
 NEW_WC_COMPETITIVE_INTENSITY,NEW,Competitive intensity in Indian wires & cables,+1 = new entrants/capacity cause ~100 bp sustained W&C margin erosion,,,,FACTOR,POLYCAB
 NEW_SOLAR_CELL_MODULE_PRICE,NEW,Indian solar module / cell realisations,+10% Indian module/cell realisations,,,,FACTOR,PREMIERENE
 NEW_STATE_LIQUOR_POLICY,NEW,State excise / liquor pricing policy (key states),"+1 = adverse change in excise duty or pricing in UP, Rajasthan, Karnataka, Maharashtra",,,,POLICY,RADICO
 NEW_REFRIGERANT_PRICES,NEW,Global refrigerant gas prices,+10% HFC/HFO refrigerant prices,,,,FACTOR,SRF
+NEW_US_GENERIC_PRICING,NEW,US generic drug price erosion,+5 pp faster annual price erosion in US generics,,,,FACTOR,SUNPHARMA
 NEW_WTG_PRICING_COMPETITION,NEW,Wind-turbine pricing competition,+1 = realised WTG price per MW -5%,,,,THEME,SUZLON
 NEW_QCOMMERCE_COMPETITION,NEW,"Quick-commerce competitive intensity (Blinkit, Zepto, Flipkart Minutes, Amazon)",+1 = materially faster dark-store expansion/discounting by rivals,,,,FACTOR,SWIGGY
 NEW_ENTERPRISE_CONNECTIVITY_PRICING,NEW,Enterprise connectivity pricing pressure,+1 = 5% decline in MPLS/SD-WAN/IZO prices,,,,THEME,TATACOMM
 NEW_INDIA_CV_SHARE_PRESSURE,NEW,Market-share pressure in Indian medium and heavy CVs,+1 = 2 pp market share loss to competitors,,,,FACTOR,TMCV
+NEW_US_TARIFF_UK_EU_AUTOS,NEW,US tariff on UK/EU-built passenger vehicles,+10pp tariff on UK/EU autos entering the US,,,,POLICY,TMPV
 NEW_VALUE_FASHION_COMPETITION,NEW,Value-fashion and mass-retail competition intensity,"+1 = materially sharper expansion/discounting by Reliance Trends/Yousta, Max, Style Union, Myntra, V-Mart",,,,FACTOR,TRENT
 NEW_STATE_EXCISE_ALCOHOL,NEW,State excise / pricing policy for alcohol,+1 = adverse change of Maharashtra/Karnataka scale (Popular NSV about -20%),,,,POLICY,UNITDSPR
 NEW_CSD_PRICE_COMPETITION,NEW,"Soft-drink price competition intensity (Coca-Cola, Campa, regional)",+1 = materially sharper discounting/ad spend in carbonated soft drinks,,,,FACTOR,VBL

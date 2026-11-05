@@ -1,17 +1,18 @@
 {
- "nodes": 441,
- "new_nodes": 63,
- "edges": 1867,
+ "nodes": 453,
+ "new_nodes": 75,
+ "edges": 2240,
  "edges_by_layer": {
-  "company": 1691,
-  "event_edges": 133,
-  "company_link": 40,
+  "company": 1940,
+  "backbone": 174,
+  "event_edges": 78,
+  "company_link": 45,
   "director": 3
  },
- "edges_dropped_unknown_or_industry": 0,
+ "edges_dropped_unknown_or_industry": 5,
  "events": 161,
  "occurred_events": 61,
- "profiles": 145,
+ "profiles": 166,
  "empirical_sign_conflicts": 2,
  "assumptions": {
   "damping": {

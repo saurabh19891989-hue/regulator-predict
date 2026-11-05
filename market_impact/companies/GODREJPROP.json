@@ -1,0 +1,488 @@
+{
+ "name": "Godrej Properties Ltd.",
+ "industry": "I_REAL_ESTATE",
+ "tier": "MIDCAP_100",
+ "business_summary": "Godrej Group's listed real-estate developer; asset-light model (JDA, development management, outright land) across Mumbai, NCR, Bengaluru, Pune, Hyderabad, Kolkata and others. FY27 bookings targeted at a record Rs 41,500 cr (+22%) per Pirojsha Godrej (Fortune India 2026-10-25), with Rs 32,000 cr of launches planned in H2 FY27. Q2 FY27 PAT fell 62% to Rs 154 cr on lumpy revenue recognition though collections were a record; Rs 70 cr one-off from a Gurugram settlement hit sentiment in September. Market cap Rs 54,386 cr, P/E 39.8.",
+ "revenue_mix": [
+  {
+   "segment": "Residential real estate (bookings-led, reported on completion)",
+   "share_pct": 97,
+   "geography": "Mumbai MMR, NCR, Bengaluru, Pune, Hyderabad (model estimate of split)"
+  },
+  {
+   "segment": "Annuity/commercial, fees, other",
+   "share_pct": 3,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "NEW_CEMENT_PRICE",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "GODREJPROP",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 3.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Pure-play resi developer (>90% of value; asset-light JDA/DM model, top-3 by bookings). +10% market volume -> GPL bookings +10% (pipeline-driven, 8-10 cities) -> revenue/EBITDA +10% with ~25% project margin and operating leverage 1.3x -> EBITDA +13%; EV/MCap ~1.35 (net debt plus customer advances), persistence 0.5 => ~+6. Anarock: top-7 city sales +3% y/y only in Jul-Sep 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Godrej+Properties+plans+32000+crore+launches+H2+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "CEO (Business Standard 2026-10-23): Rs 32,000 cr project launches planned in H2 FY27; Pirojsha Godrej (Fortune India 2026-10-25): FY27 bookings seen +22% to record Rs 41,500 cr"
+    },
+    {
+     "source": "market_impact/data/packs/GODREJPROP.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "GODREJPROP",
+   "relation": "discount_rate",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "Repo 5.50% after the 2026-10-07 hike. +25 bp: mid-premium buyer EMI +2%, elasticity -0.7 -> volumes -1.4% -> value -1.5%; developer borrowing cost +25 bp on ~Rs 8-9k cr net debt (model estimate) = Rs 21 cr (<2% of TTM PAT) -> -0.5; sentiment/multiple (P/E 40, beta ~2.0) -> -1.5. Total ~ -3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "India Today 2026-09-21: analysts see up to 50 bp more by December; The Hindu 2026-09-18: two hikes possible in CY2026 (pre-decision views)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "GODREJPROP",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Developer bonds/NCDs and construction finance priced off spreads; +50 bp on ~Rs 8k cr gross refinancing need ~Rs 40 cr -> ~-0.8 after 40% share rolling in 12m.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODREJPROP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 54,386 cr, P/E 39.8, P/B 2.8, price 1,806 (52w 1,434-2,337); TTM PAT Rs 1,334 cr on revenue Rs 6,398 cr; reported operating profit negative (-Rs 437 cr TTM) due to JV/ Ind AS 115 recognition"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GODREJPROP",
+   "relation": "macro_transmission",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Market beta 2.07 (pack, vs Nifty 50). +US$5bn inflow ~ +1.5% index x beta 2.0 = +3.0; stock -13% in 3m, -21% in 12m so foreign sentiment is the swing.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GODREJPROP.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    },
+    {
+     "source": "https://www.screener.in/company/GODREJPROP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 54,386 cr, P/E 39.8, P/B 2.8, price 1,806 (52w 1,434-2,337); TTM PAT Rs 1,334 cr on revenue Rs 6,398 cr; reported operating profit negative (-Rs 437 cr TTM) due to JV/ Ind AS 115 recognition"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "GODREJPROP",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "DII support to quality mid-caps: +10% flows -> +0.5% bid x beta 2.0 => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GODREJPROP.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "GODREJPROP",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Mix shifting to premium/luxury (Marine Lines Mumbai Rs 6,000 cr project added 2026-09-27) lifts realisations; GPL's portfolio spans mid to luxury so exposure is lower than DLF/Oberoi => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Godrej+Properties+Marine+Lines+6000+crore+project+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Marine Lines Mumbai luxury project, GDV Rs 6,000 cr (HDFC Sky/Upstox 2026-09-27/28)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "GODREJPROP",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+5pp urban consumption/wealth -> mid/upper-income housing demand +1.5pp -> bookings -> +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODREJPROP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 54,386 cr, P/E 39.8, P/B 2.8, price 1,806 (52w 1,434-2,337); TTM PAT Rs 1,334 cr on revenue Rs 6,398 cr; reported operating profit negative (-Rs 437 cr TTM) due to JV/ Ind AS 115 recognition"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "GODREJPROP",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Construction ~45% of revenue, steel ~12% -> 5.4% of revenue; +7% steel -> +0.38% of revenue; exposure on unsold/new launches (~50% of cost base, given heavy H2 launches Rs 32,000 cr) -> EBITDA ~-0.8% at ~25% margin; persistence 0.3, EV/MCap 1.35 => ~-0.6 after weighting uncertainty.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODREJPROP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 54,386 cr, P/E 39.8, P/B 2.8, price 1,806 (52w 1,434-2,337); TTM PAT Rs 1,334 cr on revenue Rs 6,398 cr; reported operating profit negative (-Rs 437 cr TTM) due to JV/ Ind AS 115 recognition"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CEMENT_PRICE",
+   "dst": "GODREJPROP",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Cement ~10% of construction = 4.5% of revenue; +5% -> 0.23% of revenue; same exposure logic as steel => ~-0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODREJPROP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 54,386 cr, P/E 39.8, P/B 2.8, price 1,806 (52w 1,434-2,337); TTM PAT Rs 1,334 cr on revenue Rs 6,398 cr; reported operating profit negative (-Rs 437 cr TTM) due to JV/ Ind AS 115 recognition"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "GODREJPROP",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Labour ~25% of construction cost; +2pp wage inflation -> cost +0.5%; exposure 50% => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODREJPROP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 54,386 cr, P/E 39.8, P/B 2.8, price 1,806 (52w 1,434-2,337); TTM PAT Rs 1,334 cr on revenue Rs 6,398 cr; reported operating profit negative (-Rs 437 cr TTM) due to JV/ Ind AS 115 recognition"
+    }
+   ]
+  },
+  {
+   "src": "P_HOUSING_POLICY",
+   "dst": "GODREJPROP",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = stronger support (stamp duty, redevelopment/FSI incentives, RERA easing); Mumbai/Pune/NCR/Bengaluru wide footprint and redevelopment pipeline gives broader policy leverage => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "GODREJPROP",
+   "relation": "policy_effect",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Higher property/equity capital-gains taxes reduce investor demand (30-40% of mid-premium purchases are investors, model estimate) -> -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/GODREJPROP/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 54,386 cr, P/E 39.8, P/B 2.8, price 1,806 (52w 1,434-2,337); TTM PAT Rs 1,334 cr on revenue Rs 6,398 cr; reported operating profit negative (-Rs 437 cr TTM) due to JV/ Ind AS 115 recognition"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "GODREJPROP",
+   "relation": "regulatory_risk",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Higher bank risk weights on construction/real-estate exposure raise project funding costs and cut buyer loans => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "GODREJPROP",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Prior: stronger dollar -> FPI outflow -> negative. DISAGREES with data: pack shows +3.27 per +3% DXY, t=+2.8 (market beta 2.07); likely a regime coincidence (DXY up when rate-hike hopes lifted Indian cyclicals), so weight shrunk toward zero and range spans positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GODREJPROP.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "GODREJPROP",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -0.4,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Domestic business; NRI demand (~10% of presales, model estimate) gets cheaper with weak rupee (94.5). Pack: -2.52 per +3% USD/INR, t=-1.4 (not significant, opposite sign), so confidence low.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GODREJPROP.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Landowners / JDA partners",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "JDA/DM reduces upfront land capital"
+  },
+  {
+   "counterparty": "Godrej Industries / Godrej family (promoter)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "promoter group; Godrej Consumer (GODREJCP) is sister company in same group"
+  },
+  {
+   "counterparty": "Homebuyers (mid-premium, investors, NRIs)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "EMI-sensitive"
+  },
+  {
+   "counterparty": "DLF / Lodha / Prestige / Oberoi",
+   "ticker": "DLF",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "launch competition in Mumbai/NCR/Bengaluru"
+  },
+  {
+   "counterparty": "Contractors, steel and cement suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "construction-cost pass-through limited on unsold stock"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11/2027-03",
+   "event": "H2 FY27 launches of ~Rs 32,000 cr; sell-through test for FY27 bookings target Rs 41,500 cr",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Godrej+Properties+plans+32000+crore+launches+H2+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI December MPC (second hike risk) - macro event, sensitivity only",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.5,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 business update (bookings) and results (date model-estimated; Q2 results were 2026-10-23)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Godrej+Properties+Q2+FY27+results+net+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12/2027-03",
+   "event": "New land/JDA additions (company typically adds Rs 15-20k cr GDV quarterly; headline Marine Lines Rs 6,000 cr)",
+   "type": "capex",
+   "prob": 0.85,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Godrej+Properties+Gurugram+settlement+70+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-05",
+   "event": "FY27 results: bookings vs Rs 41,500 cr target, FY28 guidance",
+   "type": "guidance",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "https://news.google.com/rss/search?q=Godrej+Properties+plans+32000+crore+launches+H2+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 1,935 cr (screener), PAT Rs 145-154 cr (-62% y/y), record collections, sales volumes below expectation",
+  "trend": "Earnings lumpy and weak, bookings guidance strong; stock -13% 3m, -21% 12m but +12% in last month (rebound after Nomura upgrade).",
+  "valuation": "P/E 39.8, P/B 2.8, ROE 8.8%, ROCE 7.6%, div yield 0.57%; 52w 1,434-2,337.",
+  "recent_developments": [
+   "2026-10-26 Nomura upgrades to Buy, TP cut to Rs 1,900",
+   "2026-10-25 Fortune India: FY27 bookings seen +22% to Rs 41,500 cr",
+   "2026-10-23 Q2 results: PAT -62%, shares -6%",
+   "2026-09-27 Marine Lines Rs 6,000 cr project",
+   "2026-09-11 Rs 70 cr Gurugram settlement impact, stock -7%, Nifty Realty -4%",
+   "2026-10-07 RBI repo hike to 5.50%"
+  ]
+ },
+ "key_risks": [
+  "Sell-through of record H2 launches falls short",
+  "Rate hikes cut mid-segment affordability",
+  "Earnings lumpiness/one-offs (settlements) trigger derating",
+  "Land-acquisition competition raises costs",
+  "Governance/legal disputes on projects"
+ ],
+ "upside_triggers": [
+  "Bookings beat Rs 41,500 cr trajectory",
+  "RBI pause",
+  "FPI re-entry into mid-cap realty",
+  "Large JDA/land wins at attractive terms"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CEMENT_PRICE",
+   "type": "FACTOR",
+   "name": "Cement price (India)",
+   "ssu": "+5% cement price"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Godrej+Properties+Q2+FY27+results+net+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 results coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Godrej+Properties+plans+32000+crore+launches+H2+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-25",
+   "what": "FY27 bookings and launch plans"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Godrej+Properties+Gurugram+settlement+70+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-11",
+   "what": "Gurugram settlement and sector sell-off"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Nomura+upgrades+Godrej+Properties+Buy+target+1900+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "Nomura upgrade"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-28",
+   "what": "Anarock housing sales"
+  },
+  {
+   "url": "https://www.screener.in/company/GODREJPROP/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals via pack"
+  }
+ ],
+ "ticker": "GODREJPROP",
+ "as_of": "2026-11-05"
+}

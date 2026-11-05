@@ -47,7 +47,7 @@ P_US_VISA_OUTSOURCING,0.9,events
 T_GENAI_SERVICES,1.0,events
 P_FDI_RULES,0.5,events
 C_US_CHINA_DECOUPLING,-0.1,events
-C_EU_UK,0.22,events
+F_EU_GDP,0.22,events
 F_SHIPPING_RATES,0.3,events
 NEW_USDJPY,-0.5,events
 F_AI_CAPEX,-0.3,events

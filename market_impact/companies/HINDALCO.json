@@ -1,0 +1,394 @@
+{
+ "name": "Hindalco Industries Ltd.",
+ "industry": "I_NONFERROUS",
+ "business_summary": "Aditya Birla Group metals flagship. Integrated India aluminium (captive bauxite/coal, Utkal and Aditya refineries, smelters, downstream rolled, foil, extrusions), copper smelter and recycling, plus Novelis, the world's largest aluminium rolled-products and can-sheet maker (N. America, Europe, Asia, S. America). Q1 FY27 (Jun 2026) sales Rs84,825 cr, EBITDA Rs13,932 cr (16%), record PAT Rs7,013 cr. TTM sales Rs295,537 cr, EBITDA Rs40,903 cr, PAT Rs16,400 cr; market cap Rs2.11 lakh cr; Q2 FY27 results due 2026-11-06.",
+ "revenue_mix": [
+  {
+   "segment": "Novelis (rolled products, recycling)",
+   "share_pct": 55,
+   "geography": "N. America ~half of Novelis, Europe, Asia, S. America (model knowledge)"
+  },
+  {
+   "segment": "India aluminium upstream + downstream",
+   "share_pct": 28,
+   "geography": "India majority, exports ~30-35% (model knowledge)"
+  },
+  {
+   "segment": "Copper",
+   "share_pct": 15,
+   "geography": "India plus exports of cathode/rods"
+  },
+  {
+   "segment": "Other",
+   "share_pct": 2,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 35
+  },
+  {
+   "input": "F_COAL_INDIA",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 3
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "HINDALCO",
+   "relation": "output_price",
+   "w": 6.0,
+   "w_low": 3.5,
+   "w_high": 8.5,
+   "lag": "0-3m",
+   "mechanism": "Upstream India aluminium (primary ~1.3 Mt/yr, model knowledge) sold at LME-linked prices; +10% LME (~+$320/t at $3,200) x ~1.3 Mt x Rs94.5 = ~Rs3,900 cr/yr, ~10% of TTM EBITDA Rs40,903 cr (hedging/lags trim this). EV/MCap ~1.35 (net debt incl. Novelis, model knowledge), persistence 0.5 => ~+6.7, trimmed for hedges. Q1 FY27 India upstream EBITDA ~Rs7,400 cr (53% of consolidated Rs13,932 cr). Agrees with pack empirical +5.45 (t=+7.3).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hindalco+Q1+FY27+results+Novelis+India+aluminium+EBITDA+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "note": "AL Circle: Rs74 bn upstream aluminium EBITDA in Q1 FY27"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Hindalco+MD+aluminium+%243%2C200-3%2C400+per+tonne+Novelis+FY27+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "note": "CNBC TV18: MD sees aluminium at $3,200-3,400/t"
+    },
+    {
+     "source": "market_impact/data/packs/HINDALCO.md",
+     "date": "2026-11-05",
+     "note": "empirical +5.45 per +10% aluminium, t=+7.3"
+    }
+   ]
+  },
+  {
+   "src": "NEW_ALUMINA_PRICE",
+   "dst": "HINDALCO",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "Hindalco is roughly self-sufficient to net-long alumina (Utkal and Aditya refineries, model knowledge), so a +15% alumina spike raises purchased-input cost only for the shortfall and Novelis is not alumina-linked; small net effect, sign uncertain (net sellers gain). Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hindalco+alumina+strategy+AluChem+terminated+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "Business Today: alumina strategy unchanged after AluChem exit"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "HINDALCO",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Power/fuel ~30% of smelting cost; captive coal blocks cover roughly half of coal need (model knowledge). +10% coal ~ +1.5-2% aluminium cash cost ~ $40/t x 1.3 Mt x 94.5 = ~Rs490 cr = ~1.2% EBITDA; x1.35 x0.5 => ~-0.8, widened for the uncovered portion.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDALCO.md",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 OPM 16% vs 12% year ago; cost split not in pack"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "HINDALCO",
+   "relation": "output_price",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Copper smelter earns TC/RC and by-products (~Rs1,800-2,000 cr EBITDA/yr, model knowledge) with little direct LME exposure; stock tracks copper as a metals-basket proxy (empirical +2.42, t=+3.5, mostly co-movement). Weight kept low to avoid double counting with F_ALUMINIUM.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hindalco+Q2+FY27+expectations+Novelis+recovery+copper+earnings+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Trade Brains preview: copper earnings a Q2 driver"
+    },
+    {
+     "source": "market_impact/data/packs/HINDALCO.md",
+     "date": "2026-11-05",
+     "note": "empirical +2.42 per +10% copper, t=+3.5"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HINDALCO",
+   "relation": "fx_translation",
+   "w": 1.8,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "India aluminium revenue (~Rs41k cr at LME x FX) is USD-linked while ~35% of costs are INR; +3% INR depreciation adds ~Rs800-1,200 cr EBITDA net, plus Novelis EBITDA translated up (~Rs470 cr), minus USD debt revaluation. Net ~+3% EBITDA x1.35 x0.5-0.75 => ~+2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDALCO.md",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49 (factor_state): rupee 6.5% weaker over 12m"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "HINDALCO",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Novelis (~55% of group sales, N. America about half of Novelis) sells beverage-can, automotive and specialty sheet; +1pp US growth lifts volumes ~1% and EBITDA/tonne via mix => ~+1.5% equity. Oswego hot-mill recovery is the idiosyncratic swing.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Novelis+Q1FY27+net+income+net+debt+EBITDA+per+tonne+improve+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-08",
+     "note": "scanx: Novelis Q1 FY27 net income +71% to $164M"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Novelis+first+coil+Alabama+greenfield+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Novelis produced first coil at Bay Minette plant"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "HINDALCO",
+   "relation": "regulatory_risk",
+   "w": -0.4,
+   "w_low": -1.5,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Direct India-to-US exports are small and Novelis US production is largely domestic, so tariff exposure runs through aluminium duties / Midwest premium, which is mixed for Novelis (scrap spread up, can-sheet pricing sticky). Low weight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Hindalco+Novelis+tariff+2026+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "Trade Brains: Novelis drives revenue growth but creates risks"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HINDALCO",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Consolidated interest Rs3,692 cr TTM; mostly fixed/USD debt so the earnings channel is small; discount-rate channel for a beta~1 cyclical dominates: +25bp repo => ~-0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDALCO.md",
+     "date": "2026-11-05",
+     "note": "TTM interest Rs3,692 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "HINDALCO",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "India downstream (foil, extrusions, rolled, copper cathode/rods, ~15% of EBITDA) grows ~1.5x GDP; +1pp GDP => +1.5% volumes => ~+1.2% equity including operating leverage.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDALCO.md",
+     "date": "2026-11-05",
+     "note": "TTM sales Rs295,537 cr, +20%"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "HINDALCO",
+   "relation": "geopolitical_exposure",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation hits Gulf smelters (EGA Al Taweelah restarting, 50% done 2026-10-21), lifting aluminium (captured in F_ALUMINIUM), but raises caustic soda, CP coke, LNG and freight costs and triggers risk-off in cyclicals. Net of the aluminium channel: mildly negative; de-escalation and full Al Taweelah restart (Q1 2027) are the current price headwind.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Aluminium+LME+price+outlook+EGA+Al+Taweelah+restart+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "CNBC TV18: EGA restarts 50% of smelter; Axis sees $2,800 in CY27"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Aluminium+LME+price+outlook+EGA+Al+Taweelah+restart+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "AL Circle: aluminium futures $3,050, lowest since February"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "HINDALCO",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "New broad duties on Chinese aluminium flat-rolled/foil imports support India downstream margins (downstream ~15% of EBITDA). No specific 2026 action found; model knowledge.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HINDALCO.md",
+     "date": "2026-11-05",
+     "note": "no specific 2026 duty action found"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Novelis Inc. (wholly owned)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~55% of revenue, ~40% of EBITDA (model knowledge); Oswego recovery, Bay Minette first coil 2026-10-07"
+  },
+  {
+   "counterparty": "Vedanta Aluminium",
+   "ticker": "VEDL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "largest Indian primary peer"
+  },
+  {
+   "counterparty": "National Aluminium Co.",
+   "ticker": "NATIONALUM",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "PSU aluminium/alumina peer"
+  },
+  {
+   "counterparty": "Coal India / captive coal blocks",
+   "ticker": "COALINDIA",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "linkage coal for power; covered by F_COAL_INDIA"
+  },
+  {
+   "counterparty": "Can makers, auto OEMs",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Novelis beverage-can and auto sheet customers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-06",
+   "event": "Q2 FY27 results (record Q1 PAT Rs7,013 cr is the bar; LME aluminium eased vs Q1)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Hindalco+Q2+Results+on+Nov+6+record+Rs+7%2C013+crore+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "EGA Al Taweelah smelter at full output (target Q1 2027) pressures LME aluminium",
+   "type": "other",
+   "prob": 0.7,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=EGA+Al+Taweelah+restart+full+production+Q1+2027+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results and Novelis net-debt reduction milestones",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "pattern: Q1 on 2026-08-07, Q2 on 2026-11-06"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs84,825 cr (+32% YoY), EBITDA Rs13,932 cr (OPM 16%), PAT Rs7,013 cr (+75%); Q2 pending 2026-11-06",
+  "trend": "Record earnings on high aluminium (~$3,200-3,400) and Novelis recovery; LME has since slid to ~$3,050-3,200 and stock is -8.5% over 3m",
+  "valuation": "Mcap Rs2.11 lakh cr = ~12.9x TTM PAT Rs16,400 cr (screener shows P/E 10.1 on its own basis); P/B ~1.5",
+  "recent_developments": [
+   "2026-08-07: Q1 FY27 record PAT Rs7,013 cr (Moneycontrol, Fortune India)",
+   "2026-10-02: AluChem $125 mn acquisition terminated after closing delays (ET, Business Today)",
+   "2026-10-07: Novelis first coil at Alabama greenfield (Yahoo Finance)",
+   "2026-10-21/23: Nifty Metal -2%, Hindalco/NALCO/Vedanta -3% on EGA restart (Upstox, CNBC TV18)",
+   "2026-09-23: management sees EBITDA more than doubling in five years; CLSA Outperform (NDTV Profit)"
+  ]
+ },
+ "key_risks": [
+  "LME aluminium falls toward $2,800 as Gulf supply returns (Axis Capital CY27)",
+  "Novelis execution (Oswego, Bay Minette ramp) and leverage",
+  "Coal/caustic/energy cost inflation from West Asia conflict",
+  "US tariff regime on aluminium products"
+ ],
+ "upside_triggers": [
+  "Aluminium sustains >$3,300 on China capacity cap / Indian demand",
+  "Novelis net-debt reduction and EBITDA/t improvement",
+  "Strong Q2 print on 2026-11-06"
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/HINDALCO.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Jun 2026, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Hindalco+Q1+FY27+results+Novelis+India+aluminium+EBITDA+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-07",
+   "what": "Q1 FY27 results coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Aluminium+LME+price+outlook+EGA+Al+Taweelah+restart+2026+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-25",
+   "what": "EGA restart, aluminium price outlook"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Hindalco+Aluchem+acquisition+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-03",
+   "what": "AluChem termination"
+  }
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_ALUMINA_PRICE",
+   "type": "FACTOR",
+   "name": "Alumina price (FOB Australia)",
+   "ssu": "+15% alumina"
+  }
+ ],
+ "ticker": "HINDALCO",
+ "as_of": "2026-11-05",
+ "tier": "NIFTY_50",
+ "company_links": []
+}

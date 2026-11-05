@@ -1,0 +1,384 @@
+{
+ "industry": "I_INTERNET_PLATFORMS",
+ "business_summary": "One 97 Communications (Paytm): consumer wallet/UPI/QR app with merchant payments (soundboxes, POS devices), subscription revenue, and distribution of loans, insurance and wealth products via partners. Post-RBI PPBL curbs (2024) it relies on third-party payments banks for UPI. Q2 FY27 consolidated revenue Rs2,648cr (+28.5%), PAT ~Rs225cr, versus Rs21cr a year ago; Q1 FY27 GMV Rs7.1 lakh cr (+31%). Stock Rs1,797 (+50% in 6m, +42% in 12m), mcap Rs1.15 lakh cr, P/B ~8.5; Morgan Stanley upgraded and Bernstein is positive.",
+ "revenue_mix": [
+  {
+   "segment": "payments (merchant, consumer, subscriptions, devices)",
+   "share_pct": 62,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "financial services (loan/insurance/wealth distribution)",
+   "share_pct": 22,
+   "geography": "India"
+  },
+  {
+   "segment": "marketing/cloud/other",
+   "share_pct": 16,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_DIGITAL_PAYMENTS",
+   "dst": "PAYTM",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": ">12m",
+   "mechanism": "+1 digital-payments adoption: payments GMV +25% (Q1 FY27 GMV Rs7.1 lakh cr, +31%) and merchant devices/subscriptions grow; payment+device revenue ~65% of sales => revenue +5%, with operating leverage (opex ~92% of sales) EBITDA +25% x EV/MCap 0.9 x persistence 0.3 => ~+6; discounted to +4 because UPI take-rate is near zero.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/paytm-q2-fy27-results-net-profit-jumps-to-225-crore-as-revenue-rises-285",
+     "date": "2026-10-26",
+     "note": "Paytm Q2 FY27: consolidated PAT ~Rs225cr (vs Rs21cr), revenue from operations Rs2,648cr (+28.5% YoY), exchange filing 2026-10-26 (Free Press Journal/Inc42/Devdiscourse via search; Q1 FY27 PAT Rs220cr, GMV Rs7.1 lakh cr +31%)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_UPI_MDR",
+   "dst": "PAYTM",
+   "relation": "policy_effect",
+   "w": 6.0,
+   "w_low": 0.0,
+   "w_high": 14.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = government/RBI permits MDR or incentive on UPI merchant payments (currently 0% MDR; incentive scheme only). Paytm UPI P2M volume ~Rs7 lakh cr GMV/qtr (Q1 FY27); each 1bp take-rate on Rs28 lakh cr annual GMV = Rs28cr vs TTM PAT Rs618cr (screener); +5bp = +Rs140cr post-tax x EV/MCap 0.9 x persistence 0.6 => ~+6 central. Speculative; no proposal confirmed in fetched sources.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "PAYTM",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 tightening step on payment aggregators/wallets/KYC, or lending-partner norms (digital lending directions, FLDG caps): the earlier PPBL curbs show regulator risk; a new action hitting merchant-lending distribution (revenue ~20%) or PA licence would cut EBITDA -15% x persistence 0.5 => ~-3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "PAYTM",
+   "relation": "demand_driver",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "+1pp delinquencies on small-ticket loans distributed via partners (postpaid, personal loans, merchant loans; financial services ~15-20% of revenue, model): FLDG exposure and lower disbursement => EBITDA -8% x 0.9 x 0.5 => -2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "PAYTM",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+5pp urban consumption growth -> GMV +3% -> payment revenue +3% with leverage -> EBITDA +15% x 0.9 x 0.2 => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "PAYTM",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "0-3m",
+   "mechanism": "+$5bn/qtr: beta 0.44-0.64 per pack shows low market beta, but high flows-sensitivity of FII-held growth names (stock +50% in 6m, 52w high 2026-09-11) => +5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "PAYTM",
+   "relation": "macro_transmission",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: pack -1.06 per SSU (t -1.1); 40% annual volatility; -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PAYTM",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": -1.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp repo: Paytm holds ~Rs12-13k cr cash/treasury (model estimate) => +Rs30cr pre-tax interest (~+4% of TTM PAT Rs618cr) partly offset by lower partner-lending demand => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "PAYTM",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "+3pp bank credit growth -> partner banks/NBFCs distribute more loans via Paytm: loan-distribution revenue +8% x 20% of sales = +1.6% sales => +1.5 equity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "PAYTM",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "+5% S&P 500: pack +2.43 per SSU (t +1.5) as growth-tech sentiment; shrunk to +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "PAYTM",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "+1 GenAI: management cites AI-led cost savings and opportunities (Tribune/IANS Nov 2025 for Q2 FY26; Q2 FY27 not verified): opex -2% => EBITDA +20% x 0.9 x 0.15 => ~+1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "PAYTM",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": -1.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Pack +8.84 (t +2.5) with market beta 0.44: no business mechanism for coal; likely a regime artefact; shrunk by 90%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAYTM.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "NPCI / UPI rails",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "zero-MDR UPI; 30% market-share cap deadline 2026-12-31"
+  },
+  {
+   "counterparty": "Partner banks (Axis, HDFC, SBI, Yes, others)",
+   "ticker": "SBIN",
+   "role": "supplier",
+   "importance": "high",
+   "note": "PSP banks for UPI and lending partners (model knowledge; names unverified)"
+  },
+  {
+   "counterparty": "PhonePe, Google Pay",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "~80% UPI share combined"
+  },
+  {
+   "counterparty": "Little Internet (subsidiary, stake 77.42%)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "stake raised 2026-09-25 (Business Standard)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12-31",
+   "event": "NPCI 30% UPI market-share cap deadline for third-party apps (extension to date repeatedly deferred; no later change found)",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.businesstoday.in/tech-today/news/story/npci-extends-30-upi-market-share-cap-deadline-on-3rd-party-apps-to-december-2026-459171-2024-12-31"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date approximate; Q2 on 2026-10-26)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-11",
+   "event": "Investor meetings across four cities (announced 2026-11-03)",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=One+97+Communications+investor+meetings+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027",
+   "event": "Policy change on UPI MDR/incentives for merchant payments",
+   "type": "regulatory",
+   "prob": 0.1,
+   "impact_pct_low": 4.0,
+   "impact_pct_high": 15.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28 (UPI incentive allocation)",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "revenue Rs2,648cr (+28.5% YoY); PAT ~Rs225cr vs Rs21cr; screener (standalone) shows Sep-26 sales Rs1,199cr, PAT Rs169cr, OPM 7%; Q1 FY27 GMV Rs7.1 lakh cr",
+  "valuation": "price Rs1,797; mcap Rs1,15,426cr; BV Rs211 (P/B 8.5); P/E 192 on screener TTM; Bernstein, Emkay (Rs2,300), ICICI Sec (Rs1,945) targets",
+  "recent_developments": [
+   "2026-09-09 52-week high",
+   "2026-09-25 stake in Little Internet raised to 77.42%",
+   "2026-10-26 Q2 results, board meeting",
+   "2026-10-28 Morgan Stanley upgrade",
+   "2026-10-30 ICICI Sec Buy Rs1,945",
+   "2026-11-03 investor meetings in four cities"
+  ]
+ },
+ "key_risks": [
+  "RBI/NPCI regulation (PA, wallets, lending partners)",
+  "Zero-MDR UPI and no take-rate",
+  "Competition from PhonePe/Google Pay and bank apps",
+  "Valuation (P/B 8.5) after +90% from March low",
+  "Credit stress in distributed small loans"
+ ],
+ "upside_triggers": [
+  "MDR/incentive on UPI merchant payments",
+  "Enforcement of the 30% share cap",
+  "Loan distribution recovery",
+  "Profitability trend (PAT margin ~8%)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_UPI_MDR",
+   "type": "POLICY",
+   "name": "UPI merchant discount rate / incentive policy",
+   "ssu": "+1 = MDR or take-rate introduced on UPI merchant payments (~+5bp)"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.freepressjournal.in/business/paytm-q2-fy27-results-net-profit-jumps-to-225-crore-as-revenue-rises-285",
+   "date": "2026-10-26",
+   "what": "Q2 FY27 headline numbers (search summaries)"
+  },
+  {
+   "url": "https://www.businesstoday.in/tech-today/news/story/npci-extends-30-upi-market-share-cap-deadline-on-3rd-party-apps-to-december-2026-459171-2024-12-31",
+   "date": "2024-12-31",
+   "what": "NPCI cap deadline"
+  },
+  {
+   "url": "market_impact/data/packs/PAYTM.md",
+   "date": "2026-11-05",
+   "what": "pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ],
+ "ticker": "PAYTM",
+ "name": "One 97 Communications Ltd.",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

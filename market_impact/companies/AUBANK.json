@@ -1,0 +1,389 @@
+{
+ "ticker": "AUBANK",
+ "name": "AU Small Finance Bank Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PRIVATE_BANKS",
+ "tier": "NIFTY_200",
+ "business_summary": "Jaipur-based small finance bank moving to universal-bank status; vehicle loans (Wheels AUM above Rs50,000cr), SME, mortgages, credit cards and ex-Fincare microfinance (MFIB, 1,000+ branches). Q2 FY27 PAT Rs858cr (+53%), but shares fell 7-10% on 2026-10-26 as management flagged margin pressure. Shareholding: promoters 22.7%, FIIs 36%, DIIs 32.8%; RBI approved ICICI Prudential AMC buying up to 9.95%. Probing a potential data leak (vehicle-loan customers, 2026-10-30). Stock Rs941, P/E 22.4x, P/B 3.3x, 3m -13%, 12m +7%.",
+ "revenue_mix": [
+  {
+   "segment": "vehicle finance (Wheels)",
+   "share_pct": 38,
+   "geography": "Rajasthan and north/west heartland, expanding pan-India (model est.)"
+  },
+  {
+   "segment": "SME, commercial and mortgage",
+   "share_pct": 35,
+   "geography": "India"
+  },
+  {
+   "segment": "microfinance, cards, personal, other",
+   "share_pct": 27,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 50
+  },
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 25
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "AUBANK",
+   "relation": "funding_cost",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Mostly fixed-rate vehicle/SME assets (~70%; model est.) vs term deposits repricing: floating assets 0.3 x Rs1.3 lakh cr x 25bp = Rs98cr/yr; deposit repricing on ~Rs1.0 lakh cr of TDs at ~70% beta => Rs175cr; net -Rs77cr = -1.8% of PBT (~Rs4,200cr); persistence 0.5 => -0.9; P/E 22x multiple effect => -2.5. Management flagged margin pressure on the Q2 call (stock -7 to -10% on 2026-10-26).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+Q2+profit+jumps+53%25+to+858+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "Q2 FY27 PAT Rs858cr (+53%) (Moneycontrol/The Hindu 2026-10-24); shares fell 7-10% on 2026-10-26 after management flagged margin pressure (CNBC TV18/ET/Livemint 2026-10-26); Jefferies and Motilal see up to 37% upside"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    },
+    {
+     "source": "market_impact/data/packs/AUBANK.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "AUBANK",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "AU funds ~85% from deposits (term-deposit heavy, universal-bank transition aims to raise CASA); +3pp system deposit growth eases competition for retail TDs => cost of funds -8bp => NII +2% => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+universal+bank+licence+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "AU SFB 'new universal bank licence' (Trade Brains 2026-09-23); RBI approves ICICI Prudential AMC buying up to 9.95% (Sahi 2026-09-09); stage of licence not independently verified"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "AUBANK",
+   "relation": "funding_cost",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr liquidity lowers marginal TD pricing ~7bp => +1.5% PBT x 0.5 + sentiment => +1; currently the RBI is draining liquidity (CRR maintenance raised to 99%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+raises+banks+daily+CRR+maintenance+requirement+excess+liquidity+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "RBI raised daily CRR maintenance to 99% to drain surplus liquidity; surplus shrinking on tax outflows (CNBC TV18 2026-10-09; Rediff 2026-10-23)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "AUBANK",
+   "relation": "demand_driver",
+   "w": -7.0,
+   "w_low": -12.0,
+   "w_high": -3.5,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost on ~Rs1.3 lakh cr (model est.) = Rs650cr = 15% of PBT; persistence 0.5 => -7.5; vehicle, SME and ex-Fincare MFI books are cyclical and sensitive to local liquidity => -7.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+Q2+profit+jumps+53%25+to+858+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "Q2 FY27 PAT Rs858cr (+53%) (Moneycontrol/The Hindu 2026-10-24); shares fell 7-10% on 2026-10-26 after management flagged margin pressure (CNBC TV18/ET/Livemint 2026-10-26); Jefferies and Motilal see up to 37% upside"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+vehicle+loan+portfolio+crosses+50%2C000+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-16",
+     "note": "vehicle (Wheels) AUM crosses Rs50,000cr (CNBC TV18/ET 2026-09-16)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "AUBANK",
+   "relation": "demand_driver",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Fincare MFI, cards, personal loans ~15% of book (model est.): +1pp delinquency => credit cost +0.8pp on Rs0.2 lakh cr = Rs160cr = 3.8% of PBT x 0.5 => -1.9; sentiment => -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/AUBANK.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "AUBANK",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "Wheels (vehicle finance) AUM Rs50,000cr+ = ~38% of the book: +10% auto volumes => disbursement +6% => AUM +2.3% => PAT +2.5% x 0.75 + sentiment => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+vehicle+loan+portfolio+crosses+50%2C000+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-16",
+     "note": "vehicle (Wheels) AUM crosses Rs50,000cr (CNBC TV18/ET 2026-09-16)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "AUBANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth => +1.5pp AUM growth on a ~20% base; NII +1.5% x 0.75 + sentiment => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+Q2+profit+jumps+53%25+to+858+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "Q2 FY27 PAT Rs858cr (+53%) (Moneycontrol/The Hindu 2026-10-24); shares fell 7-10% on 2026-10-26 after management flagged margin pressure (CNBC TV18/ET/Livemint 2026-10-26); Jefferies and Motilal see up to 37% upside"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "AUBANK",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Rajasthan and rural/semi-urban heartland (vehicles, tractors, SME, MFI): +5pp rural demand raises disbursement and collections => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+vehicle+loan+portfolio+crosses+50%2C000+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-16",
+     "note": "vehicle (Wheels) AUM crosses Rs50,000cr (CNBC TV18/ET 2026-09-16)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "AUBANK",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "SFB treasury (SLR ~20% of deposits, partly AFS) loses on higher yields; +25bp x duration 2.5 on Rs0.15 lakh cr AFS = ~Rs90cr = 2% PBT one-off; plus cost of equity at P/B 3.3x => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "10y G-sec closed 7.19% on 2026-11-04 after 7.48% on 2026-10-23 (Moneycontrol 2026-11-04; BusinessLine 2026-10-23)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "AUBANK",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Universal-bank transition conditions (priority-sector, CRR/SLR, capital), RBI scrutiny after the data leak probe (2026-10-30) and unsecured/MFI norms; ECL from April 2027 applies to banks. -3 with wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+probes+potential+data+leak+vehicle+loan+customers+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "AU SFB probing potential data leak of vehicle-loan customers after hacker claim (Moneycontrol/ETLegalWorld 2026-10-30, 2026-11-02)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+universal+bank+licence+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "AU SFB 'new universal bank licence' (Trade Brains 2026-09-23); RBI approves ICICI Prudential AMC buying up to 9.95% (Sahi 2026-09-09); stage of licence not independently verified"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+expected+credit+loss+framework+April+2027+banks+provisioning+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "RBI ECL framework from April 2027; SBI estimates Rs19,500cr post-tax impact; RBI to meet bank CEOs on readiness (Moneycontrol/Business Standard 2026-11-03)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "AUBANK",
+   "relation": "discount_rate",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold ~36% and the stock has fallen 13% in 3 months; +US$5bn quarterly inflow => +3 (beta 0.98 but heavy foreign ownership).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/AUBANK.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Retail depositors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "term-deposit funded; CASA ramp is a goal"
+  },
+  {
+   "counterparty": "Vehicle dealers and OEMs",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "origination channel for Wheels AUM"
+  },
+  {
+   "counterparty": "Bajaj Finance, Chola, HDFC Bank, Ujjivan SFB",
+   "ticker": "BAJFINANCE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "vehicle/consumer finance and SFB peers"
+  },
+  {
+   "counterparty": "ICICI Prudential AMC",
+   "ticker": "ICICIAMC",
+   "role": "customer",
+   "importance": "low",
+   "note": "RBI approved up to 9.95% stake (2026-09-09)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (inferred; Q2 call 2026-10-24): NIM trend and credit cost",
+   "type": "results",
+   "prob": 0.92,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+Q2+profit+jumps+53%25+to+858+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Data-leak investigation outcome and possible RBI/regulatory action",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 0.5,
+   "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+probes+potential+data+leak+vehicle+loan+customers+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Universal bank transition milestones (licence terms, branch/CASA targets); stage not independently verified",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+universal+bank+licence+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "ECL framework effective; AU's transition hit unquantified",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+expected+credit+loss+framework+April+2027+banks+provisioning+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs858cr (+53% y/y; Jun qtr Rs796cr); revenue Rs5,612cr; interest Rs2,792cr; but margin pressure flagged and shares -10% on the day.",
+  "valuation": "P/E 22.4x, P/B 3.3x (Rs941 / BV Rs286); 52w Rs832-1,145; 1m -8.3%, 3m -13.3%, 12m +7.1%; 1y vol 31%.",
+  "recent_developments": [
+   "2026-09-09: RBI approves ICICI Pru AMC up to 9.95% stake",
+   "2026-09-15: senior hires (Anil Agarwal, Amol Padhye)",
+   "2026-09-16: Wheels AUM crosses Rs50,000cr",
+   "2026-09-23: 'new universal bank licence' commentary",
+   "2026-10-24: Q2 results; 2026-10-26 shares -7 to -10%",
+   "2026-10-30: data-leak probe"
+  ]
+ },
+ "key_risks": [
+  "NIM compression from deposit repricing with fixed-rate assets",
+  "Credit cost in vehicle/SME/MFI",
+  "Universal-bank transition costs and RBI conditions",
+  "Data breach and regulatory/reputational fallout",
+  "High foreign ownership (36%) flows"
+ ],
+ "upside_triggers": [
+  "Margin stabilisation as deposits reprice",
+  "Universal bank execution lifting CASA",
+  "Brokerage upgrades (Jefferies, Motilal up to 37% upside)",
+  "Falling yields after crude eases"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/AUBANK.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+Q2+profit+jumps+53%25+to+858+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-24",
+   "what": "Q2 and margin warning"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+probes+potential+data+leak+vehicle+loan+customers+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "data leak"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+universal+bank+licence+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "universal bank / ICICI Pru AMC stake"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=AU+Small+Finance+Bank+vehicle+loan+portfolio+crosses+50%2C000+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-16",
+   "what": "Wheels AUM"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}

@@ -1,0 +1,577 @@
+{
+ "ticker": "TMPV",
+ "name": "Tata Motors Passenger Vehicles Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AUTO_PV",
+ "tier": "NIFTY_50",
+ "business_summary": "The passenger-vehicle entity after the Tata Motors demerger: Jaguar Land Rover (about two-thirds of revenue, Range Rover/Defender/Discovery at 81% of wholesales) and the Indian PV and EV business (Nexon, Punch, Harrier, Curvv; ~14.3% share in Q1 FY27, targeting 15% soon and 20% by FY31; EV mix 20-23% of sales). Consolidated TTM revenue Rs 3.44 lakh cr but EBITDA margin only 4.9%, so earnings are highly geared to JLR volumes, commodities, FX and US tariffs. Net debt ~Rs 42,000 cr at Q1 FY27.",
+ "revenue_mix": [
+  {
+   "segment": "Jaguar Land Rover",
+   "share_pct": 80,
+   "geography": "UK ~25% of wholesale, North America, Europe, China <8%, rest of world"
+  },
+  {
+   "segment": "India passenger vehicles and EV",
+   "share_pct": 19,
+   "geography": "India"
+  },
+  {
+   "segment": "other",
+   "share_pct": 1,
+   "geography": "-"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 4,
+   "note": "share of sales, model estimate"
+  },
+  {
+   "input": "F_STEEL_GLOBAL",
+   "share_of_costs_pct": 4,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 1.5,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_BATTERY_MATERIALS",
+   "share_of_costs_pct": 7,
+   "note": "India EV battery content as % of India revenue, model estimate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "TMPV",
+   "relation": "input_cost",
+   "w": -3.4,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "JLR bodies are aluminium-intensive; aluminium ~4% of consolidated sales (model estimate). +10% -> 0.4% of sales = ~Rs 1,370 cr vs TTM EBITDA Rs 16,910 cr -> -8% pre pass-through; ~25% recovered -> -6%; EV/MCap ~1.4 (net debt ~Rs 42,000 cr), persistence 0.4 -> -3.4. Very high operating leverage: TTM EBITDA margin only 4.9%. Aluminium -19.6% since June is a tailwind.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/tata-motors-passenger-vehicles-ltd-230555605.html",
+     "date": "2026-08-13",
+     "note": "Consolidated EBIT margin 2.4%, JLR EBIT 2.8%, net debt Rs 42,000 cr"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium -19.6% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "TMPV",
+   "relation": "input_cost",
+   "w": -3.0,
+   "w_low": -5.5,
+   "w_high": -1.2,
+   "lag": "0-3m",
+   "mechanism": "Steel ~4% of consolidated sales (JLR and Tata India; model estimate). +10% global HRC -> 0.4% of sales = Rs 1,375 cr -> -8% of EBITDA pre; ~30% recovered -> -5.7%; x1.4 x0.4 = -3.2, rounded -3.0. Global HRC is +20.6% since June (factor_state): large headwind. Company said commodity pressure would persist in Q2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://hdfcsky.com/news/tata-motors-pv-warns-q2-commodity-hit",
+     "date": "2026-08-14",
+     "note": "TMPV expects commodity pressure to persist in September quarter; needs to accelerate cost reduction"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Global HRC +20.6% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "TMPV",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Copper ~1.5% of sales (harness, motors, EV). +10% -> Rs 515 cr -> -3% EBITDA pre; 30% recovered -> -2.1%; x1.4 x0.4 = -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.business-standard.com/companies/news/tamo-pv-q1-pat-falls-80-as-jlr-volumes-higher-commodity-costs-weigh-126081301723_1.html",
+     "date": "2026-08-13",
+     "note": "Elevated commodity prices cited in Q1 domestic PV margin pressure"
+    }
+   ]
+  },
+  {
+   "src": "F_BATTERY_MATERIALS",
+   "dst": "TMPV",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "EVs ~20-23% of India volumes (34,000+ units in Q1, 20% mix, exit 23%) plus JLR EVs. India revenue ~Rs 72k cr/yr x 20% x battery ~35% = ~Rs 5,000 cr battery content; +15% cell cost -> +10.5% = Rs 525 cr = -3.1% EBITDA pre; 50% recovered -> -1.6%; x1.4 x0.4 = -0.9. PLI accruals (Rs 313 cr in Q1) partly offset.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/tata-motors-passenger-vehicles-ltd-230555605.html",
+     "date": "2026-08-13",
+     "note": "EV volumes >34,000 in Q1 FY27, ~20% mix, exit 23%; PLI accrual Rs 313 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "TMPV",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Direct oil-linked inputs (plastics, paints, freight) ~6% of sales; +10% Brent -> 0.15% of sales net -> -3% EBITDA pre... x1.4 x0.4 -> -1.0, plus JLR Middle East demand disruption ('market disruption linked to the conflict in the Middle East', Q1 FY27) ~-0.2. Pack empirical -0.53 per +10% (t -0.6) is insignificant. Offsetting EV demand benefit is on a separate substitution edge.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://media.jlr.com/corporate/news/2026/08/jlr-delivers-profitable-quarter-despite-supply-and-market-challenges",
+     "date": "2026-08-13",
+     "note": "JLR Q1 volumes impacted by market disruption linked to conflict in the Middle East"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "TMPV",
+   "relation": "substitution",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Higher fuel prices pull India demand toward EVs where Tata has ~60%+ of the market (model knowledge): TMPV said EV volumes +112% y/y 'supported by demand growth following the West Asia conflict'. +10% Brent -> EV mix +1pp (20% -> 21%) -> EV unit margin gap + PLI -> EBITDA +2.5% x1.4 x0.3 = +1.0. Note this is a parallel path to the input-cost Brent edge; Director should net them (net ~-0.2).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://upstox.com/news/market-news/earnings/tata-motors-pv-q1-fy-27-results-net-profit-declines-80-jlr-revenue-drops-to-6-0-billion-yo-y/article-198614/",
+     "date": "2026-08-13",
+     "note": "EV volumes +112% y/y supported by demand growth following the West Asia conflict"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TMPV",
+   "relation": "fx_translation",
+   "w": 2.0,
+   "w_low": -0.5,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "JLR (about two-thirds of revenue and most of EBITDA, ~Rs 12k cr) reports in GBP/translated to INR: a weaker INR vs GBP lifts reported INR earnings. +3% -> +3% on ~Rs 12k cr = +Rs 360 cr = +2.1% EBITDA; JLR is also net long USD/CNY revenues vs GBP/EUR costs; India business imports ~10% of cost partly offsets. Net +1.5-2.5 x1.4... = +2.0. Pack empirical +2.78 per +3% (t +1.2) consistent. Note: Q1 FY27 adverse FX hit the domestic business.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TMPV.md",
+     "date": "2026-11-05",
+     "note": "Empirical USDINR +2.78 per +3% (t +1.2)"
+    },
+    {
+     "source": "https://www.business-standard.com/companies/news/tamo-pv-q1-pat-falls-80-as-jlr-volumes-higher-commodity-costs-weigh-126081301723_1.html",
+     "date": "2026-08-13",
+     "note": "Elevated commodity and FX costs hurt domestic PV business"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "TMPV",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "North America is JLR's largest-profit region and the strategic refocus (June investor day). +1pp US demand growth -> JLR US volume +1.5% -> JLR EBITDA +5.6% (contribution ~30% vs EBITDA margin ~8%); JLR ~70% of group EBITDA -> +3.9%; x1.4 x0.5 = +2.7 -> 2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://media.jlr.com/corporate/news/2026/08/jlr-delivers-profitable-quarter-despite-supply-and-market-challenges",
+     "date": "2026-08-13",
+     "note": "June investor day: double-digit revenue growth target, refocus on North America"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "TMPV",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "UK is JLR's biggest wholesale region (21,000 units in Q2 FY27, 25% of 82,400) and Europe ~20%. +1pp UK/Europe demand growth -> JLR volume +1.2% -> EBITDA +4.5% x0.7 group share x1.4 x0.5 = +2.2 -> 2.0. UK is preparing duties on Chinese EVs (Times of London 2026-10-05) - mild positive for JLR share.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://univest.in/blogs/uk-chinese-ev-tariff-plan-double-edged-sword-tata-motors-jlr-made-in-europe",
+     "date": "2026-10-08",
+     "note": "JLR Q2 wholesales 82,400 (+24.5%); UK 21,000; China 6,100 (-46%); UK Chinese-EV tariff plan"
+    }
+   ]
+  },
+  {
+   "src": "C_CHINA",
+   "dst": "TMPV",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "China wholesales fell 46% to 6,100 units in Q2 FY27 after local production ended in June; the market is now <8% of JLR volume. +1pp China growth -> +0.3% JLR volume ... -> +0.6. Chinese-brand competition in UK/EU is a separate risk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://univest.in/blogs/uk-chinese-ev-tariff-plan-double-edged-sword-tata-motors-jlr-made-in-europe",
+     "date": "2026-10-08",
+     "note": "JLR China wholesales -46% to 6,100 in Q2 FY27"
+    }
+   ]
+  },
+  {
+   "src": "NEW_US_TARIFF_UK_EU_AUTOS",
+   "dst": "TMPV",
+   "relation": "policy_effect",
+   "w": -8.0,
+   "w_low": -14.0,
+   "w_high": -3.0,
+   "lag": "0-3m",
+   "mechanism": "US ~25% of JLR revenue (~GBP 6bn/yr). A +10pp additional US tariff on UK/EU-built autos = GBP 600m; if half absorbed = GBP 300m = Rs 3,500 cr = 21% of TTM EBITDA; x1.4 x0.5 persistence... -> -10 to -14 if unmitigated; with mitigation (price, mix, US assembly via Stellantis MoU) central -8. Current status unverified in this session; shown as conditional risk edge. Proposed new node.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://media.jlr.com/corporate/news/2026/08/jlr-delivers-profitable-quarter-despite-supply-and-market-challenges",
+     "date": "2026-08-13",
+     "note": "JLR/Stellantis MoU on US-specific Defender products; US refocus"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TMPV",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "India PV business is ~20% of revenue and ~17% of EBITDA but a larger share of growth value; +25bp -> India PV volume -0.4% x gearing 4 (EBITDA margin only ~4%) -> -1.6% India EBITDA = -0.3% group; plus multiple compression on a high-beta (1.4) stock ~-0.3 = -0.5. RBI hiked to 5.50% on 2026-10-07.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+     "date": "2026-10-07",
+     "note": "Repo +25bp to 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "TMPV",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.5,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "India business: Q1 revenue Rs 18,000 cr (+65%), EBITDA margin ~4%, volumes ~182,000 (+46%), share 14.3%. +10% industry volumes -> +10% TMPV India volume; contribution ~18% vs 4% EBITDA margin -> gearing 4.5x -> India EBITDA +45% = +7.7% group; x1.4 x0.3 = +3.2 -> 3.0. Oct 2026 industry >5 lakh units; management expects industry +10% for FY27.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/tata-motors-passenger-vehicles-ltd-230555605.html",
+     "date": "2026-08-13",
+     "note": "India revenue Rs 18,000 cr (+65%), EBITDA margin ~4%, market share 14.3%"
+    },
+    {
+     "source": "https://www.business-standard.com/companies/news/tamo-pv-q1-pat-falls-80-as-jlr-volumes-higher-commodity-costs-weigh-126081301723_1.html",
+     "date": "2026-08-13",
+     "note": "Industry growth expected >10% in FY27"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "TMPV",
+   "relation": "policy_effect",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": ">12m",
+   "mechanism": "Market leader in Indian EVs (EV mix ~20-23%, 70% EV volume growth targeted for FY27). Stronger EV push (+1) -> EV mix +4-5pp, PLI accruals up (Rs 313 cr in Q1 = 5% of quarterly EBITDA) -> EBITDA +4% x1.4 x0.5 structural = +2.8 -> 2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.business-standard.com/companies/news/tamo-pv-q1-pat-falls-80-as-jlr-volumes-higher-commodity-costs-weigh-126081301723_1.html",
+     "date": "2026-08-13",
+     "note": "TMPV eyes 70% EV volume growth for FY27"
+    },
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/tata-motors-passenger-vehicles-ltd-230555605.html",
+     "date": "2026-08-13",
+     "note": "PLI accrual Rs 313 cr in Q1"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "TMPV",
+   "relation": "policy_effect",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "PLI accruals Rs 313 cr in Q1 FY27 = ~Rs 1,250 cr/yr = 7.4% of TTM EBITDA. +1 SSU (expansion/faster disbursement) -> +25% -> +1.8% EBITDA x1.4 x0.5 = +1.3 -> 1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/tata-motors-passenger-vehicles-ltd-230555605.html",
+     "date": "2026-08-13",
+     "note": "PLI accrual Rs 313 cr in Q1 FY27"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "TMPV",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "India PV ~20% of revenue; GST 2.0 already boosted volumes (+46% in Q1). A further cut (+1) -> India volume +3% x gearing 4.5 = +13% India EBITDA = +2.3% group x1.4 x0.5 = +1.6 -> 1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/tata-motors-passenger-vehicles-ltd-230555605.html",
+     "date": "2026-08-13",
+     "note": "India volumes +46% y/y in Q1 FY27"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "TMPV",
+   "relation": "input_cost",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "JLR was hit by a component-supplier fire in Q1 FY27 and earlier supply disruptions; +1 SSU = a chip-type shortage cutting JLR output ~5% for a quarter -> JLR EBITDA -18%/quarter = -3% annualised x1.4 ... -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://media.jlr.com/corporate/news/2026/08/jlr-delivers-profitable-quarter-despite-supply-and-market-challenges",
+     "date": "2026-08-13",
+     "note": "Q1 volumes impacted by temporary supply constraints including a fire at a major component supplier"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "TMCV",
+   "dst": "TMPV",
+   "relation": "group_contagion",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "Same Tata group, same demerger heritage and shared brand/governance. Tata Sons chairman N. Chandrasekaran stepped down on 2026-08-12 and TMPV fell ~4% (NDTV Profit headline); TMCV's Iveco takeover (>80% acceptance 2026-10-27) is a separate corporate event. w = % TMPV per +1% TMCV; empirical co-movement modest.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "Business Today headline (page not fetched)",
+     "date": "2026-10-27",
+     "note": "TMCV takeover bid for Iveco crossed 80% threshold"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Jaguar Land Rover Automotive plc",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~2/3 of revenue; Q1 FY27 revenue GBP 6.0bn, EBIT 2.8%"
+  },
+  {
+   "counterparty": "Tata Motors CV (TMCV)",
+   "ticker": "TMCV",
+   "role": "competitor",
+   "importance": "low",
+   "note": "demerged sister company; Iveco takeover underway"
+  },
+  {
+   "counterparty": "Maruti Suzuki",
+   "ticker": "MARUTI",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Tata overtook Mahindra in H1 FY27 share"
+  },
+  {
+   "counterparty": "Mahindra & Mahindra",
+   "ticker": "M&M",
+   "role": "competitor",
+   "importance": "high",
+   "note": "SUV and EV competitor"
+  },
+  {
+   "counterparty": "Stellantis",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "MoU to explore Defender-brand US products (JLR media 2026-08-13)"
+  },
+  {
+   "counterparty": "Tier-1 suppliers (capacity for 100,000 PV/month from FY28)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "ET 2026-10-06 headline"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results and analyst call (JLR Q2 wholesales +24.5%, retail -7.5%, commodity headwind flagged in August); exact date unverified",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "Kalkine headline 2026-10-30; HDFC Sky 2026-08-14; Univest 2026-10-08"
+  },
+  {
+   "date": "2026-12",
+   "event": "Possible UK duties on Chinese EVs / EU 'Made in Europe' scheme link",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.5,
+   "source": "https://univest.in/blogs/uk-chinese-ev-tariff-plan-double-edged-sword-tata-motors-jlr-made-in-europe"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": -0.3,
+   "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece"
+  },
+  {
+   "date": "2027-01",
+   "event": "JLR Q3 wholesale update and Jaguar Type 01 launch progress (Enterprise Missions GBP 1.7bn savings details with Q2)",
+   "type": "guidance",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://media.jlr.com/corporate/news/2026/08/jlr-delivers-profitable-quarter-despite-supply-and-market-challenges"
+  },
+  {
+   "date": "2026-12",
+   "event": "US-India trade agreement or change in US tariffs on UK-built vehicles",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 5.0,
+   "source": "Reuters 2026-10-06; Rubio 2026-10-20"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026), reported 2026-08-13; Q2 FY27 not yet reported",
+  "trend": "Q1: revenue Rs 95,799 cr (+9%), EBITDA Rs 6,176 cr (-24%; margin 6.5%), PAT Rs 775-859 cr (-80%) on JLR volume -9.2% (supplier fire, Middle East disruption, Jaguar wind-down), JLR EBIT 2.8%, retail VME 7.1% vs 4.1%, adverse commodity/FX. India PV revenue Rs 18,000 cr (+65%), volumes ~182,000 (+46%), share 14.3%, EV 34,000+ units. Q2 operational update: JLR wholesale 82,400 (+24.5%) but retail -7.5%; China -46%.",
+  "valuation": "Price ~Rs 295 (2026-11-05), market cap ~Rs 1.08 lakh cr, ~0.96x book; headline P/E 109x distorted by Rs 84,536 cr other income from demerger gain; 52-wk Rs 259-414; -27.5% 12m. Earnings multiple on normalised EBITDA ~7x EV/EBITDA.",
+  "recent_developments": [
+   "2026-08-12: N. Chandrasekaran stepped down as Tata Sons chairman; TMPV -4% (NDTV Profit headline)",
+   "2026-08-14: Management warns Q2 commodity hit",
+   "2026-08-20: India PV price hikes up to Rs 25,000 from September (Upstox headline)",
+   "2026-09-27: MD targets 15% share soon, 20% by FY31 (The Hindu headline)",
+   "2026-10-01: Q2 sales +40% to 201,723 (scanx); India Sept sales +15% to 70,210",
+   "2026-10-05: Times reports UK preparing duties on Chinese EVs",
+   "2026-10-06: Suppliers asked to build capacity for 100,000 PV/month from FY28 (ET)",
+   "2026-11-02: Oct car industry record; Tata overtook Mahindra"
+  ]
+ },
+ "key_risks": [
+  "US tariffs on UK-built JLR vehicles",
+  "Commodity (steel +21% since June) and FX",
+  "JLR supply-chain shocks, retail weakness (-7.5% retail in Q2) and rising incentives",
+  "Jaguar rebrand/Type 01 launch execution, cash burn (FCF -GBP ~1bn in Q1)",
+  "Chinese-brand competition and China exit",
+  "Tata group governance transition"
+ ],
+ "upside_triggers": [
+  "JLR volume recovery and Enterprise Missions savings (GBP 1.7bn over two years)",
+  "Commodity easing (aluminium already -20%)",
+  "India PV share gains, EV leadership and PLI",
+  "UK/EU protection against Chinese EVs",
+  "Trade deals"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_US_TARIFF_UK_EU_AUTOS",
+   "type": "POLICY",
+   "name": "US tariff on UK/EU-built passenger vehicles",
+   "ssu": "+10pp tariff on UK/EU autos entering the US"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://upstox.com/news/market-news/earnings/tata-motors-pv-q1-fy-27-results-net-profit-declines-80-jlr-revenue-drops-to-6-0-billion-yo-y/article-198614/",
+   "date": "2026-08-13",
+   "what": "Q1 FY27 results, EV volumes, net cash/debt"
+  },
+  {
+   "url": "https://media.jlr.com/corporate/news/2026/08/jlr-delivers-profitable-quarter-despite-supply-and-market-challenges",
+   "date": "2026-08-13",
+   "what": "JLR Q1 FY27 press release"
+  },
+  {
+   "url": "https://finance.yahoo.com/markets/stocks/articles/tata-motors-passenger-vehicles-ltd-230555605.html",
+   "date": "2026-08-13",
+   "what": "Q1 earnings call highlights (India business, net debt)"
+  },
+  {
+   "url": "https://www.business-standard.com/companies/news/tamo-pv-q1-pat-falls-80-as-jlr-volumes-higher-commodity-costs-weigh-126081301723_1.html",
+   "date": "2026-08-13",
+   "what": "Business Standard: Q1 PAT, guidance"
+  },
+  {
+   "url": "https://hdfcsky.com/news/tata-motors-pv-warns-q2-commodity-hit",
+   "date": "2026-08-14",
+   "what": "Commodity pressure warning for Q2"
+  },
+  {
+   "url": "https://univest.in/blogs/uk-chinese-ev-tariff-plan-double-edged-sword-tata-motors-jlr-made-in-europe",
+   "date": "2026-10-08",
+   "what": "JLR Q2 wholesale, UK Chinese EV tariff plan"
+  },
+  {
+   "url": "https://www.livemint.com/market/stock-market-news/tata-motors-pv-q1-results-net-profit-drops-to-rs-775-crore-on-weak-jlr-sales-11786617489104.html",
+   "date": "2026-08-13",
+   "what": "Livemint Q1 analysis"
+  },
+  {
+   "url": "market_impact/data/packs/TMPV.md",
+   "date": "2026-11-05",
+   "what": "Pack"
+  },
+  {
+   "url": "https://www.moneycontrol.com/news/business/markets/auto-stocks-rally-ashok-leyland-jumps-9-maruti-tata-motors-pv-m-m-lead-gains-as-nifty-auto-surges-3-14071026.html",
+   "date": "2026-11-05",
+   "what": "Auto rally"
+  }
+ ]
+}

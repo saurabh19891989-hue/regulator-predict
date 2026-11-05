@@ -1,0 +1,337 @@
+{
+ "ticker": "MANKIND",
+ "name": "Mankind Pharma Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PHARMA_DOMESTIC",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's fourth-largest pharma company by domestic sales with ~15.2% prescription share (Kalkine 2026-10-26): chronic and acute formulations marketed through ~15,000 field reps, plus consumer healthcare (Manforce, Prega News, Unwanted-72, Gas-O-Fast), the Bharat Serums & Vaccines (BSV) women's-health/critical-care business (acquired 2024, funded by debt) and a small export business (US ~50 launches). Promoters hold 72.6%. Q2 FY27 revenue +17% to ~Rs 3,145 cr, EBITDA margin ~30% (+300bp YoY per Upstox), PAT Rs 711-716 cr (+37-39%; the screener pack shows Rs 582 cr which may be before an exceptional line). Mcap Rs 1.03 lakh cr, P/E 43. Recent: 70% stake in Belgian CAR-T biotech ACTx for EUR 48m (Oct 2026).",
+ "revenue_mix": [
+  {
+   "segment": "India branded formulations (acute+chronic)",
+   "share_pct": 82,
+   "geography": "India"
+  },
+  {
+   "segment": "Consumer healthcare",
+   "share_pct": 8,
+   "geography": "India"
+  },
+  {
+   "segment": "Exports (US, RoW) and others",
+   "share_pct": 10,
+   "geography": "US ~4%, other ~6% (model knowledge)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 6
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_P_PHARMA_MARKETING_PRICE_REG",
+   "dst": "MANKIND",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "SC (2026-10-08) directed the Centre to form an expert panel to curb unethical marketing/freebies to doctors; Mankind and Zydus fell up to 3% (Moneycontrol). Mankind's field-force-driven model (~15,000 MRs, ~25% of revenue on selling costs, model assumption) is most exposed to UCPMP enforcement and trade-margin/MRP caps (SC also seeks MRP-cap discussion, 2026-10). One tightening step: -2% revenue growth and +100bp selling cost = EBITDA -4%; EV/MCap 1.05, persistence 1.0, p 0.6 -> -3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Supreme+Court+Centre+order+drug+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "SC asks Centre to form panel on unethical pharma marketing; Mankind, Zydus fall up to 3% (Moneycontrol 2026-10-08)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "MANKIND",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Consumer health (8% of revenue) and acute therapies (~30%) are discretionary-sensitive: +5pp urban consumption lifts that ~38% of sales by ~2.5pp = +0.95% group sales; ~60% flow-through at 31% OPM = +1.8% EBITDA; EV/MCap 1.05, persistence 0.5 (some structural) with multiple effect -> +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Q2 FY27: strong domestic chronic business (Business Standard 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "MANKIND",
+   "relation": "demand_driver",
+   "w": 1.6,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "India 90%+ of revenue; IPM grows ~8-9% nominal; +1pp real GDP adds ~0.4pp to volumes -> +0.4% sales, 70% flow-through at 31% OPM = +0.9% EBITDA; persistence 1.0 -> +1.0; plus valuation sensitivity -> +1.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Revenue +17% YoY in Q2 (CNBC TV18 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MANKIND",
+   "relation": "funding_cost",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "BSV-related debt: interest Rs 88 cr/qtr (down from Rs 149 cr a year ago as deleveraging, screener.in) ~Rs 4,500 cr debt (estimate, 8%); 70% floating: +25bp = Rs 8 cr/yr = 0.2% of EBITDA; discount-rate effect on 43x P/E growth stock dominates -> -1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Interest Rs 88 cr in Sep-26 vs Rs 149 cr Sep-25 (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "MANKIND",
+   "relation": "fx_translation",
+   "w": 0.6,
+   "w_low": -0.2,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Exports ~10% of revenue; imported RM ~8% of sales: net ~+2% x 3% = +0.06% of sales... +0.3% EBITDA; empirical +0.78 (t=0.5) similar -> +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Pack: USDINR +0.78 (t=0.5)"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "MANKIND",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": -1.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Empirical DXY +1.80 (t=1.7) (positive). Mostly defensive-rotation correlation in a 73% promoter-held stock; model prior 0, shrunk to +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Pack: DXY +1.80 (t=1.7)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "MANKIND",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Petrochemical-linked raw materials/excipients ~22% of costs: +10% feedstock = +2.2% costs; ~60% recoverable via annual WPI-linked NLEM price hike and mix -> net 0.9% of costs = 0.6% of revenue (costs ~70%); /30% OPM = EBITDA -2.0%; persistence 0.25-0.5, EV/MCap 1.05 -> -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "EBITDA margin up 300bp YoY to 30% (Upstox 2026-10-26)"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "MANKIND",
+   "relation": "demand_driver",
+   "w": 1.3,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": ">12m",
+   "mechanism": "Chronic share (~40%) and CAR-T/ speciality entry (ACTx) support ARPU; +1 unit theme -> +1.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+ACTx+Belgium+acquisition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "ACTx 70% stake EUR 48m (Business Standard 2026-10-15)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MANKIND",
+   "relation": "discount_rate",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "FII 9.4% (down from 10.2%); promoters 72.6%; free float small. +US$5bn -> +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Shareholding Sep 2026 (screener.in)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Distributors/stockists (~15,000 field force)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "trade margins"
+  },
+  {
+   "counterparty": "Bharat Serums & Vaccines (subsidiary)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "acquired 2024"
+  },
+  {
+   "counterparty": "ACTx (Belgium, 70% stake pending)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "CAR-T, EUR 48m"
+  },
+  {
+   "counterparty": "Sun, Cipla, Lupin, Zydus, Torrent, Alkem",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "IPM share"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "Supreme Court-mandated expert panel on pharma marketing practices (setup/terms)",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Supreme+Court+Centre+order+drug+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: IPM growth, BSV integration, margin vs 30%",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Completion of ACTx 70% acquisition (EUR 48m, Rs 511 cr)",
+   "type": "corporate_action",
+   "prob": 0.8,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Mankind+Pharma+ACTx+Belgium+acquisition+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "Annual NLEM / NPPA price revision (WPI-linked)",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.5,
+   "source": "https://news.google.com/rss/search?q=Mankind+Pharma+Supreme+Court+Centre+order+drug+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue ~Rs 3,145 cr (+17-19%), EBITDA margin ~30% (+300bp YoY), PAT Rs 711-716 cr (+37-39%) per press; pack shows Rs 582 cr.",
+  "trend": "Earnings growing 35-40% on operating leverage and falling interest cost; three consecutive quarters of >30% margin.",
+  "valuation": "Rs 2,505; P/E 43; mcap Rs 1.03 lakh cr; Kotak Buy Rs 3,000 TP (2026-09-22); Jefferies Buy; others flag valuation (2026-10-27).",
+  "recent_developments": [
+   "2026-10-27 shares +8-9% post Q2; Kotak sees big upside, others cautious on valuation",
+   "2026-10-16 buys 70% of ACTx for EUR 48m (CAR-T); stock -2%",
+   "2026-10-08 SC asks Centre to regulate pharma freebies; Mankind falls up to 3%",
+   "2026-09-22 Kotak upgrades to Buy, TP Rs 3,000"
+  ]
+ },
+ "key_risks": [
+  "Pharma marketing/UCPMP enforcement and MRP caps",
+  "IPM slowdown",
+  "Premium valuation 43x",
+  "Debt/BSV integration",
+  "Promoter selling (promoter stake -3.9% over 3 yrs)"
+ ],
+ "upside_triggers": [
+  "Prescription share gains (15.2%)",
+  "Operating leverage to 32%+ margin",
+  "BSV synergy and deleveraging",
+  "US launches"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_P_PHARMA_MARKETING_PRICE_REG",
+   "type": "POLICY",
+   "name": "India pharma marketing-practice and trade-margin/MRP regulation (UCPMP, NPPA)",
+   "ssu": "+1 = one tightening step (binding marketing code, trade-margin or MRP cap)"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/MANKIND.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Mankind+Pharma+Q2+FY27+Bharat+Serums+India+business+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "Q2 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Mankind+Pharma+ACTx+Belgium+acquisition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "ACTx acquisition"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Mankind+Pharma+Supreme+Court+Centre+order+drug+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-08",
+   "what": "SC on pharma marketing"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Mankind+Pharma+jumps+8%+on+Q2+earnings+beat+analysts+remain+concerned+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "Analyst concerns"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Mankind+Pharma+Kotak+upgrade+buy+target+Rs+3,000+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-22",
+   "what": "Kotak upgrade"
+  }
+ ]
+}

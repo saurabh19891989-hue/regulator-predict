@@ -118,7 +118,7 @@
    "w_low": 0.2,
    "w_high": 3.0,
    "lag": "0-3m",
-   "mechanism": "+5% S&P 500: client sentiment and global risk appetite; shrunk toward 1.5 from the pack elasticity (PACKUSEQ).",
+   "mechanism": "+5% S&P 500: client sentiment and global risk appetite; shrunk toward 1.5 from the pack elasticity (+1.49, t +1.9).",
    "confidence": "medium",
    "evidence": [
     {
