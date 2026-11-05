@@ -1,18 +1,18 @@
 {
- "nodes": 453,
- "new_nodes": 75,
- "edges": 2240,
+ "nodes": 456,
+ "new_nodes": 78,
+ "edges": 2459,
  "edges_by_layer": {
-  "company": 1940,
-  "backbone": 174,
-  "event_edges": 78,
+  "company": 2033,
+  "backbone": 330,
+  "event_edges": 48,
   "company_link": 45,
   "director": 3
  },
  "edges_dropped_unknown_or_industry": 5,
  "events": 161,
  "occurred_events": 61,
- "profiles": 166,
+ "profiles": 174,
  "empirical_sign_conflicts": 2,
  "assumptions": {
   "damping": {
@@ -26,6 +26,7 @@
   "residual_cap": 10.0,
   "max_depth": 4
  },
+ "overlap_flags": 1097,
  "events_zero_reach": [
   "EV_OPEC_HOLD_OCT_NOV",
   "EV_OPEC_NOV29_HOLD",

@@ -48,6 +48,13 @@
    "origin": "energy.json",
    "factor": 0.0,
    "reason": "OMC profiles' own fuel-tax edges already embed absorption"
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "LAURUSLABS",
+   "origin": "LAURUSLABS",
+   "factor": 0.0,
+   "reason": "backbone already maps decoupling into T_CHINA_PLUS_ONE (w 0.6), which LAURUSLABS has a direct edge from; flagged by the profiling agent"
   }
  ]
 }

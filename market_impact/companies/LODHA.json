@@ -1,0 +1,508 @@
+{
+ "name": "Lodha Developers Ltd.",
+ "industry": "I_REAL_ESTATE",
+ "tier": "MIDCAP_100",
+ "business_summary": "Mumbai-headquartered residential developer (MMR ~70%+ of pre-sales, model estimate; Pune, Bengaluru, new NCR entry and London projects) plus industrial/logistics and digital parks around Palava. Q2 FY27 pre-sales Rs 5,037 cr (+10%), PAT Rs 1,013 cr (+28%); H1 PAT Rs 2,386 cr (+63%) and management expects to exceed full-year profit guidance (ET/Business Standard 2026-10-30). Nomura sees H2 pre-sales +25% to Rs 143 bn. TTM operating margin ~33%. Market cap Rs 1.17 lakh cr, P/E 26.9.",
+ "revenue_mix": [
+  {
+   "segment": "Residential (MMR, Pune, Bengaluru, NCR, UK)",
+   "share_pct": 92,
+   "geography": "India ~95%, UK ~5% (model estimate)"
+  },
+  {
+   "segment": "Commercial, industrial/warehousing parks, digital",
+   "share_pct": 8,
+   "geography": "MMR/Palava/NCR"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "NEW_CEMENT_PRICE",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "LODHA",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 3.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "MMR-heavy (Mumbai, Thane/Palava) plus Pune/Bengaluru, now NCR; ~85% of value is residential. +10% market volume -> pre-sales +10% (Rs 5,037 cr/qtr base) -> EBITDA +12% (operating margin 33% TTM, leverage) -> EV/MCap ~1.1 (net debt ~Rs 10k cr model estimate), persistence 0.5 => ~+6. Anarock: top-7 city sales +3% y/y Jul-Sep 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Lodha+Developers+Q2+FY27+results+pre-sales+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: pre-sales Rs 5,037 cr (+10%), PAT Rs 1,013 cr (+28%), H1 PAT Rs 2,386 cr (+63%), expects to exceed FY27 profit guidance (ET/Business Standard 2026-10-30/31)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LODHA",
+   "relation": "discount_rate",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+25 bp: premium-mid buyers' EMI +2% -> volumes -1.2% -> -1.0%; interest cost +25 bp on ~Rs 14k cr gross debt (interest Rs 717 cr TTM / ~8% cost implies ~Rs 9k cr) = ~Rs 25 cr (~0.6% of PAT, mostly capitalised) -> -0.4; multiple derating, beta 2.0-2.3 (pack) -> -2.1. Total ~ -3.5. Note: Lodha rose 4% on 2026-09-18 on 'rate hike bets' (Livemint), i.e. the market sometimes reads hikes as growth-positive.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "India Today 2026-09-21: analysts see up to 50 bp more by December; The Hindu 2026-09-18: two hikes possible in CY2026 (pre-decision views)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Lodha+Developers+share+price+gains+rate+hike+bets+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-18",
+     "note": "Livemint 2026-09-18: Lodha +4% on rate hike bets"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "LODHA",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Upper-mid and luxury mix in Mumbai (Lodha Bellevue/Park/Altamount-type), rising ticket sizes; +1 SSU -> realisation +2% on launches -> EBITDA +3% => ~+2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lodha+Developers+Q2+FY27+results+pre-sales+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Q2 FY27: pre-sales Rs 5,037 cr (+10%), PAT Rs 1,013 cr (+28%), H1 PAT Rs 2,386 cr (+63%), expects to exceed FY27 profit guidance (ET/Business Standard 2026-10-30/31)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LODHA",
+   "relation": "macro_transmission",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "0-3m",
+   "mechanism": "Beta 2.2-2.3; FPI-held growth mid/large cap. +US$5bn -> index +1.5% x 2.2 => +3.3, haircut for overlap => +3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LODHA.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "LODHA",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "MF buying/selling matters (ET 2026-10-17 lists REC and Cochin as top MF-sold, not Lodha); +10% DII flows -> +0.5% x 2.2 => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LODHA.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "LODHA",
+   "relation": "fx_translation",
+   "w": 0.6,
+   "w_low": -0.4,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "NRI/Gulf-linked buyers ~15% of Mumbai prime pre-sales (model estimate); rupee at 94.5 is ~6.5% weaker y/y -> effective prices lower in USD -> +0.6. UK projects (small) add a minor GBP translation effect. DISAGREES with data: pack -2.96 per +3% USD/INR (t=-1.4, not significant).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    },
+    {
+     "source": "market_impact/data/packs/LODHA.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GULF_REMITTANCES",
+   "dst": "LODHA",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.1,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "+10% Gulf remittances/NRI liquidity -> NRI share of pre-sales +1pp -> value +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LODHA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,17,129 cr, P/E 26.9, P/B 4.6, ROCE 16.4%; TTM sales Rs 18,850 cr, operating profit Rs 6,238 cr, PAT Rs 4,352 cr; interest Rs 717 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "LODHA",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Construction ~45% of revenue, steel 12% = 5.4% of revenue; +7% -> 0.38% of revenue on ~50% exposed cost base; margin 33% -> EBITDA -0.6%; persistence 0.3, EV/MCap 1.1 => ~-0.6 with allowance for escalation clauses.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LODHA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,17,129 cr, P/E 26.9, P/B 4.6, ROCE 16.4%; TTM sales Rs 18,850 cr, operating profit Rs 6,238 cr, PAT Rs 4,352 cr; interest Rs 717 cr"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CEMENT_PRICE",
+   "dst": "LODHA",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Cement ~10% of construction (4.5% of revenue); +5% -> 0.23% of revenue; same exposure => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LODHA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,17,129 cr, P/E 26.9, P/B 4.6, ROCE 16.4%; TTM sales Rs 18,850 cr, operating profit Rs 6,238 cr, PAT Rs 4,352 cr; interest Rs 717 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "LODHA",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Fenestration/cladding minor input (~1% of cost). Pack shows -3.11 per +10% aluminium (t=-2.5), consistent in sign but the size is implausible for a 1% input (likely proxy for commodity-cycle/risk-off), so shrunk hard to -0.2 with a wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LODHA.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "LODHA",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -2.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Prior negative (FPI outflow), but pack shows +4.48 per +3% DXY (t=+3.1, beta 2.28): DISAGREES; likely a regime coincidence, so shrunk toward zero with range spanning positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/LODHA.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "P_HOUSING_POLICY",
+   "dst": "LODHA",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Maharashtra stamp duty, redevelopment (cluster) and FSI/premium policies are the largest policy levers for MMR developers => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "LODHA",
+   "relation": "policy_effect",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Higher capital gains tax cuts investor and NRI purchases => -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LODHA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,17,129 cr, P/E 26.9, P/B 4.6, ROCE 16.4%; TTM sales Rs 18,850 cr, operating profit Rs 6,238 cr, PAT Rs 4,352 cr; interest Rs 717 cr"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "LODHA",
+   "relation": "regulatory_risk",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Tighter bank construction-finance norms => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "LODHA",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "+50 bp spreads on ~Rs 9k cr debt refinanced over 12m (40% share) -> Rs 18 cr => -0.8 after multiple effect.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LODHA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,17,129 cr, P/E 26.9, P/B 4.6, ROCE 16.4%; TTM sales Rs 18,850 cr, operating profit Rs 6,238 cr, PAT Rs 4,352 cr; interest Rs 717 cr"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "LODHA",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.1,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Lodha is building industrial/logistics and digital infrastructure parks (Palava, Taloja); +1 SSU data-centre demand -> land/lease monetisation, ~5% of value => +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Lodha+Developers+NCR+debut+1700+crore+office+project+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "NCR market debut with Rs 1,700 cr office project (Livemint 2026-10-31)"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "LODHA",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Industrial & warehousing park leasing (Lodha Industrial & Logistics Parks) tied to private capex; +10% capex -> +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LODHA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,17,129 cr, P/E 26.9, P/B 4.6, ROCE 16.4%; TTM sales Rs 18,850 cr, operating profit Rs 6,238 cr, PAT Rs 4,352 cr; interest Rs 717 cr"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "MMR homebuyers (upper-mid/luxury, NRI)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "price and rate sensitivity"
+  },
+  {
+   "counterparty": "Contractors, steel and cement suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "cost pass-through on unsold stock limited"
+  },
+  {
+   "counterparty": "DLF / Godrej Properties / Oberoi / Prestige",
+   "ticker": "DLF",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "MMR competition: Oberoi, Godrej; NCR entry vs DLF"
+  },
+  {
+   "counterparty": "Banks / NCD investors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "debt funding for land and construction"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Analyst/investor meets mid-November 2026 (scanx 2026-11-04): guidance reiteration",
+   "type": "guidance",
+   "prob": 0.9,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Nomura+Lodha+Developers+second+half+pre-sales+Buy+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI December MPC: further hike risk (sensitivity only)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.5,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11/2027-03",
+   "event": "H2 launches incl. NCR office/residential and MMR; test of Nomura's +25% H2 pre-sales call",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Nomura+Lodha+Developers+second+half+pre-sales+Buy+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results/pre-sales (model-estimated; Q2 reported 2026-10-30)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Lodha+Developers+Q2+FY27+results+pre-sales+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-05",
+   "event": "FY27 results: PAT versus guidance (company flags it will exceed); FY28 pre-sales guidance",
+   "type": "guidance",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 9.0,
+   "source": "https://news.google.com/rss/search?q=Lodha+Developers+Q2+FY27+results+pre-sales+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 4,467 cr (screener), operating profit Rs 1,488 cr, PAT Rs 1,014 cr (+28%); pre-sales Rs 5,037 cr (+10%); call 'misses estimates, stock slips' per Investing.com 2026-11-02",
+  "trend": "Profit growth strong (H1 +63%), pre-sales growth modest (+10%); market focuses on H2 launch momentum.",
+  "valuation": "P/E 26.9, P/B 4.6, ROE 15.5%, ROCE 16.4%; 52w 651-1,345; 6m +21%, 12m -4.3%; 1y vol 40%.",
+  "recent_developments": [
+   "2026-11-05 H1 FY27 profit +63% (Rs 2,386 cr)",
+   "2026-11-04 analyst meets scheduled mid-Nov",
+   "2026-11-03 Nomura (H2 pre-sales +25%), Emkay TP 1,400, Motilal TP 1,375",
+   "2026-11-02 Q2 call: estimates missed, stock slips (Investing.com)",
+   "2026-10-31 NCR debut Rs 1,700 cr office project",
+   "2026-10-31 Q2 pre-sales Rs 5,037 cr (+10%)",
+   "2026-10-07 RBI hike"
+  ]
+ },
+ "key_risks": [
+  "MMR price/volume correction under rate hikes",
+  "Launch slippage (approvals, monsoon)",
+  "High beta (2.2) and 40% vol amplifies FPI outflows",
+  "Execution of NCR/new-asset expansion",
+  "Leverage with higher funding costs"
+ ],
+ "upside_triggers": [
+  "H2 launches deliver +25% pre-sales",
+  "Profit guidance beaten (H1 +63%)",
+  "RBI pause; MMR redevelopment/stamp duty relief",
+  "Digital/logistics parks monetisation"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CEMENT_PRICE",
+   "type": "FACTOR",
+   "name": "Cement price (India)",
+   "ssu": "+5% cement price"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Lodha+Developers+Q2+FY27+results+pre-sales+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Q2 FY27 results coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Nomura+Lodha+Developers+second+half+pre-sales+Buy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Nomura/Emkay/Motilal views"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Lodha+Developers+NCR+debut+1700+crore+office+project+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-31",
+   "what": "NCR debut"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-28",
+   "what": "Anarock"
+  },
+  {
+   "url": "https://www.screener.in/company/LODHA/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  }
+ ],
+ "ticker": "LODHA",
+ "as_of": "2026-11-05"
+}

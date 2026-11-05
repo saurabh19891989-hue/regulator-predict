@@ -1,0 +1,367 @@
+{
+ "ticker": "TIINDIA",
+ "name": "Tube Investments of India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AUTO_COMPONENTS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Murugappa-group engineering company: standalone precision steel tubes, chains, car door frames/metal-formed parts, bicycles and strips (Q1 FY27 standalone revenue Rs 2,366 cr, +18%), plus subsidiaries CG Power (majority-owned, consolidated, ~Rs 12.4k cr revenue), Shanthi Gears, TI Clean Mobility (EV; loss Rs 147 cr in Q1), a semiconductor venture (loss Rs 50 cr) and a new 76.24% stake in Orange Koi. Consolidated EBITDA is dominated by CG Power; the market values TII below its CG stake alone. Promoters 44.1%, FIIs 21.5%.",
+ "revenue_mix": [
+  {
+   "segment": "CG Power (power systems + industrial systems)",
+   "share_pct": 53,
+   "geography": "India ~90%"
+  },
+  {
+   "segment": "engineering (tubes, chains, metal-formed, strips)",
+   "share_pct": 38,
+   "geography": "India with ~15% exports"
+  },
+  {
+   "segment": "mobility/EV, gears, cycles and other",
+   "share_pct": 9,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 45,
+   "note": "of standalone sales, model estimate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "TIINDIA",
+   "relation": "input_cost",
+   "w": -1.4,
+   "w_low": -2.8,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Standalone engineering (tubes, strips, chains, metal-formed) steel ~45% of standalone sales (~Rs 9.5k cr/yr, model estimate). +7% -> ~Rs 300 cr cost; ~75% recovered by contractual pass-through with a lag -> ~Rs 75 cr unrecovered = ~7.5% of standalone EBITDA (~Rs 1,000 cr); standalone ~40% of TII market value x persistence 0.4 = -1.2; set at -1.4 to reflect the Q1 margin compression of 194bp. Pack empirical global HRC -1.80 per +10% (t -1.7) has the same sign. Management says inflation will be recovered 'over the coming quarters' (expectation, not outcome).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/tube-investments-reports-17-q1-revenue-growth-in-key-business-areas-4005-PE1_COR",
+     "date": "2026-08-17",
+     "note": "Standalone EBITDA margin down 194bp to 10.39% on rising material consumption"
+    },
+    {
+     "source": "https://www.kalkine.co.in/article/growth/tube-investments-of-india-nse-tiindia-how-power-infrastructure-links-and-fy27-capex-plans-shape-the-outlook",
+     "date": "2026-10-29",
+     "note": "Management expects input-cost inflation to be fully recovered over coming quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "TIINDIA",
+   "relation": "demand_driver",
+   "w": 1.4,
+   "w_low": 0.6,
+   "w_high": 2.3,
+   "lag": "0-3m",
+   "mechanism": "Metal-formed (car door frames), chains and tubes for autos ~40% of standalone revenue. +10% auto volumes -> +4% standalone revenue; contribution ~30% vs EBITDA margin ~10% -> EBITDA +12% of standalone; x0.4 value share x0.3 persistence = +1.4 after rounding up for capacity additions. Standalone engineering revenue +20.6% in Q1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/tube-investments-reports-17-q1-revenue-growth-in-key-business-areas-4005-PE1_COR",
+     "date": "2026-08-17",
+     "note": "Engineering segment standalone revenue Rs 1,566 cr, +20.64%"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "TIINDIA",
+   "relation": "policy_effect",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 0.9,
+   "lag": "3-12m",
+   "mechanism": "Metal-formed rail components (new customer plants in rail per Kalkine): rail ~5% of standalone revenue; +10% rail capex -> +0.5% standalone revenue -> +1.5% EBITDA x0.4 x0.5 = +0.3, rounded 0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.kalkine.co.in/article/growth/tube-investments-of-india-nse-tiindia-how-power-infrastructure-links-and-fy27-capex-plans-shape-the-outlook",
+     "date": "2026-10-29",
+     "note": "FY27 capex plan includes supplies linked to new customer plants in automotive and rail"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "TIINDIA",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Industrial tubes, Shanthi Gears and engineering capital goods linked to private capex ~25% of standalone: +10% capex growth -> +3% revenue -> +9% EBITDA x0.4 x0.3 = +1.1, trimmed to 0.8. Excludes CG Power, which flows through the holding link.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.kalkine.co.in/article/growth/tube-investments-of-india-nse-tiindia-how-power-infrastructure-links-and-fy27-capex-plans-shape-the-outlook",
+     "date": "2026-10-29",
+     "note": "Larger FY27 capex excl. CG Power incl. new Nashik facility"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "TIINDIA",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "TI Clean Mobility revenue Rs 239 cr (+77%) but loss Rs 147 cr in Q1 FY27 (Rs 136 cr a year earlier), plus Rs 50 cr semiconductor loss; TII injected Rs 250 cr more on 2026-09-29. Stronger EV support (+1) -> TICM loss -30% = +Rs 175 cr/yr = +17% of standalone EBITDA x0.4 value share x0.3 plus less capital drag = +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/tube-investments-reports-17-q1-revenue-growth-in-key-business-areas-4005-PE1_COR",
+     "date": "2026-08-17",
+     "note": "EV segment revenue +76.6% to Rs 239 cr; EV subsidiary loss Rs 147 cr; semiconductor loss Rs 50 cr"
+    },
+    {
+     "source": "ET Auto / BusinessLine / Autocar Professional headlines in pack",
+     "date": "2026-09-30",
+     "note": "Rs 250 cr infusion into TI Clean Mobility"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "TIINDIA",
+   "relation": "competition",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Pack empirical -7.24 per +3% USD/CNY (t -3.0). Plausible channel: weaker yuan = cheaper Chinese bicycles, EV components and engineered tubes/chains competing with TII; also a sentiment/regime proxy. Shrunk to about one fifth of the empirical estimate.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TIINDIA.md",
+     "date": "2026-11-05",
+     "note": "Empirical USDCNY -7.24 (t -3.0)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TIINDIA",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Long-duration, P/E ~70x stock funding EV/semiconductor losses; direct interest cost small (interest Rs 62 cr TTM). +25bp -> -0.8 mostly multiple compression. RBI hiked to 5.50% on 2026-10-07.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+     "date": "2026-10-07",
+     "note": "Repo +25bp to 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TIINDIA",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -0.6,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Standalone exports ~15% of engineering revenue vs imported steel/EV components ~10% -> net small positive; +3% -> +0.4% of standalone revenue x0.4 value share = +0.2-0.3. Pack: no significant USDINR sensitivity in the top 12.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TIINDIA.md",
+     "date": "2026-11-05",
+     "note": "No significant USDINR sensitivity"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "CGPOWER",
+   "dst": "TIINDIA",
+   "relation": "holding_stake",
+   "w": 0.5,
+   "w_low": 0.25,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "TII is CG Power's majority holder (Kalkine: 'majority holding'); the CG promoter group holds 56.34% (screener Sep 2026); TII's exact share is to be verified (model knowledge ~56-58%). CG is consolidated: CG PAT ~Rs 308 cr in Q1 vs TII consolidated PAT Rs 294 cr with minorities ~Rs 124 cr. Stake value 56% x Rs 1.27 lakh cr = ~Rs 71k cr = 1.6x TII's Rs 43.8k cr market cap: a deep holding-company discount. Structural pass-through would be ~1.0 per +1% CG; the empirical 3-year weekly regression of TII on CG controlling for Nifty 50 gives beta 0.31 (computed from data/prices/close.csv). w = 0.5 blends the two. Unit: % change in TII equity per +1% change in CGPOWER equity.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kalkine.co.in/article/growth/tube-investments-of-india-nse-tiindia-how-power-infrastructure-links-and-fy27-capex-plans-shape-the-outlook",
+     "date": "2026-10-29",
+     "note": "TII holds a majority stake in CG Power"
+    },
+    {
+     "source": "market_impact/data/packs/CGPOWER.md",
+     "date": "2026-11-05",
+     "note": "CG market cap Rs 1,27,103 cr; promoter 56.34%"
+    },
+    {
+     "source": "https://www.sahi.com/news/tube-investments-q1-consolidated-net-profit-at-1-7b-rupees-versus-3b-yoy-4005-PE1_COR",
+     "date": "2026-08-14",
+     "note": "CG Power and Shanthi Gears reported as subsidiaries; consolidated PAT attributable Rs 170 cr vs total Rs 294 cr (AI-generated summary; treat with caution)"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "CG Power and Industrial Solutions",
+   "ticker": "CGPOWER",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "majority holding; ~80% of consolidated EBITDA"
+  },
+  {
+   "counterparty": "Shanthi Gears",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "Q1 revenue Rs 115 cr (-14%); TII bought another 2.69% on 2026-08-21"
+  },
+  {
+   "counterparty": "Steel producers (JSW, Tata, SAIL)",
+   "ticker": "TATASTEEL",
+   "role": "supplier",
+   "importance": "high",
+   "note": "steel strips and coils"
+  },
+  {
+   "counterparty": "Maruti, M&M, Tata, Hero (auto OEM customers)",
+   "ticker": "MARUTI",
+   "role": "customer",
+   "importance": "medium",
+   "note": "door frames, chains"
+  },
+  {
+   "counterparty": "Imported bicycles and engineered tubes",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "low",
+   "note": "cycles, tubes"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (date unverified): CG Power Q2 PAT +44% already public; standalone margin recovery and EV/semiconductor losses are the watch items",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "Q1 pattern; CG Q2 released 2026-10-23"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further capital infusions into TI Clean Mobility / semiconductor ventures",
+   "type": "capex",
+   "prob": 0.4,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 0.0,
+   "source": "scanx.trade/ET Auto headlines 2026-09-29/30 (Rs 250 cr into TICM)"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -2.5,
+   "impact_pct_high": -0.3,
+   "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "normal reporting calendar"
+  },
+  {
+   "date": "2027",
+   "event": "Speculative value-unlocking of the holding discount to CG Power (no announcement)",
+   "type": "corporate_action",
+   "prob": 0.05,
+   "impact_pct_low": 5.0,
+   "impact_pct_high": 25.0,
+   "source": "not sourced; model scenario"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026), reported 2026-08-14; Q2 pending",
+  "trend": "Consolidated revenue Rs 6,215 cr (+17%), EBITDA Rs 548 cr (OPM 9%), PAT Rs 294 cr (-3%); attributable PAT ~Rs 170 cr (one source). Standalone revenue Rs 2,366 cr (+18%), EBITDA margin 10.39% (-194bp). EV subsidiary loss Rs 147 cr, semiconductor loss Rs 50 cr. CG Power Q2 PAT +44% (2026-10-23) is not yet in TII's reported numbers.",
+  "valuation": "Rs 2,253, market cap Rs 43.6k cr, P/E ~70x trailing (depressed earnings), book value Rs 400; -25% in 12 months and -18% in 3 months; 52-week low Rs 2,128 on 2026-11-01. CG stake alone ~Rs 71k cr.",
+  "recent_developments": [
+   "2026-08-14: Q1 FY27 results",
+   "2026-08-21: acquires further 2.69% in Shanthi Gears",
+   "2026-09-29: Rs 250 cr into TI Clean Mobility",
+   "2026-10-29: Kalkine FY27 outlook: larger capex excl. CG; Nashik plant",
+   "2026-11-01: 52-week low Rs 2,128",
+   "2026-11-02: Rs 39 lakh Punjab pollution board environmental compensation (immaterial)"
+  ]
+ },
+ "key_risks": [
+  "Steel cost not recovered; metal-formed pricing lag",
+  "EV and semiconductor venture losses and capital calls",
+  "CG Power valuation (P/E ~91x) and AI/data-centre sentiment",
+  "Persistent holding-company discount",
+  "Chinese competition (tubes, cycles, EV parts)"
+ ],
+ "upside_triggers": [
+  "CG Power order inflow/margin strength",
+  "Recovery of standalone margins",
+  "TICM breakeven path",
+  "Holding-discount narrowing or value-unlocking"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.sahi.com/news/tube-investments-reports-17-q1-revenue-growth-in-key-business-areas-4005-PE1_COR",
+   "date": "2026-08-17",
+   "what": "Q1 FY27 standalone and segment data"
+  },
+  {
+   "url": "https://www.sahi.com/news/tube-investments-q1-consolidated-net-profit-at-1-7b-rupees-versus-3b-yoy-4005-PE1_COR",
+   "date": "2026-08-14",
+   "what": "Q1 consolidated PAT, subsidiaries"
+  },
+  {
+   "url": "https://www.kalkine.co.in/article/growth/tube-investments-of-india-nse-tiindia-how-power-infrastructure-links-and-fy27-capex-plans-shape-the-outlook",
+   "date": "2026-10-29",
+   "what": "FY27 outlook, CG Power link, capex"
+  },
+  {
+   "url": "https://www.screener.in/company/TIINDIA/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in quarterly financials"
+  },
+  {
+   "url": "market_impact/data/packs/CGPOWER.md",
+   "date": "2026-11-05",
+   "what": "CG market cap and shareholding"
+  },
+  {
+   "url": "market_impact/data/packs/TIINDIA.md",
+   "date": "2026-11-05",
+   "what": "Pack"
+  },
+  {
+   "url": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+   "date": "2026-10-07",
+   "what": "RBI"
+  }
+ ]
+}

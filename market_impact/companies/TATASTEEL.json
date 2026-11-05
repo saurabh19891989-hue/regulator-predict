@@ -1,0 +1,372 @@
+{
+ "name": "Tata Steel Ltd.",
+ "industry": "I_STEEL",
+ "business_summary": "India's largest steel group by capacity (~Tata Steel India ~23 Mt with Jamshedpur, Kalinganagar, Angul/Neelachal, NINL) plus Tata Steel Netherlands (IJmuiden) and UK (Port Talbot, in transition to EAF) and Southeast Asian assets. Captive iron ore and ~45% captive coking coal in India. Q1 FY27 sales Rs60,794 cr, EBITDA Rs9,264 cr (15%), PAT Rs2,385 cr. TTM sales Rs239,756 cr, EBITDA Rs36,189 cr, net profit Rs11,264 cr; market cap Rs2.26 lakh cr. Q2 FY27 results due in November (date unconfirmed); Q2 India crude steel output +10% YoY (6.21 Mt reported 2026-10-07/08).",
+ "revenue_mix": [
+  {
+   "segment": "India steel",
+   "share_pct": 62,
+   "geography": "India majority; exports small (model estimate)"
+  },
+  {
+   "segment": "Europe (Netherlands, UK)",
+   "share_pct": 30,
+   "geography": "EU/UK"
+  },
+  {
+   "segment": "Other (SE Asia, services)",
+   "share_pct": 8,
+   "geography": "Thailand, Singapore, etc."
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COKING_COAL",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_IRON_ORE",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "F_GAS_GLOBAL",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "TATASTEEL",
+   "relation": "output_price",
+   "w": 8.0,
+   "w_low": 3.5,
+   "w_high": 12.0,
+   "lag": "0-3m",
+   "mechanism": "India ~62% of revenue (~Rs130-140k cr, model estimate) and ~70% of EBITDA; +7% price on ~Rs135k cr = Rs9.5k cr vs TTM EBITDA Rs36,189 cr => +26%; EV/MCap ~1.4 (net debt ~Rs80k cr, model estimate), persistence 0.3 => +11; trimmed for cost co-movement and contract pricing => ~8. Pack: global HRC +0.94 (t=+1.3).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+steel+prices+set+to+rise+coking+coal+costs+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-08",
+     "note": "Reuters: Indian steel prices set to rise further"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Steel+prices+at+import+parity+Tata+Steel+JSW+Steel+SAIL+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "NDTV Profit"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "TATASTEEL",
+   "relation": "output_price",
+   "w": 2.0,
+   "w_low": 0.7,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Europe (NL+UK, ~30% of revenue, ~Rs72k cr) prices follow global/EU HRC; +10% global HRC => ~+5% European realisation => ~+Rs3.6k cr = +10% EBITDA x1.4 x0.3 = +4.2, halved for contract lags and EU quota/CBAM dampening => ~+2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATASTEEL.md",
+     "date": "2026-11-05",
+     "note": "empirical +0.94 per +10% global HRC, t=+1.3"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=EU+steel+quota+2.8+million+tonnes+India+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "note": "Business Standard: EU quota window for India"
+    }
+   ]
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "TATASTEEL",
+   "relation": "input_cost",
+   "w": -4.0,
+   "w_low": -7.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "India coking coal ~45% captive (Jharia, model knowledge) so ~55% imported; Europe fully imported. Net exposed ~Rs35k cr (~17% of costs): +15% => -14.8% EBITDA; ~40% passed through => -8.9%; x1.4 x0.3 => ~-3.7.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+steel+mills+margin+squeeze+global+coking+coal+prices+rise+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-19",
+     "note": "Reuters: coking coal rise squeezes mills"
+    }
+   ]
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "TATASTEEL",
+   "relation": "input_cost",
+   "w": 0.5,
+   "w_low": -1.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "India is ~fully captive (Odisha/Jharkhand mines): higher ore price raises opportunity value and steel prices more than cost; Europe buys ore (~10% of costs there) => net slightly positive/neutral. Pack +1.97 (t=+1.5).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATASTEEL.md",
+     "date": "2026-11-05",
+     "note": "empirical +1.97 per +15% iron ore, t=+1.5"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "TATASTEEL",
+   "relation": "output_price",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Weaker yuan makes Chinese steel exports cheaper, pressuring Indian and European HRC (path partly in F_STEEL_*). Empirical -4.77 (t=-2.9) shrunk by ~half to avoid double counting.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATASTEEL.md",
+     "date": "2026-11-05",
+     "note": "empirical -4.77 per +3% USD/CNY, t=-2.9"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "TATASTEEL",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Europe EBITDA has high operating leverage; +1pp EU growth => +1.5% volume => ~+Rs380 cr (1% EBITDA) x1.4 x0.5 => ~+0.7; plus pricing => ~+1.2. Dutch decarbonisation timetable (joint LoI extended to March 2027) and CBAM add policy risk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Steel+Dutch+govt+extend+joint+letter+of+intent+decarbonisation+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-25",
+     "note": "Business Standard: LoI extended; Economic Times: extended to March 2027"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "TATASTEEL",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "European operations use gas and power (~8% of European costs); +15% gas => ~-1.5% Europe EBITDA => -0.6% equity. Pack +0.30 (t=+0.9) insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATASTEEL.md",
+     "date": "2026-11-05",
+     "note": "empirical +0.30 per +15% gas, t=+0.9"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TATASTEEL",
+   "relation": "fx_translation",
+   "w": 1.5,
+   "w_low": -1.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Import-parity pricing in India and translation of European EBITDA lift INR profit; imported coal and USD/EUR debt offset. Net ~+4% EBITDA x1.4 x0.3-0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATASTEEL.md",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49, +6.5% 12m"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TATASTEEL",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Interest Rs7.1k cr TTM on ~Rs80k cr net debt; discount-rate channel on a levered cyclical.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATASTEEL.md",
+     "date": "2026-11-05",
+     "note": "TTM interest Rs7,085 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "TATASTEEL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Infrastructure/construction demand for Tata Steel India's long and flat products; +10% capex => ~+2.5% volume.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Steel+sector+continues+strong+show+H1+2026-27+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "ETV Bharat"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "TATASTEEL",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Largest Indian auto-steel supplier and key European auto supplier; +10% volume => +2% India flat volumes.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATASTEEL.md",
+     "date": "2026-11-05",
+     "note": "market beta 1.19"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Coking coal miners (Australia, US, Mozambique)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "USD-priced"
+  },
+  {
+   "counterparty": "JSW Steel",
+   "ticker": "JSWSTEEL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "closest peer"
+  },
+  {
+   "counterparty": "SAIL",
+   "ticker": "SAIL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "PSU rival"
+  },
+  {
+   "counterparty": "Auto OEMs (Tata Motors group, Maruti etc.)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "flat auto grades"
+  },
+  {
+   "counterparty": "T Steel Holdings (Singapore subsidiary)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "Tata Steel acquired 394 crore shares for Rs3,260 cr on 2026-09-29"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (date not confirmed; analysts expected EBITDA to decline QoQ per Livemint 2026-10-18)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Tata+Steel+declares+Q2+results+2026+date+EBITDA+may+decline+QoQ+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Dutch government joint letter of intent deadline (extended five months to March 2027): binding support for IJmuiden decarbonisation",
+   "type": "regulatory",
+   "prob": 0.55,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Tata+Steel+extends+Dutch+green+steel+pact+by+five+months+to+March+2027+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "pattern: quarterly results mid-Nov / early Feb"
+  },
+  {
+   "date": "2027-03",
+   "event": "Safeguard duty tightening on Indian flat imports",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=India+steel+ministry+unlikely+to+tighten+steel+import+curbs+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs60,794 cr, EBITDA Rs9,264 cr (15%), PAT Rs2,385 cr; Q2 pending",
+  "trend": "India volumes rising (+10% YoY in Q2); Europe still pressured; stock near 52-week low area and -16.5% over 6m, with a 5% single-day gain on 2026-11-02",
+  "valuation": "P/E ~19x, P/B 2.2x (price Rs181 vs BV Rs81.8), dividend yield 2.2%",
+  "recent_developments": [
+   "2026-11-02: shares +5% from near 52-week low, biggest single-day gain in 14 months (Zee Business, Business Today)",
+   "2026-10-16: shares slip as draft steel policy 2047 draws focus (BusinessLine)",
+   "2026-10-07: Q2 production update; India crude +10% YoY (scanx.trade); global volumes under pressure (Upstox)",
+   "2026-09-29: acquires 394 crore shares of T Steel Holdings for Rs3,260 cr (CNBC TV18)",
+   "2026-09-25: Dutch decarbonisation LoI extended to March 2027 (Business Standard, ET)"
+  ]
+ },
+ "key_risks": [
+  "European losses and decarbonisation capex",
+  "Coking coal rise ahead of HRC",
+  "Chinese export surge",
+  "CBAM / EU safeguard on third-country steel"
+ ],
+ "upside_triggers": [
+  "Q2 beat and Indian price hikes",
+  "Dutch support agreement signed",
+  "Safeguard duty tightening"
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/TATASTEEL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Jun 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Steel+Q2+FY27+results+Europe+India+EBITDA+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-18",
+   "what": "Q2 preview"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Steel+Netherlands+IJmuiden+decarbonisation+EAF+2026+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-06",
+   "what": "Dutch decarbonisation"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=draft+National+Steel+Policy+2047+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-11",
+   "what": "draft policy"
+  }
+ ],
+ "ticker": "TATASTEEL",
+ "as_of": "2026-11-05",
+ "tier": "NIFTY_50",
+ "company_links": [],
+ "new_nodes_proposed": []
+}

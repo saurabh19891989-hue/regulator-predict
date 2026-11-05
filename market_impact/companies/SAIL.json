@@ -1,0 +1,354 @@
+{
+ "name": "Steel Authority of India Ltd.",
+ "industry": "I_STEEL",
+ "business_summary": "Government-owned (65%) integrated steel producer: Bhilai, Durgapur, Rourkela, Bokaro, Burnpur (IISCO) plants with captive iron ore, limestone and dolomite mines, ~20 Mtpa crude capacity heading to 35 Mtpa. Products: rails, structurals, plates, HR/CR coils and special steels; strong in public-sector demand (railways, defence, infrastructure). Q2 FY27 sales Rs31,998 cr, EBITDA Rs4,216 cr (13%), PAT Rs1,750 cr (about four-fold YoY). TTM sales Rs116,428 cr, EBITDA Rs15,072 cr; market cap Rs69,599 cr; FY27 capex raised to Rs15,000 cr.",
+ "revenue_mix": [
+  {
+   "segment": "flat products (HRC, plates, CRC)",
+   "share_pct": 55,
+   "geography": "India ~97%"
+  },
+  {
+   "segment": "long products (rails, structurals, bars)",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "semis and other",
+   "share_pct": 5,
+   "geography": "India/export"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COKING_COAL",
+   "share_of_costs_pct": 28
+  },
+  {
+   "input": "F_COAL_INDIA",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "F_IRON_ORE",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "SAIL",
+   "relation": "output_price",
+   "w": 15.0,
+   "w_low": 8.0,
+   "w_high": 22.0,
+   "lag": "0-3m",
+   "mechanism": "~97% of TTM sales Rs116,428 cr is domestic steel; +7% on ~80% realisable (some rail/PSU contracts fixed) = Rs6.3k cr vs TTM EBITDA Rs15,072 cr => +42%; EV/MCap ~1.45 (net debt ~Rs28k cr, model estimate), persistence 0.3 => +18; central 15. Pack: global HRC +1.31 (t=+1.3).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+steel+prices+set+to+rise+coking+coal+demand+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-08",
+     "note": "Reuters: steel prices set to rise further"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=SAIL+Q2+FY27+results+profit+surges+debt+falls+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Investing.com: profit +315%, debt falls"
+    },
+    {
+     "source": "market_impact/data/packs/SAIL.md",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 OPM 13%, PAT Rs1,750 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "SAIL",
+   "relation": "input_cost",
+   "w": -8.0,
+   "w_low": -13.0,
+   "w_high": -3.5,
+   "lag": "0-3m",
+   "mechanism": "SAIL imports ~70% of coking coal (model knowledge); coking coal ~28% of costs (~Rs28k cr of TTM costs Rs101k cr). +15% => -28% EBITDA; ~40% passed through => -17%; x1.45 x0.3 => ~-7.3 to -12; central -8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+steel+mills+margin+squeeze+global+coking+coal+prices+rise+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-19",
+     "note": "Reuters"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Coking+coal+outlook+China+supply+shocks+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Argus"
+    }
+   ]
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "SAIL",
+   "relation": "input_cost",
+   "w": 0.5,
+   "w_low": -1.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Almost entirely captive mines (Bokaro, Chiria, Kiriburu etc.), so ore price moves lift selling price more than cost. Pack +4.22 (t=+2.2) reflects steel co-movement.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SAIL.md",
+     "date": "2026-11-05",
+     "note": "empirical +4.22 per +15% iron ore, t=+2.2"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "SAIL",
+   "relation": "fx_translation",
+   "w": 1.0,
+   "w_low": -2.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Import-parity pricing helps; imported coal (USD) and some USD loans hurt; net small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SAIL.md",
+     "date": "2026-11-05",
+     "note": "TTM interest Rs2,096 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SAIL",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Interest Rs2.1k cr on ~Rs28k cr net debt; capex Rs15,000 cr in FY27 (35 Mtpa programme) raises sensitivity; +25bp ~Rs70 cr = 0.5% EBITDA, discount-rate effect dominates.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SAIL+boosts+FY27+capital+expenditure+Rs15%2C000+crore+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-01",
+     "note": "Sahi: capex raised to Rs15,000 cr for 35 MTPA expansion"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "SAIL",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Rails, structurals and plates for public infrastructure ~35% of sales; +10% govt capex => +3.5% volume => +6% EBITDA x1.45 x0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SAIL+expects+Rs50%2C000+crore+internal+expansion+funding+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "Multibagg AI: SAIL expects Rs50,000 cr internal funding"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "SAIL",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Rails and wheels supplier to Indian Railways (~8% of volumes, model knowledge); +10% railway capex => +2% volume.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SAIL.md",
+     "date": "2026-11-05",
+     "note": "market beta 1.36"
+    }
+   ]
+  },
+  {
+   "src": "P_STEEL_DUTY_IN",
+   "dst": "SAIL",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Largest flat-product producer exposed to imports; volume-protection effect beyond price (price in F_STEEL_INDIA). Ministry unlikely to tighten further (SMM 2026-10-07).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=steel+ministry+unlikely+to+tighten+steel+import+curbs+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "SMM"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "SAIL",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Captive iron ore/limestone/dolomite royalty and DMF charges are small vs sales (~2%); +1 unit hike ~ -1% EBITDA.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SAIL.md",
+     "date": "2026-11-05",
+     "note": "model estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "SAIL",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Residual domestic steel demand elasticity ~1.2x GDP.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SAIL.md",
+     "date": "2026-11-05",
+     "note": "ROCE 7.9%"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Indian Railways",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "rails and wheels"
+  },
+  {
+   "counterparty": "Coking coal importers (Australia, Russia, US)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "~70% imported"
+  },
+  {
+   "counterparty": "Tata Steel",
+   "ticker": "TATASTEEL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "flat and long peer"
+  },
+  {
+   "counterparty": "JSW Steel",
+   "ticker": "JSWSTEEL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "flat peer"
+  },
+  {
+   "counterparty": "Government of India (65%)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "disinvestment overhang"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Q2 on 2026-10-27)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "pattern: Q2 results on 2026-10-27"
+  },
+  {
+   "date": "2027-03",
+   "event": "Wage-agreement renewal for executives/workers due around end of the current cycle (model knowledge, unverified)",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Government stake sale (OFS) in SAIL",
+   "type": "corporate_action",
+   "prob": 0.07,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -3.0,
+   "source": "model knowledge (no 2026 announcement found)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Safeguard duty tightening on steel imports",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=steel+safeguard+duty+India+2026+HRC+prices+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs31,998 cr (+20% YoY), EBITDA Rs4,216 cr (13%), PAT Rs1,750 cr; interest Rs523 cr",
+  "trend": "Profit recovery from Rs374-745 cr/qtr a year ago; capex ramp to 35 Mtpa funded internally (Rs50,000 cr); stock -4.6% over 3m, 2026-11 in F&O ban on open-interest",
+  "valuation": "P/E 11.6x, P/B 1.1x, ROCE 7.9%, dividend yield 1.4%",
+  "recent_developments": [
+   "2026-10-27: Q2 net profit up four-fold to Rs1,750 cr (ET); shares -4% on the day (Investing.com)",
+   "2026-10-31: expects Rs50,000 cr internal funding for expansion (Multibagg AI)",
+   "2026-09-01: FY27 capex raised to Rs15,000 cr for 35 MTPA (Sahi)",
+   "2026-11-03: stock under F&O ban (Equitypandit)",
+   "2026-11-04: 12-month price target raised to Rs188 (TradingView)"
+  ]
+ },
+ "key_risks": [
+  "Coking coal rise ahead of HRC",
+  "Execution of 35 Mtpa programme and capex overrun",
+  "Wage settlement and government disinvestment",
+  "Import surge from China"
+ ],
+ "upside_triggers": [
+  "Duty tightening",
+  "Post-Diwali HRC price hikes",
+  "Faster deleveraging"
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/SAIL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=SAIL+Q2+FY27+results+profit+surges+debt+falls+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=SAIL+Boosts+FY27+Capital+Expenditure+15%2C000+Crore+35+MTPA+Expansion+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-01",
+   "what": "capex"
+  }
+ ],
+ "ticker": "SAIL",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100",
+ "company_links": [],
+ "new_nodes_proposed": []
+}

@@ -36,3 +36,13 @@ def test_clamped_observed_driver_blocks_upstream_propagation():
     clamped, _, _ = net.unit_response("BRENT", clamped=frozenset({"INR"}))
     assert math.isclose(free["X"], -2 + 0.4 * 5 * DAMP[2])
     assert math.isclose(clamped["X"], -2)          # INR observed separately → no double count via BRENT→INR
+
+
+def test_overlap_damp_when_company_has_direct_edge_from_source():
+    from market_impact.mi.graph import OVERLAP_DAMP
+    nodes = {"A": {"type": "FACTOR"}, "B": {"type": "FACTOR"}, "X": {"type": "COMPANY"}, "Y": {"type": "COMPANY"}}
+    E = lambda s, d, w, layer="backbone": {"src": s, "dst": d, "w": w, "w_low": w, "w_high": w, "layer": layer}
+    net = Network(nodes, [E("A", "B", 0.5), E("A", "X", 4, "company"), E("B", "X", 2, "company"), E("B", "Y", 2, "company")])
+    tot, _, _ = net.unit_response("A")
+    assert math.isclose(tot["X"], 4 + 0.5 * 2 * DAMP[2] * OVERLAP_DAMP)   # X has direct A edge → indirect half credit
+    assert math.isclose(tot["Y"], 0.5 * 2 * DAMP[2])                      # Y has no direct A edge → full credit

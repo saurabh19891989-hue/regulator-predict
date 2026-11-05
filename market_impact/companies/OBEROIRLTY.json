@@ -1,0 +1,488 @@
+{
+ "name": "Oberoi Realty Ltd.",
+ "industry": "I_REAL_ESTATE",
+ "tier": "MIDCAP_100",
+ "business_summary": "Mumbai-focused luxury developer and annuity owner: residential (Worli, Goregaon/Borivali, Thane, Mulund), commercial (Commerz I-III, Oberoi Garden City), Oberoi Mall and hotels; recently open to land buys and JDs in Delhi-NCR (Business Standard 2026-10-19). Lowest leverage in the sector (interest Rs 205 cr TTM against operating profit Rs 3,560 cr). Q2 FY27 PAT ~Rs 762 cr (flat) with revenue -6%, but pre-sales beat Nomura's estimates; second interim dividend Rs 2/share. Market cap Rs 63,474 cr, P/E 24, ROCE 17.3%.",
+ "revenue_mix": [
+  {
+   "segment": "Residential (Mumbai luxury)",
+   "share_pct": 75,
+   "geography": "MMR ~100%"
+  },
+  {
+   "segment": "Rental (office, mall) and hospitality",
+   "share_pct": 25,
+   "geography": "Mumbai"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "NEW_CEMENT_PRICE",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "OBEROIRLTY",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Luxury/premium Mumbai (Worli, Borivali/Goregaon, Thane, Mulund, Sky City) is ~55-60% of value; rest commercial/retail/hospitality annuity (model estimate). +10% volume -> pre-sales +10% -> resi EBITDA +11% (high margin ~57% TTM op margin) -> group +6% x EV/MCap 1.05 x persistence 0.55 => ~+3.5. Anarock: only +3% y/y in Jul-Sep 2026; Oberoi pre-sales beat Nomura (2026-10-19).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Oberoi+Realty+Nomura+Buy+pre-sales+beat+estimates+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Nomura 2026-10-19: Buy, TP Rs 2,090 as pre-sales beat; ICICI Sec TP 2,151, Motilal 2,145 (2026-10-21/22)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "OBEROIRLTY",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Lowest leverage in batch (interest Rs 205 cr TTM vs op profit Rs 3,560 cr). +25 bp -> luxury volume -0.6% -> -0.5; funding +Rs 5 cr (<0.2% PAT); multiple/sentiment (beta 1.3, P/E 24) -> -2.0. Total ~ -2.5. Smaller than Godrej/Lodha since beta 1.3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "India Today 2026-09-21: analysts see up to 50 bp more by December; The Hindu 2026-09-18: two hikes possible in CY2026 (pre-decision views)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "OBEROIRLTY",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Cap-rate channel for Oberoi Mall, Commerz I-III, Oberoi Garden City offices (annuity ~35-40% of value): +25 bp G-sec -> +12 bp yield on ~7.5% -> -1.6% x 0.38 = -0.6, plus -0.6 on resi NAV discounting.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "OBEROIRLTY",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Ultra-luxury ticket sizes (Sky City, Elysian, Three Sixty West) rely on HNI wealth rather than leverage; +1 SSU -> realisations +3% -> EBITDA +4% on resi => ~+2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Oberoi+Realty+Nomura+Buy+pre-sales+beat+estimates+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Nomura 2026-10-19: Buy, TP Rs 2,090 as pre-sales beat; ICICI Sec TP 2,151, Motilal 2,145 (2026-10-21/22)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "OBEROIRLTY",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Mall (Oberoi Mall Goregaon) footfall/turnover rent and hotel (Westin) RevPAR with urban consumption: +5pp -> annuity EBITDA +2% on 30% value share, plus wealth effect on sales => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "OBEROIRLTY",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.6,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.3 (pack) -> +US$5bn ~ +1.5% index x 1.3 = +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/OBEROIRLTY.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "OBEROIRLTY",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.6,
+   "lag": "0-3m",
+   "mechanism": "DII support; beta 1.3 => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/OBEROIRLTY.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "OBEROIRLTY",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Commerz/Oberoi Garden City tenants include IT/BFSI; occupancy high; +5% US tech spend -> +0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_TRAVEL_DEMAND",
+   "dst": "OBEROIRLTY",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Hotels ~5% of value (Westin Mumbai Garden City, Oberoi Mall Hotel); +10% travel demand -> RevPAR +6% -> EBITDA +8% on 5% share => +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "OBEROIRLTY",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Steel 5.4% of resi revenue; +7% -> 0.38% of revenue, exposed share ~45%; margin 57% -> EBITDA -0.3%; persistence 0.3 => -0.4 incl. rounding.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CEMENT_PRICE",
+   "dst": "OBEROIRLTY",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Cement 4.5% of resi revenue; +5% -> 0.23% of revenue => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "OBEROIRLTY",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Labour inflation on site and mall/hotel staff => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_GULF_REMITTANCES",
+   "dst": "OBEROIRLTY",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "NRI buyers (~10-15% of Mumbai luxury presales, model estimate) => +0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "OBEROIRLTY",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -0.3,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Domestic; weak rupee helps NRI demand; no foreign debt. Pack shows no significant FX sensitivity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    },
+    {
+     "source": "market_impact/data/packs/OBEROIRLTY.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "P_HOUSING_POLICY",
+   "dst": "OBEROIRLTY",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Maharashtra stamp duty/FSI/redevelopment policy; luxury less targeted => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "OBEROIRLTY",
+   "relation": "policy_effect",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Investor/NRI demand and equity wealth effect => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 63,474 cr, P/E 24.0, P/B 3.3, ROCE 17.3%; TTM sales Rs 6,214 cr, op profit Rs 3,560 cr (57%), PAT Rs 2,631 cr; interest Rs 205 cr"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "HNI/NRI Mumbai luxury buyers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "wealth-driven"
+  },
+  {
+   "counterparty": "Office/retail tenants (IT, BFSI, brands)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "rental stream"
+  },
+  {
+   "counterparty": "Contractors/steel/cement",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "in-house construction mgmt"
+  },
+  {
+   "counterparty": "Lodha / Godrej Properties / DLF / Prestige",
+   "ticker": "LODHA",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "MMR luxury competition; NCR entry vs DLF"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Second interim dividend Rs 2/share record/payment (declared 2026-10-16); mechanical price adjustment ~0.1%",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": -0.2,
+   "impact_pct_high": 0.2,
+   "source": "https://news.google.com/rss/search?q=Oberoi+Realty+Q2+FY27+results+net+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI December MPC (sensitivity only)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -4.5,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12/2027-06",
+   "event": "First Delhi-NCR land/JD deal announcement",
+   "type": "capex",
+   "prob": 0.35,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Oberoi+Realty+open+to+land+buys+Delhi+NCR+joint+development+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (model-estimated from Q2 on 2026-10-16)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Oberoi+Realty+Q2+FY27+results+net+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-05",
+   "event": "FY27 results and new-launch pipeline (Thane/Worli/Borivali phases)",
+   "type": "guidance",
+   "prob": 0.9,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Oberoi+Realty+Nomura+Buy+pre-sales+beat+estimates+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 1,671 cr (screener), operating profit Rs 1,019 cr (61%), PAT Rs 762 cr; revenue -6% y/y, PAT flat",
+  "trend": "Margins very high; revenue lumpy; pre-sales stronger than earnings; brokers (Nomura, ICICI Sec, Motilal, Prabhudas) Buy with TP Rs 2,090-2,151.",
+  "valuation": "Price ~Rs 1,745, P/E 24.0, P/B 3.3, ROE 14.6%, yield 0.46%; 52w 1,390-1,986; 12m -2.0%; 1y vol 28% (lowest in batch).",
+  "recent_developments": [
+   "2026-10-22 ICICI Sec Buy TP 2,151",
+   "2026-10-19 Nomura Buy TP 2,090, pre-sales beat; Q2 call 'misses estimates, shares slip'",
+   "2026-10-19 open to NCR land buys/JDs",
+   "2026-10-16 Q2 results and Rs 2 second interim dividend",
+   "2026-10-07 RBI hike"
+  ]
+ },
+ "key_risks": [
+  "Mumbai luxury demand correction",
+  "Revenue lumpiness and project timing",
+  "Rate/yield rise reduces annuity valuations",
+  "Single-city concentration",
+  "NCR expansion execution"
+ ],
+ "upside_triggers": [
+  "Strong launches in Thane/Borivali/Worli",
+  "NCR deployment of balance-sheet strength",
+  "RBI pause",
+  "Rental growth/ mall re-rating"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CEMENT_PRICE",
+   "type": "FACTOR",
+   "name": "Cement price (India)",
+   "ssu": "+5% cement price"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Oberoi+Realty+Q2+FY27+results+net+profit+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Oberoi+Realty+Nomura+Buy+pre-sales+beat+estimates+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-19",
+   "what": "broker views, pre-sales beat"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Oberoi+Realty+open+to+land+buys+Delhi+NCR+joint+development+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-19",
+   "what": "NCR plans"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-28",
+   "what": "Anarock"
+  },
+  {
+   "url": "https://www.screener.in/company/OBEROIRLTY/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  }
+ ],
+ "ticker": "OBEROIRLTY",
+ "as_of": "2026-11-05"
+}

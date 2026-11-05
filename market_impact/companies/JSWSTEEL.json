@@ -1,0 +1,369 @@
+{
+ "name": "JSW Steel Ltd.",
+ "industry": "I_STEEL",
+ "business_summary": "India's second-largest steel producer (JSW Group), integrated flat and long products at Vijayanagar, Dolvi, Salem and Bhushan Power & Steel, with captive iron ore in Karnataka/Odisha and a growing downstream (coated, special steels) and export tail. Q2 FY27 (Sep 2026) sales Rs54,486 cr, EBITDA Rs10,120 cr (19%), consolidated PAT Rs5,359 cr (about three-fold YoY; some outlets quote Rs5,279 cr), record volumes. TTM sales Rs199,021 cr, EBITDA Rs34,248 cr; market cap Rs3.32 lakh cr. Board approved Rs7,500 cr Sambalpur expansion on 2026-10-22.",
+ "revenue_mix": [
+  {
+   "segment": "steel (flat, long, coated)",
+   "share_pct": 96,
+   "geography": "India ~87% / exports ~13% (model knowledge)"
+  },
+  {
+   "segment": "other (power, ports, mining)",
+   "share_pct": 4,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COKING_COAL",
+   "share_of_costs_pct": 27
+  },
+  {
+   "input": "F_IRON_ORE",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 6
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "JSWSTEEL",
+   "relation": "output_price",
+   "w": 9.0,
+   "w_low": 4.0,
+   "w_high": 14.0,
+   "lag": "0-3m",
+   "mechanism": "Domestic HRC/long-product price. ~88% of TTM sales Rs199,021 cr is domestic; +7% price on that = ~Rs12,200 cr vs TTM EBITDA Rs34,248 cr (17% margin) => +36% EBITDA at constant cost; EV/MCap ~1.25, persistence 0.3 => +13.5. Cut to 9 because price rises historically coincide with coking-coal cost rises (spread beta < 1) and pass-through lags. Pack empirical on global HRC is small (+1.10 per +10%, t=+2.0).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+steel+prices+set+to+rise+further+coking+coal+costs+demand+revival+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-08",
+     "note": "Reuters: Indian steel prices set to rise further on coking coal costs, demand revival"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Steel+prices+at+import+parity+Tata+Steel+JSW+Steel+SAIL+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "NDTV Profit: steel prices at import parity"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=JSW+Steel+Q2+FY27+results+record+volumes+net+debt+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Moneycontrol: profit +225% YoY on record sales, firm flat steel prices"
+    }
+   ]
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "JSWSTEEL",
+   "relation": "input_cost",
+   "w": -5.5,
+   "w_low": -9.0,
+   "w_high": -2.5,
+   "lag": "0-3m",
+   "mechanism": "Imported coking coal ~27% of total costs (TTM expenses Rs164,773 cr => ~Rs44k cr; model estimate). +15% => -19.6% EBITDA at constant prices; ~35% passed through within a quarter => -12.7%; x1.25 x0.3 persistence => ~-4.8 to -7; central -5.5. Reuters 2026-08-19 flags a mill margin squeeze on rising coking coal.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+steel+mills+margin+squeeze+global+coking+coal+prices+rise+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-19",
+     "note": "Reuters: mills face margin squeeze as global coking coal rises"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Coking+coal+outlook+China+supply+shocks+Argus+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Argus: China supply shocks and coking coal trends"
+    }
+   ]
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "JSWSTEEL",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Net purchased ore ~8% of costs after captive Karnataka/Odisha mines (model estimate); +15% => ~Rs2,000 cr => -5.8% EBITDA, ~50% passed through, x1.25x0.3 => ~-1.1 to -2. Pack empirical is POSITIVE (+2.33, t=+2.3) because ore and steel prices co-move; conflict flagged: cost-side sign retained, steel-price co-movement is captured in F_STEEL_INDIA.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/JSWSTEEL.md",
+     "date": "2026-11-05",
+     "note": "empirical +2.33 per +15% iron ore, t=+2.3 (sign conflict)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=NMDC+cuts+iron+ore+prices+from+August+8+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-08",
+     "note": "ET: NMDC lump Rs5,250/t, fines Rs4,500/t"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "JSWSTEEL",
+   "relation": "fx_translation",
+   "w": 2.5,
+   "w_low": -1.5,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Import-parity domestic pricing and ~13% exports lift INR revenue ~+2.2% for +3% USD/INR (~Rs4.4k cr); imported coal/ore ~30% of costs (+Rs1.5k cr); USD debt revaluation ~-Rs0.7k cr; net ~+Rs2.2k cr = +6% EBITDA x1.25 x0.3-0.5 => ~+2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/JSWSTEEL.md",
+     "date": "2026-11-05",
+     "note": "Interest Rs1,602 cr in Q2 FY27 vs Rs2,413 cr a year earlier (debt falling)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "JSWSTEEL",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Interest Rs7.8k cr TTM on net debt of roughly Rs70k cr (model estimate), ~50% floating or short; +25bp = ~Rs90 cr = 0.3% EBITDA; most of the effect is the discount rate on a levered cyclical (beta ~1.1): ~-1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=JSW+Steel+Q2+FY27+results+record+volumes+net+debt+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Investing.com: record volumes drive profit surge, debt falls"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "JSWSTEEL",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Infrastructure/construction ~40% of Indian steel demand; +10% government capex lifts industry volumes ~2-3% and supports price; JSW (domestic volumes ~25 Mt run-rate, model knowledge) EBITDA +4% => x1.25x0.5 => ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Steel+sector+continues+strong+show+H1+2026-27+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "ETV Bharat: steel boom has upsides and downsides"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+steel+demand+Apr-Aug+2026+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "note": "PIB: steel demand robust in Apr-Aug 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "JSWSTEEL",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Flat products to autos/white goods/ appliances are ~20-25% of JSW volumes (model knowledge); +10% auto volumes => +1.5% JSW volumes => ~+3% EBITDA x1.25x0.2... => ~+0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/JSWSTEEL.md",
+     "date": "2026-11-05",
+     "note": "TTM sales +14%"
+    }
+   ]
+  },
+  {
+   "src": "P_STEEL_DUTY_IN",
+   "dst": "JSWSTEEL",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Volume-protection effect of safeguard/anti-dumping duties beyond the price channel (price already in F_STEEL_INDIA); SMM 2026-10-07 reports ministry unlikely to tighten curbs, so incremental upside is limited while removal risk is the downside.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=steel+ministry+unlikely+to+tighten+steel+import+curbs+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Shanghai Metals Market: ministry unlikely to tighten import curbs"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=EU+steel+quota+2.8+million+tonnes+India+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "note": "Business Standard: EU quota opens 2.8 MT export window for India"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "JSWSTEEL",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Exports (~12% of volume) benefit from a 2.8 Mt EU quota window but CBAM raises landed cost; small net exposure.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=EU+steel+quota+2.8+million+tonnes+India+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-17",
+     "note": "Rediff MoneyWiz: India secures 2.8 MT EU steel quota"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "JSWSTEEL",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Steel demand growth ~1.2x GDP; residual after capex and auto edges (kept small to avoid double counting).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/JSWSTEEL.md",
+     "date": "2026-11-05",
+     "note": "ROCE 11.0%"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Australian/US/Mozambique coking coal suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "imported coking coal, USD-priced"
+  },
+  {
+   "counterparty": "NMDC / Odisha iron ore auctions",
+   "ticker": "NMDC",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "purchased ore beyond captive mines"
+  },
+  {
+   "counterparty": "Tata Steel",
+   "ticker": "TATASTEEL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "closest flat-steel peer"
+  },
+  {
+   "counterparty": "SAIL",
+   "ticker": "SAIL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "PSU producer"
+  },
+  {
+   "counterparty": "APL Apollo / auto and appliance makers",
+   "ticker": "APLAPOLLO",
+   "role": "customer",
+   "importance": "medium",
+   "note": "HRC buyer"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (late Jan); monthly production updates in first week of each month",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "pattern: Q2 results on 2026-10-23"
+  },
+  {
+   "date": "2026-10-22",
+   "event": "Board approves Rs7,500 cr Sambalpur expansion (occurred; stock -3.1% that day)",
+   "type": "capex",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=JSW+Steel+Okays+7%2C500+Cr+Expansion+at+Sambalpur+Unit+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Draft National Steel Policy 2047 finalised (604 Mt capacity target, consultation open)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=draft+National+Steel+Policy+2047+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Safeguard/anti-dumping duty review or tightening on flat steel imports",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=steel+safeguard+duty+India+2026+HRC+prices+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs54,486 cr (+21% YoY), EBITDA Rs10,120 cr (19%), PAT Rs5,359 cr (consolidated per screener; Rs5,279 cr per Moneycontrol/Upstox), interest Rs1,602 cr",
+  "trend": "Record volumes, margins up from 16-17% a year ago, debt falling; but stock -13.7% over 3m after a post-result dip on capex and the call",
+  "valuation": "P/E ~21x TTM PAT Rs31,708... screener 21.2x; P/B 2.9x; ROCE 11%",
+  "recent_developments": [
+   "2026-10-23: Q2 profit +225% YoY on record sales (Moneycontrol); shares -3% on Rs7,500 cr Sambalpur approval",
+   "2026-10-26: shares +6% as Q2 beat estimates; brokerages see up to 39% upside (Moneycontrol)",
+   "2026-10-11: draft National Steel Policy 2047 (604 Mt) (Business Standard)",
+   "2026-09-08: Reuters on rising coking coal costs and steel price increases",
+   "2026-09-17: India secures 2.8 Mt EU quota"
+  ]
+ },
+ "key_risks": [
+  "Coking coal rallies faster than HRC",
+  "Chinese export surge / import parity ceiling on prices",
+  "Capex and leverage on large expansions",
+  "CBAM and EU trade-barrier costs"
+ ],
+ "upside_triggers": [
+  "Safeguard duty tightening",
+  "Steel price hikes sticking after Diwali",
+  "Faster deleveraging"
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/JSWSTEEL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=JSW+Steel+Q2+FY27+results+record+volumes+net+debt+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Indian+steel+mills+margin+squeeze+global+coking+coal+prices+rise+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-19",
+   "what": "coking coal squeeze"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=draft+National+Steel+Policy+2047+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-11",
+   "what": "draft policy"
+  }
+ ],
+ "ticker": "JSWSTEEL",
+ "as_of": "2026-11-05",
+ "tier": "NIFTY_50",
+ "company_links": [],
+ "new_nodes_proposed": []
+}

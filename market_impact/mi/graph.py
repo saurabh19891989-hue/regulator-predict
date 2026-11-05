@@ -27,6 +27,7 @@ PRICED_SHARE_FWD = 0.5        # share of forward event expectations assumed alre
 RECENT_CONVERGENCE = 0.3      # share of the unrealised residual of occurred events expected to close in 3 months
 RESIDUAL_CAP = 10.0           # cap on |residual contribution| (% points)
 RECENT_START = "2026-06-01"
+OVERLAP_DAMP = 0.5            # indirect paths from X to c get half credit when c already has a direct edge from X
 import re as _re
 MARKET_WIDE = _re.compile(r"union budget|budget fy|\bmpc\b|rbi (policy|rate|monetary)|repo rate|gst council|state election|"
                           r"general election|fomc|fed (rate|meeting)|opec|monsoon", _re.I)
@@ -157,6 +158,10 @@ class Network:
                 continue
             self.out[e["src"]].append(i)
         self.companies = [n for n, v in nodes.items() if v["type"] == "COMPANY"]
+        self.direct_src = defaultdict(set)
+        for e in edges:
+            if e["layer"] in ("company", "director") and nodes[e["dst"]]["type"] == "COMPANY":
+                self.direct_src[e["dst"]].add(e["src"])
 
     def paths_from(self, start, w_vec=None, clamped=frozenset()):
         """Enumerate simple paths from `start` (unit +1 shock). Yields (edge_idx_tuple, contribution, end_node).
@@ -172,6 +177,8 @@ class Network:
                 k = len(path) + 1
                 p2 = prod * W[ei]
                 contrib = p2 * DAMP[k]
+                if k >= 2 and start in self.direct_src.get(d, ()):
+                    contrib *= OVERLAP_DAMP
                 if self.nodes[d]["type"] == "COMPANY":
                     if abs(contrib) >= MIN_CONTRIB:
                         yield path + (ei,), contrib, d
@@ -360,8 +367,24 @@ def run(draws=400):
            "edges_dropped_unknown_or_industry": dropped, "events": len(events), "occurred_events": len(occurred),
            "profiles": len(profiles), "empirical_sign_conflicts": len(flags),
            "assumptions": {"damping": DAMP, "priced_share_forward": PRICED_SHARE_FWD,
-                           "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "max_depth": MAX_DEPTH}}
+                           "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "max_depth": MAX_DEPTH,
+                           "overlap_damp": OVERLAP_DAMP}}
+    # overlap diagnostic: company has direct edges from A and B while a driver edge A→B exists (possible double count)
+    direct = defaultdict(dict)
+    for e in edges:
+        if e["layer"] in ("company", "director") and nodes[e["dst"]]["type"] == "COMPANY":
+            direct[e["dst"]][e["src"]] = e["w"]
+    drv_edges = {(e["src"], e["dst"]): e["w"] for e in edges if e["layer"] in ("backbone", "event_edges") and abs(e["w"]) >= 0.3}
+    ov_rows = []
+    for c, srcs in direct.items():
+        for a_ in srcs:
+            for b_ in srcs:
+                if a_ != b_ and (a_, b_) in drv_edges:
+                    ov_rows.append({"company": c, "A": a_, "B": b_, "w_A_to_B": drv_edges[(a_, b_)], "w_A_direct": srcs[a_],
+                                    "w_B_direct": srcs[b_], "indirect_via_B": drv_edges[(a_, b_)] * srcs[b_] * DAMP[2]})
+    pd.DataFrame(ov_rows).to_csv(R("results", "overlap_flags.csv"), index=False)
     reach = {eid: sum(abs(v) for v in imp.values()) for eid, imp in ev_imp.items()}
+    rep["overlap_flags"] = len(ov_rows)
     rep["events_zero_reach"] = sorted(e for e, v in reach.items() if v < 1e-6)
     targeted = {s["node"] for ev in events for s in ev.get("entry_shocks", [])}
     rep["dead_end_drivers"] = sorted(n for n in targeted if n in nodes and nodes[n]["type"] != "COMPANY" and not net.out.get(n))
