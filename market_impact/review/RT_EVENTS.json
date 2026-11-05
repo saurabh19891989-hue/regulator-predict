@@ -1,0 +1,643 @@
+{
+ "reviewer": "RT_EVENTS",
+ "as_of": "2026-11-05",
+ "edge_scale": [],
+ "event_overrides": {
+  "EV_US_IRAN_CEASEFIRE_DEAL": {
+   "prob_by_3m": 0.4,
+   "prob_by_12m": 0.55,
+   "entry_shocks": [
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": -1.0,
+     "low": -1.5,
+     "high": -0.5,
+     "note": "de-escalation"
+    },
+    {
+     "node": "F_BRENT",
+     "ssu": -1.3,
+     "low": -2.0,
+     "high": -0.6,
+     "note": "from today's $95 to ~$80-85 (-11% to -18%); pre-war Brent ~$70, so some premium stays"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": -0.4,
+     "low": -0.8,
+     "high": -0.1,
+     "note": "VIX -2 pts"
+    },
+    {
+     "node": "F_REFINING_MARGIN",
+     "ssu": -0.6,
+     "low": -1.2,
+     "high": -0.2,
+     "note": "cracks normalise"
+    }
+   ],
+   "reason": "No ceasefire or deal is signed as of 4-5 Nov 2026. Doha talks ended without a breakthrough on 2 Nov. Qatar is working toward an 'interim deal'. US strikes on Qeshm Island on 2 Nov. Gulf/European officials say a deal 'will take months' (3 Nov). Hormuz is still disrupted, with tanker hits on 3-5 Nov. Brent fell $117 (30 Oct close) -> $105 (2 Nov) -> $94.6 (4 Nov settle), so much of the deal is already priced. The shock is re-based to today's $95. The group sum was 1.12 before normalisation; it is now 0.85 at 12m, leaving 15% for muddle-through.",
+   "source": "https://www.cbsnews.com/live-updates/iran-war-us-trump-negotiations-midterms/ (3 Nov 2026); https://finchannel.com/us-iran-talks-continue-as-doha-mediation-ends-without-breakthrough/140371/world-2/2026/11/ (3 Nov); https://news.google.com/rss/search?q=Brent%20crude+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_IRAN_TALKS_FAIL_ESCALATE": {
+   "prob_by_3m": 0.18,
+   "prob_by_12m": 0.25,
+   "entry_shocks": [
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": 1.2,
+     "low": 0.6,
+     "high": 2.0,
+     "note": "re-escalation"
+    },
+    {
+     "node": "F_BRENT",
+     "ssu": 2.2,
+     "low": 1.5,
+     "high": 3.5,
+     "note": "$95 -> ~$115 sustained (Oct-30 close was $117); measured from today's $95"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 2.0,
+     "note": "VIX +5 pts"
+    },
+    {
+     "node": "F_GAS_GLOBAL",
+     "ssu": 1.0,
+     "low": 0.3,
+     "high": 2.0,
+     "note": "Qatar LNG at risk (LNG tanker hit 30 Oct)"
+    }
+   ],
+   "reason": "Talks are alive after the US midterms (the Democratic Congress and Vance blaming the war for the loss raise pressure to exit), but strikes continued on 2-3 Nov and Iran calls the US response 'not convincing'. P(sustained >2-week Brent >$110) is lowered. The Brent shock is re-based from $95.",
+   "source": "https://www.cbsnews.com/live-updates/iran-war-us-trump-negotiations-midterms/ (3 Nov 2026); https://finchannel.com/us-iran-talks-continue-as-doha-mediation-ends-without-breakthrough/140371/world-2/2026/11/ (3 Nov); https://news.google.com/rss/search?q=Brent%20crude+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_HORMUZ_FULL_CLOSURE": {
+   "prob_by_3m": 0.03,
+   "prob_by_12m": 0.05,
+   "entry_shocks": [
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": 2.5,
+     "low": 2.0,
+     "high": 3.0,
+     "note": "extreme"
+    },
+    {
+     "node": "F_BRENT",
+     "ssu": 4.5,
+     "low": 3.5,
+     "high": 6.5,
+     "note": "$95 -> $130-150 (+37% to +58%) from today's level"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 3.0,
+     "low": 2.0,
+     "high": 5.0,
+     "note": "VIX +15"
+    },
+    {
+     "node": "F_GAS_GLOBAL",
+     "ssu": 3.0,
+     "low": 2.0,
+     "high": 5.0,
+     "note": "Qatar LNG offline"
+    }
+   ],
+   "reason": "Shock re-based from $95 (the old +60% was framed against ~$95, but the range was too wide on the upside). Hormuz was already at a 'near standstill' on 31 Oct with Brent at only $113-117. The event description's claim that 'flows had normalised by Oct' is wrong. A >$150 outcome needs attacks on Gulf export infrastructure, not just shipping harassment.",
+   "source": "https://news.google.com/rss/search?q=Hormuz%20at%20Near%20Standstill%20as%20Iran%20Warns%20Ships+when:10d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Brent%20%24117+when:12d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_IRAN_WAR_HORMUZ_OIL": {
+   "entry_shocks": [
+    {
+     "node": "F_BRENT",
+     "ssu": 0.0,
+     "low": -0.3,
+     "high": 0.3,
+     "note": "Brent 94.99 on 5 Nov = +0.0% since 2026-06-01 (factor_state). The old 4.95 was the y/y LEVEL change, including the Feb-May war run-up"
+    },
+    {
+     "node": "C_MIDEAST_CONFLICT",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 1.5,
+     "note": "escalation vs 1 Jun (Apr-Jul ceasefire/Islamabad memorandum, collapsed 8 Jul); partly offset by current talks"
+    },
+    {
+     "node": "C_RED_SEA",
+     "ssu": 0.5,
+     "low": 0.3,
+     "high": 1.0,
+     "note": "other 0.5 is booked in EV_RED_SEA_HOUTHI_ESCALATION_Q3"
+    },
+    {
+     "node": "F_REFINING_MARGIN",
+     "ssu": 0.6,
+     "low": 0.3,
+     "high": 1.2,
+     "note": "refining proxy +15.4% since 1 Jun ~ +$1.2/bbl; old +$3/bbl unverified"
+    }
+   ],
+   "reason": "Occurred-event shocks must be CHANGES since the event start or 2026-06-01, not y/y levels. Brent is flat since 1 Jun. With a 4.95 SSU (+49.5%) shock the event moves companies by +36%/-24% (event_impact_rank), above the ±25% plausibility bound. C_RED_SEA is split to avoid double counting with the Houthi event.",
+   "source": "market_impact/results/factor_state.md (Yahoo BZ=F to 2026-11-05); https://en.wikipedia.org/wiki/2026_Iran_war_ceasefire"
+  },
+  "EV_UST_SELLOFF_SEP26": {
+   "entry_shocks": [
+    {
+     "node": "F_US_10Y",
+     "ssu": 1.2,
+     "low": 0.9,
+     "high": 1.5,
+     "note": "residual after +0.8 SSU booked in EV_FED_SEP26_HIKE"
+    },
+    {
+     "node": "F_DXY",
+     "ssu": 0.33,
+     "low": 0.2,
+     "high": 0.5,
+     "note": "residual after +0.4 booked in EV_FED_SEP26_HIKE"
+    }
+   ],
+   "reason": "Double count. US 10Y occurred-event shocks summed to +3.5 SSU (Fed hike 0.8 + selloff 1.7 + precious-metals 1.5 - 0.3 - 0.2) against +1.68 realised since 1 Jun. DXY summed to +1.83 against +0.73 realised. After this fix and the precious-metals fix: 10Y 0.8+1.2-0.3-0.2 = 1.5 SSU (realised 1.68); DXY 0.73 (realised 0.73).",
+   "source": "market_impact/results/factor_state.md; https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+  },
+  "EV_PRECIOUS_METALS_CRASH_2026": {
+   "entry_shocks": [
+    {
+     "node": "F_GOLD",
+     "ssu": -1.05,
+     "low": -1.2,
+     "high": -0.9,
+     "note": "-8.4% since 1 Jun / SSU 8%"
+    },
+    {
+     "node": "F_SILVER",
+     "ssu": -2.5,
+     "low": -2.8,
+     "high": -2.2,
+     "note": "-30% since 1 Jun / SSU 12%"
+    }
+   ],
+   "reason": "US_10Y (+1.5) and DXY (+0.7) are CAUSES of the gold slump. They are already booked in EV_UST_SELLOFF_SEP26 and EV_FED_SEP26_HIKE, so repeating them here double counts the rate shock for every rate-sensitive company.",
+   "source": "market_impact/results/factor_state.md"
+  },
+  "EV_FPI_RECORD_OUTFLOW_26": {
+   "entry_shocks": [
+    {
+     "node": "F_FPI_FLOWS",
+     "ssu": -2.2,
+     "low": -3.0,
+     "high": -1.5,
+     "note": "avg ~-US$10-11bn/quarter; FII outflow ~US$32.7bn YTD (NiftyTrader 29 Oct)"
+    }
+   ],
+   "reason": "F_RISK_SENTIMENT (+0.4 = +2 VIX pts) is removed. VIX is +0.6 pt since 1 Jun (+3.5%) and India VIX is -7.4% since 1 Jun. The note used a 3-month India VIX change, and the AI-selloff and BoJ events already carry the VIX move. Occurred-event VIX shocks summed to +0.95 SSU against +0.11 realised.",
+   "source": "market_impact/results/factor_state.md; https://news.google.com/rss/search?q=FII%20Outflows%20Hit%20%2432.66%20Billion+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_STEEL_RALLY_2026": {
+   "entry_shocks": [
+    {
+     "node": "F_STEEL_GLOBAL",
+     "ssu": 2.06,
+     "low": 1.8,
+     "high": 2.3,
+     "note": "+20.6% since 1 Jun (factor_state)"
+    },
+    {
+     "node": "F_STEEL_INDIA",
+     "ssu": 1.1,
+     "low": 0.7,
+     "high": 1.6,
+     "note": "with +0.4 in EV_COKING_COAL_SURGE_AUG26 totals ~+10.5%, matching the event's own ~+10% estimate"
+    }
+   ],
+   "reason": "F_COKING_COAL (+1.2) double counts EV_COKING_COAL_SURGE_AUG26 (+1.67). Together they give +43% against a reported ~+22% YTD to $266/t (Kalkine 19 Oct). F_STEEL_INDIA is trimmed so the two events sum to ~+10.5%.",
+   "source": "https://news.google.com/rss/search?q=Coking%20Coal%20Price%202026%20Up%2022%25%20This%20Year%20at%20US%24266+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_COKING_COAL_SURGE_AUG26": {
+   "entry_shocks": [
+    {
+     "node": "F_COKING_COAL",
+     "ssu": 1.3,
+     "low": 0.8,
+     "high": 1.7,
+     "note": "~+20% since mid-year (YTD +22% to ~$266/t at 19 Oct; volatile in Oct)"
+    },
+    {
+     "node": "F_STEEL_INDIA",
+     "ssu": 0.4,
+     "low": 0.2,
+     "high": 0.7,
+     "note": "cost-push passed into prices"
+    }
+   ],
+   "reason": "Only canonical coking-coal shock (removed from EV_STEEL_RALLY_2026). Trimmed from +25% to ~+20% because the Aug spike partly retraced and the YTD change was +22% on 19 Oct.",
+   "source": "https://news.google.com/rss/search?q=Coking%20Coal%20Price%202026%20Up%2022%25%20This%20Year%20at%20US%24266+when:30d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=JSW%20Steel%20warns%20of%20coking%20coal%20price%20spike+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_OMC_FUEL_FREEZE_LOSSES": {
+   "entry_shocks": [
+    {
+     "node": "NEW_OMC_MARKETING_MARGIN",
+     "ssu": -1.0,
+     "low": -2.5,
+     "high": -0.3,
+     "note": "change vs start: pump prices frozen, Brent $95 = same as 1 Jun and ~start of Sep; INR -1% since Jun; product cracks +15% since Jun ~ -Rs0.5-1/l"
+    }
+   ],
+   "reason": "The -3.0 shock is a LEVEL vs a 'normal' Rs3-4/l margin and reflects the Oct peak ($110-117 Brent), not the change to today. At Brent $95 and stable INR, crude cost per litre is back at its 1 Jun/1 Sep level; only higher product cracks hurt. The old value drives -36% for an OMC (>25% bound). Q2 losses are already in reported results and prices.",
+   "source": "market_impact/results/factor_state.md; https://news.google.com/rss/search?q=Brent%20below%20%2495+when:5d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_US_PHARMA_232_SEP26": {
+   "entry_shocks": [
+    {
+     "node": "P_US_PHARMA_TARIFF",
+     "ssu": 0.2,
+     "low": 0.05,
+     "high": 0.5,
+     "note": "100% applies only to patented/branded drugs. Generics and their ingredients are not covered regardless of origin. India is among 20 countries with zero duty on specified specialty drugs. Effective tariff on India's generic-heavy US exports is ~+2pp"
+    }
+   ],
+   "reason": "Confirmed in force from 29 Sep 2026 (proclamation of 2 Apr 2026; first annex 31 Jul). Generics are exempt and Commerce must report on generics within one year (~Apr 2027), which is the trigger window for EV_PHARMA_GENERICS_TARIFF. The kept +0.5 SSU overstates the effective tariff on Indian exports.",
+   "source": "https://www.india-briefing.com/news/us-patented-pharma-tariff-2026-india-generic-drug-exports-exempted-43899.html ; https://www.business-standard.com/world-news/trump-100-percent-pharma-tariff-india-select-drugs-exemption-126092900121_1.html"
+  },
+  "EV_FED_DEC26_HIKE25": {
+   "prob_by_3m": 0.72,
+   "prob_by_12m": 0.72,
+   "reason": "Futures price a December hike at ~77-80% after the midterms (TokenPost 4 Nov 76.9%; BigGo 5 Nov ~80%). ADP Oct +86k beat. Warsh says inflation is 'too high'. Shaded slightly below market for the oil collapse and the 6 Nov payrolls risk. 0.58 was below market pricing.",
+   "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm (hold at 3.75-4.00%, 10-2, Cook/Hammack for hike); https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm ; https://news.google.com/rss/search?q=Fed%20December%20rate%20hike%20odds+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_FED_DEC26_HOLD": {
+   "prob_by_3m": 0.28,
+   "prob_by_12m": 0.28,
+   "reason": "Complement of the hike (sum 1.0).",
+   "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm (hold at 3.75-4.00%, 10-2, Cook/Hammack for hike); https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm ; https://news.google.com/rss/search?q=Fed%20December%20rate%20hike%20odds+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_FED_H1_2027_FURTHER_HIKES": {
+   "prob_by_3m": 0.15,
+   "prob_by_12m": 0.4,
+   "reason": "Market talk is of 'two more rate hikes' (MarketWatch 4 Nov), i.e. Dec plus one in H1 2027. With P(Dec hike) 0.72, P(>=50bp beyond Oct level by 28 Apr 2027) ~0.40. 3m = Dec+Jan 27 meeting.",
+   "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm (hold at 3.75-4.00%, 10-2, Cook/Hammack for hike); https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm ; https://news.google.com/rss/search?q=Fed%20December%20rate%20hike%20odds+when:6d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Think%20the%20Fed%20will%20be%20done%20after%20two%20more%20rate%20hikes+when:5d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_FED_H1_2027_CUTS": {
+   "prob_by_3m": 0.02,
+   "prob_by_12m": 0.12,
+   "reason": "Cuts need recession or AI bust; Fed is in hiking mode and inflation is at a 3-year high. Lowered from 0.25.",
+   "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm (hold at 3.75-4.00%, 10-2, Cook/Hammack for hike); https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm ; https://news.google.com/rss/search?q=Fed%20December%20rate%20hike%20odds+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_FED_H1_2027_PLATEAU": {
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.48,
+   "reason": "Residual; group sums 1.0 at 12m.",
+   "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm (hold at 3.75-4.00%, 10-2, Cook/Hammack for hike); https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm ; https://news.google.com/rss/search?q=Fed%20December%20rate%20hike%20odds+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_RBI_DEC26_HIKE25": {
+   "prob_by_3m": 0.42,
+   "prob_by_12m": 0.42,
+   "reason": "Dates confirmed by RBI: decision 4 Dec 2026, Feb decision 5 Feb 2027. Hawkish voices: SBI chair backs a 50 bp Dec hike (3 Nov), UOB sees consecutive hikes from Dec, HSBC 6% by Dec. Since then Brent fell from $117 to $95, the 10y G-sec rallied 7.44% -> 7.19% (4 Nov) and the rupee is at a 2-week high (~94.35-94.55). Odds: 25 bp 0.42, 50 bp 0.05, hold 0.52, cut 0.01. The 12 Nov Oct CPI print is the swing factor.",
+   "source": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62422 (MPC 2026-27: 2-4 Dec 2026, 3-5 Feb 2027) ; https://news.google.com/rss/search?q=RBI%20December%20hike+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_RBI_DEC26_HOLD": {
+   "prob_by_3m": 0.52,
+   "prob_by_12m": 0.52,
+   "reason": "See hike event; group sum 0.94 (rest 50bp/cut).",
+   "source": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62422 (MPC 2026-27: 2-4 Dec 2026, 3-5 Feb 2027) ; https://news.google.com/rss/search?q=RBI%20December%20hike+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_INDIA_US_INTERIM_DEAL_SIGNED": {
+   "prob_by_3m": 0.25,
+   "prob_by_12m": 0.55,
+   "entry_shocks": [
+    {
+     "node": "P_US_TARIFF_INDIA",
+     "ssu": -0.5,
+     "low": -1.0,
+     "high": -0.2,
+     "note": "base is MFN + 10% Section 301 (IEEPA struck down 20 Feb; Sec 122 lapsed 24 Jul); a deal can cut ~5pp, not 10pp"
+    },
+    {
+     "node": "T_CHINA_PLUS_ONE",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "relative advantage vs Asian peers (China/Vietnam/Thailand 12.5%)"
+    }
+   ],
+   "reason": "The interim deal is still stuck (BusinessLine 25 Oct). Reports after the midterms say India's urgency fades (IANS 5 Nov). The White House lists it as 'fulfilled' without a text. The current incremental US tariff on most Indian goods is ~10% (secondary sources), so a -10pp shock would take it to zero.",
+   "source": "https://www.tariffstool.com/guides/india-tariff (MFN + 10% Section 301 since 24 Jul 2026, secondary) ; https://news.google.com/rss/search?q=Urgency%20of%20a%20trade%20deal%20with%20US%20fades%20for%20India%20with%20midterm%20outcome+when:5d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=India-US%20interim%20trade%20deal%20remains%20stuck+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_INDIA_US_TALKS_COLLAPSE": {
+   "prob_by_3m": 0.08,
+   "prob_by_12m": 0.18,
+   "reason": "Trump plans more tariffs via executive action after losing Congress (DNA 1 Nov). Section 301 determinations are pending. Slightly raised; group sum 0.73.",
+   "source": "https://www.tariffstool.com/guides/india-tariff (MFN + 10% Section 301 since 24 Jul 2026, secondary) ; https://news.google.com/rss/search?q=Urgency%20of%20a%20trade%20deal%20with%20US%20fades%20for%20India%20with%20midterm%20outcome+when:5d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=India-US%20interim%20trade%20deal%20remains%20stuck+when:20d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Trump%20plans%20more%20tariffs%20via%20executive%20action%20as%20Democrats%20eye%20Congress+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_OPEC_NOV29_HOLD": {
+   "prob_by_3m": 0.7,
+   "prob_by_12m": 0.7,
+   "reason": "The 29 Nov full ministerial is confirmed (2027 quotas/capacity baselines). On 1 Nov the seven core members held Dec targets for a third month. The UAE has LEFT OPEC (Jul 2026) and is ramping toward >5 mb/d; Bousso warns of a price war. That raises the odds of a market-share raise.",
+   "source": "https://engineeringnews.co.za/article/opec-keeps-december-oil-output-targets-steady-ahead-of-tougher-call-for-2027-2026-11-02 ; https://news.google.com/rss/search?q=Freed%20from%20OPEC%20quotas%2C%20UAE%20says%20oil%20exports%20have%20risen+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_OPEC_NOV29_RAISE": {
+   "prob_by_3m": 0.2,
+   "prob_by_12m": 0.2,
+   "reason": "Market-share response to the UAE exit and Gulf export recovery. Note: the description wrongly lists the UAE as an OPEC+ member raising quotas.",
+   "source": "https://engineeringnews.co.za/article/opec-keeps-december-oil-output-targets-steady-ahead-of-tougher-call-for-2027-2026-11-02 ; https://news.google.com/rss/search?q=Freed%20from%20OPEC%20quotas%2C%20UAE%20says%20oil%20exports%20have%20risen+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_OPEC_NOV29_CUT": {
+   "prob_by_3m": 0.08,
+   "prob_by_12m": 0.08,
+   "reason": "A cut is unlikely with Brent at $95 and members below quota; group sum 0.98.",
+   "source": "https://engineeringnews.co.za/article/opec-keeps-december-oil-output-targets-steady-ahead-of-tougher-call-for-2027-2026-11-02 ; https://news.google.com/rss/search?q=Freed%20from%20OPEC%20quotas%2C%20UAE%20says%20oil%20exports%20have%20risen+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_ECL_ROLLOUT_APR27": {
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.9,
+   "entry_shocks": [
+    {
+     "node": "P_RBI_PRUDENTIAL",
+     "ssu": 0.3,
+     "low": 0.1,
+     "high": 0.6,
+     "note": "INCREMENTAL only: final directions issued 27 Apr 2026, already priced (PSU banks -3% on 28 Apr)"
+    },
+    {
+     "node": "F_CREDIT_GROWTH_IN",
+     "ssu": -0.15,
+     "low": -0.5,
+     "high": 0.0,
+     "note": "residual"
+    },
+    {
+     "node": "F_ASSET_QUALITY_IN",
+     "ssu": 0.15,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "reported credit cost; transition add-back spreads it"
+    }
+   ],
+   "reason": "ECL is FINAL RBI policy known to the market. RBI issued final asset-classification/provisioning directions on 27 Apr 2026 with an ECL start of 1 Apr 2027, rejected banks' plea for more time, and set the transition. Banks have quantified the hit (SBI Rs19,500 cr post-tax, 3 Nov; Bandhan Rs1,250 cr). Priced view: ~70% of the shock is already in prices, and the start falls outside the 3m window, so 3m p = 0.",
+   "source": "https://news.google.com/rss/search?q=RBI%20issues%20final%20directions%20for%20asset%20classification%2C%20provisioning%20ECL%20April%202027+when:365d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=SBI%20estimates%20Rs%2019%2C500%20crore%20ECL%20impact%20Setty+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_ECL_DEFERRED": {
+   "prob_by_3m": 0.03,
+   "prob_by_12m": 0.08,
+   "reason": "RBI already rejected a deferral request (Apr 2026). 'Fine-tuning' by the working group (Setty 3 Nov) points to calibration tweaks, not a delayed start. Group sum 0.98.",
+   "source": "https://news.google.com/rss/search?q=RBI%20issues%20final%20directions%20for%20asset%20classification%2C%20provisioning%20ECL%20April%202027+when:365d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=SBI%20estimates%20Rs%2019%2C500%20crore%20ECL%20impact%20Setty+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_NEMONSOON26_DEFICIT": {
+   "prob_by_3m": 0.12,
+   "prob_by_12m": 0.12,
+   "reason": "Season resolves 31 Dec, which is inside the 3m window, so 3m must equal 12m (was 0.0). TN NEM is +32% above normal at 31 Oct (+51% in 27 days of Oct). Severe cyclone Murasu crossed AP 2-3 Nov and heavy rain is forecast to 8 Nov. A deficient season now needs a very dry Nov-Dec. Old pair summed 1.05.",
+   "source": "https://news.google.com/rss/search?q=Tamil%20Nadu%20Northeast%20Monsoon%202026%20Rainfall%2032%25%20Above%20Normal+when:10d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=October%20downpour%20wipes%20out%20TN%20rainfall%20deficit+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_NEMONSOON26_NORMAL_UP": {
+   "prob_by_3m": 0.85,
+   "prob_by_12m": 0.85,
+   "reason": "See deficit event; group sum 0.97. Southern reservoirs were still 43% below average (FACTLY 26 Oct), so keep the conditional shock modest.",
+   "source": "https://news.google.com/rss/search?q=Tamil%20Nadu%20Northeast%20Monsoon%202026%20Rainfall%2032%25%20Above%20Normal+when:10d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=October%20downpour%20wipes%20out%20TN%20rainfall%20deficit+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_STEEL_SAFEGUARD_STEPDOWN_2027": {
+   "prob_by_3m": 0.0,
+   "prob_by_12m": 0.95,
+   "reason": "The final duty was notified 30-31 Dec 2025: 12% (21 Apr 2025-20 Apr 2026), 11.5% (21 Apr 2026-20 Apr 2027), 11% (21 Apr 2027-20 Apr 2028). The 2027 step is 11.5% -> 11%, not '12% -> 11.5%' as the description says. It is notified law, so p ~0.95. The steel ministry signalled no change (Reuters 6 Oct). The shock size of -0.05 is fine.",
+   "source": "https://www.taxscan.in/top-stories/government-shields-indian-steel-sector-with-three-year-safeguard-duty-plan-amid-import-surge-1441347 ; https://www.bigmint.co/insights/detail/india-imposes-three-year-safeguard-duty-on-flat-steel-imports-710177"
+  },
+  "EV_YEN_CARRY_UNWIND_RISK": {
+   "prob_by_3m": 0.05,
+   "prob_by_12m": 0.15,
+   "entry_shocks": [
+    {
+     "node": "NEW_USDJPY",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.5,
+     "note": "-9% USD/JPY"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 2.5,
+     "low": 1.5,
+     "high": 5.0,
+     "note": "VIX +12.5 pts persistent-equivalent; Aug-2024 intraday +45 pts but closes back <20 within ~2 weeks"
+    },
+    {
+     "node": "F_US_EQUITIES",
+     "ssu": -1.5,
+     "low": -3.0,
+     "high": -0.7,
+     "note": "S&P -7.5% (Aug-2024 drawdown ~-8.5%)"
+    }
+   ],
+   "reason": "5 SSU (+25 VIX pts) is the intraday extreme of Aug 2024 and is used as a 12m-horizon shock, which overstates (rank #2 by impact, -35% max). The event also hits both F_US_EQUITIES and F_RISK_SENTIMENT, which reach Indian stocks by parallel paths. USD/JPY is ~157-158 with BoJ hike expectations for Dec (TradingNEWS 2 Nov). Odds trimmed slightly.",
+   "source": "https://news.google.com/rss/search?q=BoJ%20December%20hike%20yen%20158+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_AI_CAPEX_RESET_RISK": {
+   "prob_by_3m": 0.1,
+   "prob_by_12m": 0.25,
+   "entry_shocks": [
+    {
+     "node": "F_AI_CAPEX",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.5,
+     "note": "capex growth -30 pp"
+    },
+    {
+     "node": "F_US_EQUITIES",
+     "ssu": -3.0,
+     "low": -5.0,
+     "high": -1.5,
+     "note": "S&P -15%"
+    },
+    {
+     "node": "F_RISK_SENTIMENT",
+     "ssu": 2.5,
+     "low": 1.5,
+     "high": 4.0,
+     "note": "VIX to ~29-30 (+12.5 pts), consistent with a -15% S&P drawdown (2022 analogue); +20 pts was inconsistent"
+    }
+   ],
+   "reason": "The VIX shock is inconsistent with the paired S&P shock. Hyperscalers deferred raising guidance but have not cut it (CNBC 29 Oct). Nvidia reports 17 Nov.",
+   "source": "https://news.google.com/rss/search?q=AI%20hyperscalers%20capex%20guidance+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_FPI_INFLOW_REBOUND": {
+   "prob_by_3m": 0.08,
+   "prob_by_12m": 0.5,
+   "reason": "The only calendar quarter that can complete within 3m is Q4 CY26. October had ~-Rs44-48k cr (~-US$5bn) outflow, so Nov-Dec would need ~+US$10bn. Early-Nov buying (Rs20,834 cr in 4 sessions, ~US$2.2bn) helps but is not enough. 12m is unchanged.",
+   "source": "https://news.google.com/rss/search?q=FPI%20buying%20highest%20in%20a%20year+when:6d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=FPIs%20pull%20out%20equities%20in%20Oct%202026%20outflows%20cross%203%20trn+when:40d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_RUPEE_BREAK_98_RESERVE_STRESS": {
+   "prob_by_3m": 0.05,
+   "prob_by_12m": 0.18,
+   "reason": "The main trigger (Brent >$105) has receded: Brent is $95. The rupee is at a 2-week high of 94.33-94.55 on 5 Nov (Yahoo 94.49 confirmed).",
+   "source": "https://news.google.com/rss/search?q=Rupee%20hits%20five-day%20high%2094.35+when:3d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_INDIA_RETAIL_FUEL_HIKE": {
+   "prob_by_3m": 0.08,
+   "prob_by_12m": 0.3,
+   "reason": "At Brent $95 (flat since 1 Jun), OMC crude cost is back to the June level. UP/Punjab polls are due Feb-Mar 2027. The need for a hike has largely gone.",
+   "source": "https://news.google.com/rss/search?q=Brent%20below%20%2495+when:5d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_PRECIOUS_METALS_FURTHER_SLIDE": {
+   "entry_shocks": [
+    {
+     "node": "F_GOLD",
+     "ssu": -1.9,
+     "low": -3.0,
+     "high": -1.0,
+     "note": "-15%"
+    },
+    {
+     "node": "F_SILVER",
+     "ssu": -2.0,
+     "low": -3.5,
+     "high": -1.0,
+     "note": "-24%"
+    }
+   ],
+   "reason": "The F_FED_FUNDS +1.0 shock double counts EV_FED_DEC26_HIKE25 (separate exclusive group, p 0.72). The Fed is a cause here, not an independent shock, and it would add a second rate hit to banks and NBFCs.",
+   "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm (hold at 3.75-4.00%, 10-2, Cook/Hammack for hike); https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm ; https://news.google.com/rss/search?q=Fed%20December%20rate%20hike%20odds+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_PRECIOUS_METALS_REBOUND_H1_2027": {
+   "entry_shocks": [
+    {
+     "node": "F_GOLD",
+     "ssu": 1.0,
+     "low": 0.5,
+     "high": 2.0,
+     "note": "+8%"
+    },
+    {
+     "node": "F_SILVER",
+     "ssu": 1.5,
+     "low": 0.5,
+     "high": 3.0,
+     "note": "+18%"
+    }
+   ],
+   "reason": "The F_US_10Y -1.0 shock duplicates the Fed/Iran-deal events that would cause the rebound (EV_US_IRAN_CEASEFIRE_DEAL, EV_FED_H1_2027_CUTS).",
+   "source": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm (hold at 3.75-4.00%, 10-2, Cook/Hammack for hike); https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm ; https://news.google.com/rss/search?q=Fed%20December%20rate%20hike%20odds+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ },
+ "event_drop": {},
+ "recent_state_overrides": [],
+ "findings": [
+  {
+   "severity": "high",
+   "subject": "EV_US_IRAN_CEASEFIRE_DEAL / Iran group",
+   "issue": "There is no signed ceasefire as of 5 Nov 2026, so it should not be marked occurred. Doha talks ended 2 Nov with no breakthrough. Qatar is working toward an 'interim deal' and the US reportedly approved a Qatar-presented draft (Anadolu 3 Nov), but Iran calls it 'not convincing'. US 'defensive' strikes hit Qeshm on 2 Nov, and tanker and seafarer attacks continued 3-5 Nov. Brent: $117 (30 Oct close) -> ~$105 (2 Nov) -> $94.62 (4 Nov settle) -> ~$94 (5 Nov), the steepest weekly loss since 2022. The pre-normalisation group sum was 1.12, which is incoherent. New sum: 0.61 (3m) / 0.85 (12m). Brent shocks are re-based from $95.",
+   "evidence": "https://www.cbsnews.com/live-updates/iran-war-us-trump-negotiations-midterms/ (3 Nov 2026); https://finchannel.com/us-iran-talks-continue-as-doha-mediation-ends-without-breakthrough/140371/world-2/2026/11/ (3 Nov); https://news.google.com/rss/search?q=Brent%20crude+when:7d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "EV_IRAN_WAR_HORMUZ_OIL",
+   "issue": "The occurred shock F_BRENT=4.95 SSU is the y/y LEVEL (+49.5%), not the change since 1 Jun (+0.0%). It produces company moves of +36%/-24%. Override: 0.0. The description also says 'peak ~$110 on 16 Oct', but Brent closed at $117 on 30 Oct.",
+   "evidence": "market_impact/results/factor_state.md; https://news.google.com/rss/search?q=Brent%20%24117+when:12d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "F_US_10Y / F_DXY (occurred events)",
+   "issue": "Double count across occurred events. 10Y shocks summed to +3.5 SSU against +1.68 realised since 1 Jun; DXY +1.83 against +0.73. Fixed by trimming EV_UST_SELLOFF_SEP26 to the residual and removing rate/dollar shocks from EV_PRECIOUS_METALS_CRASH_2026.",
+   "evidence": "market_impact/results/factor_state.md"
+  },
+  {
+   "severity": "high",
+   "subject": "EV_OMC_FUEL_FREEZE_LOSSES",
+   "issue": "NEW_OMC_MARKETING_MARGIN -3.0 is a level relative to 'normal' at the Oct peak. It drives -36% for an OMC, above the ±25% bound. With Brent back at $95 (flat since 1 Jun) and INR -1%, the change since the start is about -1 SSU.",
+   "evidence": "factor_state.md"
+  },
+  {
+   "severity": "medium",
+   "subject": "F_RISK_SENTIMENT (occurred events)",
+   "issue": "Occurred VIX shocks sum to +0.95 SSU (+4.75 pts) against +0.56 pt realised since 1 Jun. EV_FPI_RECORD_OUTFLOW_26 used a 3m India-VIX change; India VIX is -7.4% since 1 Jun. Removed.",
+   "evidence": "factor_state.md"
+  },
+  {
+   "severity": "medium",
+   "subject": "F_COKING_COAL",
+   "issue": "Double count: EV_STEEL_RALLY_2026 (+1.2) and EV_COKING_COAL_SURGE_AUG26 (+1.67) give +43% against ~+22% YTD ($266/t, 19 Oct). Kept a single +1.3 in the coking-coal event.",
+   "evidence": "https://news.google.com/rss/search?q=Coking%20Coal%20Price%202026%20Up%2022%25%20This%20Year%20at%20US%24266+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "EV_US_MIDTERMS_DEM_SWEEP",
+   "issue": "Correctly specified as occurred. Democrats won both House and Senate on 3 Nov 2026 (NBC, Global News, RTE, 5 Nov). The small shocks are fine. The F_FPI_FLOWS +0.5 should be read with the Nifty rally on 4-5 Nov, which was mostly oil-driven (already in Brent). It may slightly double count the oil channel via flows; no override.",
+   "evidence": "https://news.google.com/rss/search?q=Democrats%20take%20House%20and%20Senate+when:3d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "EV_RBI_OCT26_HIKE25",
+   "issue": "Verified: repo 5.25% -> 5.50% on 7 Oct 2026, stance 'calibrated tightening'. RBI MPC dates: 2-4 Dec 2026 and 3-5 Feb 2027 (official RBI press release, 23 Mar 2026). The April 2027 date is not yet published (FY28 calendar). 10y G-sec fell to 7.19% on 4 Nov from 7.44% on 3 Nov, so EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26's +1.4 SSU (based on 7.44%) now overstates. Since the event start (~7.38% on 9 Oct) the 10y is about -20 bp. The recent-state clamp should use 7.19%. RBI injected ~Rs2.5 lakh cr (Business Today 4 Nov): liquidity has moved toward deficit.",
+   "evidence": "https://www.rbi.org.in/scripts/BS_PressReleaseDisplay.aspx?prid=62422 (MPC 2026-27: 2-4 Dec 2026, 3-5 Feb 2027) ; https://news.google.com/rss/search?q=RBI%20December%20hike+when:6d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=10-year%20yield%20closes%20at%207.19%25+when:3d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "EV_FED_* groups",
+   "issue": "Fed funds is 3.75-4.00% (held 28 Oct, 10-2, two dissents for a hike). The Dec 8-9 meeting has an SEP. The 2027 meetings are Jan 26-27, Mar 16-17 and Apr 27-28. Spec bug: FURTHER_HIKES is measured from the Oct level, while PLATEAU/CUTS are measured from the post-Dec level. A Dec hold followed by one hike by April falls in no bucket. Define all three relative to the 3.75-4.00% Oct level.",
+   "evidence": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm (hold at 3.75-4.00%, 10-2, Cook/Hammack for hike); https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm ; https://news.google.com/rss/search?q=Fed%20December%20rate%20hike%20odds+when:6d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "EV_OPEC_NOV29_RAISE / missing event",
+   "issue": "The UAE left OPEC in Jul 2026 and is lifting exports toward >5 mb/d in 2027 (Reuters 2 Nov; IEA via EnergyNow 4 Nov). There is no event for it in the catalogue, and the RAISE description wrongly names the UAE as a quota member. Its Brent effect is inside the flat Brent move since June, so no new occurred shock is needed. It does raise the odds of a market-share raise or price war on 29 Nov.",
+   "evidence": "https://engineeringnews.co.za/article/opec-keeps-december-oil-output-targets-steady-ahead-of-tougher-call-for-2027-2026-11-02 ; https://news.google.com/rss/search?q=Freed%20from%20OPEC%20quotas%2C%20UAE%20says%20oil%20exports%20have%20risen+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "EV_ECL_ROLLOUT_APR27",
+   "issue": "ECL is FINAL RBI policy already known to the market. Final directions were issued 27 Apr 2026, effective 1 Apr 2027; RBI rejected the banks' plea for delay; PSU banks fell ~3% on the day; banks have quantified the hit (SBI Rs19,500 cr post-tax, 3 Nov). Priced view: treat only ~30% of the shock as unpriced. Deferral is a low-probability tail (0.08).",
+   "evidence": "https://news.google.com/rss/search?q=RBI%20issues%20final%20directions%20for%20asset%20classification%2C%20provisioning%20ECL%20April%202027+when:365d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=SBI%20estimates%20Rs%2019%2C500%20crore%20ECL%20impact%20Setty+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "EV_US_PHARMA_232_SEP26",
+   "issue": "The tariff is in force from 29 Sep. It is 100% on patented/branded drugs only. Generics and APIs are explicitly NOT covered; India is in the 20-country zero-duty list for specified specialty drugs. The Commerce report on generics is due within a year of the 2 Apr 2026 proclamation (~Apr 2027), which supports EV_PHARMA_GENERICS_TARIFF at 0.12 by 12m. Shock reduced to +0.2 SSU.",
+   "evidence": "https://www.india-briefing.com/news/us-patented-pharma-tariff-2026-india-generic-drug-exports-exempted-43899.html"
+  },
+  {
+   "severity": "medium",
+   "subject": "US tariff level on India",
+   "issue": "Secondary sources (not USTR/Federal Register): IEEPA tariffs were struck down 20 Feb 2026. The Section 122 10% surcharge ran 24 Feb-24 Jul 2026. Since 24 Jul most Indian goods pay MFN + 10% Section 301 (China/Vietnam/Thailand 12.5%). New Section 301 determinations are pending. A trade-court ruling (3 Nov) found tariffs illegal but with a narrow block. Deal/collapse shocks are re-sized to this 10% base.",
+   "evidence": "https://www.tariffstool.com/guides/india-tariff (MFN + 10% Section 301 since 24 Jul 2026, secondary) ; https://news.google.com/rss/search?q=Urgency%20of%20a%20trade%20deal%20with%20US%20fades%20for%20India%20with%20midterm%20outcome+when:5d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=India-US%20interim%20trade%20deal%20remains%20stuck+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "Indian CPI / FPI / USD-INR",
+   "issue": "Sep CPI is 5.54% (21-month high, food 7.74%), as in the catalogue; Oct CPI is due 12 Nov. UOB sees a tolerance-band breach, so EV_CPI_BREACH_6PCT 0.5/0.6 is reasonable. FPI: Oct equity outflow ~Rs44-48k cr, CY26 >Rs3 trn (~US$32.7bn); early-Nov buying is the strongest in a year. USD/INR is 94.33-94.55 on 5 Nov, matching Yahoo 94.49. An ET headline citing '95.64' appears mis-dated.",
+   "evidence": "https://news.google.com/rss/search?q=retail%20inflation%20September%205.54+when:40d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Rupee%20hits%20five-day%20high%2094.35+when:3d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "EV_POWER_SPOT_SPIKE",
+   "issue": "F_POWER_PRICE_IN +3.0 (+45%) is based on y/y comparisons (Oct DAM Rs6.66/unit, +149% y/y off a rain-depressed Oct-2025 base), not the change since 1 Jun. The occurred power-price shocks sum to +4.3 SSU (+65%). A change-since-June number has not been verified; low-confidence overstatement.",
+   "evidence": "https://news.google.com/rss/search?q=Spot%20power%20prices%20jump%20149%25%20to%206.66%20per%20unit%20in%20October+when:5d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "EV_STEEL_SAFEGUARD_STEPDOWN_2027",
+   "issue": "The description has the schedule wrong. Year two (11.5%) already started on 21 Apr 2026; the 2027 step is 11.5% -> 11% on 21 Apr 2027. The reported 'Government proposes 12% safeguard duty' headline (ET Infra 30 Oct 2026) was not verified and looks like a recycled 2025 story.",
+   "evidence": "https://www.taxscan.in/top-stories/government-shields-indian-steel-sector-with-three-year-safeguard-duty-plan-amid-import-surge-1441347"
+  },
+  {
+   "severity": "low",
+   "subject": "EV_HORMUZ_FULL_CLOSURE",
+   "issue": "The description says 'flows had normalised by Oct', but Hormuz was at a near standstill on 31 Oct. Iran conditions reopening on its 7-point plan, and India has received 'special access' (TOI 5 Nov). The scenario should be defined as 'Gulf export infrastructure hit / Brent >$130 for >2 weeks'.",
+   "evidence": "https://news.google.com/rss/search?q=Hormuz%20at%20Near%20Standstill+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "Risk-scenario SSU (yen carry, AI capex)",
+   "issue": "F_RISK_SENTIMENT SSU = +5 VIX pts. Yen carry (+25 pts) and AI reset (+20 pts) used intraday-peak magnitudes as 12m shocks, inconsistent with their paired S&P shocks. Re-sized to +12.5 pts. Both events also shock F_US_EQUITIES and F_RISK_SENTIMENT at once; check that these do not reach Indian stocks through parallel edges, which would double count.",
+   "evidence": "n/a (unit check against nodes_seed.json)"
+  },
+  {
+   "severity": "low",
+   "subject": "EV_Q2_FY27_GDP_STRONG/SOFT",
+   "issue": "The release date 2026-11-30 is approximate. Q2 GDP is usually published on the last working day of November (27 Nov 2026 is a Friday). Not verified; no effect beyond the 3m window.",
+   "evidence": "model knowledge"
+  }
+ ]
+}

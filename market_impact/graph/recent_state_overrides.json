@@ -13,6 +13,22 @@
     "https://www.forexsrovnavac.cz/en/commodities/coal",
     "https://news.google.com/rss/search?q=Newcastle+coal+price+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
    ]
+  },
+  {
+   "node": "F_GSEC_10Y_IN",
+   "state_ssu": 1.55,
+   "reason": "10y G-sec ~6.8% around 1 Jun 2026 (ET BFSI 10 Jun: yield down on FPI buying; BoB report 22 Jul: 6.70-6.85% range) vs 7.19% on 4 Nov (RT_EVENTS) \u21d2 \u2248 +39 bp \u21d2 1.55 SSU (SSU +25 bp). Replaces the event-sum 1.7, which was based on the 7.44% intraday peak.",
+   "sources": [
+    "https://news.google.com/rss/search?q=10-year+benchmark+bond+yield+India+June+2026&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
+  },
+  {
+   "node": "F_POWER_PRICE_IN",
+   "state_ssu": 1.9,
+   "reason": "IEX DAM average \u20b95.2/unit in June 2026 (Business Standard, 3 Jul 2026) vs \u20b96.66/unit in October 2026 (RT_EVENTS) \u21d2 +28% \u21d2 1.9 SSU (SSU +15%). Replaces the event-sum 3.0 (clipped from +4.3), which used y/y comparisons.",
+   "sources": [
+    "https://news.google.com/rss/search?q=IEX+day-ahead+market+price+June+2026+per+unit&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
   }
  ]
 }
