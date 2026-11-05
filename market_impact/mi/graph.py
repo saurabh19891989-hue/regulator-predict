@@ -26,6 +26,10 @@ DRIVER = {"FACTOR", "POLICY", "COUNTRY", "THEME", "NEW"}
 PRICED_SHARE_FWD = 0.5        # share of forward event expectations assumed already in prices
 RECENT_CONVERGENCE = {"3m": 0.3, "12m": 0.5}   # share of the still-unpriced impact of occurred events expected to be priced
 RESIDUAL_CAP = 10.0           # cap on |residual contribution| (% points)
+# Corporate actions that break the price series: realised move since RECENT_START is not used (residual = 0) and
+# volatility/beta are estimated only on data after the clean date.
+CORP_ACTION_BREAKS = {"VEDL": ("June 2026 demerger: Vedanta Aluminium (VAML) and other units listed from 2026-06-15; "
+                               "VEDL price since 1 Jun is not comparable", "2026-06-22")}
 IVOL_CAP = 60.0               # cap on 12m idiosyncratic vol used for noise (corporate-action price breaks inflate it)
 # Unpriced part of an occurred-event impact: same sign as the model impact and never larger than it. A stock that moved
 # further than the events explain is treated as having idiosyncratic news, not as a mean-reversion candidate.
@@ -411,7 +415,7 @@ def run(draws=400):
            "edges_dropped_unknown_or_industry": dropped, "events": len(events), "occurred_events": len(occurred),
            "profiles": len(profiles), "empirical_sign_conflicts": len(flags),
            "assumptions": {"damping": DAMP, "priced_share_forward": PRICED_SHARE_FWD,
-                           "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "max_depth": MAX_DEPTH,
+                           "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "corp_action_breaks": CORP_ACTION_BREAKS, "max_depth": MAX_DEPTH,
                            "overlap_damp": OVERLAP_DAMP}}
     # overlap diagnostic: company has direct edges from A and B while a driver edge A→B exists (possible double count)
     direct = defaultdict(dict)
@@ -485,7 +489,9 @@ def idio_vol(comps):
         if c not in lr.columns:
             continue
         x = lr[[c, "MKT_NIFTY50"]].dropna().tail(52)
-        if len(x) < 26:
+        if c in CORP_ACTION_BREAKS:
+            x = x[x.index > CORP_ACTION_BREAKS[c][1]]
+        if len(x) < 12:
             continue
         b = np.cov(x[c], x["MKT_NIFTY50"])[0, 1] / np.var(x["MKT_NIFTY50"])
         out[c] = float((x[c] - b * x["MKT_NIFTY50"]).std() * np.sqrt(52) * 100)
@@ -506,9 +512,11 @@ def realised_moves(comps):
         if c not in df.columns:
             continue
         x = lr[[c, "MKT_NIFTY50"]].dropna().tail(156)
+        if c in CORP_ACTION_BREAKS:
+            x = x[x.index > CORP_ACTION_BREAKS[c][1]]
         raw = np.cov(x[c], x["MKT_NIFTY50"])[0, 1] / np.var(x["MKT_NIFTY50"]) if len(x) > 30 else 1.0
         betas[c] = float(np.clip(0.67 * raw + 0.33, 0.3, 2.0))
-        if base not in df.index or pd.isna(df.loc[base, c]):
+        if base not in df.index or pd.isna(df.loc[base, c]) or c in CORP_ACTION_BREAKS:
             continue
         rc = df[c].dropna().iloc[-1] / df.loc[base, c] - 1
         rm = m.dropna().iloc[-1] / m.loc[base] - 1

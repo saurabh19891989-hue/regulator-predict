@@ -51,6 +51,60 @@
      "date": "2026-11-05"
     }
    ]
+  },
+  {
+   "src": "NEW_EU_STEEL_ACCESS",
+   "dst": "TATASTEEL",
+   "relation": "regulatory_risk",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Tata Steel Netherlands/UK (~30% of revenue) sit inside the EU/UK protection wall: tighter EU quotas/CBAM on imports lift EU HRC realisations, partly offset by lost India\u2192EU exports (Director gap-fill; profile has no direct edge).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + companies/TATASTEEL.json revenue mix",
+     "date": "2026-11-05",
+     "note": "EU segment ~30% of Tata Steel revenue"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EU_STEEL_ACCESS",
+   "dst": "JSWSTEEL",
+   "relation": "regulatory_risk",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "India\u2192EU flat-steel exports face lower quotas / CBAM cost; exporter margin and diverted volumes pressure domestic prices (Director gap-fill).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + companies/TATASTEEL.json revenue mix",
+     "date": "2026-11-05",
+     "note": "EU segment ~30% of Tata Steel revenue"
+    }
+   ]
+  },
+  {
+   "src": "NEW_EU_STEEL_ACCESS",
+   "dst": "JINDALSTEL",
+   "relation": "regulatory_risk",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Smaller EU export share than JSW; CBAM cost on coal-based BF route (Director gap-fill).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + companies/TATASTEEL.json revenue mix",
+     "date": "2026-11-05",
+     "note": "EU segment ~30% of Tata Steel revenue"
+    }
+   ]
   }
  ]
 }

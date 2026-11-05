@@ -1448,12 +1448,12 @@ JINDALSTEL,F_CHINA_STEEL_EXPORTS,China steel exports,-3.1780000000000004,+15% y/
 JINDALSTEL,P_ANTI_DUMPING_IN,"Indian anti-dumping duties (chemicals, solar, others)",3.0,+1 = new broad duties
 JINDALSTEL,F_GOVT_CAPEX,Central + state government capex,2.499104738636363,+10% capex growth
 JINDALSTEL,F_USDINR,USD/INR exchange rate,2.4499191512499996,+3% USD/INR (rupee weaker)
-JINDALSTEL,NEW_EU_STEEL_ACCESS,EU steel safeguard / CBAM burden on imports,-1.92,+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost)
 JINDALSTEL,NEW_FISCAL_SLIPPAGE_IN,General-government fiscal slippage / extra borrowing vs budget (Centre + states),-1.7734200000000004,+0.5 pp of GDP deficit above budget (~Rs2 lakh cr)
 JINDALSTEL,F_IRON_ORE,Iron ore price,-1.6860000000000002,+15% iron ore
 JINDALSTEL,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.596,+25 bp yield
 JINDALSTEL,C_RED_SEA,Red Sea / Suez shipping disruption,-1.5573333333333337,+1 = disruption
 JINDALSTEL,C_US_CHINA_DECOUPLING,US–China trade decoupling,-1.5537400000000003,+1 = more decoupling
+JINDALSTEL,NEW_EU_STEEL_ACCESS,EU steel safeguard / CBAM burden on imports,-1.46,+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost)
 JIOFIN,F_RISK_SENTIMENT,Global risk aversion (VIX),-6.06025415814394,+5 VIX points
 JIOFIN,F_CPI_IN,India CPI inflation,-5.883765975243506,+1 pp
 JIOFIN,F_USDINR,USD/INR exchange rate,-4.5403640754870125,+3% USD/INR (rupee weaker)
@@ -1495,10 +1495,10 @@ JSWSTEEL,C_MIDEAST_CONFLICT,Middle East conflict intensity,1.685794264285714,+1 
 JSWSTEEL,F_CHINA_GDP,China growth / stimulus,1.6465405321428568,+1 pp
 JSWSTEEL,F_REPO_IN,RBI repo rate,-1.547987616883117,+25 bp repo
 JSWSTEEL,F_DXY,US dollar index,1.3452549624999997,+3% DXY
+JSWSTEEL,NEW_EU_STEEL_ACCESS,EU steel safeguard / CBAM burden on imports,-1.3197499999999998,+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost)
 JSWSTEEL,F_BRENT,Brent crude oil price,1.221333702142857,+10% Brent
 JSWSTEEL,F_CPI_IN,India CPI inflation,-1.1459923,+1 pp
 JSWSTEEL,F_IRON_ORE,Iron ore price,-1.0592953125000002,+15% iron ore
-JSWSTEEL,NEW_EU_STEEL_ACCESS,EU steel safeguard / CBAM burden on imports,-1.0394999999999999,+1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost)
 JUBLFOOD,F_URBAN_DEMAND,Urban discretionary consumption growth,3.72043,+5 pp
 JUBLFOOD,F_CPI_IN,India CPI inflation,-3.2697318839285723,+1 pp
 JUBLFOOD,T_QUICK_COMMERCE,Quick-commerce disruption of retail/FMCG distribution,-3.0,+1
@@ -2009,6 +2009,21 @@ NHPC,F_DXY,US dollar index,-1.0379976157670454,+3% DXY
 NHPC,F_BRENT,Brent crude oil price,-1.000301908198052,+10% Brent
 NHPC,F_US_10Y,US 10-year Treasury yield,-0.99364946875,+25 bp yield
 NHPC,F_GOVT_CAPEX,Central + state government capex,0.942483068181818,+10% capex growth
+NLCINDIA,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,3.4805,+1 = stronger support
+NLCINDIA,F_CPI_IN,India CPI inflation,-2.182231909090909,+1 pp
+NLCINDIA,T_ENERGY_TRANSITION,Energy transition investment,1.96216,+1
+NLCINDIA,P_POWER_REFORM,Power market / DISCOM reform,1.9,+1 = reform progress
+NLCINDIA,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.49703,+25 bp yield
+NLCINDIA,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.3462564334659093,+US$5 bn net inflow per quarter
+NLCINDIA,F_POWER_DEMAND_IN,Indian electricity demand,1.2928333333333335,+3 pp demand growth
+NLCINDIA,F_FOOD_INFLATION_IN,India food inflation,-1.1980893323863635,+2 pp
+NLCINDIA,F_REPO_IN,RBI repo rate,-1.0577616363636364,+25 bp repo
+NLCINDIA,F_USDINR,USD/INR exchange rate,-1.0013665732954544,+3% USD/INR (rupee weaker)
+NLCINDIA,P_MINING_ROYALTY,Mining royalty / mineral tax burden,-1.0,+1 = higher
+NLCINDIA,C_MIDEAST_CONFLICT,Middle East conflict intensity,-0.9458565857142858,+1 = escalation
+NLCINDIA,F_RISK_SENTIMENT,Global risk aversion (VIX),-0.9099018914772727,+5 VIX points
+NLCINDIA,F_DXY,US dollar index,-0.9076723583096593,+3% DXY
+NLCINDIA,F_BRENT,Brent crude oil price,-0.8688107969074674,+10% Brent
 NMDC,F_IRON_ORE,Iron ore price,9.090303124999998,+15% iron ore
 NMDC,F_CHINA_GDP,China growth / stimulus,5.1107422499999995,+1 pp
 NMDC,P_MINING_ROYALTY,Mining royalty / mineral tax burden,-3.0,+1 = higher

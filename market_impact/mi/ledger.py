@@ -49,7 +49,10 @@ def freeze():
     rk["code_commit_at_freeze"] = commit
     keep = ["frozen_at_utc", "code_commit_at_freeze", "entry_date", "company", "name", "tier", "nse_industry", "entry_close",
             "rank_3m", "rank_12m", "exp_rel_return_3m", "exp_rel_return_12m", "mc_p10_12m", "mc_p50_12m", "mc_p90_12m",
-            "mc_prob_outperform", "profile_confidence", "baseline_momentum_z"]
+            "mc_prob_outperform", "prob_outperform_3m", "ret_p10_12m", "ret_p90_12m", "beta", "idio_vol_12m",
+            "profile_confidence", "baseline_momentum_z"]
+    rk["entry_close_nifty50"] = float(px["MKT_NIFTY50"].dropna().iloc[-1])
+    keep.append("entry_close_nifty50")
     rk = rk[[c for c in keep if c in rk.columns]]
     os.makedirs(R("ledger"), exist_ok=True)
     path = R("ledger", f"predictions_{now.strftime('%Y%m%d')}.csv")
@@ -77,11 +80,17 @@ def score(path, horizon_days=None):
                 real[c] = float(s.iloc[-1] / e - 1) * 100
     f["realised_ret"] = f.company.map(real)
     f["realised_rel"] = f.realised_ret - f.realised_ret.mean()
+    if "beta" in f and "entry_close_nifty50" in f:      # beta-adjusted, matching how the model's returns are defined
+        m = px["MKT_NIFTY50"].dropna()
+        rm = float(m[m.index <= end].iloc[-1] / f.entry_close_nifty50.iloc[0] - 1) * 100
+        adj = f.realised_ret - f.beta.fillna(1.0) * rm
+        f["realised_rel"] = adj - adj.mean()
     ok = f.dropna(subset=["realised_rel"])
     ic = lambda col: float(ok[col].rank().corr(ok.realised_rel.rank()))
     res = {"file": path, "hash_ok": exp == h, "entry": str(entry.date()), "scored_to": str(end.date()), "n": len(ok),
            "rank_ic_model_12m_signal": ic("exp_rel_return_12m"), "rank_ic_model_3m_signal": ic("exp_rel_return_3m"),
            "rank_ic_momentum_baseline": ic("baseline_momentum_z"),
+           "hit_rate_prob_outperform_12m": float(((ok.mc_prob_outperform > 0.5) == (ok.realised_rel > 0)).mean()) if "mc_prob_outperform" in ok else None,
            "top_decile_minus_bottom_model": float(ok.nlargest(20, "exp_rel_return_3m").realised_rel.mean() - ok.nsmallest(20, "exp_rel_return_3m").realised_rel.mean())}
     out = path.replace(".csv", f"_score_{end.strftime('%Y%m%d')}.json")
     json.dump(res, open(out, "w"), indent=1)

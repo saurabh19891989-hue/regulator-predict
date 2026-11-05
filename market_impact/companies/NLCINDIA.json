@@ -1,0 +1,431 @@
+{
+ "ticker": "NLCINDIA",
+ "name": "NLC India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_POWER_THERMAL",
+ "tier": "MIDCAP_100",
+ "business_summary": "Navratna PSU that mines lignite (Neyveli, Barsingsar) and coal (Talabira II & III, Odisha) and generates power: lignite stations at Neyveli (TPS-I, II, Expansion) and Barsingsar, Ghatampur (NUPPL, 3x660 MW, now fully commissioned), plus renewables via NLC India Renewables (NIRL). Tariffs are CERC cost-plus with several 2024-29 final orders pending, so interim billing applies (Ghatampur at 90%). Q2 FY27: sales Rs 2,691 cr, operating profit Rs 686 cr (OPM 25%), net profit Rs 1,205 cr per screener (company headlines quote Rs 1,328-1,381 cr, +83% to doubling; reasons not verified). Rs 1.50 interim dividend; NIRL IPO with OFS up to 10 crore shares cleared 4 Nov. Promoters 69.5%; mcap Rs 33.5k cr; P/E 10.3; stock -27% in 6 months.",
+ "revenue_mix": [
+  {
+   "segment": "Thermal power (lignite + coal)",
+   "share_pct": 78,
+   "geography": "Tamil Nadu, UP, Rajasthan, Kerala etc. (state discoms)"
+  },
+  {
+   "segment": "Lignite/coal mining (external + inter-segment)",
+   "share_pct": 14,
+   "geography": "Neyveli, Odisha"
+  },
+  {
+   "segment": "Renewables",
+   "share_pct": 8,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Fuel (lignite/coal, largely captive)",
+   "share_of_costs_pct": 40
+  },
+  {
+   "input": "Employee",
+   "share_of_costs_pct": 16
+  },
+  {
+   "input": "Interest",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "Depreciation and other",
+   "share_of_costs_pct": 34
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "NLCINDIA",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Regulated PSU (CERC cost-plus: fixed charges on lignite power and mining) with P/E 10.3, div yield 1.5%; EV/MCap ~1.7 (borrowings Rs 28.2k cr vs mcap Rs 33.5k cr). +25bp on a ~10% rate => value -2.0% on a 10-year duration; low P/E and regulated pass-through => -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NLCINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 33,453 cr, P/E 10.3, borrowings Rs 28,248 cr (Sep-26)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "NLCINDIA",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Debt/equity 1.19-1.27 (consolidated) and Rs 11.3k cr CWIP; interest recoverable via tariff on operating plants but Ghatampur (1,980 MW, fully commissioned) bills at 90% interim tariff pending CERC final orders and the 2024-29 tariff orders are still pending for several stations (Q1 FY27 filing). +25bp on ~Rs 14k cr floating = Rs 35 cr = -1.0% of PAT x 1.7 x persistence 0.5 => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9b1e76d6-6477-4611-b278-e43e422965b8.pdf",
+     "date": "2026-08-07",
+     "note": "Ghatampur fully commissioned (3x660 MW); interim billing at 90% of claimed tariff; CERC 2024-29 final tariff orders pending"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "NLCINDIA",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.2,
+   "lag": "0-3m",
+   "mechanism": "Fixed-charge recovery is linked to availability (PAF) so volumes matter through incentive and the unscheduled/merchant slice of Ghatampur. Q2 power demand +11% pushed lignite PLF up; +3pp demand => +1.5% generation => +1.2% EBITDA x EV/MCap 1.7 x 0.5 => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NLCINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Sales Rs 2,691 cr in Sep-26 quarter vs Rs 2,565 cr; OPM 25%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+coal+stocks+critical+October+2026+imported+coal+Section+11+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Over half of coal plants at critically low stocks; captive plants ordered to maximise output from 1 Oct (Times of India 21 Oct, Reuters 28 Sep 2026 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "NLCINDIA",
+   "relation": "output_price",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Small merchant sales from Ghatampur and Neyveli surplus; most thermal output on regulated or long-term PPAs. +15% spot => +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9b1e76d6-6477-4611-b278-e43e422965b8.pdf",
+     "date": "2026-08-07",
+     "note": "Thermal billing per CERC tariff orders; interim tariff on Ghatampur"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "NLCINDIA",
+   "relation": "output_price",
+   "w": 0.3,
+   "w_low": -0.8,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "NLC's Talabira II & III coal block (branch: Q1 FY27 total income Rs 933 cr, PAT Rs 289 cr) and Barsingsar/Neyveli lignite mines sell fuel at regulated or auction-linked prices; Ghatampur uses Pakri-Barwadih captive coal (model knowledge). Higher domestic coal prices lift mining realisations while pass-through protects power; net small positive. +10% => +0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9b1e76d6-6477-4611-b278-e43e422965b8.pdf",
+     "date": "2026-08-07",
+     "note": "Talabira branch total income Rs 932.87 cr and PAT Rs 289.44 cr for Q1 FY27"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=NLC+India+Talabira+coal+mine+capacity+Odisha+thermal+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-25",
+     "note": "Talabira II & III coal mine record production (IntelliNews)"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "NLCINDIA",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Debtor days fell from 88 to 62 (screener); discom reform lowers receivable and LPS risk; CERC final tariff orders (regulatory) unlock deferred income: regulatory deferral liability Rs 413.64 cr on disputed billing. +1 SSU => +2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NLCINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Debtor days improved from 88.2 to 62.4"
+    },
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9b1e76d6-6477-4611-b278-e43e422965b8.pdf",
+     "date": "2026-08-07",
+     "note": "Regulatory deferral liability Rs 413.64 cr, incl. Rs 27.13 cr interest, at 30 Jun 2026"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "NLCINDIA",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "Renewable pivot: 10 GW target by 2030, 50:50 conventional/renewable mix by 2032 (CMD), NIRL IPO OFS of up to 10 crore shares cleared on 4 Nov 2026 (listing in FY27 per Sahi). Stronger policy (ISTS, storage, GNA) raises NIRL's value and the IPO price discovery: +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NLC+India+Renewables+IPO+OFS+10+crore+shares+NIRL+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "NLC India board cleared NIRL (NLC India Renewables) IPO with OFS of up to 10 crore shares; Rs 1.50 interim dividend; Rs 2,500 cr bonds; 660 MW expansion (CNBC TV18, PSU Connect, Business Today 4 Nov)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=NLC+India+Talabira+coal+mine+capacity+Odisha+thermal+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-20",
+     "note": "NLC targets 10 GW RE by 2030 (Indian Masterminds); Rs 37,000 cr Odisha plan (Business Standard 23 Oct)"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "NLCINDIA",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Renewables, storage and critical minerals expansion announced (Energetica 21 Sep 2026); 660 MW expansion and Rs 2,500 cr bond plan on 4 Nov. +1 SSU => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NLC+India+Renewables+IPO+OFS+10+crore+shares+NIRL+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "NLC India board cleared NIRL (NLC India Renewables) IPO with OFS of up to 10 crore shares; Rs 1.50 interim dividend; Rs 2,500 cr bonds; 660 MW expansion (CNBC TV18, PSU Connect, Business Today 4 Nov)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=NLC+India+Talabira+coal+mine+capacity+Odisha+thermal+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "NLC India expands into renewables, storage and critical minerals (Energetica India)"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "NLCINDIA",
+   "relation": "policy_effect",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Lignite and coal royalties and DMF/NMET levies sit in mining cost base (Neyveli, Barsingsar, Talabira); CERC passes through only partially for lignite mines on interim price orders (Neyveli mines billed at interim lignite price, final order pending). +1 SSU (higher royalty) => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9b1e76d6-6477-4611-b278-e43e422965b8.pdf",
+     "date": "2026-08-07",
+     "note": "Neyveli mines billed on CERC interim lignite price order; final 2019-24 order pending"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "NLCINDIA",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs 4.6% and DIIs 13.6%; promoter (GoI) 69.5% after a stake sale of ~2.7pp in Q1 FY27 (72.2% -> 69.47%); beta ~1.3-1.7 in pack. +5bn => +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NLCINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Shareholding Sep-26: promoters 69.47%, FIIs 4.61%, DIIs 13.64%"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "NLCINDIA",
+   "relation": "fx_translation",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Imported power equipment and some USD supplier credits; majority INR; wind/solar module imports for NIRL partly offset by DCR sourcing. +3% => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NLCINDIA/consolidated/",
+     "date": "2026-11-05",
+     "note": "Borrowings Rs 28,248 cr; CWIP Rs 11,306 cr"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India (Ministry of Coal)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "69.5% promoter; OFS/disinvestment overhang"
+  },
+  {
+   "counterparty": "TANGEDCO / state discoms (TN, Kerala, UP, Puducherry, Rajasthan)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Neyveli and Ghatampur power; receivables"
+  },
+  {
+   "counterparty": "NLC India Renewables (NIRL) and subsidiaries",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "IPO via OFS of up to 10 crore shares by NLC"
+  },
+  {
+   "counterparty": "Coal India (pricing reference for Talabira coal)",
+   "ticker": "COALINDIA",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Notified coal price benchmark"
+  },
+  {
+   "counterparty": "NTPC",
+   "ticker": "NTPC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Peer PSU thermal generator; compete for Odisha thermal and RE"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-03",
+   "event": "NIRL IPO/OFS listing (FY27 per company; up to 10 crore shares by NLC)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=NLC+India+Renewables+IPO+OFS+10+crore+shares+NIRL+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Ex-date/payment of Rs 1.50 interim dividend (record date per exchange filing, not verified)",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": -0.7,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=NLC+India+Renewables+IPO+OFS+10+crore+shares+NIRL+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "CERC final tariff orders for 2024-29 / Ghatampur final tariff (replacing 90% interim billing)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 4.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9b1e76d6-6477-4611-b278-e43e422965b8.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "Rs 2,500 cr bond issue and Rs 37,000 cr Odisha power & minerals investment announcements progress",
+   "type": "capex",
+   "prob": 0.7,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=NLC+India+Renewables+IPO+OFS+10+crore+shares+NIRL+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Q2 declared 4 Nov after reschedule; estimate early Feb 2027)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge on schedule"
+  },
+  {
+   "date": "2027-03",
+   "event": "Further government OFS in NLC India (promoter 72.2% -> 69.5% in Q1 FY27)",
+   "type": "corporate_action",
+   "prob": 0.2,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": -2.0,
+   "source": "https://www.screener.in/company/NLCINDIA/consolidated/"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 2,691 cr (+5% YoY), operating profit Rs 686 cr (OPM 25% vs 28%), net profit Rs 1,205 cr (screener) vs Rs 485 cr; reported variously as Rs 1,328 cr (+83%) / Rs 1,381 cr. The jump in net profit far exceeds operating profit growth, so it likely contains regulatory income / deferred tax / other income (not verified).",
+  "trend": "Operating margin is flat to lower year on year; earnings quality questioned (screener flags other income of Rs 1,679 cr). Ghatampur fully commissioned; renewable and critical-mineral pivot under way; stock fell 21% in 3 months before a +9% pop on 4 Nov.",
+  "valuation": "P/E 10.3, P/B 1.6 (BV Rs 150), ROE 9.6%, ROCE 9.4%, dividend yield 1.5%; 52-week range Rs 222-388.",
+  "recent_developments": [
+   "2026-08-25: Talabira II & III coal mine record production (IntelliNews)",
+   "2026-09-09/20: NLC India Renewables to list in FY27; target 10 GW RE by 2030",
+   "2026-10-23: Rs 37,000 cr Odisha power and minerals investment plan (Business Standard)",
+   "2026-10-31 to 11-04: Board approves Q2, Rs 1.50 interim dividend, Rs 2,500 cr bonds, 660 MW expansion and NIRL IPO OFS; stock +8-9%",
+   "2026-11-04: CMD says 50:50 conventional/renewable mix by 2032 (ET EnergyWorld)"
+  ]
+ },
+ "key_risks": [
+  "Regulatory: pending CERC final tariff orders and interim billing; disputed Rs 386 cr discom billing",
+  "Earnings quality (non-operating gains in Q2 profit)",
+  "Government OFS/disinvestment overhang",
+  "Mine and plant availability, Talabira ramp and cost",
+  "Rising yields; weak return on equity (7.6% 3-year)"
+ ],
+ "upside_triggers": [
+  "NIRL IPO value unlock at a premium",
+  "CERC final orders releasing regulatory income",
+  "Odisha thermal/mining expansion approvals",
+  "Dividend growth and bond-funded capex at low cost"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=9b1e76d6-6477-4611-b278-e43e422965b8.pdf",
+   "date": "2026-08-07",
+   "what": "NLC India Q1 FY27 results filing (OCR text; regulatory notes, Ghatampur, Talabira)"
+  },
+  {
+   "url": "https://www.screener.in/company/NLCINDIA/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "market_impact/data/packs/NLCINDIA.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities and headlines pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=NLC+India+Renewables+IPO+OFS+10+crore+shares+NIRL+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "NIRL IPO/OFS and Q2 headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=NLC+India+Talabira+coal+mine+capacity+Odisha+thermal+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Odisha investment and expansion headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike headlines"
+  }
+ ]
+}
