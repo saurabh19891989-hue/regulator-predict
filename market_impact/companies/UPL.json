@@ -1,0 +1,308 @@
+{
+ "ticker": "UPL",
+ "name": "UPL Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AGROCHEMICALS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Global crop-protection, seeds (Advanta) and sustainable agri-solutions group (UPL SAS, UPL Corp) with ~80% of sales outside India (model knowledge). Q2 FY27: sales Rs11,860 cr (flat to lower y/y), OP Rs2,068 cr (17.4%), PAT Rs452 cr (Business Standard) with margin expansion for the eighth straight quarter. TTM sales Rs52,645 cr, interest Rs3,281 cr. Mcap Rs44,238 cr, P/E 23.1, 12m -28%.",
+ "revenue_mix": [
+  {
+   "segment": "UPL Corp (crop protection ex-India)",
+   "share_pct": 55,
+   "geography": "LatAm, N. America, Europe, RoW (model estimate)"
+  },
+  {
+   "segment": "UPL SAS (India + biosolutions)",
+   "share_pct": 20,
+   "geography": "India"
+  },
+  {
+   "segment": "Advanta seeds",
+   "share_pct": 15,
+   "geography": "global"
+  },
+  {
+   "segment": "others",
+   "share_pct": 10,
+   "geography": "global"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 50
+  },
+  {
+   "input": "Employee",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "Freight, selling, other",
+   "share_of_costs_pct": 40
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_AGROCHEM_PRICES_GLOBAL",
+   "dst": "UPL",
+   "relation": "output_price",
+   "w": 8.0,
+   "w_low": 3.0,
+   "w_high": 13.0,
+   "lag": "3-12m",
+   "mechanism": "SSU +10% global agchem prices/volumes. Revenue +8% (price mostly drops to EBITDA at ~35% flow-through) on Q2 sales 11,860 / EBITDA 2,068 (17.4% margin): EBITDA +8% x 11,860 x 0.35/2,068... ~ +16%; net debt high (EV/MCap ~1.6-1.9, estimate) so equity beta is ~1.7x -> +27% x persistence 0.3 -> +8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=UPL+Q2+FY27+revenue+guidance+Advanta+net+debt+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "Q2: PAT Rs452 cr (BS) / Rs421 cr attributable (-24% CNBC TV18), EBITDA +5%, eighth straight quarter of margin expansion, sales slipped (Investing.com, Business Standard, AgroSpectrum)"
+    },
+    {
+     "source": "https://www.screener.in/company/UPL/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "UPL",
+   "relation": "fx_translation",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "~80% of revenue outside India (model knowledge) and most debt in USD/BRL; translation lift on EBITDA vs higher INR value of USD debt nearly offset; Brazil real moves matter more. Net +1.0 with wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "geographic split is model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_EDIBLE_OIL",
+   "dst": "UPL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Series is ZS=F soybean-linked: +10% soy/vegetable-oil prices lift Brazil/US/Argentina farmer incomes and crop-protection spending (~60% of sales LatAm + N. America); +10% -> volume +3% -> EBITDA +6% x EV/MCap 1.7 x0.3 = +3; empirical +2.15 (t +1.8) per +10% agrees in sign; shaded to +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/UPL/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "C_AFRICA_LATAM",
+   "dst": "UPL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "LatAm ~35% of revenue (model estimate): +1pp growth -> sales +0.5% and credit availability for Brazilian farmers (bad-debt cycle) -> EBITDA +1.5% x1.7 x0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "UPL",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Chinese generic actives set price floor; +15% export push -> prices -4% on 40% of portfolio -> EBITDA -9% x1.7 x0.3... -4.6; shaded -3 as UPL's integrated manufacturing and distribution cushions.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "UPL",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Interest Rs3,281 cr TTM on gross debt ~Rs45k cr (derived); ~40% floating -> +25bp = Rs45 cr = -2% PAT, x persistence 0.5 -> -1.0. Empirical +2.21 (t +1.3) has the wrong sign and is ignored.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/UPL/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "UPL",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.1,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "India ~20% of sales; +10% monsoon -> domestic sales +5% -> EBITDA +2% x1.7 x0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "UPL",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Intermediates/solvents ~50% of COGS; pass-through limited in competitive markets (~50%). +10% -> costs +5% x50% unrecovered -> EBITDA -8% x1.7 x0.3... -2.4; shaded -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "UPL",
+   "relation": "policy_effect",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "North America is a minority of revenue and UPL manufactures partly outside India; small exposure.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Chinese actives suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "key inputs"
+  },
+  {
+   "counterparty": "Brazilian/US distributors",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "working capital and credit"
+  },
+  {
+   "counterparty": "PI Industries, Dhanuka, Bayer, Corteva, Syngenta",
+   "ticker": "PIIND",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "sector read-across"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (estimate)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Advanta Enterprises IPO / partial listing (status unverified after mid-2026)",
+   "type": "corporate_action",
+   "prob": 0.25,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 10.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "Net-debt reduction targets / refinancing and rating actions",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=UPL+Q2+FY27+revenue+guidance+Advanta+net+debt+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Jul-Sep 2026), reported 2 Nov 2026",
+  "trend": "Sales Rs11,860 cr vs Rs12,019 cr (-1% y/y); OP Rs2,068 cr vs 1,947 cr (+6%); PAT Rs452 cr vs 612 cr (-26%). H1 margin expansion, but costs inflating.",
+  "valuation": "P/E 23, P/B 1.3; EV/EBITDA ~7x (net debt not retrieved, estimate). 12m -28%, 52w range Rs476-812.",
+  "recent_developments": [
+   "2026-11-02 Q2 results: EBITDA +5%, PAT -24 to -26%, eighth quarter of margin expansion (CNBC TV18/Investing.com)",
+   "2026-10-16 shares +5% on speciality chemicals business prospects (BusinessLine)",
+   "2026-10-13 Kotak Neo upgraded to Add (NDTV Profit)",
+   "2026-10-08 52-week low streak at Rs493 (Univest)"
+  ]
+ },
+ "key_risks": [
+  "High leverage (interest Rs3.3k cr/yr)",
+  "Brazil farmer credit and generic price pressure",
+  "Chinese price cuts",
+  "FX volatility (BRL)",
+  "Cost inflation"
+ ],
+ "upside_triggers": [
+  "Advanta listing, deleveraging",
+  "Margin expansion continues",
+  "Agchem destocking ends",
+  "Specialty chemicals value unlock"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_AGROCHEM_PRICES_GLOBAL",
+   "type": "FACTOR",
+   "name": "Global agrochemical prices and channel destocking",
+   "ssu": "+10% global agchem active prices / volumes"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/UPL/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=UPL+Q2+FY27+revenue+guidance+Advanta+net+debt+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 headlines (bodies not retrieved)"
+  }
+ ]
+}

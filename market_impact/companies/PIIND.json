@@ -1,0 +1,310 @@
+{
+ "ticker": "PIIND",
+ "name": "PI Industries Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AGROCHEMICALS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Custom-synthesis and manufacturing (CSM) agchem and pharma-intermediates exporter for global innovators (notably Japanese and European crop-science companies) plus a domestic branded agri-inputs business and biologicals/Isagro (model knowledge). Q2 FY27: sales Rs1,702 cr (-9% y/y), OP Rs233 cr (OPM 14% vs 29%), PAT Rs122 cr (-70%). TTM sales -15%. Shares hit a 6-year low on 5 Nov (-15 to -18%) after a Morgan Stanley double downgrade (21 Oct) and a 'Kumiai warning' (11 Sep).",
+ "revenue_mix": [
+  {
+   "segment": "CSM exports (agchem + pharma)",
+   "share_pct": 65,
+   "geography": "export: Japan, Europe, US (model estimate)"
+  },
+  {
+   "segment": "domestic agri-inputs and biologicals",
+   "share_pct": 35,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "Employee & R&D",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "Power/fuel/other",
+   "share_of_costs_pct": 43
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "PIIND",
+   "relation": "fx_translation",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Exports ~70% of revenue (model knowledge), USD-linked inputs ~25% of sales -> net long ~45% of sales; +3% -> +1.35% of sales -> EBITDA +6.8% at 20% TTM margin (more at the 14% Q2 margin); ~50% hedged near term -> +3.4%; x0.97 EV/MCap x persistence 0.5 -> +1.6; rounded +2.0. Not significant empirically.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PIIND/consolidated/",
+     "date": "2026-11-05"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "export share is model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AGROCHEM_PRICES_GLOBAL",
+   "dst": "PIIND",
+   "relation": "output_price",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 10.0,
+   "lag": "3-12m",
+   "mechanism": "SSU +10% global agrochemical molecule prices/volumes (destocking recovery). Custom-synthesis contracts are cost-plus but volumes/mix follow innovator off-take; +10% -> revenue +6% (CSM + domestic) -> EBITDA +20% at 14-20% margin x0.97 x persistence 0.5 -> +9.7; shaded to +6 because CSM contracts lag. Sales -16% in FY26 and TTM -15% show how large the destocking effect was.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PIIND/consolidated/",
+     "date": "2026-11-05"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=PI+Industries+Q2+FY27+Kumiai+guidance+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Shares -15 to -18% to 6-year low on 5 Nov after Q2 profit -70% to Rs122 cr, margins nearly halve (Business Standard, NDTV Profit, BusinessLine, CNBC TV18); Morgan Stanley double downgrade 21 Oct; 'Kumiai warning' 11 Sep (content not retrieved)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "PIIND",
+   "relation": "competition",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Chinese agchem intermediates/actives dumping (+15% export volumes/price cuts) cut generic-active prices and pressure CSM re-sourcing; +15% -> price -5% on ~35% of the portfolio -> EBITDA -8% x0.97 x0.5... -3.9; shaded to -3. Pack has no significant empirical beta.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "PIIND",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Core investment thesis: innovators shift sourcing to India. +1 SSU = a step-up in new CSM molecule awards; every +Rs300 cr of annual orders ~ +4% sales. Valuation hit (stock -50% 12m) suggests thesis is being doubted.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "thesis is model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "PIIND",
+   "relation": "policy_effect",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "US/EU-bound CSM contracts are typically priced FOB/ex-works with customer absorbing duty, but 10pp tariff reduces innovator margin and volume; US ~20% of exports (model estimate) -> volumes -2% -> EBITDA -3.5% x0.97 x0.5 -> -1.7; reduced for contract protection.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "PIIND",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Domestic agri-inputs ~30% of sales (model); +10% monsoon above LPA -> kharif acreage and pest pressure up -> domestic sales +5% -> EBITDA +4% x0.5 -> +1.9; shaded.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "PIIND",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Solvents, aromatics and intermediates ~45% of costs; CSM contracts pass through most raw-material moves with a 1-2 quarter lag (~70% pass-through). +10% -> costs +4.5% x30% unrecovered = +1.35% of costs -> EBITDA -4.7% at 20% margin... x0.5 -> -1.0 after lag.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_EU_GDP",
+   "dst": "PIIND",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "European/Japanese innovator end-markets (cropland spend) set CSM order flow; +1pp growth -> +0.5% CSM volume -> small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "PIIND",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Domestic agri-input pull follows farm incomes; +5pp rural growth -> domestic sales +3% -> +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Kumiai Chemical, Nissan Chemical, Corteva, Bayer and other innovators",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "concentrated multi-year CSM contracts; Kumiai warning 11 Sep"
+  },
+  {
+   "counterparty": "Dhanuka, Bayer CropScience, Rallis",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "domestic"
+  },
+  {
+   "counterparty": "Chinese agchem producers",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "price benchmark"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Post-Q2 management commentary / analyst downgrades follow-through",
+   "type": "guidance",
+   "prob": 0.7,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=PI+Industries+Q2+FY27+Kumiai+guidance+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (estimate)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": 12.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Stabilisation or further loss of CSM contract volumes with key customer(s)",
+   "type": "other",
+   "prob": 0.3,
+   "impact_pct_low": -20.0,
+   "impact_pct_high": -5.0,
+   "source": "https://news.google.com/rss/search?q=Morgan+Stanley+downgrade+PI+Industries+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Jul-Sep 2026), reported 4 Nov 2026",
+  "trend": "Sales flat y/y at Rs1,702 cr; OPM 14% vs 22% in Q1 and 29% a year ago; PAT Rs122 cr (-70%). FY26 sales -16%; TTM PAT Rs878 cr.",
+  "valuation": "P/E 35 on TTM (falling), P/B 2.4; price Rs1,844 vs 52-week high Rs3,833; -50% 12m, -18% 1m.",
+  "recent_developments": [
+   "2026-11-05 shares -15% to -18% to 6-year low on Q2 miss (Business Standard/NDTV Profit/BusinessLine/Business Today)",
+   "2026-11-04 Q2 profit -70% to Rs122 cr (CNBC TV18)",
+   "2026-10-21 Morgan Stanley double downgrade, shares -5%",
+   "2026-09-11 'Kumiai warning', shares -7% (CNBC TV18/Equitypandit; article not read)"
+  ]
+ },
+ "key_risks": [
+  "Loss/delay of CSM contracts at key innovators",
+  "Chinese competition and destocking prolonged",
+  "Margin collapse to 14% OPM",
+  "US tariffs on Indian chemicals",
+  "Weak domestic sell-in"
+ ],
+ "upside_triggers": [
+  "Destocking ends, volumes recover",
+  "New CSM molecule launches",
+  "Rupee weakness",
+  "Monsoon-driven domestic upturn",
+  "Valuation reset attracting buyers"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_AGROCHEM_PRICES_GLOBAL",
+   "type": "FACTOR",
+   "name": "Global agrochemical prices and channel destocking",
+   "ssu": "+10% global agchem active prices / volumes"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/PIIND/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals through Sep 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PI+Industries+Q2+FY27+Kumiai+guidance+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-05",
+   "what": "headlines only; bodies not retrievable"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Morgan+Stanley+downgrade+PI+Industries+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "Morgan Stanley double downgrade"
+  }
+ ]
+}

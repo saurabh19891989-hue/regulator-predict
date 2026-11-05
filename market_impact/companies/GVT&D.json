@@ -1,0 +1,418 @@
+{
+ "name": "GE Vernova T&D India Ltd.",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Listed Indian arm of GE Vernova's grid business (formerly GE T&D / Alstom T&D India): HV/EHV transformers, reactors, GIS/AIS switchgear, HVDC and FACTS (STATCOM) terminals, substations and services. Q2 FY27 revenue Rs 2,027 cr (+32%), EBITDA Rs 550 cr (27.1% margin), PAT Rs 431 cr; backlog Rs 21,440 cr (>3x trailing revenue); net cash ~Rs 3,250 cr; exports ~32% of revenue. Customers are Power Grid, state transmission utilities, renewable developers and group companies abroad. Parent GE Vernova Inc. owns 51%. Stock is priced for a multi-year grid super-cycle (~60-70x annualised earnings, derived; Screener's P/E of 563 in the pack is a scraping artefact).",
+ "revenue_mix": [
+  {
+   "segment": "Products (transformers, reactors, switchgear)",
+   "share_pct": 55,
+   "geography": "India ~68% / exports ~32% (Q2 FY27; segment split approximate, model knowledge)"
+  },
+  {
+   "segment": "Projects / HVDC / FACTS / substations",
+   "share_pct": 35,
+   "geography": "mostly India (Power Grid, state utilities)"
+  },
+  {
+   "segment": "Services & others",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Materials (transformer steel/CRGO, copper, insulation oil, bought-out HVDC equipment) ~ 55% of revenue",
+   "share_of_costs_pct": 75
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_STEEL_GLOBAL",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 9
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "GVT&D",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Domestic grid ordering (Power Grid, state utilities, HVDC, GEC-III green energy corridors) is the core order source; domestic is ~79% of Q2 orders. +10% central+state capex -> grid order inflow ~+10% but revenue converts over 3 years (backlog Rs 21,440 cr = >3x FY26 revenue), so FY28 EBITDA ~+4%; EV/MCap ~0.97 (net cash Rs 3,250 cr), persistence 1.0 (structural), but only ~60% of capex growth is grid-relevant -> ~+2.4, rounded up for the growth-multiple (stock ~65x annualised H1 EPS, derived).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/ge-vernova-td-share-price-q2-result-reaction-fy27-guidance-hvdc-order-flows-buy-sell-target-upside-returns-20024278.htm",
+     "date": "2026-11-02",
+     "note": "Backlog Rs 21,440 cr, FY27 base order inflow target Rs 7,200-8,000 cr, >30% annual execution growth guided for 3-4 yrs"
+    },
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html",
+     "date": "2026-11-03",
+     "note": "Domestic orders ~79% of Q2 intake; backlog = >3 yrs of FY25-26 revenue"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "GVT&D",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 12.0,
+   "lag": "3-12m",
+   "mechanism": "Theme shock +1 = transmission build-out pipeline ~10% larger than plan (HVDC corridors, GEC-III, 500 GW RE target). HVDC is the swing: Barmer II-South Kalamb 6,000 MW LoA received 3 Nov 2026, 2-3 more HVDC bids expected in FY28. +10% pipeline -> FY28-30 revenue +6% at 27% margin with operating leverage -> EBITDA +8%; EV/MCap 0.97; persistence 1.0; ~50% already in price (stock +33% YTD) -> ~+4, plus multiple support -> +6. Wide range.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.equitypandit.com/ge-vernova-td-india-rallies-4-on-power-grid-award/",
+     "date": "2026-11-04",
+     "note": "Power Grid LoA dated 3 Nov for 6,000 MW HVDC terminal station (2x3,000 MW); value undisclosed"
+    },
+    {
+     "source": "https://www.cnbctv18.com/market/ge-vernova-td-share-price-q2-result-reaction-fy27-guidance-hvdc-order-flows-buy-sell-target-upside-returns-20024278.htm",
+     "date": "2026-11-02",
+     "note": "Management: FY28 will see bidding for 2-3 HVDC projects"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "GVT&D",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "STATCOM / reactive-power and substation orders from data-centre campuses; management expects STATCOM and data-centre orders to pick up from Q4 FY27 (Jan-Mar 2027). +1 = data-centre build-out 20% above plan -> data-centre related orders (~5% of FY28 inflow, estimate) +20% -> +1% revenue; EBITDA +1.3%; persistence 1.0, multiple support -> ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/ge-vernova-td-share-price-q2-result-reaction-fy27-guidance-hvdc-order-flows-buy-sell-target-upside-returns-20024278.htm",
+     "date": "2026-11-02",
+     "note": "STATCOM and data centre orders to pick up from Q4"
+    },
+    {
+     "source": "market_impact/data/packs/GVT&D.md",
+     "date": "2026-10-01",
+     "note": "Headline (Moneycontrol, via pack): Nomura sees GEC-III benefiting GE Vernova T&D; page not fetched"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "GVT&D",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Renewable evacuation drives HVDC/GIS/transformer demand; stronger support (GEC-III, ISTS waiver extension, storage VGF) lifts the RE-linked share of inflows (~40%, estimate). +1 = 10% more RE-linked tenders -> +4% inflow -> FY28 EBITDA +3%; persistence 1.0 x EV/MCap 0.97 x 0.6 (already announced pipeline) -> ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GVT&D.md",
+     "date": "2026-10-06",
+     "note": "Headline (pack): GEC-III boosts outlook for T&D sector; GE Vernova among top bets: MOFSL; not fetched"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "GVT&D",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Transformers/reactors use copper windings and CRGO steel (together est. ~20% of revenue; gross margin 44.5%). Domestic contracts carry price-variation clauses, export/HVDC contracts mostly fixed. +10% copper -> copper ~10% of revenue x 10% = 1.0% of revenue; ~50% unprotected -> 0.5% / 27% margin = EBITDA -1.9%; EV/MCap 0.97; persistence 0.25 -> -0.46. Empirical -0.92 (t -0.7) is directionally consistent but insignificant.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html",
+     "date": "2026-11-03",
+     "note": "Gross margin 44.5%, EBITDA 27.1%"
+    },
+    {
+     "source": "market_impact/data/packs/GVT&D.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_COPPER -0.92 (t -0.7)"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "GVT&D",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "CRGO/structural steel, tanks and castings ~8-10% of revenue, partly passed through in domestic contracts. +10% HRC -> 0.9% of revenue; 50% unprotected -> 0.45%/27% = EBITDA -1.7% -> equity ~ -0.4 at persistence 0.25. Empirical -3.14 (t -2.0) is larger: high-beta capital-goods stocks co-move with global steel/cycle sentiment, so I shrink only partly toward the data and widen the range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GVT&D.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_STEEL_GLOBAL -3.14 (t -2.0), beta 1.18"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "GVT&D",
+   "relation": "fx_translation",
+   "w": 0.4,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Exports are 31-32% of revenue (higher margin) but significant imported content from GE Vernova group (HVDC valves, controls; localisation under way). Net long USD/EUR about 8% of revenue (estimate). +3% USD/INR -> +0.24% revenue gain at near-100% margin = +0.9% EBITDA; EV/MCap 0.97, persistence 0.5 -> +0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html",
+     "date": "2026-11-03",
+     "note": "Export revenue 32% of Q2 revenue; export orders carry higher margins; localisation of transformers/valves/controls"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "GVT&D",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Net cash Rs 3,250 cr, finance cost negligible, so no earnings effect; the channel is the discount rate on a very long-duration equity (~60-70x earnings, derived) and Power Grid/state-utility funding costs. +25 bp repo -> +~10 bp on 10y -> ~-1.5% for a stock with ~15 years of duration in the multiple.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html",
+     "date": "2026-11-03",
+     "note": "Net zero debt, cash and equivalents ~Rs 3,250 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GVT&D",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Foreign institutions hold 19-23% (FII 22.9% Jun 2026 -> 19.2% Sep 2026) and have driven the rerating from Rs 2,500 to Rs 5,650 (52w). +US$5 bn per quarter inflow -> ~+1.5% for a stock with this ownership and 45% annualised volatility; shown as an explicit flow channel, not a fundamental one.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GVT&D.md",
+     "date": "2026-11-05",
+     "note": "Shareholding FIIs 20.39% Mar-26, 22.89% Jun-26, 19.16% Sep-26; 1y vol 45%"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "GVT&D",
+   "relation": "geopolitical_exposure",
+   "w": -0.6,
+   "w_low": -1.8,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Two related-party export orders (Middle East, France) are on hold on customer planning delays; West Asia escalation delays Gulf grid orders and freight/insurance costs. Exports to MENA est. ~8% of orders; a 6-month delay on a third of them -> ~-0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html",
+     "date": "2026-11-03",
+     "note": "Two related-party export orders (Middle East and France) on hold; revival timing uncertain"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "GVT&D",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Exports to the US are small today (a ~US$151 mn related-party order under discussion, may close in H2 FY27). +10 pp tariff -> if order is priced exposed, margin on that order falls; <3% of revenue at stake -> ~-0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html",
+     "date": "2026-11-03",
+     "note": "US related-party order ~US$151 mn still in discussion, may conclude H2 FY27"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Power Grid Corporation of India",
+   "ticker": "POWERGRID",
+   "role": "customer",
+   "importance": "high",
+   "note": "Barmer II-South Kalamb 6,000 MW HVDC LoA 3 Nov 2026; value undisclosed; also GEC-III packages"
+  },
+  {
+   "counterparty": "GE Vernova Inc. (parent, 51%)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "Related-party export orders; technology (HVDC valves, controls); acquisition of Trench Group improves supply chain control"
+  },
+  {
+   "counterparty": "Hitachi Energy India",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "Main HVDC/transformer rival; slight pricing pressure in regular domestic transformers"
+  },
+  {
+   "counterparty": "Siemens Energy India",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Listed separately (ENRIN) in the universe"
+  },
+  {
+   "counterparty": "CG Power",
+   "ticker": "CGPOWER",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Transformers and switchgear"
+  },
+  {
+   "counterparty": "Transformer steel and copper suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Price-variation clauses in domestic contracts"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "Barmer II-South Kalamb HVDC definitive agreement signed and order booked (management expects booking in Q3 FY27)",
+   "type": "guidance",
+   "prob": 0.85,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.5,
+   "source": "https://www.cnbctv18.com/market/ge-vernova-td-share-price-q2-result-reaction-fy27-guidance-hvdc-order-flows-buy-sell-target-upside-returns-20024278.htm"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Dec quarter), management reiterated FY27 EBITDA margin 'mid-20s' and base order inflow Rs 7,200-8,000 cr",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.cnbctv18.com/market/ge-vernova-td-share-price-q2-result-reaction-fy27-guidance-hvdc-order-flows-buy-sell-target-upside-returns-20024278.htm"
+  },
+  {
+   "date": "2027-02",
+   "event": "Conclusion of ~US$151 mn US related-party export order",
+   "type": "guidance",
+   "prob": 0.45,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html"
+  },
+  {
+   "date": "2027-03",
+   "event": "Revival of two on-hold related-party export orders (Middle East, France)",
+   "type": "guidance",
+   "prob": 0.3,
+   "impact_pct_low": 0.3,
+   "impact_pct_high": 2.0,
+   "source": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html"
+  },
+  {
+   "date": "2027-03",
+   "event": "STATCOM / data-centre order pick-up (from Q4 FY27)",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": 0.3,
+   "impact_pct_high": 2.5,
+   "source": "https://www.cnbctv18.com/market/ge-vernova-td-share-price-q2-result-reaction-fy27-guidance-hvdc-order-flows-buy-sell-target-upside-returns-20024278.htm"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget FY28: power transmission / RE evacuation allocations",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge (scheduled date convention)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-30: revenue Rs 2,027 cr +32% y/y; EBITDA Rs 549.7 cr (27.1% vs 25.7%); PAT Rs 431 cr +44%; orders Rs 2,440 cr +52% y/y (H1 +11%); backlog Rs 21,440 cr; gross margin 44.5%",
+  "trend": "Execution and margins ahead of consensus (PAT +11.7% vs poll); order intake still lumpy; H1 export orders 29% of intake.",
+  "valuation": "Market cap ~Rs 1.05-1.08 lakh cr at Rs 4,107-4,218; ~60-70x annualised H1 FY27 PAT of Rs 794 cr (derived). 52w range Rs 2,523-5,650; 12m +30%, 6m -14%; broker targets Rs 5,100 (MOFSL) to Rs 6,000 (Nomura).",
+  "recent_developments": [
+   "2026-08-07: Q1 FY27 revenue +38%, PAT +25% to Rs 363 cr (BW Businessworld, headline)",
+   "2026-09-07/08: L1 for Power Grid 6,000 MW Barmer HVDC; stock +7-9% in a day",
+   "2026-10-30: Q2 beat; 2026-11-02 stock +5%",
+   "2026-11-04: formal LoA from Power Grid dated 3 Nov; stock +4% intraday to Rs 4,224"
+  ]
+ },
+ "key_risks": [
+  "Valuation: any order slippage or margin slip from mid-20s derates a ~65x stock (52w drawdown from Rs 5,650 high was -28% in Aug 2026)",
+  "Lumpy HVDC bookings and long-dated conversion (backlog is >3 years)",
+  "Domestic pricing pressure on regular transformers; competition from Hitachi Energy, Siemens Energy, CG Power",
+  "Related-party export orders on hold; dependence on parent",
+  "Customer concentration on Power Grid and state utilities; 194 debtor days (Screener)",
+  "Commodity cost on fixed-price export/HVDC contracts"
+ ],
+ "upside_triggers": [
+  "HVDC bookings from FY28 bidding round (2-3 projects)",
+  "US ~$151 mn order and STATCOM/data-centre wins",
+  "Capacity expansion Rs 1,000 cr delivering >30% execution growth",
+  "Margin above mid-20s guidance via mix and operating leverage"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.cnbctv18.com/market/ge-vernova-td-share-price-q2-result-reaction-fy27-guidance-hvdc-order-flows-buy-sell-target-upside-returns-20024278.htm",
+   "date": "2026-11-02",
+   "what": "Q2 FY27 results, guidance, backlog, brokerages"
+  },
+  {
+   "url": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-t-d-india-070323684.html",
+   "date": "2026-11-03",
+   "what": "Earnings-call highlights (GuruFocus): orders, margins, export mix, capex, risks"
+  },
+  {
+   "url": "https://www.equitypandit.com/ge-vernova-td-india-rallies-4-on-power-grid-award/",
+   "date": "2026-11-04",
+   "what": "Power Grid LoA for 6,000 MW HVDC, price action"
+  },
+  {
+   "url": "market_impact/data/packs/GVT&D.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack: prices, empirical sensitivities, headlines (pack screener fundamentals for this ticker are empty/stale)"
+  },
+  {
+   "url": "https://www.screener.in/company/GVT&D/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener page returned only Dec-2010 data for this ticker (unusable); fundamentals taken from news/earnings-call sources"
+  }
+ ],
+ "ticker": "GVT&D",
+ "as_of": "2026-11-05"
+}
