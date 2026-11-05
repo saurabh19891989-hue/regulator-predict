@@ -14,11 +14,11 @@
   "B10",
   "B15",
   "B02",
-  "B03"
+  "B03",
+  "B05",
+  "B06"
  ],
  "queued": [
-  "B05",
-  "B06",
   "B12",
   "B16",
   "B18",
@@ -32,11 +32,11 @@
   "sector_policy",
   "energy",
   "geopolitics_trade",
-  "global_macro"
+  "global_macro",
+  "india_macro",
+  "metals_china"
  ],
  "events_running": [
-  "india_macro",
-  "metals_china",
   "agri_rural"
  ],
  "backbone_running": [

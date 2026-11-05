@@ -27,6 +27,9 @@ PRICED_SHARE_FWD = 0.5        # share of forward event expectations assumed alre
 RECENT_CONVERGENCE = 0.3      # share of the unrealised residual of occurred events expected to close in 3 months
 RESIDUAL_CAP = 10.0           # cap on |residual contribution| (% points)
 RECENT_START = "2026-06-01"
+import re as _re
+MARKET_WIDE = _re.compile(r"union budget|budget fy|\bmpc\b|rbi (policy|rate|monetary)|repo rate|gst council|state election|"
+                          r"general election|fomc|fed (rate|meeting)|opec|monsoon", _re.I)
 
 
 def load_json(p):
@@ -231,6 +234,8 @@ def run(draws=400):
     cs = defaultdict(lambda: [0.0, 0.0])
     for t, o in profiles.items():
         for ce in o.get("company_events", []) or []:
+            if MARKET_WIDE.search(str(ce.get("event", ""))):   # covered by the event catalogue → avoid double count
+                continue
             try:
                 mid = (float(ce.get("impact_pct_low", 0)) + float(ce.get("impact_pct_high", 0))) / 2
                 p = float(ce.get("prob", 0))

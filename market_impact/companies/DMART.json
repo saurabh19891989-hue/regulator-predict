@@ -1,0 +1,415 @@
+{
+ "ticker": "DMART",
+ "name": "Avenue Supermarts Ltd. (DMart)",
+ "as_of": "2026-11-05",
+ "industry": "I_RETAIL",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest listed value-retail supermarket chain (DMart) with mostly owned stores, EDLP pricing and a focus on foods, FMCG and general merchandise/apparel; also DMart Ready e-commerce. TTM sales Rs 74,223 cr (+16%), EBITDA margin ~7.5%, PAT Rs 3,116 cr, promoter holding 74.5% (Damani family). Growth is driven by ~20% annual area growth and mid-single-digit LFL; it is valued at ~71x trailing earnings so the stock is highly sensitive to growth/margin delivery and the discount rate.",
+ "revenue_mix": [
+  {
+   "segment": "Foods + FMCG staples (approx.)",
+   "share_pct": 55,
+   "geography": "India; West & South heavy (Maharashtra, Gujarat, Telangana, Karnataka)"
+  },
+  {
+   "segment": "General merchandise & apparel (approx.)",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "DMart Ready online and others (approx.)",
+   "share_pct": 5,
+   "geography": "Top cities"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Purchase of stock-in-trade / COGS (food, FMCG, GM, apparel)",
+   "share_of_costs_pct": 92
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 2.5
+  },
+  {
+   "input": "Rent, utilities, other",
+   "share_of_costs_pct": 3
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "DMART",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Revenue +16-18% y/y is ~60% store-area growth, ~40% LFL/ticket. +5pp urban demand growth -> LFL +2.5pp -> revenue +2.5%; fixed-cost (rent/staff ~50% of opex) leverage gives ~1.5x flow-through: EBITDA +4-5% at 7.5% margin. EV/MCap ~1.02, persistence 0.5 -> ~+2.3 from earnings alone; adds ~+1.7 for growth-multiple support (P/E 71.5, price already -22% in 6m on growth/margin worry). Net ~+4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=DMart+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "BusinessLine: store network +20% but sales/sq ft +0.6%; CNBC TV18/Moneycontrol 12 Oct: margin miss, stock -3-4%; Business Standard 16 Oct: 3-yr low, -28% from April high"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "DMART",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Broad GST cut on staples/FMCG/apparel lowers shelf prices, lifts volumes and trade-down traffic for the value format (DMart is >50% FMCG+food; apparel/GM ~ 30-35%). +3pp effective price cut x elasticity ~0.7 -> volume +2%, revenue neutral-to-positive; gross margin neutral (EDLP, pass-through). ~+3 incl. sentiment; one-off (persistence 0.3). Model knowledge on GST 2.0 (Sep 2025); confirm current rates.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-09",
+     "note": "GST rationalisation Sep 2025 (model memory)"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "DMART",
+   "relation": "substitution",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Quick-commerce (Blinkit, Instamart, Zepto, BB Now) is eroding top-up grocery baskets in top-8 cities where DMart has dense stores; DMart Ready scales slowly. If 3% of DMart food/FMCG GMV (~55% of sales -> 1.7% of sales) is lost with ~40% decremental margin -> EBITDA -9%; partly offset by catchment of tier-2/3 where q-comm absent -> -3 net. Structural (persistence 1.0) but contested; analyst commentary after Q2 flagged slowing sales/sq ft (+0.6%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=DMart+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "BusinessLine: store network +20% but sales/sq ft +0.6%; CNBC TV18/Moneycontrol 12 Oct: margin miss, stock -3-4%; Business Standard 16 Oct: 3-yr low, -28% from April high"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Eternal+Blinkit+Q2+stores+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Blinkit targets 3,500-5,000 stores (Indian Startup News/CIOL)"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "DMART",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": ">12m",
+   "mechanism": "Shift of grocery share from kirana to organised value retail: DMart is the largest listed beneficiary (revenue 74k cr TTM, +16% vs nominal food retail ~+9%). +1 unit ~ +1pp/yr faster organised share gain -> revenue +1.5% p.a. compounding; valuation (71x) capitalises long runway so w ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "DMART",
+   "relation": "discount_rate",
+   "w": -2.2,
+   "w_low": -3.8,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Stock P/E 71.5, duration ~30y of cash flows: +25bp discount-rate shift = ~-2% equity via Gordon-style sensitivity (1/(r-g) with r-g~4%: 0.25/4 = -6%, damped 0.35 for the portion of the multiple driven by rates rather than growth). Empirical US 10y beta -0.5 (t -0.8) consistent in sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "DMART",
+   "relation": "funding_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Borrowings are rising (interest 64 cr in Q2 vs 35 cr a year ago; Fortune India 12 Oct flagged rising debt) but still ~2% of sales; +25bp on ~2,500 cr floating debt = ~6 cr/yr vs PAT ~3,100 cr = -0.2%. Mostly captured by F_GSEC_10Y_IN discount-rate edge; kept small to avoid double counting.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Avenue+Supermarts+debt+Q2+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Fortune India: brokerages flag rising debt"
+    },
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "DMART",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": -2.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+2pp food inflation raises nominal ticket size (food ~ 50% of sales: revenue +1%), but DMart's EDLP pricing absorbs part of input inflation (gross margin ~14-15% compresses 10-20bp if it lags) and demand elasticity trims volumes. Net ~+0.8 with wide range. Pack shows edible oil +1.99 (t 1.6) and wheat +1.26 (t 1.5): same positive sign, not significant, so weight shrunk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "DMART",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Diesel/freight ~2.5% of sales. +10% Brent -> diesel ~+5% (retail prices regulated, pass-through partial) -> logistics +0.13% of sales vs 7.5% EBITDA margin = EBITDA -1.7%; EV/MCap 1.02; persistence 0.3 -> -0.5; adds consumer wallet squeeze via CPI -> -0.8. Pack Brent coefficient not in top-12 (insignificant).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "DMART",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Employee cost ~3.5-4% of sales (largely contract/outsourced staff). +2pp wage growth -> +0.07-0.08% of sales -> EBITDA -1.0%; EV/MCap 1.02; persistence 0.5 -> -0.5; offset +0.1 by higher disposable income -> -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "DMART",
+   "relation": "regulatory_risk",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Implementation of the four labour codes raises statutory wage-base/gratuity and contract-labour compliance cost. Staff ~4% of sales; +5% effective cost -> 0.2% of sales -> EBITDA -2.7%; persistence 1.0 but gradual, ~50% passed via EDLP efficiencies -> -0.6. Model knowledge on codes (notified Nov 2025); implementation timing uncertain.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2025-11",
+     "note": "Labour codes notified (model memory)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "DMART",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 8.5% (down from 9.2% in Jun-26) and DMart is a classic FPI-favoured quality-growth name; +$5bn/qtr inflows lift high-multiple compounders ~ +2-3% relative (beta to FPI-driven rerating).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "DMART",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.1,
+   "lag": ">12m",
+   "mechanism": "Store capex (~4,000-5,000 cr/yr, owns most stores) has steel ~8-10% of build cost: +7% steel -> capex +0.6% -> ROCE -2bp. Immaterial. Pack shows iron ore -3.21 (t -2.0): statistically notable but likely a proxy for risk-on/commodity-cycle vs defensive-growth rotation, not a fundamental link; weight not raised.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "DMART",
+   "relation": "fx_translation",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Imported content (edible oils/pulses sourcing, some GM/electronics, ~10% of purchases is import-linked) so +3% USD/INR -> COGS +0.3% -> margin pressure partly passed on; also hurts FII-sentiment. EBITDA -1.5% x 0.3 persistence -> -0.5; plus FPI sentiment -0.1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/DMART/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q2 FY27 sales 19,644 cr, OP 1,393 cr (OPM 7%), PAT 743 cr; mcap 2,22,894 cr, P/E 71.5"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Hindustan Unilever",
+   "ticker": "HINDUNILVR",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Large FMCG vendors each <10% of purchases; DMart bargaining power rises with scale"
+  },
+  {
+   "counterparty": "Nestle India / ITC / Britannia / Marico / Dabur",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "FMCG vendors; model knowledge"
+  },
+  {
+   "counterparty": "Eternal (Blinkit)",
+   "ticker": "ETERNAL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Quick commerce competing for top-up grocery baskets"
+  },
+  {
+   "counterparty": "Swiggy Instamart / Zepto / Reliance Retail / BigBasket",
+   "ticker": "SWIGGY",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Organised grocery competitors"
+  },
+  {
+   "counterparty": "Trent (Star Bazaar/Zudio)",
+   "ticker": "TRENT",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Apparel value-fashion overlap"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-04",
+   "event": "Q3 FY27 standalone business update (revenue, store count) - DMart publishes a quarterly update in the first week after quarter end (as in Oct 2026: 4-5 Oct)",
+   "type": "results",
+   "prob": 0.85,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Avenue+Supermarts+Q2+update+when:90d&hl=en-IN&gl=IN&ceid=IN:en (Oct 5 2026: shares fell 4-6% despite 18% growth)"
+  },
+  {
+   "date": "2027-01-16",
+   "event": "Q3 FY27 results (Dec-quarter, festive/winter season); key watch: gross margin, EBITDA margin vs 8% a year ago, debt",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge of mid-Jan results timing; Q2 results came 10 Oct 2026"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget FY28: consumption/GST/income-tax measures (market-wide, listed for company sensitivity)",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge (annual Budget date)"
+  },
+  {
+   "date": "2026-12",
+   "event": "New store additions pace: management guidance of ~ 20% area growth; new-city launches, update on DMart Ready profitability",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=DMart+store+network+20%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep-26): sales Rs 19,644 cr (+17.8% y/y), EBITDA Rs 1,393 cr (OPM 7.1% vs 7.3% a year ago, down q/q from 8.0%), PAT Rs 743 cr (+8.5% y/y, below estimates); interest Rs 64 cr vs 35 cr.",
+  "trend": "Revenue growth steady at ~17-18% on ~20% area growth but sales per sq ft +0.6% (BusinessLine 16 Oct); earnings growth lags revenue; leverage rising; stock at 3-year low, -22% in 6m, -28% from April-2026 high (Business Standard 16 Oct).",
+  "valuation": "Stock P/E 71.5 (TTM EPS 47.8), P/B 8.5, ROE 12.9%, ROCE 17.2%; screener flags low 3y ROE 13.5%; no dividend. Historic P/E range materially higher (>100x in 2021-24, model knowledge), so de-rating is under way.",
+  "recent_developments": [
+   "2026-10-05: Q2 business update revenue +18% y/y; shares -4% to -6% intraday, Citi maintains Sell (Moneycontrol/CNBC TV18/ET).",
+   "2026-10-10: Q2 results PAT +8.5% to ~Rs 743 cr, misses estimates; margin pressure.",
+   "2026-10-12: Jefferies and Morgan Stanley trim target prices; Motilal Oswal/Nuvama/ICICI Sec mixed; shares hit 52-week low (Livemint, NDTV Profit).",
+   "2026-10-16: 3-year low, sales/sq ft +0.6% (Business Standard/BusinessLine).",
+   "2026-11: FII holding 8.48% vs 9.22% in Jun-26 (screener)."
+  ]
+ },
+ "key_risks": [
+  "Further de-rating if LFL stays low-single digit and margins keep slipping",
+  "Quick-commerce share loss in metros",
+  "Rising debt funding aggressive store growth",
+  "Gross-margin compression from price investments / competition",
+  "Labour-code and rent inflation",
+  "Rate shock on 70x multiple"
+ ],
+ "upside_triggers": [
+  "LFL recovery with GST-led festive/winter demand",
+  "Gross-margin expansion with private label and apparel mix",
+  "Moderating capex/debt intensity",
+  "Lower G-sec yields / FPI return to quality compounders"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/DMART/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals, quarterly P&L, shareholding (via pack)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=DMart+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "Q2 FY27 coverage: Moneycontrol, Livemint, BusinessLine, Business Standard, CNBC TV18, NDTV Profit, Fortune India (headlines only; article bodies not retrieved)"
+  },
+  {
+   "url": "market_impact/data/packs/DMART.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities, price performance"
+  }
+ ]
+}
