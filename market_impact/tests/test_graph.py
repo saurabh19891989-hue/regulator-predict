@@ -47,3 +47,17 @@ def test_overlap_damp_when_company_has_direct_edge_from_source():
     tot, _, _ = net.unit_response("A")
     assert math.isclose(tot["X"], 4 + 0.5 * 2 * DAMP[2] * OVERLAP_DAMP)   # X has direct A edge → indirect half credit
     assert math.isclose(tot["Y"], 0.5 * 2 * DAMP[2])                      # Y has no direct A edge → full credit
+
+
+def test_overlap_damp_at_intermediate_node():
+    """X → GDP → AQ → BANK where BANK also has a direct (total-effect) GDP edge: the 3rd-order route is damped."""
+    from market_impact.mi.graph import OVERLAP_DAMP
+    E = lambda s, d, w, layer="backbone": {"src": s, "dst": d, "w": w, "w_low": w, "w_high": w, "layer": layer}
+    nodes = {k: {"type": "FACTOR"} for k in ("X", "GDP", "AQ")}
+    nodes["BANK"] = {"type": "COMPANY"}
+    with_direct = Network(nodes, [E("X", "GDP", 1.0), E("GDP", "AQ", 1.0), E("AQ", "BANK", 2.0, "company"), E("GDP", "BANK", 3.0, "company")])
+    t, _, _ = with_direct.unit_response("X")
+    assert math.isclose(t["BANK"], 3.0 * DAMP[2] + 2.0 * DAMP[3] * OVERLAP_DAMP)
+    no_direct = Network(nodes, [E("X", "GDP", 1.0), E("GDP", "AQ", 1.0), E("AQ", "BANK", 2.0, "company")])
+    t2, _, _ = no_direct.unit_response("X")
+    assert math.isclose(t2["BANK"], 2.0 * DAMP[3])
