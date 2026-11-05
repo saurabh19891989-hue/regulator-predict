@@ -2,10 +2,11 @@
 *MIDCAP_100 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.0%**, **12 months -4.4%** (rank 156 / 162 of 200 for 3m / 12m); beta 0.82
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 43%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.9% … P90 -0.3%; plausible 12m relative-return range incl. stock-specific noise: -14.9% … +17.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -3.3 pp (model impact -6.6% beta-adjusted vs realised market-adjusted move +18.6%); forward event exposure +1.8% (3m +1.1%; half assumed priced); company-specific events -1.8%
+- Expected relative return: **3 months +0.3%**, **12 months -0.5%** (rank 85 / 128 of 200 for 3m / 12m); beta 0.82
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 51%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.2% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -31.5% … +16.5%
+- Decomposition (12m): 0.5 × forward event exposure +1.8% (3m +0.9%; half assumed priced) + 0.5 × company-specific catalysts -1.8%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -4.2% (beta-adjusted) vs a realised market-adjusted move of +18.6% — gap -22.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -13,34 +14,34 @@
 |---|---|---|---|---|---|---|---|
 | US generic drug price erosion (higher = worse) (`F_US_GENERIC_PRICING`) | +5 pp erosion | -5.00 | -5.00 | +0.00 | +0.00 | +0.00 | — |
 | USFDA inspection/enforcement intensity (`P_USFDA_ENFORCEMENT`) | +1 = stricter | -3.00 | -4.00 | +1.00 | +0.00 | +0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.56 | +3.20 | -0.34 | -0.18 | -0.11 | -1.1% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.66 | +3.20 | -0.34 | -0.11 | -0.09 | -1.1% |
 | China+1 manufacturing relocation to India (`T_CHINA_PLUS_ONE`) | +1 | +2.41 | +2.50 | -0.13 | +0.02 | +0.01 | — |
 | US tariffs on pharmaceuticals (`P_US_PHARMA_TARIFF`) | +10 pp on Indian pharma exports | -2.40 | -3.00 | +0.60 | +0.00 | +0.00 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.78 | +2.00 | -0.25 | +0.00 | +0.02 | — |
-| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | +1.61 | +0.00 | +1.42 | +0.24 | -0.05 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.77 | +2.00 | -0.25 | +0.00 | +0.01 | — |
+| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | +1.69 | +0.00 | +1.42 | +0.29 | -0.02 | — |
 | Chemical feedstock (benzene, propylene, etc.) (`F_CHEM_FEEDSTOCK`) | +10% feedstock | -1.60 | -1.60 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.25 | +0.00 | -0.48 | -0.47 | -0.30 | — |
-| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.21 | -1.20 | +0.00 | +0.00 | -0.01 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.04 | +0.00 | +0.01 | -1.01 | -0.04 | — |
+| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.05 | +0.00 | -0.48 | -0.49 | -0.09 | — |
 | Europe growth (`F_EU_GDP`) | +1 pp | +1.01 | +1.00 | +0.00 | +0.01 | -0.01 | — |
 | GLP-1 / obesity drug adoption (`T_GLP1`) | +1 | +1.00 | +1.00 | +0.00 | +0.00 | +0.00 | — |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -0.89 | +0.00 | -0.78 | -0.10 | -0.01 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -0.92 | +0.00 | -0.78 | -0.15 | +0.01 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -0.82 | -0.40 | -0.33 | -0.04 | -0.05 | +0.0% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.9% | -3.9% | -4.4 | +0.5 | +0.0 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.9% | -3.9% | -4.4 | +0.5 | +0.0 | -0.0 |
 | USFDA warning letters: Alembic, Aurobindo-Eugia, Dabur (Jul-Aug 2026) (`EV_USFDA_WARNING_WAVE_26`) | occurred | 1.00 | -3.0% | -3.0% | -4.0 | +1.0 | +0.0 | +0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +4.3% | +2.1% | +5.0 | -0.8 | -0.0 | +0.1 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +4.2% | +2.1% | +5.0 | -0.8 | -0.0 | +0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | +0.0 | -0.0 |
 | US imposes tariffs on generic drugs (200% threat) or removes India's speciality exemption (`EV_PHARMA_GENERICS_TARIFF`) | risk_scenario | 0.12 | -14.0% | -1.7% | -14.0 | +0.0 | +0.0 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | +0.0 | -1.2 | -0.1 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.5% | +1.2% | +1.5 | -0.1 | +0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.1% | -1.1% | -1.2 | +0.1 | +0.0 | +0.0 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +0.9% | +0.9% | +1.0 | -0.0 | -0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.7 | -0.1 | -0.0 | -0.0 |
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.7 | -0.0 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.9 | +0.2 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.3% | +0.7% | +0.5 | +0.6 | +0.1 | +0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.9 | +0.1 | +0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.6 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -59,25 +60,25 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → AUROPHARMA | +0.75% | +0.41% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → AUROPHARMA | +0.71% | +0.39% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → AUROPHARMA | -0.74% | -0.37% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → AUROPHARMA | -0.66% | -0.36% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → AUROPHARMA | -0.60% | -0.36% |
+| 1 | EV_CHINA_FDI_EASING_PN3 ⇒ T_CHINA_PLUS_ONE → AUROPHARMA | +0.50% | +0.35% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | P_USFDA_ENFORCEMENT → AUROPHARMA | +1.00 | events | -4.00% |
 | 1 | F_FPI_FLOWS → AUROPHARMA | -1.60 | events | -3.20% |
 | 1 | F_GSEC_10Y_IN → AUROPHARMA | +1.55 | director_override | -1.86% |
+| 1 | P_USFDA_ENFORCEMENT → AUROPHARMA | +0.40 | director_override | -1.60% |
 | 1 | F_USDINR → AUROPHARMA | -0.37 | observed | -1.18% |
-| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → AUROPHARMA | +1.00 | events | +1.00% |
 | 1 | P_US_PHARMA_TARIFF → AUROPHARMA | +0.20 | events | -0.60% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → AUROPHARMA | +0.40 | director_override | +0.40% |
 | 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → AUROPHARMA | -0.60 | events | +0.36% |
 | 1 | F_REPO_IN → AUROPHARMA | +1.00 | events | -0.30% |
+| 1 | T_GLP1 → AUROPHARMA | +0.30 | director_override | +0.30% |
 | 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → AUROPHARMA | +0.50 | events | +0.25% |
 | 1 | F_EU_GDP → AUROPHARMA | +0.22 | events | +0.22% |
 | 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → AUROPHARMA | +0.40 | events | -0.13% |
-| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → AUROPHARMA | +0.20 | events | +0.12% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |

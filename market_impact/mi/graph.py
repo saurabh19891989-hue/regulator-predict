@@ -24,7 +24,11 @@ MIN_CONTRIB = 0.005                            # prune paths contributing < 0.00
 CONF_W = {"high": 1.0, "medium": 0.6, "low": 0.3}
 DRIVER = {"FACTOR", "POLICY", "COUNTRY", "THEME", "NEW"}
 PRICED_SHARE_FWD = 0.5        # share of forward event expectations assumed already in prices
-RECENT_CONVERGENCE = {"3m": 0.3, "12m": 0.5}   # share of the still-unpriced impact of occurred events expected to be priced
+# Share of the "unpriced" recent impact added to the headline expected return. Set to 0 after the in-sample check
+# (2026-11-05): the graph's Jun–Nov model impact correlates -0.34 with realised market-adjusted moves across 198 stocks
+# (event-estimated driver states -0.41; market-observed drivers +0.10; within-industry -0.16), and stock reviewers found
+# most large "unpriced" items were stock-specific news the graph lacks. The gap is still reported as a diagnostic.
+RECENT_CONVERGENCE = {"3m": 0.0, "12m": 0.0}
 RESIDUAL_CAP = 10.0           # cap on |residual contribution| (% points)
 # Corporate actions that break the price series: realised move since RECENT_START is not used (residual = 0) and
 # volatility/beta are estimated only on data after the clean date.
@@ -41,7 +45,11 @@ RECENT_START = "2026-06-01"
 OVERLAP_DAMP = 0.5            # indirect paths from X to c get half credit when c already has a direct edge from X
 import re as _re
 MARKET_WIDE = _re.compile(r"union budget|budget fy|\bmpc\b|rbi (policy|rate|monetary)|repo rate|gst council|state election|"
-                          r"general election|fomc|fed (rate|meeting)|opec|monsoon", _re.I)
+                          r"general election|fomc|fed (rate|meeting)|opec|monsoon|\bECL\b|expected credit loss", _re.I)
+# Holding companies whose profiles were written EX-subsidiary: driver shocks reaching the listed subsidiary continue to
+# the holdco through the holding_stake link (look-through). Every other company profile is consolidated, so driver
+# shocks stop at companies (see Network.paths_from).
+HOLDCO_LOOKTHROUGH = {("HINDZINC", "VEDL"), ("BAJAJFINSV", "BAJAJHLDNG"), ("BAJAJ-AUTO", "BAJAJHLDNG")}
 
 
 def load_json(p):
@@ -182,6 +190,10 @@ class Network:
                 continue
             self.out[e["src"]].append(i)
         self.companies = [n for n, v in nodes.items() if v["type"] == "COMPANY"]
+        self.lookthrough = defaultdict(list)
+        for i, e in enumerate(edges):
+            if e["layer"] == "company_link" and (e["src"], e["dst"]) in HOLDCO_LOOKTHROUGH:
+                self.lookthrough[e["src"]].append(i)
         self.direct_src = defaultdict(set)
         for e in edges:
             if e["layer"] in ("company", "director") and nodes[e["dst"]]["type"] == "COMPANY":
@@ -191,10 +203,10 @@ class Network:
         """Enumerate simple paths from `start` (unit +1 shock). Yields (edge_idx_tuple, contribution, end_node).
         `clamped` drivers are observed: their actual move is already in the state vector, so paths never enter them."""
         W = w_vec if w_vec is not None else np.array([e["w"] for e in self.edges])
-        stack = [(start, (), 1.0, frozenset([start]))]
+        stack = [(start, (), 1.0, frozenset([start]), False)]
         while stack:
-            node, path, prod, seen = stack.pop()
-            for ei in self.out.get(node, ()):
+            node, path, prod, seen, lt_only = stack.pop()
+            for ei in (self.lookthrough.get(node, ()) if lt_only else self.out.get(node, ())):
                 d = self.edges[ei]["dst"]
                 if d in seen or d in clamped:
                     continue
@@ -211,9 +223,11 @@ class Network:
                     # factor/driver-origin shocks stop at companies: consolidated profiles already embed subsidiary
                     # economics, so passing driver shocks through holding links would double count.
                     if self.nodes[start]["type"] != "COMPANY":
+                        if self.lookthrough.get(d) and k < MAX_DEPTH:     # ex-subsidiary holdco: look through
+                            stack.append((d, path + (ei,), p2, seen | {d}, True))
                         continue
                 if k < MAX_DEPTH and abs(p2) * DAMP.get(k + 1, 0) >= MIN_CONTRIB * 0.1:
-                    stack.append((d, path + (ei,), p2, seen | {d}))
+                    stack.append((d, path + (ei,), p2, seen | {d}, False))
 
     def unit_response(self, start, clamped=frozenset()):
         """Company response to +1 SSU at start: totals and by order, plus path list."""
@@ -400,6 +414,7 @@ def run(draws=400):
         rc3 = float(np.clip(RECENT_CONVERGENCE["3m"] * resid, -RESIDUAL_CAP, RESIDUAL_CAP))
         rc12 = float(np.clip(RECENT_CONVERGENCE["12m"] * resid, -RESIDUAL_CAP, RESIDUAL_CAP))
         res.append({"company": c, "beta": b, "recent_events_model_impact_raw": rec_raw, "forward_exposure_12m_raw": f12_raw[c],
+                    "graph_vs_market_gap": (rec - rz) if rz is not None else None,
                     "recent_events_model_impact": rec, "realised_mkt_adj_since_jun": rz,
                     "unpriced_recent_impact": resid, "residual_contribution_3m": rc3, "residual_contribution": rc12,
                     "forward_exposure_3m": f3, "forward_exposure_12m": f12,

@@ -17,42 +17,42 @@ ECB hiked to 2.5% on 10 Sep (CNBC) and held on 29 Oct (CNBC); Reuters 29 Oct: go
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| MOTILALOFS | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
-| YESBANK | +0.3 | +0.0 | +0.1 | +0.1 | +0.1 |
-| BSE | +0.3 | +0.0 | +0.1 | +0.1 | -0.0 |
-| MUTHOOTFIN | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
-| ICICIAMC | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
-| 360ONE | +0.3 | +0.0 | +0.1 | +0.1 | +0.0 |
-| GROWW | +0.3 | +0.0 | +0.1 | +0.1 | +0.0 |
-| SBIN | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
-| PAYTM | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| BAJFINANCE | +0.2 | +0.0 | +0.1 | +0.0 | +0.1 |
-| AUBANK | +0.2 | +0.0 | +0.1 | +0.0 | +0.1 |
-| MAXHEALTH | +0.2 | +0.2 | +0.1 | +0.0 | +0.0 |
-| ETERNAL | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| INDIGO | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| ADANIENSOL | +0.2 | +0.0 | +0.1 | +0.0 | +0.0 |
+| MOTILALOFS | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
+| MUTHOOTFIN | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
+| PAYTM | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
+| ICICIAMC | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| BSE | +0.1 | +0.0 | +0.1 | +0.1 | +0.0 |
+| MEESHO | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| HINDCOPPER | +0.1 | +0.0 | +0.1 | -0.0 | -0.0 |
+| SBIN | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| 360ONE | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| VEDL | +0.1 | +0.0 | +0.1 | +0.0 | +0.1 |
+| ETERNAL | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
+| ADANIGREEN | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| ADANIENT | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| SBICARD | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| INDIGO | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| TMPV | -0.4 | -0.2 | -0.1 | -0.1 | -0.0 |
+| TMPV | -0.3 | -0.2 | -0.1 | -0.0 | -0.0 |
 | PERSISTENT | -0.2 | -0.2 | -0.1 | -0.0 | +0.0 |
-| TECHM | -0.2 | -0.1 | -0.1 | -0.0 | +0.0 |
-| JSWSTEEL | -0.2 | -0.0 | -0.1 | -0.1 | -0.0 |
+| TECHM | -0.2 | -0.1 | -0.0 | -0.0 | -0.0 |
+| WIPRO | -0.2 | -0.2 | -0.0 | -0.0 | -0.0 |
+| TCS | -0.2 | -0.1 | -0.0 | -0.0 | +0.0 |
 | HCLTECH | -0.2 | -0.1 | -0.0 | -0.0 | +0.0 |
-| TCS | -0.2 | -0.1 | -0.1 | -0.0 | +0.0 |
-| WIPRO | -0.2 | -0.2 | +0.0 | -0.0 | +0.0 |
-| PIIND | -0.2 | -0.1 | -0.0 | -0.0 | -0.0 |
-| TATASTEEL | -0.1 | -0.1 | +0.0 | -0.1 | -0.0 |
-| MOTHERSON | -0.1 | -0.2 | -0.0 | -0.0 | +0.0 |
-| BIOCON | -0.1 | -0.1 | -0.1 | -0.0 | +0.0 |
+| MANKIND | -0.1 | -0.2 | -0.0 | +0.0 | +0.0 |
+| MOTHERSON | -0.1 | -0.2 | +0.0 | -0.0 | +0.0 |
+| TMCV | -0.1 | -0.2 | +0.0 | +0.0 | +0.0 |
 | INFY | -0.1 | -0.1 | -0.0 | -0.0 | +0.0 |
-| MANKIND | -0.1 | -0.2 | +0.0 | +0.0 | +0.0 |
-| SAIL | -0.1 | +0.0 | -0.0 | -0.1 | -0.0 |
+| BIOCON | -0.1 | -0.1 | -0.0 | -0.0 | +0.0 |
+| PIIND | -0.1 | -0.1 | -0.0 | +0.0 | -0.0 |
+| LTM | -0.1 | -0.1 | -0.0 | -0.0 | -0.0 |
+| JSWSTEEL | -0.1 | -0.0 | -0.0 | -0.0 | +0.0 |
 | BAJAJ-AUTO | -0.1 | -0.1 | -0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 13%, 2: 56%, 3: 20%, 4: 11%
+Share of absolute impact by order: 1: 20%, 2: 62%, 3: 15%, 4: 4%
 
 ## Sources
 - 2026-10-29 ECB governors see December hike likely followed by pause, sources say - Reuters https://news.google.com/rss/search?q=ECB%20governors%20see%20December%20hike%20likely%20followed%20by%20pause%2C%20sources%20say%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en

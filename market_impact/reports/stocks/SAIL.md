@@ -2,29 +2,30 @@
 *MIDCAP_100 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +7.3%**, **12 months +13.7%** (rank 4 / 2 of 200 for 3m / 12m); beta 1.29
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.7%): 3 months 68%, 12 months 80%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +9.0% … P90 +22.7%; plausible 12m relative-return range incl. stock-specific noise: -10.2% … +80.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +7.6 pp (model impact +15.2% beta-adjusted vs realised market-adjusted move -23.2%); forward event exposure +15.1% (3m +6.9%; half assumed priced); company-specific events -0.8%
+- Expected relative return: **3 months +2.4%**, **12 months +3.7%** (rank 7 / 9 of 200 for 3m / 12m); beta 1.29
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.7%): 3 months 56%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.0% … P90 +10.5%; plausible 12m relative-return range incl. stock-specific noise: -35.4% … +49.2%
+- Decomposition (12m): 0.5 × forward event exposure +9.2% (3m +5.4%; half assumed priced) + 0.5 × company-specific catalysts -0.8%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +13.8% (beta-adjusted) vs a realised market-adjusted move of -23.2% — gap +37.0 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| Indian domestic steel price (`F_STEEL_INDIA`) | +7% domestic HRC/rebar price | +14.74 | +15.00 | -0.24 | -0.02 | +0.00 | — |
-| Global HRC steel price (`F_STEEL_GLOBAL`) | +10% global HRC | +7.16 | +0.00 | +7.40 | -0.22 | -0.01 | +20.6% |
+| Indian domestic steel price (`F_STEEL_INDIA`) | +7% domestic HRC/rebar price | +14.75 | +15.00 | -0.24 | -0.01 | +0.00 | — |
+| Global HRC steel price (`F_STEEL_GLOBAL`) | +10% global HRC | +7.29 | +0.00 | +7.40 | -0.11 | +0.00 | +20.6% |
 | Coking coal price (`F_COKING_COAL`) | +15% coking coal | -5.60 | -8.00 | +1.50 | +0.93 | -0.03 | — |
-| Indian safeguard/anti-dumping duty on steel imports (`P_STEEL_DUTY_IN`) | +10 pp effective duty | +4.99 | +2.00 | +3.00 | +0.00 | -0.01 | — |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +4.35 | +0.00 | -2.97 | +4.80 | +2.52 | — |
-| China steel exports (`F_CHINA_STEEL_EXPORTS`) | +15% y/y | -3.97 | +0.00 | -2.68 | -1.37 | +0.08 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.49 | +2.50 | +1.19 | -0.12 | -0.08 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.54 | +1.00 | +1.75 | -0.21 | +0.00 | -1.1% |
-| EU steel safeguard / CBAM burden on imports (`NEW_EU_STEEL_ACCESS`) | +1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost) | -1.75 | +0.00 | -1.80 | +0.05 | +0.00 | — |
-| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -1.52 | +0.00 | +0.00 | +0.32 | -1.84 | — |
+| Indian safeguard/anti-dumping duty on steel imports (`P_STEEL_DUTY_IN`) | +10 pp effective duty | +5.00 | +2.00 | +3.00 | +0.00 | +0.00 | — |
+| China steel exports (`F_CHINA_STEEL_EXPORTS`) | +15% y/y | -4.51 | +0.00 | -2.68 | -1.86 | +0.04 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.51 | +2.50 | +1.19 | -0.12 | -0.06 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.60 | +1.00 | +1.75 | -0.15 | +0.01 | -1.1% |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.94 | +0.00 | -2.97 | +2.95 | +1.95 | — |
+| EU steel safeguard / CBAM burden on imports (`NEW_EU_STEEL_ACCESS`) | +1 = tightening step (quota cut / higher out-of-quota tariff / CBAM cost) | -1.77 | +0.00 | -1.80 | +0.03 | +0.00 | — |
 | Mining royalty / mineral tax burden (`P_MINING_ROYALTY`) | +1 = higher | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +1.48 | +0.00 | +0.00 | +0.28 | +1.20 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.47 | -1.20 | -0.04 | -0.18 | -0.05 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.46 | -1.20 | -0.04 | -0.18 | -0.04 | — |
 | Railway capex (`P_RAILWAY_CAPEX`) | +10% | +1.42 | +1.20 | +0.12 | +0.11 | -0.01 | — |
+| Iron ore price (`F_IRON_ORE`) | +15% iron ore | +1.24 | +0.50 | +0.00 | +0.76 | -0.02 | -12.5% |
+| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -1.13 | +0.00 | +0.00 | +0.32 | -1.45 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
@@ -33,14 +34,14 @@
 | Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -4.5% | -4.5% | -4.4 | -0.1 | -0.0 | +0.0 |
 | DGTR recommends/imposes anti-dumping duty on hot-rolled flat steel from China, Japan, Russia (`EV_INDIA_HR_STEEL_AD_PROVISIONAL`) | anticipated | 0.55 | +7.6% | +4.2% | +7.6 | +0.0 | -0.0 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +3.6% | +3.6% | +2.9 | +0.9 | -0.1 | -0.1 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +3.8% | +3.4% | +3.0 | +1.0 | -0.1 | -0.1 |
-| Chinese steel/aluminium export surge floods Asia as China demand stays weak (`EV_CHINA_STEEL_EXPORT_FLOOD`) | risk_scenario | 0.25 | -9.7% | -2.4% | +0.0 | -11.4 | +1.7 | +0.0 |
+| Chinese steel/aluminium export surge floods Asia as China demand stays weak (`EV_CHINA_STEEL_EXPORT_FLOOD`) | risk_scenario | 0.25 | -10.6% | -2.6% | +0.0 | -11.4 | +0.9 | +0.0 |
 | EU quota-halving steel regime and CBAM cut Indian steel exports to EU (`EV_EU_STEEL_REGIME_CBAM_HITS_INDIA`) | occurred | 1.00 | -2.2% | -2.2% | -2.2 | +0.0 | +0.0 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +1.6% | +1.6% | +0.0 | +0.4 | +1.3 | -0.2 |
-| China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +4.5% | +1.6% | +0.0 | -3.0 | +4.9 | +2.6 |
-| China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +1.5% | +1.5% | +0.0 | -0.9 | +1.6 | +0.9 |
+| China enforces steel output cuts / export licensing discipline ('anti-involution') (`EV_CHINA_STEEL_OUTPUT_CURB_2027`) | anticipated | 0.50 | +3.3% | +1.7% | -0.1 | +3.8 | -0.3 | +0.0 |
 | Union Budget 2027-28 (1 Feb 2027): customs-duty relief on coking coal/critical minerals/scrap vs. higher protection (`EV_UNION_BUDGET_FEB27_METALS`) | scheduled | 0.90 | +1.7% | +1.5% | +2.4 | -0.4 | -0.3 | +0.0 |
-| China enforces steel output cuts / export licensing discipline ('anti-involution') (`EV_CHINA_STEEL_OUTPUT_CURB_2027`) | anticipated | 0.50 | +3.0% | +1.5% | -0.1 | +3.8 | -0.7 | -0.0 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.2 | -0.0 | -0.2 | -0.0 |
+| India relaxes steel import curbs early (safeguard cut/exemptions) after inflation or FTA pressure (`EV_STEEL_SAFEGUARD_EARLY_RELAXATION`) | risk_scenario | 0.15 | -9.1% | -1.4% | -9.1 | +0.0 | +0.0 | +0.0 |
+| Iron ore at two-year low; NMDC price cuts then partial hike (`EV_IRON_ORE_TWO_YEAR_LOW`) | occurred | 1.00 | -1.0% | -1.0% | -0.4 | +0.0 | -0.6 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +0.4 | +0.7 | -0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -49,18 +50,18 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → SAIL | +6.00% | +3.30% |
 | 1 | EV_UNION_BUDGET_FEB27_METALS ⇒ F_COKING_COAL → SAIL | +2.40% | +2.16% |
 | 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → SAIL | -7.40% | -1.85% |
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SAIL | +2.00% | +1.80% |
 | 1 | EV_STEEL_SAFEGUARD_EARLY_RELAXATION ⇒ F_STEEL_INDIA → SAIL | -7.50% | -1.12% |
 | 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → SAIL | -4.50% | -1.12% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COKING_COAL → SAIL | -3.20% | -1.12% |
 | 2 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → SAIL | +2.22% | +1.11% |
 | 2 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → SAIL | +1.80% | +0.90% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ P_STEEL_DUTY_IN → SAIL | +1.60% | +0.88% |
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → SAIL | +0.96% | +0.86% |
-| 3 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → F_STEEL_INDIA → SAIL | -1.55% | -0.78% |
-| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → SAIL | -1.39% | -0.76% |
-| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_STEEL_INDIA → SAIL | +0.84% | +0.76% |
-| 3 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_STEEL_GLOBAL → F_STEEL_INDIA → SAIL | +2.08% | +0.73% |
+| 3 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → SAIL | +1.69% | +0.59% |
+| 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_CHINA_GDP → F_COKING_COAL → SAIL | -1.28% | -0.58% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SAIL | -1.20% | -0.50% |
+| 4 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_CHINA_STEEL_EXPORTS → F_STEEL_GLOBAL → F_STEEL_INDIA → SAIL | +1.33% | +0.46% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SAIL | +0.50% | +0.45% |
+| 2 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → F_STEEL_INDIA → SAIL | +2.34% | +0.42% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -68,8 +69,8 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_STEEL_INDIA → SAIL | +1.35 | events | +20.25% |
 | 1 | F_COKING_COAL → SAIL | +1.30 | events | -10.40% |
-| 1 | F_GOVT_CAPEX → SAIL | +1.00 | events | +2.50% |
 | 1 | F_REPO_IN → SAIL | +1.00 | events | -1.20% |
+| 1 | F_GOVT_CAPEX → SAIL | +0.20 | director_override | +0.50% |
 | 1 | F_IRON_ORE → SAIL | -0.83 | observed | -0.42% |
 | 1 | F_GDP_IN → SAIL | +0.50 | events | +0.40% |
 | 1 | F_USDINR → SAIL | -0.37 | observed | -0.37% |

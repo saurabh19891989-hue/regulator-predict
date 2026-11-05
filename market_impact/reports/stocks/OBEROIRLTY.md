@@ -2,45 +2,46 @@
 *MIDCAP_100 · Realty · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -3.3%**, **12 months -5.3%** (rank 177 / 173 of 200 for 3m / 12m); beta 1.22
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.7%): 3 months 39%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.2% … P90 -2.4%; plausible 12m relative-return range incl. stock-specific noise: -28.2% … +30.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.2 pp (model impact -4.5% beta-adjusted vs realised market-adjusted move +0.2%); forward event exposure -5.9% (3m -3.4%; half assumed priced); company-specific events +1.9%
+- Expected relative return: **3 months -1.2%**, **12 months -1.1%** (rank 172 / 146 of 200 for 3m / 12m); beta 1.22
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.7%): 3 months 46%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.5% … P90 +0.6%; plausible 12m relative-return range incl. stock-specific noise: -30.4% … +26.1%
+- Decomposition (12m): 0.5 × forward event exposure -3.3% (3m -2.8%; half assumed priced) + 0.5 × company-specific catalysts +1.9%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -3.5% (beta-adjusted) vs a realised market-adjusted move of +0.2% — gap -3.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -5.74 | +0.00 | -3.44 | -1.85 | -0.44 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -3.40 | -2.50 | -0.69 | -0.17 | -0.04 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +3.39 | +3.50 | +0.00 | -0.07 | -0.03 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -2.90 | +0.00 | +0.00 | -1.90 | -1.01 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +3.41 | +3.50 | +0.00 | -0.07 | -0.02 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -3.29 | -2.50 | -0.69 | -0.06 | -0.05 | — |
 | Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +2.61 | +2.50 | +0.10 | +0.01 | -0.00 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.16 | +2.00 | +0.02 | +0.06 | +0.08 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +2.03 | +0.00 | +0.76 | +0.92 | +0.36 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.83 | +0.00 | -0.32 | -0.99 | -0.52 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.69 | +0.00 | -0.06 | -0.47 | -1.16 | — |
-| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.60 | -1.20 | -0.42 | +0.00 | +0.02 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.58 | +0.00 | -2.00 | -0.52 | -0.05 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.11 | +2.00 | +0.02 | +0.04 | +0.05 | — |
 | Affordable-housing / home-loan support (`P_HOUSING_POLICY`) | +1 = stronger support | +1.54 | +1.00 | +0.56 | +0.00 | -0.02 | — |
-| Capital-gains / securities tax burden (`P_CAPITAL_GAINS_TAX`) | +1 = higher | -1.48 | -1.00 | -0.45 | -0.01 | -0.02 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.44 | +0.00 | -0.15 | -0.80 | -0.49 | +0.0% |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.39 | +1.50 | +0.16 | -0.06 | -0.21 | — |
+| Capital-gains / securities tax burden (`P_CAPITAL_GAINS_TAX`) | +1 = higher | -1.47 | -1.00 | -0.45 | -0.01 | -0.01 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.43 | +1.50 | +0.16 | -0.06 | -0.17 | — |
+| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.37 | +0.00 | +0.00 | -1.10 | -0.26 | — |
+| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.33 | -1.20 | -0.14 | +0.00 | +0.01 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.32 | +0.00 | +0.76 | +0.50 | +0.07 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.13 | +0.00 | -0.71 | -0.38 | -0.05 | +3.5% |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.11 | +0.00 | -0.06 | -0.51 | -0.54 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | -0.88 | +0.00 | -0.32 | -0.45 | -0.11 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -6.6% | -6.6% | +0.0 | -4.0 | -2.1 | -0.5 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.7% | -4.7% | -4.4 | -0.0 | -0.1 | -0.2 |
-| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -3.5% | -3.5% | -2.9 | -0.6 | -0.0 | -0.1 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.5% | +2.7% | +5.0 | +0.0 | +0.2 | +0.3 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.3% | -2.3% | -1.7 | -0.6 | -0.0 | +0.0 |
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.2 | -0.5 | -0.2 |
-| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -3.5% | -1.5% | -2.9 | -0.6 | -0.0 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.7% | +1.5% | +0.0 | +0.5 | +1.3 | +0.8 |
-| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | +0.0 | -0.9 | -0.5 |
-| Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -5.7% | -1.4% | +0.0 | -3.4 | -1.9 | -0.4 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -1.1 | -0.3 | -0.0 |
-| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -2.2% | -1.3% | -1.6 | -0.5 | -0.0 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.6% | -4.6% | -4.4 | -0.0 | -0.1 | -0.1 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -3.4% | -3.4% | -2.9 | -0.5 | -0.0 | -0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.9% | -2.9% | +0.0 | -2.3 | -0.6 | -0.0 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.3% | +2.6% | +5.0 | +0.0 | +0.1 | +0.1 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.9% | -1.9% | -1.7 | -0.2 | -0.0 | +0.0 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -3.4% | -1.4% | -2.9 | -0.5 | -0.0 | -0.1 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -7.0% | -1.3% | -6.3 | -0.6 | -0.0 | -0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.1 | -0.2 | +0.0 |
+| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -2.0% | -1.2% | -1.6 | -0.4 | -0.0 | -0.0 |
+| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.1% | +1.1% | +1.0 | +0.1 | +0.0 | +0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -4.1% | -1.0% | +0.0 | -4.0 | -0.2 | +0.1 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -1.0 | -0.0 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,7 +49,6 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → OBEROIRLTY | +5.00% | +2.50% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → OBEROIRLTY | -2.50% | -1.05% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → OBEROIRLTY | -2.88% | -0.72% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → OBEROIRLTY | -2.50% | -0.68% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → OBEROIRLTY | -1.00% | -0.60% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → OBEROIRLTY | -3.00% | -0.54% |
@@ -57,10 +57,11 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → OBEROIRLTY | -0.96% | -0.48% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → OBEROIRLTY | -1.87% | -0.47% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → OBEROIRLTY | -2.50% | -0.45% |
-| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → OBEROIRLTY | -0.63% | -0.41% |
-| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_REPO_IN → OBEROIRLTY | -0.43% | -0.39% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → OBEROIRLTY | -0.60% | -0.36% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → OBEROIRLTY | -1.44% | -0.36% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → OBEROIRLTY | +1.00% | +0.35% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → OBEROIRLTY | +0.40% | +0.32% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_REPO_IN → OBEROIRLTY | -2.50% | -0.30% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -69,13 +70,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_FPI_FLOWS → OBEROIRLTY | -1.60 | events | -3.20% |
 | 1 | F_REPO_IN → OBEROIRLTY | +1.00 | events | -2.50% |
 | 1 | F_GSEC_10Y_IN → OBEROIRLTY | +1.55 | director_override | -1.86% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → OBEROIRLTY | +1.55 | director_override | -0.65% |
 | 1 | F_STEEL_INDIA → OBEROIRLTY | +1.35 | events | -0.54% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → OBEROIRLTY | +0.50 | events | +0.42% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → OBEROIRLTY | +1.00 | events | -0.36% |
 | 1 | F_URBAN_DEMAND → OBEROIRLTY | +0.20 | events | +0.30% |
-| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → OBEROIRLTY | +1.00 | events | -0.28% |
 | 1 | F_US_TECH_SPEND → OBEROIRLTY | -0.60 | events | -0.24% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → OBEROIRLTY | +1.55 | director_override | -0.21% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → OBEROIRLTY | +0.50 | director_override | -0.14% |
 | 1 | F_USDINR → OBEROIRLTY | -0.37 | observed | -0.11% |
 | 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → OBEROIRLTY | +1.35 | events | -0.09% |
 

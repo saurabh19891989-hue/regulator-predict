@@ -42,6 +42,7 @@ IEX day-ahead prices hit the Rs20/kWh ceiling on 19 Sep (ET); Business Standard 
 | TATACOMM | -2.1 | -2.1 | +0.0 | +0.0 | +0.0 |
 | INDUSTOWER | -1.5 | -1.5 | +0.0 | +0.0 | +0.0 |
 | HINDZINC | -1.1 | -0.9 | -0.2 | +0.0 | +0.0 |
+| VEDL | -0.6 | +0.0 | -0.5 | -0.1 | +0.0 |
 | HINDALCO | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
 | GAIL | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | NATIONALUM | +0.6 | +0.9 | -0.3 | +0.0 | +0.0 |
@@ -50,9 +51,8 @@ IEX day-ahead prices hit the Rs20/kWh ceiling on 19 Sep (ET); Business Standard 
 | APARINDS | +1.0 | +0.0 | +1.0 | +0.0 | +0.0 |
 | KEI | +1.0 | +0.0 | +1.0 | +0.0 | +0.0 |
 | POLYCAB | +1.0 | +0.0 | +1.0 | +0.0 | +0.0 |
-| SOLARINDS | +1.0 | +1.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 83%, 2: 17%, 3: 0%, 4: 0%
+Share of absolute impact by order: 1: 82%, 2: 18%, 3: 0%, 4: 0%
 
 ## Sources
 - 2026-09-19 IEX power prices hit Rs20/unit ceiling (ET) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=IEX+power+prices+hit+Rs+20+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en

@@ -17,42 +17,42 @@ Trump waived the Graham-Act sanctions law mechanism two days before the 100% tar
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BPCL | +5.3 | +3.0 | +2.7 | -0.4 | +0.1 |
-| IOC | +4.3 | +2.5 | +1.7 | +0.0 | +0.1 |
-| HINDPETRO | +3.7 | +1.5 | +2.1 | -0.0 | +0.1 |
-| YESBANK | +2.5 | +0.0 | +0.5 | +0.8 | +1.1 |
-| MOTILALOFS | +2.4 | +0.0 | +0.8 | +1.0 | +0.6 |
-| IDFCFIRSTB | +2.2 | +0.0 | +0.5 | +0.9 | +0.8 |
-| SBIN | +2.1 | +0.0 | +0.7 | +0.9 | +0.5 |
-| INDUSINDBK | +2.1 | +0.0 | +0.6 | +0.9 | +0.6 |
-| GMRAIRPORT | +2.0 | +0.0 | +1.1 | +0.4 | +0.5 |
-| INDIGO | +1.9 | +0.0 | +1.1 | +0.4 | +0.4 |
-| APARINDS | +1.9 | +1.2 | +0.7 | -0.2 | +0.1 |
-| SHRIRAMFIN | +1.8 | +0.0 | +0.9 | +0.5 | +0.4 |
-| HDFCBANK | +1.8 | +0.0 | +0.7 | +0.6 | +0.4 |
-| RELIANCE | +1.7 | +1.1 | +0.5 | +0.0 | +0.2 |
-| ETERNAL | +1.6 | +0.0 | +0.7 | +0.3 | +0.5 |
+| BPCL | +4.7 | +3.0 | +1.9 | -0.2 | +0.0 |
+| IOC | +3.9 | +2.5 | +1.4 | -0.0 | +0.0 |
+| HINDPETRO | +3.2 | +1.5 | +1.7 | -0.0 | +0.0 |
+| RELIANCE | +1.6 | +1.1 | +0.5 | -0.0 | +0.0 |
+| APARINDS | +1.5 | +1.2 | +0.3 | -0.0 | +0.0 |
+| BHARATFORG | +1.4 | +1.5 | -0.1 | -0.0 | -0.0 |
+| MOTILALOFS | +1.3 | +0.0 | +0.8 | +0.4 | +0.1 |
+| WAAREEENER | +1.1 | +1.0 | +0.0 | +0.1 | +0.0 |
+| INDUSINDBK | +1.1 | +0.0 | +0.6 | +0.4 | +0.1 |
+| YESBANK | +1.0 | +0.0 | +0.5 | +0.3 | +0.2 |
+| IDFCFIRSTB | +1.0 | +0.0 | +0.5 | +0.4 | +0.1 |
+| ICICIAMC | +1.0 | +0.0 | +0.6 | +0.3 | +0.1 |
+| CONCOR | +1.0 | +0.8 | +0.2 | +0.1 | +0.0 |
+| SBIN | +1.0 | +0.0 | +0.6 | +0.3 | +0.1 |
+| PAYTM | +0.9 | +0.0 | +0.5 | +0.3 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | -1.0 | +0.0 | -0.1 | -0.4 | -0.5 |
-| JSWSTEEL | -1.0 | +0.0 | -0.1 | -0.5 | -0.3 |
-| SAIL | -0.9 | +0.0 | -0.0 | -0.4 | -0.5 |
-| LT | -0.9 | +0.0 | -0.4 | -0.6 | +0.2 |
-| HINDZINC | -0.8 | +0.0 | -0.2 | -0.6 | -0.0 |
-| COALINDIA | -0.7 | +0.0 | -0.6 | -0.2 | +0.0 |
-| TATASTEEL | -0.7 | +0.0 | -0.1 | -0.3 | -0.3 |
-| DRREDDY | -0.6 | +0.0 | -0.2 | -0.5 | +0.0 |
-| BDL | -0.6 | -0.8 | +0.1 | +0.1 | +0.0 |
-| OIL | -0.6 | +1.0 | -1.2 | -0.3 | -0.0 |
-| PERSISTENT | -0.6 | +0.0 | -0.2 | -0.4 | -0.0 |
-| LUPIN | -0.6 | +0.0 | -0.1 | -0.4 | +0.0 |
-| MCX | -0.5 | +0.0 | -0.6 | -0.1 | +0.1 |
-| NATIONALUM | -0.5 | +0.0 | +0.0 | -0.5 | -0.0 |
-| BIOCON | -0.5 | +0.0 | -0.2 | -0.4 | +0.1 |
+| BDL | -0.7 | -0.8 | +0.1 | +0.0 | +0.0 |
+| JSWSTEEL | -0.4 | +0.0 | -0.1 | -0.2 | -0.1 |
+| JINDALSTEL | -0.4 | +0.0 | -0.1 | -0.2 | -0.1 |
+| DRREDDY | -0.4 | +0.0 | -0.2 | -0.2 | -0.0 |
+| PERSISTENT | -0.3 | +0.0 | -0.2 | -0.2 | -0.0 |
+| BIOCON | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
+| COALINDIA | -0.3 | +0.0 | -0.3 | -0.1 | +0.0 |
+| HINDZINC | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
+| TATASTEEL | -0.3 | +0.0 | -0.1 | -0.1 | -0.1 |
+| LT | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
+| VAML | -0.3 | +0.0 | -0.2 | -0.0 | -0.0 |
+| TECHM | -0.3 | +0.0 | -0.1 | -0.1 | -0.0 |
+| SAIL | -0.3 | +0.0 | -0.0 | -0.2 | -0.1 |
+| LUPIN | -0.3 | +0.0 | -0.1 | -0.1 | -0.0 |
+| NATIONALUM | -0.3 | +0.0 | -0.1 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 11%, 2: 35%, 3: 30%, 4: 25%
+Share of absolute impact by order: 1: 20%, 2: 49%, 3: 22%, 4: 9%
 
 ## Sources
 - 2026-10-17 Trump waives Russia sanctions that threatened 100% tariffs on India (NDTV) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=Trump+waives+sanctions+Russian+oil+India+tariff+when:120d&hl=en-IN&gl=IN&ceid=IN:en

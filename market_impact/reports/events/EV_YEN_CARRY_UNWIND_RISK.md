@@ -20,42 +20,42 @@ Yen neared 160 in Aug 2026; BoJ at 31-year-high rates; hawkish BoJ/Takaichi plus
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | +2.5 | +0.0 | +0.8 | +1.3 | +0.4 |
-| SAIL | +2.4 | +0.0 | +0.3 | +1.3 | +0.8 |
-| HINDZINC | +2.1 | +0.0 | +0.7 | +1.3 | +0.2 |
-| NATIONALUM | +2.1 | +0.0 | +0.9 | +1.1 | +0.0 |
-| TATASTEEL | +1.9 | +0.0 | +0.4 | +1.1 | +0.4 |
+| HINDZINC | +2.2 | +0.0 | +0.7 | +1.3 | +0.2 |
+| JSWSTEEL | +2.1 | +0.0 | +0.8 | +1.1 | +0.2 |
+| NATIONALUM | +2.0 | +0.0 | +0.9 | +1.2 | -0.1 |
 | TATACONSUM | +1.7 | +2.0 | -0.1 | -0.2 | +0.0 |
-| ASTRAL | +1.6 | +2.0 | -0.1 | -0.2 | -0.1 |
-| ONGC | +1.5 | +0.0 | +0.9 | +0.8 | -0.2 |
-| OIL | +1.5 | +0.0 | +0.9 | +0.8 | -0.1 |
+| ASTRAL | +1.7 | +2.0 | -0.1 | -0.2 | +0.0 |
+| ONGC | +1.7 | +0.0 | +0.9 | +0.9 | -0.1 |
+| OIL | +1.7 | +0.0 | +0.9 | +0.8 | -0.1 |
+| SAIL | +1.6 | +0.0 | +0.3 | +0.8 | +0.5 |
+| TATASTEEL | +1.6 | +0.0 | +0.4 | +0.9 | +0.3 |
 | NMDC | +1.3 | +0.0 | +0.6 | +0.7 | +0.0 |
-| HINDALCO | +1.3 | +0.0 | +0.4 | +0.8 | +0.1 |
-| PIIND | +1.2 | +0.0 | +0.6 | +0.6 | -0.0 |
-| SRF | +1.0 | +0.0 | +0.6 | +0.6 | -0.1 |
+| SRF | +1.2 | +0.0 | +0.6 | +0.7 | -0.0 |
+| PIIND | +1.2 | +0.0 | +0.6 | +0.6 | +0.0 |
+| HINDALCO | +1.2 | +0.0 | +0.4 | +0.8 | -0.0 |
+| BAJAJ-AUTO | +1.0 | +0.0 | +0.6 | +0.4 | -0.0 |
 | UPL | +0.8 | +0.0 | +0.3 | +0.5 | +0.0 |
-| BAJAJ-AUTO | +0.7 | +0.0 | +0.6 | +0.3 | -0.2 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| MOTILALOFS | -21.5 | -11.0 | -8.8 | -2.6 | +0.9 |
-| ICICIAMC | -18.3 | -11.5 | -6.4 | -0.9 | +0.5 |
-| JIOFIN | -17.8 | -12.5 | -4.2 | -1.0 | -0.1 |
-| IREDA | -16.5 | -12.5 | -3.5 | -0.4 | -0.2 |
-| 360ONE | -16.2 | -8.8 | -5.8 | -2.1 | +0.4 |
-| MEESHO | -15.5 | -10.0 | -5.8 | +0.4 | -0.0 |
-| INDUSINDBK | -14.9 | -8.8 | -6.7 | +0.3 | +0.2 |
-| NAUKRI | -14.3 | -10.0 | -4.3 | -0.1 | +0.1 |
-| PAYTM | -12.9 | -6.5 | -7.1 | +0.6 | +0.2 |
-| IDFCFIRSTB | -12.9 | -7.5 | -5.1 | -0.1 | -0.2 |
-| MAHABANK | -12.6 | -8.8 | -4.2 | +0.1 | +0.2 |
-| GROWW | -12.5 | -6.5 | -3.6 | -3.8 | +1.4 |
-| LENSKART | -12.4 | -7.5 | -5.0 | +0.2 | -0.0 |
-| POLICYBZR | -11.9 | -6.2 | -6.5 | +0.7 | +0.1 |
-| ETERNAL | -11.9 | -6.2 | -5.9 | +0.3 | -0.0 |
+| MOTILALOFS | -21.5 | -11.0 | -8.8 | -2.1 | +0.4 |
+| ICICIAMC | -18.4 | -11.5 | -6.4 | -0.8 | +0.3 |
+| JIOFIN | -17.4 | -12.5 | -4.2 | -0.7 | -0.0 |
+| IREDA | -16.4 | -12.5 | -3.5 | -0.3 | -0.2 |
+| 360ONE | -15.8 | -8.8 | -5.8 | -1.4 | +0.1 |
+| MEESHO | -15.7 | -10.0 | -5.8 | +0.2 | +0.0 |
+| INDUSINDBK | -15.1 | -8.8 | -6.7 | +0.2 | +0.2 |
+| NAUKRI | -14.4 | -10.0 | -4.3 | -0.2 | +0.1 |
+| PAYTM | -13.2 | -6.5 | -7.1 | +0.3 | +0.1 |
+| MAHABANK | -12.7 | -8.8 | -4.2 | +0.1 | +0.2 |
+| IDFCFIRSTB | -12.6 | -7.5 | -5.1 | -0.0 | -0.0 |
+| LENSKART | -12.5 | -7.5 | -5.0 | +0.1 | -0.1 |
+| POLICYBZR | -12.3 | -6.2 | -6.5 | +0.4 | +0.1 |
+| ETERNAL | -12.1 | -6.2 | -5.9 | +0.1 | -0.1 |
+| IDEA | -11.3 | -6.2 | -4.5 | -0.4 | -0.1 |
 
-Share of absolute impact by order: 1: 35%, 2: 52%, 3: 9%, 4: 4%
+Share of absolute impact by order: 1: 37%, 2: 55%, 3: 7%, 4: 2%
 
 ## Sources
 - 2026-10-05 Japan Has Left the Zero-Rate World. What Happens to the Yen Carry Trade? - IndraStra https://news.google.com/rss/search?q=Japan%20Has%20Left%20the%20Zero-Rate%20World.%20What%20Happens%20to%20the%20Yen%20Carry%20Trade%3F%20-%20IndraStra&hl=en-IN&gl=IN&ceid=IN:en

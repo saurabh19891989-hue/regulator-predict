@@ -15,42 +15,42 @@ Board approved PMS revamp, easier settlements, new ad code and FPI commodity-tra
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BSE | +1.5 | +1.1 | +0.4 | -0.0 | +0.0 |
-| GROWW | +1.5 | +1.1 | +0.4 | -0.0 | +0.0 |
-| MOTILALOFS | +1.1 | +0.8 | +0.3 | -0.0 | +0.0 |
+| BSE | +1.5 | +1.1 | +0.4 | -0.0 | -0.0 |
+| GROWW | +1.3 | +0.9 | +0.4 | -0.0 | +0.0 |
+| MOTILALOFS | +1.1 | +0.8 | +0.3 | -0.0 | -0.0 |
 | MCX | +0.8 | +0.7 | +0.1 | +0.0 | +0.0 |
-| 360ONE | +0.7 | +0.4 | +0.4 | -0.0 | +0.0 |
-| ICICIAMC | +0.6 | +0.5 | +0.2 | -0.0 | -0.0 |
-| PAYTM | +0.5 | +0.5 | +0.0 | -0.0 | +0.0 |
-| SBIN | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
+| 360ONE | +0.7 | +0.4 | +0.4 | -0.0 | -0.0 |
+| ICICIAMC | +0.7 | +0.5 | +0.2 | -0.0 | -0.0 |
+| PAYTM | +0.5 | +0.5 | +0.0 | -0.0 | -0.0 |
+| SBIN | +0.4 | +0.4 | +0.0 | -0.0 | +0.0 |
 | JIOFIN | +0.4 | +0.2 | +0.2 | +0.0 | +0.0 |
-| INDUSINDBK | +0.4 | +0.4 | +0.0 | -0.0 | +0.0 |
-| FEDERALBNK | +0.4 | +0.4 | -0.0 | -0.0 | +0.0 |
+| INDUSINDBK | +0.4 | +0.4 | +0.0 | -0.0 | -0.0 |
 | POLICYBZR | +0.4 | +0.4 | -0.0 | -0.0 | +0.0 |
 | NAUKRI | +0.4 | +0.3 | +0.1 | -0.0 | +0.0 |
 | ETERNAL | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
-| YESBANK | +0.4 | +0.3 | +0.0 | +0.0 | +0.0 |
+| MEESHO | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
+| HDFCBANK | +0.4 | +0.4 | +0.0 | -0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | JSWSTEEL | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
-| SAIL | -0.1 | +0.0 | -0.0 | -0.1 | +0.0 |
-| JINDALSTEL | -0.1 | +0.0 | -0.0 | -0.1 | +0.0 |
-| TATASTEEL | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
 | NATIONALUM | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | OIL | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | ONGC | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | VAML | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| SAIL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| TATASTEEL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | NMDC | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| JINDALSTEL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | PIIND | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
-| HINDZINC | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | TMPV | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
-| HINDALCO | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| HINDZINC | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | SRF | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
-| SUNPHARMA | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| HINDALCO | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| PERSISTENT | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 80%, 2: 14%, 3: 3%, 4: 3%
+Share of absolute impact by order: 1: 82%, 2: 15%, 3: 2%, 4: 1%
 
 ## Sources
 - 2026-09-25 Sebi Board Meeting: PMS Overhaul, Easier Settlements, New Ad Code (headline) https://www.outlookmoney.com/

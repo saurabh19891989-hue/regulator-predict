@@ -16,21 +16,21 @@ Administration appealed (12 Oct); courts have so far ruled against; DHS OPT fee 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| VMM | +0.7 | +0.0 | +0.4 | +0.3 | -0.0 |
-| TRENT | +0.6 | +0.0 | +0.3 | +0.3 | -0.1 |
-| INDUSINDBK | +0.5 | +0.0 | +0.0 | +0.2 | +0.4 |
-| INDIGO | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| IDFCFIRSTB | +0.4 | +0.0 | +0.0 | +0.1 | +0.3 |
+| VMM | +0.5 | +0.0 | +0.4 | +0.2 | -0.0 |
+| INDUSINDBK | +0.5 | +0.0 | +0.0 | +0.2 | +0.3 |
 | SBICARD | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| GMRAIRPORT | +0.4 | +0.0 | +0.0 | +0.1 | +0.3 |
+| TRENT | +0.4 | +0.0 | +0.3 | +0.2 | -0.0 |
 | TMCV | +0.4 | +0.0 | +0.0 | +0.0 | +0.4 |
-| BANKINDIA | +0.4 | +0.0 | +0.0 | +0.0 | +0.3 |
-| M&MFIN | +0.4 | +0.0 | +0.0 | +0.2 | +0.1 |
-| KOTAKBANK | +0.3 | +0.0 | +0.0 | +0.0 | +0.3 |
+| IDFCFIRSTB | +0.4 | +0.0 | +0.0 | +0.1 | +0.3 |
+| M&MFIN | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
 | HYUNDAI | +0.3 | +0.0 | +0.0 | +0.0 | +0.3 |
-| INDHOTEL | +0.3 | +0.0 | -0.1 | +0.1 | +0.3 |
-| LTF | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| KALYANKJIL | +0.3 | +0.0 | +0.0 | +0.1 | +0.1 |
+| GMRAIRPORT | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
+| SHRIRAMFIN | +0.3 | +0.0 | +0.0 | +0.0 | +0.3 |
+| INDIGO | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| BANKINDIA | +0.3 | +0.0 | +0.0 | +0.0 | +0.3 |
+| NYKAA | +0.3 | +0.0 | +0.0 | +0.3 | -0.0 |
+| ETERNAL | +0.3 | +0.0 | +0.0 | +0.3 | -0.1 |
+| KOTAKBANK | +0.3 | +0.0 | +0.0 | +0.0 | +0.2 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -46,12 +46,12 @@ Administration appealed (12 Oct); courts have so far ruled against; DHS OPT fee 
 | TECHM | -2.2 | -2.0 | -0.2 | +0.0 | +0.0 |
 | OFSS | -1.0 | -1.0 | +0.0 | +0.0 | +0.0 |
 | GROWW | -0.3 | +0.0 | -0.3 | +0.0 | -0.0 |
+| FORTIS | -0.2 | +0.0 | -0.3 | +0.0 | +0.0 |
 | COALINDIA | -0.2 | +0.0 | -0.2 | +0.0 | -0.0 |
-| FORTIS | -0.2 | +0.0 | -0.3 | +0.1 | +0.0 |
-| PRESTIGE | -0.2 | +0.0 | -0.1 | +0.0 | -0.1 |
-| GODREJPROP | -0.1 | +0.0 | -0.1 | +0.1 | -0.1 |
+| APOLLOHOSP | -0.1 | +0.0 | -0.2 | +0.1 | +0.0 |
+| MAXHEALTH | -0.1 | +0.0 | -0.2 | +0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 51%, 2: 6%, 3: 19%, 4: 24%
+Share of absolute impact by order: 1: 54%, 2: 7%, 3: 18%, 4: 21%
 
 ## Sources
 - 2026-10-12 Trump Appeals Court Loss That Blocked $100,000 H-1B Fee Policies https://news.google.com/rss/search?q=H-1B+fee+court+rule+when:120d&hl=en-IN&gl=IN&ceid=IN:en

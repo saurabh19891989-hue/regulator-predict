@@ -17,42 +17,42 @@ Markets price a December Fed hike (NY Post 28 Oct) after US inflation hit a 3-ye
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| ADANIGREEN | +4.0 | +3.8 | +0.0 | +0.1 | +0.1 |
-| ADANIENT | +3.9 | +3.8 | +0.0 | +0.1 | +0.1 |
-| IDEA | +3.0 | +2.8 | +0.0 | +0.1 | +0.1 |
-| PREMIERENE | +3.0 | +2.8 | +0.0 | +0.2 | -0.0 |
-| WAAREEENER | +1.8 | +1.6 | +0.0 | +0.2 | -0.0 |
-| LICI | +1.6 | +1.5 | +0.0 | +0.0 | +0.0 |
-| KALYANKJIL | +1.3 | -0.9 | +2.1 | +0.0 | +0.1 |
-| YESBANK | +1.0 | +0.0 | +0.0 | +0.6 | +0.4 |
-| TATACAP | +1.0 | +0.0 | +0.0 | +0.5 | +0.4 |
-| GMRAIRPORT | +0.8 | +0.0 | +0.0 | +0.5 | +0.3 |
-| PRESTIGE | +0.8 | +0.0 | +0.0 | +0.6 | +0.2 |
-| IREDA | +0.7 | +0.0 | +0.0 | +0.4 | +0.3 |
-| PHOENIXLTD | +0.7 | +0.0 | +0.1 | +0.5 | +0.1 |
-| SHRIRAMFIN | +0.7 | +0.0 | +0.0 | +0.4 | +0.3 |
-| GODREJPROP | +0.7 | +0.0 | +0.0 | +0.5 | +0.2 |
+| IDEA | +3.0 | +2.8 | +0.0 | +0.1 | +0.0 |
+| PREMIERENE | +2.9 | +2.8 | +0.0 | +0.1 | +0.0 |
+| WAAREEENER | +1.7 | +1.6 | +0.0 | +0.1 | +0.0 |
+| LICI | +1.5 | +1.5 | +0.0 | +0.0 | +0.0 |
+| KALYANKJIL | +1.3 | -0.9 | +2.1 | +0.0 | +0.0 |
+| YESBANK | +0.5 | +0.0 | +0.0 | +0.4 | +0.1 |
+| TITAN | +0.5 | -1.1 | +1.6 | +0.0 | +0.0 |
+| TATACAP | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| IREDA | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| PRESTIGE | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
+| AUBANK | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
+| GODREJPROP | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
+| JSWENERGY | +0.3 | +0.0 | +0.0 | +0.3 | +0.1 |
+| IDFCFIRSTB | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| JIOFIN | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| HINDZINC | -6.9 | -7.0 | +0.0 | +0.1 | +0.1 |
-| MUTHOOTFIN | -6.5 | -6.7 | +0.0 | +0.1 | +0.0 |
+| HINDZINC | -6.9 | -7.0 | +0.0 | +0.1 | +0.0 |
+| MUTHOOTFIN | -6.6 | -6.7 | +0.0 | +0.1 | +0.0 |
 | MCX | -5.8 | -5.8 | +0.0 | +0.0 | +0.0 |
-| BRITANNIA | -1.8 | -1.9 | +0.0 | +0.1 | -0.0 |
-| BAJAJFINSV | -1.2 | -1.5 | +0.0 | +0.2 | +0.1 |
+| VEDL | -4.1 | +0.0 | -4.2 | +0.0 | +0.1 |
+| BAJAJFINSV | -1.3 | -1.5 | +0.0 | +0.1 | +0.1 |
 | MFSL | -1.1 | -1.1 | +0.0 | +0.0 | -0.0 |
-| CANBK | -0.9 | -0.9 | +0.0 | -0.0 | +0.1 |
-| M&MFIN | -0.7 | -0.9 | +0.0 | +0.2 | +0.1 |
-| INDUSINDBK | -0.5 | -0.8 | +0.0 | +0.1 | +0.1 |
-| BAJFINANCE | -0.1 | -0.6 | +0.0 | +0.3 | +0.2 |
-| LICHSGFIN | -0.0 | +0.0 | +0.0 | -0.4 | +0.3 |
-| PAYTM | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| CANBK | -0.9 | -0.9 | +0.0 | +0.0 | +0.0 |
+| M&MFIN | -0.8 | -0.9 | +0.0 | +0.1 | +0.0 |
+| INDUSINDBK | -0.6 | -0.8 | +0.0 | +0.1 | +0.1 |
+| BAJAJHLDNG | -0.4 | +0.0 | -0.5 | +0.0 | +0.1 |
+| BAJFINANCE | -0.3 | -0.6 | +0.0 | +0.2 | +0.1 |
+| LICHSGFIN | -0.1 | +0.0 | +0.0 | -0.2 | +0.1 |
+| PAYTM | -0.0 | +0.0 | +0.0 | +0.0 | -0.1 |
 | UPL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| IOC | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
-| PIIND | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| IOC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 45%, 2: 5%, 3: 33%, 4: 18%
+Share of absolute impact by order: 1: 51%, 2: 13%, 3: 27%, 4: 9%
 
 ## Sources
 - 2026-10-28 Fed holds interest rates steady - investors bet on December rate hike https://news.google.com/rss/search?q=Fed+holds+interest+rates+steady+-+investors+bet+on+December+rate+hike&hl=en-IN&gl=IN&ceid=IN:en

@@ -21,42 +21,42 @@ Gold peaked at ~$5,419/oz in Jan 2026 and is ~$4,128 (-8.4% since 1 Jun, -12.4% 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PREMIERENE | +3.6 | +3.5 | +0.0 | +0.1 | -0.0 |
-| ADANIGREEN | +2.2 | +2.1 | +0.0 | +0.1 | +0.1 |
-| ADANIENT | +2.2 | +2.1 | +0.0 | +0.0 | +0.0 |
-| WAAREEENER | +2.1 | +2.0 | +0.0 | +0.1 | -0.0 |
-| IDEA | +1.7 | +1.6 | +0.0 | +0.1 | +0.0 |
-| LICI | +0.9 | +0.8 | +0.0 | +0.0 | +0.0 |
+| PREMIERENE | +3.5 | +3.5 | +0.0 | +0.0 | +0.0 |
+| WAAREEENER | +2.0 | +2.0 | +0.0 | +0.0 | +0.0 |
+| IDEA | +1.6 | +1.6 | +0.0 | +0.0 | +0.0 |
+| LICI | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
 | KALYANKJIL | +0.7 | -0.5 | +1.2 | +0.0 | +0.0 |
-| YESBANK | +0.6 | +0.0 | +0.0 | +0.3 | +0.2 |
-| TATACAP | +0.5 | +0.0 | +0.0 | +0.3 | +0.2 |
-| GMRAIRPORT | +0.4 | +0.0 | +0.0 | +0.3 | +0.2 |
-| PRESTIGE | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| IREDA | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| PHOENIXLTD | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| SHRIRAMFIN | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| GODREJPROP | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| YESBANK | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| TITAN | +0.2 | -0.6 | +0.9 | +0.0 | +0.0 |
+| TATACAP | +0.2 | +0.0 | +0.0 | +0.2 | +0.1 |
+| IREDA | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| PRESTIGE | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| AUBANK | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| GODREJPROP | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| JSWENERGY | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| IDFCFIRSTB | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| JIOFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | HINDZINC | -8.7 | -8.8 | +0.0 | +0.0 | +0.0 |
 | MCX | -5.3 | -5.3 | +0.0 | +0.0 | +0.0 |
-| MUTHOOTFIN | -3.6 | -3.7 | +0.0 | +0.1 | +0.0 |
-| BRITANNIA | -1.0 | -1.1 | +0.0 | +0.0 | -0.0 |
-| BAJAJFINSV | -0.7 | -0.8 | +0.0 | +0.1 | +0.1 |
+| VEDL | -5.2 | +0.0 | -5.3 | +0.0 | +0.0 |
+| MUTHOOTFIN | -3.6 | -3.7 | +0.0 | +0.0 | +0.0 |
+| BAJAJFINSV | -0.7 | -0.8 | +0.0 | +0.1 | +0.0 |
 | MFSL | -0.6 | -0.6 | +0.0 | +0.0 | -0.0 |
-| CANBK | -0.5 | -0.5 | +0.0 | -0.0 | +0.0 |
-| M&MFIN | -0.4 | -0.5 | +0.0 | +0.1 | +0.0 |
-| INDUSINDBK | -0.3 | -0.4 | +0.0 | +0.0 | +0.1 |
-| BAJFINANCE | -0.1 | -0.3 | +0.0 | +0.2 | +0.1 |
-| LICHSGFIN | -0.0 | +0.0 | +0.0 | -0.2 | +0.2 |
-| PAYTM | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| CANBK | -0.5 | -0.5 | +0.0 | +0.0 | +0.0 |
+| M&MFIN | -0.5 | -0.5 | +0.0 | +0.1 | +0.0 |
+| INDUSINDBK | -0.3 | -0.4 | +0.0 | +0.0 | +0.0 |
+| BAJAJHLDNG | -0.2 | +0.0 | -0.3 | +0.0 | +0.0 |
+| BAJFINANCE | -0.2 | -0.3 | +0.0 | +0.1 | +0.0 |
+| LICHSGFIN | -0.0 | +0.0 | +0.0 | -0.1 | +0.0 |
+| PAYTM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | UPL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| IOC | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| PIIND | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| IOC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 54%, 2: 4%, 3: 28%, 4: 15%
+Share of absolute impact by order: 1: 57%, 2: 15%, 3: 21%, 4: 7%
 
 ## Sources
 - 2026-10-26 Silver prices fall 53% from peak: Should buyers wait or buy now? https://news.google.com/rss/search?q=Silver+prices+fall+53%+from+peak:+Should+buyers+wait+or+buy+now?&hl=en-IN&gl=IN&ceid=IN:en

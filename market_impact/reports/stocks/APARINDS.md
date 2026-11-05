@@ -2,51 +2,51 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.2%**, **12 months -0.5%** (rank 109 / 111 of 200 for 3m / 12m); beta 1.31
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +46.0%): 3 months 50%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.8% … P90 +2.3%; plausible 12m relative-return range incl. stock-specific noise: -73.6% … +24.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +7.7% beta-adjusted vs realised market-adjusted move +17.6%); forward event exposure +1.7% (3m +1.4%; half assumed priced); company-specific events -0.7%
+- Expected relative return: **3 months -0.3%**, **12 months -0.7%** (rank 120 / 136 of 200 for 3m / 12m); beta 1.31
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +46.0%): 3 months 50%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.2% … P90 +3.1%; plausible 12m relative-return range incl. stock-specific noise: -56.3% … +51.8%
+- Decomposition (12m): 0.5 × forward event exposure +0.2% (3m +0.4%; half assumed priced) + 0.5 × company-specific catalysts -0.7%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +5.2% (beta-adjusted) vs a realised market-adjusted move of +17.6% — gap -12.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Grid & electrification capex (`T_GRID_ELECTRIFICATION`) | +1 | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
-| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +3.29 | +0.00 | +2.32 | +0.93 | +0.04 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.96 | +2.00 | +0.95 | +0.04 | -0.03 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.92 | +2.00 | +0.95 | +0.00 | -0.03 | — |
+| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +2.78 | +0.00 | +2.32 | +0.46 | +0.00 | — |
 | US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -2.40 | -2.50 | +0.07 | +0.06 | -0.03 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.96 | -1.00 | -0.97 | +0.12 | -0.10 | — |
-| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.87 | +0.00 | -1.48 | -0.36 | -0.03 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.64 | +0.00 | -1.53 | -0.13 | +0.02 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.92 | -1.00 | -0.97 | +0.05 | -0.00 | — |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.75 | +0.00 | -1.48 | -0.31 | +0.03 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.55 | -1.50 | -0.04 | -0.01 | +0.00 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.50 | -1.50 | +0.16 | -0.09 | -0.07 | +0.0% |
-| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.43 | +1.20 | +0.29 | -0.06 | -0.00 | +1.2% |
-| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.39 | -1.20 | -0.20 | +0.02 | -0.01 | +3.5% |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.28 | +1.50 | +0.00 | -0.16 | -0.06 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.05 | +0.00 | -0.96 | +0.02 | -0.11 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.45 | -1.50 | +0.10 | -0.01 | -0.04 | +0.0% |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.39 | -1.20 | -0.20 | +0.02 | -0.00 | +3.5% |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.30 | +1.50 | +0.00 | -0.16 | -0.04 | — |
+| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | -1.25 | +0.00 | -1.31 | +0.02 | +0.04 | — |
+| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.18 | +1.20 | +0.00 | -0.03 | +0.01 | +1.2% |
 | Aluminium price (`F_ALUMINIUM`) | +10% aluminium | +1.00 | +1.00 | +0.00 | +0.00 | +0.00 | -19.6% |
+| Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +0.96 | +0.00 | +0.96 | +0.00 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +2.8% | +2.8% | +1.0 | +1.8 | +0.0 | -0.0 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +2.7% | +2.7% | +1.0 | +1.8 | +0.0 | -0.0 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | +0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.4% | +1.9% | +3.4 | -0.2 | +0.1 | +0.1 |
-| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.9% | +1.9% | +1.2 | +0.7 | -0.2 | +0.1 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -1.8 | -0.2 | +0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.8% | -1.7% | -6.6 | +0.1 | -0.2 | -0.2 |
-| ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.6% | +1.6% | +0.0 | +1.2 | +0.5 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.3% | +1.8% | +3.4 | -0.2 | +0.0 | +0.1 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.8% | -1.7% | -6.6 | +0.1 | -0.2 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | -0.0 | -0.0 | +0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.8% | -1.4% | -5.7 | +0.3 | -0.2 | -0.2 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.5% | +1.5% | +1.2 | +0.3 | -0.0 | +0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.6% | -1.4% | -5.7 | +0.2 | -0.0 | -0.1 |
+| ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.4% | +1.4% | +0.0 | +1.2 | +0.2 | +0.0 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.1% | -1.1% | -1.0 | -0.1 | -0.1 | +0.0 |
 | Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | -7.2% | -1.1% | -7.5 | +0.3 | +0.1 | -0.1 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.1% | +1.1% | +0.0 | +0.8 | +0.4 | -0.1 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.0% | +1.0% | +1.5 | -0.5 | +0.0 | -0.0 |
+| Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +1.0 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → APARINDS | +1.20% | +1.08% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → APARINDS | +1.95% | +1.07% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → APARINDS | -6.25% | -0.94% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → APARINDS | -3.60% | -0.90% |
@@ -61,22 +61,23 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → P_US_TARIFF_INDIA → APARINDS | +1.60% | +0.48% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → APARINDS | -3.00% | -0.45% |
 | 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → APARINDS | +0.96% | +0.43% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → APARINDS | -1.50% | -0.41% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_ALUMINIUM → APARINDS | -1.96 | observed | -1.96% |
-| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → APARINDS | +1.50 | events | +1.92% |
 | 1 | P_US_TARIFF_INDIA → APARINDS | -0.60 | events | +1.50% |
 | 1 | F_REPO_IN → APARINDS | +1.00 | events | -1.50% |
-| 1 | F_GOVT_CAPEX → APARINDS | +1.00 | events | +1.50% |
 | 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → APARINDS | +1.20 | events | +1.15% |
 | 1 | C_MIDEAST_CONFLICT → APARINDS | +1.00 | events | -1.00% |
-| 1 | T_ENERGY_TRANSITION → APARINDS | +0.50 | events | +1.00% |
-| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → APARINDS | +0.50 | events | +0.40% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → APARINDS | +0.60 | director_override | +0.77% |
+| 1 | T_ENERGY_TRANSITION → APARINDS | +0.30 | director_override | +0.60% |
 | 1 | F_USDINR → APARINDS | -0.37 | observed | -0.37% |
+| 1 | F_GOVT_CAPEX → APARINDS | +0.20 | director_override | +0.30% |
 | 1 | F_US_EQUITIES → APARINDS | +0.23 | observed | +0.28% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → APARINDS | +0.30 | director_override | +0.24% |
 | 1 | F_COPPER → APARINDS | -0.24 | observed | -0.14% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)

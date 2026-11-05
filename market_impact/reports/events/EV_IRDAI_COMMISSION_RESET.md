@@ -21,15 +21,15 @@ Commentary (12 Oct 2026) says IRDAI wants to reset commission rules as penetrati
 | IDFCFIRSTB | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | UNIONBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | INDUSINDBK | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| AXISBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| AUBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| PNB | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| AXISBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| AUBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| PNB | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | BANKINDIA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | INDIANB | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ICICIBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SBIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LICHSGFIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | BAJFINANCE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| TATACAP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -43,14 +43,14 @@ Commentary (12 Oct 2026) says IRDAI wants to reset commission rules as penetrati
 | SBILIFE | -1.9 | -1.8 | -0.1 | -0.0 | +0.0 |
 | APOLLOHOSP | -1.8 | -1.8 | +0.0 | +0.0 | +0.0 |
 | LICI | -1.2 | -1.0 | -0.1 | -0.1 | +0.0 |
-| BSE | -0.8 | +0.0 | -0.3 | -0.4 | -0.1 |
-| MOTILALOFS | -0.8 | +0.0 | -0.4 | -0.3 | -0.1 |
-| GROWW | -0.8 | +0.0 | -0.3 | -0.4 | -0.1 |
-| ICICIAMC | -0.8 | +0.0 | -0.5 | -0.2 | -0.0 |
-| 360ONE | -0.7 | +0.0 | -0.3 | -0.3 | -0.1 |
-| HDFCAMC | -0.6 | +0.0 | -0.3 | -0.2 | -0.0 |
+| BAJAJHLDNG | -0.8 | +0.0 | -0.7 | -0.0 | +0.0 |
+| ICICIAMC | -0.6 | +0.0 | -0.5 | -0.1 | -0.0 |
+| MOTILALOFS | -0.6 | +0.0 | -0.4 | -0.1 | -0.0 |
+| BSE | -0.6 | +0.0 | -0.3 | -0.2 | -0.0 |
+| GROWW | -0.6 | +0.0 | -0.3 | -0.2 | -0.0 |
+| JIOFIN | -0.5 | -0.3 | -0.1 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 81%, 2: 8%, 3: 8%, 4: 2%
+Share of absolute impact by order: 1: 82%, 2: 10%, 3: 6%, 4: 1%
 
 ## Sources
 - 2026-10-06 How health insurance premiums have changed one year after GST removal https://www.moneycontrol.com/

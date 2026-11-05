@@ -22,14 +22,14 @@ Council avoided mid-year rate changes and instead approved structural reforms: a
 | TITAN | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
 | DMART | +0.6 | +0.6 | +0.0 | +0.0 | -0.0 |
 | MUTHOOTFIN | +0.6 | +0.6 | +0.0 | -0.0 | -0.0 |
-| BSE | +0.5 | +0.0 | +0.2 | +0.2 | +0.0 |
 | HAVELLS | +0.5 | +0.4 | +0.0 | +0.0 | +0.0 |
 | GODFRYPHLP | +0.5 | +0.4 | +0.0 | +0.0 | +0.0 |
-| GROWW | +0.5 | +0.0 | +0.2 | +0.2 | +0.0 |
-| ICICIAMC | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
-| MOTILALOFS | +0.4 | +0.0 | +0.2 | +0.2 | +0.0 |
 | IDFCFIRSTB | +0.4 | +0.4 | +0.0 | -0.0 | -0.0 |
-| 360ONE | +0.4 | +0.0 | +0.2 | +0.1 | +0.0 |
+| ICICIAMC | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
+| BSE | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
+| MOTILALOFS | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
+| GROWW | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
+| 360ONE | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
 | HDFCAMC | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
 | JIOFIN | +0.3 | +0.0 | +0.2 | +0.1 | -0.0 |
 | ITC | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |
@@ -39,21 +39,21 @@ Council avoided mid-year rate changes and instead approved structural reforms: a
 |---|---|---|---|---|---|
 | LTF | -0.1 | +0.0 | +0.0 | -0.0 | -0.0 |
 | M&MFIN | -0.1 | +0.0 | +0.0 | -0.0 | -0.0 |
-| IREDA | -0.1 | +0.0 | +0.0 | -0.0 | -0.0 |
-| INDUSINDBK | -0.1 | +0.0 | +0.1 | -0.1 | -0.0 |
-| SBICARD | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
-| CHOLAFIN | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| SBICARD | -0.0 | +0.0 | +0.0 | -0.1 | +0.0 |
+| IREDA | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | RECLTD | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| TATACAP | -0.0 | +0.0 | +0.1 | -0.1 | -0.0 |
-| BAJFINANCE | -0.0 | +0.0 | +0.1 | -0.0 | -0.0 |
+| CHOLAFIN | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | IDEA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | VEDL | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| AUBANK | -0.0 | +0.0 | +0.1 | -0.1 | -0.0 |
-| CANBK | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| LICHSGFIN | -0.0 | +0.0 | +0.1 | -0.0 | -0.0 |
 | ADANIENSOL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| VAML | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| JSWENERGY | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| LAURUSLABS | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| SUZLON | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| HINDCOPPER | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| NATIONALUM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 30%, 2: 28%, 3: 30%, 4: 12%
+Share of absolute impact by order: 1: 34%, 2: 31%, 3: 26%, 4: 9%
 
 ## Sources
 - 2026-10-08 Recommendations of the 57th Meeting of the GST Council - PIB https://news.google.com/rss/search?q=57th+GST+Council+meeting+key+highlights+when:120d&hl=en-IN&gl=IN&ceid=IN:en

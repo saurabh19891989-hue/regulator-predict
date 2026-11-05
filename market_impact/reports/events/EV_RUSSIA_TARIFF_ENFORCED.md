@@ -18,42 +18,42 @@ Law allows up to 100% tariffs on buyers. Indian imports ~1.8-1.9 mb/d. If enforc
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| OIL | +4.8 | +3.0 | +1.3 | +0.5 | +0.0 |
-| ONGC | +3.4 | +1.8 | +1.2 | +0.5 | +0.0 |
-| JINDALSTEL | +3.1 | +0.0 | +0.6 | +2.1 | +0.3 |
-| JSWSTEEL | +3.0 | +0.0 | +1.2 | +1.7 | +0.1 |
-| SAIL | +2.8 | +0.0 | +0.3 | +2.2 | +0.3 |
-| TATASTEEL | +2.2 | +0.0 | +0.8 | +1.3 | +0.2 |
-| DRREDDY | +1.9 | +0.0 | +1.6 | +0.3 | -0.1 |
-| HINDZINC | +1.8 | +0.0 | +1.3 | +0.6 | -0.1 |
-| BIOCON | +1.6 | +0.0 | +1.7 | +0.3 | -0.4 |
-| LUPIN | +1.5 | +0.0 | +1.4 | +0.2 | -0.1 |
-| NATIONALUM | +1.5 | -0.4 | +1.4 | +0.5 | +0.0 |
-| PERSISTENT | +1.5 | +0.0 | +1.3 | +0.5 | -0.3 |
-| VAML | +1.5 | +0.0 | +1.2 | +0.4 | -0.2 |
-| COALINDIA | +1.4 | +0.8 | +0.6 | +0.2 | -0.1 |
-| GLENMARK | +1.3 | +0.0 | +1.3 | +0.2 | -0.2 |
+| OIL | +4.7 | +3.0 | +1.2 | +0.5 | +0.0 |
+| ONGC | +3.3 | +1.8 | +1.0 | +0.5 | +0.0 |
+| JSWSTEEL | +2.0 | +0.0 | +1.0 | +1.0 | +0.1 |
+| JINDALSTEL | +1.7 | +0.0 | +0.5 | +0.9 | +0.2 |
+| DRREDDY | +1.6 | +0.0 | +1.3 | +0.3 | -0.0 |
+| PERSISTENT | +1.6 | +0.0 | +1.1 | +0.5 | -0.0 |
+| BIOCON | +1.5 | +0.0 | +1.2 | +0.4 | -0.1 |
+| COALINDIA | +1.5 | +0.8 | +0.5 | +0.2 | -0.0 |
+| TATASTEEL | +1.5 | +0.0 | +0.6 | +0.8 | +0.1 |
+| HINDZINC | +1.5 | +0.0 | +1.1 | +0.3 | +0.0 |
+| VAML | +1.4 | +0.0 | +0.9 | +0.4 | +0.1 |
+| NATIONALUM | +1.4 | -0.4 | +1.3 | +0.5 | +0.0 |
+| SAIL | +1.4 | +0.0 | +0.2 | +1.1 | +0.1 |
+| TECHM | +1.4 | +0.0 | +0.9 | +0.4 | +0.0 |
+| LT | +1.3 | +0.6 | +0.8 | -0.0 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -9.1 | +0.0 | -3.4 | -3.6 | -2.1 |
-| BPCL | -8.8 | -7.4 | -1.2 | -0.1 | -0.1 |
-| MOTILALOFS | -8.6 | +0.0 | -4.9 | -2.9 | -0.7 |
-| IDFCFIRSTB | -7.6 | +0.0 | -3.2 | -3.6 | -0.9 |
-| INDUSINDBK | -7.4 | +0.0 | -3.8 | -3.5 | -0.1 |
+| BPCL | -8.7 | -7.4 | -1.1 | -0.1 | -0.1 |
 | APARINDS | -7.2 | -7.5 | +0.3 | +0.1 | -0.1 |
-| BHARATFORG | -7.0 | -7.1 | +0.3 | -0.1 | -0.2 |
-| IOC | -6.5 | -4.3 | -1.9 | -0.3 | -0.1 |
-| HINDPETRO | -6.4 | -3.9 | -2.1 | -0.2 | -0.1 |
-| SBIN | -6.2 | -0.2 | -3.3 | -2.1 | -0.5 |
-| WAAREEENER | -6.0 | -5.0 | -0.6 | -0.3 | -0.1 |
-| ICICIAMC | -5.7 | +0.0 | -3.6 | -1.6 | -0.5 |
-| AXISBANK | -5.5 | +0.0 | -2.8 | -2.3 | -0.5 |
-| AUBANK | -5.4 | +0.0 | -1.6 | -2.6 | -1.1 |
-| INDIANB | -5.2 | +0.0 | -2.4 | -2.0 | -0.8 |
+| BHARATFORG | -7.0 | -7.1 | +0.2 | -0.1 | -0.0 |
+| MOTILALOFS | -6.6 | +0.0 | -4.8 | -1.4 | -0.3 |
+| IOC | -6.4 | -4.3 | -1.8 | -0.3 | -0.0 |
+| HINDPETRO | -6.3 | -3.9 | -2.0 | -0.3 | -0.1 |
+| WAAREEENER | -5.7 | -5.0 | -0.4 | -0.2 | -0.0 |
+| INDUSINDBK | -5.5 | +0.0 | -3.8 | -1.8 | +0.1 |
+| YESBANK | -5.3 | +0.0 | -3.4 | -1.5 | -0.5 |
+| ICICIAMC | -4.9 | +0.0 | -3.6 | -1.1 | -0.3 |
+| CONCOR | -4.9 | -3.5 | -1.3 | -0.1 | -0.0 |
+| IDFCFIRSTB | -4.9 | +0.0 | -3.2 | -1.6 | -0.1 |
+| SBIN | -4.7 | -0.2 | -3.3 | -1.1 | -0.1 |
+| INDIGO | -4.4 | -2.0 | -1.6 | -0.6 | -0.3 |
+| PAYTM | -4.3 | +0.0 | -2.7 | -1.5 | -0.1 |
 
-Share of absolute impact by order: 1: 19%, 2: 43%, 3: 26%, 4: 12%
+Share of absolute impact by order: 1: 24%, 2: 51%, 3: 20%, 4: 5%
 
 ## Sources
 - 2026-09-29 India Must Not Give Up Russian Oil - ORF https://news.google.com/rss/search?q=India+Must+Not+Give+Up+Russian+Oil+when:120d&hl=en-IN&gl=IN&ceid=IN:en

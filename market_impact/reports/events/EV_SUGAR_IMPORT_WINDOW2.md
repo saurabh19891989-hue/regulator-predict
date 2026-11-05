@@ -21,12 +21,10 @@ The first 10 lakh t TRQ ended on 31 Oct 2026. Sugar prices fell 11% in the last 
 | VBL | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |
 | DABUR | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | NESTLEIND | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
-| OFSS | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| OFSS | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | NESTLEIND | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | DABUR | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | BRITANNIA | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |

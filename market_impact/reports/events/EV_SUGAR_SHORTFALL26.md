@@ -17,7 +17,6 @@ Food ministry (21-22 Aug): 2025-26 (Oct-Sep) sugar output ~306 lakh t, 11% below
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| OFSS | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
 | RADICO | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | NESTLEIND | -0.8 | -0.8 | +0.0 | +0.0 | +0.0 |
 | DABUR | -1.1 | -1.1 | +0.0 | +0.0 | +0.0 |
@@ -34,7 +33,6 @@ Food ministry (21-22 Aug): 2025-26 (Oct-Sep) sugar output ~306 lakh t, 11% below
 | DABUR | -1.1 | -1.1 | +0.0 | +0.0 | +0.0 |
 | NESTLEIND | -0.8 | -0.8 | +0.0 | +0.0 | +0.0 |
 | RADICO | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
-| OFSS | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 100%, 2: 0%, 3: 0%, 4: 0%
 

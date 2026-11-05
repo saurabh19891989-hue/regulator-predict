@@ -24,10 +24,12 @@ Goyal (27 Oct): Chile talks 'quite ripe' for conclusion; Canada talks progressin
 | BHARTIARTL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | VBL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | GODREJCP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| BAJAJHLDNG | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
+| BAJAJHLDNG | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | GODREJCP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | VBL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | BHARTIARTL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
@@ -38,7 +40,7 @@ Goyal (27 Oct): Chile talks 'quite ripe' for conclusion; Canada talks progressin
 | UPL | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | SOLARINDS | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 100%, 2: 0%, 3: 0%, 4: 0%
+Share of absolute impact by order: 1: 99%, 2: 1%, 3: 0%, 4: 0%
 
 ## Sources
 - 2026-10-27 India's FTA talks with Chile near conclusion: Goyal https://news.google.com/rss/search?q=India+Canada+OR+Chile+FTA+talks+conclude+when:120d&hl=en-IN&gl=IN&ceid=IN:en

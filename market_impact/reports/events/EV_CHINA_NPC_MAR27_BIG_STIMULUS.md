@@ -17,42 +17,42 @@ Q3 GDP 4.5% reduces urgency; IMF and Economist (1 Oct) note a 'stimulus pivot' m
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| VAML | +5.8 | +0.0 | +3.7 | +2.1 | +0.0 |
-| NMDC | +5.1 | +0.0 | +4.0 | +0.8 | +0.3 |
-| TATASTEEL | +4.8 | +0.8 | -0.9 | +3.6 | +1.4 |
-| SAIL | +4.5 | +0.0 | -3.0 | +4.9 | +2.6 |
-| JINDALSTEL | +4.1 | +0.0 | -3.7 | +4.9 | +2.9 |
-| HINDALCO | +4.1 | +0.0 | +2.7 | +1.4 | +0.0 |
-| NATIONALUM | +4.0 | +0.0 | +2.2 | +1.8 | +0.0 |
-| HINDCOPPER | +2.7 | +1.0 | +1.5 | +0.2 | +0.0 |
-| OIL | +2.1 | +0.0 | +1.6 | +0.5 | +0.0 |
-| COALINDIA | +1.9 | +0.0 | +1.2 | +0.7 | +0.1 |
-| JSWSTEEL | +1.7 | +0.0 | -3.0 | +3.1 | +1.5 |
-| HINDZINC | +1.7 | +0.0 | +1.5 | +0.2 | +0.0 |
-| ONGC | +1.6 | +0.0 | +1.2 | +0.5 | +0.0 |
-| SRF | +1.4 | +0.0 | +1.5 | +0.0 | -0.1 |
-| VEDL | +1.4 | +0.0 | +1.1 | +0.3 | -0.0 |
+| NMDC | +4.8 | +0.0 | +4.0 | +0.5 | +0.3 |
+| VAML | +3.5 | +0.0 | +3.7 | -0.2 | +0.0 |
+| HINDALCO | +2.7 | +0.0 | +2.7 | -0.0 | +0.0 |
+| HINDCOPPER | +2.7 | +1.0 | +1.5 | +0.1 | +0.0 |
+| NATIONALUM | +2.4 | +0.0 | +2.2 | +0.2 | +0.0 |
+| TATASTEEL | +2.2 | +0.8 | -1.3 | +2.1 | +0.6 |
+| SAIL | +2.1 | +0.0 | -3.0 | +3.1 | +2.0 |
+| OIL | +1.8 | +0.0 | +1.6 | +0.2 | +0.0 |
+| HINDZINC | +1.6 | +0.0 | +1.5 | +0.1 | +0.0 |
+| COALINDIA | +1.6 | +0.0 | +1.2 | +0.4 | +0.0 |
+| VEDL | +1.6 | +0.0 | +1.1 | +0.5 | +0.0 |
+| SRF | +1.5 | +0.0 | +1.5 | +0.0 | -0.0 |
+| ONGC | +1.4 | +0.0 | +1.2 | +0.2 | +0.0 |
+| PIIND | +1.1 | +0.0 | +1.1 | -0.0 | +0.0 |
+| UPL | +1.1 | +0.0 | +1.1 | -0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| VOLTAS | -3.1 | -1.1 | -1.4 | -0.6 | -0.1 |
-| TVSMOTOR | -2.6 | +0.0 | -1.6 | -0.6 | -0.4 |
-| MOTILALOFS | -2.3 | +0.0 | -1.2 | -0.9 | -0.3 |
-| ASHOKLEY | -2.3 | +0.0 | -1.0 | -0.9 | -0.4 |
-| TMCV | -2.2 | +0.0 | -0.8 | -1.0 | -0.5 |
-| MARUTI | -2.1 | +0.0 | -0.9 | -0.8 | -0.4 |
-| HYUNDAI | -2.0 | +0.0 | -1.0 | -0.6 | -0.4 |
-| TMPV | -1.8 | +0.6 | -1.5 | -0.9 | +0.0 |
-| MRF | -1.8 | +0.0 | -1.1 | -0.4 | -0.3 |
-| INDIGO | -1.7 | +0.0 | -1.2 | -0.3 | -0.2 |
-| SUZLON | -1.7 | +0.0 | -0.5 | -0.7 | -0.5 |
-| GMRAIRPORT | -1.6 | +0.0 | -1.0 | -0.4 | -0.2 |
-| POLICYBZR | -1.6 | +0.0 | -1.1 | -0.4 | -0.1 |
-| BLUESTARCO | -1.6 | +0.0 | -1.1 | -0.4 | -0.1 |
-| PRESTIGE | -1.6 | +0.0 | -0.7 | -0.4 | -0.5 |
+| VOLTAS | -2.8 | -1.1 | -1.4 | -0.3 | -0.1 |
+| TVSMOTOR | -2.2 | +0.0 | -1.6 | -0.3 | -0.3 |
+| MOTILALOFS | -1.9 | +0.0 | -1.2 | -0.6 | -0.1 |
+| ASHOKLEY | -1.8 | +0.0 | -1.0 | -0.5 | -0.3 |
+| TMCV | -1.8 | +0.0 | -0.8 | -0.6 | -0.4 |
+| MARUTI | -1.7 | +0.0 | -0.9 | -0.5 | -0.3 |
+| HYUNDAI | -1.7 | +0.0 | -1.0 | -0.4 | -0.3 |
+| MRF | -1.5 | +0.0 | -1.1 | -0.3 | -0.2 |
+| BPCL | -1.5 | +0.0 | -1.7 | +0.2 | -0.0 |
+| INDIGO | -1.4 | +0.0 | -1.2 | -0.1 | -0.1 |
+| SUZLON | -1.4 | +0.0 | -0.5 | -0.6 | -0.3 |
+| BLUESTARCO | -1.4 | +0.0 | -1.1 | -0.2 | -0.1 |
+| ICICIAMC | -1.3 | +0.0 | -0.9 | -0.3 | -0.1 |
+| INDUSINDBK | -1.3 | +0.0 | -0.8 | -0.3 | -0.2 |
+| AMBUJACEM | -1.3 | +0.0 | -1.1 | -0.1 | -0.1 |
 
-Share of absolute impact by order: 1: 3%, 2: 52%, 3: 29%, 4: 16%
+Share of absolute impact by order: 1: 4%, 2: 64%, 3: 21%, 4: 11%
 
 ## Sources
 - 2026-10-05 China's Stimulus Pivot Is Real in Tense, Not Yet in Substance - IndraStra https://news.google.com/rss/search?q=China%27s%20Stimulus%20Pivot%20Is%20Real%20in%20Tense%2C%20Not%20Yet%20in%20Substance%20-%20IndraStra&hl=en-IN&gl=IN&ceid=IN:en

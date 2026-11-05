@@ -18,7 +18,7 @@ Iron ore (TIO=F) is $91.95/t: -12.5% since 1 Jun, -17% in 6m, -12% y/y. Mining.c
 |---|---|---|---|---|---|
 | JINDALSTEL | +1.4 | +2.1 | +0.0 | -0.7 | +0.0 |
 | JSWSTEEL | +0.9 | +1.2 | +0.0 | -0.4 | +0.0 |
-| TMPV | +0.5 | +0.0 | +0.5 | +0.0 | +0.0 |
+| TMPV | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
 | TMCV | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
 | BHEL | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
 | MARUTI | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
@@ -26,11 +26,11 @@ Iron ore (TIO=F) is $91.95/t: -12.5% since 1 Jun, -17% in 6m, -12% y/y. Mining.c
 | GVT&D | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
 | ASHOKLEY | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
 | SUZLON | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| POLICYBZR | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | COCHINSHIP | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | HYUNDAI | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | RVNL | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | TIINDIA | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| TVSMOTOR | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -40,18 +40,18 @@ Iron ore (TIO=F) is $91.95/t: -12.5% since 1 Jun, -17% in 6m, -12% y/y. Mining.c
 | TATASTEEL | -0.9 | -0.4 | -0.2 | -0.3 | +0.0 |
 | ADANIPORTS | -0.4 | -0.4 | +0.0 | +0.0 | +0.0 |
 | HAL | -0.4 | -0.4 | +0.0 | +0.0 | +0.0 |
-| BANKBARODA | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
-| CHOLAFIN | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | M&MFIN | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | APLAPOLLO | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
 | LTF | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| CHOLAFIN | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | ABCAPITAL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | BLUESTARCO | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | NAUKRI | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | PIDILITIND | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | TATACAP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| ASIANPAINT | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 65%, 2: 9%, 3: 25%, 4: 1%
+Share of absolute impact by order: 1: 67%, 2: 6%, 3: 26%, 4: 1%
 
 ## Sources
 - 2026-10-15 Iron ore price slips to two-year low on concerns over weak demand, rising supply https://news.google.com/rss/search?q=Iron+ore+price+slips+to+two-year+low+on+concerns+over+weak+demand,+rising+supply&hl=en-IN&gl=IN&ceid=IN:en

@@ -17,42 +17,42 @@ Downside case: oil/rupee shock, high yields and weak rural demand bite faster th
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PERSISTENT | +0.9 | +0.0 | +1.0 | -0.0 | +0.0 |
-| TECHM | +0.8 | +0.0 | +0.8 | +0.0 | -0.0 |
-| TCS | +0.7 | +0.0 | +0.7 | +0.0 | -0.0 |
+| PERSISTENT | +1.0 | +0.0 | +1.0 | -0.0 | +0.0 |
+| TECHM | +0.8 | +0.0 | +0.8 | +0.0 | +0.0 |
+| TCS | +0.8 | +0.0 | +0.7 | +0.0 | +0.0 |
 | VAML | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
 | PREMIERENE | +0.3 | +0.3 | -0.1 | +0.0 | +0.0 |
-| RVNL | +0.2 | +0.4 | +0.0 | -0.2 | +0.0 |
 | SRF | +0.2 | +0.2 | +0.1 | -0.0 | -0.1 |
+| RVNL | +0.2 | +0.4 | +0.0 | -0.2 | +0.0 |
 | HINDZINC | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
 | NATIONALUM | +0.2 | +0.1 | +0.2 | -0.1 | -0.0 |
 | OIL | +0.2 | +0.1 | +0.2 | -0.1 | -0.0 |
 | COCHINSHIP | +0.2 | +0.1 | +0.1 | -0.0 | +0.0 |
+| GROWW | +0.2 | -0.4 | +0.3 | +0.2 | +0.1 |
 | NMDC | +0.1 | +0.1 | +0.1 | -0.1 | -0.0 |
-| SOLARINDS | +0.1 | +0.4 | -0.2 | -0.1 | -0.0 |
 | SUNPHARMA | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
-| HCLTECH | +0.1 | +0.0 | +0.2 | -0.1 | +0.0 |
+| SOLARINDS | +0.1 | +0.4 | -0.2 | -0.1 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | INDUSINDBK | -6.7 | -4.3 | -2.6 | +0.2 | +0.0 |
 | IDFCFIRSTB | -5.5 | -3.5 | -2.2 | +0.2 | +0.0 |
-| YESBANK | -5.0 | -3.5 | -1.7 | +0.2 | +0.1 |
+| YESBANK | -4.9 | -3.5 | -1.7 | +0.2 | +0.1 |
 | BANKINDIA | -4.8 | -3.5 | -1.4 | +0.0 | +0.1 |
-| MAHABANK | -4.5 | -3.3 | -1.2 | -0.0 | +0.0 |
+| MAHABANK | -4.5 | -3.3 | -1.2 | -0.0 | +0.1 |
 | KOTAKBANK | -4.4 | -3.1 | -1.3 | +0.0 | +0.0 |
-| FEDERALBNK | -4.3 | -1.3 | -3.3 | +0.1 | +0.1 |
 | HDFCBANK | -4.1 | -2.9 | -1.3 | +0.0 | +0.1 |
 | UNIONBANK | -4.1 | -3.2 | -1.0 | +0.1 | +0.1 |
 | PNB | -4.0 | -3.2 | -1.0 | +0.1 | +0.1 |
 | INDIANB | -4.0 | -2.9 | -1.2 | +0.1 | +0.0 |
-| SBIN | -4.0 | -3.4 | -0.8 | +0.1 | +0.0 |
+| SBIN | -4.0 | -3.4 | -0.8 | +0.2 | +0.0 |
+| FEDERALBNK | -4.0 | -0.7 | -3.3 | -0.0 | +0.0 |
 | AXISBANK | -3.9 | -2.5 | -1.5 | +0.1 | +0.1 |
 | ICICIAMC | -3.7 | -3.6 | -0.1 | +0.0 | +0.0 |
-| TMCV | -3.5 | -3.2 | +0.1 | -0.1 | -0.3 |
+| SHRIRAMFIN | -3.5 | -2.9 | -0.6 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 54%, 2: 29%, 3: 12%, 4: 5%
+Share of absolute impact by order: 1: 55%, 2: 30%, 3: 11%, 4: 5%
 
 ## Sources
 - 2026-10-29 Finance ministry estimates India's Q2 FY27 GDP growth at 7.35% https://news.google.com/rss/search?q=India+Q2+GDP+FY27+estimate+risks+when:120d&hl=en-IN&gl=IN&ceid=IN:en

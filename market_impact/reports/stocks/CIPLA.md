@@ -2,10 +2,11 @@
 *NIFTY_50 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.1%**, **12 months -0.5%** (rank 94 / 107 of 200 for 3m / 12m); beta 0.74
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.5%): 3 months 50%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +0.4%; plausible 12m relative-return range incl. stock-specific noise: -13.7% … +16.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.2% beta-adjusted vs realised market-adjusted move -3.0%); forward event exposure +2.3% (3m +1.3%; half assumed priced); company-specific events -1.1%
+- Expected relative return: **3 months +0.3%**, **12 months -0.1%** (rank 83 / 110 of 200 for 3m / 12m); beta 0.74
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.5%): 3 months 51%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.5% … P90 +1.8%; plausible 12m relative-return range incl. stock-specific noise: -19.5% … +15.9%
+- Decomposition (12m): 0.5 × forward event exposure +1.7% (3m +0.8%; half assumed priced) + 0.5 × company-specific catalysts -1.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.1% (beta-adjusted) vs a realised market-adjusted move of -3.0% — gap +2.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -13,34 +14,34 @@
 |---|---|---|---|---|---|---|---|
 | US generic drug price erosion (higher = worse) (`F_US_GENERIC_PRICING`) | +5 pp erosion | -3.50 | -3.50 | +0.00 | +0.00 | +0.00 | — |
 | USFDA inspection/enforcement intensity (`P_USFDA_ENFORCEMENT`) | +1 = stricter | -1.30 | -2.00 | +0.70 | +0.00 | +0.00 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.29 | +1.20 | +0.16 | -0.03 | -0.04 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.21 | +1.40 | -0.10 | -0.09 | -0.00 | -1.1% |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.91 | -1.00 | +0.00 | +0.15 | -0.05 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -0.89 | +0.00 | -0.60 | -0.20 | -0.10 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.30 | +1.20 | +0.16 | -0.03 | -0.03 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.25 | +1.40 | -0.10 | -0.06 | +0.02 | -1.1% |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.94 | -1.00 | +0.00 | +0.06 | -0.00 | — |
 | China chemical/API dumping intensity (`F_CHINA_CHEM_EXPORTS`) | +15% export volumes / price cuts | +0.80 | +0.80 | +0.00 | +0.00 | +0.00 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.78 | -0.60 | -0.10 | -0.06 | -0.01 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +0.66 | +0.00 | +0.34 | +0.33 | -0.00 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +0.61 | +0.80 | -0.11 | -0.04 | -0.04 | — |
-| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | +0.50 | +0.00 | +0.32 | +0.18 | +0.00 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.48 | +0.60 | -0.13 | +0.00 | +0.01 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -0.47 | +0.00 | +0.00 | -0.37 | -0.10 | — |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +0.42 | +0.00 | +0.38 | +0.12 | -0.09 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.77 | -0.60 | -0.10 | -0.06 | -0.01 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +0.66 | +0.80 | -0.11 | -0.01 | -0.02 | — |
+| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | +0.50 | +0.00 | +0.32 | +0.18 | +0.01 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +0.50 | +0.00 | +0.38 | +0.12 | -0.01 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +0.49 | +0.00 | +0.34 | +0.20 | -0.04 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.47 | +0.60 | -0.13 | +0.00 | +0.00 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +0.47 | +0.00 | +0.51 | -0.04 | -0.01 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.47 | +0.00 | +0.51 | -0.04 | -0.01 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | USFDA warning letters: Alembic, Aurobindo-Eugia, Dabur (Jul-Aug 2026) (`EV_USFDA_WARNING_WAVE_26`) | occurred | 1.00 | -1.3% | -1.3% | -2.0 | +0.7 | +0.0 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.1% | -1.1% | -1.3 | +0.3 | -0.0 | -0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.7 | -0.3 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.0% | -1.0% | -1.3 | +0.3 | -0.0 | +0.0 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | +0.0 | -0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.6 | -0.1 | -0.1 | -0.0 |
 | US imposes tariffs on generic drugs (200% threat) or removes India's speciality exemption (`EV_PHARMA_GENERICS_TARIFF`) | risk_scenario | 0.12 | -5.0% | -0.6% | -5.0 | +0.0 | +0.0 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +1.1% | +0.6% | +1.5 | -0.4 | -0.0 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.5% | +0.5% | +0.6 | -0.1 | -0.0 | -0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.3 | -0.1 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +0.9% | +0.5% | +1.0 | -0.3 | +0.1 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +0.9% | +0.5% | +1.0 | -0.1 | +0.1 | -0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.5% | -0.5% | -0.5 | +0.0 | +0.0 | -0.0 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.3 | -0.1 | -0.1 |
 | RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -0.8% | -0.3% | -0.6 | -0.1 | -0.1 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.3% | -0.3% | +0.0 | -0.3 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -50,29 +51,29 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → CIPLA | +1.00% | +0.55% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ F_US_GENERIC_PRICING → CIPLA | -3.50% | -0.42% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → CIPLA | +1.82% | +0.33% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → CIPLA | -0.58% | -0.32% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → CIPLA | -1.20% | -0.30% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → CIPLA | -0.60% | -0.25% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → CIPLA | +0.97% | +0.24% |
-| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → CIPLA | +0.23% | +0.21% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → CIPLA | -0.37% | -0.21% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → CIPLA | -1.50% | -0.18% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → CIPLA | -0.69% | -0.17% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → CIPLA | -0.60% | -0.16% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → CIPLA | -0.90% | -0.16% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → CIPLA | -0.32% | -0.16% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → CIPLA | +0.63% | +0.16% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → CIPLA | +0.21% | +0.15% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → CIPLA | -0.58% | -0.14% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → CIPLA | -0.58% | -0.14% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | P_USFDA_ENFORCEMENT → CIPLA | +1.00 | events | -2.00% |
 | 1 | C_MIDEAST_CONFLICT → CIPLA | +1.00 | events | -1.00% |
 | 1 | F_FPI_FLOWS → CIPLA | -1.60 | events | -0.96% |
-| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → CIPLA | +1.00 | events | +0.70% |
+| 1 | P_USFDA_ENFORCEMENT → CIPLA | +0.40 | director_override | -0.80% |
 | 1 | F_REPO_IN → CIPLA | +1.00 | events | -0.60% |
 | 1 | F_USDINR → CIPLA | -0.37 | observed | -0.52% |
 | 1 | F_GDP_IN → CIPLA | +0.50 | events | +0.40% |
+| 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → CIPLA | +0.40 | director_override | +0.28% |
 | 1 | F_URBAN_DEMAND → CIPLA | +0.20 | events | +0.24% |
 | 1 | P_US_PHARMA_TARIFF → CIPLA | +0.20 | events | -0.10% |
 | 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → CIPLA | -0.47 | observed | -0.09% |

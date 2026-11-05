@@ -24,12 +24,12 @@ DAC accorded AoN to Rs 1.10 lakh crore (about $11.6bn) of proposals, 98% from In
 | COCHINSHIP | +3.0 | +3.0 | +0.0 | -0.0 | -0.0 |
 | LT | +1.3 | +1.2 | +0.1 | +0.0 | -0.0 |
 | BHEL | +0.5 | +0.4 | +0.1 | +0.0 | +0.0 |
-| TMCV | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
-| BANKINDIA | +0.4 | +0.0 | +0.1 | +0.1 | +0.2 |
 | POWERINDIA | +0.4 | +0.0 | +0.4 | +0.0 | -0.0 |
-| UNIONBANK | +0.4 | +0.0 | +0.2 | +0.1 | +0.1 |
-| SAIL | +0.4 | +0.0 | +0.2 | +0.2 | -0.0 |
-| PNB | +0.4 | +0.0 | +0.2 | +0.1 | +0.1 |
+| TMCV | +0.4 | +0.0 | +0.3 | +0.0 | +0.0 |
+| ENRIN | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
+| POLYCAB | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
+| CGPOWER | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
+| ASHOKLEY | +0.3 | +0.0 | +0.2 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -50,7 +50,7 @@ DAC accorded AoN to Rs 1.10 lakh crore (about $11.6bn) of proposals, 98% from In
 | PRESTIGE | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | TECHM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 64%, 2: 19%, 3: 8%, 4: 9%
+Share of absolute impact by order: 1: 67%, 2: 19%, 3: 7%, 4: 7%
 
 ## Sources
 - 2026-09-07 DAC clears Rs 1.10 lakh crore proposals https://www.thehindu.com/

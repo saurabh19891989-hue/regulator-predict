@@ -18,7 +18,7 @@ Aluminium (ALI=F) $3,200/t is -19.6% since 1 Jun, -8% in 6m though +15.8% y/y; L
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| TMPV | +7.0 | +7.0 | +0.0 | +0.0 | +0.0 |
+| TMPV | +3.6 | +3.6 | +0.0 | +0.0 | +0.0 |
 | TVSMOTOR | +2.5 | +2.5 | +0.0 | +0.0 | +0.0 |
 | HEROMOTOCO | +2.0 | +2.0 | +0.0 | +0.0 | +0.0 |
 | VOLTAS | +1.9 | +1.9 | +0.0 | +0.0 | +0.0 |
@@ -46,12 +46,12 @@ Aluminium (ALI=F) $3,200/t is -19.6% since 1 Jun, -8% in 6m though +15.8% y/y; L
 | HAVELLS | -1.2 | -1.2 | +0.0 | +0.0 | +0.0 |
 | POLYCAB | -1.0 | -1.0 | +0.0 | +0.0 | +0.0 |
 | BDL | -0.6 | -0.6 | +0.0 | +0.0 | +0.0 |
-| MPHASIS | -0.6 | -0.6 | +0.0 | +0.0 | +0.0 |
 | ADANIENT | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
 | SBICARD | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
 | KEI | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
 | BAJAJFINSV | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | MCX | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
+| ABB | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 100%, 2: 0%, 3: 0%, 4: 0%
 

@@ -17,42 +17,42 @@ Five states poll Feb-March 2027 (TOI/ET 7 Sep; EC transferred officers 27 Oct; U
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | +3.4 | +0.7 | +1.5 | +1.4 | -0.2 |
-| IDFCFIRSTB | +2.8 | +0.6 | +1.3 | +1.2 | -0.2 |
-| MAHABANK | +2.3 | +0.9 | +0.7 | +0.8 | -0.1 |
-| BANKINDIA | +2.1 | +0.5 | +0.9 | +1.0 | -0.2 |
-| INDIANB | +2.0 | +0.8 | +0.8 | +0.6 | -0.1 |
-| KOTAKBANK | +2.0 | +0.4 | +0.8 | +0.8 | -0.1 |
-| YESBANK | +1.9 | +0.0 | +1.3 | +0.9 | -0.3 |
-| MOTILALOFS | +1.8 | +0.7 | +0.6 | +0.4 | +0.1 |
-| ICICIAMC | +1.8 | +0.8 | +0.7 | +0.3 | +0.0 |
-| AXISBANK | +1.8 | +0.3 | +0.8 | +0.8 | -0.2 |
-| SBIN | +1.7 | +0.3 | +0.8 | +0.8 | -0.1 |
+| INDUSINDBK | +2.9 | +0.7 | +1.5 | +0.8 | -0.1 |
+| IDFCFIRSTB | +2.4 | +0.6 | +1.3 | +0.6 | -0.1 |
+| MAHABANK | +2.0 | +0.9 | +0.7 | +0.5 | -0.1 |
+| INDIANB | +1.8 | +0.8 | +0.8 | +0.4 | -0.1 |
+| BANKINDIA | +1.8 | +0.5 | +0.9 | +0.6 | -0.1 |
+| MOTILALOFS | +1.7 | +0.7 | +0.6 | +0.3 | +0.1 |
+| ICICIAMC | +1.7 | +0.8 | +0.7 | +0.2 | +0.0 |
 | MEESHO | +1.7 | +1.6 | +0.1 | -0.0 | -0.0 |
-| FEDERALBNK | +1.7 | +0.3 | +0.5 | +1.0 | -0.2 |
-| UNIONBANK | +1.6 | +0.2 | +0.8 | +0.7 | -0.1 |
-| HDFCBANK | +1.6 | +0.0 | +0.9 | +0.9 | -0.1 |
+| KOTAKBANK | +1.7 | +0.4 | +0.8 | +0.5 | -0.0 |
+| YESBANK | +1.6 | +0.0 | +1.3 | +0.5 | -0.1 |
+| IREDA | +1.6 | +1.0 | +0.3 | +0.4 | -0.1 |
+| FEDERALBNK | +1.5 | +0.3 | +0.4 | +0.9 | -0.0 |
+| AXISBANK | +1.5 | +0.3 | +0.8 | +0.4 | -0.1 |
+| SBIN | +1.5 | +0.3 | +0.8 | +0.4 | -0.1 |
+| TMCV | +1.5 | +0.4 | +1.1 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BIOCON | -0.2 | +0.0 | -0.0 | -0.1 | -0.1 |
-| OIL | -0.2 | +0.0 | -0.1 | -0.1 | -0.1 |
-| NATIONALUM | -0.2 | +0.0 | -0.1 | -0.1 | -0.1 |
-| SRF | -0.2 | +0.0 | +0.0 | -0.1 | -0.1 |
-| ONGC | -0.2 | +0.0 | -0.0 | -0.1 | -0.1 |
+| OIL | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
+| NATIONALUM | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
 | HINDZINC | -0.2 | +0.0 | -0.1 | -0.1 | -0.1 |
-| DRREDDY | -0.2 | +0.0 | -0.0 | -0.1 | -0.1 |
-| GRASIM | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| SRF | -0.2 | +0.0 | +0.0 | -0.1 | -0.1 |
 | SUZLON | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
-| GLENMARK | -0.1 | +0.0 | +0.0 | -0.1 | -0.1 |
+| ONGC | -0.1 | +0.0 | -0.0 | -0.1 | -0.0 |
+| BIOCON | -0.1 | +0.0 | -0.0 | -0.0 | -0.1 |
 | PREMIERENE | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
-| ASTRAL | -0.1 | -0.0 | +0.0 | -0.0 | -0.1 |
+| GRASIM | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| DRREDDY | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
 | SUNPHARMA | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| LUPIN | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
+| COALINDIA | -0.1 | +0.0 | -0.0 | -0.1 | +0.0 |
+| ASTRAL | -0.1 | -0.0 | +0.0 | -0.0 | -0.0 |
+| GLENMARK | -0.1 | +0.0 | +0.0 | -0.0 | -0.0 |
 | NMDC | -0.1 | +0.1 | -0.0 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 32%, 2: 36%, 3: 23%, 4: 9%
+Share of absolute impact by order: 1: 35%, 2: 39%, 3: 20%, 4: 6%
 
 ## Sources
 - 2026-09-07 5 poll-bound states set to vote in February-March - Times of India https://news.google.com/rss/search?q=5+poll-bound+states+set+to+vote+in+February-March+when:120d&hl=en-IN&gl=IN&ceid=IN:en

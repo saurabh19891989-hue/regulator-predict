@@ -22,42 +22,42 @@ Iran has threatened Gulf oil and AI facilities if attacks renew (Guardian 22 Oct
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| OIL | +19.0 | +16.7 | +1.9 | +0.4 | +0.0 |
-| ONGC | +14.9 | +12.4 | +2.1 | +0.4 | +0.0 |
-| JSWSTEEL | +3.6 | +0.0 | +1.8 | +1.8 | +0.0 |
-| SAIL | +3.4 | +0.0 | +0.6 | +2.6 | +0.3 |
-| MCX | +3.3 | +2.9 | +0.6 | -0.1 | -0.1 |
-| COALINDIA | +3.2 | +2.2 | +0.9 | +0.2 | -0.1 |
-| COCHINSHIP | +3.1 | -0.4 | +1.6 | +1.9 | -0.1 |
-| NATIONALUM | +2.4 | -1.1 | +3.3 | +0.2 | -0.0 |
-| VAML | +2.4 | -0.8 | +3.4 | +0.2 | -0.5 |
-| HINDZINC | +2.3 | +0.0 | +1.8 | +1.1 | -0.5 |
-| SOLARINDS | +2.2 | +2.9 | -0.1 | -0.4 | -0.2 |
-| TATASTEEL | +2.1 | -0.6 | +1.2 | +1.4 | +0.1 |
-| HINDALCO | +1.4 | -0.6 | +2.0 | +0.1 | -0.1 |
-| DRREDDY | +1.3 | -0.8 | +2.2 | +0.0 | -0.1 |
-| GLENMARK | +1.2 | +0.0 | +1.8 | -0.4 | -0.2 |
+| OIL | +18.8 | +16.7 | +1.6 | +0.5 | +0.1 |
+| ONGC | +14.6 | +12.4 | +1.7 | +0.5 | +0.1 |
+| COALINDIA | +3.1 | +2.2 | +0.8 | +0.2 | -0.0 |
+| MCX | +3.1 | +2.9 | +0.5 | -0.2 | -0.1 |
+| HINDZINC | +2.6 | +0.0 | +1.2 | +1.5 | -0.1 |
+| SOLARINDS | +2.5 | +2.9 | -0.2 | -0.1 | -0.1 |
+| NATIONALUM | +2.2 | -1.1 | +2.9 | +0.3 | +0.1 |
+| JSWSTEEL | +2.2 | +0.0 | +1.2 | +0.9 | +0.1 |
+| COCHINSHIP | +2.1 | -0.4 | +1.5 | +1.0 | -0.0 |
+| VAML | +2.1 | -0.8 | +2.7 | +0.2 | -0.0 |
+| SAIL | +1.5 | +0.0 | +0.4 | +1.0 | +0.2 |
+| BAJAJ-AUTO | +1.2 | +0.6 | +0.6 | +0.1 | -0.1 |
+| HINDALCO | +1.1 | -0.6 | +1.6 | +0.1 | -0.0 |
+| TATASTEEL | +1.0 | -0.6 | +0.9 | +0.7 | +0.1 |
+| GLENMARK | +1.0 | +0.0 | +1.1 | -0.1 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDIGO | -13.9 | -8.5 | -3.0 | -1.6 | -0.8 |
-| YESBANK | -13.2 | +0.0 | -3.4 | -5.5 | -4.4 |
-| MOTILALOFS | -12.9 | -3.5 | -4.7 | -3.6 | -1.0 |
-| GMRAIRPORT | -12.1 | -6.3 | -2.5 | -1.6 | -1.6 |
-| IDFCFIRSTB | -11.7 | -3.0 | -2.7 | -4.0 | -2.0 |
-| IREDA | -11.5 | -5.0 | -1.5 | -2.8 | -2.2 |
-| AXISBANK | -11.5 | -5.1 | -2.4 | -2.6 | -1.4 |
-| JIOFIN | -11.0 | -5.0 | -1.1 | -2.3 | -2.6 |
-| INDUSINDBK | -10.9 | -3.5 | -2.9 | -3.5 | -1.0 |
-| BPCL | -10.3 | -13.9 | +3.9 | -0.2 | -0.1 |
-| ICICIAMC | -10.2 | -4.0 | -3.0 | -2.3 | -0.9 |
-| HINDPETRO | -10.2 | -12.5 | +2.4 | +0.0 | -0.1 |
-| BAJFINANCE | -10.1 | -2.0 | -1.2 | -3.6 | -3.4 |
-| IDEA | -9.4 | -2.5 | -3.3 | -1.9 | -1.8 |
-| MEESHO | -9.1 | -6.2 | -1.1 | -1.4 | -0.3 |
+| INDIGO | -12.9 | -8.5 | -2.8 | -1.2 | -0.4 |
+| MOTILALOFS | -10.5 | -3.5 | -4.3 | -2.1 | -0.5 |
+| BPCL | -10.0 | -13.9 | +4.1 | -0.1 | -0.1 |
+| HINDPETRO | -9.8 | -12.5 | +2.7 | +0.1 | -0.1 |
+| GMRAIRPORT | -9.5 | -6.3 | -2.0 | -0.7 | -0.6 |
+| AXISBANK | -9.1 | -5.1 | -2.2 | -1.5 | -0.3 |
+| ICICIAMC | -9.0 | -4.0 | -3.0 | -1.6 | -0.4 |
+| JIOFIN | -8.6 | -5.0 | -1.1 | -1.6 | -0.8 |
+| IREDA | -8.6 | -5.0 | -1.3 | -1.7 | -0.5 |
+| INDUSINDBK | -8.4 | -3.5 | -2.8 | -2.0 | -0.1 |
+| MEESHO | -8.4 | -6.2 | -1.1 | -0.9 | -0.2 |
+| IOC | -8.1 | -9.7 | +2.0 | -0.2 | -0.1 |
+| IDFCFIRSTB | -7.9 | -3.0 | -2.5 | -2.0 | -0.4 |
+| HDFCBANK | -7.8 | -4.3 | -2.0 | -1.3 | -0.2 |
+| INDHOTEL | -7.4 | -4.8 | -1.8 | -0.7 | -0.2 |
 
-Share of absolute impact by order: 1: 36%, 2: 26%, 3: 24%, 4: 14%
+Share of absolute impact by order: 1: 46%, 2: 30%, 3: 19%, 4: 6%
 
 ## Sources
 - 2026-10-22 Iran threatens to strike oil and AI facilities across Gulf if US and Israel renew attacks - The Guardian https://news.google.com/rss/search?q=Iran+threatens+strike+oil+AI+facilities+Gulf+when:120d&hl=en-IN&gl=IN&ceid=IN:en

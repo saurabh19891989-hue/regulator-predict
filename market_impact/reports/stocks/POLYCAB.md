@@ -2,10 +2,11 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.7%**, **12 months +6.9%** (rank 29 / 22 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 57%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.7% … P90 +8.1%; plausible 12m relative-return range incl. stock-specific noise: -13.3% … +25.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.4 pp (model impact +10.8% beta-adjusted vs realised market-adjusted move -22.4%); forward event exposure +5.7% (3m +1.5%; half assumed priced); company-specific events -0.4%
+- Expected relative return: **3 months +0.1%**, **12 months +1.1%** (rank 103 / 62 of 200 for 3m / 12m); beta 1.15
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 50%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.5% … P90 +4.9%; plausible 12m relative-return range incl. stock-specific noise: -32.9% … +41.4%
+- Decomposition (12m): 0.5 × forward event exposure +3.6% (3m +1.8%; half assumed priced) + 0.5 × company-specific catalysts -0.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +0.0% (beta-adjusted) vs a realised market-adjusted move of -22.4% — gap +22.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -13,68 +14,68 @@
 |---|---|---|---|---|---|---|---|
 | Competitive intensity in Indian wires & cables (`NEW_WC_COMPETITIVE_INTENSITY`) | +1 = new entrants/capacity cause ~100 bp sustained W&C margin erosion | -6.00 | -6.00 | +0.00 | +0.00 | +0.00 | — |
 | Grid & electrification capex (`T_GRID_ELECTRIFICATION`) | +1 | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.77 | +3.50 | +0.28 | +0.07 | -0.08 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -3.47 | +0.00 | -1.83 | -1.14 | -0.50 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +3.43 | +3.50 | +0.00 | -0.06 | -0.01 | — |
-| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +3.22 | +2.00 | +0.64 | +0.57 | +0.01 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +3.01 | +3.00 | +0.00 | -0.01 | +0.02 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.79 | +3.50 | +0.28 | +0.07 | -0.06 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +3.47 | +3.50 | +0.00 | -0.06 | +0.03 | — |
+| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +3.21 | +2.00 | +0.64 | +0.57 | +0.00 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +3.02 | +3.00 | +0.00 | -0.01 | +0.03 | — |
 | Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +2.95 | +2.50 | +0.42 | +0.04 | -0.00 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.34 | +0.00 | +2.32 | +0.04 | -0.02 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -2.20 | -1.50 | -0.48 | -0.18 | -0.05 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.66 | +0.00 | -1.12 | -0.43 | -0.11 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.65 | +0.00 | +0.00 | -1.01 | -0.65 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.15 | +0.00 | +0.52 | +0.31 | +0.32 | — |
-| Copper price (`F_COPPER`) | +10% copper | +1.08 | +1.00 | +0.08 | +0.00 | +0.00 | -2.4% |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.32 | +0.00 | +2.32 | +0.00 | -0.01 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -2.11 | -1.50 | -0.48 | -0.08 | -0.05 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.35 | +0.00 | -1.12 | -0.17 | -0.06 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.31 | +0.00 | -0.96 | -0.24 | -0.11 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.06 | +1.00 | +0.00 | +0.09 | -0.02 | — |
+| Copper price (`F_COPPER`) | +10% copper | +1.00 | +1.00 | +0.00 | +0.00 | +0.00 | -2.4% |
+| Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +0.96 | +0.00 | +0.96 | +0.00 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -4.0% | -4.0% | +0.0 | -2.1 | -1.3 | -0.6 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +4.1% | +4.1% | +3.7 | +0.5 | -0.1 | -0.1 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +3.8% | +3.8% | +2.0 | +1.8 | +0.0 | -0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +3.7% | +3.7% | +3.7 | +0.5 | -0.3 | -0.2 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +3.0% | +2.7% | +2.8 | +0.2 | +0.1 | -0.1 |
-| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.4% | -2.4% | -1.5 | -0.8 | -0.0 | -0.1 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.2% | -2.2% | -1.5 | -0.6 | -0.0 | -0.0 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.6% | +1.6% | +1.0 | +0.3 | +0.3 | +0.0 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -1.1 | -0.0 | +0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.1 | -0.3 | -0.2 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | +0.0 | +0.0 | +0.0 |
-| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -2.4% | -1.0% | -1.5 | -0.8 | -0.0 | -0.1 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +1.0 | +0.0 | +0.0 |
-| Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -3.5% | -0.9% | +0.0 | -1.8 | -1.1 | -0.5 |
-| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | +0.0 | -0.5 | -0.3 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -2.2% | -0.9% | -1.5 | -0.6 | -0.0 | -0.0 |
+| Final SHANTI Act rules / first private-sector nuclear licence process (`EV_NUCLEAR_SHANTI_RULES_FINAL`) | anticipated | 0.60 | +1.2% | +0.7% | +0.0 | +1.2 | +0.0 | -0.0 |
+| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +0.8% | +0.7% | +0.7 | +0.1 | +0.0 | -0.0 |
+| Risk: stagflation scare - CPI >=6.5% while GDP growth slips below ~6% (Q3 FY27 data, late Feb 2027) (`EV_INDIA_STAGFLATION_SCARE`) | risk_scenario | 0.12 | -5.4% | -0.6% | -1.5 | -2.7 | -1.0 | -0.1 |
+| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.0% | -0.6% | -0.6 | -0.4 | -0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → POLYCAB | +2.80% | +2.52% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POLYCAB | +2.10% | +0.63% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → POLYCAB | +0.70% | +0.63% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → POLYCAB | -1.50% | -0.63% |
 | 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | +1.44% | +0.58% |
-| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → POLYCAB | +0.84% | +0.50% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → POLYCAB | -1.80% | -0.45% |
 | 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → POLYCAB | +0.96% | +0.43% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → POLYCAB | -1.73% | -0.43% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → POLYCAB | -1.50% | -0.41% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → POLYCAB | -0.60% | -0.36% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | -0.52% | -0.35% |
-| 2 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → F_HOUSING_DEMAND → POLYCAB | -0.58% | -0.29% |
 | 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → POLYCAB | +0.48% | +0.29% |
 | 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POLYCAB | +0.48% | +0.29% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → POLYCAB | -1.50% | -0.27% |
+| 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_GOVT_CAPEX → POLYCAB | +0.35% | +0.24% |
+| 3 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | -0.26% | -0.22% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → POLYCAB | -0.86% | -0.22% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → POLYCAB | +0.59% | +0.21% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GOVT_CAPEX → POLYCAB | +1.00 | events | +3.50% |
-| 1 | P_RENEWABLE_SUPPORT → POLYCAB | +1.50 | events | +3.00% |
+| 1 | NEW_WC_COMPETITIVE_INTENSITY → POLYCAB | +1.00 | director_override | -6.00% |
 | 1 | F_REPO_IN → POLYCAB | +1.00 | events | -1.50% |
+| 1 | P_RENEWABLE_SUPPORT → POLYCAB | +0.60 | director_override | +1.20% |
 | 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POLYCAB | +1.20 | events | +1.15% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → POLYCAB | +1.55 | director_override | -1.12% |
-| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → POLYCAB | +1.50 | events | +0.96% |
-| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POLYCAB | +0.50 | events | +0.80% |
 | 1 | F_ALUMINIUM → POLYCAB | -1.96 | observed | -0.78% |
-| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → POLYCAB | +1.00 | events | +0.40% |
+| 1 | F_GOVT_CAPEX → POLYCAB | +0.20 | director_override | +0.70% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POLYCAB | +0.30 | director_override | +0.48% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → POLYCAB | +0.60 | director_override | +0.38% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → POLYCAB | +1.55 | director_override | -0.37% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → POLYCAB | +0.50 | events | +0.36% |
 | 2 | F_GDP_IN → F_PRIVATE_CAPEX → POLYCAB | +0.50 | events | +0.35% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → POLYCAB | +1.00 | events | -0.31% |

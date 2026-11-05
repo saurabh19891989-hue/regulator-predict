@@ -14,10 +14,11 @@ review/merge_log.json.
 import glob
 import json
 import os
+import re
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 R = lambda *p: os.path.join(HERE, *p)
-PRIORITY = ["RT_BACKBONE", "RT_EVENTS", "RT_TOP_A", "RT_TOP_B", "RT_BOT_A", "RT_BOT_B", "RT_N50_A", "RT_N50_B"]
+PRIORITY = ["DIRECTOR_CE", "RT_BACKBONE", "RT_EVENTS", "RT_TOP_A", "RT_TOP_B", "RT_BOT_A", "RT_BOT_B", "RT_N50_A", "RT_N50_B"]
 
 
 def load(p, default):
@@ -44,6 +45,10 @@ def main():
     files = sorted(glob.glob(R("review", "*.json")), key=lambda p: (
         PRIORITY.index(os.path.basename(p)[:-5]) if os.path.basename(p)[:-5] in PRIORITY else 99, p))
     files = [p for p in files if os.path.basename(p) not in ("rejected.json", "merge_log.json")]
+    ceo = load(R("graph", "company_event_overrides.json"), {"overrides": [], "add": []})
+    ceo["overrides"] = [x for x in ceo.get("overrides", []) if not x.get("by")]
+    ceo["add"] = [x for x in ceo.get("add", []) if not x.get("by")]
+    seen_ce = {(x["ticker"], x["match"].lower()) for x in ceo["overrides"]}
 
     eo = load(R("graph", "edge_overrides.json"), {"scale": []})
     eo["scale"] = [x for x in eo["scale"] if not x.get("by")]
@@ -95,6 +100,31 @@ def main():
                 ov["prob_by_12m"] = p3
             ev["events"][eid] = {**ov, "by": rid}
             log["applied"].append(f"{rid} {key}")
+        # company-event fixes: a "company_event_overrides" block, or exact JSON objects embedded in findings text
+        ce_block = o.get("company_event_overrides") or {}
+        ce_list = list(ce_block.get("overrides", [])) if isinstance(ce_block, dict) else []
+        for f in o.get("findings", []) or []:
+            blob = " ".join(str(v) for v in f.values())
+            for m in re.finditer(r'\{[^{}]*"ticker"\s*:\s*"[^"]+"[^{}]*"match"[^{}]*\}', blob):
+                try:
+                    ce_list.append(json.loads(m.group(0)))
+                except json.JSONDecodeError:
+                    log["invalid"].append(f"{rid}: unparsable company-event fix {m.group(0)[:80]}")
+        for x in ce_list:
+            k = (x.get("ticker"), str(x.get("match", "")).lower())
+            key = f"ce:{k[0]}:{k[1]}"
+            if key in rej:
+                log["rejected"].append(f"{rid} {key}")
+                continue
+            if k in seen_ce:
+                log["conflicts"].append(f"{key}: {rid}")
+                continue
+            seen_ce.add(k)
+            ceo["overrides"].append({**x, "reason": f"[{rid}] {x.get('reason', '')}", "by": rid})
+            log["applied"].append(f"{rid} {key}")
+        for x in (ce_block.get("add", []) if isinstance(ce_block, dict) else []):
+            ceo["add"].append({**x, "reason": f"[{rid}] {x.get('reason', '')}", "by": rid})
+            log["applied"].append(f"{rid} ce-add:{x.get('ticker')}")
         for eid, reason in (o.get("event_drop") or {}).items():
             key = f"drop:{eid}"
             if key in rej:
@@ -117,6 +147,7 @@ def main():
     json.dump(eo, open(R("graph", "edge_overrides.json"), "w"), indent=1)
     json.dump(ev, open(R("graph", "event_overrides.json"), "w"), indent=1)
     json.dump(rs, open(R("graph", "recent_state_overrides.json"), "w"), indent=1)
+    json.dump(ceo, open(R("graph", "company_event_overrides.json"), "w"), indent=1)
     json.dump(log, open(R("review", "merge_log.json"), "w"), indent=1)
     print({k: len(v) for k, v in log.items()})
 

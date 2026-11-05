@@ -15,42 +15,42 @@ Rubio called it a 60-day pause; Reuters (19 Oct) links it to midterm politics an
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BPCL | +1.5 | +0.9 | +0.8 | -0.2 | +0.0 |
-| IOC | +1.2 | +0.8 | +0.4 | -0.0 | +0.0 |
-| HINDPETRO | +1.0 | +0.4 | +0.6 | -0.1 | +0.0 |
-| PIDILITIND | +0.3 | +0.0 | +0.1 | +0.1 | +0.1 |
-| GMRAIRPORT | +0.3 | +0.0 | +0.2 | -0.0 | +0.1 |
-| SRF | +0.3 | +0.0 | +0.2 | +0.0 | +0.1 |
-| RELIANCE | +0.3 | +0.2 | +0.1 | -0.1 | +0.0 |
-| ASHOKLEY | +0.3 | +0.0 | +0.2 | -0.0 | +0.1 |
-| ASIANPAINT | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| INDIGO | +0.2 | +0.0 | +0.2 | -0.0 | +0.0 |
-| MARUTI | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| ATGL | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| AMBUJACEM | +0.2 | +0.0 | +0.1 | +0.0 | +0.1 |
-| M&MFIN | +0.2 | +0.0 | +0.1 | -0.0 | +0.1 |
-| MEESHO | +0.2 | +0.0 | +0.1 | -0.1 | +0.1 |
+| BPCL | +1.3 | +0.9 | +0.5 | -0.1 | -0.0 |
+| IOC | +1.1 | +0.8 | +0.4 | -0.0 | +0.0 |
+| HINDPETRO | +0.8 | +0.4 | +0.4 | -0.1 | -0.0 |
+| ONGC | +0.3 | +0.3 | -0.0 | +0.0 | +0.0 |
+| OIL | +0.2 | +0.3 | -0.1 | +0.0 | +0.0 |
+| RELIANCE | +0.2 | +0.2 | +0.1 | -0.1 | -0.0 |
+| SOLARINDS | +0.1 | +0.1 | -0.0 | +0.0 | +0.0 |
+| NATIONALUM | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| VAML | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| BIOCON | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| NMDC | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HINDCOPPER | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| TMPV | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SRF | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
+| MOTHERSON | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BHARATFORG | -0.7 | +0.0 | -0.6 | -0.1 | +0.0 |
-| CONCOR | -0.4 | +0.0 | -0.3 | -0.1 | +0.0 |
-| WAAREEENER | -0.3 | +0.0 | -0.4 | +0.0 | +0.0 |
-| LAURUSLABS | -0.3 | +0.0 | +0.0 | -0.4 | +0.1 |
-| PIIND | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
-| BAJAJ-AUTO | -0.3 | +0.0 | -0.3 | -0.0 | +0.0 |
-| MCX | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
-| COCHINSHIP | -0.3 | +0.0 | -0.3 | -0.0 | +0.0 |
-| FEDERALBNK | -0.3 | +0.0 | -0.1 | -0.1 | -0.0 |
-| APARINDS | -0.2 | +0.0 | -0.3 | -0.0 | +0.0 |
-| LT | -0.2 | +0.0 | -0.1 | -0.2 | +0.0 |
-| BDL | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
-| DIVISLAB | -0.2 | +0.0 | -0.1 | -0.2 | +0.0 |
+| BHARATFORG | -0.6 | +0.0 | -0.6 | -0.0 | -0.0 |
+| WAAREEENER | -0.4 | +0.0 | -0.4 | -0.0 | +0.0 |
+| APARINDS | -0.4 | +0.0 | -0.4 | +0.0 | +0.0 |
+| CONCOR | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
+| LAURUSLABS | -0.3 | +0.0 | +0.0 | -0.3 | +0.0 |
+| PIIND | -0.3 | +0.0 | -0.2 | -0.0 | +0.0 |
+| MOTILALOFS | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| BDL | -0.2 | -0.2 | +0.0 | -0.0 | +0.0 |
+| DIVISLAB | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
+| COCHINSHIP | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
+| INDUSINDBK | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
 | ADANIPORTS | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
-| CUMMINSIND | -0.2 | +0.0 | -0.1 | -0.0 | +0.0 |
+| SBIN | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| ICICIAMC | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| BAJAJ-AUTO | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 10%, 2: 39%, 3: 25%, 4: 25%
+Share of absolute impact by order: 1: 14%, 2: 31%, 3: 43%, 4: 12%
 
 ## Sources
 - 2026-10-19 Trump's Russia sanctions waiver eases India's energy woes - Reuters https://news.google.com/rss/search?q=Russian+oil+India+sanctions+when:120d&hl=en-IN&gl=IN&ceid=IN:en

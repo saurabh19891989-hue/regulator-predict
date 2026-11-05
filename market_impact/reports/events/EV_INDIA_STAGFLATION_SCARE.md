@@ -18,42 +18,42 @@ Combination of persistent oil, El Nino food shock, imported inflation and credit
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| UPL | +0.2 | +0.0 | +0.1 | +0.0 | +0.0 |
+| VAML | +0.2 | +0.0 | -0.2 | +0.2 | +0.1 |
 | NATIONALUM | +0.2 | -0.5 | +0.5 | +0.2 | +0.0 |
+| UPL | +0.2 | +0.0 | +0.1 | +0.0 | +0.0 |
 | OIL | +0.2 | -0.5 | +0.5 | +0.1 | +0.0 |
-| VAML | +0.1 | +0.0 | -0.2 | +0.2 | +0.1 |
-| TECHM | +0.0 | +0.0 | +0.1 | -0.1 | +0.0 |
+| TECHM | +0.1 | +0.0 | +0.1 | -0.1 | +0.0 |
 | TCS | +0.0 | +0.0 | +0.1 | -0.1 | +0.0 |
-| HINDZINC | -0.1 | +0.0 | -0.3 | +0.1 | +0.1 |
-| HINDCOPPER | -0.2 | -0.5 | +0.1 | +0.1 | +0.0 |
-| NMDC | -0.2 | -0.6 | +0.3 | +0.0 | +0.0 |
-| PERSISTENT | -0.2 | +0.0 | -0.1 | -0.2 | +0.0 |
-| SUNPHARMA | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
+| HINDZINC | -0.1 | +0.0 | -0.3 | +0.1 | +0.0 |
+| PERSISTENT | -0.2 | +0.0 | -0.1 | -0.2 | +0.1 |
+| SUNPHARMA | -0.3 | +0.0 | -0.2 | -0.1 | +0.1 |
+| NMDC | -0.3 | -0.6 | +0.3 | +0.0 | +0.0 |
+| HINDCOPPER | -0.3 | -0.5 | +0.1 | +0.0 | +0.0 |
 | HCLTECH | -0.5 | +0.0 | -0.4 | -0.1 | +0.0 |
 | INFY | -0.5 | +0.0 | -0.4 | -0.1 | +0.0 |
-| ONGC | -0.5 | -1.0 | +0.5 | +0.0 | +0.0 |
-| COCHINSHIP | -0.5 | -0.7 | +0.2 | -0.0 | +0.0 |
+| COCHINSHIP | -0.5 | -0.7 | +0.2 | +0.0 | +0.0 |
+| MCX | -0.5 | +0.0 | -0.4 | -0.2 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -19.1 | -9.0 | -9.1 | -1.1 | +0.1 |
-| INDUSINDBK | -17.1 | -6.3 | -11.0 | -0.4 | +0.6 |
-| IDFCFIRSTB | -16.4 | -6.3 | -10.2 | -0.4 | +0.4 |
-| AUBANK | -13.5 | -4.1 | -9.2 | -0.3 | +0.1 |
-| TATACAP | -13.4 | -3.0 | -9.7 | -1.1 | +0.3 |
-| BAJFINANCE | -13.3 | -3.0 | -9.0 | -1.6 | +0.3 |
-| SHRIRAMFIN | -13.2 | -7.0 | -5.0 | -1.2 | +0.1 |
-| AXISBANK | -12.0 | -4.8 | -6.9 | -0.6 | +0.2 |
-| TMCV | -11.1 | -7.5 | -2.4 | -1.0 | -0.1 |
-| M&MFIN | -10.9 | -5.7 | -5.1 | -0.4 | +0.3 |
-| GMRAIRPORT | -10.8 | -6.0 | -2.4 | -2.1 | -0.3 |
-| FEDERALBNK | -10.6 | +0.5 | -11.0 | -0.6 | +0.5 |
-| INDIANB | -10.5 | -4.2 | -5.8 | -0.6 | +0.1 |
-| HDFCBANK | -10.4 | -4.2 | -5.7 | -0.6 | +0.2 |
-| LTF | -10.3 | -4.4 | -5.8 | -0.6 | +0.5 |
+| YESBANK | -17.8 | -9.0 | -9.1 | -0.2 | +0.5 |
+| INDUSINDBK | -16.6 | -6.3 | -11.0 | +0.1 | +0.6 |
+| IDFCFIRSTB | -15.6 | -6.3 | -10.2 | +0.3 | +0.5 |
+| AUBANK | -13.8 | -4.1 | -9.2 | -0.5 | +0.1 |
+| TATACAP | -13.4 | -3.0 | -9.7 | -1.0 | +0.3 |
+| BAJFINANCE | -13.0 | -3.0 | -9.0 | -1.3 | +0.3 |
+| SHRIRAMFIN | -11.6 | -5.8 | -5.0 | -1.1 | +0.2 |
+| AXISBANK | -11.6 | -4.8 | -6.9 | -0.3 | +0.3 |
+| TMCV | -11.0 | -7.5 | -2.4 | -0.9 | -0.2 |
+| M&MFIN | -11.0 | -5.7 | -5.1 | -0.4 | +0.2 |
+| IREDA | -10.2 | -2.5 | -7.8 | -0.7 | +0.8 |
+| HDFCBANK | -10.2 | -4.2 | -5.7 | -0.5 | +0.3 |
+| CHOLAFIN | -10.0 | -2.5 | -7.1 | -0.5 | +0.1 |
+| LTF | -10.0 | -4.4 | -5.8 | -0.3 | +0.5 |
+| INDIANB | -9.9 | -4.2 | -5.8 | -0.1 | +0.3 |
 
-Share of absolute impact by order: 1: 42%, 2: 44%, 3: 11%, 4: 3%
+Share of absolute impact by order: 1: 42%, 2: 45%, 3: 10%, 4: 3%
 
 ## Sources
 - 2026-10-07 Four horsemen of economic trouble? RBI governor flags the risks - ET https://news.google.com/rss/search?q=India+stagflation+risk+growth+inflation+2026+RBI+Governor+four+horsemen+when:120d&hl=en-IN&gl=IN&ceid=IN:en

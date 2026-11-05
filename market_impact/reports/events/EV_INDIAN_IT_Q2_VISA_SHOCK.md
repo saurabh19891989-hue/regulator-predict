@@ -17,21 +17,21 @@ Q2 FY27: TCS profit +15% YoY, revenue +11% YoY, TCV $9.6 bn (8 Oct); Infosys CC 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| VMM | +0.3 | +0.0 | +0.2 | +0.2 | -0.0 |
-| TRENT | +0.3 | +0.0 | +0.1 | +0.2 | -0.0 |
-| INDUSINDBK | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
-| INDIGO | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
-| IDFCFIRSTB | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
-| SBICARD | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| GMRAIRPORT | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| VMM | +0.3 | +0.0 | +0.2 | +0.1 | -0.0 |
+| INDUSINDBK | +0.2 | +0.0 | +0.0 | +0.1 | +0.2 |
+| SBICARD | +0.2 | +0.0 | +0.0 | +0.2 | +0.1 |
+| TRENT | +0.2 | +0.0 | +0.1 | +0.1 | -0.0 |
 | TMCV | +0.2 | +0.0 | +0.0 | +0.0 | +0.2 |
-| BANKINDIA | +0.2 | +0.0 | +0.0 | +0.0 | +0.2 |
+| IDFCFIRSTB | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
 | M&MFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
-| KOTAKBANK | +0.2 | +0.0 | +0.0 | +0.0 | +0.1 |
 | HYUNDAI | +0.2 | +0.0 | +0.0 | +0.0 | +0.2 |
-| INDHOTEL | +0.2 | +0.0 | -0.1 | +0.1 | +0.1 |
-| LTF | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
-| KALYANKJIL | +0.1 | +0.0 | +0.0 | +0.1 | +0.1 |
+| GMRAIRPORT | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| SHRIRAMFIN | +0.2 | +0.0 | +0.0 | +0.0 | +0.2 |
+| INDIGO | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| BANKINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
+| NYKAA | +0.1 | +0.0 | +0.0 | +0.2 | -0.0 |
+| ETERNAL | +0.1 | +0.0 | +0.0 | +0.2 | -0.0 |
+| KOTAKBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -48,11 +48,11 @@ Q2 FY27: TCS profit +15% YoY, revenue +11% YoY, TCV $9.6 bn (8 Oct); Infosys CC 
 | OFSS | -0.5 | -0.5 | +0.0 | +0.0 | +0.0 |
 | TATACOMM | -0.4 | -0.4 | +0.0 | +0.0 | +0.0 |
 | NAUKRI | -0.4 | -0.4 | +0.0 | +0.0 | +0.1 |
-| PRESTIGE | -0.3 | -0.2 | -0.0 | +0.0 | -0.1 |
 | LT | -0.3 | -0.3 | +0.0 | +0.0 | -0.0 |
-| DLF | -0.2 | -0.2 | -0.0 | +0.0 | -0.0 |
+| PRESTIGE | -0.3 | -0.2 | -0.0 | +0.0 | -0.0 |
+| DLF | -0.2 | -0.2 | -0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 59%, 2: 5%, 3: 16%, 4: 20%
+Share of absolute impact by order: 1: 62%, 2: 5%, 3: 15%, 4: 17%
 
 ## Sources
 - 2026-10-23 Infosys cuts FY27 revenue growth guidance to 1-2%, Q2 CC revenue growth at 1.5% - Fortune India https://news.google.com/rss/search?q=Infosys%20cuts%20FY27%20revenue%20growth%20guidance%20to%201-2%25%2C%20Q2%20CC%20revenue%20growth%20at%201.5%25%20-%20Fortune%20India&hl=en-IN&gl=IN&ceid=IN:en

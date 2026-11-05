@@ -2,55 +2,56 @@
 *NIFTY_NEXT_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.2%**, **12 months -4.5%** (rank 161 / 163 of 200 for 3m / 12m); beta 0.93
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.2%): 3 months 43%, 12 months 30%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.8% … P90 -3.6%; plausible 12m relative-return range incl. stock-specific noise: -41.8% … +18.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -6.3% beta-adjusted vs realised market-adjusted move -8.4%); forward event exposure -6.6% (3m -2.7%; half assumed priced); company-specific events -0.3%
+- Expected relative return: **3 months -1.1%**, **12 months -2.9%** (rank 169 / 182 of 200 for 3m / 12m); beta 0.93
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.2%): 3 months 47%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.8% … P90 +0.5%; plausible 12m relative-return range incl. stock-specific noise: -37.8% … +19.5%
+- Decomposition (12m): 0.5 × forward event exposure -5.0% (3m -1.9%; half assumed priced) + 0.5 × company-specific catalysts +0.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -2.6% (beta-adjusted) vs a realised market-adjusted move of -8.4% — gap +5.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -5.95 | -6.00 | +0.07 | -0.01 | -0.01 | — |
-| US growth (`F_US_GDP`) | +1 pp | +3.35 | +2.50 | +0.73 | +0.23 | -0.11 | — |
+| US growth (`F_US_GDP`) | +1 pp | +3.21 | +2.50 | +0.71 | +0.11 | -0.11 | — |
 | US H-1B / outsourcing restrictions (`P_US_VISA_OUTSOURCING`) | +1 = material tightening | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +2.19 | +1.70 | +0.50 | +0.00 | -0.01 | +1.2% |
-| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.75 | +0.00 | -0.90 | -0.68 | -0.18 | — |
+| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.93 | +1.70 | +0.26 | -0.03 | +0.00 | +1.2% |
 | Europe growth (`F_EU_GDP`) | +1 pp | +1.60 | +1.60 | +0.00 | +0.01 | -0.01 | — |
 | Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.51 | -1.00 | -0.45 | -0.08 | +0.03 | +3.5% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.41 | +1.80 | -0.16 | -0.13 | -0.09 | -1.1% |
-| US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.19 | -0.70 | -0.19 | -0.29 | -0.01 | +11.2% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.48 | +1.80 | -0.16 | -0.08 | -0.08 | -1.1% |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.34 | +0.00 | -0.90 | -0.36 | -0.07 | — |
+| US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.12 | -0.70 | -0.19 | -0.26 | +0.02 | +11.2% |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
-| USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +1.00 | +0.00 | +0.64 | +0.28 | +0.08 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.89 | +1.00 | -0.13 | +0.00 | +0.02 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -0.63 | +0.00 | +0.12 | -0.72 | -0.03 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.55 | +0.00 | -0.57 | +0.01 | -0.00 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +0.89 | +1.00 | -0.13 | +0.00 | +0.01 | — |
+| USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +0.83 | +0.00 | +0.64 | +0.14 | +0.04 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.57 | +0.00 | -0.57 | +0.00 | -0.01 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.42 | +0.00 | -0.40 | +0.01 | -0.03 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -5.9% | -5.9% | -6.0 | +0.1 | -0.0 | -0.0 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +4.0% | +4.0% | +2.6 | +1.1 | +0.2 | +0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -12.7% | -3.2% | -10.5 | -2.4 | +0.4 | -0.2 |
-| Anthropic IPO prices and lists (proposed ticker ANT), Nov 2026-Q1 2027 (`EV_ANTHROPIC_IPO_LISTING`) | anticipated | 0.85 | -2.7% | -2.3% | -3.0 | +0.2 | +0.1 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.0% | -2.0% | -2.2 | +0.3 | +0.0 | -0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.3% | -1.6% | -7.6 | +1.2 | +0.1 | -0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.8% | +3.8% | +2.6 | +1.1 | +0.1 | +0.0 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -11.8% | -3.0% | -10.5 | -1.6 | +0.4 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.9% | -1.9% | -2.2 | +0.3 | +0.0 | -0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.2% | -1.6% | -7.6 | +1.2 | +0.2 | +0.0 |
 | Indian IT: weakest Q2 in 3 years, Infosys guidance cut, US green card freeze (`EV_INDIAN_IT_Q2_VISA_SHOCK`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.0 | +0.0 | +0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.4% | -1.4% | -1.4 | +0.0 | +0.0 | -0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.8% | +1.4% | +2.9 | -0.2 | +0.0 | +0.0 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.7% | +1.4% | +2.9 | -0.2 | +0.0 | +0.0 |
 | US $100,000 H-1B fee (new ~$103k proposal Aug 2026) blocked by court; administration appeals; DHS proposes $70k/$30k OPT fees (`EV_H1B_100K_FEE_COURT`) | occurred | 1.00 | -1.2% | -1.2% | -1.2 | +0.0 | +0.0 | +0.0 |
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.1% | -1.1% | -0.5 | -0.5 | -0.1 | -0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -6.1% | -0.9% | -5.1 | -1.3 | +0.3 | -0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -0.5 | -0.5 | -0.1 | +0.0 |
+| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -6.2% | -0.9% | -5.1 | -1.3 | +0.2 | -0.0 |
+| Appeals court allows $100k H-1B fee (or new rule finalised) and/or OPT fee rule finalised (`EV_H1B_FEE_REINSTATED`) | anticipated | 0.30 | -3.0% | -0.9% | -3.0 | +0.0 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → WIPRO | -3.00% | -2.55% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → WIPRO | -7.50% | -1.88% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → WIPRO | -5.10% | -1.28% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → WIPRO | -5.10% | -1.28% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → WIPRO | +2.50% | +1.25% |
+| 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → WIPRO | -1.20% | -1.02% |
 | 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → WIPRO | -3.00% | -0.90% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → WIPRO | +2.88% | +0.72% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → WIPRO | -2.50% | -0.62% |
@@ -59,14 +60,14 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_INDIA_EU_FTA_SIGNED ⇒ F_EU_GDP → WIPRO | +0.48% | +0.44% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → WIPRO | +0.68% | +0.42% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → WIPRO | +2.34% | +0.42% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → WIPRO | -0.74% | -0.41% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → WIPRO | -0.80% | -0.40% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → WIPRO | -2.55% | -0.38% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | T_GENAI_SERVICES → WIPRO | +1.00 | events | -6.00% |
+| 1 | T_GENAI_SERVICES → WIPRO | +0.50 | director_override | -3.00% |
 | 1 | F_US_GDP → WIPRO | +1.20 | events | +3.00% |
 | 1 | P_US_VISA_OUTSOURCING → WIPRO | +0.90 | events | -2.70% |
 | 1 | F_FPI_FLOWS → WIPRO | -1.60 | events | -1.60% |
@@ -76,14 +77,12 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_US_10Y → WIPRO | +1.68 | observed | +0.50% |
 | 1 | F_US_EQUITIES → WIPRO | +0.23 | observed | +0.40% |
 | 1 | F_EU_GDP → WIPRO | +0.22 | events | +0.35% |
-| 1 | F_COAL_INTL → WIPRO | +0.70 | director_override | -0.35% |
 | 1 | F_RISK_SENTIMENT → WIPRO | +0.11 | observed | -0.11% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |
 |---|---|---|---|---|---|
 | 2026-11 | Interim dividend/buyback decisions and record dates (yield 5.6%) - details not captured | corporate_action | 0.50 | +0.5% | +0.25% |
-| 2026-12 | US H-1B/outsourcing action | regulatory | 0.15 | -2.8% | -0.41% |
 | 2027-01 | Q3 FY27 results (mid-Jan); guidance for Q4 and large-deal rebound the CEO promised | results | 0.95 | +0.0% | +0.00% |
 | 2027-01 | TCS/Infosys/HCL Q3 prints set sector read-through just before Wipro | other | 0.95 | +0.0% | +0.00% |
 | 2027-03 | Acquisition announcement (management says it is shopping with large cash pile; NDTV Profit 2026-10-16) | corporate_action | 0.25 | -0.5% | -0.12% |

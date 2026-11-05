@@ -21,17 +21,16 @@ Mixed picture: Suez transits +27% in Aug and carriers edging back (K+N, Seatrade
 | HINDPETRO | +0.8 | +0.0 | +0.8 | -0.0 | +0.0 |
 | BPCL | +0.7 | -0.1 | +0.8 | -0.0 | +0.0 |
 | IOC | +0.6 | +0.0 | +0.6 | -0.0 | +0.0 |
-| RELIANCE | +0.2 | +0.0 | +0.3 | -0.1 | +0.0 |
+| RELIANCE | +0.3 | +0.0 | +0.3 | -0.0 | +0.0 |
 | ONGC | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
 | OIL | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
-| POLICYBZR | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
-| HCLTECH | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| INFY | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| HINDZINC | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
 | VMM | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | ADANIPORTS | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
-| GODREJCP | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | INDIGO | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| MRF | -0.2 | -0.1 | -0.1 | +0.0 | +0.0 |
+| JINDALSTEL | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
+| TATACOMM | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
+| CONCOR | -0.7 | -0.7 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -41,18 +40,17 @@ Mixed picture: Suez transits +27% in Aug and carriers edging back (K+N, Seatrade
 | JINDALSTEL | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
 | MRF | -0.2 | -0.1 | -0.1 | +0.0 | +0.0 |
 | INDIGO | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
-| GODREJCP | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | ADANIPORTS | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | VMM | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
-| HINDZINC | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
-| HCLTECH | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| INFY | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| POLICYBZR | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | OIL | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | ONGC | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| RELIANCE | +0.2 | +0.0 | +0.3 | -0.1 | +0.0 |
+| RELIANCE | +0.3 | +0.0 | +0.3 | -0.0 | +0.0 |
+| IOC | +0.6 | +0.0 | +0.6 | -0.0 | +0.0 |
+| BPCL | +0.7 | -0.1 | +0.8 | -0.0 | +0.0 |
+| HINDPETRO | +0.8 | +0.0 | +0.8 | -0.0 | +0.0 |
+| COCHINSHIP | +1.0 | +1.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 40%, 2: 57%, 3: 3%, 4: 0%
+Share of absolute impact by order: 1: 44%, 2: 55%, 3: 1%, 4: 0%
 
 ## Sources
 - 2026-09-04 Ocean carriers accelerate their return to the Suez Canal - Kuehne+Nagel https://news.google.com/rss/search?q=Red+Sea+shipping+Suez+when:120d&hl=en-IN&gl=IN&ceid=IN:en

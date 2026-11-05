@@ -2,10 +2,11 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.7%**, **12 months +7.8%** (rank 22 / 19 of 200 for 3m / 12m); beta 1.42
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.6%): 3 months 59%, 12 months 80%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.8% … P90 +10.8%; plausible 12m relative-return range incl. stock-specific noise: -2.3% … +43.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.7 pp (model impact +11.5% beta-adjusted vs realised market-adjusted move -27.9%); forward event exposure +6.1% (3m +2.8%; half assumed priced); company-specific events +0.2%
+- Expected relative return: **3 months +0.8%**, **12 months +1.7%** (rank 52 / 35 of 200 for 3m / 12m); beta 1.42
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.6%): 3 months 52%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.3% … P90 +6.0%; plausible 12m relative-return range incl. stock-specific noise: -45.8% … +41.3%
+- Decomposition (12m): 0.5 × forward event exposure +3.2% (3m +2.1%; half assumed priced) + 0.5 × company-specific catalysts +1.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +3.1% (beta-adjusted) vs a realised market-adjusted move of -27.9% — gap +30.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -13,76 +14,76 @@
 |---|---|---|---|---|---|---|---|
 | New-entrant pricing pressure in wires & cables (`NEW_CABLE_NEW_ENTRANT_PRICING`) | +1 = incumbent W&C gross margin -100 bp industry-wide | -5.00 | -5.00 | +0.00 | +0.00 | +0.00 | — |
 | Grid & electrification capex (`T_GRID_ELECTRIFICATION`) | +1 | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.14 | +3.00 | +0.20 | +0.00 | -0.06 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.16 | +3.00 | +0.20 | +0.00 | -0.04 | — |
 | Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +2.41 | +2.00 | +0.39 | +0.04 | -0.01 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +2.38 | +2.50 | +0.00 | -0.14 | +0.02 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +2.41 | +2.50 | +0.00 | -0.14 | +0.05 | — |
 | Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +2.30 | +0.00 | +1.28 | +1.02 | +0.00 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.07 | +0.00 | -1.26 | -0.60 | -0.21 | — |
-| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.06 | +0.00 | +2.09 | +0.00 | -0.03 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.53 | -1.20 | -0.23 | -0.07 | -0.03 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.21 | +0.00 | -0.96 | -0.21 | -0.04 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.19 | +1.20 | +0.00 | -0.02 | +0.01 | — |
-| Global AI / data-centre capex (`F_AI_CAPEX`) | +10% growth | +1.04 | +0.00 | +0.76 | +0.28 | -0.01 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.02 | +0.00 | +0.00 | -0.70 | -0.33 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +2.08 | +0.00 | +2.09 | +0.00 | -0.02 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.49 | -1.20 | -0.23 | -0.03 | -0.03 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.20 | +1.20 | +0.00 | -0.02 | +0.02 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -1.06 | +0.00 | -0.96 | -0.08 | -0.02 | — |
+| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +0.98 | +1.00 | +0.00 | -0.02 | +0.00 | +1.2% |
+| Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +0.96 | +0.00 | +0.96 | +0.00 | +0.00 | — |
 | Power market / DISCOM reform (`P_POWER_REFORM`) | +1 = reform progress | +0.96 | +0.00 | +0.96 | +0.00 | +0.00 | — |
+| Global AI / data-centre capex (`F_AI_CAPEX`) | +10% growth | +0.96 | +0.00 | +0.76 | +0.19 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +3.0% | +3.0% | +3.0 | +0.2 | -0.1 | -0.1 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.4% | -2.4% | +0.0 | -1.5 | -0.7 | -0.2 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +3.2% | +3.2% | +3.0 | +0.2 | -0.0 | -0.0 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +2.3% | +2.3% | +0.0 | +2.3 | +0.0 | -0.0 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.5% | +2.3% | +2.4 | +0.2 | +0.0 | -0.0 |
-| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.6% | -1.6% | -1.2 | -0.4 | +0.0 | -0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -5.0% | -1.3% | -3.0 | -1.3 | -0.6 | -0.2 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.2 | -0.3 | +0.0 | -0.0 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.1% | +1.1% | +0.0 | +0.6 | +0.5 | +0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -4.6% | -1.1% | -3.0 | -1.3 | -0.3 | -0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +1.0 | +0.0 | +0.0 |
-| Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2 (`EV_LPG_UNDERRECOVERY`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.7 | -0.0 | +0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.7 | -0.0 | +0.0 |
-| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.6% | -0.7% | -1.2 | -0.4 | +0.0 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.7 | -0.2 | -0.1 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.7 | +0.0 | -0.1 |
 | Final SHANTI Act rules / first private-sector nuclear licence process (`EV_NUCLEAR_SHANTI_RULES_FINAL`) | anticipated | 0.60 | +1.1% | +0.7% | +0.0 | +1.1 | +0.0 | -0.0 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.5% | -0.6% | -1.2 | -0.3 | +0.0 | -0.0 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -2.4% | -0.6% | -3.0 | +0.4 | +0.1 | +0.1 |
+| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +0.6% | +0.6% | +0.6 | +0.0 | +0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → KEI | +2.40% | +2.16% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → KEI | -3.00% | -0.75% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → KEI | -3.00% | -0.75% |
 | 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → KEI | +1.44% | +0.58% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → KEI | +1.80% | +0.54% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → KEI | +0.60% | +0.54% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → KEI | -1.20% | -0.50% |
-| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → KEI | +0.72% | +0.43% |
 | 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → KEI | +0.96% | +0.43% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → KEI | -1.44% | -0.36% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → KEI | -0.52% | -0.35% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → KEI | -1.38% | -0.35% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → KEI | -1.20% | -0.32% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → KEI | -2.00% | -0.30% |
 | 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → KEI | +0.48% | +0.29% |
 | 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → KEI | +0.48% | +0.29% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → KEI | -0.48% | -0.29% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → KEI | +0.40% | +0.25% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → KEI | -1.50% | -0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GOVT_CAPEX → KEI | +1.00 | events | +3.00% |
-| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → KEI | +1.50 | events | +1.92% |
+| 1 | NEW_CABLE_NEW_ENTRANT_PRICING → KEI | +1.00 | director_override | -5.00% |
 | 1 | F_REPO_IN → KEI | +1.00 | events | -1.20% |
 | 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → KEI | +1.20 | events | +1.15% |
-| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → KEI | +0.50 | events | +0.80% |
+| 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → KEI | +0.60 | director_override | +0.77% |
+| 1 | F_GOVT_CAPEX → KEI | +0.20 | director_override | +0.60% |
 | 1 | P_US_TARIFF_INDIA → KEI | -0.60 | events | +0.48% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → KEI | +1.55 | director_override | -0.45% |
-| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → KEI | +1.00 | events | +0.32% |
+| 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → KEI | +0.30 | director_override | +0.48% |
 | 2 | F_GDP_IN → F_PRIVATE_CAPEX → KEI | +0.50 | events | +0.25% |
 | 1 | F_US_EQUITIES → KEI | +0.23 | observed | +0.23% |
 | 1 | F_USDINR → KEI | -0.37 | observed | -0.22% |
-| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → KEI | +1.00 | events | +0.20% |
+| 1 | F_COPPER → KEI | -0.24 | observed | -0.19% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → KEI | +0.50 | director_override | +0.16% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |
 |---|---|---|---|---|---|
-| 2026-12 | Ultravolt commercial launch / first visible pricing response in LT & house wires | other | 0.45 | -3.0% | -1.35% |
+| 2026-12 | Ultravolt commercial launch / first visible pricing response in LT & house wires *(review: [RT_TOP_B] expected margin pressure moved to the recent-state node; keep only the surprise)* | other | 0.45 | -1.0% | -0.45% |
 | 2027-01 | Q3 FY27 results (Dec quarter) | results | 0.95 | +0.0% | +0.00% |
 | 2027-02 | Annual margin step-up toward 11-12% guided EBITDA band evidenced in Q3/Q4 | guidance | 0.50 | +1.0% | +0.50% |
 | 2027-03 | Sanand EHV Phase 2 commercial production | capex | 0.60 | +1.8% | +1.05% |

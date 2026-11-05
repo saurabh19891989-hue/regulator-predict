@@ -15,42 +15,42 @@ Strong El Nino typically peaks in Nov-Jan and decays by spring; the next monsoon
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | +7.1 | +0.0 | +2.0 | +3.9 | +1.1 |
-| IDFCFIRSTB | +6.0 | +0.0 | +1.7 | +3.5 | +0.8 |
-| YESBANK | +4.8 | +0.0 | +1.4 | +2.9 | +0.5 |
-| BANKINDIA | +4.6 | +0.0 | +1.0 | +2.5 | +1.0 |
-| M&MFIN | +4.1 | +2.5 | +0.6 | +0.8 | +0.2 |
-| AXISBANK | +3.9 | +0.0 | +1.0 | +2.3 | +0.6 |
-| KOTAKBANK | +3.9 | +0.0 | +1.0 | +2.1 | +0.8 |
-| MAHABANK | +3.8 | +0.0 | +0.8 | +2.1 | +0.9 |
-| SHRIRAMFIN | +3.7 | +2.0 | +0.4 | +1.0 | +0.3 |
-| INDIANB | +3.6 | +0.0 | +1.0 | +2.1 | +0.6 |
-| HDFCBANK | +3.6 | +0.0 | +0.9 | +2.0 | +0.6 |
-| UNIONBANK | +3.5 | +0.0 | +0.9 | +1.9 | +0.6 |
-| PNB | +3.4 | +0.0 | +0.9 | +1.8 | +0.6 |
-| SBIN | +3.4 | +0.0 | +1.0 | +1.8 | +0.6 |
-| FEDERALBNK | +3.2 | +0.0 | +0.2 | +2.1 | +0.8 |
+| INDUSINDBK | +5.3 | +0.0 | +2.0 | +2.7 | +0.5 |
+| IDFCFIRSTB | +4.5 | +0.0 | +1.7 | +2.4 | +0.3 |
+| M&MFIN | +3.9 | +2.5 | +0.6 | +0.6 | +0.1 |
+| YESBANK | +3.6 | +0.0 | +1.4 | +2.1 | +0.2 |
+| SHRIRAMFIN | +3.5 | +2.0 | +0.4 | +0.9 | +0.2 |
+| BANKINDIA | +3.2 | +0.0 | +1.0 | +1.7 | +0.4 |
+| AXISBANK | +2.8 | +0.0 | +1.0 | +1.6 | +0.3 |
+| KOTAKBANK | +2.8 | +0.0 | +1.0 | +1.4 | +0.3 |
+| FEDERALBNK | +2.8 | +0.0 | +0.2 | +1.8 | +0.7 |
+| INDIANB | +2.7 | +0.0 | +1.0 | +1.5 | +0.3 |
+| MAHABANK | +2.6 | +0.0 | +0.8 | +1.4 | +0.4 |
+| SBICARD | +2.6 | +0.0 | +1.6 | +1.0 | +0.1 |
+| HDFCBANK | +2.6 | +0.0 | +0.9 | +1.4 | +0.3 |
+| UNIONBANK | +2.5 | +0.0 | +0.9 | +1.4 | +0.3 |
+| PNB | +2.5 | +0.0 | +0.9 | +1.3 | +0.2 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| ADANIPOWER | -3.0 | -2.0 | -0.8 | -0.2 | +0.0 |
-| COALINDIA | -2.6 | +0.0 | -1.6 | -1.0 | +0.0 |
-| ENRIN | -2.3 | +0.0 | -1.7 | -0.6 | +0.1 |
+| COALINDIA | -2.1 | +0.0 | -1.6 | -0.5 | -0.0 |
+| ENRIN | -2.0 | +0.0 | -1.7 | -0.3 | +0.1 |
+| ADANIPOWER | -1.6 | -0.5 | -0.8 | -0.3 | -0.0 |
 | BHEL | -1.6 | +0.0 | -1.7 | +0.1 | +0.1 |
-| ADANIENSOL | -1.3 | +0.0 | -1.0 | -0.5 | +0.1 |
-| TATAPOWER | -1.3 | +0.0 | -1.1 | -0.3 | +0.1 |
-| WAAREEENER | -1.2 | +0.0 | -1.1 | +0.1 | -0.1 |
-| SUZLON | -1.0 | +0.0 | -0.9 | +0.1 | -0.2 |
-| POWERGRID | -1.0 | +0.0 | -0.9 | -0.2 | +0.1 |
-| POWERINDIA | -0.9 | +0.0 | +0.0 | -1.0 | +0.0 |
-| NLCINDIA | -0.9 | +0.0 | -0.7 | -0.1 | -0.0 |
-| SOLARINDS | -0.8 | +0.0 | -0.6 | -0.0 | -0.2 |
-| ADANIGREEN | -0.7 | +0.0 | -0.9 | +0.0 | +0.1 |
-| GVT&D | -0.7 | +0.0 | +0.0 | -0.7 | +0.0 |
-| APARINDS | -0.7 | +0.0 | +0.0 | -0.6 | -0.1 |
+| WAAREEENER | -1.2 | +0.0 | -1.1 | +0.0 | -0.1 |
+| TATAPOWER | -1.1 | +0.0 | -1.1 | -0.1 | +0.1 |
+| SUZLON | -1.1 | +0.0 | -0.9 | -0.1 | -0.2 |
+| ADANIENSOL | -1.0 | +0.0 | -1.0 | -0.2 | +0.1 |
+| POWERINDIA | -1.0 | +0.0 | +0.0 | -1.1 | +0.1 |
+| SOLARINDS | -0.9 | +0.0 | -0.6 | -0.1 | -0.2 |
+| POWERGRID | -0.8 | +0.0 | -0.9 | -0.0 | +0.1 |
+| GVT&D | -0.8 | +0.0 | +0.0 | -0.8 | +0.0 |
+| APARINDS | -0.8 | +0.0 | +0.0 | -0.7 | -0.1 |
+| NLCINDIA | -0.8 | +0.0 | -0.7 | -0.0 | -0.0 |
+| ADANIGREEN | -0.7 | +0.0 | -0.9 | +0.1 | +0.1 |
 
-Share of absolute impact by order: 1: 8%, 2: 34%, 3: 44%, 4: 14%
+Share of absolute impact by order: 1: 8%, 2: 39%, 3: 42%, 4: 11%
 
 ## Sources
 - 2026-09-30 IMD forecast record in 2026 (92%, then 90% vs 87% actual) https://www.thehindu.com/sci-tech/energy-and-environment/southwest-monsoon-ends-with-12-deficit/article71529423.ece

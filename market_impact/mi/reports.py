@@ -56,10 +56,12 @@ def stock_report(r, ev, so, nodes, fs, paths, events, rpaths=None):
           f"- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 {f1(r.get('mc_p10_12m'))}% … "
           f"P90 {f1(r.get('mc_p90_12m'))}%; plausible 12m relative-return range incl. stock-specific noise: "
           f"{f1(r.get('ret_p10_12m'))}% … {f1(r.get('ret_p90_12m'))}%",
-          f"- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves {f1(r.residual_contribution)} pp "
-          f"(model impact {f1(r.recent_events_model_impact)}% beta-adjusted vs realised market-adjusted move "
-          f"{f1(r.realised_mkt_adj_since_jun)}%); forward event exposure {f1(r.forward_exposure_12m)}% (3m {f1(r.forward_exposure_3m)}%; "
-          f"half assumed priced); company-specific events {f1(r.company_events_12m)}%", ""]
+          f"- Decomposition (12m): 0.5 × forward event exposure {f1(r.forward_exposure_12m)}% (3m {f1(r.forward_exposure_3m)}%; "
+          f"half assumed priced) + 0.5 × company-specific catalysts {f1(r.company_events_12m)}%, centred on the universe",
+          f"- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply {f1(r.recent_events_model_impact)}% "
+          f"(beta-adjusted) vs a realised market-adjusted move of {f1(r.realised_mkt_adj_since_jun)}% — gap "
+          f"{f1(r.get('graph_vs_market_gap'))} pp. Across the universe this gap does not predict anything we can verify "
+          f"(in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.", ""]
     g = so[so.company == t].copy() if len(so) else pd.DataFrame()
     if len(g):
         g["total"] = g[["order1", "order2", "order3", "order4"]].sum(axis=1)
@@ -155,9 +157,16 @@ def summary(rk, ev, so, nodes, paths, events, rpaths=None):
          f"{asm['events']} events of which {asm['occurred_events']} already occurred since June 2026). Effects propagate up to "
          "four hops, damped by order, with double-count controls (clamping, overlap damping, link semantics).", "",
          "**How to read the numbers.** Expected returns are *scenario-implied*, beta-adjusted and relative to the Nifty 200 "
-         "average. They combine the still-unpriced part of June–November driver moves with probability-weighted forward events "
-         "(half assumed priced) and company-specific catalysts. They are not validated forecasts; the rankings are frozen in "
-         "`ledger/` and will be scored against realised returns and a momentum baseline.", ""]
+         "average: probability-weighted impacts of upcoming and risk events through the graph (half assumed already priced) plus "
+         "company-specific catalysts. They are not validated forecasts; the rankings are frozen in `ledger/` and will be scored "
+         "against realised returns and a momentum baseline.", "",
+         "**What the in-sample check showed.** We first also credited the part of June–November driver moves the graph said was "
+         "not yet in prices. Across 198 stocks the graph's June–November impact correlated **−0.34** with realised "
+         "market-adjusted moves (agent-estimated event shocks −0.41; market-observed drivers +0.10; within industries −0.16), "
+         "and eight red-team reviewers found most large 'unpriced' items were stock-specific news the graph lacks (results "
+         "misses, regulation, competition). That component is therefore excluded from the headline and kept only as a "
+         "diagnostic. The graph's value is the exposure map — which drivers and events hit which company, by causal order — "
+         "not a proven return forecast.", ""]
     cols = "| # | ticker | name | industry | exp 3m | exp 12m | P(beat 12m) | strongest positive chain | strongest negative chain |"
     top = defaultdict(lambda: ("—", "—"))
     for c, lst in paths.items():

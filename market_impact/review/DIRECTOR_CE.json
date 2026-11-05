@@ -1,0 +1,113 @@
+{
+ "reviewer": "DIRECTOR_CE",
+ "note": "Company-event fixes transcribed by the Director from RT_N50_A findings (written there in non-JSON form).",
+ "company_event_overrides": {
+  "overrides": [
+   {
+    "ticker": "SIEMENS",
+    "match": "Jefferies downgrade",
+    "drop": true,
+    "reason": "RT_N50_A: refers to Siemens AG (SIEGY), not Siemens Ltd"
+   },
+   {
+    "ticker": "PNB",
+    "match": "ECL framework effective",
+    "drop": true,
+    "reason": "RT_N50_A: duplicates EV_ECL_ROLLOUT_APR27"
+   },
+   {
+    "ticker": "UNIONBANK",
+    "match": "ECL framework effective",
+    "drop": true,
+    "reason": "RT_N50_A: duplicates EV_ECL_ROLLOUT_APR27"
+   },
+   {
+    "ticker": "GODREJCP",
+    "match": "Kendal",
+    "drop": true,
+    "reason": "RT_N50_A: occurred 2026-10-06, priced"
+   },
+   {
+    "ticker": "GODREJCP",
+    "match": "Interim dividend",
+    "drop": true,
+    "reason": "RT_N50_A: not a relative-price event"
+   },
+   {
+    "ticker": "GODREJCP",
+    "match": "Calibrated price increases",
+    "impact_pct_low": 0.0,
+    "impact_pct_high": 1.5,
+    "reason": "RT_N50_A: commodity edges already book costs net of partial recovery"
+   },
+   {
+    "ticker": "VBL",
+    "match": "COO",
+    "drop": true,
+    "reason": "RT_N50_A: occurred 2026-09-24, priced"
+   },
+   {
+    "ticker": "VBL",
+    "match": "Start of peak season",
+    "impact_pct_low": -9.0,
+    "impact_pct_high": 9.0,
+    "reason": "RT_N50_A: non-event; symmetric range"
+   },
+   {
+    "ticker": "BRITANNIA",
+    "match": "Q2 FY27 results",
+    "date": "2026-11-05",
+    "impact_pct_low": -7.0,
+    "impact_pct_high": 7.0,
+    "reason": "RT_N50_A: results scheduled 5 Nov; cost skew already in F_SUGAR/edible-oil edges"
+   },
+   {
+    "ticker": "AMBUJACEM",
+    "match": "F&O ban",
+    "drop": true,
+    "reason": "RT_N50_A: noise (mid 0)"
+   },
+   {
+    "ticker": "AMBUJACEM",
+    "match": "price hike",
+    "prob": 0.4,
+    "reason": "RT_N50_A: hikes must stick after Q2 PAT -90%"
+   }
+  ],
+  "add": [
+   {
+    "ticker": "PNB",
+    "date": "2027-03",
+    "event": "Cabinet raises FDI cap in PSU banks from 20% to 49% (draft cabinet note with RBI backing; reports 21 Oct 2026)",
+    "type": "regulatory",
+    "prob": 0.5,
+    "impact_pct_low": 0.0,
+    "impact_pct_high": 3.0,
+    "source": "RT_N50_A (news 21 Oct 2026)",
+    "reason": "RT_N50_A: replaces conflated P_FDI_RULES edge"
+   },
+   {
+    "ticker": "UNIONBANK",
+    "date": "2027-03",
+    "event": "Cabinet raises FDI cap in PSU banks from 20% to 49% (draft cabinet note with RBI backing; reports 21 Oct 2026)",
+    "type": "regulatory",
+    "prob": 0.5,
+    "impact_pct_low": 0.0,
+    "impact_pct_high": 3.0,
+    "source": "RT_N50_A (news 21 Oct 2026)",
+    "reason": "RT_N50_A: replaces conflated P_FDI_RULES edge"
+   },
+   {
+    "ticker": "HINDZINC",
+    "date": "2027-02-01",
+    "event": "Windfall levy/export duty on zinc-silver earnings (tail; replaces conflated P_WINDFALL_EXPORT_TAX edge)",
+    "type": "regulatory",
+    "prob": 0.05,
+    "impact_pct_low": -10.0,
+    "impact_pct_high": -2.0,
+    "source": "model judgement; 2022 fuel-levy precedent",
+    "reason": "RT_N50_A"
+   }
+  ]
+ }
+}

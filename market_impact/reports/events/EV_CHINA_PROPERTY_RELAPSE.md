@@ -16,42 +16,42 @@ China's property bust continues to drain local finances (EAF 4 Oct); sales recov
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| TMPV | +2.6 | -0.5 | +2.3 | +0.7 | +0.1 |
-| ASHOKLEY | +2.0 | +0.0 | +0.8 | +0.9 | +0.2 |
-| MARUTI | +1.6 | +0.0 | +0.7 | +0.8 | +0.2 |
-| VOLTAS | +1.4 | +0.0 | +1.3 | +0.2 | -0.1 |
-| TMCV | +1.2 | +0.0 | +0.2 | +0.8 | +0.2 |
+| JSWSTEEL | +1.7 | +2.0 | +2.1 | -1.7 | -0.6 |
+| ASHOKLEY | +1.7 | +0.0 | +0.8 | +0.6 | +0.2 |
+| JINDALSTEL | +1.5 | +2.4 | +2.1 | -2.4 | -0.6 |
+| MARUTI | +1.4 | +0.0 | +0.7 | +0.6 | +0.2 |
+| VOLTAS | +1.3 | +0.0 | +1.3 | +0.0 | -0.0 |
+| TMPV | +1.2 | -0.5 | +1.4 | +0.2 | +0.1 |
 | TATACONSUM | +1.1 | +1.0 | +0.1 | +0.0 | +0.0 |
-| MRF | +1.1 | +0.0 | +0.7 | +0.3 | +0.2 |
-| ASTRAL | +1.0 | +1.0 | -0.1 | +0.0 | +0.1 |
-| SUZLON | +1.0 | +0.0 | +0.2 | +0.6 | +0.1 |
-| POWERGRID | +1.0 | +1.1 | -0.1 | -0.0 | -0.0 |
-| JSWSTEEL | +0.9 | +2.0 | +2.1 | -2.5 | -0.6 |
-| HEROMOTOCO | +0.8 | +0.0 | +0.2 | +0.6 | +0.1 |
-| M&M | +0.8 | +0.0 | +0.4 | +0.3 | +0.1 |
-| BLUESTARCO | +0.8 | +0.0 | +0.7 | +0.1 | -0.0 |
-| AMBUJACEM | +0.8 | +0.0 | +0.6 | +0.1 | +0.1 |
+| MRF | +1.0 | +0.0 | +0.7 | +0.2 | +0.1 |
+| POWERGRID | +0.9 | +1.1 | -0.1 | -0.1 | -0.0 |
+| TMCV | +0.9 | +0.0 | +0.2 | +0.6 | +0.2 |
+| ASTRAL | +0.9 | +1.0 | -0.1 | +0.0 | +0.0 |
+| SUZLON | +0.9 | +0.0 | +0.2 | +0.5 | +0.1 |
+| BPCL | +0.8 | +0.0 | +1.2 | -0.4 | +0.0 |
+| AMBUJACEM | +0.8 | +0.0 | +0.7 | +0.0 | +0.0 |
+| M&M | +0.7 | +0.0 | +0.4 | +0.2 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| NMDC | -11.9 | -11.7 | +0.4 | -0.5 | -0.1 |
+| NMDC | -11.7 | -11.7 | +0.4 | -0.3 | -0.1 |
 | JIOFIN | -6.5 | -6.0 | -0.2 | -0.3 | -0.0 |
-| IREDA | -6.3 | -6.0 | -0.2 | -0.2 | +0.1 |
-| ICICIAMC | -5.7 | -4.8 | -0.6 | -0.4 | +0.0 |
-| MOTILALOFS | -5.7 | -4.2 | -0.9 | -0.6 | -0.0 |
-| VAML | -5.4 | -1.0 | -2.8 | -1.6 | -0.0 |
-| MEESHO | -4.9 | -4.8 | +0.1 | -0.4 | +0.1 |
-| 360ONE | -4.9 | -4.2 | -0.2 | -0.4 | -0.0 |
+| IREDA | -6.4 | -6.0 | -0.2 | -0.2 | +0.1 |
+| MOTILALOFS | -5.9 | -4.2 | -0.9 | -0.7 | -0.1 |
+| ICICIAMC | -5.8 | -4.8 | -0.6 | -0.4 | +0.0 |
+| MEESHO | -5.1 | -4.8 | +0.1 | -0.4 | -0.0 |
+| 360ONE | -5.0 | -4.2 | -0.2 | -0.5 | -0.1 |
+| INDUSINDBK | -4.5 | -4.2 | -0.3 | -0.2 | +0.2 |
 | MAHABANK | -4.4 | -4.2 | -0.2 | -0.1 | +0.1 |
-| INDUSINDBK | -4.4 | -4.2 | -0.3 | -0.2 | +0.3 |
 | LICI | -4.4 | -4.2 | -0.1 | -0.1 | +0.0 |
-| NAUKRI | -4.0 | -3.0 | -0.9 | -0.2 | +0.1 |
-| LENSKART | -3.9 | -3.6 | -0.2 | -0.2 | +0.1 |
-| IDFCFIRSTB | -3.8 | -3.6 | -0.2 | -0.2 | +0.2 |
-| TATASTEEL | -3.8 | -0.7 | +0.4 | -2.8 | -0.7 |
+| NAUKRI | -4.0 | -3.0 | -0.9 | -0.2 | +0.0 |
+| LENSKART | -4.0 | -3.6 | -0.2 | -0.2 | +0.0 |
+| IDFCFIRSTB | -3.9 | -3.6 | -0.2 | -0.1 | +0.1 |
+| INDIANB | -3.8 | -3.6 | -0.2 | -0.0 | +0.0 |
+| VAML | -3.5 | -1.0 | -2.8 | +0.3 | +0.0 |
 
-Share of absolute impact by order: 1: 47%, 2: 27%, 3: 21%, 4: 5%
+Share of absolute impact by order: 1: 50%, 2: 29%, 3: 18%, 4: 4%
 
 ## Sources
 - 2026-10-04 The fiscal fallout from China's property bust https://news.google.com/rss/search?q=The+fiscal+fallout+from+China's+property+bust&hl=en-IN&gl=IN&ceid=IN:en

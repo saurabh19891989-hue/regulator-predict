@@ -17,42 +17,42 @@ Windfall export levies reintroduced in August (raised 3 Aug amid Iran war, cut 1
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDIGO | +0.9 | +0.4 | +0.4 | +0.0 | +0.1 |
-| VMM | +0.5 | +0.0 | +0.4 | +0.0 | +0.0 |
-| GODREJCP | +0.4 | +0.0 | +0.3 | +0.0 | +0.0 |
-| YESBANK | +0.3 | +0.0 | +0.0 | +0.0 | +0.3 |
-| PRESTIGE | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
-| BAJFINANCE | +0.3 | +0.0 | +0.0 | +0.0 | +0.2 |
-| ETERNAL | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
-| AUBANK | +0.3 | +0.0 | +0.0 | +0.0 | +0.2 |
-| TATACAP | +0.3 | +0.0 | +0.0 | +0.0 | +0.2 |
-| GODREJPROP | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
-| SBICARD | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
-| GMRAIRPORT | +0.2 | +0.0 | +0.0 | +0.0 | +0.2 |
-| MRF | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| PHOENIXLTD | +0.2 | +0.0 | +0.0 | +0.0 | +0.2 |
-| LENSKART | +0.2 | +0.0 | +0.0 | +0.1 | +0.2 |
+| INDIGO | +0.8 | +0.4 | +0.4 | -0.0 | +0.0 |
+| VMM | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
+| MRF | +0.2 | +0.0 | +0.2 | +0.0 | -0.0 |
+| LENSKART | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| ETERNAL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| JUBLFOOD | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| GODREJPROP | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| MEESHO | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| SUZLON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| MARUTI | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| PRESTIGE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SWIGGY | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| GRASIM | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| HEROMOTOCO | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| TVSMOTOR | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| HINDZINC | -4.0 | -4.0 | +0.0 | -0.0 | +0.0 |
 | RELIANCE | -3.4 | -3.0 | -0.4 | +0.0 | +0.0 |
-| IOC | -1.2 | -0.3 | -1.0 | +0.0 | +0.0 |
-| HINDPETRO | -0.8 | +0.3 | -1.2 | +0.0 | +0.0 |
+| IOC | -1.3 | -0.3 | -1.0 | +0.0 | -0.0 |
+| HINDPETRO | -0.8 | +0.3 | -1.2 | +0.0 | -0.0 |
 | BPCL | -0.7 | +0.5 | -1.2 | +0.0 | +0.0 |
-| ONGC | -0.6 | +0.0 | -0.6 | +0.0 | +0.0 |
+| ONGC | -0.6 | +0.0 | -0.6 | -0.0 | +0.0 |
 | OIL | -0.4 | +0.0 | -0.4 | -0.0 | +0.0 |
-| POLICYBZR | -0.3 | +0.0 | -0.4 | +0.0 | -0.0 |
-| LICHSGFIN | -0.2 | +0.0 | +0.0 | -0.1 | -0.1 |
-| BANKINDIA | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
-| INFY | -0.2 | +0.0 | -0.1 | -0.0 | +0.0 |
-| HCLTECH | -0.2 | +0.0 | -0.1 | -0.0 | +0.0 |
-| MAHABANK | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| BANKINDIA | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
 | JINDALSTEL | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
-| PNB | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| PNB | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| PFC | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| UNIONBANK | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| POWERINDIA | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| MAHABANK | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| POWERGRID | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| SAIL | -0.1 | +0.0 | +0.0 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 24%, 2: 21%, 3: 16%, 4: 38%
+Share of absolute impact by order: 1: 28%, 2: 36%, 3: 30%, 4: 7%
 
 ## Sources
 - 2026-10-31 Govt hikes windfall tax on diesel, ATF exports; petrol levy cut to zero (Moneycontrol) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=windfall+tax+India+diesel+ATF+export+duty+31+October+when:120d&hl=en-IN&gl=IN&ceid=IN:en

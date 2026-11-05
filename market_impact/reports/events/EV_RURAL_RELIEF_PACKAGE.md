@@ -15,42 +15,42 @@ Drought declared in parts of Maharashtra and Karnataka; 282 districts rain-defic
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | +2.9 | -0.2 | +1.8 | +1.5 | -0.3 |
-| IDFCFIRSTB | +2.3 | -0.2 | +1.6 | +1.2 | -0.3 |
-| BANKINDIA | +1.9 | -0.3 | +1.1 | +1.2 | -0.1 |
-| KOTAKBANK | +1.7 | -0.1 | +1.0 | +0.9 | -0.1 |
-| MAHABANK | +1.6 | -0.2 | +0.9 | +1.0 | -0.1 |
+| INDUSINDBK | +2.3 | -0.2 | +1.8 | +0.8 | -0.1 |
+| IDFCFIRSTB | +1.9 | -0.2 | +1.6 | +0.6 | -0.2 |
 | M&MFIN | +1.5 | +1.2 | +0.3 | +0.1 | -0.1 |
-| INDIANB | +1.4 | -0.2 | +1.0 | +0.8 | -0.2 |
-| UNIONBANK | +1.4 | -0.2 | +0.9 | +0.8 | -0.1 |
-| YESBANK | +1.4 | -0.3 | +1.3 | +0.8 | -0.4 |
-| AXISBANK | +1.4 | -0.2 | +1.0 | +0.8 | -0.2 |
-| PNB | +1.4 | -0.2 | +0.9 | +0.7 | -0.1 |
-| HDFCBANK | +1.3 | -0.2 | +0.8 | +0.8 | -0.2 |
-| SBIN | +1.3 | -0.2 | +0.8 | +0.7 | -0.2 |
-| FEDERALBNK | +1.3 | -0.2 | +0.5 | +1.1 | -0.2 |
-| TMCV | +1.2 | +0.0 | +1.5 | -0.1 | -0.1 |
+| TMCV | +1.4 | +0.0 | +1.5 | -0.1 | -0.0 |
+| BANKINDIA | +1.4 | -0.3 | +1.1 | +0.6 | -0.1 |
+| KOTAKBANK | +1.3 | -0.1 | +1.0 | +0.4 | -0.1 |
+| YESBANK | +1.2 | -0.3 | +1.3 | +0.4 | -0.2 |
+| FEDERALBNK | +1.2 | -0.2 | +0.5 | +1.0 | -0.1 |
+| MAHABANK | +1.2 | -0.2 | +0.9 | +0.5 | -0.1 |
+| INDIANB | +1.1 | -0.2 | +1.0 | +0.4 | -0.1 |
+| LICHSGFIN | +1.1 | -0.2 | +0.3 | +1.0 | -0.1 |
+| MEESHO | +1.1 | +1.2 | +0.0 | -0.1 | -0.0 |
+| UNIONBANK | +1.1 | -0.2 | +0.9 | +0.4 | -0.1 |
+| AXISBANK | +1.1 | -0.2 | +1.0 | +0.4 | -0.1 |
+| SHRIRAMFIN | +1.1 | -0.2 | +1.1 | +0.2 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PRESTIGE | -0.6 | -0.1 | -0.1 | -0.1 | -0.3 |
-| JSWENERGY | -0.5 | -0.2 | -0.0 | -0.2 | -0.1 |
-| GODREJPROP | -0.4 | +0.0 | -0.2 | -0.0 | -0.2 |
-| LODHA | -0.4 | +0.0 | -0.2 | +0.0 | -0.3 |
-| OBEROIRLTY | -0.4 | -0.1 | -0.0 | -0.1 | -0.1 |
-| PHOENIXLTD | -0.3 | -0.2 | +0.2 | -0.2 | -0.1 |
+| JSWENERGY | -0.5 | -0.2 | -0.0 | -0.2 | -0.0 |
+| PRESTIGE | -0.4 | -0.1 | -0.0 | -0.1 | -0.1 |
 | PERSISTENT | -0.3 | -0.2 | +0.0 | -0.1 | -0.0 |
-| BIOCON | -0.3 | -0.2 | +0.0 | -0.1 | -0.1 |
 | ADANIGREEN | -0.3 | -0.4 | -0.0 | +0.1 | -0.0 |
-| RVNL | -0.3 | +0.0 | +0.0 | -0.3 | -0.0 |
-| JIOFIN | -0.3 | -0.3 | +0.0 | +0.1 | -0.1 |
 | TECHM | -0.3 | -0.1 | +0.0 | -0.1 | -0.0 |
-| TORNTPHARM | -0.2 | -0.2 | +0.0 | -0.0 | -0.0 |
+| BIOCON | -0.3 | -0.2 | +0.0 | -0.1 | -0.0 |
+| GROWW | -0.3 | -0.2 | +0.0 | -0.0 | +0.0 |
+| OBEROIRLTY | -0.3 | -0.1 | -0.0 | -0.1 | -0.1 |
+| RVNL | -0.2 | +0.0 | +0.0 | -0.3 | +0.0 |
 | TCS | -0.2 | -0.1 | +0.0 | -0.1 | -0.0 |
 | POWERGRID | -0.2 | -0.3 | +0.0 | +0.0 | +0.0 |
+| GODREJPROP | -0.2 | +0.0 | -0.1 | -0.0 | -0.1 |
+| TATAPOWER | -0.2 | -0.2 | -0.0 | +0.1 | -0.0 |
+| LENSKART | -0.2 | +0.0 | +0.0 | -0.2 | +0.0 |
+| PFC | -0.2 | -0.2 | +0.1 | +0.0 | -0.1 |
 
-Share of absolute impact by order: 1: 26%, 2: 36%, 3: 27%, 4: 11%
+Share of absolute impact by order: 1: 29%, 2: 41%, 3: 22%, 4: 8%
 
 ## Sources
 - 2026-09-30 Chouhan: no major crisis, problem in some areas https://www.downtoearth.org.in/agriculture/india-sets-lower-food-production-target-for-2026-27-as-el-ni%C3%B1o-clouds-rabi-season

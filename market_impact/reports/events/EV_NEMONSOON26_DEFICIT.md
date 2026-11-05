@@ -17,42 +17,42 @@ NE monsoon onset expected Oct 15-21 (IMD, 1 Oct). IMD says El Nino is strengthen
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| COALINDIA | +1.2 | +0.0 | +0.8 | +0.4 | -0.0 |
-| ADANIPOWER | +1.1 | +1.0 | +0.4 | -0.1 | -0.1 |
+| COALINDIA | +1.0 | +0.0 | +0.8 | +0.2 | +0.0 |
 | ENRIN | +0.9 | +0.0 | +0.9 | +0.1 | -0.0 |
-| BHEL | +0.6 | +0.0 | +0.9 | -0.2 | -0.1 |
-| WAAREEENER | +0.4 | +0.0 | +0.6 | -0.3 | +0.1 |
-| TATAPOWER | +0.3 | +0.0 | +0.5 | -0.0 | -0.2 |
-| ADANIENSOL | +0.3 | +0.0 | +0.5 | +0.0 | -0.3 |
-| SUZLON | +0.2 | +0.0 | +0.4 | -0.3 | +0.1 |
-| POWERINDIA | +0.2 | +0.0 | +0.0 | +0.2 | -0.0 |
-| NLCINDIA | +0.2 | +0.0 | +0.4 | -0.1 | -0.1 |
-| APARINDS | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
-| GVT&D | +0.2 | +0.0 | +0.0 | +0.2 | -0.0 |
-| SOLARINDS | +0.1 | +0.0 | +0.3 | -0.2 | +0.1 |
-| POWERGRID | +0.1 | +0.0 | +0.4 | -0.1 | -0.2 |
-| NATIONALUM | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| BHEL | +0.7 | +0.0 | +0.9 | -0.1 | -0.1 |
+| ADANIPOWER | +0.6 | +0.2 | +0.4 | +0.0 | -0.0 |
+| WAAREEENER | +0.5 | +0.0 | +0.6 | -0.1 | +0.0 |
+| SUZLON | +0.4 | +0.0 | +0.4 | -0.1 | +0.1 |
+| POWERINDIA | +0.4 | +0.0 | +0.0 | +0.4 | -0.0 |
+| TATAPOWER | +0.3 | +0.0 | +0.5 | -0.1 | -0.1 |
+| SOLARINDS | +0.3 | +0.0 | +0.3 | -0.0 | +0.1 |
+| APARINDS | +0.3 | +0.0 | +0.0 | +0.3 | +0.0 |
+| GVT&D | +0.3 | +0.0 | +0.0 | +0.3 | -0.0 |
+| ADANIENSOL | +0.3 | +0.0 | +0.5 | -0.1 | -0.1 |
+| NLCINDIA | +0.2 | +0.0 | +0.4 | -0.1 | -0.0 |
+| POWERGRID | +0.2 | +0.0 | +0.4 | -0.1 | -0.1 |
+| CGPOWER | +0.2 | +0.0 | +0.0 | +0.2 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | -4.2 | +0.0 | -1.0 | -2.2 | -1.0 |
-| IDFCFIRSTB | -3.8 | +0.0 | -0.9 | -2.1 | -0.8 |
-| YESBANK | -3.6 | +0.0 | -0.7 | -2.1 | -0.8 |
-| M&MFIN | -2.7 | -1.2 | -0.4 | -0.8 | -0.3 |
-| SHRIRAMFIN | -2.7 | -1.0 | -0.2 | -0.9 | -0.5 |
-| BANKINDIA | -2.6 | +0.0 | -0.5 | -1.1 | -1.0 |
-| AXISBANK | -2.6 | +0.0 | -0.5 | -1.4 | -0.7 |
-| AUBANK | -2.4 | +0.0 | -0.5 | -1.4 | -0.5 |
-| INDIANB | -2.3 | +0.0 | -0.5 | -1.2 | -0.6 |
-| HDFCBANK | -2.3 | +0.0 | -0.5 | -1.2 | -0.6 |
-| SBIN | -2.2 | +0.0 | -0.6 | -1.0 | -0.6 |
-| KOTAKBANK | -2.2 | +0.0 | -0.5 | -1.0 | -0.6 |
-| MAHABANK | -2.2 | +0.0 | -0.4 | -0.9 | -0.8 |
-| SBICARD | -2.1 | +0.0 | -0.9 | -1.1 | -0.1 |
-| TATACAP | -2.1 | +0.0 | -0.2 | -1.4 | -0.6 |
+| INDUSINDBK | -3.0 | +0.0 | -1.0 | -1.6 | -0.4 |
+| IDFCFIRSTB | -2.7 | +0.0 | -0.9 | -1.5 | -0.3 |
+| YESBANK | -2.4 | +0.0 | -0.7 | -1.5 | -0.3 |
+| M&MFIN | -2.3 | -1.2 | -0.4 | -0.5 | -0.1 |
+| SHRIRAMFIN | -2.1 | -1.0 | -0.2 | -0.6 | -0.3 |
+| AXISBANK | -1.8 | +0.0 | -0.5 | -1.0 | -0.3 |
+| BANKINDIA | -1.8 | +0.0 | -0.5 | -0.8 | -0.4 |
+| AUBANK | -1.6 | +0.0 | -0.5 | -1.0 | -0.2 |
+| FEDERALBNK | -1.6 | +0.0 | -0.1 | -1.0 | -0.5 |
+| INDIANB | -1.6 | +0.0 | -0.5 | -0.9 | -0.2 |
+| SBICARD | -1.6 | +0.0 | -0.9 | -0.6 | -0.0 |
+| HDFCBANK | -1.6 | +0.0 | -0.5 | -0.8 | -0.3 |
+| SBIN | -1.5 | +0.0 | -0.6 | -0.7 | -0.2 |
+| KOTAKBANK | -1.5 | +0.0 | -0.5 | -0.7 | -0.3 |
+| LTF | -1.5 | -0.5 | -0.4 | -0.6 | -0.1 |
 
-Share of absolute impact by order: 1: 7%, 2: 24%, 3: 47%, 4: 22%
+Share of absolute impact by order: 1: 8%, 2: 32%, 3: 46%, 4: 14%
 
 ## Sources
 - 2026-10-01 NE monsoon may begin Oct 15-21 - DT Next https://www.dtnext.in/news/tamilnadu/northeast-monsoon-may-begin-between-october-15-21-imd

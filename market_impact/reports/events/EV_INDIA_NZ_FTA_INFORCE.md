@@ -33,23 +33,23 @@ FTA in force from ~20 Oct 2026 (Manorama Yearbook; New Indian Express 20 Oct). S
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWENERGY | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| RVNL | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| GODREJPROP | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| LODHA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| RVNL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | SUZLON | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| HYUNDAI | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| SOLARINDS | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | PREMIERENE | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| TATACAP | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| GRASIM | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| JSWENERGY | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| SOLARINDS | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | LENSKART | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| BOSCHLTD | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| MUTHOOTFIN | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| GRASIM | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| JUBLFOOD | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| GODREJPROP | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| SRF | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| APARINDS | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| TORNTPHARM | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| MEESHO | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | MARUTI | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| BAJFINANCE | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| VAML | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 58%, 2: 15%, 3: 17%, 4: 9%
+Share of absolute impact by order: 1: 63%, 2: 17%, 3: 14%, 4: 5%
 
 ## Sources
 - 2026-10-20 India-New Zealand trade pact kicks in - New Indian Express https://news.google.com/rss/search?q=India+EFTA+Oman+New+Zealand+FTA+in+force+when:120d&hl=en-IN&gl=IN&ceid=IN:en

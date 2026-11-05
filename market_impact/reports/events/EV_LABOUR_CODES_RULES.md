@@ -16,42 +16,42 @@ Centre pushed states/UTs to finalise Labour Code rules by 31 Oct 2026 (Rediff 25
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| KALYANKJIL | +1.4 | +0.0 | +1.2 | +0.2 | -0.0 |
-| IDFCFIRSTB | +1.4 | +0.0 | +0.6 | +0.5 | +0.3 |
-| INDUSINDBK | +1.4 | +0.0 | +0.3 | +0.7 | +0.4 |
-| TITAN | +1.1 | +0.0 | +0.9 | +0.2 | -0.0 |
-| BANKINDIA | +1.0 | +0.0 | +0.1 | +0.6 | +0.3 |
-| MAHABANK | +0.9 | +0.0 | +0.0 | +0.5 | +0.3 |
-| KOTAKBANK | +0.8 | +0.0 | +0.1 | +0.5 | +0.3 |
+| KALYANKJIL | +1.3 | +0.0 | +1.2 | +0.1 | -0.0 |
+| IDFCFIRSTB | +1.2 | +0.0 | +0.6 | +0.5 | +0.2 |
+| INDUSINDBK | +1.1 | +0.0 | +0.3 | +0.6 | +0.2 |
+| TITAN | +1.1 | +0.0 | +0.9 | +0.1 | +0.0 |
 | VMM | +0.8 | +0.6 | +0.3 | -0.0 | -0.0 |
-| SBICARD | +0.7 | +0.0 | +0.6 | +0.1 | +0.0 |
-| INDIGO | +0.7 | +0.0 | +0.3 | +0.4 | -0.0 |
-| UNIONBANK | +0.7 | +0.0 | +0.0 | +0.5 | +0.2 |
-| TRENT | +0.7 | +0.4 | +0.3 | -0.1 | -0.0 |
-| PNB | +0.7 | +0.0 | +0.0 | +0.5 | +0.2 |
-| INDIANB | +0.7 | +0.0 | +0.0 | +0.4 | +0.2 |
-| AXISBANK | +0.7 | +0.0 | +0.1 | +0.4 | +0.2 |
+| BANKINDIA | +0.8 | +0.0 | +0.1 | +0.5 | +0.2 |
+| SBICARD | +0.8 | +0.0 | +0.6 | +0.2 | -0.0 |
+| TMCV | +0.7 | +0.0 | +0.0 | +0.7 | -0.0 |
+| TRENT | +0.7 | +0.4 | +0.3 | -0.0 | -0.0 |
+| MAHABANK | +0.7 | +0.0 | +0.0 | +0.5 | +0.2 |
+| KOTAKBANK | +0.7 | +0.0 | +0.1 | +0.5 | +0.1 |
+| FEDERALBNK | +0.6 | +0.0 | +0.1 | +0.2 | +0.3 |
+| SHRIRAMFIN | +0.6 | +0.0 | +0.0 | +0.6 | +0.0 |
+| LICHSGFIN | +0.6 | +0.0 | +0.0 | +0.2 | +0.4 |
+| YESBANK | +0.6 | +0.0 | +0.1 | +0.4 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | SWIGGY | -2.7 | -3.0 | +0.4 | -0.1 | -0.0 |
-| ETERNAL | -2.7 | -3.0 | +0.6 | -0.2 | -0.1 |
-| MEESHO | -1.3 | -1.5 | +0.4 | -0.1 | -0.1 |
+| ETERNAL | -2.6 | -3.0 | +0.6 | -0.1 | -0.0 |
+| MEESHO | -1.2 | -1.5 | +0.4 | -0.1 | -0.0 |
 | PAGEIND | -0.7 | -0.9 | +0.2 | -0.0 | +0.0 |
 | PERSISTENT | -0.7 | -0.7 | +0.0 | +0.0 | -0.0 |
 | TECHM | -0.6 | -0.6 | +0.0 | +0.0 | -0.0 |
-| TCS | -0.5 | -0.5 | +0.0 | +0.0 | -0.0 |
+| TCS | -0.5 | -0.5 | +0.0 | +0.0 | +0.0 |
 | FORTIS | -0.4 | -0.5 | +0.1 | +0.0 | -0.0 |
 | COALINDIA | -0.4 | -0.4 | +0.0 | -0.0 | +0.0 |
-| JSWENERGY | -0.3 | +0.0 | +0.0 | -0.2 | -0.2 |
-| DMART | -0.3 | -0.7 | +0.4 | -0.0 | -0.0 |
-| PRESTIGE | -0.3 | -0.1 | +0.0 | -0.1 | -0.0 |
-| LODHA | -0.2 | +0.0 | +0.0 | -0.2 | -0.1 |
+| DMART | -0.3 | -0.7 | +0.4 | -0.0 | +0.0 |
+| GROWW | -0.2 | -0.4 | +0.0 | +0.1 | +0.1 |
+| JSWENERGY | -0.2 | +0.0 | +0.0 | -0.1 | -0.1 |
 | APOLLOHOSP | -0.2 | -0.4 | +0.1 | +0.0 | +0.0 |
+| PRESTIGE | -0.2 | -0.1 | +0.0 | -0.0 | -0.0 |
 | MAXHEALTH | -0.2 | -0.3 | +0.1 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 22%, 2: 29%, 3: 35%, 4: 15%
+Share of absolute impact by order: 1: 24%, 2: 31%, 3: 34%, 4: 11%
 
 ## Sources
 - 2026-09-25 Centre pushes states to finalise labour Code rules by October 31 https://www.rediff.com/

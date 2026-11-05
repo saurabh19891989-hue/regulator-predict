@@ -20,40 +20,40 @@ Peace talks between Iran and the US/Qatar (Guardian 2 Nov; Reuters 2 Nov: no bre
 |---|---|---|---|---|---|
 | HINDZINC | +5.2 | +5.3 | +0.0 | -0.0 | -0.0 |
 | MCX | +3.7 | +3.8 | +0.0 | -0.0 | +0.0 |
-| MUTHOOTFIN | +3.4 | +3.5 | +0.0 | -0.1 | -0.0 |
-| BRITANNIA | +1.0 | +1.0 | +0.0 | -0.0 | +0.0 |
-| BAJAJFINSV | +0.6 | +0.8 | +0.0 | -0.1 | -0.1 |
+| MUTHOOTFIN | +3.5 | +3.5 | +0.0 | -0.0 | -0.0 |
+| VEDL | +3.1 | +0.0 | +3.2 | -0.0 | -0.0 |
+| BAJAJFINSV | +0.7 | +0.8 | +0.0 | -0.1 | -0.0 |
 | MFSL | +0.6 | +0.6 | -0.0 | -0.0 | +0.0 |
-| CANBK | +0.5 | +0.5 | +0.0 | +0.0 | -0.0 |
-| M&MFIN | +0.4 | +0.5 | +0.0 | -0.1 | -0.0 |
-| INDUSINDBK | +0.3 | +0.4 | +0.0 | -0.0 | -0.1 |
-| BAJFINANCE | +0.1 | +0.3 | +0.0 | -0.2 | -0.1 |
-| LICHSGFIN | +0.0 | +0.0 | +0.0 | +0.2 | -0.2 |
-| PAYTM | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| UPL | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| CANBK | +0.5 | +0.5 | +0.0 | -0.0 | -0.0 |
+| M&MFIN | +0.4 | +0.5 | +0.0 | -0.0 | -0.0 |
+| INDUSINDBK | +0.3 | +0.4 | +0.0 | -0.0 | -0.0 |
+| BAJAJHLDNG | +0.2 | +0.0 | +0.2 | -0.0 | -0.0 |
+| BAJFINANCE | +0.2 | +0.3 | +0.0 | -0.1 | -0.0 |
+| LICHSGFIN | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
+| PAYTM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| UPL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | IOC | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| PIIND | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PREMIERENE | -2.2 | -2.1 | +0.0 | -0.1 | +0.0 |
-| ADANIGREEN | -2.1 | -2.0 | +0.0 | -0.1 | -0.1 |
-| ADANIENT | -2.1 | -2.0 | +0.0 | -0.0 | -0.0 |
-| IDEA | -1.6 | -1.5 | +0.0 | -0.1 | -0.0 |
-| WAAREEENER | -1.3 | -1.2 | +0.0 | -0.1 | +0.0 |
-| LICI | -0.8 | -0.8 | +0.0 | -0.0 | -0.0 |
+| PREMIERENE | -2.1 | -2.1 | +0.0 | -0.0 | +0.0 |
+| IDEA | -1.6 | -1.5 | +0.0 | -0.0 | -0.0 |
+| WAAREEENER | -1.2 | -1.2 | +0.0 | -0.0 | +0.0 |
+| LICI | -0.8 | -0.8 | +0.0 | -0.0 | +0.0 |
 | KALYANKJIL | -0.7 | +0.5 | -1.1 | -0.0 | -0.0 |
-| YESBANK | -0.5 | +0.0 | +0.0 | -0.3 | -0.2 |
-| TATACAP | -0.5 | +0.0 | +0.0 | -0.3 | -0.2 |
-| GMRAIRPORT | -0.4 | +0.0 | +0.0 | -0.3 | -0.2 |
-| PRESTIGE | -0.4 | +0.0 | +0.0 | -0.3 | -0.1 |
-| IREDA | -0.4 | +0.0 | +0.0 | -0.2 | -0.2 |
-| PHOENIXLTD | -0.4 | +0.0 | -0.0 | -0.3 | -0.1 |
-| SHRIRAMFIN | -0.4 | +0.0 | +0.0 | -0.2 | -0.2 |
-| GODREJPROP | -0.4 | +0.0 | +0.0 | -0.3 | -0.1 |
+| YESBANK | -0.3 | +0.0 | +0.0 | -0.2 | -0.1 |
+| TITAN | -0.2 | +0.6 | -0.8 | -0.0 | -0.0 |
+| TATACAP | -0.2 | +0.0 | +0.0 | -0.2 | -0.1 |
+| IREDA | -0.2 | +0.0 | +0.0 | -0.1 | -0.1 |
+| PRESTIGE | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| AUBANK | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
+| GODREJPROP | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
+| JSWENERGY | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
+| IDFCFIRSTB | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
+| JIOFIN | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 48%, 2: 4%, 3: 31%, 4: 17%
+Share of absolute impact by order: 1: 53%, 2: 14%, 3: 25%, 4: 8%
 
 ## Sources
 - 2026-11-02 Oil price falls amid hope of a breakthrough to end Iran war https://news.google.com/rss/search?q=Oil+price+falls+amid+hope+of+a+breakthrough+to+end+Iran+war&hl=en-IN&gl=IN&ceid=IN:en

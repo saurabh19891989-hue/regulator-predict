@@ -16,41 +16,41 @@ DGTR initiated the HR flat-steel AD probe on 26 Jun 2026 (Livemint; GMK 29 Jun);
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | SAIL | +7.6 | +7.6 | +0.0 | -0.0 | +0.0 |
-| JINDALSTEL | +6.4 | +6.4 | -0.0 | +0.0 | -0.0 |
+| JINDALSTEL | +6.4 | +6.4 | -0.0 | +0.0 | +0.0 |
 | JSWSTEEL | +4.8 | +4.8 | +0.0 | -0.0 | +0.0 |
 | TATASTEEL | +3.2 | +3.2 | +0.0 | -0.0 | +0.0 |
-| NMDC | +1.6 | +1.6 | +0.0 | -0.0 | +0.0 |
-| APLAPOLLO | +0.2 | +0.2 | -0.0 | -0.0 | -0.0 |
+| NMDC | +1.6 | +1.6 | +0.0 | +0.0 | +0.0 |
+| APLAPOLLO | +0.2 | +0.2 | -0.0 | -0.0 | +0.0 |
+| VAML | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HINDZINC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| LTM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| COFORGE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| MPHASIS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | PIIND | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| MCX | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| HINDZINC | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| VEDL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| LTM | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| SUNPHARMA | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| VAML | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| COFORGE | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| MPHASIS | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| VEDL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| AUROPHARMA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HCLTECH | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | TMCV | -0.9 | -0.9 | +0.0 | -0.0 | -0.0 |
-| MARUTI | -0.8 | -0.8 | +0.0 | -0.0 | -0.0 |
 | BHEL | -0.8 | -0.8 | +0.0 | -0.0 | +0.0 |
+| MARUTI | -0.8 | -0.8 | +0.0 | -0.0 | +0.0 |
 | ASHOKLEY | -0.7 | -0.7 | +0.0 | -0.0 | +0.0 |
 | SUZLON | -0.7 | -0.7 | +0.0 | -0.0 | +0.0 |
 | HYUNDAI | -0.6 | -0.6 | +0.0 | -0.0 | -0.0 |
 | RVNL | -0.6 | -0.6 | +0.0 | -0.0 | +0.0 |
-| COCHINSHIP | -0.6 | -0.6 | +0.0 | -0.0 | +0.0 |
+| COCHINSHIP | -0.6 | -0.6 | +0.0 | +0.0 | +0.0 |
 | TIINDIA | -0.6 | -0.6 | +0.0 | -0.0 | +0.0 |
 | TVSMOTOR | -0.5 | -0.5 | +0.0 | -0.0 | -0.0 |
-| HEROMOTOCO | -0.5 | -0.5 | +0.0 | -0.0 | -0.0 |
+| HEROMOTOCO | -0.5 | -0.5 | +0.0 | +0.0 | +0.0 |
 | BOSCHLTD | -0.4 | -0.4 | +0.0 | -0.0 | -0.0 |
-| PRESTIGE | -0.3 | -0.3 | -0.0 | -0.0 | -0.0 |
+| PRESTIGE | -0.3 | -0.3 | -0.0 | -0.0 | +0.0 |
 | ADANIENSOL | -0.3 | -0.3 | +0.0 | -0.0 | -0.0 |
 | CUMMINSIND | -0.3 | -0.3 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 89%, 2: 2%, 3: 6%, 4: 3%
+Share of absolute impact by order: 1: 93%, 2: 2%, 3: 4%, 4: 1%
 
 ## Sources
 - 2026-06-26 India launches anti-dumping probe into hot-rolled flat steel imports from China, Japan and Russia https://news.google.com/rss/search?q=India+launches+anti-dumping+probe+into+hot-rolled+flat+steel+imports+from+China,+Japan+and+Russia&hl=en-IN&gl=IN&ceid=IN:en

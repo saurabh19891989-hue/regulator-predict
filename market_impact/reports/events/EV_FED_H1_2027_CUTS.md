@@ -20,42 +20,42 @@ Labour weakness (+29k payrolls), AI capex retrenchment or oil collapse on an Ira
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BSE | +8.5 | +4.5 | +2.5 | +1.6 | -0.1 |
-| MOTILALOFS | +6.6 | +0.0 | +3.8 | +2.2 | +0.6 |
-| SWIGGY | +5.6 | +3.8 | +1.5 | +0.2 | +0.1 |
-| POLICYBZR | +5.1 | +3.0 | +1.7 | +0.2 | +0.1 |
-| YESBANK | +4.8 | +0.0 | +2.8 | +1.2 | +0.7 |
-| ICICIAMC | +4.7 | +0.0 | +2.9 | +1.4 | +0.4 |
-| JIOFIN | +4.4 | +0.0 | +2.2 | +1.6 | +0.6 |
-| INDUSINDBK | +4.4 | +0.8 | +1.9 | +1.2 | +0.5 |
-| BAJFINANCE | +4.4 | +0.0 | +2.3 | +1.4 | +0.6 |
-| GROWW | +4.3 | +0.0 | +2.1 | +2.0 | +0.2 |
-| IREDA | +4.2 | +0.0 | +2.3 | +1.4 | +0.5 |
-| SHRIRAMFIN | +4.0 | +1.2 | +1.6 | +0.8 | +0.4 |
-| NAUKRI | +3.9 | +0.0 | +2.6 | +1.1 | +0.3 |
-| TATACAP | +3.9 | +0.0 | +2.1 | +1.2 | +0.5 |
-| MUTHOOTFIN | +3.8 | +0.0 | +3.1 | +0.5 | +0.2 |
+| BSE | +7.5 | +4.5 | +2.2 | +0.8 | -0.1 |
+| SWIGGY | +5.1 | +3.8 | +1.2 | +0.2 | -0.1 |
+| POLICYBZR | +4.2 | +3.0 | +1.4 | -0.2 | -0.0 |
+| MOTILALOFS | +3.5 | +0.0 | +3.1 | +0.4 | -0.0 |
+| MUTHOOTFIN | +3.2 | +0.0 | +2.9 | +0.3 | +0.0 |
+| YESBANK | +3.1 | +0.0 | +2.5 | +0.6 | +0.0 |
+| ADANIGREEN | +2.8 | +0.0 | +2.3 | +0.5 | -0.0 |
+| NYKAA | +2.8 | +1.5 | +0.9 | +0.3 | +0.0 |
+| INDUSINDBK | +2.7 | +0.8 | +1.5 | +0.4 | +0.0 |
+| MPHASIS | +2.7 | +1.8 | +0.8 | +0.1 | -0.0 |
+| BAJFINANCE | +2.6 | +0.0 | +2.1 | +0.4 | +0.1 |
+| PRESTIGE | +2.6 | +0.3 | +1.8 | +0.5 | -0.0 |
+| TATACAP | +2.6 | +0.0 | +1.9 | +0.6 | +0.1 |
+| NAUKRI | +2.5 | +0.0 | +2.3 | +0.2 | -0.1 |
+| ICICIAMC | +2.4 | +0.0 | +2.5 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | -0.7 | +0.0 | -0.1 | -0.4 | -0.1 |
-| SAIL | -0.6 | +0.0 | +0.1 | -0.5 | -0.2 |
-| TMPV | -0.5 | +0.0 | -0.3 | -0.2 | -0.0 |
-| OIL | -0.5 | +0.0 | -0.4 | -0.2 | +0.0 |
-| ONGC | -0.5 | +0.0 | -0.3 | -0.1 | -0.0 |
-| NMDC | -0.4 | +0.0 | -0.2 | -0.2 | -0.0 |
-| PIIND | -0.4 | +0.0 | -0.3 | -0.0 | -0.0 |
-| LICHSGFIN | -0.3 | -1.5 | +0.6 | +0.5 | +0.2 |
-| DRREDDY | -0.2 | +0.0 | -0.0 | -0.2 | -0.0 |
-| MANKIND | -0.2 | -0.9 | +0.5 | +0.1 | +0.1 |
-| SRF | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
-| COALINDIA | -0.1 | +0.0 | -0.0 | -0.1 | -0.0 |
-| LUPIN | -0.1 | +0.0 | +0.0 | -0.2 | +0.0 |
-| JINDALSTEL | -0.1 | +0.0 | +0.3 | -0.3 | -0.1 |
-| TATASTEEL | -0.1 | +0.0 | +0.3 | -0.3 | -0.1 |
+| LICHSGFIN | -0.7 | -1.5 | +0.5 | +0.3 | -0.0 |
+| MANKIND | -0.3 | -0.9 | +0.5 | +0.1 | -0.0 |
+| OIL | -0.3 | +0.0 | -0.2 | -0.1 | +0.1 |
+| JSWSTEEL | -0.3 | +0.0 | -0.0 | -0.2 | -0.0 |
+| ONGC | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
+| NMDC | -0.3 | +0.0 | -0.1 | -0.2 | -0.0 |
+| PIIND | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
+| COCHINSHIP | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| SAIL | -0.1 | +0.0 | +0.1 | -0.2 | -0.0 |
+| TMPV | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| PREMIERENE | -0.1 | +0.0 | +0.3 | -0.4 | -0.0 |
+| SRF | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| COALINDIA | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| DRREDDY | -0.0 | +0.0 | +0.1 | -0.1 | +0.0 |
+| VOLTAS | -0.0 | +0.0 | -0.3 | +0.4 | -0.0 |
 
-Share of absolute impact by order: 1: 11%, 2: 56%, 3: 23%, 4: 9%
+Share of absolute impact by order: 1: 15%, 2: 69%, 3: 14%, 4: 2%
 
 ## Sources
 - 2026-09-07 White House ups pressure on Kevin Warsh's Fed as Wall Street expects hike - Fortune https://news.google.com/rss/search?q=White%20House%20ups%20pressure%20on%20Kevin%20Warsh%27s%20Fed%20as%20Wall%20Street%20expects%20hike%20-%20Fortune&hl=en-IN&gl=IN&ceid=IN:en

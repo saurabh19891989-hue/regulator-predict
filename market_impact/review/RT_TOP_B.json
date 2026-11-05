@@ -1,0 +1,295 @@
+{
+ "reviewer": "RT_TOP_B",
+ "as_of": "2026-11-05",
+ "scope": "12m ranks 14-26 at first read (BPCL, JSWSTEEL, BHEL, IDEA, SOLARINDS, KEI, CGPOWER, GVT&D, POLYCAB, COCHINSHIP, SUZLON, TMPV, HAL); rankings.csv re-read at 08:31 UTC after the RT_BACKBONE merge",
+ "edge_scale": [
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "SUZLON",
+   "origin": "SUZLON",
+   "factor": 0.4,
+   "reason": "The node's recent state of +1.5 comes entirely from solar and storage policies: EV_SOLAR_ALMM2_CELL_MANDATE (+0.5, domestic solar cells) and EV_BESS_VGF_NOV26 (+1.0, Rs14,500 cr VGF for grid batteries). Neither one orders wind turbines. Storage VGF makes solar-plus-storage cheaper, and that competes with wind-hybrid in FDRE/RTC tenders. The edge is +7 per SSU, written for wind installations +10% (see its own mechanism), so it books +10.5% 'unpriced' upside for SUZLON. That is the stock's single largest driver, and over the same period the stock fell 35% market-adjusted. With x0.4 the edge is 2.8: SUZLON keeps general RE-policy exposure but no longer takes the full wind multiplier from solar/storage policy."
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "GVT&D",
+   "origin": "GVT&D",
+   "factor": 0.5,
+   "reason": "Duplicate channel. The direct edge (+2, mechanism 'renewable evacuation drives HVDC/GIS/transformer demand ... storage VGF') is the same economics as P_RENEWABLE_SUPPORT -> T_GRID_ELECTRIFICATION (0.4) -> GVT&D (+6). That path still gets 0.8 order damping and 0.5 overlap damping, so the +1.5 state books +3.0 direct plus +1.44 via grid = +4.4%. overlap_flags.csv lists this pair. With x0.5 the direct edge is +1.0, for the RE share not captured by the grid node."
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "TMPV",
+   "origin": "TMPV",
+   "factor": 0.5,
+   "reason": "-3.4 per +10% LME is about 8x the empirical market-adjusted elasticity (-0.42, t -0.30, 156 weeks). The mechanism treats aluminium as 4% of sales at LME-linked cost. Most of JLR's aluminium spend is sheet and casting conversion, not the LME metal, and JLR hedges metal (model knowledge). The observed -1.96 SSU since June books +6.7% 'unpriced' upside for TMPV, the stock's largest single recent driver."
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "TMPV",
+   "origin": "TMPV",
+   "factor": 0.5,
+   "reason": "-3.0 per +10% global HRC vs empirical -0.69 (t -0.51). Tata India PV buys domestic steel, which is F_STEEL_INDIA, not the global HRC future. JLR's UK/EU steel is on lagged contracts. Today the observed +2.06 SSU books -6.2%. Together with the aluminium fix this halves about +/-6% of offsetting noise in TMPV's 'unpriced' recent impact. Net effect is about -0.3pp, but the decomposition stops showing two large, spurious commodity channels."
+  },
+  {
+   "src": "P_TELECOM_TARIFFS",
+   "dst": "IDEA",
+   "origin": "IDEA",
+   "factor": 0.8,
+   "reason": "Single-event magnitude above the 25% cap: EV_TELECOM_TARIFF_HIKE_2027 (+1.2 SSU) x 22 = +26.3% if the event happens. Expected +19.7%, the largest single item in IDEA's forward exposure. The edge assumes ~all extra ARPU drops to EBITDA. In past industry hikes Vi lost subscribers to Jio/Airtel (model knowledge: net losses after the July 2024 hike), and Jio has said it will stay 'affordable' (Rediff, 8 Oct 2026). The event does not shock NEW_TELECOM_SHARE_COMPETITION, so churn is not netted anywhere. With x0.8 the edge is 17.6/SSU and the conditional impact about +21%."
+  }
+ ],
+ "event_overrides": {
+  "EV_BUDGET27_CAPEX_RAILWAY": {
+   "prob_by_3m": 0.9,
+   "prob_by_12m": 0.9,
+   "entry_shocks": [
+    {
+     "node": "F_GOVT_CAPEX",
+     "ssu": 0.2,
+     "low": -0.5,
+     "high": 0.8,
+     "note": "surprise vs the ~10% growth everyone expects; fiscal deficit already 42.1% of the FY27 target in H1, so the skew is not up"
+    },
+    {
+     "node": "P_RAILWAY_CAPEX",
+     "ssu": 0.2,
+     "low": -0.3,
+     "high": 0.8,
+     "note": "surprise only"
+    },
+    {
+     "node": "P_DEFENCE_PROCUREMENT",
+     "ssu": 0.3,
+     "low": -0.2,
+     "high": 1.0,
+     "note": "surprise only; budgeted capital outlay growth is expected"
+    }
+   ],
+   "reason": "Level-as-shock error. The event's own description says 'Base case: central capex growth ~10%' (model assumption) and then books that base case as +0.8 SSU of F_GOVT_CAPEX (SSU = +10% capex growth), +0.8 railway and +1.0 defence (= +10% domestic orders). A scheduled budget that delivers the consensus is not a price shock. Only the surprise should enter. Evidence: FY27 BE capex Rs12.2 lakh cr (The Hindu, 1 Feb 2026); Centre capex +12% in Apr-Sep, fiscal deficit 42.1% of target in H1 (BusinessLine/Business Standard, 30 Oct 2026). As written, the event adds +2.2 to +6.3pp expected 12m to HAL, SOLARINDS, COCHINSHIP, BHEL, KEI, CGPOWER, POLYCAB, GVT&D and JSWSTEEL. Also, 1 Feb 2027 falls inside the 3-month window (to ~5 Feb 2027), so prob_by_3m should equal prob_by_12m rather than 0.0.",
+   "source": "https://news.google.com/rss/search?q=Union+Budget+2026-27+capital+expenditure+lakh+crore&hl=en-IN&gl=IN&ceid=IN:en (The Hindu 1 Feb 2026); https://news.google.com/rss/search?q=capital+expenditure+April-September+CGA+Centre+capex+when:30d&hl=en-IN&gl=IN&ceid=IN:en (BusinessLine 30 Oct 2026)"
+  },
+  "EV_AIRTEL_POSTPAID_HIKE": {
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "entry_shocks": [
+    {
+     "node": "P_TELECOM_TARIFFS",
+     "ssu": 0.05,
+     "low": 0.02,
+     "high": 0.1,
+     "note": "Airtel postpaid only (+Rs50, 3-11%); prepaid and Jio/Vi unchanged"
+    }
+   ],
+   "reason": "+0.3 SSU (= +3% industry ARPU) overstates a postpaid-only hike by one operator. Airtel's postpaid base is a low single-digit percentage of India's ~1.15 bn mobile subscribers (model knowledge), so a 3-11% postpaid hike moves industry ARPU by well under 0.5%. Jio said it would stay affordable. The 0.3 shock books +6.6% recent impact to IDEA, which has no postpaid hike of its own. Small signalling value retained.",
+   "source": "https://news.google.com/rss/search?q=mobile+tariff+hike+Jio+Airtel+prepaid+when:45d&hl=en-IN&gl=IN&ceid=IN:en (Livemint 7 Oct 2026 'Airtel ... hikes prices by 3-11%'; ET Telecom 8 Oct; Rediff 8 Oct 'Jio to remain affordable')"
+  }
+ },
+ "event_drop": {},
+ "recent_state_overrides": [
+  {
+   "node": "F_GOVT_CAPEX",
+   "state_ssu": 0.2,
+   "reason": "The +1.0 comes only from EV_GDP_Q1FY27_7_8, which maps a GDP beat to +10% government capex growth. Centre capex grew +12% y/y in Apr-Sep FY27 (CGA, BusinessLine 30 Oct 2026), against a budgeted FY27 BE of Rs12.2 lakh cr, which was already ~+9-11% over FY26 (The Hindu 1 Feb 2026). Since June, the change in expected capex growth is about +0.1 to +0.3 SSU. H1 fiscal deficit at 42.1% of target leaves no room for an upside H2 capex surprise. Today the +1.0 books +2.0 to +5.0% 'unpriced' upside to every capex name (KEI +3.0, BHEL +3.0, CGPOWER +3.5, POLYCAB +3.5, GVT&D +2.5, HAL +2.5, JSWSTEEL +2.0, POWERINDIA +5.0, TMCV +4.0, LT +3.5), mostly in stocks that fell 15-35% market-adjusted.",
+   "sources": [
+    "https://news.google.com/rss/search?q=capital+expenditure+April-September+CGA+Centre+capex+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+    "https://news.google.com/rss/search?q=Union+Budget+2026-27+capital+expenditure+lakh+crore&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
+  },
+  {
+   "node": "P_DEFENCE_PROCUREMENT",
+   "state_ssu": 0.4,
+   "reason": "The +1.0 (= +10% domestic defence orders) comes from EV_DAC_APPROVALS_H2_26. DAC Acceptances of Necessity are not orders: the event text itself says 'AoN precedes contract signing by 1-3 years' and calls the 26 Oct Rs2.12 lakh cr figure's relation to the 7 Sep Rs1.10 lakh cr 'unverified'. Large AoN tranches are routine through the year (model knowledge), so the change in expected order flow since June is a fraction of 1 SSU. Market check: BDL -17.5%, MAZDOCK -27%, COCHINSHIP -17% and BEL -0.8% over 3 months (price_performance.csv). The +1.0 books +3% to COCHINSHIP and SOLARINDS, +5% to HAL and BDL, and +6% to MAZDOCK.",
+   "sources": [
+    "market_impact/results/events_effective.json (EV_DAC_APPROVALS_H2_26 description citing The Hindu 7 Sep 2026 and New Indian Express 26 Oct 2026)",
+    "market_impact/results/price_performance.csv"
+   ]
+  },
+  {
+   "node": "NEW_CABLE_NEW_ENTRANT_PRICING",
+   "state_ssu": 1.0,
+   "reason": "UltraTech launched its Ultravolt wires & cables business with an Rs1,800 cr initial investment (1-4 Sep 2026). W&C stocks fell up to 16% in one week (Business Standard 11 Sep), and Nuvama warned of aggressive pricing and channel incentives (KEI profile). The graph has no catalogue event for it, so the node's recent state is 0. KEI's -27.9% market-adjusted move is then read against +11.8% model impact as fully 'unpriced'. +1 = expected ~100 bp industry margin erosion (structural, a new deep-pocketed entrant). Actual Q2 margins have not yet fallen (KEI 9.97% vs 9.88%), so 1.0 rather than more. Only KEI attaches to this node.",
+   "sources": [
+    "https://news.google.com/rss/search?q=UltraTech+cables+wires+Polycab+Havells+KEI+pricing+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
+  },
+  {
+   "node": "NEW_WC_COMPETITIVE_INTENSITY",
+   "state_ssu": 1.0,
+   "reason": "Same economic shock as NEW_CABLE_NEW_ENTRANT_PRICING (UltraTech Ultravolt entry, Sep 2026). RT_BACKBONE already flagged the two nodes as near-duplicates. Only POLYCAB attaches here, so it needs the same state, or POLYCAB's -22.4% market-adjusted move is read as +11.5% 'unpriced' upside. Polycab fell 7% on 4 Sep (Moneycontrol) and again 5-6% on the F&O exclusion (13-14 Oct, CNBC TV18/ET), which is a non-fundamental flow event.",
+   "sources": [
+    "https://news.google.com/rss/search?q=Polycab+shares+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
+  }
+ ],
+ "findings": [
+  {
+   "severity": "high",
+   "subject": "Bucket summary (ranks 14-26)",
+   "issue": "Of the 13 names, the upside is mostly artefact for KEI, POLYCAB, SUZLON, COCHINSHIP and TMPV. In each, a 20-35% market-adjusted fall explained by dated stock-specific news meets an event-built positive driver state and counts in full as 'unpriced'. It is partly artefact for CGPOWER, GVT&D, BHEL, SOLARINDS and HAL: the F_GOVT_CAPEX +1.0 GDP mapping, AoN-as-orders defence state and budget level-as-shock. It is mostly real but inflated by duplicate company events for BPCL and IDEA, and modestly high for JSWSTEEL. I re-ran the graph in a scratch copy with this file merged (company-event fixes not applied, since merge_review does not carry them). 12m ER/rank moved: KEI 7.3/18 -> 2.7/37, POLYCAB 7.2/20 -> 1.8/55, SUZLON 6.0/23 -> 2.9/35, HAL 4.5/30 -> 2.4/39, SOLARINDS 7.7/16 -> 4.6/22, BHEL 7.5/17 -> 5.1/21, CGPOWER 6.9/21 -> 4.2/26, GVT&D 6.9/22 -> 4.4/23, COCHINSHIP 5.9/24 -> 4.4/24, IDEA 9.3/11 -> 7.5/10 (about 4.6 after the company-event fixes), BPCL 7.2/19 -> 7.4/11 (about 5.6 after dropping the duplicate LPG event), JSWSTEEL 8.2/14 -> 7.1/13, TMPV 5.4/26 -> 6.4/15 (see the TMPV verdict). All figures are scenario-implied, relative to the Nifty 200, and not validated.",
+   "evidence": "scratch re-run of market_impact.mi.graph.run(draws=60) on a copy with review/RT_TOP_B.json merged, 2026-11-05"
+  },
+  {
+   "severity": "high",
+   "subject": "Ranks 14-26 (capital goods cluster)",
+   "issue": "Eight of the 13 names (KEI -27.9, POLYCAB -22.4, SUZLON -35.0, TMPV -28.9, COCHINSHIP -21.0, GVT&D -18.8, CGPOWER -14.8, IDEA -14.2; market-adjusted since 1 Jun) earn their rank mainly from 'unpriced recent impact' of +8 to +12%. Because the realised move has the opposite sign, the whole model impact counts as unpriced. That impact is built from the same few event-driven states: F_GOVT_CAPEX +1.0 (a GDP-beat mapping), P_RENEWABLE_SUPPORT +1.5 (solar/storage policies), P_DEFENCE_PROCUREMENT +1.0 (AoNs), F_POWER_DEMAND_IN +1.2 (real) and the beta term. In each case the realised fall is explained by stock-specific news the graph lacks: KEI and POLYCAB (UltraTech entry 1-11 Sep, KEI Q2 EBITDA miss 22 Oct, POLYCAB F&O exclusion 13 Oct); SUZLON (Q1 results -14% on 28-29 Jul, Q2 margin slide -10% and JM downgrade 30 Oct); TMPV (Q1 PAT -80% and JLR margin warning 13-14 Aug, Kotak fair-value cut 1 Sep, Citi cut 4 Nov, 52-week low 22-28 Oct); COCHINSHIP (Q1 profit -19% on 17 Aug, EBITDA-margin guidance cut and ICICI downgrade 11 Sep, -9%). These moves are not mean-reversion candidates and should not be shown as 'unpriced' upside. Proposed fixes: the state overrides above (F_GOVT_CAPEX 0.2, P_DEFENCE_PROCUREMENT 0.4, both cable nodes 1.0) plus the SUZLON/TMPV edge scales. Also, for stocks whose realised move is dominated by dated idiosyncratic news, the Director should halve the residual. Exact fix: add an IDIO_NEWS = {KEI, POLYCAB, SUZLON, TMPV, COCHINSHIP} set in mi/graph.py with resid *= 0.5, mirroring CORP_ACTION_BREAKS.",
+   "evidence": "https://news.google.com/rss/search?q=Suzlon+shares+fall+when:120d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Tata+Motors+Passenger+Vehicles+shares+JLR+when:120d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Cochin+Shipyard+shares+when:120d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Polycab+shares+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "Missing discount-rate / derating channel for high-P/E capital goods",
+   "issue": "The capital goods and defence derating since June was sector-wide: ABB -14%, SIEMENS -13%, POWERINDIA -12%, MAZDOCK -27%, PREMIERENE -16% and WAAREEENER -8.5% over 3 months; the BSE Capital Goods index fell ~4% on 23 Oct (Business Standard). It coincided with the RBI hike (7 Oct), +39 bp on the 10y G-sec and record FPI outflows. KEI, POLYCAB, CGPOWER, GVT&D and SUZLON (P/E ~40-90x) carry only F_REPO_IN edges of -1.2 to -2.0 per 25 bp and no F_GSEC_10Y_IN discount-rate edge, so the graph reads the derating as unexplained and the residual becomes upside. Proposed (Director decision; the merge format has no add-edge): a director edge F_GSEC_10Y_IN -> {KEI, POLYCAB, CGPOWER, GVT&D, SUZLON, SOLARINDS, HAL} w -1.0 (low -2.5, high -0.3, relation discount_rate), with the overlap with F_REPO_IN -> F_GSEC_10Y_IN handled by OVERLAP_DAMP.",
+   "evidence": "market_impact/results/price_performance.csv; https://news.google.com/rss/search?q=capital+goods+stocks+fall+valuation+when:45d&hl=en-IN&gl=IN&ceid=IN:en (Business Standard 23 Oct 2026; Livemint 13 Oct 2026)"
+  },
+  {
+   "severity": "medium",
+   "subject": "Beta adjustment of forward exposure (mi/graph.py)",
+   "issue": "forward_exposure_12m = raw - beta x universe-mean(raw). The universe mean is negative (about -3.3%), so every stock gains +beta x 3.3 before centring. Centring removes the average, but stocks with above-average beta keep (beta - 1.11) x 3.3 x 0.5. The output is labelled 'relative to the Nifty 200', and under a negative market-wide event mix a high-beta stock should underperform, not outperform. Forward exposure relative to the index should be raw - mean(raw); beta adjustment is only needed to compare model impact with the beta-adjusted realised move. Size in this bucket: COCHINSHIP +0.9pp, BHEL +0.65, KEI +0.5, SUZLON +0.4, HAL +0.4. Separately, COCHINSHIP's recent model impact (+8.1) is 79% beta term (raw +1.74): its own channels are nearly neutral. Recomputing the whole ranking with beta=1 moves COCHINSHIP from 24 to 33 and BHEL from 17 to 22.",
+   "evidence": "market_impact/mi/graph.py lines ~384-394; market_impact/results/rankings.csv (recent_events_model_impact_raw vs recent_events_model_impact)"
+  },
+  {
+   "severity": "medium",
+   "subject": "BPCL",
+   "issue": "Company event duplicates a catalogue event: 'Government decision on compensation for LPG/fuel under-recoveries' (prob 0.45, +8%, expected +3.6) is the same decision as EV_LPG_COMPENSATION_CABINET (prob 0.6, +6.0% via NEW_OMC_MARKETING_MARGIN, expected +3.6). The MARKET_WIDE regex does not catch it. Exact fix (graph/company_event_overrides.json): {\"ticker\": \"BPCL\", \"match\": \"compensation for LPG/fuel under-recoveries\", \"drop\": true, \"reason\": \"duplicate of EV_LPG_COMPENSATION_CABINET\"}. This lowers company_events_12m from +2.75 to -0.85 (-1.8pp of 12m ER).",
+   "evidence": "market_impact/results/company_events.csv rows BPCL; results/event_impacts.csv EV_LPG_COMPENSATION_CABINET x BPCL"
+  },
+  {
+   "severity": "medium",
+   "subject": "IDEA",
+   "issue": "Company event duplicates a catalogue event: 'Next industry-wide tariff hike (Nomura base case Dec quarter 2026...)' (prob 0.4, +11.5, expected +4.6) is EV_TELECOM_TARIFF_HIKE_2027 (prob 0.75, +26% conditional, expected +19.7). Exact fix: {\"ticker\": \"IDEA\", \"match\": \"Next industry-wide tariff hike\", \"drop\": true, \"reason\": \"duplicate of EV_TELECOM_TARIFF_HIKE_2027\"}. Also, the SBI-led Rs35,000 cr (~$3.5bn) facility was agreed and widely reported on 10-14 Sep 2026; the stock peaked at a 25-month high on 7 Sep and has fallen ~20% since. Financial close of an agreed facility is not worth +7.5% (prob 0.6). Exact fix: {\"ticker\": \"IDEA\", \"match\": \"Financial close / first drawdown\", \"impact_pct_low\": 0.0, \"impact_pct_high\": 4.0, \"reason\": \"facility agreed 10-11 Sep, already priced\"}. Together these cut company_events_12m from 9.5 to about 3.7 (-2.9pp of 12m ER).",
+   "evidence": "https://news.google.com/rss/search?q=Vodafone+Idea+debt+funding+banks+sanction+when:60d&hl=en-IN&gl=IN&ceid=IN:en (Economic Times 10 Sep, Business Standard 14 Sep 2026); https://news.google.com/rss/search?q=mobile+tariff+hike+Jio+Airtel+prepaid+when:45d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "BHEL",
+   "issue": "The company event 'Formal contract signing/LoA conversion for Adani Power orders (up to Rs28,000 cr)' (prob 0.7, +2) books news that already moved the stock: the order was reported on 4 Nov and the stock rose 6% that day. Exact fix: {\"ticker\": \"BHEL\", \"match\": \"Adani Power orders\", \"impact_pct_low\": 0.0, \"impact_pct_high\": 1.0, \"reason\": \"order reported 4 Nov; stock +6% the same day\"}.",
+   "evidence": "market_impact/companies/BHEL.json recent_developments (2026-11-04)"
+  },
+  {
+   "severity": "low",
+   "subject": "GVT&D",
+   "issue": "'Barmer II-South Kalamb HVDC definitive agreement' (prob 0.85, +1.25) was priced when GVT&D was declared L1 on 7-8 Sep (stock +8-9%, Nomura target raised). Exact fix: {\"ticker\": \"GVT&D\", \"match\": \"Barmer II\", \"impact_pct_low\": 0.0, \"impact_pct_high\": 0.6, \"reason\": \"L1 announced 7 Sep, stock +9%\"}.",
+   "evidence": "https://news.google.com/rss/search?q=GE+Vernova+T%26D+India+shares+when:90d&hl=en-IN&gl=IN&ceid=IN:en (Moneycontrol/Business Standard 8 Sep 2026)"
+  },
+  {
+   "severity": "low",
+   "subject": "SUZLON",
+   "issue": "'Additional large order wins' (prob 0.6, +2.5) is routine flow. The stock did not react to the 200 MW Ayana order (8 Sep, -0.07%), and the order book is already >6 GW. Exact fix: {\"ticker\": \"SUZLON\", \"match\": \"Additional large order wins\", \"impact_pct_low\": 0.0, \"impact_pct_high\": 1.0, \"reason\": \"routine orders do not move the stock\"}.",
+   "evidence": "https://news.google.com/rss/search?q=Suzlon+shares+fall+when:120d&hl=en-IN&gl=IN&ceid=IN:en (HDFC Sky 8 Sep 2026; Upstox 29 Oct 2026)"
+  },
+  {
+   "severity": "low",
+   "subject": "COCHINSHIP",
+   "issue": "'Binding contracts converting from the 40-ship order announcement (2026-10-09)' (prob 0.5, +2.5): the announcement already moved the stock +5% on 9 Oct. Exact fix: {\"ticker\": \"COCHINSHIP\", \"match\": \"40-ship order\", \"impact_pct_low\": 0.0, \"impact_pct_high\": 2.0, \"reason\": \"announcement priced 9 Oct (+5%)\"}. Q2 FY27 results are due 10 Nov, after a Q1 profit drop of -19% and a margin-guidance cut; the -0.5 Q3 margin event is reasonable.",
+   "evidence": "https://news.google.com/rss/search?q=Cochin+Shipyard+shares+when:120d&hl=en-IN&gl=IN&ceid=IN:en (Upstox 9 Oct; Moneycontrol 11 Sep 2026)"
+  },
+  {
+   "severity": "low",
+   "subject": "SOLARINDS",
+   "issue": "'Large defence export or domestic order announcement (>Rs1,000 cr)' (prob 0.45, +3.75) overlaps EV_DEFENCE_EXPORT_ORDERS (T_DEFENCE_EXPORTS -> SOLARINDS +5/SSU, expected +1.5). Exact fix: {\"ticker\": \"SOLARINDS\", \"match\": \"Large defence export or domestic order\", \"impact_pct_low\": 0.0, \"impact_pct_high\": 3.5, \"reason\": \"export-order channel already in EV_DEFENCE_EXPORT_ORDERS\"}. The 3 Nov Q2 beat (revenue +69%) is real, but the stock faded from +7% intraday to -7% over 1 month; the Omnia acquisition (stock -8-9% on 14-15 Sep) adds financing and integration risk and carries 0 impact in the profile.",
+   "evidence": "market_impact/companies/SOLARINDS.json current_state; results/event_impacts.csv"
+  },
+  {
+   "severity": "low",
+   "subject": "KEI",
+   "issue": "With the proposed NEW_CABLE_NEW_ENTRANT_PRICING state of +1.0, the company event 'Ultravolt commercial launch / first visible pricing response' (prob 0.45, -6..0) partly double counts the same expectation. Exact fix: {\"ticker\": \"KEI\", \"match\": \"Ultravolt commercial launch\", \"impact_pct_low\": -3.0, \"impact_pct_high\": 1.0, \"reason\": \"expected margin pressure moved to the recent-state node; keep only the surprise\"}.",
+   "evidence": "market_impact/results/company_events.csv"
+  },
+  {
+   "severity": "low",
+   "subject": "BPCL C_RUSSIA state",
+   "issue": "C_RUSSIA +1.0 (EV_RUSSIA_WAIVER_OCT17) books +3.0% for BPCL, but BPCL itself said Russian crude purchases will fall in November (Business Standard, 26 Oct, quoted in BPCL profile and edge mechanism). Coverage also reports a sourcing shift away from Russian crude (31 Oct). The waiver removed a tail risk but did not widen BPCL's discount barrels. Suggest RT_EVENTS/Director cut that event's C_RUSSIA shock to ~0.5. Not overridden here because the node is shared by refiners.",
+   "evidence": "https://news.google.com/rss/search?q=BPCL+shares+when:15d&hl=en-IN&gl=IN&ceid=IN:en (ad-hoc-news 31 Oct 2026)"
+  },
+  {
+   "severity": "low",
+   "subject": "TMPV / F_US_GDP",
+   "issue": "EV_US_Q3_DATA_MIXED sets F_US_GDP +1.2 SSU (+1.2 pp) from the Q3 advance print accelerating 2.2% -> 3.4% q/q saar (29 Oct). One quarterly acceleration is not a +1.2 pp change in expected US growth, and the same event reports September payrolls of +29k. This books +3.0% to TMPV and a positive state to IT exporters. Suggest ~0.4 SSU (Director/RT_EVENTS).",
+   "evidence": "https://news.google.com/rss/search?q=US+GDP+third+quarter+advance+estimate+when:20d&hl=en-IN&gl=IN&ceid=IN:en (Reuters/ANI 29 Oct 2026)"
+  },
+  {
+   "severity": "low",
+   "subject": "JSWSTEEL",
+   "issue": "Edges pass the dEBITDA x EV/MCap x persistence check: steel +9 per +7% (mcap ~Rs3.3 lakh cr, net debt ~Rs0.85 lakh cr, persistence 0.3 gives ~+9.5) and coking coal -5.5 (gives ~-5.7). The 9.4% 'unpriced' impact is the steel-minus-coal spread state (+12.2 - 7.2) plus F_GOVT_CAPEX +2.0. Peers did not re-rate on the price rally (TATASTEEL -4.3%, SAIL -4.6% over 3 months), which is consistent with the market treating the spike as transient. Q2 FY27 was a record (EBITDA 19% margin, stock +6% on 26 Oct), so part of the spread is now visible in earnings. No edge fix.",
+   "evidence": "market_impact/companies/JSWSTEEL.json; results/price_performance.csv"
+  },
+  {
+   "severity": "high",
+   "subject": "KEI",
+   "issue": "VERDICT: too high. 12m +7.3% rests on +11.8% 'unpriced' impact (F_GOVT_CAPEX +3.0, renewable/grid +2.9, power demand +1.2, beta term +5.7) against a -27.9% realised move. That move is explained by the UltraTech Ultravolt entry (1-11 Sep, W&C stocks -16% in a week) and the Q2 EBITDA miss (22 Oct, -8 to -11%), neither of which is in the recent state. With the F_GOVT_CAPEX 0.2 and NEW_CABLE_NEW_ENTRANT_PRICING 1.0 overrides, raw recent impact falls by ~7.4pp. The 12m view should be roughly +2 to +4%, not top-20 (scratch re-run: +2.7%, rank 18 -> 37).",
+   "evidence": "https://news.google.com/rss/search?q=UltraTech+cables+wires+Polycab+Havells+KEI+pricing+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "POLYCAB",
+   "issue": "VERDICT: too high. Same structure as KEI: +11.5% 'unpriced' (F_GOVT_CAPEX +3.5, P_RENEWABLE_SUPPORT +3.0 direct +1.0 via grid, beta) vs -22.4% realised. The realised move is explained by the UltraTech entry (-7% on 4 Sep), the F&O exclusion (13-14 Oct, -5-6%) and the capital-goods derating, not by fundamentals: Q2 FY27 revenue +53%, record PAT Rs990 cr. With the overrides (-2.8 capex, -6.0 competition) the 12m view is roughly +1 to +3% (scratch re-run: +1.8%, rank 20 -> 55).",
+   "evidence": "https://news.google.com/rss/search?q=Polycab+shares+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "SUZLON",
+   "issue": "VERDICT: too high. +11.9% 'unpriced' is 88% one mis-mapped channel (P_RENEWABLE_SUPPORT +1.5 from solar-cell ALMM and battery VGF -> +10.5%) plus the beta term, against -35.0% realised that two results disappointments explain (Q1: -14% on 28-29 Jul with target cuts; Q2: margin slide, -10% and JM downgrade on 30 Oct). Forward exposure is near zero (+0.2). After the x0.4 edge fix and F_GOVT_CAPEX it has no positive case beyond the beta term: 12m about +3% (scratch re-run with these fixes: +2.9%, rank 23 -> 35).",
+   "evidence": "https://news.google.com/rss/search?q=Suzlon+Q2+results+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "TMPV",
+   "issue": "VERDICT: too high. +10.5% 'unpriced' = aluminium +6.7 / steel -6.2 (both 4-8x their empirical elasticities, offsetting), F_US_GDP +3.0 (one-quarter print), P_EV_POLICY +2.75 (CAFE-III, plausible) and beta +4.5, against -28.9% realised. That move is explained by JLR: Q1 FY27 PAT -80% and a margin warning (13-14 Aug), Kotak fair-value cut (1 Sep), 52-week lows (22-28 Oct) and a Citi valuation cut on 4 Nov despite October volumes +23%. The profile has no JLR demand/margin node (China luxury, UK/EU demand, GBP), so the model cannot see the main driver. 12m roughly 0 to +3%; low confidence. Note: in a scratch re-run TMPV rises to +6.4% (rank 15). Part of that is a newer F_AUTO_DEMAND_IN override (+1.5) that is not mine, and part is the beta term: lowering other stocks' impacts makes the universe mean more negative, and beta 1.19 turns that into TMPV 'alpha'. The verdict is judgement about the missing JLR channel, not a graph output.",
+   "evidence": "https://news.google.com/rss/search?q=Tata+Motors+Passenger+Vehicles+shares+JLR+when:120d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=TMPV+shares+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "COCHINSHIP",
+   "issue": "VERDICT: too high. Raw model impact since June is only +1.74%; the reported +8.1% is 79% beta term (beta 1.67 x 3.8). Realised -21.0% is explained by stock-specific news: Q1 profit -19% (17 Aug, Kotak Sell) and the EBITDA-margin guidance cut with an ICICI Direct downgrade (11 Sep, -9%). P_DEFENCE_PROCUREMENT +1.0 from AoNs adds +3.0 and the budget level-as-shock adds +2.7 forward. Peers MAZDOCK and BDL fell 17-27% in 3 months. Scratch re-run with the graph fixes gives +4.4% (rank 24), but ~2pp of that is the forward beta term; without it, roughly +2%. Low confidence (profile confidence 'low', results 10 Nov).",
+   "evidence": "https://news.google.com/rss/search?q=Cochin+Shipyard+shares+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "CGPOWER",
+   "issue": "VERDICT: too high. +11.6% 'unpriced' (F_GOVT_CAPEX +3.5, renewable +2.7, grid/power demand +2.4, beta +4.1) vs -14.8% realised. Fundamentals are strong (Q2 profit +44%, order inflow Rs8,485 cr, brokers up to +37%), and the fall tracks the capital-goods derating (ABB, Siemens, Hitachi -12% to -14% in 3m) plus the 19 Aug cyberattack scare, which the graph has no channel for. The direction is defensible but the size is not: after the F_GOVT_CAPEX fix (-2.8 raw), 12m is roughly +4%.",
+   "evidence": "https://news.google.com/rss/search?q=CG+Power+shares+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "GVT&D",
+   "issue": "VERDICT: too high. +8.2% 'unpriced' includes the duplicated renewable channel (+3.0 direct, +1.4 via grid) and F_GOVT_CAPEX +2.5, against -18.8% realised. That realised move happened despite the +9% HVDC L1 jump on 8 Sep, so it is sector derating at ~80-100x P/E, not missed news. The HVDC company event (+1.06 expected) was already priced in September. After fixes, 12m roughly +3 to +4%.",
+   "evidence": "https://news.google.com/rss/search?q=GE+Vernova+T%26D+India+shares+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "BHEL",
+   "issue": "VERDICT: too high (direction agree). The power-demand channel is real: consumption +11% in September and +21.9% in October, and ICRA raised FY27 growth to 8.5% (ET/Construction World, Oct-Nov 2026). Thermal ordering is strong (Adani up to Rs28,000 cr on 4 Nov). But the reported +10.6% recent impact includes the beta term +5.7 and F_GOVT_CAPEX +3.0, and the forward view includes the budget level-as-shock (+2.9 expected). Realised -3.3% after a +57% 12m run, with CLSA flagging valuation. 12m roughly +4 to +5%.",
+   "evidence": "https://news.google.com/rss/search?q=India+power+consumption+October+2026+growth+per+cent+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "IDEA",
+   "issue": "VERDICT: too high. Twelve-month +9.3% is almost entirely forward and company events. The tariff-hike event alone is +19.7% expected (+26% conditional, above the 25% cap). A duplicate company tariff event adds +4.6 and an already-priced funding close adds +4.5. The recent part is ~0 (the -14.2% realised move is beyond the model). A 12-15% hike in 4-5 months is broker consensus (ET/Livemint 5-7 Oct; Ambit: December 15%), and Jio listed on 28 Oct, removing the 'before IPO' motive but not the need. After the fixes (x0.8 tariff edge, drop duplicate, trim funding close), 12m roughly +5%. Still positive, with very high idiosyncratic vol (40%).",
+   "evidence": "https://news.google.com/rss/search?q=mobile+tariff+hike+Jio+Airtel+prepaid+when:45d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "BPCL",
+   "issue": "VERDICT: too high (direction agree). After the RT_BACKBONE refining fix, recent impact is +6.2 vs realised +1.3, leaving +5.0 unpriced. That includes C_RUSSIA +3.0, which contradicts BPCL's own guidance of fewer Russian barrels. Forward +8.7 is driven by ceasefire/Brent (+3.9) and the retail-hike and LPG-compensation events (+4.5, +3.6), plus a duplicate LPG company event (+3.6). Q2 FY27: PAT -21.5%, marketing weak, refining strong. Citi/Jefferies see up to 35% upside (26 Oct), and the stock rallied up to 6% on 5 Nov as crude fell. After dropping the duplicate, 12m roughly +5%.",
+   "evidence": "https://news.google.com/rss/search?q=BPCL+Q2+results+GRM+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "JSWSTEEL",
+   "issue": "VERDICT: too high (modestly). +9.4% 'unpriced' from the steel/coking-coal spread and F_GOVT_CAPEX (+2.0, should be ~+0.4), and the budget level-as-shock adds +1.4 forward. Record Q2 and +3.8% over 3m mean part of the spread is already in the price. 12m about +6 to +7% (scratch re-run: +7.1%, rank 14 -> 13); the residual is a call on how long the spread persists.",
+   "evidence": "market_impact/companies/JSWSTEEL.json; results/price_performance.csv"
+  },
+  {
+   "severity": "low",
+   "subject": "SOLARINDS",
+   "issue": "VERDICT: too high (modestly). +8.7% 'unpriced' is P_DEFENCE_PROCUREMENT +3.0 (AoNs), C_MIDEAST_CONFLICT +1.5, F_GOVT_CAPEX +1.5, power demand +1.2, beta +3.4 and repo -2.0, against -2.0% realised. Forward +5.9 includes the budget defence level-as-shock (+2.7 +0.5 +1.1). Q2 FY27 is excellent (revenue +69%, EBITDA margin 28.6%), but at ~50-74x P/E with Omnia financing risk. After the state and budget fixes, 12m roughly +4 to +5%.",
+   "evidence": "market_impact/companies/SOLARINDS.json current_state (Q2 reported 3 Nov 2026)"
+  },
+  {
+   "severity": "low",
+   "subject": "HAL",
+   "issue": "VERDICT: agree (slightly too high). The realised +12.6% already exceeds the model impact, so unpriced = 0, which is correct. The 12m +4.5% is forward-driven: the budget defence/capex level-as-shock gives +4.5 +1.8 expected of +10.2. Under the proposed EV_BUDGET27 override it shrinks by ~4pp raw (about -2pp ER). The company events (F404 deliveries, ALH contract, AMCA partner risk) are balanced. 12m roughly +2 to +3%.",
+   "evidence": "market_impact/results/company_paths.jsonl (HAL)"
+  }
+ ]
+}

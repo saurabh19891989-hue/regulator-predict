@@ -14,21 +14,21 @@ EU storage at record seasonal low (IEEFA 9 Oct). Spike pushes Asian LNG; India s
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| COALINDIA | +1.6 | +0.0 | +0.9 | +0.7 | +0.0 |
 | MCX | +1.2 | +1.2 | +0.0 | +0.0 | +0.0 |
 | ONGC | +1.2 | +1.2 | +0.0 | +0.0 | +0.0 |
+| COALINDIA | +1.2 | +0.0 | +0.9 | +0.3 | +0.0 |
+| JSWENERGY | +0.9 | +0.0 | +0.7 | +0.1 | +0.0 |
+| TATAPOWER | +0.8 | +0.0 | +0.7 | +0.1 | +0.0 |
 | OIL | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
-| JSWENERGY | +0.7 | +0.0 | +0.7 | +0.2 | -0.2 |
-| ADANIPOWER | +0.6 | +0.0 | +0.4 | +0.2 | -0.1 |
-| TATAPOWER | +0.6 | +0.0 | +0.7 | +0.1 | -0.3 |
-| NTPC | +0.4 | +0.0 | +0.6 | +0.1 | -0.2 |
+| NTPC | +0.6 | +0.0 | +0.6 | +0.0 | +0.0 |
+| ADANIPOWER | +0.6 | +0.0 | +0.4 | +0.1 | +0.0 |
+| ADANIENT | +0.5 | +0.0 | +0.5 | +0.0 | +0.0 |
+| ADANIENSOL | +0.4 | +0.0 | +0.4 | +0.0 | +0.0 |
+| ADANIGREEN | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
+| NLCINDIA | +0.3 | +0.0 | +0.1 | +0.1 | +0.0 |
 | PAYTM | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| ADANIENSOL | +0.2 | +0.0 | +0.4 | +0.1 | -0.2 |
-| ADANIENT | +0.2 | +0.0 | +0.5 | +0.0 | -0.3 |
-| NLCINDIA | +0.1 | +0.0 | +0.1 | +0.1 | -0.2 |
-| HDFCLIFE | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
 | NATIONALUM | +0.0 | +0.0 | +0.1 | -0.1 | +0.0 |
-| MFSL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| VEDL | -0.1 | +0.0 | +0.0 | -0.1 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -38,18 +38,18 @@ EU storage at record seasonal low (IEEFA 9 Oct). Spike pushes Asian LNG; India s
 | ENRIN | -2.0 | -2.0 | +0.0 | +0.0 | +0.0 |
 | IOC | -1.8 | -1.8 | +0.0 | +0.0 | +0.0 |
 | TATASTEEL | -1.5 | -1.5 | +0.0 | +0.0 | +0.0 |
-| MOTHERSON | -1.4 | -1.2 | +0.0 | +0.0 | -0.1 |
-| UNITDSPR | -1.3 | -1.2 | +0.0 | +0.0 | -0.1 |
 | HINDPETRO | -1.2 | -1.2 | +0.0 | +0.0 | +0.0 |
+| MOTHERSON | -1.2 | -1.2 | +0.0 | +0.0 | +0.0 |
+| UNITDSPR | -1.2 | -1.2 | +0.0 | +0.0 | +0.0 |
 | AMBUJACEM | -1.2 | +0.0 | -1.2 | +0.0 | +0.0 |
 | RADICO | -1.0 | -1.0 | +0.0 | +0.0 | +0.0 |
-| APOLLOHOSP | -0.9 | -0.8 | +0.0 | +0.0 | -0.1 |
 | ULTRACEMCO | -0.9 | +0.0 | -0.9 | +0.0 | +0.0 |
-| RECLTD | -0.7 | +0.0 | -0.5 | +0.0 | -0.2 |
-| IDEA | -0.6 | +0.0 | -0.2 | -0.1 | -0.3 |
-| JINDALSTEL | -0.6 | +0.0 | -0.2 | -0.2 | -0.2 |
+| APOLLOHOSP | -0.8 | -0.8 | +0.0 | +0.0 | +0.0 |
+| GRASIM | -0.6 | +0.0 | -0.6 | +0.0 | +0.0 |
+| SOLARINDS | -0.6 | +0.0 | -0.6 | +0.0 | +0.0 |
+| RECLTD | -0.5 | +0.0 | -0.5 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 41%, 2: 20%, 3: 5%, 4: 34%
+Share of absolute impact by order: 1: 64%, 2: 29%, 3: 6%, 4: 0%
 
 ## Sources
 - 2026-10-09 EU may need to cut winter gas demand by 7% (IEEFA) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=EU+winter+gas+storage+record+low+IEEFA+when:120d&hl=en-IN&gl=IN&ceid=IN:en

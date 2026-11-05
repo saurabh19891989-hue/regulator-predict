@@ -18,42 +18,42 @@ Democrats won control of both chambers (News On AIR, NDTV, The Hindu, 4 Nov); Tr
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| MOTILALOFS | +3.7 | +3.0 | +0.7 | -0.1 | +0.0 |
-| ICICIAMC | +2.5 | +2.2 | +0.4 | -0.1 | +0.0 |
+| MOTILALOFS | +3.6 | +3.0 | +0.7 | -0.1 | +0.0 |
 | PAYTM | +2.5 | +2.5 | +0.0 | -0.0 | -0.0 |
-| INDUSINDBK | +2.3 | +2.2 | +0.1 | +0.0 | +0.0 |
-| SBIN | +2.3 | +2.0 | +0.2 | +0.0 | +0.1 |
+| ICICIAMC | +2.5 | +2.2 | +0.4 | -0.2 | +0.0 |
 | BSE | +2.3 | +1.5 | +1.0 | -0.2 | +0.0 |
-| YESBANK | +2.1 | +1.5 | +0.3 | +0.1 | +0.2 |
-| FEDERALBNK | +2.1 | +2.0 | +0.1 | +0.0 | +0.0 |
-| 360ONE | +2.1 | +1.8 | +0.4 | -0.0 | +0.0 |
-| GROWW | +2.0 | +1.2 | +0.9 | -0.2 | +0.0 |
-| HDFCBANK | +2.0 | +1.8 | +0.1 | +0.0 | +0.0 |
-| POLICYBZR | +1.9 | +2.0 | -0.0 | -0.0 | +0.0 |
-| IDFCFIRSTB | +1.8 | +1.5 | +0.2 | +0.1 | +0.1 |
-| ETERNAL | +1.8 | +1.8 | +0.0 | -0.0 | +0.0 |
-| ADANIGREEN | +1.8 | +1.5 | +0.2 | +0.0 | +0.1 |
+| INDUSINDBK | +2.3 | +2.2 | +0.1 | -0.0 | -0.0 |
+| SBIN | +2.2 | +2.0 | +0.2 | -0.0 | +0.0 |
+| 360ONE | +2.0 | +1.8 | +0.4 | -0.1 | +0.0 |
+| YESBANK | +1.9 | +1.5 | +0.3 | +0.0 | +0.1 |
+| HDFCBANK | +1.9 | +1.8 | +0.1 | +0.0 | +0.0 |
+| POLICYBZR | +1.9 | +2.0 | -0.0 | -0.1 | +0.0 |
+| ADANIGREEN | +1.9 | +1.5 | +0.3 | +0.0 | +0.0 |
+| ETERNAL | +1.8 | +1.8 | +0.0 | -0.1 | +0.0 |
+| MAXHEALTH | +1.7 | +1.8 | -0.0 | -0.0 | +0.0 |
+| AUBANK | +1.7 | +1.5 | +0.1 | +0.0 | +0.1 |
+| MEESHO | +1.7 | +1.8 | +0.0 | -0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | -0.5 | +0.0 | -0.3 | -0.2 | +0.0 |
-| SAIL | -0.5 | +0.0 | -0.1 | -0.4 | +0.0 |
-| JINDALSTEL | -0.3 | +0.0 | +0.0 | -0.4 | +0.0 |
+| JSWSTEEL | -0.4 | +0.0 | -0.3 | -0.1 | +0.0 |
 | OIL | -0.3 | +0.0 | -0.3 | -0.0 | +0.0 |
 | ONGC | -0.3 | +0.0 | -0.3 | -0.0 | +0.0 |
-| TATASTEEL | -0.3 | +0.0 | -0.2 | -0.2 | +0.0 |
 | NATIONALUM | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
-| NMDC | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
-| TMPV | -0.3 | +0.0 | -0.2 | -0.0 | -0.0 |
-| VAML | -0.2 | +0.0 | -0.3 | +0.0 | +0.1 |
-| SRF | -0.1 | +0.0 | -0.2 | -0.0 | +0.0 |
+| SAIL | -0.3 | +0.0 | -0.1 | -0.2 | +0.0 |
+| NMDC | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
+| TMPV | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
+| VAML | -0.2 | +0.0 | -0.3 | +0.0 | +0.0 |
+| TATASTEEL | -0.2 | +0.0 | -0.2 | -0.1 | +0.0 |
+| JINDALSTEL | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| SRF | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
 | COALINDIA | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
-| SUNPHARMA | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
+| SUNPHARMA | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
 | HINDALCO | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
-| PIIND | -0.1 | +0.1 | -0.2 | -0.0 | +0.0 |
+| TECHM | -0.1 | +0.0 | -0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 78%, 2: 15%, 3: 4%, 4: 3%
+Share of absolute impact by order: 1: 79%, 2: 15%, 3: 4%, 4: 2%
 
 ## Sources
 - 2026-11-04 Democrats Take Control Of US Congress. What It Means For India - NDTV https://news.google.com/rss/search?q=Democrats%20Take%20Control%20Of%20US%20Congress.%20What%20It%20Means%20For%20India%20-%20NDTV&hl=en-IN&gl=IN&ceid=IN:en

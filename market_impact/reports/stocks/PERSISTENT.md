@@ -2,45 +2,46 @@
 *MIDCAP_100 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -4.2%**, **12 months -9.8%** (rank 190 / 197 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.5%): 3 months 39%, 12 months 10%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -15.0% … P90 -10.2%; plausible 12m relative-return range incl. stock-specific noise: -44.5% … +0.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -4.2 pp (model impact -8.4% beta-adjusted vs realised market-adjusted move +8.9%); forward event exposure -8.6% (3m -2.8%; half assumed priced); company-specific events -0.5%
+- Expected relative return: **3 months -1.3%**, **12 months -4.6%** (rank 180 / 193 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.5%): 3 months 46%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.8% … P90 -0.8%; plausible 12m relative-return range incl. stock-specific noise: -42.1% … +38.2%
+- Decomposition (12m): 0.5 × forward event exposure -7.8% (3m -2.9%; half assumed priced) + 0.5 × company-specific catalysts -0.5%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -6.5% (beta-adjusted) vs a realised market-adjusted move of +8.9% — gap -15.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | US/EU enterprise IT services spend (`F_US_TECH_SPEND`) | +5% growth | +5.00 | +5.00 | +0.00 | +0.00 | +0.00 | — |
-| US growth (`F_US_GDP`) | +1 pp | +3.16 | +0.00 | +3.29 | +0.24 | -0.37 | — |
+| US growth (`F_US_GDP`) | +1 pp | +3.07 | +0.00 | +3.29 | -0.10 | -0.11 | — |
 | US H-1B / outsourcing restrictions (`P_US_VISA_OUTSOURCING`) | +1 = material tightening | -2.70 | -2.50 | -0.21 | +0.00 | +0.01 | — |
-| GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -2.41 | -3.00 | +0.58 | +0.00 | +0.01 | — |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | -2.27 | -2.20 | +0.00 | +0.01 | -0.07 | — |
-| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +2.22 | +2.00 | +0.29 | -0.03 | -0.03 | +1.2% |
-| Global AI / data-centre capex (`F_AI_CAPEX`) | +10% growth | +1.90 | +0.00 | +1.28 | +0.62 | +0.00 | — |
+| GenAI substitution of IT/BPO labour (higher = more substitution) (`T_GENAI_SERVICES`) | +1 | -2.41 | -3.00 | +0.58 | +0.00 | +0.02 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | -2.23 | -2.20 | +0.00 | +0.01 | -0.04 | — |
+| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +2.03 | +2.00 | +0.00 | +0.03 | +0.00 | +1.2% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.83 | +2.20 | +0.00 | -0.25 | -0.12 | -1.1% |
 | Europe growth (`F_EU_GDP`) | +1 pp | +1.77 | +1.50 | +0.30 | -0.02 | -0.01 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.73 | +2.20 | +0.00 | -0.32 | -0.15 | -1.1% |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.61 | +0.00 | -0.62 | -0.95 | -0.04 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.58 | +0.00 | -0.88 | -0.54 | -0.16 | — |
-| US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.49 | -1.00 | -0.16 | -0.35 | +0.03 | +11.2% |
-| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.49 | -1.50 | +0.00 | +0.00 | +0.01 | — |
-| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.47 | -1.20 | -0.31 | +0.07 | -0.03 | +3.5% |
+| Global AI / data-centre capex (`F_AI_CAPEX`) | +10% growth | +1.65 | +0.00 | +1.28 | +0.38 | -0.01 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.52 | +0.00 | -0.88 | -0.54 | -0.10 | — |
+| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.47 | -1.20 | -0.31 | +0.06 | -0.02 | +3.5% |
+| US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.43 | -1.00 | -0.16 | -0.31 | +0.04 | +11.2% |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.12 | +0.00 | -0.48 | -0.72 | +0.08 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +4.4% | +4.4% | -0.5 | +4.6 | +0.4 | -0.1 |
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -4.3% | -4.3% | -4.5 | +0.2 | +0.0 | +0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -11.7% | -2.9% | -9.0 | -1.8 | -0.8 | -0.1 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +4.1% | +4.1% | -0.5 | +4.6 | -0.1 | +0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -11.5% | -2.9% | -9.0 | -1.8 | -0.6 | -0.1 |
 | Indian IT: weakest Q2 in 3 years, Infosys guidance cut, US green card freeze (`EV_INDIAN_IT_Q2_VISA_SHOCK`) | occurred | 1.00 | -2.8% | -2.8% | -2.8 | -0.1 | +0.0 | +0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -10.9% | -2.7% | -3.0 | -8.3 | +0.7 | -0.2 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -10.1% | -2.5% | -3.0 | -7.5 | +0.5 | -0.2 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | +0.0 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -0.7 | -1.1 | -0.0 |
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.6% | -1.6% | -1.0 | -0.5 | -0.1 | -0.0 |
-| AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.4% | -1.4% | -1.1 | -0.2 | -0.1 | -0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.6% | -1.6% | -1.0 | -0.6 | +0.0 | +0.0 |
+| AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.1 | -0.2 | -0.1 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.7 | -0.6 | +0.1 |
 | US $100,000 H-1B fee (new ~$103k proposal Aug 2026) blocked by court; administration appeals; DHS proposes $70k/$30k OPT fees (`EV_H1B_100K_FEE_COURT`) | occurred | 1.00 | -1.1% | -1.1% | -1.0 | -0.1 | +0.0 | +0.0 |
-| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.72 | -1.4% | -1.0% | -1.0 | -0.2 | -0.2 | -0.0 |
-| Nvidia FQ3 results (reported 17 Nov): beat-and-raise, AI demand intact (`EV_NVDA_NOV17_BEAT`) | scheduled | 0.62 | +1.5% | +0.9% | +1.3 | +0.2 | +0.1 | +0.0 |
+| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.72 | -1.4% | -1.0% | -1.0 | -0.3 | -0.1 | -0.0 |
+| Nvidia FQ3 results (reported 17 Nov): beat-and-raise, AI demand intact (`EV_NVDA_NOV17_BEAT`) | scheduled | 0.62 | +1.5% | +0.9% | +1.3 | +0.2 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -49,7 +50,6 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → PERSISTENT | -6.00% | -1.50% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → PERSISTENT | -6.00% | -1.50% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_TECH_SPEND → PERSISTENT | -5.70% | -1.43% |
-| 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → PERSISTENT | -1.50% | -1.27% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_US_TECH_SPEND → PERSISTENT | -3.60% | -0.90% |
 | 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → PERSISTENT | -2.50% | -0.75% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → PERSISTENT | -3.00% | -0.75% |
@@ -58,19 +58,20 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → PERSISTENT | -1.20% | -0.60% |
 | 1 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → PERSISTENT | -0.66% | -0.53% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PERSISTENT | +2.86% | +0.51% |
+| 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → PERSISTENT | -0.60% | -0.51% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → PERSISTENT | -1.01% | -0.51% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → PERSISTENT | -0.90% | -0.50% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → PERSISTENT | +0.80% | +0.50% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → PERSISTENT | -3.00% | -0.45% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | T_GENAI_SERVICES → PERSISTENT | +1.00 | events | -3.00% |
 | 1 | F_US_TECH_SPEND → PERSISTENT | -0.60 | events | -3.00% |
 | 1 | F_GSEC_10Y_IN → PERSISTENT | +1.55 | director_override | -2.33% |
 | 1 | P_US_VISA_OUTSOURCING → PERSISTENT | +0.90 | events | -2.25% |
 | 1 | F_FED_FUNDS → PERSISTENT | +1.62 | observed | -1.62% |
+| 1 | T_GENAI_SERVICES → PERSISTENT | +0.50 | director_override | -1.50% |
 | 1 | F_USDINR → PERSISTENT | -0.37 | observed | -0.81% |
 | 1 | F_US_EQUITIES → PERSISTENT | +0.23 | observed | +0.47% |
 | 1 | F_EU_GDP → PERSISTENT | +0.22 | events | +0.33% |

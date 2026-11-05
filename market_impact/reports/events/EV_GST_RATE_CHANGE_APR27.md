@@ -16,42 +16,42 @@ After the 57th Council (8 Oct) ministry sources say rate changes will be made on
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| IREDA | +3.3 | +2.4 | +0.5 | +0.2 | +0.2 |
-| ADANIGREEN | +2.3 | +1.8 | +0.3 | +0.1 | +0.1 |
-| SUZLON | +2.2 | +2.1 | +0.0 | +0.1 | -0.0 |
-| PREMIERENE | +2.1 | +1.8 | +0.3 | +0.1 | -0.0 |
-| WAAREEENER | +2.1 | +1.8 | +0.2 | +0.1 | -0.0 |
-| HYUNDAI | +2.0 | +1.0 | +0.7 | +0.2 | +0.1 |
-| ADANIENSOL | +1.8 | +1.2 | +0.2 | +0.2 | +0.1 |
-| TATAPOWER | +1.7 | +1.2 | +0.3 | +0.1 | +0.1 |
-| TMCV | +1.7 | +0.0 | +1.1 | +0.5 | +0.1 |
-| POWERINDIA | +1.6 | +0.6 | +0.7 | +0.3 | -0.0 |
-| JSWENERGY | +1.5 | +1.1 | +0.2 | +0.2 | +0.0 |
-| TVSMOTOR | +1.5 | +0.0 | +1.1 | +0.2 | +0.1 |
-| ENRIN | +1.4 | +0.0 | +1.0 | +0.4 | -0.0 |
+| IREDA | +3.1 | +2.4 | +0.5 | +0.1 | +0.1 |
+| ADANIGREEN | +2.2 | +1.8 | +0.3 | +0.0 | +0.1 |
+| PREMIERENE | +2.1 | +1.8 | +0.3 | +0.0 | -0.0 |
+| WAAREEENER | +2.0 | +1.8 | +0.2 | +0.0 | -0.0 |
+| HYUNDAI | +1.9 | +1.0 | +0.7 | +0.1 | +0.0 |
+| ADANIENSOL | +1.7 | +1.2 | +0.2 | +0.2 | +0.0 |
+| TATAPOWER | +1.6 | +1.2 | +0.3 | +0.1 | +0.0 |
+| TMCV | +1.6 | +0.0 | +1.1 | +0.4 | +0.1 |
+| POWERINDIA | +1.5 | +0.6 | +0.7 | +0.2 | -0.0 |
+| TVSMOTOR | +1.4 | +0.0 | +1.1 | +0.2 | +0.1 |
 | MARUTI | +1.4 | +0.8 | +0.5 | +0.1 | +0.0 |
-| EXIDEIND | +1.4 | +0.0 | +1.1 | +0.2 | +0.1 |
+| JSWENERGY | +1.3 | +1.1 | +0.2 | +0.1 | -0.0 |
+| EXIDEIND | +1.3 | +0.0 | +1.1 | +0.2 | +0.0 |
+| EICHERMOT | +1.3 | +0.8 | +0.4 | +0.1 | +0.0 |
+| ENRIN | +1.2 | +0.0 | +1.0 | +0.2 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| ADANIPOWER | -0.1 | -0.2 | -0.0 | +0.1 | +0.1 |
+| ADANIPOWER | -0.2 | -0.2 | -0.0 | +0.0 | +0.0 |
 | COALINDIA | -0.1 | +0.0 | -0.2 | +0.0 | -0.0 |
+| RVNL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| NMDC | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| OIL | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | UPL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| NMDC | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| SAIL | +0.0 | +0.0 | +0.0 | +0.1 | -0.1 |
-| OIL | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| SUNPHARMA | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| COCHINSHIP | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| SUNPHARMA | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HAL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| SOLARINDS | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| MAZDOCK | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| BIOCON | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | HCLTECH | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | INFY | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| TCS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| TECHM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| BDL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| ONGC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| COCHINSHIP | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| PIIND | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| ONGC | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 31%, 2: 29%, 3: 24%, 4: 16%
+Share of absolute impact by order: 1: 35%, 2: 35%, 3: 20%, 4: 10%
 
 ## Sources
 - 2026-08-31 GST Council May Consider Reducing 18% GST Rate on Mobile Phones https://news.google.com/rss/search?q=GST+Council+may+consider+reducing+18%25+GST+on+mobile+phones+when:120d&hl=en-IN&gl=IN&ceid=IN:en

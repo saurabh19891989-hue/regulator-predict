@@ -19,29 +19,28 @@ Budget presented on 1 Feb 2027 (date per convention, not verified). ET (2 Nov): 
 | JINDALSTEL | +1.5 | +2.2 | -0.5 | -0.3 | +0.0 |
 | JSWSTEEL | +1.2 | +1.6 | -0.3 | -0.2 | +0.0 |
 | TATASTEEL | +0.7 | +1.2 | -0.3 | -0.2 | +0.0 |
-| TMPV | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
 | TMCV | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 | BHEL | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 | MARUTI | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| SUZLON | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 | ASHOKLEY | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| RVNL | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| SUZLON | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 | COCHINSHIP | +0.1 | +0.0 | +0.1 | +0.1 | +0.0 |
 | HYUNDAI | +0.1 | +0.0 | +0.1 | +0.1 | +0.0 |
+| RVNL | +0.1 | +0.0 | +0.1 | +0.1 | +0.0 |
 | TIINDIA | +0.1 | +0.0 | +0.1 | +0.1 | +0.0 |
 | TVSMOTOR | +0.1 | +0.0 | +0.1 | +0.1 | +0.0 |
+| TMPV | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | COALINDIA | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
 | NMDC | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
-| APLAPOLLO | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
-| CHOLAFIN | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| APLAPOLLO | -0.2 | +0.0 | -0.1 | -0.1 | -0.0 |
 | M&MFIN | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | LTF | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| CHOLAFIN | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 | BANKINDIA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| MAHABANK | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | HINDCOPPER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | HINDZINC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | NATIONALUM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
@@ -49,8 +48,9 @@ Budget presented on 1 Feb 2027 (date per convention, not verified). ET (2 Nov): 
 | VAML | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | VEDL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SBIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| AUBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 53%, 2: 29%, 3: 16%, 4: 2%
+Share of absolute impact by order: 1: 54%, 2: 28%, 3: 16%, 4: 1%
 
 ## Sources
 - 2026-11-02 Fiscal deficit likely to exceed FY27 target by up to Rs 1.2 lakh crore https://news.google.com/rss/search?q=Fiscal+deficit+likely+to+exceed+FY27+target+by+up+to+Rs+1.2+lakh+crore&hl=en-IN&gl=IN&ceid=IN:en

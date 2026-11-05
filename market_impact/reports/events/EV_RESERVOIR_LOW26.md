@@ -17,42 +17,42 @@ CWC bulletin of 15 Oct 2026: 178 major reservoirs hold 126.717 BCM = 68.58% of l
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| ADANIPOWER | +1.4 | +1.3 | +0.1 | -0.0 | -0.0 |
-| COALINDIA | +0.7 | +0.0 | +0.5 | +0.3 | -0.1 |
-| ENRIN | +0.6 | +0.0 | +0.5 | +0.2 | -0.1 |
-| JSWENERGY | +0.5 | +0.5 | +0.1 | +0.0 | -0.1 |
-| TATAPOWER | +0.4 | +0.2 | +0.3 | +0.1 | -0.1 |
+| ADANIPOWER | +0.9 | +0.8 | +0.1 | -0.0 | -0.0 |
+| COALINDIA | +0.6 | +0.0 | +0.5 | +0.2 | -0.0 |
+| ENRIN | +0.6 | +0.0 | +0.5 | +0.1 | -0.1 |
+| JSWENERGY | +0.5 | +0.5 | +0.1 | +0.0 | -0.0 |
 | BHEL | +0.4 | +0.0 | +0.5 | +0.0 | -0.1 |
-| ADANIENSOL | +0.4 | +0.1 | +0.3 | +0.2 | -0.1 |
-| POWERGRID | +0.3 | +0.0 | +0.3 | +0.1 | -0.1 |
-| WAAREEENER | +0.3 | +0.0 | +0.3 | +0.0 | -0.1 |
+| TATAPOWER | +0.4 | +0.2 | +0.3 | +0.0 | -0.1 |
+| ADANIENSOL | +0.3 | +0.1 | +0.3 | +0.1 | -0.1 |
+| WAAREEENER | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
+| NLCINDIA | +0.3 | +0.1 | +0.2 | +0.0 | -0.0 |
+| SUZLON | +0.3 | +0.0 | +0.3 | +0.1 | -0.0 |
 | ADANIGREEN | +0.3 | +0.2 | +0.2 | -0.0 | -0.1 |
-| NLCINDIA | +0.3 | +0.1 | +0.2 | +0.0 | -0.1 |
-| NTPC | +0.2 | +0.1 | +0.2 | -0.0 | -0.1 |
-| SUZLON | +0.2 | +0.0 | +0.3 | +0.1 | -0.1 |
-| AMBUJACEM | +0.2 | +0.2 | +0.0 | +0.0 | -0.0 |
-| POWERINDIA | +0.2 | +0.0 | +0.0 | +0.4 | -0.2 |
+| POWERINDIA | +0.3 | +0.0 | +0.0 | +0.4 | -0.1 |
+| POWERGRID | +0.2 | +0.0 | +0.3 | +0.1 | -0.1 |
+| SOLARINDS | +0.2 | +0.0 | +0.2 | +0.1 | -0.0 |
+| GVT&D | +0.2 | +0.0 | +0.0 | +0.3 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | -2.1 | +0.0 | -0.6 | -1.1 | -0.4 |
-| IDFCFIRSTB | -1.8 | +0.0 | -0.5 | -0.9 | -0.4 |
-| YESBANK | -1.5 | +0.0 | -0.4 | -0.7 | -0.4 |
-| BANKINDIA | -1.2 | +0.0 | -0.3 | -0.8 | -0.1 |
-| M&MFIN | -1.2 | -0.8 | -0.2 | -0.2 | -0.1 |
-| AXISBANK | -1.1 | +0.0 | -0.3 | -0.6 | -0.2 |
-| SBICARD | -1.1 | +0.0 | -0.4 | -0.3 | -0.3 |
-| KOTAKBANK | -1.1 | +0.0 | -0.3 | -0.6 | -0.1 |
-| INDIANB | -1.0 | +0.0 | -0.3 | -0.6 | -0.2 |
-| HDFCBANK | -1.0 | +0.0 | -0.3 | -0.6 | -0.2 |
-| MAHABANK | -1.0 | +0.0 | -0.2 | -0.7 | -0.1 |
-| SBIN | -1.0 | +0.0 | -0.3 | -0.6 | -0.1 |
+| INDUSINDBK | -1.6 | +0.0 | -0.6 | -0.7 | -0.2 |
+| IDFCFIRSTB | -1.4 | +0.0 | -0.5 | -0.6 | -0.3 |
+| YESBANK | -1.2 | +0.0 | -0.4 | -0.5 | -0.3 |
+| M&MFIN | -1.1 | -0.8 | -0.2 | -0.2 | -0.1 |
 | SHRIRAMFIN | -1.0 | -0.6 | -0.1 | -0.2 | -0.1 |
-| AUBANK | -1.0 | +0.0 | -0.3 | -0.4 | -0.3 |
-| UNIONBANK | -1.0 | +0.0 | -0.3 | -0.6 | -0.1 |
+| BANKINDIA | -0.9 | +0.0 | -0.3 | -0.5 | -0.1 |
+| AXISBANK | -0.9 | +0.0 | -0.3 | -0.4 | -0.2 |
+| SBICARD | -0.9 | +0.0 | -0.4 | -0.3 | -0.1 |
+| KOTAKBANK | -0.8 | +0.0 | -0.3 | -0.4 | -0.1 |
+| INDIANB | -0.8 | +0.0 | -0.3 | -0.4 | -0.1 |
+| FEDERALBNK | -0.8 | +0.0 | -0.1 | -0.5 | -0.2 |
+| SBIN | -0.8 | +0.0 | -0.3 | -0.4 | -0.1 |
+| HDFCBANK | -0.8 | +0.0 | -0.3 | -0.4 | -0.1 |
+| AUBANK | -0.8 | +0.0 | -0.3 | -0.3 | -0.2 |
+| UNIONBANK | -0.8 | +0.0 | -0.3 | -0.4 | -0.1 |
 
-Share of absolute impact by order: 1: 11%, 2: 29%, 3: 34%, 4: 26%
+Share of absolute impact by order: 1: 12%, 2: 34%, 3: 33%, 4: 22%
 
 ## Sources
 - 2026-09-28 At 70%, India's water reserves at 10-year low - Indian Express https://indianexpress.com/article/india/central-water-commission-cwc-live-reservoir-storage-report-september-seventy-percent-capacity-south-india-crisis-el-nino-10898033/

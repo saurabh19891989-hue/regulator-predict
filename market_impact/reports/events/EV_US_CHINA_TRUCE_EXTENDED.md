@@ -22,16 +22,16 @@ Truce was extended two months to 10 Jan at the Trump-Xi summit (Reuters/CNBC 23-
 | MOTILALOFS | +1.1 | +0.7 | +0.3 | +0.1 | -0.0 |
 | ICICIAMC | +1.0 | +0.8 | +0.2 | +0.0 | -0.0 |
 | MEESHO | +0.9 | +0.8 | +0.1 | -0.0 | +0.0 |
-| 360ONE | +0.9 | +0.7 | +0.1 | +0.1 | -0.0 |
-| INDUSINDBK | +0.8 | +0.7 | +0.1 | +0.0 | -0.1 |
+| 360ONE | +0.9 | +0.7 | +0.1 | +0.1 | +0.0 |
 | BOSCHLTD | +0.8 | +0.0 | +0.4 | +0.4 | -0.0 |
-| TATASTEEL | +0.8 | +0.0 | +0.3 | +0.1 | +0.4 |
+| INDUSINDBK | +0.8 | +0.7 | +0.1 | +0.0 | -0.1 |
 | MAHABANK | +0.8 | +0.7 | +0.1 | +0.0 | -0.0 |
-| LICI | +0.7 | +0.7 | +0.1 | +0.0 | -0.0 |
+| LICI | +0.7 | +0.7 | +0.1 | -0.0 | -0.0 |
 | HYUNDAI | +0.7 | +0.0 | +0.3 | +0.4 | -0.0 |
 | LENSKART | +0.7 | +0.6 | +0.1 | +0.0 | -0.0 |
-| IDFCFIRSTB | +0.7 | +0.6 | +0.1 | +0.0 | -0.0 |
 | NAUKRI | +0.7 | +0.5 | +0.2 | +0.0 | -0.0 |
+| IDFCFIRSTB | +0.7 | +0.6 | +0.1 | +0.0 | -0.0 |
+| MOTHERSON | +0.7 | +0.0 | +0.4 | +0.2 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -42,17 +42,17 @@ Truce was extended two months to 10 Jan at the Trump-Xi summit (Reuters/CNBC 23-
 | DIXON | -0.2 | -0.1 | -0.1 | +0.1 | +0.0 |
 | DRREDDY | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
 | TATACONSUM | -0.2 | -0.2 | +0.0 | -0.0 | -0.0 |
-| POWERGRID | -0.2 | -0.2 | +0.0 | -0.0 | -0.0 |
-| LUPIN | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
-| ABB | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
-| CIPLA | -0.1 | +0.0 | -0.1 | -0.1 | -0.0 |
+| LUPIN | -0.1 | +0.0 | -0.1 | -0.1 | +0.0 |
+| CIPLA | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
 | PREMIERENE | -0.1 | +0.0 | +0.0 | -0.1 | -0.1 |
+| ABB | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| POWERGRID | -0.1 | -0.2 | +0.0 | +0.0 | -0.0 |
 | SIEMENS | -0.1 | +0.2 | -0.2 | -0.0 | -0.0 |
-| CONCOR | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
 | PIDILITIND | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
+| CONCOR | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
 | SUNPHARMA | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 35%, 2: 34%, 3: 21%, 4: 10%
+Share of absolute impact by order: 1: 38%, 2: 36%, 3: 19%, 4: 7%
 
 ## Sources
 - 2026-09-23 US, China agree to extend trade truce by two months, work on bigger deal, Bessent says - Reuters https://news.google.com/rss/search?q=US%2C%20China%20agree%20to%20extend%20trade%20truce%20by%20two%20months%2C%20work%20on%20bigger%20deal%2C%20Bessent%20says%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en

@@ -1,0 +1,8 @@
+{
+ "RT_N50_B": [
+  "edge:F_ZINC_LEAD>VEDL@VEDL",
+  "edge:F_GSEC_10Y_IN>BAJAJHLDNG@BAJAJHLDNG",
+  "edge:F_REPO_IN>BAJAJHLDNG@BAJAJHLDNG"
+ ],
+ "_why": "Holdco look-through is implemented in the engine (HOLDCO_LOOKTHROUGH) for VEDL and BAJAJHLDNG; the manual scale-ups would double count."
+}

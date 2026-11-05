@@ -2,58 +2,57 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.1%**, **12 months +6.3%** (rank 26 / 23 of 200 for 3m / 12m); beta 1.67
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.9%): 3 months 58%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.4% … P90 +17.1%; plausible 12m relative-return range incl. stock-specific noise: -31.5% … +31.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.0 pp (model impact +8.1% beta-adjusted vs realised market-adjusted move -21.0%); forward event exposure +5.4% (3m +2.8%; half assumed priced); company-specific events +1.2%
+- Expected relative return: **3 months +1.0%**, **12 months +1.5%** (rank 42 / 43 of 200 for 3m / 12m); beta 1.67
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.9%): 3 months 53%, 12 months 62%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.3% … P90 +8.8%; plausible 12m relative-return range incl. stock-specific noise: -23.8% … +41.8%
+- Decomposition (12m): 0.5 × forward event exposure +3.4% (3m +2.5%; half assumed priced) + 0.5 × company-specific catalysts +0.5%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +6.9% (beta-adjusted) vs a realised market-adjusted move of -21.0% — gap +27.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Shipbuilding & maritime policy support (`NEW_SHIPBUILDING_POLICY`) | +1 = stronger support (financial assistance, ISRF, yard infrastructure funding) | +4.00 | +4.00 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +3.11 | +0.00 | +1.14 | +2.14 | -0.18 | — |
-| India–Pakistan tension (`C_INDIA_PAKISTAN`) | +1 = escalation | +3.05 | +0.00 | +3.12 | -0.03 | -0.04 | — |
+| India–Pakistan tension (`C_INDIA_PAKISTAN`) | +1 = escalation | +3.11 | +0.00 | +3.12 | +0.00 | -0.01 | — |
 | Indian defence procurement & indigenisation (`P_DEFENCE_PROCUREMENT`) | +10% domestic orders | +2.99 | +3.00 | +0.00 | -0.01 | -0.01 | — |
 | Red Sea / Suez shipping disruption (`C_RED_SEA`) | +1 = disruption | +2.75 | +0.80 | +1.95 | +0.00 | +0.00 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +2.13 | +0.00 | +1.14 | +1.01 | -0.03 | — |
 | Global container / freight rates (`F_SHIPPING_RATES`) | +25% | +2.00 | +2.00 | +0.00 | +0.00 | +0.00 | — |
-| Indian domestic steel price (`F_STEEL_INDIA`) | +7% domestic HRC/rebar price | -1.51 | -1.50 | +0.00 | -0.01 | +0.00 | — |
-| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.43 | -1.50 | +0.06 | +0.01 | -0.01 | +3.5% |
-| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.16 | +0.00 | -1.00 | -0.13 | -0.04 | — |
+| Indian domestic steel price (`F_STEEL_INDIA`) | +7% domestic HRC/rebar price | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -1.43 | -1.50 | +0.06 | +0.01 | +0.00 | +3.5% |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -1.14 | +0.00 | -1.00 | -0.18 | +0.04 | — |
 | US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -0.92 | -1.00 | +0.07 | +0.02 | -0.01 | — |
-| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | -0.85 | +0.00 | -0.88 | -0.06 | +0.09 | — |
-| US growth (`F_US_GDP`) | +1 pp | +0.79 | +0.00 | +0.48 | +0.45 | -0.14 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -0.75 | +0.00 | -0.61 | -0.17 | +0.03 | — |
-| Global HRC steel price (`F_STEEL_GLOBAL`) | +10% global HRC | -0.75 | +0.00 | -0.74 | +0.00 | -0.01 | +20.6% |
+| Global HRC steel price (`F_STEEL_GLOBAL`) | +10% global HRC | -0.74 | +0.00 | -0.74 | +0.00 | +0.00 | +20.6% |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.73 | -0.70 | -0.04 | +0.01 | +0.00 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +0.71 | +1.00 | -0.24 | -0.06 | +0.00 | -1.1% |
+| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | -0.69 | +0.00 | -0.74 | +0.02 | +0.03 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | DAC clears Rs 1.10 lakh crore (7 Sep) and further proposals (Rs 2.12 lakh crore reported 26 Oct) (`EV_DAC_APPROVALS_H2_26`) | occurred | 1.00 | +3.0% | +3.0% | +3.0 | +0.0 | -0.0 | -0.0 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.6% | +2.4% | +3.0 | -0.2 | -0.1 | -0.1 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | -0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -2.9% | -1.6% | -0.0 | -1.3 | -1.7 | +0.0 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | +0.0 | +0.0 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +1.6% | +1.6% | +0.4 | +1.1 | +0.0 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -2.1% | -1.1% | -0.0 | -1.2 | -0.8 | +0.0 |
 | Red Sea shipping closed again (Houthi campaign broadens; Bab el-Mandeb largely avoided) (`EV_RED_SEA_CLOSURE`) | risk_scenario | 0.25 | +4.2% | +1.1% | +4.2 | +0.0 | +0.0 | +0.0 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +0.5 | +0.5 | -0.1 |
 | Container lines broadly return to Suez/Red Sea routing; freight rates fall (`EV_RED_SEA_SUEZ_NORMALISATION`) | anticipated | 0.45 | -2.2% | -1.0% | -2.2 | +0.0 | +0.0 | +0.0 |
 | Red Sea: Houthi attacks on shipping and Saudi targets resume (Jul-Oct 2026) while carriers partially return to Suez (`EV_RED_SEA_HOUTHI_ESCALATION_Q3`) | occurred | 1.00 | +1.0% | +1.0% | +1.0 | +0.0 | +0.0 | +0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -3.6% | -0.9% | -3.8 | +0.1 | +0.1 | -0.2 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -3.5% | -0.9% | +0.0 | -3.3 | +0.3 | -0.4 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.7 | -0.2 | +0.1 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -3.6% | -0.9% | -3.8 | +0.1 | +0.1 | -0.1 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.7% | -0.7% | -0.7 | -0.0 | +0.0 | +0.0 |
+| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +0.8% | +0.7% | +0.9 | -0.0 | -0.0 | -0.0 |
+| Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -0.6% | -0.6% | -0.6 | +0.0 | +0.0 | +0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.5 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → COCHINSHIP | +3.00% | +2.70% |
-| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → C_RED_SEA → F_SHIPPING_RATES → COCHINSHIP | -1.75% | -0.96% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → COCHINSHIP | -3.75% | -0.94% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → COCHINSHIP | +0.90% | +0.81% |
 | 1 | EV_RED_SEA_CLOSURE ⇒ F_SHIPPING_RATES → COCHINSHIP | +3.00% | +0.75% |
 | 1 | EV_RED_SEA_SUEZ_NORMALISATION ⇒ F_SHIPPING_RATES → COCHINSHIP | -1.60% | -0.72% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → COCHINSHIP | -3.75% | -0.56% |
-| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → COCHINSHIP | -2.16% | -0.54% |
-| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → C_RED_SEA → F_SHIPPING_RATES → COCHINSHIP | +2.10% | +0.53% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → C_RED_SEA → F_SHIPPING_RATES → COCHINSHIP | -0.88% | -0.48% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → COCHINSHIP | -1.50% | -0.38% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → COCHINSHIP | -2.50% | -0.38% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → COCHINSHIP | +0.60% | +0.37% |
@@ -61,13 +60,15 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_SHIPPING_RATES → COCHINSHIP | -0.64% | -0.35% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → COCHINSHIP | +0.60% | +0.33% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → COCHINSHIP | -0.60% | -0.33% |
+| 1 | EV_RED_SEA_CLOSURE ⇒ C_RED_SEA → COCHINSHIP | +1.20% | +0.30% |
+| 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ P_DEFENCE_PROCUREMENT → COCHINSHIP | +0.60% | +0.30% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | P_DEFENCE_PROCUREMENT → COCHINSHIP | +1.00 | events | +3.00% |
 | 1 | F_STEEL_INDIA → COCHINSHIP | +1.35 | events | -2.03% |
+| 1 | P_DEFENCE_PROCUREMENT → COCHINSHIP | +0.40 | director_override | +1.20% |
 | 1 | C_RED_SEA → COCHINSHIP | +1.00 | events | +0.80% |
 | 1 | F_REPO_IN → COCHINSHIP | +1.00 | events | -0.70% |
 | 1 | P_US_TARIFF_INDIA → COCHINSHIP | -0.60 | events | +0.60% |
@@ -82,7 +83,7 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2026-11-10 | Q2 FY27 results (screener upcoming-date field) | results | 0.95 | +0.0% | +0.00% |
 | 2026-12 | EGM / shareholder approval for Rs1,800 cr ISRF transfer and related capex | corporate_action | 0.85 | +0.5% | +0.42% |
 | 2027-02 | Q3 FY27 results; test of FY27 14% EBITDA margin guidance | results | 0.90 | -0.5% | -0.45% |
-| 2027-03 | Binding contracts converting from the 40-ship order announcement (2026-10-09) and further defence awards | other | 0.50 | +2.5% | +1.25% |
+| 2027-03 | Binding contracts converting from the 40-ship order announcement (2026-10-09) and further defence awards *(review: [RT_TOP_B] announcement priced 9 Oct (+5%))* | other | 0.50 | +1.0% | +0.50% |
 
 ## Analyst profile (agent research, sourced)
 # COCHINSHIP - Cochin Shipyard Ltd. (Shipbuilding PSU)

@@ -34,23 +34,23 @@ India-UK CETA took effect in mid-2026 (exact effective date not verified; Swaraj
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWENERGY | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| RVNL | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| GODREJPROP | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| LODHA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| RVNL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | SUZLON | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| HYUNDAI | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| SOLARINDS | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | PREMIERENE | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| TATACAP | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| GRASIM | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| JSWENERGY | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| SOLARINDS | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | LENSKART | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| BOSCHLTD | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| MUTHOOTFIN | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| GRASIM | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| JUBLFOOD | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| GODREJPROP | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| SRF | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| APARINDS | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| TORNTPHARM | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| MEESHO | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | MARUTI | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| BAJFINANCE | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| VAML | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 58%, 2: 15%, 3: 17%, 4: 9%
+Share of absolute impact by order: 1: 63%, 2: 17%, 3: 14%, 4: 5%
 
 ## Sources
 - 2026-10-13 India-UK Trade Jumps 15 Per Cent To Nearly $2 Billion In August After FTA Takes Effect - Swarajya https://news.google.com/rss/search?q=India+UK+CETA+come+into+force+when:120d&hl=en-IN&gl=IN&ceid=IN:en

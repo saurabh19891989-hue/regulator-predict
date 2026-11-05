@@ -18,42 +18,42 @@ Retail petrol/diesel prices unchanged while crude surged: ICRA/Express/TOI estim
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PRESTIGE | +0.5 | +0.0 | +0.0 | +0.3 | +0.2 |
-| JSWENERGY | +0.5 | +0.0 | +0.0 | +0.3 | +0.2 |
-| BAJFINANCE | +0.5 | +0.0 | +0.0 | +0.3 | +0.1 |
-| GODREJPROP | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| TATACAP | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| PHOENIXLTD | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| GMRAIRPORT | +0.4 | +0.0 | +0.0 | +0.1 | +0.2 |
-| LODHA | +0.4 | +0.0 | +0.0 | +0.2 | +0.1 |
-| OBEROIRLTY | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| LENSKART | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| HYUNDAI | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
-| MEESHO | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| ETERNAL | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| IREDA | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| JIOFIN | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| BAJFINANCE | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| TATACAP | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| PRESTIGE | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| JSWENERGY | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| IREDA | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| GODREJPROP | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| LENSKART | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| YESBANK | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| BAJAJFINSV | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| JIOFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| AUBANK | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| OBEROIRLTY | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| ADANIGREEN | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| ETERNAL | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
+| HYUNDAI | +0.1 | +0.0 | +0.0 | +0.1 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | HINDPETRO | -12.0 | -12.0 | +0.0 | +0.0 | +0.0 |
-| IOC | -6.5 | -6.5 | +0.0 | -0.0 | +0.0 |
+| IOC | -6.5 | -6.5 | +0.0 | +0.0 | +0.0 |
 | BPCL | -6.0 | -6.0 | +0.0 | +0.0 | +0.0 |
-| BANKINDIA | -1.1 | +0.0 | -0.4 | -0.4 | -0.3 |
-| SAIL | -1.0 | +0.0 | -0.6 | -0.5 | +0.0 |
-| TMCV | -1.0 | +0.0 | -1.0 | -0.2 | +0.1 |
-| UNIONBANK | -1.0 | +0.0 | -0.5 | -0.3 | -0.3 |
-| MAHABANK | -1.0 | +0.0 | -0.4 | -0.3 | -0.3 |
-| PNB | -1.0 | +0.0 | -0.5 | -0.3 | -0.2 |
-| POWERINDIA | -1.0 | +0.0 | -1.2 | +0.2 | +0.1 |
-| ASHOKLEY | -0.9 | +0.0 | -0.7 | -0.1 | -0.0 |
-| CGPOWER | -0.9 | +0.0 | -0.8 | -0.0 | +0.0 |
-| POLYCAB | -0.8 | +0.0 | -0.8 | -0.0 | +0.0 |
-| JINDALSTEL | -0.8 | +0.0 | -0.4 | -0.5 | +0.0 |
-| ENRIN | -0.8 | +0.0 | -1.0 | +0.1 | +0.0 |
+| SAIL | -0.2 | +0.0 | -0.1 | -0.0 | -0.0 |
+| POWERINDIA | -0.1 | +0.0 | -0.2 | +0.1 | +0.0 |
+| CGPOWER | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
+| ENRIN | -0.1 | +0.0 | -0.2 | +0.1 | +0.0 |
+| JSWSTEEL | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| POLYCAB | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
+| LICHSGFIN | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| ASHOKLEY | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| JINDALSTEL | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| BANKINDIA | -0.1 | +0.0 | -0.1 | -0.1 | +0.0 |
+| KEI | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| MAHABANK | -0.1 | +0.0 | -0.1 | -0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 30%, 2: 30%, 3: 24%, 4: 17%
+Share of absolute impact by order: 1: 58%, 2: 12%, 3: 23%, 4: 7%
 
 ## Sources
 - 2026-09-23 OMCs losing Rs 530 crore daily (ICRA, PSU Watch/NIE) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=OMCs+losing+Rs+530+crore+daily+ICRA+when:120d&hl=en-IN&gl=IN&ceid=IN:en

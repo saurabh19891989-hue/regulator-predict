@@ -2,10 +2,11 @@
 *NIFTY_50 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.6%**, **12 months +1.2%** (rank 76 / 73 of 200 for 3m / 12m); beta 0.87
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 53%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.6% … P90 +4.5%; plausible 12m relative-return range incl. stock-specific noise: -6.0% … +12.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.2 pp (model impact +0.4% beta-adjusted vs realised market-adjusted move -9.7%); forward event exposure +3.3% (3m +1.7%; half assumed priced); company-specific events +0.8%
+- Expected relative return: **3 months +0.7%**, **12 months +1.3%** (rank 63 / 50 of 200 for 3m / 12m); beta 0.87
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 53%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.7% … P90 +5.2%; plausible 12m relative-return range incl. stock-specific noise: -15.0% … +23.1%
+- Decomposition (12m): 0.5 × forward event exposure +2.6% (3m +1.2%; half assumed priced) + 0.5 × company-specific catalysts +0.8%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +0.8% (beta-adjusted) vs a realised market-adjusted move of -9.7% — gap +10.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,33 +15,33 @@
 | Cocoa, coffee, tea prices (`F_COCOA_COFFEE_TEA`) | +15% beverage commodities | -3.30 | -3.30 | +0.00 | +0.00 | +0.00 | — |
 | Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +2.29 | +2.30 | +0.00 | +0.00 | -0.01 | — |
 | Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.72 | +1.70 | +0.00 | +0.00 | +0.02 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.56 | +1.00 | +0.46 | +0.06 | +0.04 | — |
-| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | -1.26 | +0.00 | -0.79 | -0.40 | -0.07 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.16 | +0.00 | -0.71 | -0.34 | -0.11 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.16 | -0.80 | -0.07 | -0.19 | -0.09 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.13 | +0.00 | +0.73 | +0.16 | +0.24 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.53 | +1.00 | +0.46 | +0.06 | +0.00 | — |
+| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | -1.24 | +0.00 | -0.79 | -0.40 | -0.05 | — |
 | Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +1.09 | +1.00 | +0.09 | +0.00 | +0.00 | — |
+| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.07 | -0.80 | -0.07 | -0.19 | -0.01 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +1.02 | +0.00 | +1.14 | -0.08 | -0.05 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.02 | +0.00 | +0.73 | +0.13 | +0.15 | — |
 | India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | — |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +0.98 | +0.00 | +1.14 | -0.08 | -0.09 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.89 | +0.00 | -0.34 | -0.20 | -0.35 | — |
 | Packaging cost (paper, plastics) (`F_PACKAGING`) | +10% packaging cost | -0.80 | -0.80 | +0.00 | +0.00 | +0.00 | — |
 | Quick-commerce disruption of retail/FMCG distribution (`T_QUICK_COMMERCE`) | +1 | +0.80 | +0.80 | +0.00 | +0.00 | +0.00 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -0.79 | +0.00 | -0.71 | -0.04 | -0.05 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | +0.73 | +0.80 | -0.03 | -0.03 | -0.01 | +3.5% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | -0.9 | -0.9 | -0.4 | -0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.9% | -1.9% | -0.9 | -0.9 | -0.0 | -0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.4% | -1.4% | -1.4 | +0.0 | -0.0 | -0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -0.9 | -0.2 | -0.3 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.4 | -0.5 | -0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | +3.0% | +0.7% | +0.0 | +2.1 | +0.6 | +0.3 |
-| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.6% | -0.6% | -0.4 | -0.0 | -0.1 | -0.0 |
-| Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -2.2% | -0.6% | -1.0 | -0.8 | -0.3 | -0.1 |
-| India 2027 wheat crop (harvest Mar-Apr 2027) below 2026's record ~120 MT (`EV_WHEAT27_CROP_BELOW`) | anticipated | 0.65 | -0.8% | -0.5% | -0.7 | +0.0 | -0.1 | -0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -0.9 | -0.2 | -0.2 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.5% | -0.5% | -0.4 | -0.0 | -0.1 | -0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.4 | -0.2 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.5% | -0.5% | -0.3 | -0.1 | -0.1 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.4 | +0.0 | -0.1 |
-| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.3 | +0.1 | +0.1 |
 | Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down (`EV_RURAL_DEMAND_SOFT26`) | occurred | 1.00 | -0.5% | -0.5% | -0.5 | +0.0 | +0.0 | +0.0 |
+| India 2027 wheat crop (harvest Mar-Apr 2027) below 2026's record ~120 MT (`EV_WHEAT27_CROP_BELOW`) | anticipated | 0.65 | -0.8% | -0.5% | -0.7 | +0.0 | -0.1 | -0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.3 | -0.2 | +0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | +1.9% | +0.5% | +2.0 | -0.1 | -0.0 | +0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +0.7% | +0.5% | +0.2 | +0.4 | +0.1 | +0.1 |
+| Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -1.8% | -0.5% | -1.0 | -0.8 | -0.0 | -0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -52,15 +53,15 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → TATACONSUM | +0.51% | +0.36% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → TATACONSUM | +2.00% | +0.30% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TATACONSUM | -0.50% | -0.30% |
-| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → TATACONSUM | +1.15% | +0.29% |
 | 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → TATACONSUM | +0.51% | +0.28% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → TATACONSUM | -1.10% | -0.28% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → TATACONSUM | +0.39% | +0.26% |
 | 1 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_FOOD_INFLATION_IN → TATACONSUM | -0.96% | -0.24% |
 | 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → TATACONSUM | +0.34% | +0.23% |
-| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → TATACONSUM | -0.24% | -0.23% |
 | 1 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → TATACONSUM | -0.34% | -0.22% |
 | 1 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → TATACONSUM | -0.32% | -0.21% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → TATACONSUM | +0.80% | +0.20% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → TATACONSUM | -0.32% | -0.20% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

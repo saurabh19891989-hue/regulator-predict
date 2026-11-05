@@ -35,6 +35,7 @@ MoP proposed parallel-licensing framework to introduce distribution competition 
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | NATIONALUM | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| VEDL | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | HINDZINC | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | INDUSTOWER | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
 | JINDALSTEL | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
@@ -48,7 +49,6 @@ MoP proposed parallel-licensing framework to introduce distribution competition 
 | POLYCAB | +1.0 | +0.0 | +1.0 | +0.0 | +0.0 |
 | JSWENERGY | +1.1 | +1.5 | -0.4 | +0.0 | +0.0 |
 | BHEL | +1.2 | +1.0 | +0.2 | +0.0 | +0.0 |
-| CGPOWER | +1.2 | +0.0 | +1.2 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 70%, 2: 30%, 3: 0%, 4: 0%
 

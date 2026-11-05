@@ -18,42 +18,42 @@ Governor (7 Oct): surplus 'may not persist beyond FY27', 'surplus seen easing by
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| HDFCBANK | +0.2 | +0.5 | -0.3 | -0.0 | -0.0 |
-| INDUSINDBK | +0.1 | +0.3 | -0.2 | +0.1 | -0.0 |
+| HDFCBANK | +0.2 | +0.5 | -0.3 | -0.1 | -0.0 |
 | RVNL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SBILIFE | +0.0 | +0.1 | +0.0 | -0.0 | -0.0 |
+| MFSL | +0.0 | +0.1 | +0.0 | -0.0 | -0.0 |
 | SOLARINDS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SUZLON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | APARINDS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | PREMIERENE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| SUZLON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | POWERINDIA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| SBILIFE | +0.0 | +0.1 | +0.0 | -0.1 | -0.0 |
-| MFSL | +0.0 | +0.1 | +0.0 | -0.1 | -0.0 |
-| SRF | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| GVT&D | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | MEESHO | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | MAZDOCK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| GVT&D | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| TATASTEEL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SRF | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HAL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| WAAREEENER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -3.5 | -3.3 | -0.1 | -0.1 | -0.0 |
-| BAJFINANCE | -3.5 | -3.5 | +0.0 | -0.0 | -0.0 |
-| TATACAP | -3.2 | -3.2 | -0.0 | -0.0 | -0.0 |
-| CHOLAFIN | -2.2 | -2.1 | -0.0 | -0.0 | -0.0 |
+| YESBANK | -3.5 | -3.3 | -0.1 | -0.0 | -0.0 |
+| BAJFINANCE | -3.4 | -3.5 | +0.0 | +0.0 | +0.0 |
+| TATACAP | -3.1 | -3.2 | +0.0 | +0.0 | +0.0 |
+| CHOLAFIN | -2.1 | -2.1 | -0.0 | -0.0 | -0.0 |
 | JIOFIN | -1.9 | -1.8 | -0.1 | +0.0 | -0.0 |
-| GMRAIRPORT | -1.9 | -1.8 | +0.0 | -0.0 | -0.0 |
-| BAJAJFINSV | -1.9 | -1.8 | -0.1 | +0.0 | +0.0 |
-| IDEA | -1.8 | -1.8 | +0.0 | -0.0 | +0.0 |
+| BAJAJFINSV | -1.9 | -1.8 | -0.1 | +0.0 | -0.0 |
 | ADANIGREEN | -1.8 | -1.8 | +0.0 | +0.0 | -0.0 |
+| IDEA | -1.8 | -1.8 | +0.0 | -0.0 | +0.0 |
 | IREDA | -1.8 | -1.8 | +0.0 | +0.0 | +0.0 |
-| IDFCFIRSTB | -1.8 | -1.5 | -0.1 | -0.0 | -0.1 |
+| IDFCFIRSTB | -1.7 | -1.5 | -0.1 | -0.1 | -0.0 |
 | LTF | -1.6 | -1.6 | +0.0 | +0.0 | +0.0 |
-| ABCAPITAL | -1.6 | -1.4 | -0.2 | +0.0 | -0.0 |
-| INDIANB | -1.5 | -1.3 | -0.1 | -0.1 | -0.1 |
-| SBIN | -1.5 | -1.3 | -0.1 | -0.0 | -0.1 |
+| JSWENERGY | -1.5 | -1.5 | +0.0 | +0.0 | +0.0 |
+| AUBANK | -1.5 | -1.4 | -0.1 | +0.0 | -0.0 |
+| INDIANB | -1.5 | -1.3 | -0.1 | -0.1 | -0.0 |
+| SBIN | -1.5 | -1.3 | -0.1 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 84%, 2: 9%, 3: 4%, 4: 3%
+Share of absolute impact by order: 1: 86%, 2: 7%, 3: 4%, 4: 2%
 
 ## Sources
 - 2026-10-07 Surplus liquidity may not persist beyond FY27: RBI Governor - Business Standard https://news.google.com/rss/search?q=Surplus+liquidity+may+not+persist+beyond+FY27+Malhotra+when:120d&hl=en-IN&gl=IN&ceid=IN:en

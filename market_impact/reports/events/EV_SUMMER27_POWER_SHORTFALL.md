@@ -16,42 +16,42 @@ TOI/ET (14 Oct) flagged a strong El Nino for winter and summer 2027. Peak demand
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| ADANIPOWER | +10.0 | +10.3 | -0.2 | +0.0 | -0.1 |
-| JSWENERGY | +6.9 | +7.0 | -0.1 | +0.1 | -0.1 |
-| COALINDIA | +5.7 | +4.2 | +1.4 | +0.1 | -0.0 |
-| ENRIN | +5.5 | +4.5 | +1.1 | +0.1 | -0.2 |
+| ADANIPOWER | +9.3 | +9.6 | -0.2 | +0.0 | -0.0 |
+| JSWENERGY | +6.9 | +7.0 | -0.1 | +0.1 | -0.0 |
+| COALINDIA | +5.8 | +4.2 | +1.4 | +0.1 | +0.0 |
+| ENRIN | +5.6 | +4.5 | +1.1 | +0.1 | -0.1 |
 | BHEL | +4.7 | +4.5 | +0.3 | +0.1 | -0.1 |
 | TATAPOWER | +4.6 | +4.3 | +0.4 | +0.0 | -0.1 |
-| ADANIENSOL | +4.2 | +3.5 | +0.9 | -0.0 | -0.2 |
+| ADANIENSOL | +4.2 | +3.5 | +0.9 | -0.0 | -0.1 |
 | ADANIGREEN | +3.7 | +3.9 | +0.0 | -0.0 | -0.2 |
-| IREDA | +3.1 | +3.8 | +0.0 | -0.4 | -0.3 |
+| IREDA | +3.1 | +3.8 | +0.0 | -0.4 | -0.2 |
+| WAAREEENER | +3.1 | +3.0 | +0.0 | +0.1 | -0.1 |
 | NLCINDIA | +3.0 | +3.0 | +0.1 | +0.0 | -0.1 |
-| WAAREEENER | +3.0 | +3.0 | +0.0 | +0.1 | -0.1 |
+| POWERINDIA | +2.9 | +0.0 | +2.9 | +0.1 | -0.1 |
 | POWERGRID | +2.8 | +2.2 | +0.6 | +0.0 | -0.1 |
-| POWERINDIA | +2.7 | +0.0 | +2.9 | +0.1 | -0.2 |
 | NTPC | +2.6 | +2.7 | +0.0 | -0.0 | -0.1 |
 | RECLTD | +2.5 | +3.0 | +0.0 | -0.4 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | -3.5 | +0.0 | -1.0 | -1.8 | -0.6 |
-| IDFCFIRSTB | -3.0 | +0.0 | -0.9 | -1.5 | -0.6 |
 | VAML | -2.9 | -2.4 | -0.6 | +0.0 | +0.1 |
-| IDEA | -2.8 | -2.4 | -0.1 | -0.0 | -0.2 |
+| IDEA | -2.8 | -2.4 | -0.1 | -0.1 | -0.2 |
+| INDUSINDBK | -2.7 | +0.0 | -1.0 | -1.2 | -0.4 |
 | TATACOMM | -2.5 | -2.1 | -0.2 | -0.1 | -0.1 |
-| YESBANK | -2.4 | +0.0 | -0.7 | -1.1 | -0.6 |
 | JINDALSTEL | -2.4 | -1.8 | -0.6 | +0.0 | -0.0 |
-| BANKINDIA | -2.0 | +0.0 | -0.5 | -1.3 | -0.1 |
-| M&MFIN | -2.0 | -1.2 | -0.3 | -0.3 | -0.2 |
-| AXISBANK | -1.9 | +0.0 | -0.5 | -1.0 | -0.4 |
-| SBICARD | -1.8 | +0.0 | -0.7 | -0.6 | -0.5 |
-| KOTAKBANK | -1.8 | +0.0 | -0.5 | -1.0 | -0.2 |
-| INDIANB | -1.7 | +0.0 | -0.5 | -1.0 | -0.3 |
-| HDFCBANK | -1.7 | +0.0 | -0.5 | -0.9 | -0.3 |
+| IDFCFIRSTB | -2.3 | +0.0 | -0.9 | -1.1 | -0.4 |
+| YESBANK | -2.0 | +0.0 | -0.7 | -0.8 | -0.5 |
+| M&MFIN | -1.9 | -1.2 | -0.3 | -0.3 | -0.1 |
 | INDUSTOWER | -1.7 | -1.5 | -0.1 | -0.0 | -0.1 |
+| SHRIRAMFIN | -1.6 | -1.0 | -0.2 | -0.4 | -0.1 |
+| BANKINDIA | -1.5 | +0.0 | -0.5 | -0.9 | -0.1 |
+| AXISBANK | -1.5 | +0.0 | -0.5 | -0.7 | -0.3 |
+| SBICARD | -1.4 | +0.0 | -0.7 | -0.5 | -0.2 |
+| KOTAKBANK | -1.4 | +0.0 | -0.5 | -0.7 | -0.2 |
+| INDIANB | -1.4 | +0.0 | -0.5 | -0.7 | -0.2 |
 
-Share of absolute impact by order: 1: 43%, 2: 23%, 3: 18%, 4: 15%
+Share of absolute impact by order: 1: 46%, 2: 25%, 3: 17%, 4: 12%
 
 ## Sources
 - 2026-10-14 A super El Nino is brewing (TOI) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=super+El+Nino+India+summer+2027+power+demand+when:120d&hl=en-IN&gl=IN&ceid=IN:en

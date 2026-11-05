@@ -2,10 +2,11 @@
 *NIFTY_50 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +6.4%**, **12 months +10.2%** (rank 7 / 10 of 200 for 3m / 12m); beta 0.74
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.5%): 3 months 72%, 12 months 70%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.3% … P90 +12.2%; plausible 12m relative-return range incl. stock-specific noise: -17.0% … +55.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +7.9 pp (model impact +15.8% beta-adjusted vs realised market-adjusted move -20.1%); forward event exposure +3.9% (3m +2.9%; half assumed priced); company-specific events +2.8%
+- Expected relative return: **3 months +1.8%**, **12 months +2.7%** (rank 13 / 17 of 200 for 3m / 12m); beta 0.74
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.5%): 3 months 56%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.9% … P90 +5.8%; plausible 12m relative-return range incl. stock-specific noise: -23.4% … +40.9%
+- Decomposition (12m): 0.5 × forward event exposure +3.6% (3m +2.2%; half assumed priced) + 0.5 × company-specific catalysts +2.8%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +16.3% (beta-adjusted) vs a realised market-adjusted move of -20.1% — gap +36.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -14,33 +15,33 @@
 | Indian domestic coal price & availability cost (`F_COAL_INDIA`) | +10% domestic coal cost (notified/e-auction) | +6.00 | +6.00 | +0.00 | +0.00 | +0.00 | — |
 | Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +3.76 | +2.80 | +0.96 | +0.00 | +0.00 | — |
 | International thermal coal price (`F_COAL_INTL`) | +15% seaborne thermal coal | +2.52 | +1.80 | +0.72 | +0.00 | +0.00 | +0.0% |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -2.48 | +0.00 | -1.60 | -1.09 | +0.22 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +2.09 | +0.00 | +1.20 | +0.71 | +0.18 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -2.08 | +0.00 | -1.60 | -0.58 | +0.10 | — |
 | Mining royalty / mineral tax burden (`P_MINING_ROYALTY`) | +1 = higher | -2.00 | -2.00 | +0.00 | +0.00 | +0.00 | — |
-| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | +1.95 | +0.00 | +0.45 | +1.01 | +0.49 | — |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.92 | +0.00 | +1.22 | +0.65 | +0.05 | — |
-| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | -1.22 | -1.20 | +0.00 | -0.04 | +0.02 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | +1.17 | +1.00 | +0.19 | -0.01 | -0.01 | +0.0% |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.08 | +0.00 | -0.95 | -0.12 | -0.01 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.05 | +1.20 | -0.06 | -0.11 | +0.02 | -1.1% |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +1.76 | +0.00 | +1.20 | +0.43 | +0.14 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.61 | +0.00 | +1.22 | +0.35 | +0.04 | — |
+| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | +1.57 | +0.00 | +0.45 | +0.87 | +0.26 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | -1.18 | -1.20 | +0.00 | -0.01 | +0.03 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | +1.16 | +1.00 | +0.12 | +0.03 | +0.01 | +0.0% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.09 | +1.20 | -0.06 | -0.08 | +0.02 | -1.1% |
 | Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | -1.01 | -1.00 | +0.00 | +0.00 | -0.01 | — |
-| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | -0.87 | +0.00 | -0.64 | -0.23 | -0.00 | — |
+| Coking coal price (`F_COKING_COAL`) | +15% coking coal | +0.80 | +0.80 | +0.00 | +0.00 | +0.00 | — |
+| Power market / DISCOM reform (`P_POWER_REFORM`) | +1 = reform progress | +0.80 | +0.80 | +0.00 | +0.00 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | India coal crunch: critical plant stocks, e-auction premiums ~94%, captive plants ordered to maximise output; CIL October output +19% (`EV_INDIA_COAL_CRUNCH`) | occurred | 1.00 | +9.0% | +9.0% | +9.0 | +0.0 | +0.0 | +0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +3.8% | +3.8% | +2.8 | +1.0 | +0.0 | +0.0 |
-| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +5.7% | +2.3% | +4.2 | +1.4 | +0.1 | -0.0 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -2.6% | -1.7% | +0.0 | -1.6 | -1.0 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.1 | -0.1 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -2.0% | -1.1% | -1.3 | -0.3 | -0.3 | -0.2 |
-| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | -1.2% | -1.0% | +0.0 | -0.8 | -0.4 | +0.0 |
+| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +5.8% | +2.3% | +4.2 | +1.4 | +0.1 | +0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -2.1% | -1.5% | +0.0 | -1.6 | -0.5 | -0.0 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | +1.1% | +1.1% | +0.6 | +0.2 | +0.3 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -1.9% | -1.1% | -1.3 | -0.2 | -0.3 | -0.1 |
 | Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | +1.0% | +1.0% | +1.0 | +0.0 | -0.0 | +0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | +1.0% | +1.0% | +0.6 | +0.2 | +0.3 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | +3.2% | +0.8% | +2.2 | +0.9 | +0.2 | -0.1 |
-| IMD April 2027 forecast says below-normal monsoon (<96% LPA) - second weak year risk (`EV_MONSOON27_DEFICIT_FORECAST`) | risk_scenario | 0.32 | +2.4% | +0.8% | +0.0 | +1.6 | +0.8 | -0.0 |
+| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | -1.0% | -0.9% | +0.0 | -0.8 | -0.2 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | +3.1% | +0.8% | +2.2 | +0.8 | +0.2 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.7 | -0.0 | -0.0 | -0.0 |
+| IMD April 2027 forecast says below-normal monsoon (<96% LPA) - second weak year risk (`EV_MONSOON27_DEFICIT_FORECAST`) | risk_scenario | 0.32 | +2.0% | +0.7% | +0.0 | +1.6 | +0.4 | +0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.6 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -49,18 +50,18 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → COALINDIA | +4.20% | +1.68% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → COALINDIA | -1.60% | -1.09% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → COALINDIA | -1.30% | -0.72% |
-| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | -1.03% | -0.70% |
 | 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → COALINDIA | -0.80% | -0.68% |
 | 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | +1.44% | +0.58% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → COALINDIA | +2.20% | +0.55% |
 | 2 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → COALINDIA | +1.60% | +0.51% |
 | 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → COALINDIA | +0.90% | +0.45% |
-| 3 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | -0.52% | -0.44% |
 | 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → COALINDIA | +0.80% | +0.36% |
-| 3 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | +1.03% | +0.33% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → F_COAL_INDIA → COALINDIA | -0.52% | -0.35% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → COALINDIA | -0.70% | -0.29% |
 | 1 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → COALINDIA | -0.36% | -0.29% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → COALINDIA | +1.56% | +0.28% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → COALINDIA | -0.55% | -0.28% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → COALINDIA | +0.40% | +0.24% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -71,8 +72,8 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_COAL_INTL → COALINDIA | +0.70 | director_override | +1.26% |
 | 1 | F_COKING_COAL → COALINDIA | +1.30 | events | +1.04% |
 | 1 | F_REPO_IN → COALINDIA | +1.00 | events | -0.70% |
-| 1 | T_ENERGY_TRANSITION → COALINDIA | +0.50 | events | -0.50% |
 | 1 | F_USDINR → COALINDIA | -0.37 | observed | -0.44% |
+| 1 | T_ENERGY_TRANSITION → COALINDIA | +0.30 | director_override | -0.30% |
 | 1 | F_BRENT → COALINDIA | +0.00 | observed | +0.00% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)

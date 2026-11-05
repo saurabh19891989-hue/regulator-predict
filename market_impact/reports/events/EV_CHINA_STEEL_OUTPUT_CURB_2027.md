@@ -18,41 +18,41 @@ Fastmarkets (17 Sep) reported an anti-price-war policy and industry self-discipl
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | JINDALSTEL | +4.3 | +1.2 | +3.3 | -0.3 | +0.0 |
-| SAIL | +3.0 | -0.1 | +3.8 | -0.7 | -0.0 |
-| JSWSTEEL | +2.3 | +0.4 | +2.3 | -0.4 | -0.0 |
-| TATASTEEL | +1.7 | +0.4 | +1.6 | -0.3 | -0.0 |
-| APLAPOLLO | +0.4 | +0.0 | +0.5 | -0.0 | -0.0 |
-| CHOLAFIN | +0.3 | +0.3 | +0.0 | -0.0 | -0.0 |
+| SAIL | +3.3 | -0.1 | +3.8 | -0.3 | +0.0 |
+| JSWSTEEL | +2.5 | +0.4 | +2.3 | -0.2 | +0.0 |
+| TATASTEEL | +1.7 | +0.4 | +1.6 | -0.3 | +0.0 |
+| APLAPOLLO | +0.4 | +0.0 | +0.5 | -0.0 | +0.0 |
 | M&MFIN | +0.2 | +0.2 | +0.0 | +0.0 | -0.0 |
 | LTF | +0.1 | +0.1 | +0.0 | +0.0 | -0.0 |
-| BANKINDIA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| MAHABANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| PAYTM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| CHOLAFIN | +0.1 | +0.1 | +0.0 | -0.0 | +0.0 |
 | AUROPHARMA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| VAML | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| DRREDDY | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | HINDCOPPER | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| NATIONALUM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| OIL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| ONGC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| NMDC | -2.4 | -2.7 | +0.4 | -0.1 | -0.0 |
-| TMPV | -0.9 | -0.9 | +0.0 | +0.0 | +0.0 |
+| NMDC | -2.3 | -2.7 | +0.4 | -0.1 | +0.0 |
 | TMCV | -0.5 | +0.0 | -0.6 | +0.1 | -0.0 |
-| BHEL | -0.5 | +0.0 | -0.5 | +0.1 | -0.0 |
-| MARUTI | -0.5 | +0.0 | -0.5 | +0.1 | -0.0 |
+| BHEL | -0.5 | +0.0 | -0.5 | +0.1 | +0.0 |
+| MARUTI | -0.5 | +0.0 | -0.5 | +0.1 | +0.0 |
+| TMPV | -0.4 | -0.4 | +0.0 | +0.0 | +0.0 |
 | SUZLON | -0.4 | +0.0 | -0.5 | +0.1 | -0.0 |
-| ASHOKLEY | -0.4 | +0.0 | -0.5 | +0.1 | -0.0 |
-| RVNL | -0.4 | +0.0 | -0.4 | +0.1 | -0.0 |
-| HYUNDAI | -0.4 | +0.0 | -0.4 | +0.1 | -0.0 |
-| COCHINSHIP | -0.4 | +0.0 | -0.4 | +0.1 | -0.0 |
-| TIINDIA | -0.3 | +0.0 | -0.4 | +0.1 | -0.0 |
-| TVSMOTOR | -0.3 | +0.0 | -0.3 | +0.0 | -0.0 |
-| HEROMOTOCO | -0.3 | +0.0 | -0.3 | +0.0 | -0.0 |
-| GVT&D | -0.3 | -0.3 | +0.0 | +0.0 | -0.0 |
-| CGPOWER | -0.3 | -0.3 | +0.0 | +0.0 | -0.0 |
+| ASHOKLEY | -0.4 | +0.0 | -0.5 | +0.1 | +0.0 |
+| RVNL | -0.3 | +0.0 | -0.4 | +0.1 | -0.0 |
+| COCHINSHIP | -0.3 | +0.0 | -0.4 | +0.1 | +0.0 |
+| HYUNDAI | -0.3 | +0.0 | -0.4 | +0.1 | +0.0 |
+| TIINDIA | -0.3 | +0.0 | -0.4 | +0.1 | +0.0 |
+| TVSMOTOR | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
+| HEROMOTOCO | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
+| CGPOWER | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
+| GVT&D | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 24%, 2: 62%, 3: 10%, 4: 4%
+Share of absolute impact by order: 1: 23%, 2: 67%, 3: 9%, 4: 1%
 
 ## Sources
 - 2026-09-17 China's anti-price-war policy, steel industry's self-discipline initiative to accelerate supply-side adjustment: sources https://news.google.com/rss/search?q=China's+anti-price-war+policy,+steel+industry's+self-discipline+initiative+to+accelerate+supply-side+adjustment:+sources&hl=en-IN&gl=IN&ceid=IN:en

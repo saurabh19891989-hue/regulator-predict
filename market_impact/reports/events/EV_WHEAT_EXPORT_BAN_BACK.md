@@ -15,42 +15,42 @@ Export ban was lifted only on 24 Aug 2026; weak sowing and rising atta prices co
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | +1.2 | +0.0 | +0.0 | +0.7 | +0.5 |
-| BAJFINANCE | +1.1 | +0.0 | +0.0 | +0.6 | +0.4 |
-| TATACAP | +1.1 | +0.0 | +0.0 | +0.5 | +0.5 |
-| GMRAIRPORT | +0.9 | +0.0 | +0.0 | +0.5 | +0.3 |
-| AUBANK | +0.9 | +0.0 | +0.0 | +0.5 | +0.3 |
-| PRESTIGE | +0.8 | +0.0 | +0.0 | +0.5 | +0.3 |
-| SHRIRAMFIN | +0.8 | +0.0 | +0.0 | +0.4 | +0.4 |
-| IREDA | +0.8 | +0.0 | +0.0 | +0.4 | +0.4 |
-| IDFCFIRSTB | +0.8 | +0.0 | +0.0 | +0.4 | +0.4 |
-| PHOENIXLTD | +0.7 | +0.0 | +0.1 | +0.5 | +0.2 |
-| GODREJPROP | +0.7 | +0.0 | +0.0 | +0.5 | +0.2 |
-| BAJAJFINSV | +0.7 | +0.0 | +0.0 | +0.4 | +0.3 |
-| LTF | +0.7 | +0.0 | +0.0 | +0.4 | +0.3 |
-| LODHA | +0.7 | +0.0 | +0.0 | +0.4 | +0.2 |
-| INDUSINDBK | +0.7 | +0.0 | +0.0 | +0.3 | +0.4 |
+| YESBANK | +0.6 | +0.0 | +0.0 | +0.5 | +0.2 |
+| TATACAP | +0.5 | +0.0 | +0.0 | +0.4 | +0.2 |
+| BAJFINANCE | +0.5 | +0.0 | +0.0 | +0.4 | +0.1 |
+| BRITANNIA | +0.5 | +0.4 | +0.0 | +0.1 | -0.0 |
+| AUBANK | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| IDFCFIRSTB | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| IREDA | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| JUBLFOOD | +0.4 | +0.3 | +0.0 | +0.1 | -0.0 |
+| PRESTIGE | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| INDUSINDBK | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
+| BAJAJFINSV | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| LTF | +0.4 | +0.0 | +0.0 | +0.2 | +0.1 |
+| SHRIRAMFIN | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
+| M&MFIN | +0.4 | +0.0 | +0.1 | +0.2 | +0.1 |
+| JSWENERGY | +0.3 | +0.0 | +0.0 | +0.3 | +0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
+| DMART | -0.0 | -0.2 | +0.0 | +0.1 | +0.0 |
+| NATIONALUM | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| OIL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HINDCOPPER | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | PIIND | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| ONGC | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | UPL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| LUPIN | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | MCX | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| DMART | +0.0 | -0.2 | +0.0 | +0.1 | +0.1 |
-| NATIONALUM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| HINDCOPPER | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| SUNPHARMA | +0.0 | +0.0 | +0.0 | -0.0 | +0.1 |
-| NMDC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| VAML | +0.0 | +0.0 | +0.0 | -0.0 | +0.1 |
-| OIL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LUPIN | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LTM | +0.1 | +0.0 | +0.0 | -0.0 | +0.1 |
-| LICHSGFIN | +0.1 | +0.0 | +0.0 | -0.3 | +0.4 |
-| MPHASIS | +0.1 | +0.0 | +0.0 | -0.0 | +0.1 |
-| HCLTECH | +0.1 | +0.0 | +0.0 | -0.0 | +0.1 |
+| NMDC | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| DRREDDY | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| VAML | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HINDZINC | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| SUNPHARMA | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| LTM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 4%, 2: 4%, 3: 55%, 4: 38%
+Share of absolute impact by order: 1: 7%, 2: 5%, 3: 60%, 4: 28%
 
 ## Sources
 - 2026-08-24 Wheat export ban lifted 24 Aug 2026 https://www.deccanchronicle.com/business/economics/govt-lifts-export-ban-on-wheat-and-its-products-1981807

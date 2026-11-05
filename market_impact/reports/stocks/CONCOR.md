@@ -2,10 +2,11 @@
 *MIDCAP_100 · Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.2%**, **12 months +3.1%** (rank 37 / 43 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 59%, 12 months 80%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.8% … P90 +8.2%; plausible 12m relative-return range incl. stock-specific noise: -5.5% … +41.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.6% beta-adjusted vs realised market-adjusted move -11.2%); forward event exposure +6.9% (3m +3.5%; half assumed priced); company-specific events -2.3%
+- Expected relative return: **3 months +1.3%**, **12 months +0.9%** (rank 26 / 70 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 55%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -24.2% … +38.4%
+- Decomposition (12m): 0.5 × forward event exposure +5.0% (3m +3.0%; half assumed priced) + 0.5 × company-specific catalysts -2.3%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +4.2% (beta-adjusted) vs a realised market-adjusted move of -11.2% — gap +15.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -13,34 +14,34 @@
 |---|---|---|---|---|---|---|---|
 | Indian Railways freight/haulage tariff changes (`NEW_RAIL_FREIGHT_TARIFF`) | +1 = +5% haulage/terminal access charges | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
 | Private container train operators and road competition (`NEW_CONTAINER_LOGISTICS_COMPETITION`) | +1 = 2pp rail container market share loss for CONCOR | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +2.55 | +2.50 | +0.14 | -0.06 | -0.03 | — |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.97 | -1.50 | -0.43 | -0.03 | -0.01 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.81 | +0.00 | -0.31 | -1.27 | -0.23 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.71 | +0.00 | +1.60 | +0.17 | -0.06 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.68 | +0.00 | +1.60 | +0.16 | -0.08 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +2.56 | +2.50 | +0.14 | -0.06 | -0.02 | — |
+| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | -1.97 | -1.50 | -0.43 | -0.03 | -0.00 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +1.66 | +0.00 | +1.60 | +0.08 | -0.02 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.64 | +0.00 | +1.60 | +0.08 | -0.03 | — |
 | China+1 manufacturing relocation to India (`T_CHINA_PLUS_ONE`) | +1 | +1.58 | +1.50 | +0.02 | +0.06 | +0.01 | — |
 | Red Sea / Suez shipping disruption (`C_RED_SEA`) | +1 = disruption | -1.58 | -1.00 | -0.58 | +0.00 | +0.00 | — |
-| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | -1.37 | +0.00 | -1.10 | -0.27 | +0.00 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.22 | +0.00 | +0.90 | +0.33 | -0.01 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.21 | +0.00 | +0.67 | +0.41 | +0.13 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.06 | +0.00 | +1.00 | +0.10 | -0.04 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.05 | +1.00 | +0.07 | -0.02 | +0.01 | — |
+| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | -1.24 | +0.00 | -1.02 | -0.21 | -0.00 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.18 | +0.00 | +0.67 | +0.37 | +0.14 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.18 | +0.00 | +0.90 | +0.29 | -0.01 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.09 | +0.00 | -0.31 | -0.67 | -0.10 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.05 | +1.00 | +0.07 | -0.02 | +0.00 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +1.02 | +0.00 | +1.00 | +0.05 | -0.03 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.3% | -2.3% | -2.2 | -0.2 | +0.1 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.3% | -2.3% | -2.2 | -0.2 | +0.1 | +0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -0.8 | -0.5 | -0.2 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.5% | +1.4% | +0.6 | +0.7 | +0.3 | -0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.7% | +1.3% | +2.5 | +0.2 | -0.1 | +0.0 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.6% | +1.3% | +2.5 | +0.2 | -0.1 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.3% | +1.3% | +1.2 | +0.1 | -0.0 | -0.0 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.1 | +0.0 | -0.1 | -0.0 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.2% | -1.2% | -1.1 | +0.0 | -0.1 | -0.0 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.2% | -1.2% | -0.5 | -0.5 | -0.1 | -0.1 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.3 | -0.7 | -0.2 |
-| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.1% | +1.1% | +0.8 | +0.1 | +0.3 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.6% | +0.9% | -0.4 | +1.2 | +0.7 | +0.1 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.2% | +0.8% | +0.0 | +0.7 | +0.5 | +0.1 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.0% | +1.0% | +0.8 | +0.2 | +0.1 | +0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.3 | -0.5 | +0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.2% | +0.8% | +0.0 | +0.7 | +0.4 | +0.1 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.0% | +0.8% | +0.9 | +0.0 | +0.1 | +0.0 |
+| India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.55 | +1.4% | +0.7% | +1.2 | +0.1 | +0.0 | -0.0 |
+| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +0.7% | +0.7% | +0.7 | +0.1 | -0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,9 +49,7 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CONCOR | +2.50% | +1.25% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → CONCOR | +0.90% | +0.72% |
-| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → CONCOR | +0.72% | +0.65% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → CONCOR | -3.75% | -0.56% |
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → CONCOR | +0.56% | +0.50% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → CONCOR | +0.67% | +0.45% |
 | 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → CONCOR | -3.75% | -0.45% |
 | 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → CONCOR | +0.75% | +0.41% |
@@ -60,7 +59,9 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_RED_SEA_SUEZ_NORMALISATION ⇒ C_RED_SEA → CONCOR | +0.80% | +0.36% |
 | 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_GDP_IN → CONCOR | +0.48% | +0.34% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → CONCOR | -0.64% | -0.32% |
-| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → C_RED_SEA → F_SHIPPING_RATES → CONCOR | +0.53% | +0.29% |
+| 2 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → P_US_TARIFF_INDIA → CONCOR | +0.96% | +0.29% |
+| 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_GDP_IN → CONCOR | +0.33% | +0.28% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → CONCOR | -1.50% | -0.27% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

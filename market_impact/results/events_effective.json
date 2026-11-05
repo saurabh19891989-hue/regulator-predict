@@ -8331,10 +8331,10 @@
    "entry_shocks": [
     {
      "node": "T_GENAI_SERVICES",
-     "ssu": 0.5,
-     "low": 0.2,
-     "high": 1.0,
-     "note": "AI substitution narrative"
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "residual narrative shock at listing; the S-1 reaction (27-28 Oct) is already in prices"
     },
     {
      "node": "F_AI_CAPEX",
@@ -8414,6 +8414,7 @@
     }
    ],
    "confidence": "low",
+   "director_override": "The event's own description says Indian IT already fell 2-5% on 27-28 Oct when the S-1/IPO news sparked the global AI rally. The listing re-uses the same narrative, and an IPO does not change the substitution rate of IT labour. A further +0.5 SSU at p 0.85 counts the already-realised reaction twice: it books -1.9% expected for MPHASIS, -1.4% NAUKRI and -1.05% COFORGE. The T_GENAI shock is cut to 0.2.",
    "theme_file": "global_macro.json"
   },
   {
@@ -13730,27 +13731,27 @@
    "event_id": "EV_SEBI_CAS_DERIV_REVERSAL",
    "title": "SEBI partly reverses derivative expiry-settlement rule after closing-auction (CAS) volatility",
    "category": "sector_policy",
-   "status": "anticipated",
-   "date": "2026-11-30",
+   "status": "occurred",
+   "date": "2026-10-16",
    "window_end": "2026-12-31",
-   "prob_by_3m": 0.7,
-   "prob_by_12m": 0.85,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
    "description": "After the Closing Auction Session launch caused expiry-day swings (Sept 2026), SEBI moved to rework derivative expiry closing price determination; Reuters (5 Oct) reported a partial reversal (30-min VWAP may return). Jefferies calls it a bigger positive for brokers than exchanges (16 Oct).",
    "what_already_moved": "Not quantified.",
    "entry_shocks": [
     {
      "node": "P_SEBI_DERIVATIVES",
      "ssu": -0.4,
-     "low": -0.8,
-     "high": 0.0,
-     "note": "loosening step"
+     "low": -0.6,
+     "high": -0.2,
+     "note": "SEBI restored VWAP-based F&O expiry settlement, reversing the CAS-linked rule (16 Oct 2026)"
     },
     {
      "node": "F_EQUITY_ACTIVITY_IN",
      "ssu": 0.2,
      "low": 0.0,
-     "high": 0.5,
-     "note": "restores trader confidence"
+     "high": 0.4,
+     "note": "derivative volume recovery expected"
     }
    ],
    "chains": [
@@ -13805,6 +13806,7 @@
     }
    ],
    "confidence": "medium",
+   "director_override": "Already happened, but the catalogue has it as anticipated (p 0.85, date 2026-11-30). SEBI reinstated VWAP-based F&O settlement and reversed the CAS rule on 16 Oct 2026 (Outlook Money 16 Oct; Kalkine 19 Oct; Business Standard 19 Oct: 'Sebi's CAS rollback may offer new lifeline'). Jefferies called it 'bigger positive for brokers' (16 Oct). GROWW is +15.5% in 1m. As a forward event it books +4.9% x 0.85 of already-priced upside for GROWW (and BSE/ANGELONE-type names); as occurred it enters the recent state, where the realised move tests it.",
    "theme_file": "sector_policy.json"
   },
   {
@@ -13950,31 +13952,31 @@
    "status": "scheduled",
    "date": "2027-02-01",
    "window_end": "2027-02-01",
-   "prob_by_3m": 0.0,
+   "prob_by_3m": 0.9,
    "prob_by_12m": 0.9,
    "description": "Budget will set FY28 capex, railways and defence outlays. Base case: central capex growth ~10% and railways capex up high single digits (model assumption; no fetched figures). Vande Bharat sleeper completed 160 kmph Kavach trial (10 Sep 2026), supporting the order pipeline.",
    "what_already_moved": "n/a",
    "entry_shocks": [
     {
      "node": "F_GOVT_CAPEX",
-     "ssu": 0.8,
-     "low": 0.0,
-     "high": 1.5,
-     "note": "+8% capex growth vs ~10 SSU base; scenario"
+     "ssu": 0.2,
+     "low": -0.5,
+     "high": 0.8,
+     "note": "surprise vs the ~10% growth everyone expects; fiscal deficit already 42.1% of the FY27 target in H1, so the skew is not up"
     },
     {
      "node": "P_RAILWAY_CAPEX",
-     "ssu": 0.8,
-     "low": 0.0,
-     "high": 1.5,
-     "note": "+8%"
+     "ssu": 0.2,
+     "low": -0.3,
+     "high": 0.8,
+     "note": "surprise only"
     },
     {
      "node": "P_DEFENCE_PROCUREMENT",
-     "ssu": 1.0,
-     "low": 0.5,
-     "high": 2.0,
-     "note": "+10% domestic"
+     "ssu": 0.3,
+     "low": -0.2,
+     "high": 1.0,
+     "note": "surprise only; budgeted capital outlay growth is expected"
     }
    ],
    "chains": [
@@ -14028,6 +14030,7 @@
     }
    ],
    "confidence": "low",
+   "director_override": "Level-as-shock error. The event's own description says 'Base case: central capex growth ~10%' (model assumption) and then books that base case as +0.8 SSU of F_GOVT_CAPEX (SSU = +10% capex growth), +0.8 railway and +1.0 defence (= +10% domestic orders). A scheduled budget that delivers the consensus is not a price shock. Only the surprise should enter. Evidence: FY27 BE capex Rs12.2 lakh cr (The Hindu, 1 Feb 2026); Centre capex +12% in Apr-Sep, fiscal deficit 42.1% of target in H1 (BusinessLine/Business Standard, 30 Oct 2026). As written, the event adds +2.2 to +6.3pp expected 12m to HAL, SOLARINDS, COCHINSHIP, BHEL, KEI, CGPOWER, POLYCAB, GVT&D and JSWSTEEL. Also, 1 Feb 2027 falls inside the 3-month window (to ~5 Feb 2027), so prob_by_3m should equal prob_by_12m rather than 0.0.",
    "theme_file": "sector_policy.json"
   },
   {
@@ -14037,17 +14040,17 @@
    "status": "occurred",
    "date": "2026-10-07",
    "window_end": null,
-   "prob_by_3m": 1,
-   "prob_by_12m": 1,
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
    "description": "Airtel hiked all postpaid plan prices by Rs 50 from 8 Oct 2026, adding free annual international roaming. Prepaid/headline Jio-Airtel hikes not yet announced; media expects 12-15% hike in 4-5 months.",
    "what_already_moved": "Not isolated.",
    "entry_shocks": [
     {
      "node": "P_TELECOM_TARIFFS",
-     "ssu": 0.3,
-     "low": 0.2,
-     "high": 0.5,
-     "note": "postpaid-only, small share of base"
+     "ssu": 0.05,
+     "low": 0.02,
+     "high": 0.1,
+     "note": "Airtel postpaid only (+Rs50, 3-11%); prepaid and Jio/Vi unchanged"
     }
    ],
    "chains": [
@@ -14081,6 +14084,7 @@
     }
    ],
    "confidence": "high",
+   "director_override": "+0.3 SSU (= +3% industry ARPU) overstates a postpaid-only hike by one operator. Airtel's postpaid base is a low single-digit percentage of India's ~1.15 bn mobile subscribers (model knowledge), so a 3-11% postpaid hike moves industry ARPU by well under 0.5%. Jio said it would stay affordable. The 0.3 shock books +6.6% recent impact to IDEA, which has no postpaid hike of its own. Small signalling value retained.",
    "theme_file": "sector_policy.json"
   },
   {
@@ -14387,14 +14391,21 @@
      "ssu": 0.8,
      "low": 0.4,
      "high": 1.2,
-     "note": "stronger EV push"
+     "note": "stronger EV push (unchanged)"
+    },
+    {
+     "node": "NEW_AUTO_SAFETY_EMISSION_NORMS",
+     "ssu": 0.8,
+     "low": 0.4,
+     "high": 1.2,
+     "note": "CAFE-III is the emission-norm tightening this node was created for (node name lists CAFE-III); raises fuel-efficiency/GDI/hybrid electronics content"
     },
     {
      "node": "F_AUTO_DEMAND_IN",
      "ssu": -0.1,
      "low": -0.4,
      "high": 0.1,
-     "note": "cost pass-through on small cars"
+     "note": "cost pass-through on small cars (unchanged)"
     }
    ],
    "chains": [
@@ -14448,6 +14459,7 @@
     }
    ],
    "confidence": "medium",
+   "director_override": "The event shocks only the EV-negative side (P_EV_POLICY), so BOSCHLTD books -3.3% of 'unpriced' negative impact. The node NEW_AUTO_SAFETY_EMISSION_NORMS (Bosch +2.5) is named for 'ADAS/airbags, CAFE-III, BS-VII', yet this event does not shock it. The market read CAFE-III as content-positive: Bosch is +35.7% market-adjusted since June and at a record high (Business Standard 2026-11-03 'up 76% since Apr'; scanx 2026-11-04 'tighter safety rules support long-term growth'). The node only connects to BOSCHLTD, so no other company changes.",
    "theme_file": "sector_policy.json"
   },
   {
@@ -14899,24 +14911,24 @@
    "entry_shocks": [
     {
      "node": "P_RBI_PRUDENTIAL",
-     "ssu": 1.0,
-     "low": 0.5,
-     "high": 1.5,
-     "note": "tightening"
+     "ssu": 0.4,
+     "low": 0.2,
+     "high": 0.8,
+     "note": "generic part only (NBFC-bank lending norms); gold-loan-specific hit carried by gold-lender company events"
     },
     {
      "node": "F_UNSECURED_STRESS",
      "ssu": 0.3,
      "low": 0.0,
      "high": 0.8,
-     "note": "delinquency drift"
+     "note": "delinquency drift (unchanged)"
     },
     {
      "node": "F_GOLD_DEMAND_IN",
      "ssu": -0.3,
      "low": -1.0,
      "high": 0.0,
-     "note": "gold loan availability"
+     "note": "gold loan availability (unchanged)"
     }
    ],
    "chains": [
@@ -14971,6 +14983,7 @@
     }
    ],
    "confidence": "low",
+   "director_override": "A full +1 prudential step for a gold-loan rule hits every bank and NBFC with weights calibrated to unrelated rules. PFC (power lender, no gold loans) takes -2.5 conditional. CANBK takes -4.5 and BOB -3.5, weights calibrated to the bank ECL transition. MUTHOOTFIN also carries the same scenario as a company event (fix in findings). Cut the generic shock to 0.4 and keep the gold-lender-specific part in MUTHOOTFIN's company event (prob aligned to 0.3). Reuters 2026-10-21: NBFCs flag early gold-loan stress. ET 2026-11-02: the Muthoot MD attributes the NPA rise to the 2025 rule change. No new RBI proposal found.",
    "theme_file": "sector_policy.json"
   },
   {

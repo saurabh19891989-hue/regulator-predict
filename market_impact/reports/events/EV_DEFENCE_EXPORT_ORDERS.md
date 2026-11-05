@@ -26,12 +26,12 @@ Philippines praised BrahMos and signalled more purchases (3 Nov); BrahMos MD cal
 | COCHINSHIP | +0.6 | +0.6 | +0.0 | -0.0 | -0.0 |
 | LT | +0.3 | +0.2 | +0.0 | +0.0 | -0.0 |
 | BHEL | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
-| TMCV | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
-| BANKINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | POWERINDIA | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
-| UNIONBANK | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| SAIL | +0.1 | +0.0 | +0.0 | +0.0 | -0.0 |
-| PNB | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| TMCV | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| ENRIN | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
+| POLYCAB | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| CGPOWER | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
+| ASHOKLEY | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -52,7 +52,7 @@ Philippines praised BrahMos and signalled more purchases (3 Nov); BrahMos MD cal
 | PRESTIGE | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | TECHM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 83%, 2: 8%, 3: 4%, 4: 5%
+Share of absolute impact by order: 1: 85%, 2: 8%, 3: 3%, 4: 4%
 
 ## Sources
 - 2026-11-03 Philippines praises India's BrahMos missile as 'Unmatched' - Defence Watch https://news.google.com/rss/search?q=Philippines+praises+India+BrahMos+when:120d&hl=en-IN&gl=IN&ceid=IN:en

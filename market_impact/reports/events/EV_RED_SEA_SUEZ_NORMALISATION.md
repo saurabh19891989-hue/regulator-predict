@@ -22,16 +22,15 @@ Carriers were edging toward 'full Suez return' in Sep, but Houthi-Saudi fighting
 | TATACOMM | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | MRF | +0.3 | +0.2 | +0.1 | +0.0 | +0.0 |
 | INDIGO | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| GODREJCP | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
 | VMM | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| HINDZINC | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | ADANIPORTS | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
-| HCLTECH | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
-| INFY | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
-| POLICYBZR | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | OIL | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | ONGC | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
-| RELIANCE | -0.4 | +0.0 | -0.5 | +0.1 | +0.0 |
+| RELIANCE | -0.4 | +0.0 | -0.5 | +0.0 | +0.0 |
+| BPCL | -0.9 | +0.3 | -1.3 | +0.0 | +0.0 |
+| IOC | -1.0 | +0.0 | -1.0 | +0.0 | +0.0 |
+| HINDPETRO | -1.3 | +0.0 | -1.3 | +0.0 | +0.0 |
+| COCHINSHIP | -2.2 | -2.2 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -40,19 +39,18 @@ Carriers were edging toward 'full Suez return' in Sep, but Houthi-Saudi fighting
 | HINDPETRO | -1.3 | +0.0 | -1.3 | +0.0 | +0.0 |
 | IOC | -1.0 | +0.0 | -1.0 | +0.0 | +0.0 |
 | BPCL | -0.9 | +0.3 | -1.3 | +0.0 | +0.0 |
-| RELIANCE | -0.4 | +0.0 | -0.5 | +0.1 | +0.0 |
+| RELIANCE | -0.4 | +0.0 | -0.5 | +0.0 | +0.0 |
 | ONGC | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
 | OIL | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
-| POLICYBZR | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
-| HCLTECH | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
-| INFY | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | ADANIPORTS | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
-| HINDZINC | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 | VMM | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| GODREJCP | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
 | INDIGO | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
+| MRF | +0.3 | +0.2 | +0.1 | +0.0 | +0.0 |
+| TATACOMM | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
+| JINDALSTEL | +0.6 | +0.6 | +0.0 | +0.0 | +0.0 |
+| CONCOR | +1.3 | +1.3 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 47%, 2: 51%, 3: 3%, 4: 0%
+Share of absolute impact by order: 1: 50%, 2: 49%, 3: 1%, 4: 0%
 
 ## Sources
 - 2026-09-01 Container lines edge towards full Suez and Red Sea return - Seatrade Maritime https://news.google.com/rss/search?q=Container+lines+full+Suez+return+when:120d&hl=en-IN&gl=IN&ceid=IN:en

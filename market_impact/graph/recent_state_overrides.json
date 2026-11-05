@@ -35,6 +35,78 @@
    "state_ssu": 1.0,
    "reason": "[RT_BACKBONE] Wrong series and wrong sign. The node is 'Global natural gas / LNG price' and every backbone edge into it is about Asian LNG (Qatar/Hormuz), but the observed state uses NG=F (Henry Hub): -7.0% since 2026-06-01 -> -0.47 SSU. Because observed nodes override event shocks in recent_state(), the catalogue's own EV_LNG_HORMUZ_DISRUPTION (+1.0) is ignored; its what_already_moved text even says NG=F is 'not representative of JKM/TTF'. Asian spot LNG rose from an '11-week high' in June to its highest level since 2022 in mid/late October. Use +1.0 (energy agent's estimate, conservative given the headlines) until a JKM series is wired in. This affects GAIL, ATGL, IOC, HINDPETRO, TATASTEEL, fertiliser and CGD exposure.",
    "by": "RT_BACKBONE"
+  },
+  {
+   "node": "F_GOVT_CAPEX",
+   "state_ssu": 0.2,
+   "reason": "[RT_TOP_B] The +1.0 comes only from EV_GDP_Q1FY27_7_8, which maps a GDP beat to +10% government capex growth. Centre capex grew +12% y/y in Apr-Sep FY27 (CGA, BusinessLine 30 Oct 2026), against a budgeted FY27 BE of Rs12.2 lakh cr, which was already ~+9-11% over FY26 (The Hindu 1 Feb 2026). Since June, the change in expected capex growth is about +0.1 to +0.3 SSU. H1 fiscal deficit at 42.1% of target leaves no room for an upside H2 capex surprise. Today the +1.0 books +2.0 to +5.0% 'unpriced' upside to every capex name (KEI +3.0, BHEL +3.0, CGPOWER +3.5, POLYCAB +3.5, GVT&D +2.5, HAL +2.5, JSWSTEEL +2.0, POWERINDIA +5.0, TMCV +4.0, LT +3.5), mostly in stocks that fell 15-35% market-adjusted.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "node": "P_DEFENCE_PROCUREMENT",
+   "state_ssu": 0.4,
+   "reason": "[RT_TOP_B] The +1.0 (= +10% domestic defence orders) comes from EV_DAC_APPROVALS_H2_26. DAC Acceptances of Necessity are not orders: the event text itself says 'AoN precedes contract signing by 1-3 years' and calls the 26 Oct Rs2.12 lakh cr figure's relation to the 7 Sep Rs1.10 lakh cr 'unverified'. Large AoN tranches are routine through the year (model knowledge), so the change in expected order flow since June is a fraction of 1 SSU. Market check: BDL -17.5%, MAZDOCK -27%, COCHINSHIP -17% and BEL -0.8% over 3 months (price_performance.csv). The +1.0 books +3% to COCHINSHIP and SOLARINDS, +5% to HAL and BDL, and +6% to MAZDOCK.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "node": "NEW_CABLE_NEW_ENTRANT_PRICING",
+   "state_ssu": 1.0,
+   "reason": "[RT_TOP_B] UltraTech launched its Ultravolt wires & cables business with an Rs1,800 cr initial investment (1-4 Sep 2026). W&C stocks fell up to 16% in one week (Business Standard 11 Sep), and Nuvama warned of aggressive pricing and channel incentives (KEI profile). The graph has no catalogue event for it, so the node's recent state is 0. KEI's -27.9% market-adjusted move is then read against +11.8% model impact as fully 'unpriced'. +1 = expected ~100 bp industry margin erosion (structural, a new deep-pocketed entrant). Actual Q2 margins have not yet fallen (KEI 9.97% vs 9.88%), so 1.0 rather than more. Only KEI attaches to this node.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "node": "NEW_WC_COMPETITIVE_INTENSITY",
+   "state_ssu": 1.0,
+   "reason": "[RT_TOP_B] Same economic shock as NEW_CABLE_NEW_ENTRANT_PRICING (UltraTech Ultravolt entry, Sep 2026). RT_BACKBONE already flagged the two nodes as near-duplicates. Only POLYCAB attaches here, so it needs the same state, or POLYCAB's -22.4% market-adjusted move is read as +11.5% 'unpriced' upside. Polycab fell 7% on 4 Sep (Moneycontrol) and again 5-6% on the F&O exclusion (13-14 Oct, CNBC TV18/ET), which is a non-fundamental flow event.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "node": "T_GENAI_SERVICES",
+   "state_ssu": 0.5,
+   "reason": "[RT_BOT_B] The state of 1.0 comes entirely from EV_IT_AI_DEFLATION_Q2FY27, whose what_already_moved is 'Not quantified'. The catalogue's own EV_INDIAN_IT_Q2_VISA_SHOCK records that TCS was down ~35% in 2026 BEFORE June-Oct and that Nifty IT rose +16% in a month to 22 Oct on a 'reverse-AI trade'. IndiaIPO (29 Oct): 'AI fears ease, hiring picks up'. IT realised market-adjusted moves since 1 Jun: median +4.1% (TCS +4.1, HCLTECH +15.7, TECHM +14.0, PERSISTENT +8.9, MPHASIS +3.4, COFORGE +37.0, INFY -7.4, WIPRO -8.4). The AI-deflation step is mostly a pre-June level, and Q2 added at most half a step (Infosys guide cut, TCS beat). Cuts the -5.0/-4.1/-3.0 'unpriced' hits on MPHASIS/NAUKRI/COFORGE (and peers) roughly in half.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "node": "P_USFDA_ENFORCEMENT",
+   "state_ssu": 0.4,
+   "reason": "[RT_BOT_B] The state of 1.0 is from EV_USFDA_WARNING_WAVE_26: three warning letters in Jul-Aug 2026 (an Alembic site, Aurobindo's Eugia Unit 1, Dabur Silvassa), with what_already_moved 'size not fetched'. A few WLs in two months is normal FDA flow, not a step change in regime. The sector's realised moves since 1 Jun refute a sector-wide enforcement shock: AUROPHARMA, the WL recipient, is +18.6% market-adjusted, DIVISLAB +49.8%, GLENMARK +10.3%, DRREDDY +2.3%, TORNTPHARM +4.9%, ZYDUSLIFE +6.0%. At 1.0 the state books -4.2% for ZYDUSLIFE and -2.3% for TORNTPHARM as unpriced, which is the single biggest component of both names' bottom ranking. Company-specific inspections (Zydus Moraiya 5 obs, Oct 2026) belong in company events, where they already are.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "node": "P_RENEWABLE_SUPPORT",
+   "state_ssu": 0.6,
+   "reason": "[RT_N50_A] The event sum of 1.5 is made of ALMM List-II +0.5 and the BESS VGF +1.0. (1) ALMM-II's 1 Jun 2026 effective date was notified by MNRE in Dec 2024 (model knowledge), so the change since 1 Jun is nil. It also raises developer capex (FE, 21 Aug: 'solar project costs may rise 20%'), which is negative for IPPs (AGEL, Tata Power RE), not 'stronger support'. (2) The BESS VGF is confirmed (PIB/PM India, The Hindu, Moneycontrol, 4 Nov 2026: Rs14,500 cr for 92 GWh). It is a capex grant that competitive tariffs pass to discoms. At +1.0 SSU it books about +6% on AGEL (~Rs14,000 cr of market cap, roughly the whole subsidy) plus +4% on Tata Power and +4.8% on AESL. (3) PM-DHARA (Rs1.86 lakh cr green-energy transmission, Cabinet 30 Sep 2026) is missing from the catalogue, but power stocks fell on the day ('Power stocks fall despite PM-DHARA', Livemint 1 Oct), so the market's sensitivity to such announcements is low. Net change since June: BESS VGF ~0.3 + PM-DHARA ~0.3 = 0.6. This cuts unpriced since-June impact by about 5.4pp on ADANIGREEN, 3.6pp on TATAPOWER and 4.3pp on ADANIENSOL, the largest single item in all three.",
+   "by": "RT_N50_A"
+  },
+  {
+   "node": "T_ENERGY_TRANSITION",
+   "state_ssu": 0.3,
+   "reason": "[RT_N50_A] The only occurred shock is EV_BESS_VGF_NOV26 (+0.5), which also shocks P_RENEWABLE_SUPPORT +1.0, so one Rs14,500 cr scheme is counted on two theme nodes (AGEL 6+2 = +8%, Tata Power 4+1.5). Scale it in line with the P_RENEWABLE_SUPPORT reassessment above.",
+   "by": "RT_N50_A"
+  },
+  {
+   "node": "NEW_GENSET_PRICE_COMPETITION",
+   "state_ssu": 1.0,
+   "reason": "[RT_N50_A] This is a CUMMINSIND-only node. Q2 FY27 results (4 Nov 2026) showed revenue +4%, EBITDA margin down 680 bp y/y (~22% to ~15%) and PAT down 19-27%. The shares fell 14-15% on 5 Nov (ET, CNBC-TV18, Business Standard, NDTV Profit). EBITDA fell ~29% y/y, about twice the node's 1-SSU definition (-15% EBITDA). Without this state the model reports +6.25% 'unpriced' upside against a -31% realised move whose main cause is a stock-specific results miss, which the brief says must not be called unpriced. A state of 1.0 is conservative given that the call commentary (cause: price, mix or cost) is pending.",
+   "by": "RT_N50_A"
+  },
+  {
+   "node": "F_AUTO_DEMAND_IN",
+   "state_ssu": 0.5,
+   "reason": "[RT_N50_B] The current state is -0.1, booked only from EV_CAFE3_NOTIFIED's small-car cost note, and ignores observed volumes. Since June, demand has stayed at record pace rather than moderating as feared in June (West Asia, rate hike). SIAM: Q1 FY27 PV +26% (ET Auto 2026-07-15); Q2 auto sales +18.2%, all segments at records (ANI/SIAM 2026-10-15); September PV +21.8% (ET 2026-10-15); September retail +31.8% (FADA via DD News 2026-11-03); October PV above 5 lakh, a record, with Hyundai's best-ever month at 82,299 (ET Auto 2026-11-02, scanx 2026-11-01); Maruti raised its FY27 market view to 53-54 lakh (Moneycontrol 2026-09-03). +0.5 SSU (~5% volumes above the June-expected path) is conservative. Affects HYUNDAI (+4.5), BOSCHLTD (+3.0), MOTHERSON (+1.5), CHOLAFIN (+1.75) and other auto names.",
+   "by": "RT_N50_B"
+  },
+  {
+   "node": "NEW_BANK_INFRA_LENDING_COMPETITION",
+   "state_ssu": 0.5,
+   "reason": "[RT_N50_B] PFC is -28.2% market-adjusted since June. The model shows +1.9% and books it as 'unpriced' upside because its only stock-specific driver has no state. Dated evidence of the channel since June: Bernstein cut PFC/REC targets citing bank competition in power lending (ET/NDTV Profit 2026-08-25); REC cut FY27 loan growth guidance to 10-11% from 12-13% (2026-10-29 call); Morgan Stanley downgraded PFC (2026-11-01). The magnitude (+1 = 5pp share or 25bp spread) is not verified, so +0.5 is the conservative choice. Only PFC uses this node.",
+   "by": "RT_N50_B"
+  },
+  {
+   "node": "T_GLP1",
+   "state_ssu": 0.3,
+   "reason": "[RT_N50_B] No state is set although the oral GLP-1 theme advanced after 1 June: Foundayo (orforglipron) launched in the US with early uptake (Truveta 2026-07-20; FDA obesity approval was before June); diabetes filing (BioSpace 2026-06-09); MACE data (2026-10-19); EU CHMP positive opinion (CNBC TV18 2026-10-19, Divi's +2%). Low confidence. A small +0.3 stops the model from scoring DIVISLAB's +49.8% move against only negative drivers. Affects DIVISLAB (+2.4), DRREDDY (+1.2), BIOCON (+0.9) and small others.",
+   "by": "RT_N50_B"
   }
  ]
 }

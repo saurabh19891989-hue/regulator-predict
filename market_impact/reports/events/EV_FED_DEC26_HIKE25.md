@@ -20,42 +20,42 @@ FOMC meets 8-9 Dec (fed calendar, with SEP). Reuters 20 Oct: nearly all economis
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| LICHSGFIN | +0.6 | +1.0 | -0.1 | -0.2 | -0.1 |
-| JSWSTEEL | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| SAIL | +0.2 | +0.0 | -0.1 | +0.3 | +0.1 |
-| OIL | +0.2 | +0.0 | +0.2 | +0.1 | -0.0 |
-| NMDC | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| ONGC | +0.2 | +0.0 | +0.1 | +0.0 | +0.0 |
-| TMPV | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| PIIND | +0.2 | +0.0 | +0.1 | -0.0 | +0.0 |
-| DRREDDY | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
-| MANKIND | +0.0 | +0.4 | -0.3 | -0.1 | -0.1 |
-| SRF | +0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
-| JINDALSTEL | +0.0 | +0.0 | -0.1 | +0.1 | +0.0 |
-| LUPIN | +0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
-| COALINDIA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| TATASTEEL | -0.0 | +0.0 | -0.2 | +0.1 | +0.0 |
+| LICHSGFIN | +0.7 | +1.0 | -0.1 | -0.2 | -0.0 |
+| OIL | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
+| MANKIND | +0.1 | +0.4 | -0.3 | -0.1 | -0.0 |
+| NMDC | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| ONGC | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| PIIND | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
+| JSWSTEEL | +0.1 | +0.0 | -0.0 | +0.1 | +0.0 |
+| VOLTAS | +0.0 | +0.0 | +0.2 | -0.2 | -0.0 |
+| SAIL | +0.0 | +0.0 | -0.1 | +0.1 | +0.0 |
+| COCHINSHIP | +0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| COALINDIA | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| DRREDDY | -0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
+| SRF | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| TMPV | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| JINDALSTEL | -0.0 | +0.0 | -0.1 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BSE | -4.7 | -3.0 | -1.0 | -0.7 | -0.0 |
-| SWIGGY | -3.4 | -2.5 | -0.7 | -0.1 | -0.1 |
-| MOTILALOFS | -3.4 | +0.0 | -1.7 | -1.2 | -0.5 |
-| POLICYBZR | -3.0 | -2.0 | -0.7 | -0.2 | -0.1 |
-| ICICIAMC | -2.5 | +0.0 | -1.2 | -0.9 | -0.4 |
-| YESBANK | -2.3 | +0.0 | -1.2 | -0.7 | -0.4 |
-| JIOFIN | -2.3 | +0.0 | -0.9 | -1.0 | -0.4 |
-| IREDA | -2.2 | +0.0 | -1.0 | -0.9 | -0.3 |
-| INDUSINDBK | -2.2 | -0.2 | -0.8 | -0.8 | -0.3 |
-| BAJFINANCE | -2.2 | +0.0 | -1.0 | -0.8 | -0.3 |
-| NAUKRI | -2.2 | +0.0 | -1.2 | -0.7 | -0.2 |
-| GROWW | -2.1 | +0.0 | -0.8 | -1.0 | -0.2 |
-| 360ONE | -2.0 | +0.0 | -0.8 | -0.8 | -0.3 |
-| IDFCFIRSTB | -1.9 | +0.0 | -0.8 | -0.8 | -0.3 |
-| PAYTM | -1.9 | +0.0 | -1.1 | -0.6 | -0.2 |
+| BSE | -4.3 | -3.0 | -0.8 | -0.4 | -0.0 |
+| SWIGGY | -3.1 | -2.5 | -0.5 | -0.1 | -0.0 |
+| POLICYBZR | -2.6 | -2.0 | -0.5 | -0.0 | -0.0 |
+| MOTILALOFS | -1.8 | +0.0 | -1.4 | -0.3 | -0.0 |
+| YESBANK | -1.5 | +0.0 | -1.0 | -0.4 | -0.1 |
+| MUTHOOTFIN | -1.4 | +0.0 | -1.2 | -0.2 | -0.0 |
+| MPHASIS | -1.4 | -0.9 | -0.4 | -0.1 | +0.0 |
+| PERSISTENT | -1.4 | -1.0 | -0.3 | -0.1 | -0.0 |
+| NAUKRI | -1.4 | +0.0 | -1.1 | -0.3 | -0.0 |
+| PRESTIGE | -1.4 | -0.1 | -0.9 | -0.3 | -0.0 |
+| COFORGE | -1.3 | -0.7 | -0.5 | -0.1 | +0.0 |
+| BAJFINANCE | -1.3 | +0.0 | -0.9 | -0.3 | -0.1 |
+| INDUSINDBK | -1.3 | -0.2 | -0.6 | -0.4 | -0.0 |
+| BIOCON | -1.3 | -1.0 | -0.2 | -0.0 | +0.0 |
+| ICICIAMC | -1.3 | +0.0 | -1.0 | -0.2 | -0.0 |
 
-Share of absolute impact by order: 1: 13%, 2: 48%, 3: 27%, 4: 12%
+Share of absolute impact by order: 1: 18%, 2: 60%, 3: 19%, 4: 3%
 
 ## Sources
 - 2026-10-20 Fed to skip October but raise rates again in December, nearly all economists say - Reuters https://news.google.com/rss/search?q=Fed%20to%20skip%20October%20but%20raise%20rates%20again%20in%20December%2C%20nearly%20all%20economists%20say%20-%20Reuters&hl=en-IN&gl=IN&ceid=IN:en

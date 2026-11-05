@@ -17,42 +17,42 @@ H1 FY27 fiscal deficit Rs 7.14 lakh crore = 42.1% of full-year BE (CGA, 30 Oct; 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | +0.2 | +0.0 | +0.1 | +0.0 | +0.1 |
-| SAIL | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
-| TATASTEEL | +0.1 | +0.0 | +0.0 | +0.1 | +0.1 |
 | OIL | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
-| ONGC | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | NATIONALUM | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| JSWSTEEL | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| ONGC | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| TATASTEEL | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | NMDC | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SRF | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| TMPV | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SAIL | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | PIIND | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| TMPV | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | DRREDDY | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | COALINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | UPL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SOLARINDS | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HINDALCO | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JIOFIN | -4.6 | -4.3 | -0.1 | -0.1 | -0.0 |
-| IREDA | -4.5 | -4.3 | -0.1 | -0.0 | -0.0 |
-| BAJFINANCE | -4.2 | -3.9 | -0.2 | -0.1 | -0.0 |
-| ADANIGREEN | -4.0 | -3.6 | -0.3 | -0.1 | -0.0 |
-| TATACAP | -3.7 | -3.2 | -0.3 | -0.1 | -0.1 |
-| YESBANK | -3.6 | -2.9 | -0.3 | -0.3 | -0.1 |
+| JIOFIN | -4.5 | -4.3 | -0.1 | -0.1 | -0.0 |
+| IREDA | -4.4 | -4.3 | -0.1 | -0.0 | -0.0 |
+| BAJFINANCE | -4.1 | -3.9 | -0.1 | -0.0 | -0.0 |
+| ADANIGREEN | -3.9 | -3.6 | -0.2 | -0.1 | -0.0 |
+| TATACAP | -3.5 | -3.2 | -0.2 | -0.1 | -0.0 |
 | IDEA | -3.5 | -3.3 | -0.1 | -0.1 | -0.0 |
-| GMRAIRPORT | -3.4 | -3.0 | -0.2 | -0.2 | -0.0 |
+| YESBANK | -3.4 | -2.9 | -0.3 | -0.2 | -0.1 |
 | BAJAJFINSV | -3.3 | -3.2 | -0.1 | -0.0 | -0.0 |
-| BANKINDIA | -3.2 | -2.7 | -0.2 | -0.1 | -0.2 |
-| JSWENERGY | -3.0 | -2.8 | -0.2 | -0.1 | -0.0 |
+| BANKINDIA | -3.0 | -2.7 | -0.2 | -0.1 | -0.1 |
+| JSWENERGY | -3.0 | -2.8 | -0.2 | -0.1 | +0.0 |
 | TATAPOWER | -2.8 | -2.5 | -0.1 | -0.1 | -0.0 |
-| PFC | -2.8 | -2.5 | -0.2 | -0.1 | -0.0 |
-| ADANIENT | -2.8 | -2.5 | -0.2 | -0.1 | -0.0 |
-| GROWW | -2.7 | -2.4 | -0.1 | -0.1 | -0.0 |
+| PFC | -2.7 | -2.5 | -0.2 | -0.1 | +0.0 |
+| ADANIENT | -2.7 | -2.5 | -0.2 | -0.1 | -0.0 |
+| GMRAIRPORT | -2.6 | -2.4 | -0.1 | -0.1 | -0.0 |
+| ADANIENSOL | -2.6 | -2.3 | -0.2 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 77%, 2: 13%, 3: 7%, 4: 2%
+Share of absolute impact by order: 1: 81%, 2: 12%, 3: 6%, 4: 1%
 
 ## Sources
 - 2026-11-02 Fiscal deficit likely to exceed FY27 target by up to Rs 1.2 lakh crore - ET https://news.google.com/rss/search?q=Fiscal+deficit+likely+to+exceed+FY27+target+Rs+1.2+lakh+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en

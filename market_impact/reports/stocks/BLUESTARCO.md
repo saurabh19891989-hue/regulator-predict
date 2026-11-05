@@ -2,10 +2,11 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.8%**, **12 months +3.1%** (rank 42 / 45 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.9%): 3 months 55%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.5% … P90 +4.0%; plausible 12m relative-return range incl. stock-specific noise: -9.9% … +24.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.4 pp (model impact +6.8% beta-adjusted vs realised market-adjusted move -3.4%); forward event exposure +1.0% (3m +0.4%; half assumed priced); company-specific events +0.5%
+- Expected relative return: **3 months +0.1%**, **12 months -0.2%** (rank 96 / 112 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.9%): 3 months 50%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.7% … P90 +2.7%; plausible 12m relative-return range incl. stock-specific noise: -47.5% … +28.6%
+- Decomposition (12m): 0.5 × forward event exposure +0.0% (3m +0.3%; half assumed priced) + 0.5 × company-specific catalysts +0.5%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +6.2% (beta-adjusted) vs a realised market-adjusted move of -3.4% — gap +9.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -15,52 +16,52 @@
 | Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +3.08 | +3.00 | +0.07 | +0.00 | +0.01 | — |
 | Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +2.69 | +2.50 | +0.00 | +0.14 | +0.05 | — |
 | Consumer durables category promotional / discount intensity (`NEW_CONSUMER_DURABLES_PRICE_WAR`) | +1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances | -2.50 | -2.50 | +0.00 | +0.00 | +0.00 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.24 | +0.00 | -1.03 | -0.81 | -0.39 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -2.17 | -1.80 | +0.00 | -0.17 | -0.19 | -1.1% |
-| Copper price (`F_COPPER`) | +10% copper | -1.64 | -1.50 | -0.14 | +0.00 | +0.00 | -2.4% |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -1.62 | +0.00 | -1.15 | -0.37 | -0.11 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -2.00 | -1.80 | +0.00 | -0.13 | -0.07 | -1.1% |
 | Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.59 | +1.50 | +0.00 | +0.06 | +0.03 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.47 | +0.00 | +0.96 | +0.17 | +0.33 | — |
+| Copper price (`F_COPPER`) | +10% copper | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | -2.4% |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.41 | +0.00 | -1.03 | -0.25 | -0.13 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -1.39 | +0.00 | -1.15 | -0.15 | -0.09 | — |
 | Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.37 | +1.00 | +0.20 | +0.15 | +0.02 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.32 | +0.00 | -0.17 | -0.70 | -0.45 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.15 | +0.00 | -0.91 | -0.20 | -0.05 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.30 | +0.00 | +0.96 | +0.17 | +0.16 | — |
 | Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +1.13 | +1.00 | +0.12 | +0.00 | +0.01 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.06 | +0.00 | -0.17 | -0.48 | -0.41 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.01 | +0.00 | -0.91 | -0.08 | -0.03 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -1.2 | -0.9 | -0.5 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.0% | +2.0% | +1.6 | +0.6 | -0.2 | -0.1 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.0% | +2.0% | +1.6 | +0.6 | -0.2 | -0.0 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +1.7% | +1.7% | +1.7 | +0.0 | +0.0 | +0.0 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.5% | -1.5% | -1.1 | -0.3 | -0.0 | -0.0 |
-| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.1% | -1.1% | -0.2 | -0.7 | -0.1 | -0.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.9 | -0.1 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.9% | +1.0% | +0.0 | +1.0 | +0.4 | +0.4 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.1% | +1.0% | +0.8 | +0.2 | +0.1 | +0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -3.4% | -0.9% | +0.0 | -2.7 | -0.7 | +0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.2% | -0.8% | +0.0 | -1.7 | -0.8 | -0.7 |
-| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -4.3% | -0.8% | -3.1 | -0.9 | -0.3 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -1.2 | -0.3 | -0.2 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.1 | -0.2 | -0.0 | -0.0 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.0% | -1.0% | -0.2 | -0.6 | -0.1 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.9 | +0.0 | -0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -3.3% | -0.8% | +0.0 | -2.7 | -0.6 | +0.1 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -4.2% | -0.8% | -3.1 | -0.8 | -0.3 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.3% | +0.7% | +0.0 | +0.7 | +0.4 | +0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | +0.0 | -0.3 | -0.4 |
+| Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | +0.6% | +0.6% | +0.7 | -0.0 | +0.0 | +0.0 |
+| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.0% | -0.6% | -0.4 | -0.7 | +0.1 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → BLUESTARCO | +0.80% | +0.72% |
 | 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → BLUESTARCO | -2.16% | -0.54% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BLUESTARCO | -2.34% | -0.42% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → BLUESTARCO | +0.83% | +0.41% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → BLUESTARCO | +0.74% | +0.41% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BLUESTARCO | -0.64% | -0.32% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → BLUESTARCO | -1.25% | -0.31% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → BLUESTARCO | -0.88% | -0.31% |
 | 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → BLUESTARCO | -0.60% | -0.27% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → BLUESTARCO | +0.48% | +0.27% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BLUESTARCO | -0.40% | -0.24% |
 | 2 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → F_URBAN_DEMAND → BLUESTARCO | +0.29% | +0.23% |
-| 2 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → T_DATA_CENTRES_IN → BLUESTARCO | +0.24% | +0.20% |
-| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → BLUESTARCO | -0.19% | -0.18% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BLUESTARCO | +0.60% | +0.18% |
-| 2 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → F_URBAN_DEMAND → BLUESTARCO | -0.18% | -0.15% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → BLUESTARCO | -0.82% | -0.20% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → BLUESTARCO | +0.20% | +0.18% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → BLUESTARCO | -0.16% | -0.14% |
+| 2 | EV_CPI_BREACH_6PCT ⇒ F_CPI_IN → F_URBAN_DEMAND → BLUESTARCO | -0.24% | -0.14% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → BLUESTARCO | -0.24% | -0.14% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → BLUESTARCO | -0.80% | -0.14% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -68,16 +69,16 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_ALUMINIUM → BLUESTARCO | -1.96 | observed | +1.37% |
 | 1 | F_GSEC_10Y_IN → BLUESTARCO | +1.55 | director_override | -1.24% |
-| 1 | F_GOVT_CAPEX → BLUESTARCO | +1.00 | events | +1.00% |
 | 1 | F_USDINR → BLUESTARCO | -0.37 | observed | +0.66% |
 | 1 | F_URBAN_DEMAND → BLUESTARCO | +0.20 | events | +0.60% |
-| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → BLUESTARCO | +1.00 | events | +0.48% |
 | 1 | F_COPPER → BLUESTARCO | -0.24 | observed | +0.36% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → BLUESTARCO | +1.00 | events | -0.31% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → BLUESTARCO | +1.55 | director_override | -0.28% |
 | 2 | F_GDP_IN → F_PRIVATE_CAPEX → BLUESTARCO | +0.50 | events | +0.25% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → BLUESTARCO | +0.50 | director_override | +0.24% |
 | 2 | F_AI_CAPEX → T_DATA_CENTRES_IN → BLUESTARCO | -0.30 | events | -0.22% |
-| 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → BLUESTARCO | +1.00 | events | +0.20% |
+| 1 | F_GOVT_CAPEX → BLUESTARCO | +0.20 | director_override | +0.20% |
+| 2 | F_GDP_IN → F_HOUSING_DEMAND → BLUESTARCO | +0.50 | events | +0.18% |
+| 2 | F_REPO_IN → F_PRIVATE_CAPEX → BLUESTARCO | +1.00 | events | -0.16% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |

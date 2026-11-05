@@ -15,34 +15,34 @@ Warning letters to an Alembic site (21 Jul, patient consent), Eugia Pharma Unit 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
+| TORNTPHARM | -1.1 | -1.2 | +0.2 | +0.0 | +0.0 |
 | CIPLA | -1.3 | -2.0 | +0.7 | +0.0 | +0.0 |
 | SUNPHARMA | -1.7 | -2.0 | +0.3 | +0.0 | +0.0 |
 | LUPIN | -2.0 | -3.0 | +1.0 | +0.0 | +0.0 |
+| DIVISLAB | -2.1 | -2.4 | +0.3 | +0.0 | +0.0 |
 | DRREDDY | -2.2 | -3.0 | +0.8 | +0.0 | +0.0 |
-| TORNTPHARM | -2.3 | -2.5 | +0.2 | +0.0 | +0.0 |
+| ZYDUSLIFE | -2.2 | -3.0 | +0.8 | +0.0 | +0.0 |
 | GLENMARK | -2.9 | -3.5 | +0.6 | +0.0 | +0.0 |
 | AUROPHARMA | -3.0 | -4.0 | +1.0 | +0.0 | +0.0 |
 | BIOCON | -3.5 | -4.0 | +0.5 | +0.0 | +0.0 |
 | LAURUSLABS | -3.8 | -4.0 | +0.2 | +0.0 | +0.0 |
-| ZYDUSLIFE | -4.2 | -5.0 | +0.8 | +0.0 | +0.0 |
-| DIVISLAB | -5.7 | -6.0 | +0.3 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| DIVISLAB | -5.7 | -6.0 | +0.3 | +0.0 | +0.0 |
-| ZYDUSLIFE | -4.2 | -5.0 | +0.8 | +0.0 | +0.0 |
 | LAURUSLABS | -3.8 | -4.0 | +0.2 | +0.0 | +0.0 |
 | BIOCON | -3.5 | -4.0 | +0.5 | +0.0 | +0.0 |
 | AUROPHARMA | -3.0 | -4.0 | +1.0 | +0.0 | +0.0 |
 | GLENMARK | -2.9 | -3.5 | +0.6 | +0.0 | +0.0 |
-| TORNTPHARM | -2.3 | -2.5 | +0.2 | +0.0 | +0.0 |
 | DRREDDY | -2.2 | -3.0 | +0.8 | +0.0 | +0.0 |
+| ZYDUSLIFE | -2.2 | -3.0 | +0.8 | +0.0 | +0.0 |
+| DIVISLAB | -2.1 | -2.4 | +0.3 | +0.0 | +0.0 |
 | LUPIN | -2.0 | -3.0 | +1.0 | +0.0 | +0.0 |
 | SUNPHARMA | -1.7 | -2.0 | +0.3 | +0.0 | +0.0 |
 | CIPLA | -1.3 | -2.0 | +0.7 | +0.0 | +0.0 |
+| TORNTPHARM | -1.1 | -1.2 | +0.2 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 86%, 2: 14%, 3: 0%, 4: 0%
+Share of absolute impact by order: 1: 83%, 2: 17%, 3: 0%, 4: 0%
 
 ## Sources
 - 2026-08-14 US FDA issues warning letter to Eugia Pharma https://www.thehindu.com/

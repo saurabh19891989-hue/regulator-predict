@@ -24,16 +24,16 @@ RBI's ECL framework replaces incurred-loss provisioning. SBI estimates Rs 19,500
 | SUPREMEIND | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | BIOCON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | BSE | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| JINDALSTEL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | TECHM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| JINDALSTEL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | TCS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | NLCINDIA | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | INDUSTOWER | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| LICI | +0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | RVNL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| HDFCLIFE | +0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | HDFCAMC | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | PIIND | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| AUROPHARMA | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| HCLTECH | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -47,7 +47,7 @@ RBI's ECL framework replaces incurred-loss provisioning. SBI estimates Rs 19,500
 | TATACAP | -2.4 | -2.4 | -0.0 | +0.0 | +0.0 |
 | AXISBANK | -2.4 | -2.5 | +0.1 | +0.0 | -0.0 |
 | UNIONBANK | -2.3 | -2.4 | +0.1 | +0.0 | -0.0 |
-| ABCAPITAL | -2.2 | -2.2 | -0.1 | +0.0 | +0.0 |
+| ABCAPITAL | -2.2 | -2.2 | -0.0 | +0.0 | +0.0 |
 | AUBANK | -2.2 | -2.3 | +0.1 | +0.0 | +0.0 |
 | MAHABANK | -2.2 | -2.2 | +0.0 | +0.0 | -0.0 |
 | IREDA | -2.1 | -2.1 | -0.1 | +0.1 | +0.0 |

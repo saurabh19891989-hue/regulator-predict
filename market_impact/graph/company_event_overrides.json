@@ -1,1 +1,421 @@
-{"overrides": [], "add": []}
+{
+ "overrides": [
+  {
+   "ticker": "SIEMENS",
+   "match": "Jefferies downgrade",
+   "drop": true,
+   "reason": "[DIRECTOR_CE] RT_N50_A: refers to Siemens AG (SIEGY), not Siemens Ltd",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "PNB",
+   "match": "ECL framework effective",
+   "drop": true,
+   "reason": "[DIRECTOR_CE] RT_N50_A: duplicates EV_ECL_ROLLOUT_APR27",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "UNIONBANK",
+   "match": "ECL framework effective",
+   "drop": true,
+   "reason": "[DIRECTOR_CE] RT_N50_A: duplicates EV_ECL_ROLLOUT_APR27",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "GODREJCP",
+   "match": "Kendal",
+   "drop": true,
+   "reason": "[DIRECTOR_CE] RT_N50_A: occurred 2026-10-06, priced",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "GODREJCP",
+   "match": "Interim dividend",
+   "drop": true,
+   "reason": "[DIRECTOR_CE] RT_N50_A: not a relative-price event",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "GODREJCP",
+   "match": "Calibrated price increases",
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.5,
+   "reason": "[DIRECTOR_CE] RT_N50_A: commodity edges already book costs net of partial recovery",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "VBL",
+   "match": "COO",
+   "drop": true,
+   "reason": "[DIRECTOR_CE] RT_N50_A: occurred 2026-09-24, priced",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "VBL",
+   "match": "Start of peak season",
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "reason": "[DIRECTOR_CE] RT_N50_A: non-event; symmetric range",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "BRITANNIA",
+   "match": "Q2 FY27 results",
+   "date": "2026-11-05",
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "reason": "[DIRECTOR_CE] RT_N50_A: results scheduled 5 Nov; cost skew already in F_SUGAR/edible-oil edges",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "AMBUJACEM",
+   "match": "F&O ban",
+   "drop": true,
+   "reason": "[DIRECTOR_CE] RT_N50_A: noise (mid 0)",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "AMBUJACEM",
+   "match": "price hike",
+   "prob": 0.4,
+   "reason": "[DIRECTOR_CE] RT_N50_A: hikes must stick after Q2 PAT -90%",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "BPCL",
+   "match": "compensation for LPG/fuel under-recoveries",
+   "drop": true,
+   "reason": "[RT_TOP_B] duplicate of EV_LPG_COMPENSATION_CABINET",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "IDEA",
+   "match": "Next industry-wide tariff hike",
+   "drop": true,
+   "reason": "[RT_TOP_B] duplicate of EV_TELECOM_TARIFF_HIKE_2027",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "IDEA",
+   "match": "Financial close / first drawdown",
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 4.0,
+   "reason": "[RT_TOP_B] facility agreed 10-11 Sep, already priced",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "BHEL",
+   "match": "Adani Power orders",
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.0,
+   "reason": "[RT_TOP_B] order reported 4 Nov; stock +6% the same day",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "GVT&D",
+   "match": "Barmer II",
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 0.6,
+   "reason": "[RT_TOP_B] L1 announced 7 Sep, stock +9%",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "SUZLON",
+   "match": "Additional large order wins",
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.0,
+   "reason": "[RT_TOP_B] routine orders do not move the stock",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "COCHINSHIP",
+   "match": "40-ship order",
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "reason": "[RT_TOP_B] announcement priced 9 Oct (+5%)",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "SOLARINDS",
+   "match": "Large defence export or domestic order",
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.5,
+   "reason": "[RT_TOP_B] export-order channel already in EV_DEFENCE_EXPORT_ORDERS",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "KEI",
+   "match": "Ultravolt commercial launch",
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "reason": "[RT_TOP_B] expected margin pressure moved to the recent-state node; keep only the surprise",
+   "by": "RT_TOP_B"
+  },
+  {
+   "ticker": "FEDERALBNK",
+   "match": "ECL framework",
+   "drop": true,
+   "reason": "[RT_BOT_B] duplicate of EV_ECL_ROLLOUT_APR27",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "GROWW",
+   "match": "SEBI CAS",
+   "drop": true,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "GROWW",
+   "match": "block sales",
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 0.0,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "GROWW",
+   "match": "lock-in",
+   "drop": true,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "GMRAIRPORT",
+   "match": "Q3 FY27 results",
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "GMRAIRPORT",
+   "match": "Cargo Terminal 1",
+   "drop": true,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "PHOENIXLTD",
+   "match": "BofA Property Week",
+   "drop": true,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "PHOENIXLTD",
+   "match": "Q3 FY27 results",
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "PHOENIXLTD",
+   "match": "Festive/Diwali",
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "LODHA",
+   "match": "Analyst/investor meets",
+   "drop": true,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "LODHA",
+   "match": "Q3 FY27 results",
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "LODHA",
+   "match": "FY27 results",
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "reason": "[RT_BOT_B] ",
+   "by": "RT_BOT_B"
+  },
+  {
+   "ticker": "CANBK",
+   "match": "ECL transition begins",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Double count. EV_ECL_ROLLOUT_APR27 already carries ECL via P_RBI_PRUDENTIAL, and Canara's -4.5 edge is calibrated on this exact Rs12-15k cr estimate. The estimate was disclosed and priced on 2026-10-15 (stock -6%; NDTV Profit/India Infoline). Final RBI directions date from 27 Apr 2026.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "BANKBARODA",
+   "match": "RBI ECL framework transition",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Double count with EV_ECL_ROLLOUT_APR27 through BOB's P_RBI_PRUDENTIAL edge (-3.5, itself justified by the ECL transition). The framework is final policy (27 Apr 2026).",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "MUTHOOTFIN",
+   "match": "Gold price path",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Duplicates EV_PRECIOUS_METALS_FURTHER_SLIDE / EV_PRECIOUS_METALS_REBOUND_H1_2027, which already reach MUTHOOTFIN through F_GOLD (-2.0 / +1.6 expected).",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "MUTHOOTFIN",
+   "match": "RBI or industry action on gold-loan",
+   "prob": 0.3,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -1.0,
+   "reason": "[RT_N50_B] RT_N50_B: Keep as the gold-lender-specific part of EV_RBI_GOLD_LOAN_TIGHTEN (generic P_RBI_PRUDENTIAL shock cut to 0.4 in event_overrides). Probability aligned with the event (0.3).",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "PIDILITIND",
+   "match": "Brent sustained above $100",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Duplicates the Brent risk events (EV_IRAN_TALKS_FAIL_ESCALATE, EV_HORMUZ_FULL_CLOSURE), which reach Pidilite through F_BRENT and F_CHEM_FEEDSTOCK (-2.5 and -1.0 expected already).",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "VAML",
+   "match": "Summer 2027 power shortfall",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Duplicates EV_SUMMER27_POWER_SHORTFALL (p 0.4, F_POWER_PRICE_IN +3 SSU), which reaches VAML through its F_POWER_PRICE_IN edge.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "VEDL",
+   "match": "Further sale of HZL stake by VEDL",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: The same HZL block sale is in HINDZINC's events (p 0.25, -3.75 mid) and propagates to VEDL through the 0.75 link. For VEDL, a sale to delever converts a discounted holding into cash and debt reduction, so it is not clearly negative.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "LTM",
+   "match": "US H-1B/outsourcing-policy",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Duplicates EV_H1B_FEE_REINSTATED (p 0.3), which reaches LTM through P_US_VISA_OUTSOURCING (-1.05 expected).",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "WIPRO",
+   "match": "US H-1B/outsourcing action",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Duplicates EV_H1B_FEE_REINSTATED (p 0.3), which reaches WIPRO through P_US_VISA_OUTSOURCING (-0.9 expected).",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "LTM",
+   "match": "Record date/payout of Rs25",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Dated 2026-10-16, already past; this is not a forward event.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "HYUNDAI",
+   "match": "Monthly sales print (Oct)",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Occurred on 2026-11-01 and priced on 2026-11-02 (Nifty Auto +1.6%, Upstox). It now enters the recent state through F_AUTO_DEMAND_IN.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "BOSCHLTD",
+   "match": "Board meeting to consider first-ever bonus",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: A bonus or split is cosmetic and adds no value. The announcement was priced on 2026-11-03 (+5% to a record, Business Standard).",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "BOSCHLTD",
+   "match": "Bonus/split effective",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Cosmetic; it would count the same corporate action a second time.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "DIVISLAB",
+   "match": "European Commission decision",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: EC adoption after a positive CHMP opinion is near-automatic. The news was priced on 2026-10-19 (Divi's +2%, CNBC TV18). Divi's is a supplier, not the licence holder.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "DLF",
+   "match": "Q2 FY27 follow-through",
+   "drop": true,
+   "reason": "[RT_N50_B] RT_N50_B: Broker target changes after the 2026-10-16/19 results (Motilal, Jefferies, CLSA) are already published and priced.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "DLF",
+   "match": "Launch of luxury projects",
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "reason": "[RT_N50_B] RT_N50_B: The Rs58,000 cr pipeline was announced on 2026-10-19 and is in consensus. Only the sell-through surprise is unpriced, so the impact is symmetric.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "DLF",
+   "match": "Q4/FY27 results and FY28 guidance",
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "reason": "[RT_N50_B] RT_N50_B: The results/guidance range had a positive skew (-5..+8) with no evidence of a beat. Q2 sales were -23% y/y and operating margin 1.8%.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "DMART",
+   "match": "Q3 FY27 results",
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "reason": "[RT_N50_B] RT_N50_B: The range had a positive skew after a Q2 miss, a 3-year low in sales/sq ft and Citi/Goldman sell calls (ET 2026-10-06). No evidence supports an expected beat.",
+   "by": "RT_N50_B"
+  },
+  {
+   "ticker": "BAJAJHLDNG",
+   "match": "Corporate restructuring / holdco simplification",
+   "prob": 0.02,
+   "reason": "[RT_N50_B] RT_N50_B: The profile itself calls it 'speculative; none announced'. At p 0.05 x +25 mid it was the largest company-event item (+1.25).",
+   "by": "RT_N50_B"
+  }
+ ],
+ "add": [
+  {
+   "ticker": "PNB",
+   "date": "2027-03",
+   "event": "Cabinet raises FDI cap in PSU banks from 20% to 49% (draft cabinet note with RBI backing; reports 21 Oct 2026)",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "RT_N50_A (news 21 Oct 2026)",
+   "reason": "[DIRECTOR_CE] RT_N50_A: replaces conflated P_FDI_RULES edge",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "UNIONBANK",
+   "date": "2027-03",
+   "event": "Cabinet raises FDI cap in PSU banks from 20% to 49% (draft cabinet note with RBI backing; reports 21 Oct 2026)",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "RT_N50_A (news 21 Oct 2026)",
+   "reason": "[DIRECTOR_CE] RT_N50_A: replaces conflated P_FDI_RULES edge",
+   "by": "DIRECTOR_CE"
+  },
+  {
+   "ticker": "HINDZINC",
+   "date": "2027-02-01",
+   "event": "Windfall levy/export duty on zinc-silver earnings (tail; replaces conflated P_WINDFALL_EXPORT_TAX edge)",
+   "type": "regulatory",
+   "prob": 0.05,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": -2.0,
+   "source": "model judgement; 2022 fuel-levy precedent",
+   "reason": "[DIRECTOR_CE] RT_N50_A",
+   "by": "DIRECTOR_CE"
+  }
+ ]
+}

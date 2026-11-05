@@ -19,42 +19,42 @@ After the hike RBI raised the daily CRR maintenance requirement to 99% from 16 O
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| HDFCLIFE | +0.6 | +0.7 | +0.0 | -0.1 | -0.0 |
+| HDFCLIFE | +0.7 | +0.7 | +0.0 | -0.1 | -0.0 |
 | SBILIFE | +0.3 | +0.4 | +0.0 | -0.1 | -0.0 |
 | MFSL | +0.3 | +0.4 | +0.0 | -0.1 | -0.0 |
 | RVNL | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
-| SOLARINDS | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
-| APARINDS | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
-| PREMIERENE | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
-| SUZLON | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
-| POWERINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.1 |
-| SRF | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| MEESHO | +0.0 | +0.0 | +0.0 | -0.0 | +0.1 |
-| TATASTEEL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| MAZDOCK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SOLARINDS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SUZLON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| POWERINDIA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| APARINDS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| PREMIERENE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | GVT&D | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| MAZDOCK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | HAL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SRF | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| MEESHO | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| TATASTEEL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -6.2 | -5.6 | -0.3 | -0.2 | -0.1 |
+| YESBANK | -6.1 | -5.6 | -0.3 | -0.1 | -0.0 |
 | ADANIGREEN | -5.7 | -5.7 | +0.0 | +0.0 | -0.0 |
-| BAJFINANCE | -5.7 | -5.4 | -0.2 | -0.0 | +0.0 |
-| TATACAP | -5.4 | -5.1 | -0.3 | -0.0 | +0.0 |
-| JIOFIN | -5.3 | -5.1 | -0.1 | -0.1 | +0.0 |
+| BAJFINANCE | -5.5 | -5.4 | -0.1 | +0.0 | +0.0 |
+| JIOFIN | -5.3 | -5.1 | -0.1 | -0.0 | +0.0 |
+| TATACAP | -5.2 | -5.1 | -0.2 | +0.0 | +0.0 |
 | IREDA | -5.0 | -5.1 | +0.0 | +0.0 | +0.0 |
-| BANKINDIA | -4.9 | -4.2 | -0.3 | -0.2 | -0.2 |
-| GMRAIRPORT | -4.7 | -4.5 | +0.0 | -0.1 | -0.0 |
-| POWERGRID | -4.2 | -4.2 | +0.0 | +0.0 | -0.0 |
+| BANKINDIA | -4.7 | -4.2 | -0.3 | -0.1 | -0.1 |
 | JSWENERGY | -4.2 | -4.2 | +0.0 | +0.0 | +0.0 |
+| POWERGRID | -4.2 | -4.2 | +0.0 | +0.0 | -0.0 |
 | BAJAJFINSV | -4.1 | -4.0 | -0.1 | -0.0 | +0.0 |
 | TATAPOWER | -4.0 | -4.0 | +0.0 | +0.0 | -0.0 |
+| GMRAIRPORT | -4.0 | -3.9 | +0.0 | -0.1 | -0.0 |
 | IDEA | -4.0 | -4.0 | +0.0 | -0.0 | +0.0 |
 | ADANIENT | -4.0 | -4.0 | +0.0 | +0.0 | -0.0 |
 | PFC | -3.9 | -4.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 87%, 2: 8%, 3: 3%, 4: 2%
+Share of absolute impact by order: 1: 92%, 2: 5%, 3: 2%, 4: 1%
 
 ## Sources
 - 2026-10-21 India's 10-year bond yield climbs above 7.45% to multi-year high - Investing.com https://news.google.com/rss/search?q=India+10-year+bond+yield+multi-year+high+October+2026+when:120d&hl=en-IN&gl=IN&ceid=IN:en

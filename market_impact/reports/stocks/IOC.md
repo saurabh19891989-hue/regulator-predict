@@ -2,45 +2,46 @@
 *NIFTY_NEXT_50 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +5.7%**, **12 months +10.6%** (rank 9 / 8 of 200 for 3m / 12m); beta 1.27
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.5%): 3 months 71%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +6.5% … P90 +13.0%; plausible 12m relative-return range incl. stock-specific noise: -5.5% … +30.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.9 pp (model impact +7.7% beta-adjusted vs realised market-adjusted move -1.2%); forward event exposure +11.3% (3m +5.9%; half assumed priced); company-specific events +4.2%
+- Expected relative return: **3 months +3.4%**, **12 months +7.0%** (rank 3 / 2 of 200 for 3m / 12m); beta 1.27
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.5%): 3 months 63%, 12 months 72%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.1% … P90 +14.0%; plausible 12m relative-return range incl. stock-specific noise: -13.7% … +42.3%
+- Decomposition (12m): 0.5 × forward event exposure +10.7% (3m +5.1%; half assumed priced) + 0.5 × company-specific catalysts +4.2%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +3.4% (beta-adjusted) vs a realised market-adjusted move of -1.2% — gap +4.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| OMC petrol+diesel marketing margin (`NEW_OMC_MARKETING_MARGIN`) | +Rs1/litre average marketing margin (vs normal ~Rs3-4/l) | +6.52 | +6.50 | +0.00 | +0.02 | -0.00 | — |
+| OMC petrol+diesel marketing margin (`NEW_OMC_MARKETING_MARGIN`) | +Rs1/litre average marketing margin (vs normal ~Rs3-4/l) | +6.49 | +6.50 | +0.00 | -0.01 | +0.00 | — |
 | Refining margins (GRM / cracks) (`F_REFINING_MARGIN`) | +$2/bbl gross refining margin | +3.95 | +4.00 | -0.05 | +0.00 | +0.00 | +15.4% |
-| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | +3.94 | +2.50 | +1.49 | -0.13 | +0.08 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -3.65 | -3.50 | -0.08 | +0.21 | -0.28 | — |
+| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | +3.54 | +2.50 | +1.17 | -0.15 | +0.02 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -3.50 | -3.50 | -0.08 | +0.32 | -0.24 | — |
 | Government compensation to OMCs for fuel/LPG under-recoveries (`NEW_OMC_COMPENSATION`) | +1 = Rs25,000 cr compensation to oil marketing companies | +3.20 | +3.20 | +0.00 | +0.00 | +0.00 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -2.43 | -2.20 | -0.02 | -0.21 | -0.01 | +0.0% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.87 | -1.80 | +0.02 | -0.08 | -0.01 | -1.1% |
-| Windfall / export taxes on commodities (`P_WINDFALL_EXPORT_TAX`) | +1 = imposition | -1.74 | -0.80 | -0.96 | +0.00 | +0.02 | — |
-| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | +1.70 | +0.00 | +1.41 | +0.02 | +0.27 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -2.31 | -2.20 | +0.08 | -0.19 | -0.01 | +0.0% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.84 | -1.80 | +0.02 | -0.05 | -0.01 | -1.1% |
+| Windfall / export taxes on commodities (`P_WINDFALL_EXPORT_TAX`) | +1 = imposition | -1.76 | -0.80 | -0.96 | +0.00 | +0.00 | — |
 | Petrochemical / polymer spreads (`F_PETROCHEM_SPREADS`) | +10% polymer-naphtha spreads | +1.50 | +1.50 | +0.00 | +0.00 | +0.00 | — |
-| Red Sea / Suez shipping disruption (`C_RED_SEA`) | +1 = disruption | +1.25 | +0.00 | +1.28 | -0.03 | +0.00 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.19 | +0.00 | -0.19 | -1.07 | +0.07 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.03 | +1.20 | -0.19 | +0.03 | -0.00 | — |
-| Fuel excise / retail price policy (+ = higher taxes/regulated squeeze) (`P_FUEL_TAX_IN`) | +1 = Rs 2/litre excise rise | -1.01 | -1.00 | +0.00 | -0.02 | +0.01 | — |
+| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | +1.49 | +0.00 | +1.41 | -0.05 | +0.13 | — |
+| Red Sea / Suez shipping disruption (`C_RED_SEA`) | +1 = disruption | +1.27 | +0.00 | +1.28 | -0.01 | +0.00 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.06 | +1.20 | -0.19 | +0.05 | -0.00 | — |
+| Fuel excise / retail price policy (+ = higher taxes/regulated squeeze) (`P_FUEL_TAX_IN`) | +1 = Rs 2/litre excise rise | -1.01 | -1.00 | +0.00 | -0.01 | +0.01 | — |
+| Global natural gas / LNG price (`F_GAS_GLOBAL`) | +15% gas/LNG price | -0.70 | -0.70 | +0.00 | +0.00 | +0.00 | -7.0% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2 (`EV_LPG_UNDERRECOVERY`) | occurred | 1.00 | -6.5% | -6.5% | -6.5 | +0.0 | -0.0 | +0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -6.5% | -6.5% | -6.5 | +0.0 | -0.0 | +0.0 |
-| Government allows OMCs a retail petrol/diesel price hike (Rs3-5/l) (`EV_INDIA_RETAIL_FUEL_HIKE`) | anticipated | 0.30 | +16.1% | +4.8% | +16.2 | -0.3 | +0.1 | -0.0 |
-| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +4.3% | +4.3% | +2.5 | +1.7 | +0.0 | +0.1 |
-| Cabinet approves further LPG under-recovery compensation to OMCs (`EV_LPG_COMPENSATION_CABINET`) | anticipated | 0.60 | +6.5% | +3.9% | +6.5 | +0.0 | +0.0 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +5.0% | +2.8% | +4.0 | +0.7 | +0.3 | +0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -8.4% | -2.1% | -9.7 | +1.8 | -0.3 | -0.1 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.4 | -0.4 | -0.0 |
-| India cuts Russian crude below ~1 mb/d as part of US trade deal (`EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL`) | anticipated | 0.30 | -5.1% | -1.5% | -4.5 | -0.5 | -0.0 | -0.1 |
+| Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2 (`EV_LPG_UNDERRECOVERY`) | occurred | 1.00 | -6.5% | -6.5% | -6.5 | +0.0 | +0.0 | +0.0 |
+| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -6.5% | -6.5% | -6.5 | +0.0 | +0.0 | +0.0 |
+| Government allows OMCs a retail petrol/diesel price hike (Rs3-5/l) (`EV_INDIA_RETAIL_FUEL_HIKE`) | anticipated | 0.30 | +16.1% | +4.8% | +16.2 | -0.2 | +0.0 | +0.0 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +3.9% | +3.9% | +2.5 | +1.4 | -0.0 | +0.0 |
+| Cabinet approves further LPG under-recovery compensation to OMCs (`EV_LPG_COMPENSATION_CABINET`) | anticipated | 0.60 | +6.5% | +3.9% | +6.5 | +0.0 | -0.0 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +4.9% | +2.7% | +4.0 | +0.6 | +0.3 | +0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -8.1% | -2.0% | -9.7 | +2.0 | -0.2 | -0.1 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.4% | -1.4% | -1.1 | -0.3 | -0.0 | -0.0 |
-| Windfall/export levy re-set: petrol nil, diesel Rs11.5/l, ATF ~Rs11/l (31 Oct); excise reportedly cut (3 Nov, unverified) (`EV_EXPORT_LEVY_REVISIONS`) | occurred | 1.00 | -1.2% | -1.2% | -0.3 | -1.0 | +0.0 | +0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.4 | -0.2 | -0.5 |
+| India cuts Russian crude below ~1 mb/d as part of US trade deal (`EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL`) | anticipated | 0.30 | -4.6% | -1.4% | -4.5 | -0.2 | +0.1 | -0.0 |
+| Windfall/export levy re-set: petrol nil, diesel Rs11.5/l, ATF ~Rs11/l (31 Oct); excise reportedly cut (3 Nov, unverified) (`EV_EXPORT_LEVY_REVISIONS`) | occurred | 1.00 | -1.3% | -1.3% | -0.3 | -1.0 | +0.0 | -0.0 |
+| Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | -6.4% | -1.0% | -4.3 | -1.8 | -0.3 | -0.0 |
+| Hormuz effectively closed for >2 weeks (Brent > $150) (`EV_HORMUZ_FULL_CLOSURE`) | risk_scenario | 0.05 | -17.6% | -0.9% | -20.8 | +4.0 | -0.6 | -0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -66,16 +67,16 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_REFINING_MARGIN → IOC | +1.54 | observed | +6.17% |
 | 1 | C_MIDEAST_CONFLICT → IOC | +1.00 | events | -3.50% |
 | 1 | NEW_OMC_MARKETING_MARGIN → IOC | -0.50 | director_override | -3.25% |
 | 1 | C_RUSSIA → IOC | +1.00 | events | +2.50% |
+| 1 | F_REFINING_MARGIN → IOC | +0.60 | events | +2.40% |
 | 1 | P_WINDFALL_EXPORT_TAX → IOC | +1.00 | events | -0.80% |
+| 1 | F_GAS_GLOBAL → IOC | +1.00 | director_override | -0.70% |
 | 1 | F_USDINR → IOC | -0.37 | observed | +0.66% |
 | 1 | F_REPO_IN → IOC | +1.00 | events | -0.60% |
 | 1 | F_GDP_IN → IOC | +0.50 | events | +0.60% |
 | 1 | P_FUEL_TAX_IN → IOC | -0.50 | events | +0.50% |
-| 1 | F_GAS_GLOBAL → IOC | -0.47 | observed | +0.33% |
 | 2 | F_CHINA_GDP → F_PETROCHEM_SPREADS → IOC | +0.30 | events | +0.18% |
 | 3 | F_USDCNY → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → IOC | -0.47 | observed | +0.04% |
 

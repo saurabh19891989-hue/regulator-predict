@@ -22,8 +22,8 @@ Alternative outcome to on-time ECL start: RBI working group is 'still fine tunin
 | TATACAP | +3.0 | +2.1 | +1.1 | -0.1 | -0.1 |
 | UNIONBANK | +2.9 | +2.1 | +1.0 | -0.1 | -0.0 |
 | MUTHOOTFIN | +2.9 | +2.4 | +0.5 | -0.0 | -0.1 |
-| ABCAPITAL | +2.8 | +1.8 | +1.1 | -0.1 | -0.1 |
 | BANKBARODA | +2.7 | +2.1 | +0.7 | -0.1 | -0.0 |
+| ABCAPITAL | +2.7 | +1.8 | +1.0 | -0.1 | -0.1 |
 | IREDA | +2.7 | +1.8 | +1.0 | -0.0 | -0.1 |
 | IDFCFIRSTB | +2.6 | +1.5 | +1.5 | -0.3 | -0.1 |
 | BAJFINANCE | +2.6 | +1.8 | +1.0 | -0.1 | -0.1 |
@@ -43,15 +43,15 @@ Alternative outcome to on-time ECL start: RBI working group is 'still fine tunin
 | NLCINDIA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | PERSISTENT | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | INDUSTOWER | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| LICI | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | AUROPHARMA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | DIVISLAB | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | HDFCAMC | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| HDFCLIFE | -0.0 | +0.0 | -0.0 | -0.0 | +0.1 |
+| LICI | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
 | PIIND | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | TECHM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| WIPRO | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 52%, 2: 33%, 3: 9%, 4: 6%
+Share of absolute impact by order: 1: 52%, 2: 33%, 3: 9%, 4: 5%
 
 ## Sources
 - 2026-11-03 RBI to meet bank CEOs to review ECL preparedness (headline) https://www.business-standard.com/

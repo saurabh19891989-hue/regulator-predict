@@ -18,9 +18,6 @@ Industry estimates (RuralVoice, 2 Oct): subsidy could reach Rs 3 lakh crore in F
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | GAIL | +0.4 | +0.4 | +0.0 | +0.0 | -0.0 |
-| HDFCLIFE | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
-| MFSL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| SBILIFE | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | LAURUSLABS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | MARUTI | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SUZLON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
@@ -32,27 +29,30 @@ Industry estimates (RuralVoice, 2 Oct): subsidy could reach Rs 3 lakh crore in F
 | OIL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ONGC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | COCHINSHIP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| TIINDIA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| TVSMOTOR | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HEROMOTOCO | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| ADANIGREEN | -0.6 | +0.0 | -0.4 | -0.1 | -0.0 |
-| BAJFINANCE | -0.5 | +0.0 | -0.3 | -0.2 | -0.0 |
-| YESBANK | -0.5 | +0.0 | -0.4 | -0.1 | -0.1 |
 | SOLARINDS | -0.5 | -0.5 | +0.0 | -0.0 | +0.0 |
-| JIOFIN | -0.5 | +0.0 | -0.4 | -0.1 | -0.0 |
-| TATACAP | -0.5 | +0.0 | -0.3 | -0.2 | -0.0 |
-| IREDA | -0.5 | +0.0 | -0.4 | -0.1 | -0.0 |
-| BANKINDIA | -0.5 | +0.0 | -0.4 | -0.1 | -0.1 |
-| GMRAIRPORT | -0.5 | +0.0 | -0.3 | -0.1 | -0.0 |
-| POWERGRID | -0.5 | +0.0 | -0.4 | -0.1 | -0.0 |
-| PFC | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
-| JSWENERGY | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
-| ADANIENT | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
-| TATAPOWER | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
-| IDEA | -0.4 | +0.0 | -0.2 | -0.1 | -0.0 |
+| BANKINDIA | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| PFC | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| YESBANK | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| POWERGRID | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| ADANIGREEN | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| POWERINDIA | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| RECLTD | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| ADANIENT | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| JINDALSTEL | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| TMCV | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| PNB | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| UNIONBANK | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| INDIANB | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| IREDA | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 3%, 2: 61%, 3: 28%, 4: 8%
+Share of absolute impact by order: 1: 12%, 2: 0%, 3: 72%, 4: 16%
 
 ## Sources
 - 2026-10-02 High gas and sulphur prices could push fertiliser subsidy to Rs 3 lakh crore - RuralVoice https://eng.ruralvoice.in/national/high-gas-and-sulphur-prices-could-push-fertiliser-subsidy-to-rs-3-lakh-crore.html

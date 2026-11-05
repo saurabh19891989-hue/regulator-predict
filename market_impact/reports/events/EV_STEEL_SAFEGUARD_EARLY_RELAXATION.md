@@ -16,8 +16,8 @@ Downstream users (auto, pipes, capital goods) lobby against high steel prices; I
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | TMCV | +1.1 | +1.1 | +0.0 | +0.0 | +0.0 |
-| MARUTI | +1.0 | +1.0 | +0.0 | +0.0 | +0.0 |
 | BHEL | +1.0 | +1.0 | +0.0 | +0.0 | +0.0 |
+| MARUTI | +1.0 | +1.0 | +0.0 | +0.0 | +0.0 |
 | ASHOKLEY | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
 | SUZLON | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
 | HYUNDAI | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
@@ -27,7 +27,7 @@ Downstream users (auto, pipes, capital goods) lobby against high steel prices; I
 | TVSMOTOR | +0.7 | +0.7 | +0.0 | +0.0 | +0.0 |
 | HEROMOTOCO | +0.6 | +0.6 | +0.0 | +0.0 | +0.0 |
 | BOSCHLTD | +0.5 | +0.5 | +0.0 | +0.0 | +0.0 |
-| PRESTIGE | +0.4 | +0.3 | +0.1 | +0.0 | +0.0 |
+| PRESTIGE | +0.4 | +0.3 | +0.1 | +0.0 | -0.0 |
 | ADANIENSOL | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | CUMMINSIND | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 
@@ -40,17 +40,17 @@ Downstream users (auto, pipes, capital goods) lobby against high steel prices; I
 | TATASTEEL | -4.0 | -4.0 | +0.0 | +0.0 | +0.0 |
 | NMDC | -1.8 | -1.8 | +0.0 | +0.0 | +0.0 |
 | APLAPOLLO | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
-| PIIND | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| MCX | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| HINDZINC | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| VEDL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| LTM | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| SUNPHARMA | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | VAML | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| COFORGE | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| MPHASIS | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HINDZINC | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| LTM | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| COFORGE | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| MPHASIS | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| PIIND | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| VEDL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| AUROPHARMA | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HCLTECH | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 88%, 2: 2%, 3: 6%, 4: 3%
+Share of absolute impact by order: 1: 93%, 2: 2%, 3: 4%, 4: 1%
 
 ## Sources
 - 2026-10-07 Does Indian steel really need so much protection? https://news.google.com/rss/search?q=Does+Indian+steel+really+need+so+much+protection?&hl=en-IN&gl=IN&ceid=IN:en

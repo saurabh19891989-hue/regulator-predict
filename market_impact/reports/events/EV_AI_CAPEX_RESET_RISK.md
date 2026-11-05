@@ -20,42 +20,42 @@ Signals: Google/Microsoft deferring capex-forecast raises (29 Oct), CoreWeave -2
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | +2.6 | +0.0 | +0.8 | +1.4 | +0.5 |
-| SAIL | +2.6 | +0.0 | +0.3 | +1.3 | +1.0 |
-| TMPV | +2.1 | +0.0 | +1.4 | +0.6 | +0.1 |
-| ASTRAL | +2.0 | +2.0 | -0.1 | +0.0 | +0.1 |
-| MOTHERSON | +2.0 | +0.0 | +1.9 | +0.1 | -0.0 |
-| TATACONSUM | +2.0 | +2.0 | -0.1 | -0.0 | +0.1 |
-| BOSCHLTD | +1.9 | +0.0 | +2.6 | -0.6 | -0.0 |
-| MARUTI | +1.8 | +0.0 | +2.1 | -0.1 | -0.1 |
-| TATASTEEL | +1.7 | +0.0 | +0.4 | +0.8 | +0.5 |
-| NATIONALUM | +1.6 | +0.0 | +0.9 | +0.9 | -0.2 |
-| HINDZINC | +1.6 | +0.0 | +0.7 | +1.1 | -0.2 |
-| NMDC | +1.5 | +0.0 | +0.6 | +0.8 | +0.0 |
-| M&M | +1.5 | +0.0 | +1.5 | +0.1 | -0.1 |
-| SRF | +1.4 | +0.0 | +0.6 | +0.8 | -0.0 |
-| ONGC | +1.4 | +0.0 | +0.9 | +0.6 | -0.1 |
+| TMPV | +2.2 | +0.0 | +1.4 | +0.6 | +0.1 |
+| BOSCHLTD | +2.1 | +0.0 | +2.6 | -0.6 | +0.1 |
+| MARUTI | +2.1 | +0.0 | +2.1 | -0.0 | +0.1 |
+| JSWSTEEL | +2.1 | +0.0 | +0.8 | +1.0 | +0.3 |
+| ASTRAL | +2.0 | +2.0 | -0.1 | -0.0 | +0.2 |
+| MOTHERSON | +2.0 | +0.0 | +1.9 | +0.1 | +0.1 |
+| TATACONSUM | +1.9 | +2.0 | -0.1 | -0.0 | +0.0 |
+| NATIONALUM | +1.8 | +0.0 | +0.9 | +0.9 | +0.0 |
+| M&M | +1.7 | +0.0 | +1.5 | +0.1 | +0.1 |
+| SAIL | +1.6 | +0.0 | +0.3 | +0.8 | +0.5 |
+| HINDZINC | +1.5 | +0.0 | +0.7 | +1.0 | -0.2 |
+| SRF | +1.5 | +0.0 | +0.6 | +0.8 | +0.1 |
+| NMDC | +1.4 | +0.0 | +0.6 | +0.8 | +0.1 |
+| ONGC | +1.4 | +0.0 | +0.9 | +0.5 | -0.0 |
+| TATASTEEL | +1.3 | +0.0 | +0.4 | +0.5 | +0.3 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| MOTILALOFS | -21.6 | -13.3 | -5.9 | -2.8 | +0.4 |
-| POWERINDIA | -19.5 | -14.3 | -4.1 | -1.0 | -0.1 |
-| ICICIAMC | -18.3 | -13.0 | -4.3 | -1.4 | +0.4 |
-| JIOFIN | -17.4 | -12.5 | -3.6 | -1.3 | -0.0 |
-| NAUKRI | -16.5 | -13.8 | -2.0 | -0.9 | +0.2 |
-| IREDA | -16.4 | -12.5 | -3.0 | -0.9 | -0.1 |
-| 360ONE | -15.9 | -8.8 | -4.9 | -2.4 | +0.2 |
-| MEESHO | -15.0 | -10.0 | -5.0 | -0.2 | +0.2 |
-| INDUSINDBK | -14.7 | -8.8 | -5.7 | -0.5 | +0.3 |
-| PAYTM | -13.2 | -8.0 | -5.2 | -0.3 | +0.2 |
-| TATACOMM | -13.2 | -8.8 | -4.0 | -0.5 | +0.1 |
-| IDFCFIRSTB | -12.8 | -7.5 | -4.4 | -0.8 | -0.2 |
-| GROWW | -12.8 | -8.0 | -2.4 | -3.0 | +0.6 |
-| MAHABANK | -12.6 | -8.8 | -3.6 | -0.4 | +0.1 |
-| ENRIN | -12.0 | -10.0 | -1.2 | -0.7 | -0.1 |
+| MOTILALOFS | -21.5 | -13.3 | -5.9 | -2.7 | +0.4 |
+| POWERINDIA | -19.4 | -14.3 | -4.1 | -0.9 | -0.1 |
+| ICICIAMC | -18.2 | -13.0 | -4.3 | -1.3 | +0.4 |
+| JIOFIN | -16.9 | -12.5 | -3.6 | -0.9 | +0.1 |
+| NAUKRI | -16.5 | -13.8 | -2.0 | -0.8 | +0.1 |
+| IREDA | -16.1 | -12.5 | -3.0 | -0.6 | -0.0 |
+| 360ONE | -15.2 | -8.8 | -4.9 | -1.7 | +0.1 |
+| MEESHO | -14.9 | -10.0 | -5.0 | -0.1 | +0.2 |
+| INDUSINDBK | -14.6 | -8.8 | -5.7 | -0.5 | +0.3 |
+| PAYTM | -13.4 | -8.0 | -5.2 | -0.3 | +0.1 |
+| TATACOMM | -13.2 | -8.8 | -4.0 | -0.5 | +0.0 |
+| MAHABANK | -12.4 | -8.8 | -3.6 | -0.3 | +0.2 |
+| IDFCFIRSTB | -12.2 | -7.5 | -4.4 | -0.5 | +0.1 |
+| ENRIN | -11.9 | -10.0 | -1.2 | -0.7 | -0.1 |
+| LENSKART | -11.7 | -7.5 | -4.3 | -0.1 | +0.2 |
 
-Share of absolute impact by order: 1: 40%, 2: 46%, 3: 11%, 4: 3%
+Share of absolute impact by order: 1: 43%, 2: 48%, 3: 8%, 4: 2%
 
 ## Sources
 - 2026-10-21 Either AI or public debt could crash markets. But probably not both - The Economist https://news.google.com/rss/search?q=Either%20AI%20or%20public%20debt%20could%20crash%20markets.%20But%20probably%20not%20both%20-%20The%20Economist&hl=en-IN&gl=IN&ceid=IN:en

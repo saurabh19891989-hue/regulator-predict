@@ -18,21 +18,21 @@ Reuters poll 23 Oct: BoJ to raise to 1.50% in December, keeping a quarterly pace
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| HINDZINC | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| NATIONALUM | +0.2 | +0.0 | +0.1 | +0.0 | +0.0 |
+| HINDZINC | +0.2 | +0.0 | +0.1 | +0.1 | +0.1 |
 | TATACONSUM | +0.1 | +0.2 | -0.0 | +0.0 | -0.0 |
+| NATIONALUM | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
 | ASTRAL | +0.1 | +0.2 | -0.0 | +0.0 | -0.0 |
-| HINDALCO | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | TATASTEEL | +0.1 | +0.0 | +0.1 | +0.1 | -0.0 |
 | JSWSTEEL | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
-| SAIL | +0.1 | +0.0 | +0.0 | +0.1 | -0.1 |
-| HINDCOPPER | +0.1 | -0.1 | +0.1 | +0.1 | -0.0 |
+| HINDALCO | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
 | ONGC | +0.1 | +0.0 | +0.1 | -0.0 | -0.0 |
+| HINDCOPPER | +0.1 | -0.1 | +0.1 | +0.1 | -0.0 |
 | OIL | +0.1 | +0.0 | +0.1 | -0.0 | -0.0 |
-| UPL | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SAIL | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
 | PIIND | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
-| AMBUJACEM | +0.1 | +0.0 | +0.1 | -0.0 | -0.0 |
+| UPL | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
 | NMDC | +0.1 | +0.0 | +0.1 | -0.0 | -0.0 |
+| SRF | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -40,20 +40,20 @@ Reuters poll 23 Oct: BoJ to raise to 1.50% in December, keeping a quarterly pace
 | MOTILALOFS | -1.5 | -1.3 | -0.2 | +0.0 | -0.0 |
 | ICICIAMC | -1.3 | -1.2 | -0.1 | +0.0 | -0.0 |
 | JIOFIN | -1.3 | -1.2 | -0.0 | -0.0 | -0.0 |
-| IREDA | -1.3 | -1.2 | -0.0 | +0.0 | -0.0 |
+| IREDA | -1.2 | -1.2 | -0.0 | -0.0 | -0.0 |
 | MEESHO | -1.2 | -1.2 | +0.0 | -0.0 | -0.0 |
 | 360ONE | -1.1 | -1.1 | -0.1 | -0.0 | -0.0 |
-| INDUSINDBK | -1.1 | -1.1 | -0.0 | +0.0 | -0.0 |
-| MAHABANK | -1.0 | -1.0 | -0.0 | +0.0 | -0.0 |
-| IDFCFIRSTB | -0.9 | -0.9 | -0.0 | -0.0 | -0.0 |
+| INDUSINDBK | -1.1 | -1.1 | -0.0 | +0.0 | +0.0 |
+| MAHABANK | -0.9 | -1.0 | -0.0 | +0.0 | -0.0 |
 | PAYTM | -0.9 | -0.9 | -0.0 | +0.0 | +0.0 |
 | NAUKRI | -0.9 | -0.8 | -0.1 | +0.0 | -0.0 |
+| IDFCFIRSTB | -0.9 | -0.9 | -0.0 | +0.0 | -0.0 |
 | LENSKART | -0.9 | -0.9 | -0.0 | -0.0 | -0.0 |
 | POLICYBZR | -0.9 | -0.9 | +0.0 | -0.0 | +0.0 |
-| LICI | -0.9 | -0.9 | -0.0 | -0.0 | -0.0 |
-| ETERNAL | -0.9 | -0.9 | -0.0 | +0.0 | -0.0 |
+| ETERNAL | -0.9 | -0.9 | -0.0 | -0.0 | -0.0 |
+| LICI | -0.9 | -0.9 | -0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 76%, 2: 13%, 3: 6%, 4: 5%
+Share of absolute impact by order: 1: 80%, 2: 13%, 3: 5%, 4: 2%
 
 ## Sources
 - 2026-10-23 BOJ to raise rates to 1.50% in December, sticking to quarterly pace: Reuters poll https://news.google.com/rss/search?q=BOJ%20to%20raise%20rates%20to%201.50%25%20in%20December%2C%20sticking%20to%20quarterly%20pace%3A%20Reuters%20poll&hl=en-IN&gl=IN&ceid=IN:en

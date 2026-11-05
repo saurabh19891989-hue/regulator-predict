@@ -2,52 +2,52 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.2%**, **12 months -3.3%** (rank 163 / 152 of 200 for 3m / 12m); beta 1.37
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.3%): 3 months 42%, 12 months 30%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.0% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -28.2% … +14.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.7 pp (model impact -1.4% beta-adjusted vs realised market-adjusted move +12.3%); forward event exposure -2.1% (3m -1.2%; half assumed priced); company-specific events -1.0%
+- Expected relative return: **3 months -1.3%**, **12 months -2.0%** (rank 181 / 162 of 200 for 3m / 12m); beta 1.37
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.3%): 3 months 45%, 12 months 32%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.9% … P90 +0.3%; plausible 12m relative-return range incl. stock-specific noise: -27.5% … +25.2%
+- Decomposition (12m): 0.5 × forward event exposure -2.0% (3m -1.1%; half assumed priced) + 0.5 × company-specific catalysts -1.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.1% (beta-adjusted) vs a realised market-adjusted move of +12.3% — gap -13.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Credit cost / NPA cycle (higher = worse) (`F_ASSET_QUALITY_IN`) | +50 bp credit cost | -8.23 | -8.00 | -0.24 | +0.00 | +0.01 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -4.93 | +0.00 | -2.14 | -2.78 | -0.00 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -3.95 | +0.00 | -1.49 | -1.46 | -1.00 | -1.1% |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.80 | +1.00 | +1.58 | +0.63 | +0.59 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +3.56 | +1.00 | +1.58 | +0.53 | +0.45 | — |
 | Indian vehicle demand (`F_AUTO_DEMAND_IN`) | +10% volumes | +3.50 | +3.50 | +0.00 | +0.00 | +0.00 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -3.14 | +0.00 | -0.12 | -1.37 | -1.65 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +3.08 | +1.50 | +1.27 | +0.80 | -0.49 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.49 | +0.00 | -0.60 | -0.49 | -1.40 | — |
-| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.25 | +2.00 | +0.04 | +0.09 | +0.11 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -2.23 | -1.30 | -0.89 | -0.01 | -0.03 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +3.12 | +1.50 | +1.27 | +0.80 | -0.45 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.37 | +0.00 | -1.39 | -0.97 | -0.01 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -2.24 | -1.30 | -0.89 | -0.01 | -0.03 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +2.24 | +0.00 | +1.68 | +0.83 | -0.27 | — |
 | RBI prudential tightening (risk weights, LCR, provisioning) (`P_RBI_PRUDENTIAL`) | +1 = tightening step | -2.22 | -1.00 | -1.52 | +0.21 | +0.08 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +2.19 | +1.00 | +0.23 | +0.68 | +0.29 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.15 | +2.00 | +0.04 | +0.03 | +0.07 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +2.12 | +1.00 | +0.23 | +0.68 | +0.22 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -2.06 | +0.00 | -0.85 | -0.85 | -0.37 | -1.1% |
 | Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -1.99 | -2.00 | +0.00 | +0.05 | -0.04 | — |
-| Bank credit growth (`F_CREDIT_GROWTH_IN`) | +3 pp | -1.99 | +0.00 | -1.07 | -0.94 | +0.02 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.71 | +1.50 | +0.00 | +0.37 | -0.16 | — |
+| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.57 | +0.00 | -0.12 | -0.86 | -0.59 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -6.1% | -6.1% | +0.0 | -2.6 | -3.4 | -0.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.9% | -4.9% | -4.4 | -0.1 | -0.2 | -0.3 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.7% | +2.9% | +5.0 | +0.1 | +0.3 | +0.4 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.8% | -2.8% | -1.3 | -0.3 | -0.9 | -0.4 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.7% | -4.7% | -4.4 | -0.1 | -0.1 | -0.2 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.0% | -3.0% | +0.0 | -1.7 | -1.2 | -0.1 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.4% | +2.7% | +5.0 | +0.1 | +0.1 | +0.2 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.7% | -2.7% | -1.3 | -0.3 | -0.9 | -0.3 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.6% | -2.6% | -2.0 | -0.6 | +0.1 | -0.1 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.6% | -2.6% | -2.4 | -0.1 | +0.0 | -0.1 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.9% | +1.9% | +1.5 | +1.4 | -0.8 | -0.2 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | +1.9% | +1.9% | +2.1 | -0.0 | -0.1 | -0.1 |
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -1.0 | -0.5 | -0.3 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +2.5% | +1.7% | +1.0 | +0.2 | +0.9 | +0.3 |
-| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -0.1 | -0.7 | -0.8 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.6% | +1.4% | +0.7 | +0.5 | +0.9 | +0.7 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.4% | -2.4% | -2.4 | -0.0 | +0.0 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.4% | +2.4% | +1.5 | +1.4 | -0.4 | -0.1 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +2.2% | +1.5% | +1.0 | +0.2 | +0.8 | +0.1 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -7.4% | -1.3% | -6.5 | -1.2 | +0.3 | -0.0 |
+| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.90 | -1.5% | -1.3% | -1.5 | +0.0 | -0.0 | +0.0 |
+| Banking system liquidity turns to sustained deficit by end-March 2027 (`EV_BANKING_LIQUIDITY_DEFICIT_MAR27`) | anticipated | 0.60 | -2.1% | -1.3% | -2.1 | -0.0 | -0.0 | -0.0 |
+| Risk: stagflation scare - CPI >=6.5% while GDP growth slips below ~6% (Q3 FY27 data, late Feb 2027) (`EV_INDIA_STAGFLATION_SCARE`) | risk_scenario | 0.12 | -10.0% | -1.2% | -2.5 | -7.1 | -0.5 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CHOLAFIN | +5.00% | +2.50% |
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → CHOLAFIN | +1.20% | +1.08% |
 | 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → CHOLAFIN | -1.20% | -1.08% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → CHOLAFIN | -1.20% | -0.72% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → CHOLAFIN | +1.00% | +0.68% |
@@ -61,23 +61,24 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → CHOLAFIN | -1.68% | -0.42% |
 | 2 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → CHOLAFIN | +0.51% | +0.41% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → CHOLAFIN | -0.80% | -0.40% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → CHOLAFIN | -0.60% | -0.36% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → CHOLAFIN | -1.60 | events | -3.20% |
-| 1 | F_STEEL_GLOBAL → CHOLAFIN | +2.06 | observed | +2.06% |
+| 1 | F_AUTO_DEMAND_IN → CHOLAFIN | +0.50 | director_override | +1.75% |
 | 1 | F_MONSOON → CHOLAFIN | -1.56 | events | -1.56% |
 | 1 | F_GSEC_10Y_IN → CHOLAFIN | +1.55 | director_override | -1.55% |
-| 1 | F_GOVT_CAPEX → CHOLAFIN | +1.00 | events | +1.50% |
 | 1 | F_REPO_IN → CHOLAFIN | +1.00 | events | -1.30% |
 | 2 | F_GDP_IN → F_ASSET_QUALITY_IN → CHOLAFIN | +0.50 | events | +1.28% |
 | 1 | F_CREDIT_SPREADS_IN → CHOLAFIN | +0.50 | events | -1.00% |
 | 1 | F_LIQUIDITY_IN → CHOLAFIN | -0.90 | events | -0.72% |
+| 1 | F_STEEL_GLOBAL → CHOLAFIN | +2.06 | observed | +0.62% |
 | 1 | F_RURAL_DEMAND → CHOLAFIN | -0.25 | events | -0.38% |
-| 1 | F_AUTO_DEMAND_IN → CHOLAFIN | -0.10 | events | -0.35% |
 | 2 | F_REPO_IN → F_ASSET_QUALITY_IN → CHOLAFIN | +1.00 | events | -0.32% |
+| 1 | F_GOVT_CAPEX → CHOLAFIN | +0.20 | director_override | +0.30% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |

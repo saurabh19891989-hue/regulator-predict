@@ -19,7 +19,7 @@ Draft rules propose a 6-month licensing timeline (Moneycontrol 17 Aug); NPCIL to
 | POWERINDIA | +2.6 | +1.2 | +1.4 | +0.0 | -0.0 |
 | ADANIENSOL | +2.3 | +1.5 | +0.8 | +0.0 | +0.0 |
 | TATAPOWER | +2.3 | +2.1 | +0.2 | +0.0 | +0.0 |
-| ADANIGREEN | +2.1 | +2.2 | -0.1 | -0.0 | +0.0 |
+| ADANIGREEN | +2.1 | +2.2 | -0.1 | +0.0 | +0.0 |
 | RECLTD | +2.0 | +2.0 | +0.0 | +0.0 | +0.0 |
 | PFC | +2.0 | +2.0 | +0.0 | +0.0 | -0.0 |
 | ENRIN | +2.0 | +0.9 | +1.1 | +0.0 | -0.0 |
@@ -29,28 +29,28 @@ Draft rules propose a 6-month licensing timeline (Moneycontrol 17 Aug); NPCIL to
 | JSWENERGY | +1.4 | +1.6 | -0.2 | +0.0 | -0.0 |
 | GVT&D | +1.4 | +0.0 | +1.4 | +0.0 | -0.0 |
 | APARINDS | +1.4 | +0.6 | +0.8 | +0.0 | -0.0 |
-| CGPOWER | +1.3 | +0.0 | +1.3 | -0.0 | -0.0 |
+| CGPOWER | +1.3 | +0.0 | +1.3 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| TMPV | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
 | BHARATFORG | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
-| VOLTAS | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
-| TVSMOTOR | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
-| HEROMOTOCO | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| TMPV | -0.2 | +0.0 | -0.2 | +0.0 | -0.0 |
+| VOLTAS | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
+| TVSMOTOR | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | SUZLON | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
-| MARUTI | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| BOSCHLTD | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| HYUNDAI | -0.1 | +0.0 | -0.0 | -0.0 | -0.0 |
-| BLUESTARCO | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
+| HEROMOTOCO | -0.1 | +0.0 | -0.1 | +0.0 | -0.0 |
 | LGEINDIA | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 | RVNL | -0.1 | +0.0 | -0.0 | +0.0 | -0.0 |
-| M&M | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| PRESTIGE | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
-| BAJAJ-AUTO | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| MARUTI | -0.1 | +0.0 | -0.0 | +0.0 | -0.0 |
+| BOSCHLTD | -0.1 | +0.0 | -0.0 | +0.0 | -0.0 |
+| HYUNDAI | -0.1 | +0.0 | -0.0 | +0.0 | -0.0 |
+| BLUESTARCO | -0.0 | +0.0 | -0.1 | +0.0 | +0.0 |
+| M&M | -0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
+| PRESTIGE | -0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
+| SOLARINDS | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 57%, 2: 30%, 3: 7%, 4: 6%
+Share of absolute impact by order: 1: 59%, 2: 31%, 3: 6%, 4: 5%
 
 ## Sources
 - 2026-08-17 India proposes 6-month timeline for nuclear project licences (Moneycontrol) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=India+SHANTI+draft+rules+nuclear+licence+when:120d&hl=en-IN&gl=IN&ceid=IN:en

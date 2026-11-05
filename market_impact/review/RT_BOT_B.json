@@ -1,0 +1,306 @@
+{
+ "reviewer": "RT_BOT_B",
+ "as_of": "2026-11-05",
+ "scope": "TORNTPHARM FEDERALBNK ABCAPITAL MPHASIS IDFCFIRSTB NAUKRI PHOENIXLTD SHRIRAMFIN GMRAIRPORT ZYDUSLIFE GROWW LODHA COFORGE (assigned ranks 175-187). Reviewed against results/rankings.csv of 2026-11-05 08:31 UTC (after RT_BACKBONE/RT_EVENTS merge); ranks quoted are from that run.",
+ "edge_scale": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "PHOENIXLTD",
+   "origin": "PHOENIXLTD",
+   "factor": 0.33,
+   "reason": "Duplicate discount-rate channel. Mechanism text: funding cost -1% PAT plus 'multiple compression (long-duration annuity) -2.0'. The F_GSEC_10Y_IN edge (-2.5) already carries cap-rate and 'growth-multiple effect on a 57x P/E', and its own text says 'Overlaps with repo (parallel path flagged)'. Repo -> G-sec (0.53) adds a further path. Keep only the funding part (~-1.0). One 25bp hike plus 39bp G-sec currently books -7.0% raw for a mall owner whose Q2 consumption grew 25% and stock rose +14.8% market-adjusted since June."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "GMRAIRPORT",
+   "origin": "GMRAIRPORT",
+   "factor": 0.33,
+   "reason": "Unit slip. Mechanism scales +Rs70cr/yr interest by PAT (Rs788cr TTM, P/E 178) to get -9% PAT and then -3% equity. Equity value is a DCF of regulated airports (mcap ~Rs1.05 lakh cr at Rs99.4): Rs70cr/yr pre-tax for ~2 years is ~0.1-0.2% of value, and AERA's regulatory-asset-base model trues up the actual cost of debt in aero tariffs. The discount-rate effect is in the F_GSEC_10Y_IN edge (-2.5), which also gets repo via the 0.53 backbone path. -3.0 -> ~-1.0."
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "GMRAIRPORT",
+   "origin": "GMRAIRPORT",
+   "factor": 0.4,
+   "reason": "Same PAT-scaling slip: +50bp on ~Rs25k cr refinanced = Rs125cr/yr, which is called '-16% PAT' and becomes -3.5% equity. On a ~Rs1.05 lakh cr equity value that is ~0.3-0.5% for a multi-year effect, part of it passed through via AERA true-ups. -3.5 -> -1.4 (still above the arithmetic, to allow for refinancing risk)."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LODHA",
+   "origin": "LODHA",
+   "factor": 0.7,
+   "reason": "Duplicate channel. The direct edge includes 'buyers' EMI +2% -> volumes -1.2% -> -1.0%'. That is the same economics as backbone F_REPO_IN -> F_HOUSING_DEMAND (-0.26) -> LODHA (+6.0), which still adds ~-0.8 after OVERLAP_DAMP. Remove the EMI piece: -3.5 -> ~-2.45. The agent's own evidence says Lodha rose 4% on 2026-09-18 on rate-hike bets."
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SHRIRAMFIN",
+   "origin": "SHRIRAMFIN",
+   "factor": 0.5,
+   "reason": "Half of the -2.5 is a 'discount-rate effect on P/E 17.9: -1.3%'. That duplicates the F_GSEC_10Y_IN edge (-1.5, 'cost of equity') and the repo -> G-sec backbone path. Shriram's Q2 FY27 PAT rose 59% 'on lower funding costs' despite the October hike (ET, 23 Oct 2026), and vehicle loans are fixed-rate."
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "SHRIRAMFIN",
+   "origin": "SHRIRAMFIN",
+   "factor": 0.5,
+   "reason": "Mechanism admits the empirical -1.45 (t -2.3) 'likely proxies risk-off'. The graph also carries F_US_10Y -> F_GSEC_10Y_IN (0.325) and -> F_FPI_FLOWS (-0.25), plus direct G-sec and FPI edges, so the domestic rate and flow channels are counted twice. Observed US10Y +1.68 SSU currently books -2.0% here."
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "ABCAPITAL",
+   "origin": "ABCAPITAL",
+   "factor": 0.6,
+   "reason": "Mechanism arithmetic: -3.5 on the lending profit pool x 58% lending share of value gives about -2. 'NBFC multiple stress' then doubles it to -4. That multiple channel is F_RISK_SENTIMENT/F_FPI_FLOWS, and P_RBI_PRUDENTIAL / F_ASSET_QUALITY_IN -> F_CREDIT_SPREADS_IN paths already hit this edge, per overlap_flags. -4.0 -> -2.4. Q2 FY27 PAT +38% on lending growth (Business Standard, 30 Oct 2026)."
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "FEDERALBNK",
+   "origin": "FEDERALBNK",
+   "factor": 0.5,
+   "reason": "The edge assumes escalation cuts Gulf remittances and NRI deposits. Evidence from the 2026 war runs the other way: Kerala NRI deposits reached Rs3.35 trillion, nearly a third of bank deposits (Mathrubhumi, 25 Sep 2026). Federal posted a record Q2 (PAT +45%, NIM 3.32%, decade-low NPAs; 16 Oct 2026). Rupee weakness lifts remittances, and the profile's own empirical USDINR/Brent signs (+) agree. The path via C_GCC -> F_GULF_REMITTANCES (-1.2) remains. The recent state books -3.5% unpriced on a stock up +12.6% market-adjusted since June. -3.5 -> -1.75."
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "FEDERALBNK",
+   "origin": "FEDERALBNK",
+   "factor": 0.5,
+   "reason": "The edge (+4.0, the highest bank FPI weight; universe mean 1.44) is justified by 'FIIs 28.5% and rising (26.05% in March)'. But FIIs RAISED their Federal stake during the record CY2026 FPI outflow (~US$32.7bn), which contradicts a high outflow sensitivity. Strategic holders (Blackstone/Fairfax) do not trade with flows. Currently -6.4% raw is booked from F_FPI_FLOWS -1.6 against a +12.6% market-adjusted realised move. -> 2.0."
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GMRAIRPORT",
+   "origin": "GMRAIRPORT",
+   "factor": 0.6,
+   "reason": "Own evidence: 'FII 22.95% (up from 20.2% Mar-2026)', so FIIs added during the record outflow. The GQG block (9 Oct) was turnover between holders. 2.0 -> 1.2."
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GROWW",
+   "origin": "GROWW",
+   "factor": 0.4,
+   "reason": "FPI is GROWW's largest recent channel (-6.1% raw): a direct 2.5 plus F_FPI_FLOWS -> F_EQUITY_ACTIVITY_IN (0.4) x 9.0. The profile says FIIs rose from 2.5% to 10.9% in two quarters post-IPO, during record outflows. Retail broking volumes come from domestic retail, which the activity path already captures. Realised is +14.6% market-adjusted since June. Direct 2.5 -> 1.0."
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "TORNTPHARM",
+   "origin": "TORNTPHARM",
+   "factor": 0.5,
+   "reason": "Internally inconsistent. FII ~11% and beta 0.45-0.64: an FPI inflow lifting the index ~1.5% lifts a 0.6-beta stock ~0.9%, so it UNDERperforms. Yet the edge is +2.0 'relative', above the universe mean 1.44. After beta adjustment it still books +1.1 relative per SSU, i.e. -1.9% from the June-Nov outflow. -> 1.0 (≈0 net of beta)."
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TORNTPHARM",
+   "origin": "TORNTPHARM",
+   "factor": 0.5,
+   "reason": "-1.8 per 25bp (universe mean -0.91) makes a 0.64-beta defensive pharma more rate-sensitive than most banks. P/E 82 is 'distorted by amortisation' (own text) after the JB Chemicals deal, so it overstates duration. No India-rate empirical series supports it. The +39bp G-sec move books -2.8%. -> -0.9."
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "TORNTPHARM",
+   "origin": "TORNTPHARM",
+   "factor": 0.5,
+   "reason": "US is ~8-10% of sales (own text), yet -2.5 exceeds SUNPHARMA/CIPLA (-2.0) with 3x the US exposure. Company-specific inspection risk is already a company event (USFDA inspection at Dahej/Indrad, p 0.08 x -8). -> -1.25."
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "ZYDUSLIFE",
+   "origin": "ZYDUSLIFE",
+   "factor": 0.6,
+   "reason": "Double count. The edge mechanism prices the Moraiya 5-observation inspection: 'OAI/Warning Letter risk 25% x impact (-12% value)'. The profile's company events price the same outcome (USFDA classification of Moraiya: p 0.25 x -9.5, favourable p 0.7 x +2.5). The sector-intensity edge should hold only the generic sensitivity (US ~42% of sales; peers SUN/CIPLA -2, DRREDDY/LUPIN -3). -5.0 -> -3.0."
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ZYDUSLIFE",
+   "origin": "ZYDUSLIFE",
+   "factor": 0.6,
+   "reason": "Own text: 'FII 7.0% (low), promoter 75%; limited flow sensitivity', beta 0.67. Yet +1.5 nets +0.5 relative after beta adjustment. -> 0.9 (≈0 net)."
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "MPHASIS",
+   "origin": "MPHASIS",
+   "factor": 0.7,
+   "reason": "-5.0 ties INFY for second-highest AI-substitution sensitivity (WIPRO -6). But Mphasis revenue growth accelerated every quarter, from +7% (Dec-24 qtr) to +17% YoY (Jun-26 qtr, screener.in consolidated). The company maintained its Q2 outlook with BFSI as the driver (CNBC TV18, 18 Sep 2026). -> -3.5, between COFORGE/PERSISTENT (-3) and TCS/HCL (-4)."
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "COFORGE",
+   "origin": "COFORGE",
+   "factor": 0.5,
+   "reason": "Q2 FY27 (23 Oct 2026): revenue +53.6% YoY (acquisition), order book record US$2.38bn (+45%), EBIT-margin guide raised to 16%, and deal wins described as 'AI-led' (Business Standard, CNBC TV18, The Hindu). Analytics India Magazine (3 Nov): 'Coforge is outgrowing its larger rivals. Is AI the reason?' AI is currently a demand tailwind for Coforge, not net substitution. -3.0 -> -1.5."
+  }
+ ],
+ "event_overrides": {
+  "EV_SEBI_CAS_DERIV_REVERSAL": {
+   "status": "occurred",
+   "date": "2026-10-16",
+   "prob_by_3m": 1.0,
+   "prob_by_12m": 1.0,
+   "entry_shocks": [
+    {
+     "node": "P_SEBI_DERIVATIVES",
+     "ssu": -0.4,
+     "low": -0.6,
+     "high": -0.2,
+     "note": "SEBI restored VWAP-based F&O expiry settlement, reversing the CAS-linked rule (16 Oct 2026)"
+    },
+    {
+     "node": "F_EQUITY_ACTIVITY_IN",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.4,
+     "note": "derivative volume recovery expected"
+    }
+   ],
+   "reason": "Already happened, but the catalogue has it as anticipated (p 0.85, date 2026-11-30). SEBI reinstated VWAP-based F&O settlement and reversed the CAS rule on 16 Oct 2026 (Outlook Money 16 Oct; Kalkine 19 Oct; Business Standard 19 Oct: 'Sebi's CAS rollback may offer new lifeline'). Jefferies called it 'bigger positive for brokers' (16 Oct). GROWW is +15.5% in 1m. As a forward event it books +4.9% x 0.85 of already-priced upside for GROWW (and BSE/ANGELONE-type names); as occurred it enters the recent state, where the realised move tests it.",
+   "source": "https://news.google.com/rss/search?q=SEBI+VWAP+expiry+settlement+reinstated+effective+when:30d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Sebi+CAS+rollback+derivatives+brokerage+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_ANTHROPIC_IPO_LISTING": {
+   "prob_by_3m": 0.65,
+   "prob_by_12m": 0.85,
+   "entry_shocks": [
+    {
+     "node": "T_GENAI_SERVICES",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "residual narrative shock at listing; the S-1 reaction (27-28 Oct) is already in prices"
+    },
+    {
+     "node": "F_AI_CAPEX",
+     "ssu": 0.2,
+     "low": 0.0,
+     "high": 0.5,
+     "note": "fresh capital for compute"
+    }
+   ],
+   "reason": "The event's own description says Indian IT already fell 2-5% on 27-28 Oct when the S-1/IPO news sparked the global AI rally. The listing re-uses the same narrative, and an IPO does not change the substitution rate of IT labour. A further +0.5 SSU at p 0.85 counts the already-realised reaction twice: it books -1.9% expected for MPHASIS, -1.4% NAUKRI and -1.05% COFORGE. The T_GENAI shock is cut to 0.2.",
+   "source": "https://news.google.com/rss/search?q=TCS+Infosys+IT+stocks+drop+Anthropic+IPO+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ },
+ "event_drop": {},
+ "recent_state_overrides": [
+  {
+   "node": "T_GENAI_SERVICES",
+   "state_ssu": 0.5,
+   "reason": "The state of 1.0 comes entirely from EV_IT_AI_DEFLATION_Q2FY27, whose what_already_moved is 'Not quantified'. The catalogue's own EV_INDIAN_IT_Q2_VISA_SHOCK records that TCS was down ~35% in 2026 BEFORE June-Oct and that Nifty IT rose +16% in a month to 22 Oct on a 'reverse-AI trade'. IndiaIPO (29 Oct): 'AI fears ease, hiring picks up'. IT realised market-adjusted moves since 1 Jun: median +4.1% (TCS +4.1, HCLTECH +15.7, TECHM +14.0, PERSISTENT +8.9, MPHASIS +3.4, COFORGE +37.0, INFY -7.4, WIPRO -8.4). The AI-deflation step is mostly a pre-June level, and Q2 added at most half a step (Infosys guide cut, TCS beat). Cuts the -5.0/-4.1/-3.0 'unpriced' hits on MPHASIS/NAUKRI/COFORGE (and peers) roughly in half.",
+   "evidence": "results/rankings.csv realised_mkt_adj_since_jun; events EV_INDIAN_IT_Q2_VISA_SHOCK what_already_moved; https://news.google.com/rss/search?q=IT+stocks+AI+fear+ease+hiring+picks+up+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "node": "P_USFDA_ENFORCEMENT",
+   "state_ssu": 0.4,
+   "reason": "The state of 1.0 is from EV_USFDA_WARNING_WAVE_26: three warning letters in Jul-Aug 2026 (an Alembic site, Aurobindo's Eugia Unit 1, Dabur Silvassa), with what_already_moved 'size not fetched'. A few WLs in two months is normal FDA flow, not a step change in regime. The sector's realised moves since 1 Jun refute a sector-wide enforcement shock: AUROPHARMA, the WL recipient, is +18.6% market-adjusted, DIVISLAB +49.8%, GLENMARK +10.3%, DRREDDY +2.3%, TORNTPHARM +4.9%, ZYDUSLIFE +6.0%. At 1.0 the state books -4.2% for ZYDUSLIFE and -2.3% for TORNTPHARM as unpriced, which is the single biggest component of both names' bottom ranking. Company-specific inspections (Zydus Moraiya 5 obs, Oct 2026) belong in company events, where they already are.",
+   "evidence": "results/rankings.csv realised_mkt_adj_since_jun (pharma rows); EV_USFDA_WARNING_WAVE_26 description"
+  }
+ ],
+ "findings": [
+  {
+   "severity": "high",
+   "subject": "Unpriced-recent-impact rule (universe; drives 9 of my 13 names)",
+   "issue": "Across all 198 names with prices, the model's beta-adjusted Jun-Nov impact is NEGATIVELY correlated with the realised market-adjusted move: Pearson -0.33, Spearman -0.34, OLS slope -0.93. By model quintile, mean realised is -0.2 / +5.6 / -3.5 / -7.9 / -13.6 from the most negative to the most positive model quintile. In 121 of 200 names the realised sign contradicts the model. The bounding rule then books the FULL model impact as 'unpriced' exactly when the stock moved the other way, so the 12m score systematically penalises recent outperformers that the model expected to underperform. That is a de-facto reversal bet, contrary to the 'no mean-reversion bet' design. Unpriced corr with exp_rel_return_12m = 0.86. For my names, 0.5 x unpriced is -4.6 of -6.1 (FEDERALBNK), -3.6/-6.5 (TORNTPHARM), -3.6/-5.8 (ZYDUSLIFE), -3.1/-5.7 (PHOENIXLTD), -2.1/-3.4 (LODHA). EXACT FIX (Director): when sign(realised) != sign(model) and |realised| > |model|, set unpriced = 0 (or cut the recent weight 0.5 -> 0.15 until the recent-state model shows positive cross-sectional skill). Under the first option my names move to: FEDERALBNK 183->135, LODHA 159->128, ZYDUSLIFE 179->152, PHOENIXLTD 177->157, TORNTPHARM 189->160. SHRIRAMFIN/GMRAIRPORT stay at the bottom (realised agrees in sign).",
+   "evidence": "computed from market_impact/results/rankings.csv (2026-11-05 08:31 UTC run): columns recent_events_model_impact, realised_mkt_adj_since_jun, unpriced_recent_impact, exp_rel_return_12m"
+  },
+  {
+   "severity": "high",
+   "subject": "EV_SEBI_CAS_DERIV_REVERSAL",
+   "issue": "This occurred on 16 Oct 2026, but the catalogue lists it as anticipated (p 0.85, 30 Nov). It is not covered by RT_EVENTS. See event_overrides: status occurred, date 2026-10-16. It also makes GROWW's company event 'SEBI CAS / F&O settlement review outcome' (p 0.6, -6..+7) a known outcome; see the GROWW finding.",
+   "evidence": "https://news.google.com/rss/search?q=Sebi+CAS+rollback+derivatives+brokerage+when:30d&hl=en-IN&gl=IN&ceid=IN:en (Outlook Money 16 Oct 2026; Business Standard 19 Oct; Livemint 27 Oct)"
+  },
+  {
+   "severity": "medium",
+   "subject": "FEDERALBNK",
+   "issue": "Company-event double count. 'RBI ECL framework effective' (p 0.85, -3..0, expected -1.275) duplicates the catalogue event EV_ECL_ROLLOUT_APR27 (p 0.9; -2.5% for FEDERALBNK via P_RBI_PRUDENTIAL / F_ASSET_QUALITY_IN). MARKET_WIDE in mi/graph.py does not match 'ECL'. EXACT FIX: company_event_overrides {\"ticker\":\"FEDERALBNK\",\"match\":\"ECL framework\",\"drop\":true,\"reason\":\"duplicate of EV_ECL_ROLLOUT_APR27\"}. Consider adding '\\bECL\\b|expected credit loss' to MARKET_WIDE.",
+   "evidence": "market_impact/companies/FEDERALBNK.json company_events; results/event_impacts.csv EV_ECL_ROLLOUT_APR27"
+  },
+  {
+   "severity": "medium",
+   "subject": "FEDERALBNK",
+   "issue": "VERDICT: too low. 12m -6.1% (rank 183) rests on -9.1% beta-adjusted 'unpriced' Jun-Nov impact: F_FPI_FLOWS -6.4 raw, C_MIDEAST_CONFLICT -3.5, G-sec -2.8. The stock is +12.6% market-adjusted since June. The realised drivers point the other way: record Q2 FY27 PAT Rs1,386cr +45%, NIM 3.32%, NPAs at decade lows (16 Oct); FIIs added stake (26.05% -> 28.5%) during the record FPI outflow; Kerala NRI deposits at a record Rs3.35 trn. The one stock-specific swing factor (Jana SFB deal, -3/-4% on reports, +4-5% on denial, 19 Oct) is already a company event. With the two edge fixes, the ECL dedup and the unpriced-rule fix, the expectation is ~-1% to -2% (mid-pack), not bottom-20.",
+   "evidence": "https://news.google.com/rss/search?q=Federal+Bank+Q2+results+when:60d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Kerala+NRI+deposits+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "TORNTPHARM",
+   "issue": "VERDICT: too low. 12m -6.5% (rank 189). The drivers are -7.1% 'unpriced' from FPI (-3.2 raw), G-sec (-2.8), USFDA enforcement (-2.3) and repo (-1.0), all on a 0.64-beta defensive whose realised move is +4.9% market-adjusted. The FPI, G-sec and USFDA edges are internally inconsistent; see edge_scale. A genuine stock-specific negative the graph lacks: Q2 FY27 missed estimates (PAT -10% to Rs534cr despite revenue +51% from JB Chemicals consolidation, 23 Oct). It is already in the price (1m -1.7%, 3m -5.3%). Expected after fixes: ~-2% to -3%, mostly forward risk events.",
+   "evidence": "https://news.google.com/rss/search?q=Torrent+Pharma+Q2+results+when:60d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "ZYDUSLIFE",
+   "issue": "VERDICT: too low, though less than the score implies. 12m -5.8% (rank 179). 0.5 x unpriced = -3.6, of which P_USFDA_ENFORCEMENT is -4.2 raw: a sector state from peers' warning letters times an edge that already prices Zydus's own Moraiya OAI risk. Moraiya is then priced a third time by company events (p 0.25 x -9.5 / p 0.7 x +2.5). A real stock-specific negative the graph lacks: Q2 FY27 (4 Nov) PAT -27% with margin contraction; shares fell >4% from a 52-week high. It is realised and in the price, so it must not be called 'unpriced'. Expected after fixes ~-2% to -3%.",
+   "evidence": "https://news.google.com/rss/search?q=Zydus+Lifesciences+Q2+results+when:30d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Zydus+Moraiya+USFDA+when:60d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "SHRIRAMFIN",
+   "issue": "VERDICT: too low (direction right, size too big). 12m -5.9% (rank 181); unpriced -7.4 = model -9.1 vs realised -1.8. The Jun-Nov comparison window hides that the modelled channel has already hit. Shriram cut FY27 AUM growth guidance to 15-17% from 18% citing El Nino rural stress (24-27 Oct), brokerages cut targets, and the stock hit an 11-month low (-15.6% in 3m vs Nifty -0.7%). The monsoon edge's -3.2 and much of the credit/rate hit are therefore priced, not unpriced. Q2 PAT +59% 'on lower funding costs' also contradicts the repo/spread channel. EXACT FIX: apply the repo and US10Y edge scales, and treat the monsoon impact as priced by using the 3m realised move for names with a dated guidance event inside the window (or override SHRIRAMFIN unpriced to ~-2.5). The MUFG company event (p 0.15, +4..+15) is reasonable given the 13 Oct Bloomberg report and the 14 Oct denial.",
+   "evidence": "https://news.google.com/rss/search?q=Shriram+Finance+target+cut+AUM+guidance+when:30d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Shriram+Finance+Q2+results+when:45d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "GROWW",
+   "issue": "VERDICT: too low (mildly). 12m -5.5% (rank 176) = unpriced -3.6 (FPI -6.1 raw, G-sec -3.9) + forward -2.4 + company events -3.05. Company-event fixes (exact): (1) {\"ticker\":\"GROWW\",\"match\":\"SEBI CAS\",\"drop\":true}: outcome known on 16 Oct, now an occurred catalogue event. (2) {\"ticker\":\"GROWW\",\"match\":\"block sales\",\"impact_pct_low\":-2.0,\"impact_pct_high\":0.0}: the Sept Peak XV/Sequoia block (Rs1,756-1,999cr, -4.5% on the day) was fully recovered (3m +18%), so overhang effects are transient, not -3.5 permanent. (3) {\"ticker\":\"GROWW\",\"match\":\"lock-in\",\"drop\":true}: the May-2027 expiry is dated and public and duplicates (2). Net with the FPI scale and CAS reclassification: ~-2.5% to -3%. Q2 PAT +54% even as equity-derivatives revenue fell 14% QoQ on CAS (14 Oct), and that CAS hit is now reversed.",
+   "evidence": "https://news.google.com/rss/search?q=Groww+Q2+results+when:40d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Groww+shares+block+deal+Peak+XV+when:60d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "GMRAIRPORT",
+   "issue": "VERDICT: agree (negative), size roughly right after offsetting fixes. 12m -4.7% (rank 171). Most of it is forward exposure (-7.5: Iran re-escalation, rupee 98, RBI hike, CPI breach), which is legitimate for a levered, Gulf-exposed, long-duration asset. The realised -3.7% partly prices the recent state. The repo/spread edges are overstated (see edge_scale), but three things go the other way. (a) MISSING channel: Noida International (Jewar) began commercial flights on 3 Nov 2026 with IndiGo as launch carrier (DD News, 3 Nov). NEW_NCR_AIRPORT_COMPETITION (edge -2.5) has no state or event, so add an occurred event (+0.3 SSU now, ramping; low confidence). (b) Company events carry a +2.7 positive bias. EXACT FIXES: {\"ticker\":\"GMRAIRPORT\",\"match\":\"Q3 FY27 results\",\"impact_pct_low\":-7.0,\"impact_pct_high\":7.0} (results should be mean-zero); {\"ticker\":\"GMRAIRPORT\",\"match\":\"Cargo Terminal 1\",\"drop\":true} (award letter public 4 Nov, priced). (c) Q2 FY27 was 'mixed' (PAT Rs65cr, revenue +12%; stock slipped, 28-29 Oct).",
+   "evidence": "https://news.google.com/rss/search?q=Noida+International+Airport+Jewar+operations+when:60d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=GMR+Airports+Q2+results+when:45d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "PHOENIXLTD",
+   "issue": "VERDICT: too low. 12m -5.7% (rank 177) is mostly unpriced -6.1: FPI -4.0, G-sec -4.0 and repo -3.0 raw, with repo double counted (see edge_scale). Realised is +14.8% market-adjusted; Q2 retail consumption +25%, office income +64% (30 Oct - 4 Nov); BofA calls it a 'high quality compounder'. Company events carry a +1.8 positive bias. EXACT FIXES: {\"ticker\":\"PHOENIXLTD\",\"match\":\"BofA Property Week\",\"drop\":true} (a conference is not an event); {\"ticker\":\"PHOENIXLTD\",\"match\":\"Q3 FY27 results\",\"impact_pct_low\":-6.0,\"impact_pct_high\":6.0}; {\"ticker\":\"PHOENIXLTD\",\"match\":\"Festive/Diwali\",\"impact_pct_low\":-3.0,\"impact_pct_high\":3.0}. Net after all fixes: ~-1% to -2%.",
+   "evidence": "https://news.google.com/rss/search?q=Phoenix+Mills+Q2+results+when:45d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "LODHA",
+   "issue": "VERDICT: agree on a small negative; the parts offset. 12m -3.4% (rank 159; no longer bottom-15 in the 08:31 run). Unpriced -4.1 (FPI -4.8, repo -4.1 incl. a duplicated EMI channel, G-sec -2.2) against realised +23%. Q2 pre-sales +10% to Rs5,037cr, PAT +28%, company expects to beat FY27 PAT guidance (30-31 Oct), so that move is fundamental. Company events carry a +2.6 bias that offsets the overstated unpriced part. EXACT FIXES: {\"ticker\":\"LODHA\",\"match\":\"Analyst/investor meets\",\"drop\":true}; {\"ticker\":\"LODHA\",\"match\":\"Q3 FY27 results\",\"impact_pct_low\":-7.0,\"impact_pct_high\":7.0}; {\"ticker\":\"LODHA\",\"match\":\"FY27 results\",\"impact_pct_low\":-8.0,\"impact_pct_high\":8.0}.",
+   "evidence": "https://news.google.com/rss/search?q=Lodha+Developers+Q2+pre-sales+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "COFORGE",
+   "issue": "VERDICT: too low. 12m -5.7% (rank 178) = unpriced -3.8 (T_GENAI -3.0, FPI -2.9, visa -2.7, G-sec -1.4) + forward -4.5 (US recession -3.1, AI-capex reset -2.0, Anthropic IPO -1.05). The +37% market-adjusted move since June is stock-specific and fundamental: Q2 revenue +53.6%, record order book US$2.38bn (+45%), EBIT guide raised to 16% (23 Oct). Under the rule that is fine, but it shows the AI-substitution sensitivity is overstated for Coforge (edge fix) and that the Anthropic-IPO shock double counts. Remaining risks (governance follow-up after the chairman exit, integration, high P/E) are in company events. After fixes: ~-2.5% to -3%.",
+   "evidence": "https://news.google.com/rss/search?q=Coforge+Q2+results+when:45d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Coforge+outgrowing+rivals+AI+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "MPHASIS",
+   "issue": "VERDICT: too low. 12m -7.1% (rank 193) = unpriced -5.5 (T_GENAI -5.0 raw, visa -3.15, FPI -1.9) + forward -5.6 (US recession -3.3, Anthropic IPO -1.9, AI-capex reset -1.6). Corrections: the T_GENAI state, the Mphasis T_GENAI edge and the Anthropic-IPO shock (all above). Visa: the green-card freeze named TCS/Wipro/HCL/Cognizant/Microsoft, not Mphasis, so -3.5 per step is generous, but no change is proposed. Company events are fine: Q2 results not yet reported (screener shows the Jun-26 quarter as latest; revenue +17% YoY), and the Blackstone overhang is p 0.15 (Moneycontrol 2 Nov: Blackstone's dividend haul ~Rs3,270cr, no sale signal). After fixes: ~-3.5% to -4%. Still bottom-quartile because of high US-cycle beta in the forward risk scenarios, which is defensible.",
+   "evidence": "https://www.screener.in/company/MPHASIS/consolidated/ (fetched 2026-11-05) ; https://news.google.com/rss/search?q=Mphasis+Blackstone+stake+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "NAUKRI",
+   "issue": "VERDICT: too low (mildly). 12m -6.1% (rank 184) = unpriced -5.1 (FPI -5.1 raw, T_GENAI -4.1) + forward -5.3 (AI-capex reset -16.5% if it happens, US recession -14.8% via US equities/FPI/VIX edges). The +15% realised move is largely explained by the listed portfolio: Eternal +39% market-adjusted since June, partly offset by PB Fintech -47%. Startup portfolio Rs41,300cr on 23 Jun 2026 is about half of Info Edge's ~Rs78k cr market cap. The holding_stake links (w 0.1 each, 'size unverified') are probably too small for Eternal; verify the stake in the Q2 FY27 presentation. CEO change (Bikhchandani returns, 28 Oct) is correctly a zero-mean company event. The T_GENAI state fix lifts it ~+1pp; the rest is forward risk-scenario beta, which is defensible.",
+   "evidence": "https://news.google.com/rss/search?q=Info+Edge+stake+Eternal+PB+Fintech+when:180d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Info+Edge+Bikhchandani+CEO+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "IDFCFIRSTB",
+   "issue": "VERDICT: agree on direction, too low on size. 12m -6.4% (rank 187) = unpriced -5.5 (FPI -4.8 raw, G-sec -2.3, monsoon -1.8, repo -1.6, liquidity -1.2) + forward -5.7 (AI-capex reset, Iran escalation, ECL, US recession, monsoon-27 deficit, gold-loan rules). The stock already fell -10% in 3m (-5.9% in 1m) despite Q2 PAT nearly tripling to Rs1,045cr and loans +20-30% (24 Oct). Part of the rate/monsoon/unsecured channel is visible in that 3m move, which the Jun-Nov window (+2.7%) hides. No edge fix proposed: the asset-quality -14 is large but follows the PBT arithmetic. Expected ~-3% to -4% after the method fix.",
+   "evidence": "https://news.google.com/rss/search?q=IDFC+First+Bank+Q2+results+when:45d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "ABCAPITAL",
+   "issue": "VERDICT: too low (mildly). 12m -5.9% (rank 180) = unpriced -3.7 (FPI -3.2 raw, repo -2.2, credit spreads -2.0, G-sec -1.5) + forward -6.0 (ECL -2.0, gold-loan tightening -1.8, CPI/RBI hikes). It is up +7.7% market-adjusted; Q2 PAT +38% on lending growth (30 Oct). The credit-spread edge double counts the NBFC multiple (fix above). Gold-loan exposure is new and small (entered 2026-08-19), so EV_RBI_GOLD_LOAN_TIGHTEN at -5.9% if it happens looks high, but that runs through P_RBI_PRUDENTIAL (-3.0) and is not changed here. After fixes: ~-3.5%.",
+   "evidence": "https://news.google.com/rss/search?q=Aditya+Birla+Capital+Q2+results+when:45d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "Company events: positive-mean results/guidance/capex rows (universe)",
+   "issue": "Scheduled results and guidance events should have zero expected value unless there is dated information; consensus is in the price. Asymmetric low/high ranges give non-zero means: across the universe results rows sum to +17.6 (67 of 240 non-zero), guidance +20.6, capex +52.9, other +39.8, against regulatory -21.8. In my names this adds +1.8 to +2.7 to PHOENIXLTD, LODHA and GMRAIRPORT. Suggest centring 'results' rows mechanically in mi/graph.py (mid = 0) and requiring a dated source for non-zero guidance/capex means.",
+   "evidence": "market_impact/results/company_events.csv"
+  },
+  {
+   "severity": "low",
+   "subject": "Version note",
+   "issue": "rankings.csv was rewritten twice during this review (08:29 and 08:31 UTC). My assigned 175-187 ranks came from an earlier run; in the 08:31 run LODHA (159) and GROWW (176) have moved and TORNTPHARM/MPHASIS are at 189/193. The verdicts above use the 08:31 numbers; the direction of every fix is independent of the run.",
+   "evidence": "ls -la market_impact/results/rankings.csv"
+  }
+ ]
+}

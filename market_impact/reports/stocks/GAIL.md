@@ -2,74 +2,75 @@
 *NIFTY_NEXT_50 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.1%**, **12 months +2.4%** (rank 58 / 50 of 200 for 3m / 12m); beta 1.28
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.4%): 3 months 55%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.1% … P90 +6.9%; plausible 12m relative-return range incl. stock-specific noise: -8.0% … +24.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +5.7% beta-adjusted vs realised market-adjusted move +7.9%); forward event exposure +5.7% (3m +3.5%; half assumed priced); company-specific events +1.1%
+- Expected relative return: **3 months +1.0%**, **12 months +2.3%** (rank 40 / 23 of 200 for 3m / 12m); beta 1.28
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.4%): 3 months 54%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.4% … P90 +7.1%; plausible 12m relative-return range incl. stock-specific noise: -25.7% … +23.1%
+- Decomposition (12m): 0.5 × forward event exposure +4.4% (3m +2.6%; half assumed priced) + 0.5 × company-specific catalysts +1.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +5.0% (beta-adjusted) vs a realised market-adjusted move of +7.9% — gap -2.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | PNGRB gas pipeline tariff regulation (`NEW_PNGRB_TARIFF`) | +1 = tariff cut / unified-tariff reduction of ~10% | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.99 | -1.50 | +0.18 | -0.52 | -0.15 | — |
 | Global natural gas / LNG price (`F_GAS_GLOBAL`) | +15% gas/LNG price | -1.42 | -1.50 | +0.00 | +0.08 | +0.00 | -7.0% |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.33 | +1.50 | -0.14 | -0.01 | -0.01 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.26 | -1.20 | +0.03 | -0.08 | -0.01 | -1.1% |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.36 | +1.50 | -0.14 | +0.01 | -0.01 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.22 | -1.20 | +0.03 | -0.05 | -0.01 | -1.1% |
 | Petrochemical / polymer spreads (`F_PETROCHEM_SPREADS`) | +10% polymer-naphtha spreads | +1.10 | +1.10 | +0.00 | +0.00 | +0.00 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -0.96 | +0.00 | -0.93 | +0.03 | -0.05 | — |
-| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +0.79 | +0.00 | +0.96 | -0.17 | -0.00 | — |
-| Fertiliser subsidy generosity (`P_FERT_SUBSIDY`) | +1 = higher subsidy | +0.78 | +0.80 | +0.00 | +0.00 | -0.02 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.75 | +0.00 | +0.96 | -0.20 | -0.01 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.64 | -0.60 | +0.05 | -0.07 | -0.02 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -0.55 | +0.00 | +0.00 | -0.58 | +0.03 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +0.55 | +0.00 | +0.54 | +0.05 | -0.03 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | +0.54 | +1.20 | -0.52 | -0.16 | +0.01 | +0.0% |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +0.90 | +0.00 | +0.96 | -0.09 | +0.02 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.87 | -0.49 | +0.18 | -0.45 | -0.11 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +0.86 | +0.00 | +0.96 | -0.11 | +0.01 | — |
+| Fertiliser subsidy generosity (`P_FERT_SUBSIDY`) | +1 = higher subsidy | +0.79 | +0.80 | +0.00 | +0.00 | -0.01 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.63 | -0.60 | +0.05 | -0.07 | -0.01 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | +0.63 | +1.20 | -0.45 | -0.13 | +0.01 | +0.0% |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +0.62 | +0.00 | +0.54 | +0.10 | -0.01 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -0.57 | +0.00 | -0.59 | -0.06 | +0.08 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +0.54 | +0.00 | +0.60 | -0.07 | +0.01 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.9% | -1.9% | -1.5 | -0.5 | +0.1 | +0.0 |
 | LNG supply disruption: ~90 delayed Qatar cargoes to Petronet; India re-sources to US/UAE; Henry Hub proxy only +12% in 3m (`EV_LNG_HORMUZ_DISRUPTION`) | occurred | 1.00 | -1.4% | -1.4% | -1.5 | +0.0 | +0.1 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.1 | -0.0 | -0.0 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.8% | -0.8% | +0.1 | -0.5 | -0.1 | -0.2 |
-| Cabinet approves higher rabi-season NBS subsidy rates for P&K fertilisers (and DAP special package) (`EV_NBS_RABI_HIKE`) | anticipated | 0.95 | +0.8% | +0.7% | +0.8 | +0.0 | +0.0 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.3% | +0.7% | -0.1 | +1.3 | +0.2 | -0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -0.9% | -0.9% | -0.5 | -0.5 | +0.1 | +0.0 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.8% | -0.8% | +0.1 | -0.5 | -0.2 | -0.2 |
+| Cabinet approves higher rabi-season NBS subsidy rates for P&K fertilisers (and DAP special package) (`EV_NBS_RABI_HIKE`) | anticipated | 0.95 | +0.8% | +0.8% | +0.8 | +0.0 | +0.0 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.7 | -0.1 | +0.1 |
 | Cold winter + low EU storage + Hormuz LNG loss: global gas/LNG spike (`EV_EU_WINTER_GAS_SPIKE`) | risk_scenario | 0.20 | -3.5% | -0.7% | -3.8 | +0.0 | +0.2 | +0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.7% | +0.7% | +0.8 | -0.1 | +0.0 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.7% | -0.7% | -0.6 | +0.0 | -0.1 | -0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.7% | +0.7% | +0.8 | -0.1 | -0.0 | -0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.5 | +0.0 | -0.1 |
-| Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | +0.5% | +0.5% | +0.4 | -0.0 | +0.0 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -1.8% | -0.4% | -0.7 | -0.8 | -0.3 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.5 | +0.0 | +0.0 |
+| Union Budget FY28 (1 Feb 2027) raises agri/rural spending and fertiliser subsidy; PM-Kisan/rural jobs top-up (`EV_BUDGET27_AGRI_RURAL`) | scheduled | 0.70 | +0.6% | +0.5% | +0.4 | +0.3 | -0.0 | -0.0 |
+| Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | +0.4% | +0.4% | +0.4 | -0.0 | +0.0 | -0.0 |
+| Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +0.4% | +0.4% | +0.4 | +0.0 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GAIL | -1.56% | -0.86% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → GAIL | +1.50% | +0.83% |
 | 1 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → GAIL | +0.80% | +0.76% |
 | 1 | EV_EU_WINTER_GAS_SPIKE ⇒ F_GAS_GLOBAL → GAIL | -3.75% | -0.75% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GAIL | +2.64% | +0.66% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → GAIL | -1.80% | -0.45% |
-| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → GAIL | +0.43% | +0.39% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_GAS_GLOBAL → GAIL | -1.50% | -0.38% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ P_FERT_SUBSIDY → GAIL | +0.40% | +0.36% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_GAS_GLOBAL → GAIL | +0.54% | +0.30% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → GAIL | -1.56% | -0.28% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ P_FERT_SUBSIDY → GAIL | +0.40% | +0.28% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → GAIL | +0.55% | +0.28% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → GAIL | +0.49% | +0.27% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → GAIL | +0.40% | +0.27% |
 | 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → GAIL | -2.25% | -0.27% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → GAIL | +5.40% | +0.27% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GAIL | -0.60% | -0.25% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | C_MIDEAST_CONFLICT → GAIL | +1.00 | events | -1.50% |
+| 1 | F_GAS_GLOBAL → GAIL | +1.00 | director_override | -1.50% |
 | 1 | F_GDP_IN → GAIL | +0.50 | events | +0.75% |
-| 1 | F_GAS_GLOBAL → GAIL | -0.47 | observed | +0.70% |
 | 1 | F_REPO_IN → GAIL | +1.00 | events | -0.60% |
+| 1 | C_MIDEAST_CONFLICT → GAIL | +1.00 | events | -0.49% |
 | 1 | F_POWER_DEMAND_IN → GAIL | +1.20 | events | +0.48% |
 | 1 | F_USDINR → GAIL | -0.37 | observed | +0.44% |
 | 1 | P_FERT_SUBSIDY → GAIL | +0.50 | events | +0.40% |

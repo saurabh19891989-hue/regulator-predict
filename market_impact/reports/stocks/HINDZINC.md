@@ -2,45 +2,46 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months +1.0%** (rank 84 / 77 of 200 for 3m / 12m); beta 1.14
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.9%): 3 months 51%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.2% … P90 +10.6%; plausible 12m relative-return range incl. stock-specific noise: -32.9% … +56.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -11.4% beta-adjusted vs realised market-adjusted move -14.0%); forward event exposure +5.5% (3m +2.9%; half assumed priced); company-specific events -1.4%
+- Expected relative return: **3 months +0.1%**, **12 months +1.2%** (rank 100 / 58 of 200 for 3m / 12m); beta 1.14
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.9%): 3 months 50%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.7% … P90 +8.4%; plausible 12m relative-return range incl. stock-specific noise: -53.6% … +57.9%
+- Decomposition (12m): 0.5 × forward event exposure +4.9% (3m +2.0%; half assumed priced) + 0.5 × company-specific catalysts -1.6%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -7.1% (beta-adjusted) vs a realised market-adjusted move of -14.0% — gap +6.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| Windfall / export taxes on commodities (`P_WINDFALL_EXPORT_TAX`) | +1 = imposition | -4.01 | -4.00 | +0.00 | +0.00 | -0.01 | — |
 | Zinc / lead price (`F_ZINC_LEAD`) | +10% zinc | +3.80 | +3.80 | +0.00 | +0.00 | +0.00 | — |
 | Silver price (`F_SILVER`) | +12% silver | +3.50 | +3.50 | +0.00 | +0.00 | +0.00 | -30.0% |
-| Gold price (`F_GOLD`) | +8% gold (USD) | +2.74 | +0.00 | +2.80 | -0.03 | -0.03 | -8.4% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.10 | +2.20 | +0.10 | -0.12 | -0.08 | -1.1% |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.70 | +0.00 | +1.52 | +0.16 | +0.02 | — |
+| Gold price (`F_GOLD`) | +8% gold (USD) | +2.76 | +0.00 | +2.80 | -0.03 | -0.02 | -8.4% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.16 | +2.20 | +0.10 | -0.08 | -0.06 | -1.1% |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.63 | +0.00 | +1.52 | +0.09 | +0.03 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +1.59 | +0.00 | +0.00 | +1.40 | +0.18 | — |
 | Mining royalty / mineral tax burden (`P_MINING_ROYALTY`) | +1 = higher | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +1.42 | +0.00 | +0.00 | +1.34 | +0.08 | — |
 | Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +1.24 | +0.80 | +0.44 | +0.00 | +0.00 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.13 | +0.00 | -0.96 | +0.14 | -0.31 | — |
+| US dollar index (`F_DXY`) | +3% DXY | -1.10 | +0.00 | -0.26 | -0.85 | +0.01 | +2.2% |
+| US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -1.02 | +0.00 | -0.21 | -0.61 | -0.20 | +9.4% |
 | Gold import duty (`P_GOLD_IMPORT_DUTY`) | +5 pp | +0.97 | +1.00 | +0.00 | -0.03 | +0.00 | — |
-| US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -0.94 | +0.00 | -0.21 | -0.58 | -0.14 | +9.4% |
-| US dollar index (`F_DXY`) | +3% DXY | -0.88 | +0.00 | -0.09 | -0.77 | -0.03 | +2.2% |
-| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +0.87 | +0.00 | +0.44 | +0.43 | +0.00 | — |
+| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -0.80 | -0.80 | +0.00 | +0.00 | +0.00 | — |
+| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +0.66 | +0.00 | +0.44 | +0.22 | +0.00 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | +0.57 | +0.00 | +0.26 | +0.32 | -0.02 | +3.5% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -8.7% | -8.7% | -8.8 | +0.0 | +0.0 | +0.0 |
-| Windfall/export levy re-set: petrol nil, diesel Rs11.5/l, ATF ~Rs11/l (31 Oct); excise reportedly cut (3 Nov, unverified) (`EV_EXPORT_LEVY_REVISIONS`) | occurred | 1.00 | -4.0% | -4.0% | -4.0 | +0.0 | -0.0 | +0.0 |
 | Gold/silver rebound as Fed hike fears fade or Iran war ends (`EV_PRECIOUS_METALS_REBOUND_H1_2027`) | anticipated | 0.45 | +5.2% | +2.3% | +5.3 | +0.0 | -0.0 | -0.0 |
-| Gold falls to ~$3,500 / silver to ~$40 on Fed hike(s) and strong dollar (`EV_PRECIOUS_METALS_FURTHER_SLIDE`) | risk_scenario | 0.30 | -6.9% | -2.1% | -7.0 | +0.0 | +0.1 | +0.1 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -0.8 | -0.6 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.3 | -0.9 | -0.0 |
+| Gold falls to ~$3,500 / silver to ~$40 on Fed hike(s) and strong dollar (`EV_PRECIOUS_METALS_FURTHER_SLIDE`) | risk_scenario | 0.30 | -6.9% | -2.1% | -7.0 | +0.0 | +0.1 | +0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -0.3 | -1.0 | -0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.3 | -0.8 | -0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | +0.0 | +0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | -1.1% | -1.1% | -0.9 | -0.2 | +0.0 | +0.0 |
 | India coal crunch: critical plant stocks, e-auction premiums ~94%, captive plants ordered to maximise output; CIL October output +19% (`EV_INDIA_COAL_CRUNCH`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | +0.0 | +0.0 |
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.2 | -0.8 | +0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +1.0% | +1.0% | +0.0 | +0.0 | +0.9 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -1.7% | -0.9% | +0.0 | -0.7 | -1.1 | +0.1 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.9% | -0.9% | -0.8 | -0.1 | +0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -1.5% | -0.8% | +0.0 | -0.7 | -1.1 | +0.3 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.7 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -51,30 +52,29 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ZINC_LEAD → HINDZINC | +1.52% | +0.53% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HINDZINC | +2.86% | +0.51% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → HINDZINC | -1.01% | -0.51% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HINDZINC | -0.90% | -0.50% |
 | 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_GOLD → F_SILVER → HINDZINC | -0.84% | -0.46% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HINDZINC | +1.53% | +0.38% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → HINDZINC | -0.90% | -0.36% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HINDZINC | -0.59% | -0.32% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → HINDZINC | -0.64% | -0.32% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_FOOD_INFLATION_IN → P_WINDFALL_EXPORT_TAX → HINDZINC | -1.15% | -0.29% |
 | 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_CHINA_GDP → F_ZINC_LEAD → HINDZINC | +0.61% | +0.27% |
 | 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_GOLD → F_SILVER → HINDZINC | +1.01% | +0.25% |
-| 2 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → P_WINDFALL_EXPORT_TAX → HINDZINC | -0.38% | -0.25% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HINDZINC | +1.00% | +0.25% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → HINDZINC | -0.40% | -0.24% |
+| 3 | EV_FED_DEC26_HIKE25 ⇒ F_DXY → F_GOLD → F_SILVER → HINDZINC | -0.30% | -0.22% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → HINDZINC | +0.66% | +0.17% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_SILVER → HINDZINC | -2.50 | observed | -8.74% |
-| 1 | P_WINDFALL_EXPORT_TAX → HINDZINC | +1.00 | events | -4.00% |
 | 1 | F_GSEC_10Y_IN → HINDZINC | +1.55 | director_override | -1.24% |
 | 1 | F_USDINR → HINDZINC | -0.37 | observed | -0.81% |
 | 1 | F_COAL_INDIA → HINDZINC | +1.50 | events | -0.75% |
 | 1 | F_POWER_PRICE_IN → HINDZINC | +1.90 | director_override | -0.57% |
 | 2 | F_CHINA_GDP → F_ZINC_LEAD → HINDZINC | +0.30 | events | +0.46% |
 | 2 | F_DXY → F_ZINC_LEAD → HINDZINC | +0.74 | observed | -0.45% |
-| 1 | T_ENERGY_TRANSITION → HINDZINC | +0.50 | events | +0.40% |
+| 1 | T_ENERGY_TRANSITION → HINDZINC | +0.30 | director_override | +0.24% |
 | 2 | F_USDINR → P_GOLD_IMPORT_DUTY → HINDZINC | -0.37 | observed | -0.04% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
@@ -83,6 +83,7 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2026-12 | Interim dividend declaration (H1 FY27 dividend already ~Rs11/share per press); payout drives Vedanta upstreaming | corporate_action | 0.50 | +0.5% | +0.25% |
 | 2026-12 | Sulphuric acid realisations fall, reversing part of the Q2 cost gain | other | 0.30 | -1.8% | -0.53% |
 | 2027-01 | Q3 FY27 results; silver realisation reset versus Q2 (spot US$52.5 vs implied Q2 ~US$75-80), cost guidance US$825-850/t test | results | 0.97 | -0.5% | -0.48% |
+| 2027-02-01 | Windfall levy/export duty on zinc-silver earnings (tail; replaces conflated P_WINDFALL_EXPORT_TAX edge) *(review: [DIRECTOR_CE] RT_N50_A)* | regulatory | 0.05 | -6.0% | -0.30% |
 | 2027-03 | Vedanta block/OFS sale of further HZL shares to delever (precedent: 1.6% sold Jun 2025; promoter holding -4.2 pp over 3 yrs) | corporate_action | 0.25 | -3.8% | -0.94% |
 | 2027-03 | FY27 silver output of 680 t achieved (H1: 320-340 t); Chanderiya silver refinery ramp | guidance | 0.70 | +1.5% | +1.05% |
 | 2027-06 | Government of India disinvestment OFS of part of its 27.9% stake | corporate_action | 0.10 | -4.0% | -0.40% |

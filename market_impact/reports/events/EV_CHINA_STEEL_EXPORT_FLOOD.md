@@ -15,42 +15,42 @@ If property stays weak and the Fed-driven dollar rise persists, mills export mor
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| TMPV | +3.0 | +3.0 | +0.0 | +0.0 | +0.0 |
 | TMCV | +1.6 | +0.0 | +1.7 | -0.2 | +0.0 |
+| TMPV | +1.5 | +1.5 | +0.0 | +0.0 | +0.0 |
 | BHEL | +1.4 | +0.0 | +1.6 | -0.2 | +0.0 |
 | MARUTI | +1.4 | +0.0 | +1.6 | -0.2 | +0.0 |
 | SUZLON | +1.3 | +0.0 | +1.4 | -0.2 | +0.0 |
 | ASHOKLEY | +1.3 | +0.0 | +1.4 | -0.2 | +0.0 |
 | RVNL | +1.1 | +0.0 | +1.2 | -0.1 | +0.0 |
-| HYUNDAI | +1.1 | +0.0 | +1.2 | -0.1 | +0.0 |
 | COCHINSHIP | +1.1 | +0.0 | +1.2 | -0.1 | +0.0 |
+| HYUNDAI | +1.1 | +0.0 | +1.2 | -0.1 | +0.0 |
 | TIINDIA | +1.0 | +0.0 | +1.1 | -0.1 | +0.0 |
 | TVSMOTOR | +0.9 | +0.0 | +1.0 | -0.1 | +0.0 |
-| GVT&D | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
 | CGPOWER | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
-| HEROMOTOCO | +0.9 | +0.0 | +1.0 | -0.1 | +0.0 |
-| POLICYBZR | +0.8 | +0.8 | +0.0 | +0.0 | +0.0 |
+| GVT&D | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
+| HEROMOTOCO | +0.8 | +0.0 | +1.0 | -0.1 | +0.0 |
+| BOSCHLTD | +0.6 | +0.0 | +0.7 | -0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | JINDALSTEL | -10.8 | -1.2 | -10.3 | +0.7 | +0.0 |
-| SAIL | -9.7 | +0.0 | -11.4 | +1.7 | +0.0 |
-| JSWSTEEL | -5.7 | +0.0 | -6.8 | +1.1 | +0.0 |
-| TATASTEEL | -5.6 | -2.0 | -4.4 | +0.7 | +0.0 |
-| APLAPOLLO | -1.2 | +0.0 | -1.3 | +0.1 | +0.0 |
-| NMDC | -1.0 | +0.0 | -1.3 | +0.4 | +0.0 |
-| CHOLAFIN | -1.0 | -1.0 | +0.0 | +0.0 | +0.0 |
+| SAIL | -10.6 | +0.0 | -11.4 | +0.9 | +0.0 |
+| JSWSTEEL | -6.2 | +0.0 | -6.8 | +0.5 | +0.0 |
+| TATASTEEL | -5.7 | -2.0 | -4.4 | +0.7 | +0.0 |
+| APLAPOLLO | -1.3 | +0.0 | -1.3 | +0.1 | +0.0 |
+| NMDC | -1.2 | +0.0 | -1.3 | +0.2 | +0.0 |
 | M&MFIN | -0.8 | -0.8 | +0.0 | +0.0 | +0.0 |
 | LTF | -0.5 | -0.5 | +0.0 | +0.0 | +0.0 |
-| BANKINDIA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| MAHABANK | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| PAYTM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| CHOLAFIN | -0.3 | -0.3 | +0.0 | +0.0 | +0.0 |
 | AUROPHARMA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| VAML | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| BANKBARODA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| DRREDDY | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| HINDCOPPER | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| LUPIN | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| NATIONALUM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| OIL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 14%, 2: 72%, 3: 10%, 4: 4%
+Share of absolute impact by order: 1: 11%, 2: 78%, 3: 9%, 4: 2%
 
 ## Sources
 - 2026-10-29 Asia Braces for Europe's Turn on Chinese Overcapacity https://news.google.com/rss/search?q=Asia+Braces+for+Europe's+Turn+on+Chinese+Overcapacity&hl=en-IN&gl=IN&ceid=IN:en

@@ -61,3 +61,13 @@ def test_overlap_damp_at_intermediate_node():
     no_direct = Network(nodes, [E("X", "GDP", 1.0), E("GDP", "AQ", 1.0), E("AQ", "BANK", 2.0, "company")])
     t2, _, _ = no_direct.unit_response("X")
     assert math.isclose(t2["BANK"], 2.0 * DAMP[3])
+
+
+def test_holdco_lookthrough_only_for_listed_pairs():
+    from market_impact.mi import graph as G
+    E = lambda s, d, w, layer="backbone": {"src": s, "dst": d, "w": w, "w_low": w, "w_high": w, "layer": layer}
+    nodes = {"SILVER": {"type": "FACTOR"}, "HINDZINC": {"type": "COMPANY"}, "VEDL": {"type": "COMPANY"}, "OTHER": {"type": "COMPANY"}}
+    edges = [E("SILVER", "HINDZINC", 3.0, "company"), E("HINDZINC", "VEDL", 0.75, "company_link"), E("HINDZINC", "OTHER", 0.5, "company_link")]
+    t, o, _ = G.Network(nodes, edges).unit_response("SILVER")
+    assert math.isclose(t["VEDL"], 3.0 * 0.75 * DAMP[2]) and set(o["VEDL"]) == {2}   # look-through to the listed holdco
+    assert "OTHER" not in t                                                          # other links still stop driver shocks

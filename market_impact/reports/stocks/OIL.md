@@ -2,45 +2,46 @@
 *MIDCAP_100 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.1%**, **12 months +4.7%** (rank 25 / 32 of 200 for 3m / 12m); beta 0.81
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.4%): 3 months 57%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.6% … P90 +16.5%; plausible 12m relative-return range incl. stock-specific noise: -58.5% … +65.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.1 pp (model impact +8.2% beta-adjusted vs realised market-adjusted move -15.0%); forward event exposure +3.2% (3m +2.0%; half assumed priced); company-specific events +0.2%
+- Expected relative return: **3 months +0.7%**, **12 months +0.9%** (rank 62 / 69 of 200 for 3m / 12m); beta 0.81
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.4%): 3 months 52%, 12 months 45%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.7% … P90 +12.3%; plausible 12m relative-return range incl. stock-specific noise: -36.7% … +24.0%
+- Decomposition (12m): 0.5 × forward event exposure +2.6% (3m +1.2%; half assumed priced) + 0.5 × company-specific catalysts +0.2%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +8.2% (beta-adjusted) vs a realised market-adjusted move of -15.0% — gap +23.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +8.80 | +4.50 | +3.44 | +0.77 | +0.09 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | +5.58 | +5.00 | +0.58 | +0.04 | -0.03 | +0.0% |
-| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | -3.97 | +0.00 | -3.20 | -0.69 | -0.08 | — |
-| Russia-Ukraine war / Western sanctions intensity on Russia (`NEW_RUSSIA_UKRAINE_WAR`) | +1 = escalation (new sanctions round, strikes on energy/port infrastructure); -1 = ceasefire/sanctions relief | +3.40 | +0.00 | +2.43 | +0.87 | +0.09 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.90 | +3.00 | -0.04 | -0.06 | +0.00 | -1.1% |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +2.09 | +0.00 | +1.67 | +0.40 | +0.02 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | +8.65 | +4.50 | +3.44 | +0.58 | +0.12 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | +5.47 | +5.00 | +0.41 | +0.07 | -0.01 | +0.0% |
+| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | -3.52 | +0.00 | -3.20 | -0.25 | -0.07 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +2.92 | +3.00 | -0.04 | -0.04 | +0.00 | -1.1% |
+| Russia-Ukraine war / Western sanctions intensity on Russia (`NEW_RUSSIA_UKRAINE_WAR`) | +1 = escalation (new sanctions round, strikes on energy/port infrastructure); -1 = ceasefire/sanctions relief | +2.66 | +0.00 | +2.43 | +0.21 | +0.01 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.87 | +0.00 | +1.67 | +0.17 | +0.02 | — |
 | Windfall (SAED) tax on domestic crude (`NEW_CRUDE_WINDFALL_TAX_IN`) | +1 = SAED reimposed at ~Rs10,000/tonne | -1.80 | -1.80 | +0.00 | +0.00 | +0.00 | — |
-| US growth (`F_US_GDP`) | +1 pp | +1.12 | +0.00 | +1.20 | +0.12 | -0.20 | — |
-| US dollar index (`F_DXY`) | +3% DXY | +0.97 | +0.00 | +0.70 | +0.27 | -0.01 | +2.2% |
+| US growth (`F_US_GDP`) | +1 pp | +1.04 | +0.00 | +1.20 | -0.03 | -0.12 | — |
 | Refining margins (GRM / cracks) (`F_REFINING_MARGIN`) | +$2/bbl gross refining margin | +0.90 | +0.90 | +0.00 | +0.00 | +0.00 | +15.4% |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -0.70 | +0.00 | -0.32 | -0.29 | -0.09 | — |
+| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | +0.83 | +1.00 | -0.26 | +0.05 | +0.04 | — |
+| US dollar index (`F_DXY`) | +3% DXY | +0.70 | +0.00 | +0.48 | +0.20 | +0.01 | +2.2% |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -0.65 | -0.50 | -0.12 | -0.03 | +0.00 | — |
-| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | +0.63 | +0.00 | +0.36 | +0.24 | +0.04 | +3.5% |
-| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | +0.61 | +0.00 | +0.42 | +0.17 | +0.02 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | +0.63 | +0.00 | +0.36 | +0.23 | +0.04 | +3.5% |
+| US tariffs on Indian goods (`P_US_TARIFF_INDIA`) | +10 pp average tariff | +0.61 | +0.00 | +0.42 | +0.17 | +0.01 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -12.6% | -6.9% | -11.5 | -0.9 | -0.1 | -0.0 |
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +5.2% | +5.2% | +5.0 | +0.1 | +0.1 | +0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | +19.0% | +4.8% | +16.7 | +1.9 | +0.4 | +0.0 |
-| Hormuz effectively closed for >2 weeks (Brent > $150) (`EV_HORMUZ_FULL_CLOSURE`) | risk_scenario | 0.05 | +40.1% | +2.0% | +34.6 | +4.3 | +1.0 | +0.1 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.4% | +1.4% | +0.0 | +1.4 | +0.2 | -0.2 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +1.1% | +1.1% | +0.0 | +1.2 | -0.0 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -12.5% | -6.9% | -11.5 | -0.7 | -0.2 | -0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +5.3% | +5.3% | +5.0 | +0.1 | +0.1 | +0.1 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | +18.8% | +4.7% | +16.7 | +1.6 | +0.5 | +0.1 |
+| Hormuz effectively closed for >2 weeks (Brent > $150) (`EV_HORMUZ_FULL_CLOSURE`) | risk_scenario | 0.05 | +39.6% | +2.0% | +34.6 | +3.6 | +1.1 | +0.2 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.3% | +1.3% | +0.0 | +1.4 | -0.0 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +1.2% | +1.2% | +0.0 | +1.2 | -0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | +0.0 | +0.0 |
-| OPEC+ 29 Nov meeting: 2027 quotas raised (market-share / post-war normalisation) (`EV_OPEC_NOV29_RAISE`) | scheduled | 0.20 | -3.9% | -0.8% | -3.5 | -0.4 | -0.0 | +0.0 |
-| China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +2.1% | +0.7% | +0.0 | +1.6 | +0.5 | +0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | -1.4% | -0.7% | +0.0 | -1.5 | +0.0 | +0.1 |
-| Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | +4.8% | +0.7% | +3.0 | +1.3 | +0.5 | +0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -2.8% | -0.7% | +0.0 | -3.5 | +0.6 | +0.1 |
+| OPEC+ 29 Nov meeting: 2027 quotas raised (market-share / post-war normalisation) (`EV_OPEC_NOV29_RAISE`) | scheduled | 0.20 | -3.8% | -0.8% | -3.5 | -0.3 | -0.0 | +0.0 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | -1.5% | -0.8% | +0.0 | -1.5 | +0.0 | +0.0 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -3.0% | -0.8% | +0.0 | -3.5 | +0.6 | -0.1 |
+| Waiver lapses and US imposes secondary tariff (up to 100%) or sanctions on Indian refiners buying Russian oil (`EV_RUSSIA_TARIFF_ENFORCED`) | risk_scenario | 0.15 | +4.7% | +0.7% | +3.0 | +1.2 | +0.5 | +0.0 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.7% | -0.7% | -0.5 | -0.1 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -58,20 +59,20 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ F_BRENT → OIL | +4.00% | +0.60% |
 | 1 | EV_HORMUZ_FULL_CLOSURE ⇒ C_MIDEAST_CONFLICT → OIL | +11.25% | +0.56% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_BRENT → OIL | +1.60% | +0.56% |
-| 2 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → F_BRENT → OIL | +1.20% | +0.36% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → OIL | -0.62% | -0.34% |
 | 1 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → OIL | -1.00% | -0.30% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → OIL | -0.54% | -0.30% |
+| 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_CHINA_GDP → F_BRENT → OIL | +0.64% | +0.29% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | C_MIDEAST_CONFLICT → OIL | +1.00 | events | +4.50% |
-| 1 | F_REFINING_MARGIN → OIL | +1.54 | observed | +1.39% |
 | 1 | F_USDINR → OIL | -0.37 | observed | -1.11% |
 | 1 | C_RUSSIA → OIL | +1.00 | events | +1.00% |
+| 1 | F_REFINING_MARGIN → OIL | +0.60 | events | +0.54% |
 | 1 | F_REPO_IN → OIL | +1.00 | events | -0.50% |
-| 1 | F_GAS_GLOBAL → OIL | -0.47 | observed | -0.14% |
+| 1 | F_GAS_GLOBAL → OIL | +1.00 | director_override | +0.30% |
 | 1 | F_BRENT → OIL | +0.00 | observed | +0.01% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)

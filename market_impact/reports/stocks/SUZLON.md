@@ -2,45 +2,46 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.8%**, **12 months +6.2%** (rank 20 / 24 of 200 for 3m / 12m); beta 1.37
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.0%): 3 months 59%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.3% … P90 +8.8%; plausible 12m relative-return range incl. stock-specific noise: -19.3% … +36.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.9 pp (model impact +11.9% beta-adjusted vs realised market-adjusted move -35.0%); forward event exposure +0.8% (3m +1.2%; half assumed priced); company-specific events +1.8%
+- Expected relative return: **3 months -0.4%**, **12 months +0.1%** (rank 130 / 99 of 200 for 3m / 12m); beta 1.37
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +34.0%): 3 months 49%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.1% … P90 +4.4%; plausible 12m relative-return range incl. stock-specific noise: -47.5% … +28.0%
+- Decomposition (12m): 0.5 × forward event exposure +0.6% (3m +0.2%; half assumed priced) + 0.5 × company-specific catalysts +0.6%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +3.5% (beta-adjusted) vs a realised market-adjusted move of -35.0% — gap +38.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Wind-turbine pricing competition (`NEW_WTG_PRICING_COMPETITION`) | +1 = realised WTG price per MW -5% | -8.00 | -8.00 | +0.00 | +0.00 | +0.00 | — |
-| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +6.95 | +7.00 | +0.00 | -0.05 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.59 | -2.00 | +0.00 | -0.23 | -0.36 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.49 | +0.00 | -2.54 | -0.04 | +0.09 | — |
+| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +2.75 | +2.80 | +0.00 | -0.05 | +0.00 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.36 | -2.00 | +0.00 | -0.16 | -0.20 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.94 | -2.00 | +0.05 | +0.03 | -0.02 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.84 | -1.20 | -0.38 | -0.24 | -0.02 | -1.1% |
-| Indian domestic steel price (`F_STEEL_INDIA`) | +7% domestic HRC/rebar price | -1.83 | -1.80 | +0.00 | -0.03 | +0.00 | — |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -1.70 | +0.00 | -0.53 | -0.72 | -0.45 | — |
+| Indian domestic steel price (`F_STEEL_INDIA`) | +7% domestic HRC/rebar price | -1.81 | -1.80 | +0.00 | -0.01 | +0.00 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.73 | -1.20 | -0.38 | -0.14 | -0.01 | -1.1% |
 | Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +1.55 | +1.50 | +0.06 | +0.00 | -0.01 | — |
 | Indian electricity demand (`F_POWER_DEMAND_IN`) | +3 pp demand growth | +1.50 | +1.50 | +0.00 | +0.00 | +0.00 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.38 | +0.00 | +0.00 | -1.40 | +0.02 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.28 | +0.00 | -0.92 | -0.27 | -0.10 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.01 | +0.00 | -0.38 | -0.54 | -0.09 | +0.0% |
-| Global HRC steel price (`F_STEEL_GLOBAL`) | +10% global HRC | -0.91 | +0.00 | -0.89 | +0.00 | -0.02 | +20.6% |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -1.42 | +0.00 | -0.53 | -0.53 | -0.36 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.39 | +0.00 | -1.39 | -0.04 | +0.05 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.11 | +0.00 | -0.92 | -0.12 | -0.06 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | -0.93 | +0.00 | -0.86 | -0.23 | +0.16 | — |
+| Copper price (`F_COPPER`) | +10% copper | -0.90 | -0.90 | +0.00 | +0.00 | +0.00 | -2.4% |
+| Global HRC steel price (`F_STEEL_GLOBAL`) | +10% global HRC | -0.89 | +0.00 | -0.89 | +0.00 | -0.01 | +20.6% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +6.9% | +6.9% | +7.0 | -0.1 | +0.0 | -0.0 |
-| ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +3.5% | +3.5% | +3.5 | +0.0 | -0.0 | +0.0 |
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.8% | -2.8% | +0.0 | -2.9 | -0.0 | +0.1 |
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -2.1% | -2.1% | -2.0 | +0.0 | -0.0 | -0.1 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +2.7% | +2.7% | +2.8 | -0.1 | +0.0 | -0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -2.1% | -2.1% | -2.0 | +0.0 | -0.0 | -0.0 |
 | Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -2.0% | -2.0% | -2.0 | +0.0 | -0.0 | +0.0 |
-| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.0% | -2.0% | -2.0 | +0.0 | +0.0 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.5% | +1.9% | +2.0 | +0.6 | +0.8 | +0.2 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.9% | -1.9% | -2.0 | +0.0 | +0.0 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -1.6 | -0.1 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.7% | +1.5% | +2.0 | +0.4 | +0.3 | +0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.5% | +1.5% | +1.5 | +0.0 | +0.0 | +0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.1% | -1.3% | -2.4 | -1.0 | -1.4 | -0.4 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.5 | -0.3 | -0.2 |
-| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +2.2% | +0.9% | +2.2 | +0.0 | +0.2 | -0.2 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.7 | -0.1 | -0.0 |
+| ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.4% | +1.4% | +1.4 | +0.0 | -0.0 | +0.0 |
+| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +2.4% | +0.9% | +2.2 | +0.0 | +0.2 | -0.1 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.8% | -0.9% | -2.4 | -0.7 | -0.6 | -0.1 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.9% | -0.8% | -2.0 | +0.0 | +0.0 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.7 | -0.1 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -49,37 +50,37 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → SUZLON | +2.00% | +1.10% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → SUZLON | +2.25% | +0.90% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SUZLON | -2.00% | -0.84% |
-| 1 | EV_GST_RATE_CHANGE_APR27 ⇒ P_RENEWABLE_SUPPORT → SUZLON | +2.10% | +0.63% |
 | 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → SUZLON | -2.40% | -0.60% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → SUZLON | -0.86% | -0.58% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SUZLON | -2.30% | -0.58% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SUZLON | -2.00% | -0.54% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → SUZLON | -0.80% | -0.48% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → SUZLON | -0.72% | -0.40% |
 | 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → SUZLON | -0.43% | -0.37% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → SUZLON | -2.00% | -0.36% |
-| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → SUZLON | -0.51% | -0.33% |
-| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_REPO_IN → SUZLON | -0.35% | -0.31% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SUZLON | -1.15% | -0.29% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → SUZLON | -1.56% | -0.28% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → SUZLON | +0.55% | +0.28% |
+| 2 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → SUZLON | +0.86% | +0.27% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → SUZLON | -1.08% | -0.27% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | P_RENEWABLE_SUPPORT → SUZLON | +1.50 | events | +10.50% |
 | 1 | F_STEEL_INDIA → SUZLON | +1.35 | events | -2.43% |
 | 1 | C_MIDEAST_CONFLICT → SUZLON | +1.00 | events | -2.00% |
 | 1 | F_REPO_IN → SUZLON | +1.00 | events | -2.00% |
 | 1 | F_POWER_DEMAND_IN → SUZLON | +1.20 | events | +1.80% |
+| 1 | P_RENEWABLE_SUPPORT → SUZLON | +0.60 | director_override | +1.68% |
 | 1 | F_USDINR → SUZLON | -0.37 | observed | +0.44% |
-| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → SUZLON | +1.00 | events | +0.24% |
 | 1 | F_COPPER → SUZLON | -0.24 | observed | +0.21% |
+| 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → SUZLON | +0.50 | director_override | +0.12% |
 | 2 | F_AI_CAPEX → T_DATA_CENTRES_IN → SUZLON | -0.30 | events | -0.11% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |
 |---|---|---|---|---|---|
-| 2026-12 | Additional large order wins (1.5 GW added in H1) | other | 0.60 | +2.5% | +1.50% |
+| 2026-12 | Additional large order wins (1.5 GW added in H1) *(review: [RT_TOP_B] routine orders do not move the stock)* | other | 0.60 | +0.5% | +0.30% |
 | 2027-02 | Q3 FY27 results (Dec quarter) - H2-loaded deliveries must offset H1 margin | results | 0.95 | +0.0% | +0.00% |
 | 2027-02 | Margin trajectory: FY27 guidance ~15% +/-1% test in Q3 | guidance | 0.50 | -1.5% | -0.75% |
 | 2027-03 | First S175 5 MW commercial installations and export-order milestone (BlueSky certifications) | other | 0.40 | +2.5% | +1.00% |

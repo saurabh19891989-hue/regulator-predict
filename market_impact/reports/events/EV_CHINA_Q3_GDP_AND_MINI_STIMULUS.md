@@ -18,42 +18,42 @@ China Q3 2026 GDP grew 4.5% y/y, beating forecasts, driven by AI-boom exports (R
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| TATASTEEL | +2.4 | +1.1 | -0.3 | +1.1 | +0.5 |
-| VAML | +1.6 | +0.0 | +1.0 | +0.6 | +0.0 |
-| SAIL | +1.5 | +0.0 | -0.9 | +1.6 | +0.9 |
-| NMDC | +1.5 | +0.0 | +1.1 | +0.3 | +0.1 |
-| JINDALSTEL | +1.5 | +0.0 | -1.1 | +1.5 | +1.0 |
-| HINDALCO | +1.2 | +0.0 | +0.7 | +0.4 | +0.0 |
-| NATIONALUM | +1.1 | +0.0 | +0.6 | +0.5 | +0.0 |
-| HINDCOPPER | +0.7 | +0.3 | +0.4 | +0.1 | +0.0 |
+| TATASTEEL | +1.6 | +1.1 | -0.4 | +0.7 | +0.2 |
+| NMDC | +1.4 | +0.0 | +1.1 | +0.2 | +0.1 |
+| VAML | +0.9 | +0.0 | +1.0 | -0.1 | +0.0 |
+| SAIL | +0.9 | +0.0 | -0.9 | +1.1 | +0.8 |
+| HINDALCO | +0.7 | +0.0 | +0.7 | -0.0 | +0.0 |
+| HINDCOPPER | +0.7 | +0.3 | +0.4 | +0.0 | +0.0 |
 | SRF | +0.6 | +0.0 | +0.6 | +0.0 | -0.0 |
+| NATIONALUM | +0.6 | +0.0 | +0.6 | +0.0 | +0.0 |
 | UPL | +0.6 | +0.0 | +0.6 | -0.0 | +0.0 |
-| JSWSTEEL | +0.6 | +0.0 | -1.0 | +1.0 | +0.5 |
-| PIIND | +0.6 | +0.0 | +0.5 | +0.0 | +0.0 |
-| COALINDIA | +0.5 | +0.0 | +0.3 | +0.2 | +0.0 |
-| OIL | +0.5 | +0.0 | +0.4 | +0.1 | +0.0 |
+| PIIND | +0.5 | +0.0 | +0.5 | -0.0 | +0.0 |
+| HEROMOTOCO | +0.5 | +0.9 | -0.2 | -0.1 | -0.1 |
 | MOTHERSON | +0.5 | +0.7 | -0.2 | +0.0 | +0.0 |
+| TIINDIA | +0.5 | +0.7 | -0.0 | -0.1 | -0.1 |
+| OIL | +0.4 | +0.0 | +0.4 | +0.1 | +0.0 |
+| COALINDIA | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| VOLTAS | -2.1 | -1.6 | -0.4 | -0.2 | -0.0 |
+| VOLTAS | -2.1 | -1.6 | -0.4 | -0.1 | -0.0 |
 | DIXON | -1.1 | -1.1 | +0.0 | -0.0 | -0.0 |
-| TVSMOTOR | -0.8 | +0.0 | -0.5 | -0.2 | -0.1 |
-| ASHOKLEY | -0.7 | +0.0 | -0.3 | -0.3 | -0.1 |
-| TMPV | -0.7 | +0.2 | -0.5 | -0.4 | +0.0 |
-| TMCV | -0.7 | +0.0 | -0.2 | -0.3 | -0.1 |
-| MARUTI | -0.6 | +0.0 | -0.2 | -0.3 | -0.1 |
-| HYUNDAI | -0.6 | +0.0 | -0.3 | -0.2 | -0.1 |
-| MOTILALOFS | -0.5 | +0.0 | -0.3 | -0.2 | -0.1 |
-| MRF | -0.5 | +0.0 | -0.3 | -0.2 | -0.1 |
-| POLICYBZR | -0.5 | +0.0 | -0.3 | -0.1 | -0.0 |
-| SUZLON | -0.5 | +0.0 | -0.1 | -0.2 | -0.1 |
-| BHEL | -0.5 | +0.0 | -0.1 | -0.2 | -0.1 |
-| CUMMINSIND | -0.4 | +0.0 | -0.3 | -0.1 | -0.1 |
-| GVT&D | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
+| TVSMOTOR | -0.7 | +0.0 | -0.5 | -0.1 | -0.1 |
+| ASHOKLEY | -0.6 | +0.0 | -0.3 | -0.2 | -0.1 |
+| TMCV | -0.6 | +0.0 | -0.2 | -0.2 | -0.1 |
+| MARUTI | -0.5 | +0.0 | -0.2 | -0.2 | -0.1 |
+| HYUNDAI | -0.5 | +0.0 | -0.3 | -0.1 | -0.1 |
+| MOTILALOFS | -0.5 | +0.0 | -0.3 | -0.1 | -0.0 |
+| AUROPHARMA | -0.5 | +0.0 | -0.5 | -0.0 | +0.0 |
+| MRF | -0.4 | +0.0 | -0.3 | -0.1 | -0.1 |
+| SUZLON | -0.4 | +0.0 | -0.1 | -0.2 | -0.1 |
+| BHEL | -0.4 | +0.0 | -0.1 | -0.2 | -0.1 |
+| BPCL | -0.4 | +0.0 | -0.5 | +0.1 | -0.0 |
+| GVT&D | -0.4 | +0.0 | -0.2 | -0.1 | -0.0 |
+| INDUSINDBK | -0.4 | +0.0 | -0.2 | -0.1 | -0.1 |
 
-Share of absolute impact by order: 1: 10%, 2: 50%, 3: 27%, 4: 13%
+Share of absolute impact by order: 1: 12%, 2: 58%, 3: 20%, 4: 10%
 
 ## Sources
 - 2026-10-19 China's economy grows 4.5 percent in Q3, beating forecasts https://news.google.com/rss/search?q=China's+economy+grows+4.5+percent+in+Q3,+beating+forecasts&hl=en-IN&gl=IN&ceid=IN:en

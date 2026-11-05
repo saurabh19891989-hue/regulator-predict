@@ -20,42 +20,42 @@ Oil-driven or sticky inflation (3.7% CPI), strong GDP, and 'multiple hikes likel
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | +0.4 | +0.0 | +0.1 | +0.3 | +0.1 |
-| SAIL | +0.4 | +0.0 | -0.0 | +0.4 | +0.1 |
-| TMPV | +0.4 | +0.0 | +0.2 | +0.1 | +0.0 |
-| OIL | +0.3 | +0.0 | +0.3 | +0.1 | -0.0 |
-| LICHSGFIN | +0.3 | +1.0 | -0.3 | -0.3 | -0.1 |
-| ONGC | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
-| NMDC | +0.3 | +0.0 | +0.1 | +0.1 | +0.0 |
-| PIIND | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| DRREDDY | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
-| MANKIND | +0.1 | +0.6 | -0.3 | -0.1 | -0.1 |
-| JINDALSTEL | +0.1 | +0.0 | -0.1 | +0.2 | +0.1 |
-| SRF | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LUPIN | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
-| COALINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| TATASTEEL | +0.0 | +0.0 | -0.2 | +0.2 | +0.0 |
+| LICHSGFIN | +0.6 | +1.0 | -0.2 | -0.2 | +0.0 |
+| MANKIND | +0.2 | +0.6 | -0.3 | -0.0 | +0.0 |
+| OIL | +0.2 | +0.0 | +0.2 | +0.1 | -0.0 |
+| JSWSTEEL | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| ONGC | +0.2 | +0.0 | +0.1 | +0.1 | -0.0 |
+| NMDC | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| PIIND | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
+| TMPV | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
+| SAIL | +0.1 | +0.0 | -0.1 | +0.2 | +0.0 |
+| COCHINSHIP | +0.1 | +0.0 | -0.0 | +0.1 | +0.0 |
+| VOLTAS | +0.1 | +0.0 | +0.3 | -0.2 | +0.0 |
+| PREMIERENE | +0.0 | +0.0 | -0.2 | +0.2 | +0.0 |
+| DRREDDY | +0.0 | +0.0 | -0.0 | +0.1 | -0.0 |
+| COALINDIA | +0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| SRF | +0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BSE | -5.4 | -3.0 | -1.4 | -1.0 | +0.0 |
-| MOTILALOFS | -4.1 | +0.0 | -2.3 | -1.4 | -0.4 |
-| SWIGGY | -3.7 | -2.5 | -0.9 | -0.2 | -0.1 |
-| POLICYBZR | -3.3 | -2.0 | -1.0 | -0.2 | -0.1 |
-| ICICIAMC | -3.0 | +0.0 | -1.7 | -0.9 | -0.3 |
-| YESBANK | -2.9 | +0.0 | -1.6 | -0.8 | -0.5 |
-| JIOFIN | -2.7 | +0.0 | -1.3 | -1.0 | -0.4 |
-| INDUSINDBK | -2.7 | -0.4 | -1.2 | -0.8 | -0.3 |
-| BAJFINANCE | -2.7 | +0.0 | -1.4 | -0.9 | -0.4 |
-| GROWW | -2.6 | +0.0 | -1.2 | -1.3 | -0.2 |
-| IREDA | -2.6 | +0.0 | -1.3 | -0.9 | -0.4 |
-| NAUKRI | -2.5 | +0.0 | -1.6 | -0.7 | -0.2 |
-| 360ONE | -2.4 | +0.0 | -1.1 | -0.9 | -0.3 |
-| SHRIRAMFIN | -2.4 | -0.6 | -1.0 | -0.5 | -0.3 |
-| TATACAP | -2.3 | +0.0 | -1.2 | -0.8 | -0.4 |
+| BSE | -4.7 | -3.0 | -1.2 | -0.5 | -0.0 |
+| SWIGGY | -3.3 | -2.5 | -0.7 | -0.1 | +0.0 |
+| POLICYBZR | -2.7 | -2.0 | -0.8 | +0.1 | -0.0 |
+| MOTILALOFS | -2.2 | +0.0 | -1.9 | -0.3 | -0.0 |
+| MUTHOOTFIN | -1.9 | +0.0 | -1.7 | -0.2 | -0.0 |
+| YESBANK | -1.8 | +0.0 | -1.4 | -0.4 | -0.0 |
+| INDUSINDBK | -1.6 | -0.4 | -0.9 | -0.3 | -0.0 |
+| ADANIGREEN | -1.6 | +0.0 | -1.3 | -0.3 | -0.0 |
+| PRESTIGE | -1.6 | -0.2 | -1.1 | -0.3 | -0.0 |
+| MPHASIS | -1.6 | -1.1 | -0.4 | -0.1 | +0.0 |
+| BAJFINANCE | -1.6 | +0.0 | -1.2 | -0.3 | -0.1 |
+| NAUKRI | -1.6 | +0.0 | -1.4 | -0.2 | +0.0 |
+| NYKAA | -1.6 | -0.8 | -0.6 | -0.2 | -0.0 |
+| TATACAP | -1.5 | +0.0 | -1.1 | -0.4 | -0.1 |
+| ICICIAMC | -1.5 | +0.0 | -1.4 | -0.1 | -0.0 |
 
-Share of absolute impact by order: 1: 12%, 2: 53%, 3: 25%, 4: 10%
+Share of absolute impact by order: 1: 16%, 2: 66%, 3: 16%, 4: 2%
 
 ## Sources
 - 2026-10-07 Fed policymakers saw multiple 2026 rate hikes as likely, September FOMC minutes show https://news.google.com/rss/search?q=Fed%20policymakers%20saw%20multiple%202026%20rate%20hikes%20as%20likely%2C%20September%20FOMC%20minutes%20show&hl=en-IN&gl=IN&ceid=IN:en

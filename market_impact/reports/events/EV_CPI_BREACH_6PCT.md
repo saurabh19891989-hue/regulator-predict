@@ -21,38 +21,38 @@ Sep CPI 5.54% with food 7.74%; NDTV Profit (21 Oct) says inflation 'heads to 6% 
 | UPL | +0.1 | +0.0 | +0.1 | -0.0 | +0.0 |
 | NATIONALUM | +0.0 | -0.2 | +0.3 | -0.0 | +0.0 |
 | OIL | +0.0 | -0.2 | +0.3 | -0.0 | +0.0 |
-| HINDCOPPER | +0.0 | -0.2 | +0.3 | -0.0 | -0.0 |
 | MCX | +0.0 | +0.0 | +0.1 | -0.0 | -0.0 |
+| HINDCOPPER | +0.0 | -0.2 | +0.3 | -0.0 | -0.0 |
 | ONGC | +0.0 | -0.2 | +0.3 | -0.0 | +0.0 |
-| NMDC | -0.0 | -0.2 | +0.2 | +0.0 | -0.0 |
-| LUPIN | -0.1 | -0.2 | +0.1 | +0.0 | -0.0 |
-| DRREDDY | -0.1 | -0.3 | +0.2 | +0.0 | -0.0 |
+| LUPIN | -0.0 | -0.2 | +0.1 | +0.0 | -0.0 |
+| NMDC | -0.1 | -0.2 | +0.2 | +0.0 | -0.0 |
+| DRREDDY | -0.1 | -0.3 | +0.2 | +0.0 | +0.0 |
 | HINDALCO | -0.1 | -0.2 | +0.2 | -0.1 | +0.0 |
+| PAYTM | -0.1 | +0.3 | -0.5 | +0.0 | -0.0 |
 | TMPV | -0.2 | -0.2 | +0.1 | -0.1 | +0.1 |
-| SAIL | -0.2 | -0.5 | +0.1 | +0.2 | +0.0 |
-| TATASTEEL | -0.2 | -0.4 | +0.1 | +0.1 | +0.0 |
-| JSWSTEEL | -0.2 | -0.5 | +0.2 | +0.1 | +0.0 |
+| ITC | -0.2 | -0.2 | -0.0 | +0.1 | -0.0 |
+| COCHINSHIP | -0.2 | -0.3 | +0.1 | -0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -4.5 | -2.7 | -1.0 | -0.6 | -0.2 |
-| BAJFINANCE | -4.0 | -2.5 | -1.3 | -0.1 | -0.1 |
-| TATACAP | -3.8 | -2.5 | -1.0 | -0.3 | -0.1 |
-| GMRAIRPORT | -3.5 | -2.5 | -0.6 | -0.7 | +0.2 |
-| IREDA | -3.1 | -2.5 | -0.4 | -0.2 | -0.0 |
-| PRESTIGE | -3.0 | -2.1 | -0.7 | -0.1 | -0.1 |
-| PHOENIXLTD | -2.9 | -2.7 | -0.2 | -0.1 | -0.0 |
+| YESBANK | -3.9 | -2.7 | -1.0 | -0.3 | +0.0 |
+| BAJFINANCE | -3.6 | -2.5 | -1.2 | +0.1 | +0.0 |
+| TATACAP | -3.5 | -2.5 | -0.9 | -0.1 | -0.0 |
+| IREDA | -3.0 | -2.5 | -0.4 | -0.1 | -0.0 |
 | JSWENERGY | -2.8 | -2.5 | -0.2 | -0.1 | -0.0 |
-| GODREJPROP | -2.8 | -1.4 | -1.2 | -0.1 | -0.1 |
-| JIOFIN | -2.8 | -2.1 | -0.4 | -0.2 | -0.1 |
-| AUBANK | -2.7 | -1.8 | -0.6 | -0.3 | -0.1 |
-| SHRIRAMFIN | -2.7 | -1.8 | -0.5 | -0.6 | +0.1 |
-| BAJAJFINSV | -2.7 | -1.8 | -0.8 | -0.0 | -0.1 |
-| LODHA | -2.6 | -1.4 | -1.0 | -0.1 | -0.1 |
-| ADANIGREEN | -2.6 | -2.2 | -0.2 | -0.1 | -0.1 |
+| PRESTIGE | -2.7 | -2.1 | -0.5 | -0.1 | -0.0 |
+| JIOFIN | -2.7 | -2.1 | -0.4 | -0.2 | -0.1 |
+| BAJAJFINSV | -2.6 | -1.8 | -0.8 | -0.0 | +0.0 |
+| AUBANK | -2.6 | -1.8 | -0.6 | -0.1 | -0.1 |
+| ADANIGREEN | -2.5 | -2.2 | -0.2 | -0.1 | -0.0 |
+| PFC | -2.3 | -2.0 | -0.2 | -0.1 | -0.0 |
+| GMRAIRPORT | -2.3 | -1.6 | -0.4 | -0.3 | +0.1 |
+| GODREJPROP | -2.2 | -1.4 | -0.7 | -0.0 | -0.1 |
+| LTF | -2.2 | -1.6 | -0.6 | +0.0 | +0.0 |
+| IDEA | -2.1 | -1.6 | -0.4 | -0.2 | +0.0 |
 
-Share of absolute impact by order: 1: 65%, 2: 21%, 3: 11%, 4: 4%
+Share of absolute impact by order: 1: 67%, 2: 21%, 3: 8%, 4: 3%
 
 ## Sources
 - 2026-10-21 Not A One-Off: RBI MPC Minutes Point To A Rate-Hike Cycle As Inflation Heads To 6% Ceiling - NDTV Profit https://news.google.com/rss/search?q=India+CPI+inflation+September+2026+6%25+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en

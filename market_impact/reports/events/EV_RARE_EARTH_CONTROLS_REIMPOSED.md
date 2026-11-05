@@ -17,42 +17,42 @@ Risk that Beijing lets the suspension lapse (10 Nov legal date or 10 Jan truce e
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| VOLTAS | +1.6 | +0.0 | +1.1 | +0.4 | +0.1 |
+| VOLTAS | +1.6 | +0.0 | +1.1 | +0.5 | +0.0 |
 | AUROPHARMA | +1.3 | +0.0 | +1.1 | +0.2 | -0.0 |
 | DIXON | +0.8 | -0.1 | +1.0 | -0.0 | +0.0 |
 | SIEMENS | +0.8 | +0.0 | +0.7 | +0.0 | +0.0 |
-| ASHOKLEY | +0.8 | +0.0 | +0.1 | +0.3 | +0.3 |
-| PREMIERENE | +0.7 | +0.0 | +0.0 | +0.5 | +0.1 |
-| LAURUSLABS | +0.6 | +0.0 | +0.8 | -0.1 | -0.1 |
-| ABB | +0.6 | +0.0 | +0.4 | +0.1 | +0.1 |
+| ASHOKLEY | +0.7 | +0.0 | +0.1 | +0.3 | +0.2 |
+| LAURUSLABS | +0.7 | +0.0 | +0.8 | -0.1 | -0.1 |
+| PREMIERENE | +0.6 | +0.0 | +0.0 | +0.5 | +0.1 |
+| ABB | +0.5 | +0.0 | +0.4 | +0.0 | +0.1 |
 | CONCOR | +0.5 | +0.0 | +0.5 | -0.1 | +0.0 |
 | DRREDDY | +0.4 | +0.0 | +0.3 | +0.2 | -0.0 |
 | CIPLA | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
-| POWERGRID | +0.4 | +0.0 | +0.2 | +0.1 | +0.1 |
-| PIDILITIND | +0.4 | +0.0 | +0.2 | +0.1 | +0.1 |
-| GVT&D | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| BLUESTARCO | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| ADANIPORTS | +0.4 | +0.0 | +0.4 | -0.0 | -0.0 |
+| PIDILITIND | +0.4 | +0.0 | +0.2 | +0.1 | +0.0 |
+| LUPIN | +0.4 | +0.0 | +0.2 | +0.2 | -0.0 |
+| GVT&D | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| HYUNDAI | -4.7 | -0.8 | -4.3 | +0.2 | +0.1 |
-| BOSCHLTD | -4.5 | -1.2 | -3.6 | +0.1 | +0.1 |
-| TVSMOTOR | -3.9 | -3.0 | -1.3 | +0.3 | +0.1 |
-| MARUTI | -3.2 | -0.9 | -2.8 | +0.3 | +0.2 |
+| HYUNDAI | -4.8 | -0.8 | -4.3 | +0.2 | +0.1 |
+| BOSCHLTD | -4.6 | -1.2 | -3.6 | +0.1 | +0.1 |
+| TVSMOTOR | -4.0 | -3.0 | -1.3 | +0.3 | +0.0 |
+| MARUTI | -3.3 | -0.9 | -2.8 | +0.3 | +0.2 |
 | BAJAJ-AUTO | -3.0 | -2.2 | -0.8 | +0.0 | +0.1 |
 | MOTHERSON | -2.7 | -0.9 | -1.9 | +0.1 | -0.0 |
-| TATASTEEL | -2.6 | +0.0 | -1.3 | -0.3 | -1.1 |
-| TMCV | -2.6 | +0.0 | -3.1 | +0.2 | +0.3 |
-| HEROMOTOCO | -2.3 | +0.0 | -2.6 | +0.1 | +0.2 |
+| TMCV | -2.7 | +0.0 | -3.1 | +0.2 | +0.3 |
+| HEROMOTOCO | -2.4 | +0.0 | -2.6 | +0.1 | +0.1 |
 | EICHERMOT | -2.1 | +0.0 | -2.2 | +0.1 | +0.0 |
-| CHOLAFIN | -2.0 | +0.0 | -1.7 | -0.1 | -0.2 |
-| M&MFIN | -1.9 | +0.0 | -1.7 | -0.1 | -0.1 |
+| TATASTEEL | -2.1 | +0.0 | -1.3 | -0.2 | -0.6 |
+| M&MFIN | -1.8 | +0.0 | -1.7 | -0.0 | -0.1 |
+| CHOLAFIN | -1.8 | +0.0 | -1.7 | -0.0 | -0.1 |
+| TMPV | -1.8 | -0.9 | -1.3 | +0.3 | +0.1 |
 | EXIDEIND | -1.8 | +0.0 | -2.1 | +0.3 | +0.0 |
-| SHRIRAMFIN | -1.6 | +0.0 | -1.7 | +0.0 | +0.0 |
-| AUBANK | -1.6 | +0.0 | -1.4 | -0.1 | -0.1 |
+| SHRIRAMFIN | -1.7 | +0.0 | -1.7 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 9%, 2: 57%, 3: 20%, 4: 14%
+Share of absolute impact by order: 1: 9%, 2: 62%, 3: 19%, 4: 10%
 
 ## Sources
 - 2026-09-02 India's EV ambitions hit China's rare earth roadblock; supply chain risks extend to batteries: ACMA https://news.google.com/rss/search?q=India's+EV+ambitions+hit+China's+rare+earth+roadblock;+supply+chain+risks+extend+to+batteries:+ACMA&hl=en-IN&gl=IN&ceid=IN:en

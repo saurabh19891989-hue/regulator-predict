@@ -2,51 +2,51 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.3%**, **12 months +0.5%** (rank 113 / 86 of 200 for 3m / 12m); beta 0.88
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.4%): 3 months 49%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.6% … P90 +4.2%; plausible 12m relative-return range incl. stock-specific noise: -13.9% … +14.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.7% beta-adjusted vs realised market-adjusted move -9.8%); forward event exposure +2.7% (3m +0.9%; half assumed priced); company-specific events +0.4%
+- Expected relative return: **3 months +0.1%**, **12 months +0.7%** (rank 97 / 81 of 200 for 3m / 12m); beta 0.88
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.4%): 3 months 50%, 12 months 55%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.0% … P90 +4.5%; plausible 12m relative-return range incl. stock-specific noise: -28.1% … +32.6%
+- Decomposition (12m): 0.5 × forward event exposure +1.9% (3m +0.9%; half assumed priced) + 0.5 × company-specific catalysts +0.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.9% (beta-adjusted) vs a realised market-adjusted move of -9.8% — gap +7.9 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
 | Indian anti-dumping duties (chemicals, solar, others) (`P_ANTI_DUMPING_IN`) | +1 = new broad duties | -2.01 | -2.00 | +0.00 | -0.01 | +0.00 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.97 | +2.00 | +0.00 | -0.04 | +0.01 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.92 | +2.00 | +0.00 | -0.02 | -0.07 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.67 | +0.00 | -1.04 | -0.41 | -0.22 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.58 | +1.20 | +0.23 | +0.05 | +0.10 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +1.98 | +2.00 | +0.00 | -0.04 | +0.02 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.94 | +2.00 | +0.00 | -0.02 | -0.05 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.53 | +1.20 | +0.23 | +0.05 | +0.06 | — |
 | Petrochemical / polymer spreads (`F_PETROCHEM_SPREADS`) | +10% polymer-naphtha spreads | -1.50 | -1.50 | +0.00 | +0.00 | +0.00 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.46 | +1.50 | +0.00 | -0.01 | -0.03 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.42 | -1.50 | +0.18 | -0.12 | +0.02 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.09 | -0.80 | -0.18 | -0.09 | -0.02 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -0.96 | +0.00 | -0.16 | -0.57 | -0.23 | — |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.88 | -0.60 | -0.06 | -0.12 | -0.09 | -1.1% |
-| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | -0.83 | +0.00 | -0.58 | -0.20 | -0.05 | — |
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +0.75 | +0.00 | +0.48 | +0.20 | +0.07 | — |
-| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.69 | +0.00 | -0.48 | -0.19 | -0.02 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.47 | +1.50 | +0.00 | -0.01 | -0.02 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.33 | -1.50 | +0.18 | -0.08 | +0.08 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.03 | -0.80 | -0.18 | -0.03 | -0.02 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -0.75 | -0.60 | -0.06 | -0.08 | -0.00 | -1.1% |
+| ENSO state (El Nino strength) (`NEW_EL_NINO`) | +1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina | -0.71 | +0.00 | -0.58 | -0.10 | -0.03 | — |
+| Affordable-housing / home-loan support (`P_HOUSING_POLICY`) | +1 = stronger support | +0.63 | +0.00 | +0.64 | +0.00 | -0.01 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -0.63 | +0.00 | -0.58 | -0.03 | -0.02 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +0.56 | +0.00 | +0.48 | +0.08 | -0.01 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -0.55 | +0.00 | -0.48 | -0.07 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.4 | -0.5 | -0.2 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.0% | -2.0% | -1.5 | -0.3 | -0.1 | -0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.9% | -1.9% | -1.5 | -0.3 | -0.1 | -0.1 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.0 | -0.0 | -0.0 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.3% | +1.3% | +1.5 | -0.0 | -0.1 | -0.1 |
-| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.1% | -1.1% | -0.8 | -0.3 | +0.0 | -0.0 |
-| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.6% | +1.1% | +1.2 | +0.3 | +0.1 | +0.0 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.2% | +1.1% | +1.2 | +0.0 | -0.0 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.5% | +1.5% | +1.5 | -0.0 | +0.0 | -0.0 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.1% | -1.1% | -0.8 | -0.2 | +0.0 | -0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.5% | +1.0% | +1.2 | +0.3 | +0.1 | -0.0 |
 | Finance ministry notifies anti-dumping duties on a meaningful batch of Chinese chemicals/APIs/others (`EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027`) | anticipated | 0.70 | -1.4% | -1.0% | -1.4 | +0.0 | -0.0 | +0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.8 | -0.0 | -0.0 |
 | DGTR opens wave of anti-dumping probes on Chinese chemicals, APIs and steel (`EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26`) | occurred | 1.00 | -0.8% | -0.8% | -0.8 | +0.0 | -0.0 | +0.0 |
-| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +0.9% | +0.8% | +0.6 | +0.1 | +0.1 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.4% | +0.8% | +1.1 | +0.2 | -0.0 | +0.1 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.7 | +0.0 | +0.0 |
+| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +0.8% | +0.7% | +0.6 | +0.1 | +0.1 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.2% | +0.7% | +1.1 | +0.1 | -0.1 | +0.1 |
+| Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down (`EV_RURAL_DEMAND_SOFT26`) | occurred | 1.00 | -0.6% | -0.6% | -0.6 | +0.0 | +0.0 | +0.0 |
+| IMD April 2027 forecast says below-normal monsoon (<96% LPA) - second weak year risk (`EV_MONSOON27_DEFICIT_FORECAST`) | risk_scenario | 0.32 | -1.7% | -0.5% | -1.2 | -0.3 | -0.2 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SUPREMEIND | +1.20% | +1.08% |
 | 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → SUPREMEIND | -1.40% | -0.98% |
 | 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → SUPREMEIND | +1.50% | +0.83% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → SUPREMEIND | +1.20% | +0.82% |
@@ -57,10 +57,11 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SUPREMEIND | -0.80% | -0.34% |
 | 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → SUPREMEIND | +0.60% | +0.33% |
 | 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → SUPREMEIND | +0.40% | +0.27% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SUPREMEIND | +0.90% | +0.27% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SUPREMEIND | +0.30% | +0.27% |
 | 1 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → SUPREMEIND | -0.40% | -0.26% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_MONSOON → SUPREMEIND | -0.60% | -0.24% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SUPREMEIND | -0.92% | -0.23% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SUPREMEIND | -0.80% | -0.22% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → SUPREMEIND | -0.39% | -0.21% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -68,16 +69,16 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_MONSOON → SUPREMEIND | -1.56 | events | -1.87% |
 | 1 | C_MIDEAST_CONFLICT → SUPREMEIND | +1.00 | events | -1.50% |
-| 1 | F_GOVT_CAPEX → SUPREMEIND | +1.00 | events | +1.50% |
 | 1 | F_REPO_IN → SUPREMEIND | +1.00 | events | -0.80% |
 | 1 | P_ANTI_DUMPING_IN → SUPREMEIND | +0.40 | events | -0.80% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → SUPREMEIND | +1.55 | director_override | -0.74% |
 | 1 | F_RURAL_DEMAND → SUPREMEIND | -0.25 | events | -0.50% |
+| 1 | F_GOVT_CAPEX → SUPREMEIND | +0.20 | director_override | +0.30% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → SUPREMEIND | +1.55 | director_override | -0.25% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → SUPREMEIND | +0.50 | events | +0.24% |
 | 1 | F_USDINR → SUPREMEIND | -0.37 | observed | +0.22% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → SUPREMEIND | +1.00 | events | -0.21% |
 | 2 | F_CHINA_GDP → F_PETROCHEM_SPREADS → SUPREMEIND | +0.30 | events | -0.18% |
-| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → SUPREMEIND | +1.00 | events | -0.16% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → SUPREMEIND | +1.35 | events | -0.11% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |

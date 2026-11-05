@@ -19,42 +19,42 @@ Downside: Indian refusal on agriculture/Russia-oil conditions (TheWire: 'Will Mo
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | +1.2 | +0.0 | +0.2 | +0.8 | +0.3 |
-| JSWSTEEL | +1.2 | +0.0 | +0.4 | +0.7 | +0.1 |
-| SAIL | +1.1 | +0.0 | +0.1 | +0.9 | +0.1 |
-| NATIONALUM | +1.0 | +0.0 | +0.7 | +0.2 | +0.1 |
-| TATASTEEL | +1.0 | +0.0 | +0.2 | +0.6 | +0.2 |
+| NATIONALUM | +1.0 | +0.0 | +0.7 | +0.3 | +0.1 |
 | VAML | +0.9 | +0.0 | +0.6 | +0.2 | +0.1 |
+| JSWSTEEL | +0.9 | +0.0 | +0.4 | +0.5 | +0.1 |
 | HINDZINC | +0.8 | +0.0 | +0.5 | +0.2 | +0.2 |
-| NMDC | +0.8 | +0.0 | +0.5 | +0.3 | +0.1 |
-| DRREDDY | +0.7 | +0.0 | +0.5 | +0.2 | +0.1 |
-| HINDCOPPER | +0.7 | +0.0 | +0.4 | +0.1 | +0.1 |
-| ONGC | +0.6 | +0.0 | +0.3 | +0.2 | +0.1 |
-| OIL | +0.6 | +0.0 | +0.3 | +0.2 | +0.1 |
-| BIOCON | +0.6 | -0.4 | +0.7 | +0.3 | +0.0 |
-| LUPIN | +0.6 | +0.0 | +0.4 | +0.1 | +0.1 |
-| GLENMARK | +0.5 | +0.0 | +0.3 | +0.1 | +0.0 |
+| JINDALSTEL | +0.8 | +0.0 | +0.2 | +0.4 | +0.2 |
+| NMDC | +0.8 | +0.0 | +0.5 | +0.3 | +0.0 |
+| TATASTEEL | +0.7 | +0.0 | +0.2 | +0.4 | +0.1 |
+| DRREDDY | +0.7 | +0.0 | +0.5 | +0.1 | +0.0 |
+| SAIL | +0.6 | +0.0 | +0.1 | +0.5 | +0.1 |
+| ONGC | +0.6 | +0.0 | +0.3 | +0.3 | +0.1 |
+| OIL | +0.6 | +0.0 | +0.3 | +0.3 | +0.1 |
+| HINDCOPPER | +0.6 | +0.0 | +0.4 | +0.1 | +0.0 |
+| BIOCON | +0.6 | -0.4 | +0.7 | +0.2 | +0.1 |
+| LUPIN | +0.5 | +0.0 | +0.4 | +0.1 | +0.0 |
+| GLENMARK | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| MOTILALOFS | -5.1 | +0.0 | -2.9 | -1.8 | -0.4 |
-| BHARATFORG | -5.0 | -5.0 | +0.0 | -0.1 | +0.0 |
-| APARINDS | -3.8 | -3.8 | -0.1 | +0.0 | +0.0 |
-| INDUSINDBK | -3.8 | +0.0 | -2.0 | -2.0 | +0.3 |
-| ICICIAMC | -3.7 | +0.0 | -2.3 | -1.2 | -0.2 |
-| IDFCFIRSTB | -3.6 | +0.0 | -1.8 | -1.9 | -0.0 |
-| SBIN | -3.4 | +0.0 | -1.8 | -1.4 | -0.1 |
-| YESBANK | -3.2 | +0.0 | -1.7 | -1.3 | -0.3 |
+| BHARATFORG | -5.0 | -5.0 | +0.0 | -0.1 | +0.1 |
+| APARINDS | -3.7 | -3.8 | -0.1 | +0.2 | -0.0 |
+| MOTILALOFS | -3.7 | +0.0 | -2.9 | -0.7 | -0.1 |
 | WAAREEENER | -3.1 | -3.0 | -0.1 | +0.0 | -0.0 |
-| CONCOR | -3.1 | -2.2 | -0.7 | -0.1 | -0.0 |
-| NAUKRI | -3.0 | +0.0 | -2.3 | -0.7 | -0.0 |
-| PAYTM | -2.9 | +0.0 | -1.7 | -1.2 | -0.0 |
-| MAHABANK | -2.8 | +0.0 | -1.4 | -1.4 | +0.1 |
-| INDIANB | -2.6 | +0.0 | -1.3 | -1.2 | -0.1 |
-| 360ONE | -2.6 | +0.0 | -1.1 | -1.2 | -0.3 |
+| CONCOR | -3.1 | -2.2 | -0.7 | -0.1 | +0.0 |
+| ICICIAMC | -2.8 | +0.0 | -2.3 | -0.5 | -0.1 |
+| INDUSINDBK | -2.8 | +0.0 | -2.1 | -0.9 | +0.2 |
+| NAUKRI | -2.5 | +0.0 | -2.3 | -0.2 | -0.0 |
+| PAYTM | -2.5 | +0.0 | -1.7 | -0.8 | +0.0 |
+| SBIN | -2.5 | +0.0 | -1.8 | -0.7 | +0.1 |
+| IDFCFIRSTB | -2.4 | +0.0 | -1.8 | -0.8 | +0.1 |
+| DIVISLAB | -2.2 | -1.2 | -0.9 | -0.2 | +0.1 |
+| YESBANK | -2.2 | +0.0 | -1.7 | -0.5 | +0.0 |
+| LAURUSLABS | -2.2 | +0.0 | -2.1 | -0.1 | +0.1 |
+| PIIND | -2.1 | -1.8 | -0.4 | +0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 15%, 2: 49%, 3: 29%, 4: 7%
+Share of absolute impact by order: 1: 17%, 2: 56%, 3: 22%, 4: 5%
 
 ## Sources
 - 2026-10-21 Will Modi Walk Away From a Trade Deal With Trump? - The Core https://news.google.com/rss/search?q=Will+Modi+Walk+Away+From+a+Trade+Deal+With+Trump+when:120d&hl=en-IN&gl=IN&ceid=IN:en

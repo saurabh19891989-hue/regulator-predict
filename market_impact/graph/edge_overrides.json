@@ -343,6 +343,326 @@
    "factor": 0.0,
    "reason": "[RT_BACKBONE] Mechanism text: 'no causal channel; included as noise token' (t 1.1, insignificant).",
    "by": "RT_BACKBONE"
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "SUZLON",
+   "origin": "SUZLON",
+   "factor": 0.4,
+   "reason": "[RT_TOP_B] The node's recent state of +1.5 comes entirely from solar and storage policies: EV_SOLAR_ALMM2_CELL_MANDATE (+0.5, domestic solar cells) and EV_BESS_VGF_NOV26 (+1.0, Rs14,500 cr VGF for grid batteries). Neither one orders wind turbines. Storage VGF makes solar-plus-storage cheaper, and that competes with wind-hybrid in FDRE/RTC tenders. The edge is +7 per SSU, written for wind installations +10% (see its own mechanism), so it books +10.5% 'unpriced' upside for SUZLON. That is the stock's single largest driver, and over the same period the stock fell 35% market-adjusted. With x0.4 the edge is 2.8: SUZLON keeps general RE-policy exposure but no longer takes the full wind multiplier from solar/storage policy.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "GVT&D",
+   "origin": "GVT&D",
+   "factor": 0.5,
+   "reason": "[RT_TOP_B] Duplicate channel. The direct edge (+2, mechanism 'renewable evacuation drives HVDC/GIS/transformer demand ... storage VGF') is the same economics as P_RENEWABLE_SUPPORT -> T_GRID_ELECTRIFICATION (0.4) -> GVT&D (+6). That path still gets 0.8 order damping and 0.5 overlap damping, so the +1.5 state books +3.0 direct plus +1.44 via grid = +4.4%. overlap_flags.csv lists this pair. With x0.5 the direct edge is +1.0, for the RE share not captured by the grid node.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "TMPV",
+   "origin": "TMPV",
+   "factor": 0.5,
+   "reason": "[RT_TOP_B] -3.4 per +10% LME is about 8x the empirical market-adjusted elasticity (-0.42, t -0.30, 156 weeks). The mechanism treats aluminium as 4% of sales at LME-linked cost. Most of JLR's aluminium spend is sheet and casting conversion, not the LME metal, and JLR hedges metal (model knowledge). The observed -1.96 SSU since June books +6.7% 'unpriced' upside for TMPV, the stock's largest single recent driver.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "TMPV",
+   "origin": "TMPV",
+   "factor": 0.5,
+   "reason": "[RT_TOP_B] -3.0 per +10% global HRC vs empirical -0.69 (t -0.51). Tata India PV buys domestic steel, which is F_STEEL_INDIA, not the global HRC future. JLR's UK/EU steel is on lagged contracts. Today the observed +2.06 SSU books -6.2%. Together with the aluminium fix this halves about +/-6% of offsetting noise in TMPV's 'unpriced' recent impact. Net effect is about -0.3pp, but the decomposition stops showing two large, spurious commodity channels.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "src": "P_TELECOM_TARIFFS",
+   "dst": "IDEA",
+   "origin": "IDEA",
+   "factor": 0.8,
+   "reason": "[RT_TOP_B] Single-event magnitude above the 25% cap: EV_TELECOM_TARIFF_HIKE_2027 (+1.2 SSU) x 22 = +26.3% if the event happens. Expected +19.7%, the largest single item in IDEA's forward exposure. The edge assumes ~all extra ARPU drops to EBITDA. In past industry hikes Vi lost subscribers to Jio/Airtel (model knowledge: net losses after the July 2024 hike), and Jio has said it will stay 'affordable' (Rediff, 8 Oct 2026). The event does not shock NEW_TELECOM_SHARE_COMPETITION, so churn is not netted anywhere. With x0.8 the edge is 17.6/SSU and the conditional impact about +21%.",
+   "by": "RT_TOP_B"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PHOENIXLTD",
+   "origin": "PHOENIXLTD",
+   "factor": 0.33,
+   "reason": "[RT_BOT_B] Duplicate discount-rate channel. Mechanism text: funding cost -1% PAT plus 'multiple compression (long-duration annuity) -2.0'. The F_GSEC_10Y_IN edge (-2.5) already carries cap-rate and 'growth-multiple effect on a 57x P/E', and its own text says 'Overlaps with repo (parallel path flagged)'. Repo -> G-sec (0.53) adds a further path. Keep only the funding part (~-1.0). One 25bp hike plus 39bp G-sec currently books -7.0% raw for a mall owner whose Q2 consumption grew 25% and stock rose +14.8% market-adjusted since June.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "GMRAIRPORT",
+   "origin": "GMRAIRPORT",
+   "factor": 0.33,
+   "reason": "[RT_BOT_B] Unit slip. Mechanism scales +Rs70cr/yr interest by PAT (Rs788cr TTM, P/E 178) to get -9% PAT and then -3% equity. Equity value is a DCF of regulated airports (mcap ~Rs1.05 lakh cr at Rs99.4): Rs70cr/yr pre-tax for ~2 years is ~0.1-0.2% of value, and AERA's regulatory-asset-base model trues up the actual cost of debt in aero tariffs. The discount-rate effect is in the F_GSEC_10Y_IN edge (-2.5), which also gets repo via the 0.53 backbone path. -3.0 -> ~-1.0.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "GMRAIRPORT",
+   "origin": "GMRAIRPORT",
+   "factor": 0.4,
+   "reason": "[RT_BOT_B] Same PAT-scaling slip: +50bp on ~Rs25k cr refinanced = Rs125cr/yr, which is called '-16% PAT' and becomes -3.5% equity. On a ~Rs1.05 lakh cr equity value that is ~0.3-0.5% for a multi-year effect, part of it passed through via AERA true-ups. -3.5 -> -1.4 (still above the arithmetic, to allow for refinancing risk).",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "LODHA",
+   "origin": "LODHA",
+   "factor": 0.7,
+   "reason": "[RT_BOT_B] Duplicate channel. The direct edge includes 'buyers' EMI +2% -> volumes -1.2% -> -1.0%'. That is the same economics as backbone F_REPO_IN -> F_HOUSING_DEMAND (-0.26) -> LODHA (+6.0), which still adds ~-0.8 after OVERLAP_DAMP. Remove the EMI piece: -3.5 -> ~-2.45. The agent's own evidence says Lodha rose 4% on 2026-09-18 on rate-hike bets.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SHRIRAMFIN",
+   "origin": "SHRIRAMFIN",
+   "factor": 0.5,
+   "reason": "[RT_BOT_B] Half of the -2.5 is a 'discount-rate effect on P/E 17.9: -1.3%'. That duplicates the F_GSEC_10Y_IN edge (-1.5, 'cost of equity') and the repo -> G-sec backbone path. Shriram's Q2 FY27 PAT rose 59% 'on lower funding costs' despite the October hike (ET, 23 Oct 2026), and vehicle loans are fixed-rate.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "SHRIRAMFIN",
+   "origin": "SHRIRAMFIN",
+   "factor": 0.5,
+   "reason": "[RT_BOT_B] Mechanism admits the empirical -1.45 (t -2.3) 'likely proxies risk-off'. The graph also carries F_US_10Y -> F_GSEC_10Y_IN (0.325) and -> F_FPI_FLOWS (-0.25), plus direct G-sec and FPI edges, so the domestic rate and flow channels are counted twice. Observed US10Y +1.68 SSU currently books -2.0% here.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "ABCAPITAL",
+   "origin": "ABCAPITAL",
+   "factor": 0.6,
+   "reason": "[RT_BOT_B] Mechanism arithmetic: -3.5 on the lending profit pool x 58% lending share of value gives about -2. 'NBFC multiple stress' then doubles it to -4. That multiple channel is F_RISK_SENTIMENT/F_FPI_FLOWS, and P_RBI_PRUDENTIAL / F_ASSET_QUALITY_IN -> F_CREDIT_SPREADS_IN paths already hit this edge, per overlap_flags. -4.0 -> -2.4. Q2 FY27 PAT +38% on lending growth (Business Standard, 30 Oct 2026).",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "FEDERALBNK",
+   "origin": "FEDERALBNK",
+   "factor": 0.5,
+   "reason": "[RT_BOT_B] The edge assumes escalation cuts Gulf remittances and NRI deposits. Evidence from the 2026 war runs the other way: Kerala NRI deposits reached Rs3.35 trillion, nearly a third of bank deposits (Mathrubhumi, 25 Sep 2026). Federal posted a record Q2 (PAT +45%, NIM 3.32%, decade-low NPAs; 16 Oct 2026). Rupee weakness lifts remittances, and the profile's own empirical USDINR/Brent signs (+) agree. The path via C_GCC -> F_GULF_REMITTANCES (-1.2) remains. The recent state books -3.5% unpriced on a stock up +12.6% market-adjusted since June. -3.5 -> -1.75.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "FEDERALBNK",
+   "origin": "FEDERALBNK",
+   "factor": 0.5,
+   "reason": "[RT_BOT_B] The edge (+4.0, the highest bank FPI weight; universe mean 1.44) is justified by 'FIIs 28.5% and rising (26.05% in March)'. But FIIs RAISED their Federal stake during the record CY2026 FPI outflow (~US$32.7bn), which contradicts a high outflow sensitivity. Strategic holders (Blackstone/Fairfax) do not trade with flows. Currently -6.4% raw is booked from F_FPI_FLOWS -1.6 against a +12.6% market-adjusted realised move. -> 2.0.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GMRAIRPORT",
+   "origin": "GMRAIRPORT",
+   "factor": 0.6,
+   "reason": "[RT_BOT_B] Own evidence: 'FII 22.95% (up from 20.2% Mar-2026)', so FIIs added during the record outflow. The GQG block (9 Oct) was turnover between holders. 2.0 -> 1.2.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GROWW",
+   "origin": "GROWW",
+   "factor": 0.4,
+   "reason": "[RT_BOT_B] FPI is GROWW's largest recent channel (-6.1% raw): a direct 2.5 plus F_FPI_FLOWS -> F_EQUITY_ACTIVITY_IN (0.4) x 9.0. The profile says FIIs rose from 2.5% to 10.9% in two quarters post-IPO, during record outflows. Retail broking volumes come from domestic retail, which the activity path already captures. Realised is +14.6% market-adjusted since June. Direct 2.5 -> 1.0.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "TORNTPHARM",
+   "origin": "TORNTPHARM",
+   "factor": 0.5,
+   "reason": "[RT_BOT_B] Internally inconsistent. FII ~11% and beta 0.45-0.64: an FPI inflow lifting the index ~1.5% lifts a 0.6-beta stock ~0.9%, so it UNDERperforms. Yet the edge is +2.0 'relative', above the universe mean 1.44. After beta adjustment it still books +1.1 relative per SSU, i.e. -1.9% from the June-Nov outflow. -> 1.0 (\u22480 net of beta).",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TORNTPHARM",
+   "origin": "TORNTPHARM",
+   "factor": 0.5,
+   "reason": "[RT_BOT_B] -1.8 per 25bp (universe mean -0.91) makes a 0.64-beta defensive pharma more rate-sensitive than most banks. P/E 82 is 'distorted by amortisation' (own text) after the JB Chemicals deal, so it overstates duration. No India-rate empirical series supports it. The +39bp G-sec move books -2.8%. -> -0.9.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "TORNTPHARM",
+   "origin": "TORNTPHARM",
+   "factor": 0.5,
+   "reason": "[RT_BOT_B] US is ~8-10% of sales (own text), yet -2.5 exceeds SUNPHARMA/CIPLA (-2.0) with 3x the US exposure. Company-specific inspection risk is already a company event (USFDA inspection at Dahej/Indrad, p 0.08 x -8). -> -1.25.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "ZYDUSLIFE",
+   "origin": "ZYDUSLIFE",
+   "factor": 0.6,
+   "reason": "[RT_BOT_B] Double count. The edge mechanism prices the Moraiya 5-observation inspection: 'OAI/Warning Letter risk 25% x impact (-12% value)'. The profile's company events price the same outcome (USFDA classification of Moraiya: p 0.25 x -9.5, favourable p 0.7 x +2.5). The sector-intensity edge should hold only the generic sensitivity (US ~42% of sales; peers SUN/CIPLA -2, DRREDDY/LUPIN -3). -5.0 -> -3.0.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ZYDUSLIFE",
+   "origin": "ZYDUSLIFE",
+   "factor": 0.6,
+   "reason": "[RT_BOT_B] Own text: 'FII 7.0% (low), promoter 75%; limited flow sensitivity', beta 0.67. Yet +1.5 nets +0.5 relative after beta adjustment. -> 0.9 (\u22480 net).",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "MPHASIS",
+   "origin": "MPHASIS",
+   "factor": 0.7,
+   "reason": "[RT_BOT_B] -5.0 ties INFY for second-highest AI-substitution sensitivity (WIPRO -6). But Mphasis revenue growth accelerated every quarter, from +7% (Dec-24 qtr) to +17% YoY (Jun-26 qtr, screener.in consolidated). The company maintained its Q2 outlook with BFSI as the driver (CNBC TV18, 18 Sep 2026). -> -3.5, between COFORGE/PERSISTENT (-3) and TCS/HCL (-4).",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "COFORGE",
+   "origin": "COFORGE",
+   "factor": 0.5,
+   "reason": "[RT_BOT_B] Q2 FY27 (23 Oct 2026): revenue +53.6% YoY (acquisition), order book record US$2.38bn (+45%), EBIT-margin guide raised to 16%, and deal wins described as 'AI-led' (Business Standard, CNBC TV18, The Hindu). Analytics India Magazine (3 Nov): 'Coforge is outgrowing its larger rivals. Is AI the reason?' AI is currently a demand tailwind for Coforge, not net substitution. -3.0 -> -1.5.",
+   "by": "RT_BOT_B"
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "SIEMENS",
+   "origin": "SIEMENS",
+   "factor": 0.5,
+   "reason": "[RT_N50_A] Duplicate channel. The SIEMENS F_GOVT_CAPEX edge (+2.5) already lists 'Mobility (locomotives, metros, signalling)', and railway capex is part of central capex. EV_BUDGET27_CAPEX_RAILWAY shocks both nodes (0.8 each), so one Budget books +3.4% (1.8 + 1.44 expected). Mobility is ~15% of revenue per the agent's own text, so the rail-specific increment is about +1 per SSU, not +2.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "IRFC",
+   "origin": "IRFC",
+   "factor": 0.3,
+   "reason": "[RT_N50_A] The agent's own mechanism says 'Overlaps with P_RAILWAY_CAPEX (De-duplicate: use the railway edge for rail-specific changes)', but both edges are live and EV_BUDGET27_CAPEX_RAILWAY hits both (+1.08 and +0.86 expected). Keep 0.3 for non-rail infra lending, which P_INFRA_SPENDING_ROADS partly covers already.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "ADANIPOWER",
+   "origin": "ADANIPOWER",
+   "factor": 0.25,
+   "reason": "[RT_N50_A] Double count. The mechanism (deficit monsoon -> cooling demand and lower hydro -> higher thermal PLF) is exactly the backbone F_MONSOON -> F_POWER_DEMAND_IN (-0.72) and F_MONSOON -> F_POWER_PRICE_IN (-0.38) edges. ADANIPOWER has direct edges to both, and the power-price recent state is the observed IEX change (director override 1.9). The direct edge books +3.1% since June on top of +4.4% (price) and +1.9% (demand), plus -2.1% and -1.2% forward from monsoon events. Keep 0.25 for the residual hydro-substitution PLF effect.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "AMBUJACEM",
+   "origin": "AMBUJACEM",
+   "factor": 0.0,
+   "reason": "[RT_N50_A] The agent calls the sign 'ambiguous': fewer rain days help construction, but a deficit monsoon hurts rural housing and IHB demand. Since June it books +1.25% 'unpriced' upside from the driest monsoon since 2015, while Ambuja itself flagged a demand slowdown (Reuters 28 Jul 2026; Q1 revenue -8%, Q2 PAT -90% on 29 Oct). Remove it rather than keep a coin-flip sign.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "HINDZINC",
+   "origin": "HINDZINC",
+   "factor": 0.0,
+   "reason": "[RT_N50_A] Node conflation that RT_BACKBONE only half fixed. The node's only occurred shock is EV_EXPORT_LEVY_REVISIONS (diesel Rs11.5/l, ATF levy, 31 Oct), which books -4.0% on Hindustan Zinc since June although no metals levy exists. The real tail risk, a windfall levy on zinc/silver, should be a HINDZINC company event (see findings). This changes HINDZINC since-June from -11.4 to about -7.4 beta-adjusted, still below the realised -14.0, so unpriced stays 0.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "PNB",
+   "origin": "PNB",
+   "factor": 0.0,
+   "reason": "[RT_N50_A] Node conflation. The edge is meant for raising the PSU-bank FDI cap (20% -> 49%), but P_FDI_RULES is driven by the India-China thaw (+0.3), e-commerce export-inventory FDI (+0.2) and EV_CHINA_FDI_EASING_PN3 (Press Note 3, +0.7). That gives PNB +1.5% since June and +1.47% expected forward from China-FDI easing, which is irrelevant to bank ownership caps. Replace it with a company event for the PSB FDI-cap decision (see findings).",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "UNIONBANK",
+   "origin": "UNIONBANK",
+   "factor": 0.0,
+   "reason": "[RT_N50_A] Same conflation as PNB: the China/e-commerce FDI events book +1.5% since June and +1.6% forward on Union Bank. Replace it with the PSB FDI-cap company event.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "GAIL",
+   "origin": "GAIL",
+   "factor": 0.33,
+   "reason": "[RT_N50_A] Duplicate channel. The mechanism (Hormuz cuts Qatari LNG and spikes spot LNG, hurting throughput and volumes) is the F_GAS_GLOBAL edge's mechanism (-1.5, 'spot-LNG volumes cut by demand destruction, transmission throughput falls'). Hormuz events shock both nodes, so GAIL takes -3.0 per escalation step. Since June GAIL rose +7.9% market-adjusted through the conflict. Keep 0.33 for the Petronet-associate earnings piece only.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "GODREJCP",
+   "origin": "GODREJCP",
+   "factor": 0.0,
+   "reason": "[RT_N50_A] Empirical-only edge ('Empirical -1.02/SSU ... plausible route is wider product cracks'), fitted on the flawed HO=F heating-oil price proxy (RT_BACKBONE finding). The crude-derivative cost channel (LAB, solvents, propellants) is already the F_BRENT edge (-0.9) and F_PACKAGING (-1.0). This is the same rule RT_BACKBONE applied to INFY, HCLTECH and POLICYBZR.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "CUMMINSIND",
+   "origin": "CUMMINSIND",
+   "factor": 0.0,
+   "reason": "[RT_N50_A] The mechanism says 'there is no clear fundamental channel' (pack -3.78, t -2.3). With the director override F_COAL_INTL +0.7, it books -0.7% since June. Drop it under the RT_BACKBONE rule for self-declared non-causal edges.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "BRITANNIA",
+   "origin": "BRITANNIA",
+   "factor": 0.0,
+   "reason": "[RT_N50_A] Empirical-only edge ('mechanism is indirect: gold rally = rural household wealth'). The rural-income channel is F_RURAL_DEMAND (+1.8). The gold slide (-1.05 SSU) books -1.05% since June, and the precious-metals events move Britannia +/-1-2%. This is the same treatment as F_GOLD -> ADANIGREEN/ADANIENT.",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "TVSMOTOR",
+   "origin": "TVSMOTOR",
+   "factor": 0.5,
+   "reason": "[RT_N50_A] Statistical discount-rate proxy (empirical -1.55, t -3.1) stacked on F_REPO_IN (-1.0) and an FPI edge (+2.5) that is itself described as 'an empirical DXY channel'. It books -2.5% since June from the UST selloff. Halve it to limit stacking of three flow/discount-rate proxies. Low ranking impact (unpriced = 0 because TVS is +27% market-adjusted).",
+   "by": "RT_N50_A"
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "DIVISLAB",
+   "origin": "DIVISLAB",
+   "factor": 0.4,
+   "reason": "[RT_N50_B] At -6 per enforcement step, Divi's has the largest USFDA sensitivity in the pharma set. That is larger than AUROPHARMA (-4), the company whose Eugia unit actually received the 2026 warning letter, and three times SUNPHARMA (-2). Divi's makes APIs with no sterile/injectable exposure, and the profile itself calls its units 'mostly clean historically'. The tail risk of an OAI is already a separate company event (p 0.07, -18..-6). A generic tightening step should cost roughly P(OAI | stricter regime) x hit, which is about -2 to -2.5. Today this edge alone books -6% of 'unpriced' negative impact since June (state +1.0 from EV_USFDA_WARNING_WAVE_26, which concerned sterile sites at Alembic, Eugia and Dabur).",
+   "by": "RT_N50_B"
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "CHOLAFIN",
+   "origin": "CHOLAFIN",
+   "factor": 0.3,
+   "reason": "[RT_N50_B] The weight is purely empirical: the pack co-movement is t 2.8 with market beta 1.54, i.e. a cyclical/beta proxy. The fundamental link (global HRC price -> Indian CV/mining-equipment demand -> vehicle-finance AUM) is weak and already carried by F_GOVT_CAPEX and F_AUTO_DEMAND_IN. Global HRC +20.6% since June books +2.06% to Chola's recent impact, the second-largest item in its recent state.",
+   "by": "RT_N50_B"
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "BANKBARODA",
+   "origin": "BANKBARODA",
+   "factor": 0.0,
+   "reason": "[RT_N50_B] The profile itself says 'there is no direct link'. The weight is kept only because of a t 2.1 pack co-movement, which is a metals/PSU-beta proxy. It books -0.33% since June and adds noise to every iron-ore event.",
+   "by": "RT_N50_B"
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "PIDILITIND",
+   "origin": "PIDILITIND",
+   "factor": 0.5,
+   "reason": "[RT_N50_B] -1.5 per escalation step is large for a ~85% domestic adhesives company. The crude/VAM channel is already carried by F_BRENT (-1.0) and F_CHEM_FEEDSTOCK (-1.2). The only residual is the small MENA subsidiary and export receivables, worth about -0.75. At state +1.0-1.5 this edge is the single largest recent-state item for Pidilite (-2.25%).",
+   "by": "RT_N50_B"
+  },
+  {
+   "src": "LT",
+   "dst": "LTM",
+   "origin": "LTM",
+   "factor": 0.0,
+   "reason": "[RT_N50_B] This holding_stake link runs in the wrong direction. L&T owns 69% of LTM, so a move in L&T's own value (orders, Middle East project risk) does not change LTM's equity value. LTM->LT (w 0.12) already captures the parent's look-through. The reverse edge creates an LT<->LTM loop and propagates L&T's company events into LTM (e.g. L&T's Middle East escalation event, -7.5 mid).",
+   "by": "RT_N50_B"
   }
  ]
 }

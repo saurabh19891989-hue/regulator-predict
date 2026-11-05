@@ -16,42 +16,42 @@ Budget on 1 Feb 2027 (date: model knowledge of convention; not verified). Pressu
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| INDUSINDBK | +2.7 | -0.3 | +1.8 | +1.5 | -0.3 |
-| IDFCFIRSTB | +2.1 | -0.3 | +1.6 | +1.2 | -0.4 |
-| KOTAKBANK | +1.6 | -0.1 | +1.0 | +0.9 | -0.1 |
-| BANKINDIA | +1.5 | -0.6 | +1.1 | +1.2 | -0.2 |
-| MAHABANK | +1.4 | -0.3 | +0.9 | +1.0 | -0.1 |
+| INDUSINDBK | +2.1 | -0.3 | +1.8 | +0.8 | -0.2 |
+| IDFCFIRSTB | +1.7 | -0.3 | +1.6 | +0.6 | -0.2 |
 | M&MFIN | +1.4 | +1.2 | +0.2 | +0.1 | -0.1 |
-| UNIONBANK | +1.2 | -0.3 | +0.9 | +0.7 | -0.2 |
-| INDIANB | +1.2 | -0.4 | +1.0 | +0.7 | -0.2 |
-| AXISBANK | +1.2 | -0.4 | +1.0 | +0.8 | -0.2 |
-| PNB | +1.1 | -0.3 | +0.9 | +0.7 | -0.2 |
-| TMCV | +1.1 | +0.0 | +1.5 | -0.2 | -0.1 |
-| HDFCBANK | +1.1 | -0.4 | +0.8 | +0.8 | -0.2 |
+| TMCV | +1.3 | +0.0 | +1.5 | -0.1 | -0.0 |
+| KOTAKBANK | +1.2 | -0.1 | +1.0 | +0.4 | -0.1 |
 | MEESHO | +1.1 | +1.2 | +0.0 | -0.1 | -0.0 |
-| SBIN | +1.1 | -0.3 | +0.8 | +0.7 | -0.2 |
-| FEDERALBNK | +1.1 | -0.4 | +0.5 | +1.1 | -0.2 |
+| FEDERALBNK | +1.0 | -0.4 | +0.5 | +1.0 | -0.1 |
+| BANKINDIA | +1.0 | -0.6 | +1.1 | +0.6 | -0.1 |
+| MAHABANK | +1.0 | -0.3 | +0.9 | +0.5 | -0.1 |
+| VMM | +0.9 | +0.9 | +0.0 | +0.0 | +0.0 |
+| LICHSGFIN | +0.9 | -0.3 | +0.3 | +1.0 | -0.1 |
+| INDIANB | +0.9 | -0.4 | +1.0 | +0.3 | -0.1 |
+| UNIONBANK | +0.9 | -0.3 | +0.9 | +0.4 | -0.1 |
+| YESBANK | +0.9 | -0.6 | +1.3 | +0.4 | -0.2 |
+| SHRIRAMFIN | +0.9 | -0.3 | +1.1 | +0.2 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWENERGY | -0.8 | -0.5 | -0.1 | -0.2 | -0.1 |
-| PRESTIGE | -0.7 | -0.2 | -0.1 | -0.1 | -0.3 |
+| JSWENERGY | -0.8 | -0.5 | -0.1 | -0.2 | -0.0 |
 | ADANIGREEN | -0.7 | -0.7 | -0.1 | +0.1 | -0.0 |
-| JIOFIN | -0.6 | -0.6 | -0.0 | +0.1 | -0.1 |
-| PHOENIXLTD | -0.6 | -0.5 | +0.2 | -0.2 | -0.1 |
-| GODREJPROP | -0.6 | +0.0 | -0.3 | -0.0 | -0.2 |
-| LODHA | -0.6 | +0.0 | -0.3 | +0.0 | -0.3 |
 | POWERGRID | -0.6 | -0.6 | +0.0 | +0.0 | +0.0 |
+| PRESTIGE | -0.5 | -0.2 | -0.1 | -0.1 | -0.1 |
+| JIOFIN | -0.5 | -0.6 | -0.0 | +0.1 | -0.0 |
 | PFC | -0.5 | -0.5 | +0.1 | -0.0 | -0.1 |
-| OBEROIRLTY | -0.5 | -0.2 | -0.1 | -0.1 | -0.1 |
-| GMRAIRPORT | -0.5 | -0.5 | +0.3 | -0.2 | -0.1 |
-| ADANIENT | -0.5 | -0.5 | -0.0 | +0.0 | -0.0 |
+| GROWW | -0.5 | -0.5 | +0.0 | -0.0 | +0.0 |
 | PERSISTENT | -0.5 | -0.3 | +0.0 | -0.1 | -0.0 |
+| ADANIENT | -0.5 | -0.5 | -0.0 | +0.0 | +0.0 |
 | TATAPOWER | -0.5 | -0.5 | -0.0 | +0.1 | -0.0 |
-| BIOCON | -0.5 | -0.3 | +0.0 | -0.1 | -0.1 |
+| BIOCON | -0.4 | -0.3 | +0.0 | -0.1 | -0.0 |
+| OBEROIRLTY | -0.4 | -0.2 | -0.0 | -0.1 | -0.1 |
+| NHPC | -0.4 | -0.4 | -0.0 | +0.0 | -0.0 |
+| TECHM | -0.4 | -0.2 | +0.0 | -0.1 | -0.0 |
+| JINDALSTEL | -0.4 | -0.3 | -0.0 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 33%, 2: 32%, 3: 24%, 4: 10%
+Share of absolute impact by order: 1: 38%, 2: 36%, 3: 20%, 4: 7%
 
 ## Sources
 - 2026-09-29 Agriculture target and fertiliser needs https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/

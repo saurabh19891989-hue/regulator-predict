@@ -15,7 +15,6 @@ Industry (ISMA) seeks timely alignment of sugar MSP (unchanged at Rs 31/kg since
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| OFSS | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | NESTLEIND | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | DABUR | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | BRITANNIA | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
@@ -32,7 +31,6 @@ Industry (ISMA) seeks timely alignment of sugar MSP (unchanged at Rs 31/kg since
 | VBL | -0.2 | -0.2 | +0.0 | +0.0 | +0.0 |
 | DABUR | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | NESTLEIND | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
-| OFSS | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 100%, 2: 0%, 3: 0%, 4: 0%
 

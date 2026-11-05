@@ -2,45 +2,46 @@
 *NIFTY_NEXT_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.2%**, **12 months -4.0%** (rank 162 / 160 of 200 for 3m / 12m); beta 1.07
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.4%): 3 months 42%, 12 months 20%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.3% … P90 -2.9%; plausible 12m relative-return range incl. stock-specific noise: -14.5% … +8.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.3 pp (model impact -4.6% beta-adjusted vs realised market-adjusted move +7.9%); forward event exposure -2.9% (3m -1.7%; half assumed priced); company-specific events +1.5%
+- Expected relative return: **3 months -0.4%**, **12 months -0.3%** (rank 131 / 119 of 200 for 3m / 12m); beta 1.07
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.4%): 3 months 48%, 12 months 42%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.7% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -27.3% … +28.9%
+- Decomposition (12m): 0.5 × forward event exposure -0.7% (3m -1.4%; half assumed priced) + 0.5 × company-specific catalysts +1.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.3% (beta-adjusted) vs a realised market-adjusted move of +7.9% — gap -6.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +9.96 | +5.00 | +3.69 | +0.93 | +0.34 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +9.76 | +5.00 | +3.69 | +0.86 | +0.22 | — |
 | Indian vehicle demand (`F_AUTO_DEMAND_IN`) | +10% volumes | +9.00 | +9.00 | +0.00 | +0.00 | +0.00 | — |
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -4.03 | +0.00 | -1.45 | -2.79 | +0.21 | — |
-| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +3.81 | +0.00 | +4.32 | -0.08 | -0.43 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +4.04 | +0.00 | +4.32 | -0.08 | -0.20 | — |
 | Critical-mineral supply tightness (China export controls on rare earths, magnets, graphite, Ga/Ge) (`NEW_RARE_EARTH_SUPPLY`) | +1 = new/tighter export-control round | -3.48 | +0.00 | -3.48 | +0.00 | +0.00 | — |
 | Intensity of new-model competition in India passenger vehicles (`NEW_PV_SUV_COMPETITION`) | +1 = major new-model wave by rivals (about -1pp share for incumbent) | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -2.55 | +0.00 | +0.00 | -1.02 | -1.52 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +2.52 | +0.00 | +2.95 | -0.13 | -0.31 | — |
 | Chip/electronics component supply tightness (higher = tighter) (`F_SEMICONDUCTOR_SUPPLY`) | +1 = tightening | -2.50 | -2.50 | +0.00 | +0.00 | +0.00 | — |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.38 | -1.20 | -0.66 | -0.13 | -0.39 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.24 | -1.20 | -0.66 | -0.15 | -0.23 | — |
 | Consumer premiumisation (`T_PREMIUMISATION`) | +1 | +2.16 | +2.00 | +0.00 | +0.16 | -0.00 | — |
-| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +2.13 | +0.00 | +2.95 | -0.13 | -0.69 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -2.04 | -1.00 | -0.87 | -0.11 | -0.06 | — |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -2.02 | +0.00 | -0.99 | -0.64 | -0.39 | — |
-| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -1.96 | +0.00 | -0.80 | -1.32 | +0.16 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -2.05 | -1.00 | -0.87 | -0.11 | -0.07 | — |
+| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -2.00 | +0.00 | -0.80 | -1.32 | +0.12 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.70 | +0.00 | -0.88 | -1.29 | +0.46 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | -1.66 | +0.00 | -0.99 | -0.39 | -0.28 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +1.63 | +0.00 | +0.00 | +1.83 | -0.19 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -4.9% | -4.9% | +0.0 | -1.7 | -3.4 | +0.3 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.6% | -3.6% | -3.3 | -0.1 | -0.1 | -0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.6% | -3.6% | -3.3 | -0.1 | -0.1 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.2% | -2.2% | -1.4 | -0.6 | -0.1 | -0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.2% | -2.2% | +0.0 | -1.0 | -1.7 | +0.5 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | +0.0 | -0.0 |
-| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +4.2% | +2.1% | +3.8 | +0.1 | +0.1 | +0.2 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.8% | +2.1% | +2.5 | +0.3 | +0.5 | +0.5 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +4.1% | +2.0% | +3.8 | +0.1 | +0.1 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.4% | +1.9% | +2.5 | +0.3 | +0.3 | +0.2 |
 | Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | -0.0 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -6.2% | -1.5% | -3.6 | -0.7 | -0.9 | -0.9 |
 | Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.4% | -1.4% | -1.2 | -0.1 | -0.1 | -0.1 |
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -0.9 | -0.3 | -0.2 |
-| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | +0.0 | -0.5 | -0.8 |
-| China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics (`EV_RARE_EARTH_CONTROLS_REIMPOSED`) | risk_scenario | 0.25 | -4.7% | -1.2% | -0.8 | -4.3 | +0.2 | +0.1 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.4% | -1.4% | -3.6 | -0.7 | -0.7 | -0.4 |
+| China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics (`EV_RARE_EARTH_CONTROLS_REIMPOSED`) | risk_scenario | 0.25 | -4.8% | -1.2% | -0.8 | -4.3 | +0.2 | +0.1 |
+| Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +1.1% | +1.1% | +1.1 | +0.0 | +0.0 | +0.0 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -5.5% | -1.0% | -4.4 | -0.8 | -0.2 | -0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -66,13 +67,13 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
+| 1 | F_AUTO_DEMAND_IN → HYUNDAI | +0.50 | director_override | +4.50% |
 | 1 | F_FPI_FLOWS → HYUNDAI | -1.60 | events | -2.40% |
 | 1 | F_GSEC_10Y_IN → HYUNDAI | +1.55 | director_override | -2.33% |
 | 1 | F_STEEL_INDIA → HYUNDAI | +1.35 | events | -2.03% |
 | 1 | C_MIDEAST_CONFLICT → HYUNDAI | +1.00 | events | -1.20% |
 | 1 | F_REPO_IN → HYUNDAI | +1.00 | events | -1.00% |
 | 1 | F_ALUMINIUM → HYUNDAI | -1.96 | observed | +0.98% |
-| 1 | F_AUTO_DEMAND_IN → HYUNDAI | -0.10 | events | -0.90% |
 | 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → HYUNDAI | -0.30 | events | +0.18% |
 | 1 | F_USDINR → HYUNDAI | -0.37 | observed | -0.11% |
 | 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → HYUNDAI | -0.10 | events | +0.08% |
@@ -82,7 +83,6 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
 | date | event | type | P | impact if it happens (mid) | expected |
 |---|---|---|---|---|---|
-| 2026-11-01 | Monthly sales print (Oct) - strong October per Upstox; December print on 2026-12-01 | other | 1.00 | +0.5% | +0.50% |
 | 2026-12 | New model launches (Bayon / new Venue cycle) driving volumes | other | 0.70 | +1.5% | +1.05% |
 | 2027-01 | Q3 FY27 results (margin recovery test; CLSA expects recovery) | results | 0.95 | +0.0% | +0.00% |
 | 2027-03 | Talegaon Phase-1 ramp-up: start-up costs and depreciation vs volume gains | capex | 0.80 | +0.0% | +0.00% |

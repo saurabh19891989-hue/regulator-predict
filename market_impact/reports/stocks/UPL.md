@@ -2,10 +2,11 @@
 *MIDCAP_100 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.6%**, **12 months +3.9%** (rank 46 / 37 of 200 for 3m / 12m); beta 1.05
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 55%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.3% … P90 +11.0%; plausible 12m relative-return range incl. stock-specific noise: -29.1% … +61.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.0 pp (model impact +1.9% beta-adjusted vs realised market-adjusted move -23.4%); forward event exposure +6.1% (3m +3.4%; half assumed priced); company-specific events +2.0%
+- Expected relative return: **3 months +0.9%**, **12 months +3.1%** (rank 43 / 13 of 200 for 3m / 12m); beta 1.05
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 53%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.3% … P90 +7.6%; plausible 12m relative-return range incl. stock-specific noise: -17.2% … +36.6%
+- Decomposition (12m): 0.5 × forward event exposure +5.1% (3m +2.4%; half assumed priced) + 0.5 × company-specific catalysts +2.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.4% (beta-adjusted) vs a realised market-adjusted move of -23.4% — gap +25.8 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -13,34 +14,34 @@
 |---|---|---|---|---|---|---|---|
 | Global agrochemical prices and channel destocking (`NEW_AGROCHEM_PRICES_GLOBAL`) | +10% global agchem active prices / volumes | +8.00 | +8.00 | +0.00 | +0.00 | +0.00 | — |
 | China chemical/API dumping intensity (`F_CHINA_CHEM_EXPORTS`) | +15% export volumes / price cuts | -3.04 | -3.00 | +0.00 | -0.04 | +0.00 | — |
-| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -1.76 | +0.00 | -1.20 | -0.53 | -0.04 | — |
+| US–China trade decoupling (`C_US_CHINA_DECOUPLING`) | +1 = more decoupling | -1.74 | +0.00 | -1.20 | -0.53 | -0.01 | — |
 | Palm / edible oil price (`F_EDIBLE_OIL`) | +10% edible oils | +1.51 | +1.50 | +0.00 | +0.00 | +0.01 | +1.9% |
 | Africa & Latin America demand (`C_AFRICA_LATAM`) | +1 pp growth | +1.50 | +1.50 | +0.00 | +0.00 | +0.00 | — |
 | Chemical feedstock (benzene, propylene, etc.) (`F_CHEM_FEEDSTOCK`) | +10% feedstock | -1.20 | -1.20 | +0.00 | +0.00 | +0.00 | — |
-| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.05 | +0.00 | +0.96 | +0.06 | +0.04 | — |
+| China growth / stimulus (`F_CHINA_GDP`) | +1 pp | +1.01 | +0.00 | +0.96 | +0.02 | +0.03 | — |
 | USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | +1.00 | +1.00 | +0.00 | +0.00 | +0.00 | -1.1% |
-| US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -0.99 | -1.00 | +0.00 | +0.00 | +0.01 | +11.2% |
-| US growth (`F_US_GDP`) | +1 pp | -0.81 | +0.00 | -0.64 | -0.10 | -0.08 | — |
+| US Fed funds rate (`F_FED_FUNDS`) | +25 bp | -1.00 | -1.00 | +0.00 | +0.00 | +0.00 | +11.2% |
+| US growth (`F_US_GDP`) | +1 pp | -0.80 | +0.00 | -0.64 | -0.12 | -0.04 | — |
 | Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +0.77 | +0.80 | +0.00 | +0.00 | -0.03 | — |
-| USD/CNY (`F_USDCNY`) | +3% USD/CNY (yuan weaker) | -0.64 | +0.00 | -0.62 | +0.00 | -0.02 | -1.4% |
-| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -0.53 | +0.00 | -0.16 | -0.23 | -0.14 | — |
+| USD/CNY (`F_USDCNY`) | +3% USD/CNY (yuan weaker) | -0.63 | +0.00 | -0.62 | +0.00 | -0.01 | -1.4% |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -0.57 | +0.00 | -0.16 | -0.26 | -0.15 | — |
 | Indian anti-dumping duties (chemicals, solar, others) (`P_ANTI_DUMPING_IN`) | +1 = new broad duties | +0.48 | +0.00 | +0.48 | +0.00 | +0.00 | — |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | -0.1 | +0.0 | +0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.1% | -1.1% | -1.0 | -0.1 | -0.0 | -0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | +0.0 | +0.0 | +0.0 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | +3.7% | +0.9% | +3.0 | +0.0 | +0.6 | +0.1 |
-| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.72 | -1.0% | -0.7% | -1.0 | -0.0 | -0.0 | +0.0 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.7% | -0.7% | -0.5 | +0.0 | -0.1 | -0.1 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | +3.6% | +0.9% | +3.0 | +0.0 | +0.5 | +0.0 |
+| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.72 | -1.1% | -0.8% | -1.0 | -0.1 | -0.0 | +0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.7% | -0.7% | -0.5 | +0.0 | -0.1 | -0.0 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.6 | -0.0 | +0.0 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +0.8% | +0.5% | +0.8 | +0.0 | -0.0 | -0.0 |
 | Fed hikes >=50 bp cumulative beyond Oct level by Apr 2027 (`EV_FED_H1_2027_FURTHER_HIKES`) | anticipated | 0.40 | -1.1% | -0.4% | -1.0 | -0.1 | -0.0 | +0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.4% | +0.4% | +0.0 | +0.4 | +0.0 | +0.0 |
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +1.1% | +0.4% | +0.0 | +1.1 | -0.1 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.4% | -0.4% | -0.4 | +0.0 | +0.0 | +0.0 |
-| US-China trade truce (expires 10 Jan 2027) extended or upgraded to a bigger deal (`EV_US_CHINA_TRUCE_EXTENDED`) | scheduled | 0.72 | +0.5% | +0.4% | +0.0 | +0.3 | +0.2 | +0.0 |
+| US-China trade truce (expires 10 Jan 2027) extended or upgraded to a bigger deal (`EV_US_CHINA_TRUCE_EXTENDED`) | scheduled | 0.72 | +0.5% | +0.4% | +0.0 | +0.3 | +0.2 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -60,7 +61,7 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → UPL | -0.96% | -0.24% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → UPL | +1.30% | +0.23% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → UPL | -0.46% | -0.23% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → UPL | -0.41% | -0.23% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | -3.67% | -0.18% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.

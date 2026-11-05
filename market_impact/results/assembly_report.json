@@ -11,7 +11,7 @@
  },
  "edges_dropped_unknown_or_industry": 5,
  "events": 161,
- "occurred_events": 61,
+ "occurred_events": 62,
  "profiles": 200,
  "empirical_sign_conflicts": 3,
  "assumptions": {
@@ -23,8 +23,8 @@
   },
   "priced_share_forward": 0.5,
   "recent_convergence": {
-   "3m": 0.3,
-   "12m": 0.5
+   "3m": 0.0,
+   "12m": 0.0
   },
   "residual_cap": 10.0,
   "corp_action_breaks": {
@@ -49,6 +49,6 @@
  "dead_end_drivers": [],
  "recent_state_drivers": {
   "observed": 18,
-  "from_events": 54
+  "from_events": 49
  }
 }

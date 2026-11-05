@@ -21,15 +21,15 @@ Safeguard duty on flat steel imports: provisional 12% from 21 Apr 2025; final 3-
 | ASHOKLEY | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | SUZLON | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | RVNL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| HYUNDAI | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | COCHINSHIP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HYUNDAI | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | TIINDIA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | TVSMOTOR | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | HEROMOTOCO | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| PRESTIGE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| GODREJPROP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LODHA | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | BOSCHLTD | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| PRESTIGE | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| ADANIENSOL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| CUMMINSIND | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -39,18 +39,18 @@ Safeguard duty on flat steel imports: provisional 12% from 21 Apr 2025; final 3-
 | JSWSTEEL | -0.2 | -0.1 | -0.1 | +0.0 | +0.0 |
 | TATASTEEL | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | NMDC | -0.1 | -0.1 | -0.0 | +0.0 | +0.0 |
-| PAYTM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| BANKINDIA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| VMM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | AUROPHARMA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| DRREDDY | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | HINDCOPPER | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | LUPIN | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | NATIONALUM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | OIL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| ONGC | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | VAML | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| PNB | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| UNIONBANK | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| BIOCON | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 14%, 2: 77%, 3: 3%, 4: 6%
+Share of absolute impact by order: 1: 15%, 2: 81%, 3: 2%, 4: 2%
 
 ## Sources
 - 2025-12-31 Centre imposes steel safeguard duty for 3 years; up to 12% on imports https://news.google.com/rss/search?q=Centre+imposes+steel+safeguard+duty+for+3+years;+up+to+12%+on+imports&hl=en-IN&gl=IN&ceid=IN:en

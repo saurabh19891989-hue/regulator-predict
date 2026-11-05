@@ -18,42 +18,42 @@ FOMC (unanimous, per WSJ headline) raised the target range 25 bp to 3.75-4.00% (
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | +0.5 | +0.0 | +0.1 | +0.3 | +0.1 |
-| SAIL | +0.4 | +0.0 | -0.0 | +0.4 | +0.1 |
-| OIL | +0.4 | +0.0 | +0.3 | +0.1 | -0.0 |
-| TMPV | +0.4 | +0.0 | +0.2 | +0.1 | +0.0 |
-| ONGC | +0.3 | +0.0 | +0.2 | +0.1 | -0.0 |
-| NMDC | +0.3 | +0.0 | +0.1 | +0.2 | +0.0 |
-| PIIND | +0.2 | +0.0 | +0.2 | +0.0 | +0.0 |
-| DRREDDY | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
-| MANKIND | +0.1 | +0.6 | -0.4 | -0.0 | -0.0 |
-| SRF | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| COALINDIA | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LUPIN | +0.1 | +0.0 | -0.0 | +0.1 | -0.0 |
+| LICHSGFIN | +0.4 | +1.0 | -0.4 | -0.2 | +0.0 |
+| OIL | +0.2 | +0.0 | +0.2 | +0.1 | -0.0 |
+| MANKIND | +0.2 | +0.6 | -0.4 | -0.0 | +0.0 |
+| JSWSTEEL | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| ONGC | +0.2 | +0.0 | +0.1 | +0.1 | -0.0 |
+| NMDC | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| PIIND | +0.1 | +0.0 | +0.1 | +0.0 | -0.0 |
+| COCHINSHIP | +0.1 | +0.0 | -0.0 | +0.1 | +0.0 |
 | PREMIERENE | +0.1 | +0.0 | -0.2 | +0.3 | +0.0 |
-| TATASTEEL | +0.1 | +0.0 | -0.2 | +0.2 | +0.1 |
-| LICHSGFIN | +0.0 | +1.0 | -0.5 | -0.4 | -0.1 |
+| SAIL | +0.1 | +0.0 | -0.1 | +0.2 | +0.0 |
+| TMPV | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
+| SRF | +0.0 | +0.0 | -0.0 | +0.1 | +0.0 |
+| COALINDIA | +0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| DRREDDY | +0.0 | +0.0 | -0.1 | +0.1 | -0.0 |
+| NATIONALUM | -0.0 | +0.0 | -0.2 | +0.2 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| BSE | -5.9 | -3.0 | -1.8 | -1.2 | +0.1 |
-| MOTILALOFS | -4.6 | +0.0 | -2.7 | -1.5 | -0.4 |
-| SWIGGY | -3.8 | -2.5 | -1.1 | -0.1 | -0.1 |
-| POLICYBZR | -3.4 | -2.0 | -1.3 | -0.1 | -0.1 |
-| YESBANK | -3.4 | +0.0 | -2.0 | -0.8 | -0.5 |
-| ICICIAMC | -3.3 | +0.0 | -2.1 | -0.9 | -0.3 |
-| JIOFIN | -3.1 | +0.0 | -1.6 | -1.0 | -0.4 |
-| INDUSINDBK | -3.1 | -0.6 | -1.3 | -0.8 | -0.3 |
-| BAJFINANCE | -3.1 | +0.0 | -1.7 | -1.0 | -0.4 |
-| GROWW | -3.1 | +0.0 | -1.6 | -1.4 | -0.1 |
-| IREDA | -2.9 | +0.0 | -1.7 | -0.9 | -0.4 |
-| SHRIRAMFIN | -2.9 | -1.0 | -1.1 | -0.5 | -0.3 |
-| MUTHOOTFIN | -2.8 | +0.0 | -2.3 | -0.4 | -0.1 |
-| TATACAP | -2.7 | +0.0 | -1.6 | -0.8 | -0.4 |
-| NAUKRI | -2.7 | +0.0 | -1.9 | -0.7 | -0.2 |
+| BSE | -5.2 | -3.0 | -1.7 | -0.6 | +0.1 |
+| SWIGGY | -3.4 | -2.5 | -0.9 | -0.1 | +0.1 |
+| POLICYBZR | -2.8 | -2.0 | -1.0 | +0.2 | +0.0 |
+| MOTILALOFS | -2.4 | +0.0 | -2.3 | -0.2 | +0.1 |
+| MUTHOOTFIN | -2.4 | +0.0 | -2.2 | -0.2 | -0.0 |
+| YESBANK | -2.2 | +0.0 | -1.8 | -0.4 | +0.0 |
+| NYKAA | -2.1 | -1.2 | -0.7 | -0.2 | -0.0 |
+| ADANIGREEN | -2.0 | +0.0 | -1.7 | -0.3 | +0.0 |
+| INDUSINDBK | -2.0 | -0.6 | -1.1 | -0.2 | -0.0 |
+| MPHASIS | -1.9 | -1.3 | -0.5 | -0.0 | +0.0 |
+| BAJFINANCE | -1.9 | +0.0 | -1.6 | -0.2 | -0.1 |
+| TATACAP | -1.9 | +0.0 | -1.4 | -0.4 | -0.0 |
+| PRESTIGE | -1.8 | -0.2 | -1.3 | -0.3 | +0.0 |
+| AUBANK | -1.7 | +0.0 | -1.4 | -0.3 | -0.0 |
+| ICICIAMC | -1.7 | +0.0 | -1.8 | +0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 11%, 2: 58%, 3: 22%, 4: 9%
+Share of absolute impact by order: 1: 14%, 2: 70%, 3: 13%, 4: 2%
 
 ## Sources
 - 2026-09-16 Fed approves interest rate hike, signals one more to come this year - CNBC https://news.google.com/rss/search?q=Fed%20approves%20interest%20rate%20hike%2C%20signals%20one%20more%20to%20come%20this%20year&hl=en-IN&gl=IN&ceid=IN:en

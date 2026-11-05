@@ -20,42 +20,42 @@ Talks have repeatedly 'stalled' (Reuters 6 Oct) yet US officials say '98-99% don
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| LAURUSLABS | +1.8 | +1.8 | -0.1 | +0.0 | +0.0 |
+| LAURUSLABS | +1.7 | +1.8 | -0.1 | +0.0 | -0.0 |
 | DIVISLAB | +1.5 | +1.5 | +0.0 | +0.0 | -0.0 |
-| BHARATFORG | +1.5 | +1.5 | -0.1 | +0.0 | +0.0 |
+| BHARATFORG | +1.4 | +1.5 | -0.1 | +0.0 | -0.0 |
 | PIIND | +1.4 | +1.5 | -0.1 | -0.0 | +0.0 |
 | CONCOR | +1.4 | +1.2 | +0.1 | +0.0 | -0.0 |
-| MOTILALOFS | +1.3 | +0.0 | +0.8 | +0.5 | +0.1 |
-| YESBANK | +1.3 | +0.0 | +0.5 | +0.5 | +0.3 |
 | DIXON | +1.3 | +1.2 | +0.0 | +0.0 | +0.0 |
-| INDUSINDBK | +1.2 | +0.0 | +0.6 | +0.6 | +0.0 |
 | APARINDS | +1.2 | +1.2 | -0.1 | -0.0 | +0.0 |
-| IDFCFIRSTB | +1.2 | +0.0 | +0.5 | +0.5 | +0.1 |
-| WAAREEENER | +1.1 | +1.0 | +0.1 | +0.0 | +0.0 |
-| SBIN | +1.1 | +0.0 | +0.6 | +0.4 | +0.1 |
-| SIEMENS | +1.0 | +0.8 | +0.2 | +0.0 | +0.0 |
-| ADANIPORTS | +0.9 | +0.8 | +0.1 | +0.0 | +0.0 |
+| WAAREEENER | +1.1 | +1.0 | +0.1 | +0.0 | -0.0 |
+| MOTILALOFS | +1.1 | +0.0 | +0.8 | +0.2 | +0.0 |
+| SIEMENS | +0.9 | +0.8 | +0.2 | +0.0 | +0.0 |
+| INDUSINDBK | +0.9 | +0.0 | +0.6 | +0.3 | -0.0 |
+| ADANIPORTS | +0.9 | +0.8 | +0.1 | +0.0 | -0.0 |
+| YESBANK | +0.8 | +0.0 | +0.5 | +0.2 | +0.1 |
+| SBIN | +0.8 | +0.0 | +0.6 | +0.2 | +0.0 |
+| ICICIAMC | +0.8 | +0.0 | +0.6 | +0.2 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JINDALSTEL | -0.5 | +0.0 | -0.1 | -0.3 | -0.0 |
-| JSWSTEEL | -0.5 | +0.0 | -0.2 | -0.2 | -0.0 |
-| SAIL | -0.4 | +0.0 | -0.1 | -0.4 | -0.0 |
-| TATASTEEL | -0.4 | +0.0 | -0.1 | -0.2 | -0.0 |
-| BIOCON | -0.3 | +0.0 | -0.3 | -0.0 | +0.0 |
-| NATIONALUM | -0.3 | +0.0 | -0.3 | -0.1 | -0.0 |
-| OIL | -0.3 | +0.0 | -0.3 | -0.1 | -0.0 |
-| ONGC | -0.3 | +0.0 | -0.3 | -0.1 | -0.0 |
+| BIOCON | -0.4 | +0.0 | -0.3 | -0.0 | -0.0 |
+| NATIONALUM | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
+| OIL | -0.4 | +0.0 | -0.3 | -0.1 | -0.0 |
 | VAML | -0.3 | +0.0 | -0.3 | -0.0 | -0.0 |
+| JSWSTEEL | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
+| ONGC | -0.3 | +0.0 | -0.3 | -0.0 | -0.0 |
+| JINDALSTEL | -0.3 | +0.0 | -0.1 | -0.2 | -0.0 |
+| PERSISTENT | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
+| TATASTEEL | -0.3 | +0.0 | -0.1 | -0.1 | -0.0 |
 | DRREDDY | -0.3 | +0.0 | -0.2 | -0.0 | -0.0 |
 | NMDC | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
-| PERSISTENT | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
 | HINDZINC | -0.3 | +0.0 | -0.2 | -0.0 | -0.0 |
+| TECHM | -0.3 | +0.0 | -0.2 | -0.1 | -0.0 |
+| SAIL | -0.2 | +0.0 | -0.1 | -0.2 | -0.0 |
 | TMPV | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
-| HINDCOPPER | -0.2 | +0.0 | -0.2 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 21%, 2: 46%, 3: 25%, 4: 8%
+Share of absolute impact by order: 1: 25%, 2: 52%, 3: 19%, 4: 4%
 
 ## Sources
 - 2026-10-21 India-US trade deal 'pretty close,' says Trump - DW https://news.google.com/rss/search?q=India+US+trade+deal+Trump+Modi+when:120d&hl=en-IN&gl=IN&ceid=IN:en

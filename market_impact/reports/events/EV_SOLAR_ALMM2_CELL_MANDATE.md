@@ -18,41 +18,41 @@ ALMM List-II (solar cells) mandate effective 1 June 2026 (model knowledge on dat
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | IREDA | +4.8 | +4.0 | +0.8 | +0.0 | +0.0 |
-| ADANIGREEN | +3.5 | +3.0 | +0.5 | -0.0 | -0.0 |
-| SUZLON | +3.5 | +3.5 | +0.0 | -0.0 | +0.0 |
-| PREMIERENE | +3.5 | +3.0 | +0.5 | -0.1 | -0.0 |
-| WAAREEENER | +3.3 | +3.0 | +0.4 | -0.0 | -0.0 |
+| ADANIGREEN | +3.5 | +3.0 | +0.5 | -0.0 | +0.0 |
+| PREMIERENE | +3.5 | +3.0 | +0.5 | -0.1 | +0.0 |
+| WAAREEENER | +3.3 | +3.0 | +0.4 | -0.0 | +0.0 |
 | ADANIENSOL | +2.6 | +2.0 | +0.4 | +0.2 | +0.0 |
 | TATAPOWER | +2.6 | +2.0 | +0.5 | +0.1 | +0.0 |
 | POWERINDIA | +2.5 | +1.0 | +1.2 | +0.4 | +0.0 |
-| ENRIN | +2.3 | +0.0 | +1.7 | +0.6 | +0.0 |
 | JSWENERGY | +2.1 | +1.8 | +0.4 | -0.0 | +0.0 |
-| GVT&D | +1.8 | +1.0 | +0.5 | +0.3 | +0.0 |
+| ENRIN | +2.0 | +0.0 | +1.7 | +0.3 | +0.0 |
 | NLCINDIA | +1.7 | +1.5 | +0.2 | -0.0 | +0.0 |
-| APARINDS | +1.6 | +0.0 | +1.2 | +0.5 | +0.0 |
 | POLYCAB | +1.6 | +1.0 | +0.3 | +0.3 | +0.0 |
 | NHPC | +1.4 | +1.2 | +0.2 | +0.0 | +0.0 |
+| APARINDS | +1.4 | +0.0 | +1.2 | +0.2 | +0.0 |
+| SUZLON | +1.4 | +1.4 | +0.0 | -0.0 | +0.0 |
+| POWERGRID | +1.3 | +0.8 | +0.4 | +0.2 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | ADANIPOWER | -0.5 | -0.4 | -0.0 | -0.0 | +0.0 |
-| TMPV | -0.3 | +0.0 | +0.0 | -0.2 | -0.1 |
 | BHARATFORG | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
 | COALINDIA | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
-| VOLTAS | -0.2 | +0.0 | +0.0 | -0.1 | -0.0 |
-| TVSMOTOR | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
-| HEROMOTOCO | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
+| VOLTAS | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| TMPV | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| TVSMOTOR | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
 | LGEINDIA | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
-| BLUESTARCO | -0.1 | +0.0 | +0.0 | -0.0 | -0.0 |
-| BOSCHLTD | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| HYUNDAI | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| MARUTI | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| M&M | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
-| BAJAJ-AUTO | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| HEROMOTOCO | -0.1 | +0.0 | +0.0 | -0.1 | +0.0 |
+| BLUESTARCO | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| BOSCHLTD | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HYUNDAI | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| MARUTI | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | RVNL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| M&M | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| BAJAJ-AUTO | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 58%, 2: 25%, 3: 13%, 4: 5%
+Share of absolute impact by order: 1: 58%, 2: 27%, 3: 12%, 4: 4%
 
 ## Sources
 - 2026-10-09 MNRE issues 12th solar cell ALMM revision, capacity 37.8GW (PV Tech) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=India+ALMM+solar+cell+capacity+37.8+GW+when:120d&hl=en-IN&gl=IN&ceid=IN:en

@@ -40,7 +40,6 @@ Fibre2Fashion (10 Jul): India's kharif cotton sowing fell 23%, 2026/27 balance s
 | TRENT | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | MEESHO | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | VMM | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
-| BIOCON | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | APLAPOLLO | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | ASIANPAINT | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | AUBANK | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
@@ -51,6 +50,7 @@ Fibre2Fashion (10 Jul): India's kharif cotton sowing fell 23%, 2026/27 balance s
 | GODFRYPHLP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | GODREJCP | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | HEROMOTOCO | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HINDUNILVR | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 Share of absolute impact by order: 1: 100%, 2: 0%, 3: 0%, 4: 0%
 

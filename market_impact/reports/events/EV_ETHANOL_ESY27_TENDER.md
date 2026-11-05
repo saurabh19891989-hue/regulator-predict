@@ -24,12 +24,10 @@ Oil marketing companies invited bids for 1,100 crore litres of ethanol for Nov 2
 | VBL | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |
 | DABUR | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |
 | NESTLEIND | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
-| OFSS | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| OFSS | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | NESTLEIND | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | DABUR | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |
 | BRITANNIA | +0.4 | +0.4 | +0.0 | +0.0 | +0.0 |

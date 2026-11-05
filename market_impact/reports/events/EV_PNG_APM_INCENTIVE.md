@@ -21,37 +21,37 @@ Government (PIB 13 Sep; Hindu/BS 18 Aug) allocated additional 200 SCM (units of 
 | ENRIN | +0.2 | +0.2 | +0.0 | +0.0 | +0.0 |
 | IOC | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | TATASTEEL | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
+| HINDPETRO | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | MOTHERSON | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | UNITDSPR | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
-| HINDPETRO | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | AMBUJACEM | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
 | RADICO | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
-| APOLLOHOSP | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
 | ULTRACEMCO | +0.1 | +0.0 | +0.1 | +0.0 | +0.0 |
-| RECLTD | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| IDEA | +0.1 | +0.0 | +0.0 | +0.0 | +0.0 |
-| JINDALSTEL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| APOLLOHOSP | +0.1 | +0.1 | +0.0 | +0.0 | +0.0 |
+| GRASIM | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| SOLARINDS | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| RECLTD | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| COALINDIA | -0.1 | +0.0 | -0.1 | -0.1 | +0.0 |
 | MCX | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
 | ONGC | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
+| COALINDIA | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
+| JSWENERGY | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
+| TATAPOWER | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
 | OIL | -0.1 | -0.1 | +0.0 | +0.0 | +0.0 |
-| JSWENERGY | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
-| ADANIPOWER | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
-| TATAPOWER | -0.0 | +0.0 | -0.1 | -0.0 | +0.0 |
 | NTPC | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
-| PAYTM | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
-| ADANIENSOL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| ADANIPOWER | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
 | ADANIENT | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| ADANIENSOL | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
+| ADANIGREEN | -0.0 | +0.0 | -0.0 | -0.0 | -0.0 |
 | NLCINDIA | -0.0 | +0.0 | -0.0 | -0.0 | +0.0 |
-| HDFCLIFE | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| NATIONALUM | -0.0 | +0.0 | -0.0 | +0.0 | -0.0 |
-| MFSL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| PAYTM | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| NATIONALUM | -0.0 | +0.0 | -0.0 | +0.0 | +0.0 |
+| VEDL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 41%, 2: 20%, 3: 5%, 4: 34%
+Share of absolute impact by order: 1: 64%, 2: 29%, 3: 6%, 4: 0%
 
 ## Sources
 - 2026-08-18 Government to allocate additional 200 SCM gas for domestic PNG (The Hindu) (headline via Google News RSS; article body not read) https://news.google.com/rss/search?q=Government+to+allocate+additional+200+SCM+gas+PNG+when:120d&hl=en-IN&gl=IN&ceid=IN:en

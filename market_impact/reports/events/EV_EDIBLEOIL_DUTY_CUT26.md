@@ -17,42 +17,42 @@ Notification of 23 Sep, effective 24 Sep: basic customs duty on crude palm and s
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | +0.6 | +0.0 | +0.0 | +0.3 | +0.3 |
-| BAJFINANCE | +0.5 | +0.0 | +0.0 | +0.3 | +0.2 |
-| TATACAP | +0.5 | +0.0 | +0.0 | +0.3 | +0.3 |
-| GMRAIRPORT | +0.4 | +0.0 | +0.0 | +0.3 | +0.2 |
-| AUBANK | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| PRESTIGE | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| SHRIRAMFIN | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| IREDA | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| IDFCFIRSTB | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| PHOENIXLTD | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
-| GODREJPROP | +0.4 | +0.0 | +0.0 | +0.2 | +0.1 |
-| BAJAJFINSV | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
-| LTF | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| LODHA | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
-| INDUSINDBK | +0.3 | +0.0 | +0.0 | +0.1 | +0.2 |
+| YESBANK | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| TATACAP | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| BAJFINANCE | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| AUBANK | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| IDFCFIRSTB | +0.2 | +0.0 | +0.0 | +0.2 | +0.1 |
+| IREDA | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| PRESTIGE | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| INDUSINDBK | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| BAJAJFINSV | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| LTF | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| SHRIRAMFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| M&MFIN | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| JSWENERGY | +0.2 | +0.0 | +0.0 | +0.1 | +0.0 |
+| AXISBANK | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
+| VMM | +0.2 | +0.2 | +0.0 | +0.0 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
+| DMART | -0.0 | -0.1 | +0.0 | +0.0 | +0.0 |
+| NATIONALUM | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| OIL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HINDCOPPER | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | PIIND | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| ONGC | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | UPL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| LUPIN | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
 | MCX | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| DMART | +0.0 | -0.1 | +0.0 | +0.1 | +0.0 |
-| NATIONALUM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| HINDCOPPER | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| SUNPHARMA | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| NMDC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| NMDC | -0.0 | +0.0 | +0.0 | -0.0 | -0.0 |
+| DRREDDY | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | VAML | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| OIL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| HINDZINC | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| SUNPHARMA | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 | LTM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| LICHSGFIN | +0.0 | +0.0 | +0.0 | -0.2 | +0.2 |
-| MPHASIS | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
-| HCLTECH | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 2%, 2: 4%, 3: 56%, 4: 38%
+Share of absolute impact by order: 1: 4%, 2: 6%, 3: 62%, 4: 28%
 
 ## Sources
 - 2026-09-23 Govt cuts import duties on palm, soya and sunflower oils - Business Standard https://www.business-standard.com/economy/news/govt-cuts-import-duty-on-refined-palm-oil-and-soybean-oil-to-27-5-126092301504_1.html

@@ -20,42 +20,42 @@ Complement of the hike event: weak labour data, post-midterm yield decline and l
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| MOTILALOFS | +2.0 | +0.0 | +1.5 | +0.5 | -0.1 |
-| BSE | +1.5 | +0.0 | +1.0 | +0.7 | -0.1 |
-| YESBANK | +1.5 | +0.0 | +1.0 | +0.2 | +0.3 |
-| MUTHOOTFIN | +1.4 | +0.0 | +1.3 | +0.1 | +0.0 |
-| GROWW | +1.4 | +0.0 | +0.9 | +0.6 | -0.1 |
-| SBIN | +1.3 | +0.0 | +1.1 | +0.1 | +0.1 |
-| ICICIAMC | +1.3 | +0.0 | +1.1 | +0.2 | -0.0 |
-| BAJFINANCE | +1.2 | +0.0 | +0.8 | +0.2 | +0.2 |
-| INDUSINDBK | +1.2 | +0.3 | +0.9 | +0.0 | +0.0 |
-| SHRIRAMFIN | +1.2 | +0.5 | +0.5 | +0.1 | +0.1 |
-| NYKAA | +1.2 | +0.6 | +0.5 | +0.1 | +0.0 |
-| JIOFIN | +1.1 | +0.0 | +0.8 | +0.2 | +0.1 |
-| TATACAP | +1.1 | +0.0 | +0.7 | +0.3 | +0.2 |
-| PAYTM | +1.1 | +0.0 | +1.1 | +0.0 | -0.0 |
-| INDIGO | +1.1 | +0.3 | +0.6 | +0.1 | +0.0 |
+| MUTHOOTFIN | +1.2 | +0.0 | +1.2 | +0.0 | -0.0 |
+| MOTILALOFS | +1.1 | +0.0 | +1.2 | -0.0 | -0.1 |
+| BSE | +1.0 | +0.0 | +0.9 | +0.3 | -0.1 |
+| NYKAA | +1.0 | +0.6 | +0.4 | +0.0 | -0.0 |
+| ADANIGREEN | +0.9 | +0.0 | +0.9 | +0.1 | -0.0 |
+| INDUSINDBK | +0.9 | +0.3 | +0.7 | -0.1 | -0.0 |
+| VEDL | +0.9 | +0.3 | +0.3 | +0.0 | +0.2 |
+| YESBANK | +0.8 | +0.0 | +0.8 | +0.0 | -0.0 |
+| INDIGO | +0.8 | +0.3 | +0.5 | +0.1 | -0.0 |
+| SBIN | +0.8 | +0.0 | +0.9 | -0.1 | -0.0 |
+| ADANIENT | +0.7 | +0.0 | +0.7 | +0.0 | -0.0 |
+| ADANIENSOL | +0.7 | +0.0 | +0.7 | +0.1 | -0.1 |
+| PAYTM | +0.7 | +0.0 | +0.9 | -0.1 | -0.0 |
+| ICICIAMC | +0.7 | +0.0 | +0.9 | -0.1 | -0.1 |
+| PFC | +0.7 | +0.0 | +0.7 | +0.1 | -0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| TMPV | -0.5 | +0.0 | -0.4 | -0.2 | -0.0 |
-| JSWSTEEL | -0.5 | +0.0 | -0.2 | -0.2 | -0.0 |
-| SAIL | -0.4 | +0.0 | -0.1 | -0.3 | -0.1 |
-| MANKIND | -0.4 | -0.4 | +0.1 | -0.0 | +0.0 |
-| ONGC | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
-| OIL | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
-| NMDC | -0.3 | +0.0 | -0.1 | -0.1 | -0.0 |
-| JINDALSTEL | -0.3 | +0.0 | +0.1 | -0.3 | -0.1 |
-| DRREDDY | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
-| PIIND | -0.2 | +0.0 | -0.1 | -0.0 | +0.0 |
-| LUPIN | -0.2 | +0.0 | -0.0 | -0.1 | +0.0 |
-| SRF | -0.2 | +0.0 | -0.1 | -0.0 | +0.0 |
-| TATASTEEL | -0.1 | +0.0 | +0.1 | -0.2 | -0.0 |
-| PREMIERENE | -0.1 | +0.0 | +0.1 | -0.2 | -0.0 |
-| COALINDIA | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
+| MANKIND | -0.4 | -0.4 | +0.1 | -0.0 | -0.0 |
+| TMPV | -0.3 | +0.0 | -0.3 | -0.1 | +0.0 |
+| JSWSTEEL | -0.3 | +0.0 | -0.1 | -0.1 | +0.0 |
+| ONGC | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
+| OIL | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
+| SAIL | -0.2 | +0.0 | -0.0 | -0.1 | -0.0 |
+| PREMIERENE | -0.2 | +0.0 | +0.0 | -0.2 | -0.0 |
+| NMDC | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
+| COCHINSHIP | -0.1 | +0.0 | -0.0 | -0.1 | -0.0 |
+| DRREDDY | -0.1 | +0.0 | -0.1 | -0.1 | +0.0 |
+| LTM | -0.1 | -0.2 | +0.1 | -0.1 | -0.0 |
+| SRF | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
+| VOLTAS | -0.1 | +0.0 | -0.2 | +0.1 | -0.0 |
+| PIIND | -0.1 | +0.0 | -0.1 | -0.0 | +0.0 |
+| COALINDIA | -0.1 | +0.0 | -0.1 | -0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 6%, 2: 71%, 3: 17%, 4: 6%
+Share of absolute impact by order: 1: 6%, 2: 76%, 3: 13%, 4: 5%
 
 ## Sources
 - 2026-10-28 Fed holds rates steady despite concerns over inflation - CNBC https://news.google.com/rss/search?q=Fed%20holds%20rates%20steady%20despite%20concerns%20over%20inflation%20-%20CNBC&hl=en-IN&gl=IN&ceid=IN:en

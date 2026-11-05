@@ -16,21 +16,21 @@ Media (31 Aug 2026) discuss scrapping weekly expiries; SEBI already limited week
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| LICI | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
-| GODREJPROP | +0.3 | +0.0 | +0.1 | +0.1 | +0.0 |
-| LODHA | +0.3 | +0.0 | +0.1 | +0.1 | +0.0 |
-| PRESTIGE | +0.3 | +0.0 | +0.1 | +0.1 | +0.0 |
+| LICI | +0.2 | +0.0 | +0.2 | +0.1 | +0.0 |
+| GODREJPROP | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| LODHA | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| PRESTIGE | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| PAYTM | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
 | HDFCLIFE | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 | DLF | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 | OBEROIRLTY | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| SBILIFE | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| PAYTM | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| PHOENIXLTD | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
-| SBIN | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
 | INDUSINDBK | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
-| FEDERALBNK | +0.2 | +0.0 | +0.0 | +0.2 | -0.0 |
-| POLICYBZR | +0.2 | +0.0 | +0.0 | +0.2 | -0.0 |
+| POLICYBZR | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| SBIN | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| SBILIFE | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
 | MAHABANK | +0.2 | +0.0 | +0.0 | +0.2 | +0.0 |
+| MFSL | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
+| ABCAPITAL | +0.1 | +0.0 | +0.0 | +0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
@@ -51,7 +51,7 @@ Media (31 Aug 2026) discuss scrapping weekly expiries; SEBI already limited week
 | VAML | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | JSWSTEEL | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 
-Share of absolute impact by order: 1: 81%, 2: 4%, 3: 14%, 4: 2%
+Share of absolute impact by order: 1: 82%, 2: 4%, 3: 13%, 4: 1%
 
 ## Sources
 - 2026-08-31 How scrapping weekly F&O expiries could reshape retail trading https://news.google.com/rss/search?q=SEBI+F%26O+weekly+expiry+rules

@@ -19,40 +19,40 @@ FM Sitharaman (2-3 Nov): 'we will consider the call for review of LTCG tax' and 
 |---|---|---|---|---|---|
 | MOTILALOFS | +6.8 | +6.7 | +0.2 | +0.0 | +0.0 |
 | BSE | +6.4 | +6.3 | +0.1 | +0.0 | +0.0 |
-| GROWW | +5.6 | +5.5 | +0.0 | -0.0 | +0.0 |
 | ICICIAMC | +5.5 | +5.3 | +0.2 | -0.0 | +0.0 |
 | 360ONE | +4.9 | +4.8 | +0.1 | +0.0 | +0.0 |
+| GROWW | +4.8 | +4.8 | +0.0 | -0.0 | +0.0 |
 | HDFCAMC | +2.6 | +2.4 | +0.2 | +0.0 | +0.0 |
-| PAYTM | +2.5 | +2.5 | +0.0 | -0.0 | +0.0 |
-| PRESTIGE | +2.3 | +2.1 | +0.1 | +0.1 | +0.1 |
-| GODREJPROP | +2.2 | +2.1 | +0.0 | +0.1 | +0.0 |
-| LODHA | +2.2 | +2.1 | +0.0 | +0.1 | +0.0 |
-| SBIN | +2.1 | +2.0 | +0.1 | +0.0 | +0.0 |
-| INDUSINDBK | +2.0 | +2.0 | +0.0 | -0.0 | +0.0 |
-| FEDERALBNK | +2.0 | +2.0 | -0.0 | -0.0 | +0.0 |
-| JIOFIN | +2.0 | +1.6 | +0.3 | +0.0 | +0.1 |
+| PAYTM | +2.5 | +2.5 | +0.0 | -0.0 | -0.0 |
+| PRESTIGE | +2.3 | +2.1 | +0.1 | +0.0 | +0.0 |
+| GODREJPROP | +2.2 | +2.1 | +0.0 | +0.0 | +0.0 |
+| LODHA | +2.2 | +2.1 | +0.0 | +0.0 | +0.0 |
+| SBIN | +2.1 | +2.0 | +0.1 | -0.0 | +0.0 |
+| INDUSINDBK | +2.0 | +2.0 | +0.0 | -0.0 | -0.0 |
 | POLICYBZR | +2.0 | +2.0 | -0.0 | -0.0 | +0.0 |
+| JIOFIN | +1.9 | +1.6 | +0.3 | +0.0 | +0.0 |
+| DLF | +1.9 | +1.8 | +0.1 | +0.0 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| JSWSTEEL | -0.4 | +0.0 | -0.2 | -0.2 | +0.0 |
-| SAIL | -0.4 | +0.0 | -0.1 | -0.3 | +0.0 |
-| JINDALSTEL | -0.3 | +0.0 | -0.0 | -0.3 | +0.0 |
-| TATASTEEL | -0.3 | +0.0 | -0.1 | -0.2 | +0.0 |
+| JSWSTEEL | -0.3 | +0.0 | -0.2 | -0.1 | +0.0 |
 | NATIONALUM | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
 | OIL | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
 | ONGC | -0.3 | +0.0 | -0.3 | +0.0 | +0.0 |
 | VAML | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
+| SAIL | -0.2 | +0.0 | -0.1 | -0.2 | +0.0 |
+| TATASTEEL | -0.2 | +0.0 | -0.1 | -0.1 | +0.0 |
 | NMDC | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
+| JINDALSTEL | -0.2 | +0.0 | -0.0 | -0.2 | +0.0 |
 | PIIND | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
-| HINDZINC | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
 | TMPV | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
+| HINDZINC | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
+| SRF | -0.2 | +0.0 | -0.2 | +0.0 | +0.0 |
 | HINDALCO | -0.2 | +0.0 | -0.2 | -0.0 | +0.0 |
-| SRF | -0.1 | +0.0 | -0.2 | +0.0 | +0.0 |
-| SUNPHARMA | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
+| PERSISTENT | -0.1 | +0.0 | -0.1 | +0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 86%, 2: 9%, 3: 2%, 4: 3%
+Share of absolute impact by order: 1: 88%, 2: 9%, 3: 1%, 4: 1%
 
 ## Sources
 - 2026-11-03 We will consider the call for review of LTCG tax - Economic Times https://news.google.com/rss/search?q=Sitharaman+LTCG+tax+review+FPI+exodus+when:120d&hl=en-IN&gl=IN&ceid=IN:en

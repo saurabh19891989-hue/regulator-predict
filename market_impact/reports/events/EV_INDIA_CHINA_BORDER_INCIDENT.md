@@ -18,41 +18,41 @@ Face-offs reported (Al Jazeera 27 Oct), Arunachal remarks (BBC 28 Oct); no agree
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | TATACONSUM | +0.6 | +0.6 | -0.0 | -0.0 | +0.0 |
-| JSWSTEEL | +0.5 | +0.0 | +0.2 | +0.5 | -0.2 |
 | ASTRAL | +0.5 | +0.6 | -0.0 | -0.1 | -0.0 |
-| DRREDDY | +0.4 | +0.0 | +0.2 | +0.2 | +0.0 |
-| ONGC | +0.4 | +0.0 | +0.3 | +0.1 | -0.0 |
-| POWERGRID | +0.4 | +0.6 | -0.2 | -0.1 | -0.0 |
-| OIL | +0.3 | +0.0 | +0.3 | +0.0 | -0.0 |
+| JSWSTEEL | +0.4 | +0.0 | +0.2 | +0.4 | -0.2 |
+| ONGC | +0.4 | +0.0 | +0.3 | +0.1 | +0.0 |
+| OIL | +0.3 | +0.0 | +0.3 | +0.0 | +0.0 |
+| POWERGRID | +0.3 | +0.6 | -0.2 | -0.1 | -0.0 |
+| DRREDDY | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
 | HINDZINC | +0.3 | +0.0 | +0.2 | +0.1 | -0.0 |
-| TMPV | +0.3 | +0.0 | -0.2 | +0.2 | +0.2 |
-| LUPIN | +0.3 | +0.0 | +0.1 | +0.1 | +0.0 |
+| NATIONALUM | +0.3 | +0.0 | +0.3 | -0.1 | +0.1 |
 | SUNPHARMA | +0.3 | +0.0 | +0.2 | +0.1 | +0.0 |
 | ASHOKLEY | +0.2 | +0.0 | +0.0 | +0.1 | +0.1 |
 | PIIND | +0.2 | +0.0 | +0.2 | -0.0 | +0.0 |
-| SAIL | +0.2 | +0.0 | +0.1 | +0.5 | -0.4 |
-| VOLTAS | +0.1 | +0.0 | +0.1 | +0.1 | -0.1 |
+| LUPIN | +0.2 | +0.0 | +0.1 | +0.1 | +0.0 |
+| VOLTAS | +0.2 | +0.0 | +0.1 | +0.1 | -0.0 |
+| AUROPHARMA | +0.1 | +0.0 | +0.1 | -0.1 | +0.0 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
 | MOTILALOFS | -4.8 | -2.8 | -1.2 | -0.7 | -0.1 |
-| JIOFIN | -4.8 | -4.0 | -0.4 | -0.3 | -0.1 |
-| IREDA | -4.6 | -4.0 | -0.3 | -0.2 | -0.1 |
-| ICICIAMC | -4.5 | -3.2 | -0.8 | -0.4 | +0.0 |
-| MEESHO | -4.0 | -3.2 | -0.5 | -0.2 | -0.0 |
-| 360ONE | -3.9 | -2.8 | -0.5 | -0.4 | -0.1 |
-| INDUSINDBK | -3.6 | -2.8 | -0.6 | -0.3 | +0.0 |
-| MAHABANK | -3.3 | -2.8 | -0.4 | -0.1 | +0.0 |
-| IDFCFIRSTB | -3.2 | -2.4 | -0.5 | -0.3 | -0.1 |
-| LENSKART | -3.1 | -2.4 | -0.5 | -0.2 | -0.0 |
+| JIOFIN | -4.7 | -4.0 | -0.4 | -0.3 | -0.1 |
+| IREDA | -4.6 | -4.0 | -0.3 | -0.2 | -0.0 |
+| ICICIAMC | -4.4 | -3.2 | -0.8 | -0.4 | +0.0 |
+| MEESHO | -3.9 | -3.2 | -0.5 | -0.2 | -0.0 |
+| 360ONE | -3.8 | -2.8 | -0.5 | -0.4 | -0.1 |
+| INDUSINDBK | -3.6 | -2.8 | -0.6 | -0.2 | +0.1 |
+| MAHABANK | -3.3 | -2.8 | -0.4 | -0.1 | +0.1 |
 | LICI | -3.1 | -2.8 | -0.2 | -0.1 | +0.0 |
 | NAUKRI | -3.1 | -2.0 | -0.9 | -0.2 | +0.0 |
-| INDIANB | -2.8 | -2.4 | -0.3 | -0.2 | -0.0 |
+| LENSKART | -3.1 | -2.4 | -0.5 | -0.2 | -0.0 |
+| IDFCFIRSTB | -3.1 | -2.4 | -0.5 | -0.2 | -0.0 |
 | PAYTM | -2.8 | -1.6 | -0.9 | -0.3 | +0.0 |
-| GROWW | -2.8 | -1.6 | -0.5 | -0.6 | -0.1 |
+| ETERNAL | -2.8 | -2.0 | -0.5 | -0.2 | -0.0 |
+| INDIANB | -2.8 | -2.4 | -0.3 | -0.1 | +0.0 |
 
-Share of absolute impact by order: 1: 42%, 2: 33%, 3: 19%, 4: 6%
+Share of absolute impact by order: 1: 45%, 2: 35%, 3: 17%, 4: 3%
 
 ## Sources
 - 2026-10-27 India-China border face-offs test Modi six years after deadly clash - Al Jazeera https://news.google.com/rss/search?q=India-China+border+face-offs+when:120d&hl=en-IN&gl=IN&ceid=IN:en

@@ -17,42 +17,42 @@ Agriculture Ministry data as of 30 Oct 2026 (Business Today, 3 Nov): total rabi 
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
+| DMART | +0.1 | +0.2 | +0.0 | -0.1 | -0.0 |
+| NATIONALUM | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
+| OIL | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
+| HINDCOPPER | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
 | PIIND | +0.0 | +0.0 | -0.0 | +0.1 | -0.0 |
+| ONGC | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
 | UPL | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
 | MCX | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| DMART | -0.0 | +0.2 | +0.0 | -0.2 | -0.1 |
-| NATIONALUM | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
-| HINDCOPPER | -0.0 | +0.0 | +0.0 | +0.0 | -0.1 |
-| SUNPHARMA | -0.1 | +0.0 | +0.0 | +0.0 | -0.1 |
-| NMDC | -0.1 | +0.0 | +0.0 | -0.0 | -0.0 |
-| VAML | -0.1 | +0.0 | +0.0 | +0.1 | -0.1 |
-| OIL | -0.1 | +0.0 | +0.0 | -0.0 | -0.0 |
-| LUPIN | -0.1 | +0.0 | +0.0 | -0.0 | -0.1 |
-| LTM | -0.1 | +0.0 | +0.0 | +0.0 | -0.1 |
-| LICHSGFIN | -0.1 | +0.0 | +0.0 | +0.5 | -0.6 |
-| MPHASIS | -0.1 | +0.0 | +0.0 | +0.0 | -0.1 |
-| HCLTECH | -0.1 | +0.0 | +0.0 | +0.0 | -0.1 |
+| NMDC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| DRREDDY | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| VAML | -0.0 | +0.0 | +0.0 | +0.1 | -0.1 |
+| HINDZINC | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| SUNPHARMA | -0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| LTM | -0.0 | +0.0 | +0.0 | +0.0 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -1.8 | +0.0 | +0.0 | -1.0 | -0.8 |
-| BAJFINANCE | -1.6 | +0.0 | +0.0 | -0.9 | -0.7 |
-| TATACAP | -1.6 | +0.0 | +0.0 | -0.8 | -0.8 |
-| GMRAIRPORT | -1.3 | +0.0 | +0.0 | -0.8 | -0.5 |
-| AUBANK | -1.3 | +0.0 | -0.0 | -0.7 | -0.5 |
-| PRESTIGE | -1.2 | +0.0 | +0.0 | -0.8 | -0.4 |
-| SHRIRAMFIN | -1.2 | +0.0 | +0.0 | -0.6 | -0.6 |
-| IREDA | -1.2 | +0.0 | +0.0 | -0.7 | -0.5 |
-| IDFCFIRSTB | -1.2 | +0.0 | +0.0 | -0.6 | -0.6 |
-| PHOENIXLTD | -1.1 | +0.0 | -0.1 | -0.8 | -0.3 |
-| GODREJPROP | -1.1 | +0.0 | +0.0 | -0.7 | -0.4 |
-| BAJAJFINSV | -1.1 | +0.0 | +0.0 | -0.6 | -0.5 |
-| LTF | -1.0 | +0.0 | -0.1 | -0.6 | -0.4 |
-| LODHA | -1.0 | +0.0 | +0.0 | -0.6 | -0.4 |
-| INDUSINDBK | -1.0 | +0.0 | +0.0 | -0.4 | -0.6 |
+| YESBANK | -1.0 | +0.0 | +0.0 | -0.7 | -0.3 |
+| TATACAP | -0.8 | +0.0 | +0.0 | -0.5 | -0.3 |
+| BAJFINANCE | -0.8 | +0.0 | +0.0 | -0.6 | -0.2 |
+| AUBANK | -0.7 | +0.0 | -0.0 | -0.4 | -0.2 |
+| IDFCFIRSTB | -0.7 | +0.0 | +0.0 | -0.5 | -0.2 |
+| IREDA | -0.6 | +0.0 | +0.0 | -0.4 | -0.2 |
+| PRESTIGE | -0.6 | +0.0 | +0.0 | -0.4 | -0.2 |
+| INDUSINDBK | -0.6 | +0.0 | +0.0 | -0.4 | -0.2 |
+| BAJAJFINSV | -0.6 | +0.0 | +0.0 | -0.4 | -0.2 |
+| LTF | -0.6 | +0.0 | -0.1 | -0.4 | -0.1 |
+| SHRIRAMFIN | -0.5 | +0.0 | +0.0 | -0.3 | -0.3 |
+| M&MFIN | -0.5 | +0.0 | -0.1 | -0.3 | -0.1 |
+| JSWENERGY | -0.5 | +0.0 | +0.0 | -0.4 | -0.1 |
+| AXISBANK | -0.5 | +0.0 | +0.0 | -0.3 | -0.2 |
+| VMM | -0.5 | -0.4 | -0.0 | -0.0 | +0.0 |
 
-Share of absolute impact by order: 1: 3%, 2: 4%, 3: 55%, 4: 38%
+Share of absolute impact by order: 1: 5%, 2: 6%, 3: 61%, 4: 28%
 
 ## Sources
 - 2026-11-03 Rabi sowing falls 46%; wheat 0.19 lakh ha - Business Today https://www.businesstoday.in/latest/economy/story/indias-rabi-sowing-falls-46-to-37-56-lakh-hectares-wheat-acreage-plunges-94-565374-2026-11-03

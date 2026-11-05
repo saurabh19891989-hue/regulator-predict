@@ -17,42 +17,42 @@ Agriculture Ministry (29 Sep) set a 2026-27 foodgrain target of 373.93 MT vs 376
 ## Most positively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| PIIND | +0.0 | +0.0 | -0.0 | +0.1 | -0.0 |
+| DMART | +0.1 | +0.4 | +0.0 | -0.2 | -0.1 |
+| NATIONALUM | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
+| OIL | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
+| HINDCOPPER | +0.1 | +0.0 | +0.0 | +0.1 | -0.0 |
+| PIIND | +0.1 | +0.0 | -0.0 | +0.1 | -0.0 |
+| ONGC | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
 | UPL | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
-| MCX | +0.0 | +0.0 | +0.0 | +0.1 | -0.1 |
-| DMART | -0.0 | +0.4 | +0.0 | -0.3 | -0.2 |
-| NATIONALUM | -0.1 | +0.0 | +0.0 | +0.0 | -0.1 |
-| HINDCOPPER | -0.1 | +0.0 | +0.0 | +0.0 | -0.1 |
-| SUNPHARMA | -0.1 | +0.0 | +0.0 | +0.0 | -0.1 |
-| NMDC | -0.1 | +0.0 | +0.0 | -0.1 | -0.0 |
-| VAML | -0.1 | +0.0 | +0.0 | +0.1 | -0.2 |
-| OIL | -0.1 | +0.0 | +0.0 | -0.0 | -0.1 |
-| LUPIN | -0.1 | +0.0 | +0.0 | -0.0 | -0.1 |
-| LTM | -0.1 | +0.0 | +0.0 | +0.1 | -0.2 |
-| LICHSGFIN | -0.1 | +0.0 | +0.0 | +0.8 | -1.0 |
-| MPHASIS | -0.1 | +0.0 | +0.0 | +0.1 | -0.2 |
-| HCLTECH | -0.2 | +0.0 | +0.0 | +0.0 | -0.2 |
+| LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| MCX | +0.0 | +0.0 | +0.0 | +0.1 | -0.0 |
+| NMDC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| DRREDDY | +0.0 | +0.0 | +0.0 | +0.0 | -0.0 |
+| VAML | -0.0 | +0.0 | +0.0 | +0.1 | -0.1 |
+| HINDZINC | -0.0 | +0.0 | +0.0 | +0.1 | -0.1 |
+| SUNPHARMA | -0.0 | +0.0 | +0.0 | +0.0 | -0.1 |
+| LTM | -0.0 | +0.0 | +0.0 | +0.1 | -0.1 |
 
 ## Most negatively affected (impact if the event happens, % equity value)
 | company | total | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|
-| YESBANK | -3.0 | +0.0 | +0.0 | -1.6 | -1.3 |
-| BAJFINANCE | -2.6 | +0.0 | +0.0 | -1.5 | -1.1 |
-| TATACAP | -2.6 | +0.0 | +0.0 | -1.4 | -1.3 |
-| RADICO | -2.3 | -1.8 | +0.1 | -0.6 | -0.0 |
-| GMRAIRPORT | -2.1 | +0.0 | +0.0 | -1.3 | -0.8 |
-| AUBANK | -2.1 | +0.0 | -0.1 | -1.2 | -0.9 |
-| PRESTIGE | -2.0 | +0.0 | +0.0 | -1.4 | -0.7 |
-| SHRIRAMFIN | -2.0 | +0.0 | +0.0 | -1.1 | -1.0 |
-| IREDA | -2.0 | +0.0 | +0.0 | -1.1 | -0.9 |
-| IDFCFIRSTB | -1.9 | +0.0 | +0.0 | -0.9 | -1.0 |
-| PHOENIXLTD | -1.9 | +0.0 | -0.1 | -1.3 | -0.4 |
-| GODREJPROP | -1.8 | +0.0 | +0.0 | -1.2 | -0.6 |
-| BAJAJFINSV | -1.8 | +0.0 | +0.0 | -1.0 | -0.8 |
-| LTF | -1.7 | +0.0 | -0.1 | -0.9 | -0.6 |
-| LODHA | -1.7 | +0.0 | +0.0 | -1.1 | -0.6 |
+| RADICO | -2.0 | -1.8 | +0.1 | -0.4 | +0.1 |
+| YESBANK | -1.6 | +0.0 | +0.0 | -1.2 | -0.4 |
+| TATACAP | -1.3 | +0.0 | +0.0 | -0.9 | -0.4 |
+| BAJFINANCE | -1.3 | +0.0 | +0.0 | -1.0 | -0.3 |
+| AUBANK | -1.1 | +0.0 | -0.1 | -0.7 | -0.3 |
+| IDFCFIRSTB | -1.1 | +0.0 | +0.0 | -0.8 | -0.3 |
+| IREDA | -1.1 | +0.0 | +0.0 | -0.7 | -0.4 |
+| PRESTIGE | -1.0 | +0.0 | +0.0 | -0.7 | -0.3 |
+| INDUSINDBK | -1.0 | +0.0 | +0.0 | -0.6 | -0.4 |
+| BAJAJFINSV | -0.9 | +0.0 | +0.0 | -0.7 | -0.3 |
+| LTF | -0.9 | +0.0 | -0.1 | -0.6 | -0.2 |
+| SHRIRAMFIN | -0.9 | +0.0 | +0.0 | -0.5 | -0.5 |
+| M&MFIN | -0.9 | +0.0 | -0.2 | -0.5 | -0.2 |
+| JSWENERGY | -0.9 | +0.0 | +0.0 | -0.7 | -0.2 |
+| AXISBANK | -0.9 | +0.0 | +0.0 | -0.5 | -0.3 |
 
-Share of absolute impact by order: 1: 4%, 2: 4%, 3: 55%, 4: 38%
+Share of absolute impact by order: 1: 7%, 2: 5%, 3: 60%, 4: 28%
 
 ## Sources
 - 2026-09-29 Foodgrain output estimate for 2026-27 reduced marginally - Financial Express https://www.financialexpress.com/policy/economy-foodgrain-output-estimate-for-2026-27-reduced-marginally-4349877/

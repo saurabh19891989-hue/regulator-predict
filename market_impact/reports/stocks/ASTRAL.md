@@ -2,56 +2,55 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.6%**, **12 months -0.1%** (rank 123 / 98 of 200 for 3m / 12m); beta 0.89
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.3%): 3 months 48%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +2.6%; plausible 12m relative-return range incl. stock-specific noise: -18.1% … +21.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.0% beta-adjusted vs realised market-adjusted move -13.4%); forward event exposure +2.1% (3m +0.0%; half assumed priced); company-specific events -0.2%
+- Expected relative return: **3 months -0.2%**, **12 months +0.1%** (rank 116 / 102 of 200 for 3m / 12m); beta 0.89
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.3%): 3 months 49%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.3% … P90 +3.7%; plausible 12m relative-return range incl. stock-specific noise: -15.8% … +23.9%
+- Decomposition (12m): 0.5 × forward event exposure +1.3% (3m +0.0%; half assumed priced) + 0.5 × company-specific catalysts -0.2%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.1% (beta-adjusted) vs a realised market-adjusted move of -13.4% — gap +12.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
 | driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
 |---|---|---|---|---|---|---|---|
-| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.83 | +0.00 | -1.89 | -0.67 | -0.27 | — |
-| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +2.42 | +2.50 | +0.00 | -0.07 | -0.01 | — |
-| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.85 | -1.50 | -0.23 | -0.11 | -0.01 | — |
+| Residential real-estate sales (`F_HOUSING_DEMAND`) | +10% sales volume | +2.43 | +2.50 | +0.00 | -0.07 | -0.00 | — |
+| RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.78 | -1.50 | -0.23 | -0.03 | -0.02 | — |
 | Indian anti-dumping duties (chemicals, solar, others) (`P_ANTI_DUMPING_IN`) | +1 = new broad duties | -1.58 | -1.50 | -0.08 | +0.00 | +0.00 | — |
-| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.39 | +0.00 | +0.00 | -1.04 | -0.35 | — |
-| US growth (`F_US_GDP`) | +1 pp | -1.39 | +0.00 | -0.54 | -0.72 | -0.13 | — |
-| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.33 | +1.50 | +0.00 | -0.07 | -0.10 | — |
-| Brent crude oil price (`F_BRENT`) | +10% Brent | -1.32 | +0.00 | -0.80 | -0.34 | -0.18 | +0.0% |
-| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.28 | -0.80 | -0.12 | -0.21 | -0.15 | -1.1% |
-| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.12 | +0.00 | +0.26 | -0.93 | -0.45 | — |
-| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.09 | +1.00 | +0.00 | -0.05 | +0.13 | — |
-| India real GDP growth (`F_GDP_IN`) | +1 pp | -1.03 | +0.00 | -0.36 | -0.39 | -0.28 | — |
-| US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -0.91 | -0.80 | +0.00 | -0.12 | +0.01 | +9.4% |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +1.35 | +1.50 | +0.00 | -0.07 | -0.08 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -1.24 | +0.00 | -1.02 | -0.19 | -0.02 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.11 | -0.80 | -0.12 | -0.14 | -0.05 | -1.1% |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +1.01 | +1.00 | +0.00 | -0.05 | +0.05 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -0.91 | +0.00 | -0.71 | -0.16 | -0.05 | +0.0% |
+| US 10-year Treasury yield (`F_US_10Y`) | +25 bp yield | -0.89 | -0.80 | +0.00 | -0.10 | +0.01 | +9.4% |
+| US growth (`F_US_GDP`) | +1 pp | -0.88 | +0.00 | -0.39 | -0.45 | -0.05 | — |
 | Chemical feedstock (benzene, propylene, etc.) (`F_CHEM_FEEDSTOCK`) | +10% feedstock | -0.80 | -0.80 | +0.00 | +0.00 | +0.00 | — |
+| Affordable-housing / home-loan support (`P_HOUSING_POLICY`) | +1 = stronger support | +0.78 | +0.00 | +0.80 | +0.00 | -0.02 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -0.77 | +0.00 | +0.26 | -0.81 | -0.21 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | +0.68 | +0.80 | -0.05 | -0.04 | -0.03 | +3.5% |
 
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.2% | -3.2% | +0.0 | -2.2 | -0.8 | -0.3 |
-| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.9% | -1.9% | -1.5 | -0.4 | +0.0 | -0.0 |
-| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -0.9 | -0.5 | -0.2 |
-| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.4% | -1.4% | -1.3 | +0.0 | +0.1 | -0.2 |
-| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | +5.4% | +1.4% | +0.0 | +4.1 | +0.4 | +0.8 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | -1.0 | -0.1 | -0.2 | -0.0 |
-| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -0.6 | -0.3 | -0.1 | -0.0 |
-| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.1% | +1.0% | +1.2 | +0.0 | -0.1 | -0.1 |
-| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.9% | +0.9% | +1.5 | -0.2 | -0.3 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.5% | +0.8% | -0.3 | +1.1 | +0.5 | +0.3 |
-| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.9% | -0.8% | -1.5 | -0.4 | +0.0 | -0.0 |
-| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.8 | +0.0 | +0.1 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.8% | -1.8% | -1.5 | -0.3 | +0.0 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -1.2 | -0.2 | -0.0 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.3% | -1.3% | -1.3 | +0.0 | +0.1 | -0.1 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.1% | +1.1% | +1.5 | -0.2 | -0.1 | -0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.1% | -1.1% | -1.0 | -0.0 | -0.1 | +0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -0.6 | -0.2 | -0.1 | +0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.7 | -0.2 | -0.0 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | +3.2% | +0.8% | +0.0 | +2.5 | +0.5 | +0.2 |
+| Finance ministry notifies anti-dumping duties on a meaningful batch of Chinese chemicals/APIs/others (`EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027`) | anticipated | 0.70 | -1.1% | -0.8% | -1.0 | -0.1 | +0.0 | +0.0 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.8% | -0.8% | -1.5 | -0.3 | +0.0 | -0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.0% | +0.7% | +1.0 | +0.0 | +0.1 | -0.0 |
+| DGTR opens wave of anti-dumping probes on Chinese chemicals, APIs and steel (`EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26`) | occurred | 1.00 | -0.6% | -0.6% | -0.6 | -0.0 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ASTRAL | +1.20% | +1.08% |
 | 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → ASTRAL | -1.05% | -0.73% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → ASTRAL | +1.00% | +0.68% |
 | 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ASTRAL | -1.50% | -0.63% |
 | 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ASTRAL | +2.00% | +0.50% |
-| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → ASTRAL | -1.73% | -0.43% |
 | 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → ASTRAL | +0.50% | +0.42% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → ASTRAL | -1.50% | -0.41% |
 | 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ASTRAL | +0.71% | +0.39% |
@@ -59,8 +58,10 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → ASTRAL | -1.00% | -0.32% |
 | 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ASTRAL | +2.00% | +0.30% |
 | 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → ASTRAL | -1.20% | -0.30% |
-| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → ASTRAL | +1.15% | +0.29% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ASTRAL | +0.30% | +0.27% |
 | 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → ASTRAL | -1.50% | -0.27% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → ASTRAL | -0.86% | -0.22% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → F_US_10Y → ASTRAL | +0.82% | +0.20% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -68,15 +69,15 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_MONSOON → ASTRAL | -1.56 | events | -1.56% |
 | 1 | F_REPO_IN → ASTRAL | +1.00 | events | -1.50% |
-| 1 | F_GOVT_CAPEX → ASTRAL | +1.00 | events | +1.50% |
 | 1 | F_US_10Y → ASTRAL | +1.68 | observed | -1.34% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → ASTRAL | +1.55 | director_override | -0.93% |
 | 1 | P_ANTI_DUMPING_IN → ASTRAL | +0.40 | events | -0.60% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → ASTRAL | +1.55 | director_override | -0.31% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → ASTRAL | +0.50 | events | +0.30% |
+| 1 | F_GOVT_CAPEX → ASTRAL | +0.20 | director_override | +0.30% |
 | 1 | F_USDINR → ASTRAL | -0.37 | observed | +0.30% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → ASTRAL | +1.00 | events | -0.26% |
-| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → ASTRAL | +1.00 | events | -0.20% |
 | 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → ASTRAL | +1.35 | events | -0.14% |
+| 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → ASTRAL | +0.50 | director_override | -0.10% |
 | 1 | F_RISK_SENTIMENT → ASTRAL | +0.11 | observed | +0.09% |
 
 ## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
