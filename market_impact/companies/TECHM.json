@@ -1,0 +1,371 @@
+{
+ "ticker": "TECHM",
+ "name": "Tech Mahindra Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "NIFTY_50",
+ "business_summary": "Mahindra group IT and BPS services provider with the highest communications-vertical weight among large Indian IT firms (telecom operators, enterprise, manufacturing, BFSI), on a margin-recovery turnaround. Q2 FY27: revenue Rs16,180 cr (+15.6% INR), US$1,693 mn (+2% q/q, cc +2.4% q/q, +7.2% y/y), EBIT margin 14.8% (+40 bp q/q, +270 bp y/y), PAT Rs1,586-1,610 cr (+33%), TCV US$1.02 bn (fourth straight quarter above US$1 bn); free cash flow down ~43% y/y. Board recommended a 1:1 bonus and a Rs15 dividend; management maintained its FY27 margin target. Mcap Rs1.79 lakh cr, P/E 31.3, dividend yield 2.8%.",
+ "revenue_mix": [
+  {
+   "segment": "IT and BPS services (communications ~1/3, enterprise, manufacturing, BFSI, other)",
+   "share_pct": 98,
+   "geography": "North America ~50% / Europe ~25% / rest of world ~25% (model estimate)"
+  },
+  {
+   "segment": "Other",
+   "share_pct": 2,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 65
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "TECHM",
+   "relation": "fx_translation",
+   "w": 1.8,
+   "w_low": -1.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "~92% of revenue foreign currency, INR ~45% of costs (model knowledge); ~25-30 bp margin per 1% INR on a 14.8% EBIT base => +3% = +85 bp = +5.7% EBIT; persistence 0.4, EV/MCap 0.95 => +2.2; trimmed to +1.8 for hedges and low base. Empirical -1.75 (t=-1.1), insignificant, wrong sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TECHM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDINR -1.75 (t=-1.1), insignificant"
+    },
+    {
+     "source": "https://www.kotakneo.com/news/stocks/tech-mahindra-share-price-in-focus-as-company-announces-q2-fy27-results/",
+     "date": "2026-10-16",
+     "note": "EBIT margin 14.8%, cc growth 2.4% q/q"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "TECHM",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Revenue growth cc +7.2% y/y (4 straight quarters of >US$1 bn TCV; trailing 12m US$4.27 bn); high operating leverage with margin recovering (EBIT 14.8% vs 12.1% a year ago). +5% US/EU IT spend => +2.5 pp growth => EBIT +5% on thin base; at P/E 31 the equity effect ~+3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/tech-mahindra-share-price-in-focus-as-company-announces-q2-fy27-results/",
+     "date": "2026-10-16",
+     "note": "Revenue Rs16,180 cr (+15.6%), US$1,693 mn (+2% q/q), cc +7.2% y/y"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India's+Tech+Mahindra+jumps+most+in+over+six+years+as+deal+wins+fuel+growth+optimism+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Reuters: biggest jump in over six years on deal wins"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "TECHM",
+   "relation": "substitution",
+   "w": -4.0,
+   "w_low": -10.0,
+   "w_high": 2.0,
+   "lag": ">12m",
+   "mechanism": "Communications/BPS and engineering exposure is among the most automatable (telecom ~1/3 of revenue, model estimate); +1 = ~3% repricing x 55% flow-through / 14.8% margin = -11% EBIT, persistence 0.4 => ~-4. Compare WIPRO -6, INFY -5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India's+Tech+Mahindra+maintains+fiscal+2027+margin+target+after+large+deals+drive+revenue+beat+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Reuters: margin target maintained after large deals; AI-led deal context"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Infosys+cuts+FY27+revenue+growth+guidance+to+1-2%25,+Q2+CC+revenue+growth+at+1.5%25+-+Fortune+India&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Sector guidance cut by Infosys"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "TECHM",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -6.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Lower onsite H-1B dependency than TCS/Infosys, so -2.0 (cost +1.0 pp of revenue => -6.8% EBIT, 60% passed through).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Trump+administration+freezes+green+cards+for+Microsoft,+IT+firms+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US green-card freeze for Indian IT majors (TechM not named in headline)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Trump+extends+H-1B+fee+amid+push+to+restrict+foreign+hiring+-+New+Indian+Express&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "note": "H-1B fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "TECHM",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.78 per +5% S&P (t=2.3, beta 0.75): US telecom/enterprise sentiment co-moves with equities; consistent.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TECHM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_US_EQUITIES +1.78 (t=2.3), beta 0.75"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "TECHM",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.3,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical -0.61 per +5 VIX points (t=-1.4); recent 22% rally in four days has raised beta.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TECHM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_RISK_SENTIMENT -0.61 (t=-1.4)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TECHM",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "P/E 31.3 on depressed earnings means longer duration than TCS: +25 bp => -1.0; debt-free.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TECHM/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 31.3, dividend yield 2.8%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI repo 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "TECHM",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -1.8,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "US/EU telecom and enterprise IT budgets; same as peers -0.7 per +25 bp.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fed+holds+rates+October+28+2026+dissents&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Fed holds 3.75-4.00% (event catalogue)"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "TECHM",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Europe is a large region for telecom/manufacturing deals; +1 pp EU/UK demand => +1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/tech-mahindra-share-price-in-focus-as-company-announces-q2-fy27-results/",
+     "date": "2026-10-16",
+     "note": "International markets; Europe a key region"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "TECHM",
+   "relation": "input_cost",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "+2 pp wage inflation on ~58% employee cost/revenue = +1.2 pp of revenue = -7.8% EBIT on a 14.8% base, ~60% recovered, persistence 0.5 => -2.0; the thin margin base magnifies it versus TCS.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/tech-mahindra-share-price-in-focus-as-company-announces-q2-fy27-results/",
+     "date": "2026-10-16",
+     "note": "EBIT margin up 40 bp q/q to 14.8% on efficiency programme"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Mahindra & Mahindra / Mahindra group",
+   "ticker": "M&M",
+   "role": "parent",
+   "importance": "medium",
+   "note": "Promoters 34.96%"
+  },
+  {
+   "counterparty": "Global telecom operators (US/Europe)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Communications vertical; US telecom stocks fell on 12 Oct and TechM fell 4%"
+  },
+  {
+   "counterparty": "TCS / Infosys / HCLTech / Wipro",
+   "ticker": "TCS",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Large-deal competitors"
+  },
+  {
+   "counterparty": "Hyperscaler / AI platform partners",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "low",
+   "note": "Cloud and AI platforms"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Bonus 1:1 and Rs15 dividend record/payment dates (board recommended 15 Oct; bonus subject to shareholder approval)",
+   "type": "corporate_action",
+   "prob": 0.9,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "https://www.kotakneo.com/news/stocks/tech-mahindra-share-price-in-focus-as-company-announces-q2-fy27-results/"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date unconfirmed, ~mid-Jan): margin vs FY27 target, TCV, cash conversion",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.kotakneo.com/news/stocks/tech-mahindra-share-price-in-focus-as-company-announces-q2-fy27-results/"
+  },
+  {
+   "date": "2026-12-09",
+   "event": "FOMC hike odds 0.58 (US telecom and enterprise capex sensitive)",
+   "type": "other",
+   "prob": 0.58,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Fed+holds+rates+October+28+2026+dissents&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11-17",
+   "event": "Nvidia results: AI trade read-across",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Nvidia+earnings+November+17+2026+AI+capex&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Telecom client capex/spend commentary and large-deal conversions",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Tech+Mahindra+Shares+Fall+4%25+As+US+Telecom+Stocks+Slide+-+NDTV+Profit&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-15: revenue Rs16,180 cr, EBIT 14.8%, PAT Rs1,586 cr (+33% y/y), TCV US$1.02 bn; screener OPM 18% (different definition).",
+  "trend": "Steady margin recovery (OPM 14% -> 18% over six quarters) and double-digit INR revenue growth; shares surged 22% in four days and +21% in a month after the result, Jefferies upgrade and Motilal Buy (TP Rs1,950).",
+  "valuation": "P/E 31.3 (screener) falling to ~25x on annualised EPS; price Rs1,824 near the 52w high Rs1,854; EV/EBITDA not computed. Brokers: Jefferies upgrade, MOSL Buy Rs1,950, HSBC sees upside.",
+  "recent_developments": [
+   "2026-10-15: Q2 results; Rs15 dividend and 1:1 bonus recommended (Moneycontrol/ET/NDTV Profit)",
+   "2026-10-15: Reuters - maintains fiscal 2027 margin target after large deals",
+   "2026-10-16: shares +8%, biggest one-day gain in over six years (Reuters)",
+   "2026-10-19: ET - 22% rally in 4 days; technical caution",
+   "2026-10-12: shares -4% as US telecom stocks slide (NDTV Profit)"
+  ]
+ },
+ "key_risks": [
+  "After a 22% four-day rally, results-driven momentum may mean-revert",
+  "Communications client concentration and US telecom capex",
+  "Free cash flow -43% y/y; working capital",
+  "AI/automation deflation on BPS and engineering",
+  "Thin margin base magnifies wage and visa costs",
+  "Fed hikes and weak US labour data (+29k payrolls)"
+ ],
+ "upside_triggers": [
+  "Margin above target with TCV >US$1 bn each quarter",
+  "Rupee weakness and US tech budgets steady",
+  "Bonus liquidity and rerating",
+  "Large-deal conversions in telecom and manufacturing"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.kotakneo.com/news/stocks/tech-mahindra-share-price-in-focus-as-company-announces-q2-fy27-results/",
+   "date": "2026-10-16",
+   "what": "Kotak Neo: Q2 FY27 revenue/EBIT"
+  },
+  {
+   "url": "https://hdfcsky.com/news/tech-mahindra-q2-results-shares-rise-7-46-percent-as-profit-jumps-32-7-percent",
+   "date": "2026-10-16",
+   "what": "HDFC Sky: profit +32.7%, shares +7.5%"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India's+Tech+Mahindra+jumps+most+in+over+six+years+as+deal+wins+fuel+growth+optimism+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "Reuters headline: biggest jump in six years"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India's+Tech+Mahindra+maintains+fiscal+2027+margin+target+after+large+deals+drive+revenue+beat+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Reuters headline: FY27 margin target maintained"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tech+Mahindra+Shares+Fall+4%25+As+US+Telecom+Stocks+Slide+-+NDTV+Profit&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-12",
+   "what": "NDTV Profit headline: TechM falls with US telecom stocks"
+  },
+  {
+   "url": "https://www.screener.in/company/TECHM/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals and empirical sensitivities (evidence pack)"
+  }
+ ]
+}

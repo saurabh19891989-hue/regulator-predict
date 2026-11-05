@@ -1,0 +1,451 @@
+{
+ "ticker": "NHPC",
+ "name": "NHPC Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_RENEWABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Government of India's flagship hydropower company (Navratna): 9,333 MW operating (8,771 MW hydro, 562 MW solar/wind; ~16.9% of India's hydro), 9,204 MW under construction (Subansiri Lower 2,000 MW being commissioned unit by unit, Parbati-II, Teesta-VI, Kiru, Kwar, Ratle, Dibang, Pakal Dul), ~10 GW awaiting clearances. Tariffs are CERC cost-plus with ~15.5% RoE on regulated equity, so earnings track capacity commissioning. Q2 FY27: revenue Rs 4,483 cr (+33%), net profit Rs 1,658 cr (+36%; consolidated +52%) after a Rs 231 cr Teesta IV provision. Promoter (President of India) 61.4%; mcap Rs 81.5k cr, P/E 18.8, dividend yield 2.0%; borrowings Rs 57.4k cr.",
+ "revenue_mix": [
+  {
+   "segment": "Hydro power sales (regulated, PAF-based)",
+   "share_pct": 93,
+   "geography": "India (J&K, HP, Uttarakhand, Sikkim, Assam/Arunachal, etc.)"
+  },
+  {
+   "segment": "Solar/wind, consultancy and trading",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Employee and O&M",
+   "share_of_costs_pct": 38
+  },
+  {
+   "input": "Interest (partly capitalised)",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "Depreciation",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "Other",
+   "share_of_costs_pct": 7
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "NHPC",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -3.6,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Regulated cost-plus hydro (CERC 15.5% RoE on regulated equity; equity base growing with ~Rs 9.2k cr of projects under construction): a bond-proxy with 2.0% dividend yield and P/E 18.8, EV/MCap ~1.6 (borrowings Rs 57.4k cr vs mcap Rs 81.5k cr). +25bp on a ~9% discount rate with duration ~9 => -2.2%; RoE not indexed to yields until the next tariff period => -2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NHPC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 81,475 cr, P/E 18.8, div yield 2.0%, borrowings Rs 57,408 cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "NHPC",
+   "relation": "funding_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Interest on normative debt is a pass-through in CERC tariffs, so operating plants are insulated; exposure is interest during construction on Rs 38.9k cr CWIP (capitalised, raising project cost and delaying RoE) and floating-rate debt: Rs 57k cr x ~50% floating x 25bp = Rs 72 cr, ~70% recovered => Rs 22 cr = -0.5% of PAT, capitalised, EV/MCap 1.6 => -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.nhpcindia.com/assests/pzi_public/gallery/17859053110.pdf",
+     "date": "2026-06-30",
+     "note": "Debt-equity ratio 1.16; long-term debt Rs 47,705 cr (Jun-26)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "NHPC",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "AAA PSU with government support, so spread beta is low; but incremental borrowing of Rs 15,000 cr FY27 capex (company target) is mostly debt-funded at 70:30. +50bp on ~Rs 10k cr = Rs 50 cr/yr, 70% passed through for operating assets, higher for CWIP => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NHPC+Targets+INR+15%2C000+Crore+Capex+for+FY27",
+     "date": "2026-08-11",
+     "note": "SolarQuarter: NHPC targets Rs 15,000 cr capex for FY27"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "NHPC",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": -0.8,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Revenue is largely capacity-based (PAF) under CERC tariffs, but generation above design energy earns secondary energy and PAF incentives (NHPC FY26: ~5% of revenue) and flood/silt events cut availability (Teesta V restoration completed; Teesta IV/Subansiri geological issues). A +10% rainfall year adds ~3-4% generation => ~+1.5% EBITDA, x1.6 EV/MCap x 0.35 persistence => +0.8; wide range because heavy rain also causes outages. Q2 FY27 with a 13% monsoon deficit still posted +33% revenue, driven by new capacity (Subansiri).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.nhpcindia.com/assests/pzi_public/gallery/17859053110.pdf",
+     "date": "2026-06-30",
+     "note": "Subansiri Lower highest generation in Q1 FY27 (1,316 MU); Teesta-V restoration completed"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=NHPC+Q2+FY27",
+     "date": "2026-11-04",
+     "note": "Revenue +33% in Q2 on new hydro capacity (CNBC TV18 headline)"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "NHPC",
+   "relation": "policy_effect",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Customers are state discoms; trade receivables Rs 4,354 cr (Jun-26) vs Rs 2,629 cr at Mar-26 and debtor days improved from 114 to 83 (screener). The LPS rules and discom reform improve collection and reduce working-capital interest; +1 SSU => debtor days -10 => +Rs 600 cr cash (0.7% of mcap) + risk premium cut => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.nhpcindia.com/assests/pzi_public/gallery/17859053110.pdf",
+     "date": "2026-06-30",
+     "note": "Trade receivables Rs 4,354 cr at Jun-26 vs Rs 2,629 cr at Mar-26"
+    },
+    {
+     "source": "https://www.screener.in/company/NHPC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Debtor days improved from 114 to 82.6"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "NHPC",
+   "relation": "policy_effect",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Large hydro counts as renewable; pumped-storage VGF/ISTS waiver/hydro cost-overrun support improve the pipeline (10,263 MW awaiting clearances; 8,014 MW hydro under construction; 17,930 MW PSP under survey). Kamala (1,720 MW) got CCEA approval 8 Apr 2026 and is seeking forest clearance for 23.4 lakh trees (Oct). +1 SSU => +10% accelerated approvals => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.nhpcindia.com/assests/pzi_public/gallery/17859053110.pdf",
+     "date": "2026-06-30",
+     "note": "Hydro under construction 8,014 MW; awaiting clearances 10,118 MW; Kamala 1,720 MW CCEA approval 8.4.2026"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=NHPC+Sawalkote+OR+Etalin+OR+Kamala+hydro+approval+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "NHPC seeks forest clearance to fell 23.4 lakh trees for Kamala; Sawalkot 1,856 MW work to start (Sep)"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "NHPC",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "PAF-based fixed charges make NHPC volume-insensitive; demand matters via secondary energy, peaking value of hydro and merchant sales, and sentiment for PSU generators. +3pp => +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.nhpcindia.com/assests/pzi_public/gallery/17859053110.pdf",
+     "date": "2026-06-30",
+     "note": "Tariffs on availability (PAF) basis; secondary energy and PAF incentive small"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "NHPC",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Central budgetary support for enabling infrastructure of hydro projects (roads/bridges, Rs 12-15k cr scheme - model knowledge) and equity infusion/PSU capex push lowers NHPC's net project cost. +10% government capex => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NHPC+Sawalkote+OR+Etalin+OR+Kamala+hydro+approval+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-03",
+     "note": "Government pushing Sawalkot 1,856 MW, Etalin 3,097 MW, Kamala - approvals/MoUs"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "NHPC",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": -3.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Indus Waters Treaty in abeyance since 2025 (model knowledge; NatStrat Sep 2026 headline) accelerates NHPC's Chenab projects (Sawalkot, Pakal Dul, Kiru, Kwar, Ratle); escalation also raises attack/availability risk at Salal, Uri and J&K assets and cost overruns (4 J&K projects: Rs 5,737 cr overrun, 3.5-yr average delay - Rajya Sabha, 20 Jul 2026). Net slight positive, very wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NHPC+Indus+Waters+Treaty+abeyance+Chenab+projects+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-07-20",
+     "note": "4 strategic J&K hydro projects face Rs 5,737 cr cost overrun, avg 3.5 yr delay (PSU Watch)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=NHPC+Indus+Waters+Treaty+abeyance+Chenab+projects+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-09",
+     "note": "After Abeyance: Indus Basin and the New Water Politics (NatStrat)"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "NHPC",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Hydro construction uses steel (penstock, gates) and cement; project costs are approved in tariff but overruns beyond approved cost need CERC clearance and delay RoE. +7% steel on ~Rs 9k cr of annual capex x 10% steel content = Rs 63 cr, 40% unrecoverable => -0.03% mcap x 1.6... plus cost-overrun risk => -0.4. Pack shows +3.48 for iron ore (t +2.0), a spurious PSU/commodity-cycle co-movement not carried into the weight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.nhpcindia.com/assests/pzi_public/gallery/17859053110.pdf",
+     "date": "2026-06-30",
+     "note": "Projects under construction 9,204 MW with cost-overrun/geology issues (Teesta-IV provision Rs 231 cr in Q2)"
+    },
+    {
+     "source": "https://www.screener.in/company/NHPC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical F_IRON_ORE +3.48 per SSU, t +2.0"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "NHPC",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.8,
+   "lag": "0-3m",
+   "mechanism": "FIIs 13.2% (up from 10.3% in Mar-26), DIIs 14.3%, promoter (Government) 61.4% after a ~6pp stake sale in Q1 FY27 (67.4% -> 61.4% per screener; OFS details not fetched); market beta ~1.2. +5bn => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/NHPC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Promoter holding 67.40% (Mar-26) -> 61.39% (Jun/Sep-26); FIIs 13.17%; DIIs 14.26%"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "NHPC",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Pumped storage (17.9 GW under survey), solar (1,190 MW under construction), BESS and green-hydrogen optionality; 50,000 MW capacity target by 2047 (AGM, 28 Aug 2026). +1 SSU => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NHPC+Sawalkote+OR+Etalin+OR+Kamala+hydro+approval+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-28",
+     "note": "NHPC 50th AGM targets 50,000 MW by 2047 (Sarkaritel headline)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India (President of India)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "61.4% promoter; policy, budget support and OFS overhang"
+  },
+  {
+   "counterparty": "State discoms (Punjab, J&K, UP, Rajasthan, Haryana etc.)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Long-term PPAs; receivables Rs 4,354 cr at Jun-26"
+  },
+  {
+   "counterparty": "BHEL",
+   "ticker": "BHEL",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Hydro turbine/generator equipment supplier (model knowledge)"
+  },
+  {
+   "counterparty": "Essar (300 MW hybrid PPA, 4 Nov 2026) / Tata Power (commissioned 300 MW Rajasthan solar for NHPC, 5 Nov 2026)",
+   "ticker": "TATAPOWER",
+   "role": "supplier",
+   "importance": "low",
+   "note": "Solar developers under NHPC bids"
+  },
+  {
+   "counterparty": "SJVN / NTPC / THDC",
+   "ticker": "NTPC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Compete for hydro and pumped-storage allocations"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "Further Subansiri Lower units commissioned (Unit 5 on 21 Oct 2026; 4 units were remaining at Jun-26 per presentation) lifting regulated equity",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.5,
+   "source": "https://news.google.com/rss/search?q=NHPC+Sawalkote+OR+Etalin+OR+Kamala+hydro+approval+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Kiru (624 MW), Pakal Dul (1,000 MW) and Rangit-IV commissioning scheduled Q3-Q4 FY27 (slippage typical)",
+   "type": "capex",
+   "prob": 0.4,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.nhpcindia.com/assests/pzi_public/gallery/17859053110.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "Kamala (1,720 MW) forest clearance and Sawalkot (1,856 MW) construction start",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.5,
+   "source": "https://news.google.com/rss/search?q=NHPC+Sawalkote+OR+Etalin+OR+Kamala+hydro+approval+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 declared 4 Nov; estimate late Jan/early Feb 2027)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge on schedule"
+  },
+  {
+   "date": "2027-03",
+   "event": "Further government OFS in NHPC (promoter 61.4% after Q1 FY27 sale; government remains seller of PSU stakes)",
+   "type": "corporate_action",
+   "prob": 0.25,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.5,
+   "source": "https://news.google.com/rss/search?q=NHPC+stake+sale+OFS+promoter+government+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Additional provisions or cost overruns on Teesta-IV or arbitration outcomes",
+   "type": "litigation",
+   "prob": 0.3,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": -0.5,
+   "source": "https://news.google.com/rss/search?q=NHPC+Teesta+IV+provision+Rs+231+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 4,483 cr (+33% YoY), operating profit Rs 2,876 cr (OPM 64%), net profit Rs 1,658 cr (+36%); consolidated profit Rs 1,525-1,549 cr (+52%) after Rs 231 cr Teesta IV provision.",
+  "trend": "Profit growing on new capacity but interest expense has doubled (Rs 278 cr in Sep-25 -> Rs 556 cr in Sep-26 quarter) as Subansiri and Parbati-II are capitalised; borrowings Rs 57.4k cr (+Rs 5k cr in H1).",
+  "valuation": "P/E 18.8, P/B 1.9, dividend yield 2.0% (payout 53%), ROE 9.3%; stock Rs 81 (+11% in a month, -4% in 12m).",
+  "recent_developments": [
+   "2026-08-11: FY27 capex target Rs 15,000 cr (SolarQuarter)",
+   "2026-08-28: 50th AGM; target 50,000 MW capacity by 2047",
+   "2026-09-03: Work to start on 1,856 MW Sawalkot project (Daily Excelsior)",
+   "2026-10-21: Unit 5 of Subansiri Lower commissioned (EquityBulls)",
+   "2026-10-22: Seeks forest clearance for Kamala (23.4 lakh trees)",
+   "2026-11-04: Q2 results; Rs 231 cr Teesta IV provision; Essar signs 300 MW PPA",
+   "2026-11-05: Stock in focus after results"
+  ]
+ },
+ "key_risks": [
+  "Geological/cost overruns and delays (Teesta-IV, Subansiri, J&K projects Rs 5,737 cr overrun)",
+  "Government stake sales (OFS) and PSU overhang",
+  "Discom receivables and hydrology",
+  "Rising yields compress a bond-proxy PSU",
+  "Tariff regulation changes (CERC 2024-29 and next control period)"
+ ],
+ "upside_triggers": [
+  "Faster Subansiri/Kiru/Pakal Dul commissioning (regulated equity and PAT growth)",
+  "Approvals for Kamala, Etalin, Sawalkot, pumped storage",
+  "Dividend payout and lower yields",
+  "Indus Waters Treaty abeyance accelerating Chenab projects"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.nhpcindia.com/assests/pzi_public/gallery/17859053110.pdf",
+   "date": "2026-06-30",
+   "what": "NHPC investor presentation, Q1 FY27 (capacity, projects under construction, receivables)"
+  },
+  {
+   "url": "https://www.screener.in/company/NHPC/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "market_impact/data/packs/NHPC.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities and headlines pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=NHPC+Teesta+IV+provision+Rs+231+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "NHPC Q2 results headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=NHPC+Sawalkote+OR+Etalin+OR+Kamala+hydro+approval+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-22",
+   "what": "project approvals headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=NHPC+stake+sale+OFS+promoter+government+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-04",
+   "what": "government stake sale headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike headlines"
+  }
+ ]
+}

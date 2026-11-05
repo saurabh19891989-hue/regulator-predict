@@ -1,0 +1,98 @@
+# ADANIGREEN — Adani Green Energy Ltd.
+*NIFTY_NEXT_50 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
+
+## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
+- Expected relative return: **3 months +2.6%**, **12 months +3.9%** (rank 37 / 45 of 200 for 3m / 12m); beta 1.62
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.6%): 3 months 56%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.8% … P90 +9.8%; plausible 12m relative-return range incl. stock-specific noise: -46.8% … +45.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.2 pp (model impact +10.4% beta-adjusted vs realised market-adjusted move -9.7%); forward event exposure -2.1% (3m -0.4%; half assumed priced); company-specific events +1.7%
+
+## What moves this stock (company → drivers)
+% change in equity value for a +1 standard shock of each driver, split by causal order.
+| driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
+|---|---|---|---|---|---|---|---|
+| Renewable / transmission policy support (`P_RENEWABLE_SUPPORT`) | +1 = stronger support | +6.96 | +6.00 | +1.01 | -0.03 | -0.02 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -4.83 | +0.00 | -2.19 | -2.37 | -0.27 | — |
+| Energy transition investment (`T_ENERGY_TRANSITION`) | +1 | +3.92 | +4.00 | -0.06 | -0.04 | +0.02 | — |
+| India 10-year G-sec yield (`F_GSEC_10Y_IN`) | +25 bp yield | -3.75 | -3.50 | -0.25 | +0.00 | -0.00 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +3.39 | +3.00 | +0.23 | +0.03 | +0.13 | — |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -2.90 | -1.00 | -0.56 | -0.74 | -0.60 | -1.1% |
+| Indian data-centre build-out (`T_DATA_CENTRES_IN`) | +1 | +2.87 | +2.80 | +0.05 | +0.02 | +0.00 | — |
+| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -2.54 | +0.00 | +0.00 | -1.21 | -1.33 | — |
+| Indian corporate credit spreads (`F_CREDIT_SPREADS_IN`) | +50 bp spreads | -2.50 | -2.50 | +0.00 | +0.00 | -0.00 | — |
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -2.43 | +0.00 | -1.40 | -0.74 | -0.28 | +3.5% |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -2.17 | +0.00 | -0.68 | -0.75 | -0.74 | +0.0% |
+| Gold price (`F_GOLD`) | +8% gold (USD) | -2.11 | -2.00 | +0.00 | -0.06 | -0.06 | -8.4% |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -1.91 | -0.40 | -0.32 | -0.56 | -0.63 | — |
+| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +1.88 | +0.00 | +0.96 | +0.77 | +0.15 | +1.2% |
+
+## Events affecting this stock (event → company)
+| event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
+|---|---|---|---|---|---|---|---|---|
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -12.4% | -12.4% | -0.6 | -3.8 | -4.0 | -4.0 |
+| Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +7.9% | +7.9% | +8.0 | -0.1 | -0.0 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -7.6% | -7.6% | -6.6 | -0.6 | -0.1 | -0.4 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -5.7% | -5.7% | -5.7 | +0.0 | +0.0 | -0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -5.6% | -5.6% | +0.0 | -2.5 | -2.7 | -0.3 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +8.7% | +4.3% | +7.5 | +0.7 | +0.1 | +0.4 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -13.2% | -3.7% | +0.0 | -10.5 | -2.0 | -0.7 |
+| ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +3.5% | +3.5% | +3.0 | +0.5 | -0.0 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -9.4% | -3.4% | -0.5 | -3.7 | -2.8 | -2.5 |
+| Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +3.3% | +3.3% | +3.3 | +0.0 | +0.0 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +5.3% | +3.0% | +0.4 | +2.0 | +1.5 | +1.3 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -3.0% | -3.0% | +0.0 | -2.3 | -0.6 | -0.1 |
+
+## Strongest causal chains (1st–4th order)
+| order | chain | impact if event | expected 12m |
+|---|---|---|---|
+| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → ADANIGREEN | -6.60% | -6.60% |
+| 1 | EV_BESS_VGF_NOV26 ⇒ P_RENEWABLE_SUPPORT → ADANIGREEN | +6.00% | +6.00% |
+| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → ADANIGREEN | -4.90% | -4.90% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIGREEN | +7.50% | +3.75% |
+| 1 | EV_SOLAR_ALMM2_CELL_MANDATE ⇒ P_RENEWABLE_SUPPORT → ADANIGREEN | +3.00% | +3.00% |
+| 1 | EV_PRECIOUS_METALS_CRASH_2026 ⇒ F_GOLD → ADANIGREEN | +2.10% | +2.10% |
+| 1 | EV_POWER_SPOT_SPIKE ⇒ F_POWER_PRICE_IN → ADANIGREEN | +2.10% | +2.10% |
+| 1 | EV_BESS_VGF_NOV26 ⇒ T_ENERGY_TRANSITION → ADANIGREEN | +2.00% | +2.00% |
+| 3 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → F_GSEC_10Y_IN → ADANIGREEN | -1.83% | -1.83% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → ADANIGREEN | -1.78% | -1.78% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → ADANIGREEN | -1.56% | -1.56% |
+| 2 | EV_UST_SELLOFF_SEP26 ⇒ F_US_10Y → F_GSEC_10Y_IN → ADANIGREEN | -1.55% | -1.55% |
+| 1 | EV_US_MIDTERMS_DEM_SWEEP ⇒ F_FPI_FLOWS → ADANIGREEN | +1.50% | +1.50% |
+| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → F_FPI_FLOWS → ADANIGREEN | -1.41% | -1.41% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIGREEN | -2.80% | -1.40% |
+
+## Analyst profile (agent research, sourced)
+# ADANIGREEN — Adani Green Energy Ltd. (as of 2026-11-05)
+
+*Scenario/exposure analysis relative to the Nifty 200; not a validated forecast. Sources are listed in `ADANIGREEN.json` (AGEL Q2 FY27 earnings presentation and call transcript, screener.in, Google-News headline searches). "Model knowledge" marks facts from training memory.*
+
+## Business
+AGEL develops, owns and operates utility-scale solar, wind and hybrid plants plus a fast-growing storage book. At 30 Sep 2026 it had 20,763 MW operational (14,550 MW solar, 3,266 MW hybrid, 2,947 MW wind; +24% YoY) and 6.6 GWh of battery storage, mostly at Khavda in Gujarat, the largest single-location renewable site in the world. The 2030 target is 50 GW, supported by a Rs 2.4 lakh cr capex programme. Revenue is contracted: nearly all capacity sits under 25-year fixed-tariff PPAs with SECI, NTPC, state discoms and private offtakers, and the PPAs are take-or-pay, with curtailment ordered by the grid paid for. EBITDA margin on power supply is about 92%, so the equity story is entirely about growth in operating MW, the cost of capital, and avoiding curtailment and counterparty slippage. Q2 FY27: revenue from power supply Rs 4,019 cr (+45%), EBITDA Rs 3,835 cr (+51%), but PAT only Rs 747 cr because interest (Rs 2,119 cr) and depreciation (Rs 1,084 cr) absorb most of EBITDA. Net debt Rs 102,973 cr (5.6x run-rate EBITDA), average cost 8.9% with 72% fixed, and 100% of foreign-currency debt principal hedged.
+
+## What moves the stock
+1. **Long-duration discount rate (G-sec -3.5, repo -1.0, spreads -2.5).** P/E is 119 and EV/MCap about 1.44. The RBI hiked 25bp on 7 Oct 2026 and the US 10y is 4.89%. Management argues rate risk is limited because 72-73% of project loans are fixed for three to five years and operating SPVs re-rate to AA/AAA (one SPV, about 15% of EBITDA, is now AAA at 8.4%). The valuation effect still dominates the earnings effect.
+2. **Transmission readiness at Khavda (P_RENEWABLE_SUPPORT +6).** H1 EBITDA was Rs 8,276 cr versus about Rs 9,000 cr without curtailment. Management now says Phase-3 evacuation will arrive in Q4 FY27 rather than by December, but it still expects 4.5-5 GW of FY27 commissioning if the corridor is ready, and has accelerated BESS to soak up curtailed energy.
+3. **Policy and theme support** (PM-DHARA corridor scheme, energy-transition and data-centre themes: +4.0 and +2.8) which broaden the PPA pipeline and underpin the valuation premium.
+4. **Foreign flows and group sentiment** (FPI +3.0, group contagion 0.35 from Adani Enterprises). The US criminal case was dismissed on 10 Aug 2026; FII ownership is 11.3% and DIIs have risen from 2.4% to 5.3% in 18 months.
+5. **Rupee and battery costs** (-1.0 and -0.5): hedged debt but imported cells.
+6. **Merchant exposure** (power price +0.7, demand +1.2) is small.
+The pack's strongest empirical co-movements are negative loadings on gold (t -3.3) and silver (t -2.7). They have no fundamental link and are carried as a low-confidence proxy for risk-on / real-yield sensitivity.
+
+## Worked transmission examples
+- **Hormuz disruption -> LNG shortage and Brent up (1st) -> Indian inflation and yields up, RBI turns hawkish (2nd) -> corporate spreads and the 10-year G-sec rise (3rd) -> AGEL's valuation falls because 80% of its value is terminal and its net debt/EBITDA is 5.6x (4th).** At the same time, energy-security policy strengthens the demand for domestic RE plus storage (opposite sign, smaller).
+- **Slow grid build at Khavda (ROW delays at Power Grid/AESL) -> solar curtailment during peak hours (1st) -> lower billed units; take-or-pay protects PPAs with counterparties but not units curtailed by the grid on non-PPA capacity (2nd) -> EBITDA short by Rs 700 cr per half (3rd) -> 5.6x leverage persists longer and rating upgrades are delayed (4th).** Accelerated BESS is the mitigation.
+- **Weak monsoon (-13% in Q2) -> record demand (270 GW) and thermal dispatch (1st) -> spot power prices rise and coal stocks run critical (2nd) -> states tender more firm/storage-backed power, which AGEL's 6.6 GWh BESS and hybrid portfolio can bid for (3rd) -> better pricing in FDRE/C&I tenders, higher ROE (13-14% target) (4th).**
+- **Lower battery-cell prices (F_BATTERY_MATERIALS down) -> cheaper BESS capex (1st) -> competitive tariffs in storage tenders (2nd) -> higher win rates but lower tariff per MWh (3rd) -> faster rollout but unchanged IRR (4th).**
+
+## Current situation
+H1 FY27 energy sold was 25.7 bn units (+32%); cash profit was Rs 4,176 cr (+35%). Net debt rose Rs 11.7k cr in the half. Jefferies (12 and 23 Oct) rates it a Buy with about 35% upside, and the stock fell 4% on results day, then recovered; it is 13% below its 52-week high of Rs 1,632. The call confirmed the ROE framework of 13-14% and a preference for AA+ counterparties.
+
+## Upcoming events
+Phase-3 Khavda evacuation (Q4 FY27), the 4.5-5 GW FY27 commissioning outcome, 500 MW Chitravathi pumped storage and >10 GWh BESS by year-end, conversion of 974 MW of merchant capacity to fixed PPAs, Q3 FY27 results (late Jan 2027, estimated), and the tail risk of renewed US legal action. Probabilities are in `company_events`.
+
+## Bull and bear
+**Bull:** curtailment ends in H2, commissioning reaches 4.5-5 GW, upgrades cut funding cost to below 8.5%, hyperscaler/C&I contracts lift tariffs. **Bear:** evacuation slips again, yields rise further, group legal risk returns, and a 119x P/E offers little cushion if growth in operating EBITDA disappoints.
+
+
+## Caveats
+Exposure-driven, scenario-implied estimate from an LLM-built causal graph grounded in fundamentals and price co-movement. It has not been validated out of sample; see `ledger/` for the prospective scoring record.

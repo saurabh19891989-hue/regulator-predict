@@ -1,0 +1,56 @@
+# India re-imposes curbs on broken-rice exports (`EV_RICE_BROKEN_EXPORT_CURB`)
+*agri_rural · status anticipated · date 2026-12-15 · P(3m) 0.35 · P(12m) 0.45 · confidence low*
+
+IREF warned on 3 Nov that India may re-impose restrictions on 100% broken rice exports as international prices cross US$360/t and domestic demand rises from ethanol distillers and poultry feed. No curbs announced yet. The ethanol tender (zero sugar diversion; broken rice priced Rs 64/l) could pull large volumes of broken rice into fuel; Reuters flagged the biggest rice output drop in ~2 decades. Offsetting factor: huge Central Pool rice stocks. Probability 35% by early Feb; 45% by Nov 2027.
+
+## Entry shocks (conditional on the event)
+- `F_RICE` Rice price: -0.3 SSU (range -0.8…0.0) Global rice price effect of curb is positive for importers, but Indian domestic rice falls; node is global/Indian export price (+10% SSU), which would rise elsewhere: net -0.3 domestic, global +0.5 (ambiguous).
+- `F_FOOD_INFLATION_IN` India food inflation: -0.1 SSU (range -0.3…0.0) Domestic cereal price relief.
+
+## Causal chains (agent)
+- order 2: EV_RICE_BROKEN_EXPORT_CURB → F_RICE → F_FOOD_INFLATION_IN — Domestic broken rice/feed prices ease.
+- order 3: EV_RICE_BROKEN_EXPORT_CURB → F_RICE → F_RURAL_DEMAND — Rice farmers' realisation lower in deficit year, weakening rural income.
+- order 4: EV_RICE_BROKEN_EXPORT_CURB → F_RICE → F_CPI_IN — Small CPI relief.
+
+## Most positively affected (impact if the event happens, % equity value)
+| company | total | 1st | 2nd | 3rd | 4th |
+|---|---|---|---|---|---|
+| RADICO | +1.0 | +0.9 | -0.0 | +0.1 | +0.0 |
+| YESBANK | +0.6 | +0.0 | +0.0 | +0.3 | +0.3 |
+| BAJFINANCE | +0.5 | +0.0 | +0.0 | +0.3 | +0.2 |
+| TATACAP | +0.5 | +0.0 | +0.0 | +0.3 | +0.3 |
+| GMRAIRPORT | +0.4 | +0.0 | +0.0 | +0.3 | +0.2 |
+| AUBANK | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
+| PRESTIGE | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| SHRIRAMFIN | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
+| IREDA | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
+| IDFCFIRSTB | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
+| PHOENIXLTD | +0.4 | +0.0 | +0.0 | +0.3 | +0.1 |
+| GODREJPROP | +0.4 | +0.0 | +0.0 | +0.2 | +0.1 |
+| BAJAJFINSV | +0.4 | +0.0 | +0.0 | +0.2 | +0.2 |
+| LTF | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+| LODHA | +0.3 | +0.0 | +0.0 | +0.2 | +0.1 |
+
+## Most negatively affected (impact if the event happens, % equity value)
+| company | total | 1st | 2nd | 3rd | 4th |
+|---|---|---|---|---|---|
+| PIIND | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| UPL | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| MCX | -0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| DMART | +0.0 | -0.1 | +0.0 | +0.1 | +0.0 |
+| NATIONALUM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HINDCOPPER | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| SUNPHARMA | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| NMDC | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| VAML | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| OIL | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| LUPIN | +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
+| LTM | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| LICHSGFIN | +0.0 | +0.0 | +0.0 | -0.2 | +0.2 |
+| MPHASIS | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+| HCLTECH | +0.0 | +0.0 | +0.0 | -0.0 | +0.0 |
+
+Share of absolute impact by order: 1: 6%, 2: 4%, 3: 54%, 4: 37%
+
+## Sources
+- 2026-11-03 India may reimpose broken rice export restrictions - ET/PTI https://m.economictimes.com/news/economy/agriculture/india-may-reimpose-broken-rice-export-restrictions-as-prices-cross-360-per-tonne-iref/articleshow/135493265.cms

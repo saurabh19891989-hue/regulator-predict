@@ -1,0 +1,99 @@
+# IOC — Indian Oil Corporation Ltd.
+*NIFTY_NEXT_50 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
+
+## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
+- Expected relative return: **3 months +5.6%**, **12 months +11.2%** (rank 8 / 9 of 200 for 3m / 12m); beta 1.27
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.5%): 3 months 71%, 12 months 72%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +4.9% … P90 +19.5%; plausible 12m relative-return range incl. stock-specific noise: -9.8% … +40.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.2 pp (model impact +6.5% beta-adjusted vs realised market-adjusted move -1.2%); forward event exposure +14.0% (3m +6.5%; half assumed priced); company-specific events +4.2%
+
+## What moves this stock (company → drivers)
+% change in equity value for a +1 standard shock of each driver, split by causal order.
+| driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
+|---|---|---|---|---|---|---|---|
+| OMC petrol+diesel marketing margin (`NEW_OMC_MARKETING_MARGIN`) | +Rs1/litre average marketing margin (vs normal ~Rs3-4/l) | +6.52 | +6.50 | +0.00 | +0.02 | -0.00 | — |
+| Refining margins (GRM / cracks) (`F_REFINING_MARGIN`) | +$2/bbl gross refining margin | +3.95 | +4.00 | -0.05 | +0.00 | +0.00 | +15.4% |
+| Russia (oil discounts, defence, sanctions) (`C_RUSSIA`) | +1 = closer trade access / larger discounts | +3.94 | +2.50 | +1.49 | -0.13 | +0.08 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -3.65 | -3.50 | -0.08 | +0.21 | -0.28 | — |
+| Government compensation to OMCs for fuel/LPG under-recoveries (`NEW_OMC_COMPENSATION`) | +1 = Rs25,000 cr compensation to oil marketing companies | +3.20 | +3.20 | +0.00 | +0.00 | +0.00 | — |
+| Brent crude oil price (`F_BRENT`) | +10% Brent | -2.43 | -2.20 | -0.02 | -0.21 | -0.01 | +0.0% |
+| USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.87 | -1.80 | +0.02 | -0.08 | -0.01 | -1.1% |
+| Windfall / export taxes on commodities (`P_WINDFALL_EXPORT_TAX`) | +1 = imposition | -1.74 | -0.80 | -0.96 | +0.00 | +0.02 | — |
+| OPEC+ crude supply decisions (`NEW_OPEC_PLUS_SUPPLY`) | +1 mb/d OPEC+ production (quota/actual) | +1.70 | +0.00 | +1.41 | +0.02 | +0.27 | — |
+| Petrochemical / polymer spreads (`F_PETROCHEM_SPREADS`) | +10% polymer-naphtha spreads | +1.50 | +1.50 | +0.00 | +0.00 | +0.00 | — |
+| Red Sea / Suez shipping disruption (`C_RED_SEA`) | +1 = disruption | +1.25 | +0.00 | +1.28 | -0.03 | +0.00 | — |
+| India food inflation (`F_FOOD_INFLATION_IN`) | +2 pp | -1.19 | +0.00 | -0.19 | -1.07 | +0.07 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.03 | +1.20 | -0.19 | +0.03 | -0.00 | — |
+| Fuel excise / retail price policy (+ = higher taxes/regulated squeeze) (`P_FUEL_TAX_IN`) | +1 = Rs 2/litre excise rise | -1.01 | -1.00 | +0.00 | -0.02 | +0.01 | — |
+
+## Events affecting this stock (event → company)
+| event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
+|---|---|---|---|---|---|---|---|---|
+| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -19.5% | -19.5% | -19.5 | +0.0 | -0.1 | +0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -13.0% | -13.0% | -10.1 | -1.7 | -1.1 | -0.1 |
+| Government allows OMCs a retail petrol/diesel price hike (Rs3-5/l) (`EV_INDIA_RETAIL_FUEL_HIKE`) | anticipated | 0.45 | +16.1% | +7.2% | +16.2 | -0.3 | +0.1 | -0.0 |
+| Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2 (`EV_LPG_UNDERRECOVERY`) | occurred | 1.00 | -6.5% | -6.5% | -6.5 | +0.0 | -0.0 | +0.0 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +4.3% | +4.3% | +2.5 | +1.7 | +0.0 | +0.1 |
+| Cabinet approves further LPG under-recovery compensation to OMCs (`EV_LPG_COMPENSATION_CABINET`) | anticipated | 0.60 | +6.5% | +3.9% | +6.5 | +0.0 | +0.0 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -9.1% | -3.3% | -10.4 | +1.8 | -0.4 | -0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +4.8% | +2.8% | +3.6 | +0.8 | +0.4 | +0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.4 | -0.4 | -0.0 |
+| India cuts Russian crude below ~1 mb/d as part of US trade deal (`EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL`) | anticipated | 0.30 | -5.1% | -1.5% | -4.5 | -0.5 | -0.0 | -0.1 |
+| Hormuz effectively closed for >2 weeks (Brent > $150) (`EV_HORMUZ_FULL_CLOSURE`) | risk_scenario | 0.06 | -21.7% | -1.4% | -24.1 | +3.7 | -1.1 | -0.3 |
+| Windfall/export levy re-set: petrol nil, diesel Rs11.5/l, ATF ~Rs11/l (31 Oct); excise reportedly cut (3 Nov, unverified) (`EV_EXPORT_LEVY_REVISIONS`) | occurred | 1.00 | -1.2% | -1.2% | -0.3 | -1.0 | +0.0 | +0.0 |
+
+## Strongest causal chains (1st–4th order)
+| order | chain | impact if event | expected 12m |
+|---|---|---|---|
+| 1 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → IOC | -19.50% | -19.50% |
+| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → IOC | -10.89% | -10.89% |
+| 1 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → IOC | +16.25% | +7.31% |
+| 1 | EV_LPG_UNDERRECOVERY ⇒ NEW_OMC_MARKETING_MARGIN → IOC | -6.50% | -6.50% |
+| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_REFINING_MARGIN → IOC | +6.00% | +6.00% |
+| 1 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → IOC | -5.25% | -5.25% |
+| 1 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → IOC | +6.50% | +3.90% |
+| 1 | EV_RUSSIA_WAIVER_OCT17 ⇒ C_RUSSIA → IOC | +2.50% | +2.50% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → IOC | +3.50% | +2.03% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → IOC | -5.50% | -1.96% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → IOC | +3.30% | +1.92% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → IOC | -3.20% | -1.86% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → IOC | -4.20% | -1.50% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_USDINR → IOC | -1.41% | -1.41% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → P_FUEL_TAX_IN → IOC | +1.06% | +1.06% |
+
+## Analyst profile (agent research, sourced)
+# Indian Oil Corporation (IOC) — market impact profile (as of 2026-11-05)
+
+## Business
+IOC runs ~80 MMTPA of refining capacity, roughly half of India's fuel marketing, a national pipeline network, LPG, petrochemicals and gas ventures. It earns a refining margin (global, moves with crude and cracks), a marketing margin (regulated in practice: retail petrol, diesel and LPG prices are changed rarely, so the margin is the difference between a sticky pump price and a moving crude/product cost), a pipeline tariff and a smaller petchem spread. This makes IOC structurally ambivalent about crude: high crude is good for GRM and inventory, bad for marketing; the net depends on whether pump prices move and whether the government compensates. Shares: promoters 51.5%, other government 19.6%, FII 8.6%, DII 9.9%.
+
+## What moves the stock (ranked)
+1. **Brent and frozen pump prices (F_BRENT, C_MIDEAST_CONFLICT)** — the dominant driver; empirical elasticity -1.80 per +10% Brent (t -3.7) and mid-east escalation -3.5.
+2. **Refining margin (F_REFINING_MARGIN)** — +4.0 per +$2/bbl; Q2 FY27 shows GRM and inventory gains can swing quarterly PAT by Rs 20k+ cr.
+3. **Policy: compensation, excise and windfall levies (NEW_OMC_COMPENSATION, P_FUEL_TAX_IN, P_WINDFALL_EXPORT_TAX)** — compensation of Rs 25k cr is worth ~+3% of market cap; a Rs 2/L excise absorption ~-1%.
+4. **Russian discount and sanctions (C_RUSSIA)**.
+5. **USD/INR, rates, GDP, petchem, gas** — second-tier.
+
+## Worked transmission examples
+- **War -> crude -> OMC margin (4 orders).** Hormuz escalation (order 0) lifts Brent 10-15% (order 1) -> pump prices unchanged so petrol/diesel/LPG under-recover (Rs 530 cr/day industry-wide at ~$105, ICRA) (order 2: IOC EBITDA falls, as seen in Q1 FY27's operating profit of Rs 4.1k cr) -> OMC borrowings and working-capital needs rise, credit spreads widen for PSU issuers and the government considers either a retail hike or compensation (order 3) -> a retail hike lifts CPI (+0.3-0.4pp per Rs 3/L, rough estimate) so RBI delays easing, which hurts rate-sensitive sectors but lifts IOC's relative earnings once pass-through occurs (order 4).
+- **Crude -> rupee -> import bill.** Brent up -> USD/INR up (crude is ~25% of India's import bill) -> IOC's rupee crude cost rises further, and USD debt marks lower -> additional EBITDA pressure beyond the dollar price effect -> government faces fiscal slippage from excise concessions.
+- **Falling crude (current regime).** US midterm result -> war de-escalation hopes -> Brent below $95 -> marketing margin recovers within weeks while inventory gains reverse -> Q3 FY27 profit lower than Q2 but with a better underlying marketing contribution -> market rewards the lower volatility (OMCs +up to 7% on 5 Nov).
+- **Russian-oil channel.** Wider Urals discounts -> lower crude cost for IOC -> higher GRM in INR -> yet US secondary tariffs (100% threat on Russian-oil buyers, Sep 2026) would raise trade-policy risk for Indian exporters (RELIANCE, textiles) rather than IOC directly.
+
+## Current situation
+Q2 FY27 record: standalone PAT Rs 21,630 cr, consolidated Rs 22,503 cr, driven by refining margins and inventory gains; earlier Q1 FY27 delivered a Rs 1,141 cr loss. OPM 13% vs 7% a year ago. Shares +10% in a month but -14% over 12 months at 4.3x trailing earnings and 0.89x book; Nomura target implies ~42% upside. Management warned LPG losses persist; analysts (NDTV Profit) expect H2 pain as inventory gains reverse. IOC is trimming West Asian term crude under annual deals (BS, 21 Oct). OMCs have asked for Rs 75,000 cr compensation with a decision in 2027.
+
+## Upcoming events
+Q3 FY27 results (late Jan/Feb 2027), possible pump-price or excise change, compensation decision, interim dividend, Panipat/petchem milestones, Iran war diplomacy.
+
+## Bull case
+Brent drifts to $80-90, GRM stays >$8-10/bbl (Singapore cracks wide because of diesel shortages), government compensates LPG losses, dividend yield of 6% supports a re-rating from 0.9x to 1.2x book.
+
+## Bear case
+Brent re-spikes above $105 with no pump price change, Q2 inventory gains reverse, windfall levies tighten, LPG loses Rs 25k+ cr a year, and the market treats Q2 as peak earnings.
+
+*Weights are exposure estimates with ranges, not return forecasts.*
+
+
+## Caveats
+Exposure-driven, scenario-implied estimate from an LLM-built causal graph grounded in fundamentals and price co-movement. It has not been validated out of sample; see `ledger/` for the prospective scoring record.

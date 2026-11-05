@@ -393,6 +393,7 @@ NEW_MSP_HIKE_IN,NEW,Minimum support price increase above normal,+5 pp weighted M
 NEW_FX_RESERVES_IN,NEW,India FX reserves (RBI intervention),+US$25bn reserves (RBI buys / net inflows),,,,FACTOR,backbone_india.json
 NEW_OMC_MARKETING_MARGIN,NEW,OMC petrol+diesel marketing margin,+Rs1/litre average marketing margin (vs normal ~Rs3-4/l),,,,FACTOR,energy.json
 NEW_USDJPY,NEW,USD/JPY exchange rate,+3% USD/JPY (yen weaker),,,,FACTOR,global_macro.json
+NEW_ADANI_GROUP_LEGAL_RISK,NEW,"Adani group legal/regulatory risk (US DoJ/SEC/OFAC, SEBI, Hindenburg-type events)",+1 = new material enforcement action or adverse ruling,,,,POLICY,ADANIENT
 NEW_CEMENT_PRICE_IN,NEW,Indian cement trade price (realisation),+Rs10/bag (~+2.5%),,,,FACTOR,AMBUJACEM
 NEW_NPPA_DRUG_PRICE_CONTROL,NEW,India NPPA/NLEM drug price control and trade-margin regulation,+1 = one tightening step (NLEM expansion or trade-margin cap),,,,POLICY,APOLLOHOSP
 NEW_CONSUMER_DURABLES_PRICE_WAR,NEW,Consumer durables category promotional / discount intensity,"+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances",,,,FACTOR,ASIANPAINT

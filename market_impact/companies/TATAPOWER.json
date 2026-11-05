@@ -1,0 +1,550 @@
+{
+ "ticker": "TATAPOWER",
+ "name": "Tata Power Co. Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_POWER_THERMAL",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Integrated Tata Group utility: generation (Mundra UMPP 4 GW imported coal, Jojobera, Maithon, hydro), renewables (6.7 GW; >9 GW targeted by Mar-27; TP Renewable), transmission & distribution (Mumbai licence, Delhi TPDDL, Odisha DISCOMs, Ajmer; TBCB lines), solar manufacturing (TP Solar, 4.3 GW cells/modules, rooftop), coal mines and shipping in Indonesia, EV charging, pumped hydro and Bhutan hydro. Q1 FY27 (Jun 2026): PAT Rs 1,401 cr (+11%, 27th straight quarter of EBITDA/PAT growth), underlying EBITDA Rs 4,249 cr (+8%), revenue Rs 19,051 cr. Net debt/underlying EBITDA 3.41x; capex Rs 6-6.5k cr/qtr. Q2 FY27 results pending (date not located). Mcap Rs 1.16 lakh cr, P/E 29.7; promoters (Tata Sons group) 46.86%.",
+ "revenue_mix": [
+  {
+   "segment": "Transmission & distribution (Mumbai, Delhi, Odisha, Ajmer)",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "Thermal + hydro generation incl. Mundra, Jojobera, Maithon (incl. coal/shipping pass-through)",
+   "share_pct": 35,
+   "geography": "India (Gujarat, Jharkhand, WB etc.); Indonesia coal ~5%"
+  },
+  {
+   "segment": "Renewables (utility, rooftop, TP Solar manufacturing, EPC)",
+   "share_pct": 25,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Purchased power and fuel (coal, gas)",
+   "share_of_costs_pct": 62
+  },
+  {
+   "input": "F_COAL_INTL",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "Employee, O&M, other",
+   "share_of_costs_pct": 23
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TATAPOWER",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": -0.9,
+   "lag": "0-3m",
+   "mechanism": "P/E 29.7, EV/MCap ~1.5 (net debt/underlying EBITDA 3.41x, net debt/equity 1.25x per mgmt; mcap Rs 1.16 lakh cr). Regulated Mumbai T&D, TBCB lines and 25-yr PPAs give long-duration, partly inflation-indexed cash flows; +25bp on ~10% WACC, duration ~13 => -3.3, minus offset from CERC/MERC RoE resets => -2.5. Pack: US-10y beta -0.99 per 25bp (t -1.7), consistent.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "CFO: net debt to underlying EBITDA 3.41, net debt to equity 1.25"
+    },
+    {
+     "source": "https://www.screener.in/company/TATAPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,16,342 cr; P/E 29.7; borrowings Rs 76,141 cr (Mar-26)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TATAPOWER",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Consolidated borrowings Rs 76k cr (Mar-26), interest Rs 1,407 cr in Q1 FY27 vs PBT Rs 1,823 cr. Floating share ~50% (estimate): +25bp = Rs 95 cr/yr = -1.8% of PAT (TTM Rs 5.3k cr); regulated T&D recovers actual interest on normative debt; renewables fixed tariffs do not => 60% unrecovered => -1.1% x EV/MCap 1.5 x persistence 0.6 => -1.0 (funding channel only).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TATAPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Interest Q1 FY27 Rs 1,407 cr; PBT Rs 1,823 cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "TATAPOWER",
+   "relation": "funding_cost",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.6,
+   "lag": "3-12m",
+   "mechanism": "Capex running Rs 6,000-6,500 cr/quarter (Q2 FY27, CFO) incl. 2.5 GW renewables, PSP and 2,000 km transmission, so net debt is rising (borrowings 62.9k -> 76.1k cr in FY26). +50bp on ~Rs 30k cr refinanced/new in 2 yrs = Rs 150 cr/yr = -2.9% PAT, 60% unrecovered, EV/MCap 1.5, persistence 0.5 => -1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "CFO: Q2 capex plan Rs 6,000-6,500 cr, ~half renewables; PSP accelerating; >2,000 km transmission in pipeline"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "TATAPOWER",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.5,
+   "lag": "3-12m",
+   "mechanism": "Renewables cluster (6.7 GW -> >9 GW by Mar-27; 2.5-2.7 GW to be added in FY27), rooftop (+100% revenue last year, +60-70% planned), TP Solar (4.3 GW cell/module capacity; 1 GW modules, 0.9 GW cells Q2) all depend on DCR/ALMM, ISTS waiver, PM Surya Ghar and storage mandates. +1 SSU => +20% on renewables+rooftop+manufacturing EBITDA growth for 2 yrs: renewables+solar ~35% of EBITDA (est.) => +3% value x 1.5 x ... => +4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Sinha: renewables 6.7 GW now, >9 GW by FY-end; rooftop revenue ~+100%; ALMM-II continues for rooftop and utility"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Power+solar+manufacturing+Tirunelveli+cell+ALMM+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "TP Solar produced 1 GW modules, 0.9 GW cells in Q2 FY27 (ET EnergyWorld, CNBC TV18)"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "TATAPOWER",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": -0.8,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Broad anti-dumping/ALMM-III protection on cells, wafers, glass benefits TP Solar's integrated 4.3 GW cell+module capacity (module output peaked >1,000 MW/qtr; cell output still ramping) and raises domestic module prices, but raises costs of its own utility-scale EPC/rooftop (imported cells for non-DCR use). Mgmt: ALMM-II 'not a rollback', affects ~10% of DCR demand. Net +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Sinha: ALMM-II continues for rooftop and utility; special proviso ~10% of DCR requirement"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "TATAPOWER",
+   "relation": "output_price",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Indonesian coal stakes (KPC, Arutmin and BSSR minority holdings - model knowledge) and Mundra Coal & Shipping earn when seaborne prices rise; mgmt (Jul): coal prices +5-7%, coal profitability improving. Mundra UMPP supplementary PPA is cost-plus (actual coal cost, normative fixed cost, no ROE), so pass-through is neutral and part of coal-sale profit is netted in the tariff. Estimated Indonesian coal EBITDA Rs ~1,500-2,000 cr/yr: +15% price => +30% = +Rs 500 cr = +3% group EBITDA, 50% netted/taxed => +1.5% x EV/MCap 1.5 x 0.4 => +1.0. Pack empirical +1.88 (t +1.3) consistent.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Sinha: coal prices up 5-7%; supplementary PPA on actual coal cost with no ROE; Mundra scheduled under Section 11"
+    },
+    {
+     "source": "https://www.screener.in/company/TATAPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical F_COAL_INTL +1.88 per SSU, t +1.3"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "TATAPOWER",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Q1 FY27 power demand +8.5% (May +11%, June 9.8%); Tata Power's distribution volumes (Mumbai, Delhi, Odisha, Ajmer) grow with demand but are regulated; thermal/hydro PLF and Mundra dispatch rise. +3pp demand => +2.5% distribution/generation volumes => +1.2% EBITDA x 1.5 x 0.8 => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Sinha: Q1 power demand growth ~8.5%, July 260-270 GW; delayed rains"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+coal+stocks+critical+October+2026+imported+coal+Section+11+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Coal stocks critical as demand surges"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "TATAPOWER",
+   "relation": "output_price",
+   "w": 0.7,
+   "w_low": 0.2,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Limited merchant exposure: Jojobera/Maithon/IEL thermal largely PPA-backed, Mundra on supplementary PPA, renewables fixed-tariff. +15% spot => merchant slice (~6% of generation) +Rs 100-150 cr => +0.8% EBITDA x 1.5 x 0.5 => +0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Mundra operating under Section 11 with SPPA billing; 3 states' approvals expected Aug-Sep"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "TATAPOWER",
+   "relation": "policy_effect",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Four DISCOMs (TPDDL Delhi, TPCODL/TPSODL/TPWODL Odisha, Mumbai franchise, Ajmer) - collection efficiency and tariff orders drive earnings (Odisha Q1 muted by three issues incl. collections/government dues). +1 SSU (reform progress, tariff true-up) => +5% distribution PAT growth and higher collections => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Odisha growth muted in Q1 for three reasons; improvement expected; Delhi DISCOM Q&A"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "TATAPOWER",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Mumbai transmission ~Rs 10,000 cr regulated investment in 5 yrs; TBCB projects (Jalpura-Khurja, Bikaner-Neemrana by Oct 2026) and >2,000 km pipeline; +1 SSU => +10% regulated base growth => +2 after EV/MCap and persistence.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Sinha: Rs 10,000 cr Mumbai transmission investment over 5 yrs; Bikaner-Neemrana line by October"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "TATAPOWER",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "PSP (Bhivpuri etc., first unit CY2029, 1,800 MW Shirwata soon), Bhutan hydro (Khorlochhu PPA with UPPCL signed), nuclear exploration and BESS add optionality; +1 SSU => 1.5x multiple support for transition pipeline ~ +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "PSP commissioning from early CY2029; Khorlochhu 600 MW PPA signed with UPPCL, operational CY2030"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TATAPOWER",
+   "relation": "fx_translation",
+   "w": 0.2,
+   "w_low": -1.2,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Offsetting USD exposures: imported solar wafers/cells and coal (pass-through at Mundra) cost more, but USD-linked Indonesian coal earnings and Mundra USD dollar-indexed cost recovery rise. Net near zero; +3% => +/-0.5% EBITDA noise. Rupee at 94.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "SPPA on actual coal cost; Indonesian coal sales"
+    },
+    {
+     "source": "https://www.screener.in/company/TATAPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Debt Rs 76,141 cr; Q1 FY27 sales Rs 19,051 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "TATAPOWER",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Beta ~1.4 (pack); FII holding 10.1% flat, DIIs rising (18.5%); +US$5bn FPI inflow ~ +2% Nifty x 1.4 x 0.7 => +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TATAPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Shareholding Sep-26: promoters 46.86%, FIIs 10.13%, DIIs 18.48%"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "TATAPOWER",
+   "relation": "geopolitical_exposure",
+   "w": 0.3,
+   "w_low": -2.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Hormuz disruption lifts seaborne coal (helps Indonesian coal earnings) and energy-security capex, but raises yields/inflation (negative for a 3.4x levered utility). Net ~0 with wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Strait+of+Hormuz+LNG+India+power+coal+import+Middle+East+conflict+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Middle East conflict disrupting LNG/crude via Hormuz; Asia pivoting to coal (Wood Mackenzie 12 Oct, EnergyNow 3 Nov 2026 headlines)"
+    },
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Sinha/Q&A: Indonesian coal market commentary amid on-off Hormuz situation"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "TATASTEEL",
+   "dst": "TATAPOWER",
+   "relation": "group_contagion",
+   "w": 0.12,
+   "w_low": 0.03,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Tata Steel is Tata Power's largest industrial counterparty (Jamshedpur utility, captive/pumped-storage offtake discussions - Q1 call) and a fellow Tata Sons company. Pack shows Tata Power loading +4.88 per +15% iron ore (t +3.4) and +1.58 on steel (t +2.0), most plausibly through group/Tata-complex co-movement rather than any direct raw-material link. Tata group sell-offs on Tata Sons governance (Sep 2026, Rs 40,000 cr lost) hit both. w = % move in Tata Power per 1% move in Tata Steel (judgement).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Sons+listing+Tata+Power+stake+shareholding+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-18",
+     "note": "Tata Trusts rejected Tata Sons listing; Tata group stocks lost ~Rs 40,000 cr / US$3.2 bn (CNBC TV18, Livemint 18 Sep 2026); S&P 29 Sep: little rating impact"
+    },
+    {
+     "source": "https://www.screener.in/company/TATAPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical F_IRON_ORE +4.88 per SSU, t +3.4; F_STEEL_GLOBAL +1.58, t +2.0"
+    },
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+     "date": "2026-07-28",
+     "note": "Balance 2 PSP units: discussions with Tata Steel and other procurers"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Tata Sons / Tata Group trusts",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "Tata Sons holds the promoter stake; Tata Trusts rejected Tata Sons listing (Sep 2026) in a governance dispute that dented all Tata stocks"
+  },
+  {
+   "counterparty": "Tata Steel",
+   "ticker": "TATASTEEL",
+   "role": "customer",
+   "importance": "medium",
+   "note": "Industrial offtaker and potential PSP buyer; group company"
+  },
+  {
+   "counterparty": "Gujarat, Maharashtra, Punjab, Haryana, Rajasthan discoms (Mundra SPPA)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Procurers of Mundra UMPP; 3 states' cabinet approvals expected Aug-Sep 2026"
+  },
+  {
+   "counterparty": "Kleros Capital (arbitration)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "US$490 mn SIAC award against Tata Power; challenge dismissed Aug 2026, appeal filed"
+  },
+  {
+   "counterparty": "Adani Power / Adani Energy Solutions",
+   "ticker": "ADANIPOWER",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Compete in thermal PPAs, TBCB transmission and Mumbai licence area (parallel licence)"
+  },
+  {
+   "counterparty": "NHPC",
+   "ticker": "NHPC",
+   "role": "customer",
+   "importance": "low",
+   "note": "Tata Power commissioned a 300 MW Rajasthan solar project for NHPC (5 Nov 2026)"
+  },
+  {
+   "counterparty": "Coal India / Indonesian miners",
+   "ticker": "COALINDIA",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Domestic coal for Jojobera/Maithon; Indonesian coal for Mundra via captive stakes"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (date not confirmed in this research; Upstox schedule article 7 Oct 2026)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Tata+Power+Q2+FY27+results+date+board+meeting+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Mundra supplementary PPA cabinet approvals from remaining states (3 expected Aug, 4th Sep) - confirmation/gap",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+  },
+  {
+   "date": "2027-06",
+   "event": "Singapore appeal outcome on US$490 mn Kleros award; adverse outcome costs ~Rs 4,600 cr (~4% of mcap) if unprovided",
+   "type": "litigation",
+   "prob": 0.3,
+   "impact_pct_low": -4.5,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=Tata+Power+Kleros+Capital+arbitration+Singapore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Renewable capacity reaches >9 GW (2.5-2.7 GW FY27 additions; 500 MW slipped to Q2 due to transmission delays)",
+   "type": "capex",
+   "prob": 0.65,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+  },
+  {
+   "date": "2027-06",
+   "event": "Tata Sons listing/governance decision (Trusts rejected on 18 Sep; RBI upper-layer NBFC directive) and shareholder-value unlocking",
+   "type": "corporate_action",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Tata+Sons+listing+Tata+Power+stake+shareholding+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results; Odisha DISCOM collection improvement and TP Solar cell ramp-up",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge on schedule"
+  },
+  {
+   "date": "2026-12",
+   "event": "Shirwata 1,800 MW PSP board approval and new NTPC/NHPC pumped-hydro bids",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026, latest on screener): sales Rs 19,051 cr (+6%), operating profit Rs 3,860 cr (OPM 20%), PAT Rs 1,401 cr (+11%). Q2 FY27 numbers not yet available as of 5 Nov 2026.",
+  "trend": "27 consecutive quarters of PAT/EBITDA growth (mgmt). Renewables +22% revenue, rooftop ~+100%, transmission margins steady; Mundra back on a cost-reimbursement SPPA (no ROE). Net debt rising with capex; Rs 4,318 cr of earnings is 'other income' (screener).",
+  "valuation": "P/E 29.7, P/B 2.9, ROE 10%, dividend yield 0.7%; 12m return -9% and 6m -17% (last Rs 364 vs high Rs 465). Tata group lost ~Rs 40,000 cr in market cap on 18 Sep on the Sons-listing dispute.",
+  "recent_developments": [
+   "2026-07-28: Q1 FY27 call: PAT Rs 1,401 cr; 2.5-2.7 GW RE additions in FY27; PSP CY2029; Khorlochhu hydro PPA with UPPCL",
+   "2026-08-26/27: Singapore court dismissed Tata Power's challenge to US$490 mn Kleros SIAC award; shares -4% (CNBC TV18); Tata Power appealing (30 Sep Moneycontrol)",
+   "2026-09-18: Tata Trusts rejected Tata Sons listing; group lost ~Rs 40,000 cr; 2026-09-29 S&P says little rating impact",
+   "2026-10-01: Power stocks fell despite Rs 1.86 lakh cr PM-DHARA approval (Livemint)",
+   "2026-10-07/08: TP Solar produced 1 GW modules and 0.9 GW cells in Q2 FY27; Tata Power Renewable doubled Q2 capacity addition to 419 MW (BS 12 Oct)",
+   "2026-10-07: RBI repo hike to 5.50%",
+   "2026-11-05: Tata Power commissioned NHPC's 300 MW Rajasthan solar project (Multibagg headline)"
+  ]
+ },
+ "key_risks": [
+  "Kleros US$490 mn arbitration award (appeal) - up to ~4% of mcap",
+  "Tata Sons governance dispute / listing uncertainty",
+  "Net debt/EBITDA 3.4x with Rs 6k cr+ quarterly capex in a rising-rate regime",
+  "Mundra SPPA is zero-ROE and relies on state approvals; Section 11 expiry risk",
+  "Odisha/Delhi DISCOM collection and regulatory outcomes; TP Solar margin pressure from imported cell/wafer costs and module price swings"
+ ],
+ "upside_triggers": [
+  "Renewable additions (2.5 GW) and rooftop/EV/solar manufacturing scale-up",
+  "Mundra SPPA approvals and long-term extension to 2038",
+  "Pumped-storage and Bhutan hydro progress; nuclear/transmission wins",
+  "Favourable resolution of Tata Sons listing/unlocking and Kleros appeal"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=f2eec946-af3f-4579-8a6b-1483aa6f7312.pdf",
+   "date": "2026-07-28",
+   "what": "Tata Power Q1 FY27 earnings call transcript (filed 31 Jul 2026)"
+  },
+  {
+   "url": "https://www.screener.in/company/TATAPOWER/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Jun 2026"
+  },
+  {
+   "url": "market_impact/data/packs/TATAPOWER.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities and headlines pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Power+Kleros+Capital+arbitration+Singapore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-30",
+   "what": "Kleros arbitration headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Sons+listing+Tata+Power+stake+shareholding+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-18",
+   "what": "Tata Sons listing headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Power+Q1+FY27+net+profit+renewable+EBITDA+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-07-27",
+   "what": "Q1 FY27 result headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Power+solar+manufacturing+Tirunelveli+cell+ALMM+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-08",
+   "what": "TP Solar Q2 production headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike headlines"
+  }
+ ]
+}

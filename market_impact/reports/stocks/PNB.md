@@ -1,0 +1,98 @@
+# PNB — Punjab National Bank
+*NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
+
+## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
+- Expected relative return: **3 months +1.0%**, **12 months +0.0%** (rank 66 / 103 of 200 for 3m / 12m); beta 1.22
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.0%): 3 months 53%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.8% … P90 +5.3%; plausible 12m relative-return range incl. stock-specific noise: -29.3% … +20.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +3.8% beta-adjusted vs realised market-adjusted move +15.5%); forward event exposure +3.5% (3m +2.4%; half assumed priced); company-specific events -1.1%
+
+## What moves this stock (company → drivers)
+% change in equity value for a +1 standard shock of each driver, split by causal order.
+| driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
+|---|---|---|---|---|---|---|---|
+| Credit cost / NPA cycle (higher = worse) (`F_ASSET_QUALITY_IN`) | +50 bp credit cost | -6.05 | -6.00 | +0.00 | -0.03 | -0.01 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +4.96 | +0.00 | +3.01 | +2.54 | -0.59 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +4.36 | +3.00 | +1.95 | -0.46 | -0.13 | — |
+| RBI prudential tightening (risk weights, LCR, provisioning) (`P_RBI_PRUDENTIAL`) | +1 = tightening step | -4.28 | -3.00 | -1.51 | +0.20 | +0.03 | — |
+| Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +3.76 | +0.00 | +2.32 | +2.14 | -0.70 | — |
+| Central + state government capex (`F_GOVT_CAPEX`) | +10% capex growth | +3.35 | +2.00 | +0.54 | +0.83 | -0.03 | — |
+| FDI liberalisation (`P_FDI_RULES`) | +1 = liberalisation | +3.21 | +3.00 | +0.02 | +0.09 | +0.10 | — |
+| Monsoon rainfall vs normal (`F_MONSOON`) | +10% above long-period average | +3.11 | +0.00 | +0.93 | +1.82 | +0.36 | — |
+| Urban discretionary consumption growth (`F_URBAN_DEMAND`) | +5 pp | +2.31 | +0.00 | +1.20 | +1.46 | -0.36 | — |
+| General-government fiscal slippage / extra borrowing vs budget (Centre + states) (`NEW_FISCAL_SLIPPAGE_IN`) | +0.5 pp of GDP deficit above budget (~Rs2 lakh cr) | -2.22 | +0.00 | -1.24 | -0.38 | -0.60 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +2.20 | +2.00 | +0.11 | +0.01 | +0.08 | — |
+| Bank deposit growth / funding ease (`F_DEPOSIT_GROWTH_IN`) | +3 pp | +2.15 | +2.00 | +0.40 | -0.18 | -0.07 | — |
+| India CPI inflation (`F_CPI_IN`) | +1 pp | -2.11 | +0.00 | +0.28 | -2.30 | -0.09 | — |
+| Indian wage / employee-cost inflation (`F_WAGES_IN`) | +2 pp | +2.09 | +0.00 | +0.13 | +1.28 | +0.68 | — |
+
+## Events affecting this stock (event → company)
+| event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
+|---|---|---|---|---|---|---|---|---|
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -10.8% | -10.8% | +0.0 | -3.8 | -3.6 | -3.4 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.9% | -4.9% | -4.4 | -0.3 | -0.0 | -0.2 |
+| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.62 | -7.0% | -4.4% | -7.2 | +0.2 | +0.0 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +4.2% | +4.2% | +3.5 | +1.0 | -0.2 | -0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -3.9% | -3.9% | +0.0 | -1.2 | -2.3 | -0.5 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -3.0% | -3.0% | -2.5 | -0.2 | -0.2 | -0.1 |
+| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -2.9% | -2.9% | +0.0 | -1.4 | -0.8 | -0.7 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.9% | -2.9% | +0.0 | +0.3 | -2.9 | -0.3 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.6% | +2.8% | +5.0 | +0.3 | +0.0 | +0.3 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -7.0% | -2.5% | +0.0 | -2.9 | -2.2 | -1.9 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -2.1 | -0.2 | -0.2 |
+| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.7% | +2.4% | +1.6 | +0.4 | +0.7 | -0.0 |
+
+## Strongest causal chains (1st–4th order)
+| order | chain | impact if event | expected 12m |
+|---|---|---|---|
+| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → PNB | -4.40% | -4.40% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PNB | +5.00% | +2.50% |
+| 1 | EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26 ⇒ F_GSEC_10Y_IN → PNB | -2.10% | -2.10% |
+| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GOVT_CAPEX → PNB | +2.00% | +2.00% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → PNB | -3.00% | -1.86% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → PNB | -3.00% | -1.86% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → PNB | -1.78% | -1.78% |
+| 1 | EV_GDP_Q1FY27_7_8 ⇒ F_GDP_IN → PNB | +1.50% | +1.50% |
+| 1 | EV_CHINA_FDI_EASING_PN3 ⇒ P_FDI_RULES → PNB | +2.10% | +1.47% |
+| 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → PNB | +1.60% | +1.44% |
+| 2 | EV_OMC_FUEL_FREEZE_LOSSES ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → PNB | -1.44% | -1.44% |
+| 2 | EV_CPI_REACCEL_SEP26 ⇒ F_CPI_IN → F_REPO_IN → PNB | +1.32% | +1.32% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → PNB | -1.19% | -1.19% |
+| 3 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → F_ASSET_QUALITY_IN → PNB | -1.07% | -1.07% |
+| 2 | EV_SWMONSOON26_DEFICIT ⇒ F_MONSOON → F_GDP_IN → PNB | -1.01% | -1.01% |
+
+## Analyst profile (agent research, sourced)
+# PNB - Punjab National Bank (Nifty Next 50, I_PSU_BANKS) - as of 2026-11-05
+
+## Business
+PNB is a government-owned (70.08%) bank with roughly Rs11-12 lakh cr of advances and Rs16-17 lakh cr of deposits (model estimates; reported Q2 NII is Rs11,601cr). About half the loan book is linked to the repo rate (EBLR), the rest to MCLR or fixed rates, so PNB is asset-sensitive: policy hikes lift yields faster than deposit costs. Retail, agriculture and MSME account for the majority of credit, with a large corporate book that has largely finished its post-2018 clean-up. The stock trades at 0.95x book and 6.9x earnings and rallied 12% in a month on a strong Q2.
+
+## What moves the stock, ranked
+1. **Credit cost / asset quality (w -6 per +50bp).** Provisions drove the earnings recovery (financing profit Rs3,834cr vs Rs2,242cr a year earlier); a cycle turn would reverse it. Slippages were up quarter on quarter even as GNPA improved.
+2. **Repo and NIM (w +1.0).** The 2026-10-07 hike (to 5.50%) is a net positive: PNB guides NIM +7-9bp in Q3. The sign could flip if hikes slow credit growth or raise deposit costs faster.
+3. **ECL and prudential rules (w -3.0).** RBI's expected-credit-loss framework starts April 2027. SBI estimates Rs19,500cr post-tax, Union Bank Rs5,500cr; PNB's figure is not yet found. PSU banks are expected to face more pressure.
+4. **G-sec yields (w -1.5).** AFS MTM and cost of equity; 10y is 7.19%, down from 7.48%.
+5. **Growth: credit, deposits, GDP, capex (+2.5, +2.0, +3.0, +2.0).** Deposit mobilisation is the constraint; Q2 business updates showed it clearly.
+6. **Policy and flows (FDI/consolidation +3, FPI +2, liquidity +0.8).**
+
+## Transmission examples
+- **Oil -> NIM -> equity:** Middle East escalation -> Brent up (95 now) -> CPI up -> RBI hikes again (minutes flag more) -> EBLR loans reprice within a month, deposits lag -> NIM rises 7-9bp -> EPS up; but 10y yields rise -> AFS losses -> net effect roughly +1 on equity, with credit-growth risk if crude persists.
+- **Liquidity -> competition:** RBI drains surplus (CRR maintenance at 99%) -> deposit competition intensifies -> PSU banks raise term-deposit rates -> NIM gain from the hike is partly given back -> credit growth slows -> loan targets missed.
+- **Fiscal chain:** government capex up -> PSU borrowers and EPC contractors repay and borrow -> credit growth and asset quality improve -> credit cost falls; conversely a fiscal squeeze pushes G-sec yields up, hurting the treasury book.
+- **ECL chain:** ECL rule (April 2027) -> large one-time provisions for PSU banks -> capital pressure -> dividend/capital-raise concerns -> government capital or stake sale talk -> multiple pressure on PSU peers; the 2026-10-23 stake-cut reports show the direction (PNB not named).
+
+## Current situation
+Q2 FY27 PAT Rs5,532cr (+13%), NII +11%, NIM above guidance, profit target Rs6,000cr per quarter. PNB raised lending rates after the hike. A debut dollar bond (planned early 2027) is deferred industry-wide due to hedging costs. The government is pursuing privatisation/consolidation (IDBI to Fairfax approved 2026-10-14; four other PSU banks to cut stakes to 75%; PNB not among them).
+
+## Upcoming
+Q3 results (Jan 2027), December MPC, ECL effective April 2027, consolidation announcements, any dollar bond.
+
+## Bull and bear
+Bull: NIM expansion, credit cost stays low, sector re-rating from consolidation. Bear: slippages climb, ECL hit is larger than expected, deposit competition erodes NIM, yields spike. Confidence medium; ECL figure and the loan-book split are not disclosed in the sources reviewed.
+
+## Notes on evidence quality
+Reported figures (PAT Rs5,532cr, NII Rs11,601cr, NIM guidance of 7-9bp, lending-rate hikes, dollar bond deferral, RBI penalty) are from dated news headlines whose URLs are in the JSON. Balance-sheet scale, the EBLR share of loans, the size of the AFS book and the deposit repricing lag are model estimates and should be replaced with investor-presentation numbers. The pack's empirical sensitivities are all statistically weak for PNB (largest |t| is 2.9 for global gas, with no plausible mechanism), so they were not used to shrink any weight.
+
+
+## Caveats
+Exposure-driven, scenario-implied estimate from an LLM-built causal graph grounded in fundamentals and price co-movement. It has not been validated out of sample; see `ledger/` for the prospective scoring record.

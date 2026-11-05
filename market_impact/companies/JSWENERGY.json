@@ -1,0 +1,537 @@
+{
+ "ticker": "JSWENERGY",
+ "name": "JSW Energy Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_RENEWABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "JSW Group's power arm: 15.1 GW installed (61% renewable; thermal Ratnagiri, Vijayanagar, Nandyal, KSK Mahanadi, Maruti; hydro Karcham Wangtoo, Baspa, Kutehr, Tidong; wind and solar), 15.3 GW under construction with PPAs signed, 30 GW target by 2030, plus integrated supply chain (Toshiba JSW turbines, GE Power India boilers, wind blades). Q2 FY27: revenue Rs 6,658 cr (+24%), EBITDA Rs 3,907 cr (+23%), PAT Rs 1,141 cr (+38%; attributable Rs 1,056 cr, +50%); net generation 17.5 bn units (+17%); net debt Rs 65,576 cr (5.55x TTM EBITDA); debt cost 8.28%. FY27 capex ~Rs 20,000 cr. Promoters 66.5%, mcap Rs 95.5k cr, P/E 40.6.",
+ "revenue_mix": [
+  {
+   "segment": "Thermal (long-term PPAs + merchant)",
+   "share_pct": 45,
+   "geography": "India (Maharashtra, Karnataka, AP, Chhattisgarh, Rajasthan)"
+  },
+  {
+   "segment": "Renewables (hydro, wind, solar, hybrid)",
+   "share_pct": 55,
+   "geography": "India (HP, Karnataka, TN, Gujarat, Rajasthan, Maharashtra)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COAL_INDIA",
+   "share_of_costs_pct": 42
+  },
+  {
+   "input": "F_COAL_INTL",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "Employee, O&M, other",
+   "share_of_costs_pct": 20
+  },
+  {
+   "input": "Interest",
+   "share_of_costs_pct": 30
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "JSWENERGY",
+   "relation": "funding_cost",
+   "w": -3.0,
+   "w_low": -5.5,
+   "w_high": -1.2,
+   "lag": "3-12m",
+   "mechanism": "Highest leverage in the batch: net debt Rs 65,576 cr (operational 58,410 + CWIP 7,166), 5.55x TTM EBITDA; EV/MCap ~1.7 (mcap Rs 95.5k cr). CFO (28 Oct): ~25% of term debt fixed, ~75% floating of which ~90% is linked to lenders' MCLR (lags repo). Assume 55% of the repo move passes within 12m: Rs 65.6k cr x 75% x 25bp x 55% = Rs 68 cr/yr = -2.4% of TTM PAT (Rs 2.8k cr) -> ~-0.8% of mcap capitalised at 10x less PPA indexation; plus equity-risk repricing => -3.0. Debt cost fell 51bp YoY to 8.28% so there is refinancing cushion.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "CFO Prabhakaran: ~25% of term debt fixed; ~90% of floating linked to MCLR; debt cost 8.28% vs 8.79% a year ago"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "JSWENERGY",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "P/E 40.6, P/B 2.6; 61% of capacity renewable on 25-yr PPAs, thermal PPAs with 14-25 yr remaining life. Equity duration ~14 on ~10% cost of equity: +25bp => -3.5% unadjusted; JSW Steel shareholding (market value) and cash Rs 15.7k cr dampen => -2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JSWENERGY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 95,460 cr, P/E 40.6, ROE 7.5%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "JSWENERGY",
+   "relation": "funding_cost",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "FY27 capex ~Rs 20,000 cr against ~Rs 6,500 cr accruals and Rs 7,150 cr (fund raise + JSW Steel share sales) = equity visibility Rs 13,150 cr; the ~Rs 7k cr gap plus Rs 15k cr of refinancing as projects commission must be funded in bond/loan markets. +50bp on Rs 22k cr = Rs 110 cr/yr = -3.9% of PAT x 0.5 persistence x EV/MCap 1.7 ... => -2.5. ICRA/India Ratings affirmed AA stable.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Capex ~Rs 20,000 cr FY27; accruals ~Rs 6,500 cr; ICRA and India Ratings affirmed AA/Stable"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "JSWENERGY",
+   "relation": "output_price",
+   "w": 1.8,
+   "w_low": 0.7,
+   "w_high": 3.3,
+   "lag": "0-3m",
+   "mechanism": "Merchant realisation Rs 6.9/unit (20% above Rs 5.7 DAM average) after bilateral contracts; merchant/short-term sales ~12% of volume (estimate; 15.3 GW of PPA signed; Maruti adds 64 MW merchant). +15% spot => +1.8% revenue at ~100% drop-through = +3.1% EBITDA (margin 58%) x EV/MCap 1.7 x persistence 0.4 => +2.1; haircut for fixed-price conversions => +1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Merchant realisation ~Rs 6.9/unit vs DAM Rs 5.7/unit in Q2 FY27; 96 plants critical on coal stock in Oct"
+    },
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=793205a1-32ad-4e1d-8f3a-39d46dca4fcd.pdf",
+     "date": "2026-10-28",
+     "note": "Under-construction PPA signed 15,348 MW; pipeline with LoA 2,761 MW"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "JSWENERGY",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Q2 net generation +17% YoY to 17.5 bn units on capacity + demand (power demand +11.1% in Q2, Oct MTD +21%); thermal PLF and merchant volumes rise; most PPAs are capacity-based so only ~25% of the incremental volume converts. +3pp demand => EBITDA +1.0% x 1.7 x 0.7 => +1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Power demand +11.1% in Q2, Oct-to-date +21.2%; net generation +17% to 17.5 bn units"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "JSWENERGY",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": -1.0,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Hydro is ~20% of generation (3,421 MU in Q2, +13%: Karcham Wangtoo, Baspa, Kutehr, Tidong) with some energy-linked revenue; good monsoon raises hydro (+) but lowers thermal/merchant demand and prices (-). Net small positive: +10% => hydro +8% of 20% = +1.6% of generation, EBITDA +1.0%; thermal demand loss -0.7% => +0.3 equity at EV/MCap 1.7 x persistence 0.25.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Hydro generation 3,421 MU (+13%) despite All-India hydro -15% and monsoon ~13% below normal"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "JSWENERGY",
+   "relation": "input_cost",
+   "w": 0.4,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Insulated: shifted to domestic coal and 'job-work' arrangements at imported-coal plants (Ratnagiri/Maruti linkage), so seaborne API4 (~US$115/t in Q2, +28% YoY) mostly hits others; merchant prices and Salboni/KSK optionality benefit modestly. Pack empirical +1.90 (t +0.9) agrees in sign. +15% => +0.4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Sharad Mahendra: transition to domestic coal and job-work at imported plants shields from fuel-price volatility; API4 ~US$115/t"
+    },
+    {
+     "source": "https://www.screener.in/company/JSWENERGY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical F_COAL_INTL +1.90, t +0.9"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "JSWENERGY",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Domestic coal under SHAKTI/FSA is the main thermal fuel (Maruti fully via SECL FSA); pass-through exists under most PPAs but KSK (1,800 MW, PPA with MP etc.) and merchant volume are exposed. +10% => unrecovered ~15% of Rs 2k cr/qtr fuel x ... => -1.0% EBITDA x 1.7 x 0.35 => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Maruti plant fully domestically fuelled via long-term FSA with SECL and SHAKTI linkage"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "JSWENERGY",
+   "relation": "policy_effect",
+   "w": 3.5,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "3 GW RE commissioning target FY27 (1.4 GW done), 30 GW by 2030, curtailment 4.8% of generation (59 cr revenue in Q2) with 60% moving from temporary to permanent GNA by end-Q3. Stronger support (GNA, ISTS, storage VGF) removes curtailment (-2% revenue) and lifts pipeline: +3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Curtailment ~4.8% of generation in H1; ~225 MU in Q2 costing Rs 59 cr; permanent GNA by end Q3"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=PM-DHARA+scheme+Rs+1.86+lakh+crore+power+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "note": "Cabinet approved Rs 1.86 lakh crore PM-DHARA green energy transmission scheme on 30 Sep 2026 (DD India, ThePrint, Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "JSWENERGY",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "Wind-blade plants (Halol, Chitradurga), Toshiba JSW turbines, GE Power India boiler acquisition, 26.4 GWh PSP pipeline and 1 GWh BESS in FY27 are the transition platform; +1 SSU => +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "GE Power India boiler scheme NCLT-sanctioned 1 Oct; Toshiba JSW stake 10.7%; PSP pipeline ~26.4 GWh"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "JSWENERGY",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Imported equipment for solar/BESS/hydro (Bhutan Punatsangchhu-III in INR/BTN), partial USD loans (hedged); +3% => -0.8% after hedges, EV/MCap 1.7. Rupee 94.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=793205a1-32ad-4e1d-8f3a-39d46dca4fcd.pdf",
+     "date": "2026-10-28",
+     "note": "Net debt bridge includes an FX & other line (INR share of debt assumed high, not verified)"
+    },
+    {
+     "source": "https://www.screener.in/company/JSWENERGY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Borrowings Rs 82,547 cr (Sep-26)"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "JSWENERGY",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "PPA counterparties are discoms (receivable days is a reported KPI); reform improves collection and permits more long-term thermal procurement (17 GW awarded FY26 at Rs 5.4-6.3/unit; 18 GW more under bidding). +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "States awarded ~17 GW long-term thermal in FY26 at Rs 5.4-6.3/unit; further 18 GW tenders under bidding"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "JSWENERGY",
+   "relation": "geopolitical_exposure",
+   "w": 0.6,
+   "w_low": -2.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Management frames the Hormuz disruption as raising the strategic value of domestic dispatchable power and prompting long-term thermal procurement (JSW Salboni, KSK); yields/inflation channel negative. Net +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Strait+of+Hormuz+LNG+India+power+coal+import+Middle+East+conflict+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Middle East conflict disrupting LNG/crude via Hormuz; Asia pivoting to coal (Wood Mackenzie 12 Oct, EnergyNow 3 Nov 2026 headlines)"
+    },
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Sharad Mahendra: energy security moved to the centre of the national agenda; procurement shifting to firm power"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "JSWENERGY",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.6,
+   "w_high": 3.2,
+   "lag": "0-3m",
+   "mechanism": "FIIs 10.9%, DIIs 16.7%; promoter holding fell from 69.4% to 66.5% in Q1 FY27 (capital unlocking: Rs 10,150 cr this calendar year). Beta ~0.9-1.1. +5bn FPI => +1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JSWENERGY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Shareholding Sep-26: promoters 66.53%, FIIs 10.91%, DIIs 16.68%"
+    },
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Rs 10,150 cr capital unlocking in CY2026"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "JSWSTEEL",
+   "dst": "JSWENERGY",
+   "relation": "holding_stake",
+   "w": 0.04,
+   "w_low": 0.01,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "JSW Energy holds JSW Steel shares (management quotes cash return on net worth adjusted for the JSW Steel stake and partly sold shares in CY2026 - size of the residual stake not verified here). If the residual is ~3-4% of JSW Energy's mcap, w ~0.04 per 1% JSW Steel move.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "CFO: cash return on net worth adjusted for JSW Steel shareholding ~15%; equity visibility included sale of steel shares (Rs 7,150 cr incl. fund raise)"
+    }
+   ]
+  },
+  {
+   "src": "JSWSTEEL",
+   "dst": "JSWENERGY",
+   "relation": "group_contagion",
+   "w": 0.15,
+   "w_low": 0.03,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "JSW Group RTC power demand is ~3 GW and expected to more than double to ~7 GW by 2032 as JSW Steel expands to 80 MTPA; 4.5 GW of group MoUs yet to be tied up. Group sentiment (JSW Steel, JSW Infra, JSW Cement) co-moves with JSW Energy. Judgement estimate.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "Group RTC power requirement expected to rise from ~3 GW to ~7 GW by 2032; 4.5 GW of 6.2 GW MoUs untied"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "JSW Steel / JSW Group companies",
+   "ticker": "JSWSTEEL",
+   "role": "customer",
+   "importance": "high",
+   "note": "~3 GW RTC thermal/renewable captive demand, set to reach ~7 GW by 2032; group-captive C&I 3.7 GW"
+  },
+  {
+   "counterparty": "Coal India / SECL (FSA, SHAKTI)",
+   "ticker": "COALINDIA",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Domestic coal for Maruti and other thermal plants"
+  },
+  {
+   "counterparty": "Toshiba JSW Power Systems (10.7% stake)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Turbines for Salboni (3,200 MW) ordered Sept 2026"
+  },
+  {
+   "counterparty": "GE Power India boiler business (NCLT sanctioned 1 Oct 2026)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Durgapur boiler factory in-house"
+  },
+  {
+   "counterparty": "Druk Green Power (Bhutan)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "low",
+   "note": "Partner on 920 MW Punatsangchhu-III (also partners Adani Power and Tata Power)"
+  },
+  {
+   "counterparty": "State discoms / SECI / PTC",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Long-term PPAs (Rajasthan discoms for Maruti, others)"
+  },
+  {
+   "counterparty": "NTPC, Adani Power, Tata Power",
+   "ticker": "NTPC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Thermal and RE tenders"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Closing of GE Power India boiler acquisition after NCLT sanction (1 Oct 2026)",
+   "type": "corporate_action",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.5,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf"
+  },
+  {
+   "date": "2026-12",
+   "event": "Permanent GNA for ~60% of curtailed capacity by end of Q3 FY27, lowering curtailment",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": 0.3,
+   "impact_pct_high": 1.5,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 3 GW RE commissioning target met (1.4 GW done, 1.6 GW de-risked)",
+   "type": "capex",
+   "prob": 0.7,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 on 28 Oct; estimate late Jan 2027)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge on schedule"
+  },
+  {
+   "date": "2027-06",
+   "event": "Tie-up of further group C&I / RTC contracts (2 GW under advanced discussion of 4.5 GW untied MoUs)",
+   "type": "other",
+   "prob": 0.55,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "Equity fund-raise / stake sale beyond Rs 10,150 cr unlocked (capex gap) or further JSW Steel share sales",
+   "type": "corporate_action",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs 6,658 cr (company; screener Rs 6,368 cr sales), EBITDA Rs 3,907 cr (+23%), PAT Rs 1,141 cr (+38%), attributable Rs 1,056 cr (+50%); finance cost Rs 1,615 cr (+14%), depreciation Rs 943 cr.",
+  "trend": "Capacity additions (1.7 GW since April incl. Maruti 300 MW) and high merchant prices lift earnings, but interest and depreciation grow almost as fast; ROE only 7.5%. Margin contracted vs last year (NDTV Profit).",
+  "valuation": "P/E 40.6, P/B 2.6, ROCE 8.2%, div yield 0.4%; stock -1% in 12m, -10% in 6m. Jefferies 'Buy' after Q2 (TradingView headline).",
+  "recent_developments": [
+   "2026-08-06: Completed Maruti Clean Coal & Power acquisition (EV Rs 1,410 cr)",
+   "2026-10-01/02: GE Power India boiler arrangement sanctioned by NCLT",
+   "2026-10-05: Installed capacity reaches 15.1 GW after adding 1.7 GW since April; RE share 61%",
+   "2026-10-07/14: RBI hike; JM Financial maps risks to JSW Energy, Tata Power, NTPC",
+   "2026-10-28: Q2 results/call: profit +38%, debt cost 8.28%, AA stable affirmed, FY27 capex Rs 20,000 cr",
+   "2026-11-03: KSK expansion cost targeted 25-30% lower (Multibagg headline)"
+  ]
+ },
+ "key_risks": [
+  "High leverage (5.55x) and floating-rate debt in a rising-rate regime",
+  "Execution and capex overrun on 15 GW pipeline and Salboni/KSK thermal",
+  "Curtailment and discom credit risk",
+  "Equity dilution/stake sales to fund capex gap",
+  "Merchant price normalisation"
+ ],
+ "upside_triggers": [
+  "Capacity ahead of plan (3 GW RE, KSK unit 4 by FY28)",
+  "Group RTC contracts (2 GW advanced)",
+  "Interest-rate relief; MCLR lag benefits",
+  "In-house turbine/boiler/blade supply chain lowering capex per MW"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+   "date": "2026-10-28",
+   "what": "JSW Energy Q2 FY27 earnings call transcript (BSE filing 2 Nov 2026)"
+  },
+  {
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=793205a1-32ad-4e1d-8f3a-39d46dca4fcd.pdf",
+   "date": "2026-10-28",
+   "what": "JSW Energy Q2 FY27 results presentation (net debt, PPAs, capacity)"
+  },
+  {
+   "url": "https://www.screener.in/company/JSWENERGY/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "market_impact/data/packs/JSWENERGY.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities and headlines pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=JSW+Energy+rate+hike+risk+JM+Financial+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "JM Financial rate-hike risk headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike headlines"
+  }
+ ]
+}

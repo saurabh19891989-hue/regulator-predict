@@ -1,0 +1,356 @@
+{
+ "ticker": "PERSISTENT",
+ "name": "Persistent Systems Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Pune-based digital engineering and product-engineering services firm (BFSI, software/hi-tech, healthcare), with Salesforce, AWS and AI-led partnerships. Q2 FY27: revenue US$487.6 mn (+7.8% q/q, +20% y/y), Rs4,664 cr (+30%), EBIT margin 15.0% (-130 bp y/y on wage hikes, lower utilisation, deal amortisation), reported PAT Rs352 cr (-25%) after Rs185 cr of Nagarro deal costs; operating PAT Rs495 cr (+5%); TCV US$633.5 mn. Acquiring Nagarro SE (94.04% secured; squeeze-out planned), funded by a Rs4,265 cr QIP at Rs5,550 floor (allotted 26 Oct) and debt. Mcap Rs1.02 lakh cr, P/E 54.5.",
+ "revenue_mix": [
+  {
+   "segment": "software engineering and digital services",
+   "share_pct": 100,
+   "geography": "North America ~75% / Europe ~12% / India ~10% / RoW ~3% (model estimate; Europe rises with Nagarro)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 65
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "PERSISTENT",
+   "relation": "fx_translation",
+   "w": 2.2,
+   "w_low": -0.5,
+   "w_high": 3.8,
+   "lag": "0-3m",
+   "mechanism": "~90% of revenue USD, INR ~50% of costs (model knowledge); EBIT 15.0%: +3% INR => +95 bp = +6.3% EBIT; persistence 0.4, EV/MCap 1.05 => +2.6; trimmed for Nagarro's EUR revenue base. No significant empirical estimate.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PERSISTENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "~90% of revenue USD (model knowledge); no significant empirical FX"
+    },
+    {
+     "source": "https://cxotoday.com/media-coverage/persistent-announces-487-6m-revenue-in-q2-fy27-with-20-0-y-o-y-growth/",
+     "date": "2026-10-16",
+     "note": "US$487.6 mn revenue; EBIT 15.0%"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "PERSISTENT",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.5,
+   "w_high": 8.5,
+   "lag": "3-12m",
+   "mechanism": "Mid-cap digital-engineering beta: growth is 2x TCS sensitivity to enterprise tech budgets. +5% spend => +4 pp cc growth; EBIT +6%; P/E 54.5 on growth => ~+5. Q2 US$487.6 mn (+20% y/y), TCV US$633 mn, deals slipped into Q3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://cxotoday.com/media-coverage/persistent-announces-487-6m-revenue-in-q2-fy27-with-20-0-y-o-y-growth/",
+     "date": "2026-10-16",
+     "note": "Revenue +7.8% q/q, +20% y/y; 26th straight sequential growth quarter"
+    },
+    {
+     "source": "https://www.persistent.com/wp-content/uploads/2026/10/press-release-q2fy27.pdf",
+     "date": "2026-10-16",
+     "note": "TCV US$633.5 mn, ACV US$481 mn"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "PERSISTENT",
+   "relation": "substitution",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 2.5,
+   "lag": ">12m",
+   "mechanism": "Engineering/product-engineering services are more complementary to AI build-outs than BPS; +1 = ~3% repricing x 50% flow-through / 15% margin = -10% EBIT x persistence 0.4 => -4, offset by AI-native share gains => -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.persistent.com/wp-content/uploads/2026/10/press-release-q2fy27.pdf",
+     "date": "2026-10-16",
+     "note": "No formal guidance; AI-led engineering pipeline"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Persistent+Systems+vs+Coforge+AI+stock+to+watch+2027&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "Equitymaster AI positioning headline"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "PERSISTENT",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -7.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Large US onsite mix for a firm with ~US$2bn revenue; green-card freeze did not name Persistent, but a broad H-1B rule change would hit; -2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Trump+administration+freezes+green+cards+for+Microsoft,+IT+firms+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US green-card freeze (named firms exclude Persistent)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Trump+extends+H-1B+fee+amid+push+to+restrict+foreign+hiring+-+New+Indian+Express&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "note": "H-1B fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "PERSISTENT",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Empirical +2.15 per +5% S&P (t=2.3): the AI trade and US tech sentiment; kept near empirical.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PERSISTENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_US_EQUITIES +2.15 (t=2.3), beta 0.90"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "PERSISTENT",
+   "relation": "macro_transmission",
+   "w": -1.2,
+   "w_low": -2.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Empirical -1.17 per +5 VIX (t=-2.3), consistent with a high-multiple mid-cap.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PERSISTENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_RISK_SENTIMENT -1.17 (t=-2.3)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "PERSISTENT",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "P/E 54.5 and P/B 11.4 => effective duration ~25 yrs: +25 bp => -1.5 to -2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PERSISTENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 54.5, P/B 11.4"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "PERSISTENT",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Higher US rates hit discretionary tech budgets and growth multiples; -1.0 per +25 bp.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fed+holds+rates+October+28+2026+dissents&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Fed holds 3.75-4.00% (event catalogue)"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "PERSISTENT",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Nagarro adds a large Continental Europe base: +1 pp Europe growth => +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.persistent.com/?p=158550",
+     "date": "2026-10-09",
+     "note": "Nagarro (Germany-headquartered) stake 94.04%: Europe weight rises"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "PERSISTENT",
+   "relation": "input_cost",
+   "w": -2.2,
+   "w_low": -4.0,
+   "w_high": -0.6,
+   "lag": "3-12m",
+   "mechanism": "+2 pp wage inflation on ~65% employee cost/revenue => 1.3 pp revenue = -8.7% EBIT on 15% base, 55% recovered, persistence 0.5 => -2.2; Q2 already shows wage-hike drag (margin -130 bp y/y).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://cxotoday.com/media-coverage/persistent-announces-487-6m-revenue-in-q2-fy27-with-20-0-y-o-y-growth/",
+     "date": "2026-10-16",
+     "note": "Margin down ~130 bp y/y on wage hikes, lower utilisation, amortisation"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Nagarro SE (Germany)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "94.04% secured on 9 Oct; regulatory approvals pending; transaction costs US$25-30 mn more over next two quarters"
+  },
+  {
+   "counterparty": "Large US BFSI/software/healthcare clients",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "No client >25% disclosed in sources read"
+  },
+  {
+   "counterparty": "Coforge / LTIMindtree / Mphasis",
+   "ticker": "COFORGE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Mid-cap digital engineering peers"
+  },
+  {
+   "counterparty": "Salesforce / AWS (partners)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Alliances"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 was 2026-10-15): Nagarro costs, margin recovery, deal conversion from slipped Q2 deals",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://cxotoday.com/media-coverage/persistent-announces-487-6m-revenue-in-q2-fy27-with-20-0-y-o-y-growth/"
+  },
+  {
+   "date": "2026-12",
+   "event": "Nagarro regulatory approvals and squeeze-out completion; consolidation begins",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.persistent.com/?p=158550"
+  },
+  {
+   "date": "2027-03",
+   "event": "Integration milestones; further US$25-30 mn transaction costs hit Q3-Q4 FY27",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 0.0,
+   "source": "https://www.persistent.com/wp-content/uploads/2026/10/press-release-q2fy27.pdf"
+  },
+  {
+   "date": "2026-11-17",
+   "event": "Nvidia results and AI-capex read-across (mid-cap IT beta to AI trade)",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Nvidia+earnings+November+17+2026+AI+capex&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12-09",
+   "event": "FOMC hike odds 0.58 (high-multiple stock)",
+   "type": "other",
+   "prob": 0.58,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Fed+holds+rates+October+28+2026+dissents&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-15: US$487.6 mn (+20% y/y), EBIT 15.0%, reported PAT Rs352 cr (-25%), operating PAT Rs495 cr (+5%); pack/screener Rs4,664 cr sales, OPM 14%.",
+  "trend": "26 straight quarters of sequential growth; margin dilution from wages/utilisation/amortisation and Nagarro costs; stock -5% on results day, then +11% in a month to Rs6,141 (QIP at Rs5,550 floor allotted 26 Oct; SBI, ICICI led demand).",
+  "valuation": "P/E 54.5 TTM (about 40x on adjusted), P/B 11.4; price Rs6,141 vs 52w 4,243-6,599; Axis Capital TP Rs7,210 (Buy), ICICI Securities Hold TP Rs5,670; CNBC TV18 headline 'bulls see mcap doubling, bears 27% fall'.",
+  "recent_developments": [
+   "2026-10-09: secures 94.04% of Nagarro, plans squeeze-out (scanx)",
+   "2026-10-15/16: Q2 results; shares -5% (Livemint, ET, Moneycontrol)",
+   "2026-10-21: QIP opens at Rs5,550 floor, Rs4,265 cr (BusinessLine)",
+   "2026-10-26: QIP allotted at Rs5,550; SBI, ICICI lead demand (scanx)",
+   "2026-10: promoter holding 28.82% (-1.47 pp), DIIs 34.04%"
+  ]
+ },
+ "key_risks": [
+  "Nagarro integration, EUR/European demand and debt-funded balance sheet",
+  "High valuation (P/E 54.5) and sensitivity to rates and AI-trade swings",
+  "Margin 15% vs 16-17% aspiration; wage hikes and utilisation",
+  "Deal slippage into Q3 FY27; large-deal ramp execution",
+  "US visa/outsourcing policy and GenAI repricing",
+  "Equity dilution from the QIP (about 4%)"
+ ],
+ "upside_triggers": [
+  "Nagarro closing, cross-sell and margin recovery to 16-17%",
+  "Q3 deal conversion and TCV >US$700 mn",
+  "Fed pause and AI-capex confirmation (Nvidia, hyperscalers)",
+  "Rupee weakness"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://cxotoday.com/media-coverage/persistent-announces-487-6m-revenue-in-q2-fy27-with-20-0-y-o-y-growth/",
+   "date": "2026-10-16",
+   "what": "CXOToday: Q2 FY27 US$487.6 mn, +20% y/y"
+  },
+  {
+   "url": "https://www.persistent.com/wp-content/uploads/2026/10/press-release-q2fy27.pdf",
+   "date": "2026-10-16",
+   "what": "Persistent Q2 FY27 press release (search result; TCV, guidance)"
+  },
+  {
+   "url": "https://www.persistent.com/?p=158550",
+   "date": "2026-10-09",
+   "what": "Persistent: 94.04% of Nagarro secured"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Persistent+Systems+opens+4,265-crore+QIP+at+5,550+floor+price+-+BusinessLine&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "BusinessLine headline: QIP Rs4,265 cr at Rs5,550 floor"
+  },
+  {
+   "url": "https://www.screener.in/company/PERSISTENT/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals and empirical sensitivities (evidence pack)"
+  }
+ ]
+}

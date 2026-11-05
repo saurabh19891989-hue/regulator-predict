@@ -59,6 +59,21 @@ ADANIENSOL,F_RISK_SENTIMENT,Global risk aversion (VIX),-2.1339769719696973,+5 VI
 ADANIENSOL,F_FOOD_INFLATION_IN,India food inflation,-2.0322241619318184,+2 pp
 ADANIENSOL,T_ENERGY_TRANSITION,Energy transition investment,1.96138,+1
 ADANIENSOL,F_BRENT,Brent crude oil price,-1.9110780248051942,+10% Brent
+ADANIENT,F_CPI_IN,India CPI inflation,-3.283808918831168,+1 pp
+ADANIENT,C_MIDEAST_CONFLICT,Middle East conflict intensity,-3.1408917857142855,+1 = escalation
+ADANIENT,F_TRAVEL_DEMAND,Air/hotel/tourism demand,3.0,+10%
+ADANIENT,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.65945,+25 bp yield
+ADANIENT,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.288267342443182,+US$5 bn net inflow per quarter
+ADANIENT,F_USDINR,USD/INR exchange rate,-2.252798802556818,+3% USD/INR (rupee weaker)
+ADANIENT,F_GOLD,Gold price,-2.065271272727273,+8% gold (USD)
+ADANIENT,F_URBAN_DEMAND,Urban discretionary consumption growth,1.841031647727273,+5 pp
+ADANIENT,F_FOOD_INFLATION_IN,India food inflation,-1.7461123508522727,+2 pp
+ADANIENT,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.7380051024621215,+5 VIX points
+ADANIENT,NEW_FISCAL_SLIPPAGE_IN,General-government fiscal slippage / extra borrowing vs budget (Centre + states),-1.650889375,+0.5 pp of GDP deficit above budget (~Rs2 lakh cr)
+ADANIENT,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,1.5482625,+1 = stronger support
+ADANIENT,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,1.521917386363636,+1 = broad cut (~2-5 pp on affected items)
+ADANIENT,F_CREDIT_SPREADS_IN,Indian corporate credit spreads,-1.51661625,+50 bp spreads
+ADANIENT,T_DATA_CENTRES_IN,Indian data-centre build-out,1.50882,+1
 ADANIGREEN,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,6.9627625,+1 = stronger support
 ADANIGREEN,F_CPI_IN,India CPI inflation,-4.834281891233766,+1 pp
 ADANIGREEN,T_ENERGY_TRANSITION,Energy transition investment,3.9154700000000005,+1
@@ -1454,6 +1469,21 @@ JIOFIN,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,3.08984793559253
 JIOFIN,P_RBI_PRUDENTIAL,"RBI prudential tightening (risk weights, LCR, provisioning)",-2.7583906250000005,+1 = tightening step
 JIOFIN,F_US_GDP,US growth,2.493251877029221,+1 pp
 JIOFIN,F_REPO_IN,RBI repo rate,-2.4803764042207788,+25 bp repo
+JSWENERGY,F_CPI_IN,India CPI inflation,-6.307874868506494,+1 pp
+JSWENERGY,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,4.1378,+1 = stronger support
+JSWENERGY,F_REPO_IN,RBI repo rate,-3.555105327922079,+25 bp repo
+JSWENERGY,F_FOOD_INFLATION_IN,India food inflation,-3.308754694602272,+2 pp
+JSWENERGY,T_ENERGY_TRANSITION,Energy transition investment,2.81793,+1
+JSWENERGY,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.726105,+25 bp yield
+JSWENERGY,F_USDINR,USD/INR exchange rate,-2.709266589488636,+3% USD/INR (rupee weaker)
+JSWENERGY,F_GDP_IN,India real GDP growth,-2.5251235178571427,+1 pp
+JSWENERGY,F_CREDIT_SPREADS_IN,Indian corporate credit spreads,-2.4520862500000002,+50 bp spreads
+JSWENERGY,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.183231972443183,+US$5 bn net inflow per quarter
+JSWENERGY,F_POWER_DEMAND_IN,Indian electricity demand,1.9853999999999998,+3 pp demand growth
+JSWENERGY,F_BRENT,Brent crude oil price,-1.9488122519886364,+10% Brent
+JSWENERGY,F_POWER_PRICE_IN,Indian power exchange (IEX) prices,1.8000000000000003,+15% average spot power price
+JSWENERGY,F_DXY,US dollar index,-1.7469229669744322,+3% DXY
+JSWENERGY,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.639664860795455,+5 VIX points
 JSWSTEEL,F_STEEL_INDIA,Indian domestic steel price,8.810073000000001,+7% domestic HRC/rebar price
 JSWSTEEL,F_STEEL_GLOBAL,Global HRC steel price,4.264317525000001,+10% global HRC
 JSWSTEEL,F_COKING_COAL,Coking coal price,-4.072853125,+15% coking coal
@@ -1964,6 +1994,21 @@ NESTLEIND,NEW_RUSSIA_UKRAINE_WAR,Russia-Ukraine war / Western sanctions intensit
 NESTLEIND,C_MIDEAST_CONFLICT,Middle East conflict intensity,-0.7614113357142855,+1 = escalation
 NESTLEIND,NEW_EL_NINO,ENSO state (El Nino strength),-0.7422712499999999,+1 = El Nino year (ONI >= +1.0 sustained); -1 = La Nina
 NESTLEIND,F_USDINR,USD/INR exchange rate,-0.7189938857142858,+3% USD/INR (rupee weaker)
+NHPC,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,2.89,+1 = stronger support
+NHPC,P_POWER_REFORM,Power market / DISCOM reform,2.5,+1 = reform progress
+NHPC,F_CPI_IN,India CPI inflation,-2.4358591676948054,+1 pp
+NHPC,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.0816875,+25 bp yield
+NHPC,F_USDINR,USD/INR exchange rate,-1.9636780545454546,+3% USD/INR (rupee weaker)
+NHPC,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,1.6636056329545454,+US$5 bn net inflow per quarter
+NHPC,T_ENERGY_TRANSITION,Energy transition investment,1.5033750000000001,+1
+NHPC,F_FOOD_INFLATION_IN,India food inflation,-1.3015966619318182,+2 pp
+NHPC,NEW_FISCAL_SLIPPAGE_IN,General-government fiscal slippage / extra borrowing vs budget (Centre + states),-1.2610300000000003,+0.5 pp of GDP deficit above budget (~Rs2 lakh cr)
+NHPC,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.0576519886363638,+5 VIX points
+NHPC,C_MIDEAST_CONFLICT,Middle East conflict intensity,-1.0482860357142858,+1 = escalation
+NHPC,F_DXY,US dollar index,-1.0379976157670454,+3% DXY
+NHPC,F_BRENT,Brent crude oil price,-1.000301908198052,+10% Brent
+NHPC,F_US_10Y,US 10-year Treasury yield,-0.99364946875,+25 bp yield
+NHPC,F_GOVT_CAPEX,Central + state government capex,0.942483068181818,+10% capex growth
 NMDC,F_IRON_ORE,Iron ore price,9.090303124999998,+15% iron ore
 NMDC,F_CHINA_GDP,China growth / stimulus,5.1107422499999995,+1 pp
 NMDC,P_MINING_ROYALTY,Mining royalty / mineral tax burden,-3.0,+1 = higher
@@ -2099,6 +2144,21 @@ PAYTM,F_UNSECURED_STRESS,Unsecured retail & microfinance stress (higher = worse)
 PAYTM,F_DXY,US dollar index,-2.529979735770089,+3% DXY
 PAYTM,F_GDP_IN,India real GDP growth,2.471963857142856,+1 pp
 PAYTM,F_RURAL_DEMAND,Rural consumption growth,1.841896857142857,+5 pp
+PERSISTENT,F_US_TECH_SPEND,US/EU enterprise IT services spend,5.0,+5% growth
+PERSISTENT,F_US_GDP,US growth,3.1573615467735383,+1 pp
+PERSISTENT,P_US_VISA_OUTSOURCING,US H-1B / outsourcing restrictions,-2.6995583333333335,+1 = material tightening
+PERSISTENT,T_GENAI_SERVICES,GenAI substitution of IT/BPO labour (higher = more substitution),-2.4110625000000003,+1
+PERSISTENT,F_WAGES_IN,Indian wage / employee-cost inflation,-2.26513190909091,+2 pp
+PERSISTENT,F_US_EQUITIES,US equity market,2.2238605625,+5% S&P 500
+PERSISTENT,F_AI_CAPEX,Global AI / data-centre capex,1.9041855499999998,+10% growth
+PERSISTENT,F_EU_GDP,Europe growth,1.7716581818181818,+1 pp
+PERSISTENT,F_USDINR,USD/INR exchange rate,1.7265498267045454,+3% USD/INR (rupee weaker)
+PERSISTENT,F_CPI_IN,India CPI inflation,-1.6116409090909092,+1 pp
+PERSISTENT,F_GDP_IN,India real GDP growth,-1.5825875568181822,+1 pp
+PERSISTENT,F_FED_FUNDS,US Fed funds rate,-1.485742090731534,+25 bp
+PERSISTENT,F_GSEC_10Y_IN,India 10-year G-sec yield,-1.48515,+25 bp yield
+PERSISTENT,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.4650541363636365,+5 VIX points
+PERSISTENT,NEW_US_TARIFF_GLOBAL,US average effective tariff rate (all partners),-1.2960778125,+5 pp effective tariff rate
 PFC,NEW_BANK_INFRA_LENDING_COMPETITION,Bank competition in power/infrastructure lending,-6.0,+1 = banks take ~5pp of power/infra lending share or compress spreads ~25bp
 PFC,F_CPI_IN,India CPI inflation,-4.900291195616883,+1 pp
 PFC,P_POWER_REFORM,Power market / DISCOM reform,4.0,+1 = reform progress
@@ -2549,6 +2609,21 @@ TATACONSUM,C_MIDEAST_CONFLICT,Middle East conflict intensity,-0.8939947142857143
 TATACONSUM,F_PACKAGING,"Packaging cost (paper, plastics)",-0.8,+10% packaging cost
 TATACONSUM,T_QUICK_COMMERCE,Quick-commerce disruption of retail/FMCG distribution,0.8,+1
 TATACONSUM,F_BRENT,Brent crude oil price,-0.7891937013798702,+10% Brent
+TATAPOWER,P_RENEWABLE_SUPPORT,Renewable / transmission policy support,5.2397,+1 = stronger support
+TATAPOWER,F_CPI_IN,India CPI inflation,-3.694881691233766,+1 pp
+TATAPOWER,T_ENERGY_TRANSITION,Energy transition investment,3.35345,+1
+TATAPOWER,F_GSEC_10Y_IN,India 10-year G-sec yield,-2.6847250000000003,+25 bp yield
+TATAPOWER,P_POWER_REFORM,Power market / DISCOM reform,2.5999999999999996,+1 = reform progress
+TATAPOWER,F_FPI_FLOWS,Foreign portfolio flows into Indian equities,2.206983872443182,+US$5 bn net inflow per quarter
+TATAPOWER,F_POWER_DEMAND_IN,Indian electricity demand,2.0827666666666667,+3 pp demand growth
+TATAPOWER,T_GRID_ELECTRIFICATION,Grid & electrification capex,2.0,+1
+TATAPOWER,F_FOOD_INFLATION_IN,India food inflation,-1.933564772727273,+2 pp
+TATAPOWER,F_CREDIT_SPREADS_IN,Indian corporate credit spreads,-1.7996062500000003,+50 bp spreads
+TATAPOWER,F_REPO_IN,RBI repo rate,-1.5769985097402597,+25 bp repo
+TATAPOWER,F_RISK_SENTIMENT,Global risk aversion (VIX),-1.3938999024621213,+5 VIX points
+TATAPOWER,F_MONSOON,Monsoon rainfall vs normal,-1.3152873753364234,+10% above long-period average
+TATAPOWER,F_US_10Y,US 10-year Treasury yield,-1.31067346875,+25 bp yield
+TATAPOWER,F_DXY,US dollar index,-1.301640466974432,+3% DXY
 TATASTEEL,F_STEEL_INDIA,Indian domestic steel price,7.98704,+7% domestic HRC/rebar price
 TATASTEEL,F_CHINA_GDP,China growth / stimulus,4.544271547619048,+1 pp
 TATASTEEL,F_STEEL_GLOBAL,Global HRC steel price,3.9673393333333338,+10% global HRC
@@ -2564,6 +2639,36 @@ TATASTEEL,F_EU_GDP,Europe growth,1.1856,+1 pp
 TATASTEEL,F_IRON_ORE,Iron ore price,1.1269999999999998,+15% iron ore
 TATASTEEL,F_AUTO_DEMAND_IN,Indian vehicle demand,1.0,+10% volumes
 TATASTEEL,F_CPI_IN,India CPI inflation,-0.9827099999999998,+1 pp
+TCS,F_US_TECH_SPEND,US/EU enterprise IT services spend,4.0,+5% growth
+TCS,T_GENAI_SERVICES,GenAI substitution of IT/BPO labour (higher = more substitution),-3.5328124999999995,+1
+TCS,P_US_VISA_OUTSOURCING,US H-1B / outsourcing restrictions,-3.168,+1 = material tightening
+TCS,F_US_GDP,US growth,2.112897049157873,+1 pp
+TCS,F_WAGES_IN,Indian wage / employee-cost inflation,-1.8341705454545456,+2 pp
+TCS,F_US_EQUITIES,US equity market,1.2745865624999997,+5% S&P 500
+TCS,F_EU_GDP,Europe growth,1.2186749090909093,+1 pp
+TCS,F_USDINR,USD/INR exchange rate,1.1956230272727275,+3% USD/INR (rupee weaker)
+TCS,F_GDP_IN,India real GDP growth,-1.1812886590909095,+1 pp
+TCS,F_CPI_IN,India CPI inflation,-1.0918475454545455,+1 pp
+TCS,F_AI_CAPEX,Global AI / data-centre capex,1.0578483499999998,+10% growth
+TCS,F_FED_FUNDS,US Fed funds rate,-0.9889755073686077,+25 bp
+TCS,F_GSEC_10Y_IN,India 10-year G-sec yield,-0.8878500000000001,+25 bp yield
+TCS,NEW_US_TARIFF_GLOBAL,US average effective tariff rate (all partners),-0.6723200000000001,+5 pp effective tariff rate
+TCS,F_PRIVATE_CAPEX,Private corporate capex,-0.657229090909091,+10% capex growth
+TECHM,T_GENAI_SERVICES,GenAI substitution of IT/BPO labour (higher = more substitution),-3.5511249999999994,+1
+TECHM,F_US_TECH_SPEND,US/EU enterprise IT services spend,3.5000000000000004,+5% growth
+TECHM,P_US_VISA_OUTSOURCING,US H-1B / outsourcing restrictions,-2.1866666666666665,+1 = material tightening
+TECHM,F_US_GDP,US growth,2.1602968797686684,+1 pp
+TECHM,F_WAGES_IN,Indian wage / employee-cost inflation,-2.036831272727273,+2 pp
+TECHM,F_US_EQUITIES,US equity market,1.5782748750000002,+5% S&P 500
+TECHM,F_USDINR,USD/INR exchange rate,1.4671189886363638,+3% USD/INR (rupee weaker)
+TECHM,F_EU_GDP,Europe growth,1.3863054545454545,+1 pp
+TECHM,F_GDP_IN,India real GDP growth,-1.3240784545454547,+1 pp
+TECHM,F_CPI_IN,India CPI inflation,-1.2001772727272726,+1 pp
+TECHM,F_FED_FUNDS,US Fed funds rate,-1.0392489270241474,+25 bp
+TECHM,F_AI_CAPEX,Global AI / data-centre capex,1.020506075,+10% growth
+TECHM,F_GSEC_10Y_IN,India 10-year G-sec yield,-0.9865,+25 bp yield
+TECHM,F_RISK_SENTIMENT,Global risk aversion (VIX),-0.7618034375,+5 VIX points
+TECHM,NEW_US_TARIFF_GLOBAL,US average effective tariff rate (all partners),-0.7541175,+5 pp effective tariff rate
 TIINDIA,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,1.6686646999999997,+1 = broad cut (~2-5 pp on affected items)
 TIINDIA,P_EV_POLICY,EV incentives / mandates,1.5108,+1 = stronger EV push
 TIINDIA,F_USDCNY,USD/CNY,-1.4665448849999998,+3% USD/CNY (yuan weaker)
@@ -2615,13 +2720,13 @@ TMPV,P_GST_CONSUMPTION,GST rate cuts on consumer goods/services,3.08780999999999
 TMPV,F_AUTO_DEMAND_IN,Indian vehicle demand,3.0,+10% volumes
 TMPV,F_SEMICONDUCTOR_SUPPLY,Chip/electronics component supply tightness (higher = tighter),-3.0,+1 = tightening
 TMPV,F_STEEL_GLOBAL,Global HRC steel price,-3.0,+10% global HRC
-TMPV,F_US_GDP,US growth,2.6440054520089284,+1 pp
+TMPV,F_US_GDP,US growth,2.6320054520089284,+1 pp
 TMPV,P_EV_POLICY,EV incentives / mandates,2.299975,+1 = stronger EV push
 TMPV,F_EU_GDP,Europe growth,1.9928,+1 pp
 TMPV,F_COPPER,Copper price,-1.8800000000000001,+10% copper
 TMPV,F_USDINR,USD/INR exchange rate,1.7997955,+3% USD/INR (rupee weaker)
 TMPV,F_DXY,US dollar index,1.77166953125,+3% DXY
-TMPV,F_CHINA_GDP,China growth / stimulus,-1.7294570535714289,+1 pp
+TMPV,F_CHINA_GDP,China growth / stimulus,-1.7454570535714289,+1 pp
 TMPV,NEW_RARE_EARTH_SUPPLY,"Critical-mineral supply tightness (China export controls on rare earths, magnets, graphite, Ga/Ge)",-1.5456800000000002,+1 = new/tighter export-control round
 TMPV,F_URBAN_DEMAND,Urban discretionary consumption growth,1.176075,+5 pp
 TORNTPHARM,NEW_NPPA_DRUG_PRICE_CONTROL,India NPPA/NLEM drug price control and trade-margin regulation,-3.0,+1 = one tightening step (NLEM expansion or trade-margin cap)

@@ -1,0 +1,388 @@
+{
+ "ticker": "TCS",
+ "name": "Tata Consultancy Services Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest IT services firm (Tata group; Tata Sons holds 71.77%): ~600,000 employees (model knowledge), serving BFSI (~31%), consumer, manufacturing, tech and communications clients; North America ~50% of revenue, UK ~15%, Continental Europe ~15%, India ~5%. Q2 FY27: revenue Rs73,188 cr (+11.2% INR), US$7,642 mn (+0.2% q/q, +2.8% cc y/y - weakest September quarter in three years), operating margin 24.0%, PAT Rs13,884 cr, TCV US$9.6 bn, annualised AI revenue US$3.1 bn (>10% of revenue). Debt-free, dividend yield 2.6%. Mcap Rs9.02 lakh cr, P/E 16.5.",
+ "revenue_mix": [
+  {
+   "segment": "IT and consulting services (BFSI, retail, manufacturing, tech, comms, life sciences)",
+   "share_pct": 97,
+   "geography": "North America ~50% / UK ~15% / Europe ~15% / India ~5% / rest ~15% (model estimate)"
+  },
+  {
+   "segment": "Other",
+   "share_pct": 3,
+   "geography": "Global"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 74
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "TCS",
+   "relation": "fx_translation",
+   "w": 1.5,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "~95% of revenue foreign currency, INR ~45% of costs (model knowledge); peers disclose ~25-30 bp margin per 1% INR. +3% => +80-90 bp on 24.0% EBIT = +3.5% EBIT; persistence 0.4 (hedges, wage resets), EV/MCap 0.95 => +1.3; set +1.5 consistent with INFY +1.5/HCLTECH +1.6. Empirical -1.18 (t=-0.9) wrong sign but insignificant: IT stocks rally on rupee strength via FPI flows (rupee +1.9% last month, stock +18.6% in a month).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TCS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDINR -1.18 (t=-0.9), insignificant"
+    },
+    {
+     "source": "https://www.freepressjournal.in/business/tcs-net-profit-up-025-to-13884-crore-in-q2-fy27-revenue-rises-to-73188-crore",
+     "date": "2026-10-08",
+     "note": "Op margin 24.0% flat q/q, currency gains offset by investments"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "TCS",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 2.0,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "+5% growth in US/EU enterprise IT services spend => TCS cc growth ~+2.5 pp (elasticity 0.5; ~50% North America, 15% UK, 15% Europe), operating leverage 1.4 => EBIT growth +3.5 pp for a year; at P/E 16.5 a sustained 2-3 yr step in growth is worth ~+4 to +6%; set +4.0. Q2 cc growth only +2.8% y/y (weakest Sept quarter in 3 years), so the lever is live.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/tcs-net-profit-up-025-to-13884-crore-in-q2-fy27-revenue-rises-to-73188-crore",
+     "date": "2026-10-08",
+     "note": "USD revenue US$7,642 mn, +0.2% q/q, cc +0.5% q/q, +2.8% y/y; TCV US$9.6 bn"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India's+TCS+posts+weakest+September+quarter+growth+in+three+years+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Reuters: weakest September-quarter growth in three years"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "TCS",
+   "relation": "substitution",
+   "w": -4.0,
+   "w_low": -10.0,
+   "w_high": 2.0,
+   "lag": ">12m",
+   "mechanism": "+1 = ~3% repricing of the services base from GenAI productivity pass-through; 3% x ~60% flow-through / 24% margin = -7.5% EBIT, persistence 0.5 => ~-3.5 to -4; offset: AI revenue US$3.1 bn annualised (>10% of revenue) and an 'anti-AI' relief rally in Oct (Nifty IT +16% in a month to 22 Oct). Consistent with INFY -5, HCLTECH -4, WIPRO -6, COFORGE -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.niftytrader.in/markets/?p=31958",
+     "date": "2026-10-08",
+     "note": "Annualised AI revenue US$3.1 bn, >10% of revenue"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Consultancy's+AI+strategy+has+key-man+risk+-+Breakingviews&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Breakingviews: TCS AI strategy has key-man risk"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "TCS",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "+1 = material tightening; US froze green-card filings for TCS (9 Oct) and a US$100,000 H-1B fee was blocked by court but appealed. Onsite visa cost +1.3-1.5 pp of revenue => -6% EBIT, ~50% passed to clients/local hiring, EV/MCap 0.95 => -3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Trump+administration+freezes+green+cards+for+Microsoft,+IT+firms+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US froze green-card filings for TCS, Wipro, HCL, Cognizant, Microsoft"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Trump+extends+H-1B+fee+amid+push+to+restrict+foreign+hiring+-+New+Indian+Express&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "note": "H-1B fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "TCS",
+   "relation": "macro_transmission",
+   "w": 1.2,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.07 per +5% S&P (t=1.7, beta 0.82): US client sentiment and the AI trade move IT services; the Oct AI sell-off (22 Oct) hit the sector. Kept near empirical.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TCS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_US_EQUITIES +1.07 (t=1.7), beta 0.82"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "TCS",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -1.1,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical -0.41 per +5 VIX points (t=-1.1); defensive large-cap with beta 0.85.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TCS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_RISK_SENTIMENT -0.41 (t=-1.1)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TCS",
+   "relation": "discount_rate",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "P/E 16.5, dividend yield 2.6%: +25 bp on cost of equity => ~-0.9; debt-free so no funding channel. 10y G-sec ~7.4%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/TCS/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 16.5, dividend yield 2.56%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI repo 5.50%, 10y ~7.4%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "TCS",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -1.8,
+   "w_high": 0.1,
+   "lag": "3-12m",
+   "mechanism": "US BFSI/consumer clients cut discretionary projects as the Fed funds rate rises (hike to 3.75-4.00% on 16 Sep; December hike odds 0.58); weight -0.7 per +25 bp via budget channel, cross-checked with INFY/HCLTECH -0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fed+holds+rates+October+28+2026+dissents&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Fed holds 3.75-4.00% with two hawkish dissents (event catalogue)"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "TCS",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "UK and Continental Europe ~30% of revenue; +1 pp EU/UK demand growth => +1.0. India-UK CETA in force and India-EU FTA signing 16 Dec add optionality.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2026-27/q2/Presentations/Q2%202026-27%20Fact%20Sheet.pdf",
+     "date": "2026-10-08",
+     "note": "TCS Q2 fact sheet: UK/Europe all international markets grew q/q cc"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "TCS",
+   "relation": "input_cost",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "+2 pp wage inflation on employee cost ~56% of revenue = +1.1 pp of revenue = -4.7% EBIT, ~60% recovered via pricing/utilisation, persistence 0.5 => -1.8. Q2 margin already absorbed hiring and bench costs; wage hike cycle is a Q3-Q4 FY27 question.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/tcs-net-profit-up-025-to-13884-crore-in-q2-fy27-revenue-rises-to-73188-crore",
+     "date": "2026-10-08",
+     "note": "Margin pressure from hiring, bench; senior staff to miss variable pay (Reuters 9 Oct headline)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Tata Sons",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "71.77% promoter; dividends and brand"
+  },
+  {
+   "counterparty": "Large BFSI clients (e.g. UK/US banks, insurers)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "BFSI is the largest vertical; no client >25% disclosed"
+  },
+  {
+   "counterparty": "Infosys",
+   "ticker": "INFY",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Cut FY27 guidance to 1-2% cc on 23 Oct"
+  },
+  {
+   "counterparty": "HCLTech / Wipro / Tech Mahindra",
+   "ticker": "HCLTECH",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Same deal pools; AI deflation common"
+  },
+  {
+   "counterparty": "Microsoft / AWS / Google (hyperscaler partners)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "AI and cloud platforms"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-09",
+   "event": "Q3 FY27 results (TCS reports ~9-12 Jan; date unconfirmed): cc growth, AI revenue, margin, variable pay",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://www.freepressjournal.in/business/tcs-net-profit-up-025-to-13884-crore-in-q2-fy27-revenue-rises-to-73188-crore"
+  },
+  {
+   "date": "2026-12-09",
+   "event": "FOMC (hike odds 0.58): hits US BFSI budgets and US growth expectations",
+   "type": "other",
+   "prob": 0.58,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Fed+holds+rates+October+28+2026+dissents&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11-17",
+   "event": "Nvidia FQ3 results: AI-trade read-across to IT services (anti-AI rotation vs AI-capex confidence)",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Nvidia+earnings+November+17+2026+AI+capex&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "H-1B $100,000 fee appeal / green-card freeze litigation outcomes",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Trump+extends+H-1B+fee+amid+push+to+restrict+foreign+hiring+-+New+Indian+Express&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Company wage-hike cycle announcement (Q3-Q4 FY27)",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 0.5,
+   "source": "https://www.freepressjournal.in/business/tcs-net-profit-up-025-to-13884-crore-in-q2-fy27-revenue-rises-to-73188-crore"
+  },
+  {
+   "date": "2027-03-31",
+   "event": "India-US interim trade deal concluded (services/visa side-letter odds uncertain)",
+   "type": "regulatory",
+   "prob": 0.45,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=India+US+trade+deal+interim+agreement+2026&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-08: revenue Rs73,188 cr (+11.2% y/y INR, +1.2% q/q), cc +0.5% q/q, margin 24.0% (screener OPM 26%), PAT Rs13,884 cr (+0.25% q/q; screener 13,934 - minor mismatch), TCV US$9.6 bn, India revenue -10.3% q/q.",
+  "trend": "Low-single-digit cc growth, flat margin with AI/bench investments; stock +18.6% in a month (to Rs2,492) after the 9 Oct post-results pop (+5.5%) and an anti-AI rotation, but -16.7% over 12 months.",
+  "valuation": "P/E 16.5, P/B 7.6, dividend yield 2.56% (screener); price Rs2,492 vs 52w 1,976-3,350. Historical-median multiples not verified.",
+  "recent_developments": [
+   "2026-10-08: Q2 results; revenue meets estimates, 10% of topline from AI (CNBC TV18/Reuters)",
+   "2026-10-09: shares +5.5%; senior staff miss variable pay (Reuters)",
+   "2026-10-09: US freezes green cards for TCS and peers (Reuters)",
+   "2026-10-23: Infosys cuts FY27 guidance to 1-2%; sector -2% to -5% on 27-28 Oct",
+   "2026-10-16: shares +4% post-results; analysts split"
+  ]
+ },
+ "key_risks": [
+  "GenAI-driven price deflation and slower deal conversion",
+  "US visa/outsourcing restrictions (green-card freeze, H-1B fee appeal)",
+  "Weak BFSI/consumer demand if Fed keeps hiking and US data soften (Sept payrolls +29k)",
+  "Margin pressure from wages, bench and investments; India revenue slump",
+  "Key-man risk around the AI strategy (Breakingviews)",
+  "Sharp 1-month +18.6% rally leaves little buffer"
+ ],
+ "upside_triggers": [
+  "Fed pause and US growth steadiness lifting discretionary tech spend",
+  "AI revenue scaling faster than deflation; large-deal conversion",
+  "Rupee depreciation or margin beat in Q3",
+  "India-US trade deal with visa clarity",
+  "Capital return (buyback) - not announced"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.freepressjournal.in/business/tcs-net-profit-up-025-to-13884-crore-in-q2-fy27-revenue-rises-to-73188-crore",
+   "date": "2026-10-08",
+   "what": "Free Press Journal: TCS Q2 FY27 numbers"
+  },
+  {
+   "url": "https://www.niftytrader.in/markets/?p=31958",
+   "date": "2026-10-08",
+   "what": "Nifty Trader: AI revenue US$3.1 bn"
+  },
+  {
+   "url": "https://www.tcs.com/content/dam/tcs/investor-relations/financial-statements/2026-27/q2/Presentations/Q2%202026-27%20Fact%20Sheet.pdf",
+   "date": "2026-10-08",
+   "what": "TCS Q2 FY27 fact sheet (search result; not parsed)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India's+TCS+posts+weakest+September+quarter+growth+in+three+years+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-08",
+   "what": "Reuters headline: weakest Sept-quarter growth in 3 years"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Trump+administration+freezes+green+cards+for+Microsoft,+IT+firms+-+Reuters&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Reuters headline: green-card freeze"
+  },
+  {
+   "url": "https://www.screener.in/company/TCS/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals and empirical sensitivities (evidence pack)"
+  }
+ ]
+}

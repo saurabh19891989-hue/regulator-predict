@@ -1,0 +1,642 @@
+{
+ "ticker": "ADANIENT",
+ "name": "Adani Enterprises Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CONGLOMERATE",
+ "tier": "NIFTY_50",
+ "business_summary": "Adani group's incubator holding: Integrated Resources Management (coal trading, Carmichael and Indonesian mining, MDO mining services), airports through Adani Airport Holdings (Mumbai, Navi Mumbai opened Oct 2025, six other airports), Kutch Copper smelter (80.6 kt sold in Q2), roads, water, data centres (AdaniConneX JV), solar/wind manufacturing, green hydrogen, defence and PVC. Q2 FY27: total income Rs38,023 cr (+74%), EBITDA Rs6,316 cr (+62%), H1 EBITDA Rs11,958 cr (+56%), attributable profit Rs1,492 cr (-55%; screener NP Rs1,221 cr) on higher interest and depreciation. Raising ~US$1 bn at AAHL (US$18 bn pre-money). CARE AA/Stable. Mcap Rs3.70 lakh cr, P/E 115. Segment shares in revenue_mix are model estimates. Seed tier says NIFTY_50 (brief called it Next 50): treated at Next-50 depth.",
+ "revenue_mix": [
+  {
+   "segment": "Integrated Resources Management, copper, mining services (commodity-linked)",
+   "share_pct": 85,
+   "geography": "India majority; Australia, Indonesia mining"
+  },
+  {
+   "segment": "Airports",
+   "share_pct": 9,
+   "geography": "India (Rs3,786 cr Q2 income)"
+  },
+  {
+   "segment": "Roads, data centres, solar/wind manufacturing, water, other incubating businesses",
+   "share_pct": 6,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COAL_INTL",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 25
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_TRAVEL_DEMAND",
+   "dst": "ADANIENT",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.2,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Adani Airport Holdings (AAHL: Mumbai, Navi Mumbai and six other airports - list per model knowledge) contributes Rs1,641 cr = 26% of Q2 EBITDA (income Rs3,786 cr, +20%; EBITDA +55%). Primary equity raised at US$18 bn pre-money (Sep 2026) = ~Rs1.7 lakh cr, about 46% of ADANIENT's Rs3.70 lakh cr mcap. +10% traffic => ~+9% airport revenue/EBITDA (aero+non-aero, operating leverage) => ~+9% on 46% of value = +4%; x0.8 persistence for capex dilution => +3.2; trimmed to +3.0. Depreciation from Navi Mumbai caps profit conversion.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.adani.com/newsroom/media-releases/adani-airports-to-raise-usd-1-billion-of-primary-equity-from-marquee-global-investors",
+     "date": "2026-09-09",
+     "note": "AAHL raising ~US$1 bn (Rs9,825 cr) from Alpha Wave, Premji Invest, Temasek, BlackRock funds at US$18 bn pre-money for 5.54%"
+    },
+    {
+     "source": "https://www.venturasecurities.com/?p=66117",
+     "date": "2026-10-28",
+     "note": "Airport earnings grew, higher depreciation weighed"
+    },
+    {
+     "source": "https://www.psuconnect.in/corporate-news/adani-enterprises-posts-record-h1-ebitda-of-11-958-crore-up-56",
+     "date": "2026-10-28",
+     "note": "Airports Q2 total income Rs3,786 cr (+20%), EBITDA Rs1,641 cr (+55%)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "ADANIENT",
+   "relation": "geopolitical_exposure",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation lifts ATF/Brent (US$95; peak ~US$117 on 30 Oct), closes Gulf airspace (international pax ~25% of airport traffic, model estimate), raises LNG/shipping costs and drives risk-off in a stock with beta 1.5. Offsets: coal and copper trading margins sometimes widen. Net -1.5 per +1 escalation step.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Iran+war+Hormuz+tanker+attacks+Brent+six-month+high+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Hormuz tanker attacks and Gulf strikes push Brent to six-month high (event catalogue)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ADANIENT",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Empirical -0.63 per +10% Brent (t=-0.9, beta 1.38): ATF costs reduce airline capacity growth, higher diesel raises mining services costs; direct mechanisms small. Weight at empirical value.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT -0.63 (t=-0.9); F_GAS_GLOBAL -1.16 (t=-2.3)"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "ADANIENT",
+   "relation": "output_price",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Integrated Resources Management (coal trading, Carmichael/Bunyu mining, mining services) is a large volume business (~Rs-denominated trading margin per tonne) whose EBITDA benefits from higher prices through Carmichael and Indonesian mines and inventory gains but loses on volume if buyers shift. Assume coal-linked ~25% of EBITDA: +15% price => +10% on that segment net of pass-through => +2.5% EBITDA x1.25 x0.5 => +1.5; shaded to +1.0. Seaborne thermal coal is flat since June (US$96). Not significant in the pack (t<1).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://ticker.finology.in/discover/market-update/adani-enterprises-q2-fy27-results-analysis",
+     "date": "2026-10-28",
+     "note": "IRM/mining services part of Q2 mix (details not extracted)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+coal+crunch+import+demand+Adani+Enterprises+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10",
+     "note": "India coal crunch raises imported-coal demand (catalogue EV_INDIA_COAL_CRUNCH)"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "ADANIENT",
+   "relation": "output_price",
+   "w": 1.2,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Kutch Copper smelter (1 Mtpa): Q2 copper sales 80.6 kt vs 11.8 kt a year ago; copper EBITDA reported Rs2,033 cr (period unclear: Q2 or H1). Earnings are processing margin (TC/RC at record lows per Fastmarkets, which hurts) plus by-products (sulphuric acid, gold, silver) and inventory gains; flat-price sensitivity is modest: +10% copper => ~+3% on copper EBITDA via inventory/by-product => +1.2 after ramp-up. Copper at record in Sep, +28% y/y.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://ticker.finology.in/discover/market-update/adani-enterprises-q2-fy27-results-analysis",
+     "date": "2026-10-28",
+     "note": "Copper sales volume 80,600 t vs 11,800 t"
+    },
+    {
+     "source": "https://www.psuconnect.in/corporate-news/adani-enterprises-posts-record-h1-ebitda-of-11-958-crore-up-56",
+     "date": "2026-10-28",
+     "note": "Copper EBITDA Rs2,033 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ADANIENT",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Foreign-currency borrowings (AEL and AAHL USD bonds; Australian mining) and imported copper concentrate/coal outweigh USD earnings; Kutch copper cathodes are sold domestically at LME-linked INR prices (neutral). Assumed ~25% of debt unhedged USD: +3% x 25% x Rs90,000 cr debt = Rs675 cr mark-to-market/interest ~ -4% of EBITDA x persistence 0.3 => -1. Uncertain: hedge ratio not found.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "Interest Rs2,296 cr/q, equity beta 1.5"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ADANIENT",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "P/E 115 and ROCE 5.8% on TTM: valuation rests on long-dated airport, data-centre, copper and green-hydrogen earnings, i.e. very long duration. +25 bp on cost of equity at an implied duration of ~15-20 years => -2.5 to -4%; central -2.5. 10y G-sec ~7.4% after RBI's hike and liquidity drain.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 115, P/B 3.8, ROCE 5.8%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI repo 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ADANIENT",
+   "relation": "funding_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Interest expense Rs2,296 cr/q (Rs9,200 cr/yr) against H1 EBITDA Rs11,958 cr; ~30% floating-linked: +25 bp on ~Rs27,000 cr = Rs68 cr = 0.4% of annual EBITDA x EV/MCap 1.25 => -0.5; ~-0.4 after capitalised interest. CARE upgraded the rating to AA/Stable on 7 Oct 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/corporate-news/adani-enterprises-posts-record-h1-ebitda-of-11-958-crore-up-56",
+     "date": "2026-10-28",
+     "note": "H1 EBITDA Rs11,958 cr (+56%)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Enterprises+gets+rating+upgrade+from+CARE+Ratings+to+AA+Stable&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "CARE Ratings upgrades Adani Enterprises to AA/Stable"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "ADANIENT",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Heavy refinancing/new-debt needs for capex (airports, copper phase 2, data centres, solar) at ~8-9%; +50 bp on ~Rs50,000 cr to refinance/raise in 12 months = Rs250 cr = -1.4% of EBITDA; plus access/sentiment (Adani paper has historically repriced sharply in credit stress). Net -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Enterprises+gets+rating+upgrade+from+CARE+Ratings+to+AA+Stable&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Rating upgrade cut credit-spread sensitivity; stock still fell 4% that day"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+group+stocks+under+pressure+Enterprises+Green+Energy+tank+up+to+7%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Adani group stocks fell up to 7% on 8 Oct"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ADANIENT",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Index heavyweight (Nifty 50) with FII 10.7% and DII 10.6% after Sep-quarter changes; high-beta (1.54). +US$5 bn quarterly FPI inflow => +2.0; record CY2026 outflow (~Rs3 lakh cr) has been a drag; FPI turn-positive odds 0.55 by Jan 2027.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "FII 10.66%, DII 10.62%, promoters 71.97% (-2.87 pp)"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "ADANIENT",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "AdaniConneX (JV with EdgeConneX) is a large option in the SOTP; +1 (stronger Indian data-centre build-out) => +1.5 via valuation; AI capex pause (Oct 2026 AI sell-off, EV_AI_CAPEX_RESET_RISK odds 0.28) is the risk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=AdaniConneX+data+centre+capacity+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10",
+     "note": "AdaniConneX data-centre pipeline (headline-level, not fetched)"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "ADANIENT",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Solar module/cell/wafer manufacturing (Mundra), wind turbines and green hydrogen sit in Adani New Industries; ALMM List-II cell mandate in force since 1 Jun 2026 (approved cell capacity 37.8 GW) and Rs14,500 cr BESS VGF (4 Nov) support integrated domestic makers. +1 (stronger support) => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cabinet+approves+Rs14,500+crore+VGF+battery+energy+storage+92+GWh&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "BESS VGF approved (event catalogue EV_BESS_VGF_NOV26)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=ALMM+List-II+solar+cells+mandate+June+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-06",
+     "note": "ALMM List-II domestic cell mandate in force"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "ADANIENT",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Roads (BOT/HAM), water, railway/mining-service orders and airport/city-side development depend on public capex; +10% growth => +1.2. Union Budget 1 Feb 2027 capex push odds 0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Budget+2027-28+capex+increase+infrastructure&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10",
+     "note": "Budget FY28 capex expectations (catalogue EV_BUDGET_FY28_CAPEX_PUSH)"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "ADANIENT",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Duties on Chinese solar cells/glass/aluminium frames and PVC protect Mundra solar and PVC; DGTR wave Sep-Oct 2026. +1 => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=DGTR+anti-dumping+probe+solar+PVC+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10",
+     "note": "DGTR probe wave"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "ADANIENT",
+   "relation": "macro_transmission",
+   "w": -2.0,
+   "w_low": -4.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "STATISTICAL ONLY. Empirical -3.70 per +8% gold (t=-3.6) and silver -2.19 (t=-2.9), beta 1.5: the stock rises in risk-on and falls on safe-haven rallies; no fundamental mechanism other than small by-product gold/silver from Kutch copper. Shrunk to -2.0; the assembler may treat as risk-factor proxy.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIENT/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_GOLD -3.70 (t=-3.6), F_SILVER -2.19 (t=-2.9)"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ADANIPORTS",
+   "dst": "ADANIENT",
+   "relation": "group_contagion",
+   "w": 0.5,
+   "w_low": 0.25,
+   "w_high": 0.9,
+   "lag": "0-3m",
+   "mechanism": "Same promoter (71.97%); group-wide sell-offs (Hindenburg Jan 2023, Nov 2024 US indictment) hit all listed Adani stocks; w = % move in ADANIENT per +1% in ADANIPORTS. Weekly regression of ADANIENT on ADANIPORTS: beta 1.10 (corr 0.79) over 5 years, 1.05 last 12 months, 0.81 since Jul 2026; shrunk for the market component (ADANIENT beta 1.4-1.5) to 0.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+group+stocks+under+pressure+Enterprises+Green+Energy+tank+up+to+7%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Adani Enterprises, Green tank up to 7% in a group sell-off on 8 Oct"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Enterprises+shares+drop+3%25+after+Adani+group+entities+swap+86+lakh+shares&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Group entities swap 86 lakh AEL shares for Rs2,498 cr"
+    }
+   ]
+  },
+  {
+   "src": "ADANIGREEN",
+   "dst": "ADANIENT",
+   "relation": "group_contagion",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Regression of ADANIENT on ADANIGREEN beta 0.48 (5y), 0.63 (12m), corr 0.6-0.8; shrunk for market component.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+group+stocks+under+pressure+Enterprises+Green+Energy+tank+up+to+7%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Group sell-off on 8 Oct"
+    }
+   ]
+  },
+  {
+   "src": "ADANIPOWER",
+   "dst": "ADANIENT",
+   "relation": "group_contagion",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Regression of ADANIENT on ADANIPOWER beta 0.56 (5y), 0.76 (12m), 0.93 since Jul 2026; shrunk for market component.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+group+stocks+under+pressure+Enterprises+Green+Energy+tank+up+to+7%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Group sell-off on 8 Oct"
+    }
+   ]
+  },
+  {
+   "src": "ADANIENSOL",
+   "dst": "ADANIENT",
+   "relation": "group_contagion",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Regression of ADANIENT on ADANIENSOL beta 0.53-0.58, corr 0.6-0.75; shrunk for market component.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+group+stocks+under+pressure+Enterprises+Green+Energy+tank+up+to+7%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "Group sell-off on 8 Oct"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Adani Airport Holdings Ltd (subsidiary)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "Held ~94% after the 5.54% primary placement (estimate; pre-placement stake not verified); US$18 bn pre-money valuation (Sep 2026)"
+  },
+  {
+   "counterparty": "Adani Ports and SEZ",
+   "ticker": "ADANIPORTS",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Group company; logistics synergy, correlated stock"
+  },
+  {
+   "counterparty": "Adani Power / Adani Green / Adani Energy Solutions",
+   "ticker": "ADANIPOWER",
+   "role": "customer",
+   "importance": "medium",
+   "note": "Group coal supply and EPC/MDO services; shared promoter and sentiment"
+  },
+  {
+   "counterparty": "Ambuja Cements / ATGL",
+   "ticker": "AMBUJACEM",
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "Group companies; existing contagion links already filed in their profiles"
+  },
+  {
+   "counterparty": "Coal India and global coal producers",
+   "ticker": "COALINDIA",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Imported/domestic coal supply for trading"
+  },
+  {
+   "counterparty": "Copper concentrate suppliers (global)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Kutch Copper feedstock; TC/RC at record lows"
+  },
+  {
+   "counterparty": "Airlines (IndiGo, Air India)",
+   "ticker": "INDIGO",
+   "role": "customer",
+   "importance": "high",
+   "note": "(ticker per model knowledge) Airport charges; capacity and fuel costs drive traffic"
+  },
+  {
+   "counterparty": "EdgeConneX",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "50:50 AdaniConneX JV partner"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 was 2026-10-28); airport peak-season traffic, Kutch copper ramp, interest and depreciation",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.republicworld.com/initiatives/adani-enterprises-q2-results-ebitda-surges-62-to-6316-crore-income-jumps-74-to-38023-crore-2026-10-28-139874"
+  },
+  {
+   "date": "2027-07",
+   "event": "Final tranche of Adani Airports US$1 bn primary raise (BlackRock, Temasek, Premji, Alpha Wave)",
+   "type": "corporate_action",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.5,
+   "source": "https://www.adani.com/newsroom/media-releases/adani-airports-to-raise-usd-1-billion-of-primary-equity-from-marquee-global-investors"
+  },
+  {
+   "date": "2027-06",
+   "event": "Possible Adani Airports IPO/listing preparation (model knowledge, not confirmed)",
+   "type": "corporate_action",
+   "prob": 0.15,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 6.0,
+   "source": "https://www.adani.com/newsroom/media-releases/adani-airports-to-raise-usd-1-billion-of-primary-equity-from-marquee-global-investors"
+  },
+  {
+   "date": "2026-12",
+   "event": "Group-level legal/regulatory headline risk (US probes reportedly settled; OFAC settlement Rs2,644 cr booked in Q1 FY27; other open matters not verified)",
+   "type": "litigation",
+   "prob": 0.15,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": -4.0,
+   "source": "https://www.psuconnect.in/corporate-news/adani-enterprises-posts-record-h1-ebitda-of-11-958-crore-up-56"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget FY28: capex, customs on copper/solar inputs",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Union+Budget+2027+copper+solar+customs+duty&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12-04",
+   "event": "RBI MPC (hike odds 0.40): high-duration stock",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Kutch Copper phase-2 / data-centre capacity commissioning milestones",
+   "type": "capex",
+   "prob": 0.4,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://ticker.finology.in/discover/market-update/adani-enterprises-q2-fy27-results-analysis"
+  },
+  {
+   "date": "2026-12",
+   "event": "Promoter-group inter-se share swaps / block deals (86 lakh shares for Rs2,498 cr on 25 Sep) and further promoter stake changes",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Adani+Enterprises+shares+drop+3%25+after+Adani+group+entities+swap+86+lakh+shares&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-28: total income Rs38,023 cr (+74%), EBITDA Rs6,316 cr (+62%); H1 EBITDA Rs11,958 cr (+56%); airports income Rs3,786 cr (+20%), EBITDA Rs1,641 cr (+55%); copper 80.6 kt; attributable PAT Rs1,492 cr (-55%) / screener NP Rs1,221 cr; screener sales Rs37,216 cr, OPM 15%, interest Rs2,296 cr. One source (Arthneeti) gives different totals (income Rs29,982 cr, EBITDA Rs8,041 cr) - treated as unreliable.",
+  "trend": "Revenue and EBITDA growing 60-75% on copper ramp, airports and mining services, but profit shrinking because of interest (Rs2,296 cr/q vs Rs1,711 cr a year ago) and depreciation on newly commissioned assets (Navi Mumbai); two loss/near-loss quarters (Mar and Jun 2026) in the pack.",
+  "valuation": "Price Rs2,735 (52w 1,753-3,245; +13% 12m, -9.6% 3m); mcap Rs3.70 lakh cr; P/E 115, P/B 3.8, ROCE 5.8%; EV/EBITDA on TTM EBITDA Rs17,900 cr ~ 25x (EV est. Rs4.6 lakh cr, net debt not verified). Jefferies sees 28% upside (22 Sep).",
+  "recent_developments": [
+   "2026-10-28: Q2/H1 results; record H1 EBITDA (Adani newsroom via press)",
+   "2026-10-08: CARE upgrades to AA/Stable; stock -4% to -6% on group sell-off the same day (ET, Business Standard)",
+   "2026-09-25/28: group entities swap 86 lakh AEL shares for Rs2,498 cr; promoter holding falls to 71.97% in the Sep quarter",
+   "2026-09-09: Adani Airports to raise US$1 bn at US$18 bn; AEL +6% intraday",
+   "2026-09-10/22: Jefferies calls AEL the 'platform behind platforms', 28% upside",
+   "2026-10-22: shares ~Rs2,550 then rebound to Rs2,735 on Nifty rally"
+  ]
+ },
+ "key_risks": [
+  "Leverage: interest Rs2,296 cr/q, Rs-heavy capex, rising depreciation; ROCE 5.8%",
+  "Legal/regulatory shocks at the group (US probes settled but other cases; OFAC settlement booked)",
+  "Group contagion: all listed Adani stocks sell off together (up to 7% on 8 Oct)",
+  "Commodity-linked IRM/copper margins (TC/RC at record low; coal price)",
+  "Valuation: P/E 115 relies on long-dated airports/data-centre/copper/hydrogen cash flows; high duration to rates",
+  "Governance/related-party perception and promoter share swaps"
+ ],
+ "upside_triggers": [
+  "Airport traffic growth and Navi Mumbai ramp; AAHL monetisation at US$18 bn valuation",
+  "Copper smelter ramp to full margin; TC/RC recovery",
+  "Rate cuts or FPI return (odds 0.55 by Jan 2027)",
+  "Rating upgrades and cheaper refinancing; data-centre and solar PLI-linked profits",
+  "Resolution of legal overhangs"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_ADANI_GROUP_LEGAL_RISK",
+   "type": "POLICY",
+   "name": "Adani group legal/regulatory risk (US DoJ/SEC/OFAC, SEBI, Hindenburg-type events)",
+   "ssu": "+1 = new material enforcement action or adverse ruling"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.republicworld.com/initiatives/adani-enterprises-q2-results-ebitda-surges-62-to-6316-crore-income-jumps-74-to-38023-crore-2026-10-28-139874",
+   "date": "2026-10-28",
+   "what": "Republic World: Q2 FY27 EBITDA Rs6,316 cr, income Rs38,023 cr"
+  },
+  {
+   "url": "https://www.psuconnect.in/corporate-news/adani-enterprises-posts-record-h1-ebitda-of-11-958-crore-up-56",
+   "date": "2026-10-28",
+   "what": "PSU Connect: H1 EBITDA Rs11,958 cr, airports/copper segments, OFAC settlement note"
+  },
+  {
+   "url": "https://www.freepressjournal.in/business/adani-enterprises-q2-profit-falls-55-to-1492-crore-revenue-surges-75-to-37216-crore",
+   "date": "2026-10-28",
+   "what": "Free Press Journal: profit -55% to Rs1,492 cr, revenue Rs37,216 cr"
+  },
+  {
+   "url": "https://ticker.finology.in/discover/market-update/adani-enterprises-q2-fy27-results-analysis",
+   "date": "2026-10-28",
+   "what": "Finology: copper volume 80.6 kt vs 11.8 kt (search snippet)"
+  },
+  {
+   "url": "https://www.adani.com/newsroom/media-releases/adani-airports-to-raise-usd-1-billion-of-primary-equity-from-marquee-global-investors",
+   "date": "2026-09-09",
+   "what": "Adani newsroom: Adani Airports to raise ~US$1 bn at US$18 bn pre-money"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Enterprises+gets+rating+upgrade+from+CARE+Ratings+to+AA+Stable&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "CARE Ratings upgrade to AA/Stable (ET headline)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+group+stocks+under+pressure+Enterprises+Green+Energy+tank+up+to+7%25&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-08",
+   "what": "Group sell-off headline"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Enterprises+shares+drop+3%25+after+Adani+group+entities+swap+86+lakh+shares&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-28",
+   "what": "Livemint headline: group share swap"
+  },
+  {
+   "url": "https://www.screener.in/company/ADANIENT/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals and empirical sensitivities (evidence pack)"
+  }
+ ]
+}

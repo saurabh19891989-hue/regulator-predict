@@ -1,0 +1,96 @@
+# LICI — Life Insurance Corporation of India
+*MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
+
+## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
+- Expected relative return: **3 months -0.2%**, **12 months -2.4%** (rank 103 / 132 of 200 for 3m / 12m); beta 1.12
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.7%): 3 months 49%, 12 months 57%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.7% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -21.3% … +21.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.2 pp (model impact +2.5% beta-adjusted vs realised market-adjusted move -4.3%); forward event exposure -5.1% (3m -0.9%; half assumed priced); company-specific events +0.1%
+
+## What moves this stock (company → drivers)
+% change in equity value for a +1 standard shock of each driver, split by causal order.
+| driver | standard shock | total | 1st | 2nd | 3rd | 4th | driver move since 1 Jun 2026 |
+|---|---|---|---|---|---|---|---|
+| Global risk aversion (VIX) (`F_RISK_SENTIMENT`) | +5 VIX points | -3.94 | -3.50 | -0.31 | -0.14 | +0.01 | +3.5% |
+| Household savings shift to financial assets (`T_FINANCIALISATION`) | +1 | +3.45 | +2.50 | +1.00 | -0.02 | -0.03 | — |
+| US average effective tariff rate (all partners) (`NEW_US_TARIFF_GLOBAL`) | +5 pp effective tariff rate | -2.71 | +0.00 | -1.40 | -0.89 | -0.42 | — |
+| US equity market (`F_US_EQUITIES`) | +5% S&P 500 | +2.54 | +0.00 | +2.16 | +0.36 | +0.02 | +1.2% |
+| Domestic SIP / DII flows (`F_DOMESTIC_FLOWS`) | +10% monthly SIP + DII inflow | +2.47 | +2.50 | +0.00 | -0.02 | -0.01 | — |
+| US growth (`F_US_GDP`) | +1 pp | +2.39 | +0.00 | +0.96 | +1.43 | +0.00 | — |
+| Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -2.33 | +0.00 | -1.38 | -0.59 | -0.36 | — |
+| Capital-gains / securities tax burden (`P_CAPITAL_GAINS_TAX`) | +1 = higher | -2.05 | -1.50 | -0.55 | -0.01 | +0.00 | — |
+| USD/JPY exchange rate (`NEW_USDJPY`) | +3% USD/JPY (yen weaker) | +2.02 | +0.00 | +1.76 | +0.19 | +0.07 | — |
+| Insurance regulation tightening (IRDAI) (`P_IRDAI_REG`) | +1 = tightening | -1.76 | -1.50 | -0.15 | -0.11 | +0.00 | — |
+| India real GDP growth (`F_GDP_IN`) | +1 pp | +1.53 | +1.50 | +0.14 | -0.07 | -0.04 | — |
+| Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.47 | +1.50 | +0.02 | -0.04 | -0.01 | — |
+| GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.27 | +1.00 | +0.00 | +0.21 | +0.06 | — |
+| Rural consumption growth (`F_RURAL_DEMAND`) | +5 pp | +1.08 | +0.00 | +1.01 | +0.17 | -0.10 | — |
+
+## Events affecting this stock (event → company)
+| event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
+|---|---|---|---|---|---|---|---|---|
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -5.8% | -5.8% | +0.0 | -3.8 | -1.4 | -0.6 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -16.8% | -4.7% | -14.0 | -2.7 | -0.2 | +0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.6% | -4.6% | -4.7 | -0.1 | +0.1 | +0.0 |
+| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -20.8% | -3.7% | -17.5 | -3.4 | -0.1 | +0.2 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.0% | +3.0% | +0.0 | +1.1 | +1.5 | +0.3 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -10.7% | -2.7% | +0.0 | -9.3 | -0.6 | -0.9 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.1% | +2.5% | +5.2 | +0.1 | -0.1 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -6.8% | -2.4% | -4.2 | -1.6 | -0.7 | -0.3 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.3% | +1.9% | +1.8 | +1.0 | +0.4 | +0.2 |
+| AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.5% | -1.5% | -1.2 | -0.3 | -0.0 | +0.0 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.6 | -0.5 | -0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.6 | -0.4 | -0.2 |
+
+## Strongest causal chains (1st–4th order)
+| order | chain | impact if event | expected 12m |
+|---|---|---|---|
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → LICI | -14.00% | -3.92% |
+| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_FPI_FLOWS → LICI | -3.30% | -3.30% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → LICI | -17.50% | -3.15% |
+| 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LICI | +3.75% | +1.88% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ C_MIDEAST_CONFLICT → F_RISK_SENTIMENT → LICI | -1.68% | -1.68% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → LICI | -4.20% | -1.50% |
+| 1 | EV_FPI_RECORD_OUTFLOW_26 ⇒ F_RISK_SENTIMENT → LICI | -1.40% | -1.40% |
+| 3 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_US_EQUITIES → F_RISK_SENTIMENT → LICI | +1.36% | +1.36% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → LICI | -5.04% | -1.26% |
+| 1 | EV_AI_SELLOFF_OCT26 ⇒ F_RISK_SENTIMENT → LICI | -1.23% | -1.23% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → LICI | +1.75% | +1.02% |
+| 2 | EV_US_Q3_DATA_MIXED ⇒ F_US_GDP → F_RISK_SENTIMENT → LICI | +1.01% | +1.01% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_FPI_FLOWS → LICI | -0.89% | -0.89% |
+| 2 | EV_IRAN_WAR_HORMUZ_OIL ⇒ F_BRENT → F_GDP_IN → LICI | -0.89% | -0.89% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → LICI | +1.40% | +0.87% |
+
+## Analyst profile (agent research, sourced)
+# LICI - Life Insurance Corporation of India (midcap, life insurance)
+
+## Business
+LIC is the dominant Indian life insurer: about 66% of new business premium, roughly Rs 55 lakh cr of assets and 14 lakh agents. Par (participating) policies still dominate the mix; management wants a higher non-par share and VNB margins in the mid-20s. Reported net profit (Rs 57.4k cr FY26, Rs 13.5k cr Q1 FY27) swings with realised equity gains because LIC holds one-third of assets in equity. The government owned 96.5% until the August 2026 OFS of Rs 31,552 cr; promoter share is now 90.0% and public float 10%.
+
+## What moves the stock (ranked)
+1. **Equity-market level and flows** - the portfolio makes both P&L and embedded value market-sensitive. A VIX spike of +5 points is worth about -3.5% for the stock.
+2. **Government stake-sale supply** - the OFS raised DII ownership from 1% to 6.2%. Management said no fresh sale soon, but the 12-month probability of another tranche is about 12%; each costs 2-6%.
+3. **VNB growth and margins** - Q1 VNB +61%; GST relief on individual premia and ITC on group cover (8 Oct) are tailwinds; commission/distribution reform and margin caps are risks.
+4. **Rates** - mostly neutral: 75% of assets are debt with reinvestment benefit offsetting EV discount-rate effects.
+5. **Tax policy** - LTCG revisit talk (ET, 3 Nov) matters for realised-gain profits.
+
+## Transmission examples
+- **Middle East escalation -> Brent up -> INR weaker and FPI selling -> Nifty falls -> LIC's equity book marks down -> reported profit and solvency buffer drop -> shares fall (and LIC may act as a market stabiliser, buying dips, reducing further fall).**
+- **RBI hike (7 Oct) -> bank FD rates up -> household substitution into FDs and gold; but higher yields lift annuity and non-par pricing -> VNB margin up with a lag (3rd order).**
+- **PSU divestment push (Hindustan Copper, Cochin Shipyard OFS in Aug) -> LIC as anchor buyer absorbs supply -> its equity-gain book changes (4th-order: LIC's own stake sale reduces domestic institutional appetite for other PSU OFS).**
+- **Higher gold price -> more jewellery/gold ETF buying -> less savings into endowment policies -> lower NBP.**
+
+## Current situation
+Stock fell 7.3% in October before Q2; 12m -9.8% but 3m +5.4%. Q1 showed VNB +61% and profit +23%. Q2 results are due this week (date unconfirmed). Valuation P/E 8.6 with ROE 38% looks cheap versus private peers but reflects government control and low growth (sales CAGR 7.5% over 5 years).
+
+## Upcoming
+Q2 FY27 results; Union Budget (Feb 2027); IRDAI distribution reforms; potential further OFS; NSE stake increase.
+
+## Bull / bear
+Bull: VNB margin expansion, non-par shift, large float increase and index flows, strong equity market. Bear: equity correction, government supply, regulatory caps, political demands to share surplus with policyholders.
+
+Uncertainty: AUM mix and equity share are model knowledge; screener series for Sep 2026 quarter was not yet available; low confidence overall.
+
+
+## Caveats
+Exposure-driven, scenario-implied estimate from an LLM-built causal graph grounded in fundamentals and price co-movement. It has not been validated out of sample; see `ledger/` for the prospective scoring record.

@@ -117,7 +117,20 @@ def assemble():
             continue
         groups[(e["src"], e["dst"])].append(e)
     edges = []
-    for (s, d), lst in groups.items():
+    for (s, d), lst0 in groups.items():
+        # within one origin, parallel edges with different relations are distinct channels and are netted (summed);
+        # same-relation repeats are averaged; across origins, the per-origin edges are confidence-weighted averages.
+        by_o = defaultdict(lambda: defaultdict(list))
+        for e in lst0:
+            by_o[e["origin"]][e.get("relation")].append(e)
+        lst = []
+        for o, rels in by_o.items():
+            parts = [{**r[0], **{k: float(np.mean([float(x[k]) for x in r])) for k in ("w", "w_low", "w_high")}} for r in rels.values()]
+            if len(parts) == 1:
+                lst.append(parts[0])
+            else:
+                lst.append({**max(parts, key=lambda e: abs(e["w"])), "relation": "+".join(sorted(str(x.get("relation")) for x in parts)),
+                            **{k: sum(x[k] for x in parts) for k in ("w", "w_low", "w_high")}})
         ws = np.array([CONF_W.get(e.get("confidence"), 0.3) for e in lst])
         w = float(np.dot(ws, [float(e["w"]) for e in lst]) / ws.sum())
         lo = min(float(min(e["w_low"], e["w_high"])) for e in lst)
@@ -125,7 +138,7 @@ def assemble():
         best = max(lst, key=lambda e: CONF_W.get(e.get("confidence"), 0.3))
         edges.append({"src": s, "dst": d, "w": w, "w_low": min(lo, w), "w_high": max(hi, w), "relation": best.get("relation"),
                       "lag": best.get("lag"), "confidence": best.get("confidence"), "mechanism": best.get("mechanism", "")[:400],
-                      "layer": best["layer"], "n_sources": len(lst), "origins": ";".join(sorted({e["origin"] for e in lst}))})
+                      "layer": best["layer"], "n_sources": len(lst0), "origins": ";".join(sorted({e["origin"] for e in lst}))})
     dropped = len(raw_edges) - sum(len(v) for v in groups.values())
     return nodes, edges, events, profiles, dropped
 
@@ -422,6 +435,7 @@ def run(draws=400):
     rep["recent_state_drivers"] = {"observed": int(sum(1 for v in state_src.values() if v == "observed")),
                                    "from_events": int(sum(1 for v in state_src.values() if v == "events"))}
     json.dump(rep, open(R("results", "assembly_report.json"), "w"), indent=1)
+    json.dump({"events": events}, open(R("results", "events_effective.json"), "w"), indent=1)   # after drops/overrides
     return rep
 
 

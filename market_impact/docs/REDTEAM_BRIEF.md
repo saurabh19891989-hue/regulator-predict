@@ -10,6 +10,20 @@ Today is 2026-11-05; your knowledge ends ~mid-2026 — verify recent facts with 
 (company filings/press releases, RBI/SEBI/PIB/USTR/Federal Register, reputable outlets). Google News RSS:
 `https://news.google.com/rss/search?q=<q>+when:120d&hl=en-IN&gl=IN&ceid=IN:en`; `curl -sSL -m 40 -A "Mozilla/5.0"`.
 
+## How the numbers are built (read before judging magnitudes)
+- `exp_rel_return_12m` = 0.5 × unpriced recent impact + 0.5 × (forward event exposure + company events), then
+  centred on the universe. 3m uses 0.3 for the recent part and only events due by Feb 2027.
+- **Beta adjustment:** model impacts are reported net of beta × universe-average impact (`beta` column, Blume-shrunk
+  3-year weekly beta vs the Nifty 50), matching the beta-adjusted realised move. `*_raw` columns are before adjustment.
+- **Unpriced recent impact** = model impact of Jun–Nov drivers minus the realised market-adjusted move, bounded to the
+  same sign as the model impact and never larger than it (no mean-reversion bet on unexplained moves).
+- **Clamping:** within an event, every node the event shocks is clamped (an event's Brent shock already includes its
+  conflict effect). In the recent state, every driver with an observed/specified change is clamped.
+- `OVERLAP_DAMP` 0.5: an indirect path from driver X to company c gets half credit if c also has a direct X edge.
+- Director corrections live in `graph/edge_overrides.json`, `graph/event_overrides.json`, `graph/director_edges.json`,
+  `graph/recent_state_overrides.json`, `graph/node_aliases.json`, `events/dedup.json` (drops, exclusive groups). Read
+  them so you do not re-report fixed issues. Your `review/<ID>.json` will be merged into those files by the Director.
+
 Hunt for:
 1. **Double counting** — the same economic channel reaching a company by two paths (e.g. its own Brent edge AND
    Brent → another driver → the company where that driver is just a consequence of Brent).
