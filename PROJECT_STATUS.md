@@ -1,5 +1,13 @@
 # PROJECT_STATUS.md — Regulatory Predictive Precursor Engine
 
+## Separate programme — Market Impact Graph (started 2026-11-05)
+
+The user authorised a new, separate programme on 2026-11-05: a causal exposure network of events, macro/commodity/
+policy/geopolitical drivers and companies, with 2nd–4th-order effects for the Nifty 200. It lives in `market_impact/`
+with its own rules (`market_impact/CLAUDE.md`) and status (`market_impact/STATUS.md`). The regulatory programme
+below stays closed at NO-GO; its out-of-scope rule on stock prediction applies to this regulatory work, not to
+`market_impact/`. First full run frozen 2026-11-05 (`market_impact/ledger/predictions_20261105.csv`).
+
 ## User pause — 2026-10-05
 
 Regulatory research paused at the user's explicit request after the formal NO-GO decision.

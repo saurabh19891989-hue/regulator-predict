@@ -1,276 +1,284 @@
 {
- "project": "Regulatory Predictive Precursor Engine",
- "gate": "GATE_0_BACKTEST",
- "tickets": [
-  {
-   "id": "RP0-01",
-   "title": "Initialize schemas and ledger",
-   "owner": "manager",
-   "model": "opus-5.5",
-   "effort": "medium",
-   "depends_on": [],
-   "done_when": "Evidence, thread, forecast, outcome and audit schemas are versioned and tests pass.",
-   "status": "COMPLETE",
-   "notes": "schemas v1.x, rpe/ pipeline, 9 tests passing"
+  "project": "Regulatory Predictive Precursor Engine",
+  "gate": "GATE_0_BACKTEST",
+  "tickets": [
+    {
+      "id": "RP0-01",
+      "title": "Initialize schemas and ledger",
+      "owner": "manager",
+      "model": "opus-5.5",
+      "effort": "medium",
+      "depends_on": [],
+      "done_when": "Evidence, thread, forecast, outcome and audit schemas are versioned and tests pass.",
+      "status": "COMPLETE",
+      "notes": "schemas v1.x, rpe/ pipeline, 9 tests passing"
+    },
+    {
+      "id": "RP0-00",
+      "title": "Pre-register analysis plan and GO/NO-GO bands",
+      "owner": "director",
+      "model": "opus-5.5",
+      "effort": "high",
+      "depends_on": [],
+      "status": "COMPLETE",
+      "done_when": "docs/PREREGISTRATION.md committed before any forecast",
+      "notes": "docs/PREREGISTRATION.md, commit 6841b87"
+    },
+    {
+      "id": "RP0-02",
+      "title": "Build source registry",
+      "owner": "executors",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-01"
+      ],
+      "done_when": "Pilot regulator Tier B/C endpoints and access methods are recorded.",
+      "status": "PARTIAL",
+      "notes": "sources.json present for us_fr, us_fda, us_reginfo, in_sebi_h; reachability table docs/EXECUTOR_GUIDE.md \u00a78; India workstreams stopped before writing sources.json/NOTES.md"
+    },
+    {
+      "id": "RP0-03",
+      "title": "Discover 150\u2013250 candidate threads",
+      "owner": "parallel_executors",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-01"
+      ],
+      "done_when": "Candidate set includes positive and stalled/no-action/altered threads.",
+      "status": "PARTIAL",
+      "notes": "335 candidates discovered; in_dgtr produced 0 threads"
+    },
+    {
+      "id": "RP0-04",
+      "title": "Reconstruct RAPID timelines",
+      "owner": "parallel_executors",
+      "model": "sonnet-5",
+      "effort": "high_on_ambiguity",
+      "depends_on": [
+        "RP0-03"
+      ],
+      "done_when": "100\u2013200 usable threads are reconstructed if evidence availability permits.",
+      "status": "PARTIAL",
+      "notes": "Current freeze: 327 threads (208 actions, 119 controls), 1,785 evidence records; fixed censor 2026-09-24. Full SEBI-R30/FDA-H30 source audit completed; other source and label limitations remain. Stopped at formal NO-GO gate; remaining work not represented as completed."
+    },
+    {
+      "id": "RP0-05",
+      "title": "Build 30\u201350 GOLD threads",
+      "owner": "research_managers",
+      "model": "opus-5.5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-03"
+      ],
+      "done_when": "Point-in-time versions and leakage risks are strongly verified.",
+      "status": "PARTIAL",
+      "notes": "99 RAPID matters source-audited, including complete SEBI-R30/FDA-H30 cohort; zero GOLD promoted. Packet release is not GOLD certification. Stopped at formal NO-GO gate; remaining work not represented as completed."
+    },
+    {
+      "id": "RP0-06",
+      "title": "Blind cutoff forecasts",
+      "owner": "blind_forecasters",
+      "model": "opus-5.5",
+      "effort": "medium_high",
+      "depends_on": [
+        "RP0-04"
+      ],
+      "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
+      "status": "COMPLETE",
+      "notes": "Completed for frozen Core60/Cal60 cohort; final report reports NO-GO and explicitly unmeasured broader work."
+    },
+    {
+      "id": "RP0-07",
+      "title": "Run evidence ablations",
+      "owner": "forecast_workers",
+      "model": "sonnet-5",
+      "effort": "high",
+      "depends_on": [
+        "RP0-04"
+      ],
+      "done_when": "B/C/stakeholder/news/latest-vs-trajectory comparisons are complete.",
+      "status": "NOT_STARTED",
+      "notes": "Core60 retained evidence is 61 distinct records, all Tier B. B_ONLY, B_PLUS_C and ALL are identical inputs, so this run cannot measure Tier C, stakeholder or news lift. Evidence versus TITLE_ONLY is available after output validation; rich ablations require informative cohorts."
+    },
+    {
+      "id": "RP0-08",
+      "title": "Leakage red-team",
+      "owner": "auditors",
+      "model": "opus-5.5",
+      "effort": "high",
+      "depends_on": [
+        "RP0-05",
+        "RP0-06"
+      ],
+      "done_when": "GOLD and risk-weighted RAPID snapshots have contamination verdicts.",
+      "status": "COMPLETE",
+      "notes": "Completed for frozen Core60/Cal60 cohort; final report reports NO-GO and explicitly unmeasured broader work."
+    },
+    {
+      "id": "RP0-09",
+      "title": "Compute evaluation metrics",
+      "owner": "evaluator",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-06",
+        "RP0-07",
+        "RP0-08"
+      ],
+      "done_when": "Calibration, action, timing, content, lead-time and ablation metrics are reproducible.",
+      "status": "COMPLETE",
+      "notes": "Completed for frozen Core60/Cal60 cohort; final report reports NO-GO and explicitly unmeasured broader work."
+    },
+    {
+      "id": "RP0-10",
+      "title": "Independent hard-case adjudication",
+      "owner": "adjudicator",
+      "model": "fable-5.1",
+      "effort": "high",
+      "depends_on": [
+        "RP0-08"
+      ],
+      "optional": true,
+      "budget_rule": "Use only on 5\u201310 disputed/high-impact cases and only if budget remains.",
+      "status": "NOT_STARTED",
+      "notes": "optional adjudication"
+    },
+    {
+      "id": "RP0-11",
+      "title": "GO/NO-GO report",
+      "owner": "director",
+      "model": "opus-5.5",
+      "effort": "high",
+      "depends_on": [
+        "RP0-09"
+      ],
+      "done_when": "Six core predictive questions are answered and next architecture is justified by evidence.",
+      "status": "COMPLETE",
+      "notes": "Completed for frozen Core60/Cal60 cohort; final report reports NO-GO and explicitly unmeasured broader work."
+    },
+    {
+      "id": "RP0-12",
+      "title": "Content-label pass for positives with provisional content_direction",
+      "owner": "executors",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-04"
+      ],
+      "status": "NOT_STARTED",
+      "done_when": "every positive has content_direction with >= medium confidence",
+      "notes": "US-FR content_direction heuristic (100/205 positives action_mixed)"
+    },
+    {
+      "id": "RP0-13",
+      "title": "US news (Tier D) enrichment for US-FR/FDA threads",
+      "owner": "executors",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [
+        "RP0-04"
+      ],
+      "status": "NOT_STARTED",
+      "done_when": "Google-News-RSS dated headlines added before decisive dates",
+      "notes": "US threads have no Tier D"
+    },
+    {
+      "id": "RP0-14",
+      "title": "External US FR base-rate hazard table (2014\u20132019 NPRMs)",
+      "owner": "executors",
+      "model": "sonnet-5",
+      "effort": "medium",
+      "depends_on": [],
+      "status": "PAUSED",
+      "done_when": "hazard_table.json + external_p() available to evaluator",
+      "notes": "agent stopped at pause; no output; spec in agent prompt summarised in GPT_ASTRA_HANDOFF.md / PROJECT_STATUS.md"
+    },
+    {
+      "id": "RP0-15",
+      "title": "Smoke test SMOKE1 (10 threads, B vs B+C, T-90/T-30) + manual leakage/coherence inspection",
+      "owner": "director",
+      "model": "opus-5.5",
+      "effort": "high",
+      "depends_on": [
+        "RP0-04"
+      ],
+      "status": "COMPLETE",
+      "done_when": "inspected; go/no-go to scale",
+      "notes": "SMOKE1 valid pipeline-wise; FINDING-001 macro hindsight, FINDING-002 index instability"
+    },
+    {
+      "id": "RP0-16",
+      "title": "Finish India collectors (DGTR all; TRAI; IRDAI-R; SEBI-H; RBI-R) + NOTES.md/sources.json",
+      "owner": "executors",
+      "model": "cheap model",
+      "status": "PAUSED",
+      "depends_on": [],
+      "done_when": "frames complete per docs/EXECUTOR_GUIDE.md",
+      "notes": "partial outputs preserved in data/raw/in_*"
+    },
+    {
+      "id": "RP0-17",
+      "title": "Targeted Tier-C collection (speeches, board statements, RBI SDRP, agency press releases)",
+      "owner": "executors",
+      "status": "NOT_STARTED",
+      "depends_on": [
+        "RP0-04"
+      ],
+      "done_when": "enough tier-C items to power B vs B+C",
+      "notes": "only 12 tier-C items exist (RBI)"
+    },
+    {
+      "id": "RP0-18",
+      "title": "Re-derive LATE boundary for the new forecaster's knowledge cutoff; add post-cutoff-events rule (DEV-008); freeze snapshot index",
+      "owner": "director",
+      "status": "COMPLETE",
+      "depends_on": [],
+      "done_when": "deviations logged; index committed before forecasts",
+      "notes": "DEV-008/009/010: Astra cutoff 2026-04-30, post-cutoff packet rule, masked separation; rebuilt index frozen before GPT forecasts"
+    }
+  ],
+  "last_updated": "2026-10-05",
+  "programme_state": "PAUSED_BY_USER after formal NO-GO; separate market collection/storage check only",
+  "current_checkpoint": {
+    "freeze": "data/snapshots/freeze_20261004.json",
+    "threads": 327,
+    "actions": 208,
+    "controls": 119,
+    "evidence": 1785,
+    "source_audited_rapid": 99,
+    "gold": 0,
+    "packet_release": "PASS",
+    "packets": 38,
+    "distinct_forecasts_requested": 678,
+    "aliases_requested": 678,
+    "retained_cohort_evidence": 61,
+    "retained_cohort_evidence_tier": "B",
+    "next_gate": "None: frozen decision reached; any new research requires a new scope",
+    "completed_batches": 38,
+    "completed_distinct_forecasts": 678,
+    "independently_audited_distinct_forecasts": 678,
+    "campaign_status": "COMPLETE_NO_GO",
+    "focused_tests_passed": 11,
+    "ledger_records": 1464,
+    "decision": "NO-GO",
+    "report": "reports/FINAL_GO_NO_GO_20261005.md",
+    "user_paused": true
   },
-  {
-   "id": "RP0-00",
-   "title": "Pre-register analysis plan and GO/NO-GO bands",
-   "owner": "director",
-   "model": "opus-5.5",
-   "effort": "high",
-   "depends_on": [],
-   "status": "COMPLETE",
-   "done_when": "docs/PREREGISTRATION.md committed before any forecast",
-   "notes": "docs/PREREGISTRATION.md, commit 6841b87"
-  },
-  {
-   "id": "RP0-02",
-   "title": "Build source registry",
-   "owner": "executors",
-   "model": "sonnet-5",
-   "effort": "medium",
-   "depends_on": [
-    "RP0-01"
-   ],
-   "done_when": "Pilot regulator Tier B/C endpoints and access methods are recorded.",
-   "status": "PARTIAL",
-   "notes": "sources.json present for us_fr, us_fda, us_reginfo, in_sebi_h; reachability table docs/EXECUTOR_GUIDE.md \u00a78; India workstreams stopped before writing sources.json/NOTES.md"
-  },
-  {
-   "id": "RP0-03",
-   "title": "Discover 150\u2013250 candidate threads",
-   "owner": "parallel_executors",
-   "model": "sonnet-5",
-   "effort": "medium",
-   "depends_on": [
-    "RP0-01"
-   ],
-   "done_when": "Candidate set includes positive and stalled/no-action/altered threads.",
-   "status": "PARTIAL",
-   "notes": "335 candidates discovered; in_dgtr produced 0 threads"
-  },
-  {
-   "id": "RP0-04",
-   "title": "Reconstruct RAPID timelines",
-   "owner": "parallel_executors",
-   "model": "sonnet-5",
-   "effort": "high_on_ambiguity",
-   "depends_on": [
-    "RP0-03"
-   ],
-   "done_when": "100\u2013200 usable threads are reconstructed if evidence availability permits.",
-   "status": "PARTIAL",
-   "notes": "Current freeze: 327 threads (208 actions, 119 controls), 1,785 evidence records; fixed censor 2026-09-24. Full SEBI-R30/FDA-H30 source audit completed; other source and label limitations remain. Stopped at formal NO-GO gate; remaining work not represented as completed."
-  },
-  {
-   "id": "RP0-05",
-   "title": "Build 30\u201350 GOLD threads",
-   "owner": "research_managers",
-   "model": "opus-5.5",
-   "effort": "medium",
-   "depends_on": [
-    "RP0-03"
-   ],
-   "done_when": "Point-in-time versions and leakage risks are strongly verified.",
-   "status": "PARTIAL",
-   "notes": "99 RAPID matters source-audited, including complete SEBI-R30/FDA-H30 cohort; zero GOLD promoted. Packet release is not GOLD certification. Stopped at formal NO-GO gate; remaining work not represented as completed."
-  },
-  {
-   "id": "RP0-06",
-   "title": "Blind cutoff forecasts",
-   "owner": "blind_forecasters",
-   "model": "opus-5.5",
-   "effort": "medium_high",
-   "depends_on": [
-    "RP0-04"
-   ],
-   "done_when": "Frozen predictions exist for all eligible cutoffs without outcome exposure.",
-   "status": "COMPLETE",
-   "notes": "Completed for frozen Core60/Cal60 cohort; final report reports NO-GO and explicitly unmeasured broader work."
-  },
-  {
-   "id": "RP0-07",
-   "title": "Run evidence ablations",
-   "owner": "forecast_workers",
-   "model": "sonnet-5",
-   "effort": "high",
-   "depends_on": [
-    "RP0-04"
-   ],
-   "done_when": "B/C/stakeholder/news/latest-vs-trajectory comparisons are complete.",
-   "status": "NOT_STARTED",
-   "notes": "Core60 retained evidence is 61 distinct records, all Tier B. B_ONLY, B_PLUS_C and ALL are identical inputs, so this run cannot measure Tier C, stakeholder or news lift. Evidence versus TITLE_ONLY is available after output validation; rich ablations require informative cohorts."
-  },
-  {
-   "id": "RP0-08",
-   "title": "Leakage red-team",
-   "owner": "auditors",
-   "model": "opus-5.5",
-   "effort": "high",
-   "depends_on": [
-    "RP0-05",
-    "RP0-06"
-   ],
-   "done_when": "GOLD and risk-weighted RAPID snapshots have contamination verdicts.",
-   "status": "COMPLETE",
-   "notes": "Completed for frozen Core60/Cal60 cohort; final report reports NO-GO and explicitly unmeasured broader work."
-  },
-  {
-   "id": "RP0-09",
-   "title": "Compute evaluation metrics",
-   "owner": "evaluator",
-   "model": "sonnet-5",
-   "effort": "medium",
-   "depends_on": [
-    "RP0-06",
-    "RP0-07",
-    "RP0-08"
-   ],
-   "done_when": "Calibration, action, timing, content, lead-time and ablation metrics are reproducible.",
-   "status": "COMPLETE",
-   "notes": "Completed for frozen Core60/Cal60 cohort; final report reports NO-GO and explicitly unmeasured broader work."
-  },
-  {
-   "id": "RP0-10",
-   "title": "Independent hard-case adjudication",
-   "owner": "adjudicator",
-   "model": "fable-5.1",
-   "effort": "high",
-   "depends_on": [
-    "RP0-08"
-   ],
-   "optional": true,
-   "budget_rule": "Use only on 5\u201310 disputed/high-impact cases and only if budget remains.",
-   "status": "NOT_STARTED",
-   "notes": "optional adjudication"
-  },
-  {
-   "id": "RP0-11",
-   "title": "GO/NO-GO report",
-   "owner": "director",
-   "model": "opus-5.5",
-   "effort": "high",
-   "depends_on": [
-    "RP0-09"
-   ],
-   "done_when": "Six core predictive questions are answered and next architecture is justified by evidence.",
-   "status": "COMPLETE",
-   "notes": "Completed for frozen Core60/Cal60 cohort; final report reports NO-GO and explicitly unmeasured broader work."
-  },
-  {
-   "id": "RP0-12",
-   "title": "Content-label pass for positives with provisional content_direction",
-   "owner": "executors",
-   "model": "sonnet-5",
-   "effort": "medium",
-   "depends_on": [
-    "RP0-04"
-   ],
-   "status": "NOT_STARTED",
-   "done_when": "every positive has content_direction with >= medium confidence",
-   "notes": "US-FR content_direction heuristic (100/205 positives action_mixed)"
-  },
-  {
-   "id": "RP0-13",
-   "title": "US news (Tier D) enrichment for US-FR/FDA threads",
-   "owner": "executors",
-   "model": "sonnet-5",
-   "effort": "medium",
-   "depends_on": [
-    "RP0-04"
-   ],
-   "status": "NOT_STARTED",
-   "done_when": "Google-News-RSS dated headlines added before decisive dates",
-   "notes": "US threads have no Tier D"
-  },
-  {
-   "id": "RP0-14",
-   "title": "External US FR base-rate hazard table (2014\u20132019 NPRMs)",
-   "owner": "executors",
-   "model": "sonnet-5",
-   "effort": "medium",
-   "depends_on": [],
-   "status": "PAUSED",
-   "done_when": "hazard_table.json + external_p() available to evaluator",
-   "notes": "agent stopped at pause; no output; spec in agent prompt summarised in GPT_ASTRA_HANDOFF.md / PROJECT_STATUS.md"
-  },
-  {
-   "id": "RP0-15",
-   "title": "Smoke test SMOKE1 (10 threads, B vs B+C, T-90/T-30) + manual leakage/coherence inspection",
-   "owner": "director",
-   "model": "opus-5.5",
-   "effort": "high",
-   "depends_on": [
-    "RP0-04"
-   ],
-   "status": "COMPLETE",
-   "done_when": "inspected; go/no-go to scale",
-   "notes": "SMOKE1 valid pipeline-wise; FINDING-001 macro hindsight, FINDING-002 index instability"
-  },
-  {
-   "id": "RP0-16",
-   "title": "Finish India collectors (DGTR all; TRAI; IRDAI-R; SEBI-H; RBI-R) + NOTES.md/sources.json",
-   "owner": "executors",
-   "model": "cheap model",
-   "status": "PAUSED",
-   "depends_on": [],
-   "done_when": "frames complete per docs/EXECUTOR_GUIDE.md",
-   "notes": "partial outputs preserved in data/raw/in_*"
-  },
-  {
-   "id": "RP0-17",
-   "title": "Targeted Tier-C collection (speeches, board statements, RBI SDRP, agency press releases)",
-   "owner": "executors",
-   "status": "NOT_STARTED",
-   "depends_on": [
-    "RP0-04"
-   ],
-   "done_when": "enough tier-C items to power B vs B+C",
-   "notes": "only 12 tier-C items exist (RBI)"
-  },
-  {
-   "id": "RP0-18",
-   "title": "Re-derive LATE boundary for the new forecaster's knowledge cutoff; add post-cutoff-events rule (DEV-008); freeze snapshot index",
-   "owner": "director",
-   "status": "COMPLETE",
-   "depends_on": [],
-   "done_when": "deviations logged; index committed before forecasts",
-   "notes": "DEV-008/009/010: Astra cutoff 2026-04-30, post-cutoff packet rule, masked separation; rebuilt index frozen before GPT forecasts"
+  "status_vocabulary": [
+    "COMPLETE",
+    "PARTIAL",
+    "NOT_STARTED",
+    "BLOCKED",
+    "PAUSED"
+  ],
+  "related_programmes": {
+    "market_impact": {
+      "path": "market_impact/",
+      "status_file": "market_impact/STATUS.md",
+      "state": "first full run frozen 2026-11-05; awaiting 3m ledger scoring (~2027-02-05)",
+      "authorised": "2026-11-05"
+    }
   }
- ],
- "last_updated": "2026-10-05",
- "programme_state": "PAUSED_BY_USER after formal NO-GO; separate market collection/storage check only",
- "current_checkpoint": {
-  "freeze": "data/snapshots/freeze_20261004.json",
-  "threads": 327,
-  "actions": 208,
-  "controls": 119,
-  "evidence": 1785,
-  "source_audited_rapid": 99,
-  "gold": 0,
-  "packet_release": "PASS",
-  "packets": 38,
-  "distinct_forecasts_requested": 678,
-  "aliases_requested": 678,
-  "retained_cohort_evidence": 61,
-  "retained_cohort_evidence_tier": "B",
-  "next_gate": "None: frozen decision reached; any new research requires a new scope",
-  "completed_batches": 38,
-  "completed_distinct_forecasts": 678,
-  "independently_audited_distinct_forecasts": 678,
-  "campaign_status": "COMPLETE_NO_GO",
-  "focused_tests_passed": 11,
-  "ledger_records": 1464,
-  "decision": "NO-GO",
-  "report": "reports/FINAL_GO_NO_GO_20261005.md",
-  "user_paused": true
- },
- "status_vocabulary": [
-  "COMPLETE",
-  "PARTIAL",
-  "NOT_STARTED",
-  "BLOCKED",
-  "PAUSED"
- ]
 }
