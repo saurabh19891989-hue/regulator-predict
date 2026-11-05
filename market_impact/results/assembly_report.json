@@ -33,10 +33,14 @@
     "2026-06-22"
    ]
   },
+  "not_observable_state": {
+   "F_REFINING_MARGIN": "HO=F is a NY Harbor heating-oil price; its crack vs Brent swung +$24/bbl since June (US distillate squeeze), far from Singapore/Indian GRM moves (RT_BACKBONE)",
+   "F_GAS_GLOBAL": "NG=F is Henry Hub; the node is Asian LNG (JKM), which rose to 2022 highs (RT_BACKBONE)"
+  },
   "max_depth": 4,
   "overlap_damp": 0.5
  },
- "overlap_flags": 1234,
+ "overlap_flags": 1082,
  "events_zero_reach": [
   "EV_OPEC_HOLD_OCT_NOV",
   "EV_OPEC_NOV29_HOLD",
@@ -44,7 +48,7 @@
  ],
  "dead_end_drivers": [],
  "recent_state_drivers": {
-  "observed": 20,
-  "from_events": 53
+  "observed": 18,
+  "from_events": 54
  }
 }

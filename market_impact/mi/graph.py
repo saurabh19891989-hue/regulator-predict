@@ -30,6 +30,10 @@ RESIDUAL_CAP = 10.0           # cap on |residual contribution| (% points)
 # volatility/beta are estimated only on data after the clean date.
 CORP_ACTION_BREAKS = {"VEDL": ("June 2026 demerger: Vedanta Aluminium (VAML) and other units listed from 2026-06-15; "
                                "VEDL price since 1 Jun is not comparable", "2026-06-22")}
+# Price series that are poor proxies for the node's SSU: their recent change comes from reviewed events/overrides instead.
+NOT_OBSERVABLE_STATE = {"F_REFINING_MARGIN": "HO=F is a NY Harbor heating-oil price; its crack vs Brent swung +$24/bbl since June "
+                        "(US distillate squeeze), far from Singapore/Indian GRM moves (RT_BACKBONE)",
+                        "F_GAS_GLOBAL": "NG=F is Henry Hub; the node is Asian LNG (JKM), which rose to 2022 highs (RT_BACKBONE)"}
 IVOL_CAP = 60.0               # cap on 12m idiosyncratic vol used for noise (corporate-action price breaks inflate it)
 # Unpriced part of an occurred-event impact: same sign as the model impact and never larger than it. A stock that moved
 # further than the events explain is treated as having idiosyncratic news, not as a mean-reversion candidate.
@@ -197,7 +201,9 @@ class Network:
                 k = len(path) + 1
                 p2 = prod * W[ei]
                 contrib = p2 * DAMP[k]
-                if k >= 2 and start in self.direct_src.get(d, ()):
+                # overlap: the company already has a direct (total-effect) edge from an upstream node on this path other
+                # than the immediate predecessor (start included) → this indirect route is partly the same channel
+                if k >= 2 and not self.direct_src.get(d, frozenset()).isdisjoint(seen - {node}):
                     contrib *= OVERLAP_DAMP
                 if self.nodes[d]["type"] == "COMPANY":
                     if abs(contrib) >= MIN_CONTRIB:
@@ -442,7 +448,7 @@ def run(draws=400):
            "edges_dropped_unknown_or_industry": dropped, "events": len(events), "occurred_events": len(occurred),
            "profiles": len(profiles), "empirical_sign_conflicts": len(flags),
            "assumptions": {"damping": DAMP, "priced_share_forward": PRICED_SHARE_FWD,
-                           "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "corp_action_breaks": CORP_ACTION_BREAKS, "max_depth": MAX_DEPTH,
+                           "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "corp_action_breaks": CORP_ACTION_BREAKS, "not_observable_state": NOT_OBSERVABLE_STATE, "max_depth": MAX_DEPTH,
                            "overlap_damp": OVERLAP_DAMP}}
     # overlap diagnostic: company has direct edges from A and B while a driver edge A→B exists (possible double count)
     direct = defaultdict(dict)
@@ -479,7 +485,7 @@ def recent_state(nodes, occurred):
     state, src = {}, {}
     stale = set()
     for f, (kind, size) in SSU_SCALE.items():
-        if f not in df.columns:
+        if f not in df.columns or f in NOT_OBSERVABLE_STATE:
             continue
         s = df[f].dropna()
         if len(s) < 30 or s.tail(30).nunique() <= 1 or s.index.max() < df.index.max() - pd.Timedelta(days=14):   # stale → not observable

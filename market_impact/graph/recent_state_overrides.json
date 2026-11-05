@@ -29,6 +29,12 @@
    "sources": [
     "https://news.google.com/rss/search?q=IEX+day-ahead+market+price+June+2026+per+unit&hl=en-IN&gl=IN&ceid=IN:en"
    ]
+  },
+  {
+   "node": "F_GAS_GLOBAL",
+   "state_ssu": 1.0,
+   "reason": "[RT_BACKBONE] Wrong series and wrong sign. The node is 'Global natural gas / LNG price' and every backbone edge into it is about Asian LNG (Qatar/Hormuz), but the observed state uses NG=F (Henry Hub): -7.0% since 2026-06-01 -> -0.47 SSU. Because observed nodes override event shocks in recent_state(), the catalogue's own EV_LNG_HORMUZ_DISRUPTION (+1.0) is ignored; its what_already_moved text even says NG=F is 'not representative of JKM/TTF'. Asian spot LNG rose from an '11-week high' in June to its highest level since 2022 in mid/late October. Use +1.0 (energy agent's estimate, conservative given the headlines) until a JKM series is wired in. This affects GAIL, ATGL, IOC, HINDPETRO, TATASTEEL, fertiliser and CGD exposure.",
+   "by": "RT_BACKBONE"
   }
  ]
 }

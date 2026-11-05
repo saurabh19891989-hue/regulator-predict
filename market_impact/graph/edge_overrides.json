@@ -60,8 +60,8 @@
    "src": "F_GSEC_10Y_IN",
    "dst": "F_HOUSING_DEMAND",
    "origin": "sector_policy.json",
-   "factor": 0.1,
-   "reason": "unit error: written per -100bp, SSU is +25bp; backbone_india agent flag"
+   "factor": 0.033,
+   "reason": "unit error: written per -100bp, SSU is +25bp; backbone_india agent flag | RT_BACKBONE: further \u00d70.33 (mortgages are repo-linked; F_REPO_IN\u2192F_HOUSING_DEMAND carries them) \u21d2 net 0.033"
   },
   {
    "src": "P_SEBI_DERIVATIVES",
@@ -90,6 +90,259 @@
    "origin": "geopolitics_trade.json",
    "factor": 0.25,
    "reason": "outlier 6.0 vs 1.5 in backbone_global and energy.json"
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "ADANIENT",
+   "origin": "ADANIENT",
+   "factor": 0.0,
+   "reason": "Director: non-causal company edge removed \u2014 agent mechanism: 'STATISTICAL ONLY' risk-on/safe-haven co-movement; beta/risk sentiment already carry it"
+  },
+  {
+   "src": "F_COTTON",
+   "dst": "BIOCON",
+   "origin": "BIOCON",
+   "factor": 0.0,
+   "reason": "Director: non-causal company edge removed \u2014 agent mechanism: 'no fundamental link (cotton not an input)'"
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "KALYANKJIL",
+   "origin": "KALYANKJIL",
+   "factor": 0.0,
+   "reason": "Director: non-causal company edge removed \u2014 agent mechanism: 'No fundamental link' (commodity-cycle co-movement)"
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "F_LIQUIDITY_IN",
+   "origin": "backbone_global.json",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Double count of RBI intervention. backbone_india models the same mechanism explicitly: F_USDINR -> NEW_FX_RESERVES_IN (-0.9 x US$25bn) -> F_LIQUIDITY_IN (+1.45) = -1.3 lakh cr per +3% INR. The direct edge (-1.0, 'RBI dollar sales drain liquidity') adds a second -1.0, so +3% INR currently drains ~-2.0 lakh cr after damping. It is the 4th-largest driver-edge flow into YESBANK/TATACAP in EV_IRAN_WAR_HORMUZ_OIL (-4.3 of -24.0).",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "F_REPO_IN",
+   "origin": null,
+   "factor": 0.5,
+   "reason": "[RT_BACKBONE] Largest flow-carrying edge in the graph: sum of |path contributions| through it is 1,612, versus 1,093 for the next edge. Central 1.44 SSU = 36bp per +1pp CPI. backbone_india's own evidence (CPI ~2.8% -> 5.5% in 2026 was met by one 25bp hike on 7 Oct) implies ~0.37 SSU/pp realised. Adding the catalogue's priced odds (Dec hike 0.40, Feb hike 0.27) gives ~0.62 SSU/pp expected. RBI looks through supply-led (food, oil) CPI, which is what this graph mostly propagates. Explicit RBI decision events (EV_RBI_DEC26/FEB27/APR27) already carry the policy path, so CPI-shock events double count it. x0.5 gives 0.72 SSU, about 18bp per pp.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_USDINR",
+   "origin": "energy.json",
+   "factor": 0.5,
+   "reason": "[RT_BACKBONE] Not netted of parallel paths. energy.json 0.5 means +10% Brent -> INR -1.5% on the direct edge alone. backbone_global (0.18) nets out the FPI, CPI and GDP paths and cites an empirical weekly beta of 0.06-0.12. The 2026 episode (Brent +50% y/y, INR +6.5% with record FPI outflow and US tariffs) gives <=0.44 TOTAL. This is the #1 driver edge in the Hormuz events (flow -10.1 into YESBANK, -7.9 into MOTILALOFS). After the fix, the dedup mean is ~0.26.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "F_USDINR",
+   "origin": "geopolitics_trade.json",
+   "factor": 0.5,
+   "reason": "[RT_BACKBONE] Same as energy.json: 0.6 central (INR -1.8% per +10% Brent) is a total, not a direct, effect. Brent -> FPI -> INR, Brent -> CPI -> INR and Brent -> GDP paths already exist.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_USDINR",
+   "origin": "global_macro.json",
+   "factor": 0.5,
+   "reason": "[RT_BACKBONE] global_macro 0.5 ('INR beta to DXY ~0.5') is a total beta. backbone_global (0.17, high confidence) explicitly nets out the CNY (+0.04) and FPI (+0.05) paths and cites an empirical 3y weekly total of 0.04-0.10. After the fix the dedup mean is ~0.20 (was 0.294).",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_DXY",
+   "dst": "F_FPI_FLOWS",
+   "origin": "global_macro.json",
+   "factor": 0.5,
+   "reason": "[RT_BACKBONE] -0.8 (-US$4bn/qtr per +3% DXY) is twice backbone_global's -0.3. It is also not netted of DXY -> USDINR -> FPI (-0.4) and US_10Y -> DXY co-movement. After the fix the mean is ~-0.35.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "F_RISK_SENTIMENT",
+   "origin": "global_macro.json",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Tight feedback pair. F_RISK_SENTIMENT -> F_US_EQUITIES is -0.55 and this reverse edge is -0.6; the loop product is +0.33, the largest 2-cycle in the graph. VIX is the implied vol of the S&P, so the two are one market move, and every upstream shock (US_GDP, FED_FUNDS, US_10Y, AI_CAPEX) reaches companies twice. Example: F_US_GDP -> F_RISK_SENTIMENT (-0.3) direct plus F_US_GDP -> F_US_EQUITIES -> F_RISK_SENTIMENT (-0.54). Flow through this edge is 283. Keep the RISK -> US_EQ direction.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "NEW_OMC_MARKETING_MARGIN",
+   "dst": "F_GOVT_CAPEX",
+   "origin": "energy.json",
+   "factor": 0.2,
+   "reason": "[RT_BACKBONE] Unit error. +Rs1/l on ~150bn l industry petrol+diesel = Rs15k cr pre-tax. The Government receives ~50% via dividend and tax, ~Rs7.5k cr, which is ~0.7% of central capex (~Rs11-12 lakh cr) -> +0.07 SSU (SSU +10% capex growth), not 0.3. At 0.3, EV_OMC_FUEL_FREEZE_LOSSES (margin -3) cuts government capex growth by 9pp and hits BANKINDIA/SAIL/TMCV/PNB/POWERINDIA by about -3% each. The edge's own text is just 'OMC capex and PSU dividends feed fiscal/capex' (low confidence).",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "P_WINDFALL_EXPORT_TAX",
+   "origin": "backbone_global.json",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Node conflation. P_WINDFALL_EXPORT_TAX's company edges are fuel/metal windfall taxes (RELIANCE -3.0, HINDZINC -4.0, BPCL -1.5), plus P_WINDFALL -> F_REFINING_MARGIN -0.6. This edge (food export curbs) therefore routes food inflation into a Reliance/Hindustan Zinc tax hit. Food export curbs already have their own node: F_FOOD_INFLATION_IN -> NEW_AGRI_TRADE_CURBS_IN (+0.5, backbone_india).",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "F_FOOD_INFLATION_IN",
+   "origin": "backbone_global.json",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Companion of the food-curb conflation above. A fuel/metal windfall levy (e.g. EV_EXPORT_LEVY_REVISIONS) does not lower food inflation; NEW_AGRI_TRADE_CURBS_IN -> F_FOOD_INFLATION_IN (-0.2) already carries the food-export-curb effect.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "P_FERT_SUBSIDY",
+   "dst": "F_GSEC_10Y_IN",
+   "origin": "agri_rural.json",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Double count of the fiscal channel. P_FERT_SUBSIDY -> NEW_FISCAL_SLIPPAGE_IN (0.15) -> F_GSEC_10Y_IN (0.5) gives +1.9bp per subsidy step; this direct edge adds +7.5bp, four times the explicit channel. Without the fix, EV_NBS_RABI_HIKE spills -1.1% onto ADANIGREEN and similar rate-sensitive names.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "F_BRENT",
+   "origin": "geopolitics_trade.json",
+   "factor": 0.4,
+   "reason": "[RT_BACKBONE] C_RUSSIA +1 = India's closer trade access/larger discounts. India's purchases do not add or remove barrels from the world market: Russia re-routes at a deeper discount (the mechanism text 'loss of 1.8 mb/d' assumes the barrels vanish). Global sanctions (Oct-2025 Rosneft/Lukoil) moved Brent ~+5%; an India-only shift is a fraction of that. -0.6 -> -0.24 (Brent -2.4% per step). Flow through the edge is 176; it also double-counts OMC discount benefits already on BPCL/IOC/HPCL's own C_RUSSIA edges.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_CHINA_GDP",
+   "dst": "F_STEEL_GLOBAL",
+   "origin": "global_macro.json",
+   "factor": 0.25,
+   "reason": "[RT_BACKBONE] global_macro 0.6 ('China ~50% of steel') is a total effect. backbone_global keeps only the direct 0.15 because the export (CHINA_GDP -> CHINA_STEEL_EXPORTS -> STEEL_GLOBAL, +0.26 after damping), iron-ore (+0.13) and coking-coal (+0.14) paths exist. Result: direct 0.15 after dedup (backbone_global's netted value), total ~0.67 SSU (+6.7% global HRC) per +1pp China GDP.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_US_GDP",
+   "dst": "F_US_10Y",
+   "origin": "global_macro.json",
+   "factor": 0.4,
+   "reason": "[RT_BACKBONE] backbone_global (0.3) explicitly nets the Fed channel (US_GDP -> FED_FUNDS -> US_10Y = 0.36); global_macro 0.8 does not. Result: dedup ~0.31.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "F_POWER_PRICE_IN",
+   "origin": "energy.json",
+   "factor": 0.4,
+   "reason": "[RT_BACKBONE] 0.8 = +12% IEX price per +10% domestic coal cost. backbone_global shows the arithmetic: +10% coal -> +~Rs0.2/kWh variable cost -> IEX +3.75% = 0.25. Spot prices are set by scarcity at the evening peak and imported-coal/gas units, and the convex demand edge (POWER_DEMAND -> POWER_PRICE ~1.07) already carries that. After the fix the mean is ~0.29.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_SILVER",
+   "dst": "F_GOLD",
+   "origin": "metals_china.json",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Reverse-causal co-movement ('investor co-movement'). The GOLD -> SILVER edge (1.0, empirical) is the causal direction; this reverse edge makes a +0.25 2-cycle. Silver-only shocks (EV_PRECIOUS_METALS_* shock both nodes anyway) should not move gold financiers or jewellers.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "F_ALUMINIUM",
+   "origin": "global_macro.json",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] The edge's own text is 'base-metal correlation'. Both metals have their own drivers (F_CHINA_GDP -> ALUMINIUM 0.475, -> COPPER 0.73; DXY; energy transition), so routing copper shocks into HINDALCO/VAML/NATIONALUM counts the common driver twice. Example: EV_CHINA_CEWC_STIMULUS_DEC26 shocks F_CHINA_GDP and F_COPPER together.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "NEW_AGRI_TRADE_CURBS_IN",
+   "dst": "F_RICE",
+   "origin": "backbone_india.json",
+   "factor": -0.5,
+   "reason": "[RT_BACKBONE] Sign error versus the node convention. F_RICE feeds F_FOOD_INFLATION_IN (+0.25) and RADICO/UNITDSPR as a DOMESTIC grain cost. The catalogue's EV_RICE_BROKEN_EXPORT_CURB shocks F_RICE -0.3, so an Indian export curb lowers domestic rice. The +0.4 edge encodes the world-price effect, which makes a food-curb measure RAISE Indian food inflation. Flip and halve: w -0.2, range [-0.75, 0]. If negative factors are not allowed, use factor 0 and add the edge given in findings.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "ADANIGREEN",
+   "origin": "ADANIGREEN",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'Statistical proxy only ... No direct fundamental link'. Observed gold -1.05 SSU since June books +2.1% 'unpriced' impact for AGEL, and Mideast escalation (via C_MIDEAST -> F_GOLD) books -0.8%/step. Beta and real-yield exposure are carried by F_RISK_SENTIMENT/F_GSEC/F_FPI edges.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_DXY",
+   "dst": "MAXHEALTH",
+   "origin": "MAXHEALTH",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text says 'likely spurious (period-specific)'. Observed DXY +0.74 SSU books -1.1% for MAXHEALTH with no causal channel.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_DXY",
+   "dst": "AMBUJACEM",
+   "origin": "AMBUJACEM",
+   "factor": 0.33,
+   "reason": "[RT_BACKBONE] Mechanism text: 'no direct fundamental channel beyond imported-fuel cost'. The fuel channel belongs to F_USDINR/F_COAL_INTL. Keep -0.5 as a token; observed DXY +0.74 currently books -1.1%.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "POLICYBZR",
+   "origin": "POLICYBZR",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'no fundamental channel for an insurance marketplace'. The observed F_REFINING_MARGIN state is +1.54 (HO=F proxy, see findings), so this edge books +1.2% 'unpriced' upside.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "POLICYBZR",
+   "origin": "POLICYBZR",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'no mechanism; shrunk heavily'. Observed F_STEEL_GLOBAL is +2.06, which books -1.6%.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "INFY",
+   "origin": "INFY",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'there is no causal channel ... proxies global-cyclical risk appetite'. Risk appetite is already F_RISK_SENTIMENT/F_US_EQUITIES.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "HCLTECH",
+   "origin": "HCLTECH",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'no causal channel; risk-on proxy. Token weight.'",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "WIPRO",
+   "origin": "WIPRO",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'no causal channel (coal is <0.5% of IT costs)'. F_COAL_INTL also receives backbone flows (F_GAS_GLOBAL -> F_COAL_INTL, F_CHINA_GDP -> F_COAL_INTL).",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_SUGAR",
+   "dst": "OFSS",
+   "origin": "OFSS",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'no causal channel; likely data-mined'. Observed sugar +2.78 SSU books +0.8% for OFSS.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "MPHASIS",
+   "origin": "MPHASIS",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'no causal channel (cyclical-risk proxy)'. Observed aluminium -1.96 SSU books -0.6%.",
+   "by": "RT_BACKBONE"
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "COFORGE",
+   "origin": "COFORGE",
+   "factor": 0.0,
+   "reason": "[RT_BACKBONE] Mechanism text: 'no causal channel; included as noise token' (t 1.1, insignificant).",
+   "by": "RT_BACKBONE"
   }
  ]
 }
