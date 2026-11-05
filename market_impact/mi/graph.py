@@ -37,7 +37,7 @@ CORP_ACTION_BREAKS = {"VEDL": ("June 2026 demerger: Vedanta Aluminium (VAML) and
 # Price series that are poor proxies for the node's SSU: their recent change comes from reviewed events/overrides instead.
 NOT_OBSERVABLE_STATE = {"F_REFINING_MARGIN": "HO=F is a NY Harbor heating-oil price; its crack vs Brent swung +$24/bbl since June "
                         "(US distillate squeeze), far from Singapore/Indian GRM moves (RT_BACKBONE)",
-                        "F_GAS_GLOBAL": "NG=F is Henry Hub; the node is Asian LNG (JKM), which rose to 2022 highs (RT_BACKBONE)"}
+                        }   # F_GAS_GLOBAL now uses JKM=F (Asian LNG), so it is observed again
 # Market-priced macro drivers: their forward path is taken from market pricing, so the event catalogue's
 # probability-weighted mean drift on them is removed from expected returns (an offsetting deterministic anchor), while the
 # scenarios themselves still drive the Monte Carlo bands and the per-event reports. Reason (2026-11-05 red-team): the
@@ -49,6 +49,35 @@ MARKET_PRICED = {"F_BRENT", "F_GAS_GLOBAL", "F_COAL_INTL", "F_REFINING_MARGIN", 
                  "F_SUGAR", "F_COTTON", "F_EDIBLE_OIL", "F_RICE", "F_USDINR", "F_REPO_IN", "F_GSEC_10Y_IN", "F_CPI_IN",
                  "F_GDP_IN", "F_LIQUIDITY_IN", "F_CREDIT_SPREADS_IN", "F_FPI_FLOWS", "F_DOMESTIC_FLOWS", "NEW_FX_RESERVES_IN",
                  "NEW_FPI_DEBT_FLOWS", "F_FOOD_INFLATION_IN"}
+import re as _re
+REGULATORY_RE = _re.compile(r"IRDAI|SEBI|RBI_PRUDENTIAL|NPPA|FOOD_SAFETY|USFDA|REGULATION|_REG$|UPI_MDR|PNGRB|CERC|EMISSION_NORMS|"
+                            r"AIRFARE|AIRPORT_TARIFF|DRUG_PRICE")
+SECTOR_POLICY_NODES = {"P_TELECOM_TARIFFS"}          # typed POLICY but an industry pricing move
+POLICY_FACTORS = {"F_GOVT_CAPEX", "NEW_FISCAL_SLIPPAGE_IN", "NEW_INCOME_TAX_RELIEF_IN"}
+CATEGORIES = ["Policy", "Regulatory", "Sector", "Theme", "Geopolitics", "Company catalysts", "Market-priced macro"]
+
+
+def driver_category(n, nodes):
+    """Attribution bucket of an event's entry driver (what the user sees as the source of an expected return)."""
+    t = nodes[n]["type"]
+    pt = nodes[n].get("proposed_type") if t == "NEW" else t
+    if t == "COMPANY":
+        return "Company catalysts"
+    if n in MARKET_PRICED:
+        return "Market-priced macro"
+    if pt == "COUNTRY":
+        return "Geopolitics"
+    if pt == "THEME":
+        return "Theme"
+    if REGULATORY_RE.search(n):
+        return "Regulatory"
+    if n in SECTOR_POLICY_NODES:
+        return "Sector"
+    if pt == "POLICY" or n in POLICY_FACTORS:
+        return "Policy"
+    return "Sector"
+
+
 IVOL_CAP = 60.0               # cap on 12m idiosyncratic vol used for noise (corporate-action price breaks inflate it)
 # Unpriced part of an occurred-event impact: same sign as the model impact and never larger than it. A stock that moved
 # further than the events explain is treated as having idiosyncratic news, not as a mean-reversion candidate.
@@ -289,10 +318,20 @@ def run(draws=400):
     ev_rows, comp_paths = [], defaultdict(list)
     ev_imp, ev_mc = {}, {}
     resp_cache = {}
+    attr = {"3m": defaultdict(lambda: defaultdict(float)), "12m": defaultdict(lambda: defaultdict(float))}
+    mp_mean = {"3m": defaultdict(lambda: defaultdict(float)), "12m": defaultdict(lambda: defaultdict(float))}
     for ev in events:
         imp = defaultdict(float)
         imp_o = defaultdict(lambda: defaultdict(float))
         mc_rows = []
+        fwd = ev.get("status") != "occurred"
+        p3e, p12e = float(ev.get("prob_by_3m", 0) or 0), float(ev.get("prob_by_12m", 0) or 0)
+
+        def attr_add(c, cat, order, v):
+            if fwd:
+                key = (cat, "1st order" if order <= 1 else "2nd–4th order")
+                attr["3m"][c][key] += p3e * v
+                attr["12m"][c][key] += p12e * v
         entry = frozenset(sh["node"] for sh in ev.get("entry_shocks", []) if sh["node"] in nodes and nodes[sh["node"]]["type"] != "COMPANY")
         for sh in ev.get("entry_shocks", []):
             n, m = sh["node"], float(sh.get("ssu", 0))
@@ -301,10 +340,12 @@ def run(draws=400):
             if nodes[n]["type"] == "COMPANY":           # company-specific event: entry is % equity value directly
                 imp[n] += m
                 imp_o[n][1] += m
+                attr_add(n, "Company catalysts", 1, m)
                 mc_rows.append(((), 1.0, m, n))
                 for path, cval, c in net.paths_from(n):   # idiosyncratic spillover via holding/group/customer links
                     imp[c] += m * cval
                     imp_o[c][len(path) + 1] += m * cval
+                    attr_add(c, "Company catalysts", len(path) + 1, m * cval)
                     pw = float(np.prod(W_central[list(path)]))
                     mc_rows.append((path, cval / pw if pw else 0.0, m, c))
                 continue
@@ -316,7 +357,12 @@ def run(draws=400):
                 imp[c] += m * v
                 for k, vv in by_order[c].items():
                     imp_o[c][k] += m * vv
+            cat_n = driver_category(n, nodes)
             for path, cval, c in paths:
+                attr_add(c, cat_n, len(path), m * cval)
+                if fwd and n in MARKET_PRICED:            # exact mean of market-priced shocks along their own paths
+                    mp_mean["3m"][c][len(path)] += p3e * m * cval
+                    mp_mean["12m"][c][len(path)] += p12e * m * cval
                 pw = float(np.prod(W_central[list(path)]))
                 mc_rows.append((path, cval / pw if pw else 0.0, m, c))
                 comp_paths[c].append({"event": ev["event_id"], "status": ev.get("status"), "path": ev["event_id"] + " ⇒ " + path_str(net, n, path),
@@ -377,6 +423,7 @@ def run(draws=400):
                        "impact_mid": mid, "expected": p * mid, "override": ce.get("director_override", "")})
     pd.DataFrame(ce_out).to_csv(R("results", "company_events.csv"), index=False)
 
+    cs_direct = {t: list(v) for t, v in cs.items()}
     link_out = defaultdict(list)
     for e in edges:
         if e["layer"] == "company_link":
@@ -421,17 +468,16 @@ def run(draws=400):
             if sh["node"] in MARKET_PRICED and sh["node"] in nodes:
                 drift["3m"][sh["node"]] += float(e.get("prob_by_3m", 0)) * float(sh.get("ssu", 0))
                 drift["12m"][sh["node"]] += float(e.get("prob_by_12m", 0)) * float(sh.get("ssu", 0))
-    mp = frozenset(n for n in MARKET_PRICED if n in nodes)
+    # anchor = minus the exact probability-weighted contribution of market-priced entry shocks, propagated with each
+    # event's own clamping (so it also removes their 2nd-4th-order echoes through other market-priced nodes)
     anchor = {"3m": defaultdict(float), "12m": defaultdict(float)}
-    for n in mp:
-        if abs(drift["12m"][n]) < 1e-9 and abs(drift["3m"][n]) < 1e-9:
-            continue
-        tot, _, _ = net.unit_response(n, clamped=mp - {n})
-        for c, v in tot.items():
-            anchor["3m"][c] -= drift["3m"][n] * v
-            anchor["12m"][c] -= drift["12m"][n] * v
+    for h in ("3m", "12m"):
+        for c, byk in mp_mean[h].items():
+            for k, v in byk.items():
+                anchor[h][c] -= v
+                attr[h][c][("Market-priced macro", "1st order" if k <= 1 else "2nd–4th order")] -= v
     pd.DataFrame([{"driver": n, "drift_3m_ssu": drift["3m"][n], "drift_12m_ssu": drift["12m"][n],
-                   "ssu": nodes[n].get("ssu"), "name": nodes[n].get("name")} for n in sorted(mp, key=lambda k: -abs(drift["12m"][k]))
+                   "ssu": nodes[n].get("ssu"), "name": nodes[n].get("name")} for n in sorted(drift["12m"], key=lambda k: -abs(drift["12m"][k]))
                   if abs(drift["12m"][n]) > 1e-9]).to_csv(R("results", "neutralised_drift.csv"), index=False)
     for c in comps:
         f3_raw[c] += anchor["3m"].get(c, 0.0)
@@ -457,6 +503,30 @@ def run(draws=400):
     rk = pd.DataFrame(res)
     for h in ("3m", "12m"):
         rk[f"exp_rel_return_{h}"] = rk[f"raw_er_{h}"] - rk[f"raw_er_{h}"].mean()   # relative to universe average
+    # attribution of the headline: categories × order, plus beta adjustment and universe centring (sums exactly)
+    arows = []
+    for h, m_h in (("3m", m3), ("12m", m12)):
+        mean_raw = float(rk[f"raw_er_{h}"].mean())
+        hi = 0 if h == "3m" else 1
+        for c in comps:
+            for (cat, order), v in attr[h][c].items():
+                arows.append({"company": c, "horizon": h, "category": cat, "order": order, "value": (1 - PRICED_SHARE_FWD) * v})
+            ced = cs_direct.get(c, [0.0, 0.0])[hi]
+            arows.append({"company": c, "horizon": h, "category": "Company catalysts", "order": "1st order", "value": (1 - PRICED_SHARE_FWD) * ced})
+            arows.append({"company": c, "horizon": h, "category": "Company catalysts", "order": "2nd–4th order",
+                          "value": (1 - PRICED_SHARE_FWD) * (cs[c][hi] - ced)})
+            rc = float(rk.loc[rk.company == c, "residual_contribution_3m" if h == "3m" else "residual_contribution"].iloc[0])
+            if rc:
+                arows.append({"company": c, "horizon": h, "category": "Recent unpriced (excluded)", "order": "—", "value": rc})
+            arows.append({"company": c, "horizon": h, "category": "Beta adjustment", "order": "—",
+                          "value": -(1 - PRICED_SHARE_FWD) * beta.get(c, 1.0) * m_h})
+            arows.append({"company": c, "horizon": h, "category": "Universe centring", "order": "—", "value": -mean_raw})
+    adf = pd.DataFrame(arows)
+    adf = adf.groupby(["company", "horizon", "category", "order"], as_index=False).value.sum()
+    adf.to_csv(R("results", "attribution.csv"), index=False)
+    chk = adf.groupby(["company", "horizon"]).value.sum().unstack()
+    exp_ = rk.set_index("company")[["exp_rel_return_3m", "exp_rel_return_12m"]]
+    attribution_error = float(max((chk["3m"] - exp_.exp_rel_return_3m).abs().max(), (chk["12m"] - exp_.exp_rel_return_12m).abs().max()))
     # 5) Monte Carlo over edge-weight uncertainty and event occurrence → P10/P90 of 12m relative return
     base12 = dict(zip(rk.company, rk.residual_contribution + (1 - PRICED_SHARE_FWD) * rk.company_events_12m))
     ivol = idio_vol(net.companies)
@@ -520,6 +590,7 @@ def run(draws=400):
     rep["dead_end_drivers"] = sorted(n for n in targeted if n in nodes and nodes[n]["type"] != "COMPANY" and not net.out.get(n))
     rep["recent_state_drivers"] = {"observed": int(sum(1 for v in state_src.values() if v == "observed")),
                                    "from_events": int(sum(1 for v in state_src.values() if v == "events"))}
+    rep["attribution_max_abs_error_pp"] = attribution_error
     json.dump(rep, open(R("results", "assembly_report.json"), "w"), indent=1)
     json.dump({"events": events}, open(R("results", "events_effective.json"), "w"), indent=1)   # after drops/overrides
     return rep

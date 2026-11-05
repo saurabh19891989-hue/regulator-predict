@@ -2,11 +2,26 @@
 *NIFTY_50 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months +0.9%** (rank 75 / 48 of 200 for 3m / 12m); beta 1.17
+- Expected relative return: **3 months +0.3%**, **12 months +1.1%** (rank 64 / 29 of 200 for 3m / 12m); beta 1.17
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +51.3%): 3 months 50%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.6% … P90 +2.7%; plausible 12m relative-return range incl. stock-specific noise: -64.1% … +63.4%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.5% … P90 +2.8%; plausible 12m relative-return range incl. stock-specific noise: -64.0% … +63.5%
 - Decomposition (12m): 0.5 × forward event exposure +0.2% (3m -0.0%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +2.2%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.5% (beta-adjusted) vs a realised market-adjusted move of +4.7% — gap -3.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +1.6% (beta-adjusted) vs a realised market-adjusted move of +4.7% — gap -3.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+
+## Where the expected return comes from
+Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows, growth, inflation) are taken as priced, so what is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Percentage points of the expected relative return.
+| source | 12m: 1st order | 12m: 2nd–4th order | 12m total | 3m total |
+|---|---|---|---|---|
+| Policy | +0.03 | +0.07 | +0.10 | -0.02 |
+| Regulatory | +0.00 | -0.01 | -0.01 | -0.00 |
+| Sector | +0.39 | +0.34 | +0.74 | +0.36 |
+| Theme | +0.00 | -0.02 | -0.02 | -0.02 |
+| Geopolitics | +0.00 | -0.03 | -0.03 | -0.02 |
+| Company catalysts | +1.10 | +0.00 | +1.10 | +0.42 |
+| Market-priced macro | +0.00 | +0.00 | +0.00 | +0.00 |
+| Beta adjustment | — | — | -0.67 | -0.30 |
+| Universe centring | — | — | -0.15 | -0.10 |
+| **Expected relative return** | | | **+1.07** | **+0.31** |
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.

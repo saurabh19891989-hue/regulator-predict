@@ -1,6 +1,7 @@
-check,correlation,stocks,note
-All drivers (decision-time run),-0.335,198,"graph Jun–Nov impact vs realised beta-adjusted move, before review overrides"
-Agent-estimated event shocks,-0.411,198,driver states built from occurred-event shocks
-Market-observed drivers,0.101,198,"Brent, FX, metals, rates etc. from price series"
-Within industries,-0.162,198,after removing industry averages
-All drivers after review overrides,-0.154,198,final run; still not used in the headline
+check,correlation,spearman,stocks,note
+"All drivers (decision-time run, before reviews)",-0.335,-0.342,198,the result that removed the 'unpriced recent impact' from the headline
+All drivers (final run),-0.15,-0.16,198,79 drivers
+Market-observed drivers only,0.103,-0.003,198,18 drivers
+Event-estimated drivers only,-0.169,-0.167,198,42 drivers
+Reviewed overrides only,-0.148,-0.232,198,19 drivers
+"All drivers, within industries",0.002,-0.025,198,industry averages removed from both sides

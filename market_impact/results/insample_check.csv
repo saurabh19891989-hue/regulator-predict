@@ -1,0 +1,7 @@
+check,correlation,spearman,stocks,group,note
+"All drivers (decision-time run, before reviews)",-0.335,-0.342,198,history,the result that removed the 'unpriced recent impact' from the headline
+All drivers (final run),-0.15,-0.16,198,final,79 drivers
+Market-observed drivers only,0.103,-0.003,198,final,18 drivers
+Event-estimated drivers only,-0.169,-0.167,198,final,42 drivers
+Reviewed overrides only,-0.148,-0.232,198,final,19 drivers
+"All drivers, within industries",0.002,-0.025,198,final,industry averages removed from both sides

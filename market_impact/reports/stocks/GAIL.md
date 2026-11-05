@@ -2,11 +2,25 @@
 *NIFTY_NEXT_50 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +1.9%** (rank 29 / 16 of 200 for 3m / 12m); beta 1.28
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.4%): 3 months 53%, 12 months 54%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.9% … P90 +6.6%; plausible 12m relative-return range incl. stock-specific noise: -19.1% … +27.0%
-- Decomposition (12m): 0.5 × forward event exposure +3.2% (3m +1.8%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.1%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +4.8% (beta-adjusted) vs a realised market-adjusted move of +7.9% — gap -3.1 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.3%**, **12 months +1.1%** (rank 62 / 30 of 200 for 3m / 12m); beta 1.28
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.4%): 3 months 52%, 12 months 52%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.8% … P90 +5.7%; plausible 12m relative-return range incl. stock-specific noise: -20.0% … +26.1%
+- Decomposition (12m): 0.5 × forward event exposure +1.2% (3m +0.9%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +1.1%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.5% (beta-adjusted) vs a realised market-adjusted move of +7.9% — gap -8.4 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+
+## Where the expected return comes from
+Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows, growth, inflation) are taken as priced, so what is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Percentage points of the expected relative return.
+| source | 12m: 1st order | 12m: 2nd–4th order | 12m total | 3m total |
+|---|---|---|---|---|
+| Policy | +0.70 | +0.05 | +0.75 | +0.44 |
+| Sector | +0.12 | +0.27 | +0.39 | +0.18 |
+| Theme | +0.00 | +0.06 | +0.06 | +0.04 |
+| Geopolitics | +0.03 | +0.13 | +0.16 | +0.12 |
+| Company catalysts | +0.57 | +0.00 | +0.57 | +0.00 |
+| Market-priced macro | +0.00 | +0.00 | +0.00 | +0.00 |
+| Beta adjustment | — | — | -0.73 | -0.33 |
+| Universe centring | — | — | -0.15 | -0.10 |
+| **Expected relative return** | | | **+1.05** | **+0.35** |
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -67,7 +81,7 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GAS_GLOBAL → GAIL | +1.00 | director_override | -1.50% |
+| 1 | F_GAS_GLOBAL → GAIL | +4.61 | observed | -6.92% |
 | 1 | F_GDP_IN → GAIL | +0.50 | events | +0.75% |
 | 1 | F_REPO_IN → GAIL | +1.00 | events | -0.60% |
 | 1 | C_MIDEAST_CONFLICT → GAIL | +1.00 | events | -0.49% |

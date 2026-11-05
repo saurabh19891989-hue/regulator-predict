@@ -1,6 +1,6 @@
 id,type,name,ssu,series,nse_industry,tier,proposed_type,proposed_by
 F_BRENT,FACTOR,Brent crude oil price,+10% Brent,BZ=F,,,,
-F_GAS_GLOBAL,FACTOR,Global natural gas / LNG price,+15% gas/LNG price,NG=F,,,,
+F_GAS_GLOBAL,FACTOR,Global natural gas / LNG price,+15% gas/LNG price,JKM=F,,,,
 F_COAL_INTL,FACTOR,International thermal coal price,+15% seaborne thermal coal,MTF=F,,,,
 F_COAL_INDIA,FACTOR,Indian domestic coal price & availability cost,+10% domestic coal cost (notified/e-auction),,,,,
 F_COKING_COAL,FACTOR,Coking coal price,+15% coking coal,,,,,

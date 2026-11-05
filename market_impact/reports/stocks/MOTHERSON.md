@@ -2,11 +2,25 @@
 *NIFTY_NEXT_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.3%**, **12 months +0.3%** (rank 69 / 79 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.6%): 3 months 51%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.4% … P90 +5.7%; plausible 12m relative-return range incl. stock-specific noise: -32.1% … +33.9%
-- Decomposition (12m): 0.5 × forward event exposure +1.6% (3m +0.6%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.4%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +6.0% (beta-adjusted) vs a realised market-adjusted move of +11.5% — gap -5.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.1%**, **12 months -0.7%** (rank 116 / 147 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.6%): 3 months 50%, 12 months 47%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.4% … P90 +4.6%; plausible 12m relative-return range incl. stock-specific noise: -33.2% … +32.9%
+- Decomposition (12m): 0.5 × forward event exposure -0.7% (3m -0.3%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.4%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +4.3% (beta-adjusted) vs a realised market-adjusted move of +11.5% — gap -7.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+
+## Where the expected return comes from
+Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows, growth, inflation) are taken as priced, so what is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Percentage points of the expected relative return.
+| source | 12m: 1st order | 12m: 2nd–4th order | 12m total | 3m total |
+|---|---|---|---|---|
+| Policy | +0.00 | +0.11 | +0.11 | -0.02 |
+| Sector | -0.11 | +0.14 | +0.03 | -0.06 |
+| Theme | +0.09 | -0.06 | +0.03 | +0.01 |
+| Geopolitics | +0.00 | +0.27 | +0.27 | +0.28 |
+| Company catalysts | -0.20 | +0.00 | -0.20 | +0.17 |
+| Market-priced macro | +0.00 | +0.00 | +0.00 | -0.00 |
+| Beta adjustment | — | — | -0.78 | -0.35 |
+| Universe centring | — | — | -0.15 | -0.10 |
+| **Expected relative return** | | | **-0.68** | **-0.07** |
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -68,12 +82,12 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_GSEC_10Y_IN → MOTHERSON | +1.55 | director_override | -3.10% |
+| 1 | F_GAS_GLOBAL → MOTHERSON | +4.61 | observed | -2.31% |
 | 1 | F_AUTO_DEMAND_IN → MOTHERSON | +0.50 | director_override | +1.50% |
 | 1 | F_US_GDP → MOTHERSON | +1.20 | events | +1.44% |
 | 1 | F_USDCNY → MOTHERSON | -0.47 | observed | +0.70% |
 | 1 | F_FED_FUNDS → MOTHERSON | +1.62 | observed | -0.65% |
 | 1 | F_ALUMINIUM → MOTHERSON | -1.96 | observed | +0.59% |
-| 1 | F_GAS_GLOBAL → MOTHERSON | +1.00 | director_override | -0.50% |
 | 1 | F_USDINR → MOTHERSON | -0.37 | observed | -0.44% |
 | 1 | F_EU_GDP → MOTHERSON | +0.22 | events | +0.33% |
 | 1 | T_ENERGY_TRANSITION → MOTHERSON | +0.30 | director_override | +0.30% |

@@ -2,11 +2,25 @@
 *MIDCAP_100 · Oil Gas & Consumable Fuels · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.4%**, **12 months +6.6%** (rank 8 / 1 of 200 for 3m / 12m); beta 1.46
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.1%): 3 months 55%, 12 months 63%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.5% … P90 +19.9%; plausible 12m relative-return range incl. stock-specific noise: -21.6% … +38.7%
-- Decomposition (12m): 0.5 × forward event exposure +14.4% (3m +4.2%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.6%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +3.8% (beta-adjusted) vs a realised market-adjusted move of -8.5% — gap +12.3 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.9%**, **12 months +5.3%** (rank 19 / 2 of 200 for 3m / 12m); beta 1.46
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.1%): 3 months 53%, 12 months 61%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.8% … P90 +18.7%; plausible 12m relative-return range incl. stock-specific noise: -22.9% … +37.4%
+- Decomposition (12m): 0.5 × forward event exposure +11.6% (3m +3.1%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.6%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +2.1% (beta-adjusted) vs a realised market-adjusted move of -8.5% — gap +10.6 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+
+## Where the expected return comes from
+Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows, growth, inflation) are taken as priced, so what is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Percentage points of the expected relative return.
+| source | 12m: 1st order | 12m: 2nd–4th order | 12m total | 3m total |
+|---|---|---|---|---|
+| Policy | +1.48 | -0.04 | +1.44 | +0.21 |
+| Sector | +4.50 | +0.20 | +4.70 | +1.27 |
+| Theme | +0.00 | +0.08 | +0.08 | +0.06 |
+| Geopolitics | -0.12 | +0.53 | +0.41 | +0.39 |
+| Company catalysts | -0.30 | +0.00 | -0.30 | -0.60 |
+| Market-priced macro | +0.00 | +0.00 | +0.00 | -0.00 |
+| Beta adjustment | — | — | -0.84 | -0.38 |
+| Universe centring | — | — | -0.15 | -0.10 |
+| **Expected relative return** | | | **+5.35** | **+0.86** |
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -69,12 +83,12 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | NEW_OMC_MARKETING_MARGIN → HINDPETRO | -0.50 | director_override | -6.00% |
 | 1 | F_REFINING_MARGIN → HINDPETRO | +0.60 | events | +3.00% |
+| 1 | F_GAS_GLOBAL → HINDPETRO | +4.61 | observed | -2.31% |
 | 1 | C_RUSSIA → HINDPETRO | +1.00 | events | +1.50% |
 | 1 | C_MIDEAST_CONFLICT → HINDPETRO | +1.00 | events | -0.90% |
 | 1 | F_USDINR → HINDPETRO | -0.37 | observed | +0.81% |
 | 1 | F_REPO_IN → HINDPETRO | +1.00 | events | -0.80% |
 | 1 | P_FUEL_TAX_IN → HINDPETRO | -0.50 | events | +0.75% |
-| 1 | F_GAS_GLOBAL → HINDPETRO | +1.00 | director_override | -0.50% |
 | 1 | F_GDP_IN → HINDPETRO | +0.50 | events | +0.50% |
 | 1 | P_WINDFALL_EXPORT_TAX → HINDPETRO | +1.00 | events | -0.40% |
 | 1 | F_BRENT → HINDPETRO | +0.00 | observed | -0.00% |

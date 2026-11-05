@@ -1,19 +1,19 @@
 industry,stocks,exp_3m,exp_12m,best,worst
-Telecommunication,4,0.65,2.09,IDEA,TATACOMM
-Oil Gas & Consumable Fuels,9,0.65,1.94,HINDPETRO,ATGL
-Chemicals,5,0.71,1.34,SOLARINDS,PIIND
-Capital Goods,24,0.36,1.28,MAZDOCK,CUMMINSIND
-Power,9,0.65,1.19,TATAPOWER,NTPC
-Construction Materials,3,0.61,1.1,ULTRACEMCO,GRASIM
-Construction,2,0.55,0.84,RVNL,LT
-Consumer Durables,8,0.51,0.83,DIXON,VOLTAS
-Metals & Mining,12,0.2,0.69,NMDC,HINDCOPPER
-Automobile and Auto Components,14,0.32,0.56,M&M,EICHERMOT
-Fast Moving Consumer Goods,14,-0.02,0.09,TATACONSUM,PATANJALI
-Services,4,0.1,-0.11,ADANIPORTS,INDIGO
-Consumer Services,12,-0.37,-0.71,VMM,SWIGGY
-Realty,6,-0.02,-0.76,GODREJPROP,LODHA
-Healthcare,15,-0.3,-0.77,LAURUSLABS,FORTIS
-Textiles,1,-0.93,-1.11,PAGEIND,PAGEIND
-Financial Services,48,-0.44,-1.29,RECLTD,POLICYBZR
-Information Technology,10,-0.96,-1.5,HCLTECH,PERSISTENT
+Telecommunication,4,0.89,2.75,IDEA,TATACOMM
+Power,9,0.83,1.7,JSWENERGY,NTPC
+Oil Gas & Consumable Fuels,9,0.3,1.21,HINDPETRO,ONGC
+Capital Goods,24,0.13,0.62,MAZDOCK,ASTRAL
+Consumer Durables,8,0.38,0.52,DIXON,VOLTAS
+Construction Materials,3,0.47,0.46,ULTRACEMCO,GRASIM
+Chemicals,5,0.39,0.46,SOLARINDS,PIIND
+Services,4,0.18,0.12,ADANIPORTS,CONCOR
+Automobile and Auto Components,14,0.13,0.01,HEROMOTOCO,BAJAJ-AUTO
+Construction,2,0.18,-0.06,LT,RVNL
+Realty,6,0.22,-0.08,GODREJPROP,LODHA
+Fast Moving Consumer Goods,14,-0.12,-0.17,BRITANNIA,UNITDSPR
+Consumer Services,12,-0.18,-0.25,VMM,ETERNAL
+Textiles,1,-0.56,-0.28,PAGEIND,PAGEIND
+Financial Services,48,-0.1,-0.42,PAYTM,POLICYBZR
+Healthcare,15,-0.25,-0.59,LAURUSLABS,FORTIS
+Metals & Mining,12,-0.36,-0.61,JSWSTEEL,HINDCOPPER
+Information Technology,10,-1.03,-1.82,WIPRO,PERSISTENT

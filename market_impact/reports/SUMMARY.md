@@ -6,131 +6,143 @@
 
 **What the in-sample check showed.** We first also credited the part of June–November driver moves the graph said was not yet in prices. Across 198 stocks the graph's June–November impact correlated **−0.34** with realised market-adjusted moves (agent-estimated event shocks −0.41; market-observed drivers +0.10; within industries −0.16), and eight red-team reviewers found most large 'unpriced' items were stock-specific news the graph lacks (results misses, regulation, competition). That component is therefore excluded from the headline and kept only as a diagnostic. The graph's value is the exposure map — which drivers and events hit which company, by causal order — not a proven return forecast.
 
+## Where the expected returns come from (all 200 stocks, 12 months)
+What is left after taking market-priced macro as priced is policy, regulatory, sector, theme, geopolitical and company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Share of the total absolute contribution across stocks, split by the order at which it reaches the company.
+| source | share | via 1st order | via 2nd–4th order | biggest positive | biggest negative |
+|---|---|---|---|---|---|
+| Policy | 17% | 13% | 4% | RECLTD +1.71, PFC +1.64, HINDPETRO +1.44, ADANIENSOL +1.42 | ETERNAL -1.69, SWIGGY -1.21, AUROPHARMA -0.90, LAURUSLABS -0.73 |
+| Regulatory | 7% | 6% | 1% | — | POLICYBZR -2.50, MFSL -1.62, HDFCLIFE -1.26, GROWW -1.19 |
+| Sector | 36% | 17% | 19% | IDEA +7.29, HINDPETRO +4.70, IOC +2.70, BHARTIARTL +2.54 | GROWW -0.82, PERSISTENT -0.61, TATACOMM -0.54, POWERINDIA -0.53 |
+| Theme | 8% | 6% | 3% | LAURUSLABS +2.61, DIXON +1.73, DIVISLAB +1.54, PIIND +1.29 | WIPRO -0.56, INFY -0.47, LTM -0.40, HCLTECH -0.39 |
+| Geopolitics | 4% | 1% | 3% | HINDPETRO +0.41, BDL +0.37, BEL +0.30, BHARATFORG +0.29 | OIL -0.29, ONGC -0.22, MOTILALOFS -0.16, MCX -0.15 |
+| Company catalysts | 27% | 26% | 1% | MAZDOCK +2.18, PAYTM +1.90, LAURUSLABS +1.82, LUPIN +1.71 | PIIND -2.23, HINDCOPPER -2.21, POLICYBZR -2.12, FORTIS -2.00 |
+| Market-priced macro | 0% | 0% | 0% | — | — |
+
 **Catalogue drift removed as already priced (probability-weighted, 12 months):** US equity market -1.48 × (+5% S&P 500); India 10-year G-sec yield +1.18 × (+25 bp yield); Indian banking system liquidity -1.17 × (+1 lakh crore surplus liquidity); Foreign portfolio flows into Indian equities +1.13 × (+US$5 bn net inflow per quarter); Global risk aversion (VIX) +1.12 × (+5 VIX points); RBI repo rate +0.94 × (+25 bp repo); Global natural gas / LNG price +0.90 × (+15% gas/LNG price); US growth -0.80 × (+1 pp); USD/JPY exchange rate -0.80 × (+3% USD/JPY (yen weaker)); India CPI inflation +0.76 × (+1 pp); India FX reserves (RBI intervention) -0.50 × (+US$25bn reserves (RBI buys / net inflows)); Refining margins (GRM / cracks) -0.48 × (+$2/bbl gross refining margin)
 
 ## Top 20 (12-month, beta-adjusted, relative)
 | # | ticker | name | industry | exp 3m | exp 12m | P(beat 12m) | largest upside scenario chain | largest downside scenario chain |
 |---|---|---|---|---|---|---|---|---|
-| 1 | [HINDPETRO](stocks/HINDPETRO.md) | Hindustan Petroleum Corporation Ltd. | Oil Gas & Consumable Fuels | +1.4 | +6.6 | 63% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → HINDPETRO | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → HINDPETRO |
-| 2 | [IDEA](stocks/IDEA.md) | Vodafone Idea Ltd. | Telecommunication | +1.6 | +6.1 | 58% | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → IDEA | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → IDEA |
-| 3 | [IOC](stocks/IOC.md) | Indian Oil Corporation Ltd. | Oil Gas & Consumable Fuels | +1.0 | +4.1 | 60% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → IOC | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → IOC |
-| 4 | [MAZDOCK](stocks/MAZDOCK.md) | Mazagoan Dock Shipbuilders Ltd. | Capital Goods | +1.4 | +3.5 | 57% | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → MAZDOCK | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → MAZDOCK |
-| 5 | [BDL](stocks/BDL.md) | Bharat Dynamics Ltd. | Capital Goods | +0.5 | +3.4 | 52% | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → BDL | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BDL |
-| 6 | [DIXON](stocks/DIXON.md) | Dixon Technologies (India) Ltd. | Consumer Durables | +1.2 | +3.3 | 54% | EV_CHINA_FDI_EASING_PN3 ⇒ P_FDI_RULES → DIXON | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → DIXON |
-| 7 | [NMDC](stocks/NMDC.md) | NMDC Ltd. | Metals & Mining | +1.5 | +2.8 | 57% | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_IRON_ORE → NMDC | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_IRON_ORE → NMDC |
-| 8 | [SOLARINDS](stocks/SOLARINDS.md) | Solar Industries India Ltd. | Chemicals | +1.3 | +2.7 | 54% | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → SOLARINDS | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SOLARINDS |
-| 9 | [ENRIN](stocks/ENRIN.md) | Siemens Energy India Ltd. | Capital Goods | +1.7 | +2.5 | 50% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → ENRIN | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ENRIN |
-| 10 | [BPCL](stocks/BPCL.md) | Bharat Petroleum Corporation Ltd. | Oil Gas & Consumable Fuels | +0.9 | +2.5 | 58% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → BPCL | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BPCL |
-| 11 | [BHARTIARTL](stocks/BHARTIARTL.md) | Bharti Airtel Ltd. | Telecommunication | +1.6 | +2.5 | 54% | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → BHARTIARTL | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BHARTIARTL |
-| 12 | [LAURUSLABS](stocks/LAURUSLABS.md) | Laurus Labs Ltd. | Healthcare | +1.1 | +2.3 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LAURUSLABS | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → LAURUSLABS |
-| 13 | [JSWSTEEL](stocks/JSWSTEEL.md) | JSW Steel Ltd. | Metals & Mining | +0.4 | +2.3 | 57% | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → JSWSTEEL | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → JSWSTEEL |
-| 14 | [VMM](stocks/VMM.md) | Vishal Mega Mart Ltd. | Consumer Services | +0.7 | +2.2 | 57% | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → VMM | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → VMM |
-| 15 | [TATAPOWER](stocks/TATAPOWER.md) | Tata Power Co. Ltd. | Power | +1.4 | +2.0 | 55% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATAPOWER | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATAPOWER |
-| 16 | [GAIL](stocks/GAIL.md) | GAIL (India) Ltd. | Oil Gas & Consumable Fuels | +0.7 | +1.9 | 54% | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → GAIL | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GAIL |
-| 17 | [COALINDIA](stocks/COALINDIA.md) | Coal India Ltd. | Oil Gas & Consumable Fuels | +1.6 | +1.9 | 53% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → COALINDIA | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → COALINDIA |
-| 18 | [JINDALSTEL](stocks/JINDALSTEL.md) | Jindal Steel Ltd. | Metals & Mining | +0.5 | +1.8 | 54% | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → JINDALSTEL | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → JINDALSTEL |
-| 19 | [JSWENERGY](stocks/JSWENERGY.md) | JSW Energy Ltd. | Power | +0.9 | +1.8 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → JSWENERGY | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → JSWENERGY |
-| 20 | [KEI](stocks/KEI.md) | KEI Industries Ltd. | Capital Goods | +0.3 | +1.8 | 52% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → KEI | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → KEI |
+| 1 | [IDEA](stocks/IDEA.md) | Vodafone Idea Ltd. | Telecommunication | +1.9 | +7.1 | 59% | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → IDEA | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → IDEA |
+| 2 | [HINDPETRO](stocks/HINDPETRO.md) | Hindustan Petroleum Corporation Ltd. | Oil Gas & Consumable Fuels | +0.9 | +5.3 | 61% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → HINDPETRO | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → HINDPETRO |
+| 3 | [BHARTIARTL](stocks/BHARTIARTL.md) | Bharti Airtel Ltd. | Telecommunication | +1.9 | +3.4 | 56% | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → BHARTIARTL | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BHARTIARTL |
+| 4 | [IOC](stocks/IOC.md) | Indian Oil Corporation Ltd. | Oil Gas & Consumable Fuels | +0.6 | +3.1 | 58% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → IOC | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → IOC |
+| 5 | [LAURUSLABS](stocks/LAURUSLABS.md) | Laurus Labs Ltd. | Healthcare | +1.4 | +3.1 | 53% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LAURUSLABS | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → LAURUSLABS |
+| 6 | [MAZDOCK](stocks/MAZDOCK.md) | Mazagoan Dock Shipbuilders Ltd. | Capital Goods | +1.2 | +2.9 | 56% | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → MAZDOCK | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → MAZDOCK |
+| 7 | [DIXON](stocks/DIXON.md) | Dixon Technologies (India) Ltd. | Consumer Durables | +1.0 | +2.7 | 53% | EV_CHINA_FDI_EASING_PN3 ⇒ P_FDI_RULES → DIXON | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → DIXON |
+| 8 | [JSWENERGY](stocks/JSWENERGY.md) | JSW Energy Ltd. | Power | +1.2 | +2.7 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → JSWENERGY | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → JSWENERGY |
+| 9 | [TATAPOWER](stocks/TATAPOWER.md) | Tata Power Co. Ltd. | Power | +1.4 | +2.4 | 56% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATAPOWER | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATAPOWER |
+| 10 | [BDL](stocks/BDL.md) | Bharat Dynamics Ltd. | Capital Goods | -0.0 | +2.2 | 51% | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → BDL | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BDL |
+| 11 | [ADANIPOWER](stocks/ADANIPOWER.md) | Adani Power Ltd. | Power | +1.2 | +2.1 | 52% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → ADANIPOWER | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIPOWER |
+| 12 | [ENRIN](stocks/ENRIN.md) | Siemens Energy India Ltd. | Capital Goods | +1.5 | +2.1 | 50% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → ENRIN | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ENRIN |
+| 13 | [POWERINDIA](stocks/POWERINDIA.md) | Hitachi Energy India Ltd. | Capital Goods | +0.4 | +2.1 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → POWERINDIA | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → POWERINDIA |
+| 14 | [RELIANCE](stocks/RELIANCE.md) | Reliance Industries Ltd. | Oil Gas & Consumable Fuels | +0.1 | +1.9 | 56% | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → RELIANCE | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → RELIANCE |
+| 15 | [SOLARINDS](stocks/SOLARINDS.md) | Solar Industries India Ltd. | Chemicals | +1.0 | +1.9 | 53% | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → SOLARINDS | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SOLARINDS |
+| 16 | [ADANIENSOL](stocks/ADANIENSOL.md) | Adani Energy Solutions Ltd. | Power | +1.7 | +1.8 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIENSOL | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIENSOL |
+| 17 | [NLCINDIA](stocks/NLCINDIA.md) | NLC India Ltd. | Power | +0.1 | +1.6 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → NLCINDIA | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → NLCINDIA |
+| 18 | [NHPC](stocks/NHPC.md) | NHPC Ltd. | Power | +0.9 | +1.6 | 55% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → NHPC | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → NHPC |
+| 19 | [TMCV](stocks/TMCV.md) | Tata Motors Ltd. | Capital Goods | +0.4 | +1.5 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TMCV | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → TMCV |
+| 20 | [PAYTM](stocks/PAYTM.md) | One 97 Communications Ltd. | Financial Services | +1.8 | +1.5 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PAYTM | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → PAYTM |
 
 ## Bottom 20
 | # | ticker | name | industry | exp 3m | exp 12m | P(beat 12m) | largest upside scenario chain | largest downside scenario chain |
 |---|---|---|---|---|---|---|---|---|
-| 200 | [POLICYBZR](stocks/POLICYBZR.md) | PB Fintech Ltd. | Financial Services | -3.6 | -6.2 | 43% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → POLICYBZR | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → POLICYBZR |
-| 199 | [MOTILALOFS](stocks/MOTILALOFS.md) | Motilal Oswal Financial Services Ltd. | Financial Services | -1.4 | -3.7 | 44% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MOTILALOFS | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → MOTILALOFS |
-| 198 | [FORTIS](stocks/FORTIS.md) | Fortis Healthcare Ltd. | Healthcare | -3.1 | -3.4 | 42% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → FORTIS | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → FORTIS |
-| 197 | [GROWW](stocks/GROWW.md) | Billionbrains Garage Ventures Ltd. | Financial Services | -1.1 | -3.4 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → GROWW | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → GROWW |
-| 196 | [SWIGGY](stocks/SWIGGY.md) | Swiggy Ltd. | Consumer Services | -2.0 | -3.2 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SWIGGY | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → SWIGGY |
-| 195 | [MFSL](stocks/MFSL.md) | Max Financial Services Ltd. | Financial Services | -1.2 | -2.8 | 43% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MFSL | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → MFSL |
-| 194 | [ICICIAMC](stocks/ICICIAMC.md) | ICICI Prudential Asset Management Company Ltd. | Financial Services | -1.7 | -2.8 | 44% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ICICIAMC | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ICICIAMC |
-| 193 | [MUTHOOTFIN](stocks/MUTHOOTFIN.md) | Muthoot Finance Ltd. | Financial Services | -0.8 | -2.8 | 46% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MUTHOOTFIN | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → MUTHOOTFIN |
-| 192 | [BSE](stocks/BSE.md) | BSE Ltd. | Financial Services | -0.9 | -2.8 | 44% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BSE | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → BSE |
-| 191 | [360ONE](stocks/360ONE.md) | 360 ONE WAM Ltd. | Financial Services | -0.7 | -2.7 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → 360ONE | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → 360ONE |
-| 190 | [YESBANK](stocks/YESBANK.md) | Yes Bank Ltd. | Financial Services | -2.1 | -2.6 | 47% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → YESBANK | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → YESBANK |
-| 189 | [ETERNAL](stocks/ETERNAL.md) | Eternal Ltd. | Consumer Services | -1.2 | -2.5 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ETERNAL | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → ETERNAL |
-| 188 | [MAXHEALTH](stocks/MAXHEALTH.md) | Max Healthcare Institute Ltd. | Healthcare | -1.7 | -2.4 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MAXHEALTH | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MAXHEALTH |
-| 187 | [AUBANK](stocks/AUBANK.md) | AU Small Finance Bank Ltd. | Financial Services | -1.2 | -2.3 | 47% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → AUBANK | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → AUBANK |
-| 186 | [PERSISTENT](stocks/PERSISTENT.md) | Persistent Systems Ltd. | Information Technology | -0.6 | -2.2 | 47% | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → PERSISTENT | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → PERSISTENT |
-| 185 | [BIOCON](stocks/BIOCON.md) | Biocon Ltd. | Healthcare | -0.4 | -2.2 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BIOCON | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → BIOCON |
-| 184 | [HDFCLIFE](stocks/HDFCLIFE.md) | HDFC Life Insurance Company Ltd. | Financial Services | -0.9 | -2.2 | 42% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HDFCLIFE | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → HDFCLIFE |
-| 183 | [ABCAPITAL](stocks/ABCAPITAL.md) | Aditya Birla Capital Ltd. | Financial Services | -0.5 | -2.1 | 43% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ABCAPITAL | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → ABCAPITAL |
-| 182 | [CANBK](stocks/CANBK.md) | Canara Bank | Financial Services | -0.5 | -1.9 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CANBK | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → CANBK |
-| 181 | [COFORGE](stocks/COFORGE.md) | Coforge Ltd. | Information Technology | -1.3 | -1.9 | 47% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → COFORGE | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → COFORGE |
+| 200 | [POLICYBZR](stocks/POLICYBZR.md) | PB Fintech Ltd. | Financial Services | -3.2 | -4.8 | 43% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → POLICYBZR | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → POLICYBZR |
+| 199 | [HINDCOPPER](stocks/HINDCOPPER.md) | Hindustan Copper Ltd. | Metals & Mining | -0.6 | -2.8 | 51% | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → HINDCOPPER | EV_FED_DEC26_HIKE25 ⇒ F_DXY → F_COPPER → HINDCOPPER |
+| 198 | [GROWW](stocks/GROWW.md) | Billionbrains Garage Ventures Ltd. | Financial Services | -0.8 | -2.8 | 46% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → GROWW | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → GROWW |
+| 197 | [FORTIS](stocks/FORTIS.md) | Fortis Healthcare Ltd. | Healthcare | -2.8 | -2.7 | 43% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → FORTIS | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → FORTIS |
+| 196 | [PERSISTENT](stocks/PERSISTENT.md) | Persistent Systems Ltd. | Information Technology | -0.8 | -2.6 | 46% | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → PERSISTENT | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → PERSISTENT |
+| 195 | [ETERNAL](stocks/ETERNAL.md) | Eternal Ltd. | Consumer Services | -1.2 | -2.5 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ETERNAL | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → ETERNAL |
+| 194 | [BIOCON](stocks/BIOCON.md) | Biocon Ltd. | Healthcare | -0.5 | -2.5 | 44% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BIOCON | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → BIOCON |
+| 193 | [MUTHOOTFIN](stocks/MUTHOOTFIN.md) | Muthoot Finance Ltd. | Financial Services | -0.5 | -2.3 | 47% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MUTHOOTFIN | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → MUTHOOTFIN |
+| 192 | [SWIGGY](stocks/SWIGGY.md) | Swiggy Ltd. | Consumer Services | -1.7 | -2.3 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SWIGGY | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → SWIGGY |
+| 191 | [MPHASIS](stocks/MPHASIS.md) | MphasiS Ltd. | Information Technology | -1.0 | -2.1 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MPHASIS | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → MPHASIS |
+| 190 | [TCS](stocks/TCS.md) | Tata Consultancy Services Ltd. | Information Technology | -1.3 | -2.0 | 48% | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → TCS | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_TECH_SPEND → TCS |
+| 189 | [COFORGE](stocks/COFORGE.md) | Coforge Ltd. | Information Technology | -1.3 | -1.9 | 47% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → COFORGE | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → COFORGE |
+| 188 | [INFY](stocks/INFY.md) | Infosys Ltd. | Information Technology | -1.4 | -1.9 | 45% | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → INFY | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → INFY |
+| 187 | [MFSL](stocks/MFSL.md) | Max Financial Services Ltd. | Financial Services | -0.8 | -1.9 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MFSL | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → MFSL |
+| 186 | [MCX](stocks/MCX.md) | Multi Commodity Exchange of India Ltd. | Financial Services | -1.2 | -1.8 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MCX | EV_SEBI_FNO_CURBS_RISK ⇒ P_SEBI_DERIVATIVES → MCX |
+| 185 | [VAML](stocks/VAML.md) | Vedanta Aluminium Metal Ltd. | Metals & Mining | -1.5 | -1.7 | 48% | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML |
+| 184 | [BSE](stocks/BSE.md) | BSE Ltd. | Financial Services | -0.3 | -1.7 | 46% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BSE | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → BSE |
+| 183 | [HINDZINC](stocks/HINDZINC.md) | Hindustan Zinc Ltd. | Metals & Mining | -1.0 | -1.7 | 48% | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_SILVER → HINDZINC | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → HINDZINC |
+| 182 | [NATIONALUM](stocks/NATIONALUM.md) | National Aluminium Co. Ltd. | Metals & Mining | -0.3 | -1.6 | 49% | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → NATIONALUM | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → NATIONALUM |
+| 181 | [TECHM](stocks/TECHM.md) | Tech Mahindra Ltd. | Information Technology | -0.7 | -1.6 | 48% | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → TECHM | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → TECHM |
 
 ## Nifty Next 50 — all 50 ranked
 | # | ticker | name | industry | exp 3m | exp 12m | P(beat 12m) | largest upside scenario chain | largest downside scenario chain |
 |---|---|---|---|---|---|---|---|---|
-| 2 | [IDEA](stocks/IDEA.md) | Vodafone Idea Ltd. | Telecommunication | +1.6 | +6.1 | 58% | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → IDEA | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → IDEA |
-| 3 | [IOC](stocks/IOC.md) | Indian Oil Corporation Ltd. | Oil Gas & Consumable Fuels | +1.0 | +4.1 | 60% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → IOC | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → IOC |
-| 4 | [MAZDOCK](stocks/MAZDOCK.md) | Mazagoan Dock Shipbuilders Ltd. | Capital Goods | +1.4 | +3.5 | 57% | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → MAZDOCK | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → MAZDOCK |
-| 8 | [SOLARINDS](stocks/SOLARINDS.md) | Solar Industries India Ltd. | Chemicals | +1.3 | +2.7 | 54% | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → SOLARINDS | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SOLARINDS |
-| 9 | [ENRIN](stocks/ENRIN.md) | Siemens Energy India Ltd. | Capital Goods | +1.7 | +2.5 | 50% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → ENRIN | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ENRIN |
-| 10 | [BPCL](stocks/BPCL.md) | Bharat Petroleum Corporation Ltd. | Oil Gas & Consumable Fuels | +0.9 | +2.5 | 58% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → BPCL | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BPCL |
-| 15 | [TATAPOWER](stocks/TATAPOWER.md) | Tata Power Co. Ltd. | Power | +1.4 | +2.0 | 55% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATAPOWER | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATAPOWER |
-| 16 | [GAIL](stocks/GAIL.md) | GAIL (India) Ltd. | Oil Gas & Consumable Fuels | +0.7 | +1.9 | 54% | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → GAIL | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GAIL |
-| 18 | [JINDALSTEL](stocks/JINDALSTEL.md) | Jindal Steel Ltd. | Metals & Mining | +0.5 | +1.8 | 54% | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → JINDALSTEL | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → JINDALSTEL |
-| 21 | [POWERINDIA](stocks/POWERINDIA.md) | Hitachi Energy India Ltd. | Capital Goods | +0.3 | +1.8 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → POWERINDIA | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → POWERINDIA |
-| 24 | [HAL](stocks/HAL.md) | Hindustan Aeronautics Ltd. | Capital Goods | +0.7 | +1.8 | 54% | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → HAL | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → HAL |
-| 27 | [TMCV](stocks/TMCV.md) | Tata Motors Ltd. | Capital Goods | +0.4 | +1.7 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TMCV | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → TMCV |
-| 32 | [SIEMENS](stocks/SIEMENS.md) | Siemens Ltd. | Capital Goods | +0.5 | +1.5 | 53% | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → SIEMENS | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → SIEMENS |
-| 33 | [POLYCAB](stocks/POLYCAB.md) | Polycab India Ltd. | Capital Goods | +0.0 | +1.5 | 54% | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → POLYCAB | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → POLYCAB |
-| 37 | [ADANIPOWER](stocks/ADANIPOWER.md) | Adani Power Ltd. | Power | +0.9 | +1.4 | 52% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → ADANIPOWER | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIPOWER |
-| 40 | [CGPOWER](stocks/CGPOWER.md) | CG Power and Industrial Solutions Ltd. | Capital Goods | +0.6 | +1.2 | 52% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → CGPOWER | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → CGPOWER |
-| 47 | [AMBUJACEM](stocks/AMBUJACEM.md) | Ambuja Cements Ltd. | Construction Materials | +0.7 | +1.0 | 55% | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → AMBUJACEM | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → AMBUJACEM |
-| 53 | [ADANIENSOL](stocks/ADANIENSOL.md) | Adani Energy Solutions Ltd. | Power | +1.3 | +0.8 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIENSOL | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIENSOL |
-| 57 | [PIDILITIND](stocks/PIDILITIND.md) | Pidilite Industries Ltd. | Chemicals | +0.4 | +0.7 | 53% | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → PIDILITIND | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PIDILITIND |
-| 62 | [BRITANNIA](stocks/BRITANNIA.md) | Britannia Industries Ltd. | Fast Moving Consumer Goods | +0.5 | +0.6 | 54% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BRITANNIA | EV_WHEAT27_CROP_BELOW ⇒ F_WHEAT → BRITANNIA |
-| 66 | [ABB](stocks/ABB.md) | ABB India Ltd. | Capital Goods | +0.2 | +0.6 | 53% | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → ABB | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ABB |
-| 71 | [ADANIGREEN](stocks/ADANIGREEN.md) | Adani Green Energy Ltd. | Power | +0.3 | +0.4 | 49% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIGREEN | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIGREEN |
-| 78 | [GODREJCP](stocks/GODREJCP.md) | Godrej Consumer Products Ltd. | Fast Moving Consumer Goods | +0.1 | +0.3 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GODREJCP | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GODREJCP |
-| 79 | [MOTHERSON](stocks/MOTHERSON.md) | Samvardhana Motherson International Ltd. | Automobile and Auto Components | +0.3 | +0.3 | 48% | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MOTHERSON | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → MOTHERSON |
-| 82 | [PNB](stocks/PNB.md) | Punjab National Bank | Financial Services | +0.4 | +0.3 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PNB | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → PNB |
-| 85 | [VBL](stocks/VBL.md) | Varun Beverages Ltd. | Fast Moving Consumer Goods | +0.2 | +0.3 | 49% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → VBL | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → VBL |
-| 87 | [UNIONBANK](stocks/UNIONBANK.md) | Union Bank of India | Financial Services | +0.4 | +0.3 | 49% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → UNIONBANK | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → UNIONBANK |
-| 92 | [BOSCHLTD](stocks/BOSCHLTD.md) | Bosch Ltd. | Automobile and Auto Components | -0.1 | +0.2 | 52% | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BOSCHLTD |
-| 97 | [HYUNDAI](stocks/HYUNDAI.md) | Hyundai Motor India Ltd. | Automobile and Auto Components | +0.2 | +0.1 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HYUNDAI | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → HYUNDAI |
-| 99 | [HINDZINC](stocks/HINDZINC.md) | Hindustan Zinc Ltd. | Metals & Mining | -0.4 | +0.1 | 50% | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_SILVER → HINDZINC | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → HINDZINC |
-| 102 | [PFC](stocks/PFC.md) | Power Finance Corporation Ltd. | Financial Services | -0.2 | +0.0 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PFC | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → PFC |
-| 103 | [DIVISLAB](stocks/DIVISLAB.md) | Divi's Laboratories Ltd. | Healthcare | +0.1 | -0.0 | 49% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DIVISLAB | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → DIVISLAB |
-| 109 | [VAML](stocks/VAML.md) | Vedanta Aluminium Metal Ltd. | Metals & Mining | -0.7 | -0.1 | 52% | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML |
-| 122 | [TVSMOTOR](stocks/TVSMOTOR.md) | TVS Motor Company Ltd. | Automobile and Auto Components | -0.3 | -0.4 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TVSMOTOR | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → TVSMOTOR |
-| 125 | [CUMMINSIND](stocks/CUMMINSIND.md) | Cummins India Ltd. | Capital Goods | -0.7 | -0.5 | 48% | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → CUMMINSIND | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → CUMMINSIND |
-| 132 | [BAJAJHLDNG](stocks/BAJAJHLDNG.md) | Bajaj Holdings & Investment Ltd. | Financial Services | -0.2 | -0.6 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BAJAJHLDNG | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → BAJAJHLDNG |
-| 137 | [HDFCAMC](stocks/HDFCAMC.md) | HDFC Asset Management Company Ltd. | Financial Services | -0.1 | -0.7 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HDFCAMC | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → HDFCAMC |
-| 140 | [IRFC](stocks/IRFC.md) | Indian Railway Finance Corporation Ltd. | Financial Services | -0.7 | -0.7 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → IRFC | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → IRFC |
-| 145 | [DLF](stocks/DLF.md) | DLF Ltd. | Realty | -0.3 | -0.8 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DLF | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → DLF |
-| 158 | [TORNTPHARM](stocks/TORNTPHARM.md) | Torrent Pharmaceuticals Ltd. | Healthcare | -0.5 | -1.2 | 43% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TORNTPHARM | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → TORNTPHARM |
-| 160 | [LTM](stocks/LTM.md) | LTM Ltd. | Information Technology | -0.8 | -1.2 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LTM | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → LTM |
-| 161 | [VEDL](stocks/VEDL.md) | Vedanta Ltd. | Metals & Mining | -0.6 | -1.2 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → VEDL | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → HINDZINC → VEDL |
-| 162 | [WIPRO](stocks/WIPRO.md) | Wipro Ltd. | Information Technology | -0.8 | -1.3 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → WIPRO | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → WIPRO |
-| 163 | [TATACAP](stocks/TATACAP.md) | Tata Capital Ltd. | Financial Services | -0.5 | -1.3 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATACAP | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATACAP |
-| 164 | [DMART](stocks/DMART.md) | Avenue Supermarts Ltd. | Consumer Services | -0.5 | -1.3 | 46% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DMART | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → DMART |
-| 166 | [ZYDUSLIFE](stocks/ZYDUSLIFE.md) | Zydus Lifesciences Ltd. | Healthcare | -0.2 | -1.4 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ZYDUSLIFE | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → ZYDUSLIFE |
-| 168 | [BANKBARODA](stocks/BANKBARODA.md) | Bank of Baroda | Financial Services | -0.5 | -1.5 | 47% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BANKBARODA | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → BANKBARODA |
-| 173 | [CHOLAFIN](stocks/CHOLAFIN.md) | Cholamandalam Investment and Finance Company Ltd. | Financial Services | -0.9 | -1.6 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CHOLAFIN | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → CHOLAFIN |
-| 182 | [CANBK](stocks/CANBK.md) | Canara Bank | Financial Services | -0.5 | -1.9 | 45% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CANBK | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → CANBK |
-| 193 | [MUTHOOTFIN](stocks/MUTHOOTFIN.md) | Muthoot Finance Ltd. | Financial Services | -0.8 | -2.8 | 46% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MUTHOOTFIN | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → MUTHOOTFIN |
+| 1 | [IDEA](stocks/IDEA.md) | Vodafone Idea Ltd. | Telecommunication | +1.9 | +7.1 | 59% | EV_TELECOM_TARIFF_HIKE_2027 ⇒ P_TELECOM_TARIFFS → IDEA | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → IDEA |
+| 4 | [IOC](stocks/IOC.md) | Indian Oil Corporation Ltd. | Oil Gas & Consumable Fuels | +0.6 | +3.1 | 58% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → IOC | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → IOC |
+| 6 | [MAZDOCK](stocks/MAZDOCK.md) | Mazagoan Dock Shipbuilders Ltd. | Capital Goods | +1.2 | +2.9 | 56% | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → MAZDOCK | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → MAZDOCK |
+| 9 | [TATAPOWER](stocks/TATAPOWER.md) | Tata Power Co. Ltd. | Power | +1.4 | +2.4 | 56% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATAPOWER | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATAPOWER |
+| 11 | [ADANIPOWER](stocks/ADANIPOWER.md) | Adani Power Ltd. | Power | +1.2 | +2.1 | 52% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → ADANIPOWER | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIPOWER |
+| 12 | [ENRIN](stocks/ENRIN.md) | Siemens Energy India Ltd. | Capital Goods | +1.5 | +2.1 | 50% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → ENRIN | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ENRIN |
+| 13 | [POWERINDIA](stocks/POWERINDIA.md) | Hitachi Energy India Ltd. | Capital Goods | +0.4 | +2.1 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → POWERINDIA | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → POWERINDIA |
+| 15 | [SOLARINDS](stocks/SOLARINDS.md) | Solar Industries India Ltd. | Chemicals | +1.0 | +1.9 | 53% | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → SOLARINDS | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SOLARINDS |
+| 16 | [ADANIENSOL](stocks/ADANIENSOL.md) | Adani Energy Solutions Ltd. | Power | +1.7 | +1.8 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIENSOL | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIENSOL |
+| 19 | [TMCV](stocks/TMCV.md) | Tata Motors Ltd. | Capital Goods | +0.4 | +1.5 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TMCV | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → TMCV |
+| 21 | [ADANIGREEN](stocks/ADANIGREEN.md) | Adani Green Energy Ltd. | Power | +0.7 | +1.5 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIGREEN | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIGREEN |
+| 24 | [BPCL](stocks/BPCL.md) | Bharat Petroleum Corporation Ltd. | Oil Gas & Consumable Fuels | +0.5 | +1.3 | 55% | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → BPCL | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BPCL |
+| 28 | [SIEMENS](stocks/SIEMENS.md) | Siemens Ltd. | Capital Goods | +0.5 | +1.1 | 52% | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → SIEMENS | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → SIEMENS |
+| 30 | [GAIL](stocks/GAIL.md) | GAIL (India) Ltd. | Oil Gas & Consumable Fuels | +0.3 | +1.1 | 52% | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → GAIL | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GAIL |
+| 31 | [HAL](stocks/HAL.md) | Hindustan Aeronautics Ltd. | Capital Goods | +0.4 | +1.0 | 52% | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → HAL | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → HAL |
+| 33 | [PNB](stocks/PNB.md) | Punjab National Bank | Financial Services | +0.7 | +0.9 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PNB | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → PNB |
+| 34 | [DIVISLAB](stocks/DIVISLAB.md) | Divi's Laboratories Ltd. | Healthcare | +0.4 | +0.9 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DIVISLAB | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → DIVISLAB |
+| 36 | [PFC](stocks/PFC.md) | Power Finance Corporation Ltd. | Financial Services | +0.1 | +0.9 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → PFC | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → PFC |
+| 37 | [UNIONBANK](stocks/UNIONBANK.md) | Union Bank of India | Financial Services | +0.7 | +0.9 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → UNIONBANK | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → UNIONBANK |
+| 43 | [CGPOWER](stocks/CGPOWER.md) | CG Power and Industrial Solutions Ltd. | Capital Goods | +0.5 | +0.8 | 52% | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → CGPOWER | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → CGPOWER |
+| 49 | [JINDALSTEL](stocks/JINDALSTEL.md) | Jindal Steel Ltd. | Metals & Mining | +0.1 | +0.8 | 52% | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → JINDALSTEL | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → JINDALSTEL |
+| 59 | [BRITANNIA](stocks/BRITANNIA.md) | Britannia Industries Ltd. | Fast Moving Consumer Goods | +0.4 | +0.6 | 54% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BRITANNIA | EV_WHEAT27_CROP_BELOW ⇒ F_WHEAT → BRITANNIA |
+| 64 | [POLYCAB](stocks/POLYCAB.md) | Polycab India Ltd. | Capital Goods | -0.3 | +0.5 | 53% | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → POLYCAB | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → POLYCAB |
+| 68 | [AMBUJACEM](stocks/AMBUJACEM.md) | Ambuja Cements Ltd. | Construction Materials | +0.6 | +0.5 | 53% | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → AMBUJACEM | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → AMBUJACEM |
+| 71 | [HYUNDAI](stocks/HYUNDAI.md) | Hyundai Motor India Ltd. | Automobile and Auto Components | +0.3 | +0.4 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HYUNDAI | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → HYUNDAI |
+| 92 | [PIDILITIND](stocks/PIDILITIND.md) | Pidilite Industries Ltd. | Chemicals | +0.2 | +0.1 | 50% | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → PIDILITIND | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PIDILITIND |
+| 103 | [VBL](stocks/VBL.md) | Varun Beverages Ltd. | Fast Moving Consumer Goods | +0.0 | -0.0 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → VBL | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → VBL |
+| 109 | [GODREJCP](stocks/GODREJCP.md) | Godrej Consumer Products Ltd. | Fast Moving Consumer Goods | -0.1 | -0.1 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GODREJCP | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GODREJCP |
+| 116 | [DMART](stocks/DMART.md) | Avenue Supermarts Ltd. | Consumer Services | -0.1 | -0.2 | 49% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DMART | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → DMART |
+| 117 | [TVSMOTOR](stocks/TVSMOTOR.md) | TVS Motor Company Ltd. | Automobile and Auto Components | -0.2 | -0.2 | 52% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TVSMOTOR | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → TVSMOTOR |
+| 118 | [ABB](stocks/ABB.md) | ABB India Ltd. | Capital Goods | -0.1 | -0.2 | 52% | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → ABB | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ABB |
+| 119 | [TATACAP](stocks/TATACAP.md) | Tata Capital Ltd. | Financial Services | -0.1 | -0.3 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TATACAP | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATACAP |
+| 122 | [DLF](stocks/DLF.md) | DLF Ltd. | Realty | -0.1 | -0.3 | 49% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DLF | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → DLF |
+| 132 | [BOSCHLTD](stocks/BOSCHLTD.md) | Bosch Ltd. | Automobile and Auto Components | -0.3 | -0.5 | 52% | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BOSCHLTD |
+| 137 | [CUMMINSIND](stocks/CUMMINSIND.md) | Cummins India Ltd. | Capital Goods | -0.5 | -0.6 | 48% | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → CUMMINSIND | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → CUMMINSIND |
+| 141 | [BAJAJHLDNG](stocks/BAJAJHLDNG.md) | Bajaj Holdings & Investment Ltd. | Financial Services | -0.1 | -0.6 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BAJAJHLDNG | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → BAJAJHLDNG |
+| 147 | [MOTHERSON](stocks/MOTHERSON.md) | Samvardhana Motherson International Ltd. | Automobile and Auto Components | -0.1 | -0.7 | 47% | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MOTHERSON | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → MOTHERSON |
+| 148 | [HDFCAMC](stocks/HDFCAMC.md) | HDFC Asset Management Company Ltd. | Financial Services | -0.2 | -0.7 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HDFCAMC | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → HDFCAMC |
+| 154 | [BANKBARODA](stocks/BANKBARODA.md) | Bank of Baroda | Financial Services | -0.3 | -0.9 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → BANKBARODA | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → BANKBARODA |
+| 159 | [CHOLAFIN](stocks/CHOLAFIN.md) | Cholamandalam Investment and Finance Company Ltd. | Financial Services | -0.6 | -1.0 | 49% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CHOLAFIN | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → CHOLAFIN |
+| 164 | [TORNTPHARM](stocks/TORNTPHARM.md) | Torrent Pharmaceuticals Ltd. | Healthcare | -0.5 | -1.1 | 44% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → TORNTPHARM | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → TORNTPHARM |
+| 166 | [CANBK](stocks/CANBK.md) | Canara Bank | Financial Services | -0.2 | -1.2 | 46% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CANBK | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → CANBK |
+| 171 | [WIPRO](stocks/WIPRO.md) | Wipro Ltd. | Information Technology | -0.7 | -1.3 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → WIPRO | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → WIPRO |
+| 172 | [IRFC](stocks/IRFC.md) | Indian Railway Finance Corporation Ltd. | Financial Services | -1.0 | -1.3 | 50% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → IRFC | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → IRFC |
+| 174 | [LTM](stocks/LTM.md) | LTM Ltd. | Information Technology | -0.8 | -1.5 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LTM | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → LTM |
+| 176 | [ZYDUSLIFE](stocks/ZYDUSLIFE.md) | Zydus Lifesciences Ltd. | Healthcare | -0.2 | -1.5 | 48% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ZYDUSLIFE | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → ZYDUSLIFE |
+| 180 | [VEDL](stocks/VEDL.md) | Vedanta Ltd. | Metals & Mining | -0.7 | -1.6 | 51% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → VEDL | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → HINDZINC → VEDL |
+| 183 | [HINDZINC](stocks/HINDZINC.md) | Hindustan Zinc Ltd. | Metals & Mining | -1.0 | -1.7 | 48% | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_SILVER → HINDZINC | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_SILVER → HINDZINC |
+| 185 | [VAML](stocks/VAML.md) | Vedanta Aluminium Metal Ltd. | Metals & Mining | -1.5 | -1.7 | 48% | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML |
+| 193 | [MUTHOOTFIN](stocks/MUTHOOTFIN.md) | Muthoot Finance Ltd. | Financial Services | -0.5 | -2.3 | 47% | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MUTHOOTFIN | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → MUTHOOTFIN |
 
 ## Sector view (average of member stocks)
 | industry | stocks | exp 3m | exp 12m | best | worst |
 |---|---|---|---|---|---|
-| Telecommunication | 4 | +0.7 | +2.1 | IDEA | TATACOMM |
-| Oil Gas & Consumable Fuels | 9 | +0.6 | +1.9 | HINDPETRO | ATGL |
-| Chemicals | 5 | +0.7 | +1.3 | SOLARINDS | PIIND |
-| Capital Goods | 24 | +0.4 | +1.3 | MAZDOCK | CUMMINSIND |
-| Power | 9 | +0.7 | +1.2 | TATAPOWER | NTPC |
-| Construction Materials | 3 | +0.6 | +1.1 | ULTRACEMCO | GRASIM |
-| Construction | 2 | +0.5 | +0.8 | RVNL | LT |
-| Consumer Durables | 8 | +0.5 | +0.8 | DIXON | VOLTAS |
-| Metals & Mining | 12 | +0.2 | +0.7 | NMDC | HINDCOPPER |
-| Automobile and Auto Components | 14 | +0.3 | +0.6 | M&M | EICHERMOT |
-| Fast Moving Consumer Goods | 14 | -0.0 | +0.1 | TATACONSUM | PATANJALI |
-| Services | 4 | +0.1 | -0.1 | ADANIPORTS | INDIGO |
-| Consumer Services | 12 | -0.4 | -0.7 | VMM | SWIGGY |
-| Realty | 6 | -0.0 | -0.8 | GODREJPROP | LODHA |
-| Healthcare | 15 | -0.3 | -0.8 | LAURUSLABS | FORTIS |
-| Textiles | 1 | -0.9 | -1.1 | PAGEIND | PAGEIND |
-| Financial Services | 48 | -0.4 | -1.3 | RECLTD | POLICYBZR |
-| Information Technology | 10 | -1.0 | -1.5 | HCLTECH | PERSISTENT |
+| Telecommunication | 4 | +0.9 | +2.8 | IDEA | TATACOMM |
+| Power | 9 | +0.8 | +1.7 | JSWENERGY | NTPC |
+| Oil Gas & Consumable Fuels | 9 | +0.3 | +1.2 | HINDPETRO | ONGC |
+| Capital Goods | 24 | +0.1 | +0.6 | MAZDOCK | ASTRAL |
+| Consumer Durables | 8 | +0.4 | +0.5 | DIXON | VOLTAS |
+| Chemicals | 5 | +0.4 | +0.5 | SOLARINDS | PIIND |
+| Construction Materials | 3 | +0.5 | +0.5 | ULTRACEMCO | GRASIM |
+| Services | 4 | +0.2 | +0.1 | ADANIPORTS | CONCOR |
+| Automobile and Auto Components | 14 | +0.1 | +0.0 | HEROMOTOCO | BAJAJ-AUTO |
+| Construction | 2 | +0.2 | -0.1 | LT | RVNL |
+| Realty | 6 | +0.2 | -0.1 | GODREJPROP | LODHA |
+| Fast Moving Consumer Goods | 14 | -0.1 | -0.2 | BRITANNIA | UNITDSPR |
+| Consumer Services | 12 | -0.2 | -0.3 | VMM | ETERNAL |
+| Textiles | 1 | -0.6 | -0.3 | PAGEIND | PAGEIND |
+| Financial Services | 48 | -0.1 | -0.4 | PAYTM | POLICYBZR |
+| Healthcare | 15 | -0.2 | -0.6 | LAURUSLABS | FORTIS |
+| Metals & Mining | 12 | -0.4 | -0.6 | JSWSTEEL | HINDCOPPER |
+| Information Technology | 10 | -1.0 | -1.8 | WIPRO | PERSISTENT |
 
 ## Upcoming and risk events that matter most (impact if the event happens, % equity, raw)
 | event | status | P(12m) | biggest winners | biggest losers |

@@ -2,11 +2,26 @@
 *NIFTY_50 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.4%**, **12 months -1.7%** (rank 149 / 177 of 200 for 3m / 12m); beta 0.87
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.5%): 3 months 48%, 12 months 46%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.2% … P90 +2.0%; plausible 12m relative-return range incl. stock-specific noise: -27.0% … +22.9%
-- Decomposition (12m): 0.5 × forward event exposure -2.9% (3m -1.4%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.0%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -3.2% (beta-adjusted) vs a realised market-adjusted move of -0.9% — gap -2.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months +0.0%**, **12 months -0.7%** (rank 100 / 142 of 200 for 3m / 12m); beta 0.87
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.5%): 3 months 50%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.1% … P90 +3.0%; plausible 12m relative-return range incl. stock-specific noise: -25.9% … +24.0%
+- Decomposition (12m): 0.5 × forward event exposure -1.0% (3m -0.6%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.0%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -4.2% (beta-adjusted) vs a realised market-adjusted move of -0.9% — gap -3.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+
+## Where the expected return comes from
+Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows, growth, inflation) are taken as priced, so what is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Percentage points of the expected relative return.
+| source | 12m: 1st order | 12m: 2nd–4th order | 12m total | 3m total |
+|---|---|---|---|---|
+| Policy | +0.00 | -0.08 | -0.08 | -0.15 |
+| Regulatory | -0.44 | -0.01 | -0.45 | -0.13 |
+| Sector | -0.16 | +0.62 | +0.47 | +0.17 |
+| Theme | +0.00 | +0.06 | +0.06 | +0.04 |
+| Geopolitics | +0.00 | +0.01 | +0.01 | -0.01 |
+| Company catalysts | -0.02 | +0.00 | -0.02 | +0.42 |
+| Market-priced macro | +0.00 | +0.00 | +0.00 | -0.00 |
+| Beta adjustment | — | — | -0.50 | -0.22 |
+| Universe centring | — | — | -0.15 | -0.10 |
+| **Expected relative return** | | | **-0.66** | **+0.02** |
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -69,11 +84,11 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → APOLLOHOSP | -1.60 | events | -4.80% |
 | 1 | F_GSEC_10Y_IN → APOLLOHOSP | +1.55 | director_override | -3.10% |
+| 1 | F_GAS_GLOBAL → APOLLOHOSP | +4.61 | observed | -1.38% |
 | 1 | F_GDP_IN → APOLLOHOSP | +0.50 | events | +1.00% |
 | 1 | F_REPO_IN → APOLLOHOSP | +1.00 | events | -0.60% |
 | 1 | F_CPI_IN → APOLLOHOSP | +1.15 | events | +0.57% |
 | 1 | F_URBAN_DEMAND → APOLLOHOSP | +0.20 | events | +0.50% |
-| 1 | F_GAS_GLOBAL → APOLLOHOSP | +1.00 | director_override | -0.30% |
 | 1 | F_USDINR → APOLLOHOSP | -0.37 | observed | +0.18% |
 | 1 | F_RISK_SENTIMENT → APOLLOHOSP | +0.11 | observed | -0.09% |
 

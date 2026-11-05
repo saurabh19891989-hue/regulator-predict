@@ -63,6 +63,32 @@ def stock_report(r, ev, so, nodes, fs, paths, events, rpaths=None):
           f"(beta-adjusted) vs a realised market-adjusted move of {f1(r.realised_mkt_adj_since_jun)}% — gap "
           f"{f1(r.get('graph_vs_market_gap'))} pp. Across the universe this gap does not predict anything we can verify "
           f"(in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.", ""]
+    ap = R("results", "attribution.csv")
+    if os.path.exists(ap):
+        a = pd.read_csv(ap)
+        a = a[a.company == t]
+        if len(a):
+            L += ["## Where the expected return comes from",
+                  "Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows, growth, inflation) are taken "
+                  "as priced, so what is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure — "
+                  "where 2nd–4th-order effects are most likely to be missed. Percentage points of the expected relative return.",
+                  "| source | 12m: 1st order | 12m: 2nd–4th order | 12m total | 3m total |", "|---|---|---|---|---|"]
+            order = ["Policy", "Regulatory", "Sector", "Theme", "Geopolitics", "Company catalysts", "Market-priced macro",
+                     "Beta adjustment", "Universe centring"]
+            for cat in order:
+                x12 = a[(a.horizon == "12m") & (a.category == cat)]
+                x3 = a[(a.horizon == "3m") & (a.category == cat)]
+                if not len(x12) and not len(x3):
+                    continue
+                d1 = x12[x12.order == "1st order"].value.sum()
+                d2 = x12[x12.order == "2nd–4th order"].value.sum()
+                tot12, tot3 = x12.value.sum(), x3.value.sum()
+                if abs(tot12) < 0.005 and abs(tot3) < 0.005 and cat not in ("Market-priced macro",):
+                    continue
+                flat = cat in ("Beta adjustment", "Universe centring")
+                L.append(f"| {cat} | {'—' if flat else f2(d1)} | {'—' if flat else f2(d2)} | {f2(tot12)} | {f2(tot3)} |")
+            L.append(f"| **Expected relative return** | | | **{f2(r.exp_rel_return_12m)}** | **{f2(r.exp_rel_return_3m)}** |")
+            L.append("")
     g = so[so.company == t].copy() if len(so) else pd.DataFrame()
     if len(g):
         g["total"] = g[["order1", "order2", "order3", "order4"]].sum(axis=1)
@@ -171,6 +197,28 @@ def summary(rk, ev, so, nodes, paths, events, rpaths=None):
          "misses, regulation, competition). That component is therefore excluded from the headline and kept only as a "
          "diagnostic. The graph's value is the exposure map — which drivers and events hit which company, by causal order — "
          "not a proven return forecast.", ""]
+    ap = R("results", "attribution.csv")
+    if os.path.exists(ap):
+        a = pd.read_csv(ap)
+        a12 = a[(a.horizon == "12m") & (~a.category.isin(["Beta adjustment", "Universe centring", "Recent unpriced (excluded)"]))]
+        tot = a12.value.abs().sum()
+        piv = a12.groupby(["category", "order"]).value.apply(lambda x: x.abs().sum()).unstack().fillna(0.0)
+        L += ["## Where the expected returns come from (all 200 stocks, 12 months)",
+              "What is left after taking market-priced macro as priced is policy, regulatory, sector, theme, geopolitical and "
+              "company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Share of the total absolute "
+              "contribution across stocks, split by the order at which it reaches the company.",
+              "| source | share | via 1st order | via 2nd–4th order | biggest positive | biggest negative |", "|---|---|---|---|---|---|"]
+        w = a12.groupby(["company", "category"]).value.sum().unstack().fillna(0.0)
+        for cat in ["Policy", "Regulatory", "Sector", "Theme", "Geopolitics", "Company catalysts", "Market-priced macro"]:
+            if cat not in piv.index:
+                continue
+            d1 = piv.loc[cat].get("1st order", 0.0)
+            d2 = piv.loc[cat].get("2nd–4th order", 0.0)
+            pos = ", ".join(f"{c} {f2(v)}" for c, v in w[cat].nlargest(4).items() if v > 0.05) if cat in w else ""
+            neg = ", ".join(f"{c} {f2(v)}" for c, v in w[cat].nsmallest(4).items() if v < -0.05) if cat in w else ""
+            L.append(f"| {cat} | {100 * (d1 + d2) / max(tot, 1e-9):.0f}% | {100 * d1 / max(tot, 1e-9):.0f}% | "
+                     f"{100 * d2 / max(tot, 1e-9):.0f}% | {pos or '—'} | {neg or '—'} |")
+        L.append("")
     nd = R("results", "neutralised_drift.csv")
     if os.path.exists(nd):
         d = pd.read_csv(nd).head(12)

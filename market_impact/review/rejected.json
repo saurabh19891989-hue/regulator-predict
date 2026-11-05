@@ -4,5 +4,9 @@
   "edge:F_GSEC_10Y_IN>BAJAJHLDNG@BAJAJHLDNG",
   "edge:F_REPO_IN>BAJAJHLDNG@BAJAJHLDNG"
  ],
- "_why": "Holdco look-through is implemented in the engine (HOLDCO_LOOKTHROUGH) for VEDL and BAJAJHLDNG; the manual scale-ups would double count."
+ "_why": "Holdco look-through is implemented in the engine (HOLDCO_LOOKTHROUGH) for VEDL and BAJAJHLDNG; the manual scale-ups would double count.",
+ "RT_BACKBONE": [
+  "state:F_GAS_GLOBAL"
+ ],
+ "_why_gas": "F_GAS_GLOBAL is now observed from JKM=F (+69% since 1 Jun = +4.6 SSU); the reviewer's +1.0 estimate is superseded by market data."
 }

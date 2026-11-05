@@ -34,7 +34,9 @@ def momentum_baseline():
     return ((m - m.mean()) / m.std()).rename("baseline_momentum_z")
 
 
-def freeze():
+def freeze(label=None, note=None):
+    """Freeze rankings.csv. `label` (e.g. "v2") freezes a documented revision alongside earlier files of the same day;
+    earlier frozen files are never touched. `note` records why the revision exists."""
     rk = pd.read_csv(R("results", "rankings.csv"))
     px = pd.read_csv(R("data", "prices", "close.csv"), index_col=0, parse_dates=True)
     now = datetime.now(timezone.utc).replace(microsecond=0)
@@ -47,7 +49,8 @@ def freeze():
     rk["entry_close"] = rk.company.map(lambda c: float(px[c].dropna().iloc[-1]) if c in px else np.nan)
     rk["frozen_at_utc"] = now.isoformat()
     rk["code_commit_at_freeze"] = commit
-    keep = ["frozen_at_utc", "code_commit_at_freeze", "entry_date", "company", "name", "tier", "nse_industry", "entry_close",
+    rk["revision_note"] = note or ""
+    keep = ["frozen_at_utc", "code_commit_at_freeze", "revision_note", "entry_date", "company", "name", "tier", "nse_industry", "entry_close",
             "rank_3m", "rank_12m", "exp_rel_return_3m", "exp_rel_return_12m", "mc_p10_12m", "mc_p50_12m", "mc_p90_12m",
             "mc_prob_outperform", "prob_outperform_3m", "ret_p10_12m", "ret_p90_12m", "beta", "idio_vol_12m",
             "profile_confidence", "baseline_momentum_z"]
@@ -55,7 +58,7 @@ def freeze():
     keep.append("entry_close_nifty50")
     rk = rk[[c for c in keep if c in rk.columns]]
     os.makedirs(R("ledger"), exist_ok=True)
-    path = R("ledger", f"predictions_{now.strftime('%Y%m%d')}.csv")
+    path = R("ledger", f"predictions_{now.strftime('%Y%m%d')}{'_' + label if label else ''}.csv")
     if os.path.exists(path):
         sys.exit(f"refusing to overwrite frozen ledger {path}")
     rk.to_csv(path, index=False)
@@ -99,6 +102,6 @@ def score(path, horizon_days=None):
 
 if __name__ == "__main__":
     if sys.argv[1] == "freeze":
-        freeze()
+        freeze(sys.argv[2] if len(sys.argv) > 2 else None, sys.argv[3] if len(sys.argv) > 3 else None)
     else:
         score(sys.argv[2], int(sys.argv[3]) if len(sys.argv) > 3 else None)

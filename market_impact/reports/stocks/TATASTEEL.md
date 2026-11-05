@@ -2,11 +2,25 @@
 *NIFTY_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.5%**, **12 months +1.5%** (rank 42 / 34 of 200 for 3m / 12m); beta 1.17
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.4%): 3 months 52%, 12 months 51%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.9% … P90 +8.0%; plausible 12m relative-return range incl. stock-specific noise: -24.7% … +28.3%
-- Decomposition (12m): 0.5 × forward event exposure +3.2% (3m +1.4%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.3%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +11.9% (beta-adjusted) vs a realised market-adjusted move of -19.3% — gap +31.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Expected relative return: **3 months -0.1%**, **12 months +0.1%** (rank 119 / 93 of 200 for 3m / 12m); beta 1.17
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.4%): 3 months 50%, 12 months 48%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.3% … P90 +6.6%; plausible 12m relative-return range incl. stock-specific noise: -26.1% … +26.8%
+- Decomposition (12m): 0.5 × forward event exposure +0.2% (3m +0.1%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts +0.3%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply +9.9% (beta-adjusted) vs a realised market-adjusted move of -19.3% — gap +29.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+
+## Where the expected return comes from
+Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows, growth, inflation) are taken as priced, so what is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Percentage points of the expected relative return.
+| source | 12m: 1st order | 12m: 2nd–4th order | 12m total | 3m total |
+|---|---|---|---|---|
+| Policy | +0.16 | +0.01 | +0.17 | -0.01 |
+| Sector | +0.58 | -0.07 | +0.51 | +0.17 |
+| Theme | +0.00 | -0.08 | -0.08 | -0.05 |
+| Geopolitics | +0.00 | +0.15 | +0.15 | +0.22 |
+| Company catalysts | +0.14 | +0.00 | +0.14 | +0.00 |
+| Market-priced macro | +0.00 | -0.00 | -0.00 | +0.00 |
+| Beta adjustment | — | — | -0.67 | -0.30 |
+| Universe centring | — | — | -0.15 | -0.10 |
+| **Expected relative return** | | | **+0.07** | **-0.07** |
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -69,11 +83,11 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_STEEL_INDIA → TATASTEEL | +1.35 | events | +10.80% |
 | 1 | F_COKING_COAL → TATASTEEL | +1.30 | events | -5.20% |
+| 1 | F_GAS_GLOBAL → TATASTEEL | +4.61 | observed | -2.77% |
 | 1 | F_USDCNY → TATASTEEL | -0.47 | observed | +1.17% |
 | 1 | F_STEEL_GLOBAL → TATASTEEL | +0.50 | director_override | +1.00% |
 | 1 | F_REPO_IN → TATASTEEL | +1.00 | events | -1.00% |
 | 1 | NEW_EU_STEEL_ACCESS → TATASTEEL | +1.00 | events | +1.00% |
-| 1 | F_GAS_GLOBAL → TATASTEEL | +1.00 | director_override | -0.60% |
 | 1 | F_USDINR → TATASTEEL | -0.37 | observed | -0.55% |
 | 1 | F_AUTO_DEMAND_IN → TATASTEEL | +0.50 | director_override | +0.50% |
 | 1 | F_IRON_ORE → TATASTEEL | -0.83 | observed | -0.42% |

@@ -11,7 +11,8 @@
   "type": "FACTOR",
   "name": "Global natural gas / LNG price",
   "ssu": "+15% gas/LNG price",
-  "series": "NG=F"
+  "series": "JKM=F",
+  "series_note": "Platts JKM LNG futures (Asian LNG); replaced NG=F Henry Hub on 2026-11-05 (RT_BACKBONE: Henry Hub is the wrong market for this node)"
  },
  {
   "id": "F_COAL_INTL",

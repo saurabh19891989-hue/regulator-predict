@@ -2,11 +2,26 @@
 *MIDCAP_100 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.1%**, **12 months -0.6%** (rank 121 / 133 of 200 for 3m / 12m); beta 0.90
+- Expected relative return: **3 months -0.1%**, **12 months -0.6%** (rank 121 / 134 of 200 for 3m / 12m); beta 0.90
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.5%): 3 months 50%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.1% … P90 +1.1%; plausible 12m relative-return range incl. stock-specific noise: -35.4% … +33.4%
-- Decomposition (12m): 0.5 × forward event exposure -0.6% (3m -0.2%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.2%, centred on the universe
-- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -0.5% (beta-adjusted) vs a realised market-adjusted move of +24.7% — gap -25.2 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.0% … P90 +1.2%; plausible 12m relative-return range incl. stock-specific noise: -35.3% … +33.5%
+- Decomposition (12m): 0.5 × forward event exposure -0.6% (3m -0.3%; half assumed priced; market-priced macro drift removed) + 0.5 × company-specific catalysts -0.2%, centred on the universe
+- Since 1 June 2026 (diagnostic, NOT in the headline): the graph's driver moves imply -1.8% (beta-adjusted) vs a realised market-adjusted move of +24.7% — gap -26.5 pp. Across the universe this gap does not predict anything we can verify (in-sample correlation of graph impact with realised moves was negative), so it is shown, not traded.
+
+## Where the expected return comes from
+Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows, growth, inflation) are taken as priced, so what is left is policy, regulatory, sector, theme, geopolitical and company-specific exposure — where 2nd–4th-order effects are most likely to be missed. Percentage points of the expected relative return.
+| source | 12m: 1st order | 12m: 2nd–4th order | 12m total | 3m total |
+|---|---|---|---|---|
+| Policy | -0.09 | +0.01 | -0.08 | -0.05 |
+| Regulatory | +0.00 | -0.01 | -0.01 | -0.00 |
+| Sector | +0.00 | +0.27 | +0.27 | +0.15 |
+| Theme | +0.00 | -0.03 | -0.03 | -0.02 |
+| Geopolitics | +0.00 | +0.06 | +0.06 | +0.04 |
+| Company catalysts | -0.10 | +0.00 | -0.10 | +0.15 |
+| Market-priced macro | +0.00 | +0.00 | +0.00 | -0.00 |
+| Beta adjustment | — | — | -0.51 | -0.23 |
+| Universe centring | — | — | -0.15 | -0.10 |
+| **Expected relative return** | | | **-0.56** | **-0.08** |
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -68,11 +83,11 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → RADICO | -1.60 | events | -2.08% |
+| 1 | F_GAS_GLOBAL → RADICO | +4.61 | observed | -1.85% |
 | 1 | F_RICE → RADICO | +0.60 | events | -1.80% |
 | 1 | F_REPO_IN → RADICO | +1.00 | events | -1.50% |
 | 1 | P_SUGAR_ETHANOL → RADICO | -1.50 | events | +1.20% |
 | 1 | F_URBAN_DEMAND → RADICO | +0.20 | events | +0.60% |
-| 1 | F_GAS_GLOBAL → RADICO | +1.00 | director_override | -0.40% |
 | 1 | F_USDINR → RADICO | -0.37 | observed | -0.11% |
 | 1 | F_EU_GDP → RADICO | +0.22 | events | +0.09% |
 | 3 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → F_PACKAGING → RADICO | +0.40 | events | -0.03% |

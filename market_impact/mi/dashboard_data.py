@@ -86,6 +86,29 @@ def main():
            "expected_12m": round(p["expected_12m"], 2)} for c, lst in paths.items() for p in lst if p["order"] >= 2]
     pd.DataFrame(ch).sort_values("expected_12m", key=lambda s: -s.abs()).head(300).to_csv(os.path.join(OUT, "chains.csv"), index=False)
 
+    a = pd.read_csv(R("results", "attribution.csv"))
+    cats = ["Policy", "Regulatory", "Sector", "Theme", "Geopolitics", "Company catalysts"]
+    for h in ("12m", "3m"):
+        ah = a[a.horizon == h]
+        w = ah.groupby(["company", "category"]).value.sum().unstack().reindex(columns=cats + ["Market-priced macro", "Beta adjustment", "Universe centring"]).fillna(0.0)
+        w["Market and beta"] = w["Beta adjustment"] + w["Universe centring"] + w["Market-priced macro"]
+        o = ah[ah.order != "—"].groupby(["company", "order"]).value.sum().unstack().fillna(0.0)
+        out = pd.DataFrame({"ticker": w.index})
+        for c_ in cats + ["Market and beta"]:
+            out[c_.lower().replace(" ", "_")] = w[c_].round(3).values
+        out["first_order"] = o.reindex(w.index).get("1st order", 0.0).round(3).values
+        out["higher_order"] = o.reindex(w.index).get("2nd–4th order", 0.0).round(3).values
+        exp_col = "exp_rel_return_12m" if h == "12m" else "exp_rel_return_3m"
+        out["expected"] = out.ticker.map(rk.set_index("company")[exp_col]).round(3)
+        out["name"] = out.ticker.map(rk.set_index("company")["name"])
+        out["industry"] = out.ticker.map(rk.set_index("company")["nse_industry"])
+        out.sort_values("expected", ascending=False).to_csv(os.path.join(OUT, f"attribution_{h}.csv"), index=False)
+    a12 = a[(a.horizon == "12m") & a.category.isin(cats)]
+    tot = a12.value.abs().sum()
+    summ = a12.groupby(["category", "order"]).value.apply(lambda x: x.abs().sum()).unstack().fillna(0.0).reindex(cats)
+    pd.DataFrame({"category": cats, "first_order_share": (summ.get("1st order", 0.0) / tot).round(4).values,
+                  "higher_order_share": (summ.get("2nd–4th order", 0.0) / tot).round(4).values}).to_csv(os.path.join(OUT, "attribution_summary.csv"), index=False)
+
     o = so[["order1", "order2", "order3", "order4"]].abs().sum()
     pd.DataFrame({"order": ["1st", "2nd", "3rd", "4th"], "share": (o / o.sum()).round(4).values}).to_csv(os.path.join(OUT, "order_shares.csv"), index=False)
     asm = json.load(open(R("results", "assembly_report.json")))

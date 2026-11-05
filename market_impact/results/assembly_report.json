@@ -34,8 +34,7 @@
    ]
   },
   "not_observable_state": {
-   "F_REFINING_MARGIN": "HO=F is a NY Harbor heating-oil price; its crack vs Brent swung +$24/bbl since June (US distillate squeeze), far from Singapore/Indian GRM moves (RT_BACKBONE)",
-   "F_GAS_GLOBAL": "NG=F is Henry Hub; the node is Asian LNG (JKM), which rose to 2022 highs (RT_BACKBONE)"
+   "F_REFINING_MARGIN": "HO=F is a NY Harbor heating-oil price; its crack vs Brent swung +$24/bbl since June (US distillate squeeze), far from Singapore/Indian GRM moves (RT_BACKBONE)"
   },
   "market_priced_drift_removed": [
    "F_ALUMINIUM",
@@ -89,7 +88,8 @@
  ],
  "dead_end_drivers": [],
  "recent_state_drivers": {
-  "observed": 17,
+  "observed": 18,
   "from_events": 48
- }
+ },
+ "attribution_max_abs_error_pp": 1.4155343563970746e-14
 }

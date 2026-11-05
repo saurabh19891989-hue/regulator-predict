@@ -116,7 +116,7 @@ NEW_AGROCHEM_PRICES_GLOBAL,Global agrochemical prices and channel destocking,+10
 NEW_AGR_SPECTRUM_RELIEF,Government AGR/spectrum dues relief for stressed telcos,"+1 = further material relief worth ~Rs20,000 cr NPV",,,3,14.0,0.0,"IDEA +12.0, INDUSTOWER +1.5",BHARTIARTL -0.5
 P_GOLD_IMPORT_DUTY,Gold import duty,+5 pp,,,5,13.7,0.577,"MUTHOOTFIN +1.5, HINDZINC +1.0, VEDL +0.5, VOLTAS +0.1, MOTILALOFS +0.1","KALYANKJIL -3.3, TITAN -2.5, BIOCON -0.1, LAURUSLABS -0.1, JSWSTEEL -0.1"
 P_FERT_SUBSIDY,Fertiliser subsidy generosity,+1 = higher subsidy,0.5,events,1,13.6,0.942,GAIL +0.8,"BANKINDIA -0.2, PFC -0.2, POWERGRID -0.2, ADANIGREEN -0.2, POWERINDIA -0.2"
-F_GAS_GLOBAL,Global natural gas / LNG price,+15% gas/LNG price,1.0,director_override,10,13.3,0.358,"MCX +0.5, ONGC +0.5, COALINDIA +0.4, JSWENERGY +0.3, TATAPOWER +0.3","ATGL -1.6, GAIL -1.4, ENRIN -0.8, IOC -0.7, TATASTEEL -0.6"
+F_GAS_GLOBAL,Global natural gas / LNG price,+15% gas/LNG price,4.61,observed,10,13.3,0.358,"MCX +0.5, ONGC +0.5, COALINDIA +0.4, JSWENERGY +0.3, TATAPOWER +0.3","ATGL -1.6, GAIL -1.4, ENRIN -0.8, IOC -0.7, TATASTEEL -0.6"
 NEW_TELECOM_SHARE_COMPETITION,Jio/Airtel price and share competition vs Vi,+1 = intensification costing the incumbent ~1pp revenue share / 3% ARPU,,,2,13.0,0.0,,"IDEA -8.0, BHARTIARTL -5.0"
 NEW_CEMENT_PRICE_IN,Indian cement trade price (realisation),+Rs10/bag (~+2.5%),,,2,12.5,0.0,"AMBUJACEM +6.5, ULTRACEMCO +6.0",
 NEW_TOBACCO_EXCISE,Cigarette excise / tobacco tax burden (India),+10% rise in the tax burden per cigarette stick,,,2,12.5,0.0,,"GODFRYPHLP -7.5, ITC -5.0"
