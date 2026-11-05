@@ -1,0 +1,461 @@
+{
+ "ticker": "GMRAIRPORT",
+ "name": "GMR Airports Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AVIATION",
+ "tier": "MIDCAP_100",
+ "business_summary": "Private airport operator: Delhi (DIAL), Hyderabad (GHIAL), Goa Mopa, Bhogapuram (Visakhapatnam), Crete (Greece), Cebu, plus cargo, hospitality and land development. Revenue Rs16.0k cr TTM (+29%), EBITDA Rs6.1k cr (38%), but interest ~Rs3.8k cr and PAT only Rs788 cr TTM; Q2 FY27 PAT Rs65 cr (+86%) on revenue ~Rs4,095 cr (+11.6%). Traffic: H1 FY27 record 58.2m passengers but growth was flat Apr-Sep (+0.9% in Sept). Promoters 67.5%, FIIs 22.95%. Delhi Cargo Terminal 1 concession award letter received 2026-11-04.",
+ "revenue_mix": [
+  {
+   "segment": "aeronautical (Delhi, Hyderabad, Goa, others)",
+   "share_pct": 45,
+   "geography": "India ~90% / international (Greece, Cebu) ~10%"
+  },
+  {
+   "segment": "non-aeronautical (retail, F&B, parking, real estate)",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "cargo, hospitality, other",
+   "share_pct": 15,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "airport operating costs (staff, utilities, concession/revenue-share fees to AAI)",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "cost of goods/services for retail and F&B",
+   "share_of_costs_pct": 19
+  },
+  {
+   "input": "other opex",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_TRAVEL_DEMAND",
+   "dst": "GMRAIRPORT",
+   "relation": "demand_driver",
+   "w": 9.0,
+   "w_low": 4.0,
+   "w_high": 14.0,
+   "lag": "0-3m",
+   "mechanism": "Revenue Rs16.0k cr TTM: aero (regulated per-pax tariffs) ~45%, non-aero (retail, F&B, parking, real estate) ~40%, cargo/other ~15% (model estimate). +10% pax => revenue +~8% = +Rs1.28k cr at ~85% drop-through => EBITDA +Rs1.1k cr on Rs6.1k cr TTM = +18%; EV/MCap ~1.45 (net debt ~Rs 45k cr, model estimate); persistence 0.5 (aero true-up returns part of upside to airlines) => +13, trimmed to +9 as traffic has been flat (+0.9% in Sept) and valuations already discount a recovery. Traffic data: H1 FY27 58.2m record but Apr-Sep growth flat.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/gmr-airports-september-passenger-traffic-rises-0-9-to-9-2m-as-h1-fy27-hits-record-58-2m",
+     "date": "2026-10",
+     "note": "Sept traffic 9.2m (+0.9%); H1 FY27 record 58.2m"
+    },
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/gmr-airports-fy27-traffic-outlook-cmq5y7sl4dt2rmi0jnfjyqwmq",
+     "date": "2026",
+     "note": "flat Apr-Sep traffic guided, H2 recovery; Bhogapuram opening advanced (as reported)"
+    },
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "GMRAIRPORT",
+   "relation": "demand_driver",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Fuel at ~35-40% of airline costs => fares +4-5% per +10% Brent => ~-1.5% pax in 6 months (price elasticity ~-1.2 on leisure) => EBITDA -2.5% x1.45 x0.5 persistence... airlines also cut capacity. Pack -0.94 per +10% (t -1.8): agrees; central -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "GMRAIRPORT",
+   "relation": "funding_cost",
+   "w": -3.0,
+   "w_low": -5.5,
+   "w_high": -1.2,
+   "lag": "0-3m",
+   "mechanism": "Debt ~Rs 45k cr (est.), ~60% floating/MCLR-linked: +25bp = ~Rs70 cr/yr vs TTM PAT Rs788 cr (9%) and vs Q2 PAT Rs65 cr; interest coverage low (EBITDA 1,480 vs interest 993 in Q2). Equity value impact: ΔPAT 9% x0.4 persistence x (equity/PAT leverage 1.0) + discount effect => -3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/gmr-airports-q2-results-net-profit-rises-86-percent-in-fy27/",
+     "date": "2026-10-28",
+     "note": "Q2 FY27: PAT Rs65.4 cr (+86%), revenue ~Rs4,095 cr (+11.6%)"
+    },
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "GMRAIRPORT",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Very long-duration infrastructure asset (P/E 178, negative book): +25bp on ~12% cost of equity cuts value ~2.5%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "GMRAIRPORT",
+   "relation": "funding_cost",
+   "w": -3.5,
+   "w_low": -7.0,
+   "w_high": -1.2,
+   "lag": "0-3m",
+   "mechanism": "Refinancing of USD bonds and project debt at Delhi/Hyderabad/ Goa/Bhogapuram; +50bp spreads on ~Rs 25k cr refinancing each 2-3 years = ~Rs125 cr/yr = -16% PAT x 0.4 persistence x ~1.5 leverage => -3.5 (rounded).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "GMRAIRPORT",
+   "relation": "fx_translation",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "USD bonds at DIAL/GHIAL (~25-30% of debt, estimate; part hedged) lose on +3% USD/INR (-Rs 350 cr gross, mostly regulated pass-through via tariff 'pass-through' for DIAL) while international traffic fares rise; pack +1.17 (t +0.8), opposite sign: insignificant. Central -1.2, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AIRPORT_TARIFF_REGULATION",
+   "dst": "GMRAIRPORT",
+   "relation": "regulatory_risk",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 12.0,
+   "lag": "3-12m",
+   "mechanism": "+1 SSU = AERA control-period order raising aero yield ~10% (e.g. Delhi/Hyderabad). Aero ~45% of revenue => revenue +4.5% => EBITDA +~12% x1.45 x persistence 0.5 = +8.7, trimmed because tariffs are partly circular via true-up => +6. No dated AERA order for 2026-27 found in sources reviewed; treat as pending/unknown.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_NCR_AIRPORT_COMPETITION",
+   "dst": "GMRAIRPORT",
+   "relation": "competition",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Noida International (Jewar) airport diverting NCR traffic from Delhi (DEL ~55% of group EBITDA, model estimate). +1 SSU = 5% of DEL pax diverted => group pax -2.5% => EBITDA -4.5% x1.45 x 0.4 = -2.6. Opening/commercial ramp status not verified in sources reviewed.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "GMRAIRPORT",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Discretionary spending drives non-aero (duty-free, F&B, retail) which is ~40% of revenue: +5pp urban growth => non-aero +3% => EBITDA +~4% x1.45 x0.5 => +2.5 (Delhi F&B licence ~Rs109 cr fee in FY28, 2026-09-23 headline).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "GMRAIRPORT",
+   "relation": "geopolitical_exposure",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Gulf is DEL's top international region (~20% of intl pax, estimate); escalation cancels flights and spikes fuel => international pax -5% (intl ~25% of pax) => EBITDA -2.5% x1.45 x0.5 = -1.8 plus tail => -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "GMRAIRPORT",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Pax elasticity to GDP ~1.5-2: +1pp GDP => +1.5% pax => EBITDA +~2.5% x1.45 x0.5 +structural growth in non-aero => +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/gmr-airports-september-passenger-traffic-rises-0-9-to-9-2m-as-h1-fy27-hits-record-58-2m",
+     "date": "2026-10",
+     "note": "Sept traffic 9.2m (+0.9%); H1 FY27 record 58.2m"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "GMRAIRPORT",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FII 22.95% (up from 20.2% Mar-2026); GQG block deal Rs818 cr on 2026-10-09 (BW Businessworld headline) shows large FPI position turnover; beta 1.5. +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "GMRAIRPORT",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Airport capex (Bhogapuram, Hyderabad, Delhi expansion ~Rs 40-50k cr over 5y) uses steel/aluminium; pack -1.65 (t -2.0) for aluminium is probably a high-beta/commodity-cycle artefact; fundamentals imply small effect: construction materials ~30% of capex => +10% aluminium (aluminium ~5% of materials) = +0.15% capex; keep -0.4 low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/GMRAIRPORT.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "INDIGO",
+   "dst": "GMRAIRPORT",
+   "relation": "dominant_customer",
+   "w": 0.05,
+   "w_low": 0.01,
+   "w_high": 0.12,
+   "lag": "0-3m",
+   "mechanism": "IndiGo is the largest airline at Delhi and Hyderabad (~55-65% of domestic pax, estimate), so IndiGo capacity reductions or distress cut pax and non-aero spend. Mapping: IndiGo -10% equity (capacity cuts/ stress) => ~-0.5% GMR Airports.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "IndiGo ~65% domestic share, Q2 FY27 loss"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "IndiGo (InterGlobe Aviation)",
+   "ticker": "INDIGO",
+   "role": "customer",
+   "importance": "high",
+   "note": "largest airline at Delhi/Hyderabad"
+  },
+  {
+   "counterparty": "Air India group",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "second largest at Delhi"
+  },
+  {
+   "counterparty": "Airports Authority of India / AERA",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "revenue-share concessions and tariff regulation"
+  },
+  {
+   "counterparty": "Adani Airports",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Mumbai, Navi Mumbai and others"
+  },
+  {
+   "counterparty": "Bank lenders / USD bondholders",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Rs ~45k cr debt (estimate)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "Delhi Cargo Terminal 1 concession start (award letter 2026-11-04) and Delhi F&B licence (Rs109 cr fee in FY28)",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "market_impact/data/packs/GMRAIRPORT.md (scanx.trade 2026-11-04; CNBC TV18 2026-09-23)"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results; H2 traffic recovery thesis tested",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.multibagg.ai/market-pulse/articles/gmr-airports-fy27-traffic-outlook-cmq5y7sl4dt2rmi0jnfjyqwmq"
+  },
+  {
+   "date": "2027-03",
+   "event": "AERA tariff determination / true-up decisions for Delhi/Hyderabad",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge (no dated 2026-27 order found)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Bhogapuram (Vizag) airport commercial operations ramp (opening advanced to Q2 FY27 per Multibagg; status unverified)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.multibagg.ai/market-pulse/articles/gmr-airports-fy27-traffic-outlook-cmq5y7sl4dt2rmi0jnfjyqwmq"
+  },
+  {
+   "date": "2027-03",
+   "event": "Promoter/ FPI block trades (e.g. GQG sold Rs818 cr block 2026-10-09)",
+   "type": "corporate_action",
+   "prob": 0.4,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "market_impact/data/packs/GMRAIRPORT.md"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep-2026): revenue ~Rs4,100 cr (screener) / Rs4,095 cr (Kotak Neo), EBITDA Rs1,480 cr (36%), interest Rs993 cr, PAT Rs65 cr (+86% y/y); H1 FY27 traffic record 58.2m",
+  "trend": "Revenue +12% but EBITDA growth stalled (Investing.com slide summary 2026-10-29); traffic flat Apr-Sep",
+  "valuation": "Mcap Rs1.06 lakh cr at Rs99.4; P/E 178; negative book value; EV/EBITDA ~ (1.06+0.45)/0.061 = ~25x TTM (estimate); Emkay Buy Rs120 (2026-10-30 headline)",
+  "recent_developments": [
+   "2026-09-23: hospitality arm wins Delhi F&B licence (Rs109 cr FY28 fee)",
+   "2026-10-09: Rs818 cr block deal, GQG selling; shares +5% (CNBC TV18)",
+   "2026-10-14: wholly owned subsidiary for land development",
+   "2026-10-16: H1 FY27 traffic record 58.2m",
+   "2026-10-28: Q2 PAT Rs65 cr (+86%), revenue +12%",
+   "2026-11-04: official award letter for Delhi Cargo Terminal 1 concession"
+  ]
+ },
+ "key_risks": [
+  "High leverage and rising rates",
+  "Flat traffic and airline stress (fuel, rupee)",
+  "Regulatory tariff outcomes (AERA true-ups)",
+  "NCR competition (Noida airport)",
+  "International project risk (Greece, Cebu) and execution (Bhogapuram)"
+ ],
+ "upside_triggers": [
+  "Traffic recovery in H2 (fuel easing lifts airline capacity)",
+  "Non-aero monetisation (cargo, F&B, retail, real estate)",
+  "Favourable AERA tariff orders and deleveraging",
+  "Rating upgrades (Hyderabad upgrades noted in Q2 coverage)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_AIRPORT_TARIFF_REGULATION",
+   "type": "POLICY",
+   "name": "Airport tariff regulation outcomes (AERA)",
+   "ssu": "+1 = control-period order raising aero yield ~10%"
+  },
+  {
+   "id": "NEW_NCR_AIRPORT_COMPETITION",
+   "type": "THEME",
+   "name": "New NCR airport competing with Delhi",
+   "ssu": "+1 = 5% of Delhi passengers diverted"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/GMRAIRPORT.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://www.kotakneo.com/news/stocks/gmr-airports-q2-results-net-profit-rises-86-percent-in-fy27/",
+   "date": "2026-10-28",
+   "what": "Q2 FY27: PAT Rs65.4 cr (+86%), revenue ~Rs4,095 cr (+11.6%)"
+  },
+  {
+   "url": "https://www.sahi.com/news/gmr-airports-september-passenger-traffic-rises-0-9-to-9-2m-as-h1-fy27-hits-record-58-2m",
+   "date": "2026-10",
+   "what": "Sept traffic 9.2m (+0.9%); H1 FY27 record 58.2m"
+  },
+  {
+   "url": "https://www.multibagg.ai/market-pulse/articles/gmr-airports-fy27-traffic-outlook-cmq5y7sl4dt2rmi0jnfjyqwmq",
+   "date": "2026",
+   "what": "flat Apr-Sep traffic guided, H2 recovery; Bhogapuram opening advanced (as reported)"
+  }
+ ]
+}

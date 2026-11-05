@@ -8,7 +8,7 @@ IRFC's earnings are almost insensitive to commodities; the stock trades on polic
 1. **Railway capex mix (+1.5 per +10%)** and **govt capex (+1.2)**: funding volume through IRFC; the Budget's EBR vs budgetary-support split is the key swing factor.
 2. **G-sec yield (-1.0 per +25bp)**: valuation, not earnings.
 3. **Domestic flows (+1.0)**, **FPI (+0.8)**, **VIX (-0.6)**, **credit spreads (-0.8)**, **infra spending (+0.6)**, **FX (-0.5)**, **repo (-0.4)**, **liquidity (+0.4)**.
-Empirical check: no factor in the pack reaches |t|>=2; the strongest are gas (-0.89, t -1.4) and US equities (+1.67, t 1.3), consistent with a high-beta (1.5-1.6) PSU stock with no fundamental commodity link. We therefore deliberately do not create commodity edges. A zero-weight placeholder edge (P_PLI) records that we considered and rejected PLI exposure.
+Empirical check: no factor in the pack reaches |t|>=2; the strongest are gas (-0.89, t -1.4) and US equities (+1.67, t 1.3), consistent with a high-beta (1.5-1.6) PSU stock with no fundamental commodity link. We therefore deliberately do not create commodity edges.
 
 ## Transmission examples
 - **Middle East escalation -> Brent up -> CPI up -> RBI hikes again -> G-sec yield up -> IRFC's new borrowing costs more -> the cost is passed through in the lease rate (earnings unchanged) -> but the stock as a bond-proxy de-rates; and the Railways' fiscal space tightens.**
@@ -24,3 +24,8 @@ Q3 results (Jan 2027), Union Budget (1 Feb 2027, probability 0.95), borrowing/EC
 
 ## Bull and bear
 **Bull:** sovereign-quality earnings, AAA funding, no tax, dividends, loan-book diversification, Budget could restore EBR share. **Bear:** policy-set spread, shrinking EBR role, OFS overhang, yields rising, limited earnings growth.
+
+## Sizing notes and caveats
+Why equity sensitivities are small: with a cost-plus lease, a +100bp move in borrowing cost raises both finance cost and lease income by the same amount, leaving the ~0.40% spread (about Rs1,900cr of annual PAT on an asset base near Rs4.7 lakh cr, model estimate) unchanged. The edges therefore describe valuation, volume and policy rather than margin. Note that PAT growth of ~10% against revenue growth of ~23% shows the spread is being diluted by faster growth in costs, an important point to watch.
+
+Data gaps: the screener dossier was empty (no price-to-book, dividend yield, or debt figures), the interim dividend is reported as Rs1.05 by one source and Rs1.15 by most others, and EPS differs between sources; the Director should treat valuation outputs as low-confidence. The 'fair value' downside calls from Investing.com are automated models and are not used. Overall confidence for this profile is low because earnings are policy-determined and the stock's moves have been largely supply- and sentiment-driven.

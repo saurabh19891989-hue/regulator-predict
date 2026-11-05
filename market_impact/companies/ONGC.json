@@ -1,0 +1,392 @@
+{
+ "ticker": "ONGC",
+ "name": "Oil & Natural Gas Corporation Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_OIL_UPSTREAM",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest crude and gas producer (~19 Mt crude, ~20 BCM gas a year standalone, ~60% of domestic production) with overseas arm ONGC Videsh and subsidiaries HPCL (54.9%) and MRPL (71.6%). Crude is sold to Indian refiners at Brent-linked prices; gas is sold at administered (APM) and ceiling-linked prices. Government holds 58.9%. Q1 FY27 standalone profit Rs 6,554 cr; consolidated results are dragged by HPCL's Q1 under-recovery loss.",
+ "revenue_mix": [
+  {
+   "segment": "crude oil",
+   "share_pct": 62,
+   "geography": "India (standalone)"
+  },
+  {
+   "segment": "natural gas and value-added products",
+   "share_pct": 23,
+   "geography": "India"
+  },
+  {
+   "segment": "overseas (ONGC Videsh)",
+   "share_pct": 8,
+   "geography": "Azerbaijan, Russia, Mozambique, Brazil"
+  },
+  {
+   "segment": "refining/marketing via HPCL/MRPL (consolidated)",
+   "share_pct": 7,
+   "geography": "India (revenue consolidated, share of upstream-only revenue; model knowledge)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_BRENT",
+   "dst": "ONGC",
+   "relation": "output_price",
+   "w": 3.5,
+   "w_low": 2.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Standalone crude ~19 Mt (140m bbl) at ~$95: +10% = +$9.5 x 140m = $1.33bn = Rs 12.6k cr gross, ~Rs 10k cr after royalty/cess = ~+15% of standalone EBITDA (~Rs 65k cr) x EV/MCap 1.2 x persistence 0.4 => +7.2 before HPCL drag; HPCL's Brent loss is carried by the ONGC->HINDPETRO link (not here). Shrink for windfall-tax and subsidy-sharing risk and APM caps => +3.5. Pack +2.57 (t +5.3) is in line (consolidated beta includes HPCL offset).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=ONGC+Q2+results+net+profit+crude+realisation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-08",
+     "note": "Q1 FY27 net profit Rs6,554 cr (BusinessLine 8 Aug)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ONGC",
+   "relation": "fx_translation",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Realisations are USD benchmarked: INR 3% weaker => +3% on Rs ~1.4 lakh cr standalone revenue = Rs 4.2k cr, 6.5% of EBITDA x 1.2 x persistence 0.5 => +3.9; USD debt of OVL/HPCL consolidated offsets => +3.0. Pack +3.60 (t +2.5) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "ONGC",
+   "relation": "output_price",
+   "w": 0.5,
+   "w_low": -0.3,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "ONGC sells ~20 BCM gas; APM price is formula-linked to crude (cap/floor) and HPHT/new-gas at ceilings, so LNG moves matter only for the new-gas ceiling reset: +15% => +1% revenue => +0.5. Pack -0.67 (t -1.7) is a Henry-Hub proxy that co-moves with risk-off, low weight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CRUDE_WINDFALL_TAX_IN",
+   "dst": "ONGC",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -5.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "+1 = SAED reimposed at ~Rs 10,000/t. 19 Mt x Rs 10,000 = Rs 1.9k cr = 2.9% of standalone EBITDA x 1.2 x persistence 0.5 => -1.7; round to -1.5. Hit cap-ed in 2022 at Rs 23k/t when Brent >$110.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ONGC+Oil+India+windfall+tax+subsidy+sharing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Upstream vs downstream PSU energy stocks (Value Research)"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "ONGC",
+   "relation": "output_price",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Via MRPL (71.6% subsidiary, 15 MMTPA; not in universe): +$2 x 110m bbl = $220m = Rs 2.1k cr = ~3% of consolidated EBITDA x EV/MCap 1.4 x persistence 0.3 => +1.3. Pack +1.98 (t +4.2) mostly Brent proxy.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ONGC",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -1.2,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Consolidated debt ~Rs 1.2 lakh cr (HPCL-driven); floating share 40%: 25bp = Rs 120 cr, ~0.8% of PBT; yield stock 5.8% => -0.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_OMC_COMPENSATION",
+   "dst": "ONGC",
+   "relation": "policy_effect",
+   "w": -1.0,
+   "w_low": -3.5,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "+1 = Rs25k cr OMC compensation: if upstream bears ~20% (precedent: pre-2015 discounts) = Rs 5k cr pre-tax = 3.4% (Rs 3.8k cr post-tax = 1.3% of Rs 2.89 lakh cr market cap) with 0.75 probability => -1.0; offset: ONGC owns 54.9% of HPCL, which gains via the holding link.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "note": "OMCs seek Rs75,000 cr; Centre to decide in 2027"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "ONGC",
+   "relation": "geopolitical_exposure",
+   "w": 3.5,
+   "w_low": -1.0,
+   "w_high": 8.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation => Brent +12% => +4.2 (Brent edge); ONGC Videsh assets (Azerbaijan, Mozambique Rovuma 16%, Sakhalin-1, Vankor, Venezuela) mostly outside the Gulf; negative: HPCL consolidated losses. Net +3.5, wide range.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "ONGC",
+   "relation": "geopolitical_exposure",
+   "w": 1.0,
+   "w_low": -1.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "ONGC Videsh holds 20% of Sakhalin-1, 26% of Vankor, Taas-Yuryakh (model knowledge); sanction easing unblocks ~$500m dividends (Rs 4.7k cr = 1.6% of mcap) x probability 0.5 => +0.8, +1.0 rounded.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "ONGC",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Upstream earnings are price-driven; via HPCL's marketing volumes and gas demand: small +0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "HINDPETRO",
+   "dst": "ONGC",
+   "relation": "holding_stake",
+   "w": 0.12,
+   "w_low": 0.08,
+   "w_high": 0.16,
+   "lag": "0-3m",
+   "mechanism": "Unit: % change in ONGC equity value per +1% change in HPCL equity value. ONGC owns 54.9% of HPCL (market value ~Rs 44.6k cr = 15.4% of ONGC's Rs 2.89 lakh cr market cap); holding discount ~20% => 0.12.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ONGC/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in consolidated page (retrieved 2026-11-05) + empirical pack"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "HPCL (54.9% subsidiary)",
+   "ticker": "HINDPETRO",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "consolidated; downstream drag at high crude"
+  },
+  {
+   "counterparty": "IOC, BPCL, MRPL (crude buyers)",
+   "ticker": "IOC",
+   "role": "customer",
+   "importance": "high",
+   "note": "domestic crude sold at import-parity"
+  },
+  {
+   "counterparty": "GAIL (gas buyer)",
+   "ticker": "GAIL",
+   "role": "customer",
+   "importance": "medium",
+   "note": "pooled gas"
+  },
+  {
+   "counterparty": "Oil India",
+   "ticker": "OIL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "production growth peer"
+  },
+  {
+   "counterparty": "Government (royalty, cess, dividend)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "58.9%"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-12",
+   "event": "Interim dividend record date (PSU Connect; amount per share not verified)",
+   "type": "corporate_action",
+   "prob": 0.9,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=ONGC+Q2+results+net+profit+crude+realisation+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (pending as of 5 Nov; previews expect profit ~Rs 15.5-16.4k cr, down ~14% y/y on lower realisations/ HPCL; exact date not verified)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=ONGC+Q2+results+net+profit+crude+realisation+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "Subsidy-sharing / windfall-tax decision in OMC compensation package",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "KG-98/2 deepwater gas ramp-up and Mahanadi deepwater gas discovery (21 Sep 2026) appraisal",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=ONGC+strikes+gas+Mahanadi+deepwater+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Latest reported in dossier: Q1 FY27 (Jun 2026): consolidated operating profit Rs 15,485 cr (OPM 8%), PBT Rs 7,012 cr; standalone PAT Rs 6,554 cr (BusinessLine, 8 Aug). Q2 FY27 not yet reported",
+  "trend": "Stock at 52-week lows in Oct 2026 (-19% over 6 months) despite $95-110 crude, because consolidated HPCL losses, windfall/subsidy-sharing fears and weaker production dominate; Oil India outperforming on growth",
+  "valuation": "P/E 6.6x, P/B 0.8x (BV Rs 296), dividend yield 5.76%, ROE 11.6%",
+  "recent_developments": [
+   "2026-11-04/05: Brent below $90 on US midterm result",
+   "2026-10-08..16: eight sessions near 52-week low",
+   "2026-09-21: gas discovery in Mahanadi deepwater (Odisha coast)",
+   "2026-08-08: Q1 FY27 standalone PAT Rs 6,554 cr"
+  ]
+ },
+ "key_risks": [
+  "Subsidy sharing / windfall tax",
+  "Production decline",
+  "HPCL downstream losses",
+  "Brent fall",
+  "Overseas asset sanctions"
+ ],
+ "upside_triggers": [
+  "Brent >$100 sustained without sharing",
+  "Production ramp (KG-98/2)",
+  "HPCL margins recovery",
+  "Russia sanctions easing"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CRUDE_WINDFALL_TAX_IN",
+   "type": "POLICY",
+   "name": "Windfall (SAED) tax on domestic crude",
+   "ssu": "+1 = SAED reimposed at ~Rs10,000/tonne"
+  },
+  {
+   "id": "NEW_OMC_COMPENSATION",
+   "type": "POLICY",
+   "name": "Government compensation to OMCs for fuel/LPG under-recoveries",
+   "ssu": "+1 = Rs25,000 cr compensation to oil marketing companies"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/ONGC/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ONGC+Q2+results+net+profit+crude+realisation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 preview / Q1 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ONGC+Oil+India+windfall+tax+subsidy+sharing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "upstream vs downstream"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Indian+Oil+excise+duty+petrol+diesel+under-recovery+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-07",
+   "what": "OMC compensation ask"
+  }
+ ]
+}

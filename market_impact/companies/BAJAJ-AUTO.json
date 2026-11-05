@@ -1,0 +1,504 @@
+{
+ "ticker": "BAJAJ-AUTO",
+ "as_of": "2026-11-05",
+ "name": "Bajaj Auto Ltd.",
+ "industry": "I_AUTO_2W",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest motorcycle exporter and a leading 3-wheeler maker (Pulsar, Dominar, Platina, Chetak EV, RE/Compact 3W), controlling KTM/Pierer Bajaj (BMAG), Husqvarna and the Triumph manufacturing partnership. Exports are roughly half of standalone revenue. Q2 FY27 standalone revenue Rs 20,003 cr (+34%), profit Rs 3,354 cr (+35%) on an export surge; consolidated sales Rs 25,126 cr, OPM 19%. Net cash/investment-rich. Domestic 2W weakened in September (-12%) then recovered in October; JPMorgan upgraded to Overweight and CLSA sees ~29% upside (Moneycontrol 2026-10-28).",
+ "revenue_mix": [
+  {
+   "segment": "Motorcycles (domestic and exports)",
+   "share_pct": 70,
+   "geography": "India ~50% / exports ~50% of standalone"
+  },
+  {
+   "segment": "Three-wheelers",
+   "share_pct": 14,
+   "geography": "India and Africa/South Asia"
+  },
+  {
+   "segment": "KTM/BMAG and other consolidated",
+   "share_pct": 16,
+   "geography": "Europe-led"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "F_RUBBER",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "Petrochemical plastics",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "Bought-out components",
+   "share_of_costs_pct": 45
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Bajaj Holdings & Investment",
+   "ticker": "BAJAJHLDNG",
+   "role": "parent",
+   "importance": "low",
+   "note": "Group holding company with ~5% stake (estimate)"
+  },
+  {
+   "counterparty": "Bajaj Finance",
+   "ticker": "BAJFINANCE",
+   "role": "customer",
+   "importance": "medium",
+   "note": "Group NBFC financing Bajaj vehicles (model knowledge)"
+  },
+  {
+   "counterparty": "KTM / Pierer Bajaj AG (BMAG)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "Step-down subsidiary; EBIT turned positive at EUR 11.3m"
+  },
+  {
+   "counterparty": "Triumph Motorcycles",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "Co-development and contract manufacturing partner"
+  },
+  {
+   "counterparty": "Hero MotoCorp",
+   "ticker": "HEROMOTOCO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Domestic rival"
+  },
+  {
+   "counterparty": "TVS Motor",
+   "ticker": "TVSMOTOR",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Domestic rival"
+  },
+  {
+   "counterparty": "Eicher Motors",
+   "ticker": "EICHERMOT",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Mid-premium rival"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12-01",
+   "event": "November sales print (exports and domestic)",
+   "type": "other",
+   "prob": 1.0,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Bajaj+Auto+Q2+profit+jumps+35+percent+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Bajaj+Auto+Q2+FY27+exports+EBITDA+margin+KTM+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "India-US trade deal or further tariff changes affecting KTM/Triumph exports",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Why+have+India-US+trade+talks+stalled+again+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): consolidated sales Rs 25,126 cr, EBITDA Rs 4,896 cr (OPM 19%), PAT Rs 3,384 cr; standalone revenue Rs 20,003 cr (+34%), PAT Rs 3,354 cr (+35%)",
+  "trend": "Export-led growth; consolidated revenue +48% TTM; margin 19-21%; interest cost rising (KTM debt) to Rs 469 cr/quarter",
+  "valuation": "P/E 22.4, P/B 8.0, EV/EBITDA ~18x TTM (computed); dividend yield 1.4%; the cheapest P/E in the batch's 2W pair",
+  "recent_developments": [
+   "2026-10-01: stock -6.5% to -9% on September domestic 2W sales -12%",
+   "2026-10-07: RBI hike drags autos",
+   "2026-10-27: Q2 beat, JPMorgan upgrade to Overweight, CLSA sees 29% upside",
+   "2026-11-02: two-wheeler makers post strong October sales amid cost overhang (Upstox)",
+   "2026-11-04: BMAG EBIT positive EUR 11.3m (scanx)"
+  ]
+ },
+ "key_risks": [
+  "Export currency shortages in Nigeria/Egypt and volatile Africa demand",
+  "US tariffs on India-made KTM/Triumph",
+  "Raw-material 'cost overhang' (steel, rare earths)",
+  "KTM/BMAG leverage and European demand",
+  "Domestic share loss",
+  "Rate-hike drag on 2W loans"
+ ],
+ "upside_triggers": [
+  "Sustained export run-rate >2.5 lakh units a month",
+  "Domestic recovery after festivals",
+  "Chetak scale and EV margin",
+  "BMAG profitability",
+  "Rupee weakness"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_RARE_EARTH_MAGNET_SUPPLY",
+   "type": "FACTOR",
+   "name": "China rare-earth magnet export availability",
+   "ssu": "+1 = tightening of supply"
+  },
+  {
+   "id": "NEW_2W_COMPETITIVE_INTENSITY",
+   "type": "FACTOR",
+   "name": "Competitive intensity in Indian two-wheelers/EV two-wheelers",
+   "ssu": "+1 = price/share war episode"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/BAJAJ-AUTO/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals (evidence pack)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Auto+Q2+FY27+exports+EBITDA+margin+KTM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Auto+September+sales+exports+dip+below+2.5+lakh+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-01",
+   "what": "September sales and exports"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+drags+auto+stocks+Bajaj+Auto+Ashok+Leyland+top+losers+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "Rate-hike reaction"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bajaj+Auto+step-down+sub+BMAG+EBIT+turns+positive+at+EUR+11.3+mn+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "BMAG EBIT"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "BAJAJ-AUTO",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "Domestic ~50% of revenue; +10% domestic industry volumes => +5% revenue; incremental margin ~35% vs 19-20% OPM => EBITDA +9%; EV/MCap ~1.0; persistence 0.5 => ~+4.4. September domestic 2W fell 12% (stock -6.5 to -9% on 2026-10-01), October recovered.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BAJAJ-AUTO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Sep-26 qtr OPM 19%, sales 25,126 cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Auto+domestic+two-wheeler+sales+decline+12%25+Sep+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "RushLane"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BAJAJ-AUTO",
+   "relation": "fx_translation",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Exports ~45-50% of standalone revenue (USD/EUR/other) vs imports ~15% (KTM parts, electronics): net long ~30% of revenue; +3% => +0.9% of revenue; 80% flow-through after 12-month hedges => EBITDA +3.6%; x1.0 x0.5 => +1.8-2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Auto+Q2+profit+jumps+35+percent+exports+surge+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Forbes India"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49, +6.5% 12m"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "BAJAJ-AUTO",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -1.8,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Steel ~15% of costs => 12% of revenue; +7% => 0.84% of revenue => EBITDA -4.2%; 60% unrecovered => -2.5%; x1.0 x0.3 => -0.7. Empirical F_STEEL_GLOBAL +1.0 (t=1.3, positive) is a cyclical co-movement and not a cost benefit.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BAJAJ-AUTO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_STEEL_GLOBAL +1.00, t 1.3"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Auto+Q2+preview+export+momentum+offset+higher+raw+material+costs+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "NDTV Profit"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "BAJAJ-AUTO",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Aluminium ~7% of costs => 5.6% of revenue; +10% => EBITDA -2.8%; 60% unrecovered => -1.7%; x0.3 => -0.5. Empirical +1.19 (t=1.5) is positive (cyclical) so range reaches +0.5. Aluminium -19.6% since June is a margin tailwind.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BAJAJ-AUTO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_ALUMINIUM +1.19, t 1.5"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "BAJAJ-AUTO",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": -1.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical +1.06 (t=2.2) per +10% Brent is significant: higher oil lifts incomes in Nigeria, Angola, Colombia, Egypt and the Gulf, which buy Bajaj three-wheelers and motorcycles (exports ~half of revenue). Offset by India petrol cost and plastics (~-0.5). Net +0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BAJAJ-AUTO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT +1.06, t 2.2"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent +15% 3m"
+    }
+   ]
+  },
+  {
+   "src": "C_AFRICA_LATAM",
+   "dst": "BAJAJ-AUTO",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.1,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Africa+LatAm ~55% of exports (~25% of revenue); +1pp regional growth with export elasticity ~2 => +0.5% revenue => EBITDA +0.9% => ~+0.6. The company's weekly export run-rate (below 2.5 lakh units in Sept for the first time in four months) shows volatility.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Auto+September+sales+exports+dip+below+2.5+lakh+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "CNBC TV18"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "BAJAJ-AUTO",
+   "relation": "geopolitical_exposure",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Middle East/North Africa ~10% of exports; escalation disrupts shipping and lifts freight. -1.0 for an escalation unit (revenue -1%, EBITDA -2% x0.5).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Oil+jumps+2%25+settles+at+6-month+highs+on+fears+of+escalation+in+Iran+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Reuters"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "BAJAJ-AUTO",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "KTM/Husqvarna/Triumph and Bajaj Auto Intl. Europe: consolidated revenue (25,126 cr) exceeds standalone (20,003 cr) by ~20%, mostly KTM/BMAG. +1pp Euro-zone growth with discretionary-motorcycle elasticity 3 => +0.6% consolidated revenue; BMAG EBIT turning positive (EUR 11.3m) => high operating leverage => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Auto+step-down+sub+BMAG+EBIT+turns+positive+at+EUR+11.3+mn+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "scanx"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "BAJAJ-AUTO",
+   "relation": "regulatory_risk",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Triumph/KTM/Husqvarna 400cc models made in India are shipped to the US; a +10pp tariff on India-origin goods is partly shared with dealers/customers. US ~4% of revenue (estimate) => EBITDA -1.5% x0.5 => -0.8. India-US talks stalled again (Reuters 2026-10-06).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Why+have+India-US+trade+talks+stalled+again+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "note": "Reuters"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BAJAJ-AUTO",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "P/E 22 and large investment book: valuation falls on +25bp (-1.5% DCF) but treasury income (about Rs 15,000 cr of investments, estimate) rises on higher yields => net -1.2. RBI hiked repo to 5.50% on 7 Oct; Bajaj Auto and Ashok Leyland were among top losers that day.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+drags+auto+stocks+Bajaj+Auto+Ashok+Leyland+top+losers+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "CNBC TV18"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "BAJAJ-AUTO",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": ">12m",
+   "mechanism": "Chetak e-scooter and e-3W (est. 10-12% of domestic 2W revenue) benefit from stronger EV push; +1 => +1%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Mix estimate"
+    }
+   ]
+  },
+  {
+   "src": "NEW_RARE_EARTH_MAGNET_SUPPLY",
+   "dst": "BAJAJ-AUTO",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Chetak motors need rare-earth magnets; a +1 tightening cut EV output in 2025 and flagged again in Aug 2026 analyst calls. EV ~10% of domestic revenue; -15% output => EBITDA -1.5% x0.7 => about -1.0; rounded -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Festive+season+fear+EV+capacity+crunch+export+reliance+analyst+calls+Hero+RE+Bajaj+TVS+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "note": "NDTV Profit"
+    }
+   ]
+  },
+  {
+   "src": "NEW_2W_COMPETITIVE_INTENSITY",
+   "dst": "BAJAJ-AUTO",
+   "relation": "competition",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Domestic share battle with Hero, Honda, TVS and EV start-ups. +1 => -5% domestic volume or -1% price => EBITDA -6% x0.4 => -2. Domestic 2W -12% in Sept shows share loss risk.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Auto+weak+domestic+two-wheeler+sales+September+weigh+on+stock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "NDTV Profit"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "BAJAJ-AUTO",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "Pulsar, Dominar, Triumph, KTM mix lifts ASP; +1 => +1% ASP => EBITDA +5% x0.3 => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bajaj+Auto+Q2+FY27+exports+EBITDA+margin+KTM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Revenue +34%, exports surge"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "BAJAJ-AUTO",
+   "dst": "BAJAJHLDNG",
+   "relation": "holding_stake",
+   "w": 0.12,
+   "w_low": 0.08,
+   "w_high": 0.18,
+   "lag": "0-3m",
+   "mechanism": "Bajaj Holdings owns about 5% of Bajaj Auto (~17% of its NAV, model knowledge). Unit: % change in BAJAJHLDNG equity value per +1% change in BAJAJ-AUTO equity value; 0.17 x ~0.7 after the holding-company discount behaviour = 0.12.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Stake and NAV share are estimates"
+    }
+   ]
+  }
+ ]
+}

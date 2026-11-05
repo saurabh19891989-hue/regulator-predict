@@ -13,7 +13,7 @@ TVS Motor is India's third-largest two-wheeler maker and a major three-wheeler a
 7. **Idiosyncratic events**: finance demerger (8-10 months) and promoter family dispute.
 
 ## Transmission examples
-- **Oil-rates-demand chain (4 orders).** Mideast escalation -> Brent $95-100 and INR weaker (94.5) -> inflation up and the RBI raises repo to 5.50% (7 Oct) with no cuts in sight -> 2W loan EMIs and fuel costs rise for the entry-level rider -> entry commuter volumes soften while premium holds -> TVS's mix (premium ~) holds up better than Hero's.
+- **Oil-rates-demand chain (4 orders).** Mideast escalation -> Brent $95-100 and INR weaker (94.5) -> inflation up and the RBI raises repo to 5.50% (7 Oct) with no cuts in sight -> 2W loan EMIs and fuel costs rise for the entry-level rider -> entry commuter volumes soften while premium holds -> TVS's premium-heavy mix holds up better than Hero's.
 - **Aluminium chain (3 orders).** China aluminium output curbs -> LME aluminium up -> engine and wheel casting costs up -> TVS margin falls ~35bp if unrecovered -> price hike in Jan -> volumes elastic only at the entry level. (Currently reverse: aluminium -19.6% helps.)
 - **Rare earth chain (4 orders).** China limits magnet exports -> motor suppliers cut allocations -> iQube/Orbiter output constrained (capacity crunch flagged in Aug) -> EV sales lost to Ather/Ola/Bajaj -> operating leverage and PLI incentives lost.
 - **FX chain (3 orders).** USD/INR rises -> export realisations in INR up -> but Nigeria/Egypt currency weakness reduces African import demand -> net positive but volatile.

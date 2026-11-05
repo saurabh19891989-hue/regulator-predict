@@ -36,7 +36,7 @@
    "w_low": -2.5,
    "w_high": 0.0,
    "lag": "0-3m",
-   "mechanism": "Earnings are insulated (cost-plus lease: lease rate = borrowing cost + ~0.40% spread, set by Ministry of Railways), so yields barely move PAT. Equity sensitivity is via (1) refinancing: ~Rs0.3 lakh cr/yr of maturities and Rs70,000cr new borrowing at higher coupons raise lease income AND interest equally (spread unchanged), (2) valuation: a bond-proxy PSU yield stock (div yield ~2.7% at Rs80 on Rs1.15+ interim) loses relative appeal when 10y goes 7.4-7.5%. +25bp => -1.0. Stock -34% over 12m already.",
+   "mechanism": "Earnings are insulated (cost-plus lease: lease rate = borrowing cost + ~0.40% spread, set by Ministry of Railways), so yields barely move PAT. Equity sensitivity is via (1) refinancing: ~Rs0.3 lakh cr/yr of maturities and Rs70,000cr new borrowing at higher coupons raise lease income AND interest equally (spread unchanged), (2) valuation: a bond-proxy PSU yield stock (interim dividend Rs1.15 on Rs80 = 1.4% for the half-year) loses relative appeal when 10y goes 7.4-7.5%. +25bp => -1.0. Stock -34% over 12m already.",
    "confidence": "low",
    "evidence": [
     {
@@ -100,7 +100,7 @@
    "w_low": 0.3,
    "w_high": 3.0,
    "lag": "3-12m",
-   "mechanism": "Railways capex funds extra-budgetary resources via IRFC: +10% capex plan => IRFC disbursement +~5% => assets and PAT +~4% over 2 yrs (margin 0.4% on a larger book) x persistence 0.5 x EV/MCap 1.0 (but EV/MCap is ~5x: debt Rs4.7 lakh cr vs mcap Rs1.05 lakh cr; use equity PAT basis) => +1.5. IRFC share of railway funding is shifting (budgetary support rising, EBR falling) - key long-run driver.",
+   "mechanism": "Railways capex funds extra-budgetary resources via IRFC: +10% capex plan => IRFC disbursement +~5% => assets and PAT +~4% over 2 yrs (margin 0.4% on a larger book) x persistence 0.5 on an equity (PAT) basis, not EV, because debt is passed through to the lessee => +1.5. IRFC share of railway funding is shifting (budgetary support rising, EBR falling) - key long-run driver.",
    "confidence": "medium",
    "evidence": [
     {
@@ -206,18 +206,6 @@
    ]
   },
   {
-   "src": "P_PLI",
-   "dst": "IRFC",
-   "relation": "policy_effect",
-   "w": 0.0,
-   "w_low": -0.3,
-   "w_high": 0.3,
-   "lag": "3-12m",
-   "mechanism": "Placeholder: no PLI exposure; kept for completeness at zero to show explicit assessment.",
-   "confidence": "low",
-   "evidence": []
-  },
-  {
    "src": "F_GOVT_CAPEX",
    "dst": "IRFC",
    "relation": "demand_driver",
@@ -225,7 +213,7 @@
    "w_low": 0.3,
    "w_high": 2.5,
    "lag": "3-12m",
-   "mechanism": "Central capex (railways is ~2/3 of PSU capex-linked rolling stock/track outlays) drives IRFC disbursement; +10% capex growth => IRFC disbursement +4% => PAT +~3% over 2yrs x 0.5 => +1.2. Overlaps with P_RAILWAY_CAPEX (De-duplicate: use the railway edge for rail-specific changes).",
+   "mechanism": "Central capex, of which railways is a large component, drives IRFC disbursement; +10% capex growth => IRFC disbursement +4% => PAT +~3% over 2yrs x 0.5 => +1.2. Overlaps with P_RAILWAY_CAPEX (De-duplicate: use the railway edge for rail-specific changes).",
    "confidence": "low",
    "evidence": []
   },
@@ -330,7 +318,7 @@
  "current_state": {
   "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs1,958cr (+10.2%), lease income growth strong, finance cost Rs5,917cr",
   "trend": "Steady, insulated earnings (cost-plus) but stock de-rating on slowing growth, OFS supply and share of railway funding shifting to budget",
-  "valuation": "Rs80; mcap ~Rs1.05 lakh cr (13,068 cr shares, model knowledge); screener ratios blank in pack; P/E ~13-14x on TTM PAT ~Rs7,700cr (derived); investing.com 'fair value' tools flagged ~49-54% downside (low-quality signal)",
+  "valuation": "Rs80; mcap ~Rs1.05 lakh cr (13,068 cr shares, model knowledge); screener ratios blank in pack; P/E ~13-14x if TTM PAT is ~Rs7,500-7,700cr (two quarters known: Q1 Rs1,927cr, Q2 Rs1,958cr; derived, unverified); investing.com 'fair value' tools flagged ~49-54% downside (low-quality signal)",
   "recent_developments": [
    "2026-10-15 Q2 results, interim dividend Rs1.15, record date 2026-10-23",
    "2026-10-30 52-week low",

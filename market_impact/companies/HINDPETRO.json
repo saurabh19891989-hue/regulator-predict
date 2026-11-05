@@ -41,7 +41,7 @@
    "w_low": -6.0,
    "w_high": -1.0,
    "lag": "0-3m",
-   "mechanism": "Marketing-heavy OMC (sales ~50 MMT vs refining 24 MMT). Calibration: operating profit swung from Rs 9.2k cr (Mar-26) to -Rs 16.1k cr (Jun-26) with Brent up ~40-50% and frozen pump prices, i.e. ~Rs -25k cr per quarter per +45%, or ~Rs -5.5k cr per quarter per +10% if sustained, offset ~25% by refining gain. Market looks through to temporary losses plus compensation/price hikes: a one-quarter-equivalent loss Rs ~2.5k cr per +10% = 3% of market cap Rs 81k cr, ... pack elasticity -2.73 (t -4.6) agrees; w = -3.0.",
+   "mechanism": "Marketing-heavy OMC (sales ~50 MMT vs refining 24 MMT). Calibration: operating profit swung from Rs 9.2k cr (Mar-26) to -Rs 16.1k cr (Jun-26) with Brent up ~40-50% and frozen pump prices, i.e. ~Rs -25k cr per quarter per +45%, or ~Rs -5.5k cr per quarter per +10% if sustained, offset ~25% by refining gain. Market looks through to temporary losses plus compensation/price hikes: a one-quarter-equivalent loss of Rs ~2.5k cr per +10% = 3% of market cap Rs 81k cr; pack elasticity -2.73 (t -4.6) agrees; w = -3.0.",
    "confidence": "high",
    "evidence": [
     {
@@ -105,7 +105,7 @@
    "w_low": -1.2,
    "w_high": 0.0,
    "lag": "0-3m",
-   "mechanism": "Exports ~2-3 MMT; small. Rs 6/L x 3 MMT = Rs 2.2k cr x 20%... ~11% of EBITDA x 1.8 x 0.1 => -0.4.",
+   "mechanism": "Exports ~2-3 MMT; small. Rs 6/L on ~3 MMT = Rs 2.2k cr, i.e. ~11% of normalised EBITDA x 1.8 x persistence 0.1 => -0.2, round to -0.4.",
    "confidence": "low",
    "evidence": [
     {
