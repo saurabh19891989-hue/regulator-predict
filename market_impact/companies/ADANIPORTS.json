@@ -1,0 +1,577 @@
+{
+ "name": "Adani Ports and Special Economic Zone Ltd.",
+ "industry": "I_LOGISTICS_PORTS",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest private port operator (Mundra, Kandla, Krishnapatnam, Dhamra, Vizhinjam, Paradip berths etc.), with logistics (rail, warehousing), marine services and international ports (Haifa, Colombo, Tanzania, Australia; Oman subsidiary set up 2026-10-23). Four growth engines per company: domestic ports, logistics, marine, international. Q2 FY27 revenue +24%, EBITDA +23%, PAT Rs 3,682 cr (+18%); FY27 revenue and EBITDA guidance raised by Rs 1,000 cr each (2026-10-28). October cargo +27%. US$3.3 bn bid for Evos Terminals (2026-10-30). US criminal case against Gautam Adani dismissed on 2026-08-11. Market cap Rs 4.46 lakh cr, P/E 32.",
+ "revenue_mix": [
+  {
+   "segment": "Domestic ports",
+   "share_pct": 62,
+   "geography": "India (Mundra ~45% of cargo; model estimate)"
+  },
+  {
+   "segment": "Logistics (rail, warehousing, trucking)",
+   "share_pct": 12,
+   "geography": "India"
+  },
+  {
+   "segment": "Marine services",
+   "share_pct": 6,
+   "geography": "India/International"
+  },
+  {
+   "segment": "International ports and other",
+   "share_pct": 20,
+   "geography": "Israel, Sri Lanka, Tanzania, Australia, Oman (model estimate)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GDP_IN",
+   "dst": "ADANIPORTS",
+   "relation": "demand_driver",
+   "w": 1.6,
+   "w_low": 0.6,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Port cargo grows ~1.3-1.5x GDP (October cargo +27% shows share gain/ mix). +1pp GDP -> cargo +1.5pp -> revenue +1.5%, operating margin 58% with high fixed costs (incremental ~75%) -> EBITDA +2.2% x EV/MCap 1.12 x persistence 0.7 => +1.7, rounded +1.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Ports+Q2+FY27+results+EBITDA+guidance+raised+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Q2 FY27: PAT Rs 3,682 cr (+18%), revenue +24%, EBITDA +23%; FY27 revenue and EBITDA guidance bands each raised by Rs 1,000 cr (Adani Ports / Moneycontrol / Business Standard 2026-10-28/29); logistics and international ports drive growth (NDTV Profit)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Ports+October+cargo+up+27%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "October 2026 cargo volume +27% y/y (marketscreener / HDFC Sky 2026-11-02)"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "ADANIPORTS",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Container exports/imports rebalancing to India (electronics, apparel, chemicals) lifts Mundra/Vizhinjam/Krishnapatnam volumes; +1 SSU -> +2pp container volume -> EBITDA +1.6% -> +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Ports+Q2+FY27+results+EBITDA+guidance+raised+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Q2 FY27: PAT Rs 3,682 cr (+18%), revenue +24%, EBITDA +23%; FY27 revenue and EBITDA guidance bands each raised by Rs 1,000 cr (Adani Ports / Moneycontrol / Business Standard 2026-10-28/29); logistics and international ports drive growth (NDTV Profit)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "ADANIPORTS",
+   "relation": "policy_effect",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "US ~18% of India goods exports (model knowledge); +10pp tariff -> export volume -3% -> container-export throughput -1.5% (exports ~40% of containers) -> EBITDA -0.7%; also lower logistics volume -> -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 4,45,528 cr, P/E 32.3, P/B 4.4, ROE 16.4%, ROCE 14.1%; TTM sales Rs 42,603 cr, op profit Rs 24,865 cr (58%), interest Rs 4,678 cr, PAT Rs 13,683 cr"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "ADANIPORTS",
+   "relation": "geopolitical_exposure",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Haifa port (Israel, acquired 2023) ~2-3% of EBITDA at risk; Gulf trade routes via Mundra/Oman; war-risk insurance, bunker costs; Brent already +15% in 3 months. +1 escalation -> Haifa volumes -30%, Gulf feeder disruption -> EBITDA -3% but offset by diversion benefits => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Ports+Q2+FY27+results+EBITDA+guidance+raised+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "Q2 FY27: PAT Rs 3,682 cr (+18%), revenue +24%, EBITDA +23%; FY27 revenue and EBITDA guidance bands each raised by Rs 1,000 cr (Adani Ports / Moneycontrol / Business Standard 2026-10-28/29); logistics and international ports drive growth (NDTV Profit)"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  },
+  {
+   "src": "C_RED_SEA",
+   "dst": "ADANIPORTS",
+   "relation": "geopolitical_exposure",
+   "w": -0.4,
+   "w_low": -2.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Disruption lengthens Europe routes, raises freight and creates congestion; Indian gateway ports see mixed effects (higher transshipment via Colombo/Vizhinjam/Mundra vs. lower frequencies). Net ambiguous => -0.4 with range crossing zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 4,45,528 cr, P/E 32.3, P/B 4.4, ROE 16.4%, ROCE 14.1%; TTM sales Rs 42,603 cr, op profit Rs 24,865 cr (58%), interest Rs 4,678 cr, PAT Rs 13,683 cr"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "ADANIPORTS",
+   "relation": "geopolitical_exposure",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Mundra/Gujarat coast near Pakistan border; escalation raises security and insurance costs, volume diversion risk, group-wide risk-off => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 4,45,528 cr, P/E 32.3, P/B 4.4, ROE 16.4%, ROCE 14.1%; TTM sales Rs 42,603 cr, op profit Rs 24,865 cr (58%), interest Rs 4,678 cr, PAT Rs 13,683 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_SHIPPING_RATES",
+   "dst": "ADANIPORTS",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": -0.8,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Higher freight reduces trade volumes but lifts marine services/ logistics pricing and transshipment hub value; net ambiguous => +0.3 (low).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 4,45,528 cr, P/E 32.3, P/B 4.4, ROE 16.4%, ROCE 14.1%; TTM sales Rs 42,603 cr, op profit Rs 24,865 cr (58%), interest Rs 4,678 cr, PAT Rs 13,683 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ADANIPORTS",
+   "relation": "fx_translation",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Tariffs at Mundra partly USD-denominated (bulk/ liquid/ container) and international ports (~12-15% of EBITDA, Haifa, Colombo, Dar es Salaam, Australia; model estimate) translate higher; USD debt ~35-40% of gross debt (model knowledge) partly hedged. Pack: +2.91 per +3% USD/INR, t=2.0 -> weight shrunk toward 0: +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ADANIPORTS.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ADANIPORTS",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Long-duration infrastructure asset; +25 bp -> required return +15 bp -> value -1.2%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ADANIPORTS",
+   "relation": "funding_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Net debt ~Rs 57k cr (2.3x EBITDA, model estimate), ~30% floating INR; +25 bp = Rs 43 cr = 0.3% of PAT -> -0.3; plus lower sentiment -0.3 => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 4,45,528 cr, P/E 32.3, P/B 4.4, ROE 16.4%, ROCE 14.1%; TTM sales Rs 42,603 cr, op profit Rs 24,865 cr (58%), interest Rs 4,678 cr, PAT Rs 13,683 cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "ADANIPORTS",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Adani-group refinancing and USD/INR bond market access sensitive to spreads; +50 bp on ~Rs 25k cr rolling debt = Rs 125 cr = ~0.9% PAT x multiple => -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 4,45,528 cr, P/E 32.3, P/B 4.4, ROE 16.4%, ROCE 14.1%; TTM sales Rs 42,603 cr, op profit Rs 24,865 cr (58%), interest Rs 4,678 cr, PAT Rs 13,683 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ADANIPORTS",
+   "relation": "macro_transmission",
+   "w": 2.2,
+   "w_low": 0.7,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.3-1.46 (pack); FPI-held Nifty 50 stock; +US$5bn -> +1.5% x 1.45 => +2.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ADANIPORTS.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "ADANIPORTS",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Gati Shakti, Sagarmala, rail/road connectivity and public infrastructure cargo (steel, cement, coal); +10% capex -> bulk cargo +1.5% => +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 4,45,528 cr, P/E 32.3, P/B 4.4, ROE 16.4%, ROCE 14.1%; TTM sales Rs 42,603 cr, op profit Rs 24,865 cr (58%), interest Rs 4,678 cr, PAT Rs 13,683 cr"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "ADANIPORTS",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.1,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Dedicated freight corridors and port connectivity support Adani's rail logistics and port evacuation => +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 4,45,528 cr, P/E 32.3, P/B 4.4, ROE 16.4%, ROCE 14.1%; TTM sales Rs 42,603 cr, op profit Rs 24,865 cr (58%), interest Rs 4,678 cr, PAT Rs 13,683 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "ADANIPORTS",
+   "relation": "demand_driver",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "Mundra is a major coal import terminal; +15% seaborne coal -> thermal imports down (blending) ~2% of cargo -> -0.3; range crosses zero (pack shows no coal sensitivity for this ticker).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ADANIPORTS.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "ADANIPORTS",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Bulk cargo mix includes iron ore; pack +1.71 per +15% (t=1.1, insignificant); price up signals steel demand/volume. Modest weight +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ADANIPORTS.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ADANIPORTS",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -1.5,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Bunker/ fuel costs for marine services and trade-flow slowdown versus tank-terminal/ liquids upside (Evos bid); net ambiguous => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Ports+3.3+billion+bid+Evos+Terminals+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Adani Ports places US$3.3 bn bid for Evos Terminals (Economic Times / Moneycontrol 2026-10-30); stock -1%"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ADANIENT",
+   "dst": "ADANIPORTS",
+   "relation": "group_contagion",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Same promoter group; group sentiment (SEC/DoJ case dismissed 2026-08-11, financing access) moves all Adani stocks together; +1% in ADANIENT equity -> +0.15% in ADANIPORTS, not a price-channel link.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=US+judge+ends+graft+case+against+Gautam+Adani+dismissed+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-11",
+     "note": "US court dismisses criminal case against Gautam and Sagar Adani (CNBC / ET / Livemint 2026-08-11); Adani group stocks rose"
+    }
+   ]
+  },
+  {
+   "src": "ADANIPOWER",
+   "dst": "ADANIPORTS",
+   "relation": "group_contagion",
+   "w": 0.08,
+   "w_low": 0.02,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Group financing and sentiment; Mundra power/cargo linkages (related-party cargo share not verified) => +0.08.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=US+judge+ends+graft+case+against+Gautam+Adani+dismissed+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-11",
+     "note": "US court dismisses criminal case against Gautam and Sagar Adani (CNBC / ET / Livemint 2026-08-11); Adani group stocks rose"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Shipping lines (MSC, Maersk, CMA CGM)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "container throughput and JV terminals"
+  },
+  {
+   "counterparty": "Coal importers / power producers incl. Adani Power",
+   "ticker": "ADANIPOWER",
+   "role": "customer",
+   "importance": "medium",
+   "note": "related-party cargo share not verified"
+  },
+  {
+   "counterparty": "Indian Railways / DFC",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "evacuation and logistics"
+  },
+  {
+   "counterparty": "Adani Enterprises (promoter group)",
+   "ticker": "ADANIENT",
+   "role": "parent",
+   "importance": "medium",
+   "note": "group sentiment/financing"
+  },
+  {
+   "counterparty": "CONCOR and other logistics",
+   "ticker": "CONCOR",
+   "role": "competitor",
+   "importance": "low",
+   "note": "rail container logistics"
+  },
+  {
+   "counterparty": "JSW Infrastructure, GMR, state ports",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "port capacity competition"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11/2027-03",
+   "event": "Evos Terminals US$3.3 bn bid: outcome (win would add leverage ~+0.6x ND/EBITDA; model estimate) - not yet announced as accepted",
+   "type": "corporate_action",
+   "prob": 0.35,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Adani+Ports+3.3+billion+bid+Evos+Terminals+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Monthly cargo update (Nov) - October was +27% y/y",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": -1.5,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Adani+Ports+October+cargo+up+27%+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI December MPC / G-sec moves (sensitivity only)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": -0.8,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results vs raised guidance bands",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Adani+Ports+Q2+FY27+results+EBITDA+guidance+raised+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12/2027-06",
+   "event": "Group legal/regulatory: SEC civil matter and Hindenburg-era follow-ups; criminal case already dismissed 2026-08-11",
+   "type": "litigation",
+   "prob": 0.15,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=US+judge+ends+graft+case+against+Gautam+Adani+dismissed+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-05",
+   "event": "FY27 results and FY28 guidance; Vizhinjam/ Paradip/ Oman ramp",
+   "type": "guidance",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Adani+Ports+Oman+subsidiary+Paradip+berths+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 11,340 cr, operating profit Rs 6,807 cr (60%), interest Rs 1,006 cr, PAT Rs 3,682 cr (+18%)",
+  "trend": "Double-digit revenue and EBITDA growth, margin ~60%, guidance raised; October cargo +27%.",
+  "valuation": "Price Rs 1,934 (52w 1,292-1,945, at the high), P/E 32.3, P/B 4.4, ROE 16.4%, yield 0.38%; 12m +33.8%, 1m +8.4%; 1y vol 30%. Motilal TP Rs 2,130.",
+  "recent_developments": [
+   "2026-11-02 October cargo +27%",
+   "2026-10-30 US$3.3 bn Evos Terminals bid",
+   "2026-10-29 shares +4-6% after Q2 beat and guidance raise",
+   "2026-10-23 Oman subsidiary",
+   "2026-10-09 block deal Rs 1,234 cr",
+   "2026-10-06 Paradip berths subsidiary",
+   "2026-08-11 US criminal case dismissed"
+  ]
+ },
+ "key_risks": [
+  "Group governance/legal tail risk (civil SEC matter, financing access)",
+  "Leverage rises with large M&A (Evos) amid higher rates",
+  "Middle East/Haifa and Red Sea disruption",
+  "Global trade slowdown / US tariffs",
+  "Stock at 52-week high after +34% in 12m"
+ ],
+ "upside_triggers": [
+  "Evos acquisition closes at accretive terms",
+  "Cargo growth >20% sustains",
+  "Vizhinjam/Oman/Paradip ramp",
+  "Group financing normalisation and index flows"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Ports+Q2+FY27+results+EBITDA+guidance+raised+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "Q2 FY27 results and guidance"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Ports+October+cargo+up+27%+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-02",
+   "what": "October cargo"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Ports+3.3+billion+bid+Evos+Terminals+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Evos bid"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=US+judge+ends+graft+case+against+Gautam+Adani+dismissed+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-11",
+   "what": "US case dismissal"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Ports+Oman+subsidiary+Paradip+berths+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Oman/Paradip subsidiaries"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "https://www.screener.in/company/ADANIPORTS/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  }
+ ],
+ "ticker": "ADANIPORTS",
+ "as_of": "2026-11-05"
+}

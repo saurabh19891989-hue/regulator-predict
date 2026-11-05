@@ -1,0 +1,541 @@
+{
+ "ticker": "CGPOWER",
+ "name": "CG Power and Industrial Solutions Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Murugappa-group electrical-equipment maker (Tube Investments is the majority shareholder; promoter group 56.34%). Two segments: Power Systems (power and distribution transformers, switchgear, ~47% of Q2 FY27 sales, margin 25.9%) and Industrial Systems (LT/HT motors, drives, fans, railway traction and signalling, ~53% of sales). Q2 FY27 (Sep 2026): consolidated revenue Rs 3,802 cr (+30%), EBITDA Rs 621 cr (16.3%), PAT Rs 409 cr (+44%), order intake Rs 8,485 cr (+78%), backlog Rs 23,646 cr (+58%). Debt-free; building a semiconductor OSAT business. Largest export order: ~Rs 900 cr of transformers for a US hyperscale data centre.",
+ "revenue_mix": [
+  {
+   "segment": "Power Systems (transformers, switchgear)",
+   "share_pct": 47,
+   "geography": "India ~85% / exports ~15%"
+  },
+  {
+   "segment": "Industrial Systems (motors, drives, railways)",
+   "share_pct": 53,
+   "geography": "India ~95%"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 14,
+   "note": "share of sales, model estimate"
+  },
+  {
+   "input": "F_STEEL_GLOBAL",
+   "share_of_costs_pct": 12,
+   "note": "CRGO and structural steel, model estimate"
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3,
+   "note": "model estimate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "CGPOWER",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": ">12m",
+   "mechanism": "Power Systems (transformers, switchgear) Q2 FY27: sales Rs 1,769 cr (+41%), EBITDA margin 25.9% (21.5% a year ago), order intake +137% to Rs 6,258 cr, backlog Rs 18,964 cr (+81%). Power Systems ~47% of sales and ~75% of EBITDA. Theme +1 SSU (a step-up in transmission/distribution capex intensity) -> +10% power systems volume and +1pp margin -> segment EBITDA +14% = group +10%; x0.97 EV/MCap x persistence 1.0 (structural, visibility 'until FY36' per YES Securities) discounted 50% for capacity/competition = +5.0. High valuation (91x) already prices much of this.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/cg-power-q2-net-profit-rises-44-to-rs-409-crore-order-book-jumps-58-14058678.html",
+     "date": "2026-10-23",
+     "note": "Power systems sales +41%, EBITDA margin 25.9%, order intake +137%, backlog +81% to Rs 18,964 cr"
+    },
+    {
+     "source": "https://www.livemint.com/market/stock-market-news/cg-power-share-price-q2-results-brokerage-targets-11793076393653.html",
+     "date": "2026-10-27",
+     "note": "Analysts: multi-year grid modernisation opportunity; YES Securities sees visibility until FY36"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "CGPOWER",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "PGCIL/state transmission utilities, railways (traction motors), metros and water are ~45% of revenue. +10% government capex growth -> +4% revenue; contribution ~30% vs 16% EBITDA margin -> EBITDA +7.5%; x0.97 x persistence 0.5 = +3.6. Management cites long execution timelines for large railway/transformer contracts, not weak demand.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://tradebrains.in/cg-power-vs-abb-india-is-faster-growth-enough-to-beat-a-more-efficient-global-business/",
+     "date": "2026-08-23",
+     "note": "Double-digit growth in Power Systems and Motion; long execution timelines for railway and transformer contracts"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "CGPOWER",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "Industrial Systems (LT motors, HT motors, drives, fans; Q2 sales +25% to ~Rs 2,000 cr) ~54% of revenue: market share 38-39% in LT motors, 19-20% in HT motors (YES Securities). +10pp private capex -> +4% revenue; gearing 1.9x -> EBITDA +7.5%; x0.97 x0.5 = +3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.livemint.com/market/stock-market-news/cg-power-share-price-q2-results-brokerage-targets-11793076393653.html",
+     "date": "2026-10-27",
+     "note": "CG leads LT motors with 38-39% share and 19-20% in HT motors"
+    },
+    {
+     "source": "https://www.moneycontrol.com/news/business/cg-power-q2-net-profit-rises-44-to-rs-409-crore-order-book-jumps-58-14058678.html",
+     "date": "2026-10-23",
+     "note": "Industrial systems sales +25%"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "CGPOWER",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Largest-ever order: ~Rs 900 cr of power transformers for a US hyperscale data-centre project; export order inflow ~+84% y/y from a low base (Trade Brains). Theme +1 SSU -> DC share of revenue +4pp at 28% contribution -> EBITDA +7%; x0.97 x0.3 (project-based, lumpy) = +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://tradebrains.in/cg-power-vs-abb-india-is-faster-growth-enough-to-beat-a-more-efficient-global-business/",
+     "date": "2026-08-23",
+     "note": "~Rs 900 cr power-transformer order for a US hyperscale data-centre project; export inflows ~+84%"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "CGPOWER",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Global AI capex drives US transformer demand and sentiment; SBI Securities notes 'slowdown in AI capex could impact near-term sentiment'. +10% AI capex growth -> +1pp CG revenue... -> +1.5 incl. multiple effect. Overlaps with T_DATA_CENTRES_IN and F_US_EQUITIES; Director should net.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.livemint.com/market/stock-market-news/cg-power-share-price-q2-results-brokerage-targets-11793076393653.html",
+     "date": "2026-10-27",
+     "note": "SBI Securities: slowdown in AI capex could impact near-term sentiment"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "CGPOWER",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Pack empirical +2.10 per +5% S&P 500 (t +2.2; beta to Nifty 0.95): CG trades as an AI-capex/US-risk-appetite proxy. Shrunk to +1.0 because part of it is the AI-capex edge. S&P is at 7,689 (+1.2% since June).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CGPOWER.md",
+     "date": "2026-11-05",
+     "note": "Empirical US equities +2.10 (t +2.2)"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "S&P 500 7,688.6"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "CGPOWER",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Copper (winding wire, busbars) ~14% of sales. +10% -> 1.4% of sales -> EBITDA -9% pre; large orders are hedged at booking and have price-variation clauses: ~75% recovered -> -2.3%; x0.97 x0.4 = -0.9, trimmed to -0.5 given the Q2 margin expansion despite copper. Pack empirical is positive (+1.45, t +1.6): copper acts as an electrification-cycle proxy; range crosses zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CGPOWER.md",
+     "date": "2026-11-05",
+     "note": "Empirical copper +1.45 (t +1.6): sign conflict"
+    },
+    {
+     "source": "https://www.moneycontrol.com/news/business/cg-power-q2-net-profit-rises-44-to-rs-409-crore-order-book-jumps-58-14058678.html",
+     "date": "2026-10-23",
+     "note": "EBITDA margin expanded to 16.3% from 15.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "CGPOWER",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Aluminium (motor frames, castings) ~3% of sales; +10% -> -2% EBITDA pre; 60% recovered; x0.97 x0.4 = -0.3. Pack empirical is strongly POSITIVE (+2.84 per +10%, t +2.6), reflecting the cycle proxy; the cost channel is kept small and negative with a range reaching +1.5. Aluminium is -19.6% since June.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CGPOWER.md",
+     "date": "2026-11-05",
+     "note": "Empirical aluminium +2.84 (t +2.6): sign conflict"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium -19.6% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "CGPOWER",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "CRGO electrical steel (transformer cores; largely imported) and structural steel ~12% of sales. +10% -> 1.2% of sales -> -7.5% EBITDA pre; ~70% recovered -> -2.3%; x0.97 x0.4 = -0.9. Pack empirical -0.79 per +10% (t -0.7), consistent.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CGPOWER.md",
+     "date": "2026-11-05",
+     "note": "Empirical global HRC -0.79 (t -0.7)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "CGPOWER",
+   "relation": "fx_translation",
+   "w": -0.3,
+   "w_low": -1.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Imports of CRGO/components ~20% of sales vs exports growing (US order Rs 900 cr; ~15% of power systems). Net import ~10% of sales: +3% -> 0.3% of sales -> -1.9% EBITDA pre; half hedged -> -1%; x0.97 x0.4 = -0.4, offset by export upside -> -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://tradebrains.in/cg-power-vs-abb-india-is-faster-growth-enough-to-beat-a-more-efficient-global-business/",
+     "date": "2026-08-23",
+     "note": "Export order inflow ~+84%"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "CGPOWER",
+   "relation": "discount_rate",
+   "w": -1.3,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Debt-free; P/E 91x, 14.7x book - long-duration equity. +25bp -> -1.1% value from discount rate plus -0.2 from slower private capex. RBI hiked to 5.50% on 2026-10-07.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+     "date": "2026-10-07",
+     "note": "Repo +25bp to 5.50%"
+    },
+    {
+     "source": "market_impact/data/packs/CGPOWER.md",
+     "date": "2026-11-05",
+     "note": "P/E 90.9, P/B 14.7x"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "CGPOWER",
+   "relation": "policy_effect",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Semiconductor (OSAT, Sanand; ISM scheme incentives) and electrical-equipment incentives: 'emerging businesses of semiconductor design and manufacturing are future growth drivers' (SBI Securities). +1 (expansion/disbursement) -> pilot-to-volume transition sooner; est. +1.2% equity value (option value, not near-term EBITDA).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.livemint.com/market/stock-market-news/cg-power-share-price-q2-results-brokerage-targets-11793076393653.html",
+     "date": "2026-10-27",
+     "note": "Semiconductor design and manufacturing named a future growth driver"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "CGPOWER",
+   "relation": "policy_effect",
+   "w": 0.6,
+   "w_low": 0.2,
+   "w_high": 1.1,
+   "lag": "3-12m",
+   "mechanism": "Railways (traction motors, transformers, signalling) ~8% of revenue; +10% rail capex -> +0.8% revenue -> EBITDA +1.5% x0.97 x0.4 = +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://tradebrains.in/cg-power-vs-abb-india-is-faster-growth-enough-to-beat-a-more-efficient-global-business/",
+     "date": "2026-08-23",
+     "note": "Long execution timelines for large railway contracts"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "CGPOWER",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Renewable evacuation and substation build-outs drive transformer/switchgear orders (~15% of Power Systems). +1 SSU stronger support -> +5% power systems volume -> EBITDA +3.5% group x0.97 x0.3 = +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.livemint.com/market/stock-market-news/cg-power-share-price-q2-results-brokerage-targets-11793076393653.html",
+     "date": "2026-10-27",
+     "note": "Analysts cite transmission expansion and renewable integration"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "CGPOWER",
+   "relation": "competition",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Pack empirical -4.42 per +3% USD/CNY (t -1.8). Plausible channel: weaker yuan makes Chinese motors/transformers cheaper in tenders, plus Asia risk-sentiment. Shrunk to about one quarter.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/CGPOWER.md",
+     "date": "2026-11-05",
+     "note": "Empirical USDCNY -4.42 (t -1.8)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Tube Investments of India",
+   "ticker": "TIINDIA",
+   "role": "parent",
+   "importance": "high",
+   "note": "majority holder; consolidates CG; holding link modelled in TIINDIA.json"
+  },
+  {
+   "counterparty": "Power Grid Corporation / state transmission utilities",
+   "ticker": "POWERGRID",
+   "role": "customer",
+   "importance": "high",
+   "note": "transformers/switchgear; share of revenue not disclosed in sources, assumed <25%"
+  },
+  {
+   "counterparty": "Indian Railways",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "~8% of revenue (estimate)"
+  },
+  {
+   "counterparty": "US hyperscale data-centre developer",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "~Rs 900 cr transformer order"
+  },
+  {
+   "counterparty": "Hitachi Energy India",
+   "ticker": "POWERINDIA",
+   "role": "competitor",
+   "importance": "high",
+   "note": "transformers/grid"
+  },
+  {
+   "counterparty": "Siemens Energy India",
+   "ticker": "ENRIN",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "grid equipment"
+  },
+  {
+   "counterparty": "GE Vernova T&D India",
+   "ticker": "GVT&D",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "grid equipment"
+  },
+  {
+   "counterparty": "ABB India",
+   "ticker": "ABB",
+   "role": "competitor",
+   "importance": "high",
+   "note": "motors/drives/switchgear"
+  },
+  {
+   "counterparty": "Siemens",
+   "ticker": "SIEMENS",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "electrification"
+  },
+  {
+   "counterparty": "CRGO steel, copper suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "imported CRGO; LME copper"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: test of margin sustainability above 16% and order intake after Rs 8,485 cr in Q2",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.moneycontrol.com/news/business/cg-power-q2-net-profit-rises-44-to-rs-409-crore-order-book-jumps-58-14058678.html"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC (P/E 91x)",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": -0.5,
+   "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget FY28: power, railways and transmission capex",
+   "type": "regulatory",
+   "prob": 0.99,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "budget calendar convention"
+  },
+  {
+   "date": "2027",
+   "event": "Semiconductor OSAT: transition from pilot line to commercial volumes (Sanand)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 4.0,
+   "source": "SBI Securities via Livemint 2026-10-27; timing not verified"
+  },
+  {
+   "date": "2026-12",
+   "event": "Hyperscaler capex updates / AI-bubble narrative shifts",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.livemint.com/market/stock-market-news/cg-power-share-price-q2-results-brokerage-targets-11793076393653.html"
+  },
+  {
+   "date": "2026-11",
+   "event": "TII Q2 results show CG consolidation (minorities, EV/semiconductor drag at parent)",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 0.5,
+   "source": "TII reporting calendar"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-23",
+  "trend": "Revenue Rs 3,802 cr (+30%), EBITDA Rs 621 cr (+40%, 16.3%), PAT Rs 409 cr (+44%); Power Systems sales +41%, EBITDA +70%, margin 25.9%; order intake Rs 8,485 cr (+78%; Power Systems +137%); backlog Rs 23,646 cr (+58%), ~1.7x trailing revenue. Q1 FY27 had been softer (sales +14% to Rs 3,281 cr; EBITDA margin 12%).",
+  "valuation": "Rs 806, market cap Rs 1.27 lakh cr, P/E ~91x, 14.7x book, ROE 20.5%; +29% in 2026 but -17% from the July 2026 high; -11.6% in the last month (200-DMA break and recovery on 2026-11-05). Targets: Nomura Rs 1,100 (Buy), Dolat Rs 1,000, YES Rs 985, Emkay Rs 925 (Add); Kotak Sell, Jefferies Hold; Bloomberg: 21 Buy / 2 Hold / 2 Sell.",
+  "recent_developments": [
+   "2026-09-15: CG, BEL, Solar Industries fall up to 10% with Brent ~$107 and rising global yields (Livemint)",
+   "2026-10-07: RBI hike",
+   "2026-10-20/21: ABB Ltd AI worries; ABB India -6%",
+   "2026-10-23: Q2 FY27 results; stock slips on day, +2.5% on 2026-10-26",
+   "2026-10-27: Nomura raises FY28-29 EPS 4%; YES Securities initiates Buy Rs 985",
+   "2026-11-05: CG above 200-DMA (ET)"
+  ]
+ },
+ "key_risks": [
+  "Valuation (91x P/E): derating on rate hikes or AI-capex slowdown",
+  "Copper and CRGO cost inflation if hedging/escalation clauses lag",
+  "Working capital days rose from 31 to 70",
+  "Competition and capacity additions by Hitachi Energy, Siemens Energy, GE Vernova T&D, Indian entrants",
+  "Execution timelines on large railway/transformer orders",
+  "Semiconductor ramp execution and capital needs",
+  "Parent TII's EV/semiconductor spending and governance"
+ ],
+ "upside_triggers": [
+  "Continued order inflow >Rs 8,000 cr a quarter",
+  "Power Systems margin holding >25%",
+  "Larger data-centre/export transformer orders",
+  "Semiconductor OSAT commercialisation",
+  "Rate cuts or falling copper"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.moneycontrol.com/news/business/cg-power-q2-net-profit-rises-44-to-rs-409-crore-order-book-jumps-58-14058678.html",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 results, segment data, order book"
+  },
+  {
+   "url": "https://www.moneycontrol.com/news/business/stocks/cg-power-shares-rise-2-5-post-q2-results-brokerages-see-up-to-ubs-37-upside-14060071.html",
+   "date": "2026-10-26",
+   "what": "Brokerage reactions, ratings"
+  },
+  {
+   "url": "https://www.livemint.com/market/stock-market-news/cg-power-share-price-q2-results-brokerage-targets-11793076393653.html",
+   "date": "2026-10-27",
+   "what": "Analyst views, market shares, grid visibility"
+  },
+  {
+   "url": "https://www.livemint.com/market/stock-market-news/solar-industries-bharat-electronics-and-cg-power-shares-fall-up-to-10-today-what-s-driving-the-selloff-11789452059197.html",
+   "date": "2026-09-15",
+   "what": "15 Sept sell-off context: Brent $107, yields"
+  },
+  {
+   "url": "https://tradebrains.in/cg-power-vs-abb-india-is-faster-growth-enough-to-beat-a-more-efficient-global-business/",
+   "date": "2026-08-23",
+   "what": "CG vs ABB India: backlog, US data-centre order, exports"
+  },
+  {
+   "url": "https://www.kalkine.co.in/article/growth/tube-investments-of-india-nse-tiindia-how-power-infrastructure-links-and-fy27-capex-plans-shape-the-outlook",
+   "date": "2026-10-29",
+   "what": "TII holds majority stake in CG"
+  },
+  {
+   "url": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+   "date": "2026-10-07",
+   "what": "RBI"
+  },
+  {
+   "url": "market_impact/data/packs/CGPOWER.md",
+   "date": "2026-11-05",
+   "what": "Pack"
+  }
+ ]
+}

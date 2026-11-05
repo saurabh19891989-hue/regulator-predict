@@ -1,0 +1,548 @@
+{
+ "ticker": "ADANIPOWER",
+ "name": "Adani Power Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_POWER_THERMAL",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest private thermal generator: ~18 GW operating (plant list per model knowledge: Mundra, Mahan, Tiroda, Kawai, Raipur, Raigarh, Udupi, Godda for Bangladesh), 24 GW pipeline under construction/awarded (62% tied under long-term PPAs; target ~45 GW by 2032), plus Bhutan hydro JVs and the 330 MW Alaknanda hydro (via GVK Energy CIRP). Q2 FY27: sales volume 26.4 bn units (+11.5%), PLF 70.1%, continuing revenue Rs 17,014 cr (+29.8%), continuing EBITDA Rs 6,321 cr (+18.5%), reported PAT Rs 7,019 cr (+142%, includes Rs 2,422 cr one-time prior-period revenue from Gujarat PPA energy-charge revisions). Debt Rs 61,860 cr, net Rs 45,846 cr; rated AA+. Promoters 74.96%; mcap Rs 3.94 lakh cr, P/E 21.7.",
+ "revenue_mix": [
+  {
+   "segment": "Long/medium-term PPAs (23.4 bn of 26.4 bn units)",
+   "share_pct": 87,
+   "geography": "India (Gujarat, Maharashtra, Haryana, Rajasthan, UP, Bihar) + Bangladesh (Godda)"
+  },
+  {
+   "segment": "Merchant / short-term sales",
+   "share_pct": 13,
+   "geography": "India (exchanges/bilateral)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COAL_INDIA",
+   "share_of_costs_pct": 38
+  },
+  {
+   "input": "F_COAL_INTL",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "O&M, employee, other",
+   "share_of_costs_pct": 18
+  },
+  {
+   "input": "Interest",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "Depreciation",
+   "share_of_costs_pct": 15
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "ADANIPOWER",
+   "relation": "output_price",
+   "w": 2.3,
+   "w_low": 1.0,
+   "w_high": 4.2,
+   "lag": "0-3m",
+   "mechanism": "Merchant/short-term volumes were 11% of Q2 sales (26.4 bn units total; 23.4 bn under PPAs) and short-term tariffs rose 33% YoY. Merchant revenue ~Rs 2,200 cr/qtr (est. ~3.0 bn units x ~Rs 7.3) = ~13% of continuing revenue; +15% spot => +Rs 330 cr/qtr = Rs 1,320 cr/yr = +5.2% on continuing EBITDA ~Rs 25k cr (H1 13.3k x2); merchant share is falling as capacity is tied under medium-term PPAs, so x persistence 0.4 and EV/MCap 1.12 => +2.3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Merchant and short-term volume 43% lower YoY as capacity tied up; short-term merchant tariffs +33% per unit"
+    },
+    {
+     "source": "https://www.screener.in/company/ADANIPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 3.94 lakh cr; net debt Rs 45,846 cr (call)"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "ADANIPOWER",
+   "relation": "demand_driver",
+   "w": 1.6,
+   "w_low": 0.6,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Q2 demand +11.5% YoY to 502 bn units drove Adani's PLF to 70.1% (62.8% LY) and volumes +11.5%; EBITDA continuing +18.5%. PPAs pay fixed capacity charges regardless, but incremental dispatch earns energy-charge margin and incentives, and frees merchant sales. +3pp demand => ~+4% volume (PLF +2.5pp) = 4.2 bn units/yr x ~Rs 1.8/unit margin = Rs 760 cr = +2.9% EBITDA x 1.12 x persistence 0.5 => +1.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Power demand +11.5% to 502 BU in Q2; thermal PLF 68% vs 62%; Adani PLF 70.1% vs 62.8%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+coal+stocks+critical+October+2026+imported+coal+Section+11+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Coal stocks at power plants critically low as demand surges"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "ADANIPOWER",
+   "relation": "demand_driver",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Q2 power demand rose with a 13% monsoon deficit (cooling load) and hydro generation fell ~15%, so coal/lignite supplied 73% of incremental generation (call). A +10% monsoon swing reverses part of this: demand growth -2pp and hydro +10% displaces ~3 bn units/qtr of thermal; at Adani's ~7% share of thermal generation, volume -1.5% => EBITDA ~-1.8% (variable margin) x 1.12 x 0.8 persistence (seasonal, 2 quarters) => -2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Lower hydropower output because of weak monsoons; coal and lignite supplied 73% of incremental generation"
+    },
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=8d9d10b5-2681-4b49-aa41-1bcc0c856468.pdf",
+     "date": "2026-10-28",
+     "note": "JSW call: monsoon ~13% below normal in Q2 FY27, hydro generation -15% (cross-check)"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "ADANIPOWER",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -3.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Landed cost of imported coal rose ~50% YoY (call); fuel cost Q2 Rs 10,229 cr (+41.8%) = 60% of continuing revenue. Imported-coal plants (Mundra ~4.6 GW, Udupi etc. - model knowledge) are ~25-30% of fuel spend (est. Rs 2.8k cr/qtr). +15% coal => +Rs 430 cr/qtr cost. Pass-through: Bangladesh (Godda) tariff reflects international prices immediately; Gujarat PPAs index with a lag of >6 months (hit in Q3, mgmt); merchant prices rise with coal. Net 55% recovered over a year => unrecovered 45% = Rs 780 cr/yr = -3.0% EBITDA, x1.12 x persistence 0.3 => -1.0, offset +0.5 for merchant uplift on domestic-coal plants => -0.5. Pack empirical is +3.60 (t +1.6): opposite sign and likely driven by shared tight-power cycle; central value kept near zero with a wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Landed imported coal cost +~50%; Gujarat indexation lag >6 months; Bangladesh PPA gets immediate pass-through"
+    },
+    {
+     "source": "https://www.screener.in/company/ADANIPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical F_COAL_INTL +3.60 per SSU, t +1.6"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "ADANIPOWER",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Domestic coal (linkage + e-auction) fuels ~70% of capacity. Coal India has not raised notified prices, but effective cost rose in Q2 on poorer quality (monsoon), not recovered in tariffs in the quarter. +10% domestic coal cost on ~Rs 6k cr/qtr domestic fuel = Rs 600 cr/qtr; ~85% passes through under Section 62 / escalable-energy-charge PPAs after a lag => unrecovered 15% = Rs 360 cr/yr = -1.4% EBITDA x 1.12 x 0.6 => -1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Coal India has not increased notified prices; effective cost slightly higher due to lower quality in Q2"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+coal+stocks+critical+October+2026+imported+coal+Section+11+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Domestic coal stocks at multi-year lows"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ADANIPOWER",
+   "relation": "discount_rate",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "P/E 21.7, EV/MCap 1.12, net debt only ~Rs 46k cr (net debt/EBITDA ~1.8x) so lower duration than renewables peers; growth capex of 24 GW pipeline (~Rs 1.5 lakh cr) funded mostly by internal accruals. +25bp on a ~10% WACC with equity duration ~10 => -2.5; PPAs partly index to cost of debt => -1.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "CFO: capex funded primarily through internal accruals; net debt Rs 45,846 cr; AA+ rating upgrade"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ADANIPOWER",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Total debt Rs 61,860 cr (net Rs 45,846 cr) of which ~50% floating (estimate); +25bp = Rs 77 cr/yr vs H1 finance costs Rs 1,662 cr and TTM PBT Rs 20.5k cr = -0.4% PAT; flows through to equity value only via cost of new project debt on the Rs 1.5 lakh cr programme: 40% debt-funded x 25bp x capitalised = ~-1.2% of mcap at EV/MCap 1.12.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Total debt Rs 61,860 cr (Sep-26) vs Rs 53,556 cr (Mar-26); finance cost H1 Rs 1,662 cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "ADANIPOWER",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.8,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Upgraded to AA+ by CARE and India Ratings in Q2 FY27, so spread beta is lower than other Adani names; +50bp on Rs 20k cr refinancing over 2 yrs = Rs 100 cr/yr = -0.5% PAT; plus access risk => -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Credit rating upgraded from AA to AA+ (CARE, India Ratings)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ADANIPOWER",
+   "relation": "fx_translation",
+   "w": -0.6,
+   "w_low": -2.2,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Imported coal costs in USD (rupee +3% => +Rs 85 cr/qtr cost, partially passed through) vs Bangladesh Godda 1,600 MW PPA billed in USD (~7% of revenue => +Rs 40 cr/qtr) and merchant uplift. Net unrecovered ~ -0.5% EBITDA x 1.12 x 0.4 persistence... => -0.6 incl. capex import content (BHEL local; boilers local). Pack empirical -2.17 (t -1.0) is consistent in sign and larger.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Bangladesh PPA tariff determined on international prices; imported-coal cost increase"
+    },
+    {
+     "source": "https://www.screener.in/company/ADANIPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical F_USDINR -2.17 per SSU, t -1.0"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "ADANIPOWER",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Counterparties are state discoms (Maharashtra, Haryana, Rajasthan, UP, Bihar, Uttarakhand) and Bangladesh; faster discom reform and tighter late-payment rules lift realisation and allow 62%-tied long-term PPAs for the 24 GW pipeline. +1 SSU => PPA win rate and collection improve; assumed +2% of mcap.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Long-term PPAs secured for 62% of 24 GW pipeline; 1,320 MW 25-yr PPA from Uttarakhand (Korba-2); 1,600 MW Raipur-III for Maharashtra discom"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "ADANIPOWER",
+   "relation": "substitution",
+   "w": -0.8,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Stronger RE/storage support erodes midday thermal PLF and shifts bids to FDRE; but India now plans >100 GW new thermal by 2032 (CEA Chair cited; mgmt) and energy-security policy favours coal baseload, so substitution risk is mostly in long-dated PPAs. -0.8 per +1 SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Mgmt: India needs >100 GW new thermal by 2032; CEA chairman statement on capacity beyond 97 GW target"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "ADANIPOWER",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Round-the-clock load from data centres is thermal-friendly (RTC PPAs); 1,600 MW Raipur-III is for a second Maharashtra RTC PPA. +1 SSU => +1 GW thermal PPA demand over 2 yrs ~ +Rs 3k cr NPV (0.8% mcap) x 1.12 x ... => +1.5 incl. sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+     "date": "2026-10-26",
+     "note": "Raipur expansion Phase III 1,600 MW to supply second long-term PPA to Maharashtra discom"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "ADANIPOWER",
+   "relation": "geopolitical_exposure",
+   "w": 0.5,
+   "w_low": -2.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Hormuz disruption pushes Asia to coal, lifts imported coal and merchant power prices, and raises energy-security priority of domestic coal baseload (positive for dispatch and PPA awards) but raises imported-fuel cost on Mundra-type plants (negative until pass-through). Net slightly positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Strait+of+Hormuz+LNG+India+power+coal+import+Middle+East+conflict+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Middle East conflict disrupting LNG/crude via Hormuz; Asia pivoting to coal (Wood Mackenzie 12 Oct, EnergyNow 3 Nov 2026 headlines)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+coal+stocks+critical+October+2026+imported+coal+Section+11+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Over half of coal plants at critically low stocks; captive plants ordered to maximise output from 1 Oct (Times of India 21 Oct, Reuters 28 Sep 2026 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ADANIPOWER",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.6,
+   "w_high": 3.2,
+   "lag": "0-3m",
+   "mechanism": "Beta ~1.0 (pack); FII 11.0%, DII 4.5%, retail holders 2.18 mn; +US$5bn quarterly inflow ~ +2% Nifty x beta 1.0 x 0.9 => +1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIPOWER/consolidated/",
+     "date": "2026-11-05",
+     "note": "Shareholding Sep-26: promoters 74.96%, FIIs 11.03%, DIIs 4.47%"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ADANIENT",
+   "dst": "ADANIPOWER",
+   "relation": "group_contagion",
+   "w": 0.3,
+   "w_low": 0.1,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Adani family holds 74.96%. Group sell-offs (Jan 2023, Nov 2024) and relief rallies (US case dismissed 10 Aug 2026) moved Adani Power along with the group, although its larger operating cash flow (P/E 22) makes it the least group-sensitive of the Adani utilities. Judgement estimate.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-11",
+     "note": "US criminal case against Gautam Adani dismissed 10-11 Aug 2026"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Adani Enterprises / promoter family",
+   "ticker": "ADANIENT",
+   "role": "parent",
+   "importance": "high",
+   "note": "Promoters 74.96%; fuel logistics, coal trading and port linkage (Adani Enterprises, APSEZ - model knowledge)"
+  },
+  {
+   "counterparty": "Coal India Ltd",
+   "ticker": "COALINDIA",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Domestic linkage coal; notified prices unchanged but quality issues in Q2"
+  },
+  {
+   "counterparty": "BHEL",
+   "ticker": "BHEL",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Four 2x800 MW ultra-supercritical orders reported 4 Nov 2026 (Rs 5-7k cr per Sahi; Bloomberg says US$3 bn - conflicting)"
+  },
+  {
+   "counterparty": "Adani Ports (Mundra, Dahej, Dhamra)",
+   "ticker": "ADANIPORTS",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Imported coal handling for Mundra"
+  },
+  {
+   "counterparty": "State discoms (MSEDCL, Haryana, Rajasthan, UP, Uttarakhand, Gujarat)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Long-term PPAs; receivables risk"
+  },
+  {
+   "counterparty": "Bangladesh (BPDB) via Godda plant",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Tariff linked to international fuel prices, USD billing"
+  },
+  {
+   "counterparty": "NTPC / Tata Power / JSW Energy",
+   "ticker": "NTPC",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Compete for long-term thermal PPAs and merchant power"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Korba Phase-II first 660 MW unit commercial operation (grid-synchronised; 'expected shortly'); second unit Q4 FY27",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": 0.3,
+   "impact_pct_high": 2.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf"
+  },
+  {
+   "date": "2027-04",
+   "event": "Mahan Phase-II 1,600 MW COD (targeted early FY28)",
+   "type": "capex",
+   "prob": 0.35,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.5,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 declared 23 Oct; estimate late Jan 2027); imported-coal cost lag (Gujarat indexation) hits Q3",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 6.0,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf"
+  },
+  {
+   "date": "2026-12",
+   "event": "BHEL orders formalised and further long-term PPAs signed (62% of 24 GW tied); at least one new >1 GW PPA/LoA",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.5,
+   "source": "https://news.google.com/rss/search?q=Adani+Power+BHEL+order+3+billion+supercritical+units+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "NCLT/CoC approval for GVK Energy (330 MW Alaknanda hydro) resolution plan and other CIRP acquisitions (3 GW inorganic in pipeline)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": 0.3,
+   "impact_pct_high": 1.5,
+   "source": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "Government extends Section 11 / imported-coal blending directions or new capacity addition target beyond 97 GW",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": -1.5,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=India+power+demand+coal+stocks+critical+October+2026+imported+coal+Section+11+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Renewed adverse US legal-regulatory action on Adani Group",
+   "type": "litigation",
+   "prob": 0.05,
+   "impact_pct_low": -18.0,
+   "impact_pct_high": -6.0,
+   "source": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): reported revenue Rs 19,439 cr (screener; Rs 19,951 cr incl. all items per call), EBITDA Rs 8,743 cr (reported, +46%) / Rs 6,321 cr continuing (+18.5%), PAT Rs 7,019 cr (+142%). H1 continuing EBITDA Rs 13,304 cr (+20%).",
+  "trend": "Volumes and prices both strong (demand +11.5%, short-term tariffs +33%), but imported-coal costs (+~50% landed) compress per-unit margin until pass-through lags clear (Q3). Reported PAT is inflated by Rs 2,422 cr one-time prior-period revenue and a net tax credit of Rs 231 cr after subsidiary mergers.",
+  "valuation": "P/E 21.7, P/B 5.1 (BV Rs 39.8), ROE 21%, ROCE 17% (screener; trailing numbers include one-time Gujarat revenue); mcap Rs 3.94 lakh cr; EV ~Rs 4.4 lakh cr. Elara (11 Oct) sees ~16% upside (headline).",
+  "recent_developments": [
+   "2026-08-10/11: US criminal case against Gautam Adani dismissed",
+   "2026-09-09: Assigned 2,500 MW RE contract (HDFC Sky headline)",
+   "2026-09-25: NCLT nod; scheme merging 10 wholly owned subsidiaries (incl. Vidarbha Industries Power) effective",
+   "2026-10-06: Signed 770 MW Bhutan hydro JV pact with Druk Green Power (49:51)",
+   "2026-10-14: 1,234 MW (call: 1,320 MW) LoA for 25-yr PPA from Uttarakhand Power Corp (Korba-2)",
+   "2026-10-23/26: Q2 results and analyst call; AA+ rating upgrade by CARE and India Ratings",
+   "2026-11-04: BHEL wins four 2x800 MW orders from Adani Power (Bloomberg/Sahi, figures conflict)"
+  ]
+ },
+ "key_risks": [
+  "Imported-coal cost pass-through lag and tariff disputes (Gujarat indexation, Bangladesh payment)",
+  "Discom receivables and PPA litigation (Gujarat energy-charge revisions are one-offs)",
+  "Execution of 24 GW pipeline (cost, BHEL timelines, fuel linkage) and capex-funded debt rising (debt +Rs 8.3k cr in H1)",
+  "Group governance and US legal overhang",
+  "Demand normalisation if monsoon recovers; new RE+storage substituting midday thermal"
+ ],
+ "upside_triggers": [
+  "Fast commissioning of Korba-II, Mahan-II, Raipur/Raigarh Phase-II",
+  "Long-term PPAs for remaining 38% of 24 GW at attractive tariffs",
+  "Further rating upgrades and de-risked governance",
+  "Government raising thermal capacity target above 97 GW; coal-shortage policy tailwinds"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.bseindia.com/stockinfo/AnnPdfOpen.aspx?Pname=d4ca5bf0-08eb-4662-bb1d-cc35b6b77f60.pdf",
+   "date": "2026-10-26",
+   "what": "Adani Power Q2 FY27 analyst call transcript (filed with BSE 30 Oct 2026)"
+  },
+  {
+   "url": "https://www.screener.in/company/ADANIPOWER/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "market_impact/data/packs/ADANIPOWER.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities and headlines pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Power+BHEL+order+3+billion+supercritical+units+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "BHEL order headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Power+Q2+FY27+results+capacity+MW+merchant+PLF+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 result headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-11",
+   "what": "US case dismissal headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India+power+demand+coal+stocks+critical+October+2026+imported+coal+Section+11+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "coal stock headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike headlines"
+  }
+ ]
+}

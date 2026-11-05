@@ -1,0 +1,494 @@
+{
+ "name": "Phoenix Mills Ltd.",
+ "industry": "I_REAL_ESTATE",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's leading mall owner-operator (Phoenix Marketcity in Mumbai/Pune/Bengaluru/Chennai, Palladium, Mall of Asia in Bengaluru, Citadel Indore, Lucknow and others), with offices, hotels (St. Regis Mumbai, Agra) and a small residential arm. Premium-skewed, annuity-led: operating margin 60%. Management guides 14-15% rental growth through FY28 (scanx 2026-11-04); H1 FY27 retail consumption +28% (Multibagg AI 2026-10-31); Q2 owner profit +7%. Stake in ISMDPL rose to 68.10% after NCLT approval (2026-10-28). Market cap Rs 75,534 cr, P/E 57.",
+ "revenue_mix": [
+  {
+   "segment": "Retail malls (rental, CAM)",
+   "share_pct": 78,
+   "geography": "India metros; ~Mumbai 50%, Bengaluru, Chennai, Pune (model estimate)"
+  },
+  {
+   "segment": "Commercial offices",
+   "share_pct": 10,
+   "geography": "Mumbai/Pune"
+  },
+  {
+   "segment": "Hospitality",
+   "share_pct": 8,
+   "geography": "Mumbai/Agra"
+  },
+  {
+   "segment": "Residential and other",
+   "share_pct": 4,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "PHOENIXLTD",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Retail malls ~70% of EBITDA (Phoenix Marketcity, Palladium, Mall of Asia, Citadel etc.). +5pp urban consumption -> mall tenant sales +5pp -> turnover-rent (~35% of rental) +1.75% plus faster minimum-guarantee resets and leasing -> rental +2.5% -> EBITDA +2.5% (high flow-through) x EV/MCap 1.1 x persistence 0.8 ~ +2.2, rounded to 2.0. H1 consumption already +28% (Multibagg AI 2026-10-31).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Phoenix+Mills+H1+consumption+rises+28%+Mall+of+Asia+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "Multibagg AI 2026-10-31: H1 FY27 retail consumption +28%, led by Mall of Asia (Bengaluru); Investing.com call 2026-11-01: retail growth strong"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Phoenix+Mills+Q2FY27+management+guides+14-15%+rental+growth+through+FY28+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "scanx 2026-11-04: management guides 14-15% rental growth through FY28"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "PHOENIXLTD",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Luxury/premium brands anchor Palladium and high-end malls; premium share of consumption grows faster than average; +1 SSU -> rental +3% via trading-density uplift => +3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Phoenix+Mills+H1+consumption+rises+28%+Mall+of+Asia+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "Multibagg AI 2026-10-31: H1 FY27 retail consumption +28%, led by Mall of Asia (Bengaluru); Investing.com call 2026-11-01: retail growth strong"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "PHOENIXLTD",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> discretionary retail +1.5pp, office absorption -> rental +1.5% => ~+1.2 net.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Phoenix+Mills+Q2FY27+management+guides+14-15%+rental+growth+through+FY28+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "scanx 2026-11-04: management guides 14-15% rental growth through FY28"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "PHOENIXLTD",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "+1 = broad GST cut on consumer items: tenants' sales volumes +1.5% -> turnover rent +0.5% -> value +0.5; plus sentiment => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PHOENIXLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 75,534 cr, P/E 57.3, P/B 8.3, ROCE 12.4%; TTM sales Rs 4,582 cr, op profit Rs 2,758 cr (60%), PAT Rs 1,673 cr; interest Rs 397 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PHOENIXLTD",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -5.0,
+   "w_high": -1.2,
+   "lag": "0-3m",
+   "mechanism": "P/E 57 and debt-funded mall capex (interest Rs 397 cr TTM). +25 bp: +Rs 15 cr interest on ~Rs 6k cr net debt (model estimate) = -1% PAT; multiple compression (long-duration annuity) -2.0; residential tiny. Total ~ -3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "India Today 2026-09-21: analysts see up to 50 bp more by December; The Hindu 2026-09-18: two hikes possible in CY2026 (pre-decision views)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "PHOENIXLTD",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Pure cap-rate play (~85% annuity): +25 bp G-sec -> +12 bp on ~7.5% yield -> -1.6% asset value, plus growth-multiple effect on a 57x P/E -> -2.5. Overlaps with repo (parallel path flagged).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    },
+    {
+     "source": "https://www.screener.in/company/PHOENIXLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 75,534 cr, P/E 57.3, P/B 8.3, ROCE 12.4%; TTM sales Rs 4,582 cr, op profit Rs 2,758 cr (60%), PAT Rs 1,673 cr; interest Rs 397 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "PHOENIXLTD",
+   "relation": "macro_transmission",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.4-1.5 (pack); stock +12% 1m, BofA 'high quality compounder' (CNBC TV18 2026-09-17); +US$5bn -> +1.5% x 1.5 => +2.2, rounded +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PHOENIXLTD.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "PHOENIXLTD",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Quality-compounder status attracts domestic funds; +10% => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PHOENIXLTD.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_TRAVEL_DEMAND",
+   "dst": "PHOENIXLTD",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Hospitality (St. Regis Mumbai, Agra Courtyard) ~8% of EBITDA; +10% travel demand -> RevPAR +6% => +0.5. Multibagg 2026-10-31: St. Regis grows, Agra EBITDA falls.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Phoenix+Mills+hotels+St+Regis+Agra+EBITDA+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "St. Regis grows as Agra EBITDA falls (Multibagg AI 2026-10-31)"
+    }
+   ]
+  },
+  {
+   "src": "T_QUICK_COMMERCE",
+   "dst": "PHOENIXLTD",
+   "relation": "substitution",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "E-commerce/quick-commerce shifts some low-ticket purchases from malls; premium experiential malls less affected, H1 consumption +28% shows resilience => -0.4, range crosses zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Phoenix+Mills+H1+consumption+rises+28%+Mall+of+Asia+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "Multibagg AI 2026-10-31: H1 FY27 retail consumption +28%, led by Mall of Asia (Bengaluru); Investing.com call 2026-11-01: retail growth strong"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "PHOENIXLTD",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Residential (Kolkata/ Bengaluru small share, ~5% of value) => +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PHOENIXLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 75,534 cr, P/E 57.3, P/B 8.3, ROCE 12.4%; TTM sales Rs 4,582 cr, op profit Rs 2,758 cr (60%), PAT Rs 1,673 cr; interest Rs 397 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "PHOENIXLTD",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Commercial offices (Phoenix Millennium, Asia Towers) tenant base IT/GCC; +5% => +0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PHOENIXLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 75,534 cr, P/E 57.3, P/B 8.3, ROCE 12.4%; TTM sales Rs 4,582 cr, op profit Rs 2,758 cr (60%), PAT Rs 1,673 cr; interest Rs 397 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "PHOENIXLTD",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Capex-phase cost for new malls/offices (Rs ~3-4k cr annual capex, model estimate); steel 8% of capex; +7% -> 0.56% of capex, hits returns on new projects => -0.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PHOENIXLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 75,534 cr, P/E 57.3, P/B 8.3, ROCE 12.4%; TTM sales Rs 4,582 cr, op profit Rs 2,758 cr (60%), PAT Rs 1,673 cr; interest Rs 397 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "PHOENIXLTD",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Mall operations and hotel staff cost; pass-through partly via CAM; => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PHOENIXLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 75,534 cr, P/E 57.3, P/B 8.3, ROCE 12.4%; TTM sales Rs 4,582 cr, op profit Rs 2,758 cr (60%), PAT Rs 1,673 cr; interest Rs 397 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "PHOENIXLTD",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI squeezes discretionary spend (food-heavy basket); consumption +28% suggests strong cushion => -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "PHOENIXLTD",
+   "relation": "policy_effect",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Equity-wealth effect on premium spending and the REIT/asset-sale optionality => -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PHOENIXLTD/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 75,534 cr, P/E 57.3, P/B 8.3, ROCE 12.4%; TTM sales Rs 4,582 cr, op profit Rs 2,758 cr (60%), PAT Rs 1,673 cr; interest Rs 397 cr"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Retail tenants (luxury, fashion, F&B, cinema)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "tenant sales drive turnover rent"
+  },
+  {
+   "counterparty": "Office tenants",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "IT/GCC/BFSI"
+  },
+  {
+   "counterparty": "Banks (term loans) and CPPIB/ADIA co-investors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "project funding and platform partners (model knowledge)"
+  },
+  {
+   "counterparty": "Other mall/office owners (DLF malls, Prestige, Oberoi Mall)",
+   "ticker": "DLF",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "premium mall competition"
+  },
+  {
+   "counterparty": "E-commerce / quick commerce",
+   "ticker": "ETERNAL",
+   "role": "competitor",
+   "importance": "low",
+   "note": "channel substitution"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-06",
+   "event": "BofA Property Week virtual conference participation (scanx 2026-11-02)",
+   "type": "other",
+   "prob": 1.0,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.5,
+   "source": "https://news.google.com/rss/search?q=Phoenix+Mills+Q2FY27+management+guides+14-15%+rental+growth+through+FY28+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11/2026-12",
+   "event": "Final dividend Rs 2.50/share for FY26 recommended (scanx 2026-11-01): record/payment date; mechanical price adjustment ~0.1%",
+   "type": "corporate_action",
+   "prob": 0.9,
+   "impact_pct_low": -0.2,
+   "impact_pct_high": 0.2,
+   "source": "https://news.google.com/rss/search?q=Phoenix+Mills+Q2FY27+management+guides+14-15%+rental+growth+through+FY28+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI December MPC (sensitivity only)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": -1.2,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12/2027-03",
+   "event": "Festive/Diwali and holiday consumption datapoints; mall consumption growth vs +28% H1",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Phoenix+Mills+H1+consumption+rises+28%+Mall+of+Asia+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (date model-estimated; Q2 reported ~2026-10-30)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Phoenix+Mills+Q2FY27+management+guides+14-15%+rental+growth+through+FY28+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "New mall openings/Phase expansions (Mall of Asia stabilisation, Bangalore) and ISMDPL consolidation effects",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Phoenix+Mills+stake+ISMDPL+68.10%+NCLT+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 1,153 cr, op profit Rs 710 cr (62%), PAT Rs 427 cr; owner profit +7%; H1 consumption +28%",
+  "trend": "Steady 10-15% rental growth with premium/new-mall tailwind; guidance 14-15% rental growth through FY28.",
+  "valuation": "P/E 57.3, P/B 8.3, ROE 11%, div yield 0.12%; 12m +19.4%, 1m +12%, near 52w high (2,170); 1y vol 27%.",
+  "recent_developments": [
+   "2026-11-04 mgmt guides 14-15% rental growth through FY28",
+   "2026-11-02 Motilal TP 2,280; Emkay TP 2,300",
+   "2026-11-01 final dividend Rs 2.50 recommended",
+   "2026-10-31 H1 consumption +28%",
+   "2026-10-28 ISMDPL stake 68.10%",
+   "2026-09-17 BofA 'high quality compounder' 24% upside; Nifty Realty +2%"
+  ]
+ },
+ "key_risks": [
+  "P/E 57 vulnerable to higher yields and tightening",
+  "Consumption slowdown or e-commerce shift",
+  "New-mall ramp-up delays; debt-funded capex",
+  "Hospitality weakness (Agra)",
+  "Promoter/partner structure changes"
+ ],
+ "upside_triggers": [
+  "Rental growth sustained at 14-15%",
+  "RBI pause and falling yields",
+  "Mall of Asia stabilisation",
+  "REIT-style monetisation or partner deals"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Phoenix+Mills+Q2FY27+management+guides+14-15%+rental+growth+through+FY28+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "rental growth guidance"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Phoenix+Mills+H1+consumption+rises+28%+Mall+of+Asia+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-31",
+   "what": "H1 consumption growth"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Phoenix+Mills+stake+ISMDPL+68.10%+NCLT+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "ISMDPL stake"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "https://www.screener.in/company/PHOENIXLTD/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  }
+ ],
+ "ticker": "PHOENIXLTD",
+ "as_of": "2026-11-05"
+}

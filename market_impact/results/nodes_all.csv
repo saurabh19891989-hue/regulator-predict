@@ -443,6 +443,8 @@ NEW_UPI_MDR,NEW,UPI merchant discount rate / incentive policy,+1 = MDR or take-r
 NEW_BANK_INFRA_LENDING_COMPETITION,NEW,Bank competition in power/infrastructure lending,+1 = banks take ~5pp of power/infra lending share or compress spreads ~25bp,,,,FACTOR,PFC
 NEW_AGROCHEM_PRICES_GLOBAL,NEW,Global agrochemical prices and channel destocking,+10% global agchem active prices / volumes,,,,FACTOR,PIIND
 NEW_WC_COMPETITIVE_INTENSITY,NEW,Competitive intensity in Indian wires & cables,+1 = new entrants/capacity cause ~100 bp sustained W&C margin erosion,,,,FACTOR,POLYCAB
+NEW_CERC_ROE,NEW,CERC allowed regulated ROE for transmission,+50 bp allowed ROE,,,,POLICY,POWERGRID
+NEW_TBCB_BID_DISCOUNTS,NEW,Winning-bid discount intensity in transmission TBCB auctions,+1 = 10% lower winning equity IRR vs base,,,,FACTOR,POWERGRID
 NEW_SOLAR_CELL_MODULE_PRICE,NEW,Indian solar module / cell realisations,+10% Indian module/cell realisations,,,,FACTOR,PREMIERENE
 NEW_STATE_LIQUOR_POLICY,NEW,State excise / liquor pricing policy (key states),"+1 = adverse change in excise duty or pricing in UP, Rajasthan, Karnataka, Maharashtra",,,,POLICY,RADICO
 NEW_REFRIGERANT_PRICES,NEW,Global refrigerant gas prices,+10% HFC/HFO refrigerant prices,,,,FACTOR,SRF

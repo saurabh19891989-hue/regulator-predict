@@ -1,0 +1,477 @@
+{
+ "ticker": "VAML",
+ "name": "Vedanta Aluminium Metal Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_NONFERROUS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest primary aluminium producer (Jharsuguda, BALCO Korba) with integrated bauxite-alumina (Lanjigarh), captive coal mines and power; ~2.6 Mtpa smelting. Demerged from Vedanta Ltd and listed 2026-06-15 (1:1 with Vedanta shareholders; promoter 56.38%, fully encumbered with GLAS Agency). Q2 FY27: aluminium output 649 kt (record, +5%), alumina +37%, revenue ~Rs22,066-22,324 cr (+41%), EBITDA ~Rs10,100-10,190 cr (45% margin, +83%), PAT Rs6,187 cr (2x), net debt/EBITDA 0.7x. Value-added products ~two-thirds of sales. Mcap Rs1.49 lakh cr, P/E 9.9.",
+ "revenue_mix": [
+  {
+   "segment": "primary aluminium and value-added products (billets, wire rod, foundry alloy, rolled)",
+   "share_pct": 88,
+   "geography": "India ~60% / exports ~40% (model estimate)"
+  },
+  {
+   "segment": "alumina, power, other",
+   "share_pct": 12,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COAL_INDIA",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 18
+  },
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 20
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "VAML",
+   "relation": "output_price",
+   "w": 10.0,
+   "w_low": 6.0,
+   "w_high": 14.0,
+   "lag": "0-3m",
+   "mechanism": "Dominant driver. Output 649 kt/quarter (2.6 Mtpa); +10% LME (~US$320/t) x 2.6 Mt = US$830 mn = Rs7,860 cr (at 94.5) less ~15% hedged/lagged = ~Rs6,700 cr = +17% of annualised Q2 EBITDA (~Rs40,400 cr). EV/MCap 1.19 (mcap Rs1,49,123 cr + net debt ~Rs28,000 cr = 0.7x EBITDA); persistence 0.5 => +17 x1.19 x0.5 = +10. Empirical: no VAML history (listed 2026-06-15); VEDL's pre-demerger +7.22 (t=3.2) is consistent in sign/size. Aluminium is -19.6% since 1 June (Q2 EBITDA margin 45% vs ~30% a year ago) - the Q2 print was struck at higher prices.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.alcircle.com/news/vedanta-q2-fy27-profit-jumps-to-62-02b-aluminium-ebitda-soars-83-with-record-649kt-output-121749",
+     "date": "2026-10-28",
+     "note": "Q2 EBITDA +83% on record 649 kt output and higher LME"
+    },
+    {
+     "source": "https://www.uniindia.com/business-wire-india/vedanta-aluminiums-q2fy27-profit-doubles-to-inr-6187-cr-ebitda-rises-83-yoy-102520/233103",
+     "date": "2026-11-02",
+     "note": "Q2 revenue Rs22,066 cr, EBITDA Rs10,192 cr, PAT Rs6,187 cr"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=LME+aluminium+price+cools+nearly+1%25+on+October+29&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "LME aluminium cash ~US$3,000-3,130 in Oct; stocks 236-241 kt"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "VAML",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.6,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Coal for alumina refining (Lanjigarh), captive power (BALCO/Jharsuguda, related-party) and calcination. Coal+power ~40% of costs (annual costs ~Rs48,800 cr => ~Rs19,500 cr); captive/linkage mines cover ~60% (Jamkhani, Radhikapur West, Kuraloi, Chotia - model knowledge) so ~40% exposed = Rs7,800 cr; +10% = Rs780 cr = -1.9% EBITDA x1.19 x0.5 = -1.2. Coal e-auction premia ~94% and 74 plants at <=7 days stock make the shock live; government emergency order for captive plants (26-28 Sep) adds diversion risk.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+coal+stocks+power+plants+critical+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "Coal crunch, e-auction premium ~94%"
+    },
+    {
+     "source": "https://www.alcircle.com/news/vedanta-q2-fy27-profit-jumps-to-62-02b-aluminium-ebitda-soars-83-with-record-649kt-output-121749",
+     "date": "2026-10-28",
+     "note": "Alumina production +37% y/y (higher coal use)"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "VAML",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Smelting uses ~14 MWh/t => ~36 TWh/yr; mostly captive/group-captive coal plants, ~20% marginal exposure to market or regulated tariffs at ~Rs6/unit = Rs4,400 cr; +15% = Rs660 cr = -1.6% EBITDA x1.19 x0.4 = -0.8. IEX at Rs20 ceiling on 19 Sep and the El Nino summer-2027 risk (event odds 0.4) give a fat left tail (curtailment of potlines).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IEX+power+prices+hit+Rs+20+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "note": "IEX Rs20/unit ceiling; Q2 prices ~+46% y/y"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "VAML",
+   "relation": "fx_translation",
+   "w": 3.0,
+   "w_low": 1.5,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "Revenue LME-USD-linked (~Rs89,000 cr annualised); USD-linked costs (imported coal/alumina/CP coke/caustic, freight) ~25% of costs = Rs12,000 cr. +3% => +Rs2,670 cr revenue - Rs370 cr costs = +Rs2,300 cr = +5.7% EBITDA x1.19 x0.5 = +3.4; trimmed to 3.0 for hedges and USD debt (US$ bond tap). Domestic aluminium prices also price off LME x INR + duty.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.alcircle.com/news/vedanta-q2-fy27-profit-jumps-to-62-02b-aluminium-ebitda-soars-83-with-record-649kt-output-121749",
+     "date": "2026-10-28",
+     "note": "Revenue/EBITDA linked to LME; value-added products 2/3 of sales (SMEStreet headline 2026-10-09)"
+    },
+    {
+     "source": "https://scanx.trade/stock-market-news/companies/vedanta-discloses-share-encumbrance-400m-bond-tap/51352108",
+     "date": "2026-09-16",
+     "note": "US$400m bond tap disclosure"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "VAML",
+   "relation": "input_cost",
+   "w": -1.1,
+   "w_low": -2.2,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Carbon anodes (calcined petroleum coke, coal-tar pitch), caustic soda and aluminium fluoride are ~20% of cash costs; +10% feedstock => +2% of costs = Rs976 cr = -2.4% EBITDA x1.19 x0.4 = -1.1. Brent ~US$95 and refinery cracks +15% since June lift pet-coke/pitch prices.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.alcircle.com/news/vedanta-q2-fy27-profit-jumps-to-62-02b-aluminium-ebitda-soars-83-with-record-649kt-output-121749",
+     "date": "2026-10-28",
+     "note": "Cost lines up with output growth; Middle East conflict context"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "VAML",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Net debt ~Rs28,000 cr (0.7x EBITDA, down Rs3,090 cr q/q) and interest Rs911 cr/q; but 56.38% of VAML is encumbered with GLAS for the promoter's dollar financings, so spread widening feeds group-level forced-sale risk. +50 bp on Rs10,000 cr floating = Rs50 cr is trivial; the weight is the pledge channel.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://scanx.trade/stock-market-news/companies/vedanta-discloses-share-encumbrance-400m-bond-tap/51352108",
+     "date": "2026-09-16",
+     "note": "VAML encumbrance (56.38%) tied to US$400m bond tap"
+    },
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/vedanta-aluminium-encumbrance-july-2026-cmu88iceh000e34pio2f4rqbb",
+     "date": "2026-07",
+     "note": "56.38% of VAML shares tagged encumbered"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "VAML",
+   "relation": "discount_rate",
+   "w": -0.7,
+   "w_low": -1.8,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "P/E 9.9 on trailing; cyclical with dividend yield 2.1%; +25 bp cost of equity => -0.7; no empirical data (listed June 2026).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/VAML/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 9.94, dividend yield 2.09%, mcap Rs1,49,123 cr"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "VAML",
+   "relation": "regulatory_risk",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Bauxite pricing and royalty: Odisha HC dismissed VAML's plea for OMC bauxite at the historical Rs1,000/t (booked at Rs3,000/t since April 2026 vs market ~Rs3,800/t). CLSA: one-time up to US$290 mn pre-tax / US$195 mn post-tax (1.2% of mcap) and +US$10/t aluminium cost (~0.5%) near-term; OMC reportedly demands Rs5,600 cr by 31 Oct (SAHI; CLSA's historical dues ~Rs2,500 cr pre-interest - unreconciled). Further royalty/auction premia on Sijimali and other blocks are the structural leg: -1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.alcircle.com/news/vedanta-aluminium-faces-10-tonne-cost-rise-after-odisha-hc-ruling-clsa-121431",
+     "date": "2026-10-05",
+     "note": "CLSA: ~US$10/t cost rise, one-time hit up to US$290 mn after Odisha HC order"
+    },
+    {
+     "source": "https://www.businesstoday.in/markets/stocks/story/vedanta-aluminium-shares-clsa-sees-muted-medium-term-impact-from-odisha-hc-order-559443-2026-10-05",
+     "date": "2026-10-05",
+     "note": "CLSA keeps Outperform, TP Rs540; muted medium-term impact"
+    },
+    {
+     "source": "https://www.sahi.com/news/vedanta-aluminium-faces-5-600-crore-claim-from-odisha-mining-following-high-court-dismissal",
+     "date": "2026-10",
+     "note": "OMC demand Rs5,600 cr with 31 Oct deadline (unreconciled)"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "VAML",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Aluminium demand from EVs, solar frames, grid cables; value-added products (VAP) now two-thirds of sales supports premiums. +1 treated as +1.5% structural Al demand => +1.0 via multiple. Overlaps with price edge - kept small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Vedanta+Aluminium+Now+Sells+Two-Thirds+of+Metal+as+Value-Added+Products&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "SMEStreet headline: two-thirds of metal sold as value-added products"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "VAML",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Anti-dumping probes on Chinese flat-rolled and extruded aluminium products would protect VAP premia; broad probe wave Sep-Oct 2026 (chemicals, APIs, steel). Small share of EBITDA: +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=DGTR+anti-dumping+probe+aluminium+China+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10",
+     "note": "DGTR probe wave (event catalogue EV_INDIA_ANTIDUMPING_WAVE_SEP_OCT26)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "VAML",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "No empirical history (listed 2026-06-15; -20.6% in 3 months vs aluminium -4.9%). Beta to metals/risk assumed ~1.2 like VEDL: -0.8 per +5 VIX points.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/VAML/consolidated/",
+     "date": "2026-11-05",
+     "note": "3m -20.6%, 1m -4.8%, 1y vol 36%"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "VEDL",
+   "dst": "VAML",
+   "relation": "group_contagion",
+   "w": 0.35,
+   "w_low": 0.15,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Same promoter (Vedanta Resources/Twin Star), identical shareholder base from the 1:1 demerger and shared GLAS encumbrance structure (54.72% VEDL / 56.38% VAML). Weekly regression of VAML on VEDL since listing: beta 0.46, corr 0.58 (20 weeks only); VAML on HINDZINC 0.56 (corr 0.76). Shrunk for the market component: 0.35.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://scanx.trade/stock-market-news/companies/vedanta-discloses-share-encumbrance-400m-bond-tap/51352108",
+     "date": "2026-09-16",
+     "note": "Promoter-level encumbrance and bond financing disclosure"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Odisha Mining Corporation (OMC)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Bauxite at Rs3,000/t booked vs Rs1,000 historical; Odisha HC adverse order; Sijimali captive mine to follow"
+  },
+  {
+   "counterparty": "Coal India / captive coal mines",
+   "ticker": "COALINDIA",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Linkage/e-auction coal; e-auction premia ~94%"
+  },
+  {
+   "counterparty": "Vedanta Power / captive power plants (group)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Smelters' power; related-party PPAs (structure post-demerger not verified)"
+  },
+  {
+   "counterparty": "Hindalco Industries",
+   "ticker": "HINDALCO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Largest domestic competitor in primary/rolled aluminium"
+  },
+  {
+   "counterparty": "NALCO",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Domestic primary producer (not in the Nifty 200 universe)"
+  },
+  {
+   "counterparty": "Vedanta Ltd.",
+   "ticker": "VEDL",
+   "role": "parent",
+   "importance": "medium",
+   "note": "Former parent; same promoter; brand and services ties"
+  },
+  {
+   "counterparty": "Auto, power-cable, packaging, construction customers; LME-linked traders",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "No customer >25% disclosed"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (LME average lower than Q2; EBITDA margin from 45% base)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.alcircle.com/news/vedanta-q2-fy27-profit-jumps-to-62-02b-aluminium-ebitda-soars-83-with-record-649kt-output-121749"
+  },
+  {
+   "date": "2026-12",
+   "event": "Odisha High Court order follow-up: appeal/SLP, OMC payment of back bauxite dues (OMC demand Rs5,600 cr; CLSA Rs2,500 cr + interest)",
+   "type": "litigation",
+   "prob": 0.7,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 0.5,
+   "source": "https://www.sahi.com/news/vedanta-aluminium-faces-5-600-crore-claim-from-odisha-mining-following-high-court-dismissal"
+  },
+  {
+   "date": "2026-12-16",
+   "event": "India-EU FTA signing with CBAM annex relevant to aluminium exporters",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=India+EU+FTA+CBAM+aluminium+annex&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget: customs duty on aluminium/scrap, coal and critical-mineral levies",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Union+Budget+2027+aluminium+customs+duty&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Sijimali bauxite mine and alumina refinery expansion progress (cuts exposure to OMC pricing)",
+   "type": "capex",
+   "prob": 0.4,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.businesstoday.in/markets/stocks/story/vedanta-aluminium-shares-clsa-sees-muted-medium-term-impact-from-odisha-hc-order-559443-2026-10-05"
+  },
+  {
+   "date": "2027-04",
+   "event": "Summer 2027 power shortfall under El Nino (potline curtailment risk)",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=India+summer+2027+power+shortage+El+Nino+IEX&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "GLAS Agency encumbrance changes / promoter-level refinancing news (56.38%)",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": 4.0,
+   "source": "https://scanx.trade/stock-market-news/companies/vedanta-discloses-share-encumbrance-400m-bond-tap/51352108"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported ~2026-10-28: revenue Rs22,066 cr (press) / Rs22,324 cr (screener), EBITDA Rs10,192 cr / Rs10,113 cr (45%), PAT Rs6,187 cr (+105%), aluminium 649 kt, net debt/EBITDA 0.7x (from 0.9x; net debt -Rs3,090 cr q/q). Pre-listing quarters are pro-forma; screener EPS rows for early periods are unreliable.",
+  "trend": "Record production; OPM 35% (Sep 2025) -> 44% (Mar 2026) -> 48% (Jun 2026) -> 45% (Sep 2026); but LME aluminium is -19.6% since 1 June and Nifty Metal fell ~7% in October, so Q3 margins likely compress.",
+  "valuation": "Price Rs381 (52w 334-538; -20.6% in 3 months); mcap Rs1.49 lakh cr; P/E 9.9; P/B 6.5 (screener); dividend yield 2.1%. Targets: Emkay Rs550, ICICI Securities Rs490, CLSA Rs540 (Outperform).",
+  "recent_developments": [
+   "2026-10-28/29: Q2 results; profit doubles; shares touch Rs364.7 intraday (Equitypandit)",
+   "2026-10-29: ICICI Securities Buy TP Rs490; Emkay Buy TP Rs550",
+   "2026-10-23: Nifty Metal slides >3%; Vedanta Aluminium among laggards",
+   "2026-10-05: Odisha HC order on OMC bauxite price; CLSA sees muted medium-term impact",
+   "2026-10-03/06: record Q2 aluminium production of 649 kt",
+   "2026-09-19: GLAS claims 56.38% of VAML shares (encumbrance)",
+   "2026-09-22: stock +4% days after hitting 52-week low"
+  ]
+ },
+ "key_risks": [
+  "LME aluminium extends its slide (-20% since June); each -10% ~ -17% EBITDA",
+  "OMC bauxite dues and higher future bauxite cost; ruling/appeal outcome",
+  "Power and coal crunch, e-auction premia, grid curtailment in El Nino summer",
+  "Promoter share encumbrance (56.38%) and group credit; forced selling",
+  "Short listing history: only 20 weeks of price data, weights are fundamentals-only",
+  "China aluminium overcapacity and exports; US Section 232 tariffs on aluminium"
+ ],
+ "upside_triggers": [
+  "LME rebound on China stimulus (Dec CEWC) or Fed pause",
+  "Sijimali mine and refinery lowering bauxite cost",
+  "Value-added mix and domestic anti-dumping protection",
+  "Debt reduction (ND/EBITDA 0.7x falling) and higher dividends"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.alcircle.com/news/vedanta-q2-fy27-profit-jumps-to-62-02b-aluminium-ebitda-soars-83-with-record-649kt-output-121749",
+   "date": "2026-10-28",
+   "what": "AL Circle: Q2 FY27 profit, EBITDA +83%, 649 kt"
+  },
+  {
+   "url": "https://www.uniindia.com/business-wire-india/vedanta-aluminiums-q2fy27-profit-doubles-to-inr-6187-cr-ebitda-rises-83-yoy-102520/233103",
+   "date": "2026-11-02",
+   "what": "UNI/Business Wire: Q2 numbers"
+  },
+  {
+   "url": "https://www.alcircle.com/news/vedanta-aluminium-faces-10-tonne-cost-rise-after-odisha-hc-ruling-clsa-121431",
+   "date": "2026-10-05",
+   "what": "AL Circle/CLSA: Odisha HC order, US$10/t"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/vedanta-aluminium-shares-clsa-sees-muted-medium-term-impact-from-odisha-hc-order-559443-2026-10-05",
+   "date": "2026-10-05",
+   "what": "Business Today: CLSA muted medium-term impact"
+  },
+  {
+   "url": "https://www.sahi.com/news/vedanta-aluminium-faces-5-600-crore-claim-from-odisha-mining-following-high-court-dismissal",
+   "date": "2026-10",
+   "what": "SAHI: OMC Rs5,600 cr claim"
+  },
+  {
+   "url": "https://scanx.trade/stock-market-news/companies/vedanta-discloses-share-encumbrance-400m-bond-tap/51352108",
+   "date": "2026-09-16",
+   "what": "Scanx: encumbrance and bond tap"
+  },
+  {
+   "url": "https://www.screener.in/company/VAML/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals (evidence pack); no empirical sensitivities (new listing)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=LME+aluminium+price+cools+nearly+1%25+on+October+29&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "LME aluminium prices and stocks"
+  }
+ ]
+}

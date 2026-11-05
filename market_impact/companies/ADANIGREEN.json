@@ -1,0 +1,519 @@
+{
+ "ticker": "ADANIGREEN",
+ "name": "Adani Green Energy Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_RENEWABLES",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest renewable developer: 20,763 MW operational (H1 FY27, +24% YoY; solar, wind, hybrid), 6.6 GWh BESS, Khavda (Gujarat) world's largest single-location RE site, targeting 50 GW by FY30 under a Rs 2.4 lakh cr capex plan. Almost all capacity is on 25-year fixed-tariff PPAs (SECI, NTPC, discoms, private offtakers). Q2 FY27: revenue from power supply Rs 4,019 cr (+45%), EBITDA from power supply Rs 3,835 cr (92% margin), PAT Rs 747 cr; H1 energy sold 25.7 bn units (+32%). Net debt Rs 102,973 cr (5.6x run-rate EBITDA), avg cost 8.9%, 72% fixed. Stock Rs 1,414, mcap Rs 2.33 lakh cr, P/E 119; promoters 62.4%. Khavda evacuation delays are curtailing output.",
+ "revenue_mix": [
+  {
+   "segment": "Solar (14,550 MW; 55% of H1 energy sold, proxy for revenue)",
+   "share_pct": 55,
+   "geography": "India: Khavda, Rajasthan, TN, AP etc. (12 states)"
+  },
+  {
+   "segment": "Solar-wind hybrid (3,266 MW; 25% of H1 energy)",
+   "share_pct": 25,
+   "geography": "India: Khavda, Rajasthan"
+  },
+  {
+   "segment": "Wind (2,947 MW; 20% of H1 energy)",
+   "share_pct": 20,
+   "geography": "India: Khavda, Mundra, Tamil Nadu, Gujarat"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "O&M, employee, G&A (opex is ~10% of revenue)",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "Interest",
+   "share_of_costs_pct": 50
+  },
+  {
+   "input": "Depreciation",
+   "share_of_costs_pct": 28
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ADANIGREEN",
+   "relation": "discount_rate",
+   "w": -3.5,
+   "w_low": -6.5,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "Longest-duration name in the batch: P/E 119, P/B 10.6, EV ~Rs 3.36 lakh cr (mcap 2.33 + net debt 1.03 lakh cr, Sep-26) so EV/MCap 1.44; cash flows are 25-yr fixed-tariff PPAs, hence terminal-value dominated. +25bp on ~9.5% WACC with equity duration ~20 => ~-5%; 28% floating debt and PPA fixed tariffs offset nothing on valuation but cap the earnings effect => -3.5. Pack: no significant US-10y beta (Fed funds -0.93, t -0.3).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIGREEN/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,33,075 cr, P/E 119, BV Rs 131"
+    },
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/result-presentation-dynamic/agel----earnings-presentation---q2fy27_vf.pdf",
+     "date": "2026-10-22",
+     "note": "Net debt Rs 102,973 cr (operational 78,656 + under-construction 24,317); net debt/run-rate EBITDA 5.6x"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ADANIGREEN",
+   "relation": "funding_cost",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Earnings channel only. Mgmt (22 Oct): 72-73% of project loans are fixed-rate for 3-5 yrs; avg cost 8.9%. Floating ~28% x Rs 1.03 lakh cr = Rs 29k cr x 25bp = Rs 72 cr/yr vs TTM PAT Rs 2,249 cr = -3.2% PAT; capitalised to equity value via cash profit ~Rs 4.2k cr H1 => ~-0.7% of mcap; x1.44 EV/MCap persistence 1.0 => ~-1.0. Mgmt expects rating migration (BBB- to AA on operation) to cut spreads by ~50bp per notch, offsetting.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+     "date": "2026-10-22",
+     "note": "Khanna: 72% of project loans fixed 3-5 yrs; interest cost 8.9% vs 11.1% in 2019; AGE23L now AAA at 8.4%"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "ADANIGREEN",
+   "relation": "funding_cost",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Capex programme Rs 2.4 lakh cr to FY30 with net debt up Rs 11.7k cr in H1 alone (91,252 -> 102,973); refinancing of bridge/construction debt into bonds is continuous. +50bp on ~Rs 35k cr refinanced over 2 yrs = Rs 175 cr/yr vs cash profit ~Rs 8k cr/yr (-2.2%) plus access risk for group credits => -2.5 with persistence 0.5, EV/MCap 1.44.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/result-presentation-dynamic/agel----earnings-presentation---q2fy27_vf.pdf",
+     "date": "2026-10-22",
+     "note": "Net debt Rs 91,252 cr (Mar-26) -> Rs 102,973 cr (Sep-26)"
+    },
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+     "date": "2026-10-22",
+     "note": "Capex programme Rs 2.4 lakh cr through FY30"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "ADANIGREEN",
+   "relation": "policy_effect",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 11.0,
+   "lag": "3-12m",
+   "mechanism": "Operating 20.8 GW heading to 50 GW by FY30; Khavda curtailment cost ~Rs 300-700 cr EBITDA in H1 (EBITDA 8,276 vs ~9,000 without curtailment, call). Stronger support (PM-DHARA corridors, ISTS waiver, BESS VGF, take-or-pay protection) shortens the curtailment window and de-risks the 4.5-5 GW FY27 commissioning target. Removing H1 curtailment loss (Rs ~720 cr/6m = ~Rs 1,400 cr/yr, ~12% of TTM EBITDA) x 1.44 x persistence 0.4 => ~+7; set +6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+     "date": "2026-10-22",
+     "note": "H1 EBITDA Rs 8,276 cr; ~Rs 9,000 cr without curtailment; Phase-3 evacuation now expected next quarter"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=PM-DHARA+scheme+Rs+1.86+lakh+crore+power+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "note": "Cabinet approved Rs 1.86 lakh crore PM-DHARA green energy transmission scheme on 30 Sep 2026 (DD India, ThePrint, Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "ADANIGREEN",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.5,
+   "lag": "3-12m",
+   "mechanism": "Theme drives PPA awards (SECI, FDRE, BESS, PSP) and valuation premium; AGEL has 5+ GW PSP sites and 10+ GWh BESS target FY27. +1 SSU = +10% PPA award flow assumed; growth optionality worth ~3% of mcap at 60% realisation, x EV/MCap 1.44 => ~+4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+     "date": "2026-10-22",
+     "note": "BESS 6.6 GWh installed (>50% of India's operational BESS), >10 GWh target this year; PSP Chitravathi 500 MW by year-end"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "ADANIGREEN",
+   "relation": "demand_driver",
+   "w": 2.8,
+   "w_low": 0.8,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "Mgmt cites AI/data-centre/hyperscaler demand for firm renewables and C&I contracts (AdaniConneX JV in group). +1 SSU raises share of C&I PPAs at higher tariffs (13-14% ROE target). Assumed +5% EBITDA growth runway over 3 yrs => ~+2.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+     "date": "2026-10-22",
+     "note": "Khanna: demand from AI, data centers, hyperscalers and C&I customers; ROE threshold 13-14% with AA+ counterparties"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "ADANIGREEN",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Almost all 20.8 GW is on 25-yr fixed-tariff, take-or-pay PPAs (curtailment compensated for PPA counterparties), so demand only matters via curtailment (less when demand is high: grid absorbs more) and merchant slice (4.7 GW tied-up, 974 MW converting; merchant until PPA starts). Peak demand 270 GW and +11% growth already in numbers; +3pp => curtailment -0.5pp of generation => +0.5% EBITDA x1.44 x ... => ~+1.2 incl. sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+     "date": "2026-10-22",
+     "note": "All signed PPAs are take-or-pay; curtailment compensated; curtailment mostly Khavda solar hours"
+    },
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/result-presentation-dynamic/agel----earnings-presentation---q2fy27_vf.pdf",
+     "date": "2026-10-22",
+     "note": "Grid availability reflects transmission curtailment during daytime peak"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "ADANIGREEN",
+   "relation": "output_price",
+   "w": 0.7,
+   "w_low": 0.2,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Only merchant/infirm capacity is exposed (est. 5-8% of revenue; exact figure not disclosed). +15% spot => +1% revenue at ~90% margin => +1.1% EBITDA x 1.44 x persistence 0.4 => ~+0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/result-presentation-dynamic/agel----earnings-presentation---q2fy27_vf.pdf",
+     "date": "2026-10-22",
+     "note": "Out of 4.7 GW tied-up capacity, 974 MW under conversion from merchant to 25-yr fixed PPA"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ADANIGREEN",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Company hedged 100% of principal of foreign-currency debt (presentation note), so cash exposure is on interest and the unhedged import content of capex (modules/cells from group's Mundra plants mostly domestic, BESS cells and wind components imported). +3% INR depreciation on ~Rs 50k cr FY27 capex x ~35% imported content = Rs 525 cr, 50% not recoverable from tariffs = -0.11% mcap; hedge cost +; x 1.44 => ~-1.0, low confidence. INR 94.5 is +6.5% in 12m.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/result-presentation-dynamic/agel----earnings-presentation---q2fy27_vf.pdf",
+     "date": "2026-10-22",
+     "note": "The company has hedged 100% of principal amount of its foreign currency debt; MTM is non-cash"
+    },
+    {
+     "source": "https://www.screener.in/company/ADANIGREEN/consolidated/",
+     "date": "2026-11-05",
+     "note": "Borrowings Rs 1,18,372 cr (Sep-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_BATTERY_MATERIALS",
+   "dst": "ADANIGREEN",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "BESS is now the growth pillar (6.6 GWh installed; >10 GWh by FY27 end, 10+ GWh FTM target). +15% cell cost on ~Rs 8k cr of FY27 cell spend = Rs 1.2k cr; ~60% passes through in bids/PPA tariffs for later projects, 40% retained = Rs 480 cr = -0.2% mcap x1.44 => -0.3; widened to -0.5 for contracted-price rigidity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+     "date": "2026-10-22",
+     "note": "3 GWh BESS commissioned in Q2; total 6.6 GWh; >10 GWh target this fiscal"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "ADANIGREEN",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Counterparties are SECI/NTPC/NHPC (strong) and state discoms; reforms that improve discom payment security (late-payment surcharge rules, privatisation) cut receivable and counterparty risk. Mgmt wants AA+ counterparties. +1 SSU => cost of capital -15bp => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+     "date": "2026-10-22",
+     "note": "Management: neutral on counterparty but prefers AA+ counterparties; SECI/government discoms/private PPAs"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ADANIGREEN",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.2,
+   "w_high": 5.5,
+   "lag": "0-3m",
+   "mechanism": "Market beta ~2.0 (pack), FII 11.3% and DII 5.3% of equity (Sep-26), promoters 62.4%; 12m vol 42%. +US$5bn quarterly FPI inflow ~ +2% Nifty x beta 2.0 x 0.75 group-specific shrink => +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIGREEN/consolidated/",
+     "date": "2026-11-05",
+     "note": "Shareholding Sep-26: promoters 62.43%, FIIs 11.33%, DIIs 5.30%, public 20.94%"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "ADANIGREEN",
+   "relation": "macro_transmission",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Statistical proxy only: pack shows a significant negative co-movement with gold (-4.88 per +8%, t -3.3) and silver (-3.01, t -2.7), consistent with AGEL trading as a high-beta risk-on / real-yield-sensitive asset (gold falls when real yields and risk appetite rise). No direct fundamental link; weight shrunk from -4.9 to -2.0 for the assembler to cross-check.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIGREEN/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical F_GOLD -4.88 per SSU (t -3.3); F_SILVER -3.01 (t -2.7)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "ADANIGREEN",
+   "relation": "geopolitical_exposure",
+   "w": -0.4,
+   "w_low": -3.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation lifts oil/LNG, inflation and yields (negative for long-duration equity) but reinforces the energy-security rationale for domestic renewables+storage; no Gulf cash flows. Net slightly negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Strait+of+Hormuz+LNG+India+power+coal+import+Middle+East+conflict+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Middle East conflict disrupting LNG/crude via Hormuz; Asia pivoting to coal (Wood Mackenzie 12 Oct, EnergyNow 3 Nov 2026 headlines)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ADANIENT",
+   "dst": "ADANIGREEN",
+   "relation": "group_contagion",
+   "w": 0.35,
+   "w_low": 0.1,
+   "w_high": 0.7,
+   "lag": "0-3m",
+   "mechanism": "Promoters (Adani family) 62.4%; Adani Green was the focus of the Nov 2024 US indictment (bribery/securities fraud allegations), dismissed 10 Aug 2026; group-wide drawdowns move AGEL with beta well above 1 to ADANIENT. Judgement estimate (not regressed).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-11",
+     "note": "US judge dismissed criminal case against Gautam Adani (Reuters/CNBC/The Hindu)"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Adani Enterprises / promoter family",
+   "ticker": "ADANIENT",
+   "role": "parent",
+   "importance": "high",
+   "note": "Promoters 62.4%; group governance, EPC (Adani Infra) and module supply from Adani Solar (model knowledge)"
+  },
+  {
+   "counterparty": "Adani Energy Solutions",
+   "ticker": "ADANIENSOL",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Khavda evacuation lines (AESL) commissioning governs AGEL curtailment"
+  },
+  {
+   "counterparty": "Power Grid Corp of India",
+   "ticker": "POWERGRID",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Khavda ISTS corridors; ROW delays cited as the cause of curtailment"
+  },
+  {
+   "counterparty": "SECI / NTPC / NHPC / state discoms",
+   "ticker": "NTPC",
+   "role": "customer",
+   "importance": "high",
+   "note": "25-yr fixed-tariff PPAs; SECI is the largest offtaker (model knowledge)"
+  },
+  {
+   "counterparty": "TotalEnergies",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Co-investor in several AGEL JV platforms (model knowledge)"
+  },
+  {
+   "counterparty": "ReNew / ACME / NTPC Green / JSW Energy",
+   "ticker": "JSWENERGY",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "SECI/FDRE/BESS tender competitors"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-03",
+   "event": "Phase-3 Khavda evacuation commissioned by end of Q4 FY27, enabling 4.5-5 GW of FY27 commissioning (mgmt says currently expects Q4)",
+   "type": "capex",
+   "prob": 0.55,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 7.0,
+   "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 commissioning target of 4.5-5 GW missed (grid readiness slips again)",
+   "type": "guidance",
+   "prob": 0.4,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -2.0,
+   "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf"
+  },
+  {
+   "date": "2026-12",
+   "event": "Chitravathi 500 MW pumped-storage project commissioning by year-end and BESS >10 GWh by FY27 end",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date not announced; Q2 was 22 Oct, estimate late Jan/early Feb 2027)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge on schedule"
+  },
+  {
+   "date": "2027-03",
+   "event": "Conversion of ~974 MW merchant capacity to 25-yr fixed PPAs and new C&I/hyperscaler PPAs",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.5,
+   "source": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/result-presentation-dynamic/agel----earnings-presentation---q2fy27_vf.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "Renewed US/foreign legal-regulatory action vs Adani Group (criminal case dismissed 10 Aug 2026; SEC civil status not verified)",
+   "type": "litigation",
+   "prob": 0.06,
+   "impact_pct_low": -25.0,
+   "impact_pct_high": -8.0,
+   "source": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 4,258 cr (screener; +42% YoY), EBITDA from power supply Rs 3,835 cr (+51%), PAT Rs 747 cr (vs Rs 644 cr Q2 FY26). H1 EBITDA Rs 8,276 cr total (Rs 7,957 cr from power supply, +41%); cash profit H1 Rs 4,176 cr (+35%).",
+  "trend": "Operational capacity 20.8 GW (+24% YoY) and generation +32% but EBITDA is capped by Khavda curtailment (~Rs 700 cr in H1). Interest cost is growing faster than EBITDA (Q2 interest Rs 2,119 cr vs EBITDA Rs 3,797 cr). Management now expects Phase-3 evacuation in Q4 FY27 (earlier: by Dec 2026).",
+  "valuation": "P/E 119, P/B 10.6, mcap Rs 2.33 lakh cr, EV ~Rs 3.4 lakh cr; EV/run-rate EBITDA well above NTPC (P/E 10) or Tata Power (P/E 30). Jefferies (12 Oct, 23 Oct) says ~35-36% upside, Buy (headline).",
+  "recent_developments": [
+   "2026-08-10/11: US judge dismissed criminal fraud/bribery case against Gautam Adani",
+   "2026-09: Group note in AGEL presentation: AAHL (airports, a sister entity) signed agreements to raise ~Rs 9,825 cr (~US$1bn) primary equity - not an AGEL raise",
+   "2026-10-10: H1 FY27 update: operational capacity 20,763 MW (+24%), energy sold +32%",
+   "2026-10-12/23: Jefferies Buy, target implies ~35-36% upside (ET/Livemint/NDTV Profit headlines)",
+   "2026-10-22: Q2 results and call; stock -4% on day; mgmt says rate risk limited (72% fixed), curtailment to fall in H2; Phase-3 evacuation now Q4",
+   "2026-10-07: RBI hiked repo 25bp to 5.50% (context for rate-sensitive utilities)",
+   "2026-09-30: PM-DHARA Rs 1.86 lakh cr transmission scheme approved"
+  ]
+ },
+ "key_risks": [
+  "Khavda transmission delays prolong curtailment and push out 4.5-5 GW commissioning",
+  "Rising yields and spreads on a P/E-119, 5.6x net-debt/EBITDA equity",
+  "Group legal/governance flare-ups (US matters, SEBI) and funding access",
+  "Counterparty/discom payment risk in new PPAs and tariff discipline in competitive bids",
+  "Execution of BESS/PSP at scale and cost inflation in battery cells"
+ ],
+ "upside_triggers": [
+  "Phase-3 and further Khavda evacuation commissioned in Q4 FY27 -> curtailment loss (~Rs 700 cr/half) reverses",
+  "Rating upgrades of SPVs to AAA/AA+ cutting avg cost below 8.5%",
+  "C&I/hyperscaler PPAs at higher tariffs",
+  "Policy: PM-DHARA corridor execution, BESS VGF, storage obligations"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/results-conference-call-transcript/agelq2fy27earnings-call-transcriptoct-22-2026v1.pdf",
+   "date": "2026-10-22",
+   "what": "AGEL Q2 FY27 earnings call transcript (curtailment, rates, capex, BESS)"
+  },
+  {
+   "url": "https://www.adanigreenenergy.com/-/media/project/greenenergy/investor-downloads/result-presentation-dynamic/agel----earnings-presentation---q2fy27_vf.pdf",
+   "date": "2026-10-22",
+   "what": "AGEL Q2 FY27 earnings presentation (net debt, capacity, hedging)"
+  },
+  {
+   "url": "https://www.screener.in/company/ADANIGREEN/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "market_impact/data/packs/ADANIGREEN.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities and headlines pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-11",
+   "what": "US case dismissal headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PM-DHARA+scheme+Rs+1.86+lakh+crore+power+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-30",
+   "what": "PM-DHARA headlines"
+  }
+ ]
+}

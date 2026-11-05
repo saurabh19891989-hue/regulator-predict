@@ -1,0 +1,290 @@
+{
+ "name": "NMDC Ltd.",
+ "industry": "I_MINING",
+ "business_summary": "Government-owned (60.8%) India's largest iron-ore miner (Bailadila in Chhattisgarh, Donimalai, Kumaraswamy in Karnataka), producing ~45 Mt/yr and selling lump and fines to domestic steel mills (Tata Steel, JSW, SAIL). Also pellet, slurry-pipeline and (demerged) NMDC Steel assets. Q1 FY27 sales Rs6,795 cr, EBITDA Rs2,468 cr (36%), PAT Rs1,976 cr. TTM sales Rs32,127 cr, EBITDA Rs9,249 cr (29%), PAT Rs7,459 cr; market cap Rs61,850 cr, net cash, dividend yield 5%. Commissioned a Rs5,427 cr slurry-pipeline/processing/2 MTPA pellet project on 2026-09-27.",
+ "revenue_mix": [
+  {
+   "segment": "iron ore (lump, fines)",
+   "share_pct": 95,
+   "geography": "India ~95% / small exports"
+  },
+  {
+   "segment": "pellets, other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_IRON_ORE",
+   "dst": "NMDC",
+   "relation": "output_price",
+   "w": 9.0,
+   "w_low": 5.0,
+   "w_high": 13.0,
+   "lag": "0-3m",
+   "mechanism": "Iron ore is ~95% of revenue (~45 Mt/yr; TTM sales Rs32,127 cr, EBITDA Rs9,249 cr). Domestic list prices (cut 2026-08-08: lump Rs5,250/t, fines Rs4,500/t) track ~65% of international moves. +15% intl => +10% domestic => +Rs3.0k cr revenue (net of ~15% royalty/DMF => Rs2.6k cr) = +28% EBITDA; EV/MCap ~0.85 (net cash), persistence 0.4 => +9.5. Matches pack empirical +6.23 (t=+3.8) within range.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NMDC+iron+ore+price+cut+production+sales+Q1+FY27+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-08",
+     "note": "ET/Sahi: NMDC cuts iron ore prices from August 8; lump Rs5,250/t, fines Rs4,500/t"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=NMDC+upgrade+Nuvama+iron+ore+prices+near+bottom+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-17",
+     "note": "NDTV Profit: Nuvama turns bullish as iron ore prices near bottom"
+    },
+    {
+     "source": "market_impact/data/packs/NMDC.md",
+     "date": "2026-11-05",
+     "note": "empirical +6.23 per +15% iron ore, t=+3.8"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "NMDC",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Domestic mill margins set the ceiling for ore price hikes and offtake (weak offtake after muted Q1 per Livemint 2026-08-19); +7% steel supports ore pricing/volume with a lag. Partly overlaps F_IRON_ORE, so kept small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NMDC+faces+twin+challenges+weaker+offtake+and+prices+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-19",
+     "note": "Livemint: muted Q1, weak offtake and prices"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "NMDC",
+   "relation": "fx_translation",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Pricing follows import-parity INR/ton; +3% USD/INR adds ~1.5% to realisation (half pass-through) => +Rs450 cr = ~5% EBITDA x0.85 x0.5 => ~+2. Pack +1.63 (t=+1.0).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NMDC.md",
+     "date": "2026-11-05",
+     "note": "empirical +1.63 per +3% USDINR, t=+1.0"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "NMDC",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Royalty and DMF/NMET ~15% of realisation; a one-notch rise (+1pp of price) cuts EBITDA ~2.5%; x0.85 x1.0 structural => ~-2 to -3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=NMDC+iron+ore+price+cut+production+sales+Q1+FY27+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-19",
+     "note": "Citi: higher costs offset Q1 volume gains"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "NMDC",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -1.4,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Net cash balance sheet, interest Rs116 cr; dividend yield 5% makes it a bond-proxy PSU: +25bp repo => ~-0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NMDC.md",
+     "date": "2026-11-05",
+     "note": "dividend yield 5.0%; interest Rs116 cr TTM"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "NMDC",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Diesel and explosives ~10% of costs (model estimate): +10% Brent => costs +0.8% => EBITDA -0.5%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/NMDC.md",
+     "date": "2026-11-05",
+     "note": "empirical +0.65 (t=+1.1), sign conflicting and insignificant"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "NMDC",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Infrastructure-driven steel demand lifts ore offtake from steelmakers; indirect, modest.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Steel+sector+continues+strong+show+H1+2026-27+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "ETV Bharat"
+    }
+   ]
+  },
+  {
+   "src": "P_STEEL_DUTY_IN",
+   "dst": "NMDC",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Tighter import curbs support domestic mill utilisation and ore demand; SMM reports ministry unlikely to tighten.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=steel+ministry+unlikely+to+tighten+steel+import+curbs+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "SMM"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Steel mills (Tata Steel, JSW, SAIL, others)",
+   "ticker": "TATASTEEL",
+   "role": "customer",
+   "importance": "high",
+   "note": "domestic steelmakers buy lump and fines"
+  },
+  {
+   "counterparty": "JSW Steel",
+   "ticker": "JSWSTEEL",
+   "role": "customer",
+   "importance": "high",
+   "note": "buys ore beyond captive"
+  },
+  {
+   "counterparty": "Odisha private miners / OMC",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "auction ore"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (Q1 was 2026-08-14; date unconfirmed)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=NMDC+Q2+FY27+results+date+iron+ore+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Monthly iron ore price reset(s); September-October YTD production +22.8% to 27.27 Mt",
+   "type": "other",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=NMDC+YTD+iron+ore+production+jumps+22.8%25+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-09-27",
+   "event": "Rs5,427 cr slurry pipeline/processing/pellet plant commissioned (occurred)",
+   "type": "capex",
+   "prob": 1.0,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=NMDC+commissions+5%2C427+crore+iron+ore+processing+plant+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Interim dividend declaration (dividend yield 5%)",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=NMDC+dividend+record+date+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs6,795 cr, EBITDA Rs2,468 cr (36%), PAT Rs1,976 cr; weak offtake and lower realisation after muted quarter",
+  "trend": "Production +22.8% YTD but price cut on 2026-08-08; stock -18% over 3m, -22% over 6m",
+  "valuation": "P/E 8.3x, P/B 1.8x, ROCE 27.6%, dividend yield 5%",
+  "recent_developments": [
+   "2026-08-08: iron ore prices cut (lump Rs5,250/t, fines Rs4,500/t) (ET, Sahi)",
+   "2026-08-17: Nuvama upgrade, Citi cuts target (NDTV Profit)",
+   "2026-09-27: Rs5,427 cr project commissioned (PIB)",
+   "2026-10-01: YTD production 27.27 Mt, +22.8% (scanx.trade)",
+   "2026-10-11: draft National Steel Policy 2047 raises ore demand outlook (Upstox)"
+  ]
+ },
+ "key_risks": [
+  "Iron ore price trough persists with weak offtake",
+  "Royalty/levy changes",
+  "Steel mills' captive supply growth",
+  "Project execution"
+ ],
+ "upside_triggers": [
+  "Price hikes as domestic steel prices rise",
+  "Pellet/pipeline ramp-up",
+  "Steel Policy 2047 demand outlook"
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/NMDC.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Jun 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=NMDC+iron+ore+price+cut+production+sales+Q1+FY27+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-08",
+   "what": "price cut and Q1"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=NMDC+commissions+5%2C427+crore+iron+ore+processing+plant+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-27",
+   "what": "project commissioned"
+  }
+ ],
+ "ticker": "NMDC",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100",
+ "company_links": [],
+ "new_nodes_proposed": []
+}

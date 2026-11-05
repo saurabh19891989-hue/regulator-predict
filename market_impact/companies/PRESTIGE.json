@@ -1,0 +1,543 @@
+{
+ "name": "Prestige Estates Projects Ltd.",
+ "industry": "I_REAL_ESTATE",
+ "tier": "MIDCAP_100",
+ "business_summary": "Bengaluru-based diversified developer: residential (Bengaluru, Mumbai, NCR, Hyderabad, Chennai, Kochi), offices, retail and hospitality, with the highest leverage among listed peers (interest Rs 1,617 cr TTM, 45% of operating profit). Q2 FY27 bookings Rs 7,225 cr (+20%), Rs 40,000 cr launches planned in H2 FY27 (Business Standard 2026-10-20). Recent: CPP Investments to buy 27% of the hospitality arm for Rs 3,000 cr (2026-09-30) after hospitality IPO plans were dropped (2026-09-28); Gloind Vintage Infra acquisition at Rs 519 cr EV (2026-11-04); Bombay HC set aside a MahaREAT order in Mahalaxmi (2026-10-01). Market cap Rs 70,123 cr, P/E 61.6.",
+ "revenue_mix": [
+  {
+   "segment": "Residential",
+   "share_pct": 80,
+   "geography": "Bengaluru ~50% of bookings; Mumbai/NCR/Hyderabad/Chennai/Kochi (model estimate)"
+  },
+  {
+   "segment": "Office, retail, hospitality, services",
+   "share_pct": 20,
+   "geography": "Bengaluru, Mumbai, Goa, Kochi"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "NEW_CEMENT_PRICE",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "PRESTIGE",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Residential ~65% of value (Bengaluru ~50% of bookings, also Mumbai, NCR, Hyderabad, Chennai; model estimate), rest office/retail/hospitality. +10% market volume -> bookings +10% (Rs 7,225 cr/qtr base) -> EBITDA +11% -> x0.65 = +7% x EV/MCap 1.25 x persistence 0.55 ~ +5. Anarock +3% y/y Jul-Sep 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Prestige+Estates+Q2+FY27+sales+bookings+7225+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-13",
+     "note": "Q2 FY27 sales bookings Rs 7,225 cr (+20%), Rs 40,000 cr of launches planned in H2 FY27 (Business Standard/CNBC TV18 2026-10-13/20); Morgan Stanley: pre-sales and collections beat"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PRESTIGE",
+   "relation": "discount_rate",
+   "w": -4.0,
+   "w_low": -6.5,
+   "w_high": -1.8,
+   "lag": "0-3m",
+   "mechanism": "Most levered in batch: interest Rs 1,617 cr TTM = 45% of op profit. +25 bp on ~Rs 20k cr debt (60% floating, 50% expensed) = ~Rs 25 cr = -2% PAT; demand -0.6; multiple/sentiment (beta 1.9-2.0, P/E 62) -1.4. Total ~ -4.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "India Today 2026-09-21: analysts see up to 50 bp more by December; The Hindu 2026-09-18: two hikes possible in CY2026 (pre-decision views)"
+    },
+    {
+     "source": "https://www.screener.in/company/PRESTIGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 70,123 cr, P/E 61.6, P/B 4.3, ROCE 10.4%; TTM sales Rs 13,053 cr, op profit Rs 3,630 cr, interest Rs 1,617 cr (45% of op profit), PAT Rs 1,265 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "PRESTIGE",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "+50 bp spreads on bonds/NCDs/LRD refinancing ~Rs 10k cr over 12m = Rs 50 cr, ~4% of PAT before capitalisation, x0.3 net => -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PRESTIGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 70,123 cr, P/E 61.6, P/B 4.3, ROCE 10.4%; TTM sales Rs 13,053 cr, op profit Rs 3,630 cr, interest Rs 1,617 cr (45% of op profit), PAT Rs 1,265 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "PRESTIGE",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Commercial/retail/hospitality (35% of value) cap-rate effect: +25 bp -> -1.6% x 0.35 = -0.6, plus -0.4 resi discounting.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  },
+  {
+   "src": "F_US_TECH_SPEND",
+   "dst": "PRESTIGE",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Bengaluru-centric IT/GCC employment supports both housing demand and Prestige's office leasing; +5% => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PRESTIGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 70,123 cr, P/E 61.6, P/B 4.3, ROCE 10.4%; TTM sales Rs 13,053 cr, op profit Rs 3,630 cr, interest Rs 1,617 cr (45% of op profit), PAT Rs 1,265 cr"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "PRESTIGE",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Luxury/premium segment (e.g. Mahalaxmi, Chennai Palm Court Rs 1,330 cr GDV 2026-08-28) lifts margins => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Prestige+Palm+Court+Chennai+1330+crore+GDV+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-28",
+     "note": "Prestige Palm Court Chennai, GDV Rs 1,330 cr (Sahi 2026-08-28)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "PRESTIGE",
+   "relation": "macro_transmission",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.97; Invesco MF raised stake to 5.02% (2026-10-09) while FPI flows dominate; +US$5bn -> +1.5% x 2.0 => +3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PRESTIGE.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "PRESTIGE",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Domestic MF buying (Invesco 5.02%); +10% flows => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PRESTIGE.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "PRESTIGE",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -1.4,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Steel 5.4% of resi revenue; +7% -> 0.38%; exposure 50% of cost base; margin 28% -> EBITDA -0.7%; persistence 0.3, EV/MCap 1.25 => ~-0.7 with leverage multiplier.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PRESTIGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 70,123 cr, P/E 61.6, P/B 4.3, ROCE 10.4%; TTM sales Rs 13,053 cr, op profit Rs 3,630 cr, interest Rs 1,617 cr (45% of op profit), PAT Rs 1,265 cr"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CEMENT_PRICE",
+   "dst": "PRESTIGE",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Cement 4.5% of revenue; +5% -> 0.23% => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PRESTIGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 70,123 cr, P/E 61.6, P/B 4.3, ROCE 10.4%; TTM sales Rs 13,053 cr, op profit Rs 3,630 cr, interest Rs 1,617 cr (45% of op profit), PAT Rs 1,265 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "PRESTIGE",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Minor input; pack shows -2.48 per +10% (t=-2.2): sign consistent, size implausible for ~1% of cost -> shrunk to -0.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PRESTIGE.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "PRESTIGE",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Site labour inflation => -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PRESTIGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 70,123 cr, P/E 61.6, P/B 4.3, ROCE 10.4%; TTM sales Rs 13,053 cr, op profit Rs 3,630 cr, interest Rs 1,617 cr (45% of op profit), PAT Rs 1,265 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "PRESTIGE",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -2.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Prior negative (FPI outflow); DISAGREES with pack +3.48 per +3% DXY (t=+2.7, beta 1.97): regime coincidence likely; shrunk to -0.5 with a wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PRESTIGE.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GULF_REMITTANCES",
+   "dst": "PRESTIGE",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.1,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "NRI buyers from the Gulf (Bengaluru, Kerala/Kochi, Chennai) => +0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PRESTIGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 70,123 cr, P/E 61.6, P/B 4.3, ROCE 10.4%; TTM sales Rs 13,053 cr, op profit Rs 3,630 cr, interest Rs 1,617 cr (45% of op profit), PAT Rs 1,265 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_TRAVEL_DEMAND",
+   "dst": "PRESTIGE",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": 0.1,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Hospitality arm (CPPIB buying 27% for Rs 3,000 cr implies a large valuation) ~8% of value; +10% travel => +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Prestige+Estates+CPP+Investments+27%+hospitality+3000+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "note": "CPP Investments to acquire 27% in hospitality arm for Rs 3,000 cr (CNBC TV18/Upstox 2026-09-30); hospitality IPO plans called off (CNBC TV18 2026-09-28)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "PRESTIGE",
+   "relation": "regulatory_risk",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Leverage makes bank construction-finance risk-weight changes costlier => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    }
+   ]
+  },
+  {
+   "src": "P_HOUSING_POLICY",
+   "dst": "PRESTIGE",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Karnataka/Maharashtra/Telangana stamp duty and approvals policies => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "Anarock via Economic Times 2026-09-28: Jul-Sep 2026 housing sales +3% y/y to just over 1 lakh units across top 7 cities"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "PRESTIGE",
+   "relation": "policy_effect",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Investor-buyer share large in Bengaluru => -1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PRESTIGE/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 70,123 cr, P/E 61.6, P/B 4.3, ROCE 10.4%; TTM sales Rs 13,053 cr, op profit Rs 3,630 cr, interest Rs 1,617 cr (45% of op profit), PAT Rs 1,265 cr"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Bengaluru/IT-linked homebuyers and NRIs",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "IT/GCC income driver"
+  },
+  {
+   "counterparty": "CPP Investments (27% of hospitality arm)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Rs 3,000 cr capital partner"
+  },
+  {
+   "counterparty": "Banks / NCD / LRD lenders",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "large debt stack"
+  },
+  {
+   "counterparty": "Brigade / Sobha / Godrej Properties / DLF",
+   "ticker": "GODREJPROP",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Bengaluru launches"
+  },
+  {
+   "counterparty": "Contractors, steel, cement",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "cost pass-through limited on unsold stock"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 financial results/ call follow-through (Sep column already in screener) and sell-side revisions",
+   "type": "results",
+   "prob": 0.7,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Prestige+Estates+Q2+FY27+sales+bookings+7225+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI December MPC (sensitivity only)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": -1.8,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11/2027-03",
+   "event": "H2 launches of ~Rs 40,000 cr GDV: sell-through vs Rs 7,225 cr quarterly bookings",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Prestige+Estates+Q2+FY27+sales+bookings+7225+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12/2027-03",
+   "event": "Closing of CPP Investments' 27% hospitality stake purchase (Rs 3,000 cr) - deleveraging",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Prestige+Estates+CPP+Investments+27%+hospitality+3000+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (model-estimated)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Prestige+Estates+Q2+FY27+sales+bookings+7225+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Mahalaxmi project litigation: further court steps after Bombay HC set aside MahaREAT order",
+   "type": "litigation",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Prestige+Estates+Bombay+HC+MahaREAT+Mahalaxmi+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 2,675 cr, op profit Rs 849 cr, interest Rs 418 cr, PAT Rs 271 cr (screener); bookings Rs 7,225 cr (+20%)",
+  "trend": "Bookings strong (beat Morgan Stanley); reported earnings volatile; leverage drags ROE to 7.5%.",
+  "valuation": "P/E 61.6, P/B 4.3, ROE 7.5%, ROCE 10.4%; 52w 1,090-1,781; 1m +10.9%; 12m -6.8%; Motilal TP Rs 1,830 (2026-09-29).",
+  "recent_developments": [
+   "2026-11-04 Gloind Vintage Infra acquisition (Rs 519 cr EV)",
+   "2026-10-20 Rs 40,000 cr launch plan in H2 FY27",
+   "2026-10-14 Q2 pre-sales/collections beat Morgan Stanley",
+   "2026-10-13 Q2 bookings Rs 7,225 cr",
+   "2026-10-09 Invesco MF stake 5.02%",
+   "2026-10-01 Bombay HC sets aside MahaREAT order (Mahalaxmi)",
+   "2026-09-30 CPPIB Rs 3,000 cr for 27% of hospitality arm",
+   "2026-09-28 hospitality IPO called off"
+  ]
+ },
+ "key_risks": [
+  "Highest leverage in group: rate hikes and spreads",
+  "Bengaluru market dependence and IT hiring cycle",
+  "P/E 62 on lumpy earnings",
+  "Project litigation (Mahalaxmi)",
+  "Large launch pipeline execution"
+ ],
+ "upside_triggers": [
+  "Hospitality stake sale proceeds reduce debt",
+  "H2 launches sell out",
+  "RBI pause and falling spreads",
+  "Strong Bengaluru IT hiring"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CEMENT_PRICE",
+   "type": "FACTOR",
+   "name": "Cement price (India)",
+   "ssu": "+5% cement price"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Prestige+Estates+Q2+FY27+sales+bookings+7225+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-13",
+   "what": "Q2 bookings and launch plan"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Prestige+Estates+CPP+Investments+27%+hospitality+3000+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-30",
+   "what": "CPPIB hospitality stake"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Prestige+Estates+Bombay+HC+MahaREAT+Mahalaxmi+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-01",
+   "what": "Bombay HC Mahalaxmi"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Prestige+Estates+Gloind+Vintage+Infra+519+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Gloind acquisition"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=housing+sales+top+seven+cities+Q3+2026+Anarock+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-28",
+   "what": "Anarock"
+  },
+  {
+   "url": "https://www.screener.in/company/PRESTIGE/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  }
+ ],
+ "ticker": "PRESTIGE",
+ "as_of": "2026-11-05"
+}

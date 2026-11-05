@@ -1,0 +1,448 @@
+{
+ "ticker": "HINDZINC",
+ "name": "Hindustan Zinc Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_NONFERROUS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's near-monopoly zinc-lead producer (~75% domestic zinc market) and one of the world's largest integrated zinc and silver producers; all mines and smelters in Rajasthan (Rampura Agucha, Sindesar Khurd, Zawar, Kayad; Chanderiya, Dariba, Debari smelters). Q2 FY27: mined metal 271 kt (+5%), refined 264 kt (+7%), silver 173 t (+20%), revenue Rs15,093 cr (+77%), EBITDA Rs9,285 cr (62%), PAT Rs6,412 cr (+142%); zinc cost excl. royalty US$703/t, FY27 guide cut to US$825-850/t; silver ~27% of revenue and ~45% of profit. Vedanta Ltd holds ~61%, Government of India 27.9%. Mcap Rs2.41 lakh cr, P/E 11.6.",
+ "revenue_mix": [
+  {
+   "segment": "zinc and lead (refined metal, concentrate)",
+   "share_pct": 65,
+   "geography": "India ~65% / exports ~35% (model estimate)"
+  },
+  {
+   "segment": "silver",
+   "share_pct": 27,
+   "geography": "India (domestic refined silver) mostly"
+  },
+  {
+   "segment": "sulphuric acid, power, other by-products",
+   "share_pct": 8,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COAL_INDIA",
+   "share_of_costs_pct": 13
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_SILVER",
+   "dst": "HINDZINC",
+   "relation": "output_price",
+   "w": 3.5,
+   "w_low": 1.8,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Company-disclosed sensitivity: each US$1/oz silver = ~Rs200-225 cr annual EBITDA. SSU +12% on US$52.5 = US$6.3/oz = Rs1,260-1,420 cr = +3.6% of annualised Q2 EBITDA (Rs9,248 cr x4 = Rs37,000 cr). EV/MCap ~1.0 (net debt small, unverified); persistence 0.7 (silver moves are priced as semi-permanent) => +2.5. Empirical +5.00 per SSU (t=+5.7, strongest in the pack): the stock trades as a silver/precious-metals proxy (ETF flows, sentiment) beyond cash flow, so central weight set between fundamental (2.5) and empirical (5.0). Silver is ~27% of Q2 revenue (Rs4,111 cr) and ~45% of profit (press). Note: implied Q2 realisation (Rs4,111 cr / 173 t ~ US$75-80/oz) is far above the Yahoo spot path (~US$61 three months ago, US$52.5 now) - unresolved data conflict; either way spot is well below Q2 realisation, a forward headwind. 8 t of Q3 silver hedged at US$68/oz.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.niftytrader.in/markets/hindustan-zinc-q2-fy27-results-profit-guidance/",
+     "date": "2026-10-19",
+     "note": "Silver revenue Rs4,111 cr (27% of Q2 revenue); EBITDA sensitivity Rs200-225 cr per US$1/oz; 8 t Q3 hedged at US$68"
+    },
+    {
+     "source": "https://www.screener.in/company/HINDZINC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_SILVER +5.00 (t=5.7); F_GOLD +4.83 (t=3.8)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Precious+metals+crash+silver+Rs+2+lakh+kg+11-month+low+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-24",
+     "note": "Silver -53% from January peak; Indian silver below Rs2 lakh/kg"
+    }
+   ]
+  },
+  {
+   "src": "F_ZINC_LEAD",
+   "dst": "HINDZINC",
+   "relation": "output_price",
+   "w": 3.8,
+   "w_low": 2.0,
+   "w_high": 5.5,
+   "lag": "0-3m",
+   "mechanism": "Company-disclosed: each US$100/t LME zinc = ~Rs725-750 cr annual EBITDA. SSU +10% on ~US$3,200/t (assumed, no zinc series in factor_state) = US$320/t = ~Rs2,350 cr = +6.3% of annualised EBITDA Rs37,000 cr; persistence 0.6, EV/MCap 1.0 => +3.8. Zinc India ~1.1 Mt refined metal guidance; lead and sulphuric acid by-products add. No empirical zinc series.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.niftytrader.in/markets/hindustan-zinc-q2-fy27-results-profit-guidance/",
+     "date": "2026-10-19",
+     "note": "Sensitivity ~Rs725-750 cr per US$100/t zinc; zinc COP US$703/t (-29% y/y), FY27 guide cut to US$825-850/t"
+    },
+    {
+     "source": "https://www.miningweekly.com/article/indias-hindustan-zinc-records-two-fold-profit-jump-cuts-annual-production-cost-forecast-2026-10-20",
+     "date": "2026-10-20",
+     "note": "Refined metal 264 kt (+7%), mined metal 271 kt (+5%)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HINDZINC",
+   "relation": "fx_translation",
+   "w": 2.2,
+   "w_low": 1.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Revenue is LME-USD-linked (Rs60,000 cr annualised); costs ~39% of revenue mostly INR (power, labour, contractors; some USD consumables). +3% = +Rs1,800 cr on revenue = +4.9% EBITDA; partial hedging, persistence 0.5, EV/MCap 1.0 => +2.4; trimmed to 2.2 for imported-input leakage. Rupee has strengthened 1.9% in the last month (95.8 -> 94.5), a mild headwind now.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDZINC/consolidated/",
+     "date": "2026-11-05",
+     "note": "TTM sales Rs53,364 cr, OPM 58% (Q2 61%)"
+    },
+    {
+     "source": "https://www.niftytrader.in/markets/hindustan-zinc-q2-fy27-results-profit-guidance/",
+     "date": "2026-10-19",
+     "note": "Record EBITDA Rs9,285 cr at 62% margin; favourable currency movement cited in Q2"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "HINDZINC",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Captive thermal power (~474 MW, model knowledge) plus coal for smelting/roasting; coal+power ~25% of cost of production but renewable round-the-clock supply is replacing coal power. Assume ~Rs3,000 cr/yr coal; +10% = Rs300 cr = -0.8% EBITDA, x0.5 persistence => -0.4. Coal e-auction premia ~94% in Sep-Oct 2026 make the shock live.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.miningweekly.com/article/indias-hindustan-zinc-records-two-fold-profit-jump-cuts-annual-production-cost-forecast-2026-10-20",
+     "date": "2026-10-20",
+     "note": "Cost of production guidance cut despite input pressures"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+coal+stocks+power+plants+critical+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "E-auction premium ~94%"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "HINDZINC",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.9,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "Smelters are power-intensive (Chanderiya/Debari, Dariba) but mostly self-supplied or on fixed-price renewable PPAs; assume ~15% market-exposed. +15% spot power on ~Rs800 cr = Rs120 cr = -0.3% EBITDA, x0.5 persistence => -0.2; widened for grid-curtailment tail in El Nino summer 2027.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IEX+power+prices+hit+Rs+20+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "note": "IEX at Rs20/kWh ceiling"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "HINDZINC",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "P/E 11.6, dividend yield 2.0%, ROE 77%: a short-duration, high-payout cash cow; +25 bp on cost of equity => ~-0.8. Net-cash-ish balance sheet so direct funding effect nil.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDZINC/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 11.6, mcap Rs2,41,139 cr, dividend yield 1.97%"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "HINDZINC",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Royalty is paid on zinc and silver metal content; HZL's cost of production quoted excl. royalty. Assume '+1' = +2 pp rate on ~Rs6,000 cr royalty-base-equivalent => ~Rs600 cr = -1.6% EBITDA; structural (persistence 1.0), EV/MCap 1.0 => -1.6. Government of India holds 27.9% and has a fiscal interest in higher mineral levies.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HINDZINC/consolidated/",
+     "date": "2026-11-05",
+     "note": "Government 27.92%, promoters 60.71%"
+    }
+   ]
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "HINDZINC",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -10.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Tail policy risk: a windfall levy on record silver/zinc earnings (precedent: 2022 oil export levy; event catalogue shows levies are an active tool, e.g. diesel/ATF Oct 2026). Conditional on imposition of, say, 10% of excess EBITDA => -10% EBITDA x persistence 0.4 => -4. Probability low (<10% in 12m, judgement); the edge is the conditional impact.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Windfall+levy+export+duty+revisions+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-31",
+     "note": "Windfall/export levy re-set on fuels (31 Oct)"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "HINDZINC",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Silver (PV pastes), zinc (galvanising, grid/renewable towers, zinc-ion storage) and the Chanderiya silver refinery expansion are structural beneficiaries; +1 treated as ~+1% structural demand for silver/zinc => +0.8 via multiple. Overlaps with price edges - kept small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://upstox.com/news/market-news/stocks/hindustan-zinc-shares-pare-gains-after-4-rally-on-strong-q2-what-are-the-headwinds-ahead/article-202136/",
+     "date": "2026-10-20",
+     "note": "Analyst view: demand tailwinds vs headwinds ahead for HZL"
+    }
+   ]
+  },
+  {
+   "src": "P_GOLD_IMPORT_DUTY",
+   "dst": "HINDZINC",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Indian silver realisation tracks LME x USD/INR x (1+import duty); +5 pp duty (SSU defined for gold; assumed to be mirrored for silver) lifts domestic silver price ~4.5%; silver 27% of revenue => +1.2% revenue = +2% EBITDA, persistence 0.5, haircut for uncertain pass-through => +1. Rupee-silver also sits at a premium in a record-low-silver-price year.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.niftytrader.in/markets/hindustan-zinc-q2-fy27-results-profit-guidance/",
+     "date": "2026-10-19",
+     "note": "Silver 27% of Q2 revenue"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "VEDL",
+   "dst": "HINDZINC",
+   "relation": "group_contagion",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "Parent (Vedanta Ltd, ~61% of HZL) and Vedanta Resources depend on HZL dividends to service debt; promoter holding has fallen 4.2 pp in 3 years and 54.72% of VEDL / 56.38% of VAML promoter shares are encumbered with GLAS Agency as security trustee for US$1-2.25bn financings. Parent-level stress (refinancing, further HZL block sales) hits HZL; w = % move in HZL per 1% move in VEDL. Raw weekly regression of HZL on VEDL since 2021: beta 0.36 (corr 0.44), shrunk for market component.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://filingreader.com/news-wire/mumbai/2026-07-16/glas-agency-reports-encumbrance-over-547-stake-in-vedanta",
+     "date": "2026-07-16",
+     "note": "GLAS Agency reports encumbrance over 54.7% Vedanta promoter stake"
+    },
+    {
+     "source": "https://www.kotakneo.com/news/stocks/vedanta-q2-fy27-results-put-share-price-in-focus/",
+     "date": "2026-10-28",
+     "note": "Vedanta Q2: Zinc India ~93% of EBITDA"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Vedanta Ltd.",
+   "ticker": "VEDL",
+   "role": "parent",
+   "importance": "high",
+   "note": "~61% holder; brand/management fees and dividend upstreaming; refinancing overhang"
+  },
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "27.92% shareholder; possible disinvestment OFS"
+  },
+  {
+   "counterparty": "Steel/galvanising customers (zinc), Indian silver bullion/jewellery and solar-paste buyers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Domestic ~70% of zinc sales (model knowledge); no customer >25% disclosed"
+  },
+  {
+   "counterparty": "Hindalco / NALCO / Hindustan Copper",
+   "ticker": "HINDALCO",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Base-metal peers; zinc itself has no listed Indian competitor"
+  },
+  {
+   "counterparty": "Sulphuric acid/fertiliser buyers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "Acid realisations flattered Q2 cost improvement"
+  },
+  {
+   "counterparty": "Renewable PPA providers (RTC power)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Replacing coal power to cut cost and emissions"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results; silver realisation reset versus Q2 (spot US$52.5 vs implied Q2 ~US$75-80), cost guidance US$825-850/t test",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.niftytrader.in/markets/hindustan-zinc-q2-fy27-results-profit-guidance/"
+  },
+  {
+   "date": "2026-12",
+   "event": "Interim dividend declaration (H1 FY27 dividend already ~Rs11/share per press); payout drives Vedanta upstreaming",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "https://www.kotakneo.com/news/stocks/vedanta-declares-5-per-share-interim-dividend-after-demerger/"
+  },
+  {
+   "date": "2027-03",
+   "event": "Vedanta block/OFS sale of further HZL shares to delever (precedent: 1.6% sold Jun 2025; promoter holding -4.2 pp over 3 yrs)",
+   "type": "corporate_action",
+   "prob": 0.25,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.5,
+   "source": "https://bondblox.com/news/vedanta-declares-first-interim-dividend-sells-1-6-stake-in-hindustan-zinc"
+  },
+  {
+   "date": "2027-06",
+   "event": "Government of India disinvestment OFS of part of its 27.9% stake",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -2.0,
+   "source": "https://www.screener.in/company/HINDZINC/consolidated/"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 silver output of 680 t achieved (H1: 320-340 t); Chanderiya silver refinery ramp",
+   "type": "guidance",
+   "prob": 0.7,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.gurufocus.com/news/9130830/hindustan-zinc-ltd-bom500188-q2-2027-earnings-call-highlights-record-ebitda-lower-costs-and-a-silver-surprise"
+  },
+  {
+   "date": "2026-12",
+   "event": "Sulphuric acid realisations fall, reversing part of the Q2 cost gain",
+   "type": "other",
+   "prob": 0.3,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": -0.5,
+   "source": "https://www.gurufocus.com/news/9130830/hindustan-zinc-ltd-bom500188-q2-2027-earnings-call-highlights-record-ebitda-lower-costs-and-a-silver-surprise"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget: critical-mineral/royalty/duty announcements",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Union+Budget+2027+mining+royalty+silver+duty&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-19: revenue Rs15,093 cr (+77%), EBITDA Rs9,285 cr (62% margin, +108%), PAT Rs6,412 cr (+142%); zinc COP US$703/t. Pack (screener) OPM 61%, NP 6,412.",
+  "trend": "Revenue up sequentially for five straight quarters (Rs7,771 cr to Rs15,093 cr) and OPM from 50% to 61%, on silver and zinc prices and falling zinc cost; but silver is now 33% below the implied Q2 realisation and shares fell ~3% on the day after a 4% pop, with analysts flagging headwinds.",
+  "valuation": "P/E 11.6 TTM (about 8x annualised Q2 EPS), P/B 8.0, dividend yield 2.0%, ROE 77%. Price Rs571 vs 52w 454-733. Historical average P/E comparisons not verified.",
+  "recent_developments": [
+   "2026-10-19: Q2 results; record EBITDA, FY27 zinc cost guidance cut to US$825-850/t from US$975-1,000 (Mining Weekly/Kitco)",
+   "2026-10-20: shares +4% then pared; Upstox flags headwinds ahead",
+   "2026-10-21: Motilal Oswal 'neutral' on Vedanta group",
+   "2026-10-27: Chair Hebbar says long-term investments yield results (BusinessLine)",
+   "2026-10: silver -30% since 1 June; Indian silver below Rs2 lakh/kg from 23-24 Oct",
+   "2026-09: US-China and Fed-hike dollar strength weigh on metals; copper record in Sep"
+  ]
+ },
+ "key_risks": [
+  "Silver price: spot well below Q2 realisation; each US$1/oz = Rs200-225 cr annual EBITDA",
+  "Zinc price/TC-RC and sulphuric-acid-driven cost reversal",
+  "Vedanta group financing: encumbered promoter shares (GLAS), dividend upstreaming demands, HZL block sales",
+  "Government OFS or higher royalty/windfall levy",
+  "Output/ore grade at ageing Rampura Agucha, underground ramp-up, Rajasthan power supply in El Nino summer",
+  "Stock trades as a precious-metals proxy (+5.0 elasticity), so ETF/sentiment swings dominate"
+ ],
+ "upside_triggers": [
+  "Silver rebound (peace deal lowering yields/dollar; event odds 0.45 for H1 2027 rebound)",
+  "Zinc deficit/smelter closures lifting LME zinc",
+  "Cost of production undershooting US$825-850/t with renewable power",
+  "Capital return / higher payout; Chanderiya silver refinery ramp",
+  "China stimulus (Dec CEWC) lifting base metals"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.niftytrader.in/markets/hindustan-zinc-q2-fy27-results-profit-guidance/",
+   "date": "2026-10-19",
+   "what": "Q2 FY27 results, sensitivities, silver share, cost guidance"
+  },
+  {
+   "url": "https://www.miningweekly.com/article/indias-hindustan-zinc-records-two-fold-profit-jump-cuts-annual-production-cost-forecast-2026-10-20",
+   "date": "2026-10-20",
+   "what": "Mining Weekly/Reuters: profit two-fold, cost forecast cut"
+  },
+  {
+   "url": "https://www.gurufocus.com/news/9130830/hindustan-zinc-ltd-bom500188-q2-2027-earnings-call-highlights-record-ebitda-lower-costs-and-a-silver-surprise",
+   "date": "2026-10-22",
+   "what": "Earnings call highlights (search snippet): silver contribution, hedges"
+  },
+  {
+   "url": "https://upstox.com/news/market-news/stocks/hindustan-zinc-shares-pare-gains-after-4-rally-on-strong-q2-what-are-the-headwinds-ahead/article-202136/",
+   "date": "2026-10-20",
+   "what": "Upstox: shares pare gains, headwinds ahead"
+  },
+  {
+   "url": "https://www.kotakneo.com/news/stocks/vedanta-q2-fy27-results-put-share-price-in-focus/",
+   "date": "2026-10-28",
+   "what": "Vedanta Q2: Zinc India EBITDA share"
+  },
+  {
+   "url": "https://www.screener.in/company/HINDZINC/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals and empirical sensitivities (evidence pack)"
+  },
+  {
+   "url": "https://filingreader.com/news-wire/mumbai/2026-07-16/glas-agency-reports-encumbrance-over-547-stake-in-vedanta",
+   "date": "2026-07-16",
+   "what": "GLAS encumbrance disclosure"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Precious+metals+crash+silver+Rs+2+lakh+kg+11-month+low+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-24",
+   "what": "Precious-metals slump context"
+  }
+ ]
+}

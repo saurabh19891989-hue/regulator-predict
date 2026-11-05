@@ -1,0 +1,439 @@
+{
+ "ticker": "VEDL",
+ "name": "Vedanta Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_MINING",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Post-demerger (2026) Vedanta Ltd is essentially a holding company for Hindustan Zinc (~61%) plus Zinc International (South Africa, Namibia, Ireland), the copper business, nickel, ferroalloys and incubator ventures; aluminium moved to Vedanta Aluminium Metal, and oil & gas, power and iron & steel to separately listed entities. Q2 FY27 consolidated revenue Rs26,356 cr, EBITDA Rs9,938 cr (+106%), of which Zinc India Rs9,243 cr (93%); profit from continuing operations Rs6,202 cr (+151%) but profit attributable to shareholders Rs3,650 cr (-33% q/q); net debt Rs3,675 cr (0.1x), cash Rs26,622 cr. First post-demerger dividend Rs5/share (Rs1,955 cr). Mcap Rs1.03 lakh cr.",
+ "revenue_mix": [
+  {
+   "segment": "Zinc India (Hindustan Zinc: zinc, lead, silver)",
+   "share_pct": 56,
+   "geography": "India ~65% / exports ~35% (HZL model estimate)"
+  },
+  {
+   "segment": "Copper, Zinc International, nickel, ferroalloys, other",
+   "share_pct": 44,
+   "geography": "India, Zambia, South Africa, Namibia, Ireland, UAE (India ~65% of group per screener About)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COAL_INDIA",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COPPER",
+   "dst": "VEDL",
+   "relation": "output_price",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Residual Vedanta Ltd keeps the copper business (smelting/refining plus Zambian mining via KCM, model knowledge) after the aluminium/oil & gas/power/steel demergers; copper segment size NOT disclosed in sources read (Q2 segment table not found). Assume copper ~8% of residual EBITDA ex-HZL (Rs800 cr/q annualised Rs3,200 cr vs total Rs39,700 cr): +10% copper on mining margin ~+25% of that = +Rs800 cr = +2% EBITDA, persistence 0.5, EV/MCap ~1.0 => +1.0; widened. Empirical +4.02 (t=2.1) but estimated over a period when VEDL included aluminium (pre-demerger), so stale.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/VEDL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_COPPER +4.02 (t=2.1), sample pre-demerger"
+    },
+    {
+     "source": "https://ticker.finology.in/discover/market-update/vedanta-q2-fy27-results-analysis",
+     "date": "2026-10-28",
+     "note": "Post-demerger Vedanta Ltd = HZL, Zinc International, copper, nickel, ferroalloys, incubator ventures"
+    }
+   ]
+  },
+  {
+   "src": "F_ZINC_LEAD",
+   "dst": "VEDL",
+   "relation": "output_price",
+   "w": 0.9,
+   "w_low": 0.4,
+   "w_high": 1.6,
+   "lag": "0-3m",
+   "mechanism": "EX-HZL channel only (HZL's zinc/silver exposure arrives through the holding_stake link HZL->VEDL, w 0.75, to avoid double count). Zinc International (Gamsberg, Black Mountain, Skorpion; ~0.3-0.4 Mt zinc, model knowledge) = ~12% of zinc volume of the group; +10% zinc ~ +Rs600 cr EBITDA on Rs39,700 cr annualised = +1.5% x0.6 persistence => +0.9.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://ticker.finology.in/discover/market-update/vedanta-q2-fy27-results-analysis",
+     "date": "2026-10-28",
+     "note": "Zinc India EBITDA Rs9,243 cr = 93% of consolidated EBITDA; Zinc International in residual"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "VEDL",
+   "relation": "output_price",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "STALE-DATA FLAG. Empirical +7.22 per SSU (t=3.2, strongest in pack) reflects 2021-26 when aluminium was ~half of VEDL EBITDA. Aluminium is now in Vedanta Aluminium Metal (VAML, listed June 2026) so fundamental exposure is ~0; residual +0.5 is sentiment/index co-movement (group stocks trade together; Vedanta Ltd shareholders hold VAML 1:1) and possible Cairn/other linkage. Assembler should NOT shrink toward +7.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/VEDL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_ALUMINIUM +7.22 (t=3.2)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Vedanta+Aluminium+Metal+listing+demerger+June+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "note": "VAML separate listed entity; 56.38% promoter stake"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "VEDL",
+   "relation": "fx_translation",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Residual business is USD-priced (zinc, silver, copper); costs largely INR for HZL, USD/ZAR/NAD for Zinc International. HZL channel +2.2 per SSU (carried via link); ex-HZL, USD debt at parent (Vedanta Resources bonds are outside VEDL) and Zambian/SA costs. Net +2.0 on consolidated EBITDA +4% x persistence 0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.kotakneo.com/news/stocks/vedanta-q2-fy27-results-put-share-price-in-focus/",
+     "date": "2026-10-28",
+     "note": "Net debt Rs3,675 cr, ND/EBITDA 0.1x; EBITDA Rs9,938 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "VEDL",
+   "relation": "funding_cost",
+   "w": -2.0,
+   "w_low": -4.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Group is a high-yield issuer: promoter shares (54.72% of VEDL, 56.38% of VAML) are encumbered with GLAS Agency for US$2.25bn/US$1bn financings and a US$400m bond tap (16 Sep 2026); parent Vedanta Resources depends on VEDL dividends (Rs5/share = Rs1,955 cr in Oct, 12.9% yield). +50 bp spreads raises parent refinancing cost (~US$5-6bn parent debt, model knowledge) => higher dividend demands and forced-sale risk. Weight is judgemental.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://choiceindia.com/news/vedanta-promoters-pledge-54-72-percent-stake-us-2-25-billion-financing",
+     "date": "2026-07",
+     "note": "Promoter group encumbers 54.72% of Vedanta under US$2.25bn financing"
+    },
+    {
+     "source": "https://scanx.trade/stock-market-news/companies/vedanta-discloses-share-encumbrance-400m-bond-tap/51352108",
+     "date": "2026-09-16",
+     "note": "US$400m bond tap encumbrance disclosure"
+    },
+    {
+     "source": "https://www.kotakneo.com/news/stocks/vedanta-declares-5-per-share-interim-dividend-after-demerger/",
+     "date": "2026-10-08",
+     "note": "First post-demerger interim dividend Rs5/share, Rs1,955 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "VEDL",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Dollar rates drive refinancing cost of Vedanta Resources notes and global metals risk appetite; 10y UST at 4.89% (+9% since 1 June). +25 bp => -0.8 on valuation and parent credit.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=US+Treasury+selloff+10-year+yield+5%25+September+2026&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "UST 10y above 5% on 23 Sep"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "VEDL",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Dividend-yield stock (12.9% trailing); +25 bp on Indian cost of equity => ~-0.8. Direct interest bill small at VEDL (Rs696 cr/q; net debt 0.1x).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/VEDL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Dividend yield 12.9%, P/E 7.85, interest Rs696 cr in Q2"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "VEDL",
+   "relation": "regulatory_risk",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Residual earnings are 93% Zinc India, so a royalty rise is ~0.6 x HZL's -1.5 plus copper/Zinc International royalties and Zambia royalty (a recurring tax risk). Look-through ~-1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://ticker.finology.in/discover/market-update/vedanta-q2-fy27-results-analysis",
+     "date": "2026-10-28",
+     "note": "Zinc India = 93% of EBITDA"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "VEDL",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 15.8% and the stock is a high-volatility, high-beta name (price series not demerger-adjusted: 1y vol 111% and -48% 12m are artefacts of the aluminium/oil/power/steel demergers). +US$5bn quarterly net FPI inflow => relief rally in metals; record FPI outflow in CY2026 is a headwind.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/VEDL/consolidated/",
+     "date": "2026-11-05",
+     "note": "FII 15.78%; 1y vol 111% ann., 12m -48.4% (demerger-distorted)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "VEDL",
+   "relation": "macro_transmission",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical -0.67 per +5 VIX points (t=-0.6, insignificant) and beta 1.1 to 1.3; consistent with a leveraged-at-parent, cyclical stock; weight set at empirical value.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/VEDL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical F_RISK_SENTIMENT -0.67 (t=-0.6)"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "HINDZINC",
+   "dst": "VEDL",
+   "relation": "holding_stake",
+   "w": 0.75,
+   "w_low": 0.5,
+   "w_high": 1.1,
+   "lag": "0-3m",
+   "mechanism": "Vedanta holds ~60.7-61.8% of HZL (promoter holding 60.71% per screener, direct VEDL stake not separately verified). Look-through value 0.607 x Rs2,41,139 cr = ~Rs1.46 lakh cr, about 143% of VEDL's Rs1.03 lakh cr mcap (a deep holdco discount; VEDL also carries minorities' leakage, parent dividend/brand-fee outflow, and the rest of the business). A fixed-rupee discount would imply w=1.4, a proportional discount w=1.0; weekly regressions of VEDL on HZL give beta 0.54 (2021-26, pre-demerger mix), 0.66 (last 12m) and 0.77 since July 2026 (corr 0.84, 19 weeks). Central 0.75.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://ticker.finology.in/discover/market-update/vedanta-q2-fy27-results-analysis",
+     "date": "2026-10-28",
+     "note": "Zinc India = 93% of consolidated EBITDA, HZL ~60.71% owned"
+    },
+    {
+     "source": "https://www.outlookbusiness.com/amp/story/news/vedanta-divests-16-stake-in-arm-hzl-for-around-rs-3028-crore",
+     "date": "2025-06",
+     "note": "Vedanta divested 1.6% of HZL for ~Rs3,028 cr (headline)"
+    }
+   ]
+  },
+  {
+   "src": "VAML",
+   "dst": "VEDL",
+   "relation": "group_contagion",
+   "w": 0.15,
+   "w_low": 0.05,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Same promoter (Vedanta Resources/Twin Star), identical shareholder base from the 1:1 demerger, shared encumbrance structure. Raw weekly regression of VEDL on VAML not available (20 weeks of VAML history); VAML on VEDL beta 0.46, corr 0.58. w = % move in VEDL per 1% move in VAML, shrunk for market component.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://scanx.trade/stock-market-news/companies/vedanta-iron-steel-reports-encumbrance-on-56-38-promoter-shares/45719535",
+     "date": "2026-07",
+     "note": "56.38% promoter shares of Vedanta group entities encumbered"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Hindustan Zinc Ltd.",
+   "ticker": "HINDZINC",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~61% held; ~93% of EBITDA; dividends fund VEDL and Vedanta Resources"
+  },
+  {
+   "counterparty": "Vedanta Aluminium Metal Ltd.",
+   "ticker": "VAML",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Demerged sister company; same promoter, 1:1 shareholder base; brand/service ties"
+  },
+  {
+   "counterparty": "Vedanta Resources Ltd / Twin Star Holdings (promoter)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "54.72% promoter holding, fully encumbered with GLAS Agency; relies on VEDL dividends and brand fees"
+  },
+  {
+   "counterparty": "Konkola Copper Mines (Zambia), Gamsberg/Black Mountain/Skorpion",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "Copper and zinc international assets (model knowledge)"
+  },
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "Holds 27.9% of HZL"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (consolidated; reporting date not confirmed, Q2 was 2026-10-27/28)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.kotakneo.com/news/stocks/vedanta-q2-fy27-results-put-share-price-in-focus/"
+  },
+  {
+   "date": "2026-12",
+   "event": "Second interim dividend / HZL dividend upstream (first Rs5/share paid Oct)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.kotakneo.com/news/stocks/vedanta-declares-5-per-share-interim-dividend-after-demerger/"
+  },
+  {
+   "date": "2027-03",
+   "event": "Further sale of HZL stake by VEDL to delever (precedent Jun 2025: 1.6%)",
+   "type": "corporate_action",
+   "prob": 0.25,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": -1.0,
+   "source": "https://bondblox.com/news/vedanta-declares-first-interim-dividend-sells-1-6-stake-in-hindustan-zinc"
+  },
+  {
+   "date": "2027-03",
+   "event": "Vedanta Resources refinancing / bond maturity; failure or discount-to-par event for group US$ bonds",
+   "type": "other",
+   "prob": 0.1,
+   "impact_pct_low": -15.0,
+   "impact_pct_high": -5.0,
+   "source": "https://choiceindia.com/news/vedanta-promoters-pledge-54-72-percent-stake-us-2-25-billion-financing"
+  },
+  {
+   "date": "2026-12",
+   "event": "Release or enforcement-related change in GLAS Agency encumbrance on 54.72% promoter stake",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": 4.0,
+   "source": "https://filingreader.com/news-wire/mumbai/2026-07-16/glas-agency-reports-encumbrance-over-547-stake-in-vedanta"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget: mining/critical-mineral duties and royalty",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Union+Budget+2027+mining+royalty&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported ~2026-10-27: revenue Rs26,356 cr, EBITDA Rs9,915-9,938 cr (OPM 38% screener; 60% ex-copper per press), profit from continuing ops Rs6,202 cr (+151%), attributable profit Rs3,650 cr (-33% q/q), net debt Rs3,675 cr, FCF pre-capex Rs5,803 cr. Q/Q and y/y comparisons are NOT like-for-like because of the demergers; screener TTM (sales Rs96,507 cr, NP Rs31,279 cr incl. other income Rs13,605 cr) mixes pre- and post-demerger periods and is unreliable.",
+  "trend": "EBITDA rising on zinc cost cuts and metal prices, but metal prices (silver -30% since June, aluminium irrelevant) have turned down; stock -4.6% in 3 months, -14% in 6 months (not demerger-adjusted).",
+  "valuation": "Mcap Rs1.03 lakh cr vs ~Rs1.46 lakh cr look-through HZL stake alone (holdco discount ~30%); trailing dividend yield 12.9% (partly special, demerger-affected); P/E 7.85 per screener (unreliable). Brokers: Motilal Oswal neutral on the group.",
+  "recent_developments": [
+   "2026-10-08: first interim dividend since demerger Rs5/share (Rs1,955 cr), record date Oct 14 (Business Standard, Kotak Neo)",
+   "2026-10-14: Vedanta group stocks (Power, Oil & Gas, Iron & Steel) rebound up to 13% (CNBC TV18)",
+   "2026-10-27/28: Q2 results; net debt down Rs4,624 cr q/q to Rs3,675 cr",
+   "2026-09-28: Vedanta shares slip ~10% in one month",
+   "2026-09-16: US$400m bond tap with promoter share encumbrance",
+   "2026-07-16: GLAS reports encumbrance over 54.7% of Vedanta promoter stake"
+  ]
+ },
+ "key_risks": [
+  "Holdco: value depends on HZL (93% of EBITDA); silver slump hurts directly",
+  "Parent debt: encumbered promoter shares, dividend/brand-fee upstreaming, forced selling",
+  "Copper/Zinc International execution; Zambia and South Africa tax and policy risk",
+  "Demerger accounting: no clean history; contingent liabilities Rs31,673 cr (screener)",
+  "Government and royalty risk; governance perception discount",
+  "Stale empirical betas (aluminium) may mislead models"
+ ],
+ "upside_triggers": [
+  "HZL re-rating on silver/zinc recovery",
+  "Narrowing of holdco discount via simplification, buyback or large special dividend",
+  "Debt reduction at Vedanta Resources reducing encumbrance",
+  "Copper price rise and Zambia ramp-up"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.kotakneo.com/news/stocks/vedanta-q2-fy27-results-put-share-price-in-focus/",
+   "date": "2026-10-28",
+   "what": "Kotak Neo: Vedanta Q2 FY27 results, net debt, profit +151%"
+  },
+  {
+   "url": "https://ticker.finology.in/discover/market-update/vedanta-q2-fy27-results-analysis",
+   "date": "2026-10-28",
+   "what": "Finology: Vedanta Q2 analysis (EBITDA split, restructuring caveat)"
+  },
+  {
+   "url": "https://www.kotakneo.com/news/stocks/vedanta-declares-5-per-share-interim-dividend-after-demerger/",
+   "date": "2026-10-08",
+   "what": "First post-demerger dividend Rs5/share"
+  },
+  {
+   "url": "https://choiceindia.com/news/vedanta-promoters-pledge-54-72-percent-stake-us-2-25-billion-financing",
+   "date": "2026-07",
+   "what": "Choice India: promoter encumbrance 54.72% under US$2.25bn financing"
+  },
+  {
+   "url": "https://filingreader.com/news-wire/mumbai/2026-07-16/glas-agency-reports-encumbrance-over-547-stake-in-vedanta",
+   "date": "2026-07-16",
+   "what": "FilingReader: GLAS encumbrance"
+  },
+  {
+   "url": "https://scanx.trade/stock-market-news/companies/vedanta-discloses-share-encumbrance-400m-bond-tap/51352108",
+   "date": "2026-09-16",
+   "what": "Scanx: US$400m bond tap encumbrance"
+  },
+  {
+   "url": "https://bondblox.com/news/vedanta-declares-first-interim-dividend-sells-1-6-stake-in-hindustan-zinc",
+   "date": "2025-06",
+   "what": "Bondblox: Vedanta sells 1.6% of HZL (headline only)"
+  },
+  {
+   "url": "https://www.screener.in/company/VEDL/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals and empirical sensitivities (evidence pack); price series not demerger-adjusted"
+  }
+ ]
+}

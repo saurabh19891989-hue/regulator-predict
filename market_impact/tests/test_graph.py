@@ -34,7 +34,8 @@ def test_clamped_observed_driver_blocks_upstream_propagation():
     net = Network(nodes, [E("BRENT", "INR", 0.4), E("INR", "X", 5, "company"), E("BRENT", "X", -2, "company")])
     free, _, _ = net.unit_response("BRENT")
     clamped, _, _ = net.unit_response("BRENT", clamped=frozenset({"INR"}))
-    assert math.isclose(free["X"], -2 + 0.4 * 5 * DAMP[2])
+    from market_impact.mi.graph import OVERLAP_DAMP
+    assert math.isclose(free["X"], -2 + 0.4 * 5 * DAMP[2] * OVERLAP_DAMP)   # X has a direct BRENT edge → half credit
     assert math.isclose(clamped["X"], -2)          # INR observed separately → no double count via BRENT→INR
 
 

@@ -55,6 +55,41 @@
    "origin": "LAURUSLABS",
    "factor": 0.0,
    "reason": "backbone already maps decoupling into T_CHINA_PLUS_ONE (w 0.6), which LAURUSLABS has a direct edge from; flagged by the profiling agent"
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "F_HOUSING_DEMAND",
+   "origin": "sector_policy.json",
+   "factor": 0.1,
+   "reason": "unit error: written per -100bp, SSU is +25bp; backbone_india agent flag"
+  },
+  {
+   "src": "P_SEBI_DERIVATIVES",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "origin": "sector_policy.json",
+   "factor": 0.05,
+   "reason": "unit error: magnitude written in % volume, target SSU is a standard shock; backbone_india agent flag"
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_DOMESTIC_FLOWS",
+   "origin": "sector_policy.json",
+   "factor": 0.1,
+   "reason": "unit error per backbone_india agent review"
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "F_EQUITY_ACTIVITY_IN",
+   "origin": "sector_policy.json",
+   "factor": 0.05,
+   "reason": "unit error per backbone_india agent review"
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "F_BRENT",
+   "origin": "geopolitics_trade.json",
+   "factor": 0.25,
+   "reason": "outlier 6.0 vs 1.5 in backbone_global and energy.json"
   }
  ]
 }

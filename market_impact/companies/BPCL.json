@@ -1,0 +1,397 @@
+{
+ "name": "Bharat Petroleum Corporation Ltd.",
+ "industry": "I_REFINING_OMC",
+ "business_summary": "Government-owned (53%) oil marketing and refining company: ~38-40 Mtpa refining at Mumbai, Kochi and Bina (with a petrochemical expansion), ~25% share of India's petrol/diesel/LPG retail via ~23,000 outlets, plus lubricants, aviation fuel and stakes in city-gas distributors. Retail fuel prices are effectively administered, so crude spikes compress marketing margins; Q1 FY27 produced a loss (EBITDA Rs-4,055 cr, PAT Rs-1,873 cr) before Q2 recovered (EBITDA Rs8,973 cr, PAT Rs4,863 cr, -21.5% YoY). TTM sales Rs538,088 cr; market cap Rs1.38 lakh cr; dividend yield 5.6%. Plans a Rs1.45 lakh cr Andhra Pradesh (Ramayapatnam) refinery-petchem complex.",
+ "revenue_mix": [
+  {
+   "segment": "marketing (petrol, diesel, LPG, ATF, lubes)",
+   "share_pct": 85,
+   "geography": "India ~98%"
+  },
+  {
+   "segment": "refining (transfer-priced, plus exports)",
+   "share_pct": 14,
+   "geography": "India with minor exports"
+  },
+  {
+   "segment": "gas, petchem, other",
+   "share_pct": 1,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 88
+  },
+  {
+   "input": "F_SHIPPING_RATES",
+   "share_of_costs_pct": 1
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_BRENT",
+   "dst": "BPCL",
+   "relation": "input_cost",
+   "w": -5.5,
+   "w_low": -12.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "With retail petrol/diesel/LPG prices held steady, crude is the main swing: +10% Brent (~+$9.5/bbl at $95) = ~Rs5.6/l product cost. On ~38 bn litres/yr MS+HSD, 30% passed on over 3 months leaves ~Rs4/l = ~Rs15k cr annualised = -57% of TTM EBITDA Rs26,238 cr; EV/MCap ~1.25, persistence 0.25 (govt compensation/price action fades it) => ~-18 gross; partly offset by inventory gains and refining margin (see F_REFINING_MARGIN) => net ~-5.5. Pack empirical -2.16 (t=-4.4) is from a more regulated regime; ICRA: OMCs lost Rs530 cr/day (2026-09-23). Q1 FY27 EBITDA was Rs-4,055 cr when crude spiked.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=OMCs+losing+Rs530+crore+a+day+crude+surge+ICRA+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-23",
+     "note": "ET/Moneycontrol: OMCs lose Rs530 cr daily"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=BPCL+Q2+FY27+results+marketing+margin+LPG+under-recovery+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Business Standard: Q2 PAT -21.5% to Rs4,863 cr on weak marketing margins"
+    },
+    {
+     "source": "market_impact/data/packs/BPCL.md",
+     "date": "2026-11-05",
+     "note": "empirical -2.16 per +10% Brent, t=-4.4; Q1 FY27 loss Rs1,873 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "BPCL",
+   "relation": "output_price",
+   "w": 5.0,
+   "w_low": 1.0,
+   "w_high": 9.0,
+   "lag": "0-3m",
+   "mechanism": "~38-40 Mt crude throughput (~290 mn bbl); +$2/bbl GRM = ~$580 mn = ~Rs5,500 cr = +21% EBITDA; x1.25 x0.4 persistence => +10; central 5 given Bina and product-mix limits. Pack empirical is NEGATIVE (-1.61, t=-3.4): the series is a heating-oil proxy, so it co-moves with diesel spikes that hurt frozen-price marketing; structural sign kept positive, conflict flagged.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BPCL.md",
+     "date": "2026-11-05",
+     "note": "empirical -1.61 per +$2 GRM proxy, t=-3.4 (sign conflict)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=BPCL+Q2+earnings+call+refining+stays+strong+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Investing.com: BPCL Q2 beats on EPS as refining stays strong"
+    }
+   ]
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "BPCL",
+   "relation": "policy_effect",
+   "w": -4.0,
+   "w_low": -12.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "+1 unit = Rs2/l excise rise. If retail is frozen the OMC absorbs it: Rs2/l x ~38 bn l = ~Rs7,600 cr = -29% EBITDA x1.25 x0.5 => -18 worst case; probability-weighted vs pass-through to consumers and the current bias toward excise cuts => -4. Centre to decide on the Rs75,000 cr OMC compensation ask in 2027 (Moneycontrol 2026-09-07).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=OMCs+seek+Rs75%2C000+crore+for+fuel+losses+Centre+to+decide+in+2027+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-07",
+     "note": "Moneycontrol"
+    }
+   ]
+  },
+  {
+   "src": "P_WINDFALL_EXPORT_TAX",
+   "dst": "BPCL",
+   "relation": "regulatory_risk",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "BPCL exports are small but a windfall levy on refiners' export margin was used in 2022; +1 imposition => ~-1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BPCL.md",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BPCL",
+   "relation": "fx_translation",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Crude is USD-priced against INR retail prices; +3% INR depreciation raises crude cost like Brent +3% (~-1.65 using the Brent weight) with a small offset from USD-linked GRM on exports. Pack -1.09 (t=-0.8).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BPCL.md",
+     "date": "2026-11-05",
+     "note": "empirical -1.09 per +3% USDINR, t=-0.8"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BPCL",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Interest Rs2.98k cr TTM on large working-capital borrowing; +25bp ~Rs60 cr (0.2% EBITDA); discount-rate effect on a 5.6% dividend-yield PSU dominates.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BPCL.md",
+     "date": "2026-11-05",
+     "note": "TTM interest Rs2,980 cr; dividend yield 5.6%"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "BPCL",
+   "relation": "geopolitical_exposure",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Russian crude discount of ~$3/bbl on roughly a quarter of intake (model knowledge) = ~Rs2,000 cr = +8% EBITDA x1.25 x0.5 => ~+5 for larger access; central 3. BPCL expects Russian purchases to fall in November (2026-10-26) and a US Russia-sanctions law adds risk, though 100% tariffs on India were waived (2026-10-27).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bharat+Petroleum+expects+Russian+crude+purchases+to+fall+in+November+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "Business Standard"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Trump+waives+threat+of+100%25+tariffs+on+India+over+Russian+oil+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Economic Times"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Russia+Sanctions+Bill+ICICI+Securities+HPCL+BPCL+IOC+earnings+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "CNBC TV18"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "BPCL",
+   "relation": "geopolitical_exposure",
+   "w": -1.5,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Excess over the Brent channel: supply security for ~50-55% of crude from the Gulf (model knowledge; BPCL secured 55% of October needs by 2026-08-27), freight and insurance premia, replacement of cargoes (WTI cargo bought 2026-11-03). Peace hopes lowered Brent 8% on 2026-11-02.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Oil+plunges+8%25+US-Iran+peace+hopes+ease+Hormuz+fears+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "Gulf News"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Indian+refiner+BPCL+buys+US+WTI+crude+oil+cargo+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Yahoo Finance"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "BPCL",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": 0.2,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "Fuel demand grows ~0.8x GDP; +1pp lifts marketing volumes ~0.8% and refinery utilisation; ~+0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BPCL.md",
+     "date": "2026-11-05",
+     "note": "TTM sales Rs538,088 cr"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "BPCL",
+   "relation": "regulatory_risk",
+   "w": -0.4,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Stronger EV push erodes long-run petrol demand (>12m mostly); BPCL's transition capex partly hedges.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BPCL.md",
+     "date": "2026-11-05",
+     "note": "model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_SHIPPING_RATES",
+   "dst": "BPCL",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Crude freight ~$2-3/bbl of landed cost; +25% adds ~$0.6/bbl, ~-0.4 after partial pass-through.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Brent+crude+Hormuz+tanker+attacks+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-10",
+     "note": "Reuters: oil surges on more tanker attacks"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Gulf crude suppliers (Saudi, Iraq, UAE, Kuwait)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "term contracts; Hormuz route"
+  },
+  {
+   "counterparty": "Russian crude suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "discounted cargoes; sanctions risk"
+  },
+  {
+   "counterparty": "IOC",
+   "ticker": "IOC",
+   "role": "competitor",
+   "importance": "high",
+   "note": "largest OMC; shared price administration"
+  },
+  {
+   "counterparty": "HPCL",
+   "ticker": "HINDPETRO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "OMC peer"
+  },
+  {
+   "counterparty": "Government of India (53%)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "price policy and compensation"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (late Jan; Q2 on 2026-10-23)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=BPCL+Q2+FY27+results+marketing+margin+LPG+under-recovery+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Government decision on compensation for LPG/fuel under-recoveries (OMCs seek Rs75,000 cr; decision flagged for 2027)",
+   "type": "regulatory",
+   "prob": 0.45,
+   "impact_pct_low": 4.0,
+   "impact_pct_high": 12.0,
+   "source": "https://news.google.com/rss/search?q=OMCs+seek+Rs75%2C000+crore+for+fuel+losses+Centre+to+decide+in+2027+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "November LPG price/under-recovery twist after losses eased from Rs507 to Rs290 per cylinder (ET NOW 2026-10-26)",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=BPCL+LPG+losses+ease+November+twist+Q2+earnings+concall+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Andhra Pradesh refinery: environmental clearance and subsidiary set-up progress (Rs1.45 lakh cr project)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=BPCL%27s+Rs+1+trn+refinery+project+gets+environmental+clearance+recommendation+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "US Russia-sanctions law implementation / Russian crude waiver outcome",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Russia+Sanctions+Bill+ICICI+Securities+HPCL+BPCL+IOC+earnings+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs149,080 cr, EBITDA Rs8,973 cr (6%), PAT Rs4,863 cr (-21.5% YoY); Q1 FY27 was a loss of Rs1,873 cr",
+  "trend": "Recovering from war-driven Q1 loss; marketing margins still weak, refining strong; Brent has fallen from >$110 (headline 2026-11-02) to ~$100-104 (factor_state shows 94.99 front-month)",
+  "valuation": "P/E 9.8x on Rs15.8k cr TTM PAT, P/B 1.4x, dividend yield 5.6%",
+  "recent_developments": [
+   "2026-10-23: Q2 PAT Rs4,863 cr, -21.5% YoY (Business Standard); EPS beat per call transcript (Investing.com 2026-10-26)",
+   "2026-09-23: ICRA says OMCs lose Rs530 cr/day (ET)",
+   "2026-09-07: OMCs seek Rs75,000 cr; Centre to decide in 2027 (Moneycontrol)",
+   "2026-10-26: expects Russian crude purchases to fall in November (Business Standard)",
+   "2026-11-02/04: Brent drops on US-Iran peace hopes (Gulf News, Oil & Gas Middle East)"
+  ]
+ },
+ "key_risks": [
+  "Brent rebound with frozen retail prices",
+  "No compensation for LPG/fuel under-recoveries",
+  "Gulf supply disruption and Russian sanctions",
+  "Large capex (Andhra refinery) and dividend policy under government control"
+ ],
+ "upside_triggers": [
+  "Iran peace deal pushes Brent lower",
+  "Government compensation or excise relief",
+  "Strong refining margins and Bina petchem ramp-up"
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BPCL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=BPCL+Q2+FY27+results+marketing+margin+LPG+under-recovery+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=OMCs+losing+Rs530+crore+a+day+crude+surge+ICRA+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "under-recoveries"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Brent+crude+Hormuz+Iran+November+2026+when%3A90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Brent and Iran talks"
+  }
+ ],
+ "ticker": "BPCL",
+ "as_of": "2026-11-05",
+ "tier": "NIFTY_NEXT_50",
+ "company_links": [],
+ "new_nodes_proposed": []
+}

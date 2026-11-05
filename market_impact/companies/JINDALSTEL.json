@@ -1,0 +1,659 @@
+{
+ "ticker": "JINDALSTEL",
+ "name": "Jindal Steel Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_STEEL",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Odisha/Chhattisgarh-based integrated steel maker (Raigarh, Angul) with crude capacity just lifted to 15.6 Mtpa after the second Angul blast furnace; FY27 production guided ~11 Mt (6 Mt in H2) and sales 10.5-11 Mt. Mix ~60:40 flats:longs (target 65:35): plates (>220 kt/month for defence, shipbuilding, wind), HRC, rails, structurals, TMT; value-added share 57%. Captive iron ore (Kasia), 15 Mtpa captive coal blocks, coal-gasification-based DRI, and overseas coal mines (Mozambique). Q2 FY27 consolidated: sales Rs16,610 cr (+45%), EBITDA Rs2,504 cr (15.1%), adj. EBITDA/t Rs10,522, PAT Rs774 cr; net debt Rs14,790 cr (1.51x). Mcap Rs1.18 lakh cr.",
+ "revenue_mix": [
+  {
+   "segment": "steel (flats ~60%, longs ~40%; value-added 57% of sales)",
+   "share_pct": 94,
+   "geography": "India ~92% / exports ~8% (~100 kt/month)"
+  },
+  {
+   "segment": "traded goods, power, mining and other",
+   "share_pct": 6,
+   "geography": "India / overseas subsidiaries"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COKING_COAL",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "F_IRON_ORE",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_COAL_INDIA",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 6
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "JINDALSTEL",
+   "relation": "output_price",
+   "w": 16.0,
+   "w_low": 9.0,
+   "w_high": 24.0,
+   "lag": "0-3m",
+   "mechanism": "Integrated flat+long producer; ~95% of revenue is steel at NSR Rs70,078/t (Q2 FY27). +7% (SSU) = ~Rs4,900/t x FY27E sales 10.6 Mt (MOFSL) = ~Rs5,200 cr vs FY27E consolidated EBITDA Rs12,830 cr => +40% EBITDA. EV/MCap 1.13 (mcap Rs1,17,698 cr + net debt Rs14,790 cr); persistence 0.4 (prices already ~Rs60,000/t, H2 contracts reset; Chinese/safeguard cap) => 40 x 1.13 x 0.4 = +18; trimmed to +16 for partial pricing-in (HRC +14% from Q2 average by Oct). Consistent with spec worked example. Empirical pack has no significant steel factor (F_STEEL_GLOBAL not in top 12), stock beta 1.3 dominates.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "NSR INR70,078/t Q2; TMT 52k->59-60k/t, HRC 51-53k->~60k/t; mgmt expects better H2 realisations"
+    },
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "FY27E EBITDA Rs128.3bn, sales 10.6 Mt; steel price rally"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Steel+prices+at+four-year+high;+trend+to+continue+in+H2:+report&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-22",
+     "note": "Indian HRC at four-year high"
+    }
+   ]
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "JINDALSTEL",
+   "relation": "input_cost",
+   "w": -7.5,
+   "w_low": -12.0,
+   "w_high": -3.5,
+   "lag": "0-3m",
+   "mechanism": "GROSS direct cost effect (pass-through to prices travels separately via F_COKING_COAL->F_STEEL_INDIA 0.3 in backbone, so net is much smaller: -7.5 + 0.3x16 = -2.7). Imported coking coal ~0.55 t/t steel (model estimate; captive thermal coal + coal-gas DRI lowers BF coke intensity) at ~US$250/t (unverified) x USD/INR 94.5 = ~Rs13,000/t steel = ~22% of costs (NSR 70,078 minus EBITDA 10,800 = Rs59,300/t). +15% = US$37/t = Rs3,500/t coal => Rs1,950/t steel = -18% EBITDA/t; x1.13 x persistence 0.4 => -8.2; trimmed to -7.5 for Mozambique/captive supply. Mgmt: coking coal +US$12-15/t in Q2 (EBITDA/t fell 12% QoQ to Rs10,522) and a further +US$20-25/t in Q3; may ease Dec-Jan if Russian Black Sea supply resumes.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "Coking coal +US$12-15/t Q2, further +US$20-25/t Q3; Mozambique mine ships ~2 vessels/month"
+    },
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "Russian Black Sea coal could ease prices Dec-Jan"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Coking+Coal+Prices+Surge+25%,+Squeezing+India's+Steelmakers&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-20",
+     "note": "Coking coal +25% in Aug 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "JINDALSTEL",
+   "relation": "input_cost",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Ore/pellet ~12% of costs (~Rs7,100/t steel, model estimate). Captive Kasia mine = 33% of consumption (Q2), OMC long-term 13.5 Mt agreement, NMDC; ~65% market-linked. +15% x 12% x 0.65 = +1.2% of costs = Rs725 cr = -5.7% EBITDA; x1.13 x 0.4 = -2.6. Iron ore is FALLING (-12.5% since 1 Jun, two-year low), so this is currently a tailwind; empirical elasticity is +1.53 (t=+1.0) - wrong sign but insignificant (iron ore co-moves with China steel demand sentiment), hence upper bound set positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "Kasia 33% of iron ore consumption in Q2; OMC LTA 13.5 Mt; supplies normalised"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Iron+ore+price+slips+to+two-year+low+on+concerns+over+weak+demand,+rising+supply&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Iron ore at two-year low (US$91.95/t on 2026-11-05)"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "JINDALSTEL",
+   "relation": "input_cost",
+   "w": -1.3,
+   "w_low": -2.8,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Domestic thermal coal feeds coal-gas DRI (Angul, Raigarh), captive power and syngas. Captive mines (~15 Mtpa Raigarh+Angul, incl. Gare Palma) cover 50-55% of need (target 65-70%); rest via linkage/e-auction where premiums reached ~94% in Sep-Oct 2026. Coal+gas ~10% of costs (Rs6,200 cr), ~47% bought = Rs2,900 cr; +10% = Rs290 cr = -2.3% EBITDA x1.13 x0.5 = -1.3. Utkal B2 mine (FY27) and 50% royalty exemption on coal-gasification coal improve this.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "Captive coal 50-55% of needs, target 65-70%; Utkal B2 within FY27; 50% royalty exemption"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+coal+stocks+power+plants+critical+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-21",
+     "note": "74 thermal plants <=7 days stock; e-auction premium ~94% (domain-b 12 Oct)"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "JINDALSTEL",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.6,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "User worked-example channel (electricity). BF-BOF + DRI route uses ~450 kWh/t = ~5 BU/yr at 11 Mt; most from captive plants (coal-fired, waste-heat, BF gas), assume ~30% bought/open-access at ~Rs6/unit = Rs900 cr (1.5% of costs). +15% (SSU) = Rs135 cr = -1.1% EBITDA x1.13 x0.4 = -0.5. IEX day-ahead hit the Rs20/unit ceiling on 19 Sep 2026 and Q2 prices were ~+46% y/y, so realised exposure could be larger than the SSU; MOFSL names 'power & fuel' among Q2 cost escalators. Share of bought power is NOT disclosed - low confidence. Indirect power-crunch channels (rail rake priority, grid curtailment) are in the md narrative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "Q2 costs escalated on raw material, power & fuel and freight"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=IEX+power+prices+hit+Rs+20+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-19",
+     "note": "IEX hits Rs20/kWh ceiling; Q2 spot ~+46% y/y"
+    },
+    {
+     "source": "https://www.miningweekly.com/article/blackouts-hit-indian-factories-as-coal-crunch-feeds-into-economy-2026-10-12",
+     "date": "2026-10-12",
+     "note": "Coal-crunch blackouts hit Indian factories; captive producers disadvantaged (search snippet)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "JINDALSTEL",
+   "relation": "fx_translation",
+   "w": 1.0,
+   "w_low": -2.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Mixed. +3% INR depreciation: (i) coking coal import cost +3% on ~22% of costs = +0.7% of costs = -3.4% EBITDA; (ii) domestic steel prices anchored to import parity so ~40% passes to NSR = +1.2% of NSR = +8% EBITDA; (iii) exports ~8% of volume (HRC/plates, ~100 kt/month) +3% = +1.6% EBITDA; (iv) USD debt/ECB and overseas subsidiaries (Oman, Mozambique, Australia) small net negative. Net ~+6% EBITDA x1.13 x0.3 = +2; shaded to +1 since import-parity pass-through is imperfect under safeguard. No significant empirical estimate (F_USDINR absent from top-12).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "Exports ~0.1 Mt/month; adj. EBITDA includes INR0.68bn forex gain"
+    },
+    {
+     "source": "https://www.screener.in/company/JINDALSTEL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack: USD/INR not among significant factors"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "JINDALSTEL",
+   "relation": "funding_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Gross debt ~Rs18,000-22,000 cr (PL: FY27E Rs180bn), net debt Rs14,790 cr (1.51x EBITDA); ~50% floating. +25 bp x ~Rs10,000 cr = Rs25 cr = 0.2% of EBITDA => ~-0.2; RBI hiked to 5.50% on 7 Oct 2026 (calibrated tightening) so more hikes are live (Dec 4 MPC). Demand channel (housing -> TMT) is carried by F_HOUSING_DEMAND and backbone edges.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "Net debt INR147.9bn, ND/EBITDA 1.51x; capex INR75-100bn FY27 from internal accruals"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hikes repo 25 bp to 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "JINDALSTEL",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Capital-intensive cyclical with a ramp-up story (EV/EBITDA 6.3x FY28E, P/E 11.5x FY28E but 20x FY27E per PL): +25 bp on cost of equity with effective duration ~8-10 on the FY28-29 earnings step-up => ~-1.5 to -2%. 10y G-sec ~7.4-7.45% after RBI liquidity drain. Not separable from market beta (1.3) in the data.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JINDALSTEL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Market beta 1.3-1.4; P/E 34.5 TTM"
+    },
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "EV/EBITDA 9.1x FY27E, 6.3x FY28E"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_STEEL_EXPORTS",
+   "dst": "JINDALSTEL",
+   "relation": "competition",
+   "w": -0.8,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "User worked-example channel (China dumping). PRICE effect is already carried by backbone F_CHINA_STEEL_EXPORTS->F_STEEL_GLOBAL (-0.35)->F_STEEL_INDIA (0.525)->JINDALSTEL(+16) = -2.9 per +15% y/y; this direct edge covers only the VOLUME/EXPORT-MARKET effect: lost export volumes (~8% of sales into Europe/Asia) and import share gain that the 12% safeguard (to 11.5% Apr 2027) only partly blocks (H1 FY27 imports +24%). China Sep exports 10.49 Mt (+3.3% m/m); Europe's turn to protection (EU quota/CBAM) diverts Chinese tonnes to Asia.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=China's+September+steel+exports+at+10.492+million+mt&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "China September steel exports 10.492 Mt"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Steel+Demand+Outpaces+Output+in+H1+FY27+as+Imports+Rise+24%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "H1 FY27 steel imports +24%, demand outpaces output"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India's+steel+exports+to+EU+fall+20%25+amid+CBAM,+quotas;+Americas+surge+262%25,+Africa+96%25&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "India steel exports to EU -20% in H1 FY27"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "JINDALSTEL",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 0.8,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "DGTR opened an AD probe on hot-rolled flat steel from China, Japan and Russia on 26 Jun 2026 (final ~Jun 2027, provisional possible earlier). Flats are ~60-65% of JSP's mix (plates 220 kt/month, HRC). Incremental effective protection over the existing 12% safeguard assumed ~+4-5 pp => HRC +2% = 0.3 SSU x16 = +4.8, probability-neutral conditional weight shaded to +3. Counter-signal: steel ministry reportedly unlikely to seek new curbs (Reuters 6 Oct).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+launches+anti-dumping+probe+into+hot-rolled+flat+steel+imports+from+China,+Japan+and+Russia&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-06-26",
+     "note": "DGTR AD probe on HR flat steel from China, Japan, Russia"
+    },
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "Safeguard duty expected to keep domestic prices steady"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "JINDALSTEL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Plates, rails, structurals and HRC go to infrastructure, defence, shipbuilding, windmills (plates >220 kt/month). +10% government capex growth ~ +1.3% Indian steel demand; JSP is capacity-led so volume effect is small and the price effect is already in the steel-price edge; kept low to avoid double count (flag parallel path via backbone F_GOVT_CAPEX->F_STEEL_INDIA). Union Budget 1 Feb 2027 is the catalyst.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "Defence, merchant vessel, shipbuilding and windmill demand supportive; construction to improve H2"
+    },
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "Plate output >220 kt/month"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "JINDALSTEL",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Long products (rebar/TMT, ~35-40% of mix, shifting to 35%) depend on housing/construction; TMT output cut to 120 kt/month from 220 kt and redirected to flats, which cuts sensitivity. +10% sales volume ~ +1.5% long-product demand; weight small after mix shift. Rate-hike channel: RBI repo 5.50% -> mortgage rates -> housing (backbone F_REPO_IN->F_HOUSING_DEMAND -0.27).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "TMT production reduced to 120 kt/month from 220 kt; targeting 65:35 flats:longs"
+    }
+   ]
+  },
+  {
+   "src": "F_SHIPPING_RATES",
+   "dst": "JINDALSTEL",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Ocean freight on imported coking coal (US/Australia/Mozambique) ~9% of CFR cost; +25% freight = +2% of coking-coal cost (~Rs260/t steel) = -2.4% EBITDA/t x1.13 x0.3 = -0.8. PL cites higher ocean freight in Q2 costs; Red Sea/Hormuz disruption keeps rates elevated.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "Adj. EBITDA/t Rs10,522 despite higher raw material and ocean freight costs"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "JINDALSTEL",
+   "relation": "geopolitical_exposure",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Cost inflation from West Asia only ~US$4-5/t because JSP replaced imported propane (~Rs100/kg) and natural gas with coal-gas syngas (~Rs30/kg) in reheating/galvanising; peers on LPG/propane are worse off (relative positive). Escalation still lifts diesel/freight/coking-coal logistics and risk-off (market beta 1.3), net -0.8. Positive wedge: higher demand for domestic plates/defence.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "West Asia cost inflation limited to ~USD4-5/t via coal gasification"
+    },
+    {
+     "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+     "date": "2026-10-24",
+     "note": "Timely switch to methane from coal gasification avoided productivity loss in LPG crisis"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "JINDALSTEL",
+   "relation": "regulatory_risk",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Captive iron ore (Kasia), coal (Gare Palma, Utkal B2) and OMC/NMDC ore pricing all embed royalty/DMF/auction premia; +1 (assume +2 pp of royalty) on ~Rs3,000 cr captive output value = Rs60 cr = -0.5% EBITDA, structural persistence 1.0 x1.13 => -0.6; widened for auction-premium risk on new coal/ore blocks. Positive side: stated 50% royalty exemption on coal for gasification.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-24",
+     "note": "Expects government incentives incl. stated 50% royalty exemption on eligible gasification coal"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "JINDALSTEL",
+   "relation": "macro_transmission",
+   "w": -0.7,
+   "w_low": -1.3,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Empirical -0.89 per +5 VIX points (t=-2.0, market beta 1.32): high-beta cyclical sold in risk-off; shrunk slightly toward 0 since part is already the market beta that the Director demeans. Also correlated with US equities (+1.60, t=2.1) and aluminium/copper (+2.4/+1.9, t=2.7/2.5) - these are China/global-cyclical proxies, not fundamental links (JSP has no Al/Cu business).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/JINDALSTEL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Empirical sensitivities: F_RISK_SENTIMENT -0.89 (t=-2.0); F_ALUMINIUM +2.38 (t=2.7); F_COPPER +1.85 (t=2.5)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Odisha Mining Corporation (OMC)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "13.5 Mt long-term iron ore agreement; 8 mines operational after monsoon disruption"
+  },
+  {
+   "counterparty": "NMDC Ltd.",
+   "ticker": "NMDC",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Iron ore; rail route disrupted by landslide, restored by Oct 2026"
+  },
+  {
+   "counterparty": "Imported coking coal suppliers (Australia, US, Mozambique captive, Russia if Black Sea reopens)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Largest single cost input"
+  },
+  {
+   "counterparty": "Coal India / SCCL e-auction and linkage",
+   "ticker": "COALINDIA",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Supplements captive coal (50-55% of needs)"
+  },
+  {
+   "counterparty": "JSW Steel",
+   "ticker": "JSWSTEEL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Flat steel competitor; both price off the same HRC benchmarks"
+  },
+  {
+   "counterparty": "Tata Steel",
+   "ticker": "TATASTEEL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Integrated flat/long competitor"
+  },
+  {
+   "counterparty": "SAIL",
+   "ticker": "SAIL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Rails and plates competitor"
+  },
+  {
+   "counterparty": "Jindal Power Ltd (promoter group)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "low",
+   "note": "Bought 6.06 lakh JSL shares in open market (2026-10-30); promoters 62.71%, no pledge per PL"
+  },
+  {
+   "counterparty": "Defence, shipbuilding, railways, wind OEMs",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Plates/rails; no customer >25% disclosed"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (late Jan; PL expects EBITDA ~Rs3,150 cr on 2.85 Mt as Angul ramps and coking coal +US$20-25/t lands)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf"
+  },
+  {
+   "date": "2026-12",
+   "event": "Angul BF-II hot metal 12 ktpd by Dec-26; H2 production 6 Mt (0.96 Mt/month)",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf"
+  },
+  {
+   "date": "2026-12",
+   "event": "Barbil-Angul 192 km slurry pipeline enters commercial operation (saves ~Rs700/t freight)",
+   "type": "capex",
+   "prob": 0.75,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf"
+  },
+  {
+   "date": "2027-01",
+   "event": "Roida iron ore mine resumes after forest/road clearances (mgmt: Dec-26 to Jan-27)",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 2.5,
+   "source": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf"
+  },
+  {
+   "date": "2026-12",
+   "event": "Russian Black Sea coking coal supply resumes, easing coking coal (mgmt/MOFSL: Dec-Jan, subject to geopolitics)",
+   "type": "other",
+   "prob": 0.3,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 6.0,
+   "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget FY28: customs duty on coking coal / steel safeguard stance, infra and defence capex",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Union+Budget+2027+steel+coking+coal+customs+duty&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "DGTR provisional/final finding or notified anti-dumping duty on HR flat steel (China, Japan, Russia); final due ~Jun 2027",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=India+launches+anti-dumping+probe+into+hot-rolled+flat+steel+imports+from+China,+Japan+and+Russia&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04-21",
+   "event": "Safeguard duty steps down 12% -> 11.5% (year two) - minor",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Centre+imposes+steel+safeguard+duty+for+3+years;+up+to+12%25+on+imports&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "2 Mtpa DRI plant and new pellet plant commissioning (imported equipment/shipping could delay)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf"
+  },
+  {
+   "date": "2026-12-16",
+   "event": "India-EU FTA signing incl. steel quota (~1.64 Mt under discussion) vs CBAM drag on exports",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=What+the+EU's+new+steel+regime+means+for+India:+smaller+quotas,+a+higher+penalty+and+a+carbon+price&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12-04",
+   "event": "RBI MPC: further 25 bp hike (event-catalogue probability 0.40)",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -1.5,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-23. Consolidated net sales Rs16,610 cr (+45% y/y, +7% q/q), volume 2.38 Mt (+27% y/y), NSR Rs70,078/t, adj. EBITDA Rs2,504 cr (+34% y/y, -6% q/q), adj. EBITDA/t Rs10,522 (-12% q/q), PAT Rs774 cr (+21% y/y). Pack (screener, standalone-style) shows sales 15,270 / OPM 13% / NP 861 - reconcile: broker figures are consolidated.",
+  "trend": "Volumes ramping (Angul), mix shifting to flats, prices rising (HRC ~Rs60,000/t, +14% vs Q2 avg) but coking coal +US$12-15/t in Q2 and +US$20-25/t in Q3 compress unit margin; Q4 FY27 is the earnings inflection (PL EBITDA Rs4,414 cr).",
+  "valuation": "Price Rs1,153 (2026-11-05, +14% vs 24 Oct CMP ~Rs1,016); mcap Rs1.18 lakh cr; PL: EV/EBITDA 9.1x FY27E, 6.3x FY28E, P/E 20x/11.5x; MOFSL TP Rs1,270 (8x FY28E EV/EBITDA, Buy), PL TP Rs1,245 (Buy). Nuvama (7 Oct) called it an underperformer.",
+  "recent_developments": [
+   "2026-10-23: Q2 FY27 results; revenue record, margin 15%, stock slipped on the day (Reuters/Investing.com)",
+   "2026-10-24: MOFSL/PL maintain Buy; FY27 production ~11 Mt/sales 10.5-11 Mt reiterated",
+   "2026-10-30: Jindal Power (promoter group) buys 6.06 lakh shares in open market (scanx)",
+   "2026-10-14: Nomura bullish on steel as HRC hits four-year high",
+   "2026-10: India coal crunch (74 plants <=7 days stock, e-auction premia ~94%) and IEX power at Rs20 ceiling on 19 Sep",
+   "2026-10-07: RBI repo hiked to 5.50%; 10y G-sec ~7.4%",
+   "2026-11-02: reports India weighs extending safeguard duty on select steel products amid China price pressure (headline only)"
+  ]
+ },
+ "key_risks": [
+  "Coking coal spike (+US$20-25/t in Q3) outruns steel price rises; Q3 EBITDA/t below Rs10,500",
+  "Chinese export surge / Asian HRC slump (China Sep exports 10.5 Mt) overwhelms the 12% safeguard; imports +24% H1",
+  "Early relaxation of safeguard or AD probe lapses (steel ministry reportedly reluctant to add curbs; inflation at 5.5%)",
+  "Execution: Angul BF ramp (10 -> 12 ktpd), slurry pipeline, DRI/pellet slip beyond Jun-27; Roida mine clearances",
+  "Power/coal crunch and El Nino summer 2027 shortfall (curtailment, rail rake priority, e-auction premia)",
+  "Higher-for-longer rates and housing slowdown cutting TMT/rebar demand; capex Rs75-100bn FY27 with ND/EBITDA cap 1.5x",
+  "Stock already +14% since results and rebounded sharply with Nifty (+7% in a month)"
+ ],
+ "upside_triggers": [
+  "Russian coking coal reopening (Dec-Jan) or China output curbs ('anti-involution') lowering coking coal / lifting HRC",
+  "HR flat anti-dumping duty notified; safeguard retained",
+  "Angul at 12 ktpd on time, 6 Mt H2 production achieved; pipeline savings Rs700/t",
+  "Q3/Q4 results showing EBITDA/t above Rs12,000 with value-added mix >65%",
+  "India-EU FTA steel quota and US-India deal improving export outlets"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf",
+   "date": "2026-10-24",
+   "what": "Prabhudas Lilladher Q2 FY27 result update (volumes, NSR, EBITDA/t, coking coal, capex, guidance)"
+  },
+  {
+   "url": "https://investmentguruindia.com/editorial/uploads/news-pdf/af0ab6be_JINDALST-20261024-MOFSL-RU-PG010.pdf",
+   "date": "2026-10-24",
+   "what": "Motilal Oswal Q2 FY27 update (captive coal/ore, cost guidance, West Asia impact, valuation)"
+  },
+  {
+   "url": "https://www.screener.in/company/JINDALSTEL/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals and empirical sensitivities via evidence pack (market_impact/data/packs/JINDALSTEL.md)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India+coal+stocks+power+plants+critical+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-21",
+   "what": "India coal crunch (event catalogue source)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IEX+power+prices+hit+Rs+20+ceiling+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-19",
+   "what": "IEX power price ceiling (event catalogue source)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India+launches+anti-dumping+probe+into+hot-rolled+flat+steel+imports+from+China,+Japan+and+Russia&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-06-26",
+   "what": "DGTR AD probe on HR flat steel"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Steel+Demand+Outpaces+Output+in+H1+FY27+as+Imports+Rise+24%25&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "H1 FY27 steel imports +24%"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Coking+Coal+Prices+Surge+25%,+Squeezing+India's+Steelmakers&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-20",
+   "what": "Coking coal +25% in August"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+hike+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike to 5.50%"
+  },
+  {
+   "url": "https://www.miningweekly.com/article/blackouts-hit-indian-factories-as-coal-crunch-feeds-into-economy-2026-10-12",
+   "date": "2026-10-12",
+   "what": "Mining Weekly: coal crunch and captive power producers (search snippet only, body not fetched)"
+  }
+ ]
+}

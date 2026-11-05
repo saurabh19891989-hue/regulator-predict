@@ -1,0 +1,565 @@
+{
+ "ticker": "ADANIENSOL",
+ "name": "Adani Energy Solutions Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_POWER_GRID",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest private transmission company (29,802 ckm, 1.43 lakh MVA, 16 states; Q2 FY27 transmission EBITDA margin 92%), plus Mumbai distribution (AEML, ~13 mn consumers incl. MUL; RAB Rs 10,456 cr), a smart-metering platform (14.8 mn installed, 24.6 mn order book, Rs 29,519 cr) and a fast-growing Energy Solutions trading/RTC platform (Q2 operating EBITDA Rs 803 cr). Q2 FY27 total income Rs 10,239 cr (+51%), EBITDA Rs 3,548 cr (+67%), PAT Rs 1,364 cr (+145%). Transmission under construction ~Rs 87,000 cr (15 projects); FY27 transmission capex ~Rs 14,000 cr. Promoters 73.4%; stock Rs 1,453 (+47% in 12m, -10% in 3m); P/E 48; borrowings Rs 51.8k cr.",
+ "revenue_mix": [
+  {
+   "segment": "Transmission (regulated TBCB/ISTS)",
+   "share_pct": 21,
+   "geography": "India, 16 states"
+  },
+  {
+   "segment": "Distribution (AEML Mumbai + MUL Mundra)",
+   "share_pct": 45,
+   "geography": "Mumbai and Mundra SEZ"
+  },
+  {
+   "segment": "Energy Solutions platform (power trading, RTC supply, C&I)",
+   "share_pct": 28,
+   "geography": "India (H1 FY27 operating revenue Rs 4,103 cr of Rs 14,351 cr)"
+  },
+  {
+   "segment": "Smart metering + others",
+   "share_pct": 6,
+   "geography": "India (Ind AS + non-Ind AS)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Purchased power (distribution + energy solutions)",
+   "share_of_costs_pct": 58
+  },
+  {
+   "input": "F_STEEL_INDIA / conductors / equipment (capex, not opex)",
+   "share_of_costs_pct": 0
+  },
+  {
+   "input": "Interest",
+   "share_of_costs_pct": 13
+  },
+  {
+   "input": "O&M, employee, other",
+   "share_of_costs_pct": 29
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ADANIENSOL",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -3.8,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Long-duration regulated/TBCB annuity compounder: P/E 48, EV ~Rs 2.3 lakh cr vs mcap Rs 1.77 lakh cr (EV/MCap ~1.3; net debt ~Rs 49k cr on Rs 51.8k cr borrowings, screener Sep-26). +25bp on a ~9% WACC with equity duration ~20 => ~-5%, but ~60% of cash flows are CERC-fixed 25-35 yr tariffs whose RoE does not reset with yields, so only ~40% of the duration effect is realised => -2.0. Pack shows no significant empirical beta to US 10y (-1.02, t -0.9).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIENSOL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 1,77,475 cr, P/E 47.9, borrowings Rs 51,801 cr (Sep-26)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ADANIENSOL",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Funding-cost channel only (discount-rate channel is carried by F_GSEC_10Y_IN). Mgmt (23 Oct call): 'a significant portion of our debt is fixed rate or hedged', no material rate volatility expected in P&L. Illustrative: Rs 51.8k cr debt x ~35% floating x 25bp = Rs 45 cr/yr vs TTM PBT ~Rs 4.9k cr = -0.9% PAT; AEML RAB interest is partly allowed in tariff; x EV/MCap 1.3 x persistence 1.0 => ~-1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf",
+     "date": "2026-10-23",
+     "note": "Kandarp Patel: significant portion of debt fixed/hedged; no volatility expected from FX or rates"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "ADANIENSOL",
+   "relation": "funding_cost",
+   "w": -2.2,
+   "w_low": -4.5,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Rs 87,000 cr transmission order book + 14,000 cr FY27 transmission capex + smart-meter capex must be refinanced/raised at project level; group spreads widen first in stress. +50bp on ~Rs 25k cr refinanced over 2 yrs = Rs 125 cr/yr = ~-2.5% of TTM PBT; capitalised at ~10x on 1.3 EV/MCap with persistence 0.5 and offset by regulated pass-through => -2.2. Raised Rs 3,500 cr QIP in H1 FY27 which lowers near-term need.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf",
+     "date": "2026-10-22",
+     "note": "Raised Rs 3,500 cr via QIP; transmission under-construction pipeline ~Rs 87,000 cr"
+    },
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf",
+     "date": "2026-10-23",
+     "note": "Transmission capex guidance ~Rs 14,000 cr FY27; Rs 8-9k cr in H2"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "ADANIENSOL",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Transmission is the bottleneck for renewables (Khavda curtailment); stronger support (PM-DHARA Rs 1.86 lakh cr corridor scheme approved 30 Sep 2026; near-term tender pipeline ~Rs 1.4 lakh cr) lifts AESL's addressable awards. Order book Rs 87k cr; each +Rs 10k cr of wins at ~15% equity IRR spread adds ~Rs 1.5k cr NPV-at-risk ~ +0.8% of mcap; policy step expected to add ~Rs 30-40k cr of awards over 2 yrs to AESL's ~25-30% bid share => ~+4. Stock +5.5% on 1 Oct, 3rd straight up day (coincident, not proven causal).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PM-DHARA+scheme+Rs+1.86+lakh+crore+power+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "note": "Cabinet approved Rs 1.86 lakh crore PM-DHARA green energy transmission scheme on 30 Sep 2026 (DD India, ThePrint, Moneycontrol headlines)"
+    },
+    {
+     "source": "https://www.business-standard.com (via Google News RSS: 'Adani Energy Solutions gains 5.5%; extends winning streak to 3rd session')",
+     "date": "2026-10-01",
+     "note": "Stock +5.5% on 1 Oct 2026 after PM-DHARA approval (headline)"
+    },
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf",
+     "date": "2026-10-22",
+     "note": "Near-term transmission tendering pipeline ~Rs 1.4 lakh crore"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "ADANIENSOL",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Grid and electrification capex theme underpins the Rs 1.4 lakh cr near-term tender pipeline, HVDC awards and 86 mn-meter national smart-meter opportunity (AESL order book 24.6 mn meters, Rs 29,519 cr). +1 SSU assumed to add ~Rs 40k cr awards (+2.5% of EV/year growth) over 2 years; at EV/MCap 1.3 and persistence 1.0 => ~+5, wide range because award timing is lumpy.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf",
+     "date": "2026-10-22",
+     "note": "Smart-meter order book 24.6 mn meters, Rs 29,519 cr; national opportunity 86 mn meters"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Energy+Solutions+Q2+FY27+results+transmission+capex+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Fortune India: order book rises to Rs 87,000 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "ADANIENSOL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Mumbai distribution units +11% YoY (2,930 vs 2,650 MU), MUL +26%; distribution EBITDA is regulated (RAB Rs 10,456 cr) so only 40% of volume gain converts, but the Energy Solutions platform (Q2 operating EBITDA Rs 803 cr of Rs 3,070 cr = 26%) earns on trading/RTC volumes (12.2 bn units Q2). +3pp demand ~ +3% energy-solutions volume => ~+1.5% EBITDA x 1.3 x 0.8 persistence => ~+1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf",
+     "date": "2026-10-22",
+     "note": "AEML units sold +11%; Energy Solutions Q2 operating EBITDA Rs 803 cr"
+    },
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf",
+     "date": "2026-10-23",
+     "note": "Q2 energy-solutions sales 12.2 bn units"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_PRICE_IN",
+   "dst": "ADANIENSOL",
+   "relation": "output_price",
+   "w": 0.4,
+   "w_low": -2.0,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Energy Solutions earns a spread between sourced supply (solar/wind 4.6 GW, ~3.5 GWh BESS tie-ups) and customer tariffs; legacy merchant volumes benefit from high spot prices but newly signed fixed-price RTC to MSEDCL (2,500 MW, 25 yrs) means rising spot prices raise sourcing risk until capacity is tied up (mgmt cites 'timing mismatches'). Net direction ambiguous; spot +15% x merchant volume ~9.5 bn units tilt gives about +1% EBITDA offset by mismatch => ~+0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf",
+     "date": "2026-10-23",
+     "note": "Q&A: merchant volumes being converted to long-term PPAs; margin timing mismatches while capacity tied up"
+    },
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf",
+     "date": "2026-10-22",
+     "note": "2,500 MW RTC PPA with MSEDCL for 25 years"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "ADANIENSOL",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Transmission towers, conductors and substation steel are ~35% of project cost; TBCB tariffs are fixed at award, so cost inflation falls on the developer. +7% steel => +2.5% on the ~Rs 25k cr of un-contracted capex in 2 yrs = Rs 600 cr x 50% unrecoverable = Rs 300 cr = -0.17% of mcap; plus order-book re-pricing risk on bids => ~-0.8. Pack empirical F_STEEL_GLOBAL is +3.42 (t +2.2) with market beta 1.62: sign conflicts, likely risk-on co-movement rather than fundamentals; weight deliberately kept negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf",
+     "date": "2026-10-23",
+     "note": "All contracts awarded for H2 capex, but ROW and execution delays in Gujarat"
+    },
+    {
+     "source": "https://www.screener.in/company/ADANIENSOL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical: F_STEEL_GLOBAL +3.42 per SSU, t +2.2"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ADANIENSOL",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Imported HVDC/substation equipment and some USD bonds (model knowledge: AESL has USD senior notes) vs mostly INR revenues. Mgmt says debt largely fixed/hedged so no P&L volatility. +3% USDINR on ~15% unhedged USD exposure of Rs 49k cr net debt = Rs 220 cr = -0.12% mcap; capex import content adds ~-0.3%; EV/MCap 1.3 => ~-1.0 with low confidence. Rupee is at 94.5 (+6.5% in 12m).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf",
+     "date": "2026-10-23",
+     "note": "Debt largely fixed rate or hedged; no FX volatility expected in P&L"
+    },
+    {
+     "source": "https://www.screener.in/company/ADANIENSOL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Borrowings Rs 51,801 cr"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "ADANIENSOL",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Distribution reform / privatisation and parallel-licence opportunities (AESL seeks 'expansion of distribution network through parallel licenses'); smart-meter rollout is tied to state discoms' payment security. +1 SSU (reform progress) lifts probability and size of new distribution licences and de-risks Rs 29.5k cr smart-meter receivables: assumed +Rs 5k cr NPV (2.8% of mcap) at 60% realisation => ~+3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf",
+     "date": "2026-10-22",
+     "note": "Expansion of distribution via parallel licences; smart meters under implementation 24.6 mn"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+Energy+Solutions+smart+meter+Mumbai+Khavda+transmission+commissioning+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Smart-meter slow Q2 due to discom meter-type changes (call)"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "ADANIENSOL",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Energy Solutions targets C&I, data centres and utilities (supply tie-up ~4.6 GW RE + 3.5 GWh BESS); Mumbai/Navi Mumbai data-centre load raises AEML volumes and grid investment. +1 SSU => +10% C&I volume growth assumption; Energy Solutions EBITDA run-rate Rs 3.2k cr/yr x 10% x 1.3 x 0.6 => +1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf",
+     "date": "2026-10-22",
+     "note": "Energy Solutions platform catering to C&I, data centers and utilities"
+    },
+    {
+     "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf",
+     "date": "2026-10-23",
+     "note": "Mgmt on consumer-side tie-ups starting last quarter of this year"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ADANIENSOL",
+   "relation": "demand_driver",
+   "w": 2.8,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "High-beta (market beta 1.6) Adani-group stock whose FII holding has fallen 17.6% (Mar-25) -> 9.6% (Sep-26) while DIIs rose 6.3% -> 13.6% and promoter 73.4% (Sep-26); free float ~26%. +US$5bn FPI quarterly inflow ~ +2% Nifty (assumed) x beta 1.6 => +3.2; shrunk for the group-specific overhang => +2.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIENSOL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Shareholding: FIIs 9.57%, DIIs 13.61%, promoters 73.39% (Sep-26)"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "ADANIENSOL",
+   "relation": "output_price",
+   "w": 0.5,
+   "w_low": -1.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "No coal cost in transmission/distribution, but Energy Solutions trades power and AEML buys thermal power; higher imported coal lifts spot/merchant prices and trading margin on un-contracted volumes. Pack empirical +5.68 per SSU (t +1.9, beta 1.68) is much larger than any fundamental channel (+15% coal => spot +5-8% => ~+0.8% EBITDA => ~+0.5); the gap likely reflects shared risk-on/commodity-cycle factor, flagged for the assembler to shrink.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ADANIENSOL/consolidated/",
+     "date": "2026-11-05",
+     "note": "Pack empirical: F_COAL_INTL +5.68 per SSU, t +1.9"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+power+demand+coal+stocks+critical+October+2026+imported+coal+Section+11+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Over half of coal plants at critically low stocks; captive plants ordered to maximise output from 1 Oct (Times of India 21 Oct, Reuters 28 Sep 2026 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "ADANIENSOL",
+   "relation": "geopolitical_exposure",
+   "w": -0.6,
+   "w_low": -3.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Escalation raises oil/LNG, inflation and yields (RBI turned hawkish 7 Oct), hitting high-multiple utilities; offset by energy-security push that accelerates grid and domestic-supply capex. AESL has no direct Gulf cash flow. Net -0.6 per +1 SSU, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Strait+of+Hormuz+LNG+India+power+coal+import+Middle+East+conflict+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Middle East conflict disrupting LNG/crude via Hormuz; Asia pivoting to coal (Wood Mackenzie 12 Oct, EnergyNow 3 Nov 2026 headlines)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25 bp to 5.50% on 7 Oct 2026, first hike in ~4 years; stance calibrated tightening; cuts 'off the table' (Reuters, The Hindu, Business Standard headlines)"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ADANIENT",
+   "dst": "ADANIENSOL",
+   "relation": "group_contagion",
+   "w": 0.35,
+   "w_low": 0.1,
+   "w_high": 0.7,
+   "lag": "0-3m",
+   "mechanism": "Same promoter family (73.4% of AESL). Group-wide selloffs (Hindenburg Jan 2023, US indictment Nov 2024) moved all Adani names together; US criminal case dismissed 10 Aug 2026 removed a key overhang. w = % move in AESL per 1% move in Adani Enterprises, group co-movement estimate (model judgement; not regressed).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-11",
+     "note": "Reuters/CNBC/Guardian: US judge dismissed criminal case against Gautam Adani (10-11 Aug 2026)"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Adani Enterprises / Adani family",
+   "ticker": "ADANIENT",
+   "role": "parent",
+   "importance": "high",
+   "note": "Promoter group 73.4%; EPC and financing (model knowledge) and governance linkage"
+  },
+  {
+   "counterparty": "Adani Green Energy",
+   "ticker": "ADANIGREEN",
+   "role": "customer",
+   "importance": "high",
+   "note": "Khavda transmission evacuates AGEL generation; AGEL curtailment at Khavda depends on AESL/Power Grid line commissioning"
+  },
+  {
+   "counterparty": "Power Grid Corp of India",
+   "ticker": "POWERGRID",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Bids on same ISTS/TBCB tenders; also builds Khavda corridors"
+  },
+  {
+   "counterparty": "Tata Power (TBCB transmission)",
+   "ticker": "TATAPOWER",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Competes in TBCB bids"
+  },
+  {
+   "counterparty": "MSEDCL",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "2,500 MW 25-yr RTC PPA (Sep 2026); also Maharashtra transmission project Rs 4,700 cr (Aug 2026)"
+  },
+  {
+   "counterparty": "IntelliSmart Infrastructure (EESL/NABARD JV)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Rs 3,050 cr acquisition cleared by CCI 31 Oct 2026; expected to close within ~1 month"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Closing of IntelliSmart acquisition (Rs 3,050 cr) after CCI approval on 31 Oct 2026",
+   "type": "corporate_action",
+   "prob": 0.85,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Adani+Energy+Solutions+Intellismart+CCI+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Commissioning of Khavda Phase-4 remaining elements / Halvad (ROW-dependent), WRSR, Navinal per mgmt; slippage would trim the Rs 15,000 cr FY27 capitalisation guide",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 5.0,
+   "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "FY27 transmission capitalisation guidance (~Rs 15,000 cr) revised down because of Gujarat ROW delays",
+   "type": "guidance",
+   "prob": 0.35,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -2.5,
+   "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (date not announced; Q2 was 22 Oct, so estimate late Jan 2027); H2 capex ramp Rs 8-9k cr to be evidenced",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge on schedule"
+  },
+  {
+   "date": "2027-06",
+   "event": "New transmission awards from Rs 1.4 lakh cr near-term pipeline incl. PM-DHARA corridors (at least one >Rs 3,000 cr win)",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf"
+  },
+  {
+   "date": "2027-03",
+   "event": "Renewed US regulatory/legal action against Adani Group (criminal case dismissed 10 Aug 2026; status of any SEC civil matter not verified by this profile)",
+   "type": "litigation",
+   "prob": 0.06,
+   "impact_pct_low": -20.0,
+   "impact_pct_high": -8.0,
+   "source": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): total income Rs 10,239 cr +51%, EBITDA Rs 3,548 cr +67% (operating EBITDA Rs 3,070 cr +68%), PAT Rs 1,364 cr +145% (standalone-equivalent per company press release 22 Oct 2026)",
+  "trend": "Earnings step-up is driven by the low-margin but fast-scaling Energy Solutions platform (EBITDA Rs 810 cr) and SCA income, while core transmission EBITDA grew only 15% YoY in Q2 because commissioning slipped (Khavda/Halvad ROW). Stock fell 6% after the 23 Oct call on execution delays.",
+  "valuation": "P/E 47.9, P/B ~5.7 (book Rs 256), mcap Rs 1.77 lakh cr, ROCE 9.7% / ROE 9.4% (screener 5 Nov 2026); EV/EBITDA ~22x TTM on screener EBITDA Rs 10.25k cr (EV ~Rs 2.25 lakh cr). Analyst notes call the stock cheaper after a ~30% correction from the high of Rs 1,789 (Business Today 26 Oct).",
+  "recent_developments": [
+   "2026-08-10/11: US judge dismissed criminal case against Gautam Adani (Reuters/Guardian/CNBC)",
+   "2026-08-26: Won Rs 4,700 cr Maharashtra transmission project (order book ~Rs 85,000 cr then)",
+   "2026-09-09: 25-yr, 2,500 MW RTC PPA with MSEDCL (subsidiary)",
+   "2026-09-25: Incorporated eight wholly owned power subsidiaries; 2026-09-28: SEBI settlement Rs 37.05 lakh",
+   "2026-09-30/10-01: PM-DHARA Rs 1.86 lakh cr corridor scheme approved; AESL +5.5% on 1 Oct",
+   "2026-10-07/08: Acquired Satara Power Transmission; Vizag Pendurthi project won in Q2 -> order book ~Rs 87,000 cr",
+   "2026-10-22/23: Q2 results and call; guided FY27 transmission capex ~Rs 14,000 cr, 3 projects to commission this year; stock -6%",
+   "2026-10-31: CCI approved IntelliSmart acquisition (Rs 3,050 cr)",
+   "2026-10-07: RBI repo +25bp to 5.50% (macro)"
+  ]
+ },
+ "key_risks": [
+  "Right-of-way and clearance delays in Gujarat (Halvad/Khavda) pushing commissioning beyond FY27 and delaying tariff start",
+  "Energy Solutions margin compression as merchant volumes convert to fixed-price long-term contracts (timing mismatch)",
+  "Adani-group governance/legal overhang (US matters, SEBI) and funding access",
+  "Rising yields/credit spreads on a P/E-48 stock with Rs 52k cr debt",
+  "Smart-meter rollout slow (3.5 mn installed in H1 vs 10 mn FY27 target) and discom payment risk"
+ ],
+ "upside_triggers": [
+  "Resolution of Halvad ROW and commissioning of Khavda Ph-4, WRSR, Navinal, Mahan P1",
+  "New awards from the Rs 1.4 lakh cr tender pipeline incl. HVDC and PM-DHARA corridors",
+  "IntelliSmart closing and smart-meter installation acceleration in H2",
+  "Rating upgrades / lower cost of funds after legal overhang cleared"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/result-press-release/2027/aesl_q2-fy27-earnings-press-release_vf_release.pdf",
+   "date": "2026-10-22",
+   "what": "AESL Q2 FY27 earnings press release (financials, segments, order book)"
+  },
+  {
+   "url": "https://www.adanienergysolutions.com/-/media/project/transmission/investor/documents/results-conference-call-transcripts/aesl-earnings-call-transcript--q2fy27.pdf",
+   "date": "2026-10-23",
+   "what": "AESL Q2 FY27 earnings call transcript (capex guidance, ROW, hedging, IntelliSmart CCI)"
+  },
+  {
+   "url": "https://www.screener.in/company/ADANIENSOL/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in quarterly/annual/balance sheet/shareholding through Sep 2026"
+  },
+  {
+   "url": "market_impact/data/packs/ADANIENSOL.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities and headlines pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rate+hike+repo+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+US+SEC+DOJ+case+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-11",
+   "what": "US case dismissal headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Adani+Energy+Solutions+Intellismart+CCI+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-31",
+   "what": "CCI approval headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PM-DHARA+scheme+Rs+1.86+lakh+crore+power+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-30",
+   "what": "PM-DHARA scheme headlines"
+  }
+ ]
+}

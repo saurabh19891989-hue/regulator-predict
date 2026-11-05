@@ -24,8 +24,11 @@ MIN_CONTRIB = 0.005                            # prune paths contributing < 0.00
 CONF_W = {"high": 1.0, "medium": 0.6, "low": 0.3}
 DRIVER = {"FACTOR", "POLICY", "COUNTRY", "THEME", "NEW"}
 PRICED_SHARE_FWD = 0.5        # share of forward event expectations assumed already in prices
-RECENT_CONVERGENCE = 0.3      # share of the unrealised residual of occurred events expected to close in 3 months
+RECENT_CONVERGENCE = {"3m": 0.3, "12m": 0.5}   # share of the still-unpriced impact of occurred events expected to be priced
 RESIDUAL_CAP = 10.0           # cap on |residual contribution| (% points)
+IVOL_CAP = 60.0               # cap on 12m idiosyncratic vol used for noise (corporate-action price breaks inflate it)
+# Unpriced part of an occurred-event impact: same sign as the model impact and never larger than it. A stock that moved
+# further than the events explain is treated as having idiosyncratic news, not as a mean-reversion candidate.
 RECENT_START = "2026-06-01"
 OVERLAP_DAMP = 0.5            # indirect paths from X to c get half credit when c already has a direct edge from X
 import re as _re
@@ -232,34 +235,48 @@ def run(draws=400):
     pd.DataFrame(sens_rows).to_csv(R("results", "sensitivity_matrix.csv"), index=False)
     pd.DataFrame(order_rows).to_csv(R("results", "sensitivity_by_order.csv"), index=False)
 
-    # 2) event impacts (conditional on event) = Σ entry shocks × unit responses (+ company-specific entries)
+    # 2) event impacts (conditional on event). Within an event, every node it explicitly shocks is clamped:
+    #    the agent's shock on a consequence node (e.g. Brent) already includes the cause's effect (e.g. conflict).
+    W_central = np.array([e["w"] for e in edges])
     ev_rows, comp_paths = [], defaultdict(list)
-    ev_imp = {}
+    ev_imp, ev_mc = {}, {}
+    resp_cache = {}
     for ev in events:
         imp = defaultdict(float)
         imp_o = defaultdict(lambda: defaultdict(float))
-        for s in ev.get("entry_shocks", []):
-            n, m = s["node"], float(s.get("ssu", 0))
+        mc_rows = []
+        entry = frozenset(sh["node"] for sh in ev.get("entry_shocks", []) if sh["node"] in nodes and nodes[sh["node"]]["type"] != "COMPANY")
+        for sh in ev.get("entry_shocks", []):
+            n, m = sh["node"], float(sh.get("ssu", 0))
             if n not in nodes:
                 continue
             if nodes[n]["type"] == "COMPANY":           # company-specific event: entry is % equity value directly
                 imp[n] += m
                 imp_o[n][1] += m
+                mc_rows.append(((), 1.0, m, n))
                 for path, cval, c in net.paths_from(n):   # idiosyncratic spillover via holding/group/customer links
                     imp[c] += m * cval
                     imp_o[c][len(path) + 1] += m * cval
+                    pw = float(np.prod(W_central[list(path)]))
+                    mc_rows.append((path, cval / pw if pw else 0.0, m, c))
                 continue
-            tot, by_order, paths = unit_cache.get(n) or net.unit_response(n)
+            key = (n, entry - {n})
+            if key not in resp_cache:
+                resp_cache[key] = net.unit_response(n, clamped=entry - {n})
+            tot, by_order, paths = resp_cache[key]
             for c, v in tot.items():
                 imp[c] += m * v
                 for k, vv in by_order[c].items():
                     imp_o[c][k] += m * vv
             for path, cval, c in paths:
+                pw = float(np.prod(W_central[list(path)]))
+                mc_rows.append((path, cval / pw if pw else 0.0, m, c))
                 comp_paths[c].append({"event": ev["event_id"], "path": ev["event_id"] + " ⇒ " + path_str(net, n, path),
                                       "order": len(path), "impact_if_event": m * cval,
                                       "expected_3m": m * cval * float(ev.get("prob_by_3m", 0)),
                                       "expected_12m": m * cval * float(ev.get("prob_by_12m", 0))})
         ev_imp[ev["event_id"]] = imp
+        ev_mc[ev["event_id"]] = mc_rows
         for c, v in imp.items():
             ev_rows.append({"event": ev["event_id"], "status": ev.get("status"), "prob_3m": ev.get("prob_by_3m"),
                             "prob_12m": ev.get("prob_by_12m"), "company": c, "impact_if_event": v,
@@ -298,10 +315,10 @@ def run(draws=400):
     comps = net.companies
     occurred = [e for e in events if e.get("status") == "occurred"]
     forward = [e for e in events if e.get("status") != "occurred"]
-    realised = realised_moves(comps)
+    realised, beta = realised_moves(comps)
     res = []
     state, state_src = recent_state(nodes, occurred)
-    clamped = frozenset(n for n, src in state_src.items() if src == "observed")
+    clamped = frozenset(state_src)     # every node with a specified recent change is clamped against the others
     rec_imp = defaultdict(float)
     rec_paths = defaultdict(list)
     for n, m in state.items():
@@ -318,24 +335,38 @@ def run(draws=400):
             f.write(json.dumps({"company": c, "top": sorted(lst, key=lambda x: -abs(x["impact"]))[:25]}) + "\n")
     pd.DataFrame([{"driver": n, "state_ssu": m, "source": state_src[n]} for n, m in state.items()]).to_csv(
         R("results", "recent_state_vector.csv"), index=False)
+    # Beta adjustment: realised moves are market-adjusted with each stock's beta, so model impacts are made comparable
+    # by removing beta x (universe-average impact). Rankings therefore measure exposure beyond what beta implies.
+    f3_raw = {c: sum(float(e.get("prob_by_3m", 0)) * ev_imp[e["event_id"]].get(c, 0.0) for e in forward) for c in comps}
+    f12_raw = {c: sum(float(e.get("prob_by_12m", 0)) * ev_imp[e["event_id"]].get(c, 0.0) for e in forward) for c in comps}
+    m_rec, m3, m12 = (float(np.mean([d.get(c, 0.0) for c in comps])) for d in (rec_imp, f3_raw, f12_raw))
     for c in comps:
-        rec = rec_imp.get(c, 0.0)
-        f3 = sum(float(e.get("prob_by_3m", 0)) * ev_imp[e["event_id"]].get(c, 0.0) for e in forward)
-        f12 = sum(float(e.get("prob_by_12m", 0)) * ev_imp[e["event_id"]].get(c, 0.0) for e in forward)
+        b = beta.get(c, 1.0)
+        rec_raw = rec_imp.get(c, 0.0)
+        rec = rec_raw - b * m_rec
+        f3, f12 = f3_raw[c] - b * m3, f12_raw[c] - b * m12
         rz = realised.get(c)
-        resid = (rec - rz) if rz is not None else 0.0
-        resid_c = float(np.clip(RECENT_CONVERGENCE * resid, -RESIDUAL_CAP, RESIDUAL_CAP))
-        res.append({"company": c, "recent_events_model_impact": rec, "realised_mkt_adj_since_jun": rz,
-                    "unrealised_residual": resid, "residual_contribution": resid_c,
+        resid = float(np.clip(rec - rz, min(0.0, rec), max(0.0, rec))) if rz is not None else 0.0
+        rc3 = float(np.clip(RECENT_CONVERGENCE["3m"] * resid, -RESIDUAL_CAP, RESIDUAL_CAP))
+        rc12 = float(np.clip(RECENT_CONVERGENCE["12m"] * resid, -RESIDUAL_CAP, RESIDUAL_CAP))
+        res.append({"company": c, "beta": b, "recent_events_model_impact_raw": rec_raw, "forward_exposure_12m_raw": f12_raw[c],
+                    "recent_events_model_impact": rec, "realised_mkt_adj_since_jun": rz,
+                    "unpriced_recent_impact": resid, "residual_contribution_3m": rc3, "residual_contribution": rc12,
                     "forward_exposure_3m": f3, "forward_exposure_12m": f12,
                     "company_events_3m": cs[c][0], "company_events_12m": cs[c][1],
-                    "raw_er_3m": resid_c + (1 - PRICED_SHARE_FWD) * (f3 + cs[c][0]),
-                    "raw_er_12m": resid_c + (1 - PRICED_SHARE_FWD) * (f12 + cs[c][1])})
+                    "raw_er_3m": rc3 + (1 - PRICED_SHARE_FWD) * (f3 + cs[c][0]),
+                    "raw_er_12m": rc12 + (1 - PRICED_SHARE_FWD) * (f12 + cs[c][1])})
     rk = pd.DataFrame(res)
     for h in ("3m", "12m"):
         rk[f"exp_rel_return_{h}"] = rk[f"raw_er_{h}"] - rk[f"raw_er_{h}"].mean()   # relative to universe average
     # 5) Monte Carlo over edge-weight uncertainty and event occurrence → P10/P90 of 12m relative return
-    rk = rk.merge(monte_carlo(net, events, unit_cache, draws), on="company", how="left")
+    base12 = dict(zip(rk.company, rk.residual_contribution + (1 - PRICED_SHARE_FWD) * rk.company_events_12m))
+    ivol = idio_vol(net.companies)
+    rk = rk.merge(monte_carlo(net, events, ev_mc, base12, draws, ivol, beta), on="company", how="left")
+    rk["idio_vol_12m"] = rk.company.map(ivol)
+    from scipy.stats import norm as _norm
+    rk["prob_outperform_3m"] = [float(_norm.cdf(e / (v / 2))) if v and v == v else np.nan
+                                for e, v in zip(rk.exp_rel_return_3m, rk.idio_vol_12m)]
     meta = {n: nodes[n] for n in comps}
     rk["name"] = rk.company.map(lambda c: meta[c]["name"])
     rk["tier"] = rk.company.map(lambda c: meta[c].get("tier"))
@@ -431,27 +462,51 @@ def recent_state(nodes, occurred):
     return state, src
 
 
+def idio_vol(comps):
+    """12-month idiosyncratic (market-beta-adjusted) volatility in % from the last 52 weekly returns."""
+    df = pd.read_csv(R("data", "prices", "close.csv"), index_col=0, parse_dates=True)
+    lr = np.log(df.resample("W-FRI").last()).diff()
+    out = {}
+    for c in comps:
+        if c not in lr.columns:
+            continue
+        x = lr[[c, "MKT_NIFTY50"]].dropna().tail(52)
+        if len(x) < 26:
+            continue
+        b = np.cov(x[c], x["MKT_NIFTY50"])[0, 1] / np.var(x["MKT_NIFTY50"])
+        out[c] = float((x[c] - b * x["MKT_NIFTY50"]).std() * np.sqrt(52) * 100)
+    return out
+
+
 def realised_moves(comps):
+    """Market-adjusted move since RECENT_START, using a Blume-shrunk 3-year weekly beta vs the Nifty 50.
+    Returns (moves %, betas)."""
     p = R("data", "prices", "close.csv")
     df = pd.read_csv(p, index_col=0, parse_dates=True)
     m = df["MKT_NIFTY50"]
     w = df.resample("W-FRI").last()
     lr = np.log(w).diff()
-    out = {}
+    out, betas = {}, {}
     base = df[df.index <= RECENT_START].index.max()
     for c in comps:
-        if c not in df.columns or base not in df.index or pd.isna(df.loc[base, c]):
+        if c not in df.columns:
             continue
         x = lr[[c, "MKT_NIFTY50"]].dropna().tail(156)
-        beta = np.cov(x[c], x["MKT_NIFTY50"])[0, 1] / np.var(x["MKT_NIFTY50"]) if len(x) > 30 else 1.0
+        raw = np.cov(x[c], x["MKT_NIFTY50"])[0, 1] / np.var(x["MKT_NIFTY50"]) if len(x) > 30 else 1.0
+        betas[c] = float(np.clip(0.67 * raw + 0.33, 0.3, 2.0))
+        if base not in df.index or pd.isna(df.loc[base, c]):
+            continue
         rc = df[c].dropna().iloc[-1] / df.loc[base, c] - 1
         rm = m.dropna().iloc[-1] / m.loc[base] - 1
-        out[c] = float((rc - beta * rm) * 100)
-    return out
+        out[c] = float((rc - betas[c] * rm) * 100)
+    return out, betas
 
 
-def monte_carlo(net, events, unit_cache, draws):
-    """Sample event occurrence (12m probabilities) and edge weights (Beta(2,2) within [low, high])."""
+def monte_carlo(net, events, ev_mc, base12, draws, ivol=None, beta=None):
+    """Forward events only: sample occurrence (12m, exclusive groups respected) and edge weights (Beta(2,2) in
+    [low, high]); add the deterministic base (unrealised residual + company events); demean per draw.
+    mc_p*: uncertainty of the model's expectation. ret_p* and mc_prob_outperform additionally add idiosyncratic
+    noise (trailing 52-week market-adjusted volatility), i.e. the spread of plausible 12-month relative returns."""
     if draws <= 0 or not events:
         return pd.DataFrame({"company": net.companies})
     rng = np.random.default_rng(20261105)
@@ -459,28 +514,27 @@ def monte_carlo(net, events, unit_cache, draws):
     lo = np.array([e["w_low"] for e in E]); hi = np.array([e["w_high"] for e in E])
     comps = net.companies
     cidx = {c: i for i, c in enumerate(comps)}
-    # pre-collect paths per event: (edge idx array padded, damping, multiplier, company idx)
+    base = np.array([base12.get(c, 0.0) for c in comps])
     ev_paths = []
     for ev in events:
-        rows = []
-        for s in ev.get("entry_shocks", []):
-            n, m = s["node"], float(s.get("ssu", 0))
-            if n not in unit_cache:
-                if n in cidx:
-                    rows.append(((), 1.0, m, cidx[n]))
-                continue
-            for path, _, c in unit_cache[n][2]:
-                rows.append((path, DAMP[len(path)], m, cidx[c]))
+        if ev.get("status") == "occurred":
+            continue
+        rows = [r for r in ev_mc.get(ev["event_id"], []) if r[3] in cidx]
         if rows:
             L = len(E)
             P = np.full((len(rows), MAX_DEPTH), L, dtype=np.int64)
             for i, (pth, _, _, _) in enumerate(rows):
                 P[i, :len(pth)] = pth
-            ev_paths.append((ev, P, np.array([r[1] for r in rows]), np.array([r[2] for r in rows]), np.array([r[3] for r in rows])))
+            ev_paths.append((ev, P, np.array([r[1] for r in rows]), np.array([r[2] for r in rows]), np.array([cidx[r[3]] for r in rows])))
     groups = (load_json(R("events", "dedup.json")) or {}).get("exclusive_groups", [])
     gid = {e: gi for gi, g in enumerate(groups) for e in g}
     p12 = {ev["event_id"]: float(ev.get("prob_by_12m", 0)) for ev in events}
     out = np.zeros((draws, len(comps)))
+    outn = np.zeros((draws, len(comps)))
+    iv = np.array([(ivol or {}).get(c, np.nan) for c in comps])
+    iv = np.where(np.isnan(iv), np.nanmedian(iv) if np.isfinite(iv).any() else 30.0, iv)
+    iv = np.minimum(iv, IVOL_CAP)
+    bv = np.array([(beta or {}).get(c, 1.0) for c in comps])
     for k in range(draws):
         Wd = np.append(lo + (hi - lo) * rng.beta(2, 2, size=len(E)), 1.0)
         chosen = {}
@@ -498,19 +552,21 @@ def monte_carlo(net, events, unit_cache, draws):
         tot = np.zeros(len(comps))
         for ev, P, dmp, mult, ci in ev_paths:
             eid = ev["event_id"]
-            if ev.get("status") != "occurred":
-                if eid in gid:
-                    if chosen.get(gid[eid]) != eid:
-                        continue
-                elif rng.random() > p12[eid]:
+            if eid in gid:
+                if chosen.get(gid[eid]) != eid:
                     continue
-            scale = 1.0 if ev.get("status") == "occurred" else (1 - PRICED_SHARE_FWD)
-            vals = Wd[P].prod(axis=1) * dmp * mult * scale
+            elif rng.random() > p12[eid]:
+                continue
+            vals = Wd[P].prod(axis=1) * dmp * mult * (1 - PRICED_SHARE_FWD)
             np.add.at(tot, ci, vals)
+        tot = tot - bv * tot.mean() + base
         out[k] = tot - tot.mean()
+        tn = tot + rng.normal(0.0, iv)
+        outn[k] = tn - tn.mean()
     return pd.DataFrame({"company": comps, "mc_p10_12m": np.percentile(out, 10, axis=0),
                          "mc_p50_12m": np.percentile(out, 50, axis=0), "mc_p90_12m": np.percentile(out, 90, axis=0),
-                         "mc_prob_outperform": (out > 0).mean(axis=0)})
+                         "ret_p10_12m": np.percentile(outn, 10, axis=0), "ret_p90_12m": np.percentile(outn, 90, axis=0),
+                         "mc_prob_outperform": (outn > 0).mean(axis=0)})
 
 
 if __name__ == "__main__":

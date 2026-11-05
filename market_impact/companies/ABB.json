@@ -1,0 +1,441 @@
+{
+ "ticker": "ABB",
+ "name": "ABB India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Indian arm (75% owned by ABB Ltd, Switzerland) of the global electrification and automation group: electrification (low/medium-voltage switchgear, breakers, drives, building products), motion (motors, drives, traction), process automation (control systems, measurement, service) and, until its sale in early 2026, robotics and discrete automation (the Mar-2026 quarter PAT of Rs 1,784 cr includes an exceptional gain on selling the robotics business). Calendar-year reporter: Q2 CY26 revenue Rs 3,559 cr (+21%), EBITDA margin 13%, order backlog ~Rs 11,900 cr. Debt-free with large cash; about 13% of revenue exports; trades at ~91x trailing earnings and 15x book. Promoters at the 75% maximum, so no further promoter sell-down is possible without breaching minimum public shareholding.",
+ "revenue_mix": [
+  {
+   "segment": "electrification",
+   "share_pct": 38,
+   "geography": "India ~90%"
+  },
+  {
+   "segment": "motion",
+   "share_pct": 32,
+   "geography": "India ~85%, exports"
+  },
+  {
+   "segment": "process automation",
+   "share_pct": 25,
+   "geography": "India with exports/services"
+  },
+  {
+   "segment": "other (incl. residual robotics services)",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 6,
+   "note": "share of sales, model estimate"
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 5,
+   "note": "model estimate"
+  },
+  {
+   "input": "imported components/finished goods (USD, EUR, CHF)",
+   "share_of_costs_pct": 30,
+   "note": "share of sales, model estimate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "ABB",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Data-centre electrification (switchgear, drives, UPS/DC distribution, automation) is a named growth vertical; ABB Ltd launched a DC portfolio for AI data centres (2026-09-21). Assume data centres ~8% of India revenue today. Theme +1 SSU = doubling of India DC build intensity -> +8% revenue at ~28% contribution -> EBITDA +16%; x0.97 EV/MCap x persistence 0.5 (structural) discounted for share/competition risk = +3.0 (wide). Order intake +50% in Q2 CY26 but ~30pp below group growth because DC orders are booked by the parent.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/abb-india-q2-results-2026-volume-led-growth-margin-recovery-tk-sridhar-19964882.htm",
+     "date": "2026-08-08",
+     "note": "India order inflows +50% in Q2 vs +81% for global ABB; gap partly due to orders booked by parent"
+    },
+    {
+     "source": "Trade Brains headline (article not fetched)",
+     "date": "2026-08-07",
+     "note": "AI and data-centre boom created a Rs 12,000 cr revenue pipeline for the automation stock"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "ABB",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Electrification products (breakers, switchgear, low/medium voltage drives) feed grid, renewables, metro/rail and buildings; ~35% of revenue. +1 SSU (a step-up in grid/transmission capex intensity) -> +6% revenue at 30% contribution vs 14% margin -> EBITDA +13%; x0.97 x0.5 x discount for competition (Siemens, Hitachi, CG Power, Schneider) = +2.5. Backlog Rs 11,900 cr (0.85x revenue) is lower visibility than CG Power (1.37x).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://tradebrains.in/cg-power-vs-abb-india-is-faster-growth-enough-to-beat-a-more-efficient-global-business/",
+     "date": "2026-08-23",
+     "note": "Backlog ~Rs 11,900 cr (0.85x annualised revenue), ~40% to complete in two quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "ABB",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Motion/drives, process automation and machine-building customers (~55% of revenue) track private capex. +10pp private capex growth -> +4% revenue (lagged) at ~28% contribution vs 14% margin -> EBITDA +8%; x0.97 x persistence 0.5 = +3.9, trimmed to +3.5. Q2 CY26 revenue +21% to Rs 3,559 cr, first-half revenue Rs 6,743 cr; CFO sees volume-led growth.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/abb-india-q2-results-2026-volume-led-growth-margin-recovery-tk-sridhar-19964882.htm",
+     "date": "2026-08-08",
+     "note": "Highest ever Q2 revenue Rs 3,559 cr; growth to be volume-led; margin recovery to take time"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "ABB",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.8,
+   "lag": "3-12m",
+   "mechanism": "Utilities, railways/metro, water and public infrastructure ~25% of revenue. +10% government capex growth -> +2.5% revenue -> EBITDA +5%; x0.97 x0.3 = +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABB.md",
+     "date": "2026-11-05",
+     "note": "No direct disclosure fetched; model estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_AI_CAPEX",
+   "dst": "ABB",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.2,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Sentiment/valuation channel from global ABB: on 2026-10-20 ABB Ltd fell on 'AI worries' despite record orders; ABB India fell 6% on 2026-10-21 (worst day in five months) and 12% in five days (Goodreturns). At P/E 91x, a +10% change in AI capex expectations moves the multiple ~1-2% plus orders; w = +1.2. Overlaps T_DATA_CENTRES_IN; Director should net.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/abb-india-share-price-global-update-q3-order-inflow-mitsubishi-jv-overhang-buy-sell-20015940.htm",
+     "date": "2026-10-21",
+     "note": "ABB India fell as much as 6% on parent's business update; 14 of 33 analysts have Sell"
+    },
+    {
+     "source": "https://www.goodreturns.in/news/abb-india-shares-crash-over-12-in-5-days-despite-275-profit-jump-brokerages-turn-cautious-after-q-1507411.html",
+     "date": "2026-10-23",
+     "note": "Shares fell >12% in five days; brokerages cautious"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ABB",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "ABB India imports a large share of components and finished products from the group (USD/EUR/CHF), ~30% of sales; exports ~13% of revenue (down from 17%). Net exposure ~17% of sales; +3% INR weakness -> +0.5% of sales -> EBITDA -3.6% pre; ~50% hedged/passed -> -1.8%; x0.97 x0.35 = -0.6, rounded -0.8. CFO named forex volatility and commodities as the margin drag. Pack empirical +1.63 per +3% (t +0.9) has the opposite sign and is insignificant.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/abb-india-q2-results-2026-volume-led-growth-margin-recovery-tk-sridhar-19964882.htm",
+     "date": "2026-08-08",
+     "note": "Margin pressure from commodities and forex volatility; recovery depends on volatility settling"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "ABB",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Copper (cables, windings, busbars, motors) ~6% of sales. +10% -> 0.6% of sales -> EBITDA -4.3% pre; ~55% recovered through price-variation clauses and list-price rises -> -1.9%; x0.97 x0.35 = -0.65. Pack empirical copper is POSITIVE (+1.69 per +10%, t +1.9) because copper strength proxies the global electrification/capex upcycle; the structural cost edge is therefore shrunk to -0.4 with a range crossing zero. Copper is -2.4% since June.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABB.md",
+     "date": "2026-11-05",
+     "note": "Empirical copper +1.69 (t +1.9): sign conflict with cost channel"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "ABB",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -0.9,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Steel (enclosures, structures, motors) ~5% of sales. +7% -> 0.35% of sales -> -2.5% EBITDA pre; 50% recovered; x0.97 x0.35 = -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/abb-india-q2-results-2026-volume-led-growth-margin-recovery-tk-sridhar-19964882.htm",
+     "date": "2026-08-08",
+     "note": "Material costs cited as main margin pressure"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ABB",
+   "relation": "demand_driver",
+   "w": 0.6,
+   "w_low": -0.5,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Pack empirical +1.68 per +10% Brent (t +2.5): higher crude lifts oil-and-gas, refining and petrochemical capex (process automation and drives), and correlates with the commodity/capex upcycle; offset by general cost and rate pressure. Kept at +0.6 (about one third of empirical). Low confidence because the same regime also coincides with ABB India's strong stock in 2025-26.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ABB.md",
+     "date": "2026-11-05",
+     "note": "Empirical Brent +1.68 (t +2.5), refining margin +1.19 (t +1.9)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ABB",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Debt-free with Rs 1,799 cr other income (large cash), so direct cost of debt is nil; sensitivity is valuation: P/E 91x, 15x book -> equity duration ~25 years. +25bp in the discount rate -> ~-1.0% value, plus weaker private capex sentiment -0.2. RBI hiked to 5.50% on 2026-10-07.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+     "date": "2026-10-07",
+     "note": "Repo +25bp to 5.50%, stance calibrated tightening"
+    },
+    {
+     "source": "market_impact/data/packs/ABB.md",
+     "date": "2026-11-05",
+     "note": "P/E 91.4, price-to-book 15x"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "ABB",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": ">12m",
+   "mechanism": "Manufacturing relocation to India lifts demand for automation and electrification (factories, EMS, batteries, semiconductors). +1 SSU -> +2% medium-term revenue at 28% contribution -> EBITDA +4% x0.97 x0.5 x0.5 = +1.0. Risk: the ABB-Mitsubishi Electric JV (Asia-Pacific) is seen as an export overhang (InCred).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/abb-india-share-price-global-update-q3-order-inflow-mitsubishi-jv-overhang-buy-sell-20015940.htm",
+     "date": "2026-10-21",
+     "note": "InCred: new ABB-Mitsubishi JV could overhang ABB India exports to Malaysia, Thailand, Vietnam, Indonesia"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "ABB Ltd (Switzerland)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "75% promoter; group supplies imported products; some orders booked at parent level (India order growth +50% vs group +81% in Q2 CY26)"
+  },
+  {
+   "counterparty": "ABB-Mitsubishi Electric joint venture (Asia-Pacific)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "announced 2026-10-20; export overhang per InCred"
+  },
+  {
+   "counterparty": "Siemens India",
+   "ticker": "SIEMENS",
+   "role": "competitor",
+   "importance": "high",
+   "note": "electrification/automation"
+  },
+  {
+   "counterparty": "Hitachi Energy India",
+   "ticker": "POWERINDIA",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "grid equipment"
+  },
+  {
+   "counterparty": "CG Power",
+   "ticker": "CGPOWER",
+   "role": "competitor",
+   "importance": "high",
+   "note": "motors, drives, switchgear; faster growth, bigger backlog (1.37x vs 0.85x)"
+  },
+  {
+   "counterparty": "Schneider Electric Infrastructure, GE Vernova T&D",
+   "ticker": "GVT&D",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "switchgear/grid"
+  },
+  {
+   "counterparty": "Data-centre, EMS, metals, railways, utilities customers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "no counterparty >25% of revenue known"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-13",
+   "event": "Q3 CY26 (Sep 2026) results; analysts expect order intake ~Rs 4,400-4,600 cr (flat q/q); margin and segment mix watched",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.cnbctv18.com/market/abb-india-share-price-global-update-q3-order-inflow-mitsubishi-jv-overhang-buy-sell-20015940.htm"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC (rate sensitivity at P/E 91x)",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": -0.5,
+   "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece"
+  },
+  {
+   "date": "2026-12",
+   "event": "ABB-SoftBank robotics divestment: China regulator prohibited the China leg (2026-11-05); parent restructures/negotiates",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "https://www.abb.com/global/en/news/140154/update-on-divestment-of-abb-robotics"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget FY28: capex allocation (railways, power, data centres)",
+   "type": "regulatory",
+   "prob": 0.99,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "standard budget calendar; date from model knowledge convention"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q4 CY26 / full-year results and dividend; ABB Ltd Q4 update in late January shapes India sentiment",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "calendar-year reporting pattern"
+  },
+  {
+   "date": "2027",
+   "event": "Closing of ABB-Mitsubishi Electric JV and effect on ABB India export mandates",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "https://www.cnbctv18.com/market/abb-india-share-price-global-update-q3-order-inflow-mitsubishi-jv-overhang-buy-sell-20015940.htm"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 CY26 (Jun 2026), reported 2026-08-08; Q3 CY26 due 2026-11-13",
+  "trend": "Q2 CY26: revenue Rs 3,559 cr (+21%, record Q2), EBITDA Rs 447 cr (+11.4%, margin 13% vs 14%), PAT Rs 362 cr (+3%), order inflow +50% (group +81%), backlog ~Rs 11,900 cr. CFO: growth volume-led, margin recovery will take time due to commodities and forex. Mar-2026 quarter PAT Rs 1,784 cr was inflated by an exceptional gain from selling the robotics business; continuing-operations PAT was Rs 342 cr (-25%).",
+  "valuation": "Price ~Rs 6,650, market cap Rs 1.41 lakh cr, P/E ~91x, 15x book, dividend yield 0.6%; down 17% from the Rs 7,924 high but +28% YTD; consensus: 14 sell / 10 hold / 9 buy of 33 (CNBC TV18, 2026-10-21), mean target implies ~7.6% upside.",
+  "recent_developments": [
+   "2026-08-08: Q2 CY26 results; CFO guides volume-led growth",
+   "2026-09-21: ABB Ltd launches DC portfolio for AI data centres",
+   "2026-10-19: new CFO appointed (ad-hoc-news headline)",
+   "2026-10-20: ABB Ltd Q3: record orders and margins but shares fall on AI worries; JV with Mitsubishi Electric announced",
+   "2026-10-21: ABB India -6% intraday; Citi Sell, Macquarie Underperform, Axis Reduce",
+   "2026-11-05: ABB says China review prohibited acquisition of ABB Robotics in China by SoftBank; parties in dialogue"
+  ]
+ },
+ "key_risks": [
+  "Valuation (91x P/E) vulnerable to higher rates or an AI-capex pause",
+  "Margin pressure from commodities, forex and mix; exports weakening",
+  "Group-booked orders may keep India order growth below group growth",
+  "Competition from Siemens, Hitachi, Schneider, CG Power; ABB-Mitsubishi JV overhang",
+  "Weak Q3 order intake (flat q/q expected)",
+  "Robotics divestment complications at parent level"
+ ],
+ "upside_triggers": [
+  "Order intake re-acceleration and DC wins in Q3",
+  "Margin recovery as commodity/forex volatility settles",
+  "Union Budget capex push",
+  "Large cash balance deployment or higher payout"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.cnbctv18.com/market/abb-india-share-price-global-update-q3-order-inflow-mitsubishi-jv-overhang-buy-sell-20015940.htm",
+   "date": "2026-10-21",
+   "what": "Why ABB India fell 6%: parent update, analyst views, results date 13 Nov"
+  },
+  {
+   "url": "https://www.cnbctv18.com/market/earnings/abb-india-q2-results-2026-volume-led-growth-margin-recovery-tk-sridhar-19964882.htm",
+   "date": "2026-08-08",
+   "what": "Q2 CY26 results and CFO interview"
+  },
+  {
+   "url": "https://www.abb.com/global/en/news/140154/update-on-divestment-of-abb-robotics",
+   "date": "2026-11-05",
+   "what": "ABB press release on robotics divestment"
+  },
+  {
+   "url": "https://www.goodreturns.in/news/abb-india-shares-crash-over-12-in-5-days-despite-275-profit-jump-brokerages-turn-cautious-after-q-1507411.html",
+   "date": "2026-10-23",
+   "what": "Mar-2026 quarter exceptional gain; 12% fall"
+  },
+  {
+   "url": "https://univest.in/blogs/abb-india-q2-results-fy27-preview-date-expectations",
+   "date": "2026-09-08",
+   "what": "Preview with Q1 FY27 and base figures"
+  },
+  {
+   "url": "https://tradebrains.in/cg-power-vs-abb-india-is-faster-growth-enough-to-beat-a-more-efficient-global-business/",
+   "date": "2026-08-23",
+   "what": "ABB India vs CG Power comparison (backlog, exports)"
+  },
+  {
+   "url": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+   "date": "2026-10-07",
+   "what": "RBI"
+  },
+  {
+   "url": "market_impact/data/packs/ABB.md",
+   "date": "2026-11-05",
+   "what": "Pack: screener financials, empirical sensitivities"
+  }
+ ]
+}

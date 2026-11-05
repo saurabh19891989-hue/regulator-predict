@@ -1,0 +1,562 @@
+{
+ "name": "Power Grid Corporation of India Ltd.",
+ "industry": "I_POWER_GRID",
+ "tier": "NIFTY_50",
+ "business_summary": "India's central transmission utility (~80% of inter-state transmission; government holds 51.34%). Earns CERC-regulated returns (~15.5% ROE) on availability, so volumes are not at risk; growth comes from regulated asset base expansion via nominated and TBCB projects. Q2 FY27 PAT Rs 3,866 cr (+8.4%), Rs 3 interim dividend; order book ~Rs 2.2 lakh cr; FY27 capex guidance raised to Rs 37,000-40,000 cr; H1 capitalisation more than doubled to Rs 9,300 cr. Market cap Rs 2.43 lakh cr, P/E 15, yield 3.4%. Stock -17% over six months as yields rose.",
+ "revenue_mix": [
+  {
+   "segment": "Regulated transmission",
+   "share_pct": 93,
+   "geography": "India (pan-India ISTS)"
+  },
+  {
+   "segment": "Consultancy, telecom, other",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 2
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "POWERGRID",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -4.5,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "Regulated-return utility: CERC allows ~15.5% ROE on regulated equity, so cash flows are insensitive to rates and the stock trades as a bond proxy (earnings yield 6.7%, dividend yield 3.44%). +25 bp G-sec -> required earnings yield +25 bp x 0.8 pass-through on 6.7% => -3.0% value. EV/MCap ~1.5 (debt ~Rs 1.2 lakh cr from interest Rs 8,580 cr TTM at ~7%) but debt cost is largely passed through. 6m return -16.9% as yields rose.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "POWERGRID",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Floating-rate and refinancing share ~30% of ~Rs 1.2 lakh cr debt; +25 bp = Rs 90 cr/yr but tariff is truing up interest on debt for regulated assets (pass-through ~80%) => net -Rs 18 cr = -0.1% PAT; sentiment on PSU/utility multiples dominates => -0.8. Kept separate from G-sec (parallel path flagged).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "Reuters/The Hindu 2026-10-07: RBI hiked repo 25 bp to 5.50% (first hike in ~4 years), stance 'calibrated tightening'; Governor says cuts off the table near term"
+    },
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "POWERGRID",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "FY27 capex guidance Rs 37,000-40,000 cr (raised), order book Rs 2.2 lakh cr, H1 capitalisation Rs 9,300 cr (+139%); growth in regulated asset base (RAB) +10% -> PAT +8% ... with +1 SSU (faster grid build-out incl. ISTS, HVDC, storage) adding ~+4 pp to RAB growth; value +3.5 at persistence 1.0, partly priced in after Rs 2.2 lakh cr order book.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Power+Grid+Raises+FY27+CAPEX+Guidance+37000+40000+crore+RoW+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "FY27 capex guidance raised to Rs 37,000-40,000 cr citing right-of-way improvements (Saur Energy 2026-11-04); H1 capitalisation more than doubled to Rs 9,300 cr (Multibagg AI 2026-11-04; +139% per Investing.com)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=POWERGRID+secures+26000+crore+contract+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-21",
+     "note": "Sahi 2026-08-21: Rs 26,000 cr contract; order book heading to Rs 2.2 trillion"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Power+Grid+asks+cable+and+wire+makers+to+scale+up+transmission+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "ET 2026-10-28/Livemint 2026-10-30: Power Grid asks cable/wire makers to scale up as transmission capex set to rise (renewables, data centres)"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "POWERGRID",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Transmission is availability-based (>=98% target), so no volume exposure; demand growth (+3pp) raises evacuation/ISTS capex pipeline and incentive pool => RAB growth +1.5 pp => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Power+Grid+asks+cable+and+wire+makers+to+scale+up+transmission+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "ET 2026-10-28/Livemint 2026-10-30: Power Grid asks cable/wire makers to scale up as transmission capex set to rise (renewables, data centres)"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "POWERGRID",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Green energy corridors, ISTS waiver extensions and renewable bids drive evacuation capex; +1 = stronger support => more awards (RTM/TBCB) => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Power+Grid+asks+cable+and+wire+makers+to+scale+up+transmission+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "ET 2026-10-28/Livemint 2026-10-30: Power Grid asks cable/wire makers to scale up as transmission capex set to rise (renewables, data centres)"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "POWERGRID",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Storage, offshore wind, green hydrogen interconnects; overlap with grid electrification and renewables -> small incremental +1.0 (parallel path flagged).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Power+Grid+asks+cable+and+wire+makers+to+scale+up+transmission+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "ET 2026-10-28/Livemint 2026-10-30: Power Grid asks cable/wire makers to scale up as transmission capex set to rise (renewables, data centres)"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "POWERGRID",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.1,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Data-centre load clusters (Mumbai, Chennai, NCR) need new transmission; Power Grid explicitly cites data centres (Livemint 2026-10-30) => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Power+Grid+asks+cable+and+wire+makers+to+scale+up+transmission+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "ET 2026-10-28/Livemint 2026-10-30: Power Grid asks cable/wire makers to scale up as transmission capex set to rise (renewables, data centres)"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "POWERGRID",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Government-owned (51.34%, model knowledge) and CPSE capex programme; +10% central capex growth -> pipeline and equity-infusion comfort => +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "POWERGRID",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = discom reform / payment security / LPS rules progress: Power Grid collections are near-100% (CTUIL pool) but reform widens capex headroom => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CERC_ROE",
+   "dst": "POWERGRID",
+   "relation": "regulatory_risk",
+   "w": 3.0,
+   "w_low": -6.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Regulated ROE 15.5% (CERC 2024-29 tariff regs; model knowledge) on ~Rs 1 lakh cr equity base => +50 bp ROE = +Rs 500 cr = +3.1% PAT; persistence 1.0 over the control period, EV/MCap adj ~1.0 (equity effect) => +3.0 per +50 bp. Next tariff period (2029-34) review is the key risk; range spans a cut.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_TBCB_BID_DISCOUNTS",
+   "dst": "POWERGRID",
+   "relation": "competition",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Private bidders (Adani Energy, Sterlite, Tata, etc.) win TBCB lines at lower equity returns; +1 = deeper discounts -> Power Grid wins fewer/low-IRR projects; ~40% of incremental capex is competitive => -1.5. Order book Rs 2.2 lakh cr indicates it still wins.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=POWERGRID+secures+26000+crore+contract+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-21",
+     "note": "Sahi 2026-08-21: Rs 26,000 cr contract; order book heading to Rs 2.2 trillion"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "POWERGRID",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Tower steel is ~15% of line capex; on TBCB (fixed-price) lines only: +7% -> project cost +1%, equity IRR -0.4pp on ~40% of capex => -0.4; regulated lines pass through.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "POWERGRID",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Conductors (Al/ACSR) ~12% of line capex on TBCB projects; +10% -> +1.2% => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "POWERGRID",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Transformers/reactors/cables copper content; mostly pass-through => -0.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "POWERGRID",
+   "relation": "fx_translation",
+   "w": -0.2,
+   "w_low": -0.8,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Foreign-currency loans ~8% of debt (model estimate), FERV largely passed through under CERC rules, equipment imports (HVDC, GIS) small; pack shows +1.18 per +3% (t=1.0, not significant, opposite sign) => -0.2, range crosses zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POWERGRID.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent 94.99 (+15% 3m), USD/INR 94.49 (+6.5% 12m), US 10Y 4.89%, Nifty 50 24,461"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "POWERGRID",
+   "relation": "macro_transmission",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Beta ~0.9-1.0; FIIs sold during 2026 (stock 6m -16.9%); +US$5bn -> +1.5% x 0.9 => +1.2 (not all flow-driven).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POWERGRID.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "POWERGRID",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.6,
+   "lag": "0-3m",
+   "mechanism": "Defensive: pack +0.76 per +5 VIX pts (t=2.2) and -1.06 vs US equities (t=-1.7) agree with a low-beta/defensive profile => +0.8 per +5 VIX points; AGREES with data.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POWERGRID.md",
+     "date": "2026-11-05",
+     "note": "empirical market-adjusted sensitivities (weekly, 3y) from the company evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "C_CHINA",
+   "dst": "POWERGRID",
+   "relation": "geopolitical_exposure",
+   "w": -0.2,
+   "w_low": -0.8,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Some HVDC/GIS/transformer components sourced from China-linked supply chains; restrictions can delay projects. Low.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/POWERGRID/consolidated/",
+     "date": "2026-11-05",
+     "note": "Mcap Rs 2,42,746 cr, P/E 15.0, P/B 2.3, yield 3.44%, ROE 15.3%; TTM sales Rs 47,374 cr, op profit Rs 35,056 cr, interest Rs 8,580 cr, PAT Rs 16,196 cr (screener sales include other operating items; Kalkine quotes Q2 revenue Rs 10,048 cr)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "State discoms / DICs (pooled via CTUIL)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "regulated, near-100% collections"
+  },
+  {
+   "counterparty": "CG Power",
+   "ticker": "CGPOWER",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "transformers/ equipment"
+  },
+  {
+   "counterparty": "Hitachi Energy India",
+   "ticker": "POWERINDIA",
+   "role": "supplier",
+   "importance": "high",
+   "note": "HVDC/ GIS/ transformers"
+  },
+  {
+   "counterparty": "GE Vernova T&D India",
+   "ticker": "GVT&D",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "substations/equipment"
+  },
+  {
+   "counterparty": "APAR Industries / cable and wire makers",
+   "ticker": "APARINDS",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "conductors; Power Grid asked cable and wire makers to scale up (ET 2026-10-28)"
+  },
+  {
+   "counterparty": "Adani Energy Solutions / Tata Power / Sterlite",
+   "ticker": "ADANIENSOL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "TBCB competitors"
+  },
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "51.34% holding (model knowledge)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Interim dividend Rs 3/share ex-date (mechanical price adjustment ~1.1% of Rs 261)",
+   "type": "corporate_action",
+   "prob": 0.9,
+   "impact_pct_low": -1.3,
+   "impact_pct_high": -0.9,
+   "source": "https://news.google.com/rss/search?q=Power+Grid+Q2FY27+net+profit+up+8.4%+3866+crore+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI December MPC / G-sec move (sensitivity only)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+MPC+December+2026+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11/2027-03",
+   "event": "New TBCB/RTM project awards and ISTS bids (wins add to Rs 2.2 lakh cr order book)",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=POWERGRID+secures+26000+crore+contract+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: capitalisation pace vs guided Rs 37,000-40,000 cr capex",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Power+Grid+Raises+FY27+CAPEX+Guidance+37000+40000+crore+RoW+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4/FY27 results and FY28 capex/capitalisation guidance; final dividend",
+   "type": "guidance",
+   "prob": 0.9,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Power+Grid+Raises+FY27+CAPEX+Guidance+37000+40000+crore+RoW+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-2029",
+   "event": "CERC tariff period 2029-34 consultation (ROE and norms) - long-dated regulatory risk",
+   "type": "regulatory",
+   "prob": 0.1,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs 3,866 cr (+8.4%), operating profit Rs 9,716 cr, interest Rs 2,191 cr; capitalisation surged; mixed revenue (Investing.com 'mixed results')",
+  "trend": "Earnings growth mid-single to high-single digit; pipeline accelerates (capex raised); stock derated with yields.",
+  "valuation": "Price Rs 261, P/E 15.0, P/B 2.3, dividend yield 3.44%, ROE 15.3%; 52w 242-325; 6m -16.9%, 12m -6.5%; 1y vol 21%.",
+  "recent_developments": [
+   "2026-11-04 FY27 capex raised to Rs 37,000-40,000 cr; H1 capitalisation Rs 9,300 cr",
+   "2026-11-02 PAT +8.4% to Rs 3,866 cr",
+   "2026-10-29 shares +4% on dividend record date",
+   "2026-10-28 asks cable/wire makers to scale up",
+   "2026-08-21 Rs 26,000 cr contract",
+   "2026-10-07 RBI hike"
+  ]
+ },
+ "key_risks": [
+  "Rising G-sec yields compress bond-proxy multiple",
+  "TBCB competition and lower IRRs",
+  "CERC tariff period 2029-34 ROE risk",
+  "Execution and right-of-way delays",
+  "Government dividend/divestment (OFS) supply"
+ ],
+ "upside_triggers": [
+  "Capex acceleration and capitalisation beats",
+  "Falling yields / RBI pause",
+  "New large awards (HVDC, storage, green corridors)",
+  "Defensive rotation"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CERC_ROE",
+   "type": "POLICY",
+   "name": "CERC allowed regulated ROE for transmission",
+   "ssu": "+50 bp allowed ROE"
+  },
+  {
+   "id": "NEW_TBCB_BID_DISCOUNTS",
+   "type": "FACTOR",
+   "name": "Winning-bid discount intensity in transmission TBCB auctions",
+   "ssu": "+1 = 10% lower winning equity IRR vs base"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=Power+Grid+Q2FY27+net+profit+up+8.4%+3866+crore+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-01",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Power+Grid+Raises+FY27+CAPEX+Guidance+37000+40000+crore+RoW+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "capex guidance and capitalisation"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Power+Grid+asks+cable+and+wire+makers+to+scale+up+transmission+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "cable/wire makers request"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=POWERGRID+secures+26000+crore+contract+order+book+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-21",
+   "what": "order book"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+policy+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "https://www.screener.in/company/POWERGRID/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  }
+ ],
+ "ticker": "POWERGRID",
+ "as_of": "2026-11-05"
+}

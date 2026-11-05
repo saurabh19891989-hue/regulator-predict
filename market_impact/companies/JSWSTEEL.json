@@ -170,7 +170,7 @@
    "w_low": 0.2,
    "w_high": 1.8,
    "lag": "3-12m",
-   "mechanism": "Flat products to autos/white goods/ appliances are ~20-25% of JSW volumes (model knowledge); +10% auto volumes => +1.5% JSW volumes => ~+3% EBITDA x1.25x0.2... => ~+0.8.",
+   "mechanism": "Flat products to autos/white goods/ appliances are ~20-25% of JSW volumes (model knowledge); +10% auto volumes => +1.5% JSW volumes => ~+4% EBITDA; x1.25 x0.2 persistence (volume gain partly competed away) => ~+0.8 to +1.",
    "confidence": "low",
    "evidence": [
     {
@@ -318,7 +318,7 @@
  "current_state": {
   "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs54,486 cr (+21% YoY), EBITDA Rs10,120 cr (19%), PAT Rs5,359 cr (consolidated per screener; Rs5,279 cr per Moneycontrol/Upstox), interest Rs1,602 cr",
   "trend": "Record volumes, margins up from 16-17% a year ago, debt falling; but stock -13.7% over 3m after a post-result dip on capex and the call",
-  "valuation": "P/E ~21x TTM PAT Rs31,708... screener 21.2x; P/B 2.9x; ROCE 11%",
+  "valuation": "P/E 21.2x (screener; TTM PAT Rs31,708 cr), P/B 2.9x, ROCE 11%",
   "recent_developments": [
    "2026-10-23: Q2 profit +225% YoY on record sales (Moneycontrol); shares -3% on Rs7,500 cr Sambalpur approval",
    "2026-10-26: shares +6% as Q2 beat estimates; brokerages see up to 39% upside (Moneycontrol)",
