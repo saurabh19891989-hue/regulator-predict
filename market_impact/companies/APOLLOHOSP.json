@@ -1,0 +1,389 @@
+{
+ "name": "Apollo Hospitals Enterprise Ltd.",
+ "industry": "I_HOSPITALS_DIAGNOSTICS",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest private hospital chain with integrated pharmacy distribution/retail (Apollo HealthCo, Apollo Pharmacy, Apollo 24/7), diagnostics and primary-care clinics. TTM revenue Rs 27,630 cr (+19%), EBITDA Rs 4,244 cr (15%), PAT Rs 2,338 cr. Q2 FY27 revenue Rs 7,615 cr (+23%), EBITDA Rs 1,191 cr, PAT Rs 660 cr; Reuters notes expansion costs weighed on the share price (2026-11-05). NCLT approved a composite scheme of arrangement among four group entities on 2026-11-04.",
+ "revenue_mix": [
+  {
+   "segment": "Healthcare services (hospitals)",
+   "share_pct": 47,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "Pharmacy distribution and retail (HealthCo)",
+   "share_pct": 43,
+   "geography": "India"
+  },
+  {
+   "segment": "AHLL: clinics, diagnostics, insurance, other",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 24
+  },
+  {
+   "input": "F_USDINR",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "APOLLOHOSP",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Premium urban volumes, occupancy and ARPOB drive hospitals (~47% of sales, ~75% of EBITDA; model estimate). +5pp urban consumption -> +2pp inpatient revenue growth -> hospital EBITDA +4% at ~35% incremental margin -> group EBITDA +3%, persistence 0.8, EV/MCap 1.05 -> +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Apollo+Hospitals+Q2+FY27+healthcare+services+EBITDA+Apollo+24/7+pharmacy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 FY27 revenue Rs 7,615 cr (+23%), PAT Rs 660 cr (+34%, screener); Reuters 2026-11-05: shares slip as expansion costs cloud strong results"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "APOLLOHOSP",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Healthcare spend elasticity ~1.2 to GDP; +1pp GDP -> +1.2pp revenue growth, operating leverage 2x -> +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "APOLLOHOSP",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Mix shift to complex/oncology/robotics procedures and international patients lifts ARPOB (Moneycontrol 2026-11-04: occupancy and premium procedures drove margins). +1 SSU = faster mix upgrade -> +2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Apollo+Hospitals+Q2+FY27+healthcare+services+EBITDA+Apollo+24/7+pharmacy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Q2 FY27 revenue Rs 7,615 cr (+23%), PAT Rs 660 cr (+34%, screener); Reuters 2026-11-05: shares slip as expansion costs cloud strong results"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "APOLLOHOSP",
+   "relation": "input_cost",
+   "w": -1.3,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Employee plus doctor fees ~20% of group sales; +2pp wage inflation -> +0.4% of sales / OPM 16% = -2.5% EBITDA; tariff increases recover ~50%; persistence 1.0 (structural), EV/MCap 1.05 -> -1.3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "APOLLOHOSP",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Insurance-regulatory tightening on cashless/TPA rate-setting and claims pressures hospital tariffs; payer mix ~50% insured: 3% tariff cut on insured volume -> -1.5% hospital revenue -> about -9% hospital EBITDA (-7% group); weighted probability 0.3, persistence 1.0, EV/MCap 1.05 -> -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_NPPA_DRUG_PRICE_CONTROL",
+   "dst": "APOLLOHOSP",
+   "relation": "regulatory_risk",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Pharmacy distribution (Apollo HealthCo, ~40-45% of sales, ~6-8% margins) is exposed to trade-margin caps and stent/implant price control; +1 tightening step -> -0.5% pharmacy margin = -0.2% group sales / OPM 16% = -1.3% EBITDA, persistence 1.0 -> -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "APOLLOHOSP",
+   "relation": "funding_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Interest Rs 454 cr/yr, 55% floating (model): +25bp = Rs 6 cr = -0.4% EBITDA; plus bed-expansion capex funded with borrowings; discount-rate effect at P/E 53 -> -0.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance calibrated tightening (Reuters/The Hindu headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "APOLLOHOSP",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Long-duration quality growth stock (P/E 53, P/B 11): +25bp G-sec -> -2.5% x rate beta 0.8 -> -2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "APOLLOHOSP",
+   "relation": "discount_rate",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding 43.2% (Sep-26, +1.7pp QoQ); +US$5bn inflow -> +3% relative; pack beta 0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "APOLLOHOSP",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Imported equipment/consumables ~10% of hospital costs and medical-tourism revenue ~5% of hospital sales: +3% USD/INR -> cost +0.3% / revenue +0.15% -> -0.5. Empirical +1.34 (t=1.2) has opposite sign but insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "APOLLOHOSP",
+   "relation": "output_price",
+   "w": 0.5,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Hospital tariff increases track medical-cost inflation (4-6% annual); +1pp CPI -> +0.3pp tariff growth; offsets wage costs; net +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "APOLLOHOSP",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Pack shows +0.54 (t=1.6, defensive flow, insignificant) while the 53x multiple argues for de-rating in risk-off; conservative weight -0.8 with range spanning zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "APOLLOHOSP",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Empirical -1.01 per SSU (t=-3.3, significant) but no plausible direct channel (energy ~2% of costs); likely a risk-on/risk-off proxy; weight shrunk to -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+     "date": "2026-11-05",
+     "note": "screener.in financials retrieved 2026-11-05; weight is model-derived (see mechanism)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Insurers and TPAs, government schemes (CGHS, PM-JAY)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "payer mix drives tariffs and receivable days"
+  },
+  {
+   "counterparty": "Pharma and medical-device suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "pharmacy COGS ~80% of segment sales"
+  },
+  {
+   "counterparty": "Max Healthcare, Fortis, Narayana, Manipal",
+   "ticker": "MAXHEALTH",
+   "role": "competitor",
+   "importance": "high",
+   "note": "bed expansions and premium catchments"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: occupancy, ARPOB, pharmacy margin, expansion cost drag",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Apollo+Hospitals+Q2+FY27+healthcare+services+EBITDA+Apollo+24/7+pharmacy+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Composite scheme of arrangement among four group entities: NCLT order received 2026-11-04 (creditor nod 2026-10-30); effective date/filings",
+   "type": "corporate_action",
+   "prob": 0.85,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Apollo+Hospitals+composite+scheme+of+arrangement+NCLT+Apollo+Health+and+Lifestyle+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "New hospital/bed commissioning and expansion cost absorption (Reuters: expansion costs cloud results)",
+   "type": "capex",
+   "prob": 0.7,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Apollo+Hospitals+Q2+expansion+costs+margin+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "IRDAI / insurer cashless tariff negotiations or hospital-insurer dispute",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": -1.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs 7,615 cr (+23%), operating profit Rs 1,191 cr (16%), PAT Rs 660 cr (+34% per screener; other sources Rs 630 cr attributable)",
+  "trend": "Steady 15-16% margin; double-digit growth; shares slipped on expansion costs.",
+  "valuation": "Price Rs 8,350, P/E 53, P/B 11.4, market cap Rs 1.20 lakh cr, ROCE 17% (screener).",
+  "recent_developments": [
+   "2026-11-05 Reuters: shares slip as expansion costs cloud strong results",
+   "2026-11-04 NCLT order for composite scheme of arrangement involving four entities (scanx)",
+   "2026-10-30 creditor approval for the scheme",
+   "2026-09-30 hospital stocks (Max, Apollo, Fortis) fall up to 7% (Livemint)",
+   "2026-11-02 FIIs raise stake; Economic Times lists Apollo among Nifty winners in FY27"
+  ]
+ },
+ "key_risks": [
+  "High valuation",
+  "Expansion and pre-operative costs depress near-term margin",
+  "Insurer/regulatory tariff pressure",
+  "Pharmacy business low-margin and working-capital heavy",
+  "Sector sell-offs (Sep 30)"
+ ],
+ "upside_triggers": [
+  "Occupancy and ARPOB surprise",
+  "Restructuring unlocks pharmacy/digital valuation",
+  "New beds ramp faster",
+  "Lower rates"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_NPPA_DRUG_PRICE_CONTROL",
+   "type": "POLICY",
+   "name": "India NPPA/NLEM drug price control and trade-margin regulation",
+   "ssu": "+1 = one tightening step (NLEM expansion or trade-margin cap)"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/APOLLOHOSP/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in consolidated"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Apollo+Hospitals+Q2+FY27+healthcare+services+EBITDA+Apollo+24/7+pharmacy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Apollo+Hospitals+composite+scheme+of+arrangement+NCLT+Apollo+Health+and+Lifestyle+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "NCLT order"
+  },
+  {
+   "url": "market_impact/data/packs/APOLLOHOSP.md",
+   "date": "2026-11-05",
+   "what": "evidence pack"
+  }
+ ],
+ "ticker": "APOLLOHOSP",
+ "as_of": "2026-11-05"
+}

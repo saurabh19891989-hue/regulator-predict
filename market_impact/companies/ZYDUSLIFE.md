@@ -21,6 +21,9 @@ Zydus is a vertically integrated Indian pharma group with five legs: US generics
 ## Current situation
 Q2 FY27 sales Rs 7,910 cr (+29% YoY per Passionate in Marketing; screener implies +29%), operating profit Rs 1,894 cr, PAT Rs 928 cr (-27%). Shares fell 4% on results after hitting a 52-week high. Four brokerages issued fresh targets on 2026-11-05 (Zee Business). The stock is +26.6% over 6 months. USFDA approvals continue (hormone patch, 2026-10-21).
 
+## Balance sheet and cash
+Operating cash flow was Rs 2.1k cr in the latest annual cash-flow column but investing outflows of Rs 7.9k cr funded the acquisition spree, with financing inflows of Rs 5.8k cr. Net debt is still modest against Rs 27.7k cr of reserves, yet quarterly interest has doubled to Rs 187 cr, so margin recovery rather than further M&A is the market's priority.
+
 ## Upcoming events
 Moraiya classification (Q1 2027); Q3 FY27 results (Feb 2027); further complex-generic approvals; any Section 232 changes.
 
