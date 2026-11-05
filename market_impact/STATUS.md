@@ -21,7 +21,7 @@ Rules: `market_impact/CLAUDE.md`. Method: `PLAN.md`, `docs/AGENT_SPEC.md`.
   - `EVENTS.md` and `DRIVERS.md` (which effect hits which company)
   - `stocks/<T>.md` (200) and `events/<EV>.md` (161)
 - **Ledger.** `ledger/predictions_20261105.csv` with its sha256, frozen 2026-11-05T08:51:44Z at commit f21d8f3. Entry prices are the latest Yahoo quotes on 5 Nov, intraday.
-- **Dashboard datasets.** `results/dashboard/*.csv`.
+- **Dashboard.** Datasets in `results/dashboard/*.csv`; page source in `dashboard/index.html`; published privately at https://claude.ai/artifact/EoWJSKzGpqVPDB6SDwnzvm (fixed data from this run).
 
 **Review trail.** Eight Opus red-team reviewers covered: event facts, backbone units, top 26 stocks, bottom 26 stocks, and the remaining 36 Next 50 names. A Director pass added a few more fixes. In total, 257 fixes were merged by `mi/merge_review.py` into:
 
