@@ -1,0 +1,547 @@
+{
+ "reviewer": "RT_TOP_A",
+ "as_of": "2026-11-05",
+ "scope": "Top-ranked 12m names: MAZDOCK SAIL JINDALSTEL TATASTEEL HINDPETRO BDL PREMIERENE IOC ENRIN COALINDIA WAAREEENER POWERINDIA BEL",
+ "method": "Read rankings.csv, recent_state_paths.jsonl, company_paths.jsonl, event_impacts.csv and events_effective.json from the 08:27 UTC run (reports/stocks/*.md are from the earlier 08:22 run and are stale), plus profiles and edges_all.csv. Checked RT_EVENTS/RT_BACKBONE merges to avoid repeats. Verified facts via Google News RSS headlines and web search (Nov 2026). Estimated 12m numbers are back-of-envelope re-computations of the formula after the proposed fixes, before universe re-centring.",
+ "edge_scale": [
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "HINDPETRO",
+   "origin": "HINDPETRO",
+   "factor": 0.2,
+   "reason": "Double count with Brent. The profile's own mechanism says the -4.5 is '-3.6 via Brent edge' plus a supply-security premium. HPCL also has a direct F_BRENT edge (-3.0), and every Mideast event (EV_US_IRAN_CEASEFIRE_DEAL, EV_IRAN_TALKS_FAIL_ESCALATE, EV_HORMUZ_FULL_CLOSURE) shocks F_BRENT and C_MIDEAST_CONFLICT together. In the recent state, Brent is observed flat since 1 Jun, yet the edge still books -4.5% of Brent damage that did not happen. Keep ~-0.9 for the premium and freight/insurance on Gulf crude."
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "IOC",
+   "origin": "IOC",
+   "factor": 0.25,
+   "reason": "Same double count. The mechanism reads 'Escalation (+1) ~ Brent +12% and diesel cracks wider', so it carries both the Brent and the crack channels, and IOC has its own F_BRENT and F_REFINING_MARGIN edges, which events shock directly. That books -3.5% in the recent state with Brent flat since June, and +3.5% in forward ceasefire paths on top of the F_BRENT path. Keep ~-0.9 for supply security."
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "WAAREEENER",
+   "origin": "WAAREEENER",
+   "factor": 0.0,
+   "reason": "Node conflation with the wrong sign since June. P_US_TARIFF_INDIA (SSU +10 pp average tariff) fell (-0.6, after IEEPA tariffs were struck down), so this edge books +1.2% 'unpriced' upside. Waaree's US channel is governed by solar-specific AD/CVD, which rose sharply instead: Commerce final AD 123% plus CVD 126% on Indian cells/modules (14 Sep 2026), USITC final injury (15 Oct 2026), plus Section 232 MIPs. The generic tariff node no longer moves Waaree's US economics, and a US-India trade deal (forward +0.55) would not lift solar AD/CVD."
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "PREMIERENE",
+   "origin": "PREMIERENE",
+   "factor": 0.0,
+   "reason": "Same conflation as WAAREEENER. Premier is 99% domestic. Its US exposure is indirect: AD/CVD diverts Indian exporters' modules into the domestic market. That is a domestic-price channel, not a generic-tariff one."
+  },
+  {
+   "src": "F_COAL_INDIA",
+   "dst": "COALINDIA",
+   "origin": "COALINDIA",
+   "factor": 0.5,
+   "reason": "SSU mismatch. The edge (+6) is sized for a blended +10% that assumes a 1-in-3 chance of an FSA notified-price hike (its mechanism). The only state on F_COAL_INDIA (+1.5, EV_INDIA_COAL_CRUNCH) is an e-auction-premium move (premiums ~94%) with no FSA change. E-auction is ~12% of CIL volume, so the blended effect is about half. Reported Q2 FY27 confirms the gain did not reach earnings: profit missed estimates on costs, analysts flagged weak e-auction realisations, and the stock fell 3-4% on results (Moneycontrol and Business Standard, 30 Oct). This halves the +9% 'unpriced' recent impact."
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "JINDALSTEL",
+   "origin": "JINDALSTEL",
+   "factor": 0.87,
+   "reason": "EV/MCap slip. The +16 uses the AGENT_SPEC worked example's EV/MCap of 1.3. Actual: price Rs1,153 x ~102 cr shares = Rs1.18 lakh cr market cap; net debt Rs14,790 cr (Q2 FY27) gives EV/MCap ~1.13. +7% x NSR Rs70,078 x ~10.5 Mt = Rs5.15k cr = +41% of FY27E EBITDA ~Rs12.5k cr (Q2 2,504 + PL Q3 3,150/Q4 4,410), x1.13 x0.3 = +13.9."
+  },
+  {
+   "src": "F_COKING_COAL",
+   "dst": "JINDALSTEL",
+   "origin": "JINDALSTEL",
+   "factor": 0.65,
+   "reason": "Persistence/EV consistency with the steel edge. Coking coal ~22% of ~Rs54k cr FY27E costs = Rs11.9k cr; +15% = Rs1.78k cr = -14% EBITDA, x1.13 x0.3 = -4.8 (the profile's -7.5 implies persistence ~0.5 while the steel edge uses 0.3). The two price legs move together and must fade at the same rate, or every cost-push steel rally books a spurious net loss and every coal fall a spurious gain."
+  }
+ ],
+ "event_overrides": {
+  "EV_UNION_BUDGET_FEB27_METALS": {
+   "prob_by_3m": 0.35,
+   "prob_by_12m": 0.35,
+   "entry_shocks": [
+    {
+     "node": "F_COKING_COAL",
+     "ssu": -0.17,
+     "low": -0.17,
+     "high": -0.08,
+     "note": "BCD on coking coal 2.5% -> nil = -2.4% landed cost (-0.16 SSU)"
+    },
+    {
+     "node": "P_MINING_ROYALTY",
+     "ssu": 0.0,
+     "low": -0.3,
+     "high": 0.3
+    }
+   ],
+   "reason": "The event's own description models 'the ~0.35 chance of input-duty relief', yet it is entered with p=0.85/0.9 and a -0.3 SSU (-4.5%) coking-coal shock. The only lever is the 2.5% basic customs duty: cut to nil on 22 May 2022 (Notification 26/2022-Customs) and restored to 2.5% in Nov 2022, and industry still lobbies for abolition (GMK). Removing it lowers landed cost ~2.4%. Fix: p = 0.35 and shock -0.17. This removes ~+2 pp of 12m forward exposure (and ~+1.9 pp of 3m) from each integrated mill (JINDALSTEL, SAIL; TATASTEEL ~+1).",
+   "source": "https://howtoexportimport.com/Notification-No-26-2022-Customs-date-on-21st-May-2-21899.aspx ; https://gmk.center/en/news/india-demands-the-complete-abolition-of-the-import-duty-on-coking-coal/amp ; https://www.steelorbis.com/steel-news/latest-news/india-issues-new-duty-regime-15-export-taxes-on-steel-despite-mills-opposition-1245112.htm"
+  },
+  "EV_BUDGET27_CAPEX_RAILWAY": {
+   "entry_shocks": [
+    {
+     "node": "F_GOVT_CAPEX",
+     "ssu": 0.2,
+     "low": -0.3,
+     "high": 0.6,
+     "note": "surprise vs ~10% expected capex growth"
+    },
+    {
+     "node": "P_RAILWAY_CAPEX",
+     "ssu": 0.2,
+     "low": -0.2,
+     "high": 0.6,
+     "note": "surprise only"
+    },
+    {
+     "node": "P_DEFENCE_PROCUREMENT",
+     "ssu": 0.3,
+     "low": -0.3,
+     "high": 1.0,
+     "note": "surprise vs MoD's publicised ask"
+    }
+   ],
+   "reason": "LEVEL booked as a SURPRISE. The description says 'base case: central capex growth ~10% ... (model assumption; no fetched figures)'. Yet the shocks are F_GOVT_CAPEX +0.8 (SSU +10% capex growth), i.e. the expected growth itself, plus P_DEFENCE_PROCUREMENT +1.0 (+10% domestic orders) at p=0.9. A scheduled budget moves stocks only by its deviation from expectations. Expectations are already high: MoD is publicly seeking the steepest modernisation hike in a decade (up to 35%, Business Standard 9 Oct, Defence.in 16 Oct) on top of FY27's record Rs7.85 lakh cr / Rs2.19 lakh cr modernisation (Feb 2026). Fiscal room is tight: H1 FY27 deficit 42.1% of target, overshoot risk up to Rs1.2 lakh cr (ET 30 Oct, 2 Nov). This one event is the largest forward item for MAZDOCK (+7.2 expected), BEL (+6.4), BDL (+5.8), POWERINDIA (+3.5), SAIL (+3.4) and ENRIN (+2.8). Keep p=0.9 and use surprise-sized shocks.",
+   "source": "https://news.google.com/rss/search?q=MoD+to+seek+steepest+arms+buying+budget+hike+FY28+when:120d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Fiscal+deficit+in+H1+rises+to+42.1%25+of+FY27+target+when:120d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Defence+Ministry+allocated+record+Rs+7.85+lakh+crore+Union+Budget+2026-27+when:400d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  "EV_LPG_COMPENSATION_CABINET": {
+   "prob_by_3m": 0.1,
+   "prob_by_12m": 0.55,
+   "entry_shocks": [
+    {
+     "node": "NEW_OMC_COMPENSATION",
+     "ssu": 1.2,
+     "low": 0.6,
+     "high": 3.0,
+     "note": "~Rs30k cr one-off (OMC ask Rs75k cr); SSU +1 = Rs25k cr"
+    }
+   ],
+   "reason": "(1) Timing: Moneycontrol (7 Sep 2026) reports 'OMCs seek Rs 75,000 crore for fuel losses; Centre to decide in 2027'. A Dec-2026 decision with p3=0.35 is unsupported; p3 should be ~0.1. (2) Wrong node and unit: a one-off cash compensation is booked as +1 SSU of NEW_OMC_MARKETING_MARGIN, i.e. a persistent +Rs1/l on all petrol and diesel. That gives HPCL +12% and IOC +6.5% per tranche. The profiles already carry a purpose-built node, NEW_OMC_COMPENSATION (HPCL +4.5, IOC +3.2 per Rs25k cr, sized on share of compensation / market cap). (3) Triple channel: HPCL and IOC also hold company_events 'Centre decision on OMC compensation' (see findings). Re-routing cuts the HPCL expected value from +7.2 to ~+3.0 and IOC's from +3.9 to ~+2.1. BPCL has no NEW_OMC_COMPENSATION edge (see findings).",
+   "source": "https://news.google.com/rss/search?q=OMCs+seek+Rs+75%2C000+crore+for+fuel+losses+Centre+to+decide+in+2027+when:120d&hl=en-IN&gl=IN&ceid=IN:en ; market_impact/results/edges_all.csv rows NEW_OMC_COMPENSATION->HINDPETRO/IOC"
+  }
+ },
+ "event_drop": {},
+ "recent_state_overrides": [
+  {
+   "node": "P_RENEWABLE_SUPPORT",
+   "state_ssu": 0.6,
+   "reason": "The current 1.5 = EV_SOLAR_ALMM2_CELL_MANDATE +0.5 + EV_BESS_VGF_NOV26 +1.0. (a) ALMM List-II's 1 Jun 2026 effective date was notified by MNRE in Dec 2024 (model knowledge), so it was fully known before the 1 Jun baseline and is not a change since June. Since then the policy was WEAKENED: on 19 Jul 2026 the Centre deferred the domestic-cell sourcing mandate to 31 Dec 2026 for open-access and net-metering projects (Indian Express, ET, BusinessLine, 19 Jul). Waaree and Premier fell up to 6% that day (NDTV Profit 20 Jul), and module makers now seek more time (ET 1 Nov). Net ALMM change since June ~-0.2. (b) The BESS VGF (Rs14,500 cr, 92 GWh) is confirmed by Cabinet/PM India on 4 Nov. It is storage-specific, so +0.8 rather than +1.0 for a node whose company edges (Waaree/Premier +6) were sized on ALMM/DCR. Net ~0.6. This removes ~5.4% of 'unpriced' recent impact from each of WAAREEENER and PREMIERENE.",
+   "sources": [
+    "https://news.google.com/rss/search?q=Centre+defers+domestic+solar+cell+sourcing+mandate+till+December+31+when:150d&hl=en-IN&gl=IN&ceid=IN:en",
+    "https://news.google.com/rss/search?q=Premier+Energies+Waaree+Energies+shares+fall+government+extends+domestic+solar+cell+sourcing+deadline+when:150d&hl=en-IN&gl=IN&ceid=IN:en",
+    "https://news.google.com/rss/search?q=Cabinet+approves+Rs+14%2C500+crore+Viability+Gap+Funding+92+GWh+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
+  },
+  {
+   "node": "F_STEEL_GLOBAL",
+   "state_ssu": 0.5,
+   "reason": "Wrong proxy. The observed series is HRC=F, CME US Midwest HRC futures (nodes_seed series). Its +20.6% since 1 Jun reflects the tariff-walled US market (Section 232; Nucor list price rises, GMK 9 Jun/11 Aug), not 'global HRC'. Ex-US prices did much less: EU mills lifted offers ~EUR50/t (~+8%, ArcelorMittal, GMK 10 Jul), while Asian/China export HRC was flat to softer ('Export offers stall, import prices lead declines', SMM 30 Oct; Indian HRC export to Europe eased to $660 FOB, SMM 23 Oct). A trade-weighted ex-US move of ~+5% = 0.5 SSU. Impact in my scope: TATASTEEL's direct F_STEEL_GLOBAL edge (+2, Europe ~30% of revenue) books +4.1% recent 'unpriced' upside from US prices that Tata Steel Europe does not sell into; the EU-specific uplift is already on the director edge NEW_EU_STEEL_ACCESS -> TATASTEEL.",
+   "sources": [
+    "https://news.google.com/rss/search?q=SMM+Global+HRC+Weekly+Review+Export+Offers+Stall+Import+Prices+Lead+Declines+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+    "https://news.google.com/rss/search?q=ArcelorMittal+is+raising+prices+for+rolled+steel+in+Europe+by+50+per+tonne+when:150d&hl=en-IN&gl=IN&ceid=IN:en",
+    "market_impact/graph/nodes_seed.json (F_STEEL_GLOBAL series HRC=F)"
+   ]
+  },
+  {
+   "node": "NEW_POWER_EQUIP_CAPACITY",
+   "state_ssu": 0.5,
+   "reason": "Missing since-June shock. On 3 Jul 2026 the Finance Ministry gave four Chinese-linked power-equipment makers a two-year exemption to bid in critical power tenders. Hitachi Energy fell ~7.9% and CG Power ~7.1% intraday, sector stocks up to 10-12% (ET, Livemint, CNBC TV18, Business Today, JM Financial, 3 Jul). Nomura called it an overreaction and the order says it sets no precedent (Business Today 6 Jul), so a half-unit (SSU = peer capacity cutting pricing ~100 bp) is proportionate. The graph has no event for it, so POWERINDIA (-4/SSU) and ENRIN (-3/SSU) carry 'unpriced' upside the market had in fact priced against.",
+   "sources": [
+    "https://www.businesstoday.in/markets/stocks/story/ge-vernova-cg-power-hitachi-siemens-selloff-overreaction-as-4-chinese-firms-enter-power-tenders-says-nomura-541063-2026-07-06",
+    "https://www.jmfinancialservices.in/blogs-and-articles/india-grants-exemption-to-four-chinese-firms-for-critical-power-projects",
+    "https://news.google.com/rss/search?q=Hitachi+Energy+BHEL+Siemens+Energy+TARIL+shares+crash+govt+latest+move+when:150d&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
+  },
+  {
+   "node": "P_DEFENCE_PROCUREMENT",
+   "state_ssu": 0.5,
+   "reason": "EV_DAC_APPROVALS_H2_26 books +1.0 SSU (= +10% domestic ORDERS) for one DAC AoN of Rs1.10 lakh cr (7 Sep). AoNs are routine and precede contracts by 1-3 years (the event's own text). Comparable AoN rounds came every few months in 2025 (Rs1.05 lakh cr Jul 2025, ~Rs67k cr Aug 2025, ~Rs79k cr Oct 2025: model knowledge), so one round is roughly normal pipeline flow, not a 10% step-up in orders. The second Rs2.12 lakh cr clearance (NIE 26 Oct) is unverified versus the first. The market did not treat this as news: MAZDOCK -25%, COCHINSHIP -16%, BDL -11% since 1 Jun while AoNs were announced. The defence profiles' company_events also book the resulting contracts (BDL missile orders, BEL large orders), so a full-unit AoN state double counts the pipeline. 0.5 keeps a modest positive for the cumulative approvals flow (MOSL: Rs13 lakh cr approvals, 4 Oct).",
+   "sources": [
+    "https://news.google.com/rss/search?q=DAC+accords+AoN+Rs+1.10+lakh+crore+when:120d&hl=en-IN&gl=IN&ceid=IN:en",
+    "https://news.google.com/rss/search?q=Bharat+Electronics+Motilal+Oswal+top+pick+Rs+13+lakh+crore+approvals+when:60d&hl=en-IN&gl=IN&ceid=IN:en"
+   ]
+  }
+ ],
+ "findings": [
+  {
+   "severity": "high",
+   "subject": "Ranking structure (rank 1-13)",
+   "issue": "The top of the 12m ranking is mostly a short-term-reversal bet, not 'unpriced fundamentals'. 11 of my 13 names (85% of the top 13/20, 82% of the top 50, vs 54% universe-wide) have a since-June realised move OPPOSITE in sign to the model impact. The bounded-residual rule then books the FULL model impact as unpriced: resid = clip(rec - realised, 0, rec) = rec whenever realised < 0. Across the universe, exp_rel_return_12m correlates -0.41 with the realised since-June move and +0.86 with residual_contribution. In 4 of my names the opposite move is explained by stock-specific news the graph lacks: MAZDOCK (Q2 miss), WAAREEENER/PREMIERENE (US AD/CVD, ALMM deferral, margin compression) and POWERINDIA/ENRIN (Chinese bidders, capital-goods/AI de-rating). For those the 'unpriced' label is wrong. The current rule only guards against moves LARGER than the model (same sign); opposite-signed moves get no guard.",
+   "fix": "graph.py: when sign(realised) != sign(rec) and |realised| > |rec|, use resid = 0.5*rec (or 0) unless the profile cites a reason the move is noise. Minimum fix: add MAZDOCK, WAAREEENER, PREMIERENE to a residual-zero list (same mechanism as CORP_ACTION_BREAKS, residual only) with the reasons in the ticker findings below.",
+   "evidence": "market_impact/results/rankings.csv (computed 2026-11-05): top-13 opp-sign share 0.85; corr(exp_rel_return_12m, realised_mkt_adj_since_jun) = -0.41"
+  },
+  {
+   "severity": "medium",
+   "subject": "Company events: positive-skew results/execution events",
+   "issue": "Several profiles give scheduled results or guided execution milestones asymmetric ranges with no evidence. Each adds a free +0.5 to +1 pp of expected value, and these are things already in broker estimates. Examples: MAZDOCK Q3 [-9,+11] and Q4 [-8,+9] right after a 54% profit miss; POWERINDIA Q2/Q3/Q4 [-10,+12]/[-9,+10]/[-9,+10] (+1.9 total); ENRIN FY results [-9,+10], parent outlook [-4,+5], Q1 [-8,+9]; JINDALSTEL Angul ramp [0,+3], slurry pipeline [0,+2], Roida [0.5,2.5], DRI [0,+2] (all in PL's 24 Oct estimates).",
+   "fix": "Symmetric ranges unless a sourced reason exists (see per-ticker overrides).",
+   "evidence": "market_impact/companies/{MAZDOCK,POWERINDIA,ENRIN,JINDALSTEL}.json company_events"
+  },
+  {
+   "severity": "medium",
+   "subject": "Company events: dividends booked as relative return",
+   "issue": "Interim/final dividend record dates are booked as positive events: IOC p0.5 [0,1.5], COALINDIA p0.6 [0,1.5], MAZDOCK p0.9 [0,0.5]. The price drops by the dividend on the ex-date, and the yield is the same for every stock's total return, so these are not relative-return events.",
+   "fix": "Drop them (overrides below).",
+   "evidence": "profiles"
+  },
+  {
+   "severity": "low",
+   "subject": "Beta adjustment (all high-beta names)",
+   "issue": "The universe-average model recent impact is -3.82, while the Nifty 50 rose ~+3.9% since 1 Jun. The beta term therefore adds +3.8 x beta to every stock: +4.6 to +5.6 pp for my high-beta names. HINDPETRO's raw recent impact is -0.2 and its whole +5.35 'unpriced' impact comes from this term. The term is internally consistent (CAPM-style), but it means the model's own macro story (rate hikes, FPI outflows) is contradicted by the market, and high-beta cyclicals inherit that error as alpha. Corr(exp_rel_return_12m, beta) = +0.19.",
+   "fix": "Report it in the decomposition. Consider using the realised market move instead of the model universe mean, or cap the beta term.",
+   "evidence": "rankings.csv recent_events_model_impact - _raw"
+  },
+  {
+   "severity": "low",
+   "subject": "F_STEEL_INDIA state (+1.35 = +9.5%)",
+   "issue": "This is at the upper end of sourced benchmarks. BigMint Mumbai HRC was Rs58,200/t on 30 Jun 2026; SMM on 23 Jun saw further downside. BigMint's Sep benchmark was ~Rs62,000/t (4.5-year high), i.e. ~+6.5%; IDBI Capital quotes Rs64,700/t for Sep on another basis (+11%). BigMint's steel index fell for three weeks to 2 Nov (long-steel correction), though mills raised list prices again on 3 Nov. Rebar outpaced HRC. A central estimate of +8-9% (1.15-1.3 SSU) fits better, but it is inside RT_EVENTS' range, so I am not overriding it. Sensitivity: each 0.1 SSU = 1.6 pp of JINDALSTEL recent impact.",
+   "evidence": "https://trendlyne.com/posts/5887808/steel-sector-monthly-update-sector-update (IDBI, 8 Oct 2026); https://www.bigmint.co/insights/detail/india-trade-level-hrc-prices-soften-marginally-on-weak-demand-cautious-buying-765020 ; https://news.google.com/rss/search?q=BigMint+India+steel+index+drops+for+third+straight+week+when:30d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "EV_INDIA_RETAIL_FUEL_HIKE -> HINDPETRO",
+   "issue": "The conditional impact is +30% (2.5 SSU x director edge 12), above the ±25% plausibility bound. RT_EVENTS already lowered the odds (0.3), so the expected value is fine (+9 x 0.5 priced). But a hike would most likely follow a Brent re-spike, so the net margin gain is smaller than 2.5 SSU. Suggest entry 1.5 (low 1.0, high 2.5) if the Director re-sizes the event.",
+   "evidence": "results/company_paths.jsonl HINDPETRO"
+  },
+  {
+   "severity": "low",
+   "subject": "BPCL / NEW_OMC_COMPENSATION",
+   "issue": "If EV_LPG_COMPENSATION_CABINET is re-routed to NEW_OMC_COMPENSATION (event_overrides), BPCL has no edge from that node and would lose its compensation channel. Add a director edge NEW_OMC_COMPENSATION -> BPCL of ~+3.5 (low 1, high 6): share ~28% of Rs25k cr = Rs7k cr pre-tax, ~Rs5.2k cr post-tax, on a market cap of ~Rs1.4-1.5 lakh cr (model knowledge, verify).",
+   "evidence": "results/edges_all.csv (only HINDPETRO, IOC, ONGC have NEW_OMC_COMPENSATION edges)"
+  },
+  {
+   "severity": "medium",
+   "subject": "JINDALSTEL company_events",
+   "issue": "Company events give +6.2 (12m) and +4.5 (3m), about 3 pp of the 12m score and 2.3 pp of the 3m score. Breakdown: (a) 'DGTR ... anti-dumping duty on HR flat steel' (+1.6) duplicates graph event EV_INDIA_HR_STEEL_AD_PROVISIONAL (+3.5 for JSPL). (b) 'Safeguard duty steps down 12% -> 11.5%' duplicates EV_STEEL_SAFEGUARD_STEPDOWN_2027 and has the wrong schedule (it is 11.5% -> 11% on 21 Apr 2027, per RT_EVENTS). (c) 'India-EU FTA signing' (+0.9) duplicates EV_INDIA_EU_FTA_SIGNED and the NEW_EU_STEEL_ACCESS channel. (d) 'Russian Black Sea coking coal supply resumes' (+1.2) is a commodity-wide F_COKING_COAL driver; the layering rule forbids it as a company event. (e) Angul/slurry/Roida/DRI milestones are management-guided, inside PL's 24 Oct estimates, yet booked with zero downside.",
+   "fix": [
+    {
+     "ticker": "JINDALSTEL",
+     "match": "DGTR provisional/final finding",
+     "drop": true,
+     "reason": "dup of EV_INDIA_HR_STEEL_AD_PROVISIONAL"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "match": "Safeguard duty steps down",
+     "drop": true,
+     "reason": "dup of EV_STEEL_SAFEGUARD_STEPDOWN_2027; schedule wrong"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "match": "India-EU FTA signing",
+     "drop": true,
+     "reason": "dup of EV_INDIA_EU_FTA_SIGNED / NEW_EU_STEEL_ACCESS"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "match": "Russian Black Sea coking coal",
+     "drop": true,
+     "reason": "commodity driver (F_COKING_COAL), not company-specific"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "match": "Angul BF-II",
+     "impact_pct_low": -2.0,
+     "impact_pct_high": 2.0,
+     "reason": "guided; symmetric execution risk"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "match": "slurry pipeline",
+     "impact_pct_low": -1.0,
+     "impact_pct_high": 1.0,
+     "reason": "guided; symmetric"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "match": "Roida iron ore mine",
+     "impact_pct_low": -1.0,
+     "impact_pct_high": 1.5,
+     "reason": "guided; clearance slippage risk"
+    },
+    {
+     "ticker": "JINDALSTEL",
+     "match": "2 Mtpa DRI plant",
+     "impact_pct_low": -1.5,
+     "impact_pct_high": 1.0,
+     "reason": "guided; profile itself flags equipment/shipping delays"
+    }
+   ],
+   "evidence": "market_impact/companies/JINDALSTEL.json; https://plindia.com/ResReport/JINDALST-24-10-26-PL.pdf (cited in profile)"
+  },
+  {
+   "severity": "medium",
+   "subject": "SAIL / TATASTEEL company_events",
+   "issue": "Both books 'Safeguard duty tightening' at p0.25 with a positive range (+1.0 and +0.9 expected). This duplicates the graph's HR-flat AD event, and the evidence contradicts it: the steel ministry is unlikely to seek new curbs (Reuters 6 Oct), and the safeguard is a notified 3-year step-DOWN schedule.",
+   "fix": [
+    {
+     "ticker": "SAIL",
+     "match": "Safeguard duty tightening",
+     "drop": true,
+     "reason": "dup of EV_INDIA_HR_STEEL_AD_PROVISIONAL; contradicted by Reuters 6 Oct"
+    },
+    {
+     "ticker": "TATASTEEL",
+     "match": "Safeguard duty tightening",
+     "drop": true,
+     "reason": "dup of EV_INDIA_HR_STEEL_AD_PROVISIONAL; contradicted by Reuters 6 Oct"
+    }
+   ],
+   "evidence": "https://news.google.com/rss/search?q=India+steel+ministry+unlikely+to+seek+new+curbs+on+cheap+imports+when:60d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "HINDPETRO / IOC company_events",
+   "issue": "Triple and double counts with graph channels. (1) 'Centre decision on OMC compensation' (HPCL +2.1, IOC +1.6) duplicates EV_LPG_COMPENSATION_CABINET (and the unused NEW_OMC_COMPENSATION node). (2) 'Retail price hike / excise change if Brent re-crosses $100' (HPCL +0.6, IOC +0.45) duplicates EV_INDIA_RETAIL_FUEL_HIKE. (3) IOC 'US-Iran de-escalation after Democratic midterm win' (+2.0) duplicates EV_US_IRAN_CEASEFIRE_DEAL (+5.0 conditional for IOC, already in forward exposure). (4) IOC interim dividend (+0.4) is not a relative return. Together these cut IOC company events from +4.2 to ~-0.2 (-2.2 pp of 12m ER) and HPCL's from +2.1 to ~-0.6 (-1.4 pp).",
+   "fix": [
+    {
+     "ticker": "HINDPETRO",
+     "match": "Centre decision on OMC compensation",
+     "drop": true,
+     "reason": "dup of EV_LPG_COMPENSATION_CABINET"
+    },
+    {
+     "ticker": "HINDPETRO",
+     "match": "Retail price hike / excise change",
+     "drop": true,
+     "reason": "dup of EV_INDIA_RETAIL_FUEL_HIKE"
+    },
+    {
+     "ticker": "IOC",
+     "match": "Centre decision on OMC compensation",
+     "drop": true,
+     "reason": "dup of EV_LPG_COMPENSATION_CABINET"
+    },
+    {
+     "ticker": "IOC",
+     "match": "Retail petrol/diesel price hike",
+     "drop": true,
+     "reason": "dup of EV_INDIA_RETAIL_FUEL_HIKE"
+    },
+    {
+     "ticker": "IOC",
+     "match": "US-Iran de-escalation",
+     "drop": true,
+     "reason": "dup of EV_US_IRAN_CEASEFIRE_DEAL"
+    },
+    {
+     "ticker": "IOC",
+     "match": "Interim dividend",
+     "drop": true,
+     "reason": "dividend is not a relative-return event"
+    }
+   ],
+   "evidence": "market_impact/companies/HINDPETRO.json, IOC.json; https://news.google.com/rss/search?q=OMCs+seek+Rs+75%2C000+crore+for+fuel+losses+Centre+to+decide+in+2027+when:120d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "MAZDOCK company_events",
+   "issue": "Company events total +8.1 (12m). The P75I CE (p0.3, [+8,+25], mid +16.5) treats an order that brokers have called 'imminent' since Aug as unpriced. Germany finished its side on 23 Sep; CCS approval is pending; TKMS-MDL are near a commercial framework (Defence.in 20 Oct). FE (16 Aug): 'order book could surge 14X'. A contract worth roughly the whole Rs74k cr market cap, executed over ~10 years at sub-10% margins (Q2 EBITDA margin 8.1%), supports ~+4 to +15 on signing. Results events are skewed positive right after a 54% profit miss. The interim dividend is not a relative return.",
+   "fix": [
+    {
+     "ticker": "MAZDOCK",
+     "match": "P75I submarine contract",
+     "impact_pct_low": 4.0,
+     "impact_pct_high": 15.0,
+     "reason": "widely anticipated; NPV at ~8-10% margins over 10y"
+    },
+    {
+     "ticker": "MAZDOCK",
+     "match": "Q3 FY27 results",
+     "impact_pct_low": -10.0,
+     "impact_pct_high": 10.0,
+     "reason": "symmetric after Q2 miss"
+    },
+    {
+     "ticker": "MAZDOCK",
+     "match": "Q4 FY27 results",
+     "impact_pct_low": -8.5,
+     "impact_pct_high": 8.5,
+     "reason": "symmetric"
+    },
+    {
+     "ticker": "MAZDOCK",
+     "match": "Interim dividend",
+     "drop": true,
+     "reason": "dividend is not a relative-return event"
+    }
+   ],
+   "evidence": "https://news.google.com/rss/search?q=Project-75I+TKMS+MDL+near+commercial+framework+when:30d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Mazagon+Dock+Q2+Profit+Falls+54%25+Margins+Contract+8.1%25+when:15d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "BDL / BEL company_events vs P_DEFENCE_PROCUREMENT",
+   "issue": "BDL 'Large missile order(s) from DAC-cleared Rs2.12 lakh cr proposals' (p0.4, [+3,+12]) and BEL 'Large single order(s) from DAC-cleared proposals' (p0.5, [+1,+6]) book the CONTRACT stage of the same AoN pipeline that the recent state already books as +1 SSU of procurement (EV_DAC_APPROVALS_H2_26, +5 / +5.5 'unpriced'). BEL's inflows are also guided (mgmt ~Rs55k cr FY27; Nomura expects Rs70-75bn corvette orders in Q3).",
+   "fix": [
+    {
+     "ticker": "BDL",
+     "match": "Large missile order",
+     "impact_pct_low": 1.5,
+     "impact_pct_high": 6.0,
+     "reason": "contract stage of the AoN already in P_DEFENCE_PROCUREMENT state"
+    },
+    {
+     "ticker": "BEL",
+     "match": "Large single order",
+     "impact_pct_low": 0.5,
+     "impact_pct_high": 3.0,
+     "reason": "guided inflow; AoN already in state"
+    }
+   ],
+   "evidence": "https://news.google.com/rss/search?q=BEL+Q2+results+Nomura+corvette+orders+Q3+when:15d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "WAAREEENER company_events",
+   "issue": "'US ITC / Commerce follow-through on AD/CVD orders' is dated 2026-11 as a future event, but it already happened: Commerce finalised AD/CVD on 14 Sep and the USITC found material injury on 15 Oct 2026 (orders official 14 Oct). It belongs in the since-June realised move, not in forward expectations.",
+   "fix": [
+    {
+     "ticker": "WAAREEENER",
+     "match": "US ITC / Commerce follow-through",
+     "drop": true,
+     "reason": "occurred 14-15 Oct 2026"
+    }
+   ],
+   "evidence": "https://news.google.com/rss/search?q=USITC+finds+material+injury+solar+imports+India+Indonesia+Laos+when:60d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "low",
+   "subject": "POWERINDIA / ENRIN / COALINDIA company_events",
+   "issue": "POWERINDIA: results events skewed positive (+1.9) and 'Index rebalancing / FPI flows around AI-related sell-offs' duplicates F_FPI_FLOWS/F_AI_CAPEX graph events. ENRIN: results and parent-outlook events skewed positive (+1.35). COALINDIA: dividend event.",
+   "fix": [
+    {
+     "ticker": "POWERINDIA",
+     "match": "Q2 FY27 results",
+     "impact_pct_low": -11.0,
+     "impact_pct_high": 11.0,
+     "reason": "symmetric"
+    },
+    {
+     "ticker": "POWERINDIA",
+     "match": "Q3 FY27 results",
+     "impact_pct_low": -9.5,
+     "impact_pct_high": 9.5,
+     "reason": "symmetric"
+    },
+    {
+     "ticker": "POWERINDIA",
+     "match": "Q4 FY27 results",
+     "impact_pct_low": -9.5,
+     "impact_pct_high": 9.5,
+     "reason": "symmetric"
+    },
+    {
+     "ticker": "POWERINDIA",
+     "match": "Index rebalancing / FPI flows",
+     "drop": true,
+     "reason": "dup of F_FPI_FLOWS / EV_AI_CAPEX_RESET_RISK"
+    },
+    {
+     "ticker": "ENRIN",
+     "match": "FY26 (Sep-2026)",
+     "impact_pct_low": -9.5,
+     "impact_pct_high": 9.5,
+     "reason": "symmetric"
+    },
+    {
+     "ticker": "ENRIN",
+     "match": "Siemens Energy AG",
+     "impact_pct_low": -4.5,
+     "impact_pct_high": 4.5,
+     "reason": "symmetric"
+    },
+    {
+     "ticker": "ENRIN",
+     "match": "Q1 FY27 (Dec-2026",
+     "impact_pct_low": -8.5,
+     "impact_pct_high": 8.5,
+     "reason": "symmetric"
+    },
+    {
+     "ticker": "COALINDIA",
+     "match": "Third interim dividend",
+     "drop": true,
+     "reason": "dividend is not a relative-return event"
+    }
+   ],
+   "evidence": "profiles"
+  },
+  {
+   "severity": "high",
+   "subject": "JINDALSTEL",
+   "issue": "VERDICT: too high. The model gives 12m +13.7 (rank 3) and 3m +7.9 (rank 1); I estimate ~+9 for 12m and ~+5 for 3m. The positive sign survives, but the size is inflated by duplicates. Decomposition (12m, raw): unpriced recent 6.75 = 0.5 x 13.5, of which steel +21.6 and coking coal -9.75, net +8.95 raw, plus +4.5 from the beta term; forward 0.5 x 9.8; company events 0.5 x 6.2. What holds: Indian HRC +6.5-11% since June is sourced (BigMint Rs58.2k on 30 Jun vs ~Rs62k in Sep; IDBI Rs64.7k in Sep). Coking coal is +~20%. Recomputed with consistent EV/MCap (1.13) and persistence (0.3) for both legs, net spread +Rs2-4k/t is a +7-13% equity effect, so the steel-minus-coal recent impact (~+12) is plausible. The -10% realised move is partly the June metals sell-off (Moneycontrol 5 Jun) and the Q2 cost lag (EBITDA/t -12% q/q despite record volume). The stock has already re-rated +14% since the 23 Oct results. What breaks: (1) company events +6.2 are mostly duplicates of graph events or zero-downside guided milestones (-3.1 pp); (2) EV_UNION_BUDGET_FEB27_METALS books p0.9 x -4.5% coking coal although the description gives 0.35 odds and the only lever is a 2.5% duty (-0.8 pp of 12m, -1 pp of 3m); (3) the budget-capex level-as-surprise adds ~0.7 pp. No single edge or event exceeds 25%: the largest is F_STEEL_INDIA +21.6 recent, i.e. EV_STEEL_RALLY_2026 +17.6.",
+   "evidence": "rankings.csv; PL 24 Oct 2026 (profile); trendlyne IDBI 8 Oct 2026; Moneycontrol/ET 23 Oct 2026 Q2 results"
+  },
+  {
+   "severity": "high",
+   "subject": "MAZDOCK",
+   "issue": "VERDICT: too high. The model gives 12m +15.0 (rank 1); I estimate ~+4 (or ~+5 if the residual is kept at half). The +12.0 'unpriced' recent impact (P_DEFENCE_PROCUREMENT +6 from one routine DAC AoN, F_GOVT_CAPEX +2.5, beta term +5.3) is set against a -30% market-adjusted move that has stock-specific causes the graph lacks: Kotak initiated 'Sell' (9 Jul), Goldman 'Sell' (22 Oct), and Q2 FY27 profit -54% with EBITDA margin collapsing to 8.1% on provisions and lower revenue (27 Oct); the stock hit a 52-week low and HSBC/Kotak cut targets (28 Oct). That move is explained, not unpriced. Forward +11.9 is 60% one budget event booked as a level (+7.2). Company events +8.1 are led by a P75I order that has been 'imminent' since Aug.",
+   "evidence": "https://news.google.com/rss/search?q=Mazagon+Dock+Q2+results+profit+falls+54%25+when:15d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Goldman+Sachs+Sell+GRSE+MDL+when:20d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Mazagon+Dock+Kotak+initiates+Sell+when:150d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "SAIL",
+   "issue": "VERDICT: too high. The model gives 12m +13.7 (rank 2); I estimate ~+11. The recent impact (steel +20.3, coking coal -10.4, capex +2.5) is mechanically consistent; spread logic as for JINDALSTEL. The budget-metals coking-coal relief (-0.9 pp) and the budget-capex level (-1.3 pp) are overstated, and 'Safeguard duty tightening' duplicates the AD event and contradicts the ministry stance (-0.5 pp). The -23% realised move includes a -15% June drop on 'profit to peak in Q1' downgrades (Business Today 18 May) and UBS/Citi Sells (CNBC 29 Jul), plus a Q2 that missed estimates (27 Oct). Part of it is analyst-perceived margin peak, which the model's single-period spread cannot see. The residual stays capped at 7.6 pp, the biggest single component.",
+   "evidence": "https://news.google.com/rss/search?q=SAIL+Q2+results+misses+estimates+when:15d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=SAIL+shares+profit+to+peak+in+Q1+targets+downside+when:200d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "TATASTEEL",
+   "issue": "VERDICT: too high. The model gives 12m +12.4 (rank 4); I estimate ~+9.5. +4.1 pp of the recent impact comes from F_STEEL_GLOBAL observed at +2.06 SSU, but that series is CME US Midwest HRC (US tariff-walled market). Tata Steel Europe sells into the EU, where prices rose ~5-8% and which is already covered by the NEW_EU_STEEL_ACCESS director edge (override F_STEEL_GLOBAL to 0.5). The safeguard-tightening company event duplicates the AD event, and the budget-metals/capex items are overstated. Q2 FY27 results are due 7 Nov (rescheduled); Livemint previewed EBITDA down q/q, so a near-term catalyst is not reflected in 3m.",
+   "evidence": "https://news.google.com/rss/search?q=Tata+Steel+Q2+results+rescheduled+to+November+7+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "HINDPETRO",
+   "issue": "VERDICT: too high. The model gives 12m +12.1 and 3m +5.1; I estimate ~+10 and ~+3. The model's raw recent impact is -0.2; the whole +5.35 'unpriced' impact is the beta term. The C_MIDEAST_CONFLICT edge double counts Brent: fixing it adds ~+3.6 recent but removes ~0.9 forward. The biggest problem is compensation: EV_LPG_COMPENSATION_CABINET books +12% via a persistent Rs1/l marketing-margin unit at p3=0.35, while the Centre will decide in 2027 and the profile already has a cash-sized NEW_OMC_COMPENSATION node (+4.5 per Rs25k cr). A company event for the same compensation adds +2.1 on top. The fuel-hike event is +30% conditional (>25% bound). Q2 was a record refining quarter (CNBC 23 Oct) and HPCL is +8.8% in a month, so part of the refining upside is being priced.",
+   "evidence": "https://news.google.com/rss/search?q=HPCL+shares+record+Q2+refining+margins+analysts+caution+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "BDL",
+   "issue": "VERDICT: too high. The model gives 12m +11.8 (rank 6); I estimate ~+7.5. The recent +10.4 is P_DEFENCE_PROCUREMENT +5 (a single routine DAC AoN booked as +10% orders) plus the beta term +5.4. The forward +11.4 is mostly the budget event booked as a level (+5.8 expected). The missile-order company event books the contract stage of the same AoN pipeline. Real positives exist but are small: Navy order Rs1,307 cr (15 Oct) and Rs802 cr contract (23 Sep). Q2 results are due 12 Nov; the stock hit a 52-week low on 28 Oct, consistent with sector de-rating rather than an unpriced positive.",
+   "evidence": "https://news.google.com/rss/search?q=Bharat+Dynamics+wins+Rs+1%2C307+crore+Indian+Navy+order+when:30d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Bharat+Dynamics+52-week+low+when:15d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "PREMIERENE",
+   "issue": "VERDICT: too high. The model gives 12m +11.2 (rank 7) and 3m rank 2; I estimate ~+8 after the P_RENEWABLE_SUPPORT fix, or ~+1 if the residual is zeroed. The entire score is the capped residual (+10 pp of the 12m score); forward is -2.0. The 'unpriced' +20.5 rests on P_RENEWABLE_SUPPORT +1.5 (x6 = +9). But ALMM-II's 1 Jun date was pre-announced, the cell mandate was DEFERRED on 19 Jul (Premier/Waaree -6% that day), and the BESS VGF is storage-specific. The -22.7% realised move is explained by solar-specific negatives the graph lacks: the deferral; final US AD/CVD of ~250% on Indian cells/modules (14 Sep), which diverts exporters' volumes home; a 233 GW Indian module capacity glut vs ~50 GW demand (Down To Earth 2 Sep); and margin pressure in Q2 even with +30% profit (4-5 Nov). Missing channel: NEW_SOLAR_CELL_MODULE_PRICE has no since-June state although Q2 margins fell across the sector.",
+   "evidence": "https://news.google.com/rss/search?q=Premier+Energies+Q2+results+margins+pressure+when:10d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=US+finalises+AD%2FCVD+duties+solar+cell+imports+India+Indonesia+Laos+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "IOC",
+   "issue": "VERDICT: too high (modestly). The model gives 12m +10.6; I estimate ~+8.5. Company events +4.2 are almost all duplicates of graph events (compensation, retail hike, US-Iran de-escalation, dividend). The LPG compensation event is mis-timed and mis-unitised (see event_overrides). The C_MIDEAST_CONFLICT edge double counts Brent: fixing it raises recent impact by ~+2.6 and lowers forward by ~0.7. IOC is the cleanest of the OMCs: record Q2 (PAT Rs21,630 cr, LPG compensation booked plus refining) and +10.4% in a month, so the realised move is catching up.",
+   "evidence": "https://news.google.com/rss/search?q=IOC+Q2+results+net+profit+swings+21%2C630+crore+when:15d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "ENRIN",
+   "issue": "VERDICT: too high. The model gives 12m +10.2; I estimate ~+7. The +14.9 recent impact (F_GOVT_CAPEX +4, F_POWER_DEMAND_IN +3.6, renewable via grid +2.9, beta term ~+3) ignores the 3 Jul Finance Ministry exemption letting four Chinese-linked firms bid in power tenders (sector -8 to -12% that day). The NEW_POWER_EQUIP_CAPACITY node exists (-3/SSU) but has no state (override +0.5). Also ignored: AI-capex jitters (Moneycontrol 13 and 30 Oct) and the 23 Oct capital-goods sell-off. The budget-capex level adds ~1 pp. The realised -27% is not an unpriced positive. Results are skewed positive.",
+   "evidence": "https://www.businesstoday.in/markets/stocks/story/ge-vernova-cg-power-hitachi-siemens-selloff-overreaction-as-4-chinese-firms-enter-power-tenders-says-nomura-541063-2026-07-06"
+  },
+  {
+   "severity": "medium",
+   "subject": "COALINDIA",
+   "issue": "VERDICT: too high (modestly). The model gives 12m +10.2; I estimate ~+7.7. The +9 'unpriced' from F_COAL_INDIA +1.5 uses an edge sized for a blended move with FSA-hike odds, while the shock is e-auction-only (~12% of volume). Q2 results confirmed no realised uplift: profit missed on cost pressure, analysts flagged weak e-auction realisations, and the shares fell 3-4% (30 Oct); edge x0.5. Genuine positives: October output +19.3% (shares +5% on 2 Nov), Nuvama upgrade on e-auction premium (2 Oct), and the MCL IPO approved by SEBI (5 Nov; company event kept). Drop the dividend event.",
+   "evidence": "https://news.google.com/rss/search?q=Coal+India+shares+fall+4%25+after+Q2+results+cost+pressures+weak+EBITDA+when:15d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=Coal+India+October+output+rises+19.3%25+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "high",
+   "subject": "WAAREEENER",
+   "issue": "VERDICT: too high. The model gives 12m +10.2; I estimate ~+8 after fixes, or ~0 to +1 if the residual is zeroed. As for PREMIERENE, the score is the capped residual; forward is -2.9. The 'unpriced' +22.9 includes P_RENEWABLE_SUPPORT +9 (see override) and a wrong-sign +1.2 from the generic US tariff node, while Waaree's own US channel worsened sharply: final AD 123% + CVD 126% (14 Sep), USITC injury (15 Oct), cancelled ~3 GW US export orders, and Section 232 MIPs from 4 Dec. Q2 FY27 profit fell 15% y/y and EBITDA margin dropped to 17.8% from 23.2% (27 Oct). Q1 also disappointed (stock -6%, 30 Jul). The -27.7% realised move is explained by these events; calling it unpriced is an artefact.",
+   "evidence": "https://news.google.com/rss/search?q=Waaree+Energies+Q2+results+profit+falls+15%25+when:15d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=USITC+finds+material+injury+from+solar+imports+India+when:60d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "POWERINDIA",
+   "issue": "VERDICT: too high. The model gives 12m +9.9; I estimate ~+5. Recent +13.7: F_GOVT_CAPEX +5, P_RENEWABLE_SUPPORT +3 direct plus +1.9 via grid, power demand via grid +2.3, beta term +4.3. The -27.9% realised move has identifiable causes the graph lacks: the 3 Jul Chinese-bidder exemption (Hitachi -7.9% intraday), AI-related sell-offs (13 and 30 Oct; the stock is traded as an AI/data-centre proxy), and the capital-goods sell-off (23 Oct, -6%). Its direct P_RENEWABLE_SUPPORT edge plus the T_GRID_ELECTRIFICATION path take the inflated renewable state twice (half-credit overlap only). Company events are skewed positive (+1.9 from results ranges).",
+   "evidence": "https://news.google.com/rss/search?q=Hitachi+Energy+India+AI-related+shares+fall+when:40d&hl=en-IN&gl=IN&ceid=IN:en ; https://news.google.com/rss/search?q=BSE+Capital+Goods+index+tanks+Hitachi+Energy+ABB+slip+6%25+when:20d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "severity": "medium",
+   "subject": "BEL",
+   "issue": "VERDICT: too high (modestly). The model gives 12m +9.9; I estimate ~+6. BEL is the most defensible of the defence names: Q2 beat (EBITDA +14% vs estimates per Nomura; order book Rs68,717 cr), MOSL raised its target and Elara upgraded (4 Nov), and the stock is +8% from its late-Oct low. But +5.5 recent from the routine DAC AoN state and +6.4 expected from the budget event booked as a level overstate it. The large-order company event re-books the same pipeline.",
+   "evidence": "https://news.google.com/rss/search?q=Bharat+Electronics+Motilal+raises+target+Elara+upgrades+when:10d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ]
+}
