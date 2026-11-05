@@ -84,7 +84,7 @@
    "w_low": 0.5,
    "w_high": 2.5,
    "lag": "3-12m",
-   "mechanism": "FMCG-others (~25% revenue, ~11% EBIT approx) and agri (atta, spices) are rural-sensitive; cigarettes less so. +5pp rural growth => FMCG-others sales +2%, EBIT +4%, group EBIT +0.6%... plus cigarette volume uplift in rural/semi-urban ~+0.5pp => group EBITDA +1.5%; persistence 0.5; EV/MCap 0.97 => ~+1.4 (rounded with agri upside).",
+   "mechanism": "FMCG-others (~25% revenue, ~11% EBIT approx) and agri (atta, spices) are rural-sensitive; cigarettes less so. +5pp rural growth => FMCG-others sales +2%, EBIT +4%, group EBIT +0.6%, plus cigarette volume uplift in rural/semi-urban ~+0.5pp => group EBITDA about +2.9% ; persistence 0.5; EV/MCap 0.97 => ~+1.4.",
    "confidence": "low",
    "evidence": [
     {
@@ -174,7 +174,7 @@
    "w_low": -1.1,
    "w_high": -0.1,
    "lag": "0-3m",
-   "mechanism": "Fuel (paperboard mills, logistics), BOPP and polymer packaging ~4% of costs linked to crude. +10% Brent => costs +0.25%, EBITDA -0.4%... plus market-risk sentiment: ITC acts as defensive. Persistence 0.5, EV/MCap 0.97 => ~-0.5 (wider than arithmetic to include logistics). Brent is +15% over 3m (94.99).",
+   "mechanism": "Fuel (paperboard mills, logistics), BOPP and polymer packaging ~4% of costs linked to crude. +10% Brent => costs +0.25%, EBITDA -0.4%; persistence 0.5, EV/MCap 0.97 => ~-0.2, widened to -0.5 to include logistics and sentiment. Brent is +15% over 3m (94.99).",
    "confidence": "low",
    "evidence": [
     {
@@ -192,7 +192,7 @@
    "w_low": -0.5,
    "w_high": 2.5,
    "lag": "3-12m",
-   "mechanism": "Agri exports (~15% of revenue, ~USD-linked) and leaf-tobacco exports gain from a weaker rupee; imports (pulp, packaging inputs, some cigarette materials) offset. Net ~ +1.4% EBITDA per +3% INR weakness => persistence 0.5 => ~+0.7... empirical +2.04 (t=2.1) larger; blended to +1.0 with range reflecting disagreement.",
+   "mechanism": "Agri exports (~15% of revenue, ~USD-linked) and leaf-tobacco exports gain from a weaker rupee; imports (pulp, packaging inputs, some cigarette materials) offset. Net ~ +1.4% EBITDA per +3% INR weakness => persistence 0.5 => ~+0.7; empirical +2.04 (t=2.1) larger; blended to +1.0 with range reflecting disagreement.",
    "confidence": "low",
    "evidence": [
     {

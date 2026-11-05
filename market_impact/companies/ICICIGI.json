@@ -1,0 +1,381 @@
+{
+ "ticker": "ICICIGI",
+ "name": "ICICI Lombard General Insurance Company Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_GENERAL_INSURANCE",
+ "tier": "MIDCAP_100",
+ "business_summary": "Largest private general insurer in India by gross premium (motor ~35-40%, health ~25-30%, property/fire/marine/commercial/crop remainder; model estimate), 51.3% owned by ICICI Bank. Q2 FY27 profit rose 15.5% to Rs946cr in some reports and 27.5% to Rs1,031cr in others (conflicting headlines; unresolved), with investment income and treasury gains offsetting an elevated combined ratio. Rs7 interim dividend declared. Stock Rs1,622, -20.5% in 12 months, 51% promoter, FII holding down to 18.3% from 22.3%.",
+ "revenue_mix": [
+  {
+   "segment": "motor (own damage + third party)",
+   "share_pct": 38,
+   "geography": "India"
+  },
+  {
+   "segment": "health & personal accident",
+   "share_pct": 27,
+   "geography": "India"
+  },
+  {
+   "segment": "fire, marine, engineering, commercial, other",
+   "share_pct": 35,
+   "geography": "India (model estimate)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CPI_IN",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "ICICIGI",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -10.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "IRDAI's 2026-09-23 exposure draft on commission caps/dark patterns hits distribution-intensive insurers: ICICIGI pays ~15-17% of GWP as commission (model estimate); a cap lowers payout -> brokers/agents/banks (bancassurance ICICI Bank is a big partner) shift to uncapped products. Impact: GWP -2% in the near term but expense ratio -1pp (PAT +) if cap binds on insurers' payout => net value -4 central, wide range because motor/health caps differ from life caps. Systematix: IRDAI may revisit (BT 2026-09-25).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IRDAI+commission+cap+proposal+insurers+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "note": "IRDAI commission-cap proposal and dark-pattern ban; sector sell-off"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "ICICIGI",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Motor is ~35-40% of GWP (model estimate): +10% vehicle volumes -> new-vehicle OD/TP premium +4-5% -> GWP +1.7%, incremental PAT +2.5% (growth is margin-accretive on OD) x persistence 0.5 => +1.2. GST cuts of Sept 2025 pulled demand forward.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIGI.md",
+     "date": "2026-11-05",
+     "note": "pack: price 1621.7, 12m -20.5%, promoter 51.28%, FII 18.3% (from 22.3%), DII 23.8%; screener fundamentals blank"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ICICIGI",
+   "relation": "fx_translation",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+3% USD/INR raises imported-parts costs (motor repair claims ~+1% per 3%, motor claims ~45% of claims) and reinsurance premium in USD: claims +0.5% => combined ratio +0.5pp x NEP Rs22k cr = Rs110cr = 2.8% of PAT x persistence 0.5 => -1.4. Pack empirical -2.11 (t=-1.6) agrees; INR 94.49 (+6.5% y/y).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIGI.md",
+     "date": "2026-11-05",
+     "note": "pack: price 1621.7, 12m -20.5%, promoter 51.28%, FII 18.3% (from 22.3%), DII 23.8%; screener fundamentals blank"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "ICICIGI",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+25bp: investment book ~Rs32k cr (model), FVTPL/trading ~30% at duration ~3 => MTM ~Rs70cr = 1.8% of PAT x 0.25 = -0.5; discount rate on an insurer at ~30x earnings (high duration) -1.0; reinvestment yield +0.3 => -1.5 net. Investment income was the offset to underwriting pressure in Q2 (treasury gains).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ICICI+Lombard+Q2+FY27+combined+ratio+GDPI+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "Q2 FY27 PAT Rs946cr +15.5% (BusinessLine/FE) or Rs1,031cr +27.5% (Moneycontrol - conflicting); combined ratio elevated; investment income offsets underwriting pressure; Rs7 interim dividend"
+    }
+   ]
+  },
+  {
+   "src": "NEW_NAT_CAT_LOSSES",
+   "dst": "ICICIGI",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "+1 SSU = major cat year (floods/cyclone/earthquake) adding 2pp to combined ratio: NEP Rs22k cr x 2% = Rs440cr vs PAT ~Rs3.9k cr = -11% (net of reinsurance recoveries ~ -6%); persistence 0.4 => -3. Seasonal: Q3 monsoon withdrawal and Q4 storms.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "cat loss sensitivity estimated, not company-disclosed"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "ICICIGI",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI: medical inflation pass-through (health ~25-30% of GWP): claims inflation +0.6pp beyond pricing lag; repair-cost inflation in motor: combined ratio +0.3pp => PAT -2.5% x 0.4 => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=ICICI+Lombard+Q2+FY27+combined+ratio+GDPI+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-14",
+     "note": "Q2 FY27 PAT Rs946cr +15.5% (BusinessLine/FE) or Rs1,031cr +27.5% (Moneycontrol - conflicting); combined ratio elevated; investment income offsets underwriting pressure; Rs7 interim dividend"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "ICICIGI",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP: vehicle sales, commercial/fire/marine and credit-linked cover +1.5pp GWP growth; PAT +3% x persistence 0.7 => +2.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "ICICIGI",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding fell from 22.3% to 18.3% in 2 qtrs while DIIs rose to 23.8%; stock -20.5% in 12m; +US$5bn flows ~ Nifty +2% x beta 0.65 + re-rating => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIGI.md",
+     "date": "2026-11-05",
+     "note": "pack: price 1621.7, 12m -20.5%, promoter 51.28%, FII 18.3% (from 22.3%), DII 23.8%; screener fundamentals blank"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "ICICIGI",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts ~ Nifty -3% x beta 0.65-0.75 => -2.0; defensive => -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIGI.md",
+     "date": "2026-11-05",
+     "note": "pack: price 1621.7, 12m -20.5%, promoter 51.28%, FII 18.3% (from 22.3%), DII 23.8%; screener fundamentals blank"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "ICICIGI",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+1: rising insurance penetration (health, motor, property) -> GWP growth +2pp pa => PAT +3% x structural persistence 0.7 => +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIGI.md",
+     "date": "2026-11-05",
+     "note": "pack: price 1621.7, 12m -20.5%, promoter 51.28%, FII 18.3% (from 22.3%), DII 23.8%; screener fundamentals blank"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "ICICIGI",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "+1 broad GST cut lifts vehicle/consumer volumes (motor GWP +1%) => +0.8; GST exemption on individual health/life premium (Sept 2025, model knowledge) raised insurers' costs through lost input tax credit, not reversed here.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "GST Council decisions Sept 2025; not re-verified"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "ICICIBANK",
+   "dst": "ICICIGI",
+   "relation": "holding_stake",
+   "w": 0.12,
+   "w_low": 0.05,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "ICICI Bank owns ~51.3% (promoter 51.28%, pack) and is a major distribution partner (loan-linked and standalone products). ICICI Bank -1% (rating, flows) -> group sentiment -0.12% on ICICI Lombard; direct earnings link is small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/ICICIGI.md",
+     "date": "2026-11-05",
+     "note": "pack: price 1621.7, 12m -20.5%, promoter 51.28%, FII 18.3% (from 22.3%), DII 23.8%; screener fundamentals blank"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "ICICI Bank",
+   "ticker": "ICICIBANK",
+   "role": "parent",
+   "importance": "high",
+   "note": "~51.3% stake; bancassurance and credit-linked insurance"
+  },
+  {
+   "counterparty": "Garage network / OEM dealers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "motor repair costs sensitive to imported parts"
+  },
+  {
+   "counterparty": "Reinsurers (GIC Re and global)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "USD-linked reinsurance and cat cover"
+  },
+  {
+   "counterparty": "Star Health / New India / Bajaj Allianz / HDFC ERGO",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "tariff-free segments (health, property) have price competition"
+  },
+  {
+   "counterparty": "IRDAI",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "regulator; TP motor tariff and commission rules"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-14",
+   "event": "Q3 FY27 results (estimated from Q2 on 2026-10-14): combined ratio, cat losses",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model estimate from prior cycle"
+  },
+  {
+   "date": "2026-12",
+   "event": "IRDAI final commission/expense framework",
+   "type": "regulatory",
+   "prob": 0.55,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=IRDAI+commission+cap+proposal+insurers+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Ex-dividend for Rs7 interim dividend (record date late Oct/Nov)",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": -0.3,
+   "source": "https://news.google.com/rss/search?q=ICICI+Lombard+Q2+FY27+combined+ratio+GDPI+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget FY28: GST/tax changes on insurance",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): PAT Rs946cr (+15.5%) / Rs1,031cr (+27.5%) conflicting; combined ratio worsened/elevated; motor TP reserving eases (Elara, Accumulate TP Rs1,985); Rs7 interim dividend",
+  "trend": "underwriting margins under pressure, offset by investment income; stock de-rated -12% in 6m on IRDAI and growth worries",
+  "valuation": "fundamental table blank in pack; brokers' targets Rs1,985-2,000 (Elara, ICICI Securities 2026-10-16/20); price Rs1,622",
+  "recent_developments": [
+   "2026-10-14: Q2 FY27 results; combined ratio elevated (CNBC TV18)",
+   "2026-10-16: ICICI Securities buy, target Rs2,000",
+   "2026-10-20: Elara accumulate TP Rs1,985, Q2 treasury gains",
+   "2026-09-23/24: IRDAI commission-cap proposal sell-off in insurers",
+   "2026-11-04: ICICI Lombard's RTA shifts corporate office from Dec 1 (scanx)"
+  ]
+ },
+ "key_risks": [
+  "combined ratio above 103%: health and motor claims inflation",
+  "IRDAI distribution caps/tariff changes",
+  "cat losses",
+  "weak INR raising claims",
+  "bond MTM"
+ ],
+ "upside_triggers": [
+  "IRDAI dilution of cap",
+  "better motor TP reserving/pricing",
+  "strong investment income",
+  "new GST relief"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_NAT_CAT_LOSSES",
+   "type": "FACTOR",
+   "name": "Natural catastrophe insured losses (India floods/cyclones)",
+   "ssu": "+1 = major cat year adding ~2pp to industry combined ratio"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/ICICIGI.md",
+   "date": "2026-11-05",
+   "what": "evidence pack (fundamentals blank)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=ICICI+Lombard+Q2+FY27+combined+ratio+GDPI+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-14",
+   "what": "Q2 FY27 results headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IRDAI+commission+cap+proposal+insurers+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-24",
+   "what": "IRDAI proposal"
+  }
+ ]
+}

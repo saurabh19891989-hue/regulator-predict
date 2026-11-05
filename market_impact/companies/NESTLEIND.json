@@ -267,7 +267,7 @@
    "w_low": 0.0,
    "w_high": 2.5,
    "lag": "3-12m",
-   "mechanism": "Quick-commerce is Nestle's fastest channel (Maggi, KitKat, coffee); +1 acceleration => +1% sales mix gain at favourable gross margin => EBITDA +1.5%... persistence 1.0 x 0.5 execution => +1.0.",
+   "mechanism": "Quick-commerce is Nestle's fastest channel (Maggi, KitKat, coffee); +1 acceleration => +1% sales mix gain at favourable gross margin => EBITDA +1.5%; persistence 1.0 x 0.7 execution haircut => +1.0.",
    "confidence": "low",
    "evidence": [
     {

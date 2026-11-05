@@ -1,0 +1,461 @@
+{
+ "ticker": "INDIGO",
+ "name": "InterGlobe Aviation Ltd. (IndiGo)",
+ "as_of": "2026-11-05",
+ "industry": "I_AVIATION",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest airline (~65% domestic share in Sep 2026, down from higher; 86 destinations, 262 aircraft at last count). Low-cost single-type fleet, leased heavily, with USD-linked costs. FY26 net loss Rs2,394 cr; Q1 FY27 loss Rs238 cr; Q2 FY27 loss Rs1,879 cr (revenue Rs23,364 cr +26%) on higher fuel and a weak rupee. Q3 (Oct-Dec) is seasonally strong; crude has just eased, lifting the stock >6-7% on 2026-11-05. New airfare rules were notified on 2026-11-02, giving government intervention powers from 2027.",
+ "revenue_mix": [
+  {
+   "segment": "passenger ticket revenue (domestic)",
+   "share_pct": 78,
+   "geography": "India domestic ~78% / international ~22%"
+  },
+  {
+   "segment": "ancillary, cargo, others",
+   "share_pct": 22,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 38
+  },
+  {
+   "input": "aircraft & engine rentals, maintenance (USD-linked)",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "airport/ATC charges (incl. GMR airports)",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "employee and other",
+   "share_of_costs_pct": 26
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_BRENT",
+   "dst": "INDIGO",
+   "relation": "input_cost",
+   "w": -2.5,
+   "w_low": -4.5,
+   "w_high": -1.2,
+   "lag": "0-3m",
+   "mechanism": "ATF ~38% of costs (model estimate; ATF fell in Q2 FY27 profit via 'higher fuel costs' per company). +10% Brent => ATF ~+8% (taxes/crack buffer) => costs +3.0% => ~+Rs2.6k cr/yr on ~Rs86k cr costs; IndiGo recovers ~80-90% over time via fares (Nomura) but with 1-2 quarter lag, so net near-term hit ~40% = ~Rs1k cr = -9% of TTM EBITDA Rs11.4k cr; x EV/MCap 1.15 x persistence 0.25 => -2.6. Pack empirical -1.79 per +10% (t -3.8): strong agreement; central -2.5 (blend). Brent 94.99 now (+49.5% 12m, -5.6% 1m): large recent shock, now easing (stock +7% on 2026-11-05 as crude fell).",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/indigo-posts-1879-crore-net-loss-in-q2-fy27-amid-high-fuel-costs-revenue-up-259",
+     "date": "2026-10-29",
+     "note": "Q2 FY27: net loss Rs1,878.6 cr (Rs2,581.7 cr yr ago), revenue Rs23,364 cr +26%, fuel and weak rupee cited"
+    },
+    {
+     "source": "https://upstox.com/news/market-news/stocks/indi-go-shares-surge-4-as-q2-loss-narrows-prask-expected-to-grow-over-25-in-fy-27-what-analysts-said/article-202698/",
+     "date": "2026-10-30",
+     "note": "PRASK growth >25% guided for FY27 (analyst summary); Nomura: pricing captures 80-90% of cost increase"
+    },
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "INDIGO",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -1.8,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Jet cracks are the second ATF component: +$2/bbl on ~$115/bbl jet = +1.7% ATF => ~1/5 of Brent +10% effect => -0.5; pack -1.60 (t -3.6) overlaps Brent (collinear, so shrunk to -0.9 to avoid double counting). Layering note: assembler should keep only one of Brent / cracks if both fire from the same event.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "INDIGO",
+   "relation": "fx_translation",
+   "w": -2.0,
+   "w_low": -3.5,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "~55% of costs USD-linked (fuel, leases, maintenance, aircraft) vs ~25% of revenue (international); net short ~30% of costs = ~Rs26k cr. +3% => +Rs0.78k cr, ~35% recovered via fares => -Rs0.5k cr = -4.5% EBITDA, plus non-cash MTM on USD lease/debt (~Rs60k cr+, estimate) in reported profit; company blames rupee for Q2 loss. x1.15 x0.35 persistence = -1.8; pack -1.92 (t -1.4) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/indigo-posts-1879-crore-net-loss-in-q2-fy27-amid-high-fuel-costs-revenue-up-259",
+     "date": "2026-10-29",
+     "note": "Q2 FY27: net loss Rs1,878.6 cr (Rs2,581.7 cr yr ago), revenue Rs23,364 cr +26%, fuel and weak rupee cited"
+    },
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_TRAVEL_DEMAND",
+   "dst": "INDIGO",
+   "relation": "demand_driver",
+   "w": 9.0,
+   "w_low": 4.0,
+   "w_high": 16.0,
+   "lag": "0-3m",
+   "mechanism": "Operating leverage: +10% air travel demand against capacity-constrained supply (FY27 capacity growth guided single-digit) => ~+5% yield/load => +Rs4.7k cr revenue at ~90% drop-through = +37% EBITDA; x1.15 x persistence 0.25 (supply response + competitor capacity) = +10.6; trimmed to +9.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/indigo-posts-1879-crore-net-loss-in-q2-fy27-amid-high-fuel-costs-revenue-up-259",
+     "date": "2026-10-29",
+     "note": "Q2 FY27: net loss Rs1,878.6 cr (Rs2,581.7 cr yr ago), revenue Rs23,364 cr +26%, fuel and weak rupee cited"
+    },
+    {
+     "source": "https://upstox.com/news/market-news/stocks/indi-go-shares-surge-4-as-q2-loss-narrows-prask-expected-to-grow-over-25-in-fy-27-what-analysts-said/article-202698/",
+     "date": "2026-10-30",
+     "note": "PRASK growth >25% guided for FY27 (analyst summary); Nomura: pricing captures 80-90% of cost increase"
+    },
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "INDIGO",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Discretionary air travel is income-elastic (income elasticity ~1.5-2): +5pp urban consumption growth => +~4% pax => ~+2.5% revenue => +~16% EBITDA x1.15 x 0.2 = +3.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AIRFARE_REGULATION",
+   "dst": "INDIGO",
+   "relation": "regulatory_risk",
+   "w": -6,
+   "w_low": -14,
+   "w_high": 2,
+   "lag": "3-12m",
+   "mechanism": "Rules notified 2026-11-02 allow government intervention in fares in 'extraordinary situations' from 2027 (finalised before SC's Nov-16 deadline). +1 SSU = binding caps/pass-through limits in peak/stress periods. A cap that blocks ~20% of fuel/FX pass-through in stress quarters => -Rs 0.5-1k cr/yr = -4 to -9% EBITDA, x1.15 x persistence 1.0, but market reaction on 2026-11-02 was positive (rules milder than feared), so range allows +2. Central -6 for the cap-risk level; the Q2-26 sell-off on 2026-10-16 (-2%) was the opposite direction.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://economictimes.indiatimes.com/ (headline: Government notifies new airfare rules, allows intervention in extraordinary situations)",
+     "date": "2026-11-02",
+     "note": "new airfare rules notified; govt power over fares from 2027 (Gulf News headline); SC Nov-16 deadline (Sunday Guardian headline 2026-10-16)"
+    },
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_DOMESTIC_AIRLINE_CAPACITY",
+   "dst": "INDIGO",
+   "relation": "competition",
+   "w": -3,
+   "w_low": -8,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Domestic share fell to ~65% (Sahi 2026-10-06); +1 SSU = +5% industry capacity from Air India group/Akasa/ SpiceJet reboot => ~-1.5% yield => ~-Rs1.4k cr = -12% EBITDA x1.15 x0.2 persistence => -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/ (headline: Domestic Air Traffic Drops As IndiGo Market Share Falls To 65%)",
+     "date": "2026-10-06",
+     "note": "market share ~65%"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "INDIGO",
+   "relation": "geopolitical_exposure",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Airspace closures/reroutes on Gulf/Europe/Central Asia routes (~25-30% of international capacity) add flying time and fuel, beyond the Brent channel (which is counted separately): ~1.5% of costs => -Rs1.2k cr gross, ~50% recovered => -5% EBITDA x1.15 x0.3 = -1.7, with tail up to -6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "INDIGO",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Long-duration growth equity with large fixed lease/debt obligations: +25bp => -1.5. Repo-linked: Rs ~Rs 6.3k cr TTM interest (mostly lease interest, fixed).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "INDIGO",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Floating portion small (~15% of Rs ~70k cr debt/leases): +25bp = ~Rs25 cr/yr (0.2% EBITDA) plus consumer-demand drag; -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "INDIGO",
+   "relation": "policy_effect",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+1 SSU = Rs2/litre excise-equivalent. ATF excise/VAT changes pass directly into fuel cost: Rs2/litre on ~Rs 100/litre ATF = +2% fuel cost => small cost increase; x pass-through => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AIRCRAFT_ENGINE_SUPPLY",
+   "dst": "INDIGO",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -5.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "+1 SSU = further engine (Pratt & Whitney GTF) groundings / delivery delays; grounded aircraft raise wet-lease costs and cap capacity (FY27 growth single-digit vs mid-teens FY27-30 aspiration) but also tighten industry capacity (positive for yields). Net ambiguous: -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.freepressjournal.in/business/indigo-posts-1879-crore-net-loss-in-q2-fy27-amid-high-fuel-costs-revenue-up-259",
+     "date": "2026-10-29",
+     "note": "Q2 FY27: net loss Rs1,878.6 cr (Rs2,581.7 cr yr ago), revenue Rs23,364 cr +26%, fuel and weak rupee cited"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "INDIGO",
+   "relation": "macro_transmission",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Large-cap, FII 19.9% (down from 21.6% Mar 2026); beta 1.2; +US$5bn flows => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "INDIGO",
+   "relation": "discount_rate",
+   "w": -0.7,
+   "w_low": -1.8,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Pack -0.74 (t -1.3): consistent but insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/INDIGO.md",
+     "date": "2026-11-05",
+     "note": "screener.in fundamentals + empirical sensitivities in evidence pack"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "GMR Airports (Delhi, Hyderabad)",
+   "ticker": "GMRAIRPORT",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "IndiGo is the largest airline at DEL/HYD; airport charges ~14% of costs"
+  },
+  {
+   "counterparty": "Airbus, CFM / Pratt & Whitney",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "aircraft and engines; GTF groundings"
+  },
+  {
+   "counterparty": "Air India group, Akasa",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "domestic share ~65% and falling"
+  },
+  {
+   "counterparty": "OMCs (IOC, BPCL, HPCL)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "ATF supply"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-16",
+   "event": "Supreme Court deadline on airfare regulation matter (Sunday Guardian headline 2026-10-16); possible clarity on rules",
+   "type": "regulatory",
+   "prob": 0.7,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.economictimes.indiatimes.com/ (airfare rules notified 2026-11-02)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Peak winter/wedding-season fares; Q3 FY27 capacity and PRASK (>25% PRASK growth guided for FY27)",
+   "type": "guidance",
+   "prob": 0.8,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 8.0,
+   "source": "https://upstox.com/news/market-news/stocks/indi-go-shares-surge-4-as-q2-loss-narrows-prask-expected-to-grow-over-25-in-fy-27-what-analysts-said/article-202698/"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (seasonally strong; Q3 FY26 net profit Rs549 cr)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 10.0,
+   "source": "market_impact/data/packs/INDIGO.md"
+  },
+  {
+   "date": "2027-01",
+   "event": "2027 fare-intervention provisions start; first use of powers in extraordinary situations",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -2.0,
+   "source": "https://economictimes.indiatimes.com/ (headline: Government notifies new airfare rules, allows intervention in extraordinary situations)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep-2026): revenue Rs23,364 cr (+26% y/y), EBITDA Rs1,907 cr (8%), net loss Rs1,879 cr (EPS -48.6); Q1 FY27 revenue Rs24,584 cr, EBITDA Rs3,267 cr (13%), loss Rs238 cr; FY26 loss Rs2,394 cr.",
+  "trend": "Revenue growing, margins compressed by fuel (Brent +49.5% 12m) and rupee; capacity growth flat y/y in Q2 and single digits for FY27; fare pass-through (Nomura: 80-90% captured) improving",
+  "valuation": "Mcap Rs2.10 lakh cr, price ~Rs5,428 (52w Rs3,895-5,970); P/E not meaningful (loss); EV/EBITDA on FY27E not computed; analysts divided on recovery timeline (BusinessLine 2026-10-30)",
+  "recent_developments": [
+   "2026-10-16: govt tells SC airfare rules finalised; stock -2% (Moneycontrol headline)",
+   "2026-10-29/30: Q2 FY27 loss Rs1,879 cr; stock +3.8% post results (BusinessLine)",
+   "2026-11-02: Centre notifies airfare rules allowing intervention in extraordinary situations (ET, Gulf News); stock higher (CNBC TV18)",
+   "2026-11-03: stock +3.5-4% as crude fell 7.6% to ~$105 (Moneycontrol/FPJ headlines)",
+   "2026-11-05: stock >+6-7% on crude fall and US midterm results (Livemint/NDTV Profit headlines)"
+  ]
+ },
+ "key_risks": [
+  "Crude/ATF spike with incomplete fare pass-through",
+  "Rupee weakness (USD costs, lease MTM)",
+  "Airfare regulation tightening in 2027",
+  "Price war/capacity addition by Air India group, Akasa",
+  "Engine groundings and delivery delays",
+  "Middle East airspace closures"
+ ],
+ "upside_triggers": [
+  "Brent falling towards $80",
+  "Rupee stabilisation or appreciation",
+  "PRASK >25% growth realised",
+  "Mild application of airfare rules",
+  "International network expansion yields"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_AIRFARE_REGULATION",
+   "type": "POLICY",
+   "name": "Airfare caps / government fare intervention",
+   "ssu": "+1 = binding fare caps in stress periods"
+  },
+  {
+   "id": "NEW_DOMESTIC_AIRLINE_CAPACITY",
+   "type": "THEME",
+   "name": "Domestic airline industry capacity additions by competitors",
+   "ssu": "+1 = +5% industry capacity"
+  },
+  {
+   "id": "NEW_AIRCRAFT_ENGINE_SUPPLY",
+   "type": "THEME",
+   "name": "Aircraft/engine supply disruption",
+   "ssu": "+1 = further engine groundings/delivery delays"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/INDIGO.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://www.freepressjournal.in/business/indigo-posts-1879-crore-net-loss-in-q2-fy27-amid-high-fuel-costs-revenue-up-259",
+   "date": "2026-10-29",
+   "what": "Q2 FY27: net loss Rs1,878.6 cr (Rs2,581.7 cr yr ago), revenue Rs23,364 cr +26%, fuel and weak rupee cited"
+  },
+  {
+   "url": "https://upstox.com/news/market-news/stocks/indi-go-shares-surge-4-as-q2-loss-narrows-prask-expected-to-grow-over-25-in-fy-27-what-analysts-said/article-202698/",
+   "date": "2026-10-30",
+   "what": "PRASK growth >25% guided for FY27 (analyst summary); Nomura: pricing captures 80-90% of cost increase"
+  },
+  {
+   "url": "https://economictimes.indiatimes.com/ (headline: Government notifies new airfare rules, allows intervention in extraordinary situations)",
+   "date": "2026-11-02",
+   "what": "new airfare rules notified; govt power over fares from 2027 (Gulf News headline); SC Nov-16 deadline (Sunday Guardian headline 2026-10-16)"
+  }
+ ]
+}

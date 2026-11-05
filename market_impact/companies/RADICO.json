@@ -1,0 +1,374 @@
+{
+ "name": "Radico Khaitan Ltd",
+ "industry": "I_ALCOHOL_TOBACCO",
+ "business_summary": "Rampur-based Indian spirits maker: mass IMFL (8PM whisky, Old Admiral brandy, Contessa rum) and a fast-growing prestige & above (P&A) portfolio (Magic Moments vodka, Morpheus brandy, Rampur single malt, Jaisalmer gin). FY26 sales Rs 6,037 cr, EBITDA margin 17%; Sep-26 quarter sales Rs 1,745 cr (+17%), operating margin 20%, PAT Rs 232 cr (+66%). Management raised FY27 P&A volume growth guidance to 30% and says it can sustain a ~20% EBITDA margin (Oct 27-Nov 3, 2026). Karnataka duty cuts more than doubled premium volumes there (Multibagg 2026-11-04); vodka is 6.3% of India's IMFL market.",
+ "revenue_mix": [
+  {
+   "segment": "Prestige & above (P&A)",
+   "share_pct": 55,
+   "geography": "India ~90% / exports ~10% (approximate, model knowledge)"
+  },
+  {
+   "segment": "Regular and other",
+   "share_pct": 45,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_RICE",
+   "share_of_costs_pct": 25,
+   "note": "grain/ENA, maize and rice, approximate"
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 30,
+   "note": "glass, cartons, closures"
+  },
+  {
+   "input": "F_GAS_GLOBAL",
+   "share_of_costs_pct": 5
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_RICE",
+   "dst": "RADICO",
+   "relation": "input_cost",
+   "w": -3.0,
+   "w_low": -5.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Grain-based ENA/ rectified spirit ~25% of costs; costs ~80% of sales. +10% grain => costs +2.5% => 2.0% of sales => EBITDA -10% at 20% margin; state price controls limit pass-through to ~40% => -6; persistence 0.5; EV/MCap 1.03 => -3.1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RADICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "OPM 20% Sep-26 vs 16% Sep-25"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "RADICO",
+   "relation": "input_cost",
+   "w": -1.8,
+   "w_low": -3.0,
+   "w_high": -0.7,
+   "lag": "3-12m",
+   "mechanism": "Glass bottles, cartons, closures ~30% of costs (glass ~15%). +10% => costs +3% for glass+cartons part 1.2% => 1.0% of sales => EBITDA -5%; 40% passthrough => -3; persistence 0.5; => -1.5, widened to -1.8 for energy-driven glass inflation.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RADICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "cost-structure estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "RADICO",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.8,
+   "lag": "0-3m",
+   "mechanism": "Gas fuels glass furnaces and distilleries (~5% of costs direct plus pass-through in glass). +15% => costs +0.75% => EBITDA -3% at 80% cost ratio x 40% pass-through... persistence 0.25 => -0.3. Empirical +1.04 (t=+2.5) has the opposite sign and is unexplained; treated as a spurious co-movement, hence the wide interval.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RADICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical F_GAS_GLOBAL +1.04, t=+2.5"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "RADICO",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "PET, freight, fuel ~4% of costs: +10% => EBITDA -1.6% => 40% pass-through, persistence 0.5 => -0.4; -0.5 incl. sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RADICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Brent 94.99"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "RADICO",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.2,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "P&A is urban-driven (vodka/gin/single malt), 20% margin with high operating leverage. +5pp urban growth => P&A volume +4% => EBITDA +8% x persistence 0.5 x EV/MCap 1.03 => ~+3.0 (wide: 1y vol 34%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Radico+Khaitan+premium+volume+guidance+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "CNBC TV18: upgrades FY27 premium volume growth guidance to 30%"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "RADICO",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Structural premiumisation: P&A growing 30% vs regular spirits losing ground (ET 2026-10-27). +1 => mix adds ~1pp margin => EBITDA +5% x persistence 1.0 x 0.6 haircut => +3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Radico+Khaitan+premium+spirits+regular+volumes+lose+ground+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "ET: premium spirits have a moment as regular volumes lose ground"
+    }
+   ]
+  },
+  {
+   "src": "NEW_STATE_LIQUOR_POLICY",
+   "dst": "RADICO",
+   "relation": "policy_effect",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "State excise is the dominant price determinant (taxes ~60-70% of shelf price, model knowledge). +1 adverse change => 3% volume loss in a major state or margin squeeze => EBITDA -6% x persistence 0.5 => -3. Karnataka duty cuts doubled premium volumes there (positive precedent).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Radico+Karnataka+premium+volumes+duty+cuts+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "Multibagg: Karnataka premium volumes more than double after duty cuts"
+    }
+   ]
+  },
+  {
+   "src": "P_SUGAR_ETHANOL",
+   "dst": "RADICO",
+   "relation": "policy_effect",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "More ethanol-blending support diverts maize/rice/molasses and lifts ENA/grain input costs; Radico's own distillery capacity gives partial hedge. +1 => grain +4% => EBITDA -4% x 0.5 x hedge 0.4 => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RADICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "model knowledge; no direct disclosure retrieved"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "RADICO",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Imported malt and some packaging (~8% of costs) vs exports ~10% of revenue (Middle East, UK, Africa). Net ~neutral to slightly positive. Empirical +2.30 (t=1.5) larger but insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RADICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "pack empirical F_USDINR +2.30, t=+1.5"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "RADICO",
+   "relation": "demand_driver",
+   "w": 0.4,
+   "w_low": 0.0,
+   "w_high": 1.2,
+   "lag": "3-12m",
+   "mechanism": "UK duty-free presence (first Indian spirits company at four UK airports, BusinessLine 2026-09-28) and the India-UK trade pact lower spirit tariffs over time (model knowledge). Small export base => +0.4 per +1pp UK demand.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Radico+Khaitan+UK+airports+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-28",
+     "note": "BusinessLine: first Indian spirits firm at four major UK airports"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "RADICO",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -2.8,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "P/E 75, net debt small (interest Rs 11 cr/quarter): +25bp repo => richest-multiple stock in the batch, valuation channel -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RADICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 75.3, interest 11 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "RADICO",
+   "relation": "macro_transmission",
+   "w": 1.3,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "High-beta (0.94) midcap, +41% in 12 months; +US$5bn inflow => +1.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RADICO/consolidated/",
+     "date": "2026-11-05",
+     "note": "price +41.2% 12m"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Grain and molasses suppliers (FCI rice, maize, own distilleries)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "ENA inputs"
+  },
+  {
+   "counterparty": "Glass bottle makers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "packaging"
+  },
+  {
+   "counterparty": "United Spirits",
+   "ticker": "UNITDSPR",
+   "role": "competitor",
+   "importance": "high",
+   "note": "premium and prestige IMFL"
+  },
+  {
+   "counterparty": "Tilaknagar Industries",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "low",
+   "note": "not in universe; 180% H1 FY27 revenue growth (Indian Retailer 2026-11-02)"
+  },
+  {
+   "counterparty": "State liquor corporations",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "state-run retail and procurement in many states"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (festive/wedding season; P&A volume check against 30% guidance)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge; Q2 call 28 Oct 2026"
+  },
+  {
+   "date": "2027-03",
+   "event": "State excise policy resets for FY28 (UP, Rajasthan, Maharashtra, Karnataka)",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "Capacity expansion/launch updates for premium vodka and single malt",
+   "type": "capex",
+   "prob": 0.3,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "Investing.com Q2 slides 2026-10-28 (headline)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 1,745 cr (+17%), operating profit 357 cr (20%), PAT 232 cr (+66%)",
+  "trend": "premium mix and grain/glass cost control lifting margin; FY27 P&A volume growth guidance 30% (raised from 25% in July)",
+  "valuation": "P/E 75.3, price 4,517 vs 52w 2,500-4,748; +41% over 12m; mcap Rs 60,465 cr",
+  "recent_developments": [
+   "2026-11-03 FY27 P&A volume growth upgraded to 30%, ~20% EBITDA margin sustained (scanx)",
+   "2026-11-04 Karnataka premium volumes more than double after duty cuts",
+   "2026-10-27 record Q2, profit +66%",
+   "2026-09-28 UK airports listing",
+   "2026-07-29 P&A guidance had been raised to 25%"
+  ]
+ },
+ "key_risks": [
+  "Valuation at 75x earnings",
+  "State excise changes",
+  "Grain and glass inflation",
+  "Competition from United Spirits, Pernod, Tilaknagar"
+ ],
+ "upside_triggers": [
+  "P&A volume beat",
+  "Margin above 20%",
+  "Export traction (UK/Middle East)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_STATE_LIQUOR_POLICY",
+   "type": "POLICY",
+   "name": "State excise / liquor pricing policy (key states)",
+   "ssu": "+1 = adverse change in excise duty or pricing in UP, Rajasthan, Karnataka, Maharashtra"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/RADICO/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in retrieved directly (pack lacked fundamentals)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Radico+Khaitan+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "Q2 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Radico+Karnataka+premium+volumes+duty+cuts+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Karnataka duty effect"
+  }
+ ],
+ "ticker": "RADICO",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

@@ -1,0 +1,430 @@
+{
+ "ticker": "HAL",
+ "name": "Hindustan Aeronautics Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_DEFENCE",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Maharatna CPSE (71.64% Government of India) that designs, manufactures and overhauls military aircraft, helicopters, aero-engines, avionics and aerostructures for the Indian armed forces. Programmes: Tejas LCA Mk1A (97-aircraft order), Su-30MKI, LCH Prachand, ALH, Dornier, engine MRO. FY26 sales Rs 33,089 cr, OPM 30%, net profit Rs 9,116 cr; other income ~Rs 3,900 cr from large cash. Order book Rs 2,54,538 cr (Mar-2026). Revenue is back-ended (Q4 ~40%).",
+ "revenue_mix": [
+  {
+   "segment": "Aircraft/helicopter manufacturing",
+   "share_pct": 55,
+   "geography": "India (MoD) ~97%"
+  },
+  {
+   "segment": "ROH / repair & overhaul and spares",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "Exports",
+   "share_pct": 5,
+   "geography": "Dornier, helicopters, spares"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "HAL",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Order book Rs 2,54,538 cr (Mar-2026) is ~7.7x sales, so +10% domestic orders mainly adds to visibility beyond FY33. Treat +10% orders as +10% of ~Rs 25k cr/yr of new inflows -> +Rs 2,500 cr/yr -> PV-equivalent +3-4% of EV; with a 36x P/E multiple lifting on growth visibility -> ~+5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.venturasecurities.com / HAL exchange filing AON_ALH 2026-09-08 (via web search)",
+     "date": "2026-09-07",
+     "note": "DAC AoN ~Rs 1.1 lakh cr incl. 138 ALH; ~98% for Indian industry"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "HAL",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Defence capital outlay is part of union capex; +10% govt capex growth -> +3% to HAL's inflow trajectory, small valuation effect -> ~+2.5. Overlaps with P_DEFENCE_PROCUREMENT so kept lower.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_DEFENCE_EXPORTS",
+   "dst": "HAL",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Exports (Dornier, helicopters, LCA interest, spares) are <5% of revenue today; +1 theme unit = export wins double -> +2% of equity value from option value (India-ASEAN joint production headline 2026-10-16, Equitymaster).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "HAL",
+   "relation": "geopolitical_exposure",
+   "w": 3.0,
+   "w_low": -1.0,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation raises emergency procurement and order timing; defence stocks historically gain on flare-ups (model knowledge, May 2025 episode); effect fades fast, persistence 0.25 on a +12% shock -> ~+3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "HAL",
+   "relation": "geopolitical_exposure",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Global arms demand and supply-chain tightness for engines; marginal for HAL whose customer is the Indian Ministry of Defence. Pack: Brent beta +1.03 (t=1.7) is a risk-on defence/energy co-movement, not a cost channel.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HAL",
+   "relation": "fx_translation",
+   "w": -0.6,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Imported content (GE F404/F414 engines, Russian kits, avionics) is ~25-30% of material costs; contracts largely escalation-protected or in foreign exchange cost-plus. +3% -> costs +~0.8% of revenue unrecovered ~35% = 0.3% -> EBITDA -1% at 28% OPM; persistence 0.5; EV/MCap ~0.85 -> ~-0.4, rounded -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "HAL",
+   "relation": "policy_effect",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "GE engine supply (F404 deliveries restarted Aug 2026 with 3 units; 7 received, 10 more expected before Nov 2026 per search summaries) and US-India relations; tariffs/friction risk delaying LCA Mk1A deliveries.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HAL",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Net cash, huge advances; effect is valuation duration at P/E 36. +25 bp -> ~-1.2%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "HAL",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+25 bp US 10y -> FPI de-risking and higher EM discount rates; pack shows the opposite sign for Fed funds (+5.68, t=+3.1) but that is a 3-year high-beta co-movement during a rate-cut-to-hold cycle, not a causal channel; disagreement noted, weight kept small and wide.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HAL.md",
+     "date": "2026-11-05",
+     "note": "Fed funds t=+3.1 conflicts in sign"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "HAL",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold ~9.4% (down from 10.2% in Mar-2026) and DIIs 12.5% rising; PSU defence is a domestic-flow favourite. +$5bn/qtr FPI inflow -> ~+1 via liquidity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "NEW_DEFENCE_PRIVATE_COMPETITION",
+   "dst": "HAL",
+   "relation": "competition",
+   "w": -6.0,
+   "w_low": -12.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "Private/foreign entrants (Tata, L&T, Adani, Bharat Forge consortia) vie for AMCA, MRFA, helicopter and trainer programmes; Citi (2026-09-09) says private-sector concerns may be overdone. +1 unit = loss of one major programme worth ~Rs 40-60k cr of potential inflows (~15% of intrinsic value at risk x 40% prob) -> ~-6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com Citi note via LinkedIn",
+     "date": "2026-09-09",
+     "note": "Citi sees 22% upside, private competition concerns overdone"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "HAL",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -0.6,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Titanium/aluminium/steel alloy mainly imported or on escalation clauses; small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_IRON_ORE",
+   "dst": "HAL",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Pack +3.31 per +15% (t=+1.9) is a cyclical high-beta co-movement (beta 1.56) without a fundamental channel; weight shrunk to +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HAL.md",
+     "date": "2026-11-05",
+     "note": "t=+1.9"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Ministry of Defence / IAF / Army / Navy / Coast Guard",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "~97% of revenue"
+  },
+  {
+   "counterparty": "GE Aerospace (F404/F414 engines)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "113 F404 engines contracted Nov 2025; deliveries slow, restarted Aug 2026"
+  },
+  {
+   "counterparty": "Bharat Electronics",
+   "ticker": "BEL",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Radars/avionics; shared sector sentiment"
+  },
+  {
+   "counterparty": "Bharat Dynamics",
+   "ticker": "BDL",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Peer PSU defence"
+  },
+  {
+   "counterparty": "Private aerospace consortia (Tata, L&T, Adani, Bharat Forge)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Future programmes"
+  },
+  {
+   "counterparty": "Russian OEMs (Su-30 kits)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "Licence production"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (Sep quarter): seasonally weak; focus on LCA Mk1A deliveries and FY27 guidance of ~31% EBITDA margin",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "Sahi 'HAL eyes Rs 90,000 cr order pipeline and 31% EBITDA margin target FY27' (via search)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Receipt of next batch of GE F404 engines and first Mk1A deliveries from Nashik line",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 5.0,
+   "source": "search summary of Sahi/industry reports"
+  },
+  {
+   "date": "2027-03",
+   "event": "Contract signing for ALH (138 helicopters) or other DAC-cleared items converting AoN to orders",
+   "type": "regulatory",
+   "prob": 0.25,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 4.0,
+   "source": "PIB/HAL filing 2026-09-07/08"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4 FY27 results and final dividend; FY27 sales/margin vs guidance",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Government stake sale (OFS) in HAL",
+   "type": "corporate_action",
+   "prob": 0.07,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -3.0,
+   "source": "model knowledge; 71.64% govt holding"
+  },
+  {
+   "date": "2027-03",
+   "event": "AMCA / next-gen fighter programme partner decision (private vs HAL role)",
+   "type": "other",
+   "prob": 0.3,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 4.0,
+   "source": "Citi 2026-09-09 on private-sector concerns"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs 5,515 cr (+14.5%), OPM 28%, net profit Rs 1,590 cr (+15%). Q2 FY27 results pending.",
+  "trend": "Revenue growth modest (FY26 +7%), margins ~30%, order book large; stock +5% in a month, near 52-week high (Rs 5,150).",
+  "valuation": "P/E 36.4, P/B 8.3, mcap Rs 3.38 lakh cr; brokers' targets Rs 5,200-5,673 (Religare, Jefferies, Citi, Oct 2026).",
+  "recent_developments": [
+   "2026-09-07/08 DAC AoN ~Rs 1.1 lakh cr incl. 138 ALH; HAL +4% (Ventura/5paisa)",
+   "2026-09-09 Citi Buy, 22% upside; CLSA picks HAL",
+   "2026-10-06 2,000th aero-engine delivery; new Shakti engine line (Moneycontrol)",
+   "2026-10-07 new part-time official director appointed",
+   "2026-10-09 TradingView: 12-month target raised to Rs 5,673",
+   "Aug 2026 GE restarts F404 deliveries with 3 engines (search summary)"
+  ]
+ },
+ "key_risks": [
+  "LCA Mk1A delivery slippage tied to GE engines and software",
+  "Slow revenue growth vs 36x P/E",
+  "Private competition on next programmes",
+  "Govt OFS / disinvestment",
+  "Large working-capital days (301)"
+ ],
+ "upside_triggers": [
+  "Mk1A deliveries start and engine supply normalises",
+  "ALH/LCH/Su-30 upgrade contracts signed",
+  "Export orders (Dornier, helicopters)",
+  "India-Pakistan or China tension raising urgency"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_DEFENCE_PRIVATE_COMPETITION",
+   "type": "FACTOR",
+   "name": "Private/foreign competition for large Indian military aircraft programmes",
+   "ssu": "+1 = a major aircraft/helicopter programme awarded to a non-HAL player"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/HAL.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://nsearchives.nseindia.com/corporate/HAL_08092026150304_AON_ALH_08092026.pdf",
+   "date": "2026-09-08",
+   "what": "HAL filing on ALH AoN"
+  },
+  {
+   "url": "https://upstox.com/news/market-news/stocks/bel-hal-beml-defence-stocks-in-focus-as-centre-clears-1-10-lakh-crore-military-procurement/article-199929/",
+   "date": "2026-09-07",
+   "what": "DAC Rs 1.1 lakh cr clearance"
+  },
+  {
+   "url": "https://mailcontent.icicidirect.com/mailcontent/idirect_hal_q1fy27.pdf",
+   "date": "2026-08",
+   "what": "ICICI Direct Q1 FY27 note (summary only)"
+  },
+  {
+   "url": "https://www.sahi.com/news/hal-eyes-90-000-crore-order-pipeline-and-31-ebitda-margin-target-for-fy27-2811-PE1_COR",
+   "date": "2026",
+   "what": "order pipeline and margin target"
+  }
+ ]
+}

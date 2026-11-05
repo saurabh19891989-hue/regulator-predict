@@ -1,0 +1,343 @@
+{
+ "name": "Bharat Electronics Ltd.",
+ "industry": "I_DEFENCE",
+ "tier": "NIFTY_50",
+ "business_summary": "Navratna defence-electronics PSU (51.1% government) producing radars, communication and EW systems, naval sonars/combat systems, missile electronics, electro-optics, air-defence and homeland security solutions, with a small civil segment (railways, EVMs, medical). FY26 sales Rs27,610 cr (+16%), TTM Rs30,253 cr (+20%), EBITDA margin 28%, PAT Rs6,401 cr. Q2 FY27: sales Rs7,328 cr, PAT Rs1,541 cr (+20%), margin contracted; order book Rs68,717 cr. Market cap Rs289,796 cr at 45x P/E; ROE 27%; debtor days 170. Nifty 50 member since Aug 2026.",
+ "revenue_mix": [
+  {
+   "segment": "defence electronics (radars, EW, naval, air defence, comms)",
+   "share_pct": 90,
+   "geography": "India ~93% / export ~7% (model knowledge)"
+  },
+  {
+   "segment": "civil (railways, EVM, medical, solar)",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_SEMICONDUCTOR_SUPPLY",
+   "share_of_costs_pct": 15
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "BEL",
+   "relation": "policy_effect",
+   "w": 5.5,
+   "w_low": 3.0,
+   "w_high": 9.0,
+   "lag": ">12m",
+   "mechanism": "~90% defence revenue; order book Rs68,717 cr (Q2 FY27, ~2.3x TTM sales Rs30,253 cr). +10% domestic orders => ~+8% revenue (some civil), op. leverage 1.3x => EBITDA +10%; EV/MCap ~0.96, persistence 0.6 => ~+5.8, shaded to 5.5. DAC cleared Rs2.12 lakh cr on 2026-10-26/27 (Rs13 lakh cr approvals cited by Motilal 2026-10-05).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bharat+Electronics+Rs+2.12+lakh+crore+procurement+DAC+approval+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Upstox/ET: defence stocks rally as Centre clears Rs2.12 lakh crore proposals"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Bharat+Electronics+Q2+FY27+order+book+guidance+order+inflow+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Upstox: Q2 PAT +20%, order book Rs68,717 cr"
+    }
+   ]
+  },
+  {
+   "src": "C_INDIA_PAKISTAN",
+   "dst": "BEL",
+   "relation": "geopolitical_exposure",
+   "w": 2.5,
+   "w_low": 0.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation boosts emergency orders for radars, EW and air-defence electronics; sentiment effect larger than earnings in 3 months (precedent May 2025, model knowledge).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_DEFENCE_EXPORTS",
+   "dst": "BEL",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": ">12m",
+   "mechanism": "Exports are ~5-10% of revenue (model knowledge); a +1 SSU step-up in exports (e.g. Akash, radars, naval systems) adds ~+3% revenue => ~+2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "BEL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Capital outlay for defence and Kavach/railway electronics underpins order flow; shaded because P_DEFENCE_PROCUREMENT already carries most of it.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "BEL",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Import content in electronics (~25-35% of material, model knowledge; material ~55% of sales). Supply tightening raises component prices/lead times: +1 SSU => cost +3% of material = 1.7% of sales vs 28% margin => -6% EBITDA, partial pass-through, persistence 0.5 => ~-1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BEL",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Imports ~13% of sales (assumed); +3% USD/INR => +0.4% of sales cost => -1.4% EBITDA, mostly hedged and partially passed through, small export offset; x0.96 x0.5 => ~-0.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "BEL",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Net cash firm (interest Rs7 cr TTM) with substantial treasury income; discount-rate effect on 45x P/E dominates, offset partly by deposit yields. RBI repo 5.50% from 2026-10-07. Receivable days 170 raise sensitivity to government payment delays.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "BEL",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Nifty 50 constituent since Aug 2026 (replaced Wipro, NiftyTrader 2026-08-11) with FIIs trimming 19.5% to 17.0%; beta 1.4-1.5; empirical +0.2 sign-neutral, treated as noise.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BEL",
+   "relation": "macro_transmission",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "+US$5bn quarterly FPI inflow lifts large-cap PSU defence beta stocks ~1.2 (beta 1.4); FII share fell 3.3pp since Mar 2026, so flows are a live marginal driver.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "BEL",
+   "relation": "demand_driver",
+   "w": 0.3,
+   "w_low": 0.0,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "Small exposure via railway electronics (Kavach, signalling); revenue share ~3% => +10% => +0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BEL.md (screener.in + Yahoo, retrieved 2026-11-05)",
+     "date": "2026-11-05",
+     "note": "fundamentals / empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Ministry of Defence (Army/Navy/Air Force), DRDO",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Dominant customer (>80% revenue, model knowledge); orders: Rs770 cr radar (2026-10-22), Rs533 cr (2026-10-13), Rs648 cr (2026-09-17)"
+  },
+  {
+   "counterparty": "Bharat Dynamics",
+   "ticker": "BDL",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Both defence PSUs share the MoD wallet; co-operation on missiles electronics"
+  },
+  {
+   "counterparty": "HAL",
+   "ticker": "HAL",
+   "role": "customer",
+   "importance": "medium",
+   "note": "BEL supplies avionics and radar to HAL platforms (model knowledge)"
+  },
+  {
+   "counterparty": "Electronic component/semiconductor suppliers (imports)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Import content in material cost"
+  },
+  {
+   "counterparty": "L&T / Tata Advanced Systems / private defence electronics",
+   "ticker": "LT",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Private-sector competition in radars and C4I"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (late Jan); Q2 reported 2026-10-30",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "company calendar (model knowledge)"
+  },
+  {
+   "date": "2026-12",
+   "event": "Large single order(s) (e.g. air defence, EW suite) from DAC-cleared proposals; mgmt targets ~Rs55,000 cr FY27 inflow (ET Now 2026-10-30)",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Bharat+Electronics+Q2+FY27+order+book+guidance+order+inflow+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "FY27 revenue guidance delivery check at Q3 (Kotak raised target on guidance, NDTV Profit 2026-11-04)",
+   "type": "guidance",
+   "prob": 0.7,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Bharat+Electronics+Q2+FY27+order+book+guidance+order+inflow+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget 2027-28: defence capital outlay allocation",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge of budget calendar"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs7,328 cr, EBITDA Rs2,041 cr (28%), PAT Rs1,541 cr (+20% YoY), order book Rs68,717 cr",
+  "trend": "Steady 15-20% growth, margins 25-30%; stock -10% over 6m, +2% 1m; FIIs trimming, DIIs adding",
+  "valuation": "P/E 45x, P/B 11.1x, ROCE 36%; premium but below own peaks (52w high Rs473, low Rs355)",
+  "recent_developments": [
+   "2026-08-11: replaced Wipro in Nifty 50",
+   "2026-09-17: Rs648 cr orders",
+   "2026-10-05: Motilal top pick on Rs13 lakh cr approvals",
+   "2026-10-13: Rs533 cr order",
+   "2026-10-22: Rs770 cr radar order, stock -2%",
+   "2026-10-23: touched 52-week low zone",
+   "2026-10-27: DAC clears Rs2.12 lakh cr",
+   "2026-10-30: Q2 PAT +20%, beat but margin contracted",
+   "2026-11-04: Motilal raises target, Elara upgrades to Buy; shares +3%"
+  ]
+ },
+ "key_risks": [
+  "Margin contraction / execution delays",
+  "High receivables (170 days) and working-capital drag",
+  "Valuation 45x",
+  "Order inflow slowdown vs ~Rs55,000 cr target",
+  "Semiconductor import dependence",
+  "FII selling"
+ ],
+ "upside_triggers": [
+  "Large air-defence/EW awards post DAC clearance",
+  "Export wins",
+  "Margin recovery above 28%",
+  "Budget defence outlay hike"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/BEL.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals through Sep 2026, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bharat+Electronics+Q2+FY27+order+book+guidance+order+inflow+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "Q2 FY27 results and brokerage reactions headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bharat+Electronics+Rs+2.12+lakh+crore+procurement+DAC+approval+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "DAC Rs2.12 lakh crore headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "Google News: Reuters 2026-10-07 'India first hike in nearly 4 years'; SCC Online 'repo to 5.50%, calibrated tightening'"
+  }
+ ],
+ "ticker": "BEL",
+ "as_of": "2026-11-05"
+}

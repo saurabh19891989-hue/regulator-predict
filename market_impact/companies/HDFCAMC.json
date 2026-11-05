@@ -1,0 +1,373 @@
+{
+ "ticker": "HDFCAMC",
+ "name": "HDFC Asset Management Company Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AMC_WEALTH_BROKING",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest active-equity mutual fund house by market share (active equity 12.7%, overall QAAUM share 11.1%), 52.3% owned by HDFC Bank. Q2 FY27: QAAUM Rs9.69 lakh cr (+10% y/y, +4% q/q), equity-oriented QAAUM Rs6.51 lakh cr, revenue ~Rs1,170cr (+14% y/y), PAT ~Rs750cr (+4% y/y), operating margin ~79%. Asset-light, debt-free, 79% payout, ROE 33%. Earnings are a function of AUM x fee yield (~47-48bp blended): driven by equity markets, SIP flows, market share and SEBI fee rules (new regulations effective 1 Apr 2026). P/E 37.9, 13x book, dividend yield 2.1%.",
+ "revenue_mix": [
+  {
+   "segment": "Equity-oriented funds (incl. hybrid/solutions)",
+   "share_pct": 75,
+   "geography": "India"
+  },
+  {
+   "segment": "Debt and liquid funds",
+   "share_pct": 17,
+   "geography": "India"
+  },
+  {
+   "segment": "PMS/AIF, offshore advisory, other",
+   "share_pct": 8,
+   "geography": "India/offshore (small)"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "F_DOMESTIC_FLOWS",
+   "share_of_costs_pct": 35
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "HDFCAMC",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Industry equity AUM grows via SIP + lump-sum. SIP inflows ~Rs3.9 lakh cr/yr (Rs32,297cr in Aug 2026 record; Rs325bn Sep per company deck) ~9% of equity AUM; +10% => equity AUM growth +0.9pp/yr; HDFC AMC share 12.7% flows; equity ~75% of revenue (yield ~58bp active equity vs ~48bp blended) => revenue +0.7%, PBT +0.8%/yr, compounding 3 yrs, structural flow persistence 0.7 at 38x P/E => +2.5. SIP AUM was flat q/q in Sep (MOFSL) - watch.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/652f5c88_HDFCAMC-20261015-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-15",
+     "note": "MOFSL: QAAUM Rs9.69 lakh cr (+10% y/y), active equity share 12.7% (-10bp q/q), SIP AUM flat q/q"
+    }
+   ]
+  },
+  {
+   "src": "F_EQUITY_ACTIVITY_IN",
+   "dst": "HDFCAMC",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "+20% traded value/demat additions => retail participation up, equity MF lump-sum and SIP registrations +~5%; revenue +~1.5% (equity-weighted) => PBT +1.8% x persistence 0.5-1.0 x multiple => ~+2.0.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "HDFCAMC",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+US$5bn/qtr FPI inflow ~ +3% Nifty (beta 1.39) => equity-oriented QAAUM (Rs6.5 lakh cr, 67% of total) +3.5% mark-to-market => revenue +2.6% => PBT +3.1% x persistence 0.5 => +1.5 (before market demeaning). FIIs hold 24.1%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/652f5c88_HDFCAMC-20261015-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-15",
+     "note": "MOFSL: QAAUM Rs9.69 lakh cr (+10% y/y), active equity share 12.7% (-10bp q/q), SIP AUM flat q/q"
+    },
+    {
+     "source": "market_impact/data/packs/HDFCAMC.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "HDFCAMC",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points ~ -3-4% equities => AUM -2.5% => revenue -2% => PBT -2.4% x 0.5 x EV/MCap 0.97 => ~-1.2 gross; pack residual -0.40 (t -1.1) after controlling for market; take -0.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HDFCAMC.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_CAPITAL_GAINS_TAX",
+   "dst": "HDFCAMC",
+   "relation": "policy_effect",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Higher LTCG/STCG on equity funds cuts after-tax returns and retail inflows; 2024 Budget hike precedent. +1 => net flows -10% => AUM growth -0.9pp/yr (mirror of flows edge) => -2.5. Union Budget 1 Feb 2027 is the next window; probability of a rise modest.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "P_SEBI_DERIVATIVES",
+   "dst": "HDFCAMC",
+   "relation": "substitution",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Tighter F&O rules (lot sizes, weekly expiry curbs) push retail savers from leveraged trading to SIPs/MFs; +1 step => SIP registrations +2% => +0.8. Substitution evidence limited.",
+   "confidence": "low",
+   "evidence": []
+  },
+  {
+   "src": "NEW_SEBI_MF_FEE_REG",
+   "dst": "HDFCAMC",
+   "relation": "regulatory_risk",
+   "w": -5.0,
+   "w_low": -9.0,
+   "w_high": -2.0,
+   "lag": "3-12m",
+   "mechanism": "Further TER / brokerage / fee-structure tightening beyond the 1 Apr 2026 reset (brokerage caps 6bp cash / 2bp derivatives; TER slabs partly offset +5bp). SSU: -5bp on active-equity gross yield. 5bp / 58bp = -8.6% of equity revenue (75% of total) = -6.5% revenue; costs fixed => PBT -8%; mitigation (cost cuts, mix) 35% => ~-5. Jefferies sized the April 2026 change at -8-10% FY27 PBT (draft) and the stock rallied up to 8.5% on the final rules (2025-12-18), i.e. largely priced.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://moneylife.in/article/sebi-announces-major-overhaul-of-mutual-fund-rules-effective-april-2026/79422.html",
+     "date": "2025-12-18",
+     "note": "SEBI MF Regulations 2026 effective 1 Apr 2026: brokerage caps 6bp/2bp, TER restructure; Jefferies FY27 PBT -8-10% (draft), Centrum -6-10%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "HDFCAMC",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "P/E 37.9x (P/B 13x): very long duration; +25bp G-sec => ~-2.5% on multiple at 50% CoE pass-through. Debt+liquid ~26% of QAAUM at lower fees; higher yields hurt bond-fund NAVs and the ~Rs8,000cr treasury float marginally. Pack residual vs Fed funds +1.83 (t 1.3) not significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+when:30d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "India 10y G-sec ~7.4-7.5% in Oct 2026, multi-year high (Reuters/ET headlines); Nov outlook 7.25-7.35%"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "HDFCAMC",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Structural shift of household savings into MFs: +1 = industry AUM growth +2pp/yr for 3 yrs => HDFC AMC revenue +~6% cumulative at stable share and yield => PBT +7% => capitalised with persistence 0.7 => +4. SIP AUM +14% y/y, QAAUM +10% y/y shows the trend is intact but slowing (MOFSL).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/652f5c88_HDFCAMC-20261015-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-15",
+     "note": "MOFSL: QAAUM Rs9.69 lakh cr (+10% y/y), active equity share 12.7% (-10bp q/q), SIP AUM flat q/q"
+    }
+   ]
+  },
+  {
+   "src": "NEW_AMC_COMPETITION",
+   "dst": "HDFCAMC",
+   "relation": "competition",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "SSU: +1 = 0.5pp loss of active-equity AUM market share to new entrants (passives, discount brokers, Jio-style entrants, bank-owned AMCs). 0.5/12.7 = -3.9% equity AUM => -3% revenue => -3.7% PBT; persistence 1.0 (structural) => -3.5. Share slipped 10bp q/q and 20bp y/y to 12.7% in Q2 (MOFSL).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://investmentguruindia.com/editorial/uploads/news-pdf/652f5c88_HDFCAMC-20261015-MOFSL-RU-PG010.pdf",
+     "date": "2026-10-15",
+     "note": "MOFSL: QAAUM Rs9.69 lakh cr (+10% y/y), active equity share 12.7% (-10bp q/q), SIP AUM flat q/q"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HDFCAMC",
+   "relation": "demand_driver",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "Debt/liquid ~26% of QAAUM (fee yield ~15-25bp). Hikes cut bond-fund returns and shift savers to FDs (-) but lift liquid-fund yields and inflows (+). Net small: -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:60d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening' (The Hindu, Reuters headlines)"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "HDFCBANK",
+   "dst": "HDFCAMC",
+   "relation": "group_contagion",
+   "w": 0.15,
+   "w_low": 0.0,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "HDFC Bank owns 52.3% (screener promoter %) and is the largest distributor; bank-level distribution policy or governance news leaks to the AMC. Weight small because AMC earnings are driven by AUM. (The reverse stake edge HDFCAMC->HDFCBANK is ~0.04 per +1% and belongs in the bank profile.)",
+   "confidence": "low",
+   "evidence": []
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "HDFC Bank",
+   "ticker": "HDFCBANK",
+   "role": "parent",
+   "importance": "high",
+   "note": "52.3% promoter; key distribution partner"
+  },
+  {
+   "counterparty": "Nippon Life India AMC / ICICI Prudential AMC / SBI Funds",
+   "ticker": "ICICIAMC",
+   "role": "competitor",
+   "importance": "high",
+   "note": "ICICIAMC in universe; also Nippon, SBI MF, Kotak, ABSL"
+  },
+  {
+   "counterparty": "KFin Technologies (RTA)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "low",
+   "note": "registrar address change from 1 Dec 2026"
+  },
+  {
+   "counterparty": "EAAA India Alternatives",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "HDFC AMC, Carnelian, L&T acquired 2.9% on debut 2026-11-02 (Moneycontrol headline)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 reported 2026-10-15)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "pattern of prior dates; model estimate"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28: capital gains / STT changes on equity MFs",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge of schedule; a tax rise has prob ~0.15 (impact -6..-2)"
+  },
+  {
+   "date": "2026-11/12",
+   "event": "AMFI monthly data (SIP inflows, industry AUM) and SEBI follow-ups on TER/brokerage implementation",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.0,
+   "source": "https://www.sahi.com/news/hdfc-amc-in-focus-as-india-monthly-sip-inflows-hit-record-32-297-crore-3267-PE1_COR"
+  },
+  {
+   "date": "2026-12-01",
+   "event": "RTA KFin corporate office address change (administrative)",
+   "type": "other",
+   "prob": 1.0,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 0.0,
+   "source": "PSU Connect 2026-11-04 headline"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue ~Rs1,170cr, PAT ~Rs750cr (+4% y/y), QAAUM Rs9.69 lakh cr, active equity share 12.7%",
+  "trend": "Revenue growth ~14% but PAT growth slowed by SEBI fee reset; market-share drift down 10bp q/q; SIP AUM flat q/q",
+  "valuation": "Rs2,633; P/E 37.9, P/B 13, div yield 2.1%; +11.9% 1m, -2.6% 12m; 1y vol 33%",
+  "recent_developments": [
+   "2026-10-15 Q2 results; 'just missed' consensus per Simply Wall St",
+   "2026-11-02 HDFC AMC, Carnelian and L&T acquire 2.9% of EAAA India Alternatives at debut",
+   "2026-09-10 Prabhudas Lilladher Buy, target Rs2,850",
+   "2026 Aug: industry SIP inflow record Rs32,297cr",
+   "1 Apr 2026: SEBI MF Regulations 2026 effective"
+  ]
+ },
+ "key_risks": [
+  "Equity market drawdown (AUM beta ~0.7 to Nifty)",
+  "Further SEBI fee/TER/brokerage actions",
+  "Active-equity share loss to passives and new entrants",
+  "Budget tax on MF gains",
+  "Slowing SIP growth (SIP AUM flat q/q)",
+  "High valuation (38x P/E)"
+ ],
+ "upside_triggers": [
+  "Equity market rally / FPI inflows",
+  "Strong SIP and lump-sum flows",
+  "Market-share stabilisation at 12.7%+",
+  "Benign SEBI fee outcome",
+  "Distribution expansion and new products (Business Standard 2026-09-11)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_SEBI_MF_FEE_REG",
+   "type": "POLICY",
+   "name": "SEBI mutual fund fee / TER / brokerage regulation",
+   "ssu": "-5bp on active-equity gross fee yield"
+  },
+  {
+   "id": "NEW_AMC_COMPETITION",
+   "type": "THEME",
+   "name": "AMC competition intensity (passives, new entrants)",
+   "ssu": "+1 = 0.5pp loss of active-equity AUM market share"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://scanx.trade/stock-market-news/companies/hdfc-amc-q2-results-net-profit-up-4-yoy-7-5-billion/53601679",
+   "date": "2026-10-15",
+   "what": "Q2 FY27 results"
+  },
+  {
+   "url": "https://investmentguruindia.com/editorial/uploads/news-pdf/652f5c88_HDFCAMC-20261015-MOFSL-RU-PG010.pdf",
+   "date": "2026-10-15",
+   "what": "MOFSL result update"
+  },
+  {
+   "url": "https://moneylife.in/article/sebi-announces-major-overhaul-of-mutual-fund-rules-effective-april-2026/79422.html",
+   "date": "2025-12-18",
+   "what": "SEBI MF regulations 2026"
+  },
+  {
+   "url": "https://www.sahi.com/news/hdfc-amc-in-focus-as-india-monthly-sip-inflows-hit-record-32-297-crore-3267-PE1_COR",
+   "date": "2026-08",
+   "what": "SIP record"
+  },
+  {
+   "url": "https://www.screener.in/company/HDFCAMC/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals via pack"
+  }
+ ]
+}

@@ -97,7 +97,7 @@
    "w_low": -1.6,
    "w_high": -0.2,
    "lag": "3-12m",
-   "mechanism": "HDPE bottles, cartons ~10% of costs. +10% => costs +1.0% => EBITDA -4.6%... 50% passthrough, 0.5 persistence, overlap with crude-linked => -0.8.",
+   "mechanism": "HDPE bottles, cartons ~10% of costs. +10% => costs +1.0% => EBITDA -4.6%; 50% passthrough, persistence 0.5 => -1.1, trimmed to -0.8 for overlap with crude-linked costs.",
    "confidence": "low",
    "evidence": [
     {
@@ -133,7 +133,7 @@
    "w_low": 0.7,
    "w_high": 3.5,
    "lag": "3-12m",
-   "mechanism": "Rural is a large share of Parachute/ hair-oil demand (~45% of India, approximate). +5pp rural => India volume +2pp x 0.75 India share, 40% incremental margin/18% => EBITDA +3.3%... persistence 0.5 => +1.7 rounded to +2.0 given the Q2 rural rebound.",
+   "mechanism": "Rural is a large share of Parachute/ hair-oil demand (~45% of India, approximate). +5pp rural => India volume +2pp x 0.75 India share, 40% incremental margin/18% => EBITDA +3.3%; persistence 0.5 => +1.7, rounded to +2.0 given the Q2 rural rebound.",
    "confidence": "medium",
    "evidence": [
     {

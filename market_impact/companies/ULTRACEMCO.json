@@ -1,0 +1,383 @@
+{
+ "ticker": "ULTRACEMCO",
+ "name": "UltraTech Cement Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CEMENT",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest cement producer (Aditya Birla group; Grasim holds ~56%, model knowledge) with the broadest pan-India grey-cement, white-cement and RMC network plus overseas plants; acquired India Cements (model knowledge). Q2 FY27: sales Rs23,295 cr (+19%), EBITDA Rs3,719 cr (OPM 16%), PAT Rs1,501 cr (+21%). Targets 240 MT capacity and EBITDA Rs1,400/t (Sahi, 21 Oct). P/E 40.6, mcap Rs3.6 lakh cr, 12m +3.6%.",
+ "revenue_mix": [
+  {
+   "segment": "grey cement + clinker",
+   "share_pct": 92,
+   "geography": "India (pan-India, trade ~65-70% of sales; model knowledge)"
+  },
+  {
+   "segment": "white cement, RMC, building products, overseas",
+   "share_pct": 8,
+   "geography": "India + UAE/Bahrain/Sri Lanka"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COAL_INTL",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "Freight (road/rail)",
+   "share_of_costs_pct": 27
+  },
+  {
+   "input": "Raw materials",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "Employee",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "Other",
+   "share_of_costs_pct": 18
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COAL_INTL",
+   "dst": "ULTRACEMCO",
+   "relation": "input_cost",
+   "w": -1.7,
+   "w_low": -3.2,
+   "w_high": -0.7,
+   "lag": "0-3m",
+   "mechanism": "Power & fuel ~25% of costs (model knowledge); costs ~84% of sales. Kiln fuel ~62% of that, ~55% petcoke/imported (UltraTech has high WHRS and green-power share, so lower than Ambuja) -> ~7% of sales exposed. +15% -> +1.1% of sales -> EBITDA -6.8% at 16% OPM; 40% passed through -> -4.0%; EV/MCap 1.04, persistence 0.4 -> -1.7. Empirical F_COAL_INTL +1.29 (t +1.3) has the wrong sign and is treated as noise (cement stocks rallied with rising coal in 2022-23 on price hikes).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=UltraTech+Q2+FY27+EBITDA+per+tonne+capacity+cost+petcoke+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Q2: profit +21% to Rs1,494-1,501 cr, revenue +19%, volume-led with efficiency gains; shares fell up to 5% from day's high (Moneycontrol/CNBC TV18/Business Standard); targets 240 MT capacity and Rs1,400 EBITDA/t (Sahi 21 Oct)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=cement+prices+petcoke+demand+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Nomura: Rs12-15/bag hikes needed to offset fuel; UltraTech top pick (Moneycontrol 12 Oct); ET 16 Oct: strong Q2 volumes but fuel costs may weigh"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "ULTRACEMCO",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Diesel-linked road freight ~10% of costs; +10% Brent -> retail diesel +5% -> costs +0.5% -> EBITDA -2.6% at 16% OPM; 40% pass-through, x1.04 x0.4 -> -0.5; with packaging -> -0.8. Pack shows no significant empirical Brent beta.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/ULTRACEMCO/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "ULTRACEMCO",
+   "relation": "fx_translation",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Imported fuel ~7% of sales: +3% -> +0.2% of sales -> EBITDA -1.3% at 16% OPM; pass-through and hedges -> -0.4. Overseas operations (UAE, Bahrain, Sri Lanka, Bangladesh; model knowledge) give small USD offset.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "NEW_CEMENT_PRICE_IN",
+   "dst": "ULTRACEMCO",
+   "relation": "output_price",
+   "w": 6.0,
+   "w_low": 3.0,
+   "w_high": 9.5,
+   "lag": "0-3m",
+   "mechanism": "+Rs10/bag (~2.5% realisation) -> +2.5/16 = +15.6% EBITDA; x1.04 x persistence 0.4 -> +6.5; shaded to +6.0 as the pack shows UltraTech already carries the 'quality' premium and volume share loss is small.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=cement+prices+petcoke+demand+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-12",
+     "note": "Nomura: Rs12-15/bag hikes needed to offset fuel; UltraTech top pick (Moneycontrol 12 Oct); ET 16 Oct: strong Q2 volumes but fuel costs may weigh"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "ULTRACEMCO",
+   "relation": "demand_driver",
+   "w": 2.3,
+   "w_low": 1.0,
+   "w_high": 3.8,
+   "lag": "3-12m",
+   "mechanism": "Housing ~65% of cement demand, elasticity 0.25 -> +10% sales -> +1.6% volume; contribution margin ~55% -> +0.9% of sales = +5.5% EBITDA at 16% OPM; x1.04 x0.5 -> +2.9; shaded for the 7 Oct repo hike.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50% on 7 Oct 2026, stance 'calibrated tightening' (Reuters/The Hindu/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "ULTRACEMCO",
+   "relation": "demand_driver",
+   "w": 2.8,
+   "w_low": 1.2,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "UltraTech has the largest infra/institutional (RMC, ready-mix, project-linked) share, ~30-35% of volume. +10% capex x elasticity 0.5 -> +1.7% volume -> EBITDA +5.8% -> x1.04 x0.5 -> +3.0; shaded.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "demand split is model estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "ULTRACEMCO",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Industrial/warehousing/data-centre construction ~7% of demand; +10% capex growth -> +0.5% volume -> +1.9% EBITDA -> +1.0; rounded +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "ULTRACEMCO",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Interest cost small (Rs552 cr in Q2 vs EBITDA Rs3,719 cr). +25bp on gross debt of ~Rs15-16k cr (model estimate) -> -Rs40 cr, -0.8% PBT. Plus P/E 40.6 duration: ~-1.5% for +25bp on long-duration equity, partly offset. Net -1.0. RBI hiked to 5.50% on 7 Oct 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50% on 7 Oct 2026, stance 'calibrated tightening' (Reuters/The Hindu/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "ULTRACEMCO",
+   "relation": "demand_driver",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.7,
+   "lag": "0-3m",
+   "mechanism": "Heavy monsoon delays site work in Q2/Q3; rural income benefit later. Slightly negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "seasonality is model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "P_HOUSING_POLICY",
+   "dst": "ULTRACEMCO",
+   "relation": "policy_effect",
+   "w": 1.8,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Housing support (subvention, PMAY) lifts IHB demand: +1 SSU ~ +0.7% volume -> +3.5% EBITDA -> x1.04 x0.5 = +1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_MINING_ROYALTY",
+   "dst": "ULTRACEMCO",
+   "relation": "policy_effect",
+   "w": -0.7,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Limestone royalty/DMF increases raise raw-material cost (~14% of costs); partly passed on with long lags.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Grasim Industries",
+   "ticker": "GRASIM",
+   "role": "parent",
+   "importance": "high",
+   "note": "~56% holder (model knowledge); GRASIM trades on look-through value"
+  },
+  {
+   "counterparty": "Ambuja Cements (Adani)",
+   "ticker": "AMBUJACEM",
+   "role": "competitor",
+   "importance": "high",
+   "note": "announced 30 MTPA addition 2 Nov"
+  },
+  {
+   "counterparty": "Shree, Dalmia, JK Cement, Nuvoco",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "regional"
+  },
+  {
+   "counterparty": "Petcoke/coal importers & domestic coal linkage",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "kiln fuel"
+  },
+  {
+   "counterparty": "Housing / infra contractors",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "fragmented"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Industry price hikes of Rs12-15/bag realised",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=cement+prices+petcoke+demand+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (UltraTech usually reports mid/late Jan; estimate)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "Capacity commissioning towards 240 MT (timeline of 240 MT target not verified)",
+   "type": "capex",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=UltraTech+Q2+FY27+EBITDA+per+tonne+capacity+cost+petcoke+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget infra/housing allocations",
+   "type": "regulatory",
+   "prob": 0.99,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Jul-Sep 2026), reported 19 Oct 2026",
+  "trend": "Revenue +19% y/y on volumes; OPM 16.0% (vs 15.8% y/y, 20.4% in Q1); PAT +21% but -42% q/q. TTM sales Rs95,572 cr, OP Rs18,244 cr, PAT Rs8,835 cr.",
+  "valuation": "P/E 40.6, P/B 4.9; EV/EBITDA ~19x TTM (derived). Rich vs history on depressed margins; stock +13.9% in 1m after Q2.",
+  "recent_developments": [
+   "2026-10-19 Q2: profit +21%, revenue +19%; shares -5% from high, then +3% on 21 Oct as brokerages split",
+   "2026-10-21 Targets 240 MT capacity, EBITDA Rs1,400/t (Sahi headline)",
+   "2026-10-22 InCred: recovery ahead; Nuvama neutral on costs, JK Cement top pick",
+   "2026-10-12 Nomura: UltraTech top pick; needs Rs12-15/bag hikes",
+   "2026-10-12 Vivek Agrawal re-appointment approved with 99% votes",
+   "2026-10-07 RBI repo hike to 5.50%"
+  ]
+ },
+ "key_risks": [
+  "Fuel cost inflation not recovered",
+  "Housing slowdown from rate hike",
+  "Aggressive capacity adds by Ambuja/others compress pricing",
+  "Rich valuation (P/E 40)",
+  "Integration of India Cements assets"
+ ],
+ "upside_triggers": [
+  "Price hikes stick",
+  "Petcoke/Brent decline",
+  "EBITDA/t trending to Rs1,400",
+  "Infra capex pickup post-Budget"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_CEMENT_PRICE_IN",
+   "type": "FACTOR",
+   "name": "Indian cement trade price (realisation)",
+   "ssu": "+Rs10/bag (~+2.5%)"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/ULTRACEMCO/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=UltraTech+Q2+FY27+EBITDA+per+tonne+capacity+cost+petcoke+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 and target headlines (bodies not retrieved)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=cement+prices+petcoke+demand+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-22",
+   "what": "sector fuel/price headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  }
+ ]
+}

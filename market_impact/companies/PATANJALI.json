@@ -88,7 +88,7 @@
    "w_low": -2.5,
    "w_high": 0.5,
    "lag": "0-3m",
-   "mechanism": "Crude oil imports are USD-priced (~60% of costs); domestic price parity passes most through, but payables/hedging lag. +3% INR weakness => cost +1.9% vs pass-through 80% => EBITDA -0.4/4.4... ~-9% x persistence 0.25 x EV/MCap 1.1 => -0.8 (approx.). Empirical USDCNY +7.8 (t=3.4) is a spurious proxy.",
+   "mechanism": "Crude oil imports are USD-priced (~60% of costs); domestic price parity passes most through, but payables/hedging lag. +3% INR weakness => cost +1.9% vs pass-through 80% => EBITDA about -9% (thin 4.4% margin; unhedged 20% x 1.9% = 0.4pp of margin) x persistence 0.25 x EV/MCap 1.1 => about -0.8. Empirical USDCNY +7.8 (t=3.4) is a spurious proxy.",
    "confidence": "low",
    "evidence": [
     {
@@ -142,7 +142,7 @@
    "w_low": -4.0,
    "w_high": 0.0,
    "lag": "0-3m",
-   "mechanism": "MP FDA ordered a cow-ghee batch recall (24 Oct) and Maharashtra FDA acted against a distributor (company statement 3 Nov, test results pending). Stricter enforcement => recall costs and brand damage; ghee ~5% of sales; +1 => EBITDA -3%... plus multiple penalty; probability-weighted => -1.5.",
+   "mechanism": "MP FDA ordered a cow-ghee batch recall (24 Oct) and Maharashtra FDA acted against a distributor (company statement 3 Nov, test results pending). Stricter enforcement => recall costs and brand damage; ghee ~5% of sales; +1 => EBITDA -3% plus a multiple penalty; probability-weighted => -1.5.",
    "confidence": "low",
    "evidence": [
     {
@@ -161,7 +161,7 @@
    "src": "F_REPO_IN",
    "dst": "PATANJALI",
    "relation": "funding_cost",
-   "w": "",
+   "w": -0.6,
    "w_low": -1.4,
    "w_high": 0.0,
    "lag": "0-3m",
@@ -201,7 +201,7 @@
    "w_low": -0.8,
    "w_high": 0.0,
    "lag": "3-12m",
-   "mechanism": "Bottles/pouches/tins ~4% of costs: +10% => EBITDA -0.4/0.044... ~-9% of a thin margin... limited by pass-through 70% and persistence 0.25 => -0.3.",
+   "mechanism": "Bottles/pouches/tins ~4% of costs: +10% => costs +0.4% of sales-equivalent; 70% pass-through leaves 0.12pp of a 4.4% margin (-2.7% EBITDA) x persistence 0.25 x 1.1 => about -0.3.",
    "confidence": "low",
    "evidence": [
     {
