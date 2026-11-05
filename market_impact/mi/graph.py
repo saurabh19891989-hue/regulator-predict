@@ -57,6 +57,10 @@ def assemble():
         add_new(o.get("new_nodes_proposed"), os.path.basename(p))
         for e in o.get("edges", []):
             raw_edges.append({**e, "src": A(e["src"]), "dst": A(e["dst"]), "origin": os.path.basename(p), "layer": "backbone"})
+    de = load_json(R("graph", "director_edges.json")) or {}
+    add_new(de.get("new_nodes_proposed"), "director")
+    for e in de.get("edges", []):
+        raw_edges.append({**e, "src": A(e["src"]), "dst": A(e["dst"]), "origin": "director", "layer": "director"})
     dedup = load_json(R("events", "dedup.json")) or {}
     drop_ev = set(dedup.get("drop", []))
     for p in sorted(glob.glob(R("events", "*.json"))):
@@ -326,6 +330,10 @@ def run(draws=400):
            "profiles": len(profiles), "empirical_sign_conflicts": len(flags),
            "assumptions": {"damping": DAMP, "priced_share_forward": PRICED_SHARE_FWD,
                            "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "max_depth": MAX_DEPTH}}
+    reach = {eid: sum(abs(v) for v in imp.values()) for eid, imp in ev_imp.items()}
+    rep["events_zero_reach"] = sorted(e for e, v in reach.items() if v < 1e-6)
+    targeted = {s["node"] for ev in events for s in ev.get("entry_shocks", [])}
+    rep["dead_end_drivers"] = sorted(n for n in targeted if n in nodes and nodes[n]["type"] != "COMPANY" and not net.out.get(n))
     rep["recent_state_drivers"] = {"observed": int(sum(1 for v in state_src.values() if v == "observed")),
                                    "from_events": int(sum(1 for v in state_src.values() if v == "events"))}
     json.dump(rep, open(R("results", "assembly_report.json"), "w"), indent=1)

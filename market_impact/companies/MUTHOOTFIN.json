@@ -1,0 +1,453 @@
+{
+ "ticker": "MUTHOOTFIN",
+ "name": "Muthoot Finance Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_GOLD_LOANS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest gold-loan NBFC (promoter-run, 73.35% promoter holding), predominantly southern India, ~5,000+ branches (model knowledge). Q2 FY27 (Sep 2026): standalone PAT Rs2,977cr (+27% y/y), consolidated Rs3,278cr (+36%), NII +34%, gold loan AUM up ~42% y/y; Stage III rose to 3.87% as short-tenure/monthly-EMI loans stress. Also microfinance (Belstar), housing (Muthoot Homefin), vehicle/personal loans, Sri Lanka subsidiary; Muthoot Money merged in Aug 2026. Stock Rs2,845, P/E 10.2, P/B 2.6, -21% in 6 months. New MD (Alexander George) appointed 2026-09-02.",
+ "revenue_mix": [
+  {
+   "segment": "gold loans (standalone)",
+   "share_pct": 88,
+   "geography": "South India ~45% / rest of India ~55% of AUM (model est.)"
+  },
+  {
+   "segment": "subsidiaries: microfinance, housing finance, vehicle/personal loans, Sri Lanka, other",
+   "share_pct": 12,
+   "geography": "India; small Sri Lanka"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 25
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GOLD",
+   "dst": "MUTHOOTFIN",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.8,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "Gold +8%: loan per pledged gram rises at constant LTV so AUM (~Rs1.5 lakh cr, model est. from Q2 +42% y/y) grows ~+4-5% over two quarters; auction/collateral cushion widens; yield-neutral. PAT +5% x persistence ~0.6 (gold level is cyclical) + sentiment/P-E (10x) ~ +3.5. Agrees with pack elasticity +2.87 (t=+3.3). Downside asymmetry: gold is 22-26% below its January peak, and loans written near the peak are the ones nearest LTV breach.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Gold+prices+fall+26%25+from+peak+Moneycontrol+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "gold ~22-26% below its January peak; gold ~$4,128/oz on 2026-11-05 (Moneycontrol 2026-10-23, Fortune India 2026-11-05)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Muthoot+Finance%2C+Manappuram+Finance+shares+rally+gold+crosses+Rs+1.63+lakh+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-24",
+     "note": "Muthoot/Manappuram +up to 11% in 4 days as gold crossed Rs1.63 lakh/10g (ET 2026-08-24)"
+    },
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MUTHOOTFIN",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Borrowings ~Rs1.5 lakh cr (model est.: Q2 interest Rs3,365cr x4 / ~9%); ~40% bank/floating = Rs0.6 lakh cr x 25bp = Rs150cr/yr = 1.0% of PBT (TTM financing profit Rs15,201cr). Gold loans are 3-12m tenor and reprice fast, so ~60% passes through within two quarters => net -0.4% PBT; persistence 0.5, P/E 10x multiple effect => ~-1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "MPC minutes flag more hikes but wary of an aggressive cycle (Reuters 2026-10-21)"
+    },
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "MUTHOOTFIN",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "10y +25bp lifts marginal NCD/bank funding and cost of equity; at P/E 10x and P/B 2.6x, +25bp COE ~ -1 to -1.5% of value. Kept below the repo edge to avoid double counting the funding leg.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "10y G-sec closed 7.19% on 2026-11-04 after 7.48% on 2026-10-23 (Moneycontrol 2026-11-04; BusinessLine 2026-10-23)"
+    },
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "MUTHOOTFIN",
+   "relation": "funding_cost",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "+50bp spreads on market borrowings (NCD/CP/ECB ~35% of funding = Rs0.5 lakh cr) = Rs260cr/yr = 1.7% of PBT; 40% passed to lending rates, persistence 0.5 => -0.5%; NBFC multiple reaction to stress (stock -20% in 6m) takes it to ~-2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Muthoot+Finance+Belstar+Muthoot+Money+merger+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "standalone Stage III ratio climbs to 3.87% (Multibagg AI 2026-11-02)"
+    },
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "MUTHOOTFIN",
+   "relation": "demand_driver",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost on gold AUM ~Rs1.55 lakh cr = Rs775cr/yr = 5.1% of PBT; persistence 0.5 => -2.6%; add sentiment on a book where Stage III is already 3.87% and rising (management cites short-tenure/monthly-EMI loans) => -3.5. Gold loans are over-collateralised so true loss given default is low; the exposure is mostly accounting/auction-delay and sentiment.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Muthoot+Finance+Belstar+Muthoot+Money+merger+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-02",
+     "note": "standalone Stage III ratio climbs to 3.87% (Multibagg AI 2026-11-02)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Muthoot+Finance+gold+loan+NPAs+MD+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "note": "short-tenure loans and monthly-EMI structures drive up gold-loan NPAs, says MD (Financial Express 2026-11-01)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=gold+price+rally+October+2026+gold+loans+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "top Indian non-bank lenders flag early signs of stress in loans against gold (Reuters 2026-10-21)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "MUTHOOTFIN",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -9.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "One further tightening step on gold lending (LTV 75% cap, bullet-loan/monthly-EMI rules, valuation/auction norms from RBI Gold Loan Directions 2025 - model knowledge, or caps on NBFC gold-loan growth): AUM growth -5pp and yield -50bp => PAT -8%; persistence 0.5 => ~-4. Muthoot is the single most direct gold-loan franchise.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Muthoot+Finance+gold+loan+NPAs+MD+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "note": "short-tenure loans and monthly-EMI structures drive up gold-loan NPAs, says MD (Financial Express 2026-11-01)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=gold+price+rally+October+2026+gold+loans+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "top Indian non-bank lenders flag early signs of stress in loans against gold (Reuters 2026-10-21)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Muthoot+Finance+RBI+gold+loan+regulation+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-31",
+     "note": "RBI Gold Loan Directions (2025) balancing prudence and rural access (IMPRI 2026-08-31)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_GOLD_LOAN_COMPETITION",
+   "dst": "MUTHOOTFIN",
+   "relation": "competition",
+   "w": -7.0,
+   "w_low": -12.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "SSU: +1 = banks/NBFCs push industry gold-loan yields down ~100bp or take ~3pp share. 100bp on Rs1.55 lakh cr = Rs1,550cr = 10% of PBT; offset ~30% by volume/ticket-size gains, persistence 0.75 => ~-5; add multiple compression as growth leaders (L&T Finance, ABCAPITAL, banks, fintech entrants) arrive => -7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=gold+loan+NBFC+competition+banks+Manappuram+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-04",
+     "note": "new entrants turn up heat on incumbent gold-loan NBFCs (FE 2026-09-04); L&T Finance targets >10% of book in gold loans (2026-08-19); ABCAPITAL entered gold loans 2026-08-19"
+    },
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_GOLD_IMPORT_DUTY",
+   "dst": "MUTHOOTFIN",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.2,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+5pp import duty lifts domestic gold ~4.5% = ~0.56 gold-SSU x 3.5 = +2.0, less ~0.5 for weaker jewellery demand/smuggling shift; sign positive for collateral value. Low confidence on size.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Gold+prices+fall+26%25+from+peak+Moneycontrol+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "gold ~22-26% below its January peak; gold ~$4,128/oz on 2026-11-05 (Moneycontrol 2026-10-23, Fortune India 2026-11-05)"
+    },
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "MUTHOOTFIN",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Shift of pawnbroker/informal gold credit to regulated lenders (RBI rules push tighter KYC): organised share +3pp of a ~Rs15 lakh cr market adds ~Rs0.45 lakh cr to the industry; MUTHOOTFIN at ~10-12% share => AUM +3% => PAT +3% x persistence 0.75 => ~+2 (model est.).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MUTHOOTFIN",
+   "relation": "discount_rate",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding fell 12.3% (Mar) -> 9.7% (Sep 2026); flows reversing from a high-beta (1.0), 39%-vol stock: +US$5bn/quarter inflow ~ +2% of value (mid-cap financials elasticity).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "MUTHOOTFIN",
+   "relation": "fx_translation",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Foreign-currency borrowings (ECB/USD bonds, ~10% of debt, model est.) are hedged; residual hedge cost rises with weak rupee; Sri Lanka sub translation immaterial. +3% USD/INR => -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MUTHOOTFIN.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Banks (SBI, large PSU/private), NCD/CP investors, mutual funds",
+   "ticker": "SBIN",
+   "role": "supplier",
+   "importance": "high",
+   "note": "fund the borrowings (~Rs1.5 lakh cr model est.)"
+  },
+  {
+   "counterparty": "Manappuram Finance",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "closest listed pure-play gold lender (not in Nifty 200)"
+  },
+  {
+   "counterparty": "Banks (HDFC Bank, SBI, ICICI) and L&T Finance, ABCAPITAL",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "banks hold the majority of gold loans; ABCAPITAL entered gold loans 2026-08-19; L&T Finance targeting >10% of book"
+  },
+  {
+   "counterparty": "Belstar Microfinance",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "MFI exposure adds unsecured-stress sensitivity"
+  },
+  {
+   "counterparty": "Muthoot Money Ltd",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "merged into MUTHOOTFIN; share capital cancelled 2026-08-31"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (date inferred from Q2 on 2026-10-31); key read: Stage III trend, NIM, AUM growth vs +42%",
+   "type": "results",
+   "prob": 0.92,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Muthoot+Finance+Q2+results+loan+assets+NIM+gross+stage+3+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Next RBI MPC (early December; exact date unverified): a second hike would raise funding cost; gold loans reprice faster than most books",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "RBI or industry action on gold-loan tenor/EMI structure and valuation practices following rising NPAs (scenario, no announced proposal found)",
+   "type": "regulatory",
+   "prob": 0.2,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": -2.0,
+   "source": "https://news.google.com/rss/search?q=gold+price+rally+October+2026+gold+loans+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Management transition: Alexander George as MD (appointed 2026-09-02) settles in; any strategy reset on growth vs asset quality",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Muthoot+Finance+appoints+Alexander+George+as+managing+director+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Gold price path (Dhanteras reset; Fed/US politics): a further -10% would raise collateral-stress headlines; +10% lifts AUM",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Gold+prices+fall+26%25+from+peak+Moneycontrol+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Strong growth, deteriorating asset quality: standalone PAT +27% y/y but screener net profit Rs2,977cr vs Rs3,086cr in Mar qtr; interest cost Rs3,365cr (+27% y/y); opex jumped to Rs1,459cr; Stage III 3.87%.",
+  "valuation": "P/E 10.2x, P/B 2.6x (price Rs2,845 / BV Rs1,047); 52w range Rs2,303-4,150; 12m -10.8%, 6m -20.6%, 1m +5.9%; 1y vol 39%.",
+  "recent_developments": [
+   "2026-08-07: Q1 standalone PAT Rs2,550cr (+25%) (Sahi)",
+   "2026-08-24: stock +up to 11% in 4 days as gold crossed Rs1.63 lakh/10g (ET)",
+   "2026-08-31: 300% dividend on record FY26 profit; Muthoot Money share capital cancelled after merger approval (scanx)",
+   "2026-09-02: Alexander George appointed MD (scanx)",
+   "2026-10-07: RBI repo hiked to 5.50%",
+   "2026-10-21: Reuters - non-bank lenders flag early stress in gold loans; stocks down up to 6% as gold hit one-week low",
+   "2026-10-31: Q2 results; 2026-11-02 stock rebounds ~9% from 52-week low; FIIs cut to 9.7% from 12.3%"
+  ]
+ },
+ "key_risks": [
+  "Gold price fall (22-26% below peak) hitting collateral cover on late-2025/early-2026 loans",
+  "Rising Stage III and short-tenure/EMI product stress",
+  "Further RBI tightening of gold-loan norms",
+  "Competition from banks and well-funded NBFCs compressing yields",
+  "Funding cost rise with repo hikes and wider spreads"
+ ],
+ "upside_triggers": [
+  "Gold stabilising/rising lifts AUM per gram",
+  "Stage III peaks and credit cost guidance holds",
+  "Yield resilience despite competition",
+  "FII re-entry at 10x earnings"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_GOLD_LOAN_COMPETITION",
+   "type": "FACTOR",
+   "name": "Gold-loan competitive intensity (bank/NBFC entry, yield compression)",
+   "ssu": "+1 = ~100bp industry gold-loan yield compression or ~3pp share shift to banks/new entrants"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/MUTHOOTFIN.md",
+   "date": "2026-11-05",
+   "what": "screener.in fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Muthoot+Finance+Q2+results+loan+assets+NIM+gross+stage+3+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-31",
+   "what": "Q2 FY27 headline numbers"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Muthoot+Finance+Belstar+Muthoot+Money+merger+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-02",
+   "what": "Stage III ratio, merger"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Muthoot+Finance+gold+loan+NPAs+MD+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-01",
+   "what": "MD on NPA drivers"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=gold+price+rally+October+2026+gold+loans+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "Reuters gold-loan stress"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=gold+loan+NBFC+competition+banks+Manappuram+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-04",
+   "what": "competition"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Gold+prices+fall+26%25+from+peak+Moneycontrol+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "gold vs peak"
+  }
+ ]
+}

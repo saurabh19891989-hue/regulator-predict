@@ -40,7 +40,7 @@
    "w_low": 0.8,
    "w_high": 5.0,
    "lag": "3-12m",
-   "mechanism": "AI Super Highway ($450m, targets up to 40% share of AI-network demand) and GPU/cloud (Vayu) benefit from AI data-centre interconnect demand. +10% AI capex growth => ~+3% growth in data-centre/interconnect-linked revenue (est. 10% of revenue) => +0.3% revenue at ~35% incremental margin => EBITDA +2%; x EV/MCap 1.23 x persistence 1.0 (structural) = +2.5. Low-medium confidence: capex ($450m ~Rs3.8k cr) is ~75% of annual EBITDA, so returns risk is real.",
+   "mechanism": "AI Super Highway ($450m, targets up to 40% share of AI-network demand) and GPU/cloud (Vayu) benefit from AI data-centre interconnect demand. AI/data-centre-linked connectivity and cloud ~10% of revenue (~Rs2.6k cr, estimate); +10% AI capex growth => +10% on that base = +Rs260 cr at ~45% incremental margin = +Rs117 cr = +2.3% EBITDA; x EV/MCap 1.23 x persistence 1.0 (structural) = +2.5. Low-medium confidence: capex ($450m ~Rs3.8k cr) is ~75% of annual EBITDA, so returns risk is real.",
    "confidence": "low",
    "evidence": [
     {

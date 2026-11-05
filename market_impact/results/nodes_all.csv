@@ -382,20 +382,52 @@ NEW_USDJPY,NEW,USD/JPY exchange rate,+3% USD/JPY (yen weaker),,,,FACTOR,global_m
 NEW_FX_RESERVES_IN,NEW,India FX reserves,+US$25bn reserves (RBI buys / net inflows),,,,FACTOR,india_macro.json
 NEW_EU_STEEL_ACCESS,NEW,EU import access for steel/aluminium (quota cut + CBAM),"+1 = materially tighter access (quota roughly halved, 50% out-of-quota tariff, carbon cost)",,,,POLICY,metals_china.json
 NEW_RARE_EARTH_SUPPLY,NEW,Rare-earth magnet / critical-mineral availability to Indian manufacturers,"+1 = materially tighter supply (licence delays, controls reimposed)",,,,FACTOR,metals_china.json
+NEW_CEMENT_PRICE_IN,NEW,Indian cement trade price (realisation),+Rs10/bag (~+2.5%),,,,FACTOR,AMBUJACEM
+NEW_NPPA_DRUG_PRICE_CONTROL,NEW,India NPPA/NLEM drug price control and trade-margin regulation,+1 = one tightening step (NLEM expansion or trade-margin cap),,,,POLICY,APOLLOHOSP
 NEW_CONSUMER_DURABLES_PRICE_WAR,NEW,Consumer durables category promotional / discount intensity,"+1 pp of industry-wide margin given up (discounts, channel incentives, ad spend) in room AC and appliances",,,,FACTOR,ASIANPAINT
+NEW_CGD_APM_ALLOCATION,NEW,CGD APM gas allocation,+1 = 10pp cut in APM gas allocation to CNG/PNG(D),,,,POLICY,ATGL
+NEW_2W_COMPETITIVE_INTENSITY,NEW,Competitive intensity in Indian two-wheelers/EV two-wheelers,+1 = price/share war episode,,,,FACTOR,BAJAJ-AUTO
 NEW_TELECOM_SHARE_COMPETITION,NEW,Jio/Airtel price and share competition vs Vi,+1 = intensification costing the incumbent ~1pp revenue share / 3% ARPU,,,,THEME,BHARTIARTL
 NEW_AGR_SPECTRUM_RELIEF,NEW,Government AGR/spectrum dues relief for stressed telcos,"+1 = further material relief worth ~Rs20,000 cr NPV",,,,POLICY,BHARTIARTL
 NEW_AUTO_SAFETY_EMISSION_NORMS,NEW,"Auto safety and emission norm tightening (ADAS/airbags, CAFE-III, BS-VII)",+1 = a material tightening step,,,,POLICY,BOSCHLTD
-NEW_RARE_EARTH_MAGNET_SUPPLY,NEW,China rare-earth magnet export availability,+1 = tightening of supply,,,,FACTOR,BOSCHLTD
-NEW_FSSAI_FOOD_REGULATION,NEW,FSSAI / packaged-food regulation intensity,+1 = materially stricter packaged-food labelling/HFSS/online-sale rules,,,,FACTOR,BRITANNIA
+NEW_FOOD_SAFETY_REG,NEW,FSSAI / packaged-food regulation intensity,+1 = materially stricter packaged-food labelling/HFSS/online-sale rules,,,,FACTOR,BRITANNIA
+NEW_NSE_BSE_OPTIONS_SHARE,NEW,BSE share of index-options premium turnover vs NSE,+5 pp BSE market share,,,,FACTOR,BSE
+NEW_SHIPBUILDING_POLICY,NEW,Shipbuilding & maritime policy support,"+1 = stronger support (financial assistance, ISRF, yard infrastructure funding)",,,,POLICY,COCHINSHIP
+NEW_ORAL_CARE_COMPETITION,NEW,"Oral-care competition intensity (HUL, Dabur, Patanjali, Himalaya)",+1 = materially sharper discounting/advertising by rivals in toothpaste,,,,FACTOR,COLPAL
+NEW_RAIL_FREIGHT_TARIFF,NEW,Indian Railways freight/haulage tariff changes,+1 = +5% haulage/terminal access charges,,,,POLICY,CONCOR
+NEW_CONTAINER_LOGISTICS_COMPETITION,NEW,Private container train operators and road competition,+1 = 2pp rail container market share loss for CONCOR,,,,THEME,CONCOR
 NEW_GENSET_PRICE_COMPETITION,NEW,Genset / engine price competition in India,+5 pp realised-price erosion in the domestic genset/engine market,,,,FACTOR,CUMMINSIND
-NEW_FOOD_SAFETY_REG,NEW,FSSAI food-safety / labelling enforcement intensity,"+1 = materially stricter enforcement on packaged-food claims, sampling and recalls",,,,POLICY,DABUR
+NEW_POWER_EQUIP_CAPACITY,NEW,Power/T&D equipment capacity additions vs demand (pricing pressure),+1 = peer capacity additions outpace demand enough to cut order pricing/margins ~100 bp,,,,FACTOR,ENRIN
 NEW_PNGRB_TARIFF,NEW,PNGRB gas pipeline tariff regulation,+1 = tariff cut / unified-tariff reduction of ~10%,,,,POLICY,GAIL
+NEW_AIRPORT_TARIFF_REGULATION,NEW,Airport tariff regulation outcomes (AERA),+1 = control-period order raising aero yield ~10%,,,,POLICY,GMRAIRPORT
+NEW_NCR_AIRPORT_COMPETITION,NEW,New NCR airport competing with Delhi,+1 = 5% of Delhi passengers diverted,,,,THEME,GMRAIRPORT
 NEW_TOBACCO_EXCISE,NEW,Cigarette excise / tobacco tax burden (India),+10% rise in the tax burden per cigarette stick,,,,POLICY,GODFRYPHLP
-NEW_OMC_COMPENSATION,NEW,Government compensation to OMCs for fuel/LPG under-recoveries,"+1 = Rs25,000 cr compensation to oil marketing companies",,,,POLICY,IOC
+NEW_BROKER_PRICING,NEW,Retail broking fee/pricing pressure,+1 = broad fee cut or free-trade move by a large rival or exchange,,,,FACTOR,GROWW
+NEW_DEFENCE_PRIVATE_COMPETITION,NEW,Private/foreign competition for large Indian military aircraft programmes,+1 = a major aircraft/helicopter programme awarded to a non-HAL player,,,,FACTOR,HAL
+NEW_SEBI_MF_FEE_REG,NEW,SEBI mutual fund fee / TER / brokerage regulation,-5bp on active-equity gross fee yield,,,,POLICY,HDFCAMC
+NEW_AMC_COMPETITION,NEW,"AMC competition intensity (passives, new entrants)",+1 = 0.5pp loss of active-equity AUM market share,,,,THEME,HDFCAMC
+NEW_OMC_COMPENSATION,NEW,Government compensation to OMCs for fuel/LPG under-recoveries,"+1 = Rs25,000 cr compensation to oil marketing companies",,,,POLICY,HINDPETRO
+NEW_PGM_PRICES,NEW,Platinum-group metal prices (Pt/Pd/Rh) for catalytic converters,+10% basket price,,,,FACTOR,HYUNDAI
+NEW_PV_SUV_COMPETITION,NEW,Intensity of new-model competition in India passenger vehicles,+1 = major new-model wave by rivals (about -1pp share for incumbent),,,,FACTOR,HYUNDAI
+NEW_NAT_CAT_LOSSES,NEW,Natural catastrophe insured losses (India floods/cyclones),+1 = major cat year adding ~2pp to industry combined ratio,,,,FACTOR,ICICIGI
+NEW_AIRFARE_REGULATION,NEW,Airfare caps / government fare intervention,+1 = binding fare caps in stress periods,,,,POLICY,INDIGO
+NEW_DOMESTIC_AIRLINE_CAPACITY,NEW,Domestic airline industry capacity additions by competitors,+1 = +5% industry capacity,,,,THEME,INDIGO
+NEW_AIRCRAFT_ENGINE_SUPPLY,NEW,Aircraft/engine supply disruption,+1 = further engine groundings/delivery delays,,,,THEME,INDIGO
+NEW_TOWER_TENANCY_EXITS,NEW,Net tenancy exits from towers (Jio/others),"+1 = 5,000 net tenancy exits",,,,THEME,INDUSTOWER
 NEW_RAIL_TICKET_FEE_POLICY,NEW,Railway convenience-fee / ticketing / catering policy,"+1 = tightening (cuts convenience fees, opens ticketing to agents, or changes catering contracts)",,,,POLICY,IRCTC
+NEW_CABLE_NEW_ENTRANT_PRICING,NEW,New-entrant pricing pressure in wires & cables,+1 = incumbent W&C gross margin -100 bp industry-wide,,,,THEME,KEI
 NEW_COPRA_COCONUT_OIL,NEW,Copra / coconut oil price,+15% copra price,,,,FACTOR,MARICO
+NEW_DEFENCE_SHIPYARD_COMPETITION,NEW,Competition among Indian shipyards for major naval programmes,+1 = a major naval programme awarded to a competing yard,,,,FACTOR,MAZDOCK
+NEW_COMMODITY_EXCHANGE_COMPETITION,NEW,Competition in commodity derivatives,+1 = credible entrant/launch capturing ~10% of bullion/energy options volume,,,,FACTOR,MCX
+NEW_US_AUTO_PARTS_TARIFFS,NEW,US tariffs on imported autos and auto parts (incl. Mexico/USMCA),+10pp average tariff,,,,POLICY,MOTHERSON
 NEW_BEAUTY_RETAIL_COMPETITION,NEW,"Beauty retail competition intensity (Tira, Sephora, Purplle, quick commerce)",+1 = materially sharper discounting/expansion by rival beauty retailers and q-commerce,,,,FACTOR,NYKAA
-NEW_NPPA_DRUG_PRICE_CONTROL,NEW,India NPPA/NLEM drug price control and trade-margin regulation,+1 = one tightening step (NLEM expansion or trade-margin cap),,,,POLICY,TORNTPHARM
+NEW_CRUDE_WINDFALL_TAX_IN,NEW,Windfall (SAED) tax on domestic crude,"+1 = SAED reimposed at ~Rs10,000/tonne",,,,POLICY,OIL
+NEW_EDIBLE_OIL_IMPORT_DUTY,NEW,India effective import duty on crude edible oils,+5 pp effective import duty on crude palm/soy/sunflower oil,,,,POLICY,PATANJALI
+NEW_AGROCHEM_PRICES_GLOBAL,NEW,Global agrochemical prices and channel destocking,+10% global agchem active prices / volumes,,,,FACTOR,PIIND
+NEW_WC_COMPETITIVE_INTENSITY,NEW,Competitive intensity in Indian wires & cables,+1 = new entrants/capacity cause ~100 bp sustained W&C margin erosion,,,,FACTOR,POLYCAB
+NEW_STATE_LIQUOR_POLICY,NEW,State excise / liquor pricing policy (key states),"+1 = adverse change in excise duty or pricing in UP, Rajasthan, Karnataka, Maharashtra",,,,POLICY,RADICO
+NEW_QCOMMERCE_COMPETITION,NEW,"Quick-commerce competitive intensity (Blinkit, Zepto, Flipkart Minutes, Amazon)",+1 = materially faster dark-store expansion/discounting by rivals,,,,FACTOR,SWIGGY
+NEW_ENTERPRISE_CONNECTIVITY_PRICING,NEW,Enterprise connectivity pricing pressure,+1 = 5% decline in MPLS/SD-WAN/IZO prices,,,,THEME,TATACOMM
+NEW_VALUE_FASHION_COMPETITION,NEW,Value-fashion and mass-retail competition intensity,"+1 = materially sharper expansion/discounting by Reliance Trends/Yousta, Max, Style Union, Myntra, V-Mart",,,,FACTOR,TRENT
 NEW_CSD_PRICE_COMPETITION,NEW,"Soft-drink price competition intensity (Coca-Cola, Campa, regional)",+1 = materially sharper discounting/ad spend in carbonated soft drinks,,,,FACTOR,VBL
 NEW_SUMMER_TEMPERATURE,NEW,Summer temperature vs normal,+1 = season ~1C hotter than normal in Mar-Jun,,,,FACTOR,VBL

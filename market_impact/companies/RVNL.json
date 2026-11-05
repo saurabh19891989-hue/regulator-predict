@@ -1,0 +1,281 @@
+{
+ "ticker": "RVNL",
+ "name": "Rail Vikas Nigam Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_RAILWAYS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Government of India railway PSU executing infrastructure for Ministry of Railways: doubling, new lines, electrification, metro, workshops, bridges, plus some transmission and sidings (SJVN Buxar siding Rs903 cr LoA, 7 Sep) and a freight-revenue concession. Thin-margin EPC: Q1 FY27 sales Rs4,321 cr, OP Rs185 cr, PAT Rs160 cr; FY26 PAT Rs871 cr (-32%). Stock Rs194, -40% in 12m, near 52-week low. Q2 FY27 not yet reported.",
+ "revenue_mix": [
+  {
+   "segment": "railway EPC (doubling, electrification, new lines)",
+   "share_pct": 80,
+   "geography": "India"
+  },
+  {
+   "segment": "metro, roads, power, other",
+   "share_pct": 20,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "Cement, copper, other materials",
+   "share_of_costs_pct": 18
+  },
+  {
+   "input": "Subcontracting (RVNL sub-lets most work)",
+   "share_of_costs_pct": 60
+  },
+  {
+   "input": "Other",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "RVNL",
+   "relation": "policy_effect",
+   "w": 6.0,
+   "w_low": 2.5,
+   "w_high": 11.0,
+   "lag": "3-12m",
+   "mechanism": "Railways/Ministry of Railways accounts for the large majority of RVNL's order book (company data not retrieved; model knowledge). +10% railway capex -> order inflow +8% -> revenue lags 2-3 yrs; margin ~4% (OP Rs185 cr on Rs4,321 cr, Jun 2026) so earnings are highly geared: +8% revenue at constant margin = +8% PAT; x1.1 EV/MCap x persistence 0.5... + order-flow rerating -> +6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RVNL/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "RVNL",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "General central/state capex beyond rail (metro, roads, power transmission, water); partially overlaps P_RAILWAY_CAPEX, so weight set below an independent estimate: +10% capex -> inflows +3% -> +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "overlap with railway capex acknowledged"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "RVNL",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Steel and cement are ~30% of project cost; RVNL's EPC contracts carry price-variation clauses for steel only partially (~60% covered) and the OPM is already ~4%: +7% steel -> costs +2.1% x 40% unrecovered = +0.8% of sales -> EBITDA -20% at 4% OPM; x1.1 x persistence 0.1 (fast fade, repriced bids) -> -2.2, shaded to -1.5. Empirical: none significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RVNL/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "RVNL",
+   "relation": "discount_rate",
+   "w": -2.2,
+   "w_low": -4.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Interest Rs98 cr/quarter on thin PBT (Rs160 cr PAT Q1 FY27) so +25bp = ~Rs12 cr/yr (-2% PBT); plus P/E 45 duration and high retail/beta (1.7). RBI hiked to 5.50% on 7 Oct 2026.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50% on 7 Oct 2026, stance 'calibrated tightening' (Reuters/The Hindu/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "RVNL",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Beta to market 1.7 (pack); a +5-point VIX rise historically corresponds to a ~4% market fall and PSU/small-cap beta. Pack empirical t < 1 though; moderate weight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RVNL/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "RVNL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Retail/domestic-institution-heavy railway PSU theme; +10% monthly SIP/DII inflow -> theme bid.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_INFRA_SPENDING_ROADS",
+   "dst": "RVNL",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Road/highway and metro work ~10% of order book (model estimate).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "RVNL",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Electrification and signalling cable; price variation covers most; minor. Empirical +0.86 (t +0.6) ignored.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/RVNL/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Ministry of Railways, Zonal Railways, Metro corporations",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "majority of order book; payment timing"
+  },
+  {
+   "counterparty": "Sub-contractors (GPT Infraprojects Rs484 cr Mahanadi bridge, etc.)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "RVNL sub-lets most scope"
+  },
+  {
+   "counterparty": "IRCON, IRFC, NBCC, Titagarh",
+   "ticker": "IRFC",
+   "role": "competitor",
+   "importance": "low",
+   "note": "sector peers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-12",
+   "event": "Q2 FY27 results (screener lists through Jun 2026; Q2 FY26 was mid-Nov; date estimated)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "New order wins (recent: Rs903 cr SJVN Buxar siding 7 Sep; Rs405 cr East Coast Railway 21 Sep)",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": 0.3,
+   "impact_pct_high": 2.5,
+   "source": "https://news.google.com/rss/search?q=RVNL+order+book+Q2+results+date+railway+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget railway capex allocation",
+   "type": "regulatory",
+   "prob": 0.99,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-06",
+   "event": "Government OFS / stake sale (govt holds ~73%, model knowledge)",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026); Q2 pending",
+  "trend": "Sales Rs4,321 cr (+11% y/y), OP Rs185 cr (4.3%), PAT Rs160 cr (+19%). FY26 sales Rs20,412 cr, PAT Rs871 cr (-32%); OPM fell from 6.2% (FY24) to 3.8%.",
+  "valuation": "P/E 44.9 on depressed TTM EPS, P/B 4.1; price Rs194 vs 52w range Rs178-401; 6m -37%.",
+  "recent_developments": [
+   "2026-10-28 Univest: shares +2.7% to Rs185.85",
+   "2026-10-22 fresh low",
+   "2026-09-21 Rs405 cr East Coast Railway contract (Sahi)",
+   "2026-09-07 Rs903 cr SJVN Thermal Buxar siding LoA (Moneycontrol)",
+   "2026-08-13 railway PSU stocks weak amid soft market (Upstox)"
+  ]
+ },
+ "key_risks": [
+  "Margins near 4% leave no buffer for cost inflation",
+  "Order inflow lumpy; execution/payment delays at Railways",
+  "Rising rates and PSU de-rating",
+  "Government OFS overhang",
+  "High beta to market"
+ ],
+ "upside_triggers": [
+  "Large order inflows",
+  "Budget raises railway capex",
+  "Margin recovery",
+  "Rate cuts"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/RVNL/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals through Jun 2026"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RVNL+order+book+Q2+results+date+railway+capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-21",
+   "what": "order headlines"
+  }
+ ]
+}

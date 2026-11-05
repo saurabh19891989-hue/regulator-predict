@@ -41,7 +41,7 @@
    "w_low": 3.0,
    "w_high": 13.0,
    "lag": "3-12m",
-   "mechanism": "Backlog Rs 32,222 cr is ~3x LTM-implied sales; HVDC, grid integration and transformers lead orders. +1 unit = +20% order intake -> +10% revenue at ~45% contribution margin on 16% EBITDA... incremental EBITDA +4.5% of revenue = +28% EBITDA; persistence 0.5; EV/MCap ~1.0 -> ~+14, haircut for already priced-in growth (P/E >100) -> +8.",
+   "mechanism": "Backlog Rs 32,222 cr is ~3x LTM-implied sales; HVDC, grid integration and transformers lead orders. +1 unit = +20% order intake -> ~+10% revenue over 12 months; incremental EBITDA ~45% of revenue on a 16% margin -> EBITDA +28%; persistence 0.5, EV/MCap ~1.0 -> ~+14, halved to +8 because growth is largely priced in (P/E likely >100).",
    "confidence": "medium",
    "evidence": [
     {

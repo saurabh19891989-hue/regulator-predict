@@ -1,0 +1,421 @@
+{
+ "ticker": "BHARATFORG",
+ "as_of": "2026-11-05",
+ "name": "Bharat Forge Ltd.",
+ "industry": "I_AUTO_COMPONENTS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Kalyani Group's global forgings and engineered-components company: crankshafts, axle beams, chassis parts for CVs/PVs, industrial (oil & gas, rail, power), aerospace and defence (KSSL: artillery, ammunition, armoured vehicles). Exports ~45% of revenue (US, Europe). Q1 FY27 (Jun 2026): sales Rs 4,640 cr (+19% y/y), OPM 15%, but a net loss of Rs 90 cr after a Rs 358 cr exceptional item (nature not retrieved). Raised Rs 2,000 cr via QIP at Rs 1,890 (2026-09-23); invested Rs 2,400 cr in KSSL (2026-10-16); signed a long-term Pratt & Whitney Canada deal (2026-10-05). Q2 FY27 results due 2026-11-05.",
+ "revenue_mix": [
+  {
+   "segment": "Automotive forgings and components (CV, PV, off-highway)",
+   "share_pct": 55,
+   "geography": "India ~35% / US ~30% / Europe ~20% / other"
+  },
+  {
+   "segment": "Industrial (oil & gas, rail, power)",
+   "share_pct": 20,
+   "geography": "Export-led"
+  },
+  {
+   "segment": "Defence and aerospace",
+   "share_pct": 15,
+   "geography": "India and exports"
+  },
+  {
+   "segment": "Other/subsidiaries",
+   "share_pct": 10,
+   "geography": "Global"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 40
+  },
+  {
+   "input": "Power and fuel (F_COAL_INDIA/gas)",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "Employee cost",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "Other manufacturing and bought-out",
+   "share_of_costs_pct": 42
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Tata Motors, Daimler Trucks, Volvo, Cummins, Caterpillar",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "CV/off-highway OEMs; no single customer disclosed >25% (model knowledge)"
+  },
+  {
+   "counterparty": "Pratt & Whitney Canada",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Long-term aerospace engine part deal (2026-10-05)"
+  },
+  {
+   "counterparty": "Kalyani Strategic Systems",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "Defence arm; Rs 2,400 cr investment (2026-10-16)"
+  },
+  {
+   "counterparty": "Steel mills (SAIL, Tata Steel, JSW)",
+   "ticker": "TATASTEEL",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Special-steel bars/billets"
+  },
+  {
+   "counterparty": "Sona BLW, Ramkrishna Forgings",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Domestic forging peers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-05",
+   "event": "Q2 FY27 results (post-loss quarter; watch OPM recovery and exceptional items)",
+   "type": "results",
+   "prob": 1.0,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Q2+Results+Nov+5+Bharti+Airtel+LIC+Titan+Mahindra+Bharat+Forge+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "India-US trade deal or additional US tariff on Indian goods",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Why+have+India-US+trade+talks+stalled+again+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Defence orders (artillery, ammunition) and KSSL ramp",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Bharat+Forge+invests+Rs+2%2C400+crore+in+Kalyani+Strategic+Systems+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28 (defence capex)",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs 4,640 cr, OPM 15%, net loss Rs 90 cr after Rs 358 cr exceptional item; Q2 FY27 due today",
+  "trend": "Revenue +18% TTM, margin slipping (18% to 15%), fund-raising and defence expansion; stock -17.9% in three months, below the QIP price of Rs 1,890",
+  "valuation": "P/E 89.2 on TTM earnings of Rs 716 cr, P/B 9.2, EV/EBITDA ~32x; dividend yield 0.5%",
+  "recent_developments": [
+   "2026-08-10: Q1 net loss, stock -8% to -9%; board approves raising up to Rs 2,500 cr",
+   "2026-09-23: Rs 2,000 cr QIP at Rs 1,890",
+   "2026-10-05: Pratt & Whitney Canada deal",
+   "2026-10-16: Rs 2,400 cr invested in KSSL",
+   "Promoter holding down to 43.12% (Sep-26) from 44.07%"
+  ]
+ },
+ "key_risks": [
+  "Q2 margin and exceptional-item recurrence",
+  "US tariffs on India-origin components",
+  "Global truck cycle and Europe weakness",
+  "ICE-to-EV shift",
+  "High valuation vs earnings",
+  "Defence order timing"
+ ],
+ "upside_triggers": [
+  "Clean Q2 with OPM >17%",
+  "Defence order wins",
+  "Aerospace ramp (P&W Canada)",
+  "US-India trade deal"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/BHARATFORG/consolidated/",
+   "date": "2026-11-05",
+   "what": "Screener fundamentals (evidence pack)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bharat+Forge+Q1+results+stock+falls+net+loss+exceptional+item+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-10",
+   "what": "Q1 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bharat+Forge+raises+Rs+2000+crore+via+its+QIP+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "QIP"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bharat+Forge+invests+Rs+2%2C400+crore+in+Kalyani+Strategic+Systems+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "KSSL investment"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bharat+Forge+signs+long-term+Pratt+Whitney+Canada+aerospace+deal+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-05",
+   "what": "Aerospace deal"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "BHARATFORG",
+   "relation": "input_cost",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Steel bars/billets ~40% of costs => 34% of revenue; +7% => 2.4% of revenue; pass-through formulas recover ~85% with a 1-3 month lag; 15% unrecovered => 0.36% of revenue => EBITDA -2.4% at 15-17% OPM; x1.05 x0.25 => -0.7.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "HRC +20.6% since June"
+    },
+    {
+     "source": "https://www.screener.in/company/BHARATFORG/consolidated/",
+     "date": "2026-11-05",
+     "note": "Q1 FY27 OPM 15% vs 17% prior"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "BHARATFORG",
+   "relation": "fx_translation",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Exports ~45% of revenue (USD/EUR) vs imports ~12%: net long ~33%; +3% => +1.0% of revenue; 80% flow-through => EBITDA +5.3% at 15% OPM; x1.05 x0.5 => +2.9, trimmed to +2.5 for hedging. Empirical F_USDCNY -5.80 (t=-2.8) shows the stock trades as a global-cycle name.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARATFORG.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDCNY -5.80, t -2.8"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "BHARATFORG",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "US ~30% of revenue (Class 8 trucks, industrial, aerospace). +1pp US growth with truck-cycle elasticity 4 => +1.2% revenue; incremental margin 40% vs 15% => EBITDA +3.2%; x1.05 x0.5 => +1.7-1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bharat+Forge+Q1+results+stock+falls+net+loss+exceptional+item+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "note": "CNBC TV18: Q1 revenue growth despite loss"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Regional mix estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "BHARATFORG",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "US exports of forgings/components face tariffs (plus steel-derivative duties); +10pp India-specific tariff largely absorbed partially: ~30% share of revenue x 40% absorbed x 10% tariff = 1.2% of revenue => EBITDA -8%; x1.05 x0.4 => -3.3. India-US trade talks stalled again (Reuters 2026-10-06).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Why+have+India-US+trade+talks+stalled+again+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-06",
+     "note": "Reuters"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "BHARATFORG",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Europe ~20% of revenue; +1pp growth with cyclical elasticity 3 => +0.6% revenue; incremental margin 30% => EBITDA +1.2%; x1.05 x0.8 => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Regional mix estimate"
+    }
+   ]
+  },
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "BHARATFORG",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": ">12m",
+   "mechanism": "Defence ~12% of revenue via Kalyani Strategic Systems (KSSL), Rs 2,400 cr invested on 2026-10-16. +10% domestic orders => +1.2% revenue at ~25% margin (EBITDA +2.0%) plus rerating; structural (1.0) x1.05 => +2.1 to +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bharat+Forge+invests+Rs+2%2C400+crore+in+Kalyani+Strategic+Systems+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "scanx.trade"
+    }
+   ]
+  },
+  {
+   "src": "T_DEFENCE_EXPORTS",
+   "dst": "BHARATFORG",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": ">12m",
+   "mechanism": "Artillery, ammunition and aero components for foreign militaries and OEMs (Pratt & Whitney Canada long-term deal, 2026-10-05); +1 => +1% revenue at above-average margin => EBITDA +2.5% x1.05 x0.75 => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bharat+Forge+signs+long-term+Pratt+Whitney+Canada+aerospace+deal+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Sahi"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "BHARATFORG",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "India auto/CV ~25% of revenue; +10% volumes => +2.5% revenue; incremental margin 35% => EBITDA +5.8%; x1.05 x0.5 => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BHARATFORG/consolidated/",
+     "date": "2026-11-05",
+     "note": "TTM sales growth +18%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "BHARATFORG",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "P/E 89 on depressed trailing earnings; EV/EBITDA ~32x; long duration; +25bp => ~-2.5% DCF.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BHARATFORG/consolidated/",
+     "date": "2026-11-05",
+     "note": "P/E 89.2; P/B 9.2"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "BHARATFORG",
+   "relation": "demand_driver",
+   "w": 0.5,
+   "w_low": -0.3,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Oil & gas forgings and US truck/industrial activity rise with oil; empirical +0.48 (t=0.8); offset by Indian fuel costs (~-0.3).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/BHARATFORG.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT +0.48, t 0.8"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "BHARATFORG",
+   "relation": "substitution",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 1.0,
+   "lag": ">12m",
+   "mechanism": "EV adoption lowers demand for ICE crankshafts/forgings (~35% of auto revenue); aerospace, rail, wind and defence offset. +1 => net -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Mix estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "BHARATFORG",
+   "relation": "discount_rate",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 15.2% and DIIs 33.0%; +US$5bn quarterly inflow => +1.5 (beta 1.3).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/BHARATFORG/consolidated/",
+     "date": "2026-11-05",
+     "note": "Shareholding table"
+    }
+   ]
+  }
+ ]
+}

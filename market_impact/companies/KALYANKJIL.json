@@ -1,0 +1,373 @@
+{
+ "name": "Kalyan Jewellers India Ltd.",
+ "industry": "I_JEWELLERY",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's second-largest listed jeweller by revenue (TTM ~Rs39,063cr): 500+ Kalyan showrooms (franchise-owned/company-owned), Middle East stores (~11% of revenue), Candere online/omnichannel studded brand (+64% in Q2 FY27), and Muhurat. EBITDA margin ~6-7% (gold-heavy, hedged). Q2 FY27: revenue +26%, India SSSG ~20% (from ~28% in Q1). Promoter holding 62.9%. Stock +34% in 6 months and +55% in 3 months to early Oct on share-gain narrative, then flat.",
+ "revenue_mix": [
+  {
+   "segment": "India jewellery",
+   "share_pct": 89,
+   "geography": "India (South ~60%, rest of India ~40%; approximate)"
+  },
+  {
+   "segment": "International (Middle East)",
+   "share_pct": 11,
+   "geography": "UAE, Qatar, Kuwait, Oman"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_GOLD",
+   "share_of_costs_pct": 90,
+   "note": "gold and diamonds; hedged, near-pass-through"
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 2
+  },
+  {
+   "input": "rent, advertising, others",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GOLD_DEMAND_IN",
+   "dst": "KALYANKJIL",
+   "relation": "demand_driver",
+   "w": 7.0,
+   "w_low": 3.5,
+   "w_high": 11.0,
+   "lag": "0-3m",
+   "mechanism": "Jewellery ~100% of revenue, EBITDA margin ~6.7% TTM (Rs2,616cr on Rs39,063cr). +10% volume => revenue +10% at ~10% incremental margin vs 6.7% average => EBITDA +15% x EV/MCap 1.1 x persistence 0.45 => ~+7. Q1 FY27 SSSG 28% and Q2 20% show the cycle; pack revenue Jun 2026 Rs10,589cr.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/kalyan-jewellers-reports-26-yoy-q2-fy27-revenue-growth-with-20-same-store-sales",
+     "date": "2026-10-07",
+     "note": "Q2 FY27 update: consolidated revenue +26%, India +27% with SSSG ~20% (Q1 ~28%), international +18% (~11% of revenue), Candere +64%"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "KALYANKJIL",
+   "relation": "output_price",
+   "w": 0.5,
+   "w_low": -2.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Franchise-heavy (FOCO) model; gold hedged via metal loans, but revenue is price-driven (+8% gold => +5% revenue after volume dip) and inventory gains lift margin transiently while volume elasticity cuts footfalls. Net ambiguous; stock +34% in 6m while gold -12% in 6m. Gold -8.4% since June, +3.4% 12m.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KALYANKJIL.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "P_GOLD_IMPORT_DUTY",
+   "dst": "KALYANKJIL",
+   "relation": "policy_effect",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "+5pp duty => domestic gold +4.7%, demand and smuggling shifts; Kalyan's lower-margin, high-volume model and heavier South/Middle East mix make it more sensitive than Titan: ~-2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "duty history; current level not re-verified"
+    }
+   ]
+  },
+  {
+   "src": "T_FORMALISATION",
+   "dst": "KALYANKJIL",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Kalyan is the share-gainer from unorganised jewellers (Jefferies: market-share gains; 55% stock rise in 3 months to early Oct). +1 => organised share +2pp => revenue +4% => EBITDA +6% x persistence 0.8 => ~+4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KALYANKJIL.md",
+     "date": "2026-10-09",
+     "note": "Jefferies India: market share gains support bull case; +46% upside (Business Standard/Livemint headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "KALYANKJIL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Tier 2-4 towns and rural South/North weddings are ~60% of stores; +5pp rural growth => revenue +2% => EBITDA +3% x 0.5 => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "store mix estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "KALYANKJIL",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "Metro stores ~35% of network; +5pp => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/kalyan-jewellers-reports-26-yoy-q2-fy27-revenue-growth-with-20-same-store-sales",
+     "date": "2026-10-07",
+     "note": "Q2 FY27 update: consolidated revenue +26%, India +27% with SSSG ~20% (Q1 ~28%), international +18% (~11% of revenue), Candere +64%"
+    }
+   ]
+  },
+  {
+   "src": "F_GULF_REMITTANCES",
+   "dst": "KALYANKJIL",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Gulf remittances fund gold buying in Kerala/TN and Indian-diaspora demand; international is ~11% of revenue (+18% in Q2). +10% remittances => +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/kalyan-jewellers-reports-26-yoy-q2-fy27-revenue-growth-with-20-same-store-sales",
+     "date": "2026-10-07",
+     "note": "Q2 FY27 update: consolidated revenue +26%, India +27% with SSSG ~20% (Q1 ~28%), international +18% (~11% of revenue), Candere +64%"
+    }
+   ]
+  },
+  {
+   "src": "C_GCC",
+   "dst": "KALYANKJIL",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Middle East stores (~11% of revenue; ME +12% SSSG-driven in Q2); +1pp GCC growth => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/kalyan-jewellers-reports-26-yoy-q2-fy27-revenue-growth-with-20-same-store-sales",
+     "date": "2026-10-07",
+     "note": "Q2 FY27 update: consolidated revenue +26%, India +27% with SSSG ~20% (Q1 ~28%), international +18% (~11% of revenue), Candere +64%"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "KALYANKJIL",
+   "relation": "geopolitical_exposure",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Escalation hits Gulf store traffic and expatriate remittances, partly offset by safe-haven gold demand; -1.0 direct (other channels flow via Brent/INR/gold).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KALYANKJIL.md",
+     "date": "2026-11-05",
+     "note": "~11% revenue international"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "KALYANKJIL",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Working-capital debt (interest Rs108cr in Jun-26 quarter; ~Rs430cr/yr = 16% of EBITDA): +25bp lifts interest ~Rs15cr (~0.6% of EBITDA) plus discount-rate effect at 39x P/E => ~-1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KALYANKJIL.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "KALYANKJIL",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "FII 13.8%, mid-cap beta 1.5, 48% vol; +$5bn flows => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KALYANKJIL.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "KALYANKJIL",
+   "relation": "input_cost",
+   "w": -0.1,
+   "w_low": -0.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "No fundamental link; pack shows -3.12 (t=-2.2) and gas -1.36 (t=-2.0), coal +3.91 which look like commodity-cycle co-movement. Weight kept near zero deliberately to avoid spurious attribution.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/KALYANKJIL.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Titan",
+   "ticker": "TITAN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "largest organised peer; Titan +17% vs Kalyan +13% in 12m to Oct-22"
+  },
+  {
+   "counterparty": "Malabar, Joyalukkas, Senco, PC Jeweller, local jewellers",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "not in Nifty 200"
+  },
+  {
+   "counterparty": "Gold-metal loan banks and bullion suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "hedging and working-capital funding"
+  },
+  {
+   "counterparty": "Franchisees (FOCO) and Middle East partners",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "franchise inventory financed by company"
+  },
+  {
+   "counterparty": "Kalyan family promoters (62.85%)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "promoter group"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (date not announced; Q2 FY26 was announced 10 Nov 2025 per filing; SEBI deadline 14 Nov). Watch EBITDA margin vs ~6-7% and working capital",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://www.multibagg.ai/market-pulse/articles/kalyan-jewellers-q2-fy27-deadline-cmuxjd03800022yqvy6ikf025"
+  },
+  {
+   "date": "2026-11",
+   "event": "Diwali/Dhanteras/wedding-season sell-through; Q3 is the strongest quarter",
+   "type": "other",
+   "prob": 0.9,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 7.0,
+   "source": "market_impact/data/packs/KALYANKJIL.md headlines"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 business update and Q3 results",
+   "type": "guidance",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge on cadence (Q2 update came 2026-10-07)"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget: gold import duty / hallmarking / TCS changes",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Latest financials in pack: Q1 FY27 (Jun 2026) revenue Rs10,589cr, OPM 6%, PAT Rs349cr (EPS 3.38). Q2 FY27 business update: consolidated revenue +26%, India +27%, India SSSG ~20% (28% in Q1), international +18%, Candere +64%. Q2 results pending.",
+  "trend": "Revenue growth has slowed from 38% (Q1) to 26% (Q2) with higher base; share-gain thesis keeps analysts positive (Jefferies Buy +46%/ bull +76%, UBS Buy); stock 6m +34.1%, 12m +5.5%, 3m -7.8% (pack).",
+  "valuation": "P/E 39, 8.9x book, ROE 24.8%; price Rs552, mcap Rs56,998cr (pack). 52-week range Rs327-649.",
+  "recent_developments": [
+   "2026-10-07 Q2 update; stock +2-6% (Business Standard/Upstox)",
+   "2026-10-09 Jefferies bullish: market share gains, stock +46-55% in 3 months",
+   "2026-10-01 jewellery stocks -5% on a gold spike day (NDTV Profit)",
+   "2026-11-04 jewellery stocks in focus as gold/silver rebound (Livemint)"
+  ]
+ },
+ "key_risks": [
+  "Gold price spike slowing volumes; gold crash hitting franchise inventory",
+  "Import duty/TCS changes",
+  "Lower SSSG as base rises",
+  "Working-capital and leverage; franchise accounting scrutiny",
+  "Competition from Titan, Malabar and local jewellers",
+  "Middle East disruption"
+ ],
+ "upside_triggers": [
+  "Organised share gains and store roll-out",
+  "Candere scale-up",
+  "Stable gold supporting wedding season",
+  "Margin improvement from studded mix"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/KALYANKJIL.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, price, betas, headlines"
+  },
+  {
+   "url": "https://www.sahi.com/news/kalyan-jewellers-reports-26-yoy-q2-fy27-revenue-growth-with-20-same-store-sales",
+   "date": "2026-10-07",
+   "what": "Q2 FY27 business update"
+  },
+  {
+   "url": "https://www.businesstoday.in/markets/stocks/story/kalyan-jewellers-share-price-in-focus-as-q2-revenue-jumps-26-store-additions-sssg-560007-2026-10-07",
+   "date": "2026-10-07",
+   "what": "Q2 revenue, store additions and SSSG"
+  }
+ ],
+ "ticker": "KALYANKJIL",
+ "as_of": "2026-11-05"
+}

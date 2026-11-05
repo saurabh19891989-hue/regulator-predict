@@ -1,0 +1,363 @@
+{
+ "ticker": "CIPLA",
+ "name": "Cipla Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PHARMA_US_GENERICS",
+ "tier": "NIFTY_50",
+ "business_summary": "Mumbai-based branded and generic pharma and API maker. Roughly 45% of sales is India (the 'One India' prescription, trade-generic and consumer-health franchise, strong in respiratory), ~30% US (respiratory inhalers such as generic Advair/Albuterol, gRevlimid, peptides such as lanreotide, complex generics), ~13% South Africa/Africa (SAGA), remainder emerging markets and Europe (mix from model knowledge, to be verified). Q2 FY27 sales Rs 7,404 cr (-2.4% YoY), EBITDA Rs 1,388 cr (18.7%), PAT Rs 852-878 cr (-35% YoY) as gRevlimid fades and costs rise; R&D Rs 423 cr. Net-cash, TTM sales Rs 28,139 cr, mcap Rs 1.13 lakh cr (P/E 36).",
+ "revenue_mix": [
+  {
+   "segment": "India (One India: Rx, trade generics, consumer health)",
+   "share_pct": 45,
+   "geography": "India; record Q2 per management, share = model knowledge"
+  },
+  {
+   "segment": "North America (inhalers, gRevlimid, peptides, complex generics)",
+   "share_pct": 30,
+   "geography": "US; FY27 target ~US$1 bn (BusinessLine 2026-10-27)"
+  },
+  {
+   "segment": "South Africa, Africa and emerging markets",
+   "share_pct": 18,
+   "geography": "SAGA ~13%, other EM ~5% (model knowledge)"
+  },
+  {
+   "segment": "Europe, API, others",
+   "share_pct": 7,
+   "geography": "Europe/global"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 18
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 5
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "CIPLA",
+   "relation": "competition",
+   "w": -3.5,
+   "w_low": -8.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "US ~30% of sales (~Rs 2,200 cr/qtr); generics base ex-gRevlimid/gAdvair is ~60% of US. +5pp price erosion on that base = -3% US sales = -0.9% group sales; at 18.7% OPM and ~100% drop-through = -4.8% EBITDA; EV/MCap 0.95, persistence 0.5 (erosion compounds for ~1-2 yrs) -> -2.3; plus faster gRevlimid/gAdvair competition risk (Q2 US sales weak, operating margin down from 25% to 19%) -> -3.5. No empirical series for this factor.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Q2 FY27 net profit -35% on US weakness; Reuters headline 'misses profit view on US weakness' (2026-10-27)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "CIPLA",
+   "relation": "regulatory_risk",
+   "w": -0.5,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "US imposed 100% tariff on branded/patented pharma from 2026-09-29 with India and 19 other jurisdictions exempted on speciality drugs; generics have been outside the Section 232 action so far (reports 2026-09-29, Business Standard/Firstpost). Cipla US sales are mostly generics made in India (~30% of sales). Probability of a generic tariff within 12m ~10%; if imposed, US margin hit ~50% absorbed -> EBITDA -12% -> equity -10%; +10pp SSU-scaled and probability-weighted -> -0.5 per +10pp. Empirical not significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "US exempts select Indian specialty drugs from 100% pharma tariff (Open Magazine, Firstpost, Business Standard 2026-09-29)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "CIPLA",
+   "relation": "regulatory_risk",
+   "w": -2.0,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Large US-supply sites (Goa, Indore, Patalganga) plus inhaler lines; management cited supply issues in Q2 yet retained US$1 bn target (BusinessLine 2026-10-27), implying exposure to supply/inspection slippage. One OAI/warning letter at a core site: ~15% of US revenue at risk for 6-12 months = -1.5% group sales -> EBITDA -8%, +multiple derating; prob 20%/yr x -12% equity + base-level noise -> -2.0 per 'stricter' unit. Also the Oct-2026 FDA cancellation of a wholesale licence of a Cipla entity (Indian Express 2026-10-02; this is a state FDA matter, detail unverified).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+FDA+cancels+wholesale+drug+license+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "Indian Express: FDA cancels wholesale drug sales licence of Cipla Pharma & Life Sciences (state regulator, impact unclear)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "CIPLA",
+   "relation": "fx_translation",
+   "w": 1.4,
+   "w_low": 0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "USD-linked revenue ~38% of sales (US 30% + other USD/EM 8%), imported inputs ~10% of sales -> net 28% x 3% = +0.84% of sales; at 17-19% OPM = +4.7% EBITDA; ~40% hedged near term -> +2.8%; EV/MCap 0.95, persistence 0.5 -> +1.3 (rounded +1.4 incl. ZAR/EM translation). Empirical +0.83 (t=0.8) same sign, lower; kept above empirical because of hedging uncertainty.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Cipla Q2 FY27: US sales in line, India record, margin compression (CNBC TV18 2026-10-27)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "CIPLA",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "India ~45% of sales and mostly chronic/acute branded Rx plus consumer health; Rx volume growth is weakly tied to discretionary spend. +5pp urban consumption growth lifts consumer health and acute segment by ~1.5pp of India sales = +0.7% group sales, ~50% drop-through at 40% gross incremental margin -> EBITDA +2.4%; EV/MCap 0.95, persistence 0.5 -> +1.1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+bets+on+US+respiratory+launches+Middle+East+tensions+add+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Moneycontrol 2026-10-27: Cipla leans on US respiratory launches and India momentum for H2; One India revenue at record"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "CIPLA",
+   "relation": "input_cost",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 1.8,
+   "lag": "3-12m",
+   "mechanism": "Cipla buys a share of APIs/intermediates from China (model knowledge ~15-20% of RM). +15% Chinese export price cuts lower API cost ~3% of RM = RM is ~30% of costs -> -0.9% costs ~ +4% EBITDA at 17% OPM if not competed away; ~50% retained, EV/MCap 0.95, persistence 0.3 -> +0.6; rounded +0.8. Sign uncertain because cheap APIs also intensify generic competition.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Margin 18.7% (Kalkine Media 2026-10-30) well below FY25 26%: input and mix costs matter"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "CIPLA",
+   "relation": "discount_rate",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Almost debt-free (interest Rs 17 cr/qtr); only a valuation-multiple channel: +25bp repo -> higher discount rate on a 36x P/E defensive; ~-0.6% via duration. Empirical not significant (US 10y +0.51 t=1.2, wrong direction for duration).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Interest Rs 17 cr per quarter against EBITDA Rs 1,388 cr (screener.in Sep 2026)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "CIPLA",
+   "relation": "geopolitical_exposure",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Management flagged Middle East tensions adding cost (Moneycontrol 2026-10-27): freight, packaging, solvent costs, and Gulf/Africa shipping lanes (SAGA/EM ~18% of sales). Escalation unit: freight and chemicals +10% on ~8% of costs = +0.8% cost -> EBITDA -4%; persistence 0.25, EV/MCap 0.95 -> -1.0. Brent has +15% in 3m but empirical Brent sensitivity is positive (+0.44, t=1.1), i.e. not a negative market signal.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+bets+on+US+respiratory+launches+Middle+East+tensions+add+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Moneycontrol: 'Middle East tensions add cost...' in Cipla Q2 commentary"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "CIPLA",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "India prescription market grows ~8-9% nominal regardless; +1pp real GDP adds ~0.3pp to India pharma volumes; 45% of sales x 0.3% = +0.14% sales, ~+0.7% EBITDA, persistence 1.0 on structural trend share -> +0.5; rounded +0.8 to include multiple effect.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+bets+on+US+respiratory+launches+Middle+East+tensions+add+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Record One India revenue in Q2 FY27 (TradingView 2026-10-27)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "CIPLA",
+   "relation": "discount_rate",
+   "w": 0.6,
+   "w_low": 0.0,
+   "w_high": 1.4,
+   "lag": "0-3m",
+   "mechanism": "FIIs hold 20.2% (down from 22.6% in Mar 2026) while DIIs rose to 34.6%; stock beta 0.65. +US$5bn FPI quarterly inflow lifts large-caps ~3% -> beta-scaled and defensive tilt gives +0.6 extra.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Cipla+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Shareholding Sep 2026: FII 20.24%, DII 34.61% (screener.in)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "US wholesaler/pharmacy buying groups (McKesson, Cardinal, Cencora)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "set generic pricing; model knowledge"
+  },
+  {
+   "counterparty": "Chinese API/intermediate suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "cost and supply security"
+  },
+  {
+   "counterparty": "Dr Reddy's, Sun, Lupin, Zydus, Teva (US inhalers/gRevlimid competitors)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "generic share and price"
+  },
+  {
+   "counterparty": "Cipla Health / Cipla Medpro (South Africa) subsidiaries",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "SAGA ~13% of sales, ZAR exposure"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-30",
+   "event": "Q2 FY27 fully priced; next catalyst: monthly IQVIA India secondary data and US launch updates (lanreotide, inhaler approvals)",
+   "type": "guidance",
+   "prob": 0.7,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=Cipla+bets+on+US+respiratory+launches+Middle+East+tensions+add+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01-28",
+   "event": "Q3 FY27 results: gRevlimid cliff, US respiratory launches, margin vs guided 23-24% EBITDA (target unverified)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Cipla+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "USFDA outcomes on key plants and complex-generic approvals (gAdvair/inhaler launches)",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Cipla+US+revenue+1+billion+supply+issues+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Possible US generic tariff / Section 232 expansion decision",
+   "type": "regulatory",
+   "prob": 0.1,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": -5.0,
+   "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11-04",
+   "event": "New Global Chief Technical Operations Officer appointed (Vikram Janakiraman)",
+   "type": "corporate_action",
+   "prob": 1.0,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 0.5,
+   "source": "https://news.google.com/rss/search?q=Cipla+appoints+Vikram+Janakiraman+Global+Chief+Technical+Operating+Officer+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 7,404 cr (-2.4% YoY), EBITDA Rs 1,388 cr (18.7%, vs 25% a year ago), PAT Rs 852 cr per screener (press: Rs 878 cr, -35%); R&D Rs 423 cr.",
+  "trend": "Margins fell from 26% (FY25) to 15% (Mar 2026 qtr) and have since recovered to 17-19%; TTM EBITDA Rs 4,790 cr vs Rs 7,128 cr peak, TTM PAT Rs 2,854 cr. India record; US fading as gRevlimid declines.",
+  "valuation": "Rs 1,397; P/E 36 on depressed TTM EPS Rs 35.9 (FY25 EPS Rs 65); mcap Rs 1.13 lakh cr; Nomura Buy Rs 1,510 TP (2026-10-26).",
+  "recent_developments": [
+   "2026-11-04 Vikram Janakiraman appointed Global Chief Technical Operating Officer (scanx)",
+   "2026-10-27 Q2 FY27 profit -35%; stock -1.9%; keeps US$1 bn US target despite supply issues (BusinessLine)",
+   "2026-10-27 management flags Middle East tensions adding costs; H2 growth to come from US respiratory launches and India (Moneycontrol)",
+   "2026-10-02 state FDA cancels wholesale licence of a Cipla entity (Indian Express; relevance unclear)",
+   "2026-09-29 US 100% branded-pharma tariff exempts India's speciality drugs; generics unaffected (Business Standard)"
+  ]
+ },
+ "key_risks": [
+  "gRevlimid cliff and generic price erosion in US",
+  "USFDA action at key sites",
+  "US generic tariff extension",
+  "India NPPA/price-control expansion after SC remarks on MRP margins (2026-10)",
+  "Rupee appreciation (USD/INR -1.9% in 1m)"
+ ],
+ "upside_triggers": [
+  "Successful gAdvair / lanreotide / peptide launches ramp H2",
+  "Margin recovery to ~22%+",
+  "Rupee weakness",
+  "India chronic share gains"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/CIPLA.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack and price sensitivities"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Cipla+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "Q2 FY27 result coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Cipla+US+revenue+1+billion+supply+issues+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "US$1bn US revenue target retained"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Cipla+bets+on+US+respiratory+launches+Middle+East+tensions+add+cost+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "Middle East cost, H2 drivers"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "US pharma tariff and India exemption"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Cipla+FDA+cancels+wholesale+drug+license+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-02",
+   "what": "Wholesale licence cancellation"
+  }
+ ]
+}

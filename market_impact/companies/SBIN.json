@@ -1,0 +1,472 @@
+{
+ "industry": "I_PSU_BANKS",
+ "business_summary": "India's largest bank (assets ~Rs70 lakh cr, ~23% of system deposits and ~1 in 4 of new credit; model estimate): ~Rs45 lakh cr loans (retail, SME, corporate), CASA ~39-40%, 22,000+ branches, YONO digital app, and listed/unlisted subsidiaries including SBI Life (~55%) and SBI Cards (~69%). Government of India owns 55.45% (Sep 2026). Q2 FY27 PAT Rs23,038cr (+14% YoY, screener); stock Rs1,000 = P/E 11.7, P/B ~1.5, ROE 16%, down 7.8% in 3 months despite a strong print, after a data-breach disclosure and NIM/one-off concerns (Moneycontrol, 2026-11-04).",
+ "revenue_mix": [
+  {
+   "segment": "net interest income (retail, SME, corporate lending)",
+   "share_pct": 75,
+   "geography": "India ~93% / overseas ~7% (model estimate)"
+  },
+  {
+   "segment": "fees, treasury and other income",
+   "share_pct": 20,
+   "geography": "India"
+  },
+  {
+   "segment": "subsidiary dividends/other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 63
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 14
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "SBIN",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp credit growth (loan book ~Rs45 lakh cr, model estimate) -> NII +~2.5% at flat margin, plus fee/operating leverage => PAT +3%; persistence 0.6 over the year (P/B 1.5x, ROE 16%) => +1.8, rounded +2. Guidance 14-15% FY27 (Q1 call via search; 'retains 15%' per Q2 headlines) against Q1 growth 18.6% flagged as base-effect.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SBI+Q2+results+profit+Rs+23,038+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "SBI Q2 FY27 PAT Rs23,038cr (+14% YoY), bank retains ~15% credit growth outlook (NewsDrum/Livemint headlines); shares fell ~5% on the day (Investing.com)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "SBIN",
+   "relation": "funding_cost",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp deposit growth/funding ease: SBI deposit growth target 10-11% lags 14-15% credit growth (SBI Q1 commentary via search), so the gap is funded by CD/borrowings or slower loans. Easier funding cuts marginal cost ~10bp on incremental deposits (NIM +2-3bp) and lets credit growth reach guidance: PAT +1.5% x persistence 0.8 => ~+1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "SBIN",
+   "relation": "demand_driver",
+   "w": -6.0,
+   "w_low": -10.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost on ~Rs45 lakh cr advances = Rs22k cr pre-tax = Rs16.5k cr post-tax vs TTM PAT Rs84.9k cr => PAT -19%; cycle persistence 0.3 (cost normalises within 4-6 quarters), P/B-based equity moves less than earnings => ~-6. GNPA is 1.47% / NNPA 0.38% (Q1 FY27), so starting buffer is strong; shock is a tail scenario.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://sbi.bank.in/documents/17836/1275616/07082026_SBI+Analyst+Presentation+Q1FY27.pdf",
+     "date": "2026-08-07",
+     "note": "SBI Q1 FY27 analyst presentation: domestic NIM 3.00%, GNPA 1.47%, NNPA 0.38% (via web search summary; Q2 deck not retrieved)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "SBIN",
+   "relation": "demand_driver",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "+1pp delinquencies on unsecured book (personal/Xpress credit ~Rs3 lakh cr, model estimate) => ~Rs3k cr extra provisions pre-tax = ~Rs2.3k cr post-tax = -2.7% PAT, plus subsidiary SBI Cards (68% owned, see company_links) => persistence 0.5 => ~-1.2. SBI Cards credit cost has just fallen to 5.6% from 6.5% (pack headlines), so stress is easing now.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SBIN",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": -1.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "+25bp repo: ~40-45% of loans are EBLR/RLLR-linked and reprice at once while term deposits reprice over 6-12 months => NIM +4-6bp for 2-3 quarters (~Rs3k cr pre-tax => +2.5% PAT) offset by weaker credit demand and AFS MTM (handled under G-sec) => net +0.8, range wide because RBI stance changed to 'calibrated tightening' on 2026-10-07 and later hikes can slow growth.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "SBIN",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "+25bp 10y yield: AFS/FVTPL book ~Rs5 lakh cr x modified duration ~2.5 x 25bp = ~Rs3k cr MTM loss pre-tax = ~Rs2.3k cr post-tax = -2.7% of annual PAT; one-off so persistence ~0.5 => -1.4; cushion from investment fluctuation reserve not counted. Pack shows US 10y -0.53/SSU (t -1.2): consistent sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "SBIN",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 tightening step (higher risk weights, ECL provisioning norms, LCR run-off on digital deposits): ~50bp CET1 hit or ~Rs8-10k cr extra provisions => PAT -3 to -5% x persistence 0.6 => ~-2.5. As the largest PSU bank SBI also carries data/cyber supervisory exposure after the Oct 2026 breach.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SBI+data+breach+cybersecurity+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "SBI confirmed exposure of ~3,900 customer records on the dark web; appointed cybersecurity agency (Reuters/The Hindu/Indian Express)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "SBIN",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "+US$5bn/qtr FPI inflow: SBI is a top-5 Nifty weight, FIIs hold 11.07% (Sep 2026), beta ~0.9 to Nifty (pack). Index-level flows of this size move Nifty ~3-4%; large-cap PSU banks capture ~1.0-1.2x => +4. Not a fundamental channel; decays if flows reverse.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "SBIN",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP => nominal credit demand +1.5pp, lower slippages => PAT +3.5% x persistence 0.7 => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "SBIN",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr surplus liquidity: eases call-money/CD cost and speeds policy transmission to deposits; SBI is the largest holder of system liquidity so benefit is modest: NIM +1bp => +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "SBIN",
+   "relation": "macro_transmission",
+   "w": -1.2,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI -> RBI stays hawkish (already 'calibrated tightening'), real incomes and unsecured repayment capacity fall, bond yields +10-15bp => -1.2 combined; no direct empirical test in pack.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "SBIN",
+   "relation": "macro_transmission",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points -> FPI de-risking from India large-cap financials; bank beta ~0.9 to Nifty with Nifty sensitivity ~-1.5 per 5 VIX points (model).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "SBIN",
+   "relation": "macro_transmission",
+   "w": -0.3,
+   "w_low": -1.2,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "+10% Brent -> CPI +0.2-0.3pp and fiscal pressure -> yields up; direct exposure via oil-company credit is small. Pack elasticity -0.26 per SSU (t -0.7) agrees in sign but is not significant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "SBIN",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "+3% USD/INR: foreign branches (~Rs8-10 lakh cr assets, model estimate) translate higher but equity value falls with FPI outflows and imported-inflation/hike risk: net -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "SBILIFE",
+   "dst": "SBIN",
+   "relation": "holding_stake",
+   "w": 0.1,
+   "w_low": 0.06,
+   "w_high": 0.12,
+   "lag": "0-3m",
+   "mechanism": "w = % change in SBIN equity per +1% in SBILIFE equity. SBIN holds ~55.5% (model) of SBI Life, mcap ~Rs1.74 lakh cr (price 1,735 x ~100 cr shares) => stake ~Rs96k cr = ~10% of SBIN mcap Rs9.2 lakh cr; holding-company discount applies.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBILIFE.md",
+     "date": "2026-11-05",
+     "note": "price 1735.4; stake ownership from model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "SBICARD",
+   "dst": "SBIN",
+   "relation": "holding_stake",
+   "w": 0.04,
+   "w_low": 0.02,
+   "w_high": 0.05,
+   "lag": "0-3m",
+   "mechanism": "w = % change in SBIN equity per +1% in SBICARD equity. SBIN holds ~68-69% (model) of SBI Cards, mcap ~Rs55k cr (price 580.6) => stake ~Rs38k cr = ~4% of SBIN mcap.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBICARD.md",
+     "date": "2026-11-05",
+     "note": "price 580.6; stake from model knowledge"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "55.45% promoter holding; capital, dividend and policy-lending direction"
+  },
+  {
+   "counterparty": "SBI Life Insurance",
+   "ticker": "SBILIFE",
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "~55% stake, bancassurance partner"
+  },
+  {
+   "counterparty": "SBI Cards",
+   "ticker": "SBICARD",
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "~69% stake; co-brand and customer base"
+  },
+  {
+   "counterparty": "HDFC Bank / ICICI Bank / Axis Bank",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "private peers; debit card share SBI 25% (Aug 2026, ET BFSI 2026-09-28)"
+  },
+  {
+   "counterparty": "Reliance Industries",
+   "ticker": "RELIANCE",
+   "role": "customer",
+   "importance": "low",
+   "note": "SBI bought nearly 40% of Reliance's $1.35bn debt sale (Reuters, 2026-09-30)"
+  },
+  {
+   "counterparty": "CareEdge Global IFSC",
+   "ticker": null,
+   "role": "other",
+   "importance": "low",
+   "note": "SBI to acquire 19.8% stake (Business Standard, 2026-10-19)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12-04",
+   "event": "RBI MPC December review (date approximate, model knowledge): hold vs second hike after Oct 'calibrated tightening' shift",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-07",
+   "event": "Q3 FY27 results (date approximate, SBI typically reports first/second week of Feb)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "Outcome of cybersecurity assessment / possible regulatory action after the ~3,900-record data breach (DPDP Act or RBI supervisory comment)",
+   "type": "regulatory",
+   "prob": 0.2,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=SBI+data+breach+cybersecurity+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28: PSU bank capital/divestment and tax measures",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-11",
+   "event": "Completion of 19.8% stake purchase in CareEdge Global IFSC",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 0.3,
+   "source": "https://news.google.com/rss/search?q=CareEdge+Global+IFSC+State+Bank+of+India+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs23,038cr (+14% YoY, +9% QoQ); revenue Rs1.32 lakh cr; TTM PAT Rs84.9k cr; Q1 FY27 domestic NIM 3.00%, GNPA 1.47%, NNPA 0.38% (Q2 deck not retrieved)",
+  "valuation": "P/E 11.7, P/B 1.54, dividend yield 1.76%; 52w range 934-1,235; brokers (Emkay target Rs1,350) bullish",
+  "recent_developments": [
+   "2026-10-07 RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters)",
+   "2026-10-19 SBI to buy 19.8% of CareEdge Global IFSC (Business Standard)",
+   "2026-10-21 SBI confirmed customer-data exposure (~3,900 records) on dark web (Reuters, Hindu)",
+   "2026-09-30 SBI took ~40% of Reliance $1.35bn debt sale (Reuters)",
+   "2026-11-03 Q2 results: profit +14%, credit growth outlook retained; stock fell ~5% on the day on one-offs and margin worries, brokerages kept Buy (Moneycontrol, BusinessLine 2026-11-04)"
+  ]
+ },
+ "key_risks": [
+  "Margin compression if rate hikes lift deposit costs faster than EBLR repricing",
+  "Cyber/data-protection fallout from the October breach",
+  "Asset-quality turn in unsecured and MSME segments",
+  "G-sec MTM losses if yields rise further",
+  "PSU-specific: government directives, wage settlement, capital needs for 14-15% growth"
+ ],
+ "upside_triggers": [
+  "Deposit-growth pickup closing the credit-deposit gap",
+  "NIM above 3% as EBLR loans reprice after the hike",
+  "Subsidiary value unlock (SBI Life, SBI Cards, SBI AMC listing)",
+  "Credit cost staying below 0.5%"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=SBI+Q2+results+profit+Rs+23,038+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Q2 FY27 results headlines (news RSS; articles not retrieved in full)"
+  },
+  {
+   "url": "https://sbi.bank.in/documents/17836/1275616/07082026_SBI+Analyst+Presentation+Q1FY27.pdf",
+   "date": "2026-08-07",
+   "what": "Q1 FY27 analyst presentation (NIM/GNPA) via search summary"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI repo hike to 5.50%"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=SBI+data+breach+cybersecurity+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "data breach coverage"
+  },
+  {
+   "url": "market_impact/data/packs/SBIN.md",
+   "date": "2026-11-05",
+   "what": "screener fundamentals, price, empirical sensitivities, headlines"
+  }
+ ],
+ "ticker": "SBIN",
+ "name": "State Bank of India",
+ "as_of": "2026-11-05",
+ "tier": "NIFTY_50"
+}

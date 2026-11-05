@@ -12,7 +12,7 @@ Jewellery is ~85% of revenue (Tanishq, Mia, Zoya, CaratLane), then watches, eyec
 
 ## Transmission examples
 - **Middle East escalation -> gold up as haven (1st) and Brent up (1st) -> INR weaker, domestic gold higher still (2nd) -> jewellery volumes down 3-5% and customers trade to lighter/studded pieces (3rd) -> Titan's revenue per customer up but footfalls soft; Damas Gulf stores also see disruption (4th).**
-- **Gold falls (-8.4% since June) -> pre-bought customers delay? No: lower price revives volume demand (+) but inventory revaluation turns less favourable; hedging keeps EBITDA margin near 10%, so net is mildly positive on volume and mixed on optics.**
+- **Gold falls (-8.4% since June) -> lower ticket prices revive volume demand (+) while hedging keeps EBITDA margin near 10%; net mildly positive on volume, mixed on inventory-gain optics.**
 - **Government raises gold import duty (Budget) -> domestic gold +5% -> demand dips and grey market grows -> organised players with hedges recover share in 2-3 quarters (4th).**
 - **Brent up -> INR down -> RBI holds -> G-sec yield up -> discount-rate hit on a 73x P/E; FPI outflows compound it.**
 

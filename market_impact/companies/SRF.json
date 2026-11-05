@@ -1,0 +1,333 @@
+{
+ "ticker": "SRF",
+ "name": "SRF Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CHEMICALS_SPECIALTY",
+ "tier": "MIDCAP_100",
+ "business_summary": "Diversified chemicals-and-materials group: Chemicals (fluorospecialty, refrigerant gases, agrochem/pharma intermediates; the profit engine), Packaging Films (BOPET/BOPP), Technical Textiles (nylon tyre cord, belting fabrics) and others (laminated fabrics; Rs600 cr aluminium foil plant in MP announced 21 Oct). Q2 FY27: sales Rs4,904 cr, EBITDA Rs946 cr (19.3%), PAT Rs509 cr (+31% y/y). TTM sales Rs18,265 cr, PAT Rs2,283 cr. Mcap Rs73,570 cr, P/E 31.",
+ "revenue_mix": [
+  {
+   "segment": "Chemicals (fluorospecialty, refrigerants, others)",
+   "share_pct": 42,
+   "geography": "export ~50% of segment (model estimate)"
+  },
+  {
+   "segment": "Packaging films",
+   "share_pct": 30,
+   "geography": "India + export"
+  },
+  {
+   "segment": "Technical textiles",
+   "share_pct": 16,
+   "geography": "India + export"
+  },
+  {
+   "segment": "Others",
+   "share_pct": 12,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 30
+  },
+  {
+   "input": "F_BRENT",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "Power & fuel",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "Employee & other",
+   "share_of_costs_pct": 33
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "SRF",
+   "relation": "fx_translation",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Exports ~35-40% of sales (fluorospecialty, agrochem intermediates, films; model knowledge), USD-linked inputs ~15% -> net long ~22% of sales; +3% -> +0.66% of sales -> EBITDA +3.4% at 19.3% OPM (946/4,904); 50% hedged -> +1.7; x EV/MCap 1.08 x persistence 0.5... ~+1; adds translation on overseas units -> +2.0. Empirical +1.79 (t +1.4) agrees.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/SRF/consolidated/",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "SRF",
+   "relation": "input_cost",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Chloroform, fluorspar/HF, acetone, specialty feed ~30% of costs; +10% -> costs +3% = +2.4% of sales (costs ~80% of sales) -> EBITDA -12.4% at 19.3% OPM; ~60% passed through in 3-6m -> -5%; x1.08 x0.3... -1.6 -> -1.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SRF+Q2+margin+chemicals+packaging+films+refrigerant+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Q2: PAT +31% to Rs509 cr, EBIT +26%, margin at eight-quarter low; miss driven by chemicals and non-fluoro businesses; Rs600 cr aluminium foil plant in MP; shares hit 52-wk low, Jefferies/MS/UBS cautious (NDTV Profit/BusinessLine/Zee)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "SRF",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "PTA/MEG for polyester films, nylon-6 chips and caprolactam for tyre cord are crude-derived: ~25% of costs in films and technical textiles (~45% of sales); +10% Brent -> feed +5% -> costs +1.1% of sales -> EBITDA -5.7%; 60% passed on -> -2.3 x1.08 x0.5... -1.2. No significant empirical Brent beta.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "cost shares are model estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_PETROCHEM_SPREADS",
+   "dst": "SRF",
+   "relation": "output_price",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "BOPET/BOPP film realisation spreads over PET/PP feed; +10% spreads on films ~25% of sales -> sales +2.5% x flow-through 80% = +2.0% of sales -> EBITDA +10% x1.08 x0.3 -> +3.2; shaded for oversupply from China/Vietnam.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "NEW_REFRIGERANT_PRICES",
+   "dst": "SRF",
+   "relation": "output_price",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "SSU +10% global HFC/HFO refrigerant gas prices (quota-driven). Refrigerants ~15% of sales with 40% margins; +10% price -> +1.5% of sales -> EBITDA +7.8% x1.08 x0.5 -> +4.2; shaded.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "SRF",
+   "relation": "competition",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Chinese pricing in agchem intermediates, PET film and refrigerants; +15% -> chemicals and films EBITDA -6% -> -2.5% equity. Q2 miss was in chemicals/non-fluoro (NDTV Profit headline).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=SRF+Q2+margin+chemicals+packaging+films+refrigerant+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-22",
+     "note": "Q2: PAT +31% to Rs509 cr, EBIT +26%, margin at eight-quarter low; miss driven by chemicals and non-fluoro businesses; Rs600 cr aluminium foil plant in MP; shares hit 52-wk low, Jefferies/MS/UBS cautious (NDTV Profit/BusinessLine/Zee)"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "SRF",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Fluorospecialty/agchem contract awards by innovators moving supply to India; supports chemicals growth and capex returns.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "thesis is model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "SRF",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Nylon tyre cord (technical textiles ~15% of sales) follows tyre OEM/replacement volumes; +10% -> segment +8% -> +1.2% sales -> +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SRF",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Net debt ~Rs6-7k cr (estimate; interest Rs267 cr TTM) from heavy capex; +25bp -> Rs15 cr = -0.7% PBT; P/E 31 duration -1.2 incl. RBI hike on 7 Oct.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+October+2026+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50% on 7 Oct 2026, stance 'calibrated tightening' (Reuters/The Hindu/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "SRF",
+   "relation": "policy_effect",
+   "w": 1.2,
+   "w_low": 0.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Anti-dumping on PET film, nylon tyre cord fabric, R32/refrigerants protects realisations; +1 SSU -> +1% sales on 25% of portfolio -> +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-06",
+     "note": "estimate"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Agrochem and pharma innovators; refrigerant OEMs",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "fluorochemical contracts"
+  },
+  {
+   "counterparty": "Tyre makers (MRF, Apollo etc.)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "tyre cord"
+  },
+  {
+   "counterparty": "Chinese fluorochemical and film producers",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "pricing benchmark"
+  },
+  {
+   "counterparty": "Navin Fluorine, Gujarat Fluorochemicals",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "fluorochemicals"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (estimate; Q2 was on 21 Oct)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=SRF+Q2+margin+chemicals+packaging+films+refrigerant+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Aluminium foil plant (Rs600 cr, MP) and chemical capex commissioning milestones",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=SRF+Q2+margin+chemicals+packaging+films+refrigerant+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Refrigerant (HFC) quota/price changes under Kigali schedule",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Jul-Sep 2026), reported 21 Oct 2026",
+  "trend": "Sales +35% y/y to Rs4,904 cr; EBITDA +22% (Rs946 cr vs 774); OPM 19.3% vs 21.3% y/y and 24.6% in Q1; PAT +31%. TTM sales Rs18,265 cr.",
+  "valuation": "P/E 31, P/B 4.8; stock -15.6% 12m, near 52w low Rs2,177 low vs 3,143 high.",
+  "recent_developments": [
+   "2026-10-22 shares hit 52-week low, 5th day of slide; Jefferies, Morgan Stanley, UBS cautious (Zee, Business Standard)",
+   "2026-10-21 Q2: PAT +31% to Rs509 cr, margin at eight-quarter low (NDTV Profit); Rs600 cr foil plant (BusinessLine)",
+   "2026-10-23 Livemint: persistent pain point hampers confidence in earnings outlook",
+   "2026-09-17 HSBC sees 33% upside (CNBC TV18)"
+  ]
+ },
+ "key_risks": [
+  "Chemicals margin compression and non-fluoro weakness",
+  "Chinese pricing in films and refrigerants",
+  "Capex returns and rising net debt",
+  "Feedstock cost spikes with limited pass-through"
+ ],
+ "upside_triggers": [
+  "Refrigerant price/quota gains",
+  "Fluorospecialty contract wins",
+  "Film spread recovery",
+  "Weaker rupee"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_REFRIGERANT_PRICES",
+   "type": "FACTOR",
+   "name": "Global refrigerant gas prices",
+   "ssu": "+10% HFC/HFO refrigerant prices"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/SRF/consolidated/",
+   "date": "2026-11-05",
+   "what": "fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=SRF+Q2+margin+chemicals+packaging+films+refrigerant+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "Q2 headlines (bodies not retrieved)"
+  }
+ ]
+}
