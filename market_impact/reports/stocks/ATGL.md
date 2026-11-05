@@ -30,7 +30,7 @@ Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows,
 | Middle East conflict intensity (`C_MIDEAST_CONFLICT`) | +1 = escalation | -3.43 | -1.50 | -1.06 | -0.65 | -0.23 | — |
 | GST rate cuts on consumer goods/services (`P_GST_CONSUMPTION`) | +1 = broad cut (~2-5 pp on affected items) | +1.73 | +0.00 | +0.98 | +0.69 | +0.05 | — |
 | RBI repo rate (`F_REPO_IN`) | +25 bp repo | -1.62 | -1.50 | -0.04 | -0.05 | -0.04 | — |
-| Global natural gas / LNG price (`F_GAS_GLOBAL`) | +15% gas/LNG price | -1.60 | -1.60 | +0.00 | +0.00 | +0.00 | -7.0% |
+| Global natural gas / LNG price (`F_GAS_GLOBAL`) | +15% gas/LNG price | -1.60 | -1.60 | +0.00 | +0.00 | +0.00 | +69.2% |
 | Foreign portfolio flows into Indian equities (`F_FPI_FLOWS`) | +US$5 bn net inflow per quarter | +1.60 | +1.50 | +0.07 | +0.01 | +0.01 | — |
 | Brent crude oil price (`F_BRENT`) | +10% Brent | -1.46 | -0.80 | -0.49 | -0.15 | -0.02 | +0.0% |
 | USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.21 | -0.80 | -0.31 | -0.08 | -0.02 | -1.1% |

@@ -28,7 +28,7 @@ Market-priced macro drivers (rates, FX, commodities, indices, volatility, flows,
 |---|---|---|---|---|---|---|---|
 | PNGRB gas pipeline tariff regulation (`NEW_PNGRB_TARIFF`) | +1 = tariff cut / unified-tariff reduction of ~10% | -3.00 | -3.00 | +0.00 | +0.00 | +0.00 | — |
 | India real GDP growth (`F_GDP_IN`) | +1 pp | +1.45 | +1.50 | -0.03 | -0.00 | -0.02 | — |
-| Global natural gas / LNG price (`F_GAS_GLOBAL`) | +15% gas/LNG price | -1.42 | -1.50 | +0.00 | +0.08 | +0.00 | -7.0% |
+| Global natural gas / LNG price (`F_GAS_GLOBAL`) | +15% gas/LNG price | -1.42 | -1.50 | +0.00 | +0.08 | +0.00 | +69.2% |
 | USD/INR exchange rate (`F_USDINR`) | +3% USD/INR (rupee weaker) | -1.21 | -1.20 | +0.03 | -0.04 | -0.01 | -1.1% |
 | Petrochemical / polymer spreads (`F_PETROCHEM_SPREADS`) | +10% polymer-naphtha spreads | +1.10 | +1.10 | +0.00 | +0.00 | +0.00 | — |
 | Private corporate capex (`F_PRIVATE_CAPEX`) | +10% capex growth | +0.95 | +0.00 | +0.96 | -0.02 | +0.01 | — |

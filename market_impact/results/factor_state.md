@@ -10,7 +10,6 @@
 | F_DXY | US dollar index | 101.399 | -0.4 | +1.4 | +3.2 | +1.2 | +2.2 |
 | F_EDIBLE_OIL | Palm / edible oil price | 1203.0 | -7.7 | +4.0 | +2.2 | +7.4 | +1.9 |
 | F_FED_FUNDS | US Fed funds rate | 4.025 | -0.3 | +7.9 | +11.9 | +6.3 | +11.2 |
-| F_GAS_GLOBAL | Global natural gas / LNG price | 2.956 | -5.1 | +12.0 | +6.8 | -30.2 | -7.0 |
 | F_GOLD | Gold price | 4128.2998 | -1.4 | -4.0 | -12.4 | +3.4 | -8.4 |
 | F_IRON_ORE | Iron ore price | 91.95 | +0.8 | -3.5 | -17.1 | -12.2 | -12.5 |
 | F_REFINING_MARGIN | Refining margins (GRM / cracks) | 4.2006 | -8.1 | +8.2 | +10.1 | +72.7 | +15.4 |
@@ -26,5 +25,7 @@
 | MKT_INDIAVIX | MKT_INDIAVIX | 15.3225 | +12.6 | +26.0 | -7.8 | +21.1 | -7.4 |
 | MKT_NIFTY100 | MKT_NIFTY100 | 25432.8496 | +6.5 | -1.3 | +0.4 | -3.2 | +4.3 |
 | MKT_NIFTY50 | MKT_NIFTY50 | 24461.4492 | +7.4 | -0.7 | +0.6 | -4.4 | +4.6 |
+| F_GAS_GLOBAL_HENRYHUB | F_GAS_GLOBAL_HENRYHUB | 2.956 | -5.1 | +12.0 | +6.8 | -30.2 | -7.0 |
+| F_GAS_GLOBAL | Global natural gas / LNG price | 31.615 | +22.2 | +49.6 | +87.7 | +183.3 | +69.2 |
 
 Note: yields (US 10Y, ^IRX) and VIX changes are % changes of the level, not bp/points.
