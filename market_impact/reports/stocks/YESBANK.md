@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -6.9%**, **12 months -10.8%** (rank 197 / 195 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +32.3%): 3 months 34%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -32.1% … P90 +1.4%; plausible 12m relative-return range incl. stock-specific noise: -63.8% … +26.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -10.7% beta-adjusted vs realised market-adjusted move -35.3%); forward event exposure -18.5% (3m -10.3%; half assumed priced); company-specific events -0.8%
+- Expected relative return: **3 months -5.5%**, **12 months -7.9%** (rank 197 / 192 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +32.3%): 3 months 37%, 12 months 20%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -20.0% … P90 +0.7%; plausible 12m relative-return range incl. stock-specific noise: -74.4% … +10.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -10.7% beta-adjusted vs realised market-adjusted move -35.3%); forward event exposure -12.9% (3m -7.6%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,45 +29,45 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -24.0% | -24.0% | +0.0 | -4.9 | -10.8 | -8.3 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -12.2% | -12.2% | +0.0 | -6.1 | -5.5 | -0.5 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -8.3% | -8.3% | -6.6 | -0.4 | -0.4 | -0.9 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -8.0% | -8.0% | -6.6 | -0.4 | -0.3 | -0.7 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -6.2% | -6.2% | -5.6 | -0.3 | -0.2 | -0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -6.2% | -6.2% | +0.0 | -1.7 | -2.8 | -1.6 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -15.2% | -5.4% | +0.0 | -3.9 | -6.3 | -5.0 |
-| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.62 | -8.6% | -5.3% | -9.0 | +0.3 | +0.1 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -5.0% | -5.0% | -4.2 | -0.8 | +0.0 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +8.5% | +4.9% | +0.0 | +2.1 | +3.6 | +2.8 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -4.7% | -4.7% | +0.0 | -3.4 | -0.6 | -0.7 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +9.4% | +4.7% | +7.5 | +0.4 | +0.5 | +1.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -3.9% | -3.9% | +0.0 | -3.1 | -0.3 | -0.6 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +7.3% | +4.0% | +0.0 | +1.8 | +3.1 | +2.5 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -3.4% | -3.4% | +0.0 | -2.0 | -0.8 | -0.5 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -13.2% | -3.3% | +0.0 | -3.4 | -5.5 | -4.4 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +4.8% | +3.2% | +0.0 | +1.4 | +2.9 | +0.5 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -3.0% | -3.0% | +0.0 | +0.0 | -1.6 | -1.3 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -15.9% | -2.9% | -14.2 | -1.4 | -0.1 | -0.3 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → YESBANK | +7.50% | +3.75% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → YESBANK | -5.00% | -3.10% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → YESBANK | -3.00% | -1.80% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → YESBANK | -4.48% | -1.25% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → YESBANK | -2.00% | -1.24% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → YESBANK | -2.00% | -1.24% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → YESBANK | -3.00% | -1.20% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → YESBANK | -1.50% | -1.35% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → YESBANK | -3.00% | -1.26% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → YESBANK | -2.40% | -1.20% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → YESBANK | +1.15% | +1.04% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → YESBANK | -5.60% | -1.01% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → YESBANK | -4.50% | -0.99% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → YESBANK | -1.50% | -0.90% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → YESBANK | -3.46% | -0.86% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → YESBANK | -3.00% | -0.81% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → YESBANK | -2.88% | -0.81% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → YESBANK | -4.50% | -0.81% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_ASSET_QUALITY_IN → YESBANK | +0.86% | +0.78% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → YESBANK | +1.07% | +0.73% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → YESBANK | -2.88% | -0.72% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → YESBANK | -2.88% | -0.72% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → YESBANK | -1.20% | -0.72% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → YESBANK | +1.70 | events | -5.10% |
 | 1 | F_FPI_FLOWS → YESBANK | -1.60 | events | -4.80% |
+| 1 | F_GSEC_10Y_IN → YESBANK | +1.55 | director_override | -4.65% |
 | 1 | F_REPO_IN → YESBANK | +1.00 | events | -3.00% |
 | 1 | F_GDP_IN → YESBANK | +0.50 | events | +2.00% |
 | 1 | F_LIQUIDITY_IN → YESBANK | -0.90 | events | -1.80% |
@@ -78,6 +78,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → YESBANK | -0.25 | events | -0.40% |
 | 2 | F_REPO_IN → F_ASSET_QUALITY_IN → YESBANK | +1.00 | events | -0.40% |
 | 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → YESBANK | -1.56 | events | -0.37% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Yes Bank decision on further legal remedy (review/curative petition) on AT1 ruling; provisioning decision for Rs 8.4k cr write-off reversal | litigation | 0.50 | +0.0% | +0.00% |
+| 2027-01 | Q3 FY27 results: first booking (or not) of AT1 liability, NIM post-hike | results | 0.95 | -2.0% | -1.90% |
+| 2027-06 | SMBC raises stake / capital infusion (Reuters 2026-10-14 lists large cross-border financial deals; SMBC reportedly priced in adverse AT1 verdict, Moneycontrol 2026-10-22) | corporate_action | 0.15 | +7.5% | +1.12% |
 
 ## Analyst profile (agent research, sourced)
 # YESBANK - Yes Bank Ltd. (Midcap 100, private banks)

@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.0%**, **12 months +2.8%** (rank 98 / 56 of 200 for 3m / 12m); beta 1.35
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.6%): 3 months 50%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +11.1%; plausible 12m relative-return range incl. stock-specific noise: -14.5% … +45.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +7.2% beta-adjusted vs realised market-adjusted move +8.0%); forward event exposure +8.8% (3m +2.4%; half assumed priced); company-specific events -0.9%
+- Expected relative return: **3 months +0.3%**, **12 months +2.1%** (rank 85 / 51 of 200 for 3m / 12m); beta 1.35
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.6%): 3 months 51%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.5% … P90 +5.4%; plausible 12m relative-return range incl. stock-specific noise: -14.1% … +46.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +7.6% beta-adjusted vs realised market-adjusted move +8.0%); forward event exposure +7.2% (3m +2.9%; half assumed priced); company-specific events -0.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,36 +29,36 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -10.8% | -10.8% | -8.6 | -1.0 | -0.8 | -0.4 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +4.4% | +4.4% | +4.8 | -0.3 | -0.1 | -0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -2.7% | -2.7% | +0.0 | -2.2 | -0.4 | -0.1 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -2.6% | -2.6% | -2.5 | +0.0 | -0.0 | +0.0 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.8% | +2.5% | +2.4 | +0.4 | +0.1 | -0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | +0.0 | -1.5 | -0.6 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.8% | +2.2% | +3.0 | +0.3 | +0.3 | +0.2 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -5.9% | -2.1% | -4.7 | -0.5 | -0.4 | -0.3 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.2 | -0.5 | -0.4 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -2.0% | -2.0% | -2.0 | +0.0 | -0.0 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.4% | +1.9% | +2.8 | +0.3 | +0.2 | +0.1 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +1.8% | +1.8% | +1.8 | +0.0 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.2 | -0.0 | -0.3 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.3% | -1.3% | -4.3 | -0.5 | -0.4 | -0.2 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.2% | +1.2% | +0.0 | +0.9 | +0.1 | +0.2 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.5% | +1.0% | +0.0 | +0.9 | +0.6 | -0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -0.9% | -0.9% | -0.8 | -0.1 | +0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ASHOKLEY | +2.40% | +2.16% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ASHOKLEY | -3.75% | -1.34% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ASHOKLEY | +2.25% | +1.31% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ASHOKLEY | +1.80% | +0.81% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → ASHOKLEY | +1.95% | +1.07% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ASHOKLEY | -3.30% | -0.83% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → ASHOKLEY | +0.93% | +0.63% |
 | 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → ASHOKLEY | -5.25% | -0.63% |
-| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → ASHOKLEY | -9.00% | -0.56% |
 | 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → ASHOKLEY | +0.70% | +0.56% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ASHOKLEY | -1.20% | -0.48% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ASHOKLEY | +1.80% | +0.54% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ASHOKLEY | -1.20% | -0.50% |
 | 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_GDP_IN → ASHOKLEY | +0.67% | +0.47% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ASHOKLEY | +0.80% | +0.46% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → ASHOKLEY | +0.50% | +0.45% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ASHOKLEY | +0.80% | +0.44% |
 | 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ASHOKLEY | +0.72% | +0.43% |
+| 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_GDP_IN → ASHOKLEY | +0.47% | +0.40% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → ASHOKLEY | -0.72% | -0.40% |
 | 2 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → F_GDP_IN → ASHOKLEY | +0.67% | +0.37% |
 
@@ -67,17 +67,24 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_GOVT_CAPEX → ASHOKLEY | +1.00 | events | +3.00% |
-| 1 | F_STEEL_INDIA → ASHOKLEY | +1.65 | events | -2.97% |
+| 1 | F_STEEL_INDIA → ASHOKLEY | +1.35 | events | -2.43% |
 | 1 | F_ALUMINIUM → ASHOKLEY | -1.96 | observed | +1.77% |
 | 1 | F_GDP_IN → ASHOKLEY | +0.50 | events | +1.75% |
-| 1 | C_MIDEAST_CONFLICT → ASHOKLEY | +1.50 | events | -1.20% |
 | 1 | F_REPO_IN → ASHOKLEY | +1.00 | events | -1.20% |
+| 1 | C_MIDEAST_CONFLICT → ASHOKLEY | +1.00 | events | -0.80% |
 | 1 | P_EV_POLICY → ASHOKLEY | +1.10 | events | +0.66% |
 | 1 | F_USDINR → ASHOKLEY | -0.37 | observed | -0.11% |
 | 2 | F_GDP_IN → F_ASSET_QUALITY_IN → ASHOKLEY | +0.50 | events | +0.06% |
 | 2 | F_CHINA_GDP → F_RUBBER → ASHOKLEY | +0.30 | events | -0.05% |
 | 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → ASHOKLEY | -0.25 | events | -0.03% |
 | 2 | F_REPO_IN → F_ASSET_QUALITY_IN → ASHOKLEY | +1.00 | events | -0.03% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Q2 FY27 results (Sep quarter; expected mid-Nov) | results | 0.95 | +0.0% | +0.00% |
+| 2026-12-01 | November 2026 sales release (strong-volume trend; Oct +23%, Sep +28%) | other | 0.98 | +0.0% | +0.00% |
+| 2027-02 | Q3 FY27 results; commentary on FY27 peak-cycle ('output to peak in FY2027 before two-year dip', Automotive World 2026-09-30) | results | 0.90 | -1.0% | -0.90% |
 
 ## Analyst profile (agent research, sourced)
 # ASHOKLEY - Ashok Leyland (Capital Goods / commercial vehicles)

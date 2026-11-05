@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.4%**, **12 months -1.8%** (rank 140 / 128 of 200 for 3m / 12m); beta 0.89
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +13.2%): 3 months 42%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.8% … P90 +0.8%; plausible 12m relative-return range incl. stock-specific noise: -28.7% … +19.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.3 pp (model impact -0.6% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure -0.7% (3m -1.1%; half assumed priced); company-specific events +0.1%
+- Expected relative return: **3 months -0.9%**, **12 months -1.5%** (rank 132 / 128 of 200 for 3m / 12m); beta 0.89
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +13.2%): 3 months 45%, 12 months 10%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.0% … P90 +0.6%; plausible 12m relative-return range incl. stock-specific noise: -12.5% … +0.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.1 pp (model impact -0.1% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure -0.9% (3m -0.4%; half assumed priced); company-specific events +0.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,55 +29,64 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -11.5% | -11.5% | -7.2 | -2.8 | -1.1 | -0.4 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.4% | -3.4% | +0.0 | -2.8 | -0.3 | -0.3 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +4.5% | +2.6% | +3.0 | +0.9 | +0.4 | +0.2 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -6.9% | -2.5% | -4.3 | -1.6 | -0.7 | -0.3 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +4.1% | +2.2% | +2.8 | +0.8 | +0.3 | +0.2 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.9% | -1.9% | -1.5 | -0.3 | -0.0 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -6.3% | -1.6% | -4.0 | -1.4 | -0.6 | -0.3 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.0 | -0.0 | -0.0 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.3% | +1.3% | +0.0 | +0.5 | +0.5 | +0.2 |
-| Hormuz effectively closed for >2 weeks (Brent > $150) (`EV_HORMUZ_FULL_CLOSURE`) | risk_scenario | 0.06 | -16.0% | -1.0% | -9.8 | -3.8 | -1.7 | -0.8 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.4 | -0.4 | -0.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.5 | -0.2 | -0.2 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.3 | +0.1 | -0.6 |
-| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -3.5% | -0.8% | -2.8 | -0.6 | -0.1 | +0.0 |
-| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -1.9% | -0.8% | -1.5 | -0.3 | -0.0 | -0.0 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.9% | -0.8% | -1.5 | -0.3 | -0.0 | -0.0 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.0 | -0.6 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.4 | -0.2 | -0.2 |
+| Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -2.9% | -0.7% | +0.0 | -2.4 | -0.3 | -0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → PIDILITIND | -2.50% | -0.89% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → PIDILITIND | +1.50% | +0.87% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → PIDILITIND | +1.50% | +0.87% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → PIDILITIND | -1.80% | -0.64% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PIDILITIND | -1.50% | -0.60% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → PIDILITIND | +1.50% | +0.83% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → PIDILITIND | +1.30% | +0.72% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → PIDILITIND | -1.50% | -0.63% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → PIDILITIND | -2.20% | -0.55% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → PIDILITIND | -1.80% | -0.45% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → PIDILITIND | -1.73% | -0.43% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → PIDILITIND | -1.50% | -0.41% |
-| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → PIDILITIND | -6.00% | -0.38% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIDILITIND | -1.02% | -0.36% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → PIDILITIND | -0.60% | -0.36% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIDILITIND | +0.61% | +0.36% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → PIDILITIND | -1.50% | -0.33% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PIDILITIND | -1.30% | -0.29% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIDILITIND | +0.53% | +0.29% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → PIDILITIND | -1.50% | -0.27% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → PIDILITIND | +0.36% | +0.25% |
 | 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → PIDILITIND | -0.38% | -0.25% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PIDILITIND | -1.30% | -0.23% |
+| 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_REPO_IN → PIDILITIND | -0.26% | -0.23% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → PIDILITIND | +0.46% | +0.23% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | C_MIDEAST_CONFLICT → PIDILITIND | +1.50 | events | -2.25% |
+| 1 | C_MIDEAST_CONFLICT → PIDILITIND | +1.00 | events | -1.50% |
 | 1 | F_REPO_IN → PIDILITIND | +1.00 | events | -1.50% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → PIDILITIND | +1.70 | events | -0.61% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → PIDILITIND | +1.55 | director_override | -0.56% |
 | 1 | F_URBAN_DEMAND → PIDILITIND | +0.20 | events | +0.50% |
 | 1 | F_USDINR → PIDILITIND | -0.37 | observed | +0.37% |
 | 1 | F_RURAL_DEMAND → PIDILITIND | -0.25 | events | -0.30% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → PIDILITIND | +0.50 | events | +0.18% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → PIDILITIND | +1.00 | events | -0.16% |
 | 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → PIDILITIND | +1.00 | events | -0.12% |
-| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → PIDILITIND | +1.65 | events | -0.10% |
 | 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → PIDILITIND | +0.40 | events | -0.10% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → PIDILITIND | +1.35 | events | -0.08% |
 | 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → PIDILITIND | -0.47 | observed | -0.07% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-10-09 | CFO transition: Amit Agarwal appointed CFO-designate | other | 1.00 | +0.0% | +0.00% |
+| 2026-12 | Further selective price cuts / rebates as VAM and other raw materials ease | other | 0.50 | +0.8% | +0.38% |
+| 2027-02 | Q3 FY27 results (Dec quarter): first test of price hikes and easing VAM on gross margin | results | 0.95 | +0.5% | +0.47% |
+| 2027-02 | Brent sustained above $100 (MD's flagged risk) | other | 0.15 | -5.0% | -0.75% |
+| 2027-02 | Interim/final dividend and ESOP grants (1.44 lakh shares, 29 Oct) | corporate_action | 0.50 | +0.1% | +0.05% |
 
 ## Analyst profile (agent research, sourced)
 # PIDILITIND — Pidilite Industries (Nifty Next 50, as of 2026-11-05)

@@ -2,10 +2,10 @@
 *NIFTY_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.5%**, **12 months +0.8%** (rank 120 / 87 of 200 for 3m / 12m); beta 1.31
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +31.1%): 3 months 49%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.1% … P90 +3.9%; plausible 12m relative-return range incl. stock-specific noise: -41.7% … +41.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.8 pp (model impact +1.5% beta-adjusted vs realised market-adjusted move -12.0%); forward event exposure -0.1% (3m +0.0%; half assumed priced); company-specific events +2.5%
+- Expected relative return: **3 months -0.4%**, **12 months +1.1%** (rank 116 / 75 of 200 for 3m / 12m); beta 1.31
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +31.1%): 3 months 49%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.9% … P90 +4.0%; plausible 12m relative-return range incl. stock-specific noise: -30.8% … +24.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.1 pp (model impact +2.2% beta-adjusted vs realised market-adjusted move -12.0%); forward event exposure -0.4% (3m -0.2%; half assumed priced); company-specific events +2.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -10.2% | -10.2% | -5.2 | -2.1 | -1.2 | -1.7 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.2% | -5.2% | -4.4 | -0.5 | -0.0 | -0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.0% | -5.0% | -4.4 | -0.4 | -0.0 | -0.2 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -4.0% | -4.0% | -4.0 | +0.0 | +0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.8% | -3.8% | +0.0 | -1.4 | -2.2 | -0.2 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.9% | +2.9% | +5.0 | +0.6 | +0.0 | +0.2 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +5.0% | +2.9% | +2.4 | +1.4 | +0.5 | +0.6 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -8.0% | -2.9% | -3.3 | -2.3 | -1.2 | -1.2 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -8.8% | -2.5% | +0.0 | -7.1 | -1.4 | -0.3 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.5 | -0.4 | -0.0 |
-| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -7.9% | -1.7% | -7.2 | -0.6 | -0.1 | -0.1 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -9.5% | -1.7% | +0.0 | -7.5 | -1.4 | -0.5 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +4.5% | +2.5% | +2.3 | +1.3 | +0.4 | +0.5 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -2.2% | -2.2% | -1.5 | -0.5 | -0.1 | -0.1 |
+| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | +2.2% | +2.2% | +2.1 | +0.0 | +0.0 | +0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -7.3% | -1.8% | -3.1 | -2.0 | -1.1 | -1.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.7% | -1.7% | +0.0 | -5.6 | -1.0 | -0.1 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +1.6% | +1.6% | +1.5 | +0.1 | -0.0 | +0.0 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.4 | +0.0 | -0.0 | -0.1 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -7.9% | -1.4% | -7.2 | -0.6 | -0.1 | -0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -50,27 +50,27 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_GOLD → ADANIENT | +3.80% | +1.14% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIENT | -2.00% | -1.00% |
 | 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_GOLD → ADANIENT | -2.00% | -0.90% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ADANIENT | +1.50% | +0.87% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ADANIENT | +0.96% | +0.86% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIENT | -2.99% | -0.84% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ADANIENT | +1.50% | +0.83% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ADANIENT | -1.25% | -0.75% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIENT | -3.73% | -0.67% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ADANIENT | -3.00% | -0.66% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → ADANIENT | -1.80% | -0.64% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → ADANIENT | -0.60% | -0.57% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → ADANIENT | -2.50% | -0.55% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIENT | -1.92% | -0.54% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → ADANIENT | -1.50% | -0.54% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ADANIENT | -3.00% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIENT | -1.92% | -0.48% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIENT | -1.92% | -0.48% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIENT | -1.87% | -0.47% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → ADANIENT | -0.50% | -0.45% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → ADANIENT | -1.80% | -0.45% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → ADANIENT | -0.75% | -0.45% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → ADANIENT | +1.70 | events | -4.25% |
+| 1 | F_GSEC_10Y_IN → ADANIENT | +1.55 | director_override | -3.88% |
 | 1 | F_FPI_FLOWS → ADANIENT | -1.60 | events | -3.20% |
-| 1 | C_MIDEAST_CONFLICT → ADANIENT | +1.50 | events | -2.25% |
 | 1 | P_RENEWABLE_SUPPORT → ADANIENT | +1.50 | events | +2.25% |
 | 1 | F_GOLD → ADANIENT | -1.05 | observed | +2.10% |
+| 1 | C_MIDEAST_CONFLICT → ADANIENT | +1.00 | events | -1.50% |
 | 1 | F_GOVT_CAPEX → ADANIENT | +1.00 | events | +1.20% |
 | 1 | F_CREDIT_SPREADS_IN → ADANIENT | +0.50 | events | -0.75% |
 | 1 | F_COAL_INTL → ADANIENT | +0.70 | director_override | +0.70% |
@@ -78,6 +78,16 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_URBAN_DEMAND → F_TRAVEL_DEMAND → ADANIENT | +0.20 | events | +0.38% |
 | 1 | F_USDINR → ADANIENT | -0.37 | observed | +0.37% |
 | 1 | P_ANTI_DUMPING_IN → ADANIENT | +0.40 | events | +0.32% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Group-level legal/regulatory headline risk (US probes reportedly settled; OFAC settlement Rs2,644 cr booked in Q1 FY27; other open matters not verified) | litigation | 0.15 | -8.0% | -1.20% |
+| 2026-12 | Promoter-group inter-se share swaps / block deals (86 lakh shares for Rs2,498 cr on 25 Sep) and further promoter stake changes | corporate_action | 0.30 | -0.5% | -0.15% |
+| 2027-01 | Q3 FY27 results (Q2 was 2026-10-28); airport peak-season traffic, Kutch copper ramp, interest and depreciation | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Kutch Copper phase-2 / data-centre capacity commissioning milestones | capex | 0.40 | +1.5% | +0.60% |
+| 2027-06 | Possible Adani Airports IPO/listing preparation (model knowledge, not confirmed) | corporate_action | 0.15 | +4.0% | +0.60% |
+| 2027-07 | Final tranche of Adani Airports US$1 bn primary raise (BlackRock, Temasek, Premji, Alpha Wave) | corporate_action | 0.80 | +1.2% | +1.00% |
 
 ## Analyst profile (agent research, sourced)
 # ADANIENT — Adani Enterprises Ltd. — profile as of 2026-11-05

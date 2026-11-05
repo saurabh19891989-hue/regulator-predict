@@ -1,7 +1,9 @@
 # FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`)
-*india_macro · status anticipated · date 2027-01-15 · P(3m) 0.25 · P(12m) 0.5 · confidence low*
+*india_macro · status anticipated · date 2027-01-15 · P(3m) 0.08 · P(12m) 0.5 · confidence low*
 
 Early signs: FPIs buying in early Nov, longest Nifty winning streak in ~5 months (Reuters 4 Nov); crude -4%/-6% on US-Iran talks (2 Nov); India-US trade deal close per Rubio (20 Oct) though midterm result reduces US urgency; possible LTCG relief; investors rethinking AI bets (ET 2 Nov). Against: rupee still weak, 10y 7.4%, FPI share of market still falling, record YTD outflows. P(a calendar quarter with net equity inflow >= US$5bn by end-Q1 CY27): 0.50.
+
+**Review override applied:** The only calendar quarter that can complete within 3m is Q4 CY26. October had ~-Rs44-48k cr (~-US$5bn) outflow, so Nov-Dec would need ~+US$10bn. Early-Nov buying (Rs20,834 cr in 4 sessions, ~US$2.2bn) helps but is not enough. 12m is unchanged.
 
 ## Entry shocks (conditional on the event)
 - `F_FPI_FLOWS` Foreign portfolio flows into Indian equities: 2.5 SSU (range 1.2…4.0) swing from ~-US$11bn/qtr run-rate to >=+US$5bn/qtr

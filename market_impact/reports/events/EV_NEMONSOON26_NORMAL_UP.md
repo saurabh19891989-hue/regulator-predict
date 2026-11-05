@@ -1,7 +1,9 @@
 # North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`)
-*agri_rural · status anticipated · date 2026-12-31 · P(3m) 0.0 · P(12m) 0.5714285714285714 · confidence low*
+*agri_rural · status anticipated · date 2026-12-31 · P(3m) 0.85 · P(12m) 0.85 · confidence low*
 
 Complement of EV_NEMONSOON26_DEFICIT: normal-or-above NEM (probability 0.60). El Nino years often (not always) boost NEM rains over TN and coastal Andhra; a cyclone (Cyclone 'Arnab' referenced by Business Today, 3 Nov) can add rain. Would partially restore southern reservoirs, lifting 2027 rabi/summer outlook and reducing hydro/power stress.
+
+**Review override applied:** See deficit event; group sum 0.97. Southern reservoirs were still 43% below average (FACTLY 26 Oct), so keep the conditional shock modest.
 
 ## Entry shocks (conditional on the event)
 - `F_MONSOON` Monsoon rainfall vs normal: 0.5 SSU (range 0.0…1.0) Conditional on normal-to-above NEM, local south India.

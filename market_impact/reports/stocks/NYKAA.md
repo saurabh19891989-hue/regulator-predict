@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.1%**, **12 months -1.5%** (rank 134 / 124 of 200 for 3m / 12m); beta 1.02
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 47%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.5% … P90 +1.8%; plausible 12m relative-return range incl. stock-specific noise: -39.1% … +22.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.8 pp (model impact -1.7% beta-adjusted vs realised market-adjusted move +25.3%); forward event exposure +1.2% (3m +0.9%; half assumed priced); company-specific events -0.2%
+- Expected relative return: **3 months -1.5%**, **12 months -1.7%** (rank 142 / 134 of 200 for 3m / 12m); beta 1.02
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 45%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.0% … P90 +1.5%; plausible 12m relative-return range incl. stock-specific noise: -40.7% … +10.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.0 pp (model impact -2.1% beta-adjusted vs realised market-adjusted move +25.3%); forward event exposure +0.9% (3m +0.2%; half assumed priced); company-specific events -0.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -7.9% | -7.9% | +0.0 | -3.0 | -3.8 | -1.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.9% | -5.9% | -5.5 | -0.3 | -0.0 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -4.1% | -4.1% | -2.5 | -1.4 | -0.2 | +0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -3.7% | -3.7% | -2.2 | -1.3 | -0.1 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.8% | -5.8% | -5.5 | -0.2 | -0.0 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +6.7% | +3.3% | +6.2 | +0.3 | +0.0 | +0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.9% | -2.9% | +0.0 | -2.7 | -0.0 | -0.2 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.6% | -2.6% | -1.8 | -0.7 | -0.1 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.5% | -2.5% | -1.2 | -0.9 | -0.3 | -0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -5.7% | -2.0% | +0.0 | -2.8 | -2.4 | -0.5 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -7.1% | -2.0% | +0.0 | -6.6 | -0.6 | +0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.1% | +1.8% | +0.0 | +1.5 | +1.3 | +0.3 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -9.4% | -1.7% | +0.0 | -8.3 | -0.9 | -0.2 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.6% | +1.6% | +1.6 | +0.1 | +0.0 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.6% | +1.4% | +0.0 | +1.2 | +1.1 | +0.3 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.3% | -1.3% | -1.0 | -0.2 | -0.1 | -0.1 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -5.0% | -1.2% | +0.0 | -5.0 | -0.2 | +0.2 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -4.9% | -1.2% | +0.0 | -2.4 | -2.1 | -0.5 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -6.6% | -1.2% | -6.0 | -0.2 | -0.3 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.2% | +1.2% | +1.2 | +0.0 | -0.1 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → NYKAA | +6.25% | +3.12% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -3.73% | -1.05% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -4.67% | -0.84% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → NYKAA | -3.75% | -0.82% |
-| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_US_10Y → NYKAA | +1.50% | +0.68% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → NYKAA | -2.40% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → NYKAA | -3.75% | -0.67% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → NYKAA | -2.40% | -0.60% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → NYKAA | -2.40% | -0.60% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -2.33% | -0.58% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_10Y → NYKAA | +1.98% | +0.50% |
 | 2 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → F_URBAN_DEMAND → NYKAA | +0.58% | +0.46% |
-| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_US_10Y → NYKAA | -1.50% | -0.45% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → NYKAA | +1.25% | +0.44% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -1.12% | -0.40% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → NYKAA | -1.00% | -0.42% |
 | 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → NYKAA | +0.50% | +0.40% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → NYKAA | -1.00% | -0.40% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → F_US_10Y → NYKAA | +1.53% | +0.38% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -2.33% | -0.35% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_US_10Y → NYKAA | -0.45% | -0.32% |
+| 3 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → F_FPI_FLOWS → NYKAA | -1.26% | -0.32% |
+| 2 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → F_URBAN_DEMAND → NYKAA | -0.36% | -0.31% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -71,6 +71,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_URBAN_DEMAND → NYKAA | +0.20 | events | +1.20% |
 | 1 | F_REPO_IN → NYKAA | +1.00 | events | -1.00% |
 | 1 | F_USDINR → NYKAA | -0.37 | observed | +0.37% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Completion of Simply Nam 82% stake acquisition | corporate_action | 0.80 | +0.2% | +0.20% |
+| 2026-12 | Block deals / promoter or PE sell-downs into strength | corporate_action | 0.30 | -2.5% | -0.75% |
+| 2027-02 | Q3 FY27 results (festive quarter, highest GMV) | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Index rebalancing candidate (Nifty Next 50 inclusion given Rs ~1 lakh cr market cap) | other | 0.20 | +2.0% | +0.40% |
 
 ## Analyst profile (agent research, sourced)
 # NYKAA (FSN E-Commerce Ventures Ltd.) - company profile as of 2026-11-05

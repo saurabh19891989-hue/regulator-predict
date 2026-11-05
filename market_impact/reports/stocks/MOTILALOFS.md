@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.8%**, **12 months -6.6%** (rank 151 / 175 of 200 for 3m / 12m); beta 1.53
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.9%): 3 months 45%, 12 months 25%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -23.5% … P90 +1.9%; plausible 12m relative-return range incl. stock-specific noise: -50.4% … +14.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.1 pp (model impact -4.2% beta-adjusted vs realised market-adjusted move +21.0%); forward event exposure -6.1% (3m +0.9%; half assumed priced); company-specific events -0.5%
+- Expected relative return: **3 months -2.0%**, **12 months -4.8%** (rank 157 / 169 of 200 for 3m / 12m); beta 1.53
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +28.9%): 3 months 44%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -12.6% … P90 +2.5%; plausible 12m relative-return range incl. stock-specific noise: -45.3% … +3.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.4 pp (model impact -4.8% beta-adjusted vs realised market-adjusted move +21.0%); forward event exposure -2.1% (3m +0.7%; half assumed priced); company-specific events -0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -18.8% | -18.8% | +0.0 | -8.8 | -7.2 | -2.8 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -17.3% | -17.3% | -14.6 | -2.9 | +0.3 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -15.7% | -15.7% | -13.2 | -2.8 | +0.3 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +19.4% | +9.7% | +16.4 | +3.3 | -0.4 | +0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -29.7% | -8.3% | -18.5 | -7.7 | -3.8 | +0.3 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -35.0% | -6.3% | -19.8 | -11.8 | -4.2 | +0.8 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -5.8% | -5.8% | +0.0 | -4.7 | -1.5 | +0.4 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +5.7% | +5.7% | +0.0 | +2.3 | +2.3 | +1.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -15.0% | -5.4% | -4.2 | -5.4 | -4.2 | -1.2 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -5.3% | -5.3% | +0.0 | -4.3 | -1.4 | +0.3 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -21.6% | -5.4% | -13.3 | -5.9 | -2.8 | +0.4 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -4.6% | -4.6% | +0.0 | -2.7 | -1.5 | -0.4 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +7.6% | +4.4% | +1.8 | +2.9 | +2.3 | +0.7 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +3.7% | +3.7% | +3.0 | +0.7 | -0.1 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +6.4% | +3.5% | +1.4 | +2.5 | +2.0 | +0.6 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -14.0% | -3.5% | -4.5 | -8.0 | -1.1 | -0.4 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -3.2% | -3.2% | +0.0 | -2.7 | -0.8 | +0.3 |
+| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -21.5% | -3.2% | -11.0 | -8.8 | -2.6 | +0.9 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -12.9% | -3.2% | -3.5 | -4.7 | -3.6 | -1.0 |
+| AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -2.8% | -2.8% | -1.8 | -0.8 | -0.4 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → MOTILALOFS | +15.00% | +7.50% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → MOTILALOFS | -14.00% | -3.92% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → MOTILALOFS | -17.50% | -3.15% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MOTILALOFS | -9.00% | -1.98% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → MOTILALOFS | -4.20% | -1.50% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → MOTILALOFS | -8.75% | -2.19% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → MOTILALOFS | -9.00% | -1.62% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → MOTILALOFS | +2.80% | +1.40% |
 | 1 | EV_SEBI_FNO_CURBS_RISK ⇒ F_EQUITY_ACTIVITY_IN → MOTILALOFS | -7.00% | -1.40% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → MOTILALOFS | -4.50% | -1.26% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MOTILALOFS | -4.48% | -1.25% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → MOTILALOFS | -8.75% | -1.31% |
 | 1 | EV_SEBI_CAS_DERIV_REVERSAL ⇒ F_EQUITY_ACTIVITY_IN → MOTILALOFS | +1.40% | +1.19% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → MOTILALOFS | -4.50% | -1.12% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → MOTILALOFS | -4.50% | -1.12% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → MOTILALOFS | +3.00% | +1.05% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → MOTILALOFS | +1.75% | +1.02% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → MOTILALOFS | -5.60% | -1.01% |
 | 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → MOTILALOFS | +1.20% | +0.96% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → MOTILALOFS | -3.50% | -0.88% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → MOTILALOFS | +1.40% | +0.87% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ P_CAPITAL_GAINS_TAX → MOTILALOFS | +2.25% | +0.79% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → MOTILALOFS | +1.40% | +0.77% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | P_SEBI_DERIVATIVES → F_EQUITY_ACTIVITY_IN → MOTILALOFS | -0.10 | events | +0.22% |
 | 1 | P_SEBI_DERIVATIVES → MOTILALOFS | -0.10 | events | +0.20% |
 | 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → MOTILALOFS | -1.60 | events | +0.13% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Leadership rejig across verticals takes effect (Vishal Tulsyan WTD) | corporate_action | 0.95 | +0.0% | +0.00% |
+| 2026-11 | NCD issuance up to Rs3,000cr approved by board in Q2 | capex | 0.60 | +0.0% | +0.00% |
+| 2026-12 | SEBI derivatives or broker-regulation measures | regulatory | 0.25 | -2.0% | -0.50% |
+| 2027-01 | Q3 FY27 results (date approximate; Q2 on ~2026-10-28/29) | results | 0.90 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # MOTILALOFS - Motilal Oswal Financial Services (as of 2026-11-05)

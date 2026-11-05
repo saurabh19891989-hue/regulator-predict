@@ -1,7 +1,9 @@
 # RBI MPC Dec 2026 (~4 Dec): holds repo at 5.50% (pause; cut very unlikely) (`EV_RBI_DEC26_HOLD`)
-*india_macro · status scheduled · date 2026-12-04 · P(3m) 0.57 · P(12m) 0.57 · confidence low*
+*india_macro · status scheduled · date 2026-12-04 · P(3m) 0.52 · P(12m) 0.52 · confidence low*
 
 Pause scenario: RBI waits to see transmission of the Oct hike and liquidity tightening, with oil easing. Stance likely stays 'calibrated tightening' (cut <=0.01). Hold relative to hike pricing is mildly bond-positive. Odds as in the hike event.
+
+**Review override applied:** See hike event; group sum 0.94 (rest 50bp/cut).
 
 ## Entry shocks (conditional on the event)
 - `F_REPO_IN` RBI repo rate: 0.0 SSU (range 0.0…0.0) no change

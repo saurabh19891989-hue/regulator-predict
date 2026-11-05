@@ -1,7 +1,9 @@
 # OPEC+ 29 Nov meeting: 2027 quotas raised (market-share / post-war normalisation) (`EV_OPEC_NOV29_RAISE`)
-*energy · status scheduled · date 2026-11-29 · P(3m) 0.16 · P(12m) 0.16 · confidence low*
+*energy · status scheduled · date 2026-11-29 · P(3m) 0.2 · P(12m) 0.2 · confidence low*
 
 If Hormuz reopens/ceasefire holds, producers (Saudi, UAE) may raise quotas to regain share, as they did mid-2026 (Jul-Aug headlines). Brent -5% typical.
+
+**Review override applied:** Market-share response to the UAE exit and Gulf export recovery. Note: the description wrongly lists the UAE as an OPEC+ member raising quotas.
 
 ## Entry shocks (conditional on the event)
 - `F_BRENT` Brent crude oil price: -0.7 SSU (range -1.5…-0.2) ~-7% on announcement

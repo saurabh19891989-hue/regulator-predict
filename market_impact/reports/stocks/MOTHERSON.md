@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.0%**, **12 months +0.3%** (rank 97 / 94 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.6%): 3 months 50%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.9% … P90 +8.8%; plausible 12m relative-return range incl. stock-specific noise: -35.8% … +29.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +5.1% beta-adjusted vs realised market-adjusted move +11.5%); forward event exposure +3.4% (3m +1.2%; half assumed priced); company-specific events -0.4%
+- Expected relative return: **3 months -0.1%**, **12 months -0.8%** (rank 99 / 117 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.6%): 3 months 50%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.6% … P90 +3.7%; plausible 12m relative-return range incl. stock-specific noise: -42.3% … +8.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +4.8% beta-adjusted vs realised market-adjusted move +11.5%); forward event exposure +1.0% (3m +0.9%; half assumed priced); company-specific events -0.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -4.3% | -4.3% | -3.0 | -0.1 | -0.0 | -1.2 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.8% | -2.8% | -2.8 | +0.0 | +0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | +0.0 | -0.3 | -2.1 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.2% | -1.2% | -0.6 | -0.5 | -0.1 | -0.0 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.1% | +1.1% | +1.2 | +0.1 | -0.2 | -0.1 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -0.4 | -0.5 | -0.1 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.6% | +0.9% | +0.9 | +0.2 | +0.0 | +0.5 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.9 | +0.1 | -0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -2.3% | -0.8% | -2.0 | +0.6 | -0.1 | -0.8 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.4% | +0.8% | +0.8 | +0.2 | +0.0 | +0.4 |
 | Budget FY2027-28: FY27 deficit overshoot confirmed and consolidation path slowed (`EV_BUDGET_FY28_FISCAL_SLIPPAGE`) | scheduled | 0.50 | -1.6% | -0.8% | -1.6 | +0.0 | +0.0 | -0.0 |
 | CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.1% | -0.7% | -1.0 | -0.1 | -0.2 | +0.1 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.8 | +0.1 | -0.0 |
+| China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics (`EV_RARE_EARTH_CONTROLS_REIMPOSED`) | risk_scenario | 0.25 | -2.7% | -0.7% | -0.9 | -1.9 | +0.1 | -0.0 |
+| Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +0.6% | +0.6% | +0.6 | +0.0 | +0.0 | +0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.6 | +0.0 | -0.0 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | +0.0 | -0.1 | -0.5 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,25 +48,25 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → MOTHERSON | -3.60% | -0.90% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → MOTHERSON | -1.60% | -0.80% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MOTHERSON | +2.16% | +0.60% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → MOTHERSON | -1.00% | -0.60% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → MOTHERSON | -1.50% | -0.54% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → MOTHERSON | +0.90% | +0.52% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MOTHERSON | +2.16% | +0.54% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → MOTHERSON | -0.48% | -0.46% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → MOTHERSON | -2.00% | -0.44% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → MOTHERSON | +0.78% | +0.43% |
 | 1 | EV_INDIA_EU_FTA_SIGNED ⇒ F_EU_GDP → MOTHERSON | +0.45% | +0.41% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → MOTHERSON | -1.44% | -0.36% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → MOTHERSON | -0.40% | -0.36% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → MOTHERSON | -0.60% | -0.36% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → MOTHERSON | +1.56% | +0.34% |
-| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → MOTHERSON | +0.60% | +0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → MOTHERSON | -2.00% | -0.36% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → MOTHERSON | -1.32% | -0.33% |
+| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → MOTHERSON | +0.60% | +0.31% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → MOTHERSON | +1.20% | +0.30% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → MOTHERSON | -0.40% | -0.29% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → MOTHERSON | +1.70 | events | -3.40% |
+| 1 | F_GSEC_10Y_IN → MOTHERSON | +1.55 | director_override | -3.10% |
 | 1 | F_US_GDP → MOTHERSON | +1.20 | events | +1.44% |
 | 1 | F_USDCNY → MOTHERSON | -0.47 | observed | +0.70% |
 | 1 | F_FED_FUNDS → MOTHERSON | +1.62 | observed | -0.65% |
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_GAS_GLOBAL → MOTHERSON | -0.47 | observed | +0.23% |
 | 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MOTHERSON | -0.30 | events | +0.22% |
 | 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → MOTHERSON | -0.10 | events | +0.10% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Q2 FY27 consolidated results (trading window closed from late Sep; date not retrieved) | results | 0.95 | +0.0% | +0.00% |
+| 2026-12 | Completion of Rotary Connectors 50.1% acquisition (approvals pending) | corporate_action | 0.70 | +0.5% | +0.35% |
+| 2027-02 | Q3 FY27 results and European production read-through | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | US-Mexico/USMCA auto tariff outcome and EU-US trade terms | regulatory | 0.50 | -1.5% | -0.75% |
 
 ## Analyst profile (agent research, sourced)
 # Samvardhana Motherson International (MOTHERSON) — Market Impact profile, 2026-11-05

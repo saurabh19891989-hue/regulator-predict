@@ -1,7 +1,9 @@
 # Government allows OMCs a retail petrol/diesel price hike (Rs3-5/l) (`EV_INDIA_RETAIL_FUEL_HIKE`)
-*sector_policy · status anticipated · date 2027-02-15 · P(3m) 0.18 · P(12m) 0.45 · confidence low*
+*sector_policy · status anticipated · date 2027-02-15 · P(3m) 0.08 · P(12m) 0.3 · confidence low*
 
 Prices frozen for months; state elections (UP, Punjab, Uttarakhand, Goa, Manipur) due Feb-Mar 2027 argue against a hike before March; a Brent fall would remove the need. Probability is analyst judgement, not sourced. A hike lifts CPI ~0.3-0.4 pp.
+
+**Review override applied:** At Brent $95 (flat since 1 Jun), OMC crude cost is back to the June level. UP/Punjab polls are due Feb-Mar 2027. The need for a hike has largely gone.
 
 ## Entry shocks (conditional on the event)
 - `NEW_OMC_MARKETING_MARGIN` OMC petrol+diesel marketing margin: 2.5 SSU (range 1.5…4.0) Rs2.5/l net after pass-through

@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.6%**, **12 months -4.5%** (rank 165 / 157 of 200 for 3m / 12m); beta 1.07
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.4%): 3 months 40%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.0% … P90 -1.2%; plausible 12m relative-return range incl. stock-specific noise: -19.5% … +23.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.7 pp (model impact -5.4% beta-adjusted vs realised market-adjusted move +7.9%); forward event exposure -2.9% (3m -2.0%; half assumed priced); company-specific events +1.5%
+- Expected relative return: **3 months -2.2%**, **12 months -4.0%** (rank 162 / 160 of 200 for 3m / 12m); beta 1.07
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.4%): 3 months 42%, 12 months 20%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.3% … P90 -2.9%; plausible 12m relative-return range incl. stock-specific noise: -14.5% … +8.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -2.3 pp (model impact -4.6% beta-adjusted vs realised market-adjusted move +7.9%); forward event exposure -2.9% (3m -1.7%; half assumed priced); company-specific events +1.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -10.0% | -10.0% | -6.8 | -0.3 | -1.4 | -1.5 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -4.9% | -4.9% | +0.0 | -1.7 | -3.4 | +0.3 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.7% | -3.7% | -3.3 | -0.1 | -0.1 | -0.2 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -6.8% | -2.4% | -3.9 | -0.8 | -1.1 | -1.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +4.2% | +2.4% | +2.7 | +0.4 | +0.6 | +0.5 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.6% | -3.6% | -3.3 | -0.1 | -0.1 | -0.2 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.2% | -2.2% | -1.4 | -0.6 | -0.1 | -0.1 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -2.2% | -2.2% | -2.1 | +0.0 | -0.0 | -0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | +0.0 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +4.2% | +2.1% | +3.8 | +0.1 | +0.1 | +0.2 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -1.5 | -0.1 | -0.1 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.3 | +0.0 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.8% | +2.1% | +2.5 | +0.3 | +0.5 | +0.5 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | -0.0 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -6.2% | -1.5% | -3.6 | -0.7 | -0.9 | -0.9 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.4% | -1.4% | -1.2 | -0.1 | -0.1 | -0.1 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -0.9 | -0.3 | -0.2 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | +0.0 | -0.5 | -0.8 |
+| China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics (`EV_RARE_EARTH_CONTROLS_REIMPOSED`) | risk_scenario | 0.25 | -4.7% | -1.2% | -0.8 | -4.3 | +0.2 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,28 +48,28 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HYUNDAI | +3.75% | +1.88% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → HYUNDAI | -4.32% | -1.08% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → HYUNDAI | -2.50% | -0.89% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → HYUNDAI | +1.50% | +0.87% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → HYUNDAI | +1.20% | +0.70% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HYUNDAI | -2.24% | -0.63% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → HYUNDAI | +1.30% | +0.72% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → HYUNDAI | +1.20% | +0.66% |
 | 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → HYUNDAI | +0.89% | +0.62% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → HYUNDAI | -1.20% | -0.60% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → HYUNDAI | -1.44% | -0.51% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → HYUNDAI | +1.80% | +0.50% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HYUNDAI | -2.80% | -0.50% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → HYUNDAI | -2.25% | -0.49% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → HYUNDAI | -2.20% | -0.55% |
 | 2 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → HYUNDAI | +0.89% | +0.49% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → HYUNDAI | +1.80% | +0.45% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → HYUNDAI | -0.75% | -0.45% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → F_AUTO_DEMAND_IN → HYUNDAI | +0.63% | +0.43% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → HYUNDAI | -1.00% | -0.42% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → HYUNDAI | -2.25% | -0.40% |
+| 2 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → HYUNDAI | +0.59% | +0.40% |
+| 2 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → HYUNDAI | -0.59% | -0.38% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → HYUNDAI | +1.70 | events | -2.55% |
-| 1 | F_STEEL_INDIA → HYUNDAI | +1.65 | events | -2.47% |
 | 1 | F_FPI_FLOWS → HYUNDAI | -1.60 | events | -2.40% |
-| 1 | C_MIDEAST_CONFLICT → HYUNDAI | +1.50 | events | -1.80% |
+| 1 | F_GSEC_10Y_IN → HYUNDAI | +1.55 | director_override | -2.33% |
+| 1 | F_STEEL_INDIA → HYUNDAI | +1.35 | events | -2.03% |
+| 1 | C_MIDEAST_CONFLICT → HYUNDAI | +1.00 | events | -1.20% |
 | 1 | F_REPO_IN → HYUNDAI | +1.00 | events | -1.00% |
 | 1 | F_ALUMINIUM → HYUNDAI | -1.96 | observed | +0.98% |
 | 1 | F_AUTO_DEMAND_IN → HYUNDAI | -0.10 | events | -0.90% |
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → HYUNDAI | -0.10 | events | +0.08% |
 | 1 | F_COPPER → HYUNDAI | -0.24 | observed | +0.07% |
 | 3 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → F_SEMICONDUCTOR_SUPPLY → HYUNDAI | -0.10 | events | +0.03% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11-01 | Monthly sales print (Oct) - strong October per Upstox; December print on 2026-12-01 | other | 1.00 | +0.5% | +0.50% |
+| 2026-12 | New model launches (Bayon / new Venue cycle) driving volumes | other | 0.70 | +1.5% | +1.05% |
+| 2027-01 | Q3 FY27 results (margin recovery test; CLSA expects recovery) | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Talegaon Phase-1 ramp-up: start-up costs and depreciation vs volume gains | capex | 0.80 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Hyundai Motor India Ltd. (HYUNDAI) — Market Impact profile, 2026-11-05

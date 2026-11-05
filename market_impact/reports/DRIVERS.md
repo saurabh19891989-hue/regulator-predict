@@ -8,7 +8,7 @@
 - Losses: YESBANK -10.1, BAJFINANCE -9.6, TATACAP -9.3, GMRAIRPORT -8.1, PRESTIGE -8.1, GODREJPROP -7.2, SHRIRAMFIN -7.1, IREDA -6.9
 
 ## Middle East conflict intensity (`C_MIDEAST_CONFLICT`) — SSU +1 = escalation
-- Companies with |effect| ≥ 0.5%: 169; share via 2nd–4th order: 86%; recent state: +1.50 SSU (events)
+- Companies with |effect| ≥ 0.5%: 169; share via 2nd–4th order: 86%; recent state: +1.00 SSU (events)
 - Gains: OIL +8.8, ONGC +7.1, COCHINSHIP +3.1, MCX +2.5, VAML +2.5, NATIONALUM +2.3, COALINDIA +2.1, JSWSTEEL +1.7
 - Losses: INDIGO -6.1, MOTILALOFS -5.7, GMRAIRPORT -5.3, FEDERALBNK -5.0, MEESHO -4.7, AXISBANK -4.6, IDFCFIRSTB -4.6, INDUSINDBK -4.5
 
@@ -93,7 +93,7 @@
 - Losses: ADANIPOWER -3.1, COALINDIA -2.5, ENRIN -2.1, BHEL -1.4, TATAPOWER -1.3, ADANIENSOL -1.3, POWERGRID -1.0, WAAREEENER -0.9
 
 ## India 10-year G-sec yield (`F_GSEC_10Y_IN`) — SSU +25 bp yield
-- Companies with |effect| ≥ 0.5%: 108; share via 2nd–4th order: 15%; recent state: +1.70 SSU (events)
+- Companies with |effect| ≥ 0.5%: 108; share via 2nd–4th order: 15%; recent state: +1.55 SSU (director_override)
 - Gains: HDFCLIFE +0.4, SBILIFE +0.2, MFSL +0.2, RVNL +0.0, SOLARINDS +0.0, APARINDS +0.0, PREMIERENE +0.0, SUZLON +0.0
 - Losses: ADANIGREEN -3.8, YESBANK -3.4, JIOFIN -3.4, IREDA -3.3, BANKINDIA -3.2, BAJFINANCE -3.1, TATACAP -3.1, POWERGRID -3.0
 
@@ -203,7 +203,7 @@
 - Losses: TMPV -1.2, COALINDIA -1.0, BHARATFORG -1.0, VOLTAS -0.6, TVSMOTOR -0.4, ADANIPOWER -0.4, HEROMOTOCO -0.4, SUZLON -0.3
 
 ## Indian domestic steel price (`F_STEEL_INDIA`) — SSU +7% domestic HRC/rebar price
-- Companies with |effect| ≥ 0.5%: 32; share via 2nd–4th order: 12%; recent state: +1.65 SSU (events)
+- Companies with |effect| ≥ 0.5%: 32; share via 2nd–4th order: 12%; recent state: +1.35 SSU (events)
 - Gains: JINDALSTEL +16.0, SAIL +14.7, JSWSTEEL +8.8, TATASTEEL +8.0, NMDC +1.9, APLAPOLLO +1.5, PIIND +0.0, MCX +0.0
 - Losses: TMCV -2.2, MARUTI -2.0, BHEL -2.0, ASHOKLEY -1.8, SUZLON -1.8, HYUNDAI -1.5, RVNL -1.5, COCHINSHIP -1.5
 

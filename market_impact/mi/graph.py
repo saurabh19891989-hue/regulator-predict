@@ -308,18 +308,43 @@ def run(draws=400):
             f.write(json.dumps({"company": c, "top_paths": lst}, ensure_ascii=False) + "\n")
 
     # 3) company-specific events from profiles (conditional impact midpoint × prob)
-    cs = defaultdict(lambda: [0.0, 0.0])
+    # Director/red-team corrections: graph/company_event_overrides.json {"overrides": [{"ticker", "match" (substring of
+    # the event text, case-insensitive), any of date/prob/impact_pct_low/impact_pct_high, "drop": bool, "reason"}],
+    # "add": [{"ticker", "date", "event", "prob", "impact_pct_low", "impact_pct_high", "source", "reason"}]}
+    ceo = load_json(R("graph", "company_event_overrides.json")) or {}
+    ce_rows = []
     for t, o in profiles.items():
         for ce in o.get("company_events", []) or []:
-            if MARKET_WIDE.search(str(ce.get("event", ""))):   # covered by the event catalogue → avoid double count
-                continue
-            try:
-                mid = (float(ce.get("impact_pct_low", 0)) + float(ce.get("impact_pct_high", 0))) / 2
-                p = float(ce.get("prob", 0))
-            except (TypeError, ValueError):
-                continue
-            cs[t][1] += p * mid
-            cs[t][0] += p * mid if str(ce.get("date", ""))[:7] <= "2027-02" else 0.0
+            ce = dict(ce)
+            for ov in ceo.get("overrides", []):
+                if ov.get("ticker") == t and str(ov.get("match", "")).lower() in str(ce.get("event", "")).lower():
+                    if ov.get("drop"):
+                        ce["_drop"] = True
+                    for k in ("date", "prob", "impact_pct_low", "impact_pct_high"):
+                        if k in ov:
+                            ce[k] = ov[k]
+                    ce["director_override"] = ov.get("reason", "")
+            ce_rows.append((t, ce))
+    for a in ceo.get("add", []):
+        if a.get("ticker") in profiles:
+            ce_rows.append((a["ticker"], {**a, "director_override": a.get("reason", "added")}))
+    cs = defaultdict(lambda: [0.0, 0.0])
+    ce_out = []
+    for t, ce in ce_rows:
+        if ce.get("_drop"):
+            continue
+        if MARKET_WIDE.search(str(ce.get("event", ""))):   # covered by the event catalogue → avoid double count
+            continue
+        try:
+            mid = (float(ce.get("impact_pct_low", 0)) + float(ce.get("impact_pct_high", 0))) / 2
+            p = float(ce.get("prob", 0))
+        except (TypeError, ValueError):
+            continue
+        cs[t][1] += p * mid
+        cs[t][0] += p * mid if str(ce.get("date", ""))[:7] <= "2027-02" else 0.0
+        ce_out.append({"company": t, "date": ce.get("date"), "event": ce.get("event"), "type": ce.get("type"), "prob": p,
+                       "impact_mid": mid, "expected": p * mid, "override": ce.get("director_override", "")})
+    pd.DataFrame(ce_out).to_csv(R("results", "company_events.csv"), index=False)
 
     link_out = defaultdict(list)
     for e in edges:

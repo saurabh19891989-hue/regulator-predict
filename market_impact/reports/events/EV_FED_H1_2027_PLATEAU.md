@@ -1,7 +1,9 @@
 # Fed on hold Jan-Apr 2027 FOMCs (27 Jan, 17 Mar, 28 Apr) near 4% (`EV_FED_H1_2027_PLATEAU`)
-*global_macro · status anticipated · date 2027-04-28 · P(3m) 0.0 · P(12m) 0.45 · confidence low*
+*global_macro · status anticipated · date 2027-04-28 · P(3m) 0.0 · P(12m) 0.48 · confidence low*
 
 Base path: after at most one more hike the Fed holds at ~3.75-4.25% through the April 2027 meeting (Sept SEP showed low-4% for 2027 per Bondsavvy headline). Paths (plateau 0.45, further hikes 0.30, cuts 0.25) are mutually exclusive outcomes by 28 Apr 2027 relative to the post-Dec level. Meeting dates from federalreserve.gov calendar (2027: Jan 26-27, Mar 16-17, Apr 27-28; the page lists them as such).
+
+**Review override applied:** Residual; group sums 1.0 at 12m.
 
 **Already moved:** n/a
 

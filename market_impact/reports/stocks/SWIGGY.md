@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.6%**, **12 months -3.3%** (rank 163 / 145 of 200 for 3m / 12m); beta 1.17
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +38.6%): 3 months 45%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.9% … P90 +3.5%; plausible 12m relative-return range incl. stock-specific noise: -34.2% … +54.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -6.7% beta-adjusted vs realised market-adjusted move -30.0%); forward event exposure -3.4% (3m -2.6%; half assumed priced); company-specific events -0.8%
+- Expected relative return: **3 months -2.7%**, **12 months -3.0%** (rank 172 / 147 of 200 for 3m / 12m); beta 1.17
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +38.6%): 3 months 44%, 12 months 80%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.8% … P90 +1.1%; plausible 12m relative-return range incl. stock-specific noise: -8.4% … +44.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -7.1% beta-adjusted vs realised market-adjusted move -30.0%); forward event exposure -3.1% (3m -3.0%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -7.4% | -7.4% | -3.5 | -0.9 | -2.3 | -0.7 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -6.8% | -6.8% | -6.6 | +0.0 | -0.1 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -6.7% | -6.7% | -6.6 | +0.0 | -0.0 | -0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -4.2% | -4.2% | -1.1 | -2.7 | -0.2 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +7.7% | +3.8% | +7.5 | +0.0 | +0.1 | +0.1 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -3.8% | -3.8% | -2.5 | -1.1 | -0.1 | -0.1 |
+| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.72 | -3.4% | -2.4% | -2.5 | -0.7 | -0.1 | -0.1 |
 | Labour codes: states finalise rules (deadline 31 Oct 2026), wider operational rollout (`EV_LABOUR_CODES_RULES`) | anticipated | 0.80 | -2.7% | -2.2% | -3.0 | +0.4 | -0.1 | -0.0 |
-| Fed hikes >=50 bp cumulative beyond Oct level by Apr 2027 (`EV_FED_H1_2027_FURTHER_HIKES`) | anticipated | 0.30 | -7.3% | -2.2% | -5.0 | -1.8 | -0.3 | -0.2 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -7.3% | -2.0% | +0.0 | -7.4 | +0.2 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -2.0 | -0.1 | +0.1 |
-| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.58 | -3.4% | -2.0% | -2.5 | -0.7 | -0.1 | -0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -5.5% | -2.0% | -1.8 | -1.8 | -1.7 | -0.3 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -9.9% | -1.8% | +0.0 | -9.2 | -0.4 | -0.3 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.8% | -1.8% | -1.5 | -0.2 | -0.0 | -0.1 |
+| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.5% | +1.5% | +1.5 | +0.0 | +0.0 | +0.0 |
+| Fed hikes >=50 bp cumulative beyond Oct level by Apr 2027 (`EV_FED_H1_2027_FURTHER_HIKES`) | anticipated | 0.40 | -3.7% | -1.5% | -2.5 | -0.9 | -0.2 | -0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.5% | +1.4% | +0.9 | +0.7 | +0.7 | +0.2 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -0.5 | -0.1 | -0.7 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -5.1% | -1.3% | +0.0 | -5.7 | +0.5 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -49,18 +49,18 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SWIGGY | +7.50% | +3.75% |
 | 1 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → SWIGGY | -3.00% | -2.40% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → SWIGGY | +7.50% | +1.88% |
-| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → SWIGGY | -5.00% | -1.50% |
-| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → SWIGGY | -2.50% | -1.45% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SWIGGY | -4.48% | -1.25% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SWIGGY | -5.60% | -1.01% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SWIGGY | -4.50% | -0.99% |
-| 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → SWIGGY | +3.75% | +0.94% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SWIGGY | -2.88% | -0.81% |
-| 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_FED_FUNDS → SWIGGY | -2.50% | -0.75% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → SWIGGY | -2.50% | -1.80% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → SWIGGY | -2.50% | -1.00% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SWIGGY | -4.50% | -0.81% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SWIGGY | -2.88% | -0.72% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → SWIGGY | -2.88% | -0.72% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → SWIGGY | -1.75% | -0.62% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → SWIGGY | +1.05% | +0.61% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SWIGGY | -1.50% | -0.60% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SWIGGY | -2.80% | -0.70% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SWIGGY | -1.50% | -0.63% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → SWIGGY | +1.50% | +0.52% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → SWIGGY | +0.91% | +0.50% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → SWIGGY | +0.60% | +0.48% |
+| 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → SWIGGY | +3.75% | +0.45% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SWIGGY | -1.73% | -0.43% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -72,6 +72,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_REPO_IN → SWIGGY | +1.00 | events | -1.50% |
 | 1 | F_URBAN_DEMAND → SWIGGY | +0.20 | events | +0.80% |
 | 1 | F_BRENT → SWIGGY | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | More block deals / large holder exits after Tencent (Rs 982 cr, 2026-10-30) | corporate_action | 0.40 | -3.0% | -1.20% |
+| 2026-12 | Regulatory action on quick commerce (CCI / FSSAI / dark-store rules) | regulatory | 0.25 | +0.5% | +0.12% |
+| 2027-01 | Q3 FY27 results: Instamart contribution margin and loss trajectory (festive quarter) | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Instamart break-even / contribution-positive target commentary and fundraising need | guidance | 0.30 | +1.0% | +0.30% |
 
 ## Analyst profile (agent research, sourced)
 # SWIGGY (Swiggy Ltd.) - company profile as of 2026-11-05

@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.7%**, **12 months -4.0%** (rank 148 / 150 of 200 for 3m / 12m); beta 0.95
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.8%): 3 months 43%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.8% … P90 +2.1%; plausible 12m relative-return range incl. stock-specific noise: -37.6% … +15.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.8% beta-adjusted vs realised market-adjusted move -10.1%); forward event exposure -5.9% (3m -2.2%; half assumed priced); company-specific events +0.3%
+- Expected relative return: **3 months -1.1%**, **12 months -2.4%** (rank 135 / 141 of 200 for 3m / 12m); beta 0.95
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.8%): 3 months 46%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.9% … P90 +2.5%; plausible 12m relative-return range incl. stock-specific noise: -34.5% … +13.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -5.2% beta-adjusted vs realised market-adjusted move -10.1%); forward event exposure -2.9% (3m -1.1%; half assumed priced); company-specific events +0.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -11.1% | -11.1% | +0.0 | -4.3 | -5.4 | -1.3 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -7.4% | -7.4% | -7.2 | +0.0 | -0.1 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -6.8% | -6.8% | -6.6 | +0.0 | -0.1 | -0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -4.5% | -4.5% | +0.0 | -1.9 | -1.5 | -1.2 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +8.3% | +4.2% | +8.1 | +0.0 | +0.1 | +0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.3% | -3.3% | -0.9 | -1.9 | -0.6 | +0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -11.5% | -3.2% | -6.0 | -5.1 | -0.4 | +0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -7.8% | -2.8% | -1.8 | -2.5 | -2.9 | -0.6 |
-| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.62 | -4.1% | -2.5% | -4.8 | +0.7 | -0.0 | +0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -14.0% | -2.5% | -7.5 | -6.4 | +0.1 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +4.2% | +2.4% | +0.8 | +1.4 | +1.7 | +0.4 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.4% | -2.4% | -2.0 | -0.3 | +0.1 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.2% | -2.2% | +0.0 | -2.2 | -0.0 | +0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +3.1% | +2.1% | +0.0 | +1.6 | +1.4 | +0.1 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -8.1% | -2.0% | -3.8 | -4.3 | -0.2 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.5% | +1.9% | +0.6 | +1.2 | +1.4 | +0.3 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.3 | -0.4 | -0.2 |
+| RBI tightens gold-loan / unsecured and NBFC-bank lending norms after early stress (`EV_RBI_GOLD_LOAN_TIGHTEN`) | risk_scenario | 0.30 | -5.8% | -1.7% | -4.8 | -0.8 | -0.2 | -0.0 |
+| India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.7% | +1.7% | +1.7 | +0.3 | -0.2 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -6.7% | -1.7% | -1.5 | -2.2 | -2.5 | -0.5 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → SBICARD | +7.50% | +3.75% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → SBICARD | -3.00% | -1.86% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → SBICARD | -6.00% | -1.68% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → SBICARD | -7.50% | -1.35% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → SBICARD | -1.75% | -1.09% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SBICARD | -4.50% | -0.99% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → SBICARD | -3.75% | -0.94% |
 | 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → SBICARD | -3.00% | -0.90% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBICARD | -2.88% | -0.81% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → SBICARD | -4.50% | -0.81% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → SBICARD | -0.90% | -0.81% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SBICARD | -1.80% | -0.76% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBICARD | -2.88% | -0.72% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → SBICARD | -2.88% | -0.72% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SBICARD | -1.80% | -0.72% |
-| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → SBICARD | +1.80% | +0.68% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_UNSECURED_STRESS → SBICARD | +0.96% | +0.65% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → SBICARD | -1.80% | -0.64% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → SBICARD | -2.24% | -0.63% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → SBICARD | -3.75% | -0.56% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → SBICARD | -2.16% | -0.54% |
+| 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ F_UNSECURED_STRESS → SBICARD | -1.80% | -0.54% |
+| 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → SBICARD | +1.50% | +0.52% |
+| 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → SBICARD | +0.58% | +0.52% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SBICARD | -1.80% | -0.49% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -78,6 +78,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_RURAL_DEMAND → F_UNSECURED_STRESS → SBICARD | -0.25 | events | -0.24% |
 | 2 | F_GDP_IN → F_UNSECURED_STRESS → SBICARD | +0.50 | events | +0.24% |
 | 1 | F_COPPER → SBICARD | -0.24 | observed | -0.24% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Festive-season spends data (Oct-Nov) and cobrand ramp (Air India, Eternal) | other | 0.80 | +0.5% | +0.40% |
+| 2027 | RBI/NPCI changes to card unsecured risk weights or interchange/MDR rules | regulatory | 0.15 | -4.0% | -0.60% |
+| 2027-01-22 | Q3 FY27 results (date approximate; Q2 was 2026-10-23): credit cost vs ~6% FY27 guide, receivables growth in H2 | results | 0.90 | +0.5% | +0.45% |
 
 ## Analyst profile (agent research, sourced)
 # SBICARD - SBI Cards & Payment Services (as of 2026-11-05)

@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.2%**, **12 months +0.2%** (rank 105 / 99 of 200 for 3m / 12m); beta 1.00
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.1%): 3 months 49%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.1% … P90 +12.2%; plausible 12m relative-return range incl. stock-specific noise: -12.4% … +43.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -21.9% beta-adjusted vs realised market-adjusted move —%); forward event exposure +5.9% (3m +2.9%; half assumed priced); company-specific events -3.2%
+- Expected relative return: **3 months -0.3%**, **12 months -0.5%** (rank 112 / 109 of 200 for 3m / 12m); beta 1.00
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.1%): 3 months 49%, 12 months 80%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.7% … P90 +9.9%; plausible 12m relative-return range incl. stock-specific noise: -12.1% … +59.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -21.3% beta-adjusted vs realised market-adjusted move —%); forward event exposure +4.3% (3m +2.7%; half assumed priced); company-specific events -3.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -30,53 +30,63 @@
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -19.6% | -19.6% | -19.6 | +0.0 | +0.0 | +0.0 |
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +3.6% | +3.6% | +0.0 | +4.2 | +0.5 | -1.2 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | -2.8% | -2.8% | -2.4 | -0.4 | +0.0 | +0.0 |
 | India coal crunch: critical plant stocks, e-auction premiums ~94%, captive plants ordered to maximise output; CIL October output +19% (`EV_INDIA_COAL_CRUNCH`) | occurred | 1.00 | -2.6% | -2.6% | -2.6 | +0.0 | +0.0 | +0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +2.2% | +2.2% | +0.0 | +2.1 | +0.0 | -0.0 |
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +5.8% | +2.0% | +0.0 | +3.7 | +2.1 | +0.0 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +1.6% | +1.6% | +0.0 | +1.0 | +0.6 | +0.0 |
 | China Central Economic Work Conference / NPC (Dec 2026-Mar 2027): larger-than-expected fiscal or property stimulus (`EV_CHINA_CEWC_STIMULUS_DEC26`) | anticipated | 0.45 | +3.1% | +1.4% | +0.0 | +3.1 | -0.1 | -0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.3 | +0.0 | +0.0 | +0.0 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +1.2% | +1.2% | +0.5 | +0.5 | +0.2 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | -2.1% | -1.2% | +0.4 | -2.8 | -0.1 | +0.4 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.7 | -0.4 | -0.1 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.2% | -1.2% | -1.1 | -0.1 | +0.0 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -2.1% | -1.2% | +0.3 | -2.7 | -0.1 | +0.4 |
+| Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | -2.9% | -1.2% | -2.4 | -0.6 | +0.0 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML | -2.40% | -1.39% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | +3.80% | +1.33% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML | +2.88% | +1.03% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML | -2.40% | -1.32% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → VAML | -2.40% | -0.96% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → VAML | -3.20% | -0.90% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → VAML | +3.90% | +0.86% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → VAML | +2.37% | +0.85% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → VAML | -1.42% | -0.83% |
 | 3 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → F_ALUMINIUM → VAML | +2.20% | +0.77% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → VAML | +2.88% | +0.72% |
 | 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → F_ALUMINIUM → VAML | +1.60% | +0.72% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → VAML | -4.00% | -0.72% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → VAML | +3.90% | +0.70% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → VAML | -1.38% | -0.69% |
 | 2 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | +1.52% | +0.68% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VAML | -1.87% | -0.67% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VAML | +1.12% | +0.65% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → VAML | -1.23% | -0.68% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VAML | +0.97% | +0.53% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → VAML | +2.09% | +0.52% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → VAML | -2.00% | -0.50% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → VAML | -1.65% | -0.41% |
+| 2 | EV_CHINA_PROPERTY_RELAPSE ⇒ F_CHINA_GDP → F_ALUMINIUM → VAML | -3.04% | -0.30% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_ALUMINIUM → VAML | -1.96 | observed | -19.61% |
-| 1 | F_POWER_PRICE_IN → VAML | +3.00 | events | -2.40% |
 | 1 | F_COAL_INDIA → VAML | +1.50 | events | -1.80% |
-| 1 | F_GSEC_10Y_IN → VAML | +1.70 | events | -1.19% |
+| 1 | F_POWER_PRICE_IN → VAML | +1.90 | director_override | -1.52% |
 | 1 | F_USDINR → VAML | -0.37 | observed | -1.11% |
+| 1 | F_GSEC_10Y_IN → VAML | +1.55 | director_override | -1.08% |
 | 1 | T_ENERGY_TRANSITION → VAML | +0.50 | events | +0.50% |
 | 1 | F_CREDIT_SPREADS_IN → VAML | +0.50 | events | -0.50% |
 | 1 | P_ANTI_DUMPING_IN → VAML | +0.40 | events | +0.20% |
 | 1 | F_RISK_SENTIMENT → VAML | +0.11 | observed | -0.09% |
 | 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → VAML | +0.40 | events | -0.04% |
 | 2 | F_BRENT → F_CHEM_FEEDSTOCK → VAML | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Odisha High Court order follow-up: appeal/SLP, OMC payment of back bauxite dues (OMC demand Rs5,600 cr; CLSA Rs2,500 cr + interest) | litigation | 0.70 | -1.8% | -1.22% |
+| 2026-12 | GLAS Agency encumbrance changes / promoter-level refinancing news (56.38%) | corporate_action | 0.10 | -4.0% | -0.40% |
+| 2026-12-16 | India-EU FTA signing with CBAM annex relevant to aluminium exporters | regulatory | 0.90 | +1.0% | +0.90% |
+| 2027-01 | Q3 FY27 results (LME average lower than Q2; EBITDA margin from 45% base) | results | 0.95 | -1.0% | -0.95% |
+| 2027-03 | Sijimali bauxite mine and alumina refinery expansion progress (cuts exposure to OMC pricing) | capex | 0.40 | +1.5% | +0.60% |
+| 2027-04 | Summer 2027 power shortfall under El Nino (potline curtailment risk) | other | 0.40 | -3.5% | -1.40% |
 
 ## Analyst profile (agent research, sourced)
 # VAML — Vedanta Aluminium Metal Ltd. (Nifty Next 50) — profile as of 2026-11-05

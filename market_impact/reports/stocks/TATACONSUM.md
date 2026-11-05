@@ -2,10 +2,10 @@
 *NIFTY_50 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.8%**, **12 months +2.2%** (rank 71 / 64 of 200 for 3m / 12m); beta 0.87
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 54%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.2% … P90 +8.6%; plausible 12m relative-return range incl. stock-specific noise: -11.6% … +18.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.3 pp (model impact +0.6% beta-adjusted vs realised market-adjusted move -9.7%); forward event exposure +5.3% (3m +2.0%; half assumed priced); company-specific events +0.8%
+- Expected relative return: **3 months +0.6%**, **12 months +1.2%** (rank 76 / 73 of 200 for 3m / 12m); beta 0.87
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 53%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.6% … P90 +4.5%; plausible 12m relative-return range incl. stock-specific noise: -6.0% … +12.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.2 pp (model impact +0.4% beta-adjusted vs realised market-adjusted move -9.7%); forward event exposure +3.3% (3m +1.7%; half assumed priced); company-specific events +0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,45 +29,45 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -3.7% | -3.7% | -2.5 | -0.0 | -0.6 | -0.6 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | -0.9 | -0.9 | -0.4 | -0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.4% | -1.4% | -1.4 | +0.0 | -0.0 | -0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -0.9 | -0.2 | -0.3 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.4 | -0.5 | -0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | +3.1% | +0.9% | +3.2 | -0.1 | -0.1 | +0.1 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | +3.0% | +0.7% | +0.0 | +2.1 | +0.6 | +0.3 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.5 | -0.2 | -0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | +3.6% | +0.6% | +4.0 | -0.1 | -0.3 | +0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.5 | -0.1 | -0.0 |
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.6% | -0.6% | -0.4 | -0.0 | -0.1 | -0.0 |
 | Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -2.2% | -0.6% | -1.0 | -0.8 | -0.3 | -0.1 |
+| India 2027 wheat crop (harvest Mar-Apr 2027) below 2026's record ~120 MT (`EV_WHEAT27_CROP_BELOW`) | anticipated | 0.65 | -0.8% | -0.5% | -0.7 | +0.0 | -0.1 | -0.1 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.5% | -0.5% | -0.3 | -0.1 | -0.1 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.4 | +0.0 | -0.1 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.3 | +0.1 | +0.1 |
+| Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down (`EV_RURAL_DEMAND_SOFT26`) | occurred | 1.00 | -0.5% | -0.5% | -0.5 | +0.0 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → TATACONSUM | +3.20% | +0.90% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → TATACONSUM | +4.00% | +0.72% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → TATACONSUM | -1.25% | -0.45% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → TATACONSUM | +0.75% | +0.44% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → TATACONSUM | +2.00% | +0.50% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → TATACONSUM | -0.80% | -0.40% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → TATACONSUM | +0.65% | +0.36% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → TATACONSUM | +0.51% | +0.36% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → TATACONSUM | +0.96% | +0.34% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → TATACONSUM | +2.00% | +0.30% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → TATACONSUM | -0.50% | -0.30% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → TATACONSUM | +1.15% | +0.29% |
 | 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → TATACONSUM | +0.51% | +0.28% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → TATACONSUM | -1.10% | -0.28% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → TATACONSUM | +0.39% | +0.26% |
 | 1 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_FOOD_INFLATION_IN → TATACONSUM | -0.96% | -0.24% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → TATACONSUM | -0.40% | -0.23% |
 | 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → TATACONSUM | +0.34% | +0.23% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → TATACONSUM | -0.24% | -0.23% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → TATACONSUM | -0.34% | -0.22% |
+| 1 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → TATACONSUM | -0.32% | -0.21% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → TATACONSUM | +1.70 | events | -1.70% |
 | 1 | F_FOOD_INFLATION_IN → TATACONSUM | +2.00 | events | -1.60% |
+| 1 | F_GSEC_10Y_IN → TATACONSUM | +1.55 | director_override | -1.55% |
 | 1 | F_URBAN_DEMAND → TATACONSUM | +0.20 | events | +0.46% |
 | 1 | F_RURAL_DEMAND → TATACONSUM | -0.25 | events | -0.43% |
 | 1 | F_USDINR → TATACONSUM | -0.37 | observed | +0.18% |
@@ -78,6 +78,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 4 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → TATACONSUM | +0.40 | events | -0.00% |
 | 4 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → TATACONSUM | +0.30 | events | -0.00% |
 | 4 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → TATACONSUM | -0.10 | events | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11/12 | Additional price increases / tea cost trajectory (Q2 call: price hikes support H2) | guidance | 0.60 | +0.5% | +0.30% |
+| 2027-01 | Q3 FY27 results (Q2 on 2026-10-26) | results | 0.95 | +0.5% | +0.47% |
+| 2027-05 | Q4 FY27 results and FY28 outlook | results | 0.95 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Tata Consumer Products (TATACONSUM) - Market Impact profile, as of 2026-11-05

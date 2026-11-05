@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.5%**, **12 months +0.2%** (rank 87 / 98 of 200 for 3m / 12m); beta 0.95
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 51%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +2.1%; plausible 12m relative-return range incl. stock-specific noise: -29.7% … +40.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +2.5% beta-adjusted vs realised market-adjusted move +13.4%); forward event exposure +1.3% (3m +0.8%; half assumed priced); company-specific events +1.5%
+- Expected relative return: **3 months +0.5%**, **12 months -0.0%** (rank 79 / 97 of 200 for 3m / 12m); beta 0.95
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 51%, 12 months 80%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.4% … P90 +1.1%; plausible 12m relative-return range incl. stock-specific noise: -14.0% … +39.9%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +2.3% beta-adjusted vs realised market-adjusted move +13.4%); forward event exposure +0.6% (3m +0.6%; half assumed priced); company-specific events +1.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -6.0% | -6.0% | +0.0 | -2.8 | -1.8 | -1.4 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.3% | -2.3% | -1.8 | -0.5 | -0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | +0.0 | -1.1 | -0.8 | -0.3 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.2% | -2.2% | -1.8 | -0.4 | -0.0 | -0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.5% | -1.5% | -1.3 | -0.2 | -0.0 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -4.0% | -1.4% | +0.0 | -2.0 | -1.2 | -0.8 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -1.0 | -0.4 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.6% | +1.3% | +2.0 | +0.5 | +0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.2% | +1.3% | +0.0 | +1.1 | +0.6 | +0.5 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.9 | -0.3 | +0.0 |
-| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -4.9% | -1.1% | -4.1 | -0.6 | -0.2 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.9% | +1.0% | +0.0 | +0.9 | +0.5 | +0.4 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.5 | -0.3 | -0.1 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -4.9% | -0.9% | -4.1 | -0.6 | -0.2 | -0.0 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.9% | +0.9% | +0.0 | +0.4 | +0.3 | +0.2 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.5% | -0.9% | +0.0 | -1.7 | -1.0 | -0.7 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.6 | -0.2 | +0.0 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.3 | -0.4 | -0.1 | -0.1 |
+| China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.0% | +0.8% | +0.9 | +0.0 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,36 +48,44 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LGEINDIA | +2.00% | +1.00% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → LGEINDIA | +0.90% | +0.72% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → LGEINDIA | -1.95% | -0.43% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → LGEINDIA | -1.19% | -0.42% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → LGEINDIA | +0.71% | +0.41% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → LGEINDIA | +1.30% | +0.36% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → LGEINDIA | -0.72% | -0.36% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LGEINDIA | -1.19% | -0.33% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → LGEINDIA | +0.45% | +0.29% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → LGEINDIA | -1.95% | -0.35% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → LGEINDIA | +0.62% | +0.34% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → LGEINDIA | +1.30% | +0.32% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → LGEINDIA | -0.45% | -0.27% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LGEINDIA | -1.49% | -0.27% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → LGEINDIA | -1.20% | -0.26% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → LGEINDIA | -1.04% | -0.26% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → LGEINDIA | +0.45% | +0.25% |
 | 2 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → F_URBAN_DEMAND → LGEINDIA | +0.29% | +0.23% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → LGEINDIA | -0.77% | -0.22% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → LGEINDIA | -1.20% | -0.22% |
 | 1 | EV_CHINA_FDI_EASING_PN3 ⇒ T_CHINA_PLUS_ONE → LGEINDIA | +0.30% | +0.21% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → LGEINDIA | -0.59% | -0.21% |
+| 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → LGEINDIA | -0.22% | -0.21% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → LGEINDIA | -0.77% | -0.19% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → LGEINDIA | +1.70 | events | -1.53% |
+| 1 | F_GSEC_10Y_IN → LGEINDIA | +1.55 | director_override | -1.40% |
 | 1 | F_FPI_FLOWS → LGEINDIA | -1.60 | events | -1.28% |
 | 1 | F_URBAN_DEMAND → LGEINDIA | +0.20 | events | +0.60% |
 | 1 | F_USDINR → LGEINDIA | -0.37 | observed | +0.55% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → LGEINDIA | +1.00 | events | -0.25% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → LGEINDIA | +1.70 | events | -0.24% |
 | 1 | F_COPPER → LGEINDIA | -0.24 | observed | +0.24% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → LGEINDIA | +1.55 | director_override | -0.22% |
 | 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → LGEINDIA | -0.60 | events | +0.22% |
 | 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → LGEINDIA | +0.50 | events | +0.15% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → LGEINDIA | +0.50 | events | +0.14% |
 | 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → LGEINDIA | -0.30 | events | +0.13% |
 | 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → LGEINDIA | +1.00 | events | -0.10% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Citi '90-day positive catalyst watch' (opened 2026-10-01) runs to ~end Dec; MOFSL target Rs2,080, BOB Capital +20%, UBS Buy | other | 0.50 | +1.5% | +0.75% |
+| 2026-11-05 | Q2 FY27 results declared: profit +26% YoY, revenue beat (per headlines); board approved foray into a new business (details not read). Stock +3.5% intraday | results | 1.00 | +1.0% | +1.00% |
+| 2027-02 | Q3 FY27 results (festive-quarter sell-through); then summer 2027 AC season | results | 0.95 | +0.0% | +0.00% |
+| 2027-06 | Hypothetical parent stake sale (OFS) given 85% holding vs 75% SEBI MPS limit; no evidence of a plan, listed only as a tail risk (SEBI public-shareholding rule: model knowledge) | corporate_action | 0.05 | -5.5% | -0.28% |
 
 ## Analyst profile (agent research, sourced)
 # LGEINDIA - LG Electronics India Ltd. (midcap, appliances and consumer electronics)

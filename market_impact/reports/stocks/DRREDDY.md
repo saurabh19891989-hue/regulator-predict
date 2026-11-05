@@ -2,10 +2,10 @@
 *NIFTY_50 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.1%**, **12 months +0.1%** (rank 95 / 101 of 200 for 3m / 12m); beta 0.69
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 50%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.5% … P90 +6.1%; plausible 12m relative-return range incl. stock-specific noise: -24.0% … +25.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.8 pp (model impact -3.6% beta-adjusted vs realised market-adjusted move +2.3%); forward event exposure +3.7% (3m +1.7%; half assumed priced); company-specific events +2.4%
+- Expected relative return: **3 months -0.1%**, **12 months -0.6%** (rank 100 / 114 of 200 for 3m / 12m); beta 0.69
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 50%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.7% … P90 +1.8%; plausible 12m relative-return range incl. stock-specific noise: -4.8% … +24.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.7 pp (model impact -3.4% beta-adjusted vs realised market-adjusted move +2.3%); forward event exposure +1.9% (3m +1.0%; half assumed priced); company-specific events +2.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +3.0% | +3.0% | -1.0 | +4.6 | -0.2 | -0.4 |
 | USFDA warning letters: Alembic, Aurobindo-Eugia, Dabur (Jul-Aug 2026) (`EV_USFDA_WARNING_WAVE_26`) | occurred | 1.00 | -2.2% | -2.2% | -3.0 | +0.8 | +0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.1% | -1.1% | -1.2 | +0.1 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.0% | -1.0% | -0.8 | -0.2 | -0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.5 | -0.4 | -0.0 |
 | US imposes tariffs on generic drugs (200% threat) or removes India's speciality exemption (`EV_PHARMA_GENERICS_TARIFF`) | risk_scenario | 0.12 | -6.4% | -0.8% | -6.4 | +0.0 | +0.0 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.7% | -0.7% | -1.3 | +0.6 | -0.0 | -0.0 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.2 | -0.5 | +0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.2 | +0.5 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | +1.6% | +0.6% | -0.8 | +2.5 | +0.0 | -0.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.6% | -0.6% | -1.3 | +0.8 | -0.0 | -0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.2 | +0.4 | -0.0 |
-| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | +2.4% | +0.5% | +2.5 | -0.0 | -0.0 | +0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -0.6% | -0.6% | -0.7 | +0.0 | +0.0 | +0.0 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | +2.4% | +0.4% | +2.5 | -0.0 | -0.0 | +0.0 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.0% | -0.4% | -0.8 | -0.2 | -0.0 | -0.0 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +0.7% | +0.3% | +1.5 | -0.9 | +0.0 | +0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | +1.3% | +0.3% | -0.8 | +2.2 | +0.0 | -0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → DRREDDY | +4.16% | +0.92% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → DRREDDY | +2.53% | +0.90% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → DRREDDY | -1.52% | -0.88% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DRREDDY | +1.50% | +0.75% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → DRREDDY | +4.16% | +0.75% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → DRREDDY | -1.31% | -0.72% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → DRREDDY | +2.22% | +0.56% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ F_US_GENERIC_PRICING → DRREDDY | -4.00% | -0.48% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → DRREDDY | +1.54% | +0.43% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → DRREDDY | +0.70% | +0.41% |
-| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_USDINR → DRREDDY | +6.07% | +0.38% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → DRREDDY | +0.70% | +0.39% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → DRREDDY | -0.74% | -0.37% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → DRREDDY | +1.92% | +0.35% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → DRREDDY | -0.80% | -0.32% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → DRREDDY | -0.84% | -0.30% |
-| 2 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → F_USDINR → DRREDDY | -0.45% | -0.29% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → DRREDDY | -0.80% | -0.34% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → DRREDDY | -2.40% | -0.29% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DRREDDY | -0.90% | -0.25% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → DRREDDY | +0.96% | +0.24% |
+| 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → DRREDDY | -0.92% | -0.23% |
+| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_USDINR → DRREDDY | +4.55% | +0.23% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → DRREDDY | -0.80% | -0.22% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → DRREDDY | -0.84% | -0.21% |
+| 2 | EV_CPI_BREACH_6PCT ⇒ F_CPI_IN → F_USDINR → DRREDDY | +0.32% | +0.19% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -68,16 +68,25 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | P_USFDA_ENFORCEMENT → DRREDDY | +1.00 | events | -3.00% |
 | 1 | F_USDINR → DRREDDY | -0.37 | observed | -1.18% |
-| 1 | C_MIDEAST_CONFLICT → DRREDDY | +1.50 | events | -1.05% |
 | 1 | F_FPI_FLOWS → DRREDDY | -1.60 | events | -0.96% |
 | 1 | F_REPO_IN → DRREDDY | +1.00 | events | -0.80% |
 | 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → DRREDDY | +1.00 | events | +0.80% |
-| 1 | P_US_PHARMA_TARIFF → DRREDDY | +0.50 | events | -0.40% |
-| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → DRREDDY | +0.50 | events | +0.24% |
+| 1 | C_MIDEAST_CONFLICT → DRREDDY | +1.00 | events | -0.70% |
+| 1 | P_US_PHARMA_TARIFF → DRREDDY | +0.20 | events | -0.16% |
 | 1 | F_URBAN_DEMAND → DRREDDY | +0.20 | events | +0.14% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → DRREDDY | +0.20 | events | +0.10% |
 | 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → DRREDDY | -0.47 | observed | -0.09% |
 | 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → DRREDDY | +0.30 | events | -0.08% |
 | 2 | P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → DRREDDY | +0.40 | events | -0.08% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Semaglutide relaunch in Canada after supply disruption | other | 0.80 | +3.5% | +2.80% |
+| 2026-12 | USFDA closure/classification of FTO-9 Visakhapatnam PAI | regulatory | 0.70 | -1.5% | -1.05% |
+| 2027-01 | Q3 FY27 results: US growth, semaglutide Canada/Brazil/India revenue, EBITDA toward ~20% FY27 target | results | 0.95 | +0.5% | +0.47% |
+| 2027-03 | Abatacept biosimilar filing/approval milestones (CFO flagged as next growth phase) | regulatory | 0.30 | +3.0% | +0.90% |
+| 2027-06 | Possible US generic tariff extension | regulatory | 0.10 | -7.0% | -0.70% |
 
 ## Analyst profile (agent research, sourced)
 # DRREDDY (Dr. Reddy's Laboratories) — Nifty 50, as of 2026-11-05

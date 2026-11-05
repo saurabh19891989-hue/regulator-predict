@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.0%**, **12 months -0.2%** (rank 68 / 109 of 200 for 3m / 12m); beta 1.19
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.6%): 3 months 53%, 12 months 25%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.1% … P90 +6.1%; plausible 12m relative-return range incl. stock-specific noise: -38.5% … +27.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +3.6% beta-adjusted vs realised market-adjusted move +9.8%); forward event exposure +3.0% (3m +2.3%; half assumed priced); company-specific events -1.2%
+- Expected relative return: **3 months +1.4%**, **12 months +0.7%** (rank 48 / 84 of 200 for 3m / 12m); beta 1.19
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.6%): 3 months 54%, 12 months 20%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.7% … P90 +6.3%; plausible 12m relative-return range incl. stock-specific noise: -32.8% … +18.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +3.4% beta-adjusted vs realised market-adjusted move +9.8%); forward event exposure +4.7% (3m +3.2%; half assumed priced); company-specific events -1.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,45 +29,45 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -10.9% | -10.9% | +0.0 | -3.8 | -3.7 | -3.5 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.9% | -4.9% | -4.4 | -0.3 | -0.0 | -0.2 |
-| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.62 | -7.8% | -4.8% | -8.0 | +0.2 | +0.0 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.8% | -4.8% | -4.4 | -0.2 | -0.0 | -0.2 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +4.2% | +4.2% | +3.5 | +1.0 | -0.3 | -0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -4.0% | -4.0% | +0.0 | -1.2 | -2.4 | -0.5 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -3.0% | -3.0% | -2.5 | -0.2 | -0.2 | -0.1 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -3.0% | -3.0% | +0.0 | -1.4 | -0.8 | -0.8 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.9% | -2.9% | +0.0 | +0.3 | -2.9 | -0.3 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.6% | +2.8% | +5.0 | +0.3 | +0.0 | +0.3 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -7.1% | -2.5% | +0.0 | -2.9 | -2.3 | -1.9 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -2.1 | -0.2 | -0.2 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.7% | +2.4% | +1.6 | +0.4 | +0.7 | -0.0 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +3.5% | +2.4% | +0.0 | +0.9 | +1.9 | +0.6 |
+| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.90 | -2.3% | -2.1% | -2.4 | +0.1 | +0.0 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.3% | +1.8% | +0.0 | +1.3 | +1.1 | +1.0 |
+| RBI tightens gold-loan / unsecured and NBFC-bank lending norms after early stress (`EV_RBI_GOLD_LOAN_TIGHTEN`) | risk_scenario | 0.30 | -5.6% | -1.7% | -3.7 | -1.9 | +0.0 | -0.0 |
+| India further eases Press Note 3 rules for China/border-country FDI (approval timelines, minority stakes) (`EV_CHINA_FDI_EASING_PN3`) | anticipated | 0.70 | +2.3% | +1.6% | +2.1 | +0.0 | +0.1 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → UNIONBANK | +5.00% | +2.50% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → UNIONBANK | -3.50% | -2.17% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → UNIONBANK | -3.25% | -2.02% |
 | 1 | EV_CHINA_FDI_EASING_PN3 ⇒ P_FDI_RULES → UNIONBANK | +2.10% | +1.47% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → UNIONBANK | +1.60% | +1.44% |
 | 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → UNIONBANK | -3.50% | -1.05% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → UNIONBANK | -2.99% | -0.84% |
-| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → UNIONBANK | +2.10% | +0.80% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → UNIONBANK | -1.25% | -0.78% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → UNIONBANK | -1.05% | -0.95% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → UNIONBANK | -0.97% | -0.88% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → UNIONBANK | -1.20% | -0.72% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → UNIONBANK | -3.73% | -0.67% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → UNIONBANK | -3.00% | -0.66% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → UNIONBANK | -1.20% | -0.60% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → UNIONBANK | +0.80% | +0.54% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → UNIONBANK | +1.20% | +0.54% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → UNIONBANK | -3.00% | -0.54% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → UNIONBANK | -4.50% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → UNIONBANK | -1.92% | -0.48% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → UNIONBANK | -1.92% | -0.48% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → UNIONBANK | +0.60% | +0.48% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → UNIONBANK | -1.87% | -0.47% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → UNIONBANK | -1.60 | events | -3.20% |
-| 1 | F_GSEC_10Y_IN → UNIONBANK | +1.70 | events | -2.55% |
+| 1 | F_GSEC_10Y_IN → UNIONBANK | +1.55 | director_override | -2.33% |
 | 1 | F_GOVT_CAPEX → UNIONBANK | +1.00 | events | +2.00% |
 | 1 | P_FDI_RULES → UNIONBANK | +0.50 | events | +1.50% |
 | 1 | F_GDP_IN → UNIONBANK | +0.50 | events | +1.50% |
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_RURAL_DEMAND → F_ASSET_QUALITY_IN → UNIONBANK | -0.25 | events | -0.26% |
 | 2 | F_REPO_IN → F_ASSET_QUALITY_IN → UNIONBANK | +1.00 | events | -0.26% |
 | 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → UNIONBANK | -1.56 | events | -0.24% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Government PSU consolidation/stake-sale announcements (Oct 2026 reports) | corporate_action | 0.30 | +2.0% | +0.60% |
+| 2027-01 | Q3 FY27 results (inferred; Q2 on 2026-10-19): NIM expansion test from the repo hike, GNPA trend | results | 0.92 | +0.5% | +0.46% |
+| 2027-03 | Capital raise (QIP/AT1/Tier-2 or dollar bond) to fund 18%+ credit growth and ECL; government at 74.76% limits an equity QIP without OFS | capex | 0.35 | -1.5% | -0.52% |
+| 2027-04 | ECL framework effective; transition hit ~Rs5,500cr (estimate) | regulatory | 0.85 | -2.0% | -1.70% |
 
 ## Analyst profile (agent research, sourced)
 # UNIONBANK - Union Bank of India (Nifty Next 50, I_PSU_BANKS) - as of 2026-11-05

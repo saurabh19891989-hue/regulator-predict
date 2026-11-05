@@ -2,10 +2,10 @@
 *MIDCAP_100 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +3.2%**, **12 months +4.2%** (rank 28 / 38 of 200 for 3m / 12m); beta 1.40
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +48.4%): 3 months 55%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.8% … P90 +14.4%; plausible 12m relative-return range incl. stock-specific noise: -40.8% … +52.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +2.9% beta-adjusted vs realised market-adjusted move -27.0%); forward event exposure +12.4% (3m +6.7%; half assumed priced); company-specific events -4.4%
+- Expected relative return: **3 months +2.5%**, **12 months +2.5%** (rank 30 / 47 of 200 for 3m / 12m); beta 1.40
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +48.4%): 3 months 54%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.0% … P90 +8.2%; plausible 12m relative-return range incl. stock-specific noise: -45.3% … +41.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.2 pp (model impact +2.3% beta-adjusted vs realised market-adjusted move -27.0%); forward event exposure +9.3% (3m +5.7%; half assumed priced); company-specific events -4.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -32,15 +32,15 @@
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -1.4% | -1.4% | -1.4 | +0.0 | +0.0 | +0.0 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +1.4% | +1.4% | +1.0 | +0.4 | +0.0 | -0.0 |
 | China Central Economic Work Conference / NPC (Dec 2026-Mar 2027): larger-than-expected fiscal or property stimulus (`EV_CHINA_CEWC_STIMULUS_DEC26`) | anticipated | 0.45 | +2.8% | +1.3% | +2.8 | -0.1 | +0.1 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.1% | -1.1% | -1.8 | +0.8 | -0.0 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.2% | -1.2% | -1.8 | +0.6 | -0.0 | -0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.0% | -1.0% | -1.1 | +0.1 | +0.0 | +0.0 |
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +2.7% | +0.9% | +1.0 | +1.5 | +0.2 | +0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -1.2 | +0.4 | -0.0 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +0.9% | +0.9% | +0.0 | +0.5 | +0.4 | +0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -1.2 | +0.4 | -0.0 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +0.7% | +0.7% | +0.3 | +0.4 | +0.1 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.6% | -0.6% | -0.5 | -0.1 | -0.0 | -0.0 |
 | CAFE-III fuel-efficiency norms notified (30 Sep 2026); no small-car carve-out; 3x credit for BEVs (`EV_CAFE3_NOTIFIED`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.4 | +0.3 | +0.0 |
+| FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +1.2% | +0.6% | +2.0 | -0.8 | +0.1 | +0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.7 | +0.1 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,19 +48,19 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → HINDCOPPER | +2.40% | +1.08% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HINDCOPPER | +2.00% | +1.00% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HINDCOPPER | +3.90% | +0.86% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HINDCOPPER | +3.90% | +0.70% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → HINDCOPPER | +1.76% | +0.62% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → HINDCOPPER | -1.25% | -0.45% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → HINDCOPPER | +0.75% | +0.44% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HINDCOPPER | +1.19% | +0.42% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HINDCOPPER | -0.71% | -0.41% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → HINDCOPPER | +1.44% | +0.40% |
-| 2 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_DXY → F_COPPER → HINDCOPPER | -1.34% | -0.40% |
+| 2 | EV_FED_DEC26_HIKE25 ⇒ F_DXY → F_COPPER → HINDCOPPER | -0.50% | -0.36% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → HINDCOPPER | +0.60% | +0.36% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → HINDCOPPER | +0.65% | +0.36% |
 | 1 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → HINDCOPPER | +1.00% | +0.35% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → HINDCOPPER | -0.69% | -0.35% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HINDCOPPER | -1.19% | -0.33% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → HINDCOPPER | +1.80% | +0.32% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HINDCOPPER | -0.62% | -0.34% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → HINDCOPPER | -1.10% | -0.28% |
+| 2 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_DXY → F_COPPER → HINDCOPPER | -0.67% | -0.27% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HINDCOPPER | +1.04% | +0.26% |
+| 3 | EV_US_CHINA_TRUCE_EXTENDED ⇒ C_US_CHINA_DECOUPLING → F_CHINA_GDP → F_COPPER → HINDCOPPER | +0.32% | +0.23% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → HINDCOPPER | +0.90% | +0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -73,6 +73,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_REPO_IN → HINDCOPPER | +1.00 | events | -0.50% |
 | 1 | F_CHINA_GDP → HINDCOPPER | +0.30 | events | +0.30% |
 | 1 | F_BRENT → HINDCOPPER | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Q2 FY27 results (Q1 was ~2026-08-10; date not confirmed) | results | 0.95 | +0.0% | +0.00% |
+| 2027-01 | Arbitration award case: commercial court conditionally stayed the 50% deposit requirement (2026-09-22); further ruling pending | litigation | 0.30 | -2.0% | -0.60% |
+| 2027-03 | QIP of up to ~9.69 crore shares / Rs500 cr NCD executed | corporate_action | 0.60 | -5.0% | -3.00% |
+| 2027-06 | Further government stake sale | corporate_action | 0.15 | -5.5% | -0.82% |
 
 ## Analyst profile (agent research, sourced)
 # HINDCOPPER — Hindustan Copper Ltd. (Midcap 100, I_NONFERROUS) — as of 2026-11-05

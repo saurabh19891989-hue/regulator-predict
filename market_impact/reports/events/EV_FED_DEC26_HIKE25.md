@@ -1,7 +1,9 @@
 # FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`)
-*global_macro · status scheduled · date 2026-12-09 · P(3m) 0.58 · P(12m) 0.58 · confidence medium*
+*global_macro · status scheduled · date 2026-12-09 · P(3m) 0.72 · P(12m) 0.72 · confidence medium*
 
 FOMC meets 8-9 Dec (fed calendar, with SEP). Reuters 20 Oct: nearly all economists expected a Dec hike; Cook and Hammack dissented for a hike on 28 Oct; 3.7% CPI, 3.4% GDP. Against: weak Sept payrolls (+29k), falling oil/yields after midterms, Trump pressure on Warsh, AI selloff. Hike 0.58, hold 0.42 (our judgment; check Nov 6 jobs report and 10 Dec CPI).
+
+**Review override applied:** Futures price a December hike at ~77-80% after the midterms (TokenPost 4 Nov 76.9%; BigGo 5 Nov ~80%). ADP Oct +86k beat. Warsh says inflation is 'too high'. Shaded slightly below market for the oil collapse and the 6 Nov payrolls risk. 0.58 was below market pricing.
 
 **Already moved:** n/a
 

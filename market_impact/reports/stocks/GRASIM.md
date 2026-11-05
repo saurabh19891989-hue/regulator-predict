@@ -2,10 +2,10 @@
 *NIFTY_50 · Construction Materials · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.6%**, **12 months +1.2%** (rank 82 / 79 of 200 for 3m / 12m); beta 1.09
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 53%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.8% … P90 +7.1%; plausible 12m relative-return range incl. stock-specific noise: -14.9% … +20.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.3 pp (model impact +2.6% beta-adjusted vs realised market-adjusted move -1.6%); forward event exposure +0.5% (3m -0.1%; half assumed priced); company-specific events +1.7%
+- Expected relative return: **3 months +0.5%**, **12 months +0.5%** (rank 78 / 87 of 200 for 3m / 12m); beta 1.09
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.9%): 3 months 52%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.1% … P90 +3.7%; plausible 12m relative-return range incl. stock-specific noise: -18.2% … +13.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.1 pp (model impact +2.2% beta-adjusted vs realised market-adjusted move -1.6%); forward event exposure -0.8% (3m -0.2%; half assumed priced); company-specific events +1.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -5.3% | -5.3% | -3.0 | -0.5 | -1.4 | -0.4 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.2% | -3.2% | +0.0 | -2.8 | -0.3 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.0% | -2.0% | -1.8 | -0.2 | -0.0 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.0% | -1.1% | -1.5 | -0.6 | -0.6 | -0.3 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.8% | +1.1% | +0.9 | +0.2 | +0.5 | +0.2 |
-| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -2.0% | -0.8% | -1.8 | -0.2 | -0.0 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.6% | +0.9% | +0.8 | +0.2 | +0.5 | +0.2 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -2.0% | -0.9% | -1.8 | -0.2 | -0.0 | -0.0 |
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | +0.0 | -0.7 | -0.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.3 | -0.2 | -0.2 |
 | Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -2.8% | -0.7% | +0.0 | -2.5 | -0.3 | -0.1 |
-| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -3.2% | -0.7% | -2.7 | -0.4 | -0.1 | +0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.0 | +0.4 | +0.2 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -2.7% | -0.7% | -1.3 | -0.6 | -0.5 | -0.3 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.3 | +0.1 | +0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.3 | -0.1 | -0.2 |
+| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.0% | -0.6% | -0.7 | -0.4 | +0.1 | -0.0 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -3.2% | -0.6% | -2.7 | -0.4 | -0.1 | +0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.3 | -0.1 | -0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GRASIM | -1.80% | -0.72% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GRASIM | -1.50% | -0.54% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GRASIM | +0.90% | +0.52% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GRASIM | -1.80% | -0.76% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → GRASIM | -2.07% | -0.52% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → GRASIM | -1.80% | -0.49% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → GRASIM | -0.72% | -0.43% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → GRASIM | -1.80% | -0.40% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → GRASIM | +0.78% | +0.43% |
 | 1 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → GRASIM | +0.56% | +0.39% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → GRASIM | -1.32% | -0.33% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → GRASIM | -1.80% | -0.32% |
 | 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → GRASIM | -0.60% | -0.30% |
 | 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → GRASIM | -0.46% | -0.30% |
 | 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_REPO_IN → GRASIM | -0.31% | -0.28% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ F_CPI_IN → F_REPO_IN → GRASIM | -0.62% | -0.28% |
-| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → GRASIM | -3.60% | -0.22% |
 | 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_REPO_IN → GRASIM | -1.80% | -0.22% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → GRASIM | -0.91% | -0.20% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → F_REPO_IN → GRASIM | -0.29% | -0.20% |
+| 3 | EV_NEMONSOON26_NORMAL_UP ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → GRASIM | +0.23% | +0.19% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ F_CPI_IN → F_REPO_IN → GRASIM | -0.62% | -0.19% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -68,7 +68,7 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_REPO_IN → GRASIM | +1.00 | events | -1.80% |
 | 1 | F_COAL_INTL → GRASIM | +0.70 | director_override | -0.84% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → GRASIM | +1.70 | events | -0.41% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → GRASIM | +1.55 | director_override | -0.37% |
 | 1 | P_ANTI_DUMPING_IN → GRASIM | +0.40 | events | +0.32% |
 | 1 | F_URBAN_DEMAND → GRASIM | +0.20 | events | +0.30% |
 | 1 | F_USDINR → GRASIM | -0.37 | observed | +0.26% |
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → GRASIM | -0.47 | observed | +0.09% |
 | 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → GRASIM | +1.00 | events | -0.08% |
 | 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → GRASIM | +0.30 | events | +0.08% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Q2 FY27 results (date not announced; Grasim reported Q1 on 12 Aug) | results | 0.95 | +0.0% | +0.00% |
+| 2026-12 | Further promoter open-market purchases (stake already raised to 45.07%) | corporate_action | 0.50 | +0.8% | +0.38% |
+| 2027-03 | Birla Opus profitability milestones / pricing war outcomes | guidance | 0.50 | +0.0% | +0.00% |
+| 2027-06 | Possible holding-company simplification / listing events in ABC group (unverified) | corporate_action | 0.10 | +2.0% | +0.20% |
 
 ## Analyst profile (agent research, sourced)
 # GRASIM — Grasim Industries Ltd. (as of 2026-11-05)

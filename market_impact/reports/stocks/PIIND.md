@@ -2,10 +2,10 @@
 *MIDCAP_100 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.3%**, **12 months +2.9%** (rank 39 / 54 of 200 for 3m / 12m); beta 0.76
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.2%): 3 months 56%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.9% … P90 +10.4%; plausible 12m relative-return range incl. stock-specific noise: -21.7% … +47.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.0 pp (model impact +2.1% beta-adjusted vs realised market-adjusted move -35.3%); forward event exposure +10.6% (3m +5.5%; half assumed priced); company-specific events -4.5%
+- Expected relative return: **3 months +2.1%**, **12 months +1.8%** (rank 38 / 60 of 200 for 3m / 12m); beta 0.76
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.2%): 3 months 56%, 12 months 80%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.1% … P90 +9.1%; plausible 12m relative-return range incl. stock-specific noise: -23.4% … +53.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.9 pp (model impact +1.8% beta-adjusted vs realised market-adjusted move -35.3%); forward event exposure +8.4% (3m +5.2%; half assumed priced); company-specific events -4.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -31,12 +31,12 @@
 |---|---|---|---|---|---|---|---|---|
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.0% | -2.0% | -1.9 | -0.2 | -0.0 | +0.1 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.8% | +1.4% | +1.8 | -0.0 | +0.0 | +0.0 |
-| India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.65 | +1.9% | +1.2% | +2.1 | -0.2 | -0.0 | +0.0 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.6% | +1.1% | +1.5 | +0.2 | -0.0 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.9% | +0.9% | +0.0 | +0.9 | +0.0 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.8 | +0.0 | +0.0 |
+| India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.55 | +1.4% | +0.8% | +1.5 | -0.1 | -0.0 | +0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.7% | -0.7% | -0.7 | +0.0 | +0.0 | -0.0 |
+| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +0.8% | +0.7% | +0.8 | +0.1 | -0.0 | +0.0 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.7% | +0.7% | +0.6 | +0.1 | -0.0 | -0.0 |
-| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | +2.6% | +0.6% | +2.6 | +0.0 | +0.0 | +0.0 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.5 | +0.0 | +0.0 |
 | India-EU FTA signed at ceremony (planned 16 Dec 2026) (`EV_INDIA_EU_FTA_SIGNED`) | scheduled | 0.92 | +0.6% | +0.5% | +0.6 | -0.0 | +0.0 | +0.0 |
 | IMD April 2027 forecast says below-normal monsoon (<96% LPA) - second weak year risk (`EV_MONSOON27_DEFICIT_FORECAST`) | risk_scenario | 0.32 | -1.6% | -0.5% | -1.5 | -0.2 | +0.1 | -0.0 |
@@ -48,19 +48,19 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → PIIND | +1.80% | +1.44% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → PIIND | +1.50% | +1.02% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → PIIND | +1.20% | +0.78% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIIND | -1.70% | -0.61% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIIND | +1.02% | +0.59% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → PIIND | +0.90% | +0.58% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PIIND | +2.60% | +0.57% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → PIIND | +1.58% | +0.56% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → PIIND | -0.95% | -0.55% |
+| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → PIIND | +0.75% | +0.64% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → PIIND | +0.90% | +0.49% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIIND | +0.88% | +0.49% |
 | 1 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → PIIND | -1.50% | -0.48% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → PIIND | +2.60% | +0.47% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → PIIND | -0.92% | -0.46% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → PIIND | -0.82% | -0.45% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → PIIND | -3.00% | -0.45% |
-| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → PIIND | +0.75% | +0.43% |
 | 1 | EV_CHINA_FDI_EASING_PN3 ⇒ T_CHINA_PLUS_ONE → PIIND | +0.60% | +0.42% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → PIIND | -1.50% | -0.37% |
 | 2 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → PIIND | +0.50% | +0.35% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → PIIND | +1.39% | +0.35% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → PIIND | +0.96% | +0.34% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -78,6 +78,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → PIIND | -0.60 | events | +0.22% |
 | 2 | C_US_CHINA_DECOUPLING → T_CHINA_PLUS_ONE → PIIND | -0.10 | events | -0.13% |
 | 2 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → PIIND | -0.10 | events | +0.12% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Post-Q2 management commentary / analyst downgrades follow-through | guidance | 0.70 | -1.0% | -0.70% |
+| 2027-02 | Q3 FY27 results (estimate) | results | 0.97 | +0.0% | +0.00% |
+| 2027-06 | Stabilisation or further loss of CSM contract volumes with key customer(s) | other | 0.30 | -12.5% | -3.75% |
 
 ## Analyst profile (agent research, sourced)
 # PIIND — PI Industries Ltd. (as of 2026-11-05)

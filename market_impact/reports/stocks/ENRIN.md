@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +6.3%**, **12 months +10.5%** (rank 5 / 12 of 200 for 3m / 12m); beta 0.83
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +41.8%): 3 months 62%, 12 months 68%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.9% … P90 +19.6%; plausible 12m relative-return range incl. stock-specific noise: -31.2% … +80.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +7.5 pp (model impact +15.1% beta-adjusted vs realised market-adjusted move -26.9%); forward event exposure +4.6% (3m +1.9%; half assumed priced); company-specific events +3.7%
+- Expected relative return: **3 months +6.0%**, **12 months +10.2%** (rank 8 / 9 of 200 for 3m / 12m); beta 0.83
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +41.8%): 3 months 61%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.0% … P90 +12.4%; plausible 12m relative-return range incl. stock-specific noise: -27.6% … +81.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +7.4 pp (model impact +14.9% beta-adjusted vs realised market-adjusted move -26.9%); forward event exposure +4.0% (3m +1.5%; half assumed priced); company-specific events +3.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -6.2% | -6.2% | +0.0 | -3.4 | -1.8 | -0.9 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +4.0% | +4.0% | +1.5 | +2.5 | +0.0 | -0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +3.9% | +3.9% | +4.0 | -0.1 | +0.0 | -0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -13.6% | -3.8% | -11.5 | -1.2 | -0.7 | -0.2 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +3.7% | +3.7% | +3.0 | +0.7 | +0.0 | +0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -12.0% | -3.0% | -10.0 | -1.2 | -0.7 | -0.1 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +3.1% | +2.8% | +3.2 | -0.0 | -0.0 | +0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -2.9 | +0.4 | +0.1 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +2.3% | +2.3% | +0.0 | +1.7 | +0.6 | +0.0 |
 | Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +5.5% | +2.2% | +4.5 | +1.1 | +0.1 | -0.2 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -2.1 | -0.0 | +0.0 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | -2.3% | -1.5% | +0.0 | -1.7 | -0.6 | +0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | +0.0 | +0.0 | -0.1 |
+| AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.1 | -0.1 | -0.1 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.3% | +1.3% | +0.4 | +1.1 | +0.5 | +0.3 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ENRIN | +3.20% | +2.88% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ENRIN | -7.50% | -2.10% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → ENRIN | -7.50% | -1.88% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → ENRIN | +4.50% | +1.80% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → ENRIN | -1.72% | -1.17% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ENRIN | -4.00% | -1.12% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ENRIN | +2.40% | +1.08% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ENRIN | -5.00% | -0.90% |
+| 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → ENRIN | -0.86% | -0.73% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ENRIN | +2.40% | +0.72% |
 | 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → ENRIN | +1.44% | +0.65% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ENRIN | -1.50% | -0.60% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → ENRIN | -1.50% | -0.63% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ENRIN | -2.50% | -0.62% |
 | 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → ENRIN | +0.96% | +0.58% |
 | 2 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → F_POWER_DEMAND_IN → ENRIN | +1.72% | +0.55% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → ENRIN | +0.90% | +0.54% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ENRIN | -0.77% | -0.53% |
-| 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_POWER_DEMAND_IN → ENRIN | -0.86% | -0.49% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_AI_CAPEX → ENRIN | +0.75% | +0.46% |
+| 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ENRIN | +1.08% | +0.43% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -73,11 +73,20 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_REPO_IN → ENRIN | +1.00 | events | -1.50% |
 | 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → ENRIN | +1.20 | events | +0.86% |
 | 1 | F_AI_CAPEX → ENRIN | -0.30 | events | -0.75% |
-| 1 | F_STEEL_INDIA → ENRIN | +1.65 | events | -0.66% |
 | 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → ENRIN | +0.50 | events | +0.60% |
+| 1 | F_STEEL_INDIA → ENRIN | +1.35 | events | -0.54% |
 | 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → ENRIN | +1.00 | events | +0.48% |
 | 1 | F_GAS_GLOBAL → ENRIN | -0.47 | observed | +0.37% |
 | 1 | F_USDINR → ENRIN | -0.37 | observed | +0.18% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | FY26 (Sep-2026) annual and Q4 results; trading window closed from 2026-09-28 (scanx) | results | 0.95 | +0.5% | +0.47% |
+| 2026-11 | Siemens Energy AG FY results / outlook (global read-across) | guidance | 0.80 | +0.5% | +0.40% |
+| 2027-01 | Large HVDC/transmission order awards (PGCIL packages) that could lift backlog | other | 0.35 | +5.0% | +1.75% |
+| 2027-02 | Q1 FY27 (Dec-2026 quarter) results | results | 0.95 | +0.5% | +0.47% |
+| 2027-06 | Transformer capacity expansion commissioning | capex | 0.30 | +2.0% | +0.60% |
 
 ## Analyst profile (agent research, sourced)
 # ENRIN — Siemens Energy India Ltd. (profile as of 2026-11-05)

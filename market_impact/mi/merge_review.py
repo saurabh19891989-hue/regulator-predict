@@ -17,7 +17,7 @@ import os
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 R = lambda *p: os.path.join(HERE, *p)
-PRIORITY = ["RT_BACKBONE", "RT_EVENTS", "RT_TOP", "RT_BOTTOM"]
+PRIORITY = ["RT_BACKBONE", "RT_EVENTS", "RT_TOP_A", "RT_TOP_B", "RT_BOT_A", "RT_BOT_B", "RT_N50_A", "RT_N50_B"]
 
 
 def load(p, default):

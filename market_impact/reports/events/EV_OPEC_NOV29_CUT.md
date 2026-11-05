@@ -1,7 +1,9 @@
 # OPEC+ 29 Nov meeting: 2027 quota cut (`EV_OPEC_NOV29_CUT`)
-*energy · status scheduled · date 2026-11-29 · P(3m) 0.12 · P(12m) 0.12 · confidence low*
+*energy · status scheduled · date 2026-11-29 · P(3m) 0.08 · P(12m) 0.08 · confidence low*
 
 A cut is unlikely with Brent ~$95 and members under-producing, but possible if peace deal produces a price slump (Brent <$80).
+
+**Review override applied:** A cut is unlikely with Brent at $95 and members below quota; group sum 0.98.
 
 ## Entry shocks (conditional on the event)
 - `F_BRENT` Brent crude oil price: 0.5 SSU (range 0.2…1.0) 

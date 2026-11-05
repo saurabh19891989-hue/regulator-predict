@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +4.2%**, **12 months +8.0%** (rank 19 / 21 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +43.6%): 3 months 58%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +4.0% … P90 +12.1%; plausible 12m relative-return range incl. stock-specific noise: -76.6% … +70.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.1 pp (model impact +8.3% beta-adjusted vs realised market-adjusted move -18.8%); forward event exposure +7.1% (3m +3.1%; half assumed priced); company-specific events +2.9%
+- Expected relative return: **3 months +3.8%**, **12 months +7.3%** (rank 21 / 21 of 200 for 3m / 12m); beta 1.11
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +43.6%): 3 months 57%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +3.0% … P90 +8.2%; plausible 12m relative-return range incl. stock-specific noise: -99.4% … +71.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.1 pp (model impact +8.2% beta-adjusted vs realised market-adjusted move -18.8%); forward event exposure +5.6% (3m +2.2%; half assumed priced); company-specific events +2.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -4.2% | -4.2% | -0.9 | -0.3 | -2.1 | -0.9 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +4.1% | +4.1% | +2.0 | +2.1 | +0.0 | -0.0 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.3% | -3.3% | -3.3 | +0.1 | -0.0 | -0.1 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.2% | +2.2% | +2.5 | -0.3 | +0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.9 | -0.2 | +0.1 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.9% | -1.9% | -1.9 | +0.0 | -0.1 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +3.8% | +1.9% | +3.8 | -0.1 | +0.1 | +0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -6.3% | -1.8% | +0.0 | -4.9 | -1.1 | -0.3 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.9% | -1.9% | -1.9 | +0.0 | -0.0 | +0.0 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.8% | +1.8% | +1.0 | +0.5 | +0.3 | +0.0 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.9% | +1.7% | +2.0 | +0.0 | -0.1 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.5% | -1.5% | -1.5 | -0.0 | +0.0 | -0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.4% | +1.4% | +0.0 | +1.4 | +0.0 | +0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -5.3% | -1.3% | +0.0 | -4.2 | -0.9 | -0.2 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.8% | +1.0% | +0.6 | +0.3 | +0.6 | +0.3 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -49,18 +49,18 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GVT&D | +3.75% | +1.88% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → GVT&D | +2.00% | +1.80% |
 | 2 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → GVT&D | +2.16% | +0.86% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → GVT&D | +1.50% | +0.68% |
 | 2 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → GVT&D | +1.44% | +0.65% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GVT&D | -2.24% | -0.63% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GVT&D | -1.50% | -0.60% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GVT&D | -1.50% | -0.63% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → GVT&D | -0.77% | -0.53% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GVT&D | -2.80% | -0.50% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GVT&D | -2.25% | -0.49% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → GVT&D | +1.50% | +0.45% |
 | 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → GVT&D | +0.72% | +0.43% |
 | 2 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → T_GRID_ELECTRIFICATION → GVT&D | +0.72% | +0.43% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → GVT&D | -1.73% | -0.43% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → GVT&D | -1.50% | -0.41% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → GVT&D | -1.44% | -0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GVT&D | -2.25% | -0.40% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → GVT&D | -1.44% | -0.36% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → GVT&D | -1.44% | -0.36% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → GVT&D | +0.60% | +0.36% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -74,10 +74,19 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_REPO_IN → GVT&D | +1.00 | events | -1.50% |
 | 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → GVT&D | +1.50 | events | +1.44% |
 | 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → GVT&D | +0.50 | events | +1.20% |
-| 1 | C_MIDEAST_CONFLICT → GVT&D | +1.50 | events | -0.90% |
+| 1 | C_MIDEAST_CONFLICT → GVT&D | +1.00 | events | -0.60% |
 | 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → GVT&D | +1.00 | events | +0.32% |
 | 1 | P_US_TARIFF_INDIA → GVT&D | -0.60 | events | +0.18% |
 | 1 | F_USDINR → GVT&D | -0.37 | observed | -0.15% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Barmer II-South Kalamb HVDC definitive agreement signed and order booked (management expects booking in Q3 FY27) | guidance | 0.85 | +1.2% | +1.06% |
+| 2027-01 | Q3 FY27 results (Dec quarter), management reiterated FY27 EBITDA margin 'mid-20s' and base order inflow Rs 7,200-8,000 cr | results | 0.95 | +0.0% | +0.00% |
+| 2027-02 | Conclusion of ~US$151 mn US related-party export order | guidance | 0.45 | +1.8% | +0.79% |
+| 2027-03 | Revival of two on-hold related-party export orders (Middle East, France) | guidance | 0.30 | +1.1% | +0.34% |
+| 2027-03 | STATCOM / data-centre order pick-up (from Q4 FY27) | guidance | 0.50 | +1.4% | +0.70% |
 
 ## Analyst profile (agent research, sourced)
 # GVT&D — GE Vernova T&D India (as of 2026-11-05)

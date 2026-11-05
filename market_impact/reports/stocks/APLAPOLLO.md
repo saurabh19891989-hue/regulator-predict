@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.3%**, **12 months +0.6%** (rank 109 / 90 of 200 for 3m / 12m); beta 1.00
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.0%): 3 months 49%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.2% … P90 +5.9%; plausible 12m relative-return range incl. stock-specific noise: -19.3% … +28.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +5.7% beta-adjusted vs realised market-adjusted move +17.9%); forward event exposure +4.3% (3m +0.7%; half assumed priced); company-specific events -0.8%
+- Expected relative return: **3 months -0.2%**, **12 months +0.2%** (rank 103 / 92 of 200 for 3m / 12m); beta 1.00
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +24.0%): 3 months 49%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +1.9%; plausible 12m relative-return range incl. stock-specific noise: -28.4% … +27.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact +5.3% beta-adjusted vs realised market-adjusted move +17.9%); forward event exposure +3.3% (3m +0.8%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -31,46 +31,46 @@
 |---|---|---|---|---|---|---|---|---|
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -1.6 | -0.7 | -0.3 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.4% | +2.4% | +2.5 | +0.2 | -0.2 | -0.1 |
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -2.2% | -2.2% | -1.2 | +0.5 | -0.7 | -0.8 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | +2.1% | +2.1% | +2.1 | +0.0 | -0.0 | -0.0 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.1% | +1.9% | +2.0 | +0.2 | +0.0 | -0.1 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -1.8 | -0.1 | +0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.7% | -1.7% | -1.2 | -0.5 | -0.0 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.4% | +0.8% | +1.1 | -0.2 | +0.2 | +0.3 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -2.1% | -0.8% | -1.7 | +0.3 | -0.3 | -0.4 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | +1.6% | +1.6% | +1.7 | +0.0 | -0.0 | -0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -0.9% | -0.9% | -0.8 | -0.1 | +0.0 | -0.0 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.7% | -0.7% | -1.2 | -0.5 | -0.0 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.3% | +0.7% | +1.0 | -0.2 | +0.2 | +0.2 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.7 | +0.0 | +0.0 |
-| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -1.7% | -0.7% | -1.2 | -0.5 | -0.0 | -0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.3 | -0.1 | -0.3 |
+| Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | +0.6% | +0.6% | +0.6 | +0.0 | -0.0 | -0.0 |
+| Domestic LPG under-recoveries >Rs59,000 cr (to July); government compensation boosts IOC Q2 (`EV_LPG_UNDERRECOVERY`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.6 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → APLAPOLLO | +2.00% | +1.80% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → APLAPOLLO | +1.50% | +0.68% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → APLAPOLLO | -2.40% | -0.67% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → APLAPOLLO | -3.00% | -0.54% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → APLAPOLLO | -1.20% | -0.48% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → APLAPOLLO | +0.80% | +0.46% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → APLAPOLLO | -1.20% | -0.50% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → APLAPOLLO | +1.50% | +0.45% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → APLAPOLLO | +0.80% | +0.44% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → APLAPOLLO | -1.50% | -0.38% |
 | 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → APLAPOLLO | +0.60% | +0.36% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → APLAPOLLO | -1.38% | -0.35% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → APLAPOLLO | -0.96% | -0.34% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → APLAPOLLO | +0.60% | +0.33% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → APLAPOLLO | -1.20% | -0.32% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → APLAPOLLO | -0.48% | -0.29% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → APLAPOLLO | -1.20% | -0.26% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → APLAPOLLO | -0.72% | -0.26% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → APLAPOLLO | -0.96% | -0.24% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → APLAPOLLO | -1.50% | -0.22% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ P_STEEL_DUTY_IN → APLAPOLLO | -0.40% | -0.22% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → APLAPOLLO | -1.20% | -0.22% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → APLAPOLLO | -0.86% | -0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_GOVT_CAPEX → APLAPOLLO | +1.00 | events | +2.50% |
-| 1 | F_STEEL_INDIA → APLAPOLLO | +1.65 | events | +2.47% |
-| 1 | C_MIDEAST_CONFLICT → APLAPOLLO | +1.50 | events | -1.20% |
+| 1 | F_STEEL_INDIA → APLAPOLLO | +1.35 | events | +2.03% |
 | 1 | F_REPO_IN → APLAPOLLO | +1.00 | events | -1.20% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → APLAPOLLO | +1.70 | events | -0.82% |
+| 1 | C_MIDEAST_CONFLICT → APLAPOLLO | +1.00 | events | -0.80% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → APLAPOLLO | +1.55 | director_override | -0.74% |
 | 1 | F_RURAL_DEMAND → APLAPOLLO | -0.25 | events | -0.25% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → APLAPOLLO | +0.50 | events | +0.24% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → APLAPOLLO | +1.00 | events | -0.21% |
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_GDP_IN → F_PRIVATE_CAPEX → APLAPOLLO | +0.50 | events | +0.15% |
 | 1 | F_USDINR → APLAPOLLO | -0.37 | observed | -0.15% |
 | 2 | F_GOVT_CAPEX → F_PRIVATE_CAPEX → APLAPOLLO | +1.00 | events | +0.12% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Further product price revisions tracking HRC (steel +20.6% since 2026-06-01) | guidance | 0.50 | +0.5% | +0.25% |
+| 2027-01 | Q3 FY27 volume update (company releases quarterly volumes in first days of quarter-end month+1) and results late Jan | results | 0.90 | +0.0% | +0.00% |
+| 2027-03 | Safeguard duty / anti-dumping decision on flat steel (policy) | regulatory | 0.25 | -0.5% | -0.12% |
+| 2027-03 | FY27 volume target (company guidance; Livemint 2026-10-06 asks if achievable) scored at Q4 | guidance | 0.60 | -1.5% | -0.90% |
 
 ## Analyst profile (agent research, sourced)
 # APLAPOLLO - APL Apollo Tubes (Capital Goods / steel tubes)

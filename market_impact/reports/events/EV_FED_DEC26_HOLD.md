@@ -1,7 +1,9 @@
 # FOMC 8-9 Dec 2026: hold at 3.75-4.00% (`EV_FED_DEC26_HOLD`)
-*global_macro · status scheduled · date 2026-12-09 · P(3m) 0.42 · P(12m) 0.42 · confidence medium*
+*global_macro · status scheduled · date 2026-12-09 · P(3m) 0.28 · P(12m) 0.28 · confidence medium*
 
 Complement of the hike event: weak labour data, post-midterm yield decline and lower oil could keep the Fed on hold; Cook/Hammack dissents would likely repeat. Mutually exclusive with EV_FED_DEC26_HIKE25.
+
+**Review override applied:** Complement of the hike (sum 1.0).
 
 **Already moved:** n/a
 

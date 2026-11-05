@@ -2,10 +2,10 @@
 *NIFTY_50 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +2.6%** (rank 75 / 57 of 200 for 3m / 12m); beta 0.92
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.8%): 3 months 53%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.1% … P90 +7.8%; plausible 12m relative-return range incl. stock-specific noise: -21.2% … +29.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.7% beta-adjusted vs realised market-adjusted move -13.1%); forward event exposure +3.1% (3m +0.5%; half assumed priced); company-specific events +0.9%
+- Expected relative return: **3 months +0.2%**, **12 months +1.7%** (rank 91 / 62 of 200 for 3m / 12m); beta 0.92
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.8%): 3 months 51%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.7% … P90 +4.0%; plausible 12m relative-return range incl. stock-specific noise: -25.2% … +25.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.9 pp (model impact +3.9% beta-adjusted vs realised market-adjusted move -13.1%); forward event exposure +0.7% (3m -0.8%; half assumed priced); company-specific events +0.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -6.5% | -6.5% | +0.0 | -0.7 | -2.6 | -3.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -4.2% | -4.2% | -4.2 | +0.0 | +0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.8% | -3.8% | +0.0 | -1.9 | -1.9 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.2% | -3.2% | -2.6 | -0.3 | -0.0 | -0.2 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +2.9% | +2.9% | +2.0 | +0.9 | -0.0 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.9% | -2.9% | -2.3 | -0.3 | -0.0 | -0.2 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.4% | -2.4% | +0.0 | -2.1 | -0.3 | -0.1 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.9 | -0.1 | -0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +1.9% | +1.9% | +1.5 | +0.4 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | +0.0 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +3.3% | +1.7% | +2.7 | +0.4 | +0.1 | +0.2 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.4 | -0.1 | -0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.1 | -0.3 | -0.1 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.3% | +1.3% | +0.8 | +0.4 | +0.2 | -0.0 |
+| Budget FY2027-28: FY27 deficit overshoot confirmed and consolidation path slowed (`EV_BUDGET_FY28_FISCAL_SLIPPAGE`) | scheduled | 0.50 | -2.3% | -1.2% | -2.2 | -0.0 | -0.0 | -0.0 |
+| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.9% | -1.1% | -1.8 | -0.0 | -0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -50,34 +50,43 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → POWERGRID | -2.40% | -1.20% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → POWERGRID | +2.25% | +0.90% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → POWERGRID | -1.50% | -0.90% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → POWERGRID | +3.20% | +0.90% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → POWERGRID | +0.96% | +0.86% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → POWERGRID | +4.00% | +0.72% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → POWERGRID | -0.72% | -0.68% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → POWERGRID | -3.00% | -0.66% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_POWER_DEMAND_IN → POWERGRID | -0.86% | -0.58% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → POWERGRID | -0.60% | -0.54% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → POWERGRID | -3.00% | -0.54% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → POWERGRID | -0.90% | -0.54% |
-| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → POWERGRID | +0.90% | +0.51% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → POWERGRID | +2.00% | +0.50% |
+| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → POWERGRID | +0.90% | +0.47% |
 | 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → POWERGRID | +1.00% | +0.45% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_GSEC_10Y_IN → POWERGRID | -0.60% | -0.42% |
+| 1 | EV_RBI_FEB27_HOLD ⇒ F_GSEC_10Y_IN → POWERGRID | +0.60% | +0.40% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → POWERGRID | +1.70 | events | -5.10% |
+| 1 | F_GSEC_10Y_IN → POWERGRID | +1.55 | director_override | -4.65% |
 | 1 | P_RENEWABLE_SUPPORT → POWERGRID | +1.50 | events | +2.25% |
 | 1 | F_FPI_FLOWS → POWERGRID | -1.60 | events | -1.92% |
 | 1 | F_POWER_DEMAND_IN → POWERGRID | +1.20 | events | +1.80% |
 | 1 | F_GOVT_CAPEX → POWERGRID | +1.00 | events | +1.20% |
 | 2 | P_RENEWABLE_SUPPORT → T_GRID_ELECTRIFICATION → POWERGRID | +1.50 | events | +0.84% |
 | 1 | F_REPO_IN → POWERGRID | +1.00 | events | -0.80% |
-| 1 | F_STEEL_INDIA → POWERGRID | +1.65 | events | -0.66% |
 | 1 | F_ALUMINIUM → POWERGRID | -1.96 | observed | +0.59% |
+| 1 | F_STEEL_INDIA → POWERGRID | +1.35 | events | -0.54% |
 | 2 | F_POWER_DEMAND_IN → T_GRID_ELECTRIFICATION → POWERGRID | +1.20 | events | +0.50% |
 | 1 | T_ENERGY_TRANSITION → POWERGRID | +0.50 | events | +0.50% |
 | 2 | T_ENERGY_TRANSITION → T_GRID_ELECTRIFICATION → POWERGRID | +0.50 | events | +0.35% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Interim dividend Rs 3/share ex-date (mechanical price adjustment ~1.1% of Rs 261) | corporate_action | 0.90 | -1.1% | -0.99% |
+| 2026-11/2027-03 | New TBCB/RTM project awards and ISTS bids (wins add to Rs 2.2 lakh cr order book) | capex | 0.80 | +1.0% | +0.80% |
+| 2027-02 | Q3 FY27 results: capitalisation pace vs guided Rs 37,000-40,000 cr capex | results | 0.95 | +0.5% | +0.47% |
+| 2027-05 | Q4/FY27 results and FY28 capex/capitalisation guidance; final dividend | guidance | 0.90 | +1.0% | +0.90% |
+| 2027-2029 | CERC tariff period 2029-34 consultation (ROE and norms) - long-dated regulatory risk | regulatory | 0.10 | -3.0% | -0.30% |
 
 ## Analyst profile (agent research, sourced)
 # Power Grid Corporation (POWERGRID) - profile as of 2026-11-05

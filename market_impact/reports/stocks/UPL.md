@@ -2,10 +2,10 @@
 *MIDCAP_100 · Chemicals · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.8%**, **12 months +5.0%** (rank 48 / 35 of 200 for 3m / 12m); beta 1.05
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 56%, 12 months 65%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.6% … P90 +14.4%; plausible 12m relative-return range incl. stock-specific noise: -33.5% … +37.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.2 pp (model impact +2.3% beta-adjusted vs realised market-adjusted move -23.4%); forward event exposure +8.1% (3m +3.7%; half assumed priced); company-specific events +2.0%
+- Expected relative return: **3 months +1.6%**, **12 months +3.9%** (rank 46 / 37 of 200 for 3m / 12m); beta 1.05
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.4%): 3 months 55%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.3% … P90 +11.0%; plausible 12m relative-return range incl. stock-specific noise: -29.1% … +61.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.0 pp (model impact +1.9% beta-adjusted vs realised market-adjusted move -23.4%); forward event exposure +6.1% (3m +3.4%; half assumed priced); company-specific events +2.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.6 | +0.3 | -0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | -0.1 | +0.0 | +0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | +0.0 | +0.0 | +0.0 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | +3.7% | +0.9% | +3.0 | +0.0 | +0.6 | +0.1 |
+| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.72 | -1.0% | -0.7% | -1.0 | -0.0 | -0.0 | +0.0 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.7% | -0.7% | -0.5 | +0.0 | -0.1 | -0.1 |
-| Fed hikes >=50 bp cumulative beyond Oct level by Apr 2027 (`EV_FED_H1_2027_FURTHER_HIKES`) | anticipated | 0.30 | -2.1% | -0.6% | -2.0 | -0.1 | -0.0 | +0.0 |
-| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.58 | -1.0% | -0.6% | -1.0 | -0.0 | -0.0 | +0.0 |
 | China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.6 | -0.0 | +0.0 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +0.8% | +0.5% | +0.8 | +0.0 | -0.0 | -0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.5% | +0.5% | +0.0 | +0.5 | -0.0 | +0.0 |
+| Fed hikes >=50 bp cumulative beyond Oct level by Apr 2027 (`EV_FED_H1_2027_FURTHER_HIKES`) | anticipated | 0.40 | -1.1% | -0.4% | -1.0 | -0.1 | -0.0 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.4% | +0.4% | +0.0 | +0.4 | +0.0 | +0.0 |
 | China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | +1.1% | +0.4% | +0.0 | +1.1 | -0.1 | +0.0 |
-| Fed cuts >=25 bp by Apr 2027 (growth scare / AI bust / lower inflation) (`EV_FED_H1_2027_CUTS`) | anticipated | 0.25 | +1.6% | +0.4% | +1.5 | +0.1 | +0.0 | -0.0 |
+| Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.4% | -0.4% | -0.4 | +0.0 | +0.0 | +0.0 |
+| US-China trade truce (expires 10 Jan 2027) extended or upgraded to a bigger deal (`EV_US_CHINA_TRUCE_EXTENDED`) | scheduled | 0.72 | +0.5% | +0.4% | +0.0 | +0.3 | +0.2 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → UPL | +3.00% | +0.75% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | -2.04% | -0.73% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | +1.22% | +0.71% |
-| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → UPL | -2.00% | -0.60% |
-| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → UPL | -1.00% | -0.58% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → UPL | -1.00% | -0.72% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | +1.06% | +0.58% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → UPL | +0.80% | +0.54% |
-| 1 | EV_FED_H1_2027_CUTS ⇒ F_FED_FUNDS → UPL | +1.50% | +0.38% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | -1.80% | -0.45% |
+| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → UPL | -1.00% | -0.40% |
 | 2 | EV_INDIA_ADD_DUTIES_NOTIFIED_H1_2027 ⇒ P_ANTI_DUMPING_IN → F_CHINA_CHEM_EXPORTS → UPL | +0.50% | +0.35% |
+| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → UPL | +0.40% | +0.34% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → UPL | +0.96% | +0.34% |
-| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_CHEM_FEEDSTOCK → UPL | -4.90% | -0.31% |
-| 1 | EV_PRECIOUS_METALS_FURTHER_SLIDE ⇒ F_FED_FUNDS → UPL | -1.00% | -0.30% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → UPL | +1.30% | +0.29% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → UPL | +0.79% | +0.28% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → UPL | -0.47% | -0.28% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → UPL | +0.40% | +0.26% |
+| 2 | EV_US_CHINA_TRUCE_EXTENDED ⇒ C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → UPL | +0.36% | +0.26% |
+| 1 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → UPL | -0.80% | -0.26% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → UPL | -0.96% | -0.24% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → UPL | +1.30% | +0.23% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → UPL | -0.46% | -0.23% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → UPL | -0.41% | -0.23% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -78,6 +78,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → UPL | -0.10 | events | +0.12% |
 | 2 | P_ANTI_DUMPING_IN → F_CHEM_FEEDSTOCK → UPL | +0.40 | events | -0.10% |
 | 2 | F_BRENT → F_CHEM_FEEDSTOCK → UPL | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2027-02 | Q3 FY27 results (estimate) | results | 0.97 | +0.0% | +0.00% |
+| 2027-03 | Net-debt reduction targets / refinancing and rating actions | other | 0.50 | +1.0% | +0.50% |
+| 2027-06 | Advanta Enterprises IPO / partial listing (status unverified after mid-2026) | corporate_action | 0.25 | +6.0% | +1.50% |
 
 ## Analyst profile (agent research, sourced)
 # UPL — UPL Ltd. (as of 2026-11-05)

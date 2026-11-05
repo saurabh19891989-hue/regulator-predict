@@ -2,10 +2,10 @@
 *NIFTY_50 · Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.4%**, **12 months +0.8%** (rank 117 / 86 of 200 for 3m / 12m); beta 1.23
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.3%): 3 months 48%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.1% … P90 +4.3%; plausible 12m relative-return range incl. stock-specific noise: -28.3% … +24.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.4 pp (model impact -2.7% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure +5.3% (3m +2.1%; half assumed priced); company-specific events +1.4%
+- Expected relative return: **3 months -0.6%**, **12 months +0.6%** (rank 122 / 85 of 200 for 3m / 12m); beta 1.23
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.3%): 3 months 48%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.4% … P90 +3.2%; plausible 12m relative-return range incl. stock-specific noise: -23.2% … +34.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.0 pp (model impact -2.1% beta-adjusted vs realised market-adjusted move +2.7%); forward event exposure +4.0% (3m +1.4%; half assumed priced); company-specific events +1.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,55 +29,64 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -6.1% | -6.1% | -4.1 | +0.0 | -1.0 | -1.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.8% | -4.8% | -4.8 | +0.1 | +0.0 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.8% | -4.8% | -4.8 | +0.1 | -0.0 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.5% | +2.7% | +5.5 | -0.2 | -0.0 | +0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -0.9 | -1.4 | -0.2 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -2.0 | +0.0 | -0.1 | -0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.8 | -0.0 | -0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.9% | +1.9% | +2.0 | +0.1 | -0.1 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.1% | +1.8% | +1.9 | +0.5 | +0.3 | +0.3 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -5.0% | -1.8% | -2.5 | -1.1 | -0.7 | -0.6 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -1.6 | +0.0 | -0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.2 | -0.1 | -0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.8% | +1.6% | +1.9 | +0.4 | +0.3 | +0.3 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.7% | +1.5% | +1.4 | +0.2 | +0.1 | -0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -5.4% | -1.5% | +0.0 | -4.9 | -0.4 | -0.1 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.4% | -1.4% | -1.2 | -0.0 | -0.1 | -0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.0 | -0.2 | -0.1 |
+| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.3% | +1.3% | +1.2 | +0.1 | +0.0 | +0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -1.1 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ADANIPORTS | +5.50% | +2.75% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPORTS | -3.29% | -0.92% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ADANIPORTS | +1.50% | +0.87% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → ADANIPORTS | +0.96% | +0.86% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPORTS | -4.11% | -0.74% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ADANIPORTS | -3.30% | -0.73% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → ADANIPORTS | -1.80% | -0.64% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIPORTS | -2.11% | -0.59% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → ADANIPORTS | +1.50% | +0.83% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ADANIPORTS | -3.30% | -0.59% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → ADANIPORTS | +0.72% | +0.58% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIPORTS | -2.11% | -0.53% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ADANIPORTS | -2.11% | -0.53% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → ADANIPORTS | +0.80% | +0.52% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPORTS | -2.05% | -0.51% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ADANIPORTS | -0.96% | -0.48% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → ADANIPORTS | -1.80% | -0.45% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → ADANIPORTS | +0.48% | +0.43% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → ADANIPORTS | +1.10% | +0.39% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ADANIPORTS | -0.60% | -0.36% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → ADANIPORTS | +0.44% | +0.35% |
+| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → ADANIPORTS | -2.05% | -0.31% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → ADANIPORTS | -1.60 | events | -3.52% |
-| 1 | C_MIDEAST_CONFLICT → ADANIPORTS | +1.50 | events | -2.25% |
-| 1 | F_GSEC_10Y_IN → ADANIPORTS | +1.70 | events | -2.04% |
+| 1 | F_GSEC_10Y_IN → ADANIPORTS | +1.55 | director_override | -1.86% |
+| 1 | C_MIDEAST_CONFLICT → ADANIPORTS | +1.00 | events | -1.50% |
 | 1 | F_GOVT_CAPEX → ADANIPORTS | +1.00 | events | +1.20% |
 | 1 | F_GDP_IN → ADANIPORTS | +0.50 | events | +0.80% |
-| 1 | C_RED_SEA → ADANIPORTS | +1.50 | events | -0.60% |
 | 1 | F_REPO_IN → ADANIPORTS | +1.00 | events | -0.60% |
 | 1 | F_CREDIT_SPREADS_IN → ADANIPORTS | +0.50 | events | -0.60% |
 | 1 | P_US_TARIFF_INDIA → ADANIPORTS | -0.60 | events | +0.48% |
 | 1 | F_IRON_ORE → ADANIPORTS | -0.83 | observed | -0.42% |
+| 1 | C_RED_SEA → ADANIPORTS | +1.00 | events | -0.40% |
 | 1 | F_USDINR → ADANIPORTS | -0.37 | observed | -0.37% |
 | 1 | F_COAL_INTL → ADANIPORTS | +0.70 | director_override | -0.21% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11/2027-03 | Evos Terminals US$3.3 bn bid: outcome (win would add leverage ~+0.6x ND/EBITDA; model estimate) - not yet announced as accepted | corporate_action | 0.35 | +0.0% | +0.00% |
+| 2026-12 | Monthly cargo update (Nov) - October was +27% y/y | other | 0.95 | +0.2% | +0.24% |
+| 2026-12/2027-06 | Group legal/regulatory: SEC civil matter and Hindenburg-era follow-ups; criminal case already dismissed 2026-08-11 | litigation | 0.15 | -3.0% | -0.45% |
+| 2027-02 | Q3 FY27 results vs raised guidance bands | results | 0.95 | +0.5% | +0.47% |
+| 2027-05 | FY27 results and FY28 guidance; Vizhinjam/ Paradip/ Oman ramp | guidance | 0.90 | +1.0% | +0.90% |
 
 ## Analyst profile (agent research, sourced)
 # Adani Ports and SEZ (ADANIPORTS) - profile as of 2026-11-05

@@ -1,7 +1,9 @@
 # North-east monsoon (Oct-Dec) 2026 deficient in south peninsula (`EV_NEMONSOON26_DEFICIT`)
-*agri_rural · status anticipated · date 2026-12-31 · P(3m) 0.0 · P(12m) 0.42857142857142855 · confidence low*
+*agri_rural · status anticipated · date 2026-12-31 · P(3m) 0.12 · P(12m) 0.12 · confidence low*
 
 NE monsoon onset expected Oct 15-21 (IMD, 1 Oct). IMD says El Nino is strengthening and IOD stays neutral through NEM; it expected below-normal October rain. El Nino usually enhances NEM over Tamil Nadu/south coastal AP (positive link), but 2026 reservoirs in the Cauvery/Pennar basins are very low and Drishti IAS (13 Oct) discusses a 'Tamil Nadu anomaly' in super El Nino years. IMD's seasonal NEM forecast was not retrieved (data gap). Probability: deficient (<90% LPA) 0.40, normal 0.35, above 0.25 (model judgement). Resolved by Dec 31.
+
+**Review override applied:** Season resolves 31 Dec, which is inside the 3m window, so 3m must equal 12m (was 0.0). TN NEM is +32% above normal at 31 Oct (+51% in 27 days of Oct). Severe cyclone Murasu crossed AP 2-3 Nov and heavy rain is forecast to 8 Nov. A deficient season now needs a very dry Nov-Dec. Old pair summed 1.05.
 
 ## Entry shocks (conditional on the event)
 - `F_MONSOON` Monsoon rainfall vs normal: -0.5 SSU (range -1.0…0.0) Conditional on a deficient NEM; local to TN/AP/Karnataka/Kerala.

@@ -2,10 +2,10 @@
 *MIDCAP_100 · Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.6%**, **12 months +4.1%** (rank 36 / 40 of 200 for 3m / 12m); beta 1.36
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 60%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.4% … P90 +9.4%; plausible 12m relative-return range incl. stock-specific noise: -19.0% … +27.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.5% beta-adjusted vs realised market-adjusted move -11.2%); forward event exposure +9.4% (3m +4.4%; half assumed priced); company-specific events -2.3%
+- Expected relative return: **3 months +2.2%**, **12 months +3.1%** (rank 37 / 43 of 200 for 3m / 12m); beta 1.36
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.7%): 3 months 59%, 12 months 80%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.8% … P90 +8.2%; plausible 12m relative-return range incl. stock-specific noise: -5.5% … +41.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.8 pp (model impact +3.6% beta-adjusted vs realised market-adjusted move -11.2%); forward event exposure +6.9% (3m +3.5%; half assumed priced); company-specific events -2.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,47 +29,47 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -2.6% | -2.6% | +0.5 | -2.2 | -0.4 | -0.5 |
 | Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.3% | -2.3% | -2.2 | -0.2 | +0.1 | -0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -0.8 | -0.5 | -0.2 |
-| India-US interim trade agreement formally signed/announced (`EV_INDIA_US_INTERIM_DEAL_SIGNED`) | anticipated | 0.65 | +2.3% | +1.5% | +1.9 | +0.3 | +0.0 | -0.0 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.5% | +1.4% | +0.6 | +0.7 | +0.3 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.7% | +1.3% | +2.5 | +0.2 | -0.1 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.3% | +1.3% | +1.2 | +0.1 | -0.0 | -0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.1 | +0.0 | -0.1 | -0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.2% | -1.2% | -0.5 | -0.5 | -0.1 | -0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.3 | -0.7 | -0.2 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -1.1 | -0.1 | -0.0 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.1% | +1.1% | +0.8 | +0.1 | +0.3 | +0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -1.0 | -0.1 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.6% | +0.9% | -0.4 | +1.2 | +0.7 | +0.1 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.2% | +0.8% | +0.0 | +0.7 | +0.5 | +0.1 |
+| China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.0% | +0.8% | +0.9 | +0.0 | +0.1 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CONCOR | +2.50% | +1.25% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → CONCOR | +1.50% | +0.98% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → CONCOR | +0.90% | +0.72% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → CONCOR | +0.72% | +0.65% |
 | 1 | EV_RUSSIA_TARIFF_ENFORCED ⇒ P_US_TARIFF_INDIA → CONCOR | -3.75% | -0.56% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → CONCOR | +0.56% | +0.50% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → CONCOR | +0.67% | +0.45% |
 | 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → CONCOR | -3.75% | -0.45% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CONCOR | -1.49% | -0.42% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ P_US_TARIFF_INDIA → CONCOR | +0.75% | +0.41% |
+| 1 | EV_INDIA_US_TALKS_COLLAPSE ⇒ P_US_TARIFF_INDIA → CONCOR | -2.25% | -0.40% |
 | 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → CONCOR | +0.50% | +0.40% |
 | 1 | EV_RED_SEA_CLOSURE ⇒ C_RED_SEA → CONCOR | -1.50% | -0.38% |
 | 1 | EV_RED_SEA_SUEZ_NORMALISATION ⇒ C_RED_SEA → CONCOR | +0.80% | +0.36% |
-| 1 | EV_INDIA_US_TALKS_COLLAPSE ⇒ P_US_TARIFF_INDIA → CONCOR | -2.25% | -0.34% |
 | 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_GDP_IN → CONCOR | +0.48% | +0.34% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CONCOR | -1.87% | -0.34% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → CONCOR | -0.64% | -0.32% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → C_RED_SEA → F_SHIPPING_RATES → CONCOR | +0.53% | +0.29% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → CONCOR | -1.60 | events | -1.60% |
-| 1 | C_RED_SEA → CONCOR | +1.50 | events | -1.50% |
-| 1 | F_GSEC_10Y_IN → CONCOR | +1.70 | events | -1.36% |
 | 1 | F_GDP_IN → CONCOR | +0.50 | events | +1.25% |
+| 1 | F_GSEC_10Y_IN → CONCOR | +1.55 | director_override | -1.24% |
+| 1 | C_RED_SEA → CONCOR | +1.00 | events | -1.00% |
 | 1 | P_US_TARIFF_INDIA → CONCOR | -0.60 | events | +0.90% |
 | 1 | F_SHIPPING_RATES → CONCOR | +0.30 | events | -0.18% |
 | 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → CONCOR | +0.50 | events | +0.15% |
@@ -77,6 +77,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → CONCOR | -0.60 | events | +0.11% |
 | 2 | C_US_CHINA_DECOUPLING → T_CHINA_PLUS_ONE → CONCOR | -0.10 | events | -0.07% |
 | 1 | F_BRENT → CONCOR | +0.00 | observed | +0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11-11 | Record date for second interim dividend Rs1.90/share | corporate_action | 1.00 | -0.2% | -0.25% |
+| 2027-01 | Q3 FY27 volumes (provisional throughput) and results (Feb) | results | 0.95 | +0.5% | +0.47% |
+| 2027-03 | FY27 volume guidance 9.5% vs H1 4.5%: miss/ revision risk | guidance | 0.60 | -3.5% | -2.10% |
+| 2027-03 | Railway freight tariff / land licence fee policy changes | regulatory | 0.20 | -2.0% | -0.40% |
 
 ## Analyst profile (agent research, sourced)
 # CONCOR — Container Corporation of India Ltd. (Midcap 100) — profile as of 2026-11-05

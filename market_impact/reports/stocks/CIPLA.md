@@ -2,10 +2,10 @@
 *NIFTY_50 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.2%**, **12 months +0.0%** (rank 91 / 104 of 200 for 3m / 12m); beta 0.74
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.5%): 3 months 51%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.9% … P90 +3.3%; plausible 12m relative-return range incl. stock-specific noise: -19.3% … +18.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.4% beta-adjusted vs realised market-adjusted move -3.0%); forward event exposure +3.5% (3m +1.6%; half assumed priced); company-specific events -1.1%
+- Expected relative return: **3 months +0.1%**, **12 months -0.5%** (rank 94 / 107 of 200 for 3m / 12m); beta 0.74
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +17.5%): 3 months 50%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.6% … P90 +0.4%; plausible 12m relative-return range incl. stock-specific noise: -13.7% … +16.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.2% beta-adjusted vs realised market-adjusted move -3.0%); forward event exposure +2.3% (3m +1.3%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -30,54 +30,63 @@
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | USFDA warning letters: Alembic, Aurobindo-Eugia, Dabur (Jul-Aug 2026) (`EV_USFDA_WARNING_WAVE_26`) | occurred | 1.00 | -1.3% | -1.3% | -2.0 | +0.7 | +0.0 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.1% | -1.1% | -1.3 | +0.3 | -0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.7 | -0.3 | -0.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.0% | -1.0% | -1.3 | +0.4 | +0.0 | -0.0 |
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.0% | -1.0% | -1.5 | +1.4 | -0.5 | -0.3 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | +0.0 | -0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.6 | -0.1 | -0.1 | -0.0 |
 | US imposes tariffs on generic drugs (200% threat) or removes India's speciality exemption (`EV_PHARMA_GENERICS_TARIFF`) | risk_scenario | 0.12 | -5.0% | -0.6% | -5.0 | +0.0 | +0.0 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +1.1% | +0.6% | +1.5 | -0.4 | -0.0 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.5% | +0.5% | +0.6 | -0.1 | -0.0 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +0.9% | +0.5% | +1.0 | -0.4 | +0.2 | +0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.3 | -0.1 | -0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +0.9% | +0.5% | +1.0 | -0.3 | +0.1 | +0.1 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.5% | -0.5% | -0.5 | +0.0 | +0.0 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -1.0% | -0.3% | -1.2 | +0.6 | -0.3 | -0.1 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -0.8% | -0.3% | -0.6 | -0.1 | -0.1 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CIPLA | +1.50% | +0.75% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → CIPLA | +1.00% | +0.58% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → CIPLA | -1.20% | -0.43% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → CIPLA | +1.00% | +0.55% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ F_US_GENERIC_PRICING → CIPLA | -3.50% | -0.42% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → CIPLA | +1.82% | +0.40% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → CIPLA | +1.11% | +0.39% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → CIPLA | -0.66% | -0.39% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CIPLA | -0.90% | -0.25% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → CIPLA | -0.60% | -0.24% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → CIPLA | +1.82% | +0.33% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → CIPLA | -0.58% | -0.32% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → CIPLA | -1.20% | -0.30% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → CIPLA | -0.60% | -0.25% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → CIPLA | +0.97% | +0.24% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → CIPLA | +0.23% | +0.21% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CIPLA | -1.12% | -0.20% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → CIPLA | -0.90% | -0.20% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → CIPLA | +0.67% | +0.19% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → CIPLA | -1.50% | -0.18% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → CIPLA | -0.69% | -0.17% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → CIPLA | -0.60% | -0.16% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → CIPLA | -0.90% | -0.16% |
+| 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → CIPLA | -0.32% | -0.16% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → CIPLA | +0.21% | +0.15% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | P_USFDA_ENFORCEMENT → CIPLA | +1.00 | events | -2.00% |
-| 1 | C_MIDEAST_CONFLICT → CIPLA | +1.50 | events | -1.50% |
+| 1 | C_MIDEAST_CONFLICT → CIPLA | +1.00 | events | -1.00% |
 | 1 | F_FPI_FLOWS → CIPLA | -1.60 | events | -0.96% |
 | 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → CIPLA | +1.00 | events | +0.70% |
 | 1 | F_REPO_IN → CIPLA | +1.00 | events | -0.60% |
 | 1 | F_USDINR → CIPLA | -0.37 | observed | -0.52% |
 | 1 | F_GDP_IN → CIPLA | +0.50 | events | +0.40% |
-| 1 | P_US_PHARMA_TARIFF → CIPLA | +0.50 | events | -0.25% |
 | 1 | F_URBAN_DEMAND → CIPLA | +0.20 | events | +0.24% |
-| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → CIPLA | +0.50 | events | +0.21% |
+| 1 | P_US_PHARMA_TARIFF → CIPLA | +0.20 | events | -0.10% |
 | 2 | F_USDCNY → F_CHINA_CHEM_EXPORTS → CIPLA | -0.47 | observed | -0.09% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → CIPLA | +0.20 | events | +0.08% |
 | 2 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → CIPLA | +0.30 | events | -0.08% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11-04 | New Global Chief Technical Operations Officer appointed (Vikram Janakiraman) | corporate_action | 1.00 | +0.0% | +0.00% |
+| 2026-11-30 | Q2 FY27 fully priced; next catalyst: monthly IQVIA India secondary data and US launch updates (lanreotide, inhaler approvals) | guidance | 0.70 | +0.5% | +0.35% |
+| 2027-01-28 | Q3 FY27 results: gRevlimid cliff, US respiratory launches, margin vs guided 23-24% EBITDA (target unverified) | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | USFDA outcomes on key plants and complex-generic approvals (gAdvair/inhaler launches) | regulatory | 0.40 | -1.5% | -0.60% |
+| 2027-06 | Possible US generic tariff / Section 232 expansion decision | regulatory | 0.10 | -8.5% | -0.85% |
 
 ## Analyst profile (agent research, sourced)
 # CIPLA (Cipla Ltd.) — Nifty 50, as of 2026-11-05

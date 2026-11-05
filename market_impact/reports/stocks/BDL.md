@@ -2,10 +2,10 @@
 *MIDCAP_100 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +4.6%**, **12 months +12.7%** (rank 15 / 3 of 200 for 3m / 12m); beta 1.40
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +40.7%): 3 months 59%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +9.4% … P90 +25.8%; plausible 12m relative-return range incl. stock-specific noise: -33.3% … +80.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.5 pp (model impact +11.0% beta-adjusted vs realised market-adjusted move -17.5%); forward event exposure +12.9% (3m +4.0%; half assumed priced); company-specific events +4.0%
+- Expected relative return: **3 months +4.4%**, **12 months +11.8%** (rank 16 / 6 of 200 for 3m / 12m); beta 1.40
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +40.7%): 3 months 58%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +8.8% … P90 +15.7%; plausible 12m relative-return range incl. stock-specific noise: -61.0% … +6.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.2 pp (model impact +10.4% beta-adjusted vs realised market-adjusted move -17.5%); forward event exposure +11.4% (3m +3.9%; half assumed priced); company-specific events +4.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -31,36 +31,36 @@
 |---|---|---|---|---|---|---|---|---|
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +6.5% | +5.8% | +6.2 | +0.4 | -0.1 | -0.0 |
 | DAC clears Rs 1.10 lakh crore (7 Sep) and further proposals (Rs 2.12 lakh crore reported 26 Oct) (`EV_DAC_APPROVALS_H2_26`) | occurred | 1.00 | +5.4% | +5.4% | +5.0 | +0.4 | +0.0 | +0.0 |
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -1.6 | -0.7 | -0.3 |
 | New BrahMos/defence export contracts (Philippines follow-on, Indonesia, Vietnam or others) announced (`EV_DEFENCE_EXPORT_ORDERS`) | anticipated | 0.50 | +2.8% | +1.4% | +2.8 | +0.0 | +0.0 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.3% | +1.3% | +1.5 | -0.2 | -0.0 | -0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -4.1% | -1.1% | -4.0 | +0.2 | -0.3 | -0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -5.5% | -1.0% | -5.0 | -0.2 | -0.3 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -1.0 | +0.1 | +0.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.8% | -0.8% | -0.4 | -0.3 | -0.0 | -0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -2.4% | -0.8% | -1.2 | -0.6 | -0.4 | -0.2 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -1.1 | +0.2 | +0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.2% | +0.7% | +0.5 | +0.3 | +0.2 | +0.1 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | -0.6% | -0.6% | -0.8 | +0.1 | +0.1 | +0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -2.5% | -0.6% | -2.5 | +0.2 | -0.2 | -0.0 |
+| Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -0.6% | -0.6% | -0.6 | +0.0 | +0.0 | +0.0 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.3 | +0.3 | +0.0 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.6% | -0.6% | -0.6 | +0.0 | +0.0 | +0.0 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -2.2% | -0.6% | +0.0 | -1.9 | -0.1 | -0.2 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.0% | +0.5% | +0.4 | +0.3 | +0.2 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → BDL | +5.00% | +4.50% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BDL | -4.00% | -1.12% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → BDL | +1.20% | +1.08% |
 | 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ T_DEFENCE_EXPORTS → BDL | +1.80% | +0.90% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → BDL | -5.00% | -0.90% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → BDL | -2.50% | -0.62% |
 | 1 | EV_DEFENCE_EXPORT_ORDERS ⇒ P_DEFENCE_PROCUREMENT → BDL | +1.00% | +0.50% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → BDL | -1.20% | -0.43% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BDL | +0.90% | +0.40% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → BDL | -2.50% | -0.38% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → BDL | -1.44% | -0.36% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_DEFENCE_PROCUREMENT → T_DEFENCE_EXPORTS → BDL | +0.36% | +0.32% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → BDL | +0.50% | +0.29% |
 | 1 | EV_INDIA_PAK_CRISIS ⇒ C_INDIA_PAKISTAN → BDL | +3.00% | +0.27% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → BDL | +0.90% | +0.27% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BDL | -0.60% | -0.25% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → BDL | -1.00% | -0.25% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → BDL | +0.40% | +0.25% |
 | 1 | EV_RUSSIAN_CRUDE_CUT_TRADE_DEAL ⇒ C_RUSSIA → BDL | +0.80% | +0.24% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → BDL | -0.60% | -0.24% |
+| 2 | EV_INDIA_PAK_CRISIS ⇒ C_INDIA_PAKISTAN → P_DEFENCE_PROCUREMENT → BDL | +2.50% | +0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -77,6 +77,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BDL | -0.30 | events | +0.04% |
 | 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → BDL | -0.10 | events | +0.02% |
 | 3 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → F_SEMICONDUCTOR_SUPPLY → BDL | -0.10 | events | +0.01% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11-12 | Q2 FY27 results (screener upcoming-date field) | results | 0.95 | +0.0% | +0.00% |
+| 2027-02 | Q3 FY27 results; execution of Rs26,176 cr order book (conversion pace is the key variable) | results | 0.90 | +0.0% | +0.00% |
+| 2027-03 | Large missile order(s) from DAC-cleared Rs2.12 lakh cr proposals (Akash-NG, Astra, Invar etc. share unknown) | other | 0.40 | +7.5% | +3.00% |
+| 2027-03 | Export contract announcement | other | 0.15 | +6.5% | +0.97% |
 
 ## Analyst profile (agent research, sourced)
 # BDL - Bharat Dynamics Ltd. (Defence PSU, missiles)

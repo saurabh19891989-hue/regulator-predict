@@ -101,6 +101,17 @@ def stock_report(r, ev, so, nodes, fs, paths, events, rpaths=None):
         for p in rp[:12]:
             L.append(f"| {p['order']} | {p['path']} | {p['state_ssu']:+.2f} | {p['source']} | {f2(p['impact'])}% |")
         L.append("")
+    cep = R("results", "company_events.csv")
+    if os.path.exists(cep):
+        ce = pd.read_csv(cep)
+        ce = ce[ce.company == t]
+        if len(ce):
+            L += ["## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)",
+                  "| date | event | type | P | impact if it happens (mid) | expected |", "|---|---|---|---|---|---|"]
+            for _, x in ce.sort_values("date").iterrows():
+                note = f" *(review: {x.override})*" if isinstance(x.override, str) and x.override else ""
+                L.append(f"| {x.date} | {x.event}{note} | {x.type} | {x.prob:.2f} | {f1(x.impact_mid)}% | {f2(x.expected)}% |")
+            L.append("")
     md = R("companies", f"{t}.md")
     L += ["## Analyst profile (agent research, sourced)", open(md).read() if os.path.exists(md) else "_Profile not yet available._", ""]
     L += ["## Caveats", "Exposure-driven, scenario-implied estimate from an LLM-built causal graph grounded in fundamentals and price "

@@ -2,10 +2,10 @@
 *MIDCAP_100 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.7%**, **12 months -3.2%** (rank 149 / 144 of 200 for 3m / 12m); beta 0.93
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.7%): 3 months 46%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.3% … P90 -0.5%; plausible 12m relative-return range incl. stock-specific noise: -48.0% … +25.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.7% beta-adjusted vs realised market-adjusted move -4.2%); forward event exposure -2.7% (3m -0.6%; half assumed priced); company-specific events -1.4%
+- Expected relative return: **3 months -1.8%**, **12 months -3.3%** (rank 151 / 151 of 200 for 3m / 12m); beta 0.93
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +33.7%): 3 months 46%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.5% … P90 -1.2%; plausible 12m relative-return range incl. stock-specific noise: -43.3% … +25.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.0% beta-adjusted vs realised market-adjusted move -4.2%); forward event exposure -3.1% (3m -0.8%; half assumed priced); company-specific events -1.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -30,37 +30,37 @@
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +2.6% | +2.6% | +1.4 | +0.9 | +0.2 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.5% | -2.5% | -2.6 | +0.1 | -0.0 | -0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -8.8% | -2.5% | -8.5 | -0.5 | +0.2 | -0.0 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -8.6% | -2.2% | -6.9 | -1.9 | +0.3 | -0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.0% | -2.0% | -2.2 | +0.2 | +0.0 | -0.0 |
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -2.0% | -2.0% | -2.0 | +0.1 | -0.0 | -0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -8.5% | -1.5% | -7.2 | -1.5 | +0.3 | -0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -7.2% | -1.8% | -7.0 | -0.4 | +0.2 | +0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.5% | -1.5% | -0.7 | -0.8 | -0.1 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.8% | +1.4% | +2.9 | -0.2 | +0.0 | +0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.3 | +0.0 | +0.0 | -0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -1.2 | +0.2 | +0.1 |
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -0.9% | -0.9% | -0.9 | -0.1 | +0.0 | +0.0 |
+| FOMC 8-9 Dec 2026: 25 bp hike to 4.00-4.25% (`EV_FED_DEC26_HIKE25`) | scheduled | 0.72 | -1.2% | -0.9% | -0.7 | -0.4 | -0.1 | -0.0 |
+| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -5.8% | -0.9% | -4.8 | -1.3 | +0.3 | -0.0 |
 | Sugar supply shock: 2025-26 output cut to ~306 lakh t, retail sugar at record, first duty-free raw sugar imports in a decade (`EV_SUGAR_SHORTFALL26`) | occurred | 1.00 | +0.8% | +0.8% | +0.8 | +0.0 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → OFSS | -4.50% | -1.26% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → OFSS | +2.50% | +1.25% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → OFSS | -4.50% | -1.12% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → OFSS | -4.50% | -1.12% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → OFSS | -4.50% | -1.12% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → OFSS | -4.00% | -1.12% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → OFSS | -5.00% | -0.90% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → OFSS | -1.00% | -0.85% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → OFSS | -2.50% | -0.62% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → OFSS | +2.10% | +0.52% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → OFSS | +1.95% | +0.43% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → OFSS | -1.20% | -0.43% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → OFSS | +1.19% | +0.42% |
-| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_FED_FUNDS → OFSS | -1.40% | -0.42% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → OFSS | -0.71% | -0.41% |
-| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → OFSS | -0.70% | -0.41% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → OFSS | -2.25% | -0.40% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → OFSS | -0.70% | -0.50% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → OFSS | -2.50% | -0.38% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → OFSS | +0.60% | +0.37% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → OFSS | -0.72% | -0.36% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → OFSS | +1.95% | +0.35% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → OFSS | -0.62% | -0.34% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → OFSS | -2.25% | -0.34% |
+| 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → OFSS | -1.00% | -0.30% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -69,7 +69,7 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | T_GENAI_SERVICES → OFSS | +1.00 | events | -2.00% |
 | 1 | F_US_GDP → OFSS | +1.20 | events | +1.80% |
 | 1 | F_FPI_FLOWS → OFSS | -1.60 | events | -1.60% |
-| 1 | F_GSEC_10Y_IN → OFSS | +1.70 | events | -1.53% |
+| 1 | F_GSEC_10Y_IN → OFSS | +1.55 | director_override | -1.40% |
 | 1 | F_FED_FUNDS → OFSS | +1.62 | observed | -1.13% |
 | 1 | P_US_VISA_OUTSOURCING → OFSS | +0.90 | events | -0.90% |
 | 1 | F_SUGAR → OFSS | +2.78 | observed | +0.83% |
@@ -77,6 +77,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_US_EQUITIES → OFSS | +0.23 | observed | +0.35% |
 | 1 | F_EU_GDP → OFSS | +0.22 | events | +0.22% |
 | 1 | F_RISK_SENTIMENT → OFSS | +0.11 | observed | -0.11% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Further Oracle Corp credit/AI-capex headlines | other | 0.35 | -4.0% | -1.40% |
+| 2027-01 | Q3 FY27 results; licence timing risk | results | 0.90 | +0.0% | +0.00% |
+| 2027-02 | Dividend declaration (yield 3.9%) with Q3/Q4 results | corporate_action | 0.50 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Oracle Financial Services Software Ltd. (OFSS) - company profile, as of 2026-11-05

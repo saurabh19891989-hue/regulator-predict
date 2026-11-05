@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.5%**, **12 months -3.8%** (rank 162 / 148 of 200 for 3m / 12m); beta 1.37
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.3%): 3 months 41%, 12 months 42%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.4% … P90 -0.0%; plausible 12m relative-return range incl. stock-specific noise: -30.3% … +26.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.5 pp (model impact -1.0% beta-adjusted vs realised market-adjusted move +12.3%); forward event exposure -3.3% (3m -1.9%; half assumed priced); company-specific events -1.0%
+- Expected relative return: **3 months -2.2%**, **12 months -3.3%** (rank 163 / 152 of 200 for 3m / 12m); beta 1.37
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.3%): 3 months 42%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -5.0% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -28.2% … +14.5%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.7 pp (model impact -1.4% beta-adjusted vs realised market-adjusted move +12.3%); forward event exposure -2.1% (3m -1.2%; half assumed priced); company-specific events -1.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -8.1% | -8.1% | -2.5 | -0.6 | -2.9 | -2.2 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -6.1% | -6.1% | +0.0 | -2.6 | -3.4 | -0.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.1% | -5.1% | -4.4 | -0.1 | -0.2 | -0.3 |
-| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.62 | -4.8% | -3.0% | -5.0 | +0.1 | +0.0 | +0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.9% | -4.9% | -4.4 | -0.1 | -0.2 | -0.3 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.7% | +2.9% | +5.0 | +0.1 | +0.3 | +0.4 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.8% | -2.8% | -1.3 | -0.3 | -0.9 | -0.4 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.6% | -2.6% | -2.0 | -0.6 | +0.1 | -0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.6% | -2.6% | -2.4 | -0.1 | +0.0 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -1.8 | -0.5 | -0.2 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.0% | -2.0% | +0.0 | -1.6 | -0.3 | -0.2 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -5.7% | -2.0% | -1.2 | -1.2 | -1.9 | -1.4 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.9% | +1.9% | +1.5 | +1.4 | -0.8 | -0.2 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | +1.9% | +1.9% | +2.1 | -0.0 | -0.1 | -0.1 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -1.0 | -0.5 | -0.3 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +2.5% | +1.7% | +1.0 | +0.2 | +0.9 | +0.3 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -0.1 | -0.7 | -0.8 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.6% | +1.4% | +0.7 | +0.5 | +0.9 | +0.7 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → CHOLAFIN | +5.00% | +2.50% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → CHOLAFIN | -4.00% | -2.48% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → CHOLAFIN | +1.20% | +1.08% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CHOLAFIN | -2.99% | -0.84% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → CHOLAFIN | -1.20% | -1.08% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_LIQUIDITY_IN → CHOLAFIN | -1.20% | -0.72% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → CHOLAFIN | +1.00% | +0.68% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CHOLAFIN | -3.73% | -0.67% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → CHOLAFIN | -3.00% | -0.66% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → CHOLAFIN | -1.00% | -0.62% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → CHOLAFIN | -1.92% | -0.54% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → CHOLAFIN | -1.30% | -0.52% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → CHOLAFIN | -1.30% | -0.55% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → CHOLAFIN | -3.00% | -0.54% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → CHOLAFIN | -1.92% | -0.48% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → CHOLAFIN | -1.92% | -0.48% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → CHOLAFIN | -1.87% | -0.47% |
 | 2 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → CHOLAFIN | -3.84% | -0.46% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → CHOLAFIN | -1.25% | -0.45% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → CHOLAFIN | +0.75% | +0.44% |
+| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → CHOLAFIN | +0.50% | +0.42% |
+| 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → CHOLAFIN | -1.68% | -0.42% |
+| 2 | EV_Q2_FY27_GDP_STRONG ⇒ F_GDP_IN → F_ASSET_QUALITY_IN → CHOLAFIN | +0.51% | +0.41% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → CHOLAFIN | -0.80% | -0.40% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -68,8 +68,8 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → CHOLAFIN | -1.60 | events | -3.20% |
 | 1 | F_STEEL_GLOBAL → CHOLAFIN | +2.06 | observed | +2.06% |
-| 1 | F_GSEC_10Y_IN → CHOLAFIN | +1.70 | events | -1.70% |
 | 1 | F_MONSOON → CHOLAFIN | -1.56 | events | -1.56% |
+| 1 | F_GSEC_10Y_IN → CHOLAFIN | +1.55 | director_override | -1.55% |
 | 1 | F_GOVT_CAPEX → CHOLAFIN | +1.00 | events | +1.50% |
 | 1 | F_REPO_IN → CHOLAFIN | +1.00 | events | -1.30% |
 | 2 | F_GDP_IN → F_ASSET_QUALITY_IN → CHOLAFIN | +0.50 | events | +1.28% |
@@ -78,6 +78,12 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_RURAL_DEMAND → CHOLAFIN | -0.25 | events | -0.38% |
 | 1 | F_AUTO_DEMAND_IN → CHOLAFIN | -0.10 | events | -0.35% |
 | 2 | F_REPO_IN → F_ASSET_QUALITY_IN → CHOLAFIN | +1.00 | events | -0.32% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Rs5,000cr QIP launch/pricing (board approved 2026-10-28; shareholder approval route and timing unverified); ~3.3% of market cap | corporate_action | 0.70 | -1.5% | -1.05% |
+| 2027-01 | Q3 FY27 results (Q2 declared 2026-10-28) | results | 0.95 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # Cholamandalam Investment and Finance (CHOLAFIN) - Market Impact profile, as of 2026-11-05

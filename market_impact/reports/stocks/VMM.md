@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.8%**, **12 months +2.5%** (rank 73 / 59 of 200 for 3m / 12m); beta 1.11
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.9%): 3 months 53%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.3% … P90 +7.2%; plausible 12m relative-return range incl. stock-specific noise: -20.7% … +24.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.3% beta-adjusted vs realised market-adjusted move -25.6%); forward event exposure +5.5% (3m +2.0%; half assumed priced); company-specific events +1.9%
+- Expected relative return: **3 months +1.1%**, **12 months +2.1%** (rank 60 / 52 of 200 for 3m / 12m); beta 1.11
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.9%): 3 months 54%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.9% … P90 +5.6%; plausible 12m relative-return range incl. stock-specific noise: -21.9% … +13.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.8% beta-adjusted vs realised market-adjusted move -25.6%); forward event exposure +4.4% (3m +2.5%; half assumed priced); company-specific events +1.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -6.9% | -6.9% | -5.8 | -0.2 | -0.7 | -0.2 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.0% | -3.0% | -1.7 | -1.4 | +0.3 | -0.2 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -2.7% | -2.7% | +0.0 | -1.8 | -0.4 | -0.5 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.9% | -1.4% | -2.5 | -0.7 | -0.5 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.3% | +1.4% | +2.0 | +0.1 | +0.2 | +0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.3% | -1.3% | -1.0 | -0.1 | -0.1 | -0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.0% | +1.1% | +1.7 | +0.1 | +0.2 | +0.1 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +1.4% | +1.0% | +0.3 | +0.8 | +0.1 | +0.2 |
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.9% | -0.9% | -0.8 | -0.1 | -0.1 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +0.9% | +0.9% | +0.7 | +0.1 | +0.1 | -0.0 |
 | India 2027 wheat crop (harvest Mar-Apr 2027) below 2026's record ~120 MT (`EV_WHEAT27_CROP_BELOW`) | anticipated | 0.65 | -1.3% | -0.9% | -1.2 | +0.0 | -0.1 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.5% | -0.9% | -2.2 | -0.7 | -0.4 | -0.1 |
 | Rural demand indicators mixed: tractor volumes dip in Oct, 2W festive sales firm, rural CPI above urban, rural jobs scheme person-days down (`EV_RURAL_DEMAND_SOFT26`) | occurred | 1.00 | -0.8% | -0.8% | -0.9 | +0.0 | +0.1 | +0.0 |
+| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +0.9% | +0.8% | +0.3 | +0.4 | +0.1 | +0.1 |
 | Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -3.0% | -0.7% | -1.8 | -1.3 | +0.2 | -0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → VMM | -2.50% | -0.89% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → VMM | +1.50% | +0.87% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → VMM | +1.30% | +0.72% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → VMM | +0.90% | +0.63% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → VMM | -2.20% | -0.55% |
 | 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → VMM | +0.90% | +0.49% |
 | 1 | EV_LABOUR_CODES_RULES ⇒ F_WAGES_IN → VMM | +0.60% | +0.48% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → VMM | +0.68% | +0.46% |
 | 1 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_FOOD_INFLATION_IN → VMM | -1.80% | -0.45% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → VMM | -1.00% | -0.42% |
 | 1 | EV_STATE_POLLS_FEB_MAR27 ⇒ F_RURAL_DEMAND → VMM | +0.60% | +0.41% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → VMM | -1.00% | -0.40% |
 | 1 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → VMM | -0.60% | -0.39% |
 | 1 | EV_WHEAT27_CROP_BELOW ⇒ F_RURAL_DEMAND → VMM | -0.60% | -0.39% |
-| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → VMM | -6.00% | -0.38% |
+| 2 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → F_RURAL_DEMAND → VMM | +0.34% | +0.29% |
 | 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_RURAL_DEMAND → VMM | -2.40% | -0.29% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → VMM | -1.15% | -0.29% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_REFINING_MARGIN → VMM | +0.48% | +0.28% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → VMM | -1.00% | -0.27% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -74,6 +74,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_COTTON → VMM | +0.19 | observed | -0.08% |
 | 1 | F_USDINR → VMM | -0.37 | observed | +0.07% |
 | 1 | F_BRENT → VMM | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Promoter/PE block sale or share overhang (promoters 40.12% -> 40.02%, FIIs selling) | corporate_action | 0.30 | -3.0% | -0.90% |
+| 2027-01 | Q3 FY27 results: festive shift reverses (Diwali 2026-11-08, model knowledge) so SSSG and margin should rebound | results | 0.95 | +2.0% | +1.90% |
+| 2027-03 | Store additions toward FY27 target (currently ~844 stores) | capex | 0.90 | +1.0% | +0.90% |
 
 ## Analyst profile (agent research, sourced)
 # VMM (Vishal Mega Mart Ltd.) - company profile as of 2026-11-05

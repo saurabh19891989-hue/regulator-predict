@@ -2,10 +2,10 @@
 *MIDCAP_100 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.1%**, **12 months +0.3%** (rank 103 / 96 of 200 for 3m / 12m); beta 0.96
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 50%, 12 months 45%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.9% … P90 +2.5%; plausible 12m relative-return range incl. stock-specific noise: -33.6% … +41.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.2 pp (model impact +6.3% beta-adjusted vs realised market-adjusted move -15.2%); forward event exposure -6.7% (3m -3.7%; half assumed priced); company-specific events +3.2%
+- Expected relative return: **3 months -0.9%**, **12 months -0.6%** (rank 131 / 113 of 200 for 3m / 12m); beta 0.96
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +29.7%): 3 months 48%, 12 months 30%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.8% … P90 +0.3%; plausible 12m relative-return range incl. stock-specific noise: -36.3% … +6.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +2.0 pp (model impact +4.0% beta-adjusted vs realised market-adjusted move -15.2%); forward event exposure -6.2% (3m -3.9%; half assumed priced); company-specific events +3.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -9.0% | -9.0% | +0.9 | -2.3 | -3.9 | -3.6 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -7.2% | -7.2% | +0.0 | -4.8 | -2.2 | -0.2 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | +6.5% | +6.5% | +6.6 | -0.1 | +0.0 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.0% | -5.0% | -4.0 | -0.4 | -0.2 | -0.4 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +4.8% | +4.8% | +5.0 | -0.1 | +0.0 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.8% | -4.8% | -4.0 | -0.4 | -0.1 | -0.3 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -4.2% | -4.2% | -4.2 | +0.0 | +0.0 | -0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -4.2% | -4.2% | -4.2 | +0.0 | +0.0 | +0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -3.1% | -3.1% | +0.0 | -2.4 | -0.5 | -0.2 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.6% | +2.8% | +4.5 | +0.5 | +0.2 | +0.5 |
 | Summer 2027 peak-demand shortfall / IEX at cap under super El Nino (`EV_SUMMER27_POWER_SHORTFALL`) | anticipated | 0.40 | +6.9% | +2.7% | +7.0 | -0.1 | +0.1 | -0.1 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -2.2 | -0.2 | -0.2 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -2.3% | -2.3% | +0.0 | -1.6 | -0.5 | -0.2 |
+| ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +2.1% | +2.1% | +1.8 | +0.4 | -0.0 | +0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.5 | -0.3 | -0.0 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -10.1% | -1.8% | -9.2 | -1.0 | +0.0 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,36 +48,46 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → JSWENERGY | +4.50% | +2.25% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → JSWENERGY | +5.40% | +2.16% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → JSWENERGY | -3.00% | -1.20% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → JSWENERGY | -3.00% | -1.26% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → JSWENERGY | -2.00% | -1.00% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → JSWENERGY | -3.46% | -0.86% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → JSWENERGY | -3.00% | -0.81% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → JSWENERGY | -2.69% | -0.75% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → JSWENERGY | -1.25% | -0.75% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → JSWENERGY | -1.20% | -0.72% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → JSWENERGY | +1.80% | +0.72% |
 | 1 | EV_POWER_DISTRIB_REFORM ⇒ P_POWER_REFORM → JSWENERGY | +1.50% | +0.68% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → JSWENERGY | -3.00% | -0.66% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → JSWENERGY | -3.36% | -0.60% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → JSWENERGY | -2.70% | -0.59% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → JSWENERGY | -0.60% | -0.57% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → JSWENERGY | -3.00% | -0.54% |
+| 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → JSWENERGY | +0.90% | +0.54% |
+| 3 | EV_WHEAT27_CROP_BELOW ⇒ F_FOOD_INFLATION_IN → F_CPI_IN → F_REPO_IN → JSWENERGY | -0.76% | -0.49% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → JSWENERGY | -2.70% | -0.49% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_POWER_PRICE_IN → JSWENERGY | +3.00 | events | +5.40% |
 | 1 | P_RENEWABLE_SUPPORT → JSWENERGY | +1.50 | events | +5.25% |
-| 1 | F_GSEC_10Y_IN → JSWENERGY | +1.70 | events | -4.25% |
+| 1 | F_GSEC_10Y_IN → JSWENERGY | +1.55 | director_override | -3.88% |
+| 1 | F_POWER_PRICE_IN → JSWENERGY | +1.90 | director_override | +3.42% |
 | 1 | F_REPO_IN → JSWENERGY | +1.00 | events | -3.00% |
 | 1 | F_FPI_FLOWS → JSWENERGY | -1.60 | events | -2.88% |
 | 1 | T_ENERGY_TRANSITION → JSWENERGY | +0.50 | events | +1.50% |
 | 1 | F_POWER_DEMAND_IN → JSWENERGY | +1.20 | events | +1.44% |
 | 1 | F_CREDIT_SPREADS_IN → JSWENERGY | +0.50 | events | -1.25% |
-| 1 | C_MIDEAST_CONFLICT → JSWENERGY | +1.50 | events | +0.90% |
 | 1 | F_COAL_INDIA → JSWENERGY | +1.50 | events | -0.90% |
+| 1 | C_MIDEAST_CONFLICT → JSWENERGY | +1.00 | events | +0.60% |
 | 1 | F_MONSOON → JSWENERGY | -1.56 | events | -0.47% |
 | 1 | F_USDINR → JSWENERGY | -0.37 | observed | +0.30% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Closing of GE Power India boiler acquisition after NCLT sanction (1 Oct 2026) | corporate_action | 0.80 | +0.8% | +0.60% |
+| 2026-12 | Permanent GNA for ~60% of curtailed capacity by end of Q3 FY27, lowering curtailment | regulatory | 0.60 | +0.9% | +0.54% |
+| 2027-01 | Q3 FY27 results (Q2 on 28 Oct; estimate late Jan 2027) | results | 0.97 | +0.0% | +0.00% |
+| 2027-03 | FY27 3 GW RE commissioning target met (1.4 GW done, 1.6 GW de-risked) | capex | 0.70 | +1.8% | +1.22% |
+| 2027-03 | Equity fund-raise / stake sale beyond Rs 10,150 cr unlocked (capex gap) or further JSW Steel share sales | corporate_action | 0.35 | -1.0% | -0.35% |
+| 2027-06 | Tie-up of further group C&I / RTC contracts (2 GW under advanced discussion of 4.5 GW untied MoUs) | other | 0.55 | +1.8% | +0.96% |
 
 ## Analyst profile (agent research, sourced)
 # JSWENERGY — JSW Energy Ltd. (as of 2026-11-05)

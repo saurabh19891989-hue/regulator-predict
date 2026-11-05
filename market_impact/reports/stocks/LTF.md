@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.2%**, **12 months -3.8%** (rank 159 / 147 of 200 for 3m / 12m); beta 1.55
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.6%): 3 months 43%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -10.6% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -43.6% … +25.9%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.1% beta-adjusted vs realised market-adjusted move -4.3%); forward event exposure -5.5% (3m -3.1%; half assumed priced); company-specific events +0.3%
+- Expected relative return: **3 months -1.8%**, **12 months -3.4%** (rank 148 / 153 of 200 for 3m / 12m); beta 1.55
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +26.6%): 3 months 45%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.7% … P90 +0.1%; plausible 12m relative-return range incl. stock-specific noise: -16.8% … +19.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.1 pp (model impact -4.5% beta-adjusted vs realised market-adjusted move -4.3%); forward event exposure -4.7% (3m -2.2%; half assumed priced); company-specific events +0.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,45 +29,45 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -9.8% | -9.8% | -4.5 | -1.1 | -2.5 | -1.9 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -6.7% | -6.7% | +0.0 | -3.9 | -2.7 | -0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.1% | -4.1% | -3.3 | -0.3 | -0.1 | -0.3 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.0% | -4.0% | -3.3 | -0.3 | -0.1 | -0.3 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -3.5% | -3.5% | -3.2 | -0.3 | +0.1 | -0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -3.2% | -3.2% | -3.3 | +0.0 | +0.1 | +0.0 |
-| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.62 | -4.9% | -3.0% | -5.2 | +0.1 | +0.2 | +0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -3.0% | -3.0% | -1.3 | -0.7 | -0.6 | -0.4 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -1.8 | -0.6 | -0.2 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +4.6% | +2.3% | +3.8 | +0.4 | +0.2 | +0.4 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -6.5% | -2.3% | -2.3 | -1.3 | -1.6 | -1.3 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.6 | -0.3 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.6% | +2.1% | +1.4 | +0.7 | +0.9 | +0.7 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.1 | -0.5 | -0.2 |
+| IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +2.6% | +1.8% | +1.0 | +0.6 | +0.8 | +0.2 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -0.1 | -0.9 | -0.6 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.1% | +1.7% | +1.2 | +0.5 | +0.7 | +0.6 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.1 | -0.4 | -0.1 |
+| RBI tightens gold-loan / unsecured and NBFC-bank lending norms after early stress (`EV_RBI_GOLD_LOAN_TIGHTEN`) | risk_scenario | 0.30 | -5.0% | -1.5% | -3.4 | -1.6 | -0.1 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LTF | +3.75% | +1.88% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → LTF | -2.75% | -1.71% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → LTF | -2.50% | -1.55% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → LTF | -2.25% | -0.80% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → LTF | -2.00% | -0.80% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → LTF | +1.35% | +0.78% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → LTF | -2.00% | -0.84% |
 | 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → LTF | -2.50% | -0.75% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → LTF | -0.82% | -0.74% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → LTF | -1.20% | -0.72% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → LTF | +1.00% | +0.68% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → LTF | -0.75% | -0.68% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → LTF | +1.17% | +0.64% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → LTF | +0.90% | +0.63% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → LTF | -2.24% | -0.63% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → LTF | -1.20% | -0.60% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_CREDIT_SPREADS_IN → LTF | -1.20% | -0.60% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → LTF | -2.30% | -0.58% |
-| 1 | EV_ECL_DEFERRED ⇒ P_RBI_PRUDENTIAL → LTF | +1.50% | +0.57% |
+| 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → LTF | -2.00% | -0.54% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → LTF | -1.98% | -0.50% |
+| 1 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → LTF | +0.90% | +0.49% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → LTF | +1.70 | events | -2.55% |
 | 1 | F_FPI_FLOWS → LTF | -1.60 | events | -2.40% |
+| 1 | F_GSEC_10Y_IN → LTF | +1.55 | director_override | -2.33% |
 | 1 | F_REPO_IN → LTF | +1.00 | events | -2.00% |
 | 1 | F_CREDIT_SPREADS_IN → LTF | +0.50 | events | -2.00% |
 | 1 | F_MONSOON → LTF | -1.56 | events | -1.56% |
@@ -78,6 +78,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_MONSOON → F_UNSECURED_STRESS → LTF | -1.56 | events | -0.37% |
 | 1 | F_USDINR → LTF | -0.37 | observed | +0.30% |
 | 2 | F_GDP_IN → F_UNSECURED_STRESS → LTF | +0.50 | events | +0.24% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Further NCD/sub-debt raising (Rs 1,000 cr NCDs allotted 4 Nov; sub-bond bids 9 Oct) to fund 25%+ book growth | other | 0.90 | +0.0% | +0.00% |
+| 2027-01 | Q3 FY27 results (Q2 was 15 Oct 2026) | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | FY27 close: Lakshya 2026 targets (RoA >2.8%, RoE >16%) delivery check | guidance | 0.60 | +0.5% | +0.30% |
 
 ## Analyst profile (agent research, sourced)
 # LTF - L&T Finance (midcap, retail NBFC)

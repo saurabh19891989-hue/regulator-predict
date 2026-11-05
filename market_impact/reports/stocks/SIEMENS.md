@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Capital Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +2.0%**, **12 months +4.8%** (rank 42 / 36 of 200 for 3m / 12m); beta 1.24
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.0%): 3 months 56%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.5% … P90 +9.5%; plausible 12m relative-return range incl. stock-specific noise: -24.4% … +33.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +4.1 pp (model impact +8.3% beta-adjusted vs realised market-adjusted move -13.1%); forward event exposure +3.2% (3m +0.9%; half assumed priced); company-specific events +0.5%
+- Expected relative return: **3 months +1.9%**, **12 months +4.3%** (rank 40 / 34 of 200 for 3m / 12m); beta 1.24
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.0%): 3 months 56%, 12 months 80%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.4% … P90 +5.2%; plausible 12m relative-return range incl. stock-specific noise: -4.0% … +35.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +3.9 pp (model impact +7.8% beta-adjusted vs realised market-adjusted move -13.1%); forward event exposure +2.5% (3m +1.0%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -6.4% | -6.4% | +0.0 | -2.7 | -2.8 | -0.9 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +3.7% | +3.4% | +3.6 | +0.3 | -0.1 | -0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.3% | -3.3% | +0.0 | -3.0 | -0.3 | -0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -10.7% | -3.0% | -7.7 | -2.2 | -0.8 | -0.1 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.4% | +2.4% | +2.5 | +0.2 | -0.2 | -0.1 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -9.2% | -2.3% | -6.5 | -2.0 | -0.6 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -2.2% | -2.2% | -2.0 | -0.2 | +0.0 | -0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -1.8 | -0.0 | +0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -4.5% | -1.6% | -1.0 | -1.7 | -1.3 | -0.5 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +2.0% | +1.6% | +1.8 | +0.2 | +0.0 | -0.0 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.6% | +1.6% | +0.0 | +1.4 | +0.2 | -0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.4% | -1.4% | -0.3 | -0.8 | -0.1 | -0.2 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.4% | +1.4% | +0.4 | +0.9 | +0.8 | +0.3 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -5.0% | -1.3% | -4.5 | -0.7 | +0.1 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.0% | +1.1% | +0.3 | +0.8 | +0.7 | +0.3 |
+| AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.1% | -1.1% | -0.8 | -0.2 | -0.1 | -0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.8 | -0.3 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.9% | -1.0% | -0.8 | -1.5 | -1.2 | -0.5 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,19 +48,19 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → SIEMENS | +2.00% | +1.80% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ P_RAILWAY_CAPEX → SIEMENS | +1.60% | +1.44% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → SIEMENS | -4.50% | -1.26% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → SIEMENS | +1.50% | +1.20% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → SIEMENS | -4.50% | -1.12% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → SIEMENS | -4.50% | -1.12% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → SIEMENS | -3.20% | -0.90% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SIEMENS | -2.00% | -0.80% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → SIEMENS | -4.00% | -0.72% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SIEMENS | +1.50% | +0.68% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → SIEMENS | -2.00% | -0.84% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → SIEMENS | -2.30% | -0.58% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → SIEMENS | -2.00% | -0.54% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → SIEMENS | -1.80% | -0.50% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → SIEMENS | +0.75% | +0.49% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → SIEMENS | -2.00% | -0.50% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → SIEMENS | -0.80% | -0.48% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → SIEMENS | -2.00% | -0.44% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SIEMENS | +1.50% | +0.45% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → SIEMENS | -1.80% | -0.45% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → SIEMENS | +0.75% | +0.41% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → SIEMENS | +0.60% | +0.37% |
+| 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → SIEMENS | +0.60% | +0.36% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -78,6 +78,16 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_CREDIT_SPREADS_IN → F_PRIVATE_CAPEX → SIEMENS | +0.50 | events | -0.27% |
 | 2 | P_FDI_RULES → T_CHINA_PLUS_ONE → SIEMENS | +0.50 | events | +0.25% |
 | 2 | F_AI_CAPEX → T_DATA_CENTRES_IN → SIEMENS | -0.30 | events | -0.18% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Q2 FY27 results (Jul-Sep 2026): OPM trajectory (Q1 9%) and treatment of LVM proceeds | results | 0.90 | -0.5% | -0.45% |
+| 2026-12 | Further analyst downgrades/upgrades after Jefferies downgrade on demand risks (2026-10-16) | guidance | 0.50 | -1.0% | -0.50% |
+| 2027-01 | Possible special dividend / capital return from LVM sale proceeds | corporate_action | 0.25 | +2.5% | +0.62% |
+| 2027-02 | Q3 FY27 results | results | 0.90 | +0.0% | +0.00% |
+| 2027-03 | Large metro / locomotive / signalling order awards in India | other | 0.40 | +2.0% | +0.80% |
+| 2027-05 | Annual (March FY) results and dividend | results | 0.90 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # SIEMENS — Siemens Ltd. (profile as of 2026-11-05)

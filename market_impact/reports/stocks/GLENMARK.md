@@ -2,10 +2,10 @@
 *MIDCAP_100 · Healthcare · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.6%**, **12 months -0.6%** (rank 123 / 117 of 200 for 3m / 12m); beta 0.79
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.8%): 3 months 48%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.1% … P90 +8.2%; plausible 12m relative-return range incl. stock-specific noise: -26.9% … +20.2%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.8 pp (model impact -3.5% beta-adjusted vs realised market-adjusted move +10.3%); forward event exposure +3.0% (3m +1.6%; half assumed priced); company-specific events +1.6%
+- Expected relative return: **3 months -1.0%**, **12 months -1.4%** (rank 134 / 127 of 200 for 3m / 12m); beta 0.79
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +20.8%): 3 months 46%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.1% … P90 -0.1%; plausible 12m relative-return range incl. stock-specific noise: -15.1% … +18.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.8 pp (model impact -3.7% beta-adjusted vs realised market-adjusted move +10.3%); forward event exposure +1.3% (3m +0.8%; half assumed priced); company-specific events +1.6%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -30,37 +30,37 @@
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
 | USFDA warning letters: Alembic, Aurobindo-Eugia, Dabur (Jul-Aug 2026) (`EV_USFDA_WARNING_WAVE_26`) | occurred | 1.00 | -2.9% | -2.9% | -3.5 | +0.6 | +0.0 | +0.0 |
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +2.6% | +2.6% | +0.0 | +4.1 | -0.9 | -0.6 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.7% | -1.7% | -2.2 | +0.6 | -0.0 | -0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.6% | -1.6% | +0.0 | -1.1 | -0.4 | -0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.6% | -1.6% | -2.2 | +0.8 | -0.0 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.4% | -1.4% | -1.2 | -0.2 | -0.0 | -0.0 |
 | Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -1.0% | -1.0% | -1.1 | +0.1 | +0.1 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +1.8% | +0.9% | +2.5 | -0.8 | +0.0 | +0.1 |
 | US imposes tariffs on generic drugs (200% threat) or removes India's speciality exemption (`EV_PHARMA_GENERICS_TARIFF`) | risk_scenario | 0.12 | -5.4% | -0.6% | -5.4 | +0.0 | +0.0 | +0.0 |
-| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.40 | -1.4% | -0.6% | -1.2 | -0.2 | -0.0 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | +1.3% | +0.5% | +0.0 | +2.1 | -0.5 | -0.3 |
+| RBI MPC Dec 2026 (~4 Dec): hikes repo another 25 bp to 5.75% (`EV_RBI_DEC26_HIKE25`) | scheduled | 0.42 | -1.4% | -0.6% | -1.2 | -0.2 | -0.0 | -0.0 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.1 | -0.4 | +0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | -0.8% | -0.5% | +0.0 | -1.2 | +0.3 | +0.2 |
+| RBI MPC Feb 2027 (~5 Feb, just after Budget): hikes 25 bp (`EV_RBI_FEB27_HIKE25`) | scheduled | 0.27 | -1.4% | -0.4% | -1.2 | -0.2 | -0.0 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | -0.7% | -0.4% | +0.0 | -1.1 | +0.2 | +0.1 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.4% | -0.4% | +0.0 | +0.0 | -0.3 | -0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → GLENMARK | +2.50% | +1.25% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → GLENMARK | +3.90% | +0.86% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → GLENMARK | +2.37% | +0.85% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → GLENMARK | -1.42% | -0.83% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GLENMARK | -1.20% | -0.48% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GLENMARK | -1.49% | -0.42% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → GLENMARK | +1.44% | +0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → GLENMARK | +3.90% | +0.70% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → GLENMARK | -1.23% | -0.68% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → GLENMARK | +2.09% | +0.52% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → GLENMARK | -1.20% | -0.50% |
 | 1 | EV_PHARMA_GENERICS_TARIFF ⇒ F_US_GENERIC_PRICING → GLENMARK | -3.00% | -0.36% |
-| 2 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → F_USDINR → GLENMARK | +5.69% | +0.36% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → GLENMARK | -1.38% | -0.35% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → GLENMARK | -0.69% | -0.35% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GLENMARK | -1.87% | -0.34% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GLENMARK | -1.50% | -0.33% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → GLENMARK | -1.20% | -0.32% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → GLENMARK | +1.80% | +0.32% |
+| 1 | EV_PHARMA_GENERICS_TARIFF ⇒ P_US_PHARMA_TARIFF → GLENMARK | -2.40% | -0.29% |
+| 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → GLENMARK | -0.48% | -0.29% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → GLENMARK | -1.50% | -0.27% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → GLENMARK | -0.96% | -0.24% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → GLENMARK | -0.96% | -0.24% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → GLENMARK | -0.93% | -0.23% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -71,11 +71,20 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_REPO_IN → GLENMARK | +1.00 | events | -1.20% |
 | 1 | F_USDINR → GLENMARK | -0.37 | observed | -1.11% |
 | 2 | P_USFDA_ENFORCEMENT → F_US_GENERIC_PRICING → GLENMARK | +1.00 | events | +0.60% |
-| 1 | P_US_PHARMA_TARIFF → GLENMARK | +0.50 | events | -0.40% |
 | 1 | F_URBAN_DEMAND → GLENMARK | +0.20 | events | +0.26% |
 | 2 | F_DXY → C_AFRICA_LATAM → GLENMARK | +0.74 | observed | -0.21% |
-| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → GLENMARK | +0.50 | events | +0.18% |
 | 1 | F_EU_GDP → GLENMARK | +0.22 | events | +0.18% |
+| 1 | P_US_PHARMA_TARIFF → GLENMARK | +0.20 | events | -0.16% |
+| 2 | P_US_PHARMA_TARIFF → F_US_GENERIC_PRICING → GLENMARK | +0.20 | events | +0.07% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11-12 | Q2 FY27 results (date unverified; trading window closed 2026-09-28) | results | 0.95 | +0.0% | +0.00% |
+| 2026-12-06 | IGI/partner presents updated ISB 2001 data at ASH meeting | other | 0.90 | +1.0% | +0.90% |
+| 2027-02 | Q3 FY27 results | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | USFDA inspections of Monroe/Baddi/Indore sites | regulatory | 0.30 | -3.5% | -1.05% |
+| 2027-06 | Next ISB 2001 milestone payments / trial progress from AbbVie (timing not disclosed) | other | 0.30 | +6.0% | +1.80% |
 
 ## Analyst profile (agent research, sourced)
 # GLENMARK (Glenmark Pharmaceuticals) — Midcap, as of 2026-11-05

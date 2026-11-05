@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.3%**, **12 months +2.1%** (rank 53 / 65 of 200 for 3m / 12m); beta 1.30
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 53%, 12 months 40%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.4% … P90 +6.7%; plausible 12m relative-return range incl. stock-specific noise: -55.2% … +28.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +6.2% beta-adjusted vs realised market-adjusted move +3.4%); forward event exposure +2.4% (3m +3.3%; half assumed priced); company-specific events +1.4%
+- Expected relative return: **3 months +1.3%**, **12 months +1.9%** (rank 51 / 58 of 200 for 3m / 12m); beta 1.30
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +30.5%): 3 months 54%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +1.4% … P90 +4.2%; plausible 12m relative-return range incl. stock-specific noise: -27.0% … +15.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.2 pp (model impact +5.8% beta-adjusted vs realised market-adjusted move +3.4%); forward event exposure +2.1% (3m +3.5%; half assumed priced); company-specific events +1.4%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -4.0% | -4.0% | +0.0 | -1.5 | -1.1 | -1.3 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +3.6% | +2.9% | +3.6 | +0.0 | +0.0 | +0.0 |
 | India further eases Press Note 3 rules for China/border-country FDI (approval timelines, minority stakes) (`EV_CHINA_FDI_EASING_PN3`) | anticipated | 0.70 | +3.6% | +2.5% | +3.6 | +0.0 | +0.0 | +0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -8.8% | -2.5% | -12.0 | +3.1 | +0.0 | +0.0 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +2.4% | +2.4% | +0.0 | +2.0 | +0.3 | +0.1 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -11.1% | -2.0% | -10.5 | -0.1 | -0.4 | +0.0 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -7.8% | -1.9% | -6.0 | -2.2 | +0.9 | -0.5 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | -0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -0.9 | -0.6 | -0.2 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.9% | -1.4% | -1.8 | -1.0 | -0.4 | -0.8 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.4% | -1.4% | -0.6 | -0.6 | +0.0 | -0.2 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.5% | -1.6% | -9.8 | +3.2 | +0.0 | +0.0 |
 | India-China thaw: Xi visit around BRICS summit in India (mid-Sep 2026), flights resume, Chinese-investment curbs eased (`EV_INDIA_CHINA_THAW_SEP26`) | occurred | 1.00 | +1.2% | +1.2% | +1.0 | +0.1 | +0.0 | -0.0 |
+| China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | -0.0 | -0.0 |
+| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -7.2% | -1.1% | -6.8 | -0.1 | -0.4 | +0.0 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.6 | -0.3 | +0.0 |
+| AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -0.9% | -0.9% | -1.2 | +0.3 | +0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,26 +48,26 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_CHINA_FDI_EASING_PN3 ⇒ P_FDI_RULES → DIXON | +2.80% | +1.96% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ T_CHINA_PLUS_ONE → DIXON | +2.40% | +1.92% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → DIXON | -6.00% | -1.68% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → DIXON | -6.00% | -1.68% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → DIXON | -6.00% | -1.50% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → DIXON | -6.00% | -1.50% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → DIXON | -7.50% | -1.35% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ P_PLI → DIXON | +1.20% | +0.96% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → DIXON | +3.24% | +0.91% |
-| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → DIXON | +1.20% | +0.78% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → DIXON | -1.80% | -0.64% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → DIXON | -3.75% | -0.94% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → DIXON | +3.24% | +0.81% |
+| 1 | EV_INDIA_US_INTERIM_DEAL_SIGNED ⇒ T_CHINA_PLUS_ONE → DIXON | +1.20% | +0.66% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → DIXON | -3.75% | -0.56% |
 | 1 | EV_CHINA_FDI_EASING_PN3 ⇒ T_CHINA_PLUS_ONE → DIXON | +0.80% | +0.56% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → DIXON | -3.00% | -0.54% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → DIXON | +0.80% | +0.50% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → DIXON | -0.96% | -0.48% |
 | 1 | EV_QCOMM_FDI_CRACKDOWN ⇒ P_FDI_RULES → DIXON | -4.00% | -0.48% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → DIXON | -3.00% | -0.45% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → DIXON | -1.50% | -0.38% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → DIXON | +1.70 | events | -2.04% |
 | 1 | P_FDI_RULES → DIXON | +0.50 | events | +2.00% |
+| 1 | F_GSEC_10Y_IN → DIXON | +1.55 | director_override | -1.86% |
 | 1 | F_USDCNY → DIXON | -0.47 | observed | -1.17% |
 | 2 | P_US_TARIFF_INDIA → T_CHINA_PLUS_ONE → DIXON | -0.60 | events | +0.58% |
 | 1 | F_URBAN_DEMAND → DIXON | +0.20 | events | +0.50% |
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_RISK_SENTIMENT → DIXON | +0.11 | observed | -0.17% |
 | 1 | C_US_CHINA_DECOUPLING → DIXON | -0.10 | events | -0.15% |
 | 2 | C_US_CHINA_DECOUPLING → T_CHINA_PLUS_ONE → DIXON | -0.10 | events | -0.09% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Memory-price trajectory sets Q3 mobile BOM; further price hikes by brands may reduce volumes (market -16% YoY) | other | 0.60 | -1.5% | -0.90% |
+| 2027-01 | Q3 FY27 results (Q2 was 2026-10-30/11-01); watch mobile margin vs 2.7% and Vivo JV start | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Vivo JV (51% Dixon) commencement in Q4 FY27 (delayed from Q3); contingent on approvals | regulatory | 0.55 | +1.0% | +0.55% |
+| 2027-03 | ECMS / component-scheme approvals or successor mobile incentive decision supporting backward-integration margins | regulatory | 0.35 | +5.0% | +1.75% |
 
 ## Analyst profile (agent research, sourced)
 # DIXON - Dixon Technologies (India) Ltd. (midcap, EMS)

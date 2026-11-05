@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +5.6%**, **12 months +10.7%** (rank 8 / 10 of 200 for 3m / 12m); beta 1.20
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.6%): 3 months 68%, 12 months 75%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +5.6% … P90 +23.2%; plausible 12m relative-return range incl. stock-specific noise: -11.7% … +44.5%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +2.8 pp (model impact +5.7% beta-adjusted vs realised market-adjusted move -10.2%); forward event exposure +12.0% (3m +4.7%; half assumed priced); company-specific events +6.2%
+- Expected relative return: **3 months +7.9%**, **12 months +13.7%** (rank 1 / 3 of 200 for 3m / 12m); beta 1.20
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.6%): 3 months 75%, 12 months 80%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +10.7% … P90 +22.6%; plausible 12m relative-return range incl. stock-specific noise: -5.0% … +35.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +6.8 pp (model impact +13.5% beta-adjusted vs realised market-adjusted move -10.2%); forward event exposure +9.8% (3m +4.6%; half assumed priced); company-specific events +6.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | +13.4% | +13.4% | +13.4 | -0.0 | +0.0 | -0.0 |
-| Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -6.1% | -6.1% | -6.1 | -0.0 | +0.0 | -0.0 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | +17.6% | +17.6% | +17.6 | -0.0 | +0.0 | -0.0 |
 | DGTR recommends/imposes anti-dumping duty on hot-rolled flat steel from China, Japan, Russia (`EV_INDIA_HR_STEEL_AD_PROVISIONAL`) | anticipated | 0.55 | +6.4% | +3.5% | +6.4 | -0.0 | +0.0 | -0.0 |
+| Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -3.4% | -3.4% | -3.3 | -0.0 | +0.0 | -0.0 |
 | EU quota-halving steel regime and CBAM cut Indian steel exports to EU (`EV_EU_STEEL_REGIME_CBAM_HITS_INDIA`) | occurred | 1.00 | -2.9% | -2.9% | -2.9 | +0.0 | +0.0 | +0.0 |
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | +2.9% | +2.9% | -1.2 | -0.4 | +5.1 | -0.7 |
 | Chinese steel/aluminium export surge floods Asia as China demand stays weak (`EV_CHINA_STEEL_EXPORT_FLOOD`) | risk_scenario | 0.25 | -10.8% | -2.7% | -1.2 | -10.3 | +0.7 | +0.0 |
 | India coal crunch: critical plant stocks, e-auction premiums ~94%, captive plants ordered to maximise output; CIL October output +19% (`EV_INDIA_COAL_CRUNCH`) | occurred | 1.00 | -2.6% | -2.6% | -2.6 | +0.0 | +0.0 | +0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -2.5% | -2.5% | +0.0 | -1.1 | -1.4 | +0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.2% | -2.2% | -2.1 | -0.1 | +0.0 | +0.0 |
 | Indian spot power: IEX prices hit Rs20/unit ceiling (19 Sep), Q2 prices up ~46% y/y; El Nino lifts demand (`EV_POWER_SPOT_SPIKE`) | occurred | 1.00 | -2.2% | -2.2% | -1.8 | -0.4 | +0.0 | +0.0 |
 | China enforces steel output cuts / export licensing discipline ('anti-involution') (`EV_CHINA_STEEL_OUTPUT_CURB_2027`) | anticipated | 0.50 | +4.3% | +2.1% | +1.2 | +3.3 | -0.3 | +0.0 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.0% | +2.0% | +1.5 | +1.1 | -0.4 | -0.2 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -1.8% | -1.8% | -0.8 | -1.0 | -0.0 | +0.0 |
+| Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.0% | +1.8% | +1.2 | +0.9 | +0.0 | -0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -54,30 +54,43 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 2 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → JINDALSTEL | +2.37% | +1.18% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → JINDALSTEL | +1.20% | +1.08% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COKING_COAL → JINDALSTEL | -3.00% | -1.05% |
-| 3 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → JINDALSTEL | +2.84% | +1.02% |
-| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → JINDALSTEL | -1.71% | -0.99% |
 | 3 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → F_STEEL_INDIA → JINDALSTEL | -1.66% | -0.83% |
+| 3 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → F_STEEL_INDIA → JINDALSTEL | -1.48% | -0.81% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_STEEL_INDIA → JINDALSTEL | +0.90% | +0.81% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → JINDALSTEL | -2.80% | -0.78% |
 | 3 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_STEEL_GLOBAL → F_STEEL_INDIA → JINDALSTEL | +2.22% | +0.78% |
 | 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_PRICE_IN → JINDALSTEL | -1.80% | -0.72% |
+| 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_IRON_ORE → JINDALSTEL | -1.50% | -0.68% |
+| 3 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_CHINA_STEEL_EXPORTS → F_STEEL_INDIA → JINDALSTEL | +1.80% | +0.63% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_STEEL_INDIA → JINDALSTEL | +1.65 | events | +26.40% |
-| 1 | F_COKING_COAL → JINDALSTEL | +2.87 | events | -21.53% |
-| 1 | F_GSEC_10Y_IN → JINDALSTEL | +1.70 | events | -2.55% |
+| 1 | F_STEEL_INDIA → JINDALSTEL | +1.35 | events | +21.60% |
+| 1 | F_COKING_COAL → JINDALSTEL | +1.30 | events | -9.75% |
+| 1 | F_GSEC_10Y_IN → JINDALSTEL | +1.55 | director_override | -2.33% |
 | 1 | F_IRON_ORE → JINDALSTEL | -0.83 | observed | +2.08% |
 | 1 | F_COAL_INDIA → JINDALSTEL | +1.50 | events | -1.95% |
-| 1 | F_POWER_PRICE_IN → JINDALSTEL | +3.00 | events | -1.80% |
 | 1 | F_GOVT_CAPEX → JINDALSTEL | +1.00 | events | +1.50% |
-| 1 | C_MIDEAST_CONFLICT → JINDALSTEL | +1.50 | events | -1.20% |
 | 1 | P_ANTI_DUMPING_IN → JINDALSTEL | +0.40 | events | +1.20% |
+| 1 | F_POWER_PRICE_IN → JINDALSTEL | +1.90 | director_override | -1.14% |
+| 1 | C_MIDEAST_CONFLICT → JINDALSTEL | +1.00 | events | -0.80% |
 | 1 | NEW_EU_STEEL_ACCESS → JINDALSTEL | +1.00 | events | -0.50% |
 | 1 | F_USDINR → JINDALSTEL | -0.37 | observed | -0.37% |
 | 1 | F_REPO_IN → JINDALSTEL | +1.00 | events | -0.30% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Angul BF-II hot metal 12 ktpd by Dec-26; H2 production 6 Mt (0.96 Mt/month) | capex | 0.60 | +1.5% | +0.90% |
+| 2026-12 | Barbil-Angul 192 km slurry pipeline enters commercial operation (saves ~Rs700/t freight) | capex | 0.75 | +1.0% | +0.75% |
+| 2026-12 | Russian Black Sea coking coal supply resumes, easing coking coal (mgmt/MOFSL: Dec-Jan, subject to geopolitics) | other | 0.30 | +4.0% | +1.20% |
+| 2026-12-16 | India-EU FTA signing incl. steel quota (~1.64 Mt under discussion) vs CBAM drag on exports | regulatory | 0.90 | +1.0% | +0.90% |
+| 2027-01 | Q3 FY27 results (late Jan; PL expects EBITDA ~Rs3,150 cr on 2.85 Mt as Angul ramps and coking coal +US$20-25/t lands) | results | 0.97 | +0.0% | +0.00% |
+| 2027-01 | Roida iron ore mine resumes after forest/road clearances (mgmt: Dec-26 to Jan-27) | regulatory | 0.50 | +1.5% | +0.75% |
+| 2027-03 | DGTR provisional/final finding or notified anti-dumping duty on HR flat steel (China, Japan, Russia); final due ~Jun 2027 | regulatory | 0.40 | +4.0% | +1.60% |
+| 2027-04-21 | Safeguard duty steps down 12% -> 11.5% (year two) - minor | regulatory | 0.85 | -0.5% | -0.42% |
+| 2027-06 | 2 Mtpa DRI plant and new pellet plant commissioning (imported equipment/shipping could delay) | capex | 0.50 | +1.0% | +0.50% |
 
 ## Analyst profile (agent research, sourced)
 # JINDALSTEL — Jindal Steel Ltd. (Nifty Next 50) — profile as of 2026-11-05

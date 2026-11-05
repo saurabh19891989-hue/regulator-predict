@@ -2,10 +2,10 @@
 *MIDCAP_100 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.7%**, **12 months +2.0%** (rank 76 / 69 of 200 for 3m / 12m); beta 1.14
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.6%): 3 months 52%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.5% … P90 +7.3%; plausible 12m relative-return range incl. stock-specific noise: -30.8% … +50.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.0% beta-adjusted vs realised market-adjusted move -11.1%); forward event exposure +2.4% (3m +0.9%; half assumed priced); company-specific events +1.0%
+- Expected relative return: **3 months +0.7%**, **12 months +1.4%** (rank 73 / 66 of 200 for 3m / 12m); beta 1.14
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.6%): 3 months 52%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.9% … P90 +3.9%; plausible 12m relative-return range incl. stock-specific noise: -26.3% … +35.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +2.8% beta-adjusted vs realised market-adjusted move -11.1%); forward event exposure +1.1% (3m +0.8%; half assumed priced); company-specific events +1.0%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -5.3% | -5.3% | -3.0 | -0.6 | -0.5 | -1.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -3.1% | -3.1% | +0.0 | -1.4 | -1.8 | +0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.1% | -2.1% | -2.1 | +0.0 | +0.0 | -0.0 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +1.5% | +1.5% | +1.5 | +0.0 | +0.0 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.4% | -1.4% | -1.0 | -0.2 | -0.1 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.1% | -1.1% | -1.5 | -0.4 | -0.4 | -0.8 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.8% | +1.0% | +0.9 | +0.2 | +0.2 | +0.4 |
 | China+1 momentum: Apple/Foxconn/Tata iPhone 18 Pro export ramp, India ~50% of US smartphone imports, PLI round 4 (textiles) and component schemes (`EV_CHINA_PLUS_ONE_ELECTRONICS`) | anticipated | 0.80 | +1.3% | +1.0% | +1.2 | +0.0 | +0.0 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.6 | -0.0 | -0.3 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.6 | -0.2 | -0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.6 | -0.0 | -0.2 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.5% | +0.8% | +0.8 | +0.2 | +0.2 | +0.4 |
 | Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | +0.0 | -0.4 | -0.4 |
-| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.22 | -3.5% | -0.8% | -3.1 | -0.2 | -0.1 | -0.1 |
+| ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.8 | +0.0 | +0.0 |
+| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.2% | -0.7% | -1.0 | -0.2 | -0.2 | +0.1 |
+| Food inflation overshoot: Dec-Feb CPI food >9% y/y on pulses, vegetables, edible oils, milk (`EV_PULSES_VEG_SPIKE_WINTER`) | risk_scenario | 0.25 | -2.8% | -0.7% | +0.0 | -1.2 | -1.6 | +0.1 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -2.7% | -0.7% | -1.3 | -0.4 | -0.3 | -0.7 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -49,24 +49,24 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ P_PLI → EXIDEIND | +1.20% | +0.96% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → EXIDEIND | -1.20% | -0.60% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ T_ENERGY_TRANSITION → EXIDEIND | +0.90% | +0.54% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → EXIDEIND | -1.50% | -0.54% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → EXIDEIND | +0.90% | +0.52% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → EXIDEIND | -1.92% | -0.48% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → EXIDEIND | -0.75% | -0.45% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → EXIDEIND | +0.78% | +0.43% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → EXIDEIND | -0.36% | -0.34% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → EXIDEIND | -1.50% | -0.33% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → EXIDEIND | -1.32% | -0.33% |
 | 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → EXIDEIND | +0.39% | +0.28% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → EXIDEIND | -0.30% | -0.27% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → EXIDEIND | -1.50% | -0.27% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → EXIDEIND | -0.45% | -0.27% |
-| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → EXIDEIND | +0.45% | +0.26% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → EXIDEIND | -0.60% | -0.24% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → EXIDEIND | -1.04% | -0.23% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → EXIDEIND | -0.60% | -0.25% |
+| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → EXIDEIND | +0.45% | +0.23% |
+| 2 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → EXIDEIND | +0.39% | +0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → EXIDEIND | +1.70 | events | -2.55% |
+| 1 | F_GSEC_10Y_IN → EXIDEIND | +1.55 | director_override | -2.33% |
 | 1 | T_ENERGY_TRANSITION → EXIDEIND | +0.50 | events | +1.50% |
 | 1 | F_REPO_IN → EXIDEIND | +1.00 | events | -0.60% |
 | 1 | F_AUTO_DEMAND_IN → EXIDEIND | -0.10 | events | -0.40% |
@@ -74,6 +74,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_CHINA_GDP → F_ZINC_LEAD → EXIDEIND | +0.30 | events | -0.18% |
 | 2 | F_DXY → F_ZINC_LEAD → EXIDEIND | +0.74 | observed | +0.18% |
 | 1 | F_BRENT → EXIDEIND | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11-04 | Q2 FY27 results delivered: net profit +75%, revenue +20% | results | 1.00 | +0.0% | +0.00% |
+| 2026-12 | Further capital infusion into Exide Energy or customer MoUs | corporate_action | 0.60 | +0.5% | +0.30% |
+| 2027-02 | Q3 FY27 results | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Exide Energy Phase-I ramp-up and customer qualifications | capex | 0.70 | +1.0% | +0.70% |
 
 ## Analyst profile (agent research, sourced)
 # Exide Industries Ltd. (EXIDEIND) — Market Impact profile, 2026-11-05

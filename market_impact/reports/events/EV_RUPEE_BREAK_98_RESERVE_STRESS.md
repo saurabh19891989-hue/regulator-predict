@@ -1,7 +1,9 @@
 # Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`)
-*india_macro · status risk_scenario · date 2027-01-15 · P(3m) 0.08 · P(12m) 0.22 · confidence low*
+*india_macro · status risk_scenario · date 2027-01-15 · P(3m) 0.05 · P(12m) 0.18 · confidence low*
 
 Triggers: oil back >US$105 (US-Iran war flare-up, Hormuz/Kharg risk), further FPI exits, India-US trade breakdown. RBI has ~US$200bn net short forward book (record, Aug), reserves US$719.75bn and falling seven weeks; Reuters (15 Oct) says half of US$140bn capital haul spent. RBI response could include FCNR(B) schemes, import curbs, an out-of-cycle/50 bp hike, and CRR hikes. P(by 12m) 0.22 is a judgement.
+
+**Review override applied:** The main trigger (Brent >$105) has receded: Brent is $95. The rupee is at a 2-week high of 94.33-94.55 on 5 Nov (Yahoo 94.49 confirmed).
 
 ## Entry shocks (conditional on the event)
 - `F_USDINR` USD/INR exchange rate: 1.3 SSU (range 0.9…2.0) 94.5 -> ~98.3 (+4%)

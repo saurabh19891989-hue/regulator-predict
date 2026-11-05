@@ -2,10 +2,10 @@
 *MIDCAP_100 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.5%**, **12 months -4.5%** (rank 161 / 154 of 200 for 3m / 12m); beta 0.80
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.0%): 3 months 42%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.4% … P90 +0.2%; plausible 12m relative-return range incl. stock-specific noise: -32.5% … +16.6%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.4% beta-adjusted vs realised market-adjusted move -10.9%); forward event exposure -5.5% (3m -2.3%; half assumed priced); company-specific events -1.1%
+- Expected relative return: **3 months -2.1%**, **12 months -3.7%** (rank 159 / 157 of 200 for 3m / 12m); beta 0.80
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.0%): 3 months 43%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.9% … P90 -0.9%; plausible 12m relative-return range incl. stock-specific noise: -4.6% … +20.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.5% beta-adjusted vs realised market-adjusted move -10.9%); forward event exposure -4.1% (3m -1.6%; half assumed priced); company-specific events -1.1%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,51 +29,58 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -9.5% | -9.5% | +0.0 | -6.0 | -1.8 | -1.7 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.5% | -4.5% | -3.9 | -0.5 | +0.0 | -0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -9.7% | -2.7% | -6.0 | -2.9 | -0.9 | +0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.8% | -3.8% | -3.3 | -0.4 | +0.0 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.0% | +2.5% | +4.3 | +0.5 | -0.0 | +0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -6.8% | -2.4% | -1.8 | -3.1 | -1.0 | -0.9 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.3% | -2.3% | -1.1 | -0.4 | -0.7 | -0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.2% | -2.2% | -2.1 | +0.0 | -0.1 | -0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -11.7% | -2.1% | -7.5 | -3.7 | -0.7 | +0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.6% | +2.1% | +0.8 | +1.8 | +0.6 | +0.5 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.9 | -0.1 | -0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -1.7 | -0.2 | +0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -0.7 | -0.8 | -0.3 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +3.1% | +1.7% | +0.6 | +1.5 | +0.5 | +0.5 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -6.6% | -1.7% | -3.8 | -2.4 | -0.7 | +0.2 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -1.0 | -0.4 | -0.2 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.9% | -1.5% | -1.5 | -2.7 | -0.9 | -0.8 |
+| IRDAI resets insurance commission/expense rules; post-GST-exemption demand (`EV_IRDAI_COMMISSION_RESET`) | anticipated | 0.50 | -2.9% | -1.4% | -2.8 | -0.1 | +0.0 | +0.0 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -5.0% | -1.2% | +0.0 | -5.2 | +0.5 | -0.3 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +1.2% | +1.2% | +0.0 | +0.6 | +0.4 | +0.2 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → ICICIGI | +3.75% | +1.88% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ICICIGI | -6.00% | -1.68% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → ICICIGI | -2.80% | -1.40% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ICICIGI | -7.50% | -1.35% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → ICICIGI | -1.80% | -0.64% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → ICICIGI | -3.75% | -0.94% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → ICICIGI | -1.20% | -0.60% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → ICICIGI | -3.75% | -0.56% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → ICICIGI | -2.16% | -0.54% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → ICICIGI | +0.58% | +0.52% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ICICIGI | -2.25% | -0.49% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → ICICIGI | -0.75% | -0.45% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → ICICIGI | +0.75% | +0.44% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → ICICIGI | -1.95% | -0.43% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → ICICIGI | -1.19% | -0.42% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → ICICIGI | +0.71% | +0.41% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ICICIGI | -1.44% | -0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → ICICIGI | -2.25% | -0.40% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → ICICIGI | -1.50% | -0.38% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → ICICIGI | +0.60% | +0.37% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → ICICIGI | +0.53% | +0.36% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → ICICIGI | -1.44% | -0.36% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → ICICIGI | -1.44% | -0.36% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → ICICIGI | -3.00% | -0.36% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → ICICIGI | +1.70 | events | -2.55% |
 | 1 | F_FPI_FLOWS → ICICIGI | -1.60 | events | -2.40% |
+| 1 | F_GSEC_10Y_IN → ICICIGI | +1.55 | director_override | -2.33% |
 | 1 | F_CPI_IN → ICICIGI | +1.15 | events | -1.15% |
 | 1 | F_GDP_IN → ICICIGI | +0.50 | events | +1.00% |
 | 1 | F_USDINR → ICICIGI | -0.37 | observed | +0.55% |
 | 1 | F_RISK_SENTIMENT → ICICIGI | +0.11 | observed | -0.17% |
 | 1 | F_AUTO_DEMAND_IN → ICICIGI | -0.10 | events | -0.12% |
 | 2 | T_FORMALISATION → T_FINANCIALISATION → ICICIGI | +0.30 | events | +0.10% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Ex-dividend for Rs7 interim dividend (record date late Oct/Nov) | corporate_action | 0.95 | -0.4% | -0.38% |
+| 2026-12 | IRDAI final commission/expense framework | regulatory | 0.55 | -1.5% | -0.83% |
+| 2027-01-14 | Q3 FY27 results (estimated from Q2 on 2026-10-14): combined ratio, cat losses | results | 0.95 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # ICICIGI - ICICI Lombard General Insurance Company Ltd. (as of 2026-11-05)

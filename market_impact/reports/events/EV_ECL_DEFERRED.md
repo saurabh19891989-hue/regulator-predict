@@ -1,7 +1,9 @@
 # RBI defers or phases ECL (longer glide path / delayed start) (`EV_ECL_DEFERRED`)
-*sector_policy · status anticipated · date 2027-03-15 · P(3m) 0.15 · P(12m) 0.38 · confidence low*
+*sector_policy · status anticipated · date 2027-03-15 · P(3m) 0.03 · P(12m) 0.08 · confidence low*
 
 Alternative outcome to on-time ECL start: RBI working group is 'still fine tuning' (Setty, 3 Nov 2026) and several banks (e.g. Bank of India, 24 Oct) have not begun provisioning, so a delay or longer transition is plausible.
+
+**Review override applied:** RBI already rejected a deferral request (Apr 2026). 'Fine-tuning' by the working group (Setty 3 Nov) points to calibration tweaks, not a delayed start. Group sum 0.98.
 
 **Already moved:** n/a
 

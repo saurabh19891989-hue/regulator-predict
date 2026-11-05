@@ -2,10 +2,10 @@
 *NIFTY_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.8%**, **12 months -2.8%** (rank 129 / 140 of 200 for 3m / 12m); beta 0.90
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.1%): 3 months 46%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.7% … P90 +2.0%; plausible 12m relative-return range incl. stock-specific noise: -25.4% … +21.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.4 pp (model impact +0.7% beta-adjusted vs realised market-adjusted move -11.6%); forward event exposure -3.3% (3m -0.1%; half assumed priced); company-specific events -0.7%
+- Expected relative return: **3 months -0.7%**, **12 months -2.1%** (rank 128 / 137 of 200 for 3m / 12m); beta 0.90
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +19.1%): 3 months 47%, 12 months 20%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.1% … P90 -1.3%; plausible 12m relative-return range incl. stock-specific noise: -16.3% … +10.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.2 pp (model impact +0.3% beta-adjusted vs realised market-adjusted move -11.6%); forward event exposure -1.7% (3m +0.4%; half assumed priced); company-specific events -0.7%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -5.7% | -5.7% | +0.0 | -4.0 | -1.8 | +0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.1% | -5.1% | -5.2 | +0.0 | +0.0 | -0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -11.6% | -3.2% | -8.0 | -3.4 | -0.3 | +0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.3% | -4.3% | -4.4 | +0.0 | +0.0 | -0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.7% | +2.9% | +5.8 | -0.1 | -0.0 | +0.0 |
 | IRDAI resets insurance commission/expense rules; post-GST-exemption demand (`EV_IRDAI_COMMISSION_RESET`) | anticipated | 0.50 | -5.1% | -2.5% | -4.9 | -0.1 | -0.0 | +0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -14.0% | -2.5% | -10.0 | -4.3 | +0.1 | +0.1 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +2.0% | +2.0% | +0.0 | +0.7 | +1.1 | +0.2 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -7.9% | -2.0% | -5.0 | -2.9 | -0.2 | +0.2 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -7.5% | -1.9% | +0.0 | -6.5 | -0.6 | -0.4 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -5.2% | -1.9% | -2.4 | -2.0 | -1.0 | +0.1 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -1.7% | -1.7% | +0.0 | -0.8 | -0.6 | -0.3 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.6% | +1.5% | +1.0 | +1.1 | +0.5 | -0.1 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.4% | -1.4% | -0.9 | -0.4 | -0.1 | -0.0 |
+| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -7.9% | -1.2% | -5.0 | -3.3 | +0.3 | +0.1 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.1% | +1.2% | +0.8 | +0.9 | +0.5 | -0.1 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -4.4% | -1.1% | -2.0 | -1.7 | -0.8 | +0.1 |
+| AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.1% | -1.1% | -0.7 | -0.4 | -0.0 | +0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,19 +48,19 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → HDFCLIFE | +5.00% | +2.50% |
 | 1 | EV_IRDAI_COMMISSION_RESET ⇒ P_IRDAI_REG → HDFCLIFE | -4.90% | -2.45% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → HDFCLIFE | -8.00% | -2.24% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → HDFCLIFE | -10.00% | -1.80% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → HDFCLIFE | -2.40% | -0.86% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → HDFCLIFE | -5.00% | -1.25% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → HDFCLIFE | -5.00% | -0.75% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → HDFCLIFE | -2.88% | -0.72% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → HDFCLIFE | -3.00% | -0.66% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → HDFCLIFE | +1.00% | +0.58% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCLIFE | -1.92% | -0.54% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → HDFCLIFE | -3.00% | -0.54% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → HDFCLIFE | +0.58% | +0.52% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → HDFCLIFE | -2.00% | -0.50% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → HDFCLIFE | +0.80% | +0.50% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCLIFE | -1.92% | -0.48% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → HDFCLIFE | -1.92% | -0.48% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → HDFCLIFE | -1.49% | -0.42% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → HDFCLIFE | +0.80% | +0.44% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_RISK_SENTIMENT → HDFCLIFE | +0.80% | +0.40% |
-| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_RISK_SENTIMENT → HDFCLIFE | -6.00% | -0.38% |
+| 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → HDFCLIFE | +0.53% | +0.36% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_RISK_SENTIMENT → HDFCLIFE | -1.44% | -0.36% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -69,7 +69,7 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_FPI_FLOWS → HDFCLIFE | -1.60 | events | -3.20% |
 | 1 | F_GDP_IN → HDFCLIFE | +0.50 | events | +1.00% |
 | 1 | F_CPI_IN → HDFCLIFE | +1.15 | events | -0.92% |
-| 1 | F_GSEC_10Y_IN → HDFCLIFE | +1.70 | events | +0.85% |
+| 1 | F_GSEC_10Y_IN → HDFCLIFE | +1.55 | director_override | +0.78% |
 | 1 | F_REPO_IN → HDFCLIFE | +1.00 | events | -0.60% |
 | 1 | F_RISK_SENTIMENT → HDFCLIFE | +0.11 | observed | -0.22% |
 | 2 | T_FORMALISATION → T_FINANCIALISATION → HDFCLIFE | +0.30 | events | +0.14% |
@@ -78,6 +78,13 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 3 | T_FORMALISATION → T_FINANCIALISATION → F_DOMESTIC_FLOWS → HDFCLIFE | +0.30 | events | +0.04% |
 | 3 | F_FPI_FLOWS → F_EQUITY_ACTIVITY_IN → P_CAPITAL_GAINS_TAX → HDFCLIFE | -1.60 | events | +0.03% |
 | 2 | F_CPI_IN → F_UNSECURED_STRESS → HDFCLIFE | +1.15 | events | -0.03% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | IRDAI final commission/expense framework after consultation (exposure draft 2026-09-23); outcome: diluted cap, deferral or as proposed | regulatory | 0.55 | -1.5% | -0.83% |
+| 2026-12 | HDFC Life GIFT City insurance office shareholder approval (postal ballot, 2026-10-27) | corporate_action | 0.90 | +0.2% | +0.23% |
+| 2027-01-16 | Q3 FY27 results (estimated from Q2 on 2026-10-15): VNB growth and margin | results | 0.95 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # HDFCLIFE - HDFC Life Insurance Company Ltd. (as of 2026-11-05)

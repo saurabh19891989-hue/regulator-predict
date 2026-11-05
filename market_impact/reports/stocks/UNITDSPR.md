@@ -2,10 +2,10 @@
 *MIDCAP_100 · Fast Moving Consumer Goods · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.1%**, **12 months -1.0%** (rank 133 / 121 of 200 for 3m / 12m); beta 0.86
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.1%): 3 months 46%, 12 months 57%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.6% … P90 +3.3%; plausible 12m relative-return range incl. stock-specific noise: -25.2% … +41.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.1 pp (model impact -0.3% beta-adjusted vs realised market-adjusted move +8.4%); forward event exposure +1.6% (3m +0.4%; half assumed priced); company-specific events -0.9%
+- Expected relative return: **3 months -1.1%**, **12 months -1.5%** (rank 136 / 130 of 200 for 3m / 12m); beta 0.86
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +22.1%): 3 months 46%, 12 months 70%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.1% … P90 +1.5%; plausible 12m relative-return range incl. stock-specific noise: -15.5% … +34.7%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.2 pp (model impact -0.4% beta-adjusted vs realised market-adjusted move +8.4%); forward event exposure +0.4% (3m +0.4%; half assumed priced); company-specific events -0.9%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,45 +29,45 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -5.4% | -5.4% | -2.5 | -1.6 | -0.6 | -0.7 |
 | Sugar supply shock: 2025-26 output cut to ~306 lakh t, retail sugar at record, first duty-free raw sugar imports in a decade (`EV_SUGAR_SHORTFALL26`) | occurred | 1.00 | -3.0% | -3.0% | -3.0 | +0.0 | +0.0 | +0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.8% | -1.8% | -1.8 | +0.0 | -0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | +0.0 | -0.7 | -0.7 | -0.1 |
 | OMC ethanol tender ESY 2026-27: no cane juice/syrup/B-heavy ethanol; maize price incentive cut; grain-based ethanol takes over (`EV_ETHANOL_ESY27_TENDER`) | occurred | 1.00 | +1.4% | +1.4% | +1.4 | +0.0 | +0.0 | +0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +1.9% | +1.1% | +0.8 | +0.7 | +0.2 | +0.3 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.0% | -1.1% | -1.8 | -0.4 | -0.4 | -0.5 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.6 | -0.1 | -0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.6 | -0.1 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.7% | +1.0% | +0.7 | +0.7 | +0.2 | +0.3 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -2.7% | -0.7% | -1.6 | -0.3 | -0.3 | -0.5 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.6% | +0.6% | +0.0 | +0.3 | +0.2 | +0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.6% | -0.6% | -0.4 | -0.1 | -0.1 | -0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | -0.4 | -0.0 | -0.2 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -0.6% | -0.6% | -0.3 | +0.1 | -0.2 | -0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.5% | -0.5% | +0.0 | -0.4 | +0.0 | -0.2 |
+| Budget FY2027-28: FY27 deficit overshoot confirmed and consolidation path slowed (`EV_BUDGET_FY28_FISCAL_SLIPPAGE`) | scheduled | 0.50 | -1.1% | -0.5% | -1.0 | -0.0 | -0.0 | -0.0 |
+| LNG supply disruption: ~90 delayed Qatar cargoes to Petronet; India re-sources to US/UAE; Henry Hub proxy only +12% in 3m (`EV_LNG_HORMUZ_DISRUPTION`) | occurred | 1.00 | -0.5% | -0.5% | -0.5 | +0.0 | +0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → UNITDSPR | -1.04% | -0.52% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → UNITDSPR | -1.25% | -0.45% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → UNITDSPR | +0.75% | +0.44% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.65% | -0.39% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → UNITDSPR | +0.65% | +0.36% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → UNITDSPR | -0.31% | -0.30% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → UNITDSPR | -1.30% | -0.29% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → UNITDSPR | -1.10% | -0.28% |
 | 1 | EV_SUGAR_MSP_HIKE ⇒ P_SUGAR_ETHANOL → UNITDSPR | -0.64% | -0.26% |
 | 1 | EV_EU_WINTER_GAS_SPIKE ⇒ F_GAS_GLOBAL → UNITDSPR | -1.25% | -0.25% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.26% | -0.23% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.39% | -0.23% |
-| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → UNITDSPR | +0.39% | +0.22% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_GAS_GLOBAL → UNITDSPR | +0.36% | +0.21% |
-| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → UNITDSPR | -3.00% | -0.19% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → UNITDSPR | -1.30% | -0.23% |
+| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → UNITDSPR | +0.39% | +0.20% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_GAS_GLOBAL → UNITDSPR | +0.36% | +0.20% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.26% | -0.18% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_GAS_GLOBAL → UNITDSPR | -0.50% | -0.18% |
+| 1 | EV_RBI_FEB27_HOLD ⇒ F_GSEC_10Y_IN → UNITDSPR | +0.26% | +0.17% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_GSEC_10Y_IN → UNITDSPR | -0.39% | -0.16% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_SUGAR → UNITDSPR | +2.78 | observed | -3.34% |
-| 1 | F_GSEC_10Y_IN → UNITDSPR | +1.70 | events | -2.21% |
+| 1 | F_GSEC_10Y_IN → UNITDSPR | +1.55 | director_override | -2.02% |
 | 1 | P_SUGAR_ETHANOL → UNITDSPR | -1.50 | events | +1.20% |
 | 1 | F_URBAN_DEMAND → UNITDSPR | +0.20 | events | +0.40% |
 | 1 | F_RICE → UNITDSPR | +0.60 | events | -0.30% |
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 4 | F_CHINA_GDP → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → UNITDSPR | +0.30 | events | -0.00% |
 | 4 | C_US_CHINA_DECOUPLING → F_CHINA_CHEM_EXPORTS → F_PETROCHEM_SPREADS → F_PACKAGING → UNITDSPR | -0.10 | events | -0.00% |
 | 1 | F_BRENT → UNITDSPR | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-10 | Investment in Nuvola Spirits (JSA advised, 2026-10-11) | corporate_action | 1.00 | +0.2% | +0.25% |
+| 2026-11/12 | Resolution of customs (DRI) search operations disclosed 2026-10-17 ('no financial impact' reported) | regulatory | 0.30 | -3.0% | -0.90% |
+| 2027 | State excise policy changes (Maharashtra/Karnataka follow-ups; other states' FY28 policies) | regulatory | 0.50 | -1.5% | -0.75% |
+| 2027-01/02 | Q3 FY27 results (Q2 on 2026-10-28; festive quarter) | results | 0.95 | +0.5% | +0.47% |
 
 ## Analyst profile (agent research, sourced)
 # United Spirits (UNITDSPR) - Market Impact profile, as of 2026-11-05

@@ -2,10 +2,10 @@
 *NIFTY_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +0.6%**, **12 months +0.6%** (rank 84 / 91 of 200 for 3m / 12m); beta 1.04
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.4%): 3 months 53%, 12 months 55%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -2.4% … P90 +4.8%; plausible 12m relative-return range incl. stock-specific noise: -18.4% … +18.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.1% beta-adjusted vs realised market-adjusted move -7.5%); forward event exposure +1.9% (3m +0.6%; half assumed priced); company-specific events +1.6%
+- Expected relative return: **3 months +0.9%**, **12 months +0.3%** (rank 70 / 89 of 200 for 3m / 12m); beta 1.04
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.4%): 3 months 54%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -1.3% … P90 +2.5%; plausible 12m relative-return range incl. stock-specific noise: -15.6% … +9.8%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -0.6% beta-adjusted vs realised market-adjusted move -7.5%); forward event exposure +1.2% (3m +1.1%; half assumed priced); company-specific events +1.6%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,48 +29,48 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -8.6% | -8.6% | -6.8 | -0.3 | -0.9 | -0.5 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -2.8% | -2.8% | -2.8 | +0.0 | -0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -1.4 | -1.4 | +0.2 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.1% | +1.8% | +2.4 | +0.1 | +0.3 | +0.2 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -4.9% | -1.7% | -3.7 | -0.2 | -0.6 | -0.4 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -2.2% | -2.2% | -2.2 | +0.0 | -0.0 | -0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.7% | +1.5% | +2.2 | +0.1 | +0.3 | +0.2 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.3% | -1.3% | -0.9 | -0.3 | -0.1 | -0.0 |
 | CAFE-III fuel-efficiency norms notified (30 Sep 2026); no small-car carve-out; 3x credit for BEVs (`EV_CAFE3_NOTIFIED`) | occurred | 1.00 | -1.2% | -1.2% | -1.2 | +0.0 | -0.0 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -4.4% | -1.1% | -3.4 | -0.2 | -0.5 | -0.3 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +1.1% | +1.1% | +1.1 | +0.0 | +0.0 | +0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.9% | -0.9% | +0.0 | -0.4 | -0.4 | -0.2 |
 | US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.6 | +0.1 | +0.2 |
 | Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -0.8% | -0.8% | -0.8 | +0.0 | -0.0 | -0.0 |
 | China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics (`EV_RARE_EARTH_CONTROLS_REIMPOSED`) | risk_scenario | 0.25 | -3.2% | -0.8% | -0.9 | -2.8 | +0.3 | +0.2 |
+| China Dec CEWC / Mar 2027 NPC delivers large fiscal stimulus and consumption push (`EV_CHINA_NPC_MAR27_BIG_STIMULUS`) | anticipated | 0.35 | -2.1% | -0.7% | +0.0 | -0.9 | -0.8 | -0.4 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → MARUTI | -3.00% | -1.07% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → MARUTI | +1.80% | +1.04% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → MARUTI | +1.56% | +0.86% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → MARUTI | -2.64% | -0.66% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MARUTI | +2.16% | +0.60% |
-| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → MARUTI | -7.20% | -0.45% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → MARUTI | -2.64% | -0.66% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MARUTI | +2.16% | +0.54% |
 | 1 | EV_INDIA_HR_STEEL_AD_PROVISIONAL ⇒ F_STEEL_INDIA → MARUTI | -0.80% | -0.44% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → MARUTI | -0.90% | -0.36% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → MARUTI | +0.60% | +0.35% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → MARUTI | -0.90% | -0.38% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → MARUTI | +0.60% | +0.33% |
 | 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → MARUTI | +0.39% | +0.27% |
+| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → MARUTI | -5.40% | -0.27% |
 | 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → F_AUTO_DEMAND_IN → MARUTI | +0.38% | +0.26% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → MARUTI | -1.04% | -0.26% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → MARUTI | -0.72% | -0.26% |
 | 2 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → F_STEEL_INDIA → MARUTI | +0.99% | +0.25% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → MARUTI | -0.90% | -0.24% |
 | 1 | EV_GST_RATE_CHANGE_APR27 ⇒ P_GST_CONSUMPTION → MARUTI | +0.80% | +0.24% |
+| 1 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ F_SEMICONDUCTOR_SUPPLY → MARUTI | -0.90% | -0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_STEEL_INDIA → MARUTI | +1.65 | events | -3.30% |
+| 1 | F_STEEL_INDIA → MARUTI | +1.35 | events | -2.70% |
 | 1 | F_ALUMINIUM → MARUTI | -1.96 | observed | +0.98% |
 | 1 | F_REPO_IN → MARUTI | +1.00 | events | -0.90% |
-| 1 | C_MIDEAST_CONFLICT → MARUTI | +1.50 | events | -0.90% |
 | 1 | P_EV_POLICY → MARUTI | +1.10 | events | -0.88% |
+| 1 | C_MIDEAST_CONFLICT → MARUTI | +1.00 | events | -0.60% |
 | 1 | F_AUTO_DEMAND_IN → MARUTI | -0.10 | events | -0.55% |
 | 1 | F_RURAL_DEMAND → MARUTI | -0.25 | events | -0.33% |
 | 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → MARUTI | -0.30 | events | +0.22% |
@@ -78,6 +78,15 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → MARUTI | -0.10 | events | +0.10% |
 | 1 | F_COPPER → MARUTI | -0.24 | observed | +0.07% |
 | 2 | F_CHINA_GDP → F_RUBBER → MARUTI | +0.30 | events | -0.04% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11-08 | Diwali festive peak (retail conversion of 2.45 lakh pending orders) | other | 0.95 | +1.0% | +0.95% |
+| 2026-12-01 | November sales print (festive month, first full month of Diwali retail) | guidance | 0.99 | +0.5% | +0.49% |
+| 2027-01 | CNG production capacity expansion starts (company) | capex | 0.80 | +0.8% | +0.60% |
+| 2027-01 | Q3 FY27 results (margin trajectory; commodity pass-through via price hikes) | results | 0.97 | +0.0% | +0.00% |
+| 2027-06 | EPR / End-of-Life Vehicles certificate pricing framework (company says obligation not yet reliably estimable) | regulatory | 0.30 | -1.5% | -0.45% |
 
 ## Analyst profile (agent research, sourced)
 # MARUTI - Maruti Suzuki India Ltd. (as of 2026-11-05)

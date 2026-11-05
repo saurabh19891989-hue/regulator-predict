@@ -2,10 +2,10 @@
 *MIDCAP_100 · Power · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.1%**, **12 months +2.4%** (rank 62 / 62 of 200 for 3m / 12m); beta 1.10
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 54%, 12 months 52%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.5% … P90 +4.7%; plausible 12m relative-return range incl. stock-specific noise: -26.2% … +22.7%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.1 pp (model impact +2.2% beta-adjusted vs realised market-adjusted move +0.0%); forward event exposure +3.5% (3m +1.1%; half assumed priced); company-specific events +1.5%
+- Expected relative return: **3 months +0.9%**, **12 months +2.1%** (rank 66 / 53 of 200 for 3m / 12m); beta 1.10
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +21.6%): 3 months 53%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.1% … P90 +2.9%; plausible 12m relative-return range incl. stock-specific noise: -17.7% … +23.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.1 pp (model impact +2.2% beta-adjusted vs realised market-adjusted move +0.0%); forward event exposure +2.6% (3m +0.8%; half assumed priced); company-specific events +1.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,18 +29,18 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -5.5% | -5.5% | +0.0 | -0.9 | -2.3 | -2.4 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.7% | -3.7% | -3.3 | -0.2 | -0.1 | -0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.7% | -3.7% | -3.3 | -0.2 | -0.0 | -0.1 |
 | Cabinet approves Rs14,500 cr VGF for ~92 GWh grid-scale storage (4 Nov) (`EV_BESS_VGF_NOV26`) | occurred | 1.00 | +3.3% | +3.3% | +3.2 | +0.0 | +0.0 | +0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -3.0% | -3.0% | -3.0 | +0.0 | +0.0 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.8% | -2.8% | +0.0 | -1.2 | -1.5 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.1% | -2.1% | +0.0 | -1.9 | -0.2 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +4.2% | +2.1% | +3.8 | +0.2 | +0.1 | +0.2 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.7 | -0.1 | -0.0 |
 | ALMM List-II (domestic cells) in force; approved cell capacity 37.8 GW (12th revision, 9 Oct); solar project costs seen +20% (`EV_SOLAR_ALMM2_CELL_MANDATE`) | occurred | 1.00 | +1.4% | +1.4% | +1.2 | +0.2 | +0.0 | +0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -4.0% | -1.4% | +0.0 | -1.1 | -1.5 | -1.4 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -1.0 | -0.3 | -0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -4.8% | -1.3% | +0.0 | -3.7 | -0.9 | -0.2 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.2 | -0.1 | -0.0 |
+| RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.3% | -1.3% | -1.3 | +0.0 | +0.0 | -0.0 |
+| Electricity (Amendment) Bill / distribution parallel licensing and DISCOM privatisation steps (`EV_POWER_DISTRIB_REFORM`) | anticipated | 0.45 | +2.5% | +1.1% | +2.5 | +0.0 | +0.0 | +0.0 |
+| Final SHANTI Act rules / first private-sector nuclear licence process (`EV_NUCLEAR_SHANTI_RULES_FINAL`) | anticipated | 0.60 | +1.7% | +1.0% | +1.7 | +0.0 | +0.0 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.8% | +1.0% | +0.0 | +0.5 | +0.7 | +0.7 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -51,31 +51,41 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → NHPC | -1.60% | -0.80% |
 | 1 | EV_NUCLEAR_SHANTI_RULES_FINAL ⇒ P_POWER_REFORM → NHPC | +1.25% | +0.75% |
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → NHPC | +0.80% | +0.72% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NHPC | -2.24% | -0.63% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → NHPC | -1.00% | -0.60% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → NHPC | +0.80% | +0.54% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → NHPC | -2.80% | -0.50% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → NHPC | -2.25% | -0.49% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → NHPC | -0.48% | -0.46% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → NHPC | -2.00% | -0.44% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → NHPC | -1.44% | -0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → NHPC | -2.25% | -0.40% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → NHPC | -1.44% | -0.36% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → NHPC | -1.44% | -0.36% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → NHPC | -0.40% | -0.36% |
+| 1 | EV_SUMMER27_POWER_SHORTFALL ⇒ F_POWER_DEMAND_IN → NHPC | +0.90% | +0.36% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → NHPC | -0.60% | -0.36% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → NHPC | -2.00% | -0.36% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | P_RENEWABLE_SUPPORT → NHPC | +1.50 | events | +3.75% |
-| 1 | F_GSEC_10Y_IN → NHPC | +1.70 | events | -3.40% |
+| 1 | F_GSEC_10Y_IN → NHPC | +1.55 | director_override | -3.10% |
 | 1 | F_FPI_FLOWS → NHPC | -1.60 | events | -2.40% |
 | 1 | F_MONSOON → NHPC | -1.56 | events | -1.25% |
 | 1 | F_GOVT_CAPEX → NHPC | +1.00 | events | +1.00% |
 | 1 | T_ENERGY_TRANSITION → NHPC | +0.50 | events | +0.75% |
 | 1 | F_POWER_DEMAND_IN → NHPC | +1.20 | events | +0.72% |
-| 1 | F_STEEL_INDIA → NHPC | +1.65 | events | -0.66% |
+| 1 | F_STEEL_INDIA → NHPC | +1.35 | events | -0.54% |
 | 1 | F_REPO_IN → NHPC | +1.00 | events | -0.50% |
 | 1 | F_CREDIT_SPREADS_IN → NHPC | +0.50 | events | -0.40% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Further Subansiri Lower units commissioned (Unit 5 on 21 Oct 2026; 4 units were remaining at Jun-26 per presentation) lifting regulated equity | capex | 0.80 | +1.5% | +1.20% |
+| 2027-01 | Q3 FY27 results (Q2 declared 4 Nov; estimate late Jan/early Feb 2027) | results | 0.97 | +0.0% | +0.00% |
+| 2027-03 | Kiru (624 MW), Pakal Dul (1,000 MW) and Rangit-IV commissioning scheduled Q3-Q4 FY27 (slippage typical) | capex | 0.40 | +2.5% | +1.00% |
+| 2027-03 | Kamala (1,720 MW) forest clearance and Sawalkot (1,856 MW) construction start | regulatory | 0.50 | +1.5% | +0.75% |
+| 2027-03 | Further government OFS in NHPC (promoter 61.4% after Q1 FY27 sale; government remains seller of PSU stakes) | corporate_action | 0.25 | -3.8% | -0.94% |
+| 2027-06 | Additional provisions or cost overruns on Teesta-IV or arbitration outcomes | litigation | 0.30 | -1.8% | -0.53% |
 
 ## Analyst profile (agent research, sourced)
 # NHPC — NHPC Ltd. (as of 2026-11-05)

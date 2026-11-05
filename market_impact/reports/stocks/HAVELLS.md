@@ -2,10 +2,10 @@
 *MIDCAP_100 · Consumer Durables · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.1%**, **12 months +2.9%** (rank 61 / 55 of 200 for 3m / 12m); beta 1.15
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.3%): 3 months 55%, 12 months 48%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.7% … P90 +8.4%; plausible 12m relative-return range incl. stock-specific noise: -18.2% … +28.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +2.8% beta-adjusted vs realised market-adjusted move -11.7%); forward event exposure +5.1% (3m +1.8%; half assumed priced); company-specific events +0.2%
+- Expected relative return: **3 months +0.9%**, **12 months +2.0%** (rank 67 / 56 of 200 for 3m / 12m); beta 1.15
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.3%): 3 months 54%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.6% … P90 +5.7%; plausible 12m relative-return range incl. stock-specific noise: -17.0% … +24.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.3 pp (model impact +2.6% beta-adjusted vs realised market-adjusted move -11.7%); forward event exposure +3.3% (3m +1.5%; half assumed priced); company-specific events +0.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,55 +29,62 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -3.8% | -3.8% | +0.0 | -1.1 | -1.2 | -1.5 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -0.7 | -1.3 | -0.6 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.8% | +1.8% | +1.5 | +0.7 | -0.3 | -0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.7% | -1.7% | -1.1 | -0.5 | -0.0 | -0.0 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.2% | -1.2% | -1.0 | -0.1 | -0.0 | -0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.7 | -0.4 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.2% | -1.2% | -0.2 | -0.8 | -0.0 | -0.1 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -1.2% | -1.2% | -1.2 | +0.0 | +0.0 | +0.0 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.2% | -1.2% | -1.0 | -0.1 | -0.0 | -0.0 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.2% | +1.1% | +1.0 | +0.1 | +0.1 | -0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.6 | -0.4 | +0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | -0.9 | -0.1 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -2.2% | -0.8% | +0.0 | -0.6 | -0.7 | -0.9 |
+| Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.4 | -0.3 | -0.1 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.4 | -0.3 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.5 | -0.1 | -0.1 |
+| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.0% | -0.6% | -0.4 | -0.6 | +0.0 | -0.1 |
+| 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -0.6% | -0.6% | +0.0 | +0.0 | -0.3 | -0.3 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → HAVELLS | +0.96% | +0.86% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAVELLS | +0.72% | +0.32% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → HAVELLS | -0.64% | -0.32% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → HAVELLS | -1.08% | -0.30% |
 | 2 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → T_FORMALISATION → HAVELLS | +0.36% | +0.29% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_DATA_CENTRES_IN → HAVELLS | -1.08% | -0.27% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → HAVELLS | -0.40% | -0.24% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HAVELLS | -1.04% | -0.23% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → HAVELLS | -0.63% | -0.23% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HAVELLS | +0.38% | +0.22% |
-| 2 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → F_HOUSING_DEMAND → HAVELLS | -0.52% | -0.21% |
+| 2 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → F_HOUSING_DEMAND → HAVELLS | -0.52% | -0.22% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAVELLS | +0.72% | +0.22% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → HAVELLS | -1.04% | -0.19% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → HAVELLS | +0.37% | +0.18% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → HAVELLS | -0.19% | -0.18% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → HAVELLS | -0.80% | -0.18% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → HAVELLS | +0.33% | +0.18% |
 | 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → HAVELLS | +0.29% | +0.17% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → HAVELLS | +0.47% | +0.16% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → HAVELLS | -0.16% | -0.14% |
+| 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → HAVELLS | +0.32% | +0.14% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → HAVELLS | +1.70 | events | -1.36% |
+| 1 | F_GSEC_10Y_IN → HAVELLS | +1.55 | director_override | -1.24% |
 | 1 | F_GOVT_CAPEX → HAVELLS | +1.00 | events | +1.20% |
 | 1 | F_STEEL_GLOBAL → HAVELLS | +2.06 | observed | -1.03% |
 | 1 | F_ALUMINIUM → HAVELLS | -1.96 | observed | -0.98% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → HAVELLS | +1.00 | events | -0.52% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → HAVELLS | +1.70 | events | -0.51% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → HAVELLS | +1.55 | director_override | -0.47% |
 | 1 | T_FORMALISATION → HAVELLS | +0.30 | events | +0.45% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → HAVELLS | +0.50 | events | +0.30% |
 | 1 | F_URBAN_DEMAND → HAVELLS | +0.20 | events | +0.30% |
 | 1 | F_USDINR → HAVELLS | -0.37 | observed | +0.30% |
 | 2 | T_GENAI_SERVICES → T_DATA_CENTRES_IN → HAVELLS | +1.00 | events | +0.24% |
 | 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → HAVELLS | +1.00 | events | -0.20% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Cable list-price / metal-pass-through repricing following aluminium decline; margin recovery or competitive price cuts | guidance | 0.50 | +0.5% | +0.25% |
+| 2027-01 | Q3 FY27 results (date not announced; Q2 was 2026-10-22). Watch cable contribution margin and Lloyd profitability | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Summer 2027 fan/Lloyd AC demand and price increases (industry hikes up to 8%) | other | 0.80 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # HAVELLS - Havells India Ltd. (midcap, electricals and consumer durables)

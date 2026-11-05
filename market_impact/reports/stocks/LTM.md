@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Information Technology · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -2.1%**, **12 months -4.6%** (rank 155 / 158 of 200 for 3m / 12m); beta 1.16
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.3%): 3 months 44%, 12 months 30%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -11.5% … P90 +1.9%; plausible 12m relative-return range incl. stock-specific noise: -37.2% … +21.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.3 pp (model impact -2.5% beta-adjusted vs realised market-adjusted move -1.9%); forward event exposure -5.6% (3m -1.7%; half assumed priced); company-specific events -0.8%
+- Expected relative return: **3 months -2.2%**, **12 months -4.8%** (rank 160 / 167 of 200 for 3m / 12m); beta 1.16
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +27.3%): 3 months 44%, 12 months 20%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -8.8% … P90 -3.7%; plausible 12m relative-return range incl. stock-specific noise: -29.4% … +21.4%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.4 pp (model impact -2.8% beta-adjusted vs realised market-adjusted move -1.9%); forward event exposure -5.8% (3m -1.6%; half assumed priced); company-specific events -0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -32,15 +32,15 @@
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +4.8% | +4.8% | +3.2 | +1.2 | +0.3 | +0.0 |
 | IT services: muted Q2 FY27 growth, AI deflation and deal-conversion concerns (`EV_IT_AI_DEFLATION_Q2FY27`) | occurred | 1.00 | -3.9% | -3.9% | -4.0 | +0.1 | -0.0 | -0.0 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -14.8% | -3.7% | -12.3 | -2.7 | +0.4 | -0.2 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -10.6% | -3.0% | -11.0 | +0.1 | +0.3 | -0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -2.3% | -2.3% | -2.5 | +0.3 | -0.0 | -0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -10.5% | -1.9% | -9.7 | -1.2 | +0.5 | -0.1 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -8.5% | -2.1% | -8.9 | +0.2 | +0.2 | -0.0 |
 | Indian IT: weakest Q2 in 3 years, Infosys guidance cut, US green card freeze (`EV_INDIAN_IT_Q2_VISA_SHOCK`) | occurred | 1.00 | -1.7% | -1.7% | -1.8 | +0.0 | +0.0 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.6% | -1.6% | -2.0 | +0.4 | +0.0 | -0.0 |
 | Anthropic IPO prices and lists (proposed ticker ANT), Nov 2026-Q1 2027 (`EV_ANTHROPIC_IPO_LISTING`) | anticipated | 0.85 | -1.7% | -1.5% | -2.0 | +0.2 | +0.1 | +0.0 |
 | US $100,000 H-1B fee (new ~$103k proposal Aug 2026) blocked by court; administration appeals; DHS proposes $70k/$30k OPT fees (`EV_H1B_100K_FEE_COURT`) | occurred | 1.00 | -1.4% | -1.4% | -1.4 | +0.0 | +0.0 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +2.5% | +1.3% | +2.8 | -0.3 | +0.0 | +0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.3% | -1.3% | -1.3 | +0.0 | +0.0 | -0.0 |
 | AI/tech selloff and capex-forecast pause (Oct 2026) (`EV_AI_SELLOFF_OCT26`) | occurred | 1.00 | -1.1% | -1.1% | -1.1 | +0.0 | +0.0 | -0.0 |
+| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.15 | -7.0% | -1.1% | -6.2 | -1.1 | +0.4 | -0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,19 +48,19 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → LTM | -9.00% | -2.25% |
 | 1 | EV_ANTHROPIC_IPO_LISTING ⇒ T_GENAI_SERVICES → LTM | -2.00% | -1.70% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → LTM | -5.60% | -1.57% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → LTM | -5.40% | -1.51% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → LTM | -5.40% | -1.35% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → LTM | -5.40% | -1.35% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → LTM | -7.00% | -1.26% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → LTM | +2.25% | +1.13% |
 | 1 | EV_H1B_FEE_REINSTATED ⇒ P_US_VISA_OUTSOURCING → LTM | -3.50% | -1.05% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → LTM | +2.86% | +0.63% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → LTM | +1.74% | +0.62% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → LTM | -1.04% | -0.61% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → LTM | -1.68% | -0.60% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → LTM | +1.92% | +0.54% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → LTM | -3.50% | -0.88% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → LTM | -3.50% | -0.53% |
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_FED_FUNDS → LTM | +2.10% | +0.52% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → LTM | -2.70% | -0.49% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → LTM | +2.86% | +0.51% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_FED_FUNDS → LTM | -0.70% | -0.50% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → LTM | -0.90% | -0.50% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → T_GENAI_SERVICES → LTM | +1.92% | +0.48% |
+| 1 | EV_NVDA_NOV17_BEAT ⇒ F_US_EQUITIES → LTM | +0.72% | +0.45% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_US_EQUITIES → LTM | -2.70% | -0.41% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -69,14 +69,22 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | T_GENAI_SERVICES → LTM | +1.00 | events | -4.00% |
 | 1 | F_US_GDP → LTM | +1.20 | events | +3.60% |
 | 1 | P_US_VISA_OUTSOURCING → LTM | +0.90 | events | -3.15% |
-| 1 | F_GSEC_10Y_IN → LTM | +1.70 | events | -1.53% |
 | 1 | F_FPI_FLOWS → LTM | -1.60 | events | -1.44% |
+| 1 | F_GSEC_10Y_IN → LTM | +1.55 | director_override | -1.40% |
 | 1 | F_FED_FUNDS → LTM | +1.62 | observed | -1.13% |
 | 1 | F_USDINR → LTM | -0.37 | observed | -0.81% |
 | 1 | F_US_10Y → LTM | +1.68 | observed | +0.67% |
 | 1 | F_US_EQUITIES → LTM | +0.23 | observed | +0.42% |
 | 1 | F_EU_GDP → LTM | +0.22 | events | +0.22% |
 | 1 | F_RISK_SENTIMENT → LTM | +0.11 | observed | -0.16% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-10-16 | Record date/payout of Rs25 per share dividend (FY27 interim) - ex-date passed or imminent (record date not captured) | corporate_action | 1.00 | -0.3% | -0.30% |
+| 2026-12 | US H-1B/outsourcing-policy or tariff action touching IT services (HIRE Act-style tax, new fee version after court loss) | regulatory | 0.15 | -3.5% | -0.53% |
+| 2027-01 | Q3 FY27 results (mid-Jan, after TCS/Infosys); guidance on AI revenue, margin, large deals | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Possible inorganic AI/engineering acquisition (management has signalled M&A optionality) | corporate_action | 0.10 | +0.5% | +0.05% |
 
 ## Analyst profile (agent research, sourced)
 # LTM Ltd. (LTM) - company profile, as of 2026-11-05

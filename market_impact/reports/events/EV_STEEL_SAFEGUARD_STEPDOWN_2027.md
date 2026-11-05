@@ -1,7 +1,9 @@
 # Scheduled step-down of India's steel safeguard duty (12% -> 11.5%) in year two (`EV_STEEL_SAFEGUARD_STEPDOWN_2027`)
-*metals_china · status scheduled · date 2027-04-21 · P(3m) 0.0 · P(12m) 0.85 · confidence low*
+*metals_china · status scheduled · date 2027-04-21 · P(3m) 0.0 · P(12m) 0.95 · confidence low*
 
 Safeguard duty on flat steel imports: provisional 12% from 21 Apr 2025; final 3-year duty notified 31 Dec 2025 (Mint/BS) with a declining schedule (12%, 11.5%, 11%; model knowledge, exact year boundaries not verified). Expiry ~Apr 2028, i.e. renewal is a 2028 question. Step-down is small (-0.5 pp) and largely priced; the important variable is whether government accelerates relief if prices inflate (HRC at four-year high) - separate low-probability scenario below.
+
+**Review override applied:** The final duty was notified 30-31 Dec 2025: 12% (21 Apr 2025-20 Apr 2026), 11.5% (21 Apr 2026-20 Apr 2027), 11% (21 Apr 2027-20 Apr 2028). The 2027 step is 11.5% -> 11%, not '12% -> 11.5%' as the description says. It is notified law, so p ~0.95. The steel ministry signalled no change (Reuters 6 Oct). The shock size of -0.05 is fine.
 
 ## Entry shocks (conditional on the event)
 - `P_STEEL_DUTY_IN` Indian safeguard/anti-dumping duty on steel imports: -0.05 SSU (range -0.08…0.0) -0.5 pp / SSU 10 pp

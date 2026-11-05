@@ -1,7 +1,9 @@
 # Fed cuts >=25 bp by Apr 2027 (growth scare / AI bust / lower inflation) (`EV_FED_H1_2027_CUTS`)
-*global_macro · status anticipated · date 2027-04-28 · P(3m) 0.05 · P(12m) 0.25 · confidence low*
+*global_macro · status anticipated · date 2027-04-28 · P(3m) 0.02 · P(12m) 0.12 · confidence low*
 
 Labour weakness (+29k payrolls), AI capex retrenchment or oil collapse on an Iran deal could reverse the hikes by April 2027; Trump pressures Warsh (Fortune 7 Sep, Yahoo 6 Oct). Cut-by-April probability 0.25 (our judgment).
+
+**Review override applied:** Cuts need recession or AI bust; Fed is in hiking mode and inflation is at a 3-year high. Lowered from 0.25.
 
 **Already moved:** n/a
 

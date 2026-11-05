@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.7%**, **12 months -2.3%** (rank 145 / 131 of 200 for 3m / 12m); beta 1.10
+- Expected relative return: **3 months -1.6%**, **12 months -2.7%** (rank 144 / 143 of 200 for 3m / 12m); beta 1.10
 - Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.9%): 3 months 45%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.7% … P90 +2.9%; plausible 12m relative-return range incl. stock-specific noise: -33.0% … +32.3%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.4 pp (model impact -2.8% beta-adjusted vs realised market-adjusted move +35.7%); forward event exposure -0.9% (3m -1.1%; half assumed priced); company-specific events +1.5%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -6.5% … P90 -0.7%; plausible 12m relative-return range incl. stock-specific noise: -17.1% … +36.6%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -1.3 pp (model impact -2.7% beta-adjusted vs realised market-adjusted move +35.7%); forward event exposure -2.0% (3m -1.0%; half assumed priced); company-specific events +1.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,46 +29,46 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -5.7% | -5.7% | -2.5 | -1.0 | -0.8 | -1.5 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -4.0% | -4.0% | +0.0 | -1.4 | -2.7 | +0.1 |
 | CAFE-III fuel-efficiency norms notified (30 Sep 2026); no small-car carve-out; 3x credit for BEVs (`EV_CAFE3_NOTIFIED`) | occurred | 1.00 | -3.0% | -3.0% | -3.0 | +0.0 | -0.0 | -0.0 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -2.8% | -2.8% | -2.8 | +0.0 | +0.0 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.6% | -1.6% | -1.1 | -0.3 | -0.1 | -0.1 |
-| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.3% | -1.3% | -1.3 | +0.0 | -0.0 | -0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -1.0 | -0.2 | -0.1 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -3.6% | -1.3% | -1.2 | -0.7 | -0.6 | -1.1 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | -0.8 | -0.1 | -0.3 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.1% | +1.2% | +0.8 | +0.4 | +0.3 | +0.6 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -1.2% | -1.2% | +0.0 | -0.8 | -0.1 | -0.3 |
 | China re-imposes/hardens rare-earth and critical-mineral export controls hitting India's autos and electronics (`EV_RARE_EARTH_CONTROLS_REIMPOSED`) | risk_scenario | 0.25 | -4.5% | -1.1% | -1.2 | -3.6 | +0.1 | +0.1 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | +1.1% | +1.1% | +1.1 | +0.0 | +0.0 | +0.0 |
+| Global and Indian steel prices at multi-year highs (global HRC +60% y/y) (`EV_STEEL_RALLY_2026`) | occurred | 1.00 | -1.0% | -1.0% | -1.0 | +0.0 | -0.0 | -0.0 |
+| Kharif 2026 output hit: paddy area down, foodgrain target cut, rice output seen sharpest fall in ~2 decades (`EV_KHARIF26_OUTPUT_HIT`) | occurred | 1.00 | -1.0% | -1.0% | +0.0 | +0.0 | -0.4 | -0.6 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +1.8% | +1.0% | +0.7 | +0.4 | +0.3 | +0.5 |
+| CPI prints >=6.0% (RBI upper tolerance) in Oct-Jan data (releases 12 Nov - 12 Feb) (`EV_CPI_BREACH_6PCT`) | anticipated | 0.60 | -1.5% | -0.9% | -1.2 | -0.2 | -0.3 | +0.2 |
+| PM E-DRIVE extended to March 2028; e2W incentive cut to Rs 5,000 (`EV_PM_EDRIVE_EXT`) | occurred | 1.00 | -0.9% | -0.9% | -0.9 | +0.0 | -0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | +2.88% | +0.81% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → BOSCHLTD | -1.60% | -0.80% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → BOSCHLTD | -2.88% | -0.72% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | +2.88% | +0.72% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → BOSCHLTD | -1.00% | -0.60% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → BOSCHLTD | -0.48% | -0.46% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → BOSCHLTD | -1.25% | -0.45% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → BOSCHLTD | -2.00% | -0.44% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → BOSCHLTD | +0.75% | +0.44% |
 | 2 | EV_BUDGET27_AGRI_RURAL ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → BOSCHLTD | +0.59% | +0.41% |
 | 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → BOSCHLTD | -0.40% | -0.36% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → BOSCHLTD | -0.60% | -0.36% |
-| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → BOSCHLTD | +0.60% | +0.34% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → BOSCHLTD | -2.00% | -0.36% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → BOSCHLTD | +0.65% | +0.36% |
 | 2 | EV_RURAL_RELIEF_PACKAGE ⇒ F_RURAL_DEMAND → F_AUTO_DEMAND_IN → BOSCHLTD | +0.59% | +0.32% |
+| 1 | EV_RBI_DEC26_HOLD ⇒ F_GSEC_10Y_IN → BOSCHLTD | +0.60% | +0.31% |
 | 1 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | -1.20% | -0.30% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → BOSCHLTD | -1.30% | -0.29% |
+| 3 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_RURAL_DEMAND → F_AUTO_DEMAND_IN → BOSCHLTD | +0.42% | +0.28% |
+| 1 | EV_BUDGET27_AGRI_RURAL ⇒ F_GSEC_10Y_IN → BOSCHLTD | -0.40% | -0.28% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
-| 1 | F_GSEC_10Y_IN → BOSCHLTD | +1.70 | events | -3.40% |
 | 1 | P_EV_POLICY → BOSCHLTD | +1.10 | events | -3.30% |
-| 1 | F_STEEL_INDIA → BOSCHLTD | +1.65 | events | -1.49% |
+| 1 | F_GSEC_10Y_IN → BOSCHLTD | +1.55 | director_override | -3.10% |
+| 1 | F_STEEL_INDIA → BOSCHLTD | +1.35 | events | -1.22% |
 | 1 | F_ALUMINIUM → BOSCHLTD | -1.96 | observed | +0.98% |
 | 1 | F_AUTO_DEMAND_IN → BOSCHLTD | -0.10 | events | -0.60% |
 | 1 | F_REPO_IN → BOSCHLTD | +1.00 | events | -0.50% |
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_COPPER → BOSCHLTD | -0.24 | observed | +0.07% |
 | 3 | C_US_CHINA_DECOUPLING → NEW_RARE_EARTH_SUPPLY → F_SEMICONDUCTOR_SUPPLY → BOSCHLTD | -0.10 | events | +0.04% |
 | 1 | F_BRENT → BOSCHLTD | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Q2 FY27 results (date not confirmed; may coincide with Nov 6 board meeting) | results | 0.95 | +0.0% | +0.00% |
+| 2026-11-06 | Board meeting to consider first-ever bonus issue and share sub-division (and likely Q2 FY27 results, unverified) | corporate_action | 0.90 | +1.0% | +0.90% |
+| 2027-02 | Q3 FY27 results and demand read-through for festive quarter | results | 0.95 | +0.0% | +0.00% |
+| 2027-04 | Bonus/split effective and possible index/ETF flow effects | corporate_action | 0.60 | +1.0% | +0.60% |
 
 ## Analyst profile (agent research, sourced)
 # Bosch Ltd. (BOSCHLTD) — Market Impact profile, 2026-11-05

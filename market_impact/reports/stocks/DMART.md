@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Consumer Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -1.3%**, **12 months -2.6%** (rank 138 / 138 of 200 for 3m / 12m); beta 0.80
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.8%): 3 months 46%, 12 months 35%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.1% … P90 +0.7%; plausible 12m relative-return range incl. stock-specific noise: -36.5% … +14.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -2.1% beta-adjusted vs realised market-adjusted move -19.8%); forward event exposure -4.0% (3m -2.3%; half assumed priced); company-specific events +1.2%
+- Expected relative return: **3 months -1.5%**, **12 months -2.3%** (rank 143 / 139 of 200 for 3m / 12m); beta 0.80
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +25.8%): 3 months 45%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -7.5% … P90 -0.0%; plausible 12m relative-return range incl. stock-specific noise: -28.3% … +13.1%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -1.9% beta-adjusted vs realised market-adjusted move -19.8%); forward event exposure -3.7% (3m -2.8%; half assumed priced); company-specific events +1.2%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,52 +29,59 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -8.8% | -8.8% | -4.0 | -1.2 | -2.0 | -1.7 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -6.1% | -6.1% | -5.5 | -0.3 | -0.0 | -0.2 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -6.0% | -6.0% | -5.5 | -0.3 | -0.0 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +6.9% | +3.4% | +6.2 | +0.4 | +0.0 | +0.2 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -3.2% | -3.2% | -3.1 | +0.0 | -0.0 | -0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -3.0% | -3.0% | +0.0 | -2.7 | -0.2 | -0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.9% | -2.9% | +0.9 | -2.2 | -1.4 | -0.2 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.6% | -2.6% | +0.0 | -2.5 | -0.1 | -0.0 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -6.4% | -2.3% | -2.0 | -1.8 | -1.5 | -1.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -7.7% | -2.1% | +0.0 | -6.4 | -1.1 | -0.1 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +3.4% | +2.0% | +1.2 | +0.9 | +0.8 | +0.6 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.9% | -1.9% | +0.0 | -1.4 | -0.4 | -0.1 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -9.6% | -1.7% | +0.0 | -8.0 | -1.2 | -0.4 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.8% | -1.8% | +0.0 | -1.7 | -0.1 | +0.0 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.9% | +1.6% | +1.0 | +0.7 | +0.7 | +0.5 |
+| US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +1.5% | +1.5% | +1.2 | +0.2 | +0.0 | +0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -5.6% | -1.4% | -1.8 | -1.5 | -1.3 | -0.9 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -5.5% | -1.4% | +0.0 | -4.9 | -0.7 | +0.1 |
+| Risk: USD/INR >98 and/or reserves < US$650bn (disorderly rupee, emergency RBI response) (`EV_RUPEE_BREAK_98_RESERVE_STRESS`) | risk_scenario | 0.18 | -7.5% | -1.4% | -7.1 | -0.2 | -0.2 | +0.0 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +1.3% | +1.3% | +0.0 | +0.7 | +0.3 | +0.3 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → DMART | +6.25% | +3.12% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DMART | -3.73% | -1.05% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → DMART | -1.76% | -0.88% |
-| 2 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DMART | -4.67% | -0.84% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → DMART | -3.75% | -0.82% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → DMART | -2.00% | -0.71% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → DMART | +1.20% | +0.70% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → DMART | -2.40% | -0.67% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → DMART | -3.75% | -0.67% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_GSEC_10Y_IN → DMART | -1.10% | -0.66% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → DMART | -2.40% | -0.60% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → DMART | -2.40% | -0.60% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DMART | -2.33% | -0.58% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → DMART | +1.04% | +0.57% |
 | 2 | EV_NBS_RABI_HIKE ⇒ P_FERT_SUBSIDY → F_GSEC_10Y_IN → DMART | -0.53% | -0.50% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_GSEC_10Y_IN → DMART | -2.20% | -0.48% |
 | 1 | EV_LABOUR_CODES_RULES ⇒ P_LABOUR_CODES → DMART | -0.60% | -0.48% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → DMART | -1.76% | -0.44% |
 | 1 | EV_BUDGET_FY28_LTCG_RELIEF ⇒ F_FPI_FLOWS → DMART | +1.25% | +0.44% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → DMART | -1.12% | -0.40% |
+| 1 | EV_Q2_FY27_GDP_STRONG ⇒ F_FPI_FLOWS → DMART | +0.50% | +0.40% |
+| 1 | EV_FERT_SUBSIDY_TOPUP_WINTER ⇒ F_GSEC_10Y_IN → DMART | -0.44% | -0.40% |
+| 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_GSEC_10Y_IN → DMART | -0.66% | -0.40% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → DMART | -1.60 | events | -4.00% |
-| 1 | F_GSEC_10Y_IN → DMART | +1.70 | events | -3.74% |
+| 1 | F_GSEC_10Y_IN → DMART | +1.55 | director_override | -3.41% |
 | 1 | F_FOOD_INFLATION_IN → DMART | +2.00 | events | +1.60% |
 | 1 | F_URBAN_DEMAND → DMART | +0.20 | events | +0.80% |
 | 1 | T_FORMALISATION → DMART | +0.30 | events | +0.60% |
-| 1 | F_STEEL_INDIA → DMART | +1.65 | events | -0.49% |
+| 1 | F_STEEL_INDIA → DMART | +1.35 | events | -0.41% |
 | 1 | F_REPO_IN → DMART | +1.00 | events | -0.40% |
 | 1 | F_USDINR → DMART | -0.37 | observed | +0.22% |
 | 1 | F_BRENT → DMART | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | New store additions pace: management guidance of ~ 20% area growth; new-city launches, update on DMart Ready profitability | capex | 0.60 | +0.5% | +0.30% |
+| 2027-01-04 | Q3 FY27 standalone business update (revenue, store count) - DMart publishes a quarterly update in the first week after quarter end (as in Oct 2026: 4-5 Oct) | results | 0.85 | +0.5% | +0.42% |
+| 2027-01-16 | Q3 FY27 results (Dec-quarter, festive/winter season); key watch: gross margin, EBITDA margin vs 8% a year ago, debt | results | 0.90 | +0.5% | +0.45% |
 
 ## Analyst profile (agent research, sourced)
 # DMART — Avenue Supermarts Ltd. (as of 2026-11-05)

@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Construction Materials · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +1.4%**, **12 months +3.0%** (rank 51 / 53 of 200 for 3m / 12m); beta 1.13
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.5%): 3 months 57%, 12 months 60%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -0.1% … P90 +7.9%; plausible 12m relative-return range incl. stock-specific noise: -15.4% … +24.0%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.5 pp (model impact +3.1% beta-adjusted vs realised market-adjusted move -16.7%); forward event exposure +2.9% (3m +0.1%; half assumed priced); company-specific events +2.3%
+- Expected relative return: **3 months +1.2%**, **12 months +2.0%** (rank 55 / 55 of 200 for 3m / 12m); beta 1.13
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +15.5%): 3 months 56%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +0.4% … P90 +5.8%; plausible 12m relative-return range incl. stock-specific noise: -17.4% … +19.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +1.4 pp (model impact +2.8% beta-adjusted vs realised market-adjusted move -16.7%); forward event exposure +1.1% (3m -0.4%; half assumed priced); company-specific events +2.3%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -7.6% | -7.6% | -5.0 | -0.5 | -1.6 | -0.5 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.8% | -2.8% | +0.0 | -1.7 | -0.8 | -0.3 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +1.7% | +1.7% | +2.2 | -0.1 | -0.2 | -0.1 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -1.6% | -1.6% | -1.2 | -0.4 | +0.0 | -0.0 |
-| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.58 | +2.6% | +1.5% | +1.5 | +0.2 | +0.7 | +0.2 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -4.3% | -1.5% | -2.5 | -0.9 | -0.4 | -0.4 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +1.7% | +1.5% | +1.8 | +0.0 | -0.0 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | -1.1 | -0.1 | -0.3 | -0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -1.3% | -1.3% | -1.0 | -0.0 | -0.2 | -0.0 |
-| Retail petrol/diesel price freeze with crude >$100 squeezes OMC marketing margins; Q2 FY27 results split refiners (`EV_OMC_FUEL_FREEZE_LOSSES`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -1.6 | +0.3 | +0.2 |
+| US-Iran ceasefire/peace framework agreed and holding (`EV_US_IRAN_CEASEFIRE_DEAL`) | anticipated | 0.55 | +2.3% | +1.3% | +1.3 | +0.2 | +0.6 | +0.2 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.0% | -1.0% | -0.6 | -0.2 | -0.2 | -0.0 |
+| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.25 | -3.8% | -0.9% | -2.2 | -0.9 | -0.4 | -0.3 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | +0.9% | +0.9% | +1.0 | +0.0 | +0.0 | -0.1 |
+| US waives Russia-oil secondary sanctions/100% tariff threat on buyers incl. India (17 Oct) (`EV_RUSSIA_WAIVER_OCT17`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.5 | +0.1 | +0.2 |
+| US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.4 | -0.2 | -0.2 |
+| RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -0.8% | -0.8% | +0.0 | -0.8 | +0.0 | +0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -0.7% | -0.7% | -0.5 | -0.0 | -0.2 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → AMBUJACEM | +1.76% | +1.58% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → AMBUJACEM | -2.50% | -0.89% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → AMBUJACEM | +1.50% | +0.87% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → AMBUJACEM | +1.30% | +0.72% |
 | 1 | EV_COAL_IMPORT_BLEND_REVIVED ⇒ F_COAL_INTL → AMBUJACEM | -1.20% | -0.60% |
-| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → AMBUJACEM | +1.32% | +0.59% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → AMBUJACEM | -2.20% | -0.55% |
 | 1 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → AMBUJACEM | -0.80% | -0.54% |
-| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.48% |
-| 1 | EV_HORMUZ_FULL_CLOSURE ⇒ F_BRENT → AMBUJACEM | -6.00% | -0.38% |
-| 1 | EV_FED_H1_2027_FURTHER_HIKES ⇒ F_DXY → AMBUJACEM | -1.20% | -0.36% |
+| 1 | EV_RBI_DEC26_HIKE25 ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.50% |
+| 2 | EV_INDIA_RETAIL_FUEL_HIKE ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → AMBUJACEM | +1.32% | +0.40% |
 | 2 | EV_PULSES_VEG_SPIKE_WINTER ⇒ F_CPI_IN → F_REPO_IN → AMBUJACEM | -1.38% | -0.35% |
+| 1 | EV_NEMONSOON26_NORMAL_UP ⇒ F_MONSOON → AMBUJACEM | -0.40% | -0.34% |
 | 1 | EV_RBI_FEB27_HIKE25 ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.32% |
+| 1 | EV_FED_DEC26_HIKE25 ⇒ F_DXY → AMBUJACEM | -0.45% | -0.32% |
 | 2 | EV_LPG_COMPENSATION_CABINET ⇒ NEW_OMC_MARKETING_MARGIN → F_GOVT_CAPEX → AMBUJACEM | +0.53% | +0.32% |
 | 1 | EV_CPI_BREACH_6PCT ⇒ F_REPO_IN → AMBUJACEM | -0.48% | -0.29% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COAL_INTL → AMBUJACEM | -0.77% | -0.27% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_REPO_IN → AMBUJACEM | -1.20% | -0.26% |
+| 1 | EV_MONSOON27_DEFICIT_FORECAST ⇒ F_MONSOON → AMBUJACEM | +0.80% | +0.26% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -71,13 +71,23 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 1 | F_MONSOON → AMBUJACEM | -1.56 | events | +1.25% |
 | 1 | F_REPO_IN → AMBUJACEM | +1.00 | events | -1.20% |
 | 1 | F_DXY → AMBUJACEM | +0.74 | observed | -1.11% |
-| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → AMBUJACEM | +1.70 | events | -1.02% |
+| 2 | F_GSEC_10Y_IN → F_HOUSING_DEMAND → AMBUJACEM | +1.55 | director_override | -0.93% |
 | 2 | F_GDP_IN → F_HOUSING_DEMAND → AMBUJACEM | +0.50 | events | +0.30% |
 | 2 | F_REPO_IN → F_HOUSING_DEMAND → AMBUJACEM | +1.00 | events | -0.26% |
 | 1 | F_USDINR → AMBUJACEM | -0.37 | observed | +0.22% |
 | 2 | T_GENAI_SERVICES → F_HOUSING_DEMAND → AMBUJACEM | +1.00 | events | -0.20% |
-| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → AMBUJACEM | +1.65 | events | -0.17% |
+| 2 | F_STEEL_INDIA → F_HOUSING_DEMAND → AMBUJACEM | +1.35 | events | -0.14% |
 | 1 | F_BRENT → AMBUJACEM | +0.00 | observed | -0.00% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Realisation of Rs12-15/bag price hikes in Nov-Dec (industry attempt to offset fuel) | other | 0.50 | +4.0% | +2.00% |
+| 2026-11 | Stock in F&O ban list on 22 Oct (high open interest); exit normalises liquidity | other | 0.50 | +0.0% | +0.00% |
+| 2026-12 | Board/regulatory clearances and groundbreaking for the 30 MTPA Rs14,500 cr expansion; environmental clearances and land are the timing risk | capex | 0.60 | +1.0% | +0.60% |
+| 2027-01 | Q3 FY27 results (date not announced; estimate late Jan/Feb 2027) | results | 0.97 | +0.0% | +0.00% |
+| 2027-03 | Intra-group consolidation of ACC/Orient/Penna/Sanghi into Ambuja (status unverified, model knowledge as of mid-2026) | corporate_action | 0.30 | +1.0% | +0.30% |
+| 2027-06 | Renewed US/regulatory legal escalation against Adani Group (status after June 2026 not verified) | litigation | 0.10 | -9.5% | -0.95% |
 
 ## Analyst profile (agent research, sourced)
 # AMBUJACEM — Ambuja Cements Ltd. (as of 2026-11-05)

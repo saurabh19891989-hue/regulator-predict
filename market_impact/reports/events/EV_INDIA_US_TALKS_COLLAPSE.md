@@ -1,7 +1,9 @@
 # India-US talks collapse; US raises tariffs on Indian goods (broad, >=10pp more) (`EV_INDIA_US_TALKS_COLLAPSE`)
-*geopolitics_trade · status risk_scenario · date 2027-01-31 · P(3m) 0.07 · P(12m) 0.15 · confidence low*
+*geopolitics_trade · status risk_scenario · date 2027-01-31 · P(3m) 0.08 · P(12m) 0.18 · confidence low*
 
 Downside: Indian refusal on agriculture/Russia-oil conditions (TheWire: 'Will Modi walk away?'), plus Dec-16 waiver lapse. Constrained by new Democratic Congress and legal limits on tariff powers.
+
+**Review override applied:** Trump plans more tariffs via executive action after losing Congress (DNA 1 Nov). Section 301 determinations are pending. Slightly raised; group sum 0.73.
 
 **Already moved:** n/a
 

@@ -2,10 +2,10 @@
 *NIFTY_50 · Financial Services · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.8%**, **12 months -2.6%** (rank 127 / 136 of 200 for 3m / 12m); beta 0.83
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.6%): 3 months 47%, 12 months 38%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -13.6% … P90 +3.5%; plausible 12m relative-return range incl. stock-specific noise: -22.9% … +21.8%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.2 pp (model impact -0.5% beta-adjusted vs realised market-adjusted move +19.8%); forward event exposure -3.1% (3m -0.6%; half assumed priced); company-specific events +0.8%
+- Expected relative return: **3 months +0.1%**, **12 months -0.5%** (rank 93 / 106 of 200 for 3m / 12m); beta 0.83
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +18.6%): 3 months 51%, 12 months 60%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -9.1% … P90 +5.3%; plausible 12m relative-return range incl. stock-specific noise: -13.7% … +28.0%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves -0.3 pp (model impact -0.7% beta-adjusted vs realised market-adjusted move +19.8%); forward event exposure +1.1% (3m +1.3%; half assumed priced); company-specific events +0.8%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,38 +29,38 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -8.7% | -8.7% | +0.0 | -4.4 | -2.7 | -1.7 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -5.1% | -5.1% | -4.8 | -0.4 | +0.1 | +0.0 |
 | 2026 south-west monsoon ends 12.6% below normal (87% of LPA), driest since 2015 (`EV_SWMONSOON26_DEFICIT`) | occurred | 1.00 | -4.5% | -4.5% | +0.0 | -1.3 | -2.6 | -0.5 |
-| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.62 | -6.8% | -4.2% | -7.0 | +0.2 | -0.0 | -0.0 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -12.5% | -3.5% | -8.8 | -3.1 | -0.8 | +0.1 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -4.3% | -4.3% | -4.0 | -0.4 | +0.1 | +0.0 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +5.7% | +2.9% | +5.4 | +0.5 | -0.1 | -0.0 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -15.2% | -2.7% | -11.0 | -3.9 | -0.5 | +0.2 |
 | IMD April 2027 long-range forecast says normal or above-normal monsoon (>=96% LPA) (`EV_MONSOON27_FIRST_FORECAST_NORMAL`) | scheduled | 0.68 | +3.9% | +2.6% | +0.0 | +1.0 | +2.1 | +0.8 |
-| Iran talks collapse; renewed Gulf strikes, sustained Hormuz tanker attacks, Brent above $110 (`EV_IRAN_TALKS_FAIL_ESCALATE`) | risk_scenario | 0.36 | -7.0% | -2.5% | -2.6 | -2.1 | -1.4 | -0.8 |
 | India Q1 FY27 GDP grows 7.8% (31 Aug 2026), beating ~7.3% consensus (`EV_GDP_Q1FY27_7_8`) | occurred | 1.00 | +2.5% | +2.5% | +1.5 | +1.2 | -0.1 | -0.1 |
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +2.4% | +2.4% | -0.1 | +1.0 | +1.4 | +0.3 |
 | Union Budget 2027-28 capex/railway allocation (infra, railways, defence) (`EV_BUDGET27_CAPEX_RAILWAY`) | scheduled | 0.90 | +2.5% | +2.3% | +0.0 | +0.9 | +1.5 | +0.1 |
+| CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -2.2% | -2.2% | +0.0 | +0.9 | -2.6 | -0.5 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -8.6% | -2.1% | -5.5 | -2.6 | -0.6 | +0.1 |
+| US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -8.0% | -2.0% | +0.9 | -7.4 | -1.3 | -0.3 |
+| RBI expected-credit-loss (ECL) provisioning goes live as scheduled (FY28 start) (`EV_ECL_ROLLOUT_APR27`) | scheduled | 0.90 | -2.1% | -1.8% | -2.1 | +0.1 | -0.0 | -0.0 |
+| North-east monsoon 2026 normal or above-normal (relief for southern reservoirs) (`EV_NEMONSOON26_NORMAL_UP`) | anticipated | 0.85 | +2.0% | +1.7% | +0.0 | +0.5 | +1.0 | +0.5 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → KOTAKBANK | -8.80% | -2.46% |
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → KOTAKBANK | +4.50% | +2.25% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → KOTAKBANK | -3.50% | -2.17% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → KOTAKBANK | -11.00% | -1.98% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → KOTAKBANK | -2.00% | -1.24% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → KOTAKBANK | -2.64% | -0.94% |
-| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_CREDIT_GROWTH_IN → KOTAKBANK | -1.50% | -0.93% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → KOTAKBANK | -5.50% | -1.38% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ F_ASSET_QUALITY_IN → KOTAKBANK | -1.05% | -0.95% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → KOTAKBANK | -5.50% | -0.82% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_RISK_SENTIMENT → KOTAKBANK | -3.17% | -0.79% |
 | 2 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → KOTAKBANK | +0.86% | +0.78% |
-| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → KOTAKBANK | +1.10% | +0.64% |
 | 1 | EV_RBI_GOLD_LOAN_TIGHTEN ⇒ P_RBI_PRUDENTIAL → KOTAKBANK | -2.00% | -0.60% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → KOTAKBANK | -2.70% | -0.59% |
+| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → KOTAKBANK | -2.20% | -0.55% |
 | 1 | EV_NVDA_NOV17_BEAT ⇒ F_RISK_SENTIMENT → KOTAKBANK | +0.88% | +0.55% |
 | 3 | EV_BUDGET27_CAPEX_RAILWAY ⇒ F_GOVT_CAPEX → F_GDP_IN → F_ASSET_QUALITY_IN → KOTAKBANK | +0.60% | +0.54% |
 | 2 | EV_MONSOON27_FIRST_FORECAST_NORMAL ⇒ F_MONSOON → F_GDP_IN → KOTAKBANK | +0.80% | +0.54% |
+| 1 | EV_INDIA_STAGFLATION_SCARE ⇒ F_GDP_IN → KOTAKBANK | -4.50% | -0.54% |
+| 1 | EV_ECL_ROLLOUT_APR27 ⇒ P_RBI_PRUDENTIAL → KOTAKBANK | -0.60% | -0.54% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → KOTAKBANK | -2.70% | -0.49% |
+| 1 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_RISK_SENTIMENT → KOTAKBANK | +0.88% | +0.48% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -68,7 +68,7 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → KOTAKBANK | -1.60 | events | -2.88% |
 | 1 | F_GDP_IN → KOTAKBANK | +0.50 | events | +1.50% |
-| 1 | F_GSEC_10Y_IN → KOTAKBANK | +1.70 | events | -1.19% |
+| 1 | F_GSEC_10Y_IN → KOTAKBANK | +1.55 | director_override | -1.08% |
 | 1 | F_REPO_IN → KOTAKBANK | +1.00 | events | +1.00% |
 | 2 | F_GDP_IN → F_ASSET_QUALITY_IN → KOTAKBANK | +0.50 | events | +0.56% |
 | 1 | F_FED_FUNDS → KOTAKBANK | +1.62 | observed | -0.49% |
@@ -78,6 +78,12 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_REPO_IN → F_ASSET_QUALITY_IN → KOTAKBANK | +1.00 | events | -0.28% |
 | 3 | F_MONSOON → F_UNSECURED_STRESS → F_ASSET_QUALITY_IN → KOTAKBANK | -1.56 | events | -0.26% |
 | 2 | F_GDP_IN → F_CREDIT_GROWTH_IN → KOTAKBANK | +0.50 | events | +0.26% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Anup Saha assumes office as MD & CEO (effective date unverified); first strategy communication | other | 0.80 | +1.0% | +0.80% |
+| 2027-01 | Q3 FY27 results (date unconfirmed; Q2 was 24 Oct 2026); NIM guided to see FCNR pressure | results | 0.95 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # KOTAKBANK - Kotak Mahindra Bank (Nifty 50, private bank)

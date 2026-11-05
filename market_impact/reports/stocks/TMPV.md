@@ -2,10 +2,10 @@
 *NIFTY_50 · Automobile and Auto Components · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months +4.1%**, **12 months +6.9%** (rank 20 / 25 of 200 for 3m / 12m); beta 1.19
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.8%): 3 months 63%, 12 months 62%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.2% … P90 +17.9%; plausible 12m relative-return range incl. stock-specific noise: -20.8% … +32.4%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.5 pp (model impact +10.9% beta-adjusted vs realised market-adjusted move -28.9%); forward event exposure +4.6% (3m +2.6%; half assumed priced); company-specific events +0.5%
+- Expected relative return: **3 months +3.8%**, **12 months +5.6%** (rank 18 / 25 of 200 for 3m / 12m); beta 1.19
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +23.8%): 3 months 63%, 12 months 50%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 +2.0% … P90 +6.8%; plausible 12m relative-return range incl. stock-specific noise: -19.5% … +36.2%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +5.2 pp (model impact +10.5% beta-adjusted vs realised market-adjusted move -28.9%); forward event exposure +2.3% (3m +2.4%; half assumed priced); company-specific events +0.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -34,13 +34,13 @@
 | US Q3 data: GDP 3.4%, CPI 3.7%, September payrolls only +29k (`EV_US_Q3_DATA_MIXED`) | occurred | 1.00 | +3.2% | +3.2% | +3.0 | +0.2 | +0.0 | +0.0 |
 | US recession (two negative quarters or NBER-style) beginning by mid-2027 (`EV_US_RECESSION_RISK_2027`) | risk_scenario | 0.25 | -7.2% | -1.8% | -7.5 | -0.3 | +0.7 | -0.0 |
 | CAFE-III fuel-efficiency norms notified (30 Sep 2026); no small-car carve-out; 3x credit for BEVs (`EV_CAFE3_NOTIFIED`) | occurred | 1.00 | +1.5% | +1.5% | +1.7 | -0.1 | -0.1 | -0.0 |
-| Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -1.4% | -1.4% | +0.0 | -1.4 | -0.0 | -0.0 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | +1.4% | +1.4% | +0.0 | +0.8 | +0.5 | +0.0 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | +1.3% | +1.3% | +0.0 | +0.9 | +0.5 | +0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -0.2 | -1.0 | +0.1 |
+| Coking coal price spike squeezes Indian steel margins (`EV_COKING_COAL_SURGE_AUG26`) | occurred | 1.00 | -1.1% | -1.1% | +0.0 | -1.1 | -0.0 | -0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.9% | -0.9% | -0.5 | -0.3 | -0.1 | -0.0 |
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.8% | +0.8% | +0.0 | +0.9 | -0.0 | -0.1 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | +2.8% | +0.8% | +0.0 | +1.8 | +0.9 | +0.1 |
+| Chinese steel/aluminium export surge floods Asia as China demand stays weak (`EV_CHINA_STEEL_EXPORT_FLOOD`) | risk_scenario | 0.25 | +3.0% | +0.8% | +3.0 | +0.0 | +0.0 | +0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | +0.7% | +0.7% | +0.0 | +0.8 | -0.0 | -0.1 |
+| China Q3 GDP +4.5% (beat); property 'mini-stimulus' of late September; PMI 49.3; LPR unchanged (`EV_CHINA_Q3_GDP_AND_MINI_STIMULUS`) | occurred | 1.00 | -0.7% | -0.7% | +0.2 | -0.5 | -0.4 | +0.0 |
+| Iran war / Hormuz and Red Sea disruption lifts Brent to ~$95 (peak ~$110 on 16 Oct) (`EV_IRAN_WAR_HORMUZ_OIL`) | occurred | 1.00 | -0.7% | -0.7% | +0.0 | -0.8 | +0.1 | +0.1 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
@@ -48,19 +48,19 @@ Order = number of hops from the event's entry driver to the company. Expected = 
 |---|---|---|---|
 | 1 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → TMPV | -7.50% | -1.88% |
 | 1 | EV_CHINA_STEEL_EXPORT_FLOOD ⇒ F_STEEL_GLOBAL → TMPV | +3.00% | +0.75% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → TMPV | +2.16% | +0.60% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → TMPV | +2.60% | +0.57% |
 | 1 | EV_INDIA_EU_FTA_SIGNED ⇒ F_EU_GDP → TMPV | +0.60% | +0.55% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → TMPV | +0.82% | +0.47% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → TMPV | +2.16% | +0.54% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → TMPV | +2.60% | +0.47% |
 | 2 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → F_USDINR → TMPV | -0.92% | -0.46% |
 | 1 | EV_CHINA_STEEL_OUTPUT_CURB_2027 ⇒ F_STEEL_GLOBAL → TMPV | -0.90% | -0.45% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → TMPV | +0.82% | +0.45% |
 | 2 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ NEW_RARE_EARTH_SUPPLY → F_AUTO_DEMAND_IN → TMPV | -1.44% | -0.36% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → TMPV | -0.98% | -0.35% |
 | 1 | EV_CHINA_PLUS_ONE_ELECTRONICS ⇒ P_PLI → TMPV | +0.36% | +0.29% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → TMPV | +0.79% | +0.28% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → TMPV | -0.47% | -0.28% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_USDINR → TMPV | +0.96% | +0.27% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ C_MIDEAST_CONFLICT → F_ALUMINIUM → TMPV | -0.98% | -0.24% |
 | 2 | EV_UNION_BUDGET_FEB27_METALS ⇒ F_COKING_COAL → F_STEEL_GLOBAL → TMPV | +0.25% | +0.23% |
+| 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_ALUMINIUM → TMPV | -0.65% | -0.23% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → TMPV | -0.41% | -0.23% |
+| 1 | EV_RARE_EARTH_CONTROLS_REIMPOSED ⇒ F_SEMICONDUCTOR_SUPPLY → TMPV | -0.90% | -0.22% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
@@ -78,6 +78,14 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_AI_CAPEX → F_SEMICONDUCTOR_SUPPLY → TMPV | -0.30 | events | +0.22% |
 | 1 | F_CHINA_GDP → TMPV | +0.30 | events | +0.18% |
 | 2 | C_US_CHINA_DECOUPLING → F_SEMICONDUCTOR_SUPPLY → TMPV | -0.10 | events | +0.10% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-11 | Q2 FY27 results and analyst call (JLR Q2 wholesales +24.5%, retail -7.5%, commodity headwind flagged in August); exact date unverified | results | 0.95 | +0.0% | +0.00% |
+| 2026-12 | Possible UK duties on Chinese EVs / EU 'Made in Europe' scheme link | regulatory | 0.40 | +1.2% | +0.50% |
+| 2026-12 | US-India trade agreement or change in US tariffs on UK-built vehicles | regulatory | 0.30 | -0.5% | -0.15% |
+| 2027-01 | JLR Q3 wholesale update and Jaguar Type 01 launch progress (Enterprise Missions GBP 1.7bn savings details with Q2) | guidance | 0.80 | +0.0% | +0.00% |
 
 ## Analyst profile (agent research, sourced)
 # TMPV - Tata Motors Passenger Vehicles Ltd. (as of 2026-11-05)

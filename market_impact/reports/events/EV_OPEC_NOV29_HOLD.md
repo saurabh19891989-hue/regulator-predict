@@ -1,7 +1,9 @@
 # OPEC+ 29 Nov meeting: 2027 quotas held / rolled over (`EV_OPEC_NOV29_HOLD`)
-*energy · status scheduled · date 2026-11-29 · P(3m) 0.72 · P(12m) 0.72 · confidence low*
+*energy · status scheduled · date 2026-11-29 · P(3m) 0.7 · P(12m) 0.7 · confidence low*
 
 OPEC+ deferred 2027 quota decision to 29 Nov (Birr Metrics headline). Base case is rollover given members cannot meet current targets. Mutually exclusive with RAISE and CUT variants. Goldman raised Dec Brent forecast to $105 (OilPrice, 2 Nov).
+
+**Review override applied:** The 29 Nov full ministerial is confirmed (2027 quotas/capacity baselines). On 1 Nov the seven core members held Dec targets for a third month. The UAE has LEFT OPEC (Jul 2026) and is ramping toward >5 mb/d; Bousso warns of a price war. That raises the odds of a market-share raise.
 
 ## Entry shocks (conditional on the event)
 - `F_BRENT` Brent crude oil price: 0.0 SSU (range -0.3…0.3) no change

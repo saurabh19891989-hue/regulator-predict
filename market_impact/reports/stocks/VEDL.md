@@ -2,10 +2,10 @@
 *NIFTY_NEXT_50 · Metals & Mining · analysis date 2026-11-05 · model run from the Market Impact Graph*
 
 ## Scenario-implied verdict (beta-adjusted, relative to the Nifty 200 average; not a validated forecast)
-- Expected relative return: **3 months -0.0%**, **12 months -0.7%** (rank 100 / 118 of 200 for 3m / 12m); beta 1.00
-- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.1%): 3 months 50%, 12 months 50%
-- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -4.3% … P90 +3.8%; plausible 12m relative-return range incl. stock-specific noise: -35.4% … +40.1%
-- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.1% beta-adjusted vs realised market-adjusted move —%); forward event exposure +3.3% (3m +2.0%; half assumed priced); company-specific events -2.5%
+- Expected relative return: **3 months -0.4%**, **12 months -1.2%** (rank 119 / 122 of 200 for 3m / 12m); beta 1.00
+- Probability of beating the universe (incl. idiosyncratic noise, 12m vol +36.1%): 3 months 49%, 12 months 40%
+- Model-uncertainty band for the 12m expectation (event occurrence × edge-weight draws): P10 -3.8% … P90 +3.9%; plausible 12m relative-return range incl. stock-specific noise: -24.4% … +21.3%
+- Decomposition (12m): unpriced part of Jun–Nov 2026 driver moves +0.0 pp (model impact -4.3% beta-adjusted vs realised market-adjusted move —%); forward event exposure +2.1% (3m +1.1%; half assumed priced); company-specific events -2.5%
 
 ## What moves this stock (company → drivers)
 % change in equity value for a +1 standard shock of each driver, split by causal order.
@@ -29,46 +29,46 @@
 ## Events affecting this stock (event → company)
 | event | status | P(12m) | impact if it happens | expected | 1st | 2nd | 3rd | 4th |
 |---|---|---|---|---|---|---|---|---|
-| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.3% | -3.3% | -3.6 | +0.4 | -0.0 | -0.1 |
-| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -2.4% | -2.4% | -1.4 | -1.0 | +0.0 | -0.1 |
-| Gold and silver slump from January 2026 peaks (silver -53%, gold -24%) (`EV_PRECIOUS_METALS_CRASH_2026`) | occurred | 1.00 | -2.1% | -2.1% | -1.2 | -1.0 | +0.1 | -0.0 |
+| Record FPI equity outflow in CY2026 (~Rs 3 lakh crore, ~2x 2025) passes Rs 3 trillion in October (`EV_FPI_RECORD_OUTFLOW_26`) | occurred | 1.00 | -3.1% | -3.1% | -3.3 | +0.3 | -0.0 | -0.1 |
 | FPI equity inflows rebound (>= +US$5bn in a quarter) on lower crude, trade deal, tax relief (`EV_FPI_INFLOW_REBOUND`) | anticipated | 0.50 | +3.7% | +1.9% | +4.0 | -0.4 | +0.0 | +0.1 |
 | RBI drains liquidity (CRR maintenance 99%, bond sales) as 10y G-sec hits multi-year high (`EV_RBI_LIQUIDITY_BOND_SELLOFF_OCT26`) | occurred | 1.00 | -1.7% | -1.7% | -1.7 | +0.0 | +0.0 | -0.0 |
+| US Treasury selloff: 10y above 5% (23 Sep), 30y highest since 2004 (`EV_UST_SELLOFF_SEP26`) | occurred | 1.00 | -1.5% | -1.5% | -1.0 | -0.6 | +0.0 | -0.0 |
 | Fed delivers first hike in years (16 Sep 2026), new chair Warsh (`EV_FED_SEP26_HIKE`) | occurred | 1.00 | -1.5% | -1.5% | -0.6 | -0.5 | -0.2 | -0.1 |
 | Aluminium -20% since June; copper off record; Nifty Metal -7% in October (`EV_BASE_METALS_ALUMINIUM_SLIDE`) | occurred | 1.00 | -1.3% | -1.3% | -1.3 | +0.0 | +0.0 | +0.0 |
 | CPI inflation re-accelerates to 5.54% (Sep), nine straight monthly rises, food 7.74% (`EV_CPI_REACCEL_SEP26`) | occurred | 1.00 | -1.3% | -1.3% | +0.0 | +0.2 | -1.2 | -0.3 |
-| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.28 | -4.5% | -1.2% | -2.8 | -2.1 | +0.4 | +0.1 |
-| Disorderly yen carry-trade unwind (Aug-2024-style) after BoJ/MoF action (`EV_YEN_CARRY_UNWIND_RISK`) | risk_scenario | 0.18 | -5.5% | -1.0% | -3.5 | -2.6 | +0.7 | -0.1 |
 | US midterms (3 Nov 2026): Democrats win House and Senate (`EV_US_MIDTERMS_DEM_SWEEP`) | occurred | 1.00 | +0.9% | +0.9% | +0.9 | -0.1 | +0.0 | +0.0 |
 | RBI MPC hikes repo 25 bp to 5.50%, stance to calibrated tightening (7 Oct 2026) (`EV_RBI_OCT26_HIKE25`) | occurred | 1.00 | -0.8% | -0.8% | -0.6 | -0.2 | -0.0 | -0.0 |
+| AI capex reset / AI-credit event: hyperscalers cut 2027 capex guide or AI financing seizes (`EV_AI_CAPEX_RESET_RISK`) | risk_scenario | 0.25 | -3.1% | -0.8% | -1.8 | -1.8 | +0.4 | +0.1 |
+| Rupee at 95-96/USD and heavy RBI FX defence; reserves fall ~US$55bn from peak (`EV_RUPEE_DEFENCE_RESERVES_26`) | occurred | 1.00 | -0.8% | -0.8% | -0.7 | -0.1 | +0.0 | +0.0 |
+| Budget FY2027-28: FY27 deficit overshoot confirmed and consolidation path slowed (`EV_BUDGET_FY28_FISCAL_SLIPPAGE`) | scheduled | 0.50 | -1.4% | -0.7% | -1.4 | -0.0 | -0.0 | -0.0 |
 
 ## Strongest forward causal chains (upcoming/risk events, 1st–4th order)
 Order = number of hops from the event's entry driver to the company. Expected = probability × impact (before the half-priced haircut).
 | order | chain | impact if event | expected 12m |
 |---|---|---|---|
 | 1 | EV_FPI_INFLOW_REBOUND ⇒ F_FPI_FLOWS → VEDL | +3.75% | +1.88% |
-| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → VEDL | -2.80% | -0.78% |
-| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → VEDL | -3.50% | -0.63% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → VEDL | +2.60% | +0.57% |
-| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → VEDL | +1.58% | +0.56% |
-| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → VEDL | -0.95% | -0.55% |
-| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → VEDL | -2.25% | -0.49% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → VEDL | -1.44% | -0.40% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_USDINR → VEDL | +2.60% | +0.47% |
+| 2 | EV_US_IRAN_CEASEFIRE_DEAL ⇒ F_BRENT → F_USDINR → VEDL | -0.82% | -0.45% |
+| 1 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → VEDL | -1.75% | -0.44% |
+| 1 | EV_RUPEE_BREAK_98_RESERVE_STRESS ⇒ F_FPI_FLOWS → VEDL | -2.25% | -0.40% |
+| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_US_EQUITIES → F_FPI_FLOWS → VEDL | -1.44% | -0.36% |
 | 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_EQUITIES → F_FPI_FLOWS → VEDL | -1.44% | -0.36% |
-| 1 | EV_PRECIOUS_METALS_REBOUND_H1_2027 ⇒ F_US_10Y → VEDL | +0.80% | +0.36% |
 | 1 | EV_BANKING_LIQUIDITY_DEFICIT_MAR27 ⇒ F_CREDIT_SPREADS_IN → VEDL | -0.60% | -0.36% |
+| 2 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_BRENT → F_USDINR → VEDL | +1.39% | +0.35% |
 | 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_GSEC_10Y_IN → VEDL | -0.64% | -0.32% |
-| 2 | EV_AI_CAPEX_RESET_RISK ⇒ F_RISK_SENTIMENT → F_FPI_FLOWS → VEDL | -1.12% | -0.31% |
 | 2 | EV_CHINA_NPC_MAR27_BIG_STIMULUS ⇒ F_CHINA_GDP → F_COPPER → VEDL | +0.88% | +0.31% |
-| 1 | EV_IRAN_TALKS_FAIL_ESCALATE ⇒ F_RISK_SENTIMENT → VEDL | -0.84% | -0.30% |
+| 1 | EV_BUDGET_FY28_FISCAL_SLIPPAGE ⇒ F_CREDIT_SPREADS_IN → VEDL | -0.60% | -0.30% |
+| 1 | EV_CHINA_CEWC_STIMULUS_DEC26 ⇒ F_COPPER → VEDL | +0.60% | +0.27% |
+| 2 | EV_US_RECESSION_RISK_2027 ⇒ F_US_GDP → F_US_10Y → VEDL | +1.06% | +0.26% |
+| 1 | EV_YEN_CARRY_UNWIND_RISK ⇒ F_RISK_SENTIMENT → VEDL | -1.75% | -0.26% |
 
 ## What has already moved since 1 June 2026 (driver change × path)
 Driver state in standard shocks (observed market series, occurred events, or reviewed override). Raw model impact, before beta adjustment and before comparing with the realised share-price move.
 | order | chain | driver change (SSU) | source | impact |
 |---|---|---|---|---|
 | 1 | F_FPI_FLOWS → VEDL | -1.60 | events | -2.40% |
-| 1 | F_GSEC_10Y_IN → VEDL | +1.70 | events | -1.36% |
 | 1 | F_US_10Y → VEDL | +1.68 | observed | -1.34% |
+| 1 | F_GSEC_10Y_IN → VEDL | +1.55 | director_override | -1.24% |
 | 1 | F_CREDIT_SPREADS_IN → VEDL | +0.50 | events | -1.00% |
 | 1 | F_ALUMINIUM → VEDL | -1.96 | observed | -0.98% |
 | 1 | F_USDINR → VEDL | -0.37 | observed | -0.74% |
@@ -76,6 +76,15 @@ Driver state in standard shocks (observed market series, occurred events, or rev
 | 2 | F_CHINA_GDP → F_ZINC_LEAD → VEDL | +0.30 | events | +0.11% |
 | 2 | F_DXY → F_ZINC_LEAD → VEDL | +0.74 | observed | -0.11% |
 | 1 | F_RISK_SENTIMENT → VEDL | +0.11 | observed | -0.08% |
+
+## Company-specific catalysts (profile events after review; expected = probability × midpoint impact)
+| date | event | type | P | impact if it happens (mid) | expected |
+|---|---|---|---|---|---|
+| 2026-12 | Second interim dividend / HZL dividend upstream (first Rs5/share paid Oct) | corporate_action | 0.50 | +1.0% | +0.50% |
+| 2026-12 | Release or enforcement-related change in GLAS Agency encumbrance on 54.72% promoter stake | corporate_action | 0.10 | -4.0% | -0.40% |
+| 2027-02 | Q3 FY27 results (consolidated; reporting date not confirmed, Q2 was 2026-10-27/28) | results | 0.95 | +0.0% | +0.00% |
+| 2027-03 | Further sale of HZL stake by VEDL to delever (precedent Jun 2025: 1.6%) | corporate_action | 0.25 | -2.5% | -0.62% |
+| 2027-03 | Vedanta Resources refinancing / bond maturity; failure or discount-to-par event for group US$ bonds | other | 0.10 | -10.0% | -1.00% |
 
 ## Analyst profile (agent research, sourced)
 # VEDL — Vedanta Ltd. (Nifty Next 50) — profile as of 2026-11-05
