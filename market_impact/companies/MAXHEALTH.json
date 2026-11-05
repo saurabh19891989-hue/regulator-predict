@@ -1,0 +1,321 @@
+{
+ "ticker": "MAXHEALTH",
+ "name": "Max Healthcare Institute Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_HOSPITALS_DIAGNOSTICS",
+ "tier": "NIFTY_50",
+ "business_summary": "Premium multi-speciality hospital chain, North India-heavy (Delhi NCR, Mohali, Dehradun, Lucknow) with Mumbai/Nagpur and Bengaluru-Jaipur expansion; ~5,000+ operational beds (model knowledge) and Max Lab diagnostics. Highest ARPOB among listed peers and EBITDA margin ~27%. Q2 FY27: consolidated revenue +20% YoY, consolidated PAT Rs 414 cr (-15%, after higher depreciation/interest and a prior-year gain; Zee Business 2026-10-30), network PAT Rs 448 cr (+10%). Pack figures (sales Rs 2,569 cr, EBITDA Rs 711 cr) differ from the 'network' scope (Q1 network sales Rs 2,982 cr, EBITDA Rs 704 cr, Healthcare Executive 2026-08-14) - scope difference, use growth rates. Mcap Rs 90,369 cr, P/E 64, FIIs 40.5%.",
+ "revenue_mix": [
+  {
+   "segment": "hospitals (network)",
+   "share_pct": 93,
+   "geography": "India; Delhi NCR ~50%+, Punjab/Uttarakhand, Mumbai, Lucknow (model knowledge)"
+  },
+  {
+   "segment": "diagnostics, pharmacy, other",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 2
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_P_DRUG_PRICE_CONTROL",
+   "dst": "MAXHEALTH",
+   "relation": "regulatory_risk",
+   "w": -6.0,
+   "w_low": -14.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "Stock fell ~20% in 3 weeks to a 2-year low (Business Standard 2026-10-13) after SC remarks on markups (2026-09-30) and Centre's 30% cancer-drug price cut. Pharmacy/consumables ~22% of network revenue; oncology (Max's strongest speciality ~20% of revenue) drug markup contribution ~2% of revenue at ~100% drop-through -> -7.5% EBITDA at 27% OPM per step; EV/MCap 1.08, persistence 1.0 but 40% mitigated by procedure repricing -> -4.9; add MRP-cap broadening risk -> -6.0. Max MD: 'hospital pricing part of wider value chain' (ET 2026-10-06).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Max+Healthcare+slips+20%+3+weeks+why+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-13",
+     "note": "Max Healthcare slips 20% in 3 weeks; SC seeks 16% MRP cap (ET 2026-09-30)"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "MAXHEALTH",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "Employee+doctor fees ~38% of costs. +2pp wage inflation = +0.76% of costs; 55% passed through -> +0.34% of costs = 0.25% of revenue (costs ~73%); / 27% OPM = EBITDA -0.9%; EV/MCap 1.08, persistence 1.0 -> -1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+results+EBITDA+ARPOB+bed+addition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Q2 FY27 earnings call 2026-11-03 (Investing.com): margin 27-28%"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "MAXHEALTH",
+   "relation": "demand_driver",
+   "w": 2.2,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Premium elective/high-acuity and international patients are tied to urban affluence/insurance. +5pp urban demand -> +2.5pp revenue at 55% incremental margin vs 27% base -> +5% EBITDA; EV/MCap 1.08, persistence 0.5 -> +2.7; haircut for 70-75% occupancy -> +2.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=CLSA+Max+Healthcare+hospital+expansion+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "CLSA eyes upside on hospital expansion, margin (Moneycontrol 2026-11-04)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MAXHEALTH",
+   "relation": "funding_cost",
+   "w": -2.0,
+   "w_low": -3.8,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Interest Rs 74 cr/qtr (TTM Rs 271 cr) vs EBITDA Rs 2,455 cr; +25bp = Rs 3 cr = 0.1% EBITDA; main channel is discount rate on 64x P/E: duration ~16 yrs, +25bp -> -2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+network+PAT+Rs+448+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Interest TTM Rs 271 cr (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MAXHEALTH",
+   "relation": "discount_rate",
+   "w": 3.5,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding 40.5% (down from 45.4% in Mar-26); beta 1.23-1.29. +US$5bn inflow -> broad +4% x beta 1.25 + re-positioning of an FII-owned stock -> +3.5 beyond market move.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+network+PAT+Rs+448+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Shareholding Sep 2026: FII 40.52% (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "MAXHEALTH",
+   "relation": "fx_translation",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "International patients ~8% of revenue (model knowledge) and imported equipment/consumables offset; +3% -> +0.4% sales... net +0.3% EBITDA; empirical +1.67 (t=0.8), correlation likely FPI-related -> +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+results+EBITDA+ARPOB+bed+addition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Pack: USDINR +1.67 (t=0.8)"
+    }
+   ]
+  },
+  {
+   "src": "F_DXY",
+   "dst": "MAXHEALTH",
+   "relation": "macro_transmission",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Empirical DXY +3.26 (t=2.5) is positive, contradicting expectation that strong USD hurts FIIs holding 40%; likely spurious (period-specific). Model prior: +3% DXY = FPI outflow -> -1.5, shrunk from data (the sign conflict is flagged).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+network+PAT+Rs+448+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "Pack: DXY +3.26 (t=2.5) sign conflict with prior"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "MAXHEALTH",
+   "relation": "demand_driver",
+   "w": 1.6,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Hospital volumes +4-5% of GDP elasticity 0.6; +1pp GDP -> +0.6% volume -> +1.2% EBITDA, persistence 1.0 -> +1.3; rerating -> +1.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+results+EBITDA+ARPOB+bed+addition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "Revenue +20% YoY in Q2 (Zee Business 2026-10-30)"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "MAXHEALTH",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.3,
+   "w_high": 3.5,
+   "lag": ">12m",
+   "mechanism": "Oncology, transplants, robotics and international patients lift ARPOB ~6%/yr; +1 theme unit -> +1.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=CLSA+Max+Healthcare+hospital+expansion+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "CLSA: expansion and margin tailwinds"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Insurers/TPAs and government schemes (CGHS, ECHS)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "payer-mix and rate negotiation"
+  },
+  {
+   "counterparty": "Pharma/consumables suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "cancer-drug markups under SC scrutiny"
+  },
+  {
+   "counterparty": "Apollo Hospitals, Fortis, Medanta, Narayana",
+   "ticker": "APOLLOHOSP",
+   "role": "competitor",
+   "importance": "high",
+   "note": "NCR competition"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "Supreme Court/NPPA follow-ups on medicine MRP and trade-margin caps",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Supreme+Court+hospitals+drug+markups+Centre+price+cap+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: ARPOB, occupancy, new-bed ramp",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+results+EBITDA+ARPOB+bed+addition+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Commissioning of new hospital capacity (bed expansion per CLSA/management)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=CLSA+Max+Healthcare+hospital+expansion+margin+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "Possible index/MSCI rebalance given FII reduction (low confidence)",
+   "type": "other",
+   "prob": 0.2,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+network+PAT+Rs+448+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): consolidated revenue +20% YoY, PAT Rs 414 cr (-15%), network PAT Rs 448 cr (+10%); pack scope: sales Rs 2,569 cr, EBITDA Rs 711 cr (28%).",
+  "trend": "Revenue growing 15-20% with margin 25-28%; Jun-26 EBITDA margin 25% was the low.",
+  "valuation": "Rs 928; P/E 64; mcap Rs 90,369 cr; 52-wk 797-1,187; ICICI Sec Buy TP Rs 1,300, PL Capital Buy TP Rs 1,080 (2026-11-04).",
+  "recent_developments": [
+   "2026-11-04 shares +2.5% on CLSA expansion/margin call (Moneycontrol)",
+   "2026-10-30 Q2 consolidated PAT -15% to Rs 414 cr, revenue +20% (Zee Business); network PAT +10%",
+   "2026-10-13 stock at 2-year low after 20% fall in 3 weeks (Business Standard)",
+   "2026-10-06 Max MD: hospital pricing part of wider value chain (ET)",
+   "2026-09-30 hospital stocks plunge up to 7% after SC drug markup questions (Livemint)"
+  ]
+ },
+ "key_risks": [
+  "Drug-price and MRP caps",
+  "FII selling (40.5% holding)",
+  "Premium valuation 64x",
+  "Wage inflation",
+  "Pricing negotiation with insurers"
+ ],
+ "upside_triggers": [
+  "Regulatory clarity",
+  "Expansion beds ramp",
+  "Margin back above 28%",
+  "Rebound in FII flows"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_P_DRUG_PRICE_CONTROL",
+   "type": "POLICY",
+   "name": "India drug/medical-product price control and trade-margin caps (NPPA, MRP caps)",
+   "ssu": "+1 = one tightening step (e.g. 30% cancer-drug price cut or broad 16% MRP-over-cost cap)"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/MAXHEALTH.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+results+EBITDA+ARPOB+bed+addition+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "Q2 call"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Max+Healthcare+Q2+network+PAT+Rs+448+crore+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Max+Healthcare+slips+20%+3+weeks+why+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-13",
+   "what": "Stock slump"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Supreme+Court+hospitals+drug+markups+Centre+price+cap+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Drug-price policy"
+  }
+ ]
+}

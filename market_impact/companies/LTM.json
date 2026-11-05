@@ -1,0 +1,404 @@
+{
+ "ticker": "LTM",
+ "name": "LTM Ltd. (erstwhile LTIMindtree)",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's fifth/sixth-largest listed IT services company (formed by the Nov-2022 merger of L&T Infotech and Mindtree; renamed LTM), ~69% owned by Larsen & Toubro. Offers application development, cloud and infra, data/AI, ERP and digital engineering to BFSI, manufacturing, hi-tech, energy/utilities and healthcare clients, ~70% from North America. TTM sales Rs43,359 cr, EBITDA margin ~18%, debt-free, ROE ~24%. AI-linked (Enterprise/Biz AI) revenue grew ~47% YoY in Q2 FY27. Stock -22.8% over 12 months, P/E 24.6 (premium to Infosys/Wipro).",
+ "revenue_mix": [
+  {
+   "segment": "BFSI",
+   "share_pct": 33,
+   "geography": "mostly North America"
+  },
+  {
+   "segment": "Manufacturing/Resources/Energy",
+   "share_pct": 22,
+   "geography": "US/Europe"
+  },
+  {
+   "segment": "Hi-tech, media, CPG/retail",
+   "share_pct": 30,
+   "geography": "US-heavy"
+  },
+  {
+   "segment": "Health/Life sciences & other",
+   "share_pct": 15,
+   "geography": "US/Europe/India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "employee costs (INR + USD onsite)",
+   "share_of_costs_pct": 68
+  },
+  {
+   "input": "subcontractors/travel/other",
+   "share_of_costs_pct": 24
+  },
+  {
+   "input": "F_USDINR-linked cost base: INR share",
+   "share_of_costs_pct": 52
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "LTM",
+   "relation": "fx_translation",
+   "w": 2.2,
+   "w_low": -1.0,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "~93% of revenue is USD/EUR/GBP-linked while ~50-55% of costs are INR (model knowledge). +3% USD/INR adds ~1.2-1.5pp of margin pre-hedge; at 18% EBITDA margin that is +7% EBITDA; LTM has stated no hedging benefit lasts beyond ~4-6 quarters and clients/wage cycle claw ~60% back, persistence 0.35; EV/MCap ~0.95 => +2.3. Pack elasticity is NEGATIVE (-1.16, t -0.8) - not significant and driven by risk-off episodes when INR weakens and IT sells off; I keep the fundamental sign but a wide range.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "LTM",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "North America ~70% of revenue (model knowledge). +1pp US growth => IT-services spend +1.5pp elasticity => revenue +1.0%; incremental margin 30% vs 18% => EBITDA +1.7%; growth-rate shifts are structural (persistence 1.0) and re-rate the multiple (P/E 24.6 vs peers 15-20) => +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=TCS+Q2+FY27+results+deal+TCV+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "TCS Q2 FY27 TCV $9.6bn, revenue +11% YoY INR - US discretionary spend stabilising"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "LTM",
+   "relation": "substitution",
+   "w": -4.0,
+   "w_low": -10.0,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "SSU +1 = a step of GenAI-led repricing (~3% of revenue base). Deflation 3% at ~60% flow-through => EBITDA -10%; persistence 0.5 (volume recapture + AI revenue growth) => -5; LTM partly hedged because AI revenue grew 47% YoY in Q2 FY27 and Enterprise/Biz AI is now a disclosed line, so central -4 vs peers. Sign genuinely two-sided so range includes +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=LTM+shares+down+28%+2026+AI+short+term+deals+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-17",
+     "note": "Business Today: stock -28% in 2026, pivot to short-term AI deals; AI revenue +47%"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "LTM",
+   "relation": "regulatory_risk",
+   "w": -3.5,
+   "w_low": -9.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "+1 = material tightening (H-1B fee/PERM/HIRE-style outsourcing tax). Onsite visa-dependent staff ~ 15% of headcount (model knowledge), replacement via local hiring adds ~2pp to cost-of-revenue => -11% EBITDA before pass-through; 50% passed on, persistence 0.6 => ~-3.5. Observed: PERM suspension 2026-10-08 produced a rally (Reuters: <2% of filings) and the $100k H-1B fee was struck down 2026-10-01 - realised tail so far mild.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US suspended PERM green-card labour programme for named firms; Reuters 2026-10-11: little risk to Indian IT (<2% of green-card filings)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "Forbes 2026-10-01: judge struck down latest version of $100,000 H-1B fee; Indian Express 2026-09-19: fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "LTM",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.3,
+   "w_high": 3.2,
+   "lag": "0-3m",
+   "mechanism": "SSU +5% S&P 500: US tech/BFSI client budget sentiment and global growth-style factor. Pack elasticity +2.15 (t +2.8, the strongest statistically meaningful link) vs market beta 1.08 - I shrink toward 1.8 since part is common market beta already removed by Nifty control but a US-risk-on factor remains.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "LTM",
+   "relation": "discount_rate",
+   "w": -1.4,
+   "w_low": -3.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: foreign investors cut high-multiple Indian IT (FII 6.15% only) and clients delay discretionary projects. Pack -0.53 per SSU (t -1.2) consistent in sign, scaled up as a +5pt shock equals ~1.4 on beta.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "LTM",
+   "relation": "discount_rate",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp India 10y: duration effect on a 24.6 P/E, ~44% payout, net-cash stock: ~-1% on equity. Low sensitivity because earnings are USD-linked.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "LTM",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Europe ~ 22% of revenue (model knowledge, includes Mindtree Europe). +1pp EU growth => revenue +0.3%, incremental margin => EBITDA +0.6% x multiple effect => ~+1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "LTM",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.8,
+   "lag": "3-12m",
+   "mechanism": "+25bp Fed funds: BFSI (~ 30% of revenue) and tech clients are rate sensitive; higher rates delay mortgage/lending tech spend; offset by weaker-USD? ambiguous. Pack gives US 10y +1.23 (t +2.0) i.e. positive but that is risk-on co-movement (yield up when US growth strong), so I use the opposite sign for the pure funding channel with low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "LTM",
+   "relation": "macro_transmission",
+   "w": 0.4,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Pack elasticity +1.23 per +25bp (t +2.0, beta 1.32): positive when yields rise on growth surprises (cyclical IT demand), negative via valuation. Net kept slightly positive, wide range; do not stack with F_FED_FUNDS in the same scenario without checking.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "LTM",
+   "relation": "discount_rate",
+   "w": 0.9,
+   "w_low": -0.3,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "+$5bn/qtr FPI inflow; IT is a funding source for FPIs rotating into cyclicals (FIIs 6.15% down from 6.63% in Mar-26). Nifty rallied +7.4% in 1m. Modest positive because IT is under-owned after a 6-year-low sell-off.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "LT",
+   "dst": "LTM",
+   "relation": "holding_stake",
+   "w": 0.1,
+   "w_low": 0.0,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "L&T holds ~69% of LTM (Sep-26 promoter 69.01%) but LT (mcap Rs5.57 lakh cr) is diversified; a 1% LT move transmits ~0.1% to LTM mainly via group sentiment/index flows. Not a fundamental driver.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "LTM",
+   "dst": "LT",
+   "relation": "holding_stake",
+   "w": 0.12,
+   "w_low": 0.05,
+   "w_high": 0.16,
+   "lag": "0-3m",
+   "mechanism": "LT's 69% of LTM = ~Rs0.89 lakh cr = ~16% of LT market cap (Rs1.286 lakh cr x 69% / Rs5.57 lakh cr); applying a holding-company discount of ~25% gives w ~0.12 (% move in LT per 1% in LTM).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/LTM/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 11,276 cr, OPM 18%, 12m price -22.8%, 1y vol 34%"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Larsen & Toubro",
+   "ticker": "LT",
+   "role": "parent",
+   "importance": "medium",
+   "note": "69% holder; captive group work and brand; IT-industry group-contagion only"
+  },
+  {
+   "counterparty": "Hyperscalers (Google Cloud Gemini Enterprise pact, Microsoft, AWS)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "platform partners for AI/cloud revenue"
+  },
+  {
+   "counterparty": "TCS, Infosys, Wipro, HCLTech, Tech Mahindra, Coforge, Persistent",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "same vendor-consolidation pools and AI-pricing pressure"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (mid-Jan, after TCS/Infosys); guidance on AI revenue, margin, large deals",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge of reporting calendar (Q2 reported 2026-10-16)"
+  },
+  {
+   "date": "2026-10-16",
+   "event": "Record date/payout of Rs25 per share dividend (FY27 interim) - ex-date passed or imminent (record date not captured)",
+   "type": "corporate_action",
+   "prob": 1.0,
+   "impact_pct_low": -0.6,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=LTM+dividend+record+date+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "US H-1B/outsourcing-policy or tariff action touching IT services (HIRE Act-style tax, new fee version after court loss)",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Possible inorganic AI/engineering acquisition (management has signalled M&A optionality)",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge; no dated announcement found"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Sep-2026 (Q2 FY27, reported 2026-10-16)",
+  "trend": "Revenue +13-14% YoY INR (screener 11,276 cr, +13.1% YoY, +2.6% QoQ); EBITDA margin ~18% stable; PAT roughly flat QoQ (-5% in several press reports). AI revenue +47% YoY. Reports and screener disagree on PAT (1,352 / 1,380 / 1,398 cr) and Q1 base (screener 10,988 vs press 11,608 cr) - unresolved data-quality risk.",
+  "valuation": "P/E 24.6, dividend yield 1.74%; premium to Infosys (14.9) and Wipro (14.9) and HCLTech (20.4); 52w range Rs3,528-6,430 vs 4,335",
+  "recent_developments": [
+   "2026-10-16: Q2 FY27 results, Rs25 dividend, AI revenue +47% (ET, CNBC TV18, Livemint)",
+   "2026-10-15: multi-million dollar deal with a US specialty engineering & construction firm (CNBC TV18)",
+   "2026-10-17: stock -28% YTD; debate on pivot to shorter AI deals (Business Today)",
+   "2026-10-07: expanded Google Cloud Gemini Enterprise pact (HDFC Sky)",
+   "2026-10-19: Jefferies presentation on record results/strategy (TradingView)",
+   "2026-10-09: PERM suspension - sector rallied up to 5% (India Infoline)"
+  ]
+ },
+ "key_risks": [
+  "GenAI price deflation outpacing AI revenue ramp",
+  "US visa/outsourcing tax escalation",
+  "Short-duration AI deals reduce visibility; large-deal conversion",
+  "Premium multiple de-rates if growth < peers",
+  "Data inconsistency in reported figures"
+ ],
+ "upside_triggers": [
+  "Large-deal wins/TCV rebound",
+  "Margin expansion via pyramid and utilisation",
+  "US discretionary spend recovery",
+  "Weaker INR",
+  "Rerating from AI revenue disclosure"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/LTM/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=LTM+Q2+results+revenue+AI+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "Q2 FY27 headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=LTM+shares+down+28%+2026+AI+short+term+deals+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-17",
+   "what": "Business Today/IndiaIPO valuation debate"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "PERM suspension"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-01",
+   "what": "H-1B fee court ruling"
+  }
+ ]
+}

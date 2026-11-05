@@ -1,0 +1,401 @@
+{
+ "ticker": "PAGEIND",
+ "name": "Page Industries Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_TEXTILES",
+ "tier": "MIDCAP_100",
+ "business_summary": "Exclusive licensee of Jockey International for innerwear, loungewear and athleisure in India, Sri Lanka, Bangladesh, Nepal, UAE, Oman, Qatar and expanding to Saudi/Bahrain/Kuwait; also Speedo licence. FY26 sales Rs5,247 cr, EBITDA Rs1,153 cr (22%), PAT Rs764 cr, ROE ~54%, payout ~80-138%. Q1 FY27 sales Rs1,420 cr (+8%), OPM 20%, PAT Rs193 cr (-4%). Promoters 42.89%, FIIs 18.8%, DIIs 32.9%. Stock Rs35,742, P/E 51; shares -10.9% 12m, -10.7% 3m.",
+ "revenue_mix": [
+  {
+   "segment": "men's innerwear and loungewear",
+   "share_pct": 60,
+   "geography": "India ~97% (distribution via ~25,000 retailers, ~1,000 exclusive outlets)"
+  },
+  {
+   "segment": "women's innerwear, athleisure, socks, others",
+   "share_pct": 40,
+   "geography": "India with small export/ Middle East licensed territories"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COTTON",
+   "share_of_costs_pct": 24
+  },
+  {
+   "input": "other raw materials (elastic, synthetics, packaging)",
+   "share_of_costs_pct": 24
+  },
+  {
+   "input": "employee costs",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "advertising, royalty, other",
+   "share_of_costs_pct": 30
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COTTON",
+   "dst": "PAGEIND",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "Raw materials ~45% of sales (model estimate; gross margin ~55%); cotton yarn/knit fabric ~50% of material cost; +10% cotton => yarn +~6% => cost +1.35% of sales => EBITDA -6.4% on 21% margin; Page passes through ~50% via price hikes within 2-3 quarters => -3.2%; EV/MCap 1.0 x persistence 0.3 = -1.0, rounded -1.2. Pack empirical -1.37 (t -1.7): agrees. Cotton is +19.7% 12m, +1.9% since June: margin headwind largely already visible (OPM 20% in Q1 vs 22-23% prior year).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    },
+    {
+     "source": "market_impact/data/packs/PAGEIND.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "PAGEIND",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Innerwear/ athleisure is discretionary-lite but premium-skewed (Jockey); +5pp urban consumption growth => +3% volumes (elasticity ~0.6) => revenue +3% (~Rs160 cr) at ~35% drop-through (fixed manufacturing cost) = Rs56 cr = +4.9% EBITDA (Rs1,147 cr TTM); x1.0 x persistence 0.7 = +3.4. FY27 volume growth target 11% (NiftyTrader preview) vs Q1 revenue +8%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    },
+    {
+     "source": "https://www.moneycontrol.com/ (headline: Page Industries Q1 profit down 4% at Rs 193 crore, revenue rises to Rs 1,420.44 crore)",
+     "date": "2026-08-13",
+     "note": "Q1 FY27 results; NiftyTrader preview cites 11% volume growth target"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "PAGEIND",
+   "relation": "demand_driver",
+   "w": 1.8,
+   "w_low": 0.6,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Small-town India is ~35% of sales (estimate); +5pp rural growth => +1.5% volumes => revenue +1.5% (~Rs80 cr) at ~45% incremental margin = Rs36 cr = +3.1% EBITDA; x persistence 0.7 x EV/MCap 1.0 = +2.2, set +1.8 for retail-channel lag.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    }
+   ]
+  },
+  {
+   "src": "F_FOOD_INFLATION_IN",
+   "dst": "PAGEIND",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+2pp food inflation squeezes household discretionary budgets: -0.5% volumes => revenue -0.5% = -Rs27 cr at 40% drop-through = -1.0% EBITDA; x0.5 plus a valuation effect => -1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    }
+   ]
+  },
+  {
+   "src": "NEW_INNERWEAR_COMPETITION",
+   "dst": "PAGEIND",
+   "relation": "competition",
+   "w": -4.0,
+   "w_low": -9.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "+1 SSU = 2pp share loss to Lux, Rupa, Dollar, Van Heusen/ Bodycare and D2C/online brands (and a ~10% price discount from low-end). Revenue -2% (Rs105 cr) at 40% drop-through = -Rs42 cr = -3.7% EBITDA; x1.0 x1.0 structural share loss = -3.7, rounded -4. Sales growth FY24 -3% / FY26 +6% and Q1 FY27 profit -4% on +8% revenue suggest rising cost/competition pressure.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    },
+    {
+     "source": "https://www.moneycontrol.com/ (headline: Page Industries Q1 profit down 4% at Rs 193 crore, revenue rises to Rs 1,420.44 crore)",
+     "date": "2026-08-13",
+     "note": "Q1 FY27 results; NiftyTrader preview cites 11% volume growth target"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "PAGEIND",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Jockey International royalty (~4-5% of sales, model estimate) and imported elastic/ trims/ machinery (~8% of sales) are USD-linked: ~12% of sales; +3% => +0.36% of sales cost = -1.7% EBITDA; ~70% retained x persistence 0.3 => -0.4; rounded -0.5. Pack shows USDCNY +3.10 (t +1.8): weaker yuan vs rupee raises import competition; not modelled separately.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    },
+    {
+     "source": "market_impact/data/packs/PAGEIND.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "PAGEIND",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "3-12m",
+   "mechanism": "Employee cost ~18% of sales (labour-intensive stitching, mostly Karnataka/Tamil Nadu/Bangladesh outsourcing); +2pp wage inflation above trend => +0.36% of sales => -1.7% EBITDA; ~50% passed => x0.5 => -0.8% x persistence 0.5 = -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    }
+   ]
+  },
+  {
+   "src": "P_LABOUR_CODES",
+   "dst": "PAGEIND",
+   "relation": "regulatory_risk",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Labour codes raise statutory costs (gratuity, PF wage definition) for a labour-heavy manufacturer: +1 SSU ~ +0.5% of sales cost => -2.3% EBITDA x0.35 => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "PAGEIND",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.1,
+   "lag": "0-3m",
+   "mechanism": "Polyester/elastane/nylon blends, packaging and freight track crude: ~10% of sales exposure; +10% Brent => +0.4% sales cost, 50% passed => -1.0% EBITDA x0.4 persistence = -0.4. Pack -0.57 (t -1.2) consistent.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PAGEIND.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "PAGEIND",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -3.5,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Quality compounder at 51x P/E, ROE 54%: valuation highly rate-sensitive; +25bp on ~11% cost of equity => ~-2.0%.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "PAGEIND",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 18.8% (down from 24.0% in Jun-2025); +US$5bn quarterly flow returns some of the selling: +2.0. Pack F_US_EQUITIES +1.42 (t +2.1) at beta 0.66 reflects FII/global-quality-growth sentiment, folded into this edge rather than modelled separately.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    },
+    {
+     "source": "market_impact/data/packs/PAGEIND.md",
+     "date": "2026-11-05",
+     "note": "empirical sensitivities, price performance"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "PAGEIND",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Apparel GST rationalised in Sept 2025 (model knowledge: 5% for items up to Rs2,500); most Jockey SKUs are already in the low slab, so a further cut has limited effect. +1 SSU = broad 2-5pp cut => +1.5% volumes => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/PAGEIND/",
+     "date": "2026-11-05",
+     "note": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Jockey International Inc.",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "licensor; royalty linked to sales (licence terms in model knowledge)"
+  },
+  {
+   "counterparty": "Lux Industries, Rupa, Dollar",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "mass innerwear"
+  },
+  {
+   "counterparty": "Cotton yarn spinners and elastic suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "cotton ~50% of material cost (estimate)"
+  },
+  {
+   "counterparty": "Large format/ online retail",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Myntra, Amazon, Reliance Retail, Lifestyle"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-12",
+   "event": "Q2 FY27 results (volume growth vs 11% target; gross margin vs cotton)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://www.screener.in/company/PAGEIND/ (upcoming result date: 12 November 2026)"
+  },
+  {
+   "date": "2026-11",
+   "event": "Interim dividend record date/payment (Rs200/share interim reported 2026-08-13 NDTV Profit headline; Kalkine 2026-10-30 record-date note; amounts for Q2 unverified)",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -0.7,
+   "impact_pct_high": 0.0,
+   "source": "market_impact/data/packs/PAGEIND.md (Google News headlines)"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (festive/wedding season volumes)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge (quarterly cadence)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Cotton price pass-through via MRP increases",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun-2026): sales Rs1,420 cr (+8% y/y), EBITDA Rs289 cr (OPM 20% vs 22%), PAT Rs193 cr (-4%), EPS Rs172.9; Q2 due 2026-11-12",
+  "trend": "Revenue +4-8% but margin compression (OPM 22-23% -> 20%) as cotton and costs rise; Q1 review: 'disruption temporary, FY27 outlook remains strong' (NDTV Profit brokerages 2026-08-14); Q2 preview: PAT may rise ~8% (Zee Business 2026-11-02)",
+  "valuation": "P/E 51.0, mcap Rs39.9k cr at Rs35,742 (52w Rs29,800-43,855), P/B 26.6, dividend yield 1.5%; 5y price CAGR -2%",
+  "recent_developments": [
+   "2026-08-13: Q1 profit -4% at Rs193 cr; stock -4.7% (Investing.com transcript note)",
+   "2026-08-14: 'volume-margin tightrope after soft Q1' (Livemint headline)",
+   "2026-08-25: gains hinge on volume growth as margin pressures persist (Business Standard)",
+   "2026-10-21: shares -2.0% (Univest)",
+   "2026-11-02: Q2 preview (Zee Business)"
+  ]
+ },
+ "key_risks": [
+  "Cotton cost and incomplete price pass-through",
+  "Volume growth below 11% target",
+  "Competition from mass and D2C brands",
+  "Royalty/ licence terms with Jockey International",
+  "Valuation (51x P/E) sensitive to rates and FII flows"
+ ],
+ "upside_triggers": [
+  "Volume rebound in festive/wedding quarter",
+  "Price hikes absorbing cotton",
+  "International licensed territories (Saudi/Bahrain/Kuwait)",
+  "FII re-entry into quality consumer"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_INNERWEAR_COMPETITION",
+   "type": "THEME",
+   "name": "Innerwear share competition (mass and D2C)",
+   "ssu": "+1 = 2pp share loss to rivals"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/PAGEIND/",
+   "date": "2026-11-05",
+   "what": "screener.in standalone fundamentals through Jun-2026, shareholding to Sep-2026, upcoming result date 12 Nov 2026 (fetched directly; pack had no dossier)"
+  },
+  {
+   "url": "market_impact/data/packs/PAGEIND.md",
+   "date": "2026-11-05",
+   "what": "empirical sensitivities, price performance"
+  },
+  {
+   "url": "https://www.moneycontrol.com/ (headline: Page Industries Q1 profit down 4% at Rs 193 crore, revenue rises to Rs 1,420.44 crore)",
+   "date": "2026-08-13",
+   "what": "Q1 FY27 results; NiftyTrader preview cites 11% volume growth target"
+  }
+ ]
+}

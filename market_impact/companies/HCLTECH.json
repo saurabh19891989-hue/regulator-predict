@@ -1,0 +1,333 @@
+{
+ "ticker": "HCLTECH",
+ "name": "HCL Technologies Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "NIFTY_50",
+ "business_summary": "Third/fourth-largest Indian IT company: IT & business services, engineering and R&D services (ER&D) and HCLSoftware (products). Americas ~65%, Europe ~30%. TTM sales ~Rs1.35 lakh cr, EBITDA ~21%, net cash, ROE 24%, yield 3.8%. Q2 FY27 (2026-10-12): revenue Rs35,620 cr, PAT Rs5,132 cr (+11% QoQ), advanced AI revenue +78%, FY27 CC revenue guide raised/narrowed to 2.5-4%, margin guide retained; shares jumped up to 8% intraday, +19% in a month.",
+ "revenue_mix": [
+  {
+   "segment": "IT & business services",
+   "share_pct": 72,
+   "geography": "Americas 65% / Europe 30% (group)"
+  },
+  {
+   "segment": "Engineering & R&D services",
+   "share_pct": 16,
+   "geography": "US/Europe"
+  },
+  {
+   "segment": "HCLSoftware",
+   "share_pct": 12,
+   "geography": "US/Europe"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "employee costs",
+   "share_of_costs_pct": 58
+  },
+  {
+   "input": "subcontractors, travel, software licences, other",
+   "share_of_costs_pct": 42
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "HCLTECH",
+   "relation": "fx_translation",
+   "w": 1.6,
+   "w_low": -1.0,
+   "w_high": 3.2,
+   "lag": "0-3m",
+   "mechanism": "~95% revenue foreign currency, INR ~ 45% of costs (model knowledge). Company has cited ~25-30bp margin per 1% INR: +3% => ~+85bp on 21% = +4% EBITDA, persistence 0.4, EV/MCap 0.97 => +1.6. Pack -2.75 (t -1.8) negative, insignificant.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "HCLTECH",
+   "relation": "demand_driver",
+   "w": 2.8,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Americas ~65% of revenue; +1pp US growth => revenue +0.95%, incremental margin 30% vs 21% => EBITDA +1.4%; with re-rating persistence 1.0 => ~+2.8.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "HCLTECH",
+   "relation": "substitution",
+   "w": -4.0,
+   "w_low": -10.0,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "+1 = ~3% base repricing. HCL's infra/BPS and engineering services are exposed (3% x 55% flow-through / 21% = -7.9%, persistence 0.5 => -4); offset by advanced AI revenue +78% YoY and software, though HCLSoftware revenue fell 11% (NiftyTrader 2026-10-12) which is an AI-substitution signal for its own product lines.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "HCLTECH",
+   "relation": "regulatory_risk",
+   "w": -3.5,
+   "w_low": -8.0,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "+1 = material tightening; HCL has a mid-high US onsite share; cost +1.3pp of revenue => -6% EBITDA, 50% passed through, persistence 0.6 => ~-3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US suspended PERM green-card labour programme for named firms; Reuters 2026-10-11: little risk to Indian IT (<2% of green-card filings)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "Forbes 2026-10-01: judge struck down latest version of $100,000 H-1B fee; Indian Express 2026-09-19: fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "HCLTECH",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.2,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+5% S&P 500: client sentiment and global risk appetite; shrunk toward 1.5 from the pack elasticity (PACKUSEQ).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "HCLTECH",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: FPI de-risking of a sector that is a prime funding source; judgement, shrunk from pack -0.7 per SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "HCLTECH",
+   "relation": "discount_rate",
+   "w": -0.9,
+   "w_low": -2.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp India 10y: duration effect on a high-payout, mostly net-cash stock.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "HCLTECH",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "+25bp Fed funds: BFSI and consumer client budgets; offset by stronger USD. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "HCLTECH",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Europe ~ 30% of revenue; +1pp EU growth => revenue +0.35%, EBITDA +0.5% with re-rating => ~+1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "HCLTECH",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": -0.8,
+   "w_high": 1.1,
+   "lag": "0-3m",
+   "mechanism": "Pack +0.80 (t +1.6): no causal channel; risk-on proxy. Token weight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/HCLTECH/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 35,620 cr, OPM 21%, PAT 5,132 cr, P/E 20.4, yield 3.77%"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Shiv Nadar family/promoters",
+   "ticker": null,
+   "role": "parent",
+   "importance": "low",
+   "note": "~60.8% promoters (model knowledge)"
+  },
+  {
+   "counterparty": "IBM (software product acquisitions)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "low",
+   "note": "HCLSoftware product lines"
+  },
+  {
+   "counterparty": "TCS, Infosys, Wipro, TechM, Cognizant, Accenture, LTTS",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "same pools"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (HCL typically first/second of big-5 after TCS)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=HCLTech+Q2+FY27+revenue+guidance+2.5-4%+advanced+AI+revenue+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-10",
+   "event": "Interim dividend Rs12/share - record date not captured",
+   "type": "corporate_action",
+   "prob": 1.0,
+   "impact_pct_low": -0.9,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=HCL+Tech+Q2+results+dividend+Rs+12+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "US H-1B/outsourcing action",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": -0.5,
+   "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Bolt-on acquisition for AI/ER&D",
+   "type": "corporate_action",
+   "prob": 0.2,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Sep-2026 (Q2 FY27, reported 2026-10-12)",
+  "trend": "Revenue Rs35,620 cr (+11.5% YoY INR, +3.0% QoQ), OPM 21%, PAT +11% QoQ; revenue YoY in USD +2.2% to $3.7bn (TOI); advanced AI +78% YoY; HCLSoftware -11%. Press differ on whether FY27 guide was 'raised' or 'narrowed' to 2.5-4%.",
+  "valuation": "P/E 20.4, yield 3.77%, price Rs1,435 vs 52w 1,030-1,780",
+  "recent_developments": [
+   "2026-10-12: Q2 FY27 beat; shares +8% intraday (Moneycontrol 2026-10-13)",
+   "2026-10-13: Livemint: premium valuation may limit upside",
+   "2026-10-13: ET: AI deflation remains a concern",
+   "2026-10-09: PERM suspension - IT up to 5% (India Infoline)"
+  ]
+ },
+ "key_risks": [
+  "AI deflation",
+  "HCLSoftware decline",
+  "US policy",
+  "Premium to peers (20x vs 15x)",
+  "Margin guide retained but wage inflation"
+ ],
+ "upside_triggers": [
+  "AI revenue scale",
+  "Software stabilisation",
+  "Weaker INR",
+  "Large deal wins",
+  "Buyback/dividend"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/HCLTECH/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=HCLTech+Q2+FY27+revenue+guidance+2.5-4%+advanced+AI+revenue+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-12",
+   "what": "Q2 FY27 guidance headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "PERM"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-01",
+   "what": "H-1B"
+  }
+ ]
+}

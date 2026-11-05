@@ -34,7 +34,7 @@ C_MIDEAST_CONFLICT,1.5,events
 C_RED_SEA,1.5,events
 C_RUSSIA,1.0,events
 P_US_TARIFF_INDIA,-0.6,events
-NEW_OMC_MARKETING_MARGIN,-3.0,events
+NEW_OMC_MARKETING_MARGIN,-0.5,director_override
 P_WINDFALL_EXPORT_TAX,1.0,events
 P_FUEL_TAX_IN,-0.5,events
 C_GCC,0.0,events

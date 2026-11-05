@@ -63,6 +63,8 @@ def assemble():
         raw_edges.append({**e, "src": A(e["src"]), "dst": A(e["dst"]), "origin": "director", "layer": "director"})
     dedup = load_json(R("events", "dedup.json")) or {}
     drop_ev = set(dedup.get("drop", []))
+    ev_over = (load_json(R("graph", "event_overrides.json")) or {}).get("events", {})
+    drop_ev |= {k for k, v in ev_over.items() if v.get("drop")}
     for p in sorted(glob.glob(R("events", "*.json"))):
         if os.path.basename(p) == "dedup.json":
             continue
@@ -74,6 +76,14 @@ def assemble():
             if ev.get("event_id") in drop_ev:
                 continue
             ev = dict(ev)
+            ov = ev_over.get(ev["event_id"], {})
+            for k in ("prob_by_3m", "prob_by_12m", "status", "date"):
+                if k in ov:
+                    ev[k] = ov[k]
+            if "entry_shocks" in ov:
+                ev["entry_shocks"] = ov["entry_shocks"]
+            if ov:
+                ev["director_override"] = ov.get("reason", "")
             ev["theme_file"] = os.path.basename(p)
             ev["entry_shocks"] = [{**s, "node": A(s["node"])} for s in ev.get("entry_shocks", [])]
             events.append(ev)
@@ -88,6 +98,12 @@ def assemble():
         for e in o.get("company_links", []) or []:
             raw_edges.append({**e, "src": A(e["src"]), "dst": A(e["dst"]), "origin": o["ticker"], "layer": "company_link"})
     nodes.update(new_nodes)
+    for ov in (load_json(R("graph", "edge_overrides.json")) or {}).get("scale", []):
+        for e in raw_edges:
+            if e["src"] == A(ov["src"]) and e["dst"] == A(ov["dst"]) and (ov.get("origin") in (None, e["origin"])):
+                for k in ("w", "w_low", "w_high"):
+                    e[k] = float(e[k]) * float(ov["factor"])
+                e["mechanism"] = f"[Director override ×{ov['factor']}: {ov['reason']}] " + str(e.get("mechanism", ""))
     # dedupe (src,dst): confidence-weighted mean, union range, provenance
     groups = defaultdict(list)
     for e in raw_edges:
@@ -136,7 +152,7 @@ class Network:
         self.out = defaultdict(list)
         for i, e in enumerate(edges):
             src_t = nodes[e["src"]]["type"]
-            # company nodes are sinks except allowed company_links (layer company_link)
+            # company → company edges carry only idiosyncratic (company-specific) shocks; see paths_from
             if src_t == "COMPANY" and e["layer"] != "company_link":
                 continue
             self.out[e["src"]].append(i)
@@ -159,7 +175,10 @@ class Network:
                 if self.nodes[d]["type"] == "COMPANY":
                     if abs(contrib) >= MIN_CONTRIB:
                         yield path + (ei,), contrib, d
-                    # continue only through company_links
+                    # factor/driver-origin shocks stop at companies: consolidated profiles already embed subsidiary
+                    # economics, so passing driver shocks through holding links would double count.
+                    if self.nodes[start]["type"] != "COMPANY":
+                        continue
                 if k < MAX_DEPTH and abs(p2) * DAMP.get(k + 1, 0) >= MIN_CONTRIB * 0.1:
                     stack.append((d, path + (ei,), p2, seen | {d}))
 
@@ -219,6 +238,9 @@ def run(draws=400):
             if nodes[n]["type"] == "COMPANY":           # company-specific event: entry is % equity value directly
                 imp[n] += m
                 imp_o[n][1] += m
+                for path, cval, c in net.paths_from(n):   # idiosyncratic spillover via holding/group/customer links
+                    imp[c] += m * cval
+                    imp_o[c][len(path) + 1] += m * cval
                 continue
             tot, by_order, paths = unit_cache.get(n) or net.unit_response(n)
             for c, v in tot.items():
@@ -255,6 +277,15 @@ def run(draws=400):
                 continue
             cs[t][1] += p * mid
             cs[t][0] += p * mid if str(ce.get("date", ""))[:7] <= "2027-02" else 0.0
+
+    link_out = defaultdict(list)
+    for e in edges:
+        if e["layer"] == "company_link":
+            link_out[e["src"]].append((e["dst"], e["w"]))
+    for t in list(cs):
+        for d2, w in link_out.get(t, []):
+            cs[d2][0] += w * cs[t][0] * DAMP[2]
+            cs[d2][1] += w * cs[t][1] * DAMP[2]
 
     # 4) expected relative returns
     comps = net.companies
@@ -372,6 +403,8 @@ def recent_state(nodes, occurred):
             agg[n] += float(sh.get("ssu", 0))
     for n, v in agg.items():
         state[n], src[n] = float(np.clip(v, -3, 3)), "events"
+    for ov in (load_json(R("graph", "recent_state_overrides.json")) or {}).get("overrides", []):
+        state[ov["node"]], src[ov["node"]] = float(ov["state_ssu"]), "director_override"
     return state, src
 
 

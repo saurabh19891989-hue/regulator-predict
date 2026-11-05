@@ -1,0 +1,428 @@
+{
+ "name": "Waaree Energies Ltd.",
+ "industry": "I_RENEWABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest solar-module maker by capacity (12 GW+ in India per Screener; 3.2 GW in Texas via Waaree Solar Americas), diversifying into cells, inverters (1.1 GW line live), BESS, T&D EPC, specialty gases and data centres. Q2 FY27 revenue Rs 7,518 cr (+24%), EBITDA Rs 1,335 cr (17.8% vs 23.2%), consolidated net profit Rs 719-753 cr (-14 to -15%). Revenue mix: retail 46%, utilities 23%, overseas 18.5%, EPC/O&M/T&D 12.6%. Order book fell 4% q/q after ~3 GW of US export orders were cancelled amid Section 232 uncertainty. FY27 EBITDA guidance Rs 7,000-7,700 cr reiterated (H1 Rs 2,775 cr: requires an H2 step-up). Stock at 52w low Rs 2,162 on 28 Oct, then +7%.",
+ "revenue_mix": [
+  {
+   "segment": "Solar PV modules",
+   "share_pct": 87,
+   "geography": "India ~80% / overseas (US) ~18.5% (Q2 FY27)"
+  },
+  {
+   "segment": "EPC, O&M, T&D",
+   "share_pct": 6,
+   "geography": "India"
+  },
+  {
+   "segment": "Cells, inverters, others",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Cells / wafers / polysilicon-derived (partly imported)",
+   "share_of_costs_pct": 50
+  },
+  {
+   "input": "Glass, EVA, backsheet, junction boxes",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "F_SILVER",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "Power, labour, freight, other",
+   "share_of_costs_pct": 24
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "WAAREEENER",
+   "relation": "policy_effect",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Overseas is 18.5% of Q2 revenue (mostly US) at above-group margins. US Commerce final AD 123.04% + CVD 126.09% on Indian cells/modules (11 Sep 2026) and Section 232 minimum import prices ($0.22/W cells, $0.38/W modules, +15% polysilicon-derivative duty, effective 4 Dec 2026) plus 3 GW of cancelled US export orders. +10 pp further tariff -> marginal US volume -15% on ~15% of EBITDA -> EBITDA -2.5%; EV/MCap 1.05 x persistence 0.8 (structural) -> -2.0. Largest US damage is already realised in the price (-35% from April high).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://upstox.com/news/market-news/stocks/waaree-energies-premier-energies-vikram-solar-us-finalises-steep-duties-on-indian-solar-imports-stocks-in-focus/article-200235/",
+     "date": "2026-09-15",
+     "note": "Final AD 123.04% and CVD 126.09% for Indian producers"
+    },
+    {
+     "source": "https://www.indiaipo.in/news/detail/waaree-energies-share-price-analysts-see-upto-55-upside-despite-target-cuts-after-q2-results",
+     "date": "2026-10-29",
+     "note": "Kotak: 3 GW export orders cancelled amid Section 232 uncertainty; order book -4% q/q"
+    },
+    {
+     "source": "https://www.thehindubusinessline.com/specials/clean-tech/us-section-232-move-opportunity-or-fresh-hurdle-for-indian-solar-makers/article71463304.ece",
+     "date": "2026-09-14",
+     "note": "Section 232 MIPs and 15% duty effective 4 Dec; onshoring programme"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "WAAREEENER",
+   "relation": "policy_effect",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 11.0,
+   "lag": "3-12m",
+   "mechanism": "ALMM List-II (cells) and DCR rules shape the domestic premium market: retail/PM Surya Ghar (46% of Q2 revenue) and utility segments. +1 stronger support -> domestic volumes/prices +8%; revenue +8% with 35% flow-through -> +2.8% of revenue; EBITDA margin 18% -> +16%; EV/MCap 1.05; persistence 0.5 -> +8.4, trimmed for non-DCR weakness -> +6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://upstox.com/news/market-news/stocks/waaree-energies-share-price-drops-3-as-q2-fy-27-net-profit-plunges-14-to-753-crore/article-202510/",
+     "date": "2026-10-28",
+     "note": "Retail 46% of revenue in Q2 (from 28.9% in Q1); utilities 22.9%"
+    },
+    {
+     "source": "https://www.indiaipo.in/news/detail/waaree-energies-share-price-analysts-see-upto-55-upside-despite-target-cuts-after-q2-results",
+     "date": "2026-10-29",
+     "note": "Kotak: weakness in non-DCR market behind profit miss"
+    }
+   ]
+  },
+  {
+   "src": "NEW_SOLAR_CELL_MODULE_PRICE",
+   "dst": "WAAREEENER",
+   "relation": "output_price",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 10.0,
+   "lag": "0-3m",
+   "mechanism": "Module-led, partly cell-integrated; EBITDA margin fell to 17.8% from 23.2% on price/mix. +10% realisation with ~40% flowing to margin = +4% of revenue; EBITDA +22%; EV/MCap 1.05; persistence 0.25 (cell capacity could reach 60-70 GW, per JM) -> +5.8, trimmed -> +5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.indiaipo.in/news/detail/waaree-energies-share-price-analysts-see-upto-55-upside-despite-target-cuts-after-q2-results",
+     "date": "2026-10-29",
+     "note": "JM: gross margin 26%, EBITDA margin 17.8%; FY27 EBITDA guidance Rs 7,000-7,700 cr reiterated; industry cell capacity could reach 60-70 GW"
+    },
+    {
+     "source": "https://upstox.com/news/market-news/stocks/waaree-energies-share-price-drops-3-as-q2-fy-27-net-profit-plunges-14-to-753-crore/article-202510/",
+     "date": "2026-10-28",
+     "note": "EBITDA Rs 1,335 cr -5.1% y/y, margin 17.8% vs 23.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "WAAREEENER",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Power demand growth drives RE tendering. +3 pp demand growth -> annual solar additions +5% -> volumes +5%; EBITDA +6%; x1.05 x 0.5 -> +3.2, trimmed -> +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.woodmac.com/press-releases/india-on-track-for-record-50-gw-solar-year-as-almm-ii-mandate-reshapes-domestic-supply-chain/",
+     "date": "2026-08-13",
+     "note": "India >50 GW dc solar additions forecast for 2026; slowdown after ALMM-II rush"
+    }
+   ]
+  },
+  {
+   "src": "F_SILVER",
+   "dst": "WAAREEENER",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Silver paste ~4% of module COGS for in-house cells (cell capacity smaller than modules, so partial); +12% silver -> +0.5% COGS ~0.4% of revenue -> EBITDA -2.2% x 1.05 x 0.5 (pass-through half) -> -0.6; shrunk with empirical (silver not significant) -> -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Silver -30% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "WAAREEENER",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Aluminium frames ~8% of module cost; +10% -> +0.8% COGS, 50% passed -> EBITDA -1.9%; x1.05 x 0.5 -> -0.9. Empirical +1.22 (t +0.7) is insignificant and opposite in sign; not adopted.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/WAAREEENER.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_ALUMINIUM +1.22 (t +0.7)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "WAAREEENER",
+   "relation": "fx_translation",
+   "w": -1.3,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Import-heavy BOM (cells, wafers, glass, silver, EVA ~55% of COGS = ~41% of revenue) vs overseas revenue 18.5% and US module sales in USD; net short USD ~22% of revenue. +3% USD/INR -> -0.66% of revenue; half hedged/passed -> -0.33% -> EBITDA -1.8%; x1.05 x 0.5 -> -1.0; empirical -2.36 (t -1.0) -> -1.3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/WAAREEENER.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDINR -2.36 (t -1.0)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "WAAREEENER",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Capex-heavy (US module lines, cells, inverters, BESS, data-centre arm) with interest Rs 105 cr in Q2 (up from Rs 43 cr a year earlier) and rising working capital; +25 bp on ~Rs 8,000 cr debt (estimate) = Rs 20 cr = 1% of PAT, plus customer financing costs -> -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/WAAREEENER.md",
+     "date": "2026-11-05",
+     "note": "Interest 43 (Jun-25) -> 105 (Sep-26) Rs cr per quarter"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "WAAREEENER",
+   "relation": "competition",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Weaker yuan (+3% USD/CNY) cheapens Chinese cells/modules/wafers (Waaree imports cells and competes with Chinese-origin modules for non-DCR); landed cost advantage 3% on a 26% gross margin -> -1.0. Empirical -3.15 (t -0.7) is larger/insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/WAAREEENER.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDCNY -3.15 (t -0.7)"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "WAAREEENER",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": -2.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "New Indian duties on Chinese cells/glass shield module pricing but raise Waaree's import-cell cost; net ambiguous, slight positive as the group is expanding its own cell capacity. Status of current duties not re-verified (model knowledge).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "DGTR solar cell/glass cases; not verified in this run"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "WAAREEENER",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Diversification into BESS, inverters (1.1 GW line live 30 Sep 2026), transformers/T&D EPC (Rs 600 cr new orders), data centres (Waaree Green Data Centers acquired). +1 = transition capex 10% above plan -> diversified revenue streams +6% -> EBITDA +5%; x1.05 x 0.6 -> +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/waaree-energies-q2-results-revenue-rises-24-pc-but-profit-and-margins-take-a-hit-20020709.htm",
+     "date": "2026-10-27",
+     "note": "Acquires Waaree Green Data Centers; expanding into batteries, transformers, transmission"
+    },
+    {
+     "source": "market_impact/data/packs/WAAREEENER.md",
+     "date": "2026-09-30",
+     "note": "Pack headline: commercial production on 1.10 GW inverter line in Gujarat"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Domestic developers / utility buyers / retail channel (PM Surya Ghar)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Retail 46% and utilities 23% of Q2 revenue"
+  },
+  {
+   "counterparty": "Waaree Solar Americas (Texas, 3.2 GW)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "Two new 800 MW lines started Nov 2026"
+  },
+  {
+   "counterparty": "Premier Energies",
+   "ticker": "PREMIERENE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Cell-integrated rival"
+  },
+  {
+   "counterparty": "Vikram Solar and Chinese/Indian cell makers",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Cell capacity race"
+  },
+  {
+   "counterparty": "Cell, wafer, glass, silver suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Imported content"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12-04",
+   "event": "Section 232 minimum import prices and 15% duty on polysilicon derivatives take effect (US)",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.thehindubusinessline.com/specials/clean-tech/us-section-232-move-opportunity-or-fresh-hurdle-for-indian-solar-makers/article71463304.ece"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Dec quarter); test of FY27 EBITDA guidance Rs 7,000-7,700 cr",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 10.0,
+   "source": "https://www.indiaipo.in/news/detail/waaree-energies-share-price-analysts-see-upto-55-upside-despite-target-cuts-after-q2-results"
+  },
+  {
+   "date": "2026-11",
+   "event": "US ITC / Commerce follow-through on AD/CVD orders on Indian cells",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 2.0,
+   "source": "https://upstox.com/news/market-news/stocks/waaree-energies-premier-energies-vikram-solar-us-finalises-steep-duties-on-indian-solar-imports-stocks-in-focus/article-200235/"
+  },
+  {
+   "date": "2027-03",
+   "event": "Completion of Waaree Green Data Centers integration / first data-centre capex disclosure",
+   "type": "corporate_action",
+   "prob": 0.4,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.cnbctv18.com/market/earnings/waaree-energies-q2-results-revenue-rises-24-pc-but-profit-and-margins-take-a-hit-20020709.htm"
+  },
+  {
+   "date": "2027-02",
+   "event": "Reversal or confirmation of cancelled ~3 GW US export orders",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://www.indiaipo.in/news/detail/waaree-energies-share-price-analysts-see-upto-55-upside-despite-target-cuts-after-q2-results"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-27: revenue Rs 7,518 cr (+23.9% y/y, -5% q/q); EBITDA Rs 1,335 cr (-5.1%), margin 17.8%; consolidated net profit Rs 718.7 cr attributable (PAT Rs 753 cr)",
+  "trend": "Sequential decline in revenue and margin; mix shift to retail; EPC down (Rs 447 cr vs Rs 763 cr).",
+  "valuation": "Market cap ~Rs 70,000 cr at Rs 2,432; P/E 17.9 trailing; 52w Rs 2,162-3,557 (-35% from April high); 12m -28%; 18 brokers: 12 Buy, 4 Hold, 2 Sell.",
+  "recent_developments": [
+   "2026-08-06: US Section 232 proclamation on polysilicon/solar (MIPs, 15% duty, effective 4 Dec)",
+   "2026-09-11: US Commerce final AD/CVD on Indian solar",
+   "2026-10-27: Q2 results, acquires Waaree Green Data Centers",
+   "2026-11-02: US capacity 3.2 GW; stake in Wictor Sealz"
+  ]
+ },
+ "key_risks": [
+  "US trade barriers (AD/CVD ~249% combined, Section 232 MIP) and order cancellations",
+  "Margin compression and H2-loaded guidance",
+  "Cell oversupply and module price falls",
+  "Non-DCR market weakness",
+  "Capital-intensive diversification (data centres, BESS) and rising interest",
+  "Related-party/promoter-group complexity"
+ ],
+ "upside_triggers": [
+  "US onshoring benefits from Section 232 for Texas output",
+  "Domestic ALMM-II premium and PM Surya Ghar",
+  "FY27 guidance delivery",
+  "Cell capacity ramp improving integration margin"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_SOLAR_CELL_MODULE_PRICE",
+   "type": "FACTOR",
+   "name": "Indian solar module / cell realisations",
+   "ssu": "+10% Indian module/cell realisations"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.cnbctv18.com/market/earnings/waaree-energies-q2-results-revenue-rises-24-pc-but-profit-and-margins-take-a-hit-20020709.htm",
+   "date": "2026-10-27",
+   "what": "Q2 FY27 results and data-centre acquisition"
+  },
+  {
+   "url": "https://upstox.com/news/market-news/stocks/waaree-energies-share-price-drops-3-as-q2-fy-27-net-profit-plunges-14-to-753-crore/article-202510/",
+   "date": "2026-10-28",
+   "what": "Segment mix, EBITDA, Q2 details"
+  },
+  {
+   "url": "https://www.indiaipo.in/news/detail/waaree-energies-share-price-analysts-see-upto-55-upside-despite-target-cuts-after-q2-results",
+   "date": "2026-10-29",
+   "what": "Broker views: Kotak, JM; order cancellations; guidance"
+  },
+  {
+   "url": "https://www.saurenergy.com/solar-energy-news/waaree-energies-expands-us-solar-module-capacity-to-32-gw-acquires-3334-stake-in-wictor-sealz-12775209",
+   "date": "2026-11-02",
+   "what": "US capacity 3.2 GW"
+  },
+  {
+   "url": "https://www.thehindubusinessline.com/specials/clean-tech/us-section-232-move-opportunity-or-fresh-hurdle-for-indian-solar-makers/article71463304.ece",
+   "date": "2026-09-14",
+   "what": "Section 232 details"
+  },
+  {
+   "url": "https://upstox.com/news/market-news/stocks/waaree-energies-premier-energies-vikram-solar-us-finalises-steep-duties-on-indian-solar-imports-stocks-in-focus/article-200235/",
+   "date": "2026-09-15",
+   "what": "US AD/CVD final rates"
+  },
+  {
+   "url": "market_impact/data/packs/WAAREEENER.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack"
+  }
+ ],
+ "ticker": "WAAREEENER",
+ "as_of": "2026-11-05"
+}

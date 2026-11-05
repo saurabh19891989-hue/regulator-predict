@@ -1,0 +1,467 @@
+{
+ "ticker": "PNB",
+ "name": "Punjab National Bank",
+ "as_of": "2026-11-05",
+ "industry": "I_PSU_BANKS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's second-largest public-sector bank by business (government 70.08%), Rs11-12 lakh cr advances and Rs16-17 lakh cr deposits (model est.), ~50% of loans repo/EBLR-linked. Q2 FY27: PAT Rs5,532cr (+13% y/y), NII Rs11,601cr (+11%), NIM above guidance, provisions lower, slippages up from June quarter. Management expects 7-9bp NIM expansion in Q3 after the 2026-10-07 repo hike and targets Rs6,000cr quarterly profit. Debut dollar bond planned but deferred (early 2027). Stock Rs125.8, P/E 6.9x, P/B 0.95x, +12% in a month, +8% on results day.",
+ "revenue_mix": [
+  {
+   "segment": "retail, agriculture and MSME lending",
+   "share_pct": 55,
+   "geography": "India (north-heavy; model est.)"
+  },
+  {
+   "segment": "corporate and large-ticket lending",
+   "share_pct": 30,
+   "geography": "India"
+  },
+  {
+   "segment": "treasury and fee income",
+   "share_pct": 15,
+   "geography": "India; small overseas"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 35
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "PNB",
+   "relation": "funding_cost",
+   "w": 1.0,
+   "w_low": -2.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Asset-sensitive: ~50% of Rs11-12 lakh cr advances are EBLR/repo-linked (model est.) => 25bp = ~Rs1,400cr/yr; deposit repricing gives back about half over 6-12 months; management guides NIM +7-9bp in Q3 (~Rs1,400cr annualised on ~Rs18 lakh cr assets = ~5% of PBT ~Rs29,000cr). Net +2.5% PBT x persistence 0.5 ~ +1.2, then offset by slower growth/treasury losses (see G-sec) => +1. Wide range because stock reaction to hikes depends on growth fears.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PNB+expects+7-9+bps+NIM+expansion+in+Q3+after+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "PNB expects 7-9bp NIM expansion in Q3 after the repo hike (ET BFSI 2026-10-19)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+PNB+BoB+Indian+Bank+UCO+Bank+raise+lending+rates+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-08",
+     "note": "PNB, BoB, Indian Bank, UCO raise repo-linked lending rates after hike (Moneycontrol 2026-10-08)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    },
+    {
+     "source": "market_impact/data/packs/PNB.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "PNB",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "10y +25bp: AFS+FVTPL book ~Rs1.3 lakh cr (model est.) x duration ~2 x 25bp = ~Rs650cr MTM = 2.2% of PBT, one-off (persistence 0.25 => -0.6) plus cost-of-equity effect at P/E 6.9x/P/B 0.95x (-1.0). Pack: US 10y elasticity -0.37 (t -0.6), no contradiction.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "10y G-sec closed 7.19% on 2026-11-04 after 7.48% on 2026-10-23 (Moneycontrol 2026-11-04; BusinessLine 2026-10-23)"
+    },
+    {
+     "source": "market_impact/data/packs/PNB.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "PNB",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth: PNB advances +14-15% y/y baseline (model est.); +1.5pp extra growth on Rs11.5 lakh cr => NII +1.5% and fee income; PAT +2% x persistence 0.75 + sentiment => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBL+Bank+Q2+Loan+Growth+Hits+40%25+PNB+BoB+AU+SFB+deposits+matter+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Q2 business updates: deposit mobilisation is the constraint for credit growth (NiftyTrader 2026-10-05)"
+    },
+    {
+     "source": "market_impact/data/packs/PNB.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "PNB",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Deposits are the binding constraint on PSU-bank credit growth (NiftyTrader 2026-10-05). +3pp system deposit growth lowers marginal deposit cost ~10bp and eases the CD ratio => NII +1.5%, persistence 0.75 => +1.2 plus sentiment => +2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBL+Bank+Q2+Loan+Growth+Hits+40%25+PNB+BoB+AU+SFB+deposits+matter+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-05",
+     "note": "Q2 business updates: deposit mobilisation is the constraint for credit growth (NiftyTrader 2026-10-05)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "PNB",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr liquidity: lowers short-term funding/CP rates, lifts treasury demand for bonds; ~5bp NIM => +0.5% PBT; the RBI is currently draining surplus (daily CRR maintenance to 99%), so the sign of the next move is negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+raises+banks+daily+CRR+maintenance+requirement+excess+liquidity+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "RBI raised daily CRR maintenance to 99% to drain surplus liquidity; surplus shrinking on tax outflows (CNBC TV18 2026-10-09; Rediff 2026-10-23)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "PNB",
+   "relation": "demand_driver",
+   "w": -6.0,
+   "w_low": -10.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp system credit cost; PNB sensitivity ~0.6x: +30bp on Rs11.5 lakh cr = Rs3,450cr = ~12% of PBT; persistence 0.5 => -6. Q2: provisions fell and GNPA improved but slippages rose from June quarter (CNBC TV18 2026-10-16), so cycle risk is not zero.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Punjab+National+Bank+Q2+results+net+profit+rises+13%25+5%2C532+crore+NII+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Q2 FY27 PAT Rs5,532cr (+13%), NII Rs11,601cr (+11%), NIM above guidance, provisions lower, slippages up from June qtr (Business Standard/NDTV Profit/Upstox/CNBC TV18 2026-10-16)"
+    },
+    {
+     "source": "market_impact/data/packs/PNB.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "PNB",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Small retail unsecured/credit-card share (<5% of advances, model est.): +1pp delinquency on 5% = 5bp of book = Rs575cr = 2% of PBT x persistence 0.5 => -1, scaled to -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PNB.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "PNB",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "RBI expected-credit-loss framework from April 2027: SBI estimates Rs19,500cr post-tax; Union Bank Rs5,500cr (ET BFSI 2026-10-21). PNB's number is not found; assume ~Rs6,000-8,000cr one-time equity hit (4-5% of ~Rs1.5 lakh cr net worth), phased through reserves, so equity value effect ~-3 with the market partly pricing it. PSU banks may face greater pressure (fintechbiznews 2026-11-03).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+expected+credit+loss+framework+April+2027+banks+provisioning+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "RBI ECL framework from April 2027; SBI estimates Rs19,500cr post-tax impact; RBI to meet bank CEOs on readiness (Moneycontrol/Business Standard 2026-11-03)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Punjab+National+Bank+Q2+results+net+profit+rises+13%25+5%2C532+crore+NII+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "Q2 FY27 PAT Rs5,532cr (+13%), NII Rs11,601cr (+11%), NIM above guidance, provisions lower, slippages up from June qtr (Business Standard/NDTV Profit/Upstox/CNBC TV18 2026-10-16)"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "PNB",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Liberalising foreign ownership in PSU banks (cap now 20%) or advancing PSU-bank privatisation/consolidation would re-rate low-multiple PSBs; IDBI sale to Fairfax (CCEA 2026-10-14) shows the path. PNB itself is not on the 75%-stake-cut list (promoter 70.08%) so benefit is sector re-rating (+3), not a direct sale.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PSU+bank+FDI+OR+privatisation+OR+merger+2026+government+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Govt plans to cut stake to 75% in four PSU banks (not PNB, promoter 70.08%) and a further consolidation round; IDBI sale to Fairfax cleared 2026-10-14 (ET/Moneycontrol/Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "PNB",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP growth lifts credit demand (+2pp), lowers slippages (-5bp credit cost): ~+4% PAT x persistence 0.75 => +3. RBI FY27 GDP forecast raised to 7.1% on 2026-10-07 (ETV Bharat).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "PNB",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "PSU-bank loan books lean on infra/PSU-linked borrowers; +10% capex growth adds ~1pp to corporate loan growth and improves repayment => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PNB.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "PNB",
+   "relation": "discount_rate",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding only 6.7%, but market beta 1.3 and PSU-bank flows follow DII/FPI sentiment: +US$5bn inflow ~ +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PNB.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "PNB",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Foreign branches and forex income are small; a planned debut dollar bond (deferred on hedging costs) would add exposure. +3% USD/INR => -0.5; pack -0.73 (t -0.5).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Punjab+National+Bank+dollar+bond+OR+QIP+OR+capital+raise+OR+stake+sale+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-11",
+     "note": "PNB may tap offshore debt market in early 2027 (BusinessWorld 2026-10-11); lenders defer dollar sales on hedging costs (Reuters 2026-10-27)"
+    },
+    {
+     "source": "market_impact/data/packs/PNB.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India (promoter)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "70.08% holding; capital and policy owner"
+  },
+  {
+   "counterparty": "Retail depositors (CASA/term)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "deposit growth is the credit constraint"
+  },
+  {
+   "counterparty": "SBI, Bank of Baroda, Canara, Union Bank",
+   "ticker": "SBIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "PSU peers reprice and compete for deposits"
+  },
+  {
+   "counterparty": "HDFC Bank / ICICI Bank",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "private banks in retail and MSME"
+  },
+  {
+   "counterparty": "RBI",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "regulator; ECL, liquidity, penalty (Rs1.56cr on 2026-10-29)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (inferred; Q2 on 2026-10-16): proof of 7-9bp NIM expansion",
+   "type": "results",
+   "prob": 0.92,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=PNB+expects+7-9+bps+NIM+expansion+in+Q3+after+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Debut dollar bond (offshore) if hedging costs allow",
+   "type": "capex",
+   "prob": 0.4,
+   "impact_pct_low": -1.5,
+   "impact_pct_high": 1.5,
+   "source": "https://news.google.com/rss/search?q=Punjab+National+Bank+dollar+bond+OR+QIP+OR+capital+raise+OR+stake+sale+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "ECL framework effective; PNB quantifies transition hit (peer SBI Rs19,500cr, Union Rs5,500cr)",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=RBI+expected+credit+loss+framework+April+2027+banks+provisioning+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC (early Dec; date unverified): further hike boosts asset-sensitive NIM but hurts treasury",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -2.5,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Government PSU-bank consolidation/stake-sale announcements (reports 2026-10-23; PNB not named for stake cut)",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=PSU+bank+FDI+OR+privatisation+OR+merger+2026+government+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs5,532cr (+13% y/y; Jun qtr Rs5,253cr), financing profit Rs3,834cr vs Rs2,242cr a year ago; provisions falling; slippages up QoQ.",
+  "valuation": "P/E 6.9x, P/B 0.95x (Rs126 / BV Rs133), div yield 2.4%; 52w Rs98.5-135; 1m +12.4%, 12m +2%; 1y vol 27%.",
+  "recent_developments": [
+   "2026-10-07: repo hiked to 5.50%",
+   "2026-10-08: PNB raises repo-linked lending rates",
+   "2026-10-16: Q2 results; 2026-10-19 stock +6-8% (ICICI Securities TP Rs140)",
+   "2026-10-19: guides NIM +7-9bp in Q3",
+   "2026-10-23: reports of PSU-bank stake sales/consolidation (PNB not among four)",
+   "2026-10-27: dollar bond plans deferred industry-wide",
+   "2026-10-29: RBI penalty Rs1.56cr (minor)"
+  ]
+ },
+ "key_risks": [
+  "ECL transition capital hit from April 2027",
+  "Slippage trend (up QoQ) and cycle turn",
+  "Deposit growth constraining credit",
+  "Treasury MTM losses with 10y yields near 7.2-7.5%",
+  "Government-driven consolidation or capital calls"
+ ],
+ "upside_triggers": [
+  "NIM expansion from EBLR repricing",
+  "Rs6,000cr quarterly profit run-rate",
+  "PSU-bank re-rating via FDI/consolidation",
+  "Falling oil and easing yields"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/PNB.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Punjab+National+Bank+Q2+results+net+profit+rises+13%25+5%2C532+crore+NII+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PNB+expects+7-9+bps+NIM+expansion+in+Q3+after+repo+rate+hike+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-19",
+   "what": "NIM guidance"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+repo+rate+hike+PNB+BoB+Indian+Bank+UCO+Bank+raise+lending+rates+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-08",
+   "what": "lending-rate repricing"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Punjab+National+Bank+dollar+bond+OR+QIP+OR+capital+raise+OR+stake+sale+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-11",
+   "what": "dollar bond plans"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PSU+bank+FDI+OR+privatisation+OR+merger+2026+government+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "PSU bank stake/consolidation"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+expected+credit+loss+framework+April+2027+banks+provisioning+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "ECL framework"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}

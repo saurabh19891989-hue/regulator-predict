@@ -1,0 +1,56 @@
+{
+ "note": "Director-authored bridging edges. Each is sized from figures in the agents' own profiles; see mechanism.",
+ "edges": [
+  {
+   "src": "NEW_OMC_MARKETING_MARGIN",
+   "dst": "IOC",
+   "relation": "output_price",
+   "w": 6.5,
+   "w_low": 3.0,
+   "w_high": 10.0,
+   "lag": "0-3m",
+   "confidence": "medium",
+   "mechanism": "+Rs1/l on ~78bn l petrol+diesel (IOC profile) = Rs7.8k cr = 13% of normalised EBITDA Rs60k cr; x EV/MCap 1.7 x persistence 0.3 = +6.6%. Brent and fuel-tax effects stay on IOC's own edges (catalogue edges into this node zeroed to avoid double count).",
+   "evidence": [
+    {
+     "source": "market_impact/companies/IOC.json",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "NEW_OMC_MARKETING_MARGIN",
+   "dst": "HINDPETRO",
+   "relation": "output_price",
+   "w": 12.0,
+   "w_low": 6.0,
+   "w_high": 18.0,
+   "lag": "0-3m",
+   "confidence": "medium",
+   "mechanism": "+Rs1/l on ~45bn l (HPCL profile) = Rs4.5k cr = 22.5% of normalised EBITDA Rs20k cr; x EV/MCap 1.8 x persistence 0.3 = +12%.",
+   "evidence": [
+    {
+     "source": "market_impact/companies/HINDPETRO.json",
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "NEW_OMC_MARKETING_MARGIN",
+   "dst": "BPCL",
+   "relation": "output_price",
+   "w": 6.0,
+   "w_low": 3.0,
+   "w_high": 9.0,
+   "lag": "0-3m",
+   "confidence": "low",
+   "mechanism": "+Rs1/l on ~50bn l (model knowledge) = Rs5k cr = ~14% of normalised EBITDA ~Rs35k cr; x EV/MCap 1.4 x persistence 0.3 = +6%.",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05"
+    }
+   ]
+  }
+ ]
+}

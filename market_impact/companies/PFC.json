@@ -1,0 +1,481 @@
+{
+ "ticker": "PFC",
+ "name": "Power Finance Corporation Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_INFRA_POWER_FINANCE",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Government-controlled (55.99%) Maharatna NBFC, India's largest power-sector lender (generation, transmission, distribution, increasingly renewables); consolidated with ~52.6% owned REC Ltd (model knowledge), combined loan book ~Rs11 lakh cr. Q2 FY27 consolidated PAT Rs7,682cr (-2% y/y), H1 Rs16,679cr; FY26 PAT Rs33,625cr. Trades at 0.73x book, 4.1x earnings, 5.6% dividend yield, -21% in 3 months on bank competition, loan-growth downgrades (REC guidance cut to 10-11%) and a Morgan Stanley downgrade. RBI cleared the PFC-REC merger (NOC 2026-10-16); swap ratio reported at 88:100, pending shareholder/creditor/other approvals.",
+ "revenue_mix": [
+  {
+   "segment": "interest on loans to state utilities/discoms/gencos",
+   "share_pct": 55,
+   "geography": "India (state sector; model est.)"
+  },
+  {
+   "segment": "loans to central/private generation, transmission, renewables",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "fees, treasury and other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_GSEC_10Y_IN",
+   "share_of_costs_pct": 60
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 30
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "PFC",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Funding is ~Rs9.8 lakh cr (Q2 consolidated interest Rs18,058cr x4 / ~7.4%), mostly AAA bonds priced off G-secs; 10y +25bp raises fresh/refinance cost (~Rs1.5 lakh cr/yr to roll) by ~Rs375cr in yr1 = ~1% of PBT (TTM financing profit Rs42,511cr), partly passed to resetting loans; plus a +25bp rise in cost of equity on a 4x-P/E, 5.6%-yield bond-proxy stock (-1.5%). Net ~-2.5; pack shows US 10y elasticity -1.18 (t=-1.6), consistent in sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "10y G-sec closed 7.19% on 2026-11-04 after 7.48% on 2026-10-23 (Moneycontrol 2026-11-04; BusinessLine 2026-10-23)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=PFC+Q2+Results+Net+Profit+Falls+2%25+Rs+7%2C682+Crore+2nd+interim+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "PFC Q2 FY27 consolidated PAT Rs7,682cr (-2% y/y), H1 Rs16,679cr, 2nd interim dividend declared (NDTV Profit/Zee 2026-11-04)"
+    },
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PFC",
+   "relation": "funding_cost",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "~25% of liabilities floating/short (Rs2.45 lakh cr, model est.) x 25bp = Rs612cr = 1.5% of PBT; loans to utilities reprice with 1-3 year reset lag so NIM dips before recovering; persistence 0.5, small multiple effect => ~-2. RBI signalled further hikes (minutes).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "MPC minutes flag more hikes but wary of an aggressive cycle (Reuters 2026-10-21)"
+    },
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "PFC",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+50bp AAA PSU spreads on ~Rs1.2 lakh cr annual fresh borrowing = Rs600cr in yr1 (1.5% of PBT), passed through only after reset lags; persistence 0.5 => ~-1.0; valuation effect -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "PFC",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = visible reform progress (discom privatisation/tariff true-ups/debt relief). Power sector is ~all of the book and state discoms the largest risk; reform narrows the 0.73x P/B discount by ~5% and supports sanctions under distribution schemes. Low-visibility catalyst: Renewable Watch (2026-10-01) lists privatisation, debt relief and market access as long-term fixes.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=power+distribution+discom+reform+privatisation+2026+PFC+loans+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "discom finances: privatisation, debt relief, market access emerging as long-term solutions (Renewable Watch 2026-10-01)"
+    },
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "PFC",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp electricity demand growth lifts generation/transmission capex and working-capital demand: loan growth +1pp on Rs11 lakh cr => NII +1.2% x persistence 0.75 => ~+1 plus sentiment => +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "PFC",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Central/state power capex (transmission, pumped storage, discom schemes) is financed via PFC/REC; +10% growth in public capex ~ +2pp disbursements => NII +2% over 2 years, persistence 0.75 => +1.5 plus sentiment => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "PFC",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Renewables/storage are the fastest growing part of power lending; stronger support (ALMM relaxations, VGF, transmission waivers) raises disbursements and widens the borrower base beyond state utilities (model knowledge on mix).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "NEW_BANK_INFRA_LENDING_COMPETITION",
+   "dst": "PFC",
+   "relation": "competition",
+   "w": -6.0,
+   "w_low": -10.0,
+   "w_high": -2.5,
+   "lag": "3-12m",
+   "mechanism": "SSU: +1 = banks take ~5pp of power/infra lending share or compress spreads ~25bp. 25bp on Rs11 lakh cr = Rs2,750cr = 6.5% of PBT; offset by volume 30%, persistence 0.75 => ~-3.5 plus growth-downgrade effect (REC cut FY27 loan growth to 10-11%; Bernstein cut targets) => -6. Already partly priced after -21% in 3m.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Bernstein+PFC+REC+bank+competition+loan+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-25",
+     "note": "Bernstein cuts PFC/REC targets as bank competition weighs on loan growth (ET/NDTV Profit 2026-08-25)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=PFC+Q2+FY27+net+profit+falls+2%25+standalone+loan+assets+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "REC cuts FY27 loan-book growth guidance to 10-11% from 12-13% (Business Upturn 2026-10-29)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Power+Finance+Corporation+stock+pressured+by+Morgan+Stanley+downgrade+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-01",
+     "note": "Morgan Stanley downgrade pressures PFC (ad-hoc-news 2026-11-01)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "PFC",
+   "relation": "demand_driver",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": -0.6,
+   "lag": "3-12m",
+   "mechanism": "+50bp system credit cost; PFC's book is ~mostly sovereign-owned/state utilities with a legacy stressed generation tail. Beta to system ~0.2: +10bp on Rs11 lakh cr = Rs1,100cr = 2.6% of PBT, persistence 0.5 => -1.3, sentiment => -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "PFC",
+   "relation": "regulatory_risk",
+   "w": -2.5,
+   "w_low": -6.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "One step tighter (project-finance provisioning for under-construction assets, large-exposure caps to single state utilities, or conditions attached to the REC merger as an NBFC-UL) => ~1% extra provisions on part of book / lower leverage; -2.5. RBI NOC for the merger already given 2026-10-16, which reduces near-term regulatory uncertainty.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=REC+PFC+merger+OR+consolidation+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "RBI NOC for REC-PFC merger 2026-10-16; NSE/BSE no-objection letters 2026-10-19; shareholder, creditor and other approvals pending (CNBC TV18, Kalkine, Indian Masterminds)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "PFC",
+   "relation": "discount_rate",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "FII holding 17.8% (Sep) from 20.5% (Jun); market beta 1.56 and 29% vol; +US$5bn quarterly inflow ~ +2.5% for a high-beta PSU financial.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "PFC",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Foreign-currency borrowings (~8-10% of debt, model est.) are largely hedged; +3% USD/INR raises hedge cost and any unhedged MTM => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PFC.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "RECLTD",
+   "dst": "PFC",
+   "relation": "holding_stake",
+   "w": 0.35,
+   "w_low": 0.2,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "w = % change in PFC equity per +1% in RECLTD equity. PFC owns ~52.6% of REC (model knowledge, 2019 acquisition); REC's market value is ~40-45% of PFC's market value, and the RBI-cleared merger ties the two. Co-movement is high (both fell on bank-competition/guidance cuts).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=REC+PFC+merger+OR+consolidation+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-16",
+     "note": "RBI NOC for REC-PFC merger 2026-10-16; NSE/BSE no-objection letters 2026-10-19; shareholder, creditor and other approvals pending (CNBC TV18, Kalkine, Indian Masterminds)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=PFC+REC+swap+ratio+88+shares+PFC+shareholders+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "88:100 share-swap ratio reported (ET Now 2026-10-21; direction not verified); Centre weighs preference shares to retain 51% (CNBC TV18 2026-10-26)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=PFC+Q2+FY27+net+profit+falls+2%25+standalone+loan+assets+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-29",
+     "note": "REC cuts FY27 loan-book growth guidance to 10-11% from 12-13% (Business Upturn 2026-10-29)"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "REC Ltd",
+   "ticker": "RECLTD",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "~52.6% owned (model knowledge); merger cleared by RBI 2026-10-16"
+  },
+  {
+   "counterparty": "State discoms and generation utilities",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "largest borrowers; credit depends on state finances and tariff reform"
+  },
+  {
+   "counterparty": "NTPC, POWERGRID, NHPC, Adani Power, JSW Energy",
+   "ticker": "NTPC",
+   "role": "customer",
+   "importance": "medium",
+   "note": "central/private power borrowers"
+  },
+  {
+   "counterparty": "Bond investors (insurers, provident funds, banks)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "AAA bonds are the main funding source"
+  },
+  {
+   "counterparty": "IREDA, banks (SBI, BoB)",
+   "ticker": "IREDA",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "banks compressing spreads; Bernstein 2026-08-25"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "PFC-REC merger: shareholder, creditor and (probably) NCLT steps; government considering preference shares to retain 51% control",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=PFC+REC+swap+ratio+88+shares+PFC+shareholders+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-09",
+   "event": "Merger effective date (any approvals chain slipping is plausible; timing not announced)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=REC+PFC+merger+OR+consolidation+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (inferred cadence; Q2 on 2026-11-04): loan-growth, NIM and merger commentary",
+   "type": "results",
+   "prob": 0.92,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=PFC+Q2+Results+Net+Profit+Falls+2%25+Rs+7%2C682+Crore+2nd+interim+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Second interim dividend record date (declared with Q2); yield ~5.6% supports downside",
+   "type": "corporate_action",
+   "prob": 0.95,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 0.5,
+   "source": "https://news.google.com/rss/search?q=PFC+Q2+Results+Net+Profit+Falls+2%25+Rs+7%2C682+Crore+2nd+interim+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC (early Dec, date unverified): second hike lifts AAA yields",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Flat earnings: consolidated PAT Rs7,682cr (-2% y/y; Jun qtr Rs8,998cr), revenue Rs29,044cr (+0.5% y/y), interest Rs18,058cr (+4% y/y); 'expenses' rose to Rs1,379cr from Rs35cr in Jun qtr. TTM revenue growth +2%.",
+  "valuation": "P/B 0.73x (Rs329 / BV Rs445), P/E 4.1x, yield 5.6%; 52w Rs310-486; 3m -21%, 6m -28%, 12m -17%.",
+  "recent_developments": [
+   "2026-08-10: CLSA cuts targets on mixed Q1; shares -up to 8% (Moneycontrol)",
+   "2026-08-25: Bernstein cuts PFC/REC targets on bank competition; sees 37-41% upside still",
+   "2026-10-16: RBI NOC for REC-PFC merger; 2026-10-19 NSE/BSE NOCs",
+   "2026-10-21: 88:100 swap ratio reported (ET Now)",
+   "2026-10-26: Centre weighs preference shares to hold 51% post-merger (CNBC TV18)",
+   "2026-10-29: REC cuts FY27 loan growth guidance to 10-11% from 12-13%",
+   "2026-11-01: Morgan Stanley downgrade",
+   "2026-11-04: Q2 results and second interim dividend"
+  ]
+ },
+ "key_risks": [
+  "Bank competition compressing spreads and loan growth (REC guidance cut)",
+  "Merger terms/approvals/timeline and government's 51% retention structure",
+  "State discom credit quality",
+  "Rising AAA yields and spreads",
+  "Further RBI prudential tightening"
+ ],
+ "upside_triggers": [
+  "Merger completion removing holding-company discount",
+  "Discom reform progress",
+  "Yields easing after oil falls",
+  "Dividend yield support at 0.73x book"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_BANK_INFRA_LENDING_COMPETITION",
+   "type": "FACTOR",
+   "name": "Bank competition in power/infrastructure lending",
+   "ssu": "+1 = banks take ~5pp of power/infra lending share or compress spreads ~25bp"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/PFC.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=REC+PFC+merger+OR+consolidation+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-16",
+   "what": "RBI/NSE/BSE NOCs for merger"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PFC+REC+swap+ratio+88+shares+PFC+shareholders+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "swap ratio, 51% govt control"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Bernstein+PFC+REC+bank+competition+loan+growth+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-25",
+   "what": "Bernstein bank competition"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PFC+Q2+FY27+net+profit+falls+2%25+standalone+loan+assets+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-29",
+   "what": "REC guidance cut"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PFC+Q2+Results+Net+Profit+Falls+2%25+Rs+7%2C682+Crore+2nd+interim+dividend+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "PFC Q2"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Power+Finance+Corporation+stock+pressured+by+Morgan+Stanley+downgrade+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-01",
+   "what": "Morgan Stanley downgrade"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "G-sec yield"
+  }
+ ]
+}

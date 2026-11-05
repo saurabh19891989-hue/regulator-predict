@@ -1,0 +1,4 @@
+{"overrides": [
+ {"node": "NEW_OMC_MARKETING_MARGIN", "state_ssu": -0.5,
+  "reason": "Agents booked the margin LEVEL vs normal (-3). Since 2026-06-01 Brent and USD/INR are flat and retail prices frozen, so the CHANGE in marketing margin is small; -0.5 reflects continuing LPG under-recovery. OMC 6m returns (-1% to +3%) vs 12m (-14% to -21%) confirm the collapse was priced before June."}
+]}

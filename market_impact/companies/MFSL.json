@@ -1,0 +1,366 @@
+{
+ "industry": "I_LIFE_INSURANCE",
+ "business_summary": "Holding company whose main asset is ~80% of Axis Max Life Insurance (Axis Bank holds ~19.99% after IRDAI-approved purchase, model/search). Axis Max Life sells savings, protection and ULIPs mostly via Axis Bank (62-63% of counter) and Yes Bank/other partners (+21% growth). Q2 FY27 VNB Rs730cr (+15%), margin 27.0% (+154bp), H1 VNB +21%; consolidated PAT Rs100cr in Q2 (Rs219cr H1, +137%). Stock Rs1,284 (-25% in 6m); P/B ~7.7. IRDAI's commission/EoM draft hit it hardest of the listed lifers (-9.5% on 2026-09-24).",
+ "revenue_mix": [
+  {
+   "segment": "Axis Max Life: individual savings and ULIP",
+   "share_pct": 65,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "protection and group",
+   "share_pct": 25,
+   "geography": "India"
+  },
+  {
+   "segment": "annuity/other",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 12
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "MFSL",
+   "relation": "regulatory_risk",
+   "w": -9.0,
+   "w_low": -18.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "IRDAI draft (2026-09-23/24) caps product commissions and lowers EoM limits; private insurers 'face a wider gap' than LIC/SBI Life (Moneycontrol 2026-09-25). MFSL fell 9.5-10% on 2026-09-24 (Kalkine/NDTV Profit). Mechanism: Axis Max Life pays high bancassurance commissions (Axis Bank ~62% of counter) -> forced EoM/commission cuts => VNB at risk -8 to -12% before cost offsets; stock trades at ~7.7x book so value moves ~1:1 with VNB => -9 central; range to +2 if IRDAI dilutes (Systematix/ET Oct 15 'not intended to disrupt business models'). Jefferies still sees 41% upside.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IRDAI+commission+cap+exposure+draft+expenses+of+management+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-24",
+     "note": "IRDAI exposure draft (2026-09-23/24): product-wise commission caps and 5-year expense limits from FY28; comments to 2026-10-25; PB Fintech -36% in a day, insurers -7 to -26% (ET/NDTV Profit/Reuters)"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "MFSL",
+   "relation": "discount_rate",
+   "w": 0.3,
+   "w_low": -2.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "+25bp: guaranteed non-par pricing improves (VNB margin +20bp ~ +0.7% VNB) vs MTM on shareholder debt and discount-rate effect on a 7.7x P/B stock; net ~0.3, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MFSL",
+   "relation": "substitution",
+   "w": -0.6,
+   "w_low": -2.0,
+   "w_high": 0.4,
+   "lag": "3-12m",
+   "mechanism": "+25bp repo -> FD rates +20-30bp competing with savings products (~55% of APE) => volume -2% x margin leverage => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_DOMESTIC_FLOWS",
+   "dst": "MFSL",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "+10% SIP/DII flows -> market support for ULIPs (~20-25% of APE) and fee AUM => +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "MFSL",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "0-3m",
+   "mechanism": "+$5bn/qtr FPI inflow: pack market beta not shown; for a high-multiple financial, beta ~1.0-1.2 => +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "MFSL",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": ">12m",
+   "mechanism": "+1 structural shift of savings to financial products: APE growth +2pp pa => VNB +3% x persistence 1.0 => +3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "MFSL",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> APE +1.5pp, lower lapses => VNB +2.5% x 0.8 => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "MFSL",
+   "relation": "macro_transmission",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points -> de-rating of high-P/B insurers; ULIP sales slip.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "MFSL",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Pack elasticity -1.26 per SSU (t -2.4) is significant but the mechanism is indirect (oil -> CPI -> yields/market risk); shrunk by ~35% toward zero => -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GOLD",
+   "dst": "MFSL",
+   "relation": "substitution",
+   "w": 0.6,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": ">12m",
+   "mechanism": "Pack +1.58 (t +2.0): gold as alternative savings would be negative mechanically, positive correlation likely reflects risk-on/liquidity regime; shrunk to +0.6, mechanism unclear.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "MFSL",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI: real income squeeze and higher rates => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MFSL.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "AXISBANK",
+   "dst": "MFSL",
+   "relation": "dominant_customer",
+   "w": 0.2,
+   "w_low": 0.05,
+   "w_high": 0.35,
+   "lag": "0-3m",
+   "mechanism": "w = % change in MFSL equity per +1% in AXISBANK equity. Axis Bank is ~62-63% of Axis Max Life's counter (down from ~65%) and holds 19.99%: bank sentiment/incentive changes feed distribution; also a common regulatory shock (IRDAI cap hits bank fee income).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://plindia.com/ResReport/MAXF-28-10-26-PL.pdf",
+     "date": "2026-10-28",
+     "note": "Axis Bank share of counter 62-63%, growth 4% YoY"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Axis Bank",
+   "ticker": "AXISBANK",
+   "role": "customer",
+   "importance": "high",
+   "note": "largest distributor (62-63% of counter) and 19.99% shareholder of Axis Max Life"
+  },
+  {
+   "counterparty": "Mitsui Sumitomo Insurance",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "strategic shareholder in MFSL (model knowledge)"
+  },
+  {
+   "counterparty": "HDFC Life / SBI Life / ICICI Pru / LIC",
+   "ticker": "HDFCLIFE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "private and public life insurers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "IRDAI final commission/EoM regulations (plan reported to start January; comments closed 2026-10-25)",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=IRDAI+commission+cap+exposure+draft+expenses+of+management+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results; VNB margin vs 27.0%",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "Any further Axis Bank stake step-up in Axis Max Life / MFSL merger of the holdco structure",
+   "type": "corporate_action",
+   "prob": 0.1,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 6.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28: insurance tax/LTCG changes",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Sitharaman+LTCG+STT+review+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Q2 consolidated PAT Rs100cr, income Rs11,605cr; VNB Rs730cr (+15%), margin 27.0% (+154bp); H1 PAT Rs219cr (+137%); Axis Bank growth slowed to 4% but other partners +21%",
+  "valuation": "price Rs1,284; mcap Rs44,309cr; BV Rs166 (P/B 7.7); P/E 240 on reported PAT; targets Nomura Rs2,000, Prabhudas Rs2,025, Motilal Rs1,550",
+  "recent_developments": [
+   "2026-09-24 stock -9.5% on IRDAI proposals",
+   "2026-09-28 Jefferies top pick, 41% upside",
+   "2026-10-28 Q2 results: PAT Rs100cr; Nomura cuts target to Rs2,000",
+   "2026-10-30 Axis Max Life H1 VNB +21%",
+   "2026-10-29 Motilal Oswal Buy, target Rs1,550"
+  ]
+ },
+ "key_risks": [
+  "Final IRDAI caps harsher than draft",
+  "Axis Bank dependence and slower Axis growth (4%)",
+  "Rich valuation (P/B 7.7) leaves no cushion",
+  "Equity-market drawdown hitting ULIP",
+  "Rate rises raising FD competition"
+ ],
+ "upside_triggers": [
+  "IRDAI dilutes or phases in caps",
+  "Non-Axis partner channels keep +20% growth",
+  "VNB margin sustained above 27%",
+  "Stock already -32% from 52w high"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://plindia.com/ResReport/MAXF-28-10-26-PL.pdf",
+   "date": "2026-10-28",
+   "what": "PL note on Q2 FY27 VNB and channel mix (search summary)"
+  },
+  {
+   "url": "https://www.theweek.in/wire-updates/business/2026/10/30/axis-max-life-s-profitability-measure-vnb-increases-21-yoy-individual-adjusted-first-year-premium-grew-12-yoy-in-h1-fy-27.html",
+   "date": "2026-10-30",
+   "what": "Axis Max Life H1 FY27 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Jefferies+Max+Financial+top+insurance+pick+EoM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-28",
+   "what": "Jefferies view"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IRDAI+commission+cap+exposure+draft+expenses+of+management+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-24",
+   "what": "IRDAI draft coverage"
+  },
+  {
+   "url": "market_impact/data/packs/MFSL.md",
+   "date": "2026-11-05",
+   "what": "screener fundamentals, headlines, empirical sensitivities"
+  }
+ ],
+ "ticker": "MFSL",
+ "name": "Max Financial Services Ltd.",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

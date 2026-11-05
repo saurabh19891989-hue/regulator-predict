@@ -1,0 +1,345 @@
+{
+ "ticker": "FORTIS",
+ "name": "Fortis Healthcare Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_HOSPITALS_DIAGNOSTICS",
+ "tier": "MIDCAP_100",
+ "business_summary": "Second/third-largest listed Indian private hospital chain: ~36 facilities and ~4,000 operational beds (screener.in), concentrated in NCR, Mumbai, Bengaluru, Punjab, plus Nepal/Dubai/Sri Lanka, and ~57%-owned SRL diagnostics (415 labs). IHH Healthcare (Malaysia) holds ~31% as promoter. Hospitals ~77% of revenue, diagnostics ~23% (mix = model knowledge). Q1 FY27 (Jun 2026): sales Rs 2,545 cr (+17.5% YoY), EBITDA Rs 537 cr (21%), PAT Rs 273 cr. Targets 25% EBITDA margin by FY28; capex of Rs 252 cr approved (Sahi 2026-08-10). Q2 FY27 results not yet in the pack; due in November (date unverified). Mcap Rs 61,208 cr, P/E 57.",
+ "revenue_mix": [
+  {
+   "segment": "hospitals (domestic, ~4,000 beds)",
+   "share_pct": 77,
+   "geography": "India ~96% / international (Nepal, Dubai, Sri Lanka) ~4%; model knowledge"
+  },
+  {
+   "segment": "diagnostics (SRL)",
+   "share_pct": 23,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 28
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 2
+  },
+  {
+   "input": "F_POWER_PRICE_IN",
+   "share_of_costs_pct": 3
+  }
+ ],
+ "exposures": [
+  {
+   "src": "NEW_P_DRUG_PRICE_CONTROL",
+   "dst": "FORTIS",
+   "relation": "regulatory_risk",
+   "w": -5.0,
+   "w_low": -12.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "SC questioned cancer-drug markups (2026-09-30) and sought a 16% MRP-over-cost cap; the Centre then cut cancer-drug prices ~30% (Livemint/Guardian, Oct 2026) and NPPA is tightening compliance. Pharmacy+consumables ~25% of revenue, of which oncology/high-markup drugs ~5% at 40% margin: one tightening step takes ~1.5% of revenue at ~100% drop-through = -7% EBITDA at 21% OPM; EV/MCap 1.1, persistence 1.0 (structural) but partly passed into procedures -> -5. Stock fell up to ~10% in 2 days (ET 2026-10-01) and recovered partly (+4% on 2026-10-09).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=hospital+stocks+fall+pharmacy+margin+Apollo+Max+Fortis+September+30+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-30",
+     "note": "Hospital stocks erase US$2.6 bn as SC questions steep markups (ThePrint 2026-09-30); Fortis -7% intraday (Livemint)"
+    }
+   ]
+  },
+  {
+   "src": "F_WAGES_IN",
+   "dst": "FORTIS",
+   "relation": "input_cost",
+   "w": -1.7,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Employee+doctor fees ~40% of costs (model knowledge). +2pp wage inflation = +0.8% of total costs; 50% passed through via tariffs -> +0.4% of costs = 0.32% of revenue (costs ~79% of revenue); / 21% OPM = EBITDA -1.5%; EV/MCap 1.1, persistence 1.0 (wages ratchet) -> -1.7.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "Q1 FY27 margin 21% vs 23% in prior quarters; short-term margin pressure (NDTV Profit 2026-08-10)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "FORTIS",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Elective surgeries, health checks and international patients correlate with urban affluence/insurance penetration. +5pp urban demand -> +2pp revenue; operating leverage 60% incremental margin on ~21% base -> +6% EBITDA; EV/MCap 1.1, persistence 0.5 -> +3.3, haircut for supply-constrained occupancy (occupancy ~70%) -> +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "Q1 FY27 revenue +17.5% YoY on expansion (Investing.com 2026-08-07)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "FORTIS",
+   "relation": "funding_cost",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Net debt ~Rs 3,600 cr (interest Rs 320 cr/yr at 8.9%; estimate from interest run-rate Rs 80 cr/qtr). +25bp on floating half = Rs 4.5 cr = 0.4% of EBITDA; main channel is discount-rate on 57x P/E growth stock: duration ~15 yrs -> +25bp = -1.5%; both -> -1.8. Empirical not significant (US 10y positive).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "Interest Rs 80 cr in Jun-26 quarter (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "FORTIS",
+   "relation": "fx_translation",
+   "w": 1.8,
+   "w_low": 0.0,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "Direct INR exposure small (international ~4% of revenue; imported equipment largely hedged). Empirical +2.98 (t=2.0, market beta 1.12) is probably FPI/risk-on co-movement rather than a fundamental link. Model: +3% USD/INR -> +0.12% sales from international/medical-tourism receipts, ~+0.5% EBITDA -> +0.5; blended with data shrinkage toward the empirical estimate -> +1.8 (low confidence).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "Pack: USDINR +2.98 (t=2.0); shrunk toward fundamentals"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "FORTIS",
+   "relation": "discount_rate",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "FII holding fell from 26.0% (Mar-26) to 23.2% (Sep-26); stock -20% in 12m, beta 1.1. +US$5bn quarterly FPI inflow -> broad market ~+4%, Fortis beta 1.1 + repositioning -> +2.5 beyond market-wide effect.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "Shareholding Sep 2026: FII 23.20%, DII 34.45% (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "FORTIS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Hospital revenue growth ~14-16% organic; +1pp real GDP adds ~0.6pp to volumes -> +0.3% sales... with 60% incremental margin +1.0% EBITDA, persistence 1.0 -> +1.1, sector rerating -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "TTM sales +18%, margin 22% (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "FORTIS",
+   "relation": "macro_transmission",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.3,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI -> RBI stays higher for longer (rate channel above) and consumables inflation ~ +0.3 pp costs; hospital pricing indexed partly (+3-5% annual tariff hikes) -> net -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-07",
+     "note": "Q1 FY27 earnings call (Yahoo Finance 2026-08-07): tariff and mix drive ARPOB"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "FORTIS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.2,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "Mix shift to high-acuity oncology, neuro, transplant and international patients raises ARPOB 5-7%/yr; +1 unit of premiumisation theme -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-10",
+     "note": "Targets 25% EBITDA margin by FY28 (Sahi 2026-08-10)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "IHH Healthcare Berhad (Malaysia)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "~31% promoter, not in universe"
+  },
+  {
+   "counterparty": "SRL Diagnostics (57% sub)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "diagnostics ~23% of revenue"
+  },
+  {
+   "counterparty": "Daiichi Sankyo / Singh brothers (litigation)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "legacy dispute; Fortis named in audit; Tokyo court dismissed NTK claim 2026-09-11"
+  },
+  {
+   "counterparty": "Insurers and TPA/government schemes (CGHS, Ayushman)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "payer mix and tariff negotiation"
+  },
+  {
+   "counterparty": "Apollo, Max, Medanta, Manipal",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "NCR-region competition"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-12",
+   "event": "Q2 FY27 results (date unverified; Q1 reported 2026-08-07)",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Forensic audit (Delhi HC-ordered, 6 months from 2026-08-31) findings and next hearings in Daiichi-Singh brothers case",
+   "type": "litigation",
+   "prob": 0.5,
+   "impact_pct_low": -18.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+forensic+audit+Supreme+Court+Singh+brothers+Delhi+HC+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Supreme Court/NPPA follow-up on MRP/trade-margin caps for medicines and hospitals",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Supreme+Court+hospitals+drug+markups+Centre+price+cap+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: margin path to 25% by FY28",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Capex commissioning / bed additions (Rs 252 cr approved Aug 2026)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Fortis+Healthcare+Targets+25%+EBITDA+Margin+By+FY28+Approves+Capex+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): sales Rs 2,545 cr (+17.5% YoY), EBITDA Rs 537 cr (21%), PAT Rs 273 cr. Q2 FY27 is not yet available in the pack.",
+  "trend": "TTM sales Rs 9,506 cr (+18%), EBITDA margin 22%, PAT Rs 1,070 cr; FY26 margin peaked at 23%.",
+  "valuation": "Rs 811; P/E 57 on TTM EPS Rs 13.9; mcap Rs 61,208 cr; 52-wk 705-1,030; Nomura Neutral TP Rs 1,030 (2026-09-16).",
+  "recent_developments": [
+   "2026-10-12 hospital stocks sold off again (CNBC TV18) then +4% on 2026-10-09 after Centre's 30% cancer-drug price cap clarity",
+   "2026-09-30 Fortis, Max, Apollo fall up to 7% after SC remarks on drug markups (Livemint)",
+   "2026-09-28 SC allows forensic audit of Fortis, IHH and RHT transactions to proceed (ET, CNBC TV18)",
+   "2026-09-23 Delhi HC order makes listed firms answerable for promoters' personal debt (Livemint)",
+   "2026-09-11 Tokyo Court dismisses NTK's claim vs Daiichi Sankyo (Sahi)",
+   "2026-08-10 Targets 25% EBITDA margin by FY28; Rs 252 cr capex approved"
+  ]
+ },
+ "key_risks": [
+  "Drug-price / MRP caps and hospital pricing regulation",
+  "Forensic audit outcome in Daiichi-Singh asset-diversion matter (Rs ~5,200 cr claim), governance overhang",
+  "Wage inflation and doctor retention",
+  "Occupancy-led growth slowing",
+  "FII selling"
+ ],
+ "upside_triggers": [
+  "Clean forensic audit",
+  "Margin trajectory to 25%",
+  "Bed additions (new Gurugram/ Mohali capacity)",
+  "Pricing rule clarity favouring procedures over drugs"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_P_DRUG_PRICE_CONTROL",
+   "type": "POLICY",
+   "name": "India drug/medical-product price control and trade-margin caps (NPPA, MRP caps)",
+   "ssu": "+1 = one tightening step (e.g. 30% cancer-drug price cut or broad 16% MRP-over-cost cap)"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/FORTIS.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Fortis+Healthcare+Q1+FY27+results+revenue+ARPOB+occupancy+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-10",
+   "what": "Q1 FY27 coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Fortis+Healthcare+forensic+audit+Supreme+Court+Singh+brothers+Delhi+HC+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-28",
+   "what": "Forensic audit / Daiichi-Singh"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=hospital+stocks+fall+pharmacy+margin+Apollo+Max+Fortis+September+30+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-30",
+   "what": "SC remarks and hospital stock sell-off"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Supreme+Court+hospitals+drug+markups+Centre+price+cap+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Drug price follow-up"
+  }
+ ]
+}

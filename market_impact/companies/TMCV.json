@@ -1,0 +1,463 @@
+{
+ "ticker": "TMCV",
+ "name": "Tata Motors Ltd. (commercial vehicles; post-demerger)",
+ "as_of": "2026-11-05",
+ "industry": "I_AUTO_CV_TRACTOR",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest commercial vehicle maker (trucks, buses, vans, small CVs, e-buses) after the demerger that separated passenger vehicles into Tata Motors Passenger Vehicles (TMPV). Promoter (Tata Sons) 42.5%. Q2 FY27 (Jul-Sep 2026): volumes 135,114 (+42.7%; domestic 113,982, international 21,132), revenue about Rs 25,300 cr per screener (+36%), OPM 10% (deck cites 11.7% on a different basis), PAT Rs 1,254 cr. Interest cost has fallen to ~Rs 100 cr a quarter. Strategic move: a public tender offer for Italy's Iveco Group at EUR 14.40 per share (~EUR 3.8-4 bn), which would double the scale and add a European CV platform; the offer crossed the acceptance threshold (HDFC Sky 2026-10-27) and a reopening window ran 2-6 Nov (search summary), with settlement pending regulatory steps. Segment splits are model estimates.",
+ "revenue_mix": [
+  {
+   "segment": "Medium & heavy CVs",
+   "share_pct": 50,
+   "geography": "India ~90% / international ~10%"
+  },
+  {
+   "segment": "Intermediate & small CVs, pickups, vans",
+   "share_pct": 35,
+   "geography": "India ~80%"
+  },
+  {
+   "segment": "Buses, e-buses, spares and services",
+   "share_pct": 15,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 20
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "F_RUBBER",
+   "share_of_costs_pct": 2
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 2
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "TMCV",
+   "relation": "demand_driver",
+   "w": 7.0,
+   "w_low": 3.0,
+   "w_high": 11.0,
+   "lag": "3-12m",
+   "mechanism": "CV is ~90% India-linked. +10% industry volumes -> TMCV revenue +8% (domestic share ~83% of volume) at ~20% incremental EBITDA margin vs 10% OPM -> EBITDA +16%; persistence 0.5; EV/MCap ~1.0 -> ~+8, haircut to 7 given H1 FY27 industry growth is already +24% (autocarpro) and the cycle is advanced.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.autocarpro.in/news/tata-motors-cv-sales-grow-427-percent-in-q2-fy27-135006 ; investor deck 2026-10-23 via ticker.finology.in",
+     "date": "2026-10-23",
+     "note": "Q2 FY27 CV volumes 135,114 (+42.7%); domestic +30.9%; revenue +36%; PAT ~Rs 1,254 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "TMCV",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Roads, mining, construction and logistics capex drive M&HCV tippers and trucks. +10% capex growth -> volumes +4% -> EBITDA +8% -> persistence 0.5 -> ~+4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_INFRA_SPENDING_ROADS",
+   "dst": "TMCV",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Highway and road building lift tipper and HCV demand; +10% -> volumes +2.5% -> EBITDA +5% -> persistence 0.5 -> +2.5. Partly overlaps F_GOVT_CAPEX, so kept lower.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "TMCV",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "Freight volumes track GDP: +1 pp GDP -> CV volumes +3% -> EBITDA +6% -> persistence 0.6 -> ~+3.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "TMCV",
+   "relation": "input_cost",
+   "w": -2.2,
+   "w_low": -4.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Steel ~20% of costs (model estimate). +7% HRC -> costs +1.4% -> EBITDA -14% at 10% OPM; price hikes (CV price hike 2026-09-17, Upstox) recover ~50% with a lag -> -7%; persistence 0.3; EV/MCap 1.0 -> ~-2.1.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "TMCV",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Aluminium ~3% of costs; +10% -> EBITDA -3%, half recovered, persistence 0.25 -> -0.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_RUBBER",
+   "dst": "TMCV",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.9,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Tyres ~6% of costs, rubber ~40% of tyre cost; +10% -> costs +0.24% -> EBITDA -2.4% -> half recovered, persistence 0.25 -> -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "TMCV",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Diesel is 50-60% of a fleet owner's operating cost; +10% Brent -> diesel +4% -> freight margin squeeze delays purchases; also raises plastics/paint costs. Brent +15% in 3 months but -5.6% in 1 month. The pack has no sensitivity table (new listing).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "TMCV",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "~90% of CVs are financed; +25 bp -> EMI +~0.7% -> volumes -1.5% -> EBITDA -3%, plus de-rating and TMCV's own acquisition financing; persistence 0.5 -> ~-1.5. Interest cost already fell from Rs 254 cr to Rs 100 cr per quarter.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "TMCV",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -1.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "International volumes +177% in Q2 (to 21,132 units) and exports ~15% of revenue vs ~10% imported content; +3% -> net +0.2% of revenue; EUR/INR exposure rises after Iveco closes (EUR-denominated debt and earnings).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_EU_GDP",
+   "dst": "TMCV",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.0,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "After completion, Iveco's European truck/bus/van business (about the same EBITDA scale as TMCV's) makes European demand material: +1 pp EU GDP -> EU truck volumes +2.5% -> combined EBITDA +3.5% -> x completion probability 0.85 x persistence 0.5 -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.theweek.in/news/biz-tech/2026/10/23/tata-motors-iveco-takeover-deadline.html ; HDFC Sky 2026-10-27; Autocar Pro 2026-10-10",
+     "date": "2026-10-27",
+     "note": "Offer raised to EUR 14.40; acceptance threshold crossed; reopening window 2-6 Nov per search summary"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "TMCV",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "E-bus and e-truck demand (PM E-DRIVE, state tenders) with a Tata e-bus franchise; small revenue share, option value.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "TMCV",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": -0.5,
+   "w_high": 2.5,
+   "lag": "0-3m",
+   "mechanism": "FIIs 19.0%; recently listed and index-eligible, supportive of flow-driven moves (e.g. +4% on 2026-10-27, up to +12% on 2026-11-05 sector rally).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "NEW_INDIA_CV_SHARE_PRESSURE",
+   "dst": "TMCV",
+   "relation": "competition",
+   "w": -5.0,
+   "w_low": -10.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "Ashok Leyland, VECV (Eicher), Mahindra and BharatBenz compete in M&HCV and ILCV; Tata holds ~40% share (model). +1 unit = 2 pp share loss -> volumes -5% -> EBITDA -10% at 20% decremental margin -> persistence 0.5 -> -5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Tata Motors Passenger Vehicles",
+   "ticker": "TMPV",
+   "role": "parent",
+   "importance": "medium",
+   "note": "Sister company from the demerger; shared brand and Tata Sons promoter; no ownership link"
+  },
+  {
+   "counterparty": "Tata Sons",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "42.5% promoter holder"
+  },
+  {
+   "counterparty": "Iveco Group (Italy)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "Pending acquisition via tender at EUR 14.40"
+  },
+  {
+   "counterparty": "Ashok Leyland",
+   "ticker": "ASHOKLEY",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Closest listed M&HCV rival; moves together on sector news (both up to 12% on 2026-11-05)"
+  },
+  {
+   "counterparty": "Fleet operators / large logistics players, financiers (Tata Capital, banks)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "CV financing availability is a demand driver"
+  },
+  {
+   "counterparty": "Steel mills (Tata Steel, JSW, SAIL)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "~20% of costs"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Iveco tender offer reopening period (2-6 Nov) and settlement; final acceptance level and regulatory clearances",
+   "type": "corporate_action",
+   "prob": 0.9,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "https://www.theweek.in/news/biz-tech/2026/10/23/tata-motors-iveco-takeover-deadline.html; HDFC Sky 2026-10-27 (via search)"
+  },
+  {
+   "date": "2027-03",
+   "event": "Iveco integration plan / squeeze-out and financing details; leverage rises",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "inference from tender structure"
+  },
+  {
+   "date": "2026-12-01",
+   "event": "Monthly CV sales (November) release",
+   "type": "other",
+   "prob": 0.98,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "NSE CV sales release 2026-07-01 precedent"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Dec quarter)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "model knowledge (Q2 on 2026-10-23)"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget: infrastructure outlay, scrappage and EV incentives",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4 FY27 results and FY28 outlook",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026, reported 2026-10-23): revenue ~Rs 25,338 cr (+36% per screener; Rs 23.9k cr in deck summary, basis differs), OPM 10% (11.7% per deck summary), PAT Rs 1,254 cr, FCF Rs 4.6k cr (deck). H1 volumes +35%.",
+  "trend": "Strong upcycle: FY27 H1 industry volumes +24%; TMCV +35%. Margin down ~90 bp YoY on input costs and mix. Stock flat in 1 month, -5.7% in 3 months, then up to 12% on 2026-11-05 sector rally (reason not verified; one undated report links a similar spike to an Iran ceasefire).",
+  "valuation": "P/E 22.4, P/B 10.4 (tiny book after demerger), mcap Rs 1.60 lakh cr; Nomura target Rs 511 (+29%, 2026-10-26).",
+  "recent_developments": [
+   "2026-09-07 Iveco tender opens (BusinessLine)",
+   "2026-09-17 CV price hike (Upstox)",
+   "2026-10-09/10 offer raised to EUR 14.40 (Reuters, Autocar Pro)",
+   "2026-10-23 Q2: profit returns, revenue +36-42%",
+   "2026-10-26 Nomura cuts target to Rs 511; shares fall",
+   "2026-10-27 shares +4% as Iveco offer crosses acceptance threshold (HDFC Sky)",
+   "2026-11-03 Tata group announcement 'Tata Motors and Iveco come together'",
+   "2026-11-05 Tata Motors and Ashok Leyland up to 12% (ET); cause unverified"
+  ]
+ },
+ "key_risks": [
+  "Iveco integration, financing and European cycle risk",
+  "CV upcycle maturing after +24% industry growth",
+  "Steel and input cost spikes with lagged pricing",
+  "Interest-rate rise affecting CV financing",
+  "Execution of the demerged structure and governance",
+  "Competition from Ashok Leyland/VECV"
+ ],
+ "upside_triggers": [
+  "Iveco closing smoothly with synergies and EU recovery",
+  "Infrastructure capex acceleration",
+  "Fall in diesel and steel",
+  "Rate cuts"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_INDIA_CV_SHARE_PRESSURE",
+   "type": "FACTOR",
+   "name": "Market-share pressure in Indian medium and heavy CVs",
+   "ssu": "+1 = 2 pp market share loss to competitors"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/TMCV.md",
+   "date": "2026-11-05",
+   "what": "fundamentals; no sensitivity table available"
+  },
+  {
+   "url": "https://www.autocarpro.in/news/tata-motors-cv-sales-grow-427-percent-in-q2-fy27-135006",
+   "date": "2026-10",
+   "what": "Q2 FY27 CV volumes"
+  },
+  {
+   "url": "https://ticker.finology.in/discover/market-update/tmcv-q2-fy27-results-analysis",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 results (summary)"
+  },
+  {
+   "url": "https://www.theweek.in/news/biz-tech/2026/10/23/tata-motors-iveco-takeover-deadline.html",
+   "date": "2026-10-23",
+   "what": "Iveco takeover deadline"
+  },
+  {
+   "url": "https://www.autocarpro.in/news/tata-motors-cv-sales-cross-200000-units-in-h1-fy2027-industry-sales-grow-24-percent-on-strong-demand-135450",
+   "date": "2026-10",
+   "what": "H1 industry growth +24%"
+  }
+ ]
+}

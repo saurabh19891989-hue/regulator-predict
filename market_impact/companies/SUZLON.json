@@ -1,0 +1,340 @@
+{
+ "name": "Suzlon Energy Ltd.",
+ "industry": "I_RENEWABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest wind-turbine OEM (22+ GW installed in 17 countries): turbine manufacturing (S144 3.15 MW; S175 5 MW and 6.3 MW being launched), project development/Devco, O&M (Suzlon Global Services) and forgings/castings (SE Forge); acquired Renom (O&M). Q2 FY27 revenue Rs 4,869 cr (+26%), record 710 MW deliveries, EBITDA Rs 720 cr (margin 14.8% vs 18.6%), comparable PAT Rs 394 cr (+1.3%; reported -69% on year-ago Rs 891 cr deferred tax credit). Order book 6 GW (18 months), net cash Rs 2,048 cr, net worth Rs 10,277 cr. FY27 EBITDA margin guidance cut to ~15% +/-1% from ~17%. Stock hit a 52w low Rs 33.2 on 30 Oct 2026 after the print.",
+ "revenue_mix": [
+  {
+   "segment": "Wind turbine generators (WTG, incl. Devco)",
+   "share_pct": 82,
+   "geography": "India ~99%; exports yet to start (BlueSky platform awaiting certification)"
+  },
+  {
+   "segment": "Operations & maintenance, services",
+   "share_pct": 15,
+   "geography": "India"
+  },
+  {
+   "segment": "Forgings, others",
+   "share_pct": 3,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 20
+  },
+  {
+   "input": "Bought-out components (gearboxes, bearings, electronics, blades)",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 4
+  },
+  {
+   "input": "Employee, logistics, other",
+   "share_of_costs_pct": 31
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "SUZLON",
+   "relation": "policy_effect",
+   "w": 7.0,
+   "w_low": 2.0,
+   "w_high": 12.0,
+   "lag": "3-12m",
+   "mechanism": "Order flow depends on India's 500 GW non-fossil push, C&I/IPP wind-hybrid auctions, transmission and ALMM-style local-content support. +1 = stronger support -> wind installations +10% in FY28-29 -> WTG revenue +10% at ~21% contribution margin; EBITDA +14% (leverage 1.4x); EV/MCap 0.95 (net cash Rs 2,048 cr); persistence 0.6 -> +8, trimmed for the 18-month order cover already in price -> +7.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html",
+     "date": "2026-10-30",
+     "note": "Order book 6 GW (18 months cover); 1.5 GW new orders in H1 FY27; 900 MW via Devco model"
+    }
+   ]
+  },
+  {
+   "src": "NEW_WTG_PRICING_COMPETITION",
+   "dst": "SUZLON",
+   "relation": "competition",
+   "w": -8.0,
+   "w_low": -14.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "JM Financial downgraded to 'Add' citing margin sustainability, competition and growth after FY28. WTG contribution margin already fell to 21.2% from 26.9% on customer/scope mix. +1 = realised WTG price per MW -5% (more competition from Envision, Adani, Inox Wind, global OEM entries): WTG ~80% of revenue x 5% = 4% revenue at ~100% drop-through -> EBITDA margin 14.8% -> ~11%, EBITDA -27%; EV/MCap 0.95; persistence 0.4 (partly offset by cost-out) -> -9.7, trimmed -> -8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/suzlon-energy-shares-crash-10-after-q2-results-jm-financial-downgrades-stock-to-add-revises-target-price-14064280.html",
+     "date": "2026-10-30",
+     "note": "JM Financial downgrade on margin sustainability, competition and growth post FY28"
+    },
+    {
+     "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html",
+     "date": "2026-10-30",
+     "note": "WTG contribution margin 26.9% -> 21.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "SUZLON",
+   "relation": "input_cost",
+   "w": -1.8,
+   "w_low": -3.2,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "Towers, hubs, castings and forgings are ~20% of COGS (COGS ~85% of revenue -> steel ~17% of revenue); order contracts fix prices with limited escalation, ~60% unprotected until re-pricing. +7% domestic steel -> +1.2% of revenue x 60% = 0.7% / 15% margin = EBITDA -4.8%; EV/MCap 0.95; persistence 0.4 -> -1.8. Empirical on global HRC -2.44 per +10% (t -2.0) is consistent (7% domestic ~ 10% global x 0.7 pass-through).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SUZLON.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_STEEL_GLOBAL -2.44 (t -2.0), beta 1.56"
+    },
+    {
+     "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html",
+     "date": "2026-10-30",
+     "note": "Management cites commodity and FX volatility behind margin cut"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "SUZLON",
+   "relation": "input_cost",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Generator windings, cables, converters use copper (~4% of revenue); +10% -> +0.4% of revenue, 60% unprotected -> 0.24%/15% = EBITDA -1.6%; x0.95 x 0.4 -> -0.6; blended with empirical -1.80 (t -1.7), partly a cyclical-beta proxy -> -0.9.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SUZLON.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_COPPER -1.80 (t -1.7)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "SUZLON",
+   "relation": "fx_translation",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Imported gearbox/bearing/electronics and Renom/European content est. ~25% of COGS; sales in INR; management names forex among the margin headwinds. +3% -> +0.64% of revenue, 50% hedged/passed -> 0.3%/15% = EBITDA -2.1%; x0.95 x 0.5 -> -1.0; empirical -2.06 (t -0.9) -> -1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html",
+     "date": "2026-10-30",
+     "note": "FY27 EBITDA margin guidance cut to ~15% +/-1% on commodity and FX pressure, West Asia crisis"
+    },
+    {
+     "source": "market_impact/data/packs/SUZLON.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDINR -2.06 (t -0.9)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "SUZLON",
+   "relation": "geopolitical_exposure",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Management attributes margin pressure to the West Asia crisis via commodity and FX volatility. +1 escalation -> steel/copper/oil-derived resin and freight up, rupee down; EBITDA margin another -100 bp (-7% EBITDA) x 0.95 x 0.3 -> -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html",
+     "date": "2026-10-30",
+     "note": "Commodity and FX pressure, particularly from the West Asia crisis"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SUZLON",
+   "relation": "funding_cost",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.6,
+   "lag": "0-3m",
+   "mechanism": "Net cash, so earnings channel is small, but wind economics for IPP/C&I buyers are rate-sensitive (project IRR down ~30 bp per +25 bp) -> orders -1.5% and a high-beta (1.5) retail-heavy stock (promoters 11.7%, public 54%) de-rates on rates; -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html",
+     "date": "2026-10-30",
+     "note": "Net cash Rs 2,048 cr; Crisil AA- stable"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "SUZLON",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Faster electricity demand lifts RE procurement by discoms/C&I. +3 pp demand growth -> annual RE auctions +4% -> orders +3%; EBITDA +4%; x0.95 x 0.6 -> +2.3, trimmed -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html",
+     "date": "2026-10-30",
+     "note": "1.25 GW erected turbines pipeline; 6 GW order book"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "SUZLON",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Data-centre operators contract RE capacity via C&I wind-hybrid PPAs. +1 = data-centre capex 20% above plan -> C&I wind orders +5% -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SUZLON.md",
+     "date": "2026-11-05",
+     "note": "Pack headlines: Rs 550 cr investment plan (12 Oct), MOFSL Buy TP Rs 65"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "IPPs, C&I buyers (Jindal Renewables, Adani Green, Torrent, etc.)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "No single customer verified >25% in this run"
+  },
+  {
+   "counterparty": "Envision, Adani Wind, Inox Wind, global OEMs",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "JM cites competition for margin"
+  },
+  {
+   "counterparty": "Gearbox, bearing, converter suppliers (Europe/China)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Imported content drives FX exposure"
+  },
+  {
+   "counterparty": "Renom (acquired)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "Not contributing meaningfully yet"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Dec quarter) - H2-loaded deliveries must offset H1 margin",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": 12.0,
+   "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html"
+  },
+  {
+   "date": "2027-03",
+   "event": "First S175 5 MW commercial installations and export-order milestone (BlueSky certifications)",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 5.0,
+   "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html"
+  },
+  {
+   "date": "2026-12",
+   "event": "Additional large order wins (1.5 GW added in H1)",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 4.0,
+   "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html"
+  },
+  {
+   "date": "2027-02",
+   "event": "Margin trajectory: FY27 guidance ~15% +/-1% test in Q3",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 5.0,
+   "source": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-29: revenue Rs 4,869 cr +26%; EBITDA Rs 720 cr flat y/y; margin 14.8%; deliveries 710 MW; installs 454 MW (+69%)",
+  "trend": "Volume records, margin compressing (WTG contribution 26.9% -> 21.2%); guidance cut.",
+  "valuation": "Market cap Rs 52,459 cr at Rs 38.5; trailing P/E 23 on reported EPS Rs 1.66 (flattered by year-ago tax credits); 52w Rs 33.2-61.5; 6m -31%, 12m -36%.",
+  "recent_developments": [
+   "2026-10-12: Rs 550 cr investment plan; MOFSL Buy TP Rs 65 (+73%)",
+   "2026-10-29/30: Q2 results; stock -10% to Rs 33.2; JM Financial downgrade, UBS bullish",
+   "2026-10-29: Crisil upgrades long-term rating to AA- stable"
+  ]
+ },
+ "key_risks": [
+  "Competition eroding WTG pricing and contribution margin",
+  "Commodity/FX shocks on fixed-price orders",
+  "Growth visibility post FY28 and export delay",
+  "Working capital (receivables)",
+  "Renom integration; low promoter holding (11.7%)"
+ ],
+ "upside_triggers": [
+  "Margin recovery as scope/customer mix normalises",
+  "S175/6.3 MW platform wins and first exports",
+  "Policy support and large Devco orders",
+  "Net cash enabling buybacks/dividends (none paid)"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_WTG_PRICING_COMPETITION",
+   "type": "THEME",
+   "name": "Wind-turbine pricing competition",
+   "ssu": "+1 = realised WTG price per MW -5%"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.moneycontrol.com/news/business/markets/suzlon-energy-shares-crash-10-after-q2-results-jm-financial-downgrades-stock-to-add-revises-target-price-14064280.html",
+   "date": "2026-10-30",
+   "what": "Q2 results and stock reaction, JM downgrade"
+  },
+  {
+   "url": "https://finance.yahoo.com/energy/articles/suzlon-energy-ltd-bom-532667-190759340.html",
+   "date": "2026-10-30",
+   "what": "Earnings call highlights: deliveries, order book, guidance cut, cash"
+  },
+  {
+   "url": "market_impact/data/packs/SUZLON.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack"
+  }
+ ],
+ "ticker": "SUZLON",
+ "as_of": "2026-11-05"
+}

@@ -1,0 +1,345 @@
+{
+ "ticker": "INFY",
+ "name": "Infosys Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "NIFTY_50",
+ "business_summary": "India's second-largest IT services company: digital, cloud, data/AI, application and BPM services (including Finacle banking software) to ~1,900 clients, North America ~57%, Europe ~28%. TTM sales ~Rs1.9 lakh cr, EBITDA margin ~24%, debt-free, ROE 32%, 4.2% dividend yield. Cut FY27 CC revenue growth guidance to 1-2% on 2026-10-23 despite $5.2bn of Q2 large deals; stock at 14.9x P/E, touched six-year lows on 2026-09-29, +14.7% in the last month.",
+ "revenue_mix": [
+  {
+   "segment": "Financial services",
+   "share_pct": 28,
+   "geography": "North America-led"
+  },
+  {
+   "segment": "Retail/consumer/manufacturing",
+   "share_pct": 30,
+   "geography": "US/Europe"
+  },
+  {
+   "segment": "Energy, comms, hi-tech, life sciences",
+   "share_pct": 42,
+   "geography": "US/Europe/RoW"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "employee costs",
+   "share_of_costs_pct": 58
+  },
+  {
+   "input": "subcontractors, travel, other",
+   "share_of_costs_pct": 42
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "INFY",
+   "relation": "fx_translation",
+   "w": 1.5,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "~97% of revenue foreign currency; INR ~ 40% of costs (model knowledge). Infosys has disclosed ~30bp margin per 1% INR; +3% => ~+90bp on 24% = +3.8% EBITDA, persistence 0.4 (hedging, wage resets), EV/MCap 0.95 => +1.5. Pack -1.48 (t -1.0) negative, insignificant; flagged.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "INFY",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "North America ~57% of revenue; +1pp US growth => revenue +0.85%, incremental margin 30% vs 24% => EBITDA +1.1%, with re-rating persistence 1.0 => ~+2.5. FY27 guide cut to 1-2% CC reflects soft US discretionary demand.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "INFY",
+   "relation": "substitution",
+   "w": -5.0,
+   "w_low": -12.0,
+   "w_high": 2.0,
+   "lag": ">12m",
+   "mechanism": "+1 = ~3% base repricing; 3% x 60% flow-through / 24% margin = -7.5% EBITDA, persistence 0.6 => ~-5. Offset: AI revenue 10.5% of total (Q2 call per BigGo 2026-10-23) and $5.2bn large deals; CEO: AI doing half the work in 2-3 years (Upstox 2026-10-13).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "INFY",
+   "relation": "regulatory_risk",
+   "w": -4.0,
+   "w_low": -9.0,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "+1 = material tightening; Infosys is among the more H-1B-reliant (visa share ~ 25% of onsite); cost +1.5pp of revenue => -6% EBITDA, 50% passed through, persistence 0.6 => ~-4. US named Infosys/TCS in PERM crackdown commentary (India Today 2026-10-09: <2% of filings); stock rose.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US suspended PERM green-card labour programme for named firms; Reuters 2026-10-11: little risk to Indian IT (<2% of green-card filings)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "Forbes 2026-10-01: judge struck down latest version of $100,000 H-1B fee; Indian Express 2026-09-19: fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "INFY",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.2,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+5% S&P 500: client sentiment and global risk appetite; scaled from pack elasticity (see below) shrunk toward 1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "INFY",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: FPI de-risking of a sector that is a prime funding source; judgement, shrunk from pack -0.7 per SSU.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "INFY",
+   "relation": "discount_rate",
+   "w": -0.9,
+   "w_low": -2.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp India 10y: duration effect on a high-payout, mostly net-cash stock.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "INFY",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "+25bp Fed funds: BFSI and consumer client budgets; offset by stronger USD. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "INFY",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.2,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Europe ~ 28% of revenue; +1pp EU growth => revenue +0.3%, EBITDA +0.4% with re-rating => ~+1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "INFY",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": -0.8,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Pack +1.19 per +$2/bbl (t +2.4) is statistically significant but there is no causal channel (refining margin is not an IT cost/revenue driver); it proxies global-cyclical risk appetite. Token weight, low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "INFY",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": -0.5,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Pack +0.97 (t +1.8): same risk-on co-movement; Brent up -> INR weaker -> margin tailwind is the only causal channel; token weight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/INFY/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 49,244 cr, OPM 24%, PAT 7,838 cr, P/E 14.9, 12m -20.8%"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "TCS, Wipro, HCLTech, Accenture, Cognizant",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "vendor consolidation, AI price cuts"
+  },
+  {
+   "counterparty": "Hyperscalers (Microsoft, AWS, Google Cloud), NVIDIA, ServiceNow",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "AI/cloud partners"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results; test of cut guidance 1-2% and large-deal conversion",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Infosys+cuts+FY27+revenue+growth+guidance+1-2%+Q2+large+deals+$5.2+billion+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11-03",
+   "event": "Dividend record date (interim) - passed; Livemint 2026-11-02",
+   "type": "corporate_action",
+   "prob": 1.0,
+   "impact_pct_low": -1.2,
+   "impact_pct_high": 0.0,
+   "source": "https://news.google.com/rss/search?q=Infosys+dividend+2026+record+date+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "US H-1B/outsourcing-tax action",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": -1.0,
+   "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Possible fresh buyback/special return (cash-rich, low P/E)",
+   "type": "corporate_action",
+   "prob": 0.2,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge; no announcement found"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Sep-2026 (Q2 FY27, reported 2026-10-23)",
+  "trend": "Revenue Rs49,244 cr (+10.7% YoY INR, +2.1% QoQ), OPM 24%, PAT Rs7,838 cr (+6% YoY); CC growth +1.5% QoQ; FY27 guide cut to 1-2%. Operating-margin guidance not verified. ADR -7% after hours on 2026-10-23; intraday 10% flash crash and recovery that day.",
+  "valuation": "P/E 14.9, yield 4.15%, price Rs1,162 vs 52w 980-1,728",
+  "recent_developments": [
+   "2026-10-23: Q2 results, guidance cut to 1-2% (Upstox, Fortune India)",
+   "2026-10-26: shares dip as lower growth outlook offsets strong deal wins (Yahoo Finance)",
+   "2026-10-13: CEO Parekh: AI to drive half of work in 2-3 years; stock +8% in 5 sessions (Upstox)",
+   "2026-09-29: six-year intraday low",
+   "2026-11-02: Hyderabad campus expansion, shares -2%"
+  ]
+ },
+ "key_risks": [
+  "Growth guide cut to 1-2% signals demand weakness",
+  "GenAI repricing",
+  "US policy",
+  "Margin pressure from wage hikes/AI investment",
+  "Further downgrades"
+ ],
+ "upside_triggers": [
+  "Conversion of $5.2bn large deals",
+  "AI revenue scale",
+  "Weaker INR",
+  "Buyback",
+  "Peer-led sector rerating"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/INFY/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Infosys+cuts+FY27+revenue+growth+guidance+1-2%+Q2+large+deals+$5.2+billion+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 guidance cut headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "PERM suspension"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-01",
+   "what": "H-1B ruling"
+  }
+ ]
+}

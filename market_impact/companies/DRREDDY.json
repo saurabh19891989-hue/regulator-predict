@@ -1,0 +1,381 @@
+{
+ "ticker": "DRREDDY",
+ "name": "Dr. Reddy's Laboratories Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_PHARMA_US_GENERICS",
+ "tier": "NIFTY_50",
+ "business_summary": "Hyderabad-based global generics, API (PSAI), biosimilar and branded-formulation company. Approximate mix (model knowledge, verify): North America ~38%, India ~27%, Emerging markets (Russia, CIS, Brazil etc.) ~17%, Europe ~10%, PSAI/API ~8%. Q2 FY27 sales Rs 8,698 cr (about -1.5% YoY), EBITDA Rs 1,723 cr (20%), PAT Rs 913-925 cr (-36% YoY) as gRevlimid (lenalidomide) fades and the Obeda semaglutide supply disruption hit; margin recovered from 5% (Mar-26 qtr) and 11% (Jun-26). Strategy: generic semaglutide (Canada, Brazil, India), abatacept/biosimilars. TTM sales Rs 33,097 cr; mcap Rs 1.14 lakh cr; borrowings rising (interest Rs 125 cr/qtr).",
+ "revenue_mix": [
+  {
+   "segment": "North America (generics, gRevlimid, OTC)",
+   "share_pct": 38,
+   "geography": "US/Canada"
+  },
+  {
+   "segment": "India",
+   "share_pct": 27,
+   "geography": "India (incl. Obeda semaglutide launch)"
+  },
+  {
+   "segment": "Emerging markets",
+   "share_pct": 17,
+   "geography": "Russia/CIS, Brazil, others"
+  },
+  {
+   "segment": "Europe",
+   "share_pct": 10,
+   "geography": "Europe"
+  },
+  {
+   "segment": "PSAI / API",
+   "share_pct": 8,
+   "geography": "global"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 32
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 15
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 4
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_US_GENERIC_PRICING",
+   "dst": "DRREDDY",
+   "relation": "competition",
+   "w": -4.0,
+   "w_low": -9.0,
+   "w_high": -1.5,
+   "lag": "3-12m",
+   "mechanism": "US/N. America ~38% of sales (Rs ~3,300 cr/qtr). Base generics ex-gRevlimid ~65% of that; +5pp erosion = -3.3% US base -> -0.8% group sales; ~100% drop-through at 20% OPM = -4.1% EBITDA; EV/MCap 1.05, persistence 0.5 -> -2.2; add gRevlimid-cliff acceleration risk (lenalidomide full-generic competition, Q2 revenue already down on it) and semaglutide pricing competition -> -4.0. Management expects double-digit US growth ahead (CNBC TV18 2026-10-26), a counter-weight to downside.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddy's+US+double+digit+growth+Canada+semaglutide+November+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-26",
+     "note": "DRL expects double-digit US growth; Q2 profit -36% on lower lenalidomide (CNBC TV18, Business Standard 2026-10-23)"
+    }
+   ]
+  },
+  {
+   "src": "T_GLP1",
+   "dst": "DRREDDY",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.0,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Generic semaglutide is the key near-term growth option: Canada generic injection (relaunch targeted for Nov 2026 after production disruption, scanx 2026-10-30), Brazil ANVISA approval 2026-11-05 (Business Standard), India oral Obeda tablets launched 2026-11-05 plus new generic Ozempic brands (Reuters 2026-10-23). If adoption +1 unit (faster uptake / extended exclusivity gaps): semaglutide sales ~Rs 1,500-2,500 cr/yr at ~45% margin -> EBITDA +10-15%; EV/MCap 1.05, persistence 0.5 -> +5; range wide because Q1 was a -ve surprise (supply disruption). No empirical series.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddy's+semaglutide+Canada+launch+Brazil+generic+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Brazil ANVISA approves Dr Reddy's generic semaglutide (Business Standard/Kalkine 2026-11-05)"
+    }
+   ]
+  },
+  {
+   "src": "P_USFDA_ENFORCEMENT",
+   "dst": "DRREDDY",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -9.0,
+   "w_high": -0.8,
+   "lag": "3-12m",
+   "mechanism": "Three USFDA Form 483 observations at FTO-9 Visakhapatnam after pre-approval inspection (Oct 2026; Business Today, Medical Dialogues) -> gating for pending launches (likely semaglutide/biosimilar fill-finish; model assumption); history of 2023-24 Srikakulam/Bachupally warning letters. Probability of OAI/PAI delay ~25% x -12% equity (approval delays on ~Rs 1,000 cr launches, EBITDA -6%) -> -3.0 per 'stricter' unit.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddy's+FTO-9+USFDA+inspection+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "USFDA completes PAI at FTO-9; 3 Form 483 observations (Business Today 2026-10-15; Equitypandit 2026-10-15)"
+    }
+   ]
+  },
+  {
+   "src": "P_US_PHARMA_TARIFF",
+   "dst": "DRREDDY",
+   "relation": "regulatory_risk",
+   "w": -0.8,
+   "w_low": -3.5,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "100% US tariff on branded pharma since 2026-09-29, with India's speciality drugs exempt; generics outside scope (Business Standard 2026-09-29). DRL US ~38% of sales, made in India; if +10pp tariff applied to generics: net absorbed 50% -> -1.9% sales -> EBITDA -9%; prob 10% over 12m, EV/MCap 1.05 -> -0.8 weighted. Some semaglutide/biosimilar assets are 'specialty' - exempted so far.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-29",
+     "note": "India among 20 jurisdictions exempted from US speciality-drug tariff (Firstpost 2026-09-29)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "DRREDDY",
+   "relation": "fx_translation",
+   "w": 3.2,
+   "w_low": 1.2,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "USD/EUR/RUB/BRL-linked sales ~73% of total; imported RM+royalties ~12% of sales: net USD-linked ~ 60% x 3% = +1.8% of sales at 20% OPM = +9% EBITDA; hedges cover ~50% for 6-12m -> +4.5%; EV/MCap 1.05, persistence 0.5 -> +2.4; with EM currency pass-through uncertainty -> +3.2. Empirical +1.73 (t=1.4) lower; rupee has strengthened 1.9% in 1m, a headwind to the Q3 print.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddys+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Q2 FY27 EBITDA margin 20.6% (Goodreturns 2026-10-23); INR 94.49, -1.9% in 1m"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "DRREDDY",
+   "relation": "input_cost",
+   "w": 0.8,
+   "w_low": -0.5,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "China-origin KSMs/intermediates are a notable part of PSAI inputs (model knowledge ~20% of RM); +15% Chinese price cuts reduce RM ~3% and compress PSAI selling prices too; net small positive for formulations (RM ~32% of costs -> -1% cost = +5% EBITDA at 20% OPM, half competed away) -> +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddys+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "PSAI is ~8% of sales; margin recovery to 20% is the stated FY27 target (Sahi 2026-09-29)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "DRREDDY",
+   "relation": "funding_cost",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Borrowings have risen (interest Rs 125 cr/qtr vs Rs 83 cr a year ago; annual Rs 450 cr TTM vs EBITDA Rs 4,853 cr). ~Rs 7,000 cr of debt (estimate), 50% floating: +25bp = Rs 9 cr/yr = 0.2% of EBITDA, negligible; discount-rate effect on a 40x TTM P/E -> -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddys+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Interest TTM Rs 450 cr (screener.in)"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "DRREDDY",
+   "relation": "geopolitical_exposure",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Russia/CIS ~10% of sales and Gulf/EM logistics; escalation lifts freight & solvents (~0.5% of costs) -> EBITDA -2.5%, persistence 0.25 -> -0.7. Empirical Brent +0.79 (t=1.8) is positive (Brent up, rupee down, oil-linked market rotation) so model sign kept low-weight.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddys+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Pack: Brent elasticity +0.79 (t=1.8)"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "DRREDDY",
+   "relation": "demand_driver",
+   "w": 0.7,
+   "w_low": 0.1,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "India 27% of sales, branded Rx and consumer health (Nicotex/ Haleon NRT), 12% weight of incremental discretionary -> +5pp urban lifts India sales 1pp = +0.27% group sales; +1.4% EBITDA; EV/MCap 1.05, persistence 0.5 -> +0.7.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddys+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "India obesity launch Obeda in 2026-11 (Multibagg 2026-11-05)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "DRREDDY",
+   "relation": "discount_rate",
+   "w": 0.6,
+   "w_low": 0.0,
+   "w_high": 1.4,
+   "lag": "0-3m",
+   "mechanism": "FII holding down to 20.3% from 21.1% in Mar 2026 but DIIs up; large-cap defensive with beta 0.62. +US$5bn FPI quarterly inflow -> +0.6 beyond beta.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Dr+Reddys+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Shareholding Sep 2026 (screener.in)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Novo Nordisk (originator semaglutide)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "semaglutide patent expiry in Canada/Brazil/India opens generic window; patent/litigation risk"
+  },
+  {
+   "counterparty": "US wholesaler buying groups (McKesson, Cardinal, Cencora)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "set pricing for ~38% of sales"
+  },
+  {
+   "counterparty": "Cipla, Sun, Lupin, Zydus, Teva (US generics)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "gRevlimid and base generics"
+  },
+  {
+   "counterparty": "Chinese KSM/intermediate suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "PSAI and formulation inputs"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Semaglutide relaunch in Canada after supply disruption",
+   "type": "other",
+   "prob": 0.8,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Dr+Reddy's+semaglutide+Canada+launch+Brazil+generic+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results: US growth, semaglutide Canada/Brazil/India revenue, EBITDA toward ~20% FY27 target",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "https://news.google.com/rss/search?q=Dr+Reddy's+US+double+digit+growth+Canada+semaglutide+November+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "USFDA closure/classification of FTO-9 Visakhapatnam PAI",
+   "type": "regulatory",
+   "prob": 0.7,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=Dr+Reddy's+FTO-9+USFDA+inspection+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Abatacept biosimilar filing/approval milestones (CFO flagged as next growth phase)",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=Dr+Reddy's+betting+on+semaglutide+comeback+abatacept+CFO+Narasimham+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Possible US generic tariff extension",
+   "type": "regulatory",
+   "prob": 0.1,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": -4.0,
+   "source": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 8,698 cr, EBITDA Rs 1,723 cr (20%), PAT Rs 913 cr (press Rs 925 cr), -36% YoY; beats consensus.",
+  "trend": "Margin troughed at 5% in Mar-26 qtr (semaglutide Obeda disruption, one-offs) -> 11% -> 20%; TTM PAT Rs 2,760 cr vs Rs 5,725 cr FY25.",
+  "valuation": "Rs 1,362; P/E 40.6 on depressed TTM EPS Rs 33.6; mcap Rs 1.14 lakh cr; 52-wk range 1,080-1,415; Citi upgraded to Buy (2026-09-29), BNP Outperform (2026-10-13), JPMorgan upgraded to neutral (2026-10-26).",
+  "recent_developments": [
+   "2026-11-05 ANVISA approves generic semaglutide in Brazil; Obeda oral tablets launched in India (Business Standard, Multibagg)",
+   "2026-10-30 oral semaglutide biosimilar launch in India and generic injection in Canada announced (scanx)",
+   "2026-10-26 JPMorgan upgrades after Q2; Nomura/Citi positive (Moneycontrol)",
+   "2026-10-23 Q2: PAT -36%, margin 20%, Canada semaglutide relaunch in Nov (Livemint, scanx)",
+   "2026-10-15 USFDA PAI at FTO-9 Visakhapatnam closes with 3 Form 483 observations",
+   "2026-10-03 US arm IRS Rs penalty US$32,350 (immaterial)",
+   "2026-09-29 Citi upgrade, target +39%"
+  ]
+ },
+ "key_risks": [
+  "gRevlimid cliff",
+  "semaglutide supply/pricing and Novo litigation",
+  "USFDA at Visakhapatnam / Srikakulam / Bachupally",
+  "US generic tariff",
+  "INR appreciation",
+  "P/E at 40x on depressed earnings"
+ ],
+ "upside_triggers": [
+  "Canada and Brazil semaglutide scale-up",
+  "US double-digit growth delivered",
+  "abatacept biosimilar approval",
+  "EBITDA back to 25% long-term target"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/DRREDDY.md",
+   "date": "2026-11-05",
+   "what": "screener.in pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Dr+Reddys+Q2+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 results coverage"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Dr+Reddy's+semaglutide+Canada+launch+Brazil+generic+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-05",
+   "what": "Semaglutide Canada/Brazil"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Dr+Reddy's+Obeda+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-24",
+   "what": "Obeda disruption and resumption in Q3"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Dr+Reddy's+FTO-9+USFDA+inspection+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "FTO-9 483 observations"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=pharma+tariff+Section+232+India+generics+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "US pharma tariff"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Dr+Reddy's+US+double+digit+growth+Canada+semaglutide+November+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-26",
+   "what": "Management outlook"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Dr+Reddy's+Citi+upgrade+target+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-29",
+   "what": "Citi upgrade"
+  }
+ ]
+}

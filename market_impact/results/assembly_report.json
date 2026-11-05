@@ -1,16 +1,17 @@
 {
- "nodes": 432,
- "new_nodes": 54,
- "edges": 1537,
+ "nodes": 441,
+ "new_nodes": 63,
+ "edges": 1867,
  "edges_by_layer": {
-  "company": 1372,
+  "company": 1691,
   "event_edges": 133,
-  "company_link": 32
+  "company_link": 40,
+  "director": 3
  },
  "edges_dropped_unknown_or_industry": 0,
  "events": 161,
  "occurred_events": 61,
- "profiles": 116,
+ "profiles": 145,
  "empirical_sign_conflicts": 2,
  "assumptions": {
   "damping": {
@@ -32,6 +33,6 @@
  "dead_end_drivers": [],
  "recent_state_drivers": {
   "observed": 21,
-  "from_events": 56
+  "from_events": 55
  }
 }

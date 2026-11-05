@@ -1,0 +1,53 @@
+{
+ "scale": [
+  {
+   "src": "RELIANCE",
+   "dst": "JIOFIN",
+   "origin": "JIOFIN",
+   "factor": 0.1,
+   "reason": "agent used per +10% source move; spec is per +1%"
+  },
+  {
+   "src": "LICI",
+   "dst": "LICHSGFIN",
+   "origin": "LICHSGFIN",
+   "factor": 0.1,
+   "reason": "per +10% \u2192 per +1%"
+  },
+  {
+   "src": "LICHSGFIN",
+   "dst": "LICI",
+   "origin": "LICI",
+   "factor": 0.1,
+   "reason": "per +10% \u2192 per +1%"
+  },
+  {
+   "src": "LT",
+   "dst": "LTF",
+   "origin": "LTF",
+   "factor": 0.1,
+   "reason": "per +10% \u2192 per +1%"
+  },
+  {
+   "src": "M&M",
+   "dst": "M&MFIN",
+   "origin": "M&MFIN",
+   "factor": 0.1,
+   "reason": "per +10% \u2192 per +1%"
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "NEW_OMC_MARKETING_MARGIN",
+   "origin": "energy.json",
+   "factor": 0.0,
+   "reason": "OMC profiles' own Brent edges already embed marketing-margin compression"
+  },
+  {
+   "src": "P_FUEL_TAX_IN",
+   "dst": "NEW_OMC_MARKETING_MARGIN",
+   "origin": "energy.json",
+   "factor": 0.0,
+   "reason": "OMC profiles' own fuel-tax edges already embed absorption"
+  }
+ ]
+}

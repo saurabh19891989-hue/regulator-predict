@@ -15,7 +15,9 @@ def test_multi_order_propagation_and_sinks():
     tot, by_order, paths = net.unit_response("F1")
     assert math.isclose(tot["A"], 10 * DAMP[1])                             # 1st order
     assert math.isclose(tot["B"], 0.5 * -6 * DAMP[2])                       # 2nd order via F2
-    assert math.isclose(tot["C"], 10 * 0.3 * DAMP[2])                       # via company link only
+    assert "C" not in tot                                                   # driver shocks stop at companies
+    tC, _, _ = net.unit_response("A")                                       # idiosyncratic shock at A
+    assert math.isclose(tC["C"], 0.3 * DAMP[1])                             # spills over via the company link
     assert set(by_order["B"]) == {2} and set(by_order["A"]) == {1}
     assert all(len(p) <= 4 for p, _, _ in paths)
     # 4th-order chain

@@ -1,0 +1,400 @@
+{
+ "ticker": "WIPRO",
+ "name": "Wipro Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_IT_SERVICES",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's fourth-largest listed IT services group (Azim Premji ~72.6% promoter holding). Segments: IT services (Americas ~58%, Europe ~30%, APMEA ~12%, model knowledge) with BFSI ~30%, consumer, health and technology/communications verticals, plus a small IT products line and Capco consulting. TTM sales Rs97,023 cr, EBITDA ~19%, PAT ~Rs13,200 cr, net cash, dividend yield 5.6%. Q3 FY27 guide is -1.5% to +0.5% QoQ constant currency, large-deal bookings hit a 19-quarter low in Q2, and the stock trades at 14.9x P/E near six-year lows (up 22% in the last month).",
+ "revenue_mix": [
+  {
+   "segment": "IT services - Americas",
+   "share_pct": 58,
+   "geography": "US-led"
+  },
+  {
+   "segment": "IT services - Europe",
+   "share_pct": 30,
+   "geography": "UK, DACH, Nordics"
+  },
+  {
+   "segment": "IT services - APMEA and India",
+   "share_pct": 11,
+   "geography": "APAC, Middle East, India"
+  },
+  {
+   "segment": "IT products/other",
+   "share_pct": 1,
+   "geography": "India/Middle East"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "employee benefit cost",
+   "share_of_costs_pct": 60
+  },
+  {
+   "input": "subcontracting & technical fees",
+   "share_of_costs_pct": 18
+  },
+  {
+   "input": "travel, facilities, other",
+   "share_of_costs_pct": 22
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_USDINR",
+   "dst": "WIPRO",
+   "relation": "fx_translation",
+   "w": 1.8,
+   "w_low": -1.5,
+   "w_high": 3.5,
+   "lag": "0-3m",
+   "mechanism": "~95% of revenue foreign-currency, ~45% of costs INR (model knowledge). +3% USD/INR => ~+1.3pp margin pre-hedge on 19.5% EBITDA => +6.7% EBITDA; hedge book and wage/pass-through leakage keep ~35% (persistence 0.35); EV/MCap ~0.9 (net cash) => +2.1, shaded to +1.8. Pack elasticity is negative (-2.52, t -1.7): not significant, reflects risk-off co-movement; fundamental sign retained, range extends below zero.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "WIPRO",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Americas ~ 58% of revenue (model knowledge). +1pp US growth => IT services +1.5pp => revenue +0.9%; incremental margin 30% on 19.5% => EBITDA +1.4%; with growth re-rating (persistence ~1) => ~+2.5. Currently weak: Q3 guide -1.5%..+0.5% CC.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Wipro+Q2+results+Q3+revenue+growth+seen+-1.5%+to+0.5%+large+deal+bookings+19-quarter+low+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Q3 FY27 IT-services CC guide -1.5% to +0.5% QoQ; large-deal bookings 19-quarter low; ADR -4.5% then recovered"
+    }
+   ]
+  },
+  {
+   "src": "C_EU_UK",
+   "dst": "WIPRO",
+   "relation": "demand_driver",
+   "w": 1.6,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Europe ~ 30% of revenue (largest among peers; model knowledge), BFSI/consumer. +1pp EU growth => revenue +0.45%; incremental margin => EBITDA +0.7%, with re-rating => ~+1.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "WIPRO",
+   "relation": "substitution",
+   "w": -6.0,
+   "w_low": -13.0,
+   "w_high": 2.0,
+   "lag": ">12m",
+   "mechanism": "SSU +1 = ~3% repricing of base. Wipro has the weakest AI-led deal momentum of the large caps (large-deal bookings -76% YoY, 19-quarter low) and large legacy infrastructure/BPS pools most exposed to automation: 3% x 65% flow-through => EBITDA -10%; persistence 0.6 => -6. Livemint (2026-10-15) notes an 'anti-AI trade' lifted Wipro ADRs - the market is pricing deflation risk both ways.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Wipro+ADRs+surge+anti-AI+trade+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-15",
+     "note": "Livemint: ADRs +5% two-month high; anti-AI trade"
+    }
+   ]
+  },
+  {
+   "src": "P_US_VISA_OUTSOURCING",
+   "dst": "WIPRO",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.4,
+   "lag": "3-12m",
+   "mechanism": "+1 = material tightening. Wipro has the lowest H-1B dependence of the Indian big five (local hiring), onsite cost +1.5pp of revenue => -7.7% EBITDA; 50% passed through; persistence 0.6 => ~-3. PERM suspension of 2026-10-08 and $100k H-1B fee litigation (struck down 2026-10-01) did not hurt the stock.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "US suspended PERM green-card labour programme for named firms; Reuters 2026-10-11: little risk to Indian IT (<2% of green-card filings)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-01",
+     "note": "Forbes 2026-10-01: judge struck down latest version of $100,000 H-1B fee; Indian Express 2026-09-19: fee extended"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "WIPRO",
+   "relation": "demand_driver",
+   "w": 1.7,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "+5% S&P: client sentiment and global risk appetite. Pack +1.69 (t +2.2) vs beta 0.78 - consistent; kept.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "WIPRO",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: FPIs (9.46% and rising) and clients de-risk; the pack lists no significant VIX elasticity for Wipro (beta 0.78), so this is a judgement-based low-confidence edge.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "WIPRO",
+   "relation": "discount_rate",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp India 10y. 5.6% dividend yield stock behaves like a bond proxy: dividend yield spread to G-sec shrinks => ~-1%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "WIPRO",
+   "relation": "discount_rate",
+   "w": 1.0,
+   "w_low": -0.2,
+   "w_high": 2.2,
+   "lag": "0-3m",
+   "mechanism": "+$5bn quarterly FPI inflow; FIIs went 8.32% -> 9.46% over Mar-Sep 2026 while DIIs fell 7.86% -> 5.14% (consistent with Nifty 50 index rebalancing - the Upstox 2026-09-29 headline 'ahead of NIFTY50 index reshuffle'; inference, not confirmed). Positive when flows return.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  },
+  {
+   "src": "F_US_10Y",
+   "dst": "WIPRO",
+   "relation": "macro_transmission",
+   "w": 0.3,
+   "w_low": -1.2,
+   "w_high": 1.4,
+   "lag": "0-3m",
+   "mechanism": "Pack +1.12 per +25bp (t +1.8): yields up with US growth; valuation channel opposite. Net kept small. Do not stack with F_FED_FUNDS in the same scenario.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "WIPRO",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -2.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "+25bp Fed funds: BFSI & consumer clients (Capco consulting arm) delay discretionary programmes; partly offset by stronger USD. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  },
+  {
+   "src": "F_COAL_INTL",
+   "dst": "WIPRO",
+   "relation": "macro_transmission",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Pack elasticity -3.13 per +15% (t -2.1, beta 0.90) but there is no causal channel (coal is <0.5% of IT costs); likely an INR/inflation macro proxy. I include a token weight to acknowledge the sign conflict - treat as noise; low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.screener.in/company/WIPRO/consolidated/",
+     "date": "2026-11-05",
+     "note": "Screener: Sep-26 qtr sales 24,753 cr, OPM 20%, PAT 3,200 cr, P/E 14.9, yield 5.58%"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Premji family/Azim Premji trusts",
+   "ticker": null,
+   "role": "parent",
+   "importance": "medium",
+   "note": "72.57% promoter holding; dividend flows to philanthropy"
+  },
+  {
+   "counterparty": "Capco (Wipro subsidiary)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "BFS consulting; sensitive to financial-services restructuring cycles"
+  },
+  {
+   "counterparty": "TCS, Infosys, HCLTech, TechM, Cognizant, Accenture",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "vendor consolidation and AI repricing; Accenture result 2026-09 set sector tone"
+  },
+  {
+   "counterparty": "Hyperscalers and ERP vendors (SAP, Salesforce, Microsoft, AWS)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "platform alliances"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (mid-Jan); guidance for Q4 and large-deal rebound the CEO promised",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "https://news.google.com/rss/search?q=Wipro+Q2+results+Q3+revenue+growth+seen+-1.5%+to+0.5%+large+deal+bookings+19-quarter+low+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-11",
+   "event": "Interim dividend/buyback decisions and record dates (yield 5.6%) - details not captured",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 1.5,
+   "source": "model knowledge; no dated notice found"
+  },
+  {
+   "date": "2027-03",
+   "event": "Acquisition announcement (management says it is shopping with large cash pile; NDTV Profit 2026-10-16)",
+   "type": "corporate_action",
+   "prob": 0.25,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=What+Cash-Rich+Wipro+Is+Looking+For+When+It+Shops+For+Its+Next+Business+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "US H-1B/outsourcing action",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": -0.5,
+   "source": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01",
+   "event": "TCS/Infosys/HCL Q3 prints set sector read-through just before Wipro",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge of calendar"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Sep-2026 (Q2 FY27, reported 2026-10-15)",
+  "trend": "Revenue Rs24,753 cr (+9.1% YoY, +1.1% QoQ), PAT Rs3,200 cr (-4.5% QoQ, -1.9% YoY), IT-services margin 16.5% (+improved), interest cost rising 361->545 cr YoY (acquisition/lease funding). Q3 guide -1.5% to +0.5% CC; large-deal TCV -76% YoY at a 19-quarter low; CEO expects Q3 rebound.",
+  "valuation": "P/E 14.9 (cheapest of the large five alongside Infosys), yield 5.58%, price Rs198 vs 52w 157-273",
+  "recent_developments": [
+   "2026-10-15: Q2 FY27 results; Reuters: revenue beat offsets weak deal wins; Nomura Buy +15% upside (Moneycontrol 2026-10-16)",
+   "2026-10-16: shares +2% to +6.5% intraday, two-month high",
+   "2026-10-09: PERM suspension - IT up to 5% (Outlook Money)",
+   "2026-09-29: Infosys, Wipro at 6-year lows; Wipro -2% ahead of Nifty 50 reshuffle (Upstox, Livemint)",
+   "2026-10-16: NDTV Profit on M&A appetite"
+  ]
+ },
+ "key_risks": [
+  "Weak large-deal bookings turn into negative growth",
+  "GenAI repricing of legacy infra/BPS",
+  "Margin dilution from acquisitions and rising interest cost",
+  "US policy",
+  "Mid-cap peers (Coforge, Persistent) taking share"
+ ],
+ "upside_triggers": [
+  "Deal rebound in Q3",
+  "Cheap valuation + 5.6% yield attracting FPIs",
+  "Accretive M&A",
+  "Weaker INR",
+  "Anti-AI trade rotation continues"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/WIPRO/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener fundamentals"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Wipro+Q2+results+Q3+revenue+growth+seen+-1.5%+to+0.5%+large+deal+bookings+19-quarter+low+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Q2 FY27 and guidance headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PERM+suspension+H-1B+green+card+IT+stocks+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-09",
+   "what": "PERM suspension"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=H-1B+fee+100000+Indian+IT+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-01",
+   "what": "H-1B fee ruling"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Wipro+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-15",
+   "what": "Wipro press release/earnings highlights listing in Google News"
+  }
+ ]
+}

@@ -398,6 +398,7 @@ NEW_RAIL_FREIGHT_TARIFF,NEW,Indian Railways freight/haulage tariff changes,+1 = 
 NEW_CONTAINER_LOGISTICS_COMPETITION,NEW,Private container train operators and road competition,+1 = 2pp rail container market share loss for CONCOR,,,,THEME,CONCOR
 NEW_GENSET_PRICE_COMPETITION,NEW,Genset / engine price competition in India,+5 pp realised-price erosion in the domestic genset/engine market,,,,FACTOR,CUMMINSIND
 NEW_POWER_EQUIP_CAPACITY,NEW,Power/T&D equipment capacity additions vs demand (pricing pressure),+1 = peer capacity additions outpace demand enough to cut order pricing/margins ~100 bp,,,,FACTOR,ENRIN
+NEW_P_DRUG_PRICE_CONTROL,NEW,"India drug/medical-product price control and trade-margin caps (NPPA, MRP caps)",+1 = one tightening step (e.g. 30% cancer-drug price cut or broad 16% MRP-over-cost cap),,,,POLICY,FORTIS
 NEW_PNGRB_TARIFF,NEW,PNGRB gas pipeline tariff regulation,+1 = tariff cut / unified-tariff reduction of ~10%,,,,POLICY,GAIL
 NEW_AIRPORT_TARIFF_REGULATION,NEW,Airport tariff regulation outcomes (AERA),+1 = control-period order raising aero yield ~10%,,,,POLICY,GMRAIRPORT
 NEW_NCR_AIRPORT_COMPETITION,NEW,New NCR airport competing with Delhi,+1 = 5% of Delhi passengers diverted,,,,THEME,GMRAIRPORT
@@ -420,14 +421,22 @@ NEW_COPRA_COCONUT_OIL,NEW,Copra / coconut oil price,+15% copra price,,,,FACTOR,M
 NEW_DEFENCE_SHIPYARD_COMPETITION,NEW,Competition among Indian shipyards for major naval programmes,+1 = a major naval programme awarded to a competing yard,,,,FACTOR,MAZDOCK
 NEW_COMMODITY_EXCHANGE_COMPETITION,NEW,Competition in commodity derivatives,+1 = credible entrant/launch capturing ~10% of bullion/energy options volume,,,,FACTOR,MCX
 NEW_US_AUTO_PARTS_TARIFFS,NEW,US tariffs on imported autos and auto parts (incl. Mexico/USMCA),+10pp average tariff,,,,POLICY,MOTHERSON
+NEW_GOLD_LOAN_COMPETITION,NEW,"Gold-loan competitive intensity (bank/NBFC entry, yield compression)",+1 = ~100bp industry gold-loan yield compression or ~3pp share shift to banks/new entrants,,,,FACTOR,MUTHOOTFIN
 NEW_BEAUTY_RETAIL_COMPETITION,NEW,"Beauty retail competition intensity (Tira, Sephora, Purplle, quick commerce)",+1 = materially sharper discounting/expansion by rival beauty retailers and q-commerce,,,,FACTOR,NYKAA
 NEW_CRUDE_WINDFALL_TAX_IN,NEW,Windfall (SAED) tax on domestic crude,"+1 = SAED reimposed at ~Rs10,000/tonne",,,,POLICY,OIL
+NEW_INNERWEAR_COMPETITION,NEW,Innerwear share competition (mass and D2C),+1 = 2pp share loss to rivals,,,,THEME,PAGEIND
 NEW_EDIBLE_OIL_IMPORT_DUTY,NEW,India effective import duty on crude edible oils,+5 pp effective import duty on crude palm/soy/sunflower oil,,,,POLICY,PATANJALI
+NEW_BANK_INFRA_LENDING_COMPETITION,NEW,Bank competition in power/infrastructure lending,+1 = banks take ~5pp of power/infra lending share or compress spreads ~25bp,,,,FACTOR,PFC
 NEW_AGROCHEM_PRICES_GLOBAL,NEW,Global agrochemical prices and channel destocking,+10% global agchem active prices / volumes,,,,FACTOR,PIIND
 NEW_WC_COMPETITIVE_INTENSITY,NEW,Competitive intensity in Indian wires & cables,+1 = new entrants/capacity cause ~100 bp sustained W&C margin erosion,,,,FACTOR,POLYCAB
+NEW_SOLAR_CELL_MODULE_PRICE,NEW,Indian solar module / cell realisations,+10% Indian module/cell realisations,,,,FACTOR,PREMIERENE
 NEW_STATE_LIQUOR_POLICY,NEW,State excise / liquor pricing policy (key states),"+1 = adverse change in excise duty or pricing in UP, Rajasthan, Karnataka, Maharashtra",,,,POLICY,RADICO
+NEW_REFRIGERANT_PRICES,NEW,Global refrigerant gas prices,+10% HFC/HFO refrigerant prices,,,,FACTOR,SRF
+NEW_WTG_PRICING_COMPETITION,NEW,Wind-turbine pricing competition,+1 = realised WTG price per MW -5%,,,,THEME,SUZLON
 NEW_QCOMMERCE_COMPETITION,NEW,"Quick-commerce competitive intensity (Blinkit, Zepto, Flipkart Minutes, Amazon)",+1 = materially faster dark-store expansion/discounting by rivals,,,,FACTOR,SWIGGY
 NEW_ENTERPRISE_CONNECTIVITY_PRICING,NEW,Enterprise connectivity pricing pressure,+1 = 5% decline in MPLS/SD-WAN/IZO prices,,,,THEME,TATACOMM
+NEW_INDIA_CV_SHARE_PRESSURE,NEW,Market-share pressure in Indian medium and heavy CVs,+1 = 2 pp market share loss to competitors,,,,FACTOR,TMCV
 NEW_VALUE_FASHION_COMPETITION,NEW,Value-fashion and mass-retail competition intensity,"+1 = materially sharper expansion/discounting by Reliance Trends/Yousta, Max, Style Union, Myntra, V-Mart",,,,FACTOR,TRENT
+NEW_STATE_EXCISE_ALCOHOL,NEW,State excise / pricing policy for alcohol,+1 = adverse change of Maharashtra/Karnataka scale (Popular NSV about -20%),,,,POLICY,UNITDSPR
 NEW_CSD_PRICE_COMPETITION,NEW,"Soft-drink price competition intensity (Coca-Cola, Campa, regional)",+1 = materially sharper discounting/ad spend in carbonated soft drinks,,,,FACTOR,VBL
 NEW_SUMMER_TEMPERATURE,NEW,Summer temperature vs normal,+1 = season ~1C hotter than normal in Mar-Jun,,,,FACTOR,VBL

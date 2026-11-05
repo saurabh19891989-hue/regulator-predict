@@ -1,0 +1,391 @@
+{
+ "industry": "I_NBFC_VEHICLE_CONSUMER",
+ "business_summary": "India's second-largest credit-card issuer by cards in force (HDFC Bank leads; SBI 'retains' debit-card share 25%), ~69% owned by State Bank of India (model knowledge). Earns interest on revolving/EMI receivables (~Rs58k cr, -2% YoY), interchange and fees on ~Rs1.1 lakh cr quarterly spends, plus insurance/other. Q2 FY27 PAT Rs778cr (+75%) on lower credit costs (impairments -37% to Rs819cr), revenue only +3-4%; credit cost 5.6%. Stock Rs580.6, -34% in 12m; analysts flag margin pressure from the shift to EMI loans (ET BFSI, JPMorgan, Nuvama).",
+ "revenue_mix": [
+  {
+   "segment": "interest income on card receivables/EMI",
+   "share_pct": 45,
+   "geography": "India (model estimate)"
+  },
+  {
+   "segment": "fees, interchange and other",
+   "share_pct": 50,
+   "geography": "India"
+  },
+  {
+   "segment": "insurance commission / other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 20
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 5
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "SBICARD",
+   "relation": "demand_driver",
+   "w": -3.5,
+   "w_low": -6.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+50bp credit cost on receivables Rs58.4k cr = Rs292cr pre-tax = Rs219cr post-tax vs run-rate PAT ~Rs3,100cr (Q2 x4) => -7% PAT; cycle persistence 0.5 => -3.5. Credit cost already fell to 5.6% (guide ~6% FY27), so downside is from a reversal.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/sbi-cards-reports-strong-q2-fy27-results-pat-rises-75-yoy-to-777-60-crore",
+     "date": "2026-10-23",
+     "note": "SBI Card Q2 FY27 PAT Rs778cr (+75%), impairments -37% to Rs819cr, receivables Rs58,376cr (-2% YoY), retail spends Rs95,299cr (+6%), credit cost 5.6% vs 6.5% in Q1; FY27 credit-cost guide ~6% (search summaries, psuconnect/Multibagg/Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "SBICARD",
+   "relation": "demand_driver",
+   "w": -6.0,
+   "w_low": -10.0,
+   "w_high": -3.0,
+   "lag": "0-3m",
+   "mechanism": "+1pp card delinquencies (cards are 100% unsecured) = ~+1pp credit cost = Rs584cr pre-tax = Rs437cr post-tax = -14% of run-rate PAT; persistence 0.45 (reverts within ~3 quarters) => -6. This was the driver of the 2024-26 drawdown and the 75% PAT rebound in Q2 FY27 was entirely from lower credit costs (impairments -37%).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/sbi-cards-reports-strong-q2-fy27-results-pat-rises-75-yoy-to-777-60-crore",
+     "date": "2026-10-23",
+     "note": "SBI Card Q2 FY27 PAT Rs778cr (+75%), impairments -37% to Rs819cr, receivables Rs58,376cr (-2% YoY), retail spends Rs95,299cr (+6%), credit cost 5.6% vs 6.5% in Q1; FY27 credit-cost guide ~6% (search summaries, psuconnect/Multibagg/Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SBICARD",
+   "relation": "funding_cost",
+   "w": -1.8,
+   "w_low": -3.5,
+   "w_high": -0.5,
+   "lag": "3-12m",
+   "mechanism": "+25bp repo (hiked to 5.50% on 2026-10-07): borrowings ~Rs55k cr (model estimate, bank lines/NCD/CP), ~35% floating re-prices in a quarter, rest over a year: +Rs140cr pre-tax annualised = Rs105cr post-tax = -3.4% PAT; management expects NIM roughly stable (Q2 call via search) as yields/pricing adjust => net -1.8 x ~1.0 persistence of a structural step.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "SBICARD",
+   "relation": "funding_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "+50bp spreads on ~40% market-linked borrowings (NCD/CP) ~Rs22k cr => Rs110cr pre-tax = Rs82cr post-tax = -2.6% PAT x 0.5 => -1.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBICARD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "SBICARD",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "+5pp urban consumption growth => card spends +6% (spends Rs1.1 lakh cr/qtr; retail Rs95.3k cr, +6% YoY) => interchange/fee income +4%, receivables +3% => PAT +5% x persistence 0.7 => +3.5. Spends are growing only 3-6% now, so there is room for upside.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.psuconnect.in/financial/sbi-cards-reports-strong-q2-fy27-results-pat-rises-75-yoy-to-777-60-crore",
+     "date": "2026-10-23",
+     "note": "SBI Card Q2 FY27 PAT Rs778cr (+75%), impairments -37% to Rs819cr, receivables Rs58,376cr (-2% YoY), retail spends Rs95,299cr (+6%), credit cost 5.6% vs 6.5% in Q1; FY27 credit-cost guide ~6% (search summaries, psuconnect/Multibagg/Business Standard)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "SBICARD",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> spends +1.3pp and lower slippages: PAT +2.5% x 0.8 => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBICARD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "SBICARD",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI squeezes real income of mass-affluent card users and keeps RBI tight: net -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "SBICARD",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -7.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 tightening step (higher risk weights on unsecured/card exposure, MDR/interchange or card-network rules, collection norms): +25pp risk-weight on receivables lifts capital need ~Rs1.5k cr or cuts growth => ROE -1pp => value -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBICARD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_DIGITAL_PAYMENTS",
+   "dst": "SBICARD",
+   "relation": "substitution",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": ">12m",
+   "mechanism": "+1 stronger UPI/BNPL adoption displaces card spends at small tickets (UPI debit/credit-on-UPI) but RuPay-on-UPI and card EMI keep partial share; net -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBICARD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "SBICARD",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "+$5bn/qtr FPI inflow: beta 0.85-0.9 (pack), high-beta financial; mutual funds bought it for 4 straight quarters (ET 2026-11-02).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBICARD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "SBICARD",
+   "relation": "macro_transmission",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points -> de-rating of unsecured-lending names; beta 0.85-0.9 (pack).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBICARD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "SBICARD",
+   "relation": "macro_transmission",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Pack elasticity +1.76 per SSU (t +2.8) is the only |t|>=2 factor but no direct mechanism; copper is a global-growth/risk proxy for consumption: shrink to +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBICARD.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "SBIN",
+   "dst": "SBICARD",
+   "relation": "holding_stake",
+   "w": 0.25,
+   "w_low": 0.1,
+   "w_high": 0.4,
+   "lag": "0-3m",
+   "mechanism": "w = % change in SBICARD equity per +1% in SBIN equity. SBIN owns ~69% (model), funds/co-brands via branch and YONO base; but SBICARD is ~4% of SBIN so reverse causality is tiny; sentiment/PSU-bank group flow beta ~0.25.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SBIN.md",
+     "date": "2026-11-05",
+     "note": "SBIN price 1000.3; stake from model knowledge"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "State Bank of India",
+   "ticker": "SBIN",
+   "role": "parent",
+   "importance": "high",
+   "note": "~69% shareholder, origination and funding support (model knowledge)"
+  },
+  {
+   "counterparty": "HDFC Bank / ICICI Bank / Axis Bank cards",
+   "ticker": "HDFCBANK",
+   "role": "competitor",
+   "importance": "high",
+   "note": "HDFC Bank leads credit cards (ET BFSI 2026-09-28)"
+  },
+  {
+   "counterparty": "Visa / Mastercard / RuPay (NPCI)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "card networks, interchange"
+  },
+  {
+   "counterparty": "Air India (co-brand launched 2026-10-28), Eternal (2026-10-15)",
+   "ticker": "ETERNAL",
+   "role": "customer",
+   "importance": "low",
+   "note": "co-brand partnerships for spend growth"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12-04",
+   "event": "RBI MPC December review: second hike would raise funding costs",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-01-22",
+   "event": "Q3 FY27 results (date approximate; Q2 was 2026-10-23): credit cost vs ~6% FY27 guide, receivables growth in H2",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 9.0,
+   "source": "https://www.psuconnect.in/financial/sbi-cards-reports-strong-q2-fy27-results-pat-rises-75-yoy-to-777-60-crore"
+  },
+  {
+   "date": "2026-11",
+   "event": "Festive-season spends data (Oct-Nov) and cobrand ramp (Air India, Eternal)",
+   "type": "other",
+   "prob": 0.8,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 4.0,
+   "source": "https://news.google.com/rss/search?q=SBI+Cards+Air+India+co-brand+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027",
+   "event": "RBI/NPCI changes to card unsecured risk weights or interchange/MDR rules",
+   "type": "regulatory",
+   "prob": 0.15,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 0.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs778cr (+75% YoY) on impairments -37% (Rs819cr) and opex +7%; revenue +3-4%; retail spends Rs95.3k cr (+6%); receivables Rs58.4k cr (-2%); credit cost 5.6% (6.5% in Q1) vs ~6% FY27 guide (search summaries; sources differ on total income Rs5,141-5,302cr)",
+  "valuation": "price Rs580.6; screener fields empty; JPMorgan and Nuvama cut targets after margin concerns (NDTV Profit 2026-10-26)",
+  "recent_developments": [
+   "2026-10-15 Eternal SBI Card launched",
+   "2026-10-23 Q2 results: PAT +75%",
+   "2026-10-26 JPMorgan, Nuvama cut targets, margin pressure",
+   "2026-10-27 ET BFSI: EMI shift threatens yields",
+   "2026-10-28 Air India co-brand card",
+   "2026-11-02 ET: MFs bought SBI Cards 4 quarters in a row"
+  ]
+ },
+ "key_risks": [
+  "Credit-cost reversal in unsecured lending",
+  "Funding cost rise after repo hike and yield compression from EMI shift",
+  "Regulatory tightening on unsecured exposure and card networks",
+  "Receivables shrinking (-2% YoY) while spends grow only 3-6%",
+  "Competition from HDFC Bank/ICICI Bank and UPI"
+ ],
+ "upside_triggers": [
+  "Credit cost below 5.5%",
+  "Receivables growth resuming in H2 FY27",
+  "Spends boost from festive season and co-brands",
+  "Rate cuts or funding-cost relief"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://www.psuconnect.in/financial/sbi-cards-reports-strong-q2-fy27-results-pat-rises-75-yoy-to-777-60-crore",
+   "date": "2026-10-23",
+   "what": "Q2 FY27 results summary"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=SBI+Cards+EMI+loans+yields+valuation+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "EMI shift/margin pressure headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  },
+  {
+   "url": "market_impact/data/packs/SBICARD.md",
+   "date": "2026-11-05",
+   "what": "pack (screener empty)"
+  }
+ ],
+ "ticker": "SBICARD",
+ "name": "SBI Cards and Payment Services Ltd.",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

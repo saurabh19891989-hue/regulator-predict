@@ -1,0 +1,465 @@
+{
+ "ticker": "MARUTI",
+ "name": "Maruti Suzuki India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AUTO_PV",
+ "tier": "NIFTY_50",
+ "business_summary": "India's largest passenger-vehicle maker (about 40% domestic PV share in H1 FY27 per Moneycontrol, 2026-10-16) with ~2.1 lakh domestic and ~50,000 export units a month (Oct 2026). Portfolio spans small cars, hatchbacks, CNG and hybrids and a growing SUV range; ~40% of sales are CNG. Majority-owned by Suzuki Motor Corp (~58.7% promoter holding). Exports to Japan, Europe, Africa, LatAm and the Middle East ~18% of volume. Carries a large cash and treasury portfolio (other income Rs 4.2k cr TTM), so equity value is less levered to operating swings than margins suggest, but treasury MTM now adds volatility.",
+ "revenue_mix": [
+  {
+   "segment": "domestic passenger vehicles",
+   "share_pct": 80,
+   "geography": "India"
+  },
+  {
+   "segment": "exports",
+   "share_pct": 15,
+   "geography": "Japan, Europe, Africa, LatAm, Middle East"
+  },
+  {
+   "segment": "spares, services, other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "raw materials (all)",
+   "share_of_costs_pct": 80,
+   "note": "79.9% of net sales in Q2 FY27 (company)"
+  },
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 14,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 1.3,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_RUBBER",
+   "share_of_costs_pct": 2.5,
+   "note": "model estimate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "MARUTI",
+   "relation": "input_cost",
+   "w": -2.0,
+   "w_low": -3.5,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Steel ~14% of sales (model estimate, not disclosed). +7% -> cost +0.98% of sales; EBITDA margin ~9-10% (Q2 FY27 9%) -> EBITDA -10% before pass-through; ~50% recovered via price hikes/mix over 1-2 qtrs -> -5%; EV/MCap ~0.9 (large treasury); persistence 0.4 -> -5*0.9*0.4 = -1.8, rounded -2.0. Pack empirical F_STEEL_GLOBAL -0.70 per +10% global HRC (t -1.1): same sign, consistent in size.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/maruti-suzuki-india-q2-results-volume-growth-commodity-impact-margins-guidance-festive-season-share-price-move-20020106.htm",
+     "date": "2026-10-27",
+     "note": "Raw material 79.9% of net sales in Q2 vs 75.7% a year earlier; management cites adverse commodity prices (West Asia conflict)"
+    },
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/maruti-suzuki-shares-slip-marginally-after-missing-estimates-in-q2-brokerages-divided-on-stock-outlook-check-target-prices-14062201.html",
+     "date": "2026-10-28",
+     "note": "Elevated steel and copper prices squeezing Indian automakers; brokerages trimmed estimates"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "MARUTI",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.2,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Direct (not via steel/rubber/INR which have own edges): oil-linked plastics, paints, lubricants, logistics ~8% of sales with ~25% pass-through to price per +10% Brent -> +0.2% of sales cost -> EBITDA -2.2% pre pass-through; plus fuel-cost hit to ownership cost/sentiment (CNG ~40% of Oct 2026 volumes, CNG price tied to gas/crude). Net ~ -1.2 after 50% pass-through, EV 0.9, persistence 0.4 plus demand effect. Agrees with pack empirical -0.99 per +10% (t -2.5).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/maruti-suzuki-india-q2-results-volume-growth-commodity-impact-margins-guidance-festive-season-share-price-move-20020106.htm",
+     "date": "2026-10-27",
+     "note": "Margin hit attributed to West Asia conflict commodity inflation"
+    },
+    {
+     "source": "https://www.newindianexpress.com/business/2026/Nov/01/monthly-car-sales-top-5-lakh-milestone-for-the-first-time-msil-sells-212l-pvs-in-oct-2026",
+     "date": "2026-11-01",
+     "note": "CNG vehicles ~87,000 units, ~40% of Oct 2026 sales; CNG capacity constrained"
+    }
+   ]
+  },
+  {
+   "src": "F_RUBBER",
+   "dst": "MARUTI",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Tyres/rubber parts ~2.5% of sales. +10% natural/synthetic rubber -> cost +0.25% of sales -> EBITDA -2.5%; 50% recovered -> -1.25%; x0.9 x0.4 = -0.45. Rubber RSS4 is +62% y/y (Mint 2026-11-05), so a large part is already in Q2 numbers.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.livemint.com/news/tyre-makers-rubber-prices-raw-material-earnings-automobile-11793702486661.html",
+     "date": "2026-11-05",
+     "note": "RSS4 rubber Rs300/kg, +62% vs Nov 2025; tyre makers raising prices"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "MARUTI",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Aluminium (castings, wheels, engine parts) ~3% of sales (estimate). +10% -> 0.3% of sales -> EBITDA -3% pre; 50% passed on; x0.9 x0.4 = -0.54. LME aluminium is -19.6% since 2026-06-01 (factor_state), so currently a tailwind into H2 FY27.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium 3,200, -19.6% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "MARUTI",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.7,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Copper (wiring harness, motors) ~1.3% of sales (estimate). +10% -> 0.13% of sales -> EBITDA -1.3% pre; 50% passed; x0.9 x0.4 = -0.23, rounded -0.3. Pack empirical copper +0.52 (t 0.7) is insignificant and opposite in sign (copper proxies global growth).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/maruti-suzuki-shares-slip-marginally-after-missing-estimates-in-q2-brokerages-divided-on-stock-outlook-check-target-prices-14062201.html",
+     "date": "2026-10-28",
+     "note": "Copper cited among elevated raw materials for automakers"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "MARUTI",
+   "relation": "fx_translation",
+   "w": -0.3,
+   "w_low": -1.2,
+   "w_high": 0.6,
+   "lag": "0-3m",
+   "mechanism": "Net effect ambiguous. Imports of parts/yen-linked content ~12% of sales vs exports ~15% of sales (Oct 2026 exports 49,872 units = 18% of volume). +3% INR weakness: import cost +0.36% of sales (-3.6% EBITDA) vs export realisation +0.45% (partly offset by local content ~80%) -> small net negative; company named 'adverse foreign exchange movement' in Q2 and MTM losses on treasury. Pack empirical +0.88 (t 0.8) is insignificant/opposite sign; wide range.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/maruti-suzuki-india-q2-results-volume-growth-commodity-impact-margins-guidance-festive-season-share-price-move-20020106.htm",
+     "date": "2026-10-27",
+     "note": "Margin pressure from adverse FX movement and MTM losses on invested surplus"
+    },
+    {
+     "source": "https://www.newindianexpress.com/business/2026/Nov/01/monthly-car-sales-top-5-lakh-milestone-for-the-first-time-msil-sells-212l-pvs-in-oct-2026",
+     "date": "2026-11-01",
+     "note": "Exports up ~60% y/y to 49,872 units in Oct 2026"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "MARUTI",
+   "relation": "demand_driver",
+   "w": -0.9,
+   "w_low": -2.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "~75-80% of cars financed (model knowledge). RBI hiked repo +25bp to 5.50% on 2026-10-07 and moved to 'calibrated tightening'. +25bp -> EMI ~+0.9% -> volume -0.45% (elasticity ~-0.5) -> EBITDA -0.45%*2.5 operating gearing = -1.1%; x0.9 x0.5 = -0.5, plus ~-0.4 from equity multiple compression on a rate-sensitive consumer name = -0.9.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+     "date": "2026-10-07",
+     "note": "Repo hiked 25bp to 5.50%, stance calibrated tightening; cuts off the table near term"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "MARUTI",
+   "relation": "demand_driver",
+   "w": 5.5,
+   "w_low": 3.0,
+   "w_high": 8.0,
+   "lag": "0-3m",
+   "mechanism": "Domestic ~82% of volumes (exports ~18%). +10% industry volumes -> Maruti volume +10% x0.82; contribution margin ~25% of sales vs EBITDA margin ~10% -> operating gearing 2.5x -> EBITDA +20%; x0.9 EV/MCap x persistence 0.3 (cyclical, GST tailwind fading) = +5.5. Oct 2026 industry record >5 lakh units; Maruti order book 2.45 lakh units, network stock 12 days.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.newindianexpress.com/business/2026/Nov/01/monthly-car-sales-top-5-lakh-milestone-for-the-first-time-msil-sells-212l-pvs-in-oct-2026",
+     "date": "2026-11-01",
+     "note": "Industry sales 5.25-5.30 lakh in Oct 2026; MSIL 2.76 lakh (+25%), pending bookings 2.45 lakh, stock 12 days"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "MARUTI",
+   "relation": "demand_driver",
+   "w": 1.3,
+   "w_low": 0.5,
+   "w_high": 2.2,
+   "lag": "3-12m",
+   "mechanism": "Entry/small cars are the rural-heavy part of the range: small cars +38% y/y in Oct 2026 (40,646 units). +5pp rural income/consumption growth -> ~+2% Maruti volume -> EBITDA +5% x0.9 x0.3 = +1.3. Partially overlaps F_AUTO_DEMAND_IN via backbone edge; weight deliberately small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.newindianexpress.com/business/2026/Nov/01/monthly-car-sales-top-5-lakh-milestone-for-the-first-time-msil-sells-212l-pvs-in-oct-2026",
+     "date": "2026-11-01",
+     "note": "Small car sales +38% y/y to 40,646 units in Oct 2026"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "MARUTI",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "GST 2.0 (Sept 2025) cut small-car GST to 18%; H1 FY27 volumes +27% in Q2 'aided by GST-led demand'. A further broad cut (+1 SSU, 2-5pp) would lift volume ~3-4% (price elasticity ~-1) and EBITDA ~+9%; x0.9 x0.5 structural = +4. Probability of another car-specific cut in 12m is low; weight is conditional.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/maruti-suzuki-india-q2-results-volume-growth-commodity-impact-margins-guidance-festive-season-share-price-move-20020106.htm",
+     "date": "2026-10-27",
+     "note": "Volume growth 27% to 6.97 lakh in Q2 'aided by GST-led demand momentum and a low base'"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "MARUTI",
+   "relation": "policy_effect",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.5,
+   "lag": ">12m",
+   "mechanism": "Maruti is an ICE/CNG/hybrid-heavy incumbent with a late EV launch; stronger EV push (incentives, mandates) shifts mix to rivals (TMPV EV mix ~20-23%, M&M BEV). +1 SSU -> ~-1.5% share erosion over time -> EBITDA -4% x0.9 x0.5 structural = -1.8, but partly offset by Maruti's own eVitara/export EV programme and PLI eligibility -> -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://hdfcsky.com/news/tata-motors-pv-warns-q2-commodity-hit",
+     "date": "2026-08-14",
+     "note": "Tata Motors PV gaining share with EV mix 20%+ (Q1 FY27 call)"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "MARUTI",
+   "relation": "input_cost",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "A tightening (+1) = chip/ECU supply disruption cutting production ~5% for a quarter (as in 2021-22 and the Oct-2025 Nexperia episode - model knowledge). 5% volume x 2.5 gearing = -12% EBITDA for one quarter -> annualised -3% x0.9 x... = -3. No current disruption reported in sourced material.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Not sourced to a 2026 article; historical analogue"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "MARUTI",
+   "relation": "geopolitical_exposure",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Direct channel only (commodity/FX/rate channels are on other edges): Middle East/GCC is a significant export region for Indian-made cars and shipping disruption raises freight; +1 escalation -> export volume -3% on an 18% share = -0.5% volume -> EBITDA -1.3% x0.9 x0.5 = -0.6. Exports nonetheless +60% y/y in Oct 2026, so the realised effect has been small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.newindianexpress.com/business/2026/Nov/01/monthly-car-sales-top-5-lakh-milestone-for-the-first-time-msil-sells-212l-pvs-in-oct-2026",
+     "date": "2026-11-01",
+     "note": "Exports 49,872 units, +60% y/y"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Suzuki Motor Corporation",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "58.7% promoter; technology, royalty and yen-linked imports; group exports"
+  },
+  {
+   "counterparty": "Motherson Sumi / Bosch / tier-1 suppliers",
+   "ticker": "MOTHERSON",
+   "role": "supplier",
+   "importance": "medium",
+   "note": "wiring, mirrors, electronics; part of 80% material cost"
+  },
+  {
+   "counterparty": "Hyundai Motor India",
+   "ticker": "HYUNDAI",
+   "role": "competitor",
+   "importance": "high",
+   "note": "No.2 historically; slipping per Moneycontrol 2026-10-16"
+  },
+  {
+   "counterparty": "Tata Motors Passenger Vehicles",
+   "ticker": "TMPV",
+   "role": "competitor",
+   "importance": "high",
+   "note": "overtook Mahindra in H1 FY27 share; targets 15% share soon, 20% by FY31"
+  },
+  {
+   "counterparty": "Mahindra & Mahindra",
+   "ticker": "M&M",
+   "role": "competitor",
+   "importance": "high",
+   "note": "SUV share competitor"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-08",
+   "event": "Diwali festive peak (retail conversion of 2.45 lakh pending orders)",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "New Indian Express 2026-11-01 (order book); Diwali date per tractor article"
+  },
+  {
+   "date": "2026-12-01",
+   "event": "November sales print (festive month, first full month of Diwali retail)",
+   "type": "guidance",
+   "prob": 0.99,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "monthly dispatch pattern"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC meeting: second hike vs hold after Oct hike to 5.50%",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": -0.5,
+   "source": "The Hindu 2026-10-07 (calibrated tightening); meeting date unverified"
+  },
+  {
+   "date": "2027-01",
+   "event": "CNG production capacity expansion starts (company)",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.5,
+   "source": "New Indian Express 2026-11-01"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (margin trajectory; commodity pass-through via price hikes)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "normal reporting calendar"
+  },
+  {
+   "date": "2027-06",
+   "event": "EPR / End-of-Life Vehicles certificate pricing framework (company says obligation not yet reliably estimable)",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 0.0,
+   "source": "CNBC TV18 2026-10-27"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-27",
+  "trend": "Record volumes (Q2 +27% to 6.97 lakh units; revenue +26% to Rs 53,356 cr) but EBITDA margin down to ~9% from 12% (EBITDA Rs 4,764 cr, -6% y/y) on commodity inflation, FX, MTM losses on treasury and higher depreciation; consolidated PAT Rs 2,466 cr (-26%). Raw material 79.9% of sales vs 75.7%.",
+  "valuation": "Price ~Rs 12,600 (2026-11-05); TTM P/E ~29.5x, market cap ~Rs 3.96 lakh cr; stock -33% in CY2026 to an 18-month low in Oct (Business Standard 2026-10-13), +8% in last month.",
+  "recent_developments": [
+   "2026-09-24: green hydrogen plant commissioned at Manesar (HDFC Sky headline)",
+   "2026-09-30: Production Director resigned, successor appointed (BusinessLine headline)",
+   "2026-10-01: Sept sales: UV volumes +62%; stock -5% that day (Zee Business headline)",
+   "2026-10-07: RBI hiked repo 25bp to 5.50%",
+   "2026-10-27: Q2 FY27 results; EPR obligations under End-of-Life Vehicles Rules 2025 not yet estimable (CNBC TV18)",
+   "2026-11-01: October sales record 2.76 lakh units (+25%), domestic PV +20%, exports +60%, order book 2.45 lakh; CNG ~40% of mix, CNG capacity to be expanded from January",
+   "2026-11-05: Nifty Auto +2.9% on crude easing to ~$94 and hopes of US tariff easing post US midterms"
+  ]
+ },
+ "key_risks": [
+  "Commodity (steel, copper, rubber, precious metals) inflation not fully passed through; Q2 margin already ~9%",
+  "Rate hikes and fuel-price/West Asia inflation dampening affordability once GST-led demand fades",
+  "Market-share pressure from Tata and Mahindra in SUVs/EVs",
+  "Treasury MTM volatility in other income",
+  "EPR/end-of-life vehicle liabilities unquantified",
+  "Supply disruptions (chips, CNG capacity)"
+ ],
+ "upside_triggers": [
+  "Crude and metals easing (Iran-US talks; aluminium already -20% since June)",
+  "Price hikes sticking in a strong festive season",
+  "Export growth (+60% y/y in Oct)",
+  "CNG capacity expansion from Jan 2027",
+  "US-India trade deal easing sentiment"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.cnbctv18.com/market/maruti-suzuki-india-q2-results-volume-growth-commodity-impact-margins-guidance-festive-season-share-price-move-20020106.htm",
+   "date": "2026-10-27",
+   "what": "Q2 FY27 results, margin drivers, EPR note"
+  },
+  {
+   "url": "https://www.moneycontrol.com/news/business/markets/maruti-suzuki-shares-slip-marginally-after-missing-estimates-in-q2-brokerages-divided-on-stock-outlook-check-target-prices-14062201.html",
+   "date": "2026-10-28",
+   "what": "Brokerage reaction, input cost commentary"
+  },
+  {
+   "url": "https://www.newindianexpress.com/business/2026/Nov/01/monthly-car-sales-top-5-lakh-milestone-for-the-first-time-msil-sells-212l-pvs-in-oct-2026",
+   "date": "2026-11-01",
+   "what": "October sales, exports, CNG share, order book"
+  },
+  {
+   "url": "https://www.screener.in/company/MARUTI/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener.in consolidated financials through Sep 2026"
+  },
+  {
+   "url": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+   "date": "2026-10-07",
+   "what": "RBI repo hike to 5.50%"
+  },
+  {
+   "url": "https://www.moneycontrol.com/news/business/markets/auto-stocks-rally-ashok-leyland-jumps-9-maruti-tata-motors-pv-m-m-lead-gains-as-nifty-auto-surges-3-14071026.html",
+   "date": "2026-11-05",
+   "what": "Auto rally on crude easing"
+  },
+  {
+   "url": "market_impact/data/packs/MARUTI.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack (price, empirical sensitivities, headlines; fundamentals section was empty so screener fetched directly)"
+  }
+ ]
+}

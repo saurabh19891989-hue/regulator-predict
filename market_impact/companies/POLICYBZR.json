@@ -1,0 +1,350 @@
+{
+ "industry": "I_INTERNET_PLATFORMS",
+ "business_summary": "Operator of Policybazaar (insurance marketplace), Paisabazaar (loans), and newer initiatives (Policybazaar for Business, UAE, health, Doctor consult). Revenue is mostly commission and marketing fees from insurers on premium sold (Q2 FY27 premium ~Rs9,385cr, +38%; revenue ~Rs2,178cr, +35%; PAT ~Rs192cr per search summaries, sources differ). IRDAI's draft commission/EoM caps and dark-pattern ban (2026-09-23/24) triggered a 36% one-day crash; stock Rs971 (-39% in 3m, -47% in 12m), market value Rs44,922cr; ad spends pressured Q2 margins (stock -7% on 2026-11-02).",
+ "revenue_mix": [
+  {
+   "segment": "insurance commissions and marketing fees (life, health, motor)",
+   "share_pct": 85,
+   "geography": "India ~95%, UAE ~5% (model estimate)"
+  },
+  {
+   "segment": "credit (Paisabazaar) and other",
+   "share_pct": 15,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 30
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_IRDAI_REG",
+   "dst": "POLICYBZR",
+   "relation": "regulatory_risk",
+   "w": -14.0,
+   "w_low": -30.0,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "IRDAI draft: product-wise commission caps (payout cap ~25%), 5-year EoM limits, dark-pattern ban, delinking of insurance from loans. PB earns ~all revenue as commission/marketing fee on insurance premium (~85-90% insurance take rate ~15-20% of premium, model). If commissions are cut a third: revenue -15 to -25%, with fixed ad/staff costs EBITDA falls ~46% (brokerages' estimate). Equity already -43% in 4 sessions (CNBC TV18/Fortune India); further downside if rules are finalised as drafted (-14 central), upside +2 if diluted (Systematix 'may need to revisit'; Livemint 2026-10-15 'not intended to disrupt').",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PB+Fintech+IRDAI+commission+cap+earnings+risk+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-26",
+     "note": "PB Fintech -36% on 2026-09-24, -43% over 4 sessions; market value -Rs31,000cr; brokerages see ~46% earnings risk (Fortune India 2026-09-25); Nomura target Rs1,100 (2026-10-09), Bernstein Rs2,310 (2026-09-28)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "POLICYBZR",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "+$5bn/qtr FPI inflow: high-beta (1.4-1.5 per pack) internet-platform name; Nifty +3-4% => stock +4 after regulator-driven idiosyncratic drag.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "POLICYBZR",
+   "relation": "macro_transmission",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX points: pack beta 1.06-1.39 and 58% annual volatility; Nifty effect -1.5% x beta 1.4 + growth-stock factor => -2.5. Pack shows -0.93 per SSU (t -1.3).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "POLICYBZR",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Pack elasticity -5.0 per +25bp (t -1.8): long-duration growth stock; shrunk by 60% toward zero because the estimate is noisy => -2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_REFINING_MARGIN",
+   "dst": "POLICYBZR",
+   "relation": "macro_transmission",
+   "w": 0.8,
+   "w_low": -0.5,
+   "w_high": 2.0,
+   "lag": "0-3m",
+   "mechanism": "Pack +2.34 per +$2 GRM (t 2.8) and Brent +1.94 (t 2.1): no fundamental channel for an insurance marketplace; probable regime proxy for risk-on/inflation. Shrunk to +0.8 and left low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_STEEL_GLOBAL",
+   "dst": "POLICYBZR",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Pack -2.82 (t -2.0): no mechanism; shrunk heavily.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_FINANCIALISATION",
+   "dst": "POLICYBZR",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": ">12m",
+   "mechanism": "+1 structural savings shift raises online protection/health penetration: premium growth +3pp pa => revenue +4% x EV/MCap 1.0 x persistence 1.0 => +4. Q2 insurance premium growth +38% (search).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "POLICYBZR",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP -> premium growth +1.5pp; revenue +2% x 1.0 => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "T_GENAI_SERVICES",
+   "dst": "POLICYBZR",
+   "relation": "substitution",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 1.0,
+   "lag": ">12m",
+   "mechanism": "+1 GenAI adoption: direct-to-consumer AI agents from insurers/Google could disintermediate aggregators (long-run, speculative) vs lower service costs for PB: net -1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CPI_IN",
+   "dst": "POLICYBZR",
+   "relation": "macro_transmission",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "+1pp CPI raises rates, weakens discretionary insurance spending, higher marketing costs: net -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI MPC hiked repo 25bp to 5.50%, stance 'calibrated tightening' (Hindu/Reuters/CNBC TV18 headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "POLICYBZR",
+   "relation": "fx_translation",
+   "w": 0.8,
+   "w_low": -1.5,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Pack +4.02 per +3% (t 1.6): UAE/Dubai operations small; mostly noise; shrunk to +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/POLICYBZR.md",
+     "date": "2026-11-05",
+     "note": "pack data and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Life insurers (HDFC Life, SBI Life, Max Life, ICICI Pru, Tata AIA)",
+   "ticker": "HDFCLIFE",
+   "role": "customer",
+   "importance": "high",
+   "note": "commission payers; 20-30% of PB's insurance revenue from top insurers (model estimate)"
+  },
+  {
+   "counterparty": "Health and motor insurers (Star, ICICI Lombard, Niva Bupa)",
+   "ticker": "ICICIGI",
+   "role": "customer",
+   "importance": "high",
+   "note": "commission payers"
+  },
+  {
+   "counterparty": "IRDAI",
+   "ticker": null,
+   "role": "other",
+   "importance": "high",
+   "note": "regulator of commissions and web aggregators"
+  },
+  {
+   "counterparty": "Google / digital channels",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "customer-acquisition ad spend; Q2 ad spend bite"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "IRDAI final commission/EoM/dark-pattern rules (reported plan from January)",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": -25.0,
+   "impact_pct_high": 15.0,
+   "source": "https://news.google.com/rss/search?q=PB+Fintech+IRDAI+commission+cap+earnings+risk+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results: take-rate and ad-spend trajectory",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": 12.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-01",
+   "event": "Insurer commission renegotiations under draft EoM (contract resets)",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=IRDAI+commission+proposal+distribution+model+pressure+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28: insurance GST/tax measures",
+   "type": "regulatory",
+   "prob": 0.95,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 5.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "Premium +38%, revenue +35%, PAT ~Rs192cr (+43%) per search summaries; ad spends squeezed margins and stock fell 7% to a 52-week low; screener consolidated figures were not in the pack (standalone only)",
+  "valuation": "price Rs971; mcap Rs44,922cr; BV Rs188 (P/B 5.2); P/E 101 on standalone TTM; targets Nomura Rs1,100, Bernstein Rs2,310 (wide)",
+  "recent_developments": [
+   "2026-09-24 -36% on IRDAI draft",
+   "2026-09-29 -43% over 4 sessions",
+   "2026-10-01 below IPO price (CNBC TV18)",
+   "2026-10-09 Nomura cuts target to Rs1,100",
+   "2026-10-15 IRDAI chief: norms not intended to disrupt business models",
+   "2026-11-02 -7% to 52w low after Q2"
+  ]
+ },
+ "key_risks": [
+  "Final IRDAI caps and dark-pattern ban cut take rates",
+  "Insurers renegotiate contracts",
+  "Ad-spend inflation and margin pressure",
+  "Disintermediation by AI/direct channels",
+  "Pack empirical factors (GRM, Brent) show unexplained noise"
+ ],
+ "upside_triggers": [
+  "IRDAI dilutes caps or exempts web aggregators",
+  "Premium growth remains 35%+",
+  "Lower marketing intensity restores margins",
+  "Stock already below IPO price and -50% from high"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "https://news.google.com/rss/search?q=PB+Fintech+IRDAI+commission+cap+earnings+risk+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-26",
+   "what": "Crash and brokerage views"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=PB+Fintech+Q2+results+52-week+low+ad+spends+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-02",
+   "what": "Q2 reaction"
+  },
+  {
+   "url": "https://yourstory.com/2026/10/pb-fintech-net-profit-rises-43-rise-in-net-profit",
+   "date": "2026-10",
+   "what": "Q2 FY27 numbers (search summary; low confidence)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IRDAI+commission+cap+exposure+draft+expenses+of+management+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-24",
+   "what": "IRDAI draft"
+  },
+  {
+   "url": "market_impact/data/packs/POLICYBZR.md",
+   "date": "2026-11-05",
+   "what": "pack"
+  }
+ ],
+ "ticker": "POLICYBZR",
+ "name": "PB Fintech Ltd.",
+ "as_of": "2026-11-05",
+ "tier": "MIDCAP_100"
+}

@@ -1,0 +1,370 @@
+{
+ "name": "Premier Energies Ltd.",
+ "industry": "I_RENEWABLES",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest solar-cell maker (10.6 GW cells, 11.1 GW modules) integrating forward into modules, EPC/transformers and backward/sideways into ingot-wafer (10 GW), aluminium frames and BESS (6 GWh, July 2027; 12 GWh JV with RCT Nexor). Q2 FY27 consolidated revenue Rs 2,632-2,656 cr (+38-43%), operating EBITDA ~Rs 736-760 cr (28%), PAT Rs 462 cr (+31%); order book 10.7 GW / Rs 16,600 cr, 99% domestic. Net debt Rs 1,911 cr and heavy capex. Promoter holding fell to 58.5% (from 63.9%) in Jun 2026. Pack's Screener quarterly table (sales Rs 253 cr) is not consolidated and is ignored.",
+ "revenue_mix": [
+  {
+   "segment": "Solar modules",
+   "share_pct": 55,
+   "geography": "India ~99% (order book)"
+  },
+  {
+   "segment": "Solar cells (merchant)",
+   "share_pct": 40,
+   "geography": "India"
+  },
+  {
+   "segment": "EPC, transformers, others",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "Wafers / polysilicon-derived (largely imported)",
+   "share_of_costs_pct": 38
+  },
+  {
+   "input": "Glass, EVA, backsheet, frames, junction boxes",
+   "share_of_costs_pct": 22
+  },
+  {
+   "input": "F_SILVER",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "Power, labour, other",
+   "share_of_costs_pct": 27
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "PREMIERENE",
+   "relation": "policy_effect",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 11.0,
+   "lag": "3-12m",
+   "mechanism": "ALMM List-II (modules from domestic cells) took effect in June 2026 and drove a record 34 GW dc H1 installation rush, then a supply crunch (Wood Mackenzie: system prices +20% by Q4 2026). Premier is India's largest cell maker (10.6 GW cells, 7 GW TOPCon cells commissioning). +1 = stronger support (e.g. extended ALMM/DCR, PM Surya Ghar, storage VGF) -> demand/price +8% on ~99% domestic book; revenue +8% with 40% price-flow-through -> EBITDA +12%; EV/MCap 1.1; persistence 0.5 -> +6.6, trimmed -> +6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.woodmac.com/press-releases/india-on-track-for-record-50-gw-solar-year-as-almm-ii-mandate-reshapes-domestic-supply-chain/",
+     "date": "2026-08-13",
+     "note": "ALMM-II effective June 2026; cell supply constraints; utility-scale prices +20% by Q4 2026"
+    },
+    {
+     "source": "https://www.saurenergy.com/solar-energy-news/premier-energies-q2-results-revenue-grows-43-but-margins-face-pressure-12784833",
+     "date": "2026-11-05",
+     "note": "99% of Rs 16,600 cr order book is domestic"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "PREMIERENE",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Structural RE/storage build-out (India >50 GW dc solar in 2026; BESS 6 GWh plant July 2027, 12 GWh JV with RCT Nexor). +1 = transition capex 10% above plan -> cell/module/BESS volumes +6% -> EBITDA +7% (leverage 1.2x); EV/MCap 1.1; persistence 0.6 -> +4.6, partly overlaps P_RENEWABLE_SUPPORT so trimmed -> +4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/premier-energies-q2-results-net-profit-rises-30pc-to-rs458-crore-as-revenue-jumps-43pc-20027357.htm",
+     "date": "2026-11-04",
+     "note": "BESS first phase July 2027, ingot-wafer 10 GW, aluminium frames Sept 2027"
+    }
+   ]
+  },
+  {
+   "src": "NEW_SOLAR_CELL_MODULE_PRICE",
+   "dst": "PREMIERENE",
+   "relation": "output_price",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "0-3m",
+   "mechanism": "Premier is cell-integrated, so module/cell realisations drop through more than for module-only makers. +10% realisation with ~40% passing to margin = +4% of revenue; EBITDA margin 28% -> EBITDA +14%; EV/MCap 1.1; persistence 0.25 (supply catches up as 60-70 GW of Indian cell capacity arrives, per JM) -> +3.9. Q2 operating margin already slid to 28% from 30.5% (higher material costs).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.saurenergy.com/solar-energy-news/premier-energies-q2-results-revenue-grows-43-but-margins-face-pressure-12784833",
+     "date": "2026-11-05",
+     "note": "Operating EBITDA margin 28% vs 30.5% y/y and 29% in Q1 on higher material costs"
+    },
+    {
+     "source": "https://www.woodmac.com/press-releases/india-on-track-for-record-50-gw-solar-year-as-almm-ii-mandate-reshapes-domestic-supply-chain/",
+     "date": "2026-08-13",
+     "note": "Cell supply constraints push prices up near term"
+    }
+   ]
+  },
+  {
+   "src": "F_SILVER",
+   "dst": "PREMIERENE",
+   "relation": "input_cost",
+   "w": -1.4,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Silver paste for TOPCon metallisation is ~8-10% of cell cost (estimate), i.e. ~4-5% of module COGS; +12% silver -> +0.5% COGS ~0.4% of revenue at partial pass-through -> EBITDA -1.5%; with EV/MCap 1.1 and persistence 0.5 -> ~-0.9; empirical -1.79 (t -1.9) agrees in sign and is larger, so blended to -1.4. Silver is -30% since 1 Jun 2026 (a tailwind already in margins).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PREMIERENE.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_SILVER -1.79 (t -1.9)"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Silver 52.5, -30% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "PREMIERENE",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "99% domestic INR revenue but imported wafers/polysilicon, glass, EVA/backsheet, silver and Chinese capex machinery priced in USD (est. ~45% of COGS). +3% USD/INR -> COGS +1.4%; 50% passed to price -> 0.7% x 72% COGS/revenue = 0.5% of revenue -> EBITDA -1.8%; EV/MCap 1.1; persistence 0.5 -> -1.0. Capex (Rs ~8,000 cr programme, USD-priced equipment) adds to the cost.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/premier-energies-q2-results-net-profit-rises-30pc-to-rs458-crore-as-revenue-jumps-43pc-20027357.htm",
+     "date": "2026-11-04",
+     "note": "Heavy capex: 7 GW cell plant, ingot-wafer 10 GW, 6 GWh BESS"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PREMIERENE",
+   "relation": "funding_cost",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Net debt Rs 1,911 cr (Sep 2026) and D/E 0.72 with H1 investing outflow Rs 1,567 cr vs operating cash flow Rs 669 cr, so borrowing rises. +25 bp -> interest on ~Rs 6,000 cr average debt +Rs 15 cr = EBITDA/PAT -1% plus a discount-rate effect on a ~21x annualised-PAT stock (derived) and developers' financing cost -> -1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.saurenergy.com/solar-energy-news/premier-energies-q2-results-revenue-grows-43-but-margins-face-pressure-12784833",
+     "date": "2026-11-05",
+     "note": "Net debt Rs 1,911 cr vs 1,642 cr in Q1; operating cash flow H1 Rs 669 cr, investing outflow Rs 1,567 cr"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "PREMIERENE",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Aluminium frames are ~8% of module cost (estimate); in-house frame plant due Sept 2027. +10% aluminium -> +0.8% module COGS, ~50% passed -> 0.3% of revenue -> EBITDA -1% x 1.1 x 0.5 = -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/premier-energies-q2-results-net-profit-rises-30pc-to-rs458-crore-as-revenue-jumps-43pc-20027357.htm",
+     "date": "2026-11-04",
+     "note": "Aluminium frames facility expected Sept 2027"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "PREMIERENE",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Duties on Chinese cells/glass/modules protect Indian pricing. +1 = new broad duties -> domestic price umbrella +5% on the ~45% of revenue exposed to import parity; EBITDA +10%; x1.1 x persistence 0.5 -> +5.5, trimmed for uncertainty about which products. Exact current India ADD status on cells not verified in this run (model knowledge, low).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "DGTR proceedings on Chinese solar cells/modules/glass; status not re-verified"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "PREMIERENE",
+   "relation": "policy_effect",
+   "w": -0.3,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "US final AD 123.04% + CVD 126.09% on Indian cells/modules (Commerce, 11 Sep 2026) and Section 232 MIPs from 4 Dec 2026 close the US to Indian cell exports; Premier's export share is only ~1% of order book, so direct hit is small. Residual: Indian capacity redirected to the home market lowers domestic prices (second-order, shown in price-node edge).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://upstox.com/news/market-news/stocks/waaree-energies-premier-energies-vikram-solar-us-finalises-steep-duties-on-indian-solar-imports-stocks-in-focus/article-200235/",
+     "date": "2026-09-15",
+     "note": "US final AD 123.04%, CVD 126.09% for Indian producers"
+    },
+    {
+     "source": "https://www.saurenergy.com/solar-energy-news/premier-energies-q2-results-revenue-grows-43-but-margins-face-pressure-12784833",
+     "date": "2026-11-05",
+     "note": "Exports 1% of order book"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Utility-scale developers / IPPs (domestic)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Rs 16,600 cr order book; Rs 4,001 cr orders added in Q2 (2,308 MW)"
+  },
+  {
+   "counterparty": "Waaree Energies",
+   "ticker": "WAAREEENER",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Module leader; Premier is more cell-integrated"
+  },
+  {
+   "counterparty": "RCT Nexor (Germany)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "low",
+   "note": "12 GWh BESS manufacturing JV"
+  },
+  {
+   "counterparty": "Chinese wafer / glass / equipment suppliers",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Imported inputs until ingot-wafer plant (Dec 2027 / Dec 2028)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12",
+   "event": "7 GW TOPCon cell plant commercial production start (company: 'shortly')",
+   "type": "capex",
+   "prob": 0.8,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 4.0,
+   "source": "https://www.cnbctv18.com/market/earnings/premier-energies-q2-results-net-profit-rises-30pc-to-rs458-crore-as-revenue-jumps-43pc-20027357.htm"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -10.0,
+   "impact_pct_high": 10.0,
+   "source": "https://www.saurenergy.com/solar-energy-news/premier-energies-q2-results-revenue-grows-43-but-margins-face-pressure-12784833"
+  },
+  {
+   "date": "2027-07",
+   "event": "First phase 6 GWh BESS commissioning",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://www.cnbctv18.com/market/earnings/premier-energies-q2-results-net-profit-rises-30pc-to-rs458-crore-as-revenue-jumps-43pc-20027357.htm"
+  },
+  {
+   "date": "2027-12",
+   "event": "Ingot-wafer 10 GW phase 1 commissioning (target Dec 2027)",
+   "type": "capex",
+   "prob": 0.3,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 5.0,
+   "source": "https://www.saurenergy.com/solar-energy-news/premier-energies-q2-results-revenue-grows-43-but-margins-face-pressure-12784833"
+  },
+  {
+   "date": "2027-03",
+   "event": "Further cell/module price compression as Indian cell capacity scales (JM: 60-70 GW)",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": -12.0,
+   "impact_pct_high": -2.0,
+   "source": "https://www.indiaipo.in/news/detail/waaree-energies-share-price-analysts-see-upto-55-upside-despite-target-cuts-after-q2-results"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-11-04: revenue +43% y/y (Rs 2,632 cr), op EBITDA 28% (vs 30.5%), PAT Rs 462 cr +31%; cell production 916 MW (+54%), module 1,199 MW; interim dividend Rs 0.50",
+  "trend": "Volume and utilisation strong (cells 99%, modules 92%); margins sliding on material costs; cash conversion weak (CFO/PAT 0.72).",
+  "valuation": "Market cap ~Rs 39,700 cr at Rs 874-904; ~21x annualised H1 FY27 PAT (derived, Q1 PAT ~Rs 471 cr + Q2 462 cr). 52w Rs 660-1,134; 3m -16%, 12m -16%.",
+  "recent_developments": [
+   "2026-09-14/15: US finalises AD/CVD on Indian solar; PREMIERENE/WAAREEENER in focus",
+   "2026-09-21: Rs 3,293 cr Andhra cell facility commissioned",
+   "2026-10-12: Q2 update, Rs 4,001 cr orders",
+   "2026-11-04: Q2 results and order book Rs 16,600 cr"
+  ]
+ },
+ "key_risks": [
+  "Cell oversupply as Indian cell capacity scales faster than demand after the ALMM-II rush",
+  "Margin compression (30.5% -> 28%)",
+  "Leverage and execution on ingot-wafer, BESS and 7 GW cell plant",
+  "Policy dependence (99% domestic, ALMM, DCR)",
+  "Promoter selling / overhang",
+  "Silver and FX volatility"
+ ],
+ "upside_triggers": [
+  "TOPCon 7 GW start at 25.8% efficiency",
+  "Extension/tightening of ALMM or DCR rules",
+  "BESS and wafer integration lowering cost",
+  "Silver price decline"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_SOLAR_CELL_MODULE_PRICE",
+   "type": "FACTOR",
+   "name": "Indian solar module / cell realisations",
+   "ssu": "+10% Indian module/cell realisations"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.cnbctv18.com/market/earnings/premier-energies-q2-results-net-profit-rises-30pc-to-rs458-crore-as-revenue-jumps-43pc-20027357.htm",
+   "date": "2026-11-04",
+   "what": "Q2 FY27 results, order book, capacity, capex timeline"
+  },
+  {
+   "url": "https://www.saurenergy.com/solar-energy-news/premier-energies-q2-results-revenue-grows-43-but-margins-face-pressure-12784833",
+   "date": "2026-11-05",
+   "what": "Margins, cash flow, net debt, expansion"
+  },
+  {
+   "url": "https://upstox.com/news/market-news/stocks/waaree-energies-premier-energies-vikram-solar-us-finalises-steep-duties-on-indian-solar-imports-stocks-in-focus/article-200235/",
+   "date": "2026-09-15",
+   "what": "US final AD/CVD rates on Indian solar"
+  },
+  {
+   "url": "https://www.woodmac.com/press-releases/india-on-track-for-record-50-gw-solar-year-as-almm-ii-mandate-reshapes-domestic-supply-chain/",
+   "date": "2026-08-13",
+   "what": "ALMM-II and price outlook"
+  },
+  {
+   "url": "market_impact/data/packs/PREMIERENE.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack"
+  }
+ ],
+ "ticker": "PREMIERENE",
+ "as_of": "2026-11-05"
+}

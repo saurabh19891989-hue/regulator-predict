@@ -51,7 +51,7 @@
    "w_low": -10.0,
    "w_high": -1.5,
    "lag": "3-12m",
-   "mechanism": "UltraTech (Aditya Birla) launched Ultravolt W&C on 3 Sep 2026 with Rs 1,800 cr initial capex; Nuvama expects aggressive pricing/channel investment -> margin pressure and interim de-rating. +1 = incumbent W&C gross margin -100 bp industry-wide (house wires/LT cables first, EHV least exposed). KEI OPM ~10-11%: -100 bp = EBITDA -9%; ~35% of KEI revenue is the contested LT/house-wire/HT segment so -100 bp on that = -3.5 bp group... scaled with share-loss risk -> EBITDA ~-6%; EV/MCap 0.98; persistence 0.5 (structural but fades as incumbents respond) -> ~-3, plus de-rating risk -> central -5. Partly priced: W&C stocks fell up to 16% in a week and KEI -27% in 3m.",
+   "mechanism": "UltraTech (Aditya Birla) launched Ultravolt W&C on 3 Sep 2026 with Rs 1,800 cr initial capex; Nuvama expects aggressive pricing/channel investment -> margin pressure and interim de-rating. +1 = incumbent W&C gross margin -100 bp industry-wide (house wires/LT cables first, EHV least exposed). KEI OPM ~10-11%: -100 bp group-wide = EBITDA -9%; only ~60% of revenue (LT/HT/house wires) is contested near term, plus modest share-loss risk -> EBITDA ~-6%; EV/MCap 0.98; persistence 0.5 (structural but fades as incumbents respond) -> ~-3, plus de-rating risk -> central -5. Partly priced: W&C stocks fell up to 16% in a week and KEI -27% in 3m.",
    "confidence": "low",
    "evidence": [
     {
@@ -132,7 +132,7 @@
    "confidence": "low",
    "evidence": [
     {
-     "source": "https://www.moneycontrol.com/news/business/markets",
+     "source": "market_impact/data/packs/KEI.md",
      "date": "2026-09-03",
      "note": "Headline via Google News: Aditya Birla Group enters wires, cables biz with Rs 1,800-crore investment amid data centre boom (page not fetched)"
     }

@@ -1,0 +1,429 @@
+{
+ "ticker": "HEROMOTOCO",
+ "name": "Hero MotoCorp Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AUTO_2W",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest two-wheeler maker by volume (Oct 2026 dispatches 7.34 lakh, +16% y/y), focused on entry commuter motorcycles and scooters (Splendor, HF Deluxe, Xoom, Destini), with a premium push (Xtreme, Karizma, Harley partnership) and an EV arm VIDA (retail 66,000 units in Q2 FY27, gross-margin positive). Debt-free, ~71% dividend payout (3.4% yield). Holds an associate stake in Ather Energy. Exports (Latin America, Bangladesh, Africa) are ~6% of sales. Rural and semi-urban demand, financing availability and commodity costs drive earnings.",
+ "revenue_mix": [
+  {
+   "segment": "two-wheelers (motorcycles, scooters)",
+   "share_pct": 93,
+   "geography": "India ~94% / exports ~6%"
+  },
+  {
+   "segment": "parts, accessories, VIDA EV, other",
+   "share_pct": 7,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 12,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 7,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 2,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_RUBBER",
+   "share_of_costs_pct": 3.5,
+   "note": "tyres, model estimate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "HEROMOTOCO",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.2,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Steel ~12% of sales (model estimate). +7% -> +0.84% of sales; EBITDA margin 13% -> -6.5% pre pass-through; ~50% recovered through 'judicious price action' (CFO, 2026-10-29) -> -3.2%; EV/MCap ~0.95 (net cash), persistence 0.4 -> -1.2. No significant pack sensitivity (global HRC not in top 12).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.business-standard.com/companies/news/hero-motocorp-expects-q3-margin-to-stay-stable-despite-commodity-inflation-126102900645_1.html",
+     "date": "2026-10-29",
+     "note": "CFO: input cost inflation persists in Q3; offset by cost savings, VIDA economics and selective price rises"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "HEROMOTOCO",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "Aluminium (engines, wheels, castings) ~7% of sales. +10% -> 0.7% of sales -> EBITDA -5.4% pre; 50% passed on -> -2.7%; x0.95 x0.4 = -1.0. Agrees with pack empirical -1.04 per +10% (t -1.3). Aluminium is -19.6% since 2026-06-01 (factor_state), a tailwind for H2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HEROMOTOCO.md",
+     "date": "2026-11-05",
+     "note": "Empirical aluminium -1.04 (t -1.3)"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium -19.6% since June"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "HEROMOTOCO",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Copper (harness, motors, EV drivetrain) ~2% of sales; +10% -> 0.2% of sales -> EBITDA -1.5% pre; 50% recovery; x0.95 x0.4 = -0.3. Pack empirical -0.64 (t -0.9) points the same way but is larger/insignificant.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HEROMOTOCO.md",
+     "date": "2026-11-05",
+     "note": "Empirical copper -0.64 (t -0.9)"
+    }
+   ]
+  },
+  {
+   "src": "F_RUBBER",
+   "dst": "HEROMOTOCO",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.7,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Tyres ~3.5% of sales; rubber ~half of tyre cost -> 1.7% of sales; +10% -> -1.3% EBITDA pre; 50% recovered; x0.95 x0.4 = -0.25. Rubber RSS4 +62% y/y (Mint 2026-11-05) so mostly already in Q2 costs.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.livemint.com/news/tyre-makers-rubber-prices-raw-material-earnings-automobile-11793702486661.html",
+     "date": "2026-11-05",
+     "note": "RSS4 rubber +62% y/y, tyre price hikes"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "HEROMOTOCO",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Direct channel: plastics, paint, lubricants, freight and fuel cost of ownership for a fuel-price-sensitive commuter buyer. +10% Brent -> ~0.3% of sales cost -> EBITDA -2% pre; 50% passed; x0.95 x0.4 = -0.4 plus ~-0.2 sentiment. Partial offset: higher petrol prices help VIDA EV demand (retail +80% y/y in Oct). Pack empirical Brent not in top 12 (not significant).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.business-standard.com/companies/news/hero-motocorp-expects-q3-margin-to-stay-stable-despite-commodity-inflation-126102900645_1.html",
+     "date": "2026-10-29",
+     "note": "CFO attributes input cost inflation to extended West Asia conflict"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "HEROMOTOCO",
+   "relation": "input_cost",
+   "w": -2.0,
+   "w_low": -6.0,
+   "w_high": 1.0,
+   "lag": "3-12m",
+   "mechanism": "Pack empirical -6.27 per +3% USD/CNY (t -3.5, the only significant factor). Plausible channel: weaker yuan lowers prices of Chinese electronics, EV components and magnets Hero imports/competes with and signals easing Asian cost pressure (inverse: yuan strength raises input cost). Weight shrunk to about one third of the empirical estimate because the link is partly a regime/sentiment proxy. Low confidence.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HEROMOTOCO.md",
+     "date": "2026-11-05",
+     "note": "Empirical USDCNY -6.27 per +3% (t -3.5)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "HEROMOTOCO",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Exports ~6% of sales (Colombia, Bangladesh, Africa) vs imported electronics/EV parts and some commodities ~8% of costs: net import-long. +3% -> costs +0.24% of sales (-1.8% EBITDA) vs export gain +0.18% -> net ~-0.5% EBITDA x0.95 plus sentiment ... rounded -1.0 incl. empirical -1.61 per +3% (t -1.1) blend.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HEROMOTOCO.md",
+     "date": "2026-11-05",
+     "note": "Empirical USDINR -1.61 (t -1.1)"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "HEROMOTOCO",
+   "relation": "demand_driver",
+   "w": 4.5,
+   "w_low": 2.0,
+   "w_high": 7.0,
+   "lag": "0-3m",
+   "mechanism": "+10% industry 2W volumes -> Hero volume +10%; contribution margin ~22% vs EBITDA margin 13% -> gearing 1.7x -> EBITDA +17%; x0.95 x persistence 0.3 = +4.8; rounded +4.5. Oct 2026 dispatches 7.34 lakh (+16%), Q2 revenue +23%; market-share target 14%.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/auto-stocks-rally-ashok-leyland-jumps-9-maruti-tata-motors-pv-m-m-lead-gains-as-nifty-auto-surges-3-14071026.html",
+     "date": "2026-11-05",
+     "note": "Auto sector rally on easing crude"
+    },
+    {
+     "source": "market_impact/data/packs/HEROMOTOCO.md",
+     "date": "2026-11-05",
+     "note": "Oct dispatches +16%, Sept +12%"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "HEROMOTOCO",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.6,
+   "w_high": 2.8,
+   "lag": "3-12m",
+   "mechanism": "~55-60% of Hero entry-commuter volumes are rural/semi-urban (model knowledge). +5pp rural growth -> volume +3% -> EBITDA +5% x0.95 x0.3 = +1.4. Partly overlaps F_AUTO_DEMAND_IN; kept smaller.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/HEROMOTOCO.md",
+     "date": "2026-11-05",
+     "note": "No rural-specific disclosure fetched; model knowledge"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "HEROMOTOCO",
+   "relation": "demand_driver",
+   "w": -0.7,
+   "w_low": -1.5,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "2W buyers are the most credit-sensitive vehicle segment (~60-65% financed by NBFCs at high rates - model knowledge). +25bp -> volume -0.4%, EBITDA -0.7% pre -> x0.95 x0.5 = -0.3; plus multiple compression on a 18x P/E stock ~-0.4 = -0.7. RBI hiked to 5.50% on 2026-10-07.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+     "date": "2026-10-07",
+     "note": "Repo +25bp to 5.50%, stance calibrated tightening"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "HEROMOTOCO",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": -1.0,
+   "w_high": 2.5,
+   "lag": ">12m",
+   "mechanism": "VIDA retail 66,000 units in Q2 (+74% y/y), gross-margin positive, EBITDA drag cut to Rs 168 cr from Rs 232 cr; stronger EV support improves VIDA unit economics and PLI accruals (Rs 63 cr in Q2, ~3% of quarterly EBITDA), but accelerates the ICE core's substitution risk (Elara: entry-level reset as low-speed EVs gain ground - headline 2026-09-28). Net +0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/hero-motocorp-vida-margin-positive-concall-cmw1mk9g300d131ql8wzx2d7a",
+     "date": "2026-11-04",
+     "note": "VIDA gross-margin positive, 66,000 retail units, Rs 63 cr PLI accrual in Q2 FY27"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "HEROMOTOCO",
+   "relation": "policy_effect",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "EV PLI accrual Rs 63 cr in Q2 FY27 = 3.2% of Q2 EBITDA (Rs 1,997 cr). +1 (expansion/disbursement) -> +25-50% accruals -> +1-1.5% EBITDA x0.95 x0.5 -> ~+0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.multibagg.ai/market-pulse/articles/hero-motocorp-vida-margin-positive-concall-cmw1mk9g300d131ql8wzx2d7a",
+     "date": "2026-11-04",
+     "note": "Rs 63 cr EV PLI accruals recognised in Q2"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "HEROMOTOCO",
+   "relation": "geopolitical_exposure",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Direct logistics channel: management said West Asia-linked logistics disruption hit shipments to Colombia and Bangladesh; exports ~6% of sales, expected to return to double-digit growth in Q3/Q4. +1 escalation -> export volume -15% for 2 quarters -> -0.9% of sales... EBITDA -2.5% x0.95 x0.3 = -0.7. Commodity channel is on other edges.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.business-standard.com/companies/news/hero-motocorp-expects-q3-margin-to-stay-stable-despite-commodity-inflation-126102900645_1.html",
+     "date": "2026-10-29",
+     "note": "Exports hit by logistics disruption; recovery expected in Q3/Q4"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Ather Energy",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "associate; QIP-driven equity consolidation gave Rs 397 cr one-time gain in Q2 FY27 (Business Standard)"
+  },
+  {
+   "counterparty": "Bajaj Auto",
+   "ticker": "BAJAJ-AUTO",
+   "role": "competitor",
+   "importance": "high",
+   "note": "premium/EV share competitor; reported Q2 PAT +62%"
+  },
+  {
+   "counterparty": "TVS Motor",
+   "ticker": "TVSMOTOR",
+   "role": "competitor",
+   "importance": "high",
+   "note": "scooter and EV competitor; Q2 PAT +46%"
+  },
+  {
+   "counterparty": "Eicher Motors",
+   "ticker": "EICHERMOT",
+   "role": "competitor",
+   "importance": "low",
+   "note": "premium motorcycles"
+  },
+  {
+   "counterparty": "Tier-1 suppliers (castings, tyres, electronics)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "incl. MRF and other tyre makers"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-08",
+   "event": "Diwali festive retail peak (festive dispatch strength drives Q3)",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.5,
+   "source": "Moneycontrol/JPMorgan: festive season key to re-rating (NDTV Profit headline 2026-09-18)"
+  },
+  {
+   "date": "2026-12-01",
+   "event": "November dispatch figures",
+   "type": "guidance",
+   "prob": 0.99,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "monthly reporting"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results; management guides stable margin in Q3",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://www.business-standard.com/companies/news/hero-motocorp-expects-q3-margin-to-stay-stable-despite-commodity-inflation-126102900645_1.html"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC: further tightening would hurt 2W credit demand",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": -0.5,
+   "source": "The Hindu 2026-10-07; meeting date unverified"
+  },
+  {
+   "date": "2027-03",
+   "event": "VIDA capacity ramp toward 80,000 units/month target (ET Auto headline 2026-10)",
+   "type": "capex",
+   "prob": 0.5,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "ET Auto headline (article not readable)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-28",
+  "trend": "Revenue Rs 14,970 cr (+23% y/y), EBITDA Rs 1,997 cr (13.3% vs 14.5% a year ago), reported PAT Rs 1,861 cr (+41%) including Rs 397 cr one-time gain; underlying PAT ~Rs 1,456 cr (+5%), a miss vs estimates (CNBC TV18). Shares fell ~4% on 2026-10-29. Management guides Q3 margin 'stable' despite continued input inflation and expects exports to return to double-digit growth.",
+  "valuation": "P/E 18.1x, price ~Rs 5,500 (2026-11-05), market cap Rs 1.10 lakh cr, dividend yield 3.4%, net cash; 52-wk range Rs 4,672-6,390; +8.4% in last month.",
+  "recent_developments": [
+   "2026-09-18: JPMorgan stays Overweight; festive season key (NDTV Profit headline)",
+   "2026-09-28: Elara warns of entry-level demand reset as low-speed EVs gain ground (ET Auto headline)",
+   "2026-10-01: Sept dispatches +12% to 7.66 lakh",
+   "2026-10-28: Q2 FY27 results; 14% market-share ambition with capacity expansion (scanx headline)",
+   "2026-10-29: Q3 margin guided stable; VIDA gross-margin positive",
+   "2026-11-01: Oct dispatches +16% to 7.34 lakh; VIDA retail +80%"
+  ]
+ },
+ "key_risks": [
+  "Commodity inflation (steel, rubber, copper) outpacing price hikes; West Asia conflict",
+  "RBI tightening hurting financed 2W demand",
+  "Low-speed EV substitution at the entry level",
+  "VIDA losses and Ather dilution/volatility",
+  "Post-festive volume normalisation after GST-led boost"
+ ],
+ "upside_triggers": [
+  "Easing crude and aluminium",
+  "Festive-season share gains toward 14%",
+  "VIDA break-even and PLI accruals",
+  "Export recovery in Colombia/Bangladesh",
+  "US-India trade progress"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.business-standard.com/companies/news/hero-motocorp-expects-q3-margin-to-stay-stable-despite-commodity-inflation-126102900645_1.html",
+   "date": "2026-10-29",
+   "what": "Q2 FY27 earnings call: Q3 margin guidance, exports"
+  },
+  {
+   "url": "https://www.multibagg.ai/market-pulse/articles/hero-motocorp-vida-margin-positive-concall-cmw1mk9g300d131ql8wzx2d7a",
+   "date": "2026-11-04",
+   "what": "VIDA gross margin, retail volumes, PLI accrual"
+  },
+  {
+   "url": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+   "date": "2026-10-07",
+   "what": "RBI repo hike"
+  },
+  {
+   "url": "market_impact/data/packs/HEROMOTOCO.md",
+   "date": "2026-11-05",
+   "what": "Pack: screener financials, empirical sensitivities, headlines (CNBC TV18, Moneycontrol, scanx.trade, ET Auto)"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "factor state"
+  }
+ ]
+}

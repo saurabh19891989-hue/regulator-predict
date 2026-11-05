@@ -1,0 +1,428 @@
+{
+ "ticker": "SIEMENS",
+ "name": "Siemens Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Indian listed arm of Siemens AG (75%). After demerging the Energy business into Siemens Energy India (2025) and selling its Low Voltage Motors business (gain Rs 2,099 cr in Q1 FY27), it operates Smart Infrastructure (electrical products, building technology, power distribution), Digital Industries (automation, drives, software) and Mobility (locomotives, metro and rail signalling). Financial year changed to March (18-month period to Mar 2026). TTM sales Rs 18,062 cr, OPM only 9-11%, large treasury (other income Rs 2,177 cr). Q1 FY27: revenue Rs 4,714 cr (+14.8%), backlog Rs 46,670 cr (+9.6%). Valuation P/E 81 reflects the one-off gain and depressed margins.",
+ "revenue_mix": [
+  {
+   "segment": "Smart Infrastructure",
+   "share_pct": 40,
+   "geography": "India ~90%"
+  },
+  {
+   "segment": "Digital Industries",
+   "share_pct": 35,
+   "geography": "India ~85% / export ~15%"
+  },
+  {
+   "segment": "Mobility",
+   "share_pct": 20,
+   "geography": "India"
+  },
+  {
+   "segment": "Other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 5
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "SIEMENS",
+   "relation": "demand_driver",
+   "w": 4.5,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Digital Industries (factory automation, drives) and Smart Infrastructure follow private capex. +10% capex growth -> revenue +5% (elasticity 0.5) at ~25% contribution margin vs 9-11% OPM -> EBITDA +11% to +14%; persistence 0.5; EV/MCap ~0.9 -> ~+5, haircut to 4.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.investywise.com/siemens-limited-financial-results-for-q1-fy27/ and niftytrader.in (via web search)",
+     "date": "2026-08",
+     "note": "Q1 FY27 revenue Rs 4,714 cr +14.8%; PAT Rs 2,143 cr incl. Rs 2,099 cr one-off LVM sale gain; ex-gain PAT ~Rs 343 cr (-19%); backlog Rs 46,670 cr +9.6%"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "SIEMENS",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Mobility (locomotives, metros, signalling), smart infrastructure for public projects; +10% -> revenue +3% -> EBITDA +7% -> persistence 0.5 -> ~+2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_RAILWAY_CAPEX",
+   "dst": "SIEMENS",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Mobility is ~15% of revenue (estimate; group won 100 Vectron X locomotives in Europe 2026-09-23 but that is group-level, not SIEMENS Ltd); +10% railway capex -> mobility revenue +10% -> EBITDA +4% -> ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "SIEMENS",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Smart Infrastructure (electrical products, building management, power distribution) for data centres; ~8% of demand; +1 unit -> +20% -> revenue +1.6% -> EBITDA +4% -> ~+2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "SIEMENS",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Factory relocation to India lifts automation spending (Digital Industries).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "SIEMENS",
+   "relation": "policy_effect",
+   "w": 1.0,
+   "w_low": 0.0,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "PLI manufacturing capex drives automation orders; small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "SIEMENS",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Copper in low/medium voltage and distribution products ~5% of costs; +10% -> cost +0.5%, 50% recovered -> EBITDA -2.5% at 10% OPM; persistence 0.25 -> -0.3. Pack shows +1.65 per +10% (t=+2.1) which reflects the capex-cycle correlation (copper rises with industrial demand), not a cost benefit; conflict noted and range spans zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SIEMENS.md",
+     "date": "2026-11-05",
+     "note": "t=+2.1, positive"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "SIEMENS",
+   "relation": "fx_translation",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Imports from Siemens group are a large share of Digital Industries and Mobility content (~35% of revenue, estimate); +3% -> cost +1.0% of revenue, ~40% recovered via price lists -> EBITDA hit 0.6% of revenue vs 10% OPM = -6%; persistence 0.4; EV/MCap 0.9 -> ~-2, set to -1.5. Pack: USDCNY -3.86 per +3% (t=-1.8), consistent with import/EM-currency sensitivity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SIEMENS",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.7,
+   "lag": "0-3m",
+   "mechanism": "P/E 81 on depressed margin (OPM 9%) means very long duration; net cash ~Rs 7,000 cr incl. LVM proceeds. +25 bp -> ~-2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "SIEMENS",
+   "relation": "macro_transmission",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Pack +2.04 per +5% S&P (t=+2.4): global industrial-tech/AI-electrification sentiment co-movement; shrunk for overlap with data-centre theme.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SIEMENS.md",
+     "date": "2026-11-05",
+     "note": "t=+2.4"
+    }
+   ]
+  },
+  {
+   "src": "NEW_POWER_EQUIP_CAPACITY",
+   "dst": "SIEMENS",
+   "relation": "competition",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": -0.3,
+   "lag": "3-12m",
+   "mechanism": "ABB India, Schneider, Hitachi Energy, Legrand and Chinese-backed competitors in electrification/automation; OPM already fell to 9%. +1 unit = 100 bp margin pressure -> EBITDA -10% at 10% OPM, persistence 0.5, probability 0.4 -> ~-2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "SIEMENS",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "Pack -0.53 per +5 VIX (t=-1.1); beta 1.3; +5 VIX ~ -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_EU_GDP",
+   "dst": "SIEMENS",
+   "relation": "macro_transmission",
+   "w": 0.5,
+   "w_low": -0.5,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Parent group's European demand affects technology roadmap and component pricing; small direct effect on India revenue.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Siemens AG and group",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "75% owner; imported products, software, technology; royalty flows"
+  },
+  {
+   "counterparty": "Indian Railways / metro corporations",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Mobility segment"
+  },
+  {
+   "counterparty": "Manufacturing and auto industry (automation customers)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Digital Industries"
+  },
+  {
+   "counterparty": "ABB India",
+   "ticker": "ABB",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Automation and electrification"
+  },
+  {
+   "counterparty": "Hitachi Energy India",
+   "ticker": "POWERINDIA",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Overlap limited after energy demerger"
+  },
+  {
+   "counterparty": "Schneider, Legrand, Havells (electrical)",
+   "ticker": "HAVELLS",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Smart Infrastructure"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 results (Jul-Sep 2026): OPM trajectory (Q1 9%) and treatment of LVM proceeds",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge of calendar (Q1 reported Aug 2026)"
+  },
+  {
+   "date": "2027-01",
+   "event": "Possible special dividend / capital return from LVM sale proceeds",
+   "type": "corporate_action",
+   "prob": 0.25,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 4.0,
+   "source": "inference; no announcement retrieved"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-05",
+   "event": "Annual (March FY) results and dividend",
+   "type": "results",
+   "prob": 0.9,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "Large metro / locomotive / signalling order awards in India",
+   "type": "other",
+   "prob": 0.4,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge; group wins in Europe (Siemens press 2026-09-22/23) are not India"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further analyst downgrades/upgrades after Jefferies downgrade on demand risks (2026-10-16)",
+   "type": "guidance",
+   "prob": 0.5,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 3.0,
+   "source": "Investing.com 2026-10-16 (headline only)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Apr-Jun 2026): sales Rs 4,714 cr (+14.8%), OPM 9% (vs 13%), PAT Rs 2,143 cr incl. Rs 2,099 cr LVM gain (ex-gain ~Rs 343 cr, -19%), backlog Rs 46,670 cr. Q2 FY27 pending.",
+  "trend": "Growth with margin compression; stock -10.8% in 1 month, -13% in 3 months, Rs 3,437 vs range Rs 2,826-4,149; -5% on 2026-10-21 (Equitymaster).",
+  "valuation": "P/E 81 (TTM incl. gain), P/B 8.9; mcap Rs 1.22 lakh cr; EV/MCap ~0.9 given net cash.",
+  "recent_developments": [
+   "2026-10-16 Jefferies downgrades on demand risks (Investing.com headline)",
+   "2026-10-21 shares -5%",
+   "2026-09-23 group wins 100 Vectron locomotives (RAILPOOL, Europe; not SIEMENS Ltd revenue)",
+   "Aug 2026 LVM business sale completed, Rs 2,099 cr gain; Q1 backlog Rs 46,670 cr (investywise)"
+  ]
+ },
+ "key_risks": [
+  "Margins of 9% vs 13% a year ago",
+  "Demand slowdown risk flagged by Jefferies",
+  "Rich valuation relative to core earnings",
+  "Imported content and USD/INR",
+  "Competition in electrification"
+ ],
+ "upside_triggers": [
+  "Margin recovery to 12%+",
+  "Large rail/metro orders",
+  "Capital return from LVM proceeds",
+  "Data-centre and factory capex pickup"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_POWER_EQUIP_CAPACITY",
+   "type": "FACTOR",
+   "name": "Power/T&D equipment capacity additions vs demand (pricing pressure)",
+   "ssu": "+1 = peer capacity additions outpace demand enough to cut order pricing/margins ~100 bp"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/SIEMENS.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://www.investywise.com/siemens-limited-financial-results-for-q1-fy27/",
+   "date": "2026-08",
+   "what": "Q1 FY27 revenue (via search)"
+  },
+  {
+   "url": "https://www.niftytrader.in/markets/siemens-q1-results-2143cr-profit-core-drop/",
+   "date": "2026-08",
+   "what": "core profit ex-gain (via search)"
+  },
+  {
+   "url": "https://upstox.com/hindi/news/market-news/latest-updates/siemens-q1-fy27-results-revenue-net-profit-order-book-details-2026/article-198474/",
+   "date": "2026-08",
+   "what": "backlog (via search)"
+  }
+ ]
+}

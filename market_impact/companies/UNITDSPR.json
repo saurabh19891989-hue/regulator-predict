@@ -44,7 +44,7 @@
    "w_low": -4.0,
    "w_high": -0.5,
    "lag": "0-3m",
-   "mechanism": "SSU: +1 = adverse state excise/pricing change on the scale of the Maharashtra and Karnataka changes in FY27 (Popular segment NSV -22.7% in Q2). Popular ~18% of NSV (model estimate) => -4% NSV hit at lower margin => EBITDA ~-3.5% (2.5% at EBITDA margin 19.7% vs popular margin lower); x persistence 0.5 x EV/MCap 1.0 => ~-1.8; rounded -2.0. Repeat risk in other states (state-level policy is the dominant idiosyncratic driver).",
+   "mechanism": "SSU: +1 = adverse state excise/pricing change on the scale of the Maharashtra and Karnataka changes in FY27 (Popular segment NSV -22.7% in Q2). Popular ~18% of NSV (model estimate) => -4% NSV hit at lower margin => EBITDA ~-3% (Popular margin below group average); x persistence 0.5 x EV/MCap 1.0 => ~-1.8; rounded -2.0. Repeat risk in other states (state-level policy is the dominant idiosyncratic driver).",
    "confidence": "medium",
    "evidence": [
     {

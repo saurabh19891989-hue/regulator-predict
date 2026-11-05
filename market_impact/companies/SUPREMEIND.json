@@ -1,0 +1,345 @@
+{
+ "name": "Supreme Industries Ltd.",
+ "industry": "I_BUILDING_MATERIALS",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest plastic-products maker: plastic piping systems (PVC/CPVC/HDPE for plumbing, agri, infra, ~70% of volume), packaging films, industrial moulded components, consumer products (furniture, material handling) and composite LPG cylinders. Q2 FY27 revenue Rs 3,361 cr (+40%), OPM 12.8%, PAT Rs 262 cr (+59%); piping volume +24% in Q2 and +23% in October after a -13.5% Q1 caused by an unprecedented PVC price cut. FY27 guidance cut: piping volume +13% (from 15-17%), total volume +10%, revenue Rs 13,500-14,000 cr, OPM 14-14.5%, capex Rs 1,000 cr; six new plants by Mar 2029. Debt-free, dividend payout ~43%.",
+ "revenue_mix": [
+  {
+   "segment": "Plastic piping systems",
+   "share_pct": 70,
+   "geography": "India (plumbing, agri, infra); small exports (approx., model knowledge)"
+  },
+  {
+   "segment": "Packaging films & industrial",
+   "share_pct": 18,
+   "geography": "India"
+  },
+  {
+   "segment": "Consumer products (furniture, storage), cylinders",
+   "share_pct": 12,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_PETROCHEM_SPREADS",
+   "share_of_costs_pct": 70
+  },
+  {
+   "input": "Power, freight, other manufacturing",
+   "share_of_costs_pct": 14
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 6
+  },
+  {
+   "input": "Advertising, other",
+   "share_of_costs_pct": 10
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_PETROCHEM_SPREADS",
+   "dst": "SUPREMEIND",
+   "relation": "input_cost",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "PVC, PE and PP resins are ~70% of costs (estimate; PVC ~45%, PE ~18%, PP ~7%). Supreme re-prices after a 10-15 day lag, so a +10% polymer move raises costs ~7% but ~85% is recovered within a month; unrecovered 15% x 7% = ~1% of costs ~0.9% of revenue vs OPM 14% -> EBITDA -6.5%; EV/MCap 1.0; persistence 0.25 -> -1.6. Range includes slightly positive because rising prices create inventory gains in piping (while packaging films cannot pass on: Q2 packaging margin fell).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/supreme-industries-ltd-bom-509930-230110361.html",
+     "date": "2026-10-26",
+     "note": "Packaging margins contracted as steep PE price increases could not be passed on; selling prices raised after 10-15 day gap"
+    },
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/supreme-industries-q2-results-cuts-fy27-volume-growth-guidance-to-10-amid-uncertainty-20019473.htm",
+     "date": "2026-10-26",
+     "note": "PVC and PP prices near peak, limited room for further increase"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "SUPREMEIND",
+   "relation": "input_cost",
+   "w": 0.3,
+   "w_low": -1.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Residual crude channel beyond the polymer-spread edge: PE/PP track crude and Middle East supply (a major supplier to India). Rising crude -> distributor restocking and inventory gains in piping (positive, short-lived) vs packaging/consumer squeeze (negative). Net ~0 with wide range; empirical +0.88 (t +1.5) is positive, which supports the inventory-gain reading. Do not combine with a polymer-price edge from the same Brent move twice in propagation.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SUPREMEIND.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT +0.88 (t +1.5), F_REFINING_MARGIN +0.94 (t +1.7)"
+    },
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/supreme-industries-ltd-bom-509930-230110361.html",
+     "date": "2026-10-26",
+     "note": "PE prices linked to crude and disrupted Middle East supply"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "SUPREMEIND",
+   "relation": "geopolitical_exposure",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "West Asia is a major PE/PP supplier to India; escalation tightens supply and spikes polymer prices faster than packaging/consumer customers accept. Q2 evidence: packaging margins absorbed the hit. +1 escalation -> polymer +10% spike in packaging/consumer (~20% of revenue) with 50% unrecovered -> ~1% of segment revenue lost -> EBITDA -3.5% in those segments; group effect ~-1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/supreme-industries-ltd-bom-509930-230110361.html",
+     "date": "2026-10-26",
+     "note": "Polyethylene prices up on crude and disrupted Middle East supply; packaging margin hit"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "SUPREMEIND",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "Plumbing/CPVC and furniture are ~25% of group revenue. +10% housing volumes -> +3% sales; fixed-cost leverage 1.5x -> EBITDA +4.5%; EV/MCap 1.0; persistence 0.5 -> +2.2 (rounded down).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/supreme-industries-q2-results-cuts-fy27-volume-growth-guidance-to-10-amid-uncertainty-20019473.htm",
+     "date": "2026-10-26",
+     "note": "Management sees healthy demand from housing and agriculture"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "SUPREMEIND",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Agricultural/irrigation pipes ~25% of piping volumes plus farm-linked demand. +5 pp rural consumption growth -> farm pipe volumes +4% -> +1.2% group revenue; leverage 1.5x -> EBITDA +1.8%; Q2 piping volume +24% shows operating leverage in recovery; x1.0 x 0.5 + sentiment -> +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/supreme-industries-ltd-bom-509930-230110361.html",
+     "date": "2026-10-26",
+     "note": "Piping volumes +24% in Q2, +23% in October"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "SUPREMEIND",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Jal Jeevan Mission / Nal Se Jal is a key public-demand driver, but it is 'significantly lower than budgeted' as states fail to match central funds. +10% government capex (incl. state funds released) -> +2% volumes -> EBITDA +3%; x1.0 x 0.5 -> +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/supreme-industries-ltd-bom-509930-230110361.html",
+     "date": "2026-10-26",
+     "note": "Nal Se Jal business significantly lower than budgeted; state governments not matching central funds"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "SUPREMEIND",
+   "relation": "fx_translation",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "India imports ~half of PVC resin; landed prices follow USD. +3% USD/INR -> resin +1.5-3% after pass-through lag; unrecovered 15% x 2% x 70% cost share ~0.2% of revenue -> EBITDA -1.5%; x1.0 x persistence 0.25 plus a margin-volume effect -> -0.6. Chairman explicitly cites rupee as a PVC price swing factor.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/supreme-industries-q2-results-cuts-fy27-volume-growth-guidance-to-10-amid-uncertainty-20019473.htm",
+     "date": "2026-10-26",
+     "note": "PVC price direction will depend on global economy and rupee vs dollar"
+    }
+   ]
+  },
+  {
+   "src": "P_ANTI_DUMPING_IN",
+   "dst": "SUPREMEIND",
+   "relation": "policy_effect",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "Anti-dumping duties on PVC resin imports raise raw-material cost for non-integrated pipe makers like Supreme (benefit goes to resin producers). +1 broad duties -> PVC +8% for ~3 months unrecovered at 20% -> EBITDA -5%; x1.0 x persistence 0.4 -> -2.0. Current India PVC ADD status not verified in this run (model knowledge: ADD was proposed in 2025; low confidence).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "DGTR PVC suspension resin ADD case; status not re-verified"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SUPREMEIND",
+   "relation": "discount_rate",
+   "w": -0.8,
+   "w_low": -1.8,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Debt-free (interest Rs 28 cr TTM); rates act via the multiple (37x trailing) and housing/MSME demand. +25 bp -> -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SUPREMEIND.md",
+     "date": "2026-11-05",
+     "note": "Interest Rs 3 cr in Sep-26 quarter; ROCE 20.7%"
+    }
+   ]
+  },
+  {
+   "src": "F_MONSOON",
+   "dst": "SUPREMEIND",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Monsoon (+10% above LPA) lifts kharif irrigation and rural piping offtake with a 1-2 quarter lag; agri ~25% of piping -> revenue +1% -> EBITDA +1.5% x 0.5 -> +0.8; plus sentiment -> +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/supreme-industries-q2-results-cuts-fy27-volume-growth-guidance-to-10-amid-uncertainty-20019473.htm",
+     "date": "2026-10-26",
+     "note": "Agriculture demand healthy"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Reliance, IOC, Indian PVC/PE/PP producers and importers",
+   "ticker": "RELIANCE",
+   "role": "supplier",
+   "importance": "high",
+   "note": "Resin supply; also imports"
+  },
+  {
+   "counterparty": "Astral",
+   "ticker": "ASTRAL",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Organised plumbing peer"
+  },
+  {
+   "counterparty": "Finolex Industries / unorganised sector",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Industry PVC volume fell 10% in H1 as organised players gained share"
+  },
+  {
+   "counterparty": "Distributors / dealers",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Channel stocking drives volumes around price moves"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Dec quarter)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://www.cnbctv18.com/market/earnings/supreme-industries-q2-results-cuts-fy27-volume-growth-guidance-to-10-amid-uncertainty-20019473.htm"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget FY28: Jal Jeevan Mission / housing allocations",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge (scheduled date convention)"
+  },
+  {
+   "date": "2026-12",
+   "event": "PVC price movement (management says near peak, may rise slightly)",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 2.5,
+   "source": "https://www.cnbctv18.com/market/earnings/supreme-industries-q2-results-cuts-fy27-volume-growth-guidance-to-10-amid-uncertainty-20019473.htm"
+  },
+  {
+   "date": "2028-03",
+   "event": "New plant commissioning (Jammu, Patna, Erode, Pondicherry, JNPT) - first fully operational by Mar 2028",
+   "type": "capex",
+   "prob": 0.3,
+   "impact_pct_low": 0.5,
+   "impact_pct_high": 3.0,
+   "source": "https://www.cnbctv18.com/market/earnings/supreme-industries-q2-results-cuts-fy27-volume-growth-guidance-to-10-amid-uncertainty-20019473.htm"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-26: revenue Rs 3,361 cr (+40% y/y), OP Rs 431 cr (OPM 12.8%), PAT Rs 262 cr (+59%); value-added products Rs 1,476 cr (+38%)",
+  "trend": "Volume recovery from Q1 trough; margins below estimates in Q1 and Q2; guidance cut; packaging squeezed.",
+  "valuation": "Market cap Rs 42,172 cr, P/E 37.4 trailing; 52w Rs 3,127-4,075; price Rs 3,320; 12m -14.6%.",
+  "recent_developments": [
+   "2026-08-19: pipe volume guidance maintained, strong exports expected (CNBC TV18 headline)",
+   "2026-10-26: Q2 results; guidance cut; stock -4% (Rs 3,250)"
+  ]
+ },
+ "key_risks": [
+  "Polymer price volatility (West Asia supply) and inability to pass on in packaging/consumer",
+  "Channel destocking when PVC prices fall",
+  "Jal Jeevan Mission delays",
+  "Competition and share dynamics vs Astral and unorganised players",
+  "Employee cost +25% y/y"
+ ],
+ "upside_triggers": [
+  "Stable/rising PVC prices and restocking",
+  "Housing and agri revival",
+  "Value-added products mix (windows, gas fittings)",
+  "Margin delivery at 14-14.5% guided"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://finance.yahoo.com/markets/stocks/articles/supreme-industries-ltd-bom-509930-230110361.html",
+   "date": "2026-10-26",
+   "what": "Q2 FY27 earnings call highlights"
+  },
+  {
+   "url": "https://www.cnbctv18.com/market/earnings/supreme-industries-q2-results-cuts-fy27-volume-growth-guidance-to-10-amid-uncertainty-20019473.htm",
+   "date": "2026-10-26",
+   "what": "Guidance cut, capex, plant plan"
+  },
+  {
+   "url": "market_impact/data/packs/SUPREMEIND.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack"
+  }
+ ],
+ "ticker": "SUPREMEIND",
+ "as_of": "2026-11-05"
+}

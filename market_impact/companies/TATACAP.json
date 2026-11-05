@@ -1,0 +1,448 @@
+{
+ "ticker": "TATACAP",
+ "name": "Tata Capital Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_NBFC_VEHICLE_CONSUMER",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Tata Sons' diversified financial arm (85.41% promoter), listed October 2025 at Rs326. Loan book above Rs3 trillion, AUM +26% y/y: consumer finance (personal, two-wheeler, cars), commercial vehicles/equipment, housing/LAP, SME and corporate, plus wealth/distribution. Q2 FY27 net profit +51% (Rs1,660cr per Business Standard; screener Rs1,832cr). Management says margins recover from Q4 after funding-cost pressure; RBI revolving-credit curbs affect 3-4% of AUM. Tata Sons, an RBI-designated upper-layer NBFC, was told on 2026-09-12 to list; a Tata Sons OFS in Tata Capital remains a possibility. Stock Rs346, P/E 24.5x, P/B 3.0x, flat since IPO.",
+ "revenue_mix": [
+  {
+   "segment": "retail/consumer (personal, 2W, cars, credit lines)",
+   "share_pct": 35,
+   "geography": "India (model est.)"
+  },
+  {
+   "segment": "commercial vehicles, equipment, SME and corporate",
+   "share_pct": 35,
+   "geography": "India"
+  },
+  {
+   "segment": "housing/LAP",
+   "share_pct": 20,
+   "geography": "India"
+  },
+  {
+   "segment": "wealth, distribution, other",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 45
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 25
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "TATACAP",
+   "relation": "funding_cost",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "Borrowings ~Rs2.4 lakh cr (Q2 interest Rs4,680cr x4 / ~7.7%); ~55% bank/floating = Rs1.3 lakh cr x 25bp = Rs330cr/yr vs PBT ~Rs10,100cr (financing profit Rs2,532cr x4) = -3.3%; ~half re-prices through floating assets (LAP, corporate, EBLR retail) => -1.6%; persistence 0.5 => -0.8; P/E 24.5x multiple effect => ~-3. Management itself says margin recovery only from Q4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "MPC minutes flag more hikes but wary of an aggressive cycle (Reuters 2026-10-21)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Capital+targets+a+Q4+NIM-plus-fee+improvement+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "margin recovery expected from Q4; NIM+fee improvement targeted (Multibagg AI 2026-11-03; TradingView 2026-10-27)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Can+Tata+Capital+stay+ahead+of+rising+funding+costs+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-22",
+     "note": "Tata Capital faces rising funding costs (Mint 2026-09-22); 'can it protect margins' (Trade Brains 2026-11-02)"
+    },
+    {
+     "source": "market_impact/data/packs/TATACAP.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "TATACAP",
+   "relation": "discount_rate",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "10y +25bp lifts AAA NBFC marginal funding and cost of equity: for a 24.5x-P/E, 3.0x-P/B growth NBFC ~-2 to -3% of value.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "10y G-sec closed 7.19% on 2026-11-04 after 7.48% on 2026-10-23 (Moneycontrol 2026-11-04; BusinessLine 2026-10-23)"
+    },
+    {
+     "source": "market_impact/data/packs/TATACAP.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "TATACAP",
+   "relation": "funding_cost",
+   "w": -4.0,
+   "w_low": -8.0,
+   "w_high": -1.5,
+   "lag": "0-3m",
+   "mechanism": "+50bp on market borrowings (~40% of Rs2.4 lakh cr = Rs0.96 lakh cr) = Rs480cr = 4.8% of PBT; 50% passed to customers => 2.4%; persistence 0.5 => -1.2; NBFC multiple sensitivity to spreads (stock -10% in 3m) => -4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Can+Tata+Capital+stay+ahead+of+rising+funding+costs+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-22",
+     "note": "Tata Capital faces rising funding costs (Mint 2026-09-22); 'can it protect margins' (Trade Brains 2026-11-02)"
+    },
+    {
+     "source": "market_impact/data/packs/TATACAP.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "TATACAP",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr liquidity: -5bp short-term funding on bank lines/CP => +0.3% PBT; sentiment => +0.8. RBI is currently draining liquidity (daily CRR maintenance raised to 99%).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+raises+banks+daily+CRR+maintenance+requirement+excess+liquidity+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "RBI raised daily CRR maintenance to 99% to drain surplus liquidity; surplus shrinking on tax outflows (CNBC TV18 2026-10-09; Rediff 2026-10-23)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "TATACAP",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "+3pp system credit growth: AUM already +26% so incremental share small; AUM +1.2pp => PAT +1.5% x persistence 0.75, plus sentiment => +2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Capital+Q2+Results+Net+profit+jumps+51%25+loan+book+crosses+3+trillion+AUM+grows+26%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Q2 FY27 net profit +51% to ~Rs1,660cr (Business Standard), loan book above Rs3 trillion, AUM +26% (CNBC TV18 2026-10-27); screener shows Rs1,832cr net profit (definition difference unresolved)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "TATACAP",
+   "relation": "demand_driver",
+   "w": -7.0,
+   "w_low": -12.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost; diversified retail/SME/secured book beta ~0.8: +40bp on Rs3 lakh cr = Rs1,200cr = 12% of PBT; persistence 0.5 => -6; sentiment => -7. Q2 asset quality 'held' (TradingView 2026-10-27).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Capital+Q2+Results+Net+profit+jumps+51%25+loan+book+crosses+3+trillion+AUM+grows+26%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Q2 FY27 net profit +51% to ~Rs1,660cr (Business Standard), loan book above Rs3 trillion, AUM +26% (CNBC TV18 2026-10-27); screener shows Rs1,832cr net profit (definition difference unresolved)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "TATACAP",
+   "relation": "demand_driver",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "Personal loans/consumer/credit-line segments ~15% of book (model est.): +1pp delinquency => credit cost +0.8pp on Rs0.45 lakh cr = Rs360cr = 3.6% of PBT, persistence 0.5 => -1.8, sentiment => -2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Capital+says+revolving+credit+impact+seen+at+3-4%25+of+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "RBI revolving-credit curbs: Tata Capital sees 3-4% of AUM affected, testing alternate products (ET BFSI 2026-10-28); stock fell up to 5% on 2026-08-07"
+    },
+    {
+     "source": "market_impact/data/packs/TATACAP.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "TATACAP",
+   "relation": "regulatory_risk",
+   "w": -3.5,
+   "w_low": -8.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "(a) RBI revolving-credit curbs: 3-4% of AUM affected, alternate products tested; (b) NBFC upper-layer scrutiny and further unsecured/credit-line tightening. 3.5% of AUM at ~3% yield => ~Rs300cr (3% of PBT) plus growth drag => PAT -5% x persistence 0.7 => -3.5. Stock fell up to 5% on 2026-08-07 on the draft.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Capital+says+revolving+credit+impact+seen+at+3-4%25+of+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-28",
+     "note": "RBI revolving-credit curbs: Tata Capital sees 3-4% of AUM affected, testing alternate products (ET BFSI 2026-10-28); stock fell up to 5% on 2026-08-07"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rejects+Tata+Sons+bid+to+surrender+NBFC+licence+listing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-12",
+     "note": "RBI rejected Tata Sons' plea to surrender its NBFC licence and asked for listing (Business Standard/The Hindu 2026-09-12); Tata stocks swung up to 20% (Fortune India 2026-09-15)"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "TATACAP",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.6,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Vehicle (CV, car, tractor) finance ~25-30% of AUM (model est., includes Tata Motors group vehicles): +10% auto volumes => disbursements +6% in that segment => AUM +1.5% => PAT +1.5% x 0.75 + sentiment => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Tata+Capital+Q2+Results+Net+profit+jumps+51%25+loan+book+crosses+3+trillion+AUM+grows+26%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-27",
+     "note": "Q2 FY27 net profit +51% to ~Rs1,660cr (Business Standard), loan book above Rs3 trillion, AUM +26% (CNBC TV18 2026-10-27); screener shows Rs1,832cr net profit (definition difference unresolved)"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "TATACAP",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.4,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Tata Capital Housing Finance and LAP ~20% of AUM (model est.): +10% sales volume lifts home-loan disbursement ~5% => AUM +1% => +1.5 incl. sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACAP.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "TATACAP",
+   "relation": "discount_rate",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 5.1%; promoter 85.4% means thin float so flow-driven moves are amplified; +US$5bn quarterly inflow => ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TATACAP.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "TCS",
+   "dst": "TATACAP",
+   "relation": "group_contagion",
+   "w": 0.1,
+   "w_low": 0.02,
+   "w_high": 0.25,
+   "lag": "0-3m",
+   "mechanism": "w = % change in TATACAP equity per +1% in TCS equity. TCS is the largest Tata Sons dividend source; the Tata Sons governance row (UL-NBFC listing order 2026-09-12, trustee disputes) moved Tata stocks together (Tata Chemicals -8%, TCS/Tata Tech/Tata Investment down 2026-09-18). Parent controls 85.41% of TATACAP, so group-level sentiment and any Tata Sons OFS plan matter.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+rejects+Tata+Sons+bid+to+surrender+NBFC+licence+listing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-09-12",
+     "note": "RBI rejected Tata Sons' plea to surrender its NBFC licence and asked for listing (Business Standard/The Hindu 2026-09-12); Tata stocks swung up to 20% (Fortune India 2026-09-15)"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Tata Sons",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "85.41% promoter; brand, capital, UL-NBFC listing order"
+  },
+  {
+   "counterparty": "Tata Motors (TMPV/TMCV)",
+   "ticker": "TMPV",
+   "role": "customer",
+   "importance": "medium",
+   "note": "vehicle financing channel; below the 25% dominant-customer test"
+  },
+  {
+   "counterparty": "Banks, NCD/CP investors, mutual funds",
+   "ticker": "SBIN",
+   "role": "supplier",
+   "importance": "high",
+   "note": "fund ~Rs2.4 lakh cr of borrowings"
+  },
+  {
+   "counterparty": "Bajaj Finance, Chola, L&T Finance, HDFC Bank",
+   "ticker": "BAJFINANCE",
+   "role": "competitor",
+   "importance": "high",
+   "note": "consumer and vehicle finance rivals; also exposed to revolving-credit curbs"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (inferred; Q2 on 2026-10-27): margin recovery test (management targets Q4)",
+   "type": "results",
+   "prob": 0.92,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Tata+Capital+targets+a+Q4+NIM-plus-fee+improvement+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "RBI final revolving-credit norms (draft Aug 2026; NBFCs seeking review)",
+   "type": "regulatory",
+   "prob": 0.55,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 2.0,
+   "source": "https://news.google.com/rss/search?q=Tata+Capital+says+revolving+credit+impact+seen+at+3-4%25+of+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-06",
+   "event": "Tata Sons listing/OFS decision: RBI rejected licence surrender 2026-09-12; sell-down in Tata Capital to meet public-shareholding norms possible (scenario)",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 5.0,
+   "source": "https://news.google.com/rss/search?q=RBI+rejects+Tata+Sons+bid+to+surrender+NBFC+licence+listing+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC (early Dec, date unverified): second hike pressures margins",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-10-12",
+   "event": "One-year IPO anniversary: lock-in/anchor expiries passed; stock flat versus IPO",
+   "type": "other",
+   "prob": 1.0,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Tata+Capital+Citi+Buy+initiation+32%25+upside+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "AUM +26%, profit +51% (Rs1,660cr reported by Business Standard; screener Rs1,832cr), asset quality held, margin compressed by funding costs; recovery guided from Q4.",
+  "valuation": "P/E 24.5x, P/B 3.0x (Rs346 / BV Rs115); 52w Rs296-390; 1m +7.3%, 3m -9.7%, 12m +4.9%; 1y vol 28%.",
+  "recent_developments": [
+   "2026-08-07: RBI revolving-credit draft; Tata Capital and Bajaj Finance fall up to 5%",
+   "2026-09-12: RBI rejects Tata Sons' licence surrender, asks for listing",
+   "2026-09-23: Citi initiates Buy, target Rs450",
+   "2026-10-07: repo hike",
+   "2026-10-27: Q2 results; 2026-10-28 stock +5%",
+   "2026-10-28: revolving credit impact 3-4% of AUM",
+   "2026-11-03: Q4 NIM-plus-fee improvement targeted"
+  ]
+ },
+ "key_risks": [
+  "Funding-cost squeeze and delayed margin recovery",
+  "RBI revolving-credit and unsecured norms",
+  "Tata Sons governance row and potential sell-down",
+  "Credit cycle turn in unsecured and vehicle books",
+  "Premium valuation (24.5x P/E) with 85% promoter holding"
+ ],
+ "upside_triggers": [
+  "Q4 margin recovery as guided",
+  "Clarity or softening of revolving-credit rules",
+  "Brokerage upgrades (Citi Rs450)",
+  "Easing yields after oil retreat"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/TATACAP.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Capital+Q2+Results+Net+profit+jumps+51%25+loan+book+crosses+3+trillion+AUM+grows+26%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-27",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Capital+targets+a+Q4+NIM-plus-fee+improvement+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-03",
+   "what": "margin outlook"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Can+Tata+Capital+stay+ahead+of+rising+funding+costs+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-22",
+   "what": "funding costs"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Capital+says+revolving+credit+impact+seen+at+3-4%25+of+AUM+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-28",
+   "what": "revolving credit"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+rejects+Tata+Sons+bid+to+surrender+NBFC+licence+listing+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-12",
+   "what": "Tata Sons listing"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Tata+Capital+Citi+Buy+initiation+32%25+upside+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-23",
+   "what": "Citi initiation"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  }
+ ]
+}
