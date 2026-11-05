@@ -24,6 +24,7 @@ MIN_CONTRIB = 0.005                            # prune paths contributing < 0.00
 CONF_W = {"high": 1.0, "medium": 0.6, "low": 0.3}
 DRIVER = {"FACTOR", "POLICY", "COUNTRY", "THEME", "NEW"}
 PRICED_SHARE_FWD = 0.5        # share of forward event expectations assumed already in prices
+PRICED_SHARE_COMPANY = 0.5    # same for company-specific catalysts from the profiles (varied separately in mi.robustness)
 # Share of the "unpriced" recent impact added to the headline expected return. Set to 0 after the in-sample check
 # (2026-11-05): the graph's Jun–Nov model impact correlates -0.34 with realised market-adjusted moves across 198 stocks
 # (event-estimated driver states -0.41; market-observed drivers +0.10; within-industry -0.16), and stock reviewers found
@@ -498,8 +499,8 @@ def run(draws=400):
                     "unpriced_recent_impact": resid, "residual_contribution_3m": rc3, "residual_contribution": rc12,
                     "forward_exposure_3m": f3, "forward_exposure_12m": f12,
                     "company_events_3m": cs[c][0], "company_events_12m": cs[c][1],
-                    "raw_er_3m": rc3 + (1 - PRICED_SHARE_FWD) * (f3 + cs[c][0]),
-                    "raw_er_12m": rc12 + (1 - PRICED_SHARE_FWD) * (f12 + cs[c][1])})
+                    "raw_er_3m": rc3 + (1 - PRICED_SHARE_FWD) * f3 + (1 - PRICED_SHARE_COMPANY) * cs[c][0],
+                    "raw_er_12m": rc12 + (1 - PRICED_SHARE_FWD) * f12 + (1 - PRICED_SHARE_COMPANY) * cs[c][1]})
     rk = pd.DataFrame(res)
     for h in ("3m", "12m"):
         rk[f"exp_rel_return_{h}"] = rk[f"raw_er_{h}"] - rk[f"raw_er_{h}"].mean()   # relative to universe average
@@ -512,9 +513,9 @@ def run(draws=400):
             for (cat, order), v in attr[h][c].items():
                 arows.append({"company": c, "horizon": h, "category": cat, "order": order, "value": (1 - PRICED_SHARE_FWD) * v})
             ced = cs_direct.get(c, [0.0, 0.0])[hi]
-            arows.append({"company": c, "horizon": h, "category": "Company catalysts", "order": "1st order", "value": (1 - PRICED_SHARE_FWD) * ced})
+            arows.append({"company": c, "horizon": h, "category": "Company catalysts", "order": "1st order", "value": (1 - PRICED_SHARE_COMPANY) * ced})
             arows.append({"company": c, "horizon": h, "category": "Company catalysts", "order": "2nd–4th order",
-                          "value": (1 - PRICED_SHARE_FWD) * (cs[c][hi] - ced)})
+                          "value": (1 - PRICED_SHARE_COMPANY) * (cs[c][hi] - ced)})
             rc = float(rk.loc[rk.company == c, "residual_contribution_3m" if h == "3m" else "residual_contribution"].iloc[0])
             if rc:
                 arows.append({"company": c, "horizon": h, "category": "Recent unpriced (excluded)", "order": "—", "value": rc})
@@ -528,7 +529,7 @@ def run(draws=400):
     exp_ = rk.set_index("company")[["exp_rel_return_3m", "exp_rel_return_12m"]]
     attribution_error = float(max((chk["3m"] - exp_.exp_rel_return_3m).abs().max(), (chk["12m"] - exp_.exp_rel_return_12m).abs().max()))
     # 5) Monte Carlo over edge-weight uncertainty and event occurrence → P10/P90 of 12m relative return
-    base12 = dict(zip(rk.company, rk.residual_contribution + (1 - PRICED_SHARE_FWD) * rk.company_events_12m))
+    base12 = dict(zip(rk.company, rk.residual_contribution + (1 - PRICED_SHARE_COMPANY) * rk.company_events_12m))
     ivol = idio_vol(net.companies)
     rk = rk.merge(monte_carlo(net, events, ev_mc, base12, draws, ivol, beta, anchor["12m"]), on="company", how="left")
     rk["idio_vol_12m"] = rk.company.map(ivol)
@@ -565,7 +566,7 @@ def run(draws=400):
            "edges": len(edges), "edges_by_layer": pd.Series([e["layer"] for e in edges]).value_counts().to_dict() if edges else {},
            "edges_dropped_unknown_or_industry": dropped, "events": len(events), "occurred_events": len(occurred),
            "profiles": len(profiles), "empirical_sign_conflicts": len(flags),
-           "assumptions": {"damping": DAMP, "priced_share_forward": PRICED_SHARE_FWD,
+           "assumptions": {"damping": DAMP, "priced_share_forward": PRICED_SHARE_FWD, "priced_share_company": PRICED_SHARE_COMPANY,
                            "recent_convergence": RECENT_CONVERGENCE, "residual_cap": RESIDUAL_CAP, "corp_action_breaks": CORP_ACTION_BREAKS, "not_observable_state": NOT_OBSERVABLE_STATE,
                            "market_priced_drift_removed": sorted(MARKET_PRICED), "max_depth": MAX_DEPTH,
                            "overlap_damp": OVERLAP_DAMP}}

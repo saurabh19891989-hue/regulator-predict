@@ -22,6 +22,7 @@
    "4": 0.45
   },
   "priced_share_forward": 0.5,
+  "priced_share_company": 0.5,
   "recent_convergence": {
    "3m": 0.0,
    "12m": 0.0
