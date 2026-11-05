@@ -1,0 +1,478 @@
+{
+ "ticker": "MOTHERSON",
+ "as_of": "2026-11-05",
+ "name": "Samvardhana Motherson International Ltd.",
+ "industry": "I_AUTO_COMPONENTS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Global tier-1 auto supplier (Motherson Group flagship). Wiring harnesses (with Motherson Sumi Wiring India), rear-view mirrors and vision systems, plastic bumpers/dashboards and modules (Peguform, SMRC), plus new businesses (aerospace, medical, electronics, logistics, defence connectors). Roughly 80% of revenue outside India, led by Europe (~40-45%) and Americas (~20%) (model knowledge); customers include VW, BMW, Mercedes, Stellantis, GM, JLR. Consolidated debt is material (net debt/EBITDA ~1.3x, model knowledge). Shares +59.7% in 12 months; 1:2 bonus in 2025; acquiring 50.1% of defence connector maker Rotary Connectors (EV Rs 500 cr, announced 2026-09-21). Screener dossier unavailable; consolidated Q2 FY27 not retrieved.",
+ "revenue_mix": [
+  {
+   "segment": "Wiring harness and electrical",
+   "share_pct": 25,
+   "geography": "Global, India ~25% of segment"
+  },
+  {
+   "segment": "Vision systems and polymer modules (SMRC/Peguform)",
+   "share_pct": 60,
+   "geography": "Europe, Americas, Asia"
+  },
+  {
+   "segment": "New businesses (aerospace, medical, electronics, logistics)",
+   "share_pct": 15,
+   "geography": "Global"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "Polymer resins (crude-linked, F_BRENT)",
+   "share_of_costs_pct": 12
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3
+  },
+  {
+   "input": "Glass, electronics, other bought-outs",
+   "share_of_costs_pct": 40
+  },
+  {
+   "input": "Employee cost",
+   "share_of_costs_pct": 17
+  },
+  {
+   "input": "Energy",
+   "share_of_costs_pct": 2
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Volkswagen Group, BMW, Mercedes, Stellantis",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "European OEMs are the largest customers; no single customer disclosed >25% (model knowledge)"
+  },
+  {
+   "counterparty": "Maruti Suzuki, Hyundai, Tata, Mahindra",
+   "ticker": "MARUTI",
+   "role": "customer",
+   "importance": "medium",
+   "note": "Indian OEM wiring and modules"
+  },
+  {
+   "counterparty": "Motherson Sumi Wiring India (MSWIL)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "Listed group company; Q2 FY27 revenue +47% y/y"
+  },
+  {
+   "counterparty": "Rotary Connectors",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "50.1% acquisition announced 2026-09-21 (defence connectors)"
+  },
+  {
+   "counterparty": "Aptiv, Yazaki, Lear, Magna",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Global tier-1s"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11",
+   "event": "Q2 FY27 consolidated results (trading window closed from late Sep; date not retrieved)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Motherson+trading+window+closed+ahead+of+Q2+FY27+results+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Completion of Rotary Connectors 50.1% acquisition (approvals pending)",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Motherson+to+acquire+50.1%25+stake+in+Rotary+Connectors+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results and European production read-through",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 7.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-03",
+   "event": "US-Mexico/USMCA auto tariff outcome and EU-US trade terms",
+   "type": "regulatory",
+   "prob": 0.5,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=US-Mexico+trade+talks+stall+over+metal+auto+tariffs+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget 2027-28 (India auto, defence manufacturing)",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q1 FY27 (Jun 2026): stock hit a new high after results (Business Standard 2026-08-07); Q2 FY27 pending",
+  "trend": "Strong re-rating: +28% in six months, +59.7% in twelve; management targets new businesses at up to 45% of revenue by 2030",
+  "valuation": "Not retrieved (screener unavailable). Price Rs 166.9; 1y volatility 34%; beta ~1.5",
+  "recent_developments": [
+   "2026-08-07: shares +6% to a record after Q1 results",
+   "2026-08-11: management sees new businesses driving up to 45% of revenue by 2030 (CNBC TV18)",
+   "2026-09-21: board approves 50.1% stake in Rotary Connectors (defence)",
+   "2026-09-23: incorporates an indirect US subsidiary",
+   "2026-10-30: MSWIL Q2 profit +35% to Rs 223 cr, revenue +47%; MSWIL shares +13% on 2026-11-02"
+  ]
+ },
+ "key_risks": [
+  "European auto production weakness and German OEM restructuring",
+  "US tariffs on Mexico/EU-built parts",
+  "Semiconductor or rare-earth supply disruption",
+  "Leverage and floating-rate debt",
+  "Execution of M&A and new businesses",
+  "High beta amid FPI outflows"
+ ],
+ "upside_triggers": [
+  "Q2 beat with EBITDA margin >10.5%",
+  "Europe production stabilisation",
+  "Wiring and aerospace/medical wins",
+  "Debt reduction",
+  "Defence-connector scale-up"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_US_AUTO_PARTS_TARIFFS",
+   "type": "POLICY",
+   "name": "US tariffs on imported autos and auto parts (incl. Mexico/USMCA)",
+   "ssu": "+10pp average tariff"
+  }
+ ],
+ "confidence_overall": "low",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/MOTHERSON.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack (no fundamentals)"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Samvardhana+Motherson+Rotary+Connectors+acquisition+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-09-21",
+   "what": "Rotary Connectors deal"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Motherson+Sumi+Wiring+Q2+net+profit+rises+35%25+revenue+jumps+47%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-30",
+   "what": "MSWIL Q2"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Samvardhana+Motherson+new+businesses+45%25+of+revenue+by+2030+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-11",
+   "what": "Management target"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=US-Mexico+trade+talks+stall+over+metal+auto+tariffs+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "Tariff risk"
+  },
+  {
+   "url": "market_impact/results/factor_state.md",
+   "date": "2026-11-05",
+   "what": "Factor levels"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "C_EU_UK",
+   "dst": "MOTHERSON",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Europe is ~40-45% of consolidated revenue (model knowledge: SMRC, SMP vision/modules, wiring for VW, BMW, Stellantis, Mercedes, JLR). +1pp European light-vehicle demand growth => +0.45% revenue; decremental/incremental margin ~25% vs ~10.5% EBITDA and ~5.5% EBIT => EBIT +2%; EV/MCap ~1.15-1.2 (net debt); persistence 0.5-0.6 => +1.2-1.4.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Regional mix is an estimate; Q2 FY27 consolidated not retrieved"
+    }
+   ]
+  },
+  {
+   "src": "C_USA",
+   "dst": "MOTHERSON",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.4,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Americas ~20% of revenue (Mexico/US wiring and modules, GM/Ford/Stellantis/Honda). +1pp US auto demand => +0.2% revenue; EBIT +1%; x1.2 x0.6 => +0.7, plus operating leverage and Mexico USMCA exposure => +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Regional mix estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "MOTHERSON",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "India is ~20% of revenue (Motherson Sumi Wiring India Q2 FY27 revenue +47% y/y to Rs 4,055 cr, per scanx) plus Indian modules/polymers and SAMIL's stake economics. +10% Indian volumes => +2% group revenue => EBIT +9% => x1.2 x0.5 => ~+3.0-5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Motherson+Sumi+Wiring+Q2+net+profit+rises+35%25+revenue+jumps+47%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-30",
+     "note": "MSWIL Q2 FY27"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Motherson+Sumi+Wiring+Q2FY27+results+revenue+up+47%25+YoY+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "scanx"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "MOTHERSON",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -0.8,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "Wiring harness copper cost is contractually passed through with a 1-3 month lag (MSWIL expects copper-cost recovery within FY27, Multibagg 2026-11-05). +10% copper => ~0.06% of revenue temporarily unrecovered => EBITDA -0.6% plus working-capital drag. Empirical +1.22 (t=1.6) is cyclical co-movement, not a cost benefit; range straddles zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=MSWIL+expects+FY27+copper-cost+recovery+within+FY27+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-05",
+     "note": "Multibagg AI"
+    },
+    {
+     "source": "market_impact/data/packs/MOTHERSON.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_COPPER +1.22, t 1.6"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "MOTHERSON",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -1.0,
+   "w_high": 0.6,
+   "lag": "3-12m",
+   "mechanism": "Aluminium in die-cast/modules ~3% of costs, mostly indexed; +10% => unrecovered ~0.05% of revenue. Empirical +2.59 (t=2.9) disagrees with the fundamental sign: aluminium co-moves with global industrial cycle and the stock's 1.56 beta; the model weight is shrunk toward the data (range up to +0.6) but kept slightly negative on cost logic. Aluminium -19.6% since June.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MOTHERSON.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_ALUMINIUM +2.59, t 2.9"
+    },
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium -19.6% since June"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "MOTHERSON",
+   "relation": "input_cost",
+   "w": -0.6,
+   "w_low": -1.5,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Polymer resins (polypropylene, ABS) for bumpers/modules: SMRC polymers ~12% of revenue are resin-intensive; +10% Brent => ~+5% resin => 0.6% of revenue gross, ~30% unrecovered over a quarter => EBITDA -1.7% x1.2 x0.3 => -0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Brent +15% 3m"
+    }
+   ]
+  },
+  {
+   "src": "F_GAS_GLOBAL",
+   "dst": "MOTHERSON",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "European plants face energy cost inflation; energy ~2% of costs, partial pass-through. +15% gas => EBITDA -1.5% x1.2 x0.3 => -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Energy share estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "MOTHERSON",
+   "relation": "fx_translation",
+   "w": -1.5,
+   "w_low": -4.0,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "China (SMRC, Samvardhana Motherson Peguform) ~7% of revenue; empirical -5.37 (t=-2.7) per +3% USD/CNY is significant, mostly a proxy for global risk-off and China/Europe auto demand. Model: translation -0.2% of revenue; blend with data => -1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MOTHERSON.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDCNY -5.37, t -2.7"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "MOTHERSON",
+   "relation": "fx_translation",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "~80% of revenue and ~75% of EBITDA is earned in EUR/USD/other and consolidated into INR. +3% USD/INR (INR weaker) => reported EBITDA +2.3%; debt is also foreign, so net equity effect +1.2 after x1.2 x0.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "USD/INR 94.49, +6.5% 12m"
+    },
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Currency mix estimate"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "MOTHERSON",
+   "relation": "discount_rate",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.8,
+   "lag": "0-3m",
+   "mechanism": "Beta 1.5 and elevated valuation after +59.7% in 12m; +25bp => ~-2% DCF; net debt amplifies it.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MOTHERSON.md",
+     "date": "2026-11-05",
+     "note": "12m +59.7%, 1y vol 34%"
+    }
+   ]
+  },
+  {
+   "src": "F_FED_FUNDS",
+   "dst": "MOTHERSON",
+   "relation": "funding_cost",
+   "w": -0.4,
+   "w_low": -1.0,
+   "w_high": 0.2,
+   "lag": "3-12m",
+   "mechanism": "Net debt (~Rs 25,000 cr, model knowledge) is ~50% floating USD/EUR; +25bp => ~Rs 31 cr extra interest vs PBT ~Rs 4,800 cr => -0.65% PBT x1.2 x0.5 => -0.4. Empirical +1.69 (t=1.0) is positive and insignificant (policy-rate rises coincide with strong global demand).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/MOTHERSON.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_FED_FUNDS +1.69, t 1.0"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "MOTHERSON",
+   "relation": "input_cost",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "OEM line stoppages (Nexperia-type shock, 2025 precedent) cut SAMIL's schedules: +1 => -3% revenue; operating leverage 25% on 10.5% EBITDA => EBITDA -7% x1.2 x0.4 => -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "2025 chip disruption precedent"
+    }
+   ]
+  },
+  {
+   "src": "NEW_US_AUTO_PARTS_TARIFFS",
+   "dst": "MOTHERSON",
+   "relation": "geopolitical_exposure",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "Mexico/US-built wiring and modules cross the border under USMCA; +10pp average US auto-parts tariff is largely passed to OEMs but with volume loss and negotiation lag. US-Mexico talks stalled on metal/auto tariffs (CNBC TV18 2026-10-21). +1 => EBIT -2.5% x1.2 x0.7 => -2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=US-Mexico+trade+talks+stall+over+metal+auto+tariffs+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "CNBC TV18"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "MOTHERSON",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": -1.0,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "EVs raise wiring and module content per vehicle; SAMIL is brand-agnostic and has no ICE-specific profit pool. +1 => +0.7% revenue at average margin => +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Samvardhana+Motherson+new+businesses+45%25+of+revenue+by+2030+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-11",
+     "note": "CNBC TV18: new businesses driving up to 45% of revenue by 2030"
+    }
+   ]
+  }
+ ]
+}

@@ -84,7 +84,7 @@
    "w_low": -4.0,
    "w_high": 0.2,
    "lag": "0-3m",
-   "mechanism": "Memory and panel-related cost spikes hit TVs and smart appliances (consumer electronics prices up 5-17% per industry reports); Home Entertainment margin 19% in Q1 so cushion exists. +1 tightening => TV BOM +4% on ~35% of sales => margin -0.9pp... after pass-through -0.4pp => EBITDA -3%, persistence 0.5 => ~-1.5, shaded to -1.8.",
+   "mechanism": "Memory and panel-related cost spikes hit TVs and smart appliances (consumer electronics prices up 5-17% per industry reports); Home Entertainment margin 19% in Q1 so cushion exists. +1 tightening => TV BOM +4% on ~35% of sales => margin -0.9pp, -0.4pp after pass-through => EBITDA -3%, persistence 0.5 => ~-1.5, shaded to -1.8.",
    "confidence": "low",
    "evidence": [
     {
@@ -124,7 +124,7 @@
    "confidence": "medium",
    "evidence": [
     {
-     "source": "https://www.economictimes.com/",
+     "source": "market_impact/data/packs/LGEINDIA.md",
      "date": "2026-10-18",
      "note": "ET headline: LG Electronics, Polycab among picks as premiumisation drives growth (via pack; not read)"
     }
@@ -271,10 +271,10 @@
   },
   {
    "counterparty": "Organised retail (Reliance Digital, Croma, Vijay Sales) and e-commerce",
-   "ticker": "RELIANCE",
+   "ticker": null,
    "role": "customer",
    "importance": "medium",
-   "note": "channel partners; share not verified"
+   "note": "channel partners; shares not verified"
   }
  ],
  "company_events": [
@@ -306,8 +306,8 @@
    "source": "model knowledge on cadence"
   },
   {
-   "date": "2026-10",
-   "event": "Lock-in / anchor expiry overhang resolved: free float ~15%; any parent OFS or stake sale would be material (no evidence of plan)",
+   "date": "2027-06",
+   "event": "Hypothetical parent stake sale (OFS) given 85% holding vs 75% SEBI MPS limit; no evidence of a plan, listed only as a tail risk (SEBI public-shareholding rule: model knowledge)",
    "type": "corporate_action",
    "prob": 0.05,
    "impact_pct_low": -8.0,

@@ -211,7 +211,7 @@
    "w_low": -2.0,
    "w_high": 0.0,
    "lag": "0-3m",
-   "mechanism": "Rider fuel costs feed into per-order payouts (~30% of costs): +10% Brent ~ +3% petrol/diesel retail effect (taxes dominate) => +0.3% of cost = Rs ~90 cr = 0.2% of mcap... scaled with persistence => -0.5 to -0.7. Empirical -0.73 (t=-0.7).",
+   "mechanism": "Rider fuel costs feed per-order payouts (~30% of costs, ~Rs 8,000 cr/yr): +10% Brent lifts retail fuel only ~3% (taxes dominate) => payouts +0.3-0.5% = Rs 25-40 cr/yr, ~0.1% of mcap, scaled for persistence => about -0.7. Empirical -0.73 (t=-0.7).",
    "confidence": "low",
    "evidence": [
     {
