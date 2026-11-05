@@ -1,0 +1,379 @@
+{
+ "ticker": "IREDA",
+ "name": "Indian Renewable Energy Development Agency Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_INFRA_POWER_FINANCE",
+ "tier": "MIDCAP_100",
+ "business_summary": "Government-owned (71.76%, MNRE) public financial institution and non-deposit NBFC lending to renewable energy projects (solar, wind, hydro, biomass, storage, green hydrogen) and energy efficiency. Loan book ~Rs90k cr (derived), revenue Rs8,339cr in FY26 (+23%), TTM profit Rs1,968cr; Q2 FY27 PAT Rs552cr (screener; Rs554cr ET) vs Rs549cr a year earlier, flat YoY with operating profit +17% and bad loans easing. Funded by bonds, bank loans and multilateral lines. Trades at ~2.1x book, P/E 15.6, ROE 15.6%, -27.6% over 12 months, beta ~1.9.",
+ "revenue_mix": [
+  {
+   "segment": "term loans to solar/wind/hydro/others",
+   "share_pct": 97,
+   "geography": "India"
+  },
+  {
+   "segment": "fees, treasury, others",
+   "share_pct": 3,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_GSEC_10Y_IN",
+   "share_of_costs_pct": 60
+  },
+  {
+   "input": "F_CREDIT_SPREADS_IN",
+   "share_of_costs_pct": 60
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "IREDA",
+   "relation": "policy_effect",
+   "w": 8.0,
+   "w_low": 3.0,
+   "w_high": 14.0,
+   "lag": "3-12m",
+   "mechanism": "+1 = stronger support (ISTS waiver extensions, VGF/PLI, solar rooftop, storage mandates): sanctions/disbursement growth +8-10pp -> loan book +8% over 12m -> NII +8% (spread stable) -> PAT +8% x persistence 1.0 x EV/MCap ~1 => +8. IREDA is a pure-play on renewable capex financing.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IREDA+QIP+OR+fundraise+OR+rating+OR+loan+disbursement+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-20",
+     "note": "Q2 FY27 net profit Rs554cr (ET EnergyWorld); operating profit +17%, bad loans ease (CNBC TV18 2026-10-19)"
+    }
+   ]
+  },
+  {
+   "src": "T_ENERGY_TRANSITION",
+   "dst": "IREDA",
+   "relation": "demand_driver",
+   "w": 6.0,
+   "w_low": 2.0,
+   "w_high": 10.0,
+   "lag": "3-12m",
+   "mechanism": "+1: faster RE addition target (500 GW by 2030, model knowledge) -> annual RE financing need +10% -> IREDA's loan growth 25% -> 28% => NII +3% pa; capitalised on 2.1x P/B growth => +6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "IREDA",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "+3pp electricity demand growth -> more capacity auctions and PPAs signed (unsigned PPA backlog is a known bottleneck, model knowledge) -> disbursal +3% => PAT +3% x 0.8 => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "IREDA",
+   "relation": "discount_rate",
+   "w": -3.0,
+   "w_low": -5.5,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "+25bp: IREDA raises ~Rs35-45k cr pa via bonds (market-linked); AAA PSU yield tracks G-sec so the marginal 40% of borrowings reprice within 12m: +25bp x 40% x Rs75k cr = Rs75cr = 3.0% of PBT (Rs2.5k cr) x persistence 0.5 = -1.5; discount rate on a 2.1x P/B stock at beta 1.9 adds -1.5 => -3.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "IREDA",
+   "relation": "funding_cost",
+   "w": -2.5,
+   "w_low": -5.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "+25bp: loans largely fixed/reset 3-5y (liability-sensitive balance sheet, model knowledge) while bank borrowings (~25% of funding) are MCLR/repo-linked: CoF +10bp on 40% reprice => NIM -4bp = -1.3% NII / -3% PAT x persistence 0.5 => -1.5; credit-demand/valuation -1.0 => -2.5. RBI hiked 25bp on 2026-10-07.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo to 5.50%, stance calibrated tightening (Hindu/Reuters/Moneycontrol headlines)"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_SPREADS_IN",
+   "dst": "IREDA",
+   "relation": "funding_cost",
+   "w": -3.0,
+   "w_low": -6.0,
+   "w_high": -1.0,
+   "lag": "0-3m",
+   "mechanism": "+50bp AAA PSU spreads: same 40% repricing x Rs75k cr x 50bp = Rs150cr = 6% of PBT x 0.5 => -3.0. Spread stability depends on RBI liquidity and PSU issuance supply.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "IREDA",
+   "relation": "regulatory_risk",
+   "w": -8.0,
+   "w_low": -13.0,
+   "w_high": -4.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp credit cost: loans ~Rs90k cr (derived from revenue/yield) x 0.5% = Rs450cr vs PBT ~Rs2.5k cr => PAT -18%; persistence 0.5 => -9, trimmed -8 as GNPA is easing (CNBC TV18 2026-10-19). Counterparty concentration in developers with PPA/transmission delays and the Stage-3 base is the risk.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=IREDA+QIP+OR+fundraise+OR+rating+OR+loan+disbursement+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-20",
+     "note": "Q2 FY27 net profit Rs554cr (ET EnergyWorld); operating profit +17%, bad loans ease (CNBC TV18 2026-10-19)"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "IREDA",
+   "relation": "regulatory_risk",
+   "w": -3.0,
+   "w_low": -8.0,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "+1 tightening: RBI project-finance directions (provisioning on under-construction projects, effective Oct 2025, model knowledge) and NBFC risk-weights/ECL transition raise provisioning on IREDA's pre-commissioning book (share under construction unverified, assumed ~50%): an extra 0.5% on that half = ~Rs225cr, staged over years, ~9% of one year's PBT x 0.35 => -3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "RBI project finance directions 2025; not re-verified"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "IREDA",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FII only 2.6%, retail 23%, govt 71.8%; high-beta (1.9) PSU-theme stock: +US$5bn ~ Nifty +2% x 1.9 = +3.8 market-driven; less given low FII ownership => +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "IREDA",
+   "relation": "discount_rate",
+   "w": -5.0,
+   "w_low": -8.0,
+   "w_high": -2.5,
+   "lag": "0-3m",
+   "mechanism": "+5 VIX pts ~ Nifty -3% x beta 1.9 = -5.7; -5.0 after rebound features. Market-wide; Director demeans.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "IREDA",
+   "relation": "fx_translation",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Foreign-currency borrowings (JICA, KfW, ADB, ~8-10% of borrowings, hedged ~, model knowledge): +3% INR depreciation on 9% x Rs70k cr = Rs190cr gross, ~30% unhedged => Rs57cr = 2% of PBT x 0.5 => -1; empirical USDCNY -4.97 (t=-1.2) is noise/market beta. Kept -0.8.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  },
+  {
+   "src": "F_BATTERY_MATERIALS",
+   "dst": "IREDA",
+   "relation": "demand_driver",
+   "w": -1.0,
+   "w_low": -3.0,
+   "w_high": 0.5,
+   "lag": "3-12m",
+   "mechanism": "+15% battery cell cost: raises storage-paired RE project costs ~+1% of capex, slowing financing of hybrid/storage projects by 1%, but also raises ticket sizes => net -1.0 (low).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  },
+  {
+   "src": "P_POWER_REFORM",
+   "dst": "IREDA",
+   "relation": "policy_effect",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "+1 reform progress (discom finances, transmission build-out, PPA signing): reduces counterparty risk for IREDA's borrowers (credit cost -5bp = PAT +4%) => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/IREDA.md",
+     "date": "2026-11-05",
+     "note": "screener: mcap Rs30,705cr, price 109, P/E 15.6, P/B ~2.1, ROE 15.6%, Sep-26 qtr PAT Rs552cr, TTM Rs1,968cr; price 12m -27.6%, beta ~1.9"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Ministry of New and Renewable Energy / Government of India",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "71.76% owner; MNRE-controlled PFI; policy and equity support"
+  },
+  {
+   "counterparty": "PFC / REC (power financiers)",
+   "ticker": "PFC",
+   "role": "competitor",
+   "importance": "high",
+   "note": "large power financiers increasingly lend to renewables; RECLTD also"
+  },
+  {
+   "counterparty": "Renewable developers (Adani Green, ReNew, Websol etc.)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Websol prepaid its entire IREDA term loan (Saur Energy 2026-08-11); concentration unknown"
+  },
+  {
+   "counterparty": "Multilateral lenders (JICA, KfW, ADB, World Bank)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "medium",
+   "note": "foreign-currency lines"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01-19",
+   "event": "Q3 FY27 results (estimated from Q2 on 2026-10-19)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model estimate from prior cycle"
+  },
+  {
+   "date": "2027-03",
+   "event": "Equity capital raise (QIP/OFS/government infusion) to support loan growth - timing unverified",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -7.0,
+   "impact_pct_high": 2.0,
+   "source": "model knowledge; not verified for Aug-Nov 2026"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget FY28: allocation to renewables/interest subvention/IREDA capital",
+   "type": "regulatory",
+   "prob": 0.6,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC December hold/hike and trajectory for AAA PSU spreads",
+   "type": "regulatory",
+   "prob": 0.9,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue Rs2,346cr (+14% YoY), interest Rs1,377cr, PAT Rs552cr (Rs549cr a year earlier; Q1 FY27 Rs339cr); operating profit +17% (CNBC TV18), bad loans ease",
+  "trend": "loan growth ~15-20% and NIM pressure from higher borrowing cost; stock -9.6% in 3m, -19% in 6m, -28% in 12m",
+  "valuation": "P/E 15.6, P/B ~2.1, ROE 15.6%, dividend yield 1.2% (screener)",
+  "recent_developments": [
+   "2026-10-19: Q2 FY27 results; operating profit +17%, bad loans ease (CNBC TV18)",
+   "2026-10-20: Net profit Rs554cr (ET EnergyWorld)",
+   "2026-10-19: PSU stock down 28% in a year ahead of results (Livemint)",
+   "2026-08-11: Websol prepaid entire IREDA term loan (Saur Energy)",
+   "2026-10-07: RBI hiked repo 25bp to 5.50%"
+  ]
+ },
+ "key_risks": [
+  "borrowing cost up with repo/G-sec and PSU spread widening",
+  "developer credit stress and project delays",
+  "equity dilution for growth capital",
+  "policy changes to RE tariffs/duties",
+  "high beta (1.9)"
+ ],
+ "upside_triggers": [
+  "RE policy support and capex acceleration",
+  "lower borrowing cost / rating upgrade",
+  "NPA resolution",
+  "government equity support"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.screener.in/company/IREDA/consolidated/",
+   "date": "2026-11-05",
+   "what": "screener financials via evidence pack"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=IREDA+QIP+OR+fundraise+OR+rating+OR+loan+disbursement+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-20",
+   "what": "Q2 FY27 results and news"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+monetary+policy+repo+rate+October+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "RBI hike"
+  }
+ ]
+}

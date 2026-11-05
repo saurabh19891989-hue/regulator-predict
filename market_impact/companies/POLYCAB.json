@@ -1,0 +1,449 @@
+{
+ "ticker": "POLYCAB",
+ "name": "Polycab India Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_CAPITAL_GOODS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest wires and cables maker (house wires, power and control cables, special cables, EPC for rural electrification) with a growing FMEG business (fans, lights, switches, switchgear, pumps, solar inverters). 61.4% promoter-held, nearly debt-free but with rising working-capital loans. Revenue Rs 34,609 cr TTM (+41%), OPM 14%, profit Rs 3,202 cr. Q2 FY27 (Sep 2026): record sales Rs 9,899 cr (+53%), PAT ~Rs 990 cr (+43%). 'Project Spring' targets W&C EBITDA 11-13% and FMEG 8-10% by FY30 with growth ~1.5x industry. EHV cable plant is due FY28. Segment shares are model estimates.",
+ "revenue_mix": [
+  {
+   "segment": "Wires & cables",
+   "share_pct": 86,
+   "geography": "India ~92% / export ~8%"
+  },
+  {
+   "segment": "FMEG (fans, lighting, switches, appliances)",
+   "share_pct": 9,
+   "geography": "India"
+  },
+  {
+   "segment": "EPC / other",
+   "share_pct": 5,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 8
+  },
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 8
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_COPPER",
+   "dst": "POLYCAB",
+   "relation": "output_price",
+   "w": 1.0,
+   "w_low": -2.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "Copper is ~55% of W&C cost; pricing is metal-linked with near-daily list revisions. +10% copper -> revenue +~5.5% with absolute EBITDA broadly unchanged (margin % falls) but 2-4 weeks of unhedged inventory yields a transient gain (+0.2% revenue ≈ +1.4% EBITDA at 14% OPM) and boosts reported growth (Q2 revenue +53% vs volume growth high/mid single digits). Demand elasticity and working capital (interest cost up Rs 94 cr/qtr) are offsets. Net +1 after persistence 0.25; range includes negative for destocking. Pack +1.36 (t=+1.3) agrees in sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "CNBC TV18 / NDTV Profit / Saur Energy",
+     "date": "2026-10-15",
+     "note": "Q2 FY27 revenue +53%, PAT +43% (Rs 977-990 cr); W&C revenue Rs 8,301 cr +47.4% helped by metal prices"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "POLYCAB",
+   "relation": "output_price",
+   "w": 0.4,
+   "w_low": -0.5,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Aluminium conductors ~8% of costs; pass-through similar to copper; small net inventory gain. Pack +1.44 (t=1.2). Aluminium is -19.6% since June.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "POLYCAB",
+   "relation": "input_cost",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "0-3m",
+   "mechanism": "PVC/XLPE/FRLS compounds ~8% of costs; +10% -> costs +0.8% -> EBITDA -5.7% at 14% OPM; ~70% recovered with lag; persistence 0.25 -> -0.4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "POLYCAB",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Government and utility projects (RDSS, BharatNet, metro, transmission); order book ~Rs 9,000-10,000 cr in BharatNet/RDSS (search summary). +10% capex growth -> W&C volumes +3% -> EBITDA +4% (OPM 14%) -> persistence 0.7 -> ~+3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_PRIVATE_CAPEX",
+   "dst": "POLYCAB",
+   "relation": "demand_driver",
+   "w": 3.5,
+   "w_low": 1.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Industrial and infra wires (LT/HT power, special cables); +10% capex -> volumes +3% -> EBITDA +4%; persistence 0.7 -> ~+3.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "POLYCAB",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Housing wire (~35% of W&C volumes, model estimate) and FMEG (fans, lights, switches) demand; +10% housing volume -> W&C +3.5%, FMEG +6% -> EBITDA +5% -> persistence 0.6 -> ~+3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_GRID_ELECTRIFICATION",
+   "dst": "POLYCAB",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 7.0,
+   "lag": "3-12m",
+   "mechanism": "EHV/HV cables (new EHV plant targeted FY28) and transmission buildout; +1 unit = +15% HV/EHV demand -> higher-margin mix -> ~+4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "T_DATA_CENTRES_IN",
+   "dst": "POLYCAB",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Data-centre power and structured cabling, special cables; ~3% of demand -> +1 unit doubles growth there -> ~+2.5 with sentiment.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "P_RENEWABLE_SUPPORT",
+   "dst": "POLYCAB",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Solar/wind cables and inverters; stronger support -> +5% W&C demand from renewable EPC.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "POLYCAB",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "FMEG (fans, switches, lights, appliances) ~8% of sales; +5 pp urban demand -> FMEG +8% -> +1.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "POLYCAB",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Moderate debt (interest Rs 94 cr/qtr, rising) and working-capital loans; P/E 37.5. +25 bp -> funding cost +0.5% of EBITDA and de-rating -> ~-1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "POLYCAB",
+   "relation": "fx_translation",
+   "w": 0.3,
+   "w_low": -1.0,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Exports ~8% of sales; copper cathode priced in USD but passed through; net ~neutral, small export benefit.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  },
+  {
+   "src": "NEW_WC_COMPETITIVE_INTENSITY",
+   "dst": "POLYCAB",
+   "relation": "competition",
+   "w": -6.0,
+   "w_low": -11.0,
+   "w_high": -2.5,
+   "lag": "3-12m",
+   "mechanism": "New entrants (Jefferies note 2026-10-16: 'Polycab vs new competition') and capacity additions by KEI, Havells, Finolex, Adani/Birla-type players threaten the 14% OPM. +1 unit = 100 bp W&C margin erosion sustained -> EBITDA -6.5% at 14% OPM; structural persistence but ~60% probability weight -> ~-6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.indiaipo.com Jefferies (headline only)",
+     "date": "2026-10-16",
+     "note": "stock may rally 33%; competition discussion"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "POLYCAB",
+   "relation": "policy_effect",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "PLI for electrical and IT hardware supports FMEG; small.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge + pack",
+     "date": "2026-11-05",
+     "note": "see mechanism"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Copper/aluminium suppliers (LME-linked)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Hindalco/imports; daily pricing"
+  },
+  {
+   "counterparty": "KEI Industries",
+   "ticker": "KEI",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Closest listed W&C peer"
+  },
+  {
+   "counterparty": "Havells India",
+   "ticker": "HAVELLS",
+   "role": "competitor",
+   "importance": "high",
+   "note": "Wires and FMEG"
+  },
+  {
+   "counterparty": "Distributors / electricians (channel)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "~80% of W&C via distribution"
+  },
+  {
+   "counterparty": "BharatNet / RDSS / state utilities",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "Order book ~Rs 9,000-10,000 cr"
+  },
+  {
+   "counterparty": "New entrants in wires (Jefferies theme)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Details not retrieved"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-12-30",
+   "event": "Exit from NSE F&O segment effective (announced 2026-10-13; stock fell ~5%)",
+   "type": "corporate_action",
+   "prob": 0.97,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 1.0,
+   "source": "Business Standard / Livemint / Moneycontrol 2026-10-13"
+  },
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Dec quarter)",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "model knowledge (Q2 on 2026-10-15)"
+  },
+  {
+   "date": "2027-02",
+   "event": "Union Budget: customs duty on copper / electrical equipment changes",
+   "type": "regulatory",
+   "prob": 0.4,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": 3.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2027-04",
+   "event": "EHV cable plant commissioning (FY28, possibly Apr-May 2027)",
+   "type": "capex",
+   "prob": 0.35,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 4.0,
+   "source": "PL / MOFSL notes 2026-10-15/16 (via search)"
+  },
+  {
+   "date": "2027-05",
+   "event": "Q4 FY27 results and dividend",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge"
+  },
+  {
+   "date": "2026-11",
+   "event": "Resolution of insolvency petition (NCLAT set aside proceedings 2026-10-30; further appeal possible)",
+   "type": "litigation",
+   "prob": 0.15,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 0.0,
+   "source": "Moneycontrol 2026-10-30 (headline only)"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): sales Rs 9,899 cr (+53%), OPM 14%, PAT ~Rs 990 cr (+43%); W&C revenue +47% (volumes high/mid single digit, rest metal prices).",
+  "trend": "Record revenue with stable margins; margin contraction smaller than feared (CNBC TV18). Stock -15.7% over 3 months, -3.6% in a month; F&O exit overhang.",
+  "valuation": "P/E 37.5, P/B 9.1; mcap Rs 1.18 lakh cr; analysts see Rs 11,000+ (CNBC TV18 2026-10-16).",
+  "recent_developments": [
+   "2026-10-13 NSE F&O exit effective 2026-12-30; shares -5%",
+   "2026-10-15 Q2 results beat; PL Buy, Equitec ADD",
+   "2026-10-16 Jefferies: stock may rally 33%; new competition debated",
+   "2026-10-30 NCLAT sets aside insolvency proceedings; shares +2% (Moneycontrol)"
+  ]
+ },
+ "key_risks": [
+  "Copper price reversal / destocking (copper +28% in 12 months)",
+  "New-entrant competition and capacity glut",
+  "Working-capital build and rising interest cost",
+  "F&O exit selling pressure",
+  "Reported growth inflated by metal prices"
+ ],
+ "upside_triggers": [
+  "Volume growth above 1.5x industry",
+  "EHV and HV cable ramp",
+  "FMEG margin move toward 8-10%",
+  "Copper stability with strong demand"
+ ],
+ "new_nodes_proposed": [
+  {
+   "id": "NEW_WC_COMPETITIVE_INTENSITY",
+   "type": "FACTOR",
+   "name": "Competitive intensity in Indian wires & cables",
+   "ssu": "+1 = new entrants/capacity cause ~100 bp sustained W&C margin erosion"
+  }
+ ],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/POLYCAB.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://www.sahi.com/news/polycab-reaffirms-fy30-ebitda-margin-targets-of-11-13-w-c-and-8-10-fmeg",
+   "date": "2026-10",
+   "what": "Project Spring targets"
+  },
+  {
+   "url": "https://investmentguruindia.com/editorial/uploads/news-pdf/79304b93_POLYCAB-20261015-MOFSL-RU-PG010.pdf",
+   "date": "2026-10-15",
+   "what": "MOFSL Q2 FY27 note (summary only)"
+  },
+  {
+   "url": "https://investmentguruindia.com/editorial/uploads/news-pdf/97a1ddb3_POLYCAB-16-10-26-PL.pdf",
+   "date": "2026-10-16",
+   "what": "PL note (summary only)"
+  }
+ ]
+}

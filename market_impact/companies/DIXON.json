@@ -1,0 +1,364 @@
+{
+ "name": "Dixon Technologies (India) Ltd.",
+ "industry": "I_ELECTRONICS_EMS",
+ "tier": "MIDCAP_100",
+ "business_summary": "India's largest listed electronics manufacturing services (EMS) company: smartphones (Q2 FY27 revenue +47%, volumes ex-Vivo guided ~32-33m units for FY27), TVs, home appliances (washing machines, fridges), lighting, security devices (CCTV), IT hardware (laptops/ tablets), camera modules and display modules through Chinese-technology JVs (Vivo India 51%, HKC, Longcheer, Chongqing Yuhai, Q Tech, Signify). Very low margins (EBITDA 2.7% in Q2 FY27) and high working-capital intensity; profits depend on PLI/ECMS subsidies, component cost pass-through and backward integration. Promoter holding 28.5%.",
+ "revenue_mix": [
+  {
+   "segment": "Mobile phones and EMS",
+   "share_pct": 78,
+   "geography": "India (domestic brands) ~95% / exports small; approximate, model knowledge"
+  },
+  {
+   "segment": "Consumer electronics & appliances (TV, washers, etc.)",
+   "share_pct": 12,
+   "geography": "India"
+  },
+  {
+   "segment": "Lighting, security, telecom, IT hardware, others",
+   "share_pct": 10,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_SEMICONDUCTOR_SUPPLY",
+   "share_of_costs_pct": 20,
+   "note": "memory, SoCs, displays (estimate)"
+  },
+  {
+   "input": "imported components China",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 2
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 2
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "DIXON",
+   "relation": "input_cost",
+   "w": -4.5,
+   "w_low": -10.0,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Memory price spike raises mobile BOM; Dixon passes costs through (revenue +47% partly price-led) but with a lag, and market smartphone volumes fell 16% YoY. At ~3% EBITDA margin, -0.5pp margin from lag = EBITDA -15%, plus ~5% volume risk; persistence 0.3, EV/MCap ~1.0 => ~-5. Q2 EBITDA margin 2.7% (3.8% a year ago) is the live evidence.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.indiainfoline.com/news/companies/dixon-technologies-surge-11-26-after-47-revenue-jump-in-q2",
+     "date": "2026-11-02",
+     "note": "Q2 FY27: revenue +47% to ~Rs21,800cr, PAT before NCI Rs411cr (-45%), EBITDA margin 2.7%; Vivo JV start slipped to Q4 FY27; stock +11% on 2 Nov"
+    }
+   ]
+  },
+  {
+   "src": "P_PLI",
+   "dst": "DIXON",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Mobile PLI ended in FY26 (cited as a cause of the Q2 margin fall, -110bp). A successor/ECMS (component scheme) approval for Dixon's component JVs would restore ~0.5-1.0pp of mobile margin: +1 = expansion => EBITDA +20% x persistence 0.5 => ~+4 (shaded).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.indiainfoline.com/news/companies/dixon-technologies-surge-11-26-after-47-revenue-jump-in-q2",
+     "date": "2026-11-02",
+     "note": "Q2 FY27: revenue +47% to ~Rs21,800cr, PAT before NCI Rs411cr (-45%), EBITDA margin 2.7%; Vivo JV start slipped to Q4 FY27; stock +11% on 2 Nov"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "DIXON",
+   "relation": "policy_effect",
+   "w": 4.0,
+   "w_low": 1.0,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Dixon's Chinese JVs (Vivo India 51% Dixon, HKC display, Longcheer, Chongqing Yuhai) need Press Note 3 clearances; easing de-risks them. The Vivo JV start has already slipped from Q3 to Q4 FY27. +1 liberalisation => JV EBITDA contribution timing improves => ~+4; status of approvals not verified.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.indiainfoline.com/news/companies/dixon-technologies-surge-11-26-after-47-revenue-jump-in-q2",
+     "date": "2026-11-02",
+     "note": "Q2 FY27: revenue +47% to ~Rs21,800cr, PAT before NCI Rs411cr (-45%), EBITDA margin 2.7%; Vivo JV start slipped to Q4 FY27; stock +11% on 2 Nov"
+    }
+   ]
+  },
+  {
+   "src": "T_CHINA_PLUS_ONE",
+   "dst": "DIXON",
+   "relation": "demand_driver",
+   "w": 4.0,
+   "w_low": 1.5,
+   "w_high": 8.0,
+   "lag": "3-12m",
+   "mechanism": "Structural: global electronics sourcing shifting to India (phones, laptops, displays, camera modules; FY27 plan 180-190m camera modules). +1 => volume +10% => EBITDA +20% on low base x persistence 0.5 => ~+5, shaded to +4.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.sahi.com/news/dixon-tech-expects-32-33-million-fy27-mobile-sales-and-180-190-million-camera-modules-3872-PE1_COR",
+     "date": "2026",
+     "note": "FY27 guidance: 32-33m phones, 180-190m camera modules (date approximate)"
+    }
+   ]
+  },
+  {
+   "src": "C_US_CHINA_DECOUPLING",
+   "dst": "DIXON",
+   "relation": "geopolitical_exposure",
+   "w": 1.5,
+   "w_low": -1.0,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "More decoupling pushes brand customers to India but Dixon's Chinese-brand/JV model is exposed to India-China frictions; net small positive.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/DIXON.md",
+     "date": "2026-09-16",
+     "note": "CLSA Underperform 'three fronts closing in' (NDTV Profit headline, body not read)"
+    }
+   ]
+  },
+  {
+   "src": "F_USDCNY",
+   "dst": "DIXON",
+   "relation": "fx_translation",
+   "w": 2.5,
+   "w_low": 0.5,
+   "w_high": 5.5,
+   "lag": "0-3m",
+   "mechanism": "Yuan weakness makes Chinese components and finished imports cheaper and lifts working-capital inventory gains for a business with ~60% China-sourced BOM. +3% USD/CNY => BOM -1.8% where pass-through is cost-plus (small EBITDA effect) plus competitor imports pressure. Pack empirical +5.85 (t=2.4); model shrinks to +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/DIXON.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "DIXON",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -2.0,
+   "w_high": 1.0,
+   "lag": "0-3m",
+   "mechanism": "Imported components priced in USD but contracts with brand customers are largely cost-plus/USD-linked; unhedged inventory days create small losses; +3% => -0.5. Pack empirical +1.94 (t=1.0) insignificant and opposite sign.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/DIXON.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "DIXON",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 4.5,
+   "lag": "0-3m",
+   "mechanism": "Smartphone/TV/appliance volumes follow consumer demand; +5pp => revenue +4% => EBITDA +5% at ~4.5% incremental margin x persistence 0.5 => +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.indiainfoline.com/news/companies/dixon-technologies-surge-11-26-after-47-revenue-jump-in-q2",
+     "date": "2026-11-02",
+     "note": "Q2 FY27: revenue +47% to ~Rs21,800cr, PAT before NCI Rs411cr (-45%), EBITDA margin 2.7%; Vivo JV start slipped to Q4 FY27; stock +11% on 2 Nov"
+    }
+   ]
+  },
+  {
+   "src": "F_RISK_SENTIMENT",
+   "dst": "DIXON",
+   "relation": "macro_transmission",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "High-beta (1.5) mid-cap, 40% annual vol; +5 VIX points => market -2% x beta => pack elasticity -0.94 (t=-1.7).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/DIXON.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_US_EQUITIES",
+   "dst": "DIXON",
+   "relation": "macro_transmission",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Pack elasticity +3.26 (t=3.4): global electronics/EMS and growth-style sentiment; JPMorgan 'global EMS opportunity' thesis. Mechanism weak (small US exposure), so shrunk to +2.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/DIXON.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "DIXON",
+   "relation": "discount_rate",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "49x P/E, high duration; +25bp => ~-1.2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/DIXON.md",
+     "date": "2026-11-05",
+     "note": "screener.in pack: fundamentals, price performance, empirical betas"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Vivo India (JV partner, 49%)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "JV operations delayed to Q4 FY27"
+  },
+  {
+   "counterparty": "Xiaomi, Samsung, Motorola, Google/Pixel and other phone brands",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "contract manufacturing; concentration >25% for top clients (model knowledge)"
+  },
+  {
+   "counterparty": "Panasonic, Haier, Philips (via Signify), Daikin",
+   "ticker": null,
+   "role": "customer",
+   "importance": "medium",
+   "note": "appliances/lighting OEM"
+  },
+  {
+   "counterparty": "Chinese display/camera/memory suppliers (HKC, Longcheer, Q Tech, Yuhai)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "JV sourcing and component supply"
+  },
+  {
+   "counterparty": "Foxconn, Tata Electronics, Kaynes, Amber Enterprises",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "mostly not in Nifty 200"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (Q2 was 2026-10-30/11-01); watch mobile margin vs 2.7% and Vivo JV start",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://www.indiainfoline.com/news/companies/dixon-technologies-surge-11-26-after-47-revenue-jump-in-q2"
+  },
+  {
+   "date": "2027-03",
+   "event": "Vivo JV (51% Dixon) commencement in Q4 FY27 (delayed from Q3); contingent on approvals",
+   "type": "regulatory",
+   "prob": 0.55,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 8.0,
+   "source": "https://www.indiainfoline.com/news/companies/dixon-technologies-surge-11-26-after-47-revenue-jump-in-q2"
+  },
+  {
+   "date": "2027-03",
+   "event": "ECMS / component-scheme approvals or successor mobile incentive decision supporting backward-integration margins",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": 2.0,
+   "impact_pct_high": 8.0,
+   "source": "model knowledge; scheme status not verified"
+  },
+  {
+   "date": "2026-12",
+   "event": "Memory-price trajectory sets Q3 mobile BOM; further price hikes by brands may reduce volumes (market -16% YoY)",
+   "type": "other",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 3.0,
+   "source": "https://www.indiainfoline.com/news/companies/dixon-technologies-surge-11-26-after-47-revenue-jump-in-q2"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026): revenue ~Rs21,794cr (+47%, partly price pass-through of memory), operating profit Rs597cr, EBITDA margin 2.7% (3.8% a year ago), PAT before NCI Rs411cr (-45%, prior year had other income); market smartphone volumes -16% YoY while Dixon gained share; Vivo JV start slipped to Q4; FY27 volumes ex-Vivo ~32-33m units.",
+  "trend": "Revenue records but margin and profit decline; stock +11% on 2 Nov as brokerages stayed bullish on Vivo JV and components; -17.8% over 12m, 3m -11.7%.",
+  "valuation": "P/E 49, 13x book, ROCE 29%; price Rs12,533, mcap Rs76,665cr (pack). CLSA Underperform (2026-09-16), JPMorgan Overweight (2026-09-23, up to 25%), Nuvama cut FY27 EPS 7% (2026-09-22). Pack notes other income of Rs838cr in earnings.",
+  "recent_developments": [
+   "2026-11-02 stock +8-13% after Q2; brokerages bullish on Vivo JV",
+   "2026-10-20 JPMorgan names Dixon top EMS pick",
+   "2026-09-22 Nuvama cuts FY27 EPS 7%",
+   "2026-09-16 CLSA Underperform"
+  ]
+ },
+ "key_risks": [
+  "Memory/component inflation with pass-through lag and volume decline",
+  "Mobile PLI ended; margin 2.7%",
+  "Chinese-JV approval and geopolitical risk",
+  "Customer concentration",
+  "High working capital and other-income dependence in reported profit",
+  "Promoter holding down 5.3pp over 3 years"
+ ],
+ "upside_triggers": [
+  "Vivo JV ramp and ECMS approvals",
+  "Backward integration (display, camera modules) lifting margin to 3-4%",
+  "China+1 order wins",
+  "Memory price normalisation"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/DIXON.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, price, betas, headlines"
+  },
+  {
+   "url": "https://www.indiainfoline.com/news/companies/dixon-technologies-surge-11-26-after-47-revenue-jump-in-q2",
+   "date": "2026-11-02",
+   "what": "Q2 FY27 results summary"
+  },
+  {
+   "url": "https://www.sahi.com/news/dixon-tech-expects-32-33-million-fy27-mobile-sales-and-180-190-million-camera-modules-3872-PE1_COR",
+   "date": "2026",
+   "what": "FY27 volume and camera-module guidance (date approximate)"
+  }
+ ],
+ "ticker": "DIXON",
+ "as_of": "2026-11-05"
+}
