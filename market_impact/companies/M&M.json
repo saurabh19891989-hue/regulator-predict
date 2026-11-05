@@ -1,0 +1,506 @@
+{
+ "ticker": "M&M",
+ "name": "Mahindra & Mahindra Ltd.",
+ "as_of": "2026-11-05",
+ "industry": "I_AUTO_PV",
+ "tier": "NIFTY_50",
+ "business_summary": "Diversified Indian group flagship: No.1 tractor maker (~35-40% share) and a leading SUV/utility-vehicle maker (Scorpio, Thar, XUV, Bolero and born-electric BE 6/XEV 9 series), plus LCVs, three-wheelers, with large stakes in Mahindra Finance (~52%) and Tech Mahindra (~26%) (stakes: model knowledge), hospitality, logistics and agri. Standalone Q2 FY27: revenue Rs 44,282 cr (+26%), EBITDA margin 15.2%. Promoter holding is only 18.4%; FIIs 33% (falling) and DIIs 34% (rising).",
+ "revenue_mix": [
+  {
+   "segment": "automotive (SUV, LCV, 3W, exports)",
+   "share_pct": 72,
+   "geography": "India ~92% / exports ~8%"
+  },
+  {
+   "segment": "farm equipment (tractors)",
+   "share_pct": 28,
+   "geography": "India ~95% / exports (incl. US) ~5%"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_STEEL_INDIA",
+   "share_of_costs_pct": 14,
+   "note": "share of sales, model estimate"
+  },
+  {
+   "input": "F_ALUMINIUM",
+   "share_of_costs_pct": 3,
+   "note": "model estimate"
+  },
+  {
+   "input": "F_COPPER",
+   "share_of_costs_pct": 1.5,
+   "note": "model estimate"
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_STEEL_INDIA",
+   "dst": "M&M",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Steel ~14% of standalone sales (SUVs, tractors; model estimate). +7% -> +1.0% of sales; standalone EBITDA margin 15.2% (Q2) -> -6.5% pre pass-through; ~55% recovered -> -2.9%; core auto+farm ~65% of market cap (rest is TechM/M&MFIN/other stakes) x persistence 0.4 -> -0.75. Q2 standalone EBITDA grew only 4% on 26% revenue growth, so margin already compressed ~320bp.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/earnings/m-stock-surges-nearly-6-14071380.html",
+     "date": "2026-11-05",
+     "note": "Standalone EBITDA +4% to Rs 6,718 cr on revenue +26% to Rs 44,282 cr (margin 15.2% vs 18.4%)"
+    }
+   ]
+  },
+  {
+   "src": "F_ALUMINIUM",
+   "dst": "M&M",
+   "relation": "input_cost",
+   "w": -0.25,
+   "w_low": -0.6,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Aluminium ~3% of sales; +10% -> 0.3% of sales -> EBITDA -2% pre; 55% recovered; x0.65 x0.4 = -0.23. Aluminium -19.6% since June is a tailwind.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/results/factor_state.md",
+     "date": "2026-11-05",
+     "note": "Aluminium -19.6% since 2026-06-01"
+    }
+   ]
+  },
+  {
+   "src": "F_COPPER",
+   "dst": "M&M",
+   "relation": "input_cost",
+   "w": -0.2,
+   "w_low": -0.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Copper ~1.5% of sales (harness, EV motors/cables, tractors); +10% -> 0.15% of sales -> -1% EBITDA pre; x0.45 x0.65 x0.4 = -0.12 rounded -0.2. Pack empirical copper +0.52 (t 0.7): opposite sign, insignificant (global-growth proxy).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/M&M.md",
+     "date": "2026-11-05",
+     "note": "Empirical copper +0.52 (t +0.7)"
+    }
+   ]
+  },
+  {
+   "src": "F_BATTERY_MATERIALS",
+   "dst": "M&M",
+   "relation": "input_cost",
+   "w": -0.3,
+   "w_low": -0.8,
+   "w_high": -0.05,
+   "lag": "3-12m",
+   "mechanism": "BEV share is small (XEV 9e/BE 6/XEV 9S; under ~5% of SUV volumes - model estimate); battery ~35% of BEV price. +15% cell cost -> ~0.4% of auto revenue pre pass-through -> ~-2.5% EBITDA x0.5 pass x0.65 x0.4 = -0.3.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "BEV volume share not disclosed in fetched sources"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "M&M",
+   "relation": "input_cost",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": 0.3,
+   "lag": "0-3m",
+   "mechanism": "Direct channel: plastics/paints/lubricants/freight ~7% of sales (+0.2% of sales cost per +10% Brent) and diesel-linked rural tractor/pickup economics (diesel is the farm cost input). EBITDA -1.5% pre, -0.9% after pass-through; x0.65 x0.4 = -0.25 plus demand/sentiment -0.5. Pack Brent not among top 12 (insignificant).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/auto-stocks-rally-ashok-leyland-jumps-9-maruti-tata-motors-pv-m-m-lead-gains-as-nifty-auto-surges-3-14071026.html",
+     "date": "2026-11-05",
+     "note": "Brent ~$94 and crude easing lifted auto stocks on 2026-11-05"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "M&M",
+   "relation": "fx_translation",
+   "w": 0.2,
+   "w_low": -1.0,
+   "w_high": 1.2,
+   "lag": "0-3m",
+   "mechanism": "Roughly balanced: exports (SUVs, tractors incl. US; overseas tractor sales +40% in Oct) ~8% of sales vs imported components/electronics ~8% of cost. Net ~0; pack empirical +1.29 per +3% (t 0.9) insignificant. Kept near zero.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/",
+     "date": "2026-11-02",
+     "note": "Tractor exports +40% y/y in Oct 2026 (2,220 units)"
+    }
+   ]
+  },
+  {
+   "src": "F_AUTO_DEMAND_IN",
+   "dst": "M&M",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.2,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "Auto segment ~70% of standalone EBITDA. +10% industry volumes -> M&M auto volume +10% (gain share on top); contribution margin ~25% vs EBITDA margin 15.2% -> gearing 1.6x -> auto EBITDA +16% = total +11%; x0.65 x persistence 0.3 = +2.2, rounded +2.5. Q2 vehicle volumes +26% to 3.31 lakh, UV 1.83 lakh.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/earnings/m-stock-surges-nearly-6-14071380.html",
+     "date": "2026-11-05",
+     "note": "Total vehicle sales +26% to 3,30,896 units; UV 1.83 lakh"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "M&M",
+   "relation": "demand_driver",
+   "w": 0.8,
+   "w_low": 0.3,
+   "w_high": 1.4,
+   "lag": "3-12m",
+   "mechanism": "Farm Equipment ~25% of standalone EBITDA plus rural UV/pickups. Tractor domestic sales Apr-Oct FY27 +2% only (Oct -13% on Diwali shift; Q2 -6%). +5pp rural growth -> tractor volume +5%, farm EBITDA +9% (gearing 1.8x) -> +2.3% total; x0.65 x0.5 = +0.75.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/",
+     "date": "2026-11-02",
+     "note": "Domestic tractors 3.25 lakh Apr-Oct (+2%); Oct -13% due to festive calendar"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "M&M",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -1.6,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Two channels: (1) SUV/tractor finance demand: +25bp -> volume -0.4% x gearing 1.6 -> EBITDA -0.7% x0.65 x0.5 = -0.2; (2) consolidated lender M&M Finance NIM/credit cost and valuation multiple compression on a 20x P/E stock ~-0.6. RBI hiked to 5.50% on 2026-10-07.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+     "date": "2026-10-07",
+     "note": "Repo +25bp to 5.50%"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "M&M",
+   "relation": "policy_effect",
+   "w": 2.0,
+   "w_low": 0.8,
+   "w_high": 3.5,
+   "lag": "3-12m",
+   "mechanism": "GST 2.0 lowered SUV tax burden (large cars 40% flat vs 28%+cess up to 50%) and cut tractors to 5% (model knowledge); another cut is unlikely near term. +1 SSU (2-5pp) -> volume +3% -> EBITDA +5% x0.65 x0.5 = +1.6 -> +2.0 incl. tractors.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "GST 2.0 rates not re-fetched this session"
+    },
+    {
+     "source": "https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/",
+     "date": "2026-11-02",
+     "note": "GST relief for farmers on retreaded tractor tyres from 1 Nov (Mint headline)"
+    }
+   ]
+  },
+  {
+   "src": "P_EV_POLICY",
+   "dst": "M&M",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "M&M's born-electric SUV range and PLI eligibility make it a relative winner from stronger EV support: +1 SSU -> BEV mix +3-5pp, EV margins improve with PLI; est. EBITDA +4% x0.65 x0.5 structural = +1.3 -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Not sourced to 2026 article"
+    }
+   ]
+  },
+  {
+   "src": "P_US_TARIFF_INDIA",
+   "dst": "M&M",
+   "relation": "policy_effect",
+   "w": -0.4,
+   "w_low": -1.2,
+   "w_high": 0.0,
+   "lag": "3-12m",
+   "mechanism": "US ~4% of consolidated auto/farm sales via Mahindra tractors (US assembly with Indian content) and exports; +10pp average tariff on Indian goods -> ~-1.5% EBITDA x0.65 x0.4 = -0.4. India-US trade talks stalled again (Reuters 2026-10-06); Rubio said deal 'very close' (2026-10-20); sector rallied on hopes post midterms (2026-11-05).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/auto-stocks-rally-ashok-leyland-jumps-9-maruti-tata-motors-pv-m-m-lead-gains-as-nifty-auto-surges-3-14071026.html",
+     "date": "2026-11-05",
+     "note": "Auto sector rally on hopes of easing US tariffs after midterms"
+    },
+    {
+     "source": "https://www.reuters.com/world/india/why-have-india-us-trade-talks-stalled-again-whats-next-2026-10-06/",
+     "date": "2026-10-06",
+     "note": "Why India-US trade talks stalled again"
+    }
+   ]
+  },
+  {
+   "src": "F_SEMICONDUCTOR_SUPPLY",
+   "dst": "M&M",
+   "relation": "input_cost",
+   "w": -2.0,
+   "w_low": -5.0,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "+1 SSU = chip disruption lowering production ~4% for a quarter: 4% x gearing 1.6 = -6% quarterly EBITDA, -1.5% annualised x0.65 ... -2 incl. launch delays. No current disruption in sourced material.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Historical analogue"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "M&M",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": ">12m",
+   "mechanism": "SUV mix and XUV 7XO/Thar/Scorpio-N pricing power: premiumisation +1 -> mix +1.5pp, ASP +1% -> EBITDA +4% x0.65 x0.5 = +1.3 -> +1.5. SUV volumes at record 73,338 in Oct 2026 (ET Auto headline).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://auto.economictimes.indiatimes.com/news/industry/mahindra-clocks-record-suv-sales-of-73338-units-in-october/135418729",
+     "date": "2026-11-01",
+     "note": "Record SUV sales of 73,338 units in Oct (headline; page blocked)"
+    }
+   ]
+  }
+ ],
+ "company_links": [
+  {
+   "src": "TECHM",
+   "dst": "M&M",
+   "relation": "holding_stake",
+   "w": 0.08,
+   "w_low": 0.04,
+   "w_high": 0.12,
+   "lag": "0-3m",
+   "mechanism": "Mahindra holds ~25.6% of Tech Mahindra (model knowledge, verify). 25.6% x TECHM mcap Rs 1.79 lakh cr = Rs 45.8k cr = 11.9% of M&M mcap (Rs 3.85 lakh cr); after ~30% holding-company discount -> 8.3% pass-through per +1% in TECHM (w = % M&M per +1% TECHM).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/TECHM.md",
+     "date": "2026-11-05",
+     "note": "TECHM market cap Rs 1,78,740 cr"
+    }
+   ]
+  },
+  {
+   "src": "M&MFIN",
+   "dst": "M&M",
+   "relation": "holding_stake",
+   "w": 0.04,
+   "w_low": 0.02,
+   "w_high": 0.06,
+   "lag": "0-3m",
+   "mechanism": "Mahindra holds ~52% of M&M Financial Services (model knowledge, verify); 52% x Rs 40,037 cr = Rs 20.8k cr = 5.4% of M&M mcap; ~30% discount -> 3.8% per +1% in M&MFIN. M&MFIN fell ~10% on 2026-10-22 despite +55% Q2 PAT (Business Today headline).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/M&MFIN.md",
+     "date": "2026-11-05",
+     "note": "M&MFIN market cap Rs 40,037 cr; Q2 PAT Rs 882 cr (+55%)"
+    }
+   ]
+  }
+ ],
+ "supply_chain": [
+  {
+   "counterparty": "Mahindra & Mahindra Financial Services",
+   "ticker": "M&MFIN",
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "captive vehicle/tractor financier; Q2 PAT Rs 882 cr"
+  },
+  {
+   "counterparty": "Tech Mahindra",
+   "ticker": "TECHM",
+   "role": "subsidiary",
+   "importance": "medium",
+   "note": "~26% stake (model knowledge)"
+  },
+  {
+   "counterparty": "Maruti Suzuki",
+   "ticker": "MARUTI",
+   "role": "competitor",
+   "importance": "high",
+   "note": "reclaimed 40% PV share in H1 FY27"
+  },
+  {
+   "counterparty": "Tata Motors PV",
+   "ticker": "TMPV",
+   "role": "competitor",
+   "importance": "high",
+   "note": "overtook Mahindra in H1 FY27 PV share (Moneycontrol 2026-10-16)"
+  },
+  {
+   "counterparty": "Hyundai Motor India",
+   "ticker": "HYUNDAI",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "SUV competitor"
+  },
+  {
+   "counterparty": "Escorts Kubota / Sonalika / TAFE",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "high",
+   "note": "tractors; Escorts Kubota Q2 profit -21% (BW Auto World headline)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2026-11-08",
+   "event": "Diwali: delayed tractor retail and SUV festive deliveries (Oct tractor sales -12% on calendar shift)",
+   "type": "other",
+   "prob": 0.95,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.5,
+   "source": "https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/"
+  },
+  {
+   "date": "2026-12-01",
+   "event": "November sales: tractor rebound test and SUV order book",
+   "type": "guidance",
+   "prob": 0.99,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 3.0,
+   "source": "monthly reporting"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC: second hike risk",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -3.0,
+   "impact_pct_high": -0.5,
+   "source": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece"
+  },
+  {
+   "date": "2027-01",
+   "event": "SML Mahindra truck and bus division acquisition (Rs 525 cr) completion",
+   "type": "corporate_action",
+   "prob": 0.7,
+   "impact_pct_low": -0.3,
+   "impact_pct_high": 0.5,
+   "source": "CNBC-TV18 post 2026-10-19 (LinkedIn)"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (auto margin recovery vs commodity; farm margin)",
+   "type": "results",
+   "prob": 0.97,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "normal reporting calendar"
+  },
+  {
+   "date": "2026-12",
+   "event": "US-India trade agreement or tariff change",
+   "type": "regulatory",
+   "prob": 0.3,
+   "impact_pct_low": 0.0,
+   "impact_pct_high": 2.0,
+   "source": "Reuters 2026-10-06; Rubio remarks 2026-10-20"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-11-05",
+  "trend": "Standalone: revenue Rs 44,282 cr (+26%), EBITDA Rs 6,718 cr (+4%, margin 15.2% vs 18.4%), PAT Rs 5,102 cr (+13%); consolidated PAT reported Rs 4,588 cr, revenue Rs 57,553 cr (+25%) (Moneycontrol; consolidated PAT figure looks low vs Q1 Rs 5,998 cr and should be re-checked). Auto volumes +26% (UV 1.83 lakh); tractors -6% to 1.16 lakh. NDTV Profit/Moneycontrol: results beat estimates but margin contracted on commodity costs.",
+  "valuation": "Price ~Rs 3,100 (2026-11-05, +4.8% on results day); P/E ~20x trailing; market cap ~Rs 3.86 lakh cr; stock -17.6% YTD and hit a 52-week low on 2026-10-07; FII holding fell from 36.2% to 33.3% over two quarters.",
+  "recent_developments": [
+   "2026-10-07: Hits 52-week low; Volkswagen-JSW alliance noted (Moneycontrol headline)",
+   "2026-10-09: Sept sales +16% to 1.13 lakh",
+   "2026-10-16: Tata overtakes Mahindra in H1 FY27 PV share",
+   "2026-10-21/22: M&M Finance Q2 PAT +55% but stock -10%",
+   "2026-11-01: Oct SUV sales record 73,338; tractors -12%",
+   "2026-11-05: Q2 results; CARE reaffirms ratings; stock +4.8%"
+  ]
+ },
+ "key_risks": [
+  "Margin compression from steel/aluminium/copper and battery costs",
+  "Tractor demand weakness and farm-income sensitivity",
+  "Loss of PV share to Tata/Maruti/Hyundai",
+  "RBI tightening hitting finance arm and demand",
+  "Large listed stakes (TechM, M&MFIN) add volatility",
+  "Consolidated numbers still to be reconciled"
+ ],
+ "upside_triggers": [
+  "Easing crude/metals",
+  "Tractor festive rebound and rural recovery",
+  "EV scale-up with PLI",
+  "US-India trade deal",
+  "Sum-of-parts re-rating as FIIs return"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.moneycontrol.com/news/business/earnings/m-stock-surges-nearly-6-14071380.html",
+   "date": "2026-11-05",
+   "what": "Q2 FY27 standalone/consolidated results, volumes"
+  },
+  {
+   "url": "https://www.global-agriculture.com/mechanization-technology/mahindra-sells-64846-tractors-in-october-2026-domestic-sales-decline-13/",
+   "date": "2026-11-02",
+   "what": "October tractor sales, Apr-Oct trend, exports"
+  },
+  {
+   "url": "https://www.moneycontrol.com/news/business/markets/auto-stocks-rally-ashok-leyland-jumps-9-maruti-tata-motors-pv-m-m-lead-gains-as-nifty-auto-surges-3-14071026.html",
+   "date": "2026-11-05",
+   "what": "Nifty Auto rally, crude ~$94, US tariff hopes"
+  },
+  {
+   "url": "https://www.thehindu.com/business/rbi-monetary-policy-meeting-decision-on-repo-rate-live-updates-october-7-2026/article71554262.ece",
+   "date": "2026-10-07",
+   "what": "RBI repo hike"
+  },
+  {
+   "url": "market_impact/data/packs/M&M.md",
+   "date": "2026-11-05",
+   "what": "Pack: Jun 2026 consolidated financials, empirical sensitivities, headlines"
+  },
+  {
+   "url": "market_impact/data/packs/M&MFIN.md",
+   "date": "2026-11-05",
+   "what": "M&MFIN market cap and Q2 headlines"
+  },
+  {
+   "url": "market_impact/data/packs/TECHM.md",
+   "date": "2026-11-05",
+   "what": "TECHM market cap"
+  }
+ ]
+}

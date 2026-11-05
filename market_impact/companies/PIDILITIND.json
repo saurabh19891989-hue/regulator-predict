@@ -1,0 +1,409 @@
+{
+ "name": "Pidilite Industries Ltd.",
+ "industry": "I_CHEMICALS_SPECIALTY",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's leading adhesives and construction-chemicals company (Fevicol, Fevikwik, M-Seal, Dr. Fixit, Araldite, Roff, Fevicryl, Motomax). Consumer & Bazaar (C&B) ~80% of sales, Business-to-Business (B2B: industrial adhesives, pigments, resins) ~21%; international subsidiaries ~14% of revenue. Q2 FY27 revenue Rs 4,298 cr (+20.9%) on UVG of 11.1% (C&B) and 9.2% (B2B), but gross margin collapsed to 48.6% (from 55%) and EBITDA margin to 20.4% (24%), at the bottom of the 20-24% corridor; PAT Rs 626 cr (+7.2%). Price hikes of 12-15% in Q1 and 3-5% in October are rebuilding margin; management guides H2 margin at the higher end of 20-24%. Almost debt free, 69% promoter-held, 59x trailing P/E.",
+ "revenue_mix": [
+  {
+   "segment": "Consumer & Bazaar (adhesives, sealants, construction chemicals, DIY, art & craft)",
+   "share_pct": 79.6,
+   "geography": "India ~86% / international subsidiaries ~14% (approx.)"
+  },
+  {
+   "segment": "Business-to-Business (industrial adhesives, resins, pigments)",
+   "share_pct": 21.2,
+   "geography": "India and overseas"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_CHEM_FEEDSTOCK",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_PACKAGING",
+   "share_of_costs_pct": 7
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 10
+  },
+  {
+   "input": "Advertising, freight, other opex",
+   "share_of_costs_pct": 28
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_BRENT",
+   "dst": "PIDILITIND",
+   "relation": "input_cost",
+   "w": -1.0,
+   "w_low": -2.2,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Petrochemical-derived raw materials (VAM, acrylic monomers, epoxy, solvents, resins) are ~44% of sales (COGS 51.4% of sales in Q2 x ~85%). +10% Brent -> RM +4% -> +1.8% of sales; Pidilite recovers ~70% through price hikes within 1-2 quarters (12-15% in Q1, 3-5% in Oct), leaving 0.55% of sales unrecovered vs EBITDA margin 22% -> EBITDA -2.5%; EV/MCap 0.99; persistence 0.25 plus a margin-guidance/multiple effect on a 59x stock -> -1.0. Matches empirical -0.96 (t -3.1) and F_REFINING_MARGIN -0.71 (t -2.5). This edge already contains the feedstock channel; do not add F_CHEM_FEEDSTOCK separately for the same Brent shock.",
+   "confidence": "high",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/pidilite-industries-share-price-q2-earnings-miss-gross-margin-contracts-640-bps-revenue-profit-cost-management-comments-20021953.htm",
+     "date": "2026-10-29",
+     "note": "Gross margin 48.6% vs 55% (-640 bp) on material inflation; EBITDA margin 20.4% vs 24%"
+    },
+    {
+     "source": "https://www.linkedin.com/posts/cnbc-tv18_demand-holding-strong-but-100-crude-oil-activity-7508790165939572738-uMf0",
+     "date": "2026-09-24",
+     "note": "MD flags sustained crude above $100/bbl as key risk; Q2 margin near lower end of 20-24% band"
+    },
+    {
+     "source": "market_impact/data/packs/PIDILITIND.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT -0.96 (t -3.1)"
+    }
+   ]
+  },
+  {
+   "src": "F_CHEM_FEEDSTOCK",
+   "dst": "PIDILITIND",
+   "relation": "input_cost",
+   "w": -1.2,
+   "w_low": -2.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Idiosyncratic feedstock moves not driven by Brent: VAM spiked to nearly US$2,000/t before cooling to ~US$1,000 (West Asia supply). +10% feedstock (benzene/propylene/VAM basket) at ~44% of sales -> +4.4% of sales; 75% recovered -> 1.1% of sales vs 22% margin -> EBITDA -5%; x0.99 x persistence 0.25 -> -1.2. Use only for feedstock shocks orthogonal to Brent (supply outages, China export curbs).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/pidilite-industries-ltd-bom-500331-050555061.html",
+     "date": "2026-10-30",
+     "note": "VAM spiked to nearly $2,000 then cooled to ~$1,000; doubling input costs needs 2x price to hold gross margin %"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "PIDILITIND",
+   "relation": "fx_translation",
+   "w": -1.0,
+   "w_low": -2.5,
+   "w_high": -0.2,
+   "lag": "0-3m",
+   "mechanism": "Imported raw materials ~30% of RM (VAM, epoxy, TiO2, pigments) ~15% of sales; international subsidiaries (~14% of revenue, EBITDA +53% in Q2) give a partial translation offset. +3% USD/INR -> +0.46% of sales cost, 60% recovered -> 0.18% /22% = EBITDA -0.8%; subs translation +0.35% EBITDA; net small (-0.2 fundamental). Empirical -2.32 (t -2.7) and DXY -1.65 (t -2.9) are larger because INR weakness coincides with foreign outflows from premium-multiple FMCG-like names; shrink halfway -> -1.0.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PIDILITIND.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_USDINR -2.32 (t -2.7), F_DXY -1.65 (t -2.9)"
+    },
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/pidilite-industries-ltd-bom-500331-050555061.html",
+     "date": "2026-10-30",
+     "note": "International subsidiaries +21.8% revenue, +53% EBITDA"
+    }
+   ]
+  },
+  {
+   "src": "F_HOUSING_DEMAND",
+   "dst": "PIDILITIND",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Fevicol (carpentry/furniture), Dr. Fixit/construction chemicals, tile adhesives and Roff are tied to housing and interiors, ~50% of revenue. +10% residential volumes -> +3% sales growth on that half = +1.5% revenue; EBITDA +2.1% (leverage 1.4x); EV/MCap 0.99; persistence 0.5 -> +1.0; growth-multiple support (59x) -> +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/pidilite-q2-results-revenue-jumps-21-pc-but-material-inflation-weighs-on-margins-profit-20021731.htm",
+     "date": "2026-10-28",
+     "note": "C&B underlying volume growth 11.1%; B2B 9.2%"
+    }
+   ]
+  },
+  {
+   "src": "F_URBAN_DEMAND",
+   "dst": "PIDILITIND",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 1.0,
+   "w_high": 5.0,
+   "lag": "3-12m",
+   "mechanism": "Premium/DIY and consumer adhesives (Fevikwik, M-Seal, hobby) are urban-skewed. +5 pp urban discretionary growth -> UVG +1.5 pp -> revenue +1.5%; EBITDA +2.4%; persistence 0.5 -> +1.2; 59x trailing multiple doubles the sensitivity to growth -> +2.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/pidilite-industries-ltd-bom-500331-050555061.html",
+     "date": "2026-10-30",
+     "note": "Sustained double-digit UVG for 6-8 consecutive quarters"
+    }
+   ]
+  },
+  {
+   "src": "F_RURAL_DEMAND",
+   "dst": "PIDILITIND",
+   "relation": "demand_driver",
+   "w": 1.2,
+   "w_low": 0.3,
+   "w_high": 2.5,
+   "lag": "3-12m",
+   "mechanism": "Bazaar/rural distribution ~35% of C&B volumes. +5 pp rural growth -> UVG +0.8 pp -> revenue +0.8%; EBITDA +1.2%; x0.99 x 0.5 plus multiple -> +1.2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/pidilite-q2-results-revenue-jumps-21-pc-but-material-inflation-weighs-on-margins-profit-20021731.htm",
+     "date": "2026-10-28",
+     "note": "Broad-based double-digit volume growth in Consumer & Bazaar"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "PIDILITIND",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.5,
+   "lag": "0-3m",
+   "mechanism": "Almost debt free (interest Rs 53 cr TTM), so only a discount-rate/housing-demand channel. At 59x trailing earnings the multiple duration is ~25 years; +25 bp repo -> ~+10 bp on long yields -> ~-2.5% before offsets -> -1.5 after demand offset.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/PIDILITIND.md",
+     "date": "2026-11-05",
+     "note": "Interest Rs 13 cr/qtr; P/E 59.1"
+    }
+   ]
+  },
+  {
+   "src": "F_PACKAGING",
+   "dst": "PIDILITIND",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.0,
+   "w_high": -0.1,
+   "lag": "0-3m",
+   "mechanism": "Packaging ~7% of costs (estimate); +10% -> +0.6% of cost, 75% recovered -> EBITDA -0.5%; x0.99 x 0.25 -> -0.1; widened for plastics-linked correlation with crude -> -0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/pidilite-industries-share-price-q2-earnings-miss-gross-margin-contracts-640-bps-revenue-profit-cost-management-comments-20021953.htm",
+     "date": "2026-10-29",
+     "note": "Cost of goods Rs 2,211 cr vs Rs 1,598 cr y/y (+38%)"
+    }
+   ]
+  },
+  {
+   "src": "P_GST_CONSUMPTION",
+   "dst": "PIDILITIND",
+   "relation": "policy_effect",
+   "w": 1.5,
+   "w_low": 0.3,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Lower GST on construction/consumer items (adhesives, paints) lowers shelf price: +3 pp cut x elasticity 0.7 -> volume +2%; Pidilite also benefits from branded vs unorganised formalisation; revenue-neutral on price, EBITDA +2.5% -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/pidilite-industries-ltd-bom-500331-050555061.html",
+     "date": "2026-10-30",
+     "note": "Management confident of continuing H1 momentum into H2"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "PIDILITIND",
+   "relation": "geopolitical_exposure",
+   "w": -1.5,
+   "w_low": -3.5,
+   "w_high": -0.3,
+   "lag": "0-3m",
+   "mechanism": "Direct effects beyond crude: MENA subsidiary revenue hit by working-capital constraints, India-to-West-Asia exports underperforming, VAM/solvent supply disruption. MENA+West Asia exports est. ~4% of revenue; -25% -> -1% revenue, 100% drop-through at 12-15% EBIT -> -4% EBITDA; x0.99 x 0.4 -> -1.6.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/pidilite-industries-ltd-bom-500331-050555061.html",
+     "date": "2026-10-30",
+     "note": "MENA business revenue headwinds; exports to West Asia underperforming on ongoing conflicts"
+    }
+   ]
+  },
+  {
+   "src": "T_PREMIUMISATION",
+   "dst": "PIDILITIND",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Value-added launches (Multilock, Expert, Wonderlock, Araldite Wood) and mix to premium sustain 22-24% margins in normal input costs. +1 = premium share +2 pp -> gross margin +60 bp -> EBITDA +3%; persistence 0.6 x 0.99 -> +1.8 -> +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://finance.yahoo.com/markets/stocks/articles/pidilite-industries-ltd-bom-500331-050555061.html",
+     "date": "2026-10-30",
+     "note": "New products Multilock, Expert, Wonderlock, Araldite Wood; AI-led distribution"
+    }
+   ]
+  },
+  {
+   "src": "F_CHINA_CHEM_EXPORTS",
+   "dst": "PIDILITIND",
+   "relation": "input_cost",
+   "w": 0.6,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Cheaper Chinese epoxy, acrylic and solvent exports lower Pidilite's input prices and add competition from imported adhesives; net positive on RM (+15% export intensity -> RM -1.5% -> EBITDA +2%; persistence 0.25) -> +0.6.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "China chemical export intensity and Indian RM sourcing; not verified for Pidilite specifically"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "VAM, acrylic, epoxy, solvent and pigment suppliers (global petrochemicals, West Asia)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "VAM price swung US$2,000 -> ~US$1,000/t in 2026"
+  },
+  {
+   "counterparty": "Hardware, paint and building-material dealers (~dealer network of lakhs)",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Bazaar channel; rebates passed to trade as RM eases"
+  },
+  {
+   "counterparty": "Asian Paints",
+   "ticker": "ASIANPAINT",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Waterproofing / construction chemicals overlap"
+  },
+  {
+   "counterparty": "Grasim (Birla Opus) / other entrants",
+   "ticker": "GRASIM",
+   "role": "competitor",
+   "importance": "low",
+   "note": "Adjacent-category entrants"
+  },
+  {
+   "counterparty": "Astral",
+   "ticker": "ASTRAL",
+   "role": "competitor",
+   "importance": "medium",
+   "note": "Plumbing adhesives (Astral Adhesives)"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Dec quarter): first test of price hikes and easing VAM on gross margin",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://www.cnbctv18.com/market/pidilite-industries-share-price-q2-earnings-miss-gross-margin-contracts-640-bps-revenue-profit-cost-management-comments-20021953.htm"
+  },
+  {
+   "date": "2026-12",
+   "event": "Further selective price cuts / rebates as VAM and other raw materials ease",
+   "type": "other",
+   "prob": 0.5,
+   "impact_pct_low": -1.0,
+   "impact_pct_high": 2.5,
+   "source": "https://news.google.com/rss/search?q=Pidilite+price+cuts+raw+material+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-10-09",
+   "event": "CFO transition: Amit Agarwal appointed CFO-designate",
+   "type": "other",
+   "prob": 1.0,
+   "impact_pct_low": -0.5,
+   "impact_pct_high": 0.5,
+   "source": "market_impact/data/packs/PIDILITIND.md"
+  },
+  {
+   "date": "2027-02",
+   "event": "Brent sustained above $100 (MD's flagged risk)",
+   "type": "other",
+   "prob": 0.15,
+   "impact_pct_low": -8.0,
+   "impact_pct_high": -2.0,
+   "source": "https://www.linkedin.com/posts/cnbc-tv18_demand-holding-strong-but-100-crude-oil-activity-7508790165939572738-uMf0"
+  },
+  {
+   "date": "2027-02",
+   "event": "Interim/final dividend and ESOP grants (1.44 lakh shares, 29 Oct)",
+   "type": "corporate_action",
+   "prob": 0.5,
+   "impact_pct_low": -0.3,
+   "impact_pct_high": 0.5,
+   "source": "market_impact/data/packs/PIDILITIND.md"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-10-28: revenue Rs 4,298 cr (+20.9%), EBITDA Rs 877 cr (+3.1%; 20.4%), PAT Rs 626 cr (+7.2%); gross margin 48.6%; UVG C&B 11.1%, B2B 9.2%; Q1 EBITDA margin was ~26%",
+  "trend": "Volume strong, margin trough in Q2 as inventory at lower cost ran out; recovery expected as price hikes (12-15% Q1, 3-5% Oct) land and VAM cools.",
+  "valuation": "Market cap Rs 1.58 lakh cr at Rs 1,556; P/E 59 trailing; EV/EBITDA ~42x (derived: TTM EBITDA Rs 3,796 cr, net cash small); 52w Rs 1,259-1,708; 1m +2%, 3m -8%, 6m +7%.",
+  "recent_developments": [
+   "2026-09-24: MD flags crude >$100 as key risk, demand strong",
+   "2026-10-09: CFO-designate Amit Agarwal appointed",
+   "2026-10-28/29: Q2 miss; stock -3%; Prabhudas Lilladher Accumulate TP Rs 1,600",
+   "2026-10-29: ESOP grant of 1.44 lakh shares"
+  ]
+ },
+ "key_risks": [
+  "Crude/VAM spikes squeezing gross margin (West Asia)",
+  "Valuation 59x leaves little room for a second margin miss",
+  "MENA subsidiary working-capital weakness",
+  "Competition from new entrants in adjacent categories",
+  "Rupee/foreign outflow sensitivity of premium-multiple stocks"
+ ],
+ "upside_triggers": [
+  "VAM and RM normalisation + price hikes rebuilding gross margin toward 55%",
+  "Continued double-digit UVG",
+  "International subsidiaries margin gains",
+  "Housing and interior-demand upswing from rate cuts"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "high",
+ "sources": [
+  {
+   "url": "https://www.cnbctv18.com/market/earnings/pidilite-q2-results-revenue-jumps-21-pc-but-material-inflation-weighs-on-margins-profit-20021731.htm",
+   "date": "2026-10-28",
+   "what": "Q2 FY27 results, UVG, EBITDA vs poll, management commentary"
+  },
+  {
+   "url": "https://www.cnbctv18.com/market/pidilite-industries-share-price-q2-earnings-miss-gross-margin-contracts-640-bps-revenue-profit-cost-management-comments-20021953.htm",
+   "date": "2026-10-29",
+   "what": "Gross margin contraction, COGS, segment EBIT"
+  },
+  {
+   "url": "https://finance.yahoo.com/markets/stocks/articles/pidilite-industries-ltd-bom-500331-050555061.html",
+   "date": "2026-10-30",
+   "what": "Earnings-call highlights: price hikes, VAM, MENA, guidance corridor"
+  },
+  {
+   "url": "https://www.linkedin.com/posts/cnbc-tv18_demand-holding-strong-but-100-crude-oil-activity-7508790165939572738-uMf0",
+   "date": "2026-09-24",
+   "what": "MD on crude risk and Q2 margin"
+  },
+  {
+   "url": "market_impact/data/packs/PIDILITIND.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack"
+  }
+ ],
+ "ticker": "PIDILITIND",
+ "as_of": "2026-11-05"
+}

@@ -24,3 +24,6 @@ Q3 results (Jan 2027), final revolving-credit norms, December MPC, Tata Sons lis
 
 ## Bull and bear
 Bull: margins recover as guided, growth stays above 25%, credit cost stays low, overhang from Tata Sons clears. Bear: further rate hikes and spreads delay recovery, RBI tightens unsecured lending, a promoter OFS adds supply. Confidence medium; margin and book-composition numbers are model estimates.
+
+## Notes on evidence quality
+The Q2 growth rates, the 3-4% revolving-credit impact, the RBI order on Tata Sons, the Citi initiation and the margin-recovery guidance come from dated news headlines (URLs in the JSON). The segment mix, floating share of borrowings and unsecured share are model estimates. The pack has no empirical sensitivity table for TATACAP because the listing is under a year old, so none of the weights is checked against price data; confidence is therefore medium at best and several edges are labelled low.

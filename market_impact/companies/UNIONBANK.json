@@ -1,0 +1,450 @@
+{
+ "ticker": "UNIONBANK",
+ "name": "Union Bank of India",
+ "as_of": "2026-11-05",
+ "industry": "I_PSU_BANKS",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "Public-sector bank (government 74.76%) with ~Rs11 lakh cr of advances (+18.5% y/y at Sep 2026, among the fastest in large PSBs). Q2 FY27: standalone PAT Rs5,537cr (+30.3%), consolidated Rs5,781cr, NIM 2.95%, GNPA 2.42%, NII +20%, falling provisions. Raised $600m in dollar bonds in August 2026 after a 12-year gap. Estimated Rs5,500cr ECL transition impact from April 2027. Roughly half of loans repo-linked, so asset-sensitive to the October hike. Stock Rs187, P/E 6.5x, P/B ~1.0x, +23.6% in 12 months, +11% in a month.",
+ "revenue_mix": [
+  {
+   "segment": "retail, agriculture and MSME advances",
+   "share_pct": 55,
+   "geography": "India (model est.)"
+  },
+  {
+   "segment": "corporate advances",
+   "share_pct": 30,
+   "geography": "India"
+  },
+  {
+   "segment": "treasury, fee and other",
+   "share_pct": 15,
+   "geography": "India; overseas branches small"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_REPO_IN",
+   "share_of_costs_pct": 55
+  },
+  {
+   "input": "F_DEPOSIT_GROWTH_IN",
+   "share_of_costs_pct": 35
+  }
+ ],
+ "exposures": [
+  {
+   "src": "F_REPO_IN",
+   "dst": "UNIONBANK",
+   "relation": "funding_cost",
+   "w": 1.0,
+   "w_low": -2.0,
+   "w_high": 3.0,
+   "lag": "0-3m",
+   "mechanism": "~50% of Rs11 lakh cr advances (model est.; gross advances +18.5% y/y) are repo/EBLR-linked: 25bp = ~Rs1,375cr/yr = 4.7% of PBT (~Rs29,000cr); deposit repricing gives back about half over 6-12m => +2.4%; persistence 0.5 => +1.2; offset by slower-growth and treasury effects => +1. NIM is only 2.95%, so the same bp matter more than at peers.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "MPC minutes flag more hikes but wary of an aggressive cycle (Reuters 2026-10-21)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+Q2+Results+Net+Profit+Rises+30.3%25+to+5%2C537+Crore+Gross+NPA+Falls+to+2.42%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Q2 FY27 standalone PAT Rs5,537cr (+30.3%), consolidated Rs5,781cr, NIM 2.95%, GNPA 2.42%, NII +20% (Business Standard, Kalkine, Indian Masterminds 2026-10-19/20)"
+    },
+    {
+     "source": "market_impact/data/packs/UNIONBANK.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_GSEC_10Y_IN",
+   "dst": "UNIONBANK",
+   "relation": "discount_rate",
+   "w": -1.5,
+   "w_low": -3.0,
+   "w_high": -0.4,
+   "lag": "0-3m",
+   "mechanism": "10y +25bp: AFS book ~Rs1.4 lakh cr (model est.) x duration 2 x 25bp = ~Rs700cr one-off MTM = 2.4% of PBT, persistence 0.25 => -0.6; cost of equity at P/B 0.99x/P-E 6.5x => -1.0. Pack: US10y elasticity -1.29 (t -1.8), same sign.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-04",
+     "note": "10y G-sec closed 7.19% on 2026-11-04 after 7.48% on 2026-10-23 (Moneycontrol 2026-11-04; BusinessLine 2026-10-23)"
+    },
+    {
+     "source": "market_impact/data/packs/UNIONBANK.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_CREDIT_GROWTH_IN",
+   "dst": "UNIONBANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "Union is already growing 18.5% (best among large PSBs); +3pp system credit growth adds ~1.5pp => NII +1.5%, PAT +2% x 0.75 + sentiment => +2.5. Growth is deposit-constrained (dollar bond raised, CD ratio high).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+Reports+18.53%25+Yearly+Growth+In+Gross+Advances+By+September+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "gross advances +18.53% y/y at Sep 2026 (Sahi/scanx 2026-10-02, 2026-11-04)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+taps+dollar+debt+market+after+12-year+hiatus+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-25",
+     "note": "Union Bank raised $600m in dollar bonds after a 12-year gap (ET 2026-08-24/25)"
+    }
+   ]
+  },
+  {
+   "src": "F_DEPOSIT_GROWTH_IN",
+   "dst": "UNIONBANK",
+   "relation": "demand_driver",
+   "w": 2.5,
+   "w_low": 0.8,
+   "w_high": 4.5,
+   "lag": "3-12m",
+   "mechanism": "With advances +18.5% outrunning deposits, +3pp deposit growth relaxes the CD ratio and lowers marginal funding cost by ~10-15bp on Rs3 lakh cr incremental funding => NII +2% x 0.75 + sentiment => +2.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+taps+dollar+debt+market+after+12-year+hiatus+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-25",
+     "note": "Union Bank raised $600m in dollar bonds after a 12-year gap (ET 2026-08-24/25)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+Reports+18.53%25+Yearly+Growth+In+Gross+Advances+By+September+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-02",
+     "note": "gross advances +18.53% y/y at Sep 2026 (Sahi/scanx 2026-10-02, 2026-11-04)"
+    }
+   ]
+  },
+  {
+   "src": "F_LIQUIDITY_IN",
+   "dst": "UNIONBANK",
+   "relation": "funding_cost",
+   "w": 0.8,
+   "w_low": 0.2,
+   "w_high": 1.8,
+   "lag": "0-3m",
+   "mechanism": "+Rs1 lakh cr liquidity cuts wholesale/CD funding ~5bp => +0.5% PBT; RBI is draining surplus (CRR maintenance 99%) so near-term sign is negative.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+raises+banks+daily+CRR+maintenance+requirement+excess+liquidity+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-09",
+     "note": "RBI raised daily CRR maintenance to 99% to drain surplus liquidity; surplus shrinking on tax outflows (CNBC TV18 2026-10-09; Rediff 2026-10-23)"
+    }
+   ]
+  },
+  {
+   "src": "F_ASSET_QUALITY_IN",
+   "dst": "UNIONBANK",
+   "relation": "demand_driver",
+   "w": -6.5,
+   "w_low": -11.0,
+   "w_high": -3.0,
+   "lag": "3-12m",
+   "mechanism": "+50bp system credit cost; Union beta 0.65: +33bp on Rs11 lakh cr = Rs3,600cr = 12% of PBT; persistence 0.5 => -6; GNPA 2.42% leaves limited cushion vs private peers => -6.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+Q2+Results+Net+Profit+Rises+30.3%25+to+5%2C537+Crore+Gross+NPA+Falls+to+2.42%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-19",
+     "note": "Q2 FY27 standalone PAT Rs5,537cr (+30.3%), consolidated Rs5,781cr, NIM 2.95%, GNPA 2.42%, NII +20% (Business Standard, Kalkine, Indian Masterminds 2026-10-19/20)"
+    }
+   ]
+  },
+  {
+   "src": "F_UNSECURED_STRESS",
+   "dst": "UNIONBANK",
+   "relation": "demand_driver",
+   "w": -0.8,
+   "w_low": -2.0,
+   "w_high": -0.2,
+   "lag": "3-12m",
+   "mechanism": "Retail unsecured share is small (<5%, model est.); +1pp delinquency => -0.8 equity.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/UNIONBANK.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_RBI_PRUDENTIAL",
+   "dst": "UNIONBANK",
+   "relation": "regulatory_risk",
+   "w": -3.5,
+   "w_low": -7.0,
+   "w_high": -1.0,
+   "lag": "3-12m",
+   "mechanism": "ECL transition from April 2027: Union's own estimate ~Rs5,500cr (3.8% of market cap, ~3.8% of net worth), which would be absorbed through reserves over several years; the equity-value effect is ~-3.5, partly priced. PSU banks expected to face greater pressure (fintechbiznews 2026-11-03).",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Bank+faces+Rs+5%2C500+crore+estimated+ECL+transition+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-21",
+     "note": "Union Bank estimates ~Rs5,500cr ECL transition impact (ET BFSI 2026-10-21)"
+    },
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+expected+credit+loss+framework+April+2027+banks+provisioning+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-11-03",
+     "note": "RBI ECL framework from April 2027; SBI estimates Rs19,500cr post-tax impact; RBI to meet bank CEOs on readiness (Moneycontrol/Business Standard 2026-11-03)"
+    }
+   ]
+  },
+  {
+   "src": "F_GDP_IN",
+   "dst": "UNIONBANK",
+   "relation": "demand_driver",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 5.5,
+   "lag": "3-12m",
+   "mechanism": "+1pp GDP: credit demand up, slippages down; ~+4% PAT x 0.75 => +3. RBI FY27 GDP forecast 7.1% (2026-10-07).",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-07",
+     "note": "RBI hiked repo 25bp to 5.50%, stance 'calibrated tightening', first hike in ~4 years (The Hindu 2026-10-07; Business Standard 2026-10-14: near-term cuts off the table)"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "UNIONBANK",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Infra and PSU-linked corporate exposures; +10% capex growth adds ~1pp corporate loan growth and improves repayment => +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/UNIONBANK.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "P_FDI_RULES",
+   "dst": "UNIONBANK",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 0.5,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "PSU-bank re-rating from FDI-cap liberalisation/consolidation (IDBI to Fairfax cleared 2026-10-14). Government holds 74.76% of UNIONBANK, essentially at the 75% ceiling, so a QIP/OFS to raise equity is possible but a stake-sale list of four banks (reported 2026-10-23) did not name it.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=PSU+bank+FDI+OR+privatisation+OR+merger+2026+government+stake+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-10-23",
+     "note": "Govt plans to cut stake in four PSU banks to 75%; IDBI sale cleared (ET/Livemint 2026-10-23)"
+    }
+   ]
+  },
+  {
+   "src": "F_FPI_FLOWS",
+   "dst": "UNIONBANK",
+   "relation": "discount_rate",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "0-3m",
+   "mechanism": "FIIs 9.4% (Sep), market beta 1.18, 33% vol; +US$5bn quarterly inflow => ~+2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/UNIONBANK.md (screener.in/Yahoo)",
+     "date": "2026-11-05",
+     "note": "fundamentals, price performance and empirical sensitivities"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "UNIONBANK",
+   "relation": "fx_translation",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.5,
+   "lag": "0-3m",
+   "mechanism": "$600m dollar bond (Aug 2026) and overseas branches; hedged. +3% USD/INR => -0.5 (hedge cost). Pack shows no significant link.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+taps+dollar+debt+market+after+12-year+hiatus+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+     "date": "2026-08-25",
+     "note": "Union Bank raised $600m in dollar bonds after a 12-year gap (ET 2026-08-24/25)"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Government of India (promoter)",
+   "ticker": null,
+   "role": "parent",
+   "importance": "high",
+   "note": "74.76%; at the 75% public-shareholding ceiling"
+  },
+  {
+   "counterparty": "Depositors and wholesale/dollar bond investors",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "deposit growth lags advances; $600m bond Aug 2026"
+  },
+  {
+   "counterparty": "SBI, PNB, Bank of Baroda, Canara",
+   "ticker": "SBIN",
+   "role": "competitor",
+   "importance": "high",
+   "note": "PSU peers"
+  },
+  {
+   "counterparty": "Star Union Dai-ichi Life, Union AMC, ASREC (subsidiaries/associates)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "low",
+   "note": "model knowledge; non-core value"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-01",
+   "event": "Q3 FY27 results (inferred; Q2 on 2026-10-19): NIM expansion test from the repo hike, GNPA trend",
+   "type": "results",
+   "prob": 0.92,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 7.0,
+   "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+Q2+Results+Net+Profit+Rises+30.3%25+to+5%2C537+Crore+Gross+NPA+Falls+to+2.42%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-04",
+   "event": "ECL framework effective; transition hit ~Rs5,500cr (estimate)",
+   "type": "regulatory",
+   "prob": 0.85,
+   "impact_pct_low": -5.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Union+Bank+faces+Rs+5%2C500+crore+estimated+ECL+transition+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2027-03",
+   "event": "Capital raise (QIP/AT1/Tier-2 or dollar bond) to fund 18%+ credit growth and ECL; government at 74.76% limits an equity QIP without OFS",
+   "type": "capex",
+   "prob": 0.35,
+   "impact_pct_low": -4.0,
+   "impact_pct_high": 1.0,
+   "source": "https://news.google.com/rss/search?q=Union+Bank+of+India+taps+dollar+debt+market+after+12-year+hiatus+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "RBI MPC (early Dec; date unverified): further hike boosts NIM but pressures treasury",
+   "type": "regulatory",
+   "prob": 0.35,
+   "impact_pct_low": -2.5,
+   "impact_pct_high": 3.0,
+   "source": "https://news.google.com/rss/search?q=India+rate+panel+flags+more+hikes+minutes+Reuters+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  },
+  {
+   "date": "2026-12",
+   "event": "Government PSU consolidation/stake-sale announcements (Oct 2026 reports)",
+   "type": "corporate_action",
+   "prob": 0.3,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 6.0,
+   "source": "https://news.google.com/rss/search?q=Govt+eyes+stake+cuts+in+4+PSU+banks+Central+Bank+UCO+Bank+when:90d&hl=en-IN&gl=IN&ceid=IN:en"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026)",
+  "trend": "PAT Rs5,537cr standalone (+30%), consolidated Rs5,781cr; provisions falling, slippages down, GNPA 2.42%, NIM 2.95%; advances +18.5% y/y.",
+  "valuation": "P/E 6.5x, P/B ~1.0x (Rs187 / BV Rs189), div yield 2.6%; 52w Rs146-205; 1m +11.2%, 6m +12%, 12m +23.6%; 1y vol 33%.",
+  "recent_developments": [
+   "2026-08-24/25: $600m dollar bond, first in 12 years (ET)",
+   "2026-10-02: Q2 business update, gross advances +18.5%",
+   "2026-10-07: repo hiked to 5.50%",
+   "2026-10-19: Q2 results, stock +4.6% to +5%; Anand Rathi TP Rs221",
+   "2026-10-21: ECL impact ~Rs5,500cr estimated",
+   "2026-10-23: PSU-bank stake-sale reports",
+   "2026-11-03: SBI ECL Rs19,500cr; RBI meets bank CEOs"
+  ]
+ },
+ "key_risks": [
+  "ECL transition and capital needs for 18% growth",
+  "Deposit growth lagging credit; funding cost",
+  "Asset-quality cycle turn (GNPA 2.42%)",
+  "Treasury losses with 10y near 7.2-7.5%",
+  "Government-driven consolidation or capital calls"
+ ],
+ "upside_triggers": [
+  "NIM expansion after repo hike",
+  "Lower credit cost; ROE 15.7% sustained",
+  "PSU re-rating via FDI/consolidation",
+  "Falling yields after crude eases"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "market_impact/data/packs/UNIONBANK.md",
+   "date": "2026-11-05",
+   "what": "fundamentals, sensitivities, headlines"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Union+Bank+of+India+Q2+Results+Net+Profit+Rises+30.3%25+to+5%2C537+Crore+Gross+NPA+Falls+to+2.42%25+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-19",
+   "what": "Q2 results"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Union+Bank+of+India+Reports+18.53%25+Yearly+Growth+In+Gross+Advances+By+September+2026+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-02",
+   "what": "advances growth"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Union+Bank+faces+Rs+5%2C500+crore+estimated+ECL+transition+impact+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-21",
+   "what": "ECL estimate"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=Union+Bank+of+India+taps+dollar+debt+market+after+12-year+hiatus+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-08-25",
+   "what": "dollar bond"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=RBI+MPC+October+2026+repo+rate+decision+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-10-07",
+   "what": "repo hike"
+  },
+  {
+   "url": "https://news.google.com/rss/search?q=India+10-year+bond+yield+7.19%25+softer+crude+US+midterm+when:90d&hl=en-IN&gl=IN&ceid=IN:en",
+   "date": "2026-11-04",
+   "what": "G-sec yield"
+  }
+ ]
+}

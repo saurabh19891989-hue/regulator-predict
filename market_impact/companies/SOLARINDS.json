@@ -1,0 +1,420 @@
+{
+ "name": "Solar Industries India Ltd.",
+ "industry": "I_CHEMICALS_SPECIALTY",
+ "tier": "NIFTY_NEXT_50",
+ "business_summary": "India's largest commercial explosives maker (bulk and packaged explosives, detonators, initiating systems; ~26% volume share FY25, wallet share 20-23% with Coal India) with fast-growing defence (rockets, warheads, ammunition filling, pyro) and international explosives (Africa, Asia, Americas). Q2 FY27 revenue Rs 3,519 cr (+69%), EBITDA Rs 1,006 cr (28.6%), PAT Rs 617-650 cr (+79%); H1 revenue Rs 7,187 cr (+70%) vs FY27 guidance of Rs 14,000 cr (to be surpassed). Revenue mix Q2: defence 29%, international explosives 43%, domestic explosives 27%. Order book Rs 20,178 cr (defence Rs 17,568 cr). Announced all-cash acquisition of South Africa's Omnia Holdings for US$1.355 bn (Rs 12,951 cr) on 14 Sep 2026; FY28 combined target revenue >Rs 30,000 cr and EBITDA Rs 6,800-7,000 cr.",
+ "revenue_mix": [
+  {
+   "segment": "International explosives",
+   "share_pct": 43,
+   "geography": "Africa, Asia, Americas, Europe (own plants + exports)"
+  },
+  {
+   "segment": "Defence (rockets, ammunition, pyro, propellants)",
+   "share_pct": 29,
+   "geography": "India and export customers"
+  },
+  {
+   "segment": "Domestic explosives (bulk/packaged, initiating systems)",
+   "share_pct": 27,
+   "geography": "India (Coal India, private miners, infra)"
+  },
+  {
+   "segment": "Other",
+   "share_pct": 1,
+   "geography": "India"
+  }
+ ],
+ "cost_structure": [
+  {
+   "input": "F_FERTILISER_INPUTS",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "Other chemical / petro-derived RM, aluminium powder, packaging",
+   "share_of_costs_pct": 25
+  },
+  {
+   "input": "F_WAGES_IN",
+   "share_of_costs_pct": 11
+  },
+  {
+   "input": "Freight, power, other opex",
+   "share_of_costs_pct": 39
+  }
+ ],
+ "exposures": [
+  {
+   "src": "P_DEFENCE_PROCUREMENT",
+   "dst": "SOLARINDS",
+   "relation": "policy_effect",
+   "w": 3.0,
+   "w_low": 1.0,
+   "w_high": 6.0,
+   "lag": "3-12m",
+   "mechanism": "Defence is 29% of Q2 revenue (24% a year ago) and Rs 17,568 cr of the Rs 20,178 cr order book; FY27 defence revenue target >Rs 4,500 cr (Q2 only ~Rs 1,002 cr, so heavily H2-loaded). +10% domestic orders -> defence revenue +4% (domestic ~40% of defence book, estimate) = +1.2% total revenue at ~33% margin -> EBITDA +1.7%; EV/MCap 1.05; persistence 1.0 (multi-year contracts) -> +1.8; add growth-multiple (74x) sensitivity -> +3.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/solar-industries-q2-results-shares-jump-profit-surges-79-pc-revenue-margins-expand-20025930.htm",
+     "date": "2026-11-03",
+     "note": "Defence 29% of revenue; order book Rs 20,178 cr of which defence Rs 17,568 cr; FY27 defence target > Rs 4,500 cr"
+    },
+    {
+     "source": "https://m.economictimes.com/markets/stocks/news/motilal-oswal-initiates-buy-on-solar-industries-sees-24-upside-4-reasons-why/articleshow/134403261.cms",
+     "date": "2026-09-22",
+     "note": "MOFSL: defence to sustain higher growth; 43% revenue CAGR FY26-30"
+    }
+   ]
+  },
+  {
+   "src": "T_DEFENCE_EXPORTS",
+   "dst": "SOLARINDS",
+   "relation": "demand_driver",
+   "w": 5.0,
+   "w_low": 2.0,
+   "w_high": 9.0,
+   "lag": "3-12m",
+   "mechanism": "Global ammunition/rocket demand lifts export orders (international explosives 43% of revenue; defence exports in the order book). +1 = defence exports 20% above plan -> defence export revenue +20% (~half of defence ~Rs 2,000 cr in FY27, estimate) = +Rs 400 cr = +3% group revenue at ~33% margin -> EBITDA +3.5%; EV/MCap 1.05; persistence 1.0 -> +3.7, plus rerating -> +5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/solar-industries-q2-results-shares-jump-profit-surges-79-pc-revenue-margins-expand-20025930.htm",
+     "date": "2026-11-03",
+     "note": "Higher defence and overseas contribution lifted margin 200 bp"
+    },
+    {
+     "source": "https://m.economictimes.com/markets/stocks/news/motilal-oswal-initiates-buy-on-solar-industries-sees-24-upside-4-reasons-why/articleshow/134403261.cms",
+     "date": "2026-09-22",
+     "note": "International footprint via exports and overseas manufacturing"
+    }
+   ]
+  },
+  {
+   "src": "C_MIDEAST_CONFLICT",
+   "dst": "SOLARINDS",
+   "relation": "geopolitical_exposure",
+   "w": 1.5,
+   "w_low": -3.0,
+   "w_high": 5.0,
+   "lag": "0-3m",
+   "mechanism": "Escalation raises ammunition and explosives demand (defence customers, mining security of supply) and international pricing, but also lifts fuel/AN/aluminium costs and disrupts shipping/Middle East operations. Net sign uncertain; defence skew gives a small positive: +1 -> defence order flow +5% (+1.5% EBITDA) vs cost +0.5% (-1.5% EBITDA); sentiment premium -> +1.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/solar-industries-q2-results-shares-jump-profit-surges-79-pc-revenue-margins-expand-20025930.htm",
+     "date": "2026-11-03",
+     "note": "International explosives 43% of revenue; defence 29%"
+    }
+   ]
+  },
+  {
+   "src": "F_GOVT_CAPEX",
+   "dst": "SOLARINDS",
+   "relation": "demand_driver",
+   "w": 1.5,
+   "w_low": 0.5,
+   "w_high": 3.0,
+   "lag": "3-12m",
+   "mechanism": "Domestic explosives are 27% of Q2 revenue; Coal India (wallet share 20-23%) and infra/tunnelling/roads are the buyers. +10% government capex -> domestic explosives volumes +4% on half the segment = +0.5% revenue; EBITDA +0.7% x1.05 x persistence 0.5 -> +0.4; plus defence-infrastructure linkage and multiple -> +1.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://m.economictimes.com/markets/stocks/news/motilal-oswal-initiates-buy-on-solar-industries-sees-24-upside-4-reasons-why/articleshow/134403261.cms",
+     "date": "2026-09-22",
+     "note": "Market leader, 26% volume share FY25, wallet share 20-23% with Coal India"
+    },
+    {
+     "source": "https://upstox.com/news/market-news/earnings/solar-industries-q2-results-net-profit-grows-79-yo-y-firm-expects-to-surpass-annual-guidance-for-fy-27/article-202897/",
+     "date": "2026-11-03",
+     "note": "Domestic explosives supported by mining and infrastructure demand"
+    }
+   ]
+  },
+  {
+   "src": "F_POWER_DEMAND_IN",
+   "dst": "SOLARINDS",
+   "relation": "demand_driver",
+   "w": 1.0,
+   "w_low": 0.3,
+   "w_high": 2.0,
+   "lag": "3-12m",
+   "mechanism": "Power demand growth drives coal output and thus bulk-explosive consumption at Coal India/captive mines. +3 pp demand -> coal production +3% -> coal blasting volumes +3% (~15% of revenue) = +0.45% revenue; EBITDA +0.6%; x1.05 x 0.5 -> +0.3; multiple -> +1.0.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://upstox.com/news/market-news/earnings/solar-industries-q2-results-net-profit-grows-79-yo-y-firm-expects-to-surpass-annual-guidance-for-fy-27/article-202897/",
+     "date": "2026-11-03",
+     "note": "Domestic explosives backed by mining demand"
+    }
+   ]
+  },
+  {
+   "src": "F_FERTILISER_INPUTS",
+   "dst": "SOLARINDS",
+   "relation": "input_cost",
+   "w": -0.5,
+   "w_low": -1.5,
+   "w_high": 0.2,
+   "lag": "0-3m",
+   "mechanism": "Ammonium nitrate (AN) tracks ammonia/urea-chain prices and is ~18% of sales (estimate: gross margin 54%, RM 46% of sales, AN ~40% of RM). +15% AN -> +2.7% of sales; Coal India and many private contracts carry price-variation clauses, ~80% recovered within a quarter -> 0.54% of sales unrecovered / 28.6% margin = EBITDA -1.9%; x1.05 x persistence 0.25 -> -0.5.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "https://www.cnbctv18.com/market/earnings/solar-industries-q2-results-shares-jump-profit-surges-79-pc-revenue-margins-expand-20025930.htm",
+     "date": "2026-11-03",
+     "note": "Gross margin stable at 54%"
+    }
+   ]
+  },
+  {
+   "src": "C_AFRICA_LATAM",
+   "dst": "SOLARINDS",
+   "relation": "demand_driver",
+   "w": 2.0,
+   "w_low": 0.5,
+   "w_high": 4.0,
+   "lag": "3-12m",
+   "mechanism": "Overseas operations (South Africa, Zambia, Nigeria, Turkey, Latin America etc., model knowledge) sell explosives to miners. +1 pp regional growth -> volumes +2.5% on ~25% of revenue -> +0.6% revenue; EBITDA +0.9%; persistence 0.6 plus the Omnia SA footprint (+Rs ~13,000 cr deal) raising exposure -> +2.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/solar-industries-falls-9-as-company-to-acquire-south-africa-s-omnia-holdings-for-nearly-rs-13-000-cr-14030019.html",
+     "date": "2026-09-15",
+     "note": "Acquisition of South Africa's Omnia Holdings for ~US$1.355 bn / Rs 12,951 cr, all cash"
+    }
+   ]
+  },
+  {
+   "src": "F_USDINR",
+   "dst": "SOLARINDS",
+   "relation": "fx_translation",
+   "w": 0.5,
+   "w_low": -1.5,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "International explosives 43% and defence exports priced in USD/local currencies, with some imported AN/chemicals; and a new US$1.355 bn acquisition debt (financing mix not retrieved). +3% USD/INR -> +1.3% revenue translation (43% x 3%) at ~29% margin = EBITDA +1.4%, less imports -0.3% -> +1.1%; x1.05 x 0.5 = +0.6; USD-debt revaluation on Omnia funding offsets -> +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/solar-industries-falls-9-as-company-to-acquire-south-africa-s-omnia-holdings-for-nearly-rs-13-000-cr-14030019.html",
+     "date": "2026-09-15",
+     "note": "All-cash Omnia deal ~US$1.355 bn; funding structure not disclosed in the fetched article"
+    }
+   ]
+  },
+  {
+   "src": "F_REPO_IN",
+   "dst": "SOLARINDS",
+   "relation": "funding_cost",
+   "w": -2.0,
+   "w_low": -4.0,
+   "w_high": -0.7,
+   "lag": "0-3m",
+   "mechanism": "Interest cost Rs 172 cr TTM (Rs 55 cr in Sep qtr), set to rise sharply with Omnia (Rs 12,951 cr, all-cash; if ~70% debt at ~8% = ~Rs 720 cr/yr vs TTM EBITDA Rs 3,555 cr). +25 bp on ~Rs 9,000 cr floating debt (estimate) = Rs 23 cr ~ 0.7% of PAT; plus discount-rate effect on a 74x stock -> -2.",
+   "confidence": "medium",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SOLARINDS.md",
+     "date": "2026-11-05",
+     "note": "Interest Rs 41 cr (Jun-26) -> Rs 55 cr (Sep-26); P/E 74.4"
+    },
+    {
+     "source": "https://www.moneycontrol.com/news/business/markets/solar-industries-falls-9-as-company-to-acquire-south-africa-s-omnia-holdings-for-nearly-rs-13-000-cr-14030019.html",
+     "date": "2026-09-15",
+     "note": "Rs 12,951 cr all-cash acquisition"
+    }
+   ]
+  },
+  {
+   "src": "F_BRENT",
+   "dst": "SOLARINDS",
+   "relation": "input_cost",
+   "w": 0.5,
+   "w_low": -0.8,
+   "w_high": 1.5,
+   "lag": "0-3m",
+   "mechanism": "Modest direct cost link (fuel, petro-derived emulsifiers/packaging ~5% of costs), offset by geopolitical-demand linkage (defence/commodity-cycle co-movement). Empirical +1.22 (t +1.5) -> +0.5 after shrinkage; sign is not a cost channel and should not be double-counted with C_MIDEAST_CONFLICT.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "market_impact/data/packs/SOLARINDS.md",
+     "date": "2026-11-05",
+     "note": "Empirical F_BRENT +1.22 (t +1.5), F_REFINING_MARGIN +1.23 (t +1.6)"
+    }
+   ]
+  },
+  {
+   "src": "C_RUSSIA",
+   "dst": "SOLARINDS",
+   "relation": "input_cost",
+   "w": 0.5,
+   "w_low": 0.0,
+   "w_high": 1.5,
+   "lag": "3-12m",
+   "mechanism": "Russia is a major AN/ammonia exporter; closer trade access/discounts lower AN prices: +1 -> AN -5% -> costs -0.9% of sales; recovered 80% via PV clauses -> EBITDA +0.7% x 0.5 -> +0.5.",
+   "confidence": "low",
+   "evidence": [
+    {
+     "source": "model knowledge",
+     "date": "2026-11-05",
+     "note": "Russia's share of global AN supply; not verified for Solar's procurement mix"
+    }
+   ]
+  }
+ ],
+ "company_links": [],
+ "supply_chain": [
+  {
+   "counterparty": "Coal India and subsidiaries",
+   "ticker": "COALINDIA",
+   "role": "customer",
+   "importance": "high",
+   "note": "20-23% wallet share; well below 25% of Solar revenue, so no dominant_customer link"
+  },
+  {
+   "counterparty": "Ministry of Defence, DRDO-linked programmes, foreign armed forces",
+   "ticker": null,
+   "role": "customer",
+   "importance": "high",
+   "note": "Order book Rs 17,568 cr"
+  },
+  {
+   "counterparty": "Omnia Holdings (South Africa)",
+   "ticker": null,
+   "role": "subsidiary",
+   "importance": "high",
+   "note": "Pending Rs 12,951 cr acquisition; global commercial explosives and chemicals"
+  },
+  {
+   "counterparty": "Ammonia / AN producers (domestic and imported)",
+   "ticker": null,
+   "role": "supplier",
+   "importance": "high",
+   "note": "Price-variation clauses pass most changes through"
+  },
+  {
+   "counterparty": "Premier Explosives, GOCL, Gulf Oil (smaller peers)",
+   "ticker": null,
+   "role": "competitor",
+   "importance": "low",
+   "note": "Not in universe"
+  }
+ ],
+ "company_events": [
+  {
+   "date": "2027-03",
+   "event": "Omnia Holdings acquisition: shareholder / regulatory (South Africa competition) approvals and funding details",
+   "type": "corporate_action",
+   "prob": 0.6,
+   "impact_pct_low": -6.0,
+   "impact_pct_high": 6.0,
+   "source": "https://www.moneycontrol.com/news/business/markets/solar-industries-falls-9-as-company-to-acquire-south-africa-s-omnia-holdings-for-nearly-rs-13-000-cr-14030019.html"
+  },
+  {
+   "date": "2027-02",
+   "event": "Q3 FY27 results (Dec quarter): defence delivery ramp toward >Rs 4,500 cr FY27 target",
+   "type": "results",
+   "prob": 0.95,
+   "impact_pct_low": -9.0,
+   "impact_pct_high": 9.0,
+   "source": "https://www.cnbctv18.com/market/earnings/solar-industries-q2-results-shares-jump-profit-surges-79-pc-revenue-margins-expand-20025930.htm"
+  },
+  {
+   "date": "2027-02",
+   "event": "Upgrade of FY27 revenue guidance above Rs 14,000 cr",
+   "type": "guidance",
+   "prob": 0.55,
+   "impact_pct_low": 1.0,
+   "impact_pct_high": 5.0,
+   "source": "https://upstox.com/news/market-news/earnings/solar-industries-q2-results-net-profit-grows-79-yo-y-firm-expects-to-surpass-annual-guidance-for-fy-27/article-202897/"
+  },
+  {
+   "date": "2027-03",
+   "event": "Large defence export or domestic order announcement (>Rs 1,000 cr)",
+   "type": "other",
+   "prob": 0.45,
+   "impact_pct_low": 1.5,
+   "impact_pct_high": 6.0,
+   "source": "https://www.cnbctv18.com/market/earnings/solar-industries-q2-results-shares-jump-profit-surges-79-pc-revenue-margins-expand-20025930.htm"
+  },
+  {
+   "date": "2027-02-01",
+   "event": "Union Budget FY28: defence capital outlay and indigenisation",
+   "type": "regulatory",
+   "prob": 1.0,
+   "impact_pct_low": -2.0,
+   "impact_pct_high": 4.0,
+   "source": "model knowledge (scheduled date convention)"
+  },
+  {
+   "date": "2027-06",
+   "event": "Plant accident / PESO regulatory action (explosives sector tail risk)",
+   "type": "regulatory",
+   "prob": 0.06,
+   "impact_pct_low": -15.0,
+   "impact_pct_high": -4.0,
+   "source": "model knowledge"
+  }
+ ],
+ "current_state": {
+  "latest_quarter": "Q2 FY27 (Sep 2026), reported 2026-11-03: revenue Rs 3,519 cr +69%; EBITDA Rs 1,006 cr (+82%, 28.6% vs 26.6%); consolidated net profit Rs 617 cr (+79%); H1 PAT Rs 1,270 cr (+86%)",
+  "trend": "Revenue ahead of consensus (+69% vs ~50% expected), margin helped by defence and overseas mix; Omnia financing is the new variable.",
+  "valuation": "Market cap Rs 1.68 lakh cr at Rs 18,586; P/E 74 trailing; ~50x on H1 FY27 annualised PAT of Rs ~2,540 cr (derived); 52w Rs 11,641-22,700; 12m +36%, 1m -7%.",
+  "recent_developments": [
+   "2026-09-14/15: Omnia deal announced; stock -8-9%",
+   "2026-09-22: Motilal Oswal initiates Buy, TP Rs 23,000",
+   "2026-11-03: Q2 results; stock +7% intraday to Rs 20,880, then faded (Yahoo close 5 Nov Rs 18,580; reason not found)"
+  ]
+ },
+ "key_risks": [
+  "Leverage and integration risk of the US$1.355 bn Omnia deal (financing structure not retrieved)",
+  "Defence order timing (H2-loaded: Q2 defence revenue ~Rs 1,002 cr vs >Rs 4,500 cr target)",
+  "Valuation 50-75x earnings with 37% volatility",
+  "AN input-cost swings and Coal India volume/pricing",
+  "Explosives safety/regulatory incidents",
+  "Export-market geopolitics"
+ ],
+ "upside_triggers": [
+  "Defence order wins and ramp to FY28 target",
+  "Omnia synergies",
+  "Guidance upgrade",
+  "Domestic mining capex and Coal India volume growth"
+ ],
+ "new_nodes_proposed": [],
+ "confidence_overall": "medium",
+ "sources": [
+  {
+   "url": "https://www.cnbctv18.com/market/earnings/solar-industries-q2-results-shares-jump-profit-surges-79-pc-revenue-margins-expand-20025930.htm",
+   "date": "2026-11-03",
+   "what": "Q2 FY27 results, mix, order book, guidance"
+  },
+  {
+   "url": "https://upstox.com/news/market-news/earnings/solar-industries-q2-results-net-profit-grows-79-yo-y-firm-expects-to-surpass-annual-guidance-for-fy-27/article-202897/",
+   "date": "2026-11-03",
+   "what": "Q2 details, H1, management commentary"
+  },
+  {
+   "url": "https://www.moneycontrol.com/news/business/earnings/q2-results-impact-solar-industries-shares-gain-as-profit-rises-79-14067660.html",
+   "date": "2026-11-03",
+   "what": "Price reaction, Omnia reference"
+  },
+  {
+   "url": "https://www.moneycontrol.com/news/business/markets/solar-industries-falls-9-as-company-to-acquire-south-africa-s-omnia-holdings-for-nearly-rs-13-000-cr-14030019.html",
+   "date": "2026-09-15",
+   "what": "Omnia acquisition terms and stock reaction"
+  },
+  {
+   "url": "https://m.economictimes.com/markets/stocks/news/motilal-oswal-initiates-buy-on-solar-industries-sees-24-upside-4-reasons-why/articleshow/134403261.cms",
+   "date": "2026-09-22",
+   "what": "Motilal Oswal initiation: market position, growth drivers"
+  },
+  {
+   "url": "market_impact/data/packs/SOLARINDS.md",
+   "date": "2026-11-05",
+   "what": "Evidence pack"
+  }
+ ],
+ "ticker": "SOLARINDS",
+ "as_of": "2026-11-05"
+}
